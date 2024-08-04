@@ -108,4 +108,7 @@ protected:
     UPROPERTY()
     UIGS_ScreenHandler* m_ScreenHandler;
 
+protected:
+    void NativeOnActivated() override;
+    void NativeOnDeactivated() override;
 };
