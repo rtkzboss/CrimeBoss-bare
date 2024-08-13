@@ -64,7 +64,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_GameplayEffectApplyDataHolder> AppliedEffects;
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(Bitmask, BitmaskEnum = "/Script/Common_Data.EIGS_ItemPropertyFlags"))
     int32 ItemPropertyFlags;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
