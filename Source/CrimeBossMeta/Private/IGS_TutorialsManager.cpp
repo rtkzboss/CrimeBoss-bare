@@ -13,6 +13,9 @@ void UIGS_TutorialsManager::SetForbiddenScreensForTutorials(const TArray<FGamepl
 void UIGS_TutorialsManager::ResetAllTutorials() {
 }
 
+void UIGS_TutorialsManager::MoveOpenedTutorialBackToPending() {
+}
+
 bool UIGS_TutorialsManager::IsTutorialCompleted(const FGameplayTag inTag) const {
     return false;
 }

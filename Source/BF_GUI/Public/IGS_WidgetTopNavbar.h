@@ -19,6 +19,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHorizontalBox* TabsOnly;
     
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UIGS_TabButton*> m_Tabs;
+    
+public:
     UIGS_WidgetTopNavbar();
 
     UFUNCTION(BlueprintCallable)

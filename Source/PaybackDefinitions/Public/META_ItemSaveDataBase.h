@@ -14,6 +14,9 @@ public:
     int32 Price;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RelativePrice;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsUnseenInShop;
     
     PAYBACKDEFINITIONS_API FMETA_ItemSaveDataBase();

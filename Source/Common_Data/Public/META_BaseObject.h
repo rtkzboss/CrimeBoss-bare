@@ -24,6 +24,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ItemCost;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RelativeItemPrice;
+    
 public:
     UMETA_BaseObject();
 
@@ -31,7 +34,10 @@ public:
     void SetTagID(FGameplayTag inTag);
     
     UFUNCTION(BlueprintCallable)
-    void SetItemPrice(int32 inItemCost);
+    void SetRelativeItemPrice(const float inRelativePrice);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetItemPrice(const int32 inItemCost);
     
     UFUNCTION(BlueprintCallable)
     void SetIcon(TSoftObjectPtr<UTexture2D> inIcon);
@@ -41,6 +47,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FGameplayTag GetTagID() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    float GetRelativeItemPrice() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EMETA_ItemQuality GetItemQuality() const;

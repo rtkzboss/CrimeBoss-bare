@@ -48,4 +48,8 @@ UMETA_Character* UMETA_Equipment::GetCharacter() const {
     return NULL;
 }
 
+int32 UMETA_Equipment::GetBasePrice() const {
+    return 0;
+}
+
 

@@ -4,8 +4,8 @@
 #include "EIGS_TeamSideEnum.h"
 
 AIGS_SquadCop::AIGS_SquadCop(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).DebugColor.G = 0;
-    (*this).DebugColor.R = 210;
+    (*this).DebugColor.B = 255;
+    (*this).DebugColor.R = 107;
 }
 
 

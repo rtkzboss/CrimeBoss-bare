@@ -12,6 +12,7 @@ FMETA_HeisterLoadoutSave::FMETA_HeisterLoadoutSave() {
     (*this).PrimaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).PrimaryWeaponSaveData.itemTag, 0)) = NAME_None;
     (*this).PrimaryWeaponSaveData.Price = 0;
+    (*this).PrimaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).PrimaryWeaponSaveData.IsUnseenInShop = false;
     (*this).PrimaryPersonalWeapons.Empty();
     (*this).SecondaryWeapon = nullptr;
@@ -24,12 +25,14 @@ FMETA_HeisterLoadoutSave::FMETA_HeisterLoadoutSave() {
     (*this).SecondaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).SecondaryWeaponSaveData.itemTag, 0)) = NAME_None;
     (*this).SecondaryWeaponSaveData.Price = 0;
+    (*this).SecondaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).SecondaryWeaponSaveData.IsUnseenInShop = false;
     (*this).SecondaryPersonalWeapons.Empty();
     (*this).Equipment.Empty();
     (*this).SelectedEquipment.EquipmentID = nullptr;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).SelectedEquipment.itemTag, 0)) = NAME_None;
     (*this).SelectedEquipment.Price = 0;
+    (*this).SelectedEquipment.RelativePrice = 0.000000000e+00f;
     (*this).SelectedEquipment.IsUnseenInShop = false;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CharacterSkin, 0)) = NAME_None;
 }

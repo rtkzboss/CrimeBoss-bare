@@ -7,11 +7,11 @@ UIGS_Quickplay_FinanceManagerComponent::UIGS_Quickplay_FinanceManagerComponent(c
 void UIGS_Quickplay_FinanceManagerComponent::SetBalance(int32 InValue) {
 }
 
-int32 UIGS_Quickplay_FinanceManagerComponent::CalculateUnlockItemCostFromInfo(const FIGS_UnlockItemInfo& inUnlockItemInfo) const {
+int32 UIGS_Quickplay_FinanceManagerComponent::CalculateUnlockItemCostFromInfo(const FIGS_UnlockItemInfo& inUnlockItemInfo, const float inRelativePrice) const {
     return 0;
 }
 
-int32 UIGS_Quickplay_FinanceManagerComponent::CalculateUnlockItemCost(FGameplayTag inTagID) const {
+int32 UIGS_Quickplay_FinanceManagerComponent::CalculateUnlockItemCost(const FGameplayTag inTagID, const float inRelativePrice) const {
     return 0;
 }
 

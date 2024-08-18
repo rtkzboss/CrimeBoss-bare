@@ -40,6 +40,7 @@ class UAbilitySystemComponent;
 class UAkComponent;
 class UAkStateValue;
 class UAkSwitchValue;
+class UDamageType;
 class UGameplayEffect;
 class UIGS_CharacterData;
 class UIGS_CharacterMaskBase;
@@ -119,6 +120,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIGS_GameplayTagsChangedOnCharacterDynamicSignature OnGameplayTagsChangedEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UDamageType> CharacterDeathCauseType;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -43,7 +43,16 @@ public:
     static bool IsQualityInBitmask(EMETA_ItemQuality inItemQuantity, int32 inBitmask);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsIntegerWithinRange(const int32 InValue, const FMETA_Interval InRange);
+    
+    UFUNCTION(BlueprintPure)
+    static bool IsInteger64WithinRange(const int64 InValue, const FMETA_Int64Interval InRange);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsGenericCharacter(EIGS_CharacterID ID);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsFloatWithinRange(const float InValue, const FMETA_FloatInterval InRange);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsBoss(EIGS_CharacterID ID);

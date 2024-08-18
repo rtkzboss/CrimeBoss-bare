@@ -67,5 +67,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UMETA_Character* GetCharacter() const;
     
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    int32 GetBasePrice() const;
+    
 };
 

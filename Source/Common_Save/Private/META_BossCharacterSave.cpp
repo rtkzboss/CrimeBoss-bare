@@ -13,6 +13,7 @@ FMETA_BossCharacterSave::FMETA_BossCharacterSave() {
     (*this).Loadout.PrimaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSaveData.itemTag, 0)) = NAME_None;
     (*this).Loadout.PrimaryWeaponSaveData.Price = 0;
+    (*this).Loadout.PrimaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).Loadout.PrimaryWeaponSaveData.IsUnseenInShop = false;
     (*this).Loadout.PrimaryPersonalWeapons.Empty();
     (*this).Loadout.SecondaryWeapon = nullptr;
@@ -25,12 +26,14 @@ FMETA_BossCharacterSave::FMETA_BossCharacterSave() {
     (*this).Loadout.SecondaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSaveData.itemTag, 0)) = NAME_None;
     (*this).Loadout.SecondaryWeaponSaveData.Price = 0;
+    (*this).Loadout.SecondaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).Loadout.SecondaryWeaponSaveData.IsUnseenInShop = false;
     (*this).Loadout.SecondaryPersonalWeapons.Empty();
     (*this).Loadout.Equipment.Empty();
     (*this).Loadout.SelectedEquipment.EquipmentID = nullptr;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SelectedEquipment.itemTag, 0)) = NAME_None;
     (*this).Loadout.SelectedEquipment.Price = 0;
+    (*this).Loadout.SelectedEquipment.RelativePrice = 0.000000000e+00f;
     (*this).Loadout.SelectedEquipment.IsUnseenInShop = false;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkin, 0)) = NAME_None;
     (*this).Perks.Empty();

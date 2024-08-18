@@ -63,10 +63,10 @@ public:
     float GetRewardMultiplierForChainContract(TSubclassOf<UIGS_ChainContractID> inChainContractID) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetItemCostPerCategoryAndQuality(EIGS_UnlockCategory inItemCategory, EMETA_ItemQuality inItemQuality) const;
+    int32 GetCharacterLevelPerQuality(EMETA_ItemQuality inQuality);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 GetCharacterLevelPerQuality(EMETA_ItemQuality inQuality);
+    int32 CalculateItemCostFromCategoryAndQuality(const EIGS_UnlockCategory inItemCategory, const EMETA_ItemQuality inItemQuality, const float inRelativePrice) const;
     
 };
 

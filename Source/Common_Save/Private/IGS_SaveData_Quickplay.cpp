@@ -29,6 +29,7 @@ FIGS_SaveData_Quickplay::FIGS_SaveData_Quickplay() {
     (*this).CrewManagerData.BossCharacter.Loadout.PrimaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CrewManagerData.BossCharacter.Loadout.PrimaryWeaponSaveData.itemTag, 0)) = NAME_None;
     (*this).CrewManagerData.BossCharacter.Loadout.PrimaryWeaponSaveData.Price = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.PrimaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).CrewManagerData.BossCharacter.Loadout.PrimaryWeaponSaveData.IsUnseenInShop = false;
     (*this).CrewManagerData.BossCharacter.Loadout.PrimaryPersonalWeapons.Empty();
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeapon = nullptr;
@@ -41,12 +42,14 @@ FIGS_SaveData_Quickplay::FIGS_SaveData_Quickplay() {
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeaponSaveData.itemTag, 0)) = NAME_None;
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeaponSaveData.Price = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeaponSaveData.IsUnseenInShop = false;
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryPersonalWeapons.Empty();
     (*this).CrewManagerData.BossCharacter.Loadout.Equipment.Empty();
     (*this).CrewManagerData.BossCharacter.Loadout.SelectedEquipment.EquipmentID = nullptr;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CrewManagerData.BossCharacter.Loadout.SelectedEquipment.itemTag, 0)) = NAME_None;
     (*this).CrewManagerData.BossCharacter.Loadout.SelectedEquipment.Price = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.SelectedEquipment.RelativePrice = 0.000000000e+00f;
     (*this).CrewManagerData.BossCharacter.Loadout.SelectedEquipment.IsUnseenInShop = false;
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CrewManagerData.BossCharacter.Loadout.CharacterSkin, 0)) = NAME_None;
     (*this).CrewManagerData.BossCharacter.Perks.Empty();

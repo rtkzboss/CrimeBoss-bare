@@ -5,6 +5,7 @@
 #include "GameplayTagContainer.h"
 #include "EIGS_WieldableSlot.h"
 #include "IGS_ActiveWieldableChangeEventSignatureDelegate.h"
+#include "IGS_ActiveWieldableHolsterEventSignatureDelegate.h"
 #include "IGS_PrimarySlotChangeFailedEventSignatureDelegate.h"
 #include "IGS_WieldableAddedEventSignatureDelegate.h"
 #include "IGS_WieldableChangedEventSignatureDelegate.h"
@@ -26,6 +27,12 @@ class BF_FRAMEWORKBASE_API UIGS_CharacterWieldablesHolderComponent : public UAct
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bForceHideWeapon;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FIGS_ActiveWieldableHolsterEventSignature OnActiveWieldableHolsterEvent;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FIGS_ActiveWieldableChangeEventSignature OnActiveWieldableBeginChange;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIGS_ActiveWieldableChangeEventSignature OnActiveWieldableChanged;

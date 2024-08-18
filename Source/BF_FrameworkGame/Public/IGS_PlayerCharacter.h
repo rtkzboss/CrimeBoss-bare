@@ -13,7 +13,6 @@
 #include "IGS_HeisterNumberInterface.h"
 #include "IGS_DeathCameraEndedSignatureDelegate.h"
 #include "IGS_IntelligentGameCharacter.h"
-#include "IGS_OnChangeShowPredictionSignatureDelegate.h"
 #include "IGS_OnZiptyingEventDelegate.h"
 #include "IGS_PlayerStateChangedSignatureDelegate.h"
 #include "IGS_ReplicatedLadder.h"
@@ -79,9 +78,6 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIGS_PlayerStateChangedSignature OnPlayerStateChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FIGS_OnChangeShowPredictionSignature OnChangeShowPrediction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UIGS_UseComponent* UseComponent;

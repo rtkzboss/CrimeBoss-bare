@@ -22,7 +22,7 @@ public:
     void OnQuickPlayStashInitialized();
     
     UFUNCTION(BlueprintCallable)
-    void OnMetaPlayStashInitialized();
+    void OnMetaStashInitialized();
     
 };
 

@@ -2,12 +2,16 @@
 
 UMETA_BaseObject::UMETA_BaseObject() {
     (*this).Icon = nullptr;
+    (*this).RelativeItemPrice = 5.000000000e-01f;
 }
 
 void UMETA_BaseObject::SetTagID(FGameplayTag inTag) {
 }
 
-void UMETA_BaseObject::SetItemPrice(int32 inItemCost) {
+void UMETA_BaseObject::SetRelativeItemPrice(const float inRelativePrice) {
+}
+
+void UMETA_BaseObject::SetItemPrice(const int32 inItemCost) {
 }
 
 void UMETA_BaseObject::SetIcon(TSoftObjectPtr<UTexture2D> inIcon) {
@@ -18,6 +22,10 @@ void UMETA_BaseObject::SetEntitlementTagID(FGameplayTag inTag) {
 
 FGameplayTag UMETA_BaseObject::GetTagID() const {
     return FGameplayTag{};
+}
+
+float UMETA_BaseObject::GetRelativeItemPrice() const {
+    return 0.0f;
 }
 
 EMETA_ItemQuality UMETA_BaseObject::GetItemQuality() const {

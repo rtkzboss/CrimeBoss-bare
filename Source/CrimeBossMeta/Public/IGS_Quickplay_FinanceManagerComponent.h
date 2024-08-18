@@ -21,10 +21,10 @@ public:
     void SetBalance(int32 InValue);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 CalculateUnlockItemCostFromInfo(const FIGS_UnlockItemInfo& inUnlockItemInfo) const;
+    int32 CalculateUnlockItemCostFromInfo(const FIGS_UnlockItemInfo& inUnlockItemInfo, const float inRelativePrice) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    int32 CalculateUnlockItemCost(FGameplayTag inTagID) const;
+    int32 CalculateUnlockItemCost(const FGameplayTag inTagID, const float inRelativePrice) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void CalculateMissionRewardWithMultipliers(const FIGS_MissionResult& inMissionResult, int32& outMissionReward, float& outMultiplier) const;

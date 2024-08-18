@@ -18,8 +18,9 @@
 #include "IGS_AISwatTeamDef.h"
 #include "IGS_GeneralReactionTeamHolder.h"
 #include "IGS_PlayerCountAIDifficultyModifierDef.h"
-#include "IGS_PlayerCountBotDamageReceivedModifierDef.h"
+#include "IGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef.h"
 #include "IGS_PlayerCountThrowableCooldownModifierDef.h"
+#include "IGS_PlayerCountWaveManagerModifierDef.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_AIDatabaseFPS.generated.h"
 
@@ -75,7 +76,10 @@ public:
     FIGS_PlayerCountThrowableCooldownModifierDef ThrowableCooldown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FIGS_PlayerCountBotDamageReceivedModifierDef BotDamageReceived;
+    FIGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef BotDamageReceived;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FIGS_PlayerCountWaveManagerModifierDef WaveManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<TSoftClassPtr<AIGS_GameCharacterFramework>, FIGS_AIBaseUnitDef> VIPs;

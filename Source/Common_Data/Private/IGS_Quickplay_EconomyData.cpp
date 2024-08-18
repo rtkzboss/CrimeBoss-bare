@@ -17,11 +17,11 @@ float UIGS_Quickplay_EconomyData::GetRewardMultiplierForChainContract(TSubclassO
     return 0.0f;
 }
 
-int32 UIGS_Quickplay_EconomyData::GetItemCostPerCategoryAndQuality(EIGS_UnlockCategory inItemCategory, EMETA_ItemQuality inItemQuality) const {
+int32 UIGS_Quickplay_EconomyData::GetCharacterLevelPerQuality(EMETA_ItemQuality inQuality) {
     return 0;
 }
 
-int32 UIGS_Quickplay_EconomyData::GetCharacterLevelPerQuality(EMETA_ItemQuality inQuality) {
+int32 UIGS_Quickplay_EconomyData::CalculateItemCostFromCategoryAndQuality(const EIGS_UnlockCategory inItemCategory, const EMETA_ItemQuality inItemQuality, const float inRelativePrice) const {
     return 0;
 }
 

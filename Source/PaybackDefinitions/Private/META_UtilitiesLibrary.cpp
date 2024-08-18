@@ -27,7 +27,19 @@ bool UMETA_UtilitiesLibrary::IsQualityInBitmask(EMETA_ItemQuality inItemQuantity
     return false;
 }
 
+bool UMETA_UtilitiesLibrary::IsIntegerWithinRange(const int32 InValue, const FMETA_Interval InRange) {
+    return false;
+}
+
+bool UMETA_UtilitiesLibrary::IsInteger64WithinRange(const int64 InValue, const FMETA_Int64Interval InRange) {
+    return false;
+}
+
 bool UMETA_UtilitiesLibrary::IsGenericCharacter(EIGS_CharacterID ID) {
+    return false;
+}
+
+bool UMETA_UtilitiesLibrary::IsFloatWithinRange(const float InValue, const FMETA_FloatInterval InRange) {
     return false;
 }
 

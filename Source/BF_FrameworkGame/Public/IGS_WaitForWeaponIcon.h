@@ -18,6 +18,11 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIGS_WeaponIconReadyOutputPin WhenWeaponIconReady;
     
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UMETA_WeaponInventoryObject> m_WeaponObject;
+    
+public:
     UIGS_WaitForWeaponIcon();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
