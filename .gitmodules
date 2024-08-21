@@ -1,0 +1,3 @@
+[submodule "Plugins/CrimeBossUGC"]
+	path = Plugins/CrimeBossUGC
+	url = https://github.com/ingamestudios/CB-UGCPlugin
