@@ -25,12 +25,12 @@ AIGS_WeaponPickupActor::AIGS_WeaponPickupActor(const FObjectInitializer& ObjectI
     (*this).IsPickableByAI = true;
     (*this).PickupMeshComp = (UPrimitiveComponent*)RootComponent;
     (*this).SceneRoot = (USceneComponent*)RootComponent;
-    (*this).SightModMesh->SetupAttachment((*this).RootComponent);
-    (*this).VisibilityModMesh->SetupAttachment((*this).RootComponent);
     (*this).BarrelModMesh->SetupAttachment((*this).RootComponent);
     (*this).GripModMesh->SetupAttachment((*this).RootComponent);
     (*this).MagazineModMesh->SetupAttachment((*this).RootComponent);
+    (*this).SightModMesh->SetupAttachment((*this).RootComponent);
     (*this).StockModMesh->SetupAttachment((*this).RootComponent);
+    (*this).VisibilityModMesh->SetupAttachment((*this).RootComponent);
 }
 
 void AIGS_WeaponPickupActor::Setup(const TSubclassOf<UMETA_WeaponInventoryObject>& inItemClass, const TSoftObjectPtr<UIGS_WeaponSkinData> inSkin) {

@@ -52,24 +52,24 @@ AIGS_WeaponBase::AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer) : 
     (*this).Basher = CreateDefaultSubobject<UIGS_BasherComponent>(TEXT("Basher"));
     (*this).VirtualSightSocketName = TEXT("VirtualSight");
     (*this).PrimaryActorTick.TickGroup = TG_DuringPhysics;
-    (*this).MuzzleFlashRootComponent->SetupAttachment((*this).RootComponent);
-    (*this).MuzzleFlashParticleComponent->SetupAttachment((*this).MuzzleFlashRootComponent);
-    (*this).MuzzleFlashParticleComponentCascade->SetupAttachment((*this).MuzzleFlashRootComponent);
+    (*this).BarrelModMesh->SetupAttachment((*this).RootComponent);
     (*this).BarrelSmokeParticleComponent->SetupAttachment((*this).MuzzleFlashRootComponent);
+    (*this).DynamicScopeMesh->SetupAttachment((*this).RootComponent);
+    (*this).FlashPointLight->SetupAttachment((*this).FlashSpotLight);
+    (*this).FlashSpotLight->SetupAttachment((*this).RootComponent);
+    (*this).GripModMesh->SetupAttachment((*this).RootComponent);
+    (*this).LaserArrow->SetupAttachment((*this).RootComponent);
+    (*this).MagazineModMesh->SetupAttachment((*this).RootComponent);
     (*this).MuzzleFlashLight3PV->SetupAttachment((*this).MuzzleFlashRootComponent);
     (*this).MuzzleFlashLightFPV->SetupAttachment((*this).MuzzleFlashRootComponent);
     (*this).MuzzleFlashLightFPVSecondary->SetupAttachment((*this).RootComponent);
-    (*this).SightModMesh->SetupAttachment((*this).RootComponent);
-    (*this).DynamicScopeMesh->SetupAttachment((*this).RootComponent);
-    (*this).VisibilityModMesh->SetupAttachment((*this).RootComponent);
-    (*this).BarrelModMesh->SetupAttachment((*this).RootComponent);
-    (*this).GripModMesh->SetupAttachment((*this).RootComponent);
-    (*this).MagazineModMesh->SetupAttachment((*this).RootComponent);
+    (*this).MuzzleFlashParticleComponent->SetupAttachment((*this).MuzzleFlashRootComponent);
+    (*this).MuzzleFlashParticleComponentCascade->SetupAttachment((*this).MuzzleFlashRootComponent);
+    (*this).MuzzleFlashRootComponent->SetupAttachment((*this).RootComponent);
     (*this).SecondMagazineModMesh->SetupAttachment((*this).RootComponent);
+    (*this).SightModMesh->SetupAttachment((*this).RootComponent);
     (*this).StockModMesh->SetupAttachment((*this).RootComponent);
-    (*this).LaserArrow->SetupAttachment((*this).RootComponent);
-    (*this).FlashSpotLight->SetupAttachment((*this).RootComponent);
-    (*this).FlashPointLight->SetupAttachment((*this).FlashSpotLight);
+    (*this).VisibilityModMesh->SetupAttachment((*this).RootComponent);
 }
 
 void AIGS_WeaponBase::StopAttack() {

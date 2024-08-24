@@ -16,8 +16,8 @@ ADEPRECATED_IGS_NavLinkGroupBase::ADEPRECATED_IGS_NavLinkGroupBase(const FObject
     (*this).BackBreachingPoints = CreateDefaultSubobject<UChildActorComponent>(TEXT("BackBreachingPoints"));
     (*this).helpersBox = CreateDefaultSubobject<UBoxComponent>(TEXT("helpersBox"));
     (*this).RootComponent = (USceneComponent*)GroupRootComponent;
-    (*this).FrontBreachingPoints->SetupAttachment((*this).GroupRootComponent);
     (*this).BackBreachingPoints->SetupAttachment((*this).GroupRootComponent);
+    (*this).FrontBreachingPoints->SetupAttachment((*this).GroupRootComponent);
     (*this).helpersBox->SetupAttachment((*this).GroupRootComponent);
 }
 

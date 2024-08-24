@@ -3,10 +3,10 @@
 
 UHoudiniInputMeshComponent::UHoudiniInputMeshComponent() {
     (*this).StaticMesh = nullptr;
-    (*this).Guid.A = 83051465;
-    (*this).Guid.B = 1336969245;
-    (*this).Guid.C = -1600914278;
-    (*this).Guid.D = 1611148974;
+    (*this).Guid.A = 1241566134;
+    (*this).Guid.B = 1272720235;
+    (*this).Guid.C = 728915132;
+    (*this).Guid.D = -2053678656;
 }
 
 

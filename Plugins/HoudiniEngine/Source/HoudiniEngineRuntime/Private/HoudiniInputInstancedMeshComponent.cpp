@@ -2,10 +2,10 @@
 #include "EHoudiniInputObjectType.h"
 
 UHoudiniInputInstancedMeshComponent::UHoudiniInputInstancedMeshComponent() {
-    (*this).Guid.A = 766052909;
-    (*this).Guid.B = 1123576754;
-    (*this).Guid.C = -416026452;
-    (*this).Guid.D = 52080992;
+    (*this).Guid.A = -114386659;
+    (*this).Guid.B = 1104169903;
+    (*this).Guid.C = -1839813959;
+    (*this).Guid.D = 1262363165;
 }
 
 

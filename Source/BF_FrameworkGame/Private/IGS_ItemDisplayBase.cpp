@@ -10,8 +10,8 @@ AIGS_ItemDisplayBase::AIGS_ItemDisplayBase(const FObjectInitializer& ObjectIniti
     (*this).ItemDisplay = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ItemDisplay"));
     (*this).BreakableWindow = CreateDefaultSubobject<UIGS_BreakableWindowComponent>(TEXT("BreakableWindow"));
     (*this).RootComponent = (USceneComponent*)RootObject;
-    (*this).ItemDisplay->SetupAttachment((*this).RootObject);
     (*this).BreakableWindow->SetupAttachment((*this).RootObject);
+    (*this).ItemDisplay->SetupAttachment((*this).RootObject);
 }
 
 void AIGS_ItemDisplayBase::UpdateLoot() {

@@ -9,8 +9,8 @@ AIGS_BreachableWall::AIGS_BreachableWall(const FObjectInitializer& ObjectInitial
     (*this).FrontBreachingPoints = CreateDefaultSubobject<UChildActorComponent>(TEXT("FrontBreachingPoints"));
     (*this).BackBreachingPoints = CreateDefaultSubobject<UChildActorComponent>(TEXT("BackBreachingPoints"));
     (*this).RootComponent = (USceneComponent*)WallRootComponent;
-    (*this).FrontBreachingPoints->SetupAttachment((*this).WallRootComponent);
     (*this).BackBreachingPoints->SetupAttachment((*this).WallRootComponent);
+    (*this).FrontBreachingPoints->SetupAttachment((*this).WallRootComponent);
 }
 
 

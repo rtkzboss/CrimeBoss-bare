@@ -53,7 +53,7 @@ public:
     void ResetAllTutorials();
     
     UFUNCTION(BlueprintCallable)
-    void MoveOpenedTutorialBackToPending();
+    bool MoveOpenedTutorialBackToPending();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTutorialCompleted(const FGameplayTag inTag) const;

@@ -9,8 +9,8 @@ AIGS_CoopClimb::AIGS_CoopClimb(const FObjectInitializer& ObjectInitializer) : Su
     (*this).CoopClimbInteractiveComponent = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("CoopClimbInteractiveComponent"));
     (*this).CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CollisionCapsule"));
     (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    (*this).CoopClimbInteractiveComponent->SetupAttachment((*this).RootComponent);
     (*this).CapsuleComponent->SetupAttachment((*this).RootComponent);
+    (*this).CoopClimbInteractiveComponent->SetupAttachment((*this).RootComponent);
 }
 
 void AIGS_CoopClimb::OnUsed(AIGS_GameCharacterFramework* inInstigator) {

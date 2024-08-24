@@ -71,11 +71,11 @@ AIGS_PlayerCharacter::AIGS_PlayerCharacter(const FObjectInitializer& ObjectIniti
     (*this).AutoPossessAI = EAutoPossessAI::Disabled;
     (*this).AIControllerClass = nullptr;
     (*this).Camera->SetupAttachment((*this).RootComponent);
-    (*this).SuppressionHandlerComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
-    (*this).LootBagInteractiveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
     (*this).CarryableInteractiveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
+    (*this).LootBagInteractiveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
     (*this).ReviveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
     (*this).SpringArmComponent->SetupAttachment((*this).RootComponent);
+    (*this).SuppressionHandlerComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
 }
 
 void AIGS_PlayerCharacter::Use(bool inIsHolding) {

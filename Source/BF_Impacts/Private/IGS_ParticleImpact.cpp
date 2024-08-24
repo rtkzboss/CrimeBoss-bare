@@ -10,8 +10,8 @@ AIGS_ParticleImpact::AIGS_ParticleImpact(const FObjectInitializer& ObjectInitial
     (*this).ParticleComponent = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("ParticleSystemComponent"));
     (*this).NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
     (*this).RootComponent = (USceneComponent*)SceneComponent;
-    (*this).ParticleComponent->SetupAttachment((*this).SceneComponent);
     (*this).NiagaraComponent->SetupAttachment((*this).SceneComponent);
+    (*this).ParticleComponent->SetupAttachment((*this).SceneComponent);
 }
 
 void AIGS_ParticleImpact::OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent) {

@@ -2,10 +2,10 @@
 #include "EHoudiniInputObjectType.h"
 
 UHoudiniInputSkeletalMesh::UHoudiniInputSkeletalMesh() {
-    (*this).Guid.A = -1621811537;
-    (*this).Guid.B = 1184073544;
-    (*this).Guid.C = -1728076381;
-    (*this).Guid.D = 1883490616;
+    (*this).Guid.A = 1082563514;
+    (*this).Guid.B = 1251234388;
+    (*this).Guid.C = -303955019;
+    (*this).Guid.D = 855893014;
 }
 
 
