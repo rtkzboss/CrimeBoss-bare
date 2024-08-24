@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IGS_UGCBaseGameInstance.h"
+#include "UGCBaseGameInstance.h"
 #include "FindSessionsCallbackProxy.h"
 #include "BPUniqueNetId.h"
 #include "EBPLoginStatus.h"
