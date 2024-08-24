@@ -27,7 +27,7 @@ void UProgressionBaseComponent::SavePendingUnlockRewards(TArray<FIGS_UnlockItemI
 void UProgressionBaseComponent::SavePendingLevelUps(const int32 inLevelUps) {
 }
 
-bool UProgressionBaseComponent::SaveLastClaimedDailyMultiplayerDateTime(FDateTime inDateTime) {
+bool UProgressionBaseComponent::SaveLastClaimedDailyMultiplayerDateTime(FDateTime InDateTime) {
     return false;
 }
 
@@ -76,7 +76,7 @@ float UProgressionBaseComponent::GetDailyCashBonus(int32 inLevel) const {
 void UProgressionBaseComponent::ClearPendingUnlockedRewards() {
 }
 
-bool UProgressionBaseComponent::CanRewardBeClaimed(FDateTime inDateTime) const {
+bool UProgressionBaseComponent::CanRewardBeClaimed(FDateTime InDateTime) const {
     return false;
 }
 

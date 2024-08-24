@@ -4,7 +4,9 @@
 #include "EIGS_TeamSideEnum.h"
 
 AIGS_SquadGangster::AIGS_SquadGangster(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).DebugColor.R = 21;
+    (*this).DebugColor.B = 0;
+    (*this).DebugColor.G = 255;
+    (*this).DebugColor.R = 180;
 }
 
 

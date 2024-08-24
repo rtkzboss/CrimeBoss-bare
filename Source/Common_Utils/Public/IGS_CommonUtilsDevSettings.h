@@ -15,9 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString FreeWeekend_URL;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString CDN_URL;
-    
     UIGS_CommonUtilsDevSettings();
 
 };

@@ -63,7 +63,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    bool SaveLastClaimedDailyMultiplayerDateTime(FDateTime inDateTime);
+    bool SaveLastClaimedDailyMultiplayerDateTime(FDateTime InDateTime);
     
 public:
     UFUNCTION(BlueprintCallable)
@@ -106,7 +106,7 @@ public:
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool CanRewardBeClaimed(FDateTime inDateTime) const;
+    bool CanRewardBeClaimed(FDateTime InDateTime) const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool BP_ProcessLevelUp(const int32 inLevel, TArray<FIGS_UnlockItemInfo>& outUnlockedItems);
