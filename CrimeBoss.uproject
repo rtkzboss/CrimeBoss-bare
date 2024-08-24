@@ -688,8 +688,7 @@
 				"GameplayTags",
 				"RenderCore",
 				"BF_Analytics",
-				"IGS_UIFramework",
-				"CrimeBossUGC"
+				"IGS_UIFramework"
 			]
 		},
 		{
