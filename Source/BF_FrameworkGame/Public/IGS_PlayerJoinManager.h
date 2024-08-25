@@ -62,7 +62,7 @@ public:
     UFUNCTION(BlueprintCallable)
     FIGS_PlayerJoinInfo GetSlotByHeisterNumberBP(int32 inHeisterNumber);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PlayerJoinManager* GetPlayerJoinManager(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -26,19 +26,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void ModAppendDataTable(UDataTable* inNewTable);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FGameplayTag GetWiedableClassById(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inWeaponId);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSoftObjectPtr<UTexture2D> GetWeaponIcon(UObject* inWCO, TSubclassOf<UMETA_WeaponInventoryObject> inWeaponObject, TSoftObjectPtr<UDataAsset> inWeaponSkin);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_WeaponDefinitionsDatabase* GetWeaponDefinitionsDatabaseInstance(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WeaponDefinitionTableRow GetDataWeaponByTagID(const UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WeaponDefinitionTableRow GetDataWeapon(const UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -47,7 +47,7 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FIGS_WeaponDefinitionTableRow> GetDatabaseTableBP();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_WeaponDefinitionTableRow> GetAllGenerableWeaponsData(const UObject* inWCO, bool inIncludeDLCs);
     
 };

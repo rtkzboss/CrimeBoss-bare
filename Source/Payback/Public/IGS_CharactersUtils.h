@@ -13,13 +13,13 @@ class PAYBACK_API UIGS_CharactersUtils : public UBlueprintFunctionLibrary {
 public:
     UIGS_CharactersUtils();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static float GetRevivesCountFromHeisterData(UObject* inWCO, UPARAM(Ref) FCommonHeisterData& inHeisterData);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static float GetHealthWithModifiersFromMetaCharacter(UObject* inWCO, UMETA_Character* inCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static float GetHealthWithModifiersFromHeisterData(UObject* inWCO, UPARAM(Ref) FCommonHeisterData& inHeisterData);
     
 };

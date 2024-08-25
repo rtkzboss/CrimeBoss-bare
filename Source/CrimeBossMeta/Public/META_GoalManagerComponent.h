@@ -102,13 +102,13 @@ protected:
     UFUNCTION(BlueprintCallable)
     FMETA_FinishedGoal ConvertGoalObjectToFinishedGoal(UMETA_BaseGoal* inGoal);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     UMETA_BaseGoal* ConvertGoalFromSave(const UObject* inWCO, UPARAM(Ref) FMETA_GoalSave& inGoal);
     
     UFUNCTION(BlueprintCallable)
     void ConvertCurrentGoalsToSave(TArray<FMETA_GoalSave>& outStoryGoalsSave, TArray<FMETA_MoneyMakingGoalSave>& outMoneyMakingGoalsSave);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<UMETA_BaseGoal*> ConvertCurrentGoalsFromSave(const UObject* inWCO, TArray<FMETA_GoalSave> inCurrentGoals, TArray<FMETA_MoneyMakingGoalSave> inMoneyMakingGoals);
     
 public:

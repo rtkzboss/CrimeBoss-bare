@@ -28,7 +28,7 @@ protected:
     void OnAssetLoaded(FSoftObjectPath inAssetPath);
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_LoadCutsceneMetaData* LoadCutsceneMetaData(UObject* inWCO, FText inCutsceneID);
     
 };

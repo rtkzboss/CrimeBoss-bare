@@ -15,10 +15,10 @@ class COMMON_DATA_API UIGS_PerksDatabase : public UGameInstanceSubsystem {
 public:
     UIGS_PerksDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_PerksTableRow GetPerkDataByTagID(const UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_PerksTableRow GetPerkData(const UObject* inWCO, const TSubclassOf<UIGS_GameplayEffect_PerkBase>& inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

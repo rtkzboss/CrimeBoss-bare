@@ -26,7 +26,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetTurfActionAfterSuccess(EMETA_TurfActionAfterSuccess inNewTurfAction);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetDataFromSave(const UObject* inWCO, const FMETA_StoryMissionSave& inStoryMissionSave);
     
     UFUNCTION(BlueprintCallable)

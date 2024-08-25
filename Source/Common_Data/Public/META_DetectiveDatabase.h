@@ -14,10 +14,10 @@ class COMMON_DATA_API UMETA_DetectiveDatabase : public UGameInstanceSubsystem {
 public:
     UMETA_DetectiveDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     TArray<TSubclassOf<UMETA_DetectiveID>> GetDetectivesIDs(UObject* inWCO) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_DetectiveTableRow GetDetectiveData(UObject* inWCO, TSubclassOf<UMETA_DetectiveID> inID, bool& outSucceeded);
     
 };

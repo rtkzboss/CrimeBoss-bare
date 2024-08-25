@@ -126,7 +126,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLastStrike() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_SuspicionManager* GetSuspicionManager(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

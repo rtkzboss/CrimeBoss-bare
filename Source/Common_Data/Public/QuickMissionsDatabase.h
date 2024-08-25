@@ -23,13 +23,13 @@ public:
     UFUNCTION(BlueprintCallable)
     TSubclassOf<UMETA_MissionID> GetRandomMissionIDForScenarios(FGameplayTagContainer inScenarioTags, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UMETA_BaseMission* GetQuickMissionObject(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inMissionID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_MissionDatabase GetQuickMissionDataBP(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inClass, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<TSubclassOf<UMETA_MissionID>> GetMoneyMakingQuickMissionIDsWithLootTypeByUnlockRespect(const UObject* inWCO, FGameplayTag inLootType, EMETA_RespectLvl inUnlockRespect);
     
     UFUNCTION(BlueprintCallable)

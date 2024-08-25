@@ -9,7 +9,7 @@ class COMMON_DATA_API UIGS_MenuBackgroundConditionBase : public UObject {
 public:
     UIGS_MenuBackgroundConditionBase();
 
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
     bool EvaluateCondition(const UObject* inWCO);
     
 };

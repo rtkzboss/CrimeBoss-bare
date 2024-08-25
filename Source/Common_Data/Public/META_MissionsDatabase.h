@@ -29,10 +29,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsItTurfWarMissionID(const TSubclassOf<UMETA_MissionID>& inMissionID, EMETA_JobType& outMissionType) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FMETA_MoneyMakingMissionMainDataFromDatabase> GetMoneyMakingMissionIDsWithLootType(const UObject* inWCO, FGameplayTag inLootType);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UMETA_BaseMission* GetMissionObject(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inMissionID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -44,7 +44,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TSubclassOf<UMETA_MissionID> GetMissionIDByTradeVendor(EMETA_TradeVendor inVendor) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_MissionDatabase GetMissionDataBP(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable)
@@ -62,10 +62,10 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_MissionDatabase> GetAllFPSMissions();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool GenerateMissionObjectiveBP(const UObject* inWCO, const UMETA_BaseMission* inMission, FMETA_ObjectiveTableRow& outBonusObjective, FMETA_ObjectiveRewardData& outRewardData);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool CanMissionBeRemovedFromTheMap(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inMissionID, EMETA_JobResult inJobResult);
     
 };

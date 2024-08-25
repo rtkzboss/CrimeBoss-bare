@@ -13,7 +13,7 @@ class CRIMEBOSSMETA_API UIGS_TutorialsDatabase : public UGameInstanceSubsystem {
 public:
     UIGS_TutorialsDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_TutorialTableRow GetTutorialData(UObject* inWCO, const FGameplayTag inTutorialID, bool& outSucceeded);
     
 };

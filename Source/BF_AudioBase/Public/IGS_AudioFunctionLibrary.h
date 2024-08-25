@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static AIGS_GameCharacterFramework* ResolveGameCharacterFromSkeletalMesh(USkeletalMeshComponent* inSkeletalMeshComponent);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_PersistentAkComponent* GetPersistentAkComponent(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

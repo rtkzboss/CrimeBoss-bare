@@ -24,16 +24,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_EquipmentInventoryObject>& inClass) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_EquipmentDatabase* GetEquipmentDatabaseInstance(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> GetEquipmentByQualities(UObject* inWCO, const TArray<EMETA_ItemQuality>& inQualities, const TArray<FGameplayTag>& inUnlockedEquipment, bool inIgnoreUnlock);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EquipmentTableRow GetDataEquipmentByTagID(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EquipmentTableRow GetDataEquipment(UObject* inWCO, const TSubclassOf<UIGS_EquipmentInventoryObject>& inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

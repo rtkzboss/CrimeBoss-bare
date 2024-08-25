@@ -21,7 +21,7 @@ class CRIMEBOSSMETA_API UMETA_RandEventsDatabase : public UGameInstanceSubsystem
 public:
     UMETA_RandEventsDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<FMETA_RandEventTableRow> GetSuitableEvents(const UObject* inWCO, EMETA_RandEventCategory inEventsCategory, EMETA_RespectLvl inRespectLvl, EMETA_Heat inCurrentHeat, int32 inCurrentBalance, FGameplayTagContainer inStorylineAssets, bool inCheckChance);
     
     UFUNCTION(BlueprintCallable)

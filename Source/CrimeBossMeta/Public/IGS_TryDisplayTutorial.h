@@ -23,7 +23,7 @@ private:
 public:
     UIGS_TryDisplayTutorial();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_TryDisplayTutorial* TryDisplayTutorial(UObject* inWCO, FGameplayTag inTutorialTag, bool& outTutorialAlreadyFinished, bool ShowEvenFinished, bool DEBUG_SaveTutorialCompleted);
     
 private:

@@ -15,22 +15,22 @@ class CRIMEBOSSMETA_API UIGS_MultiplayerJobsDatabase : public UGameInstanceSubsy
 public:
     UIGS_MultiplayerJobsDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FGameplayTagContainer GetScenariosForJob(UObject* inWCO, const FGameplayTag inJobTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FGameplayTagContainer GetRandomScenarioForQJLobby(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_MultiplayerJobCategoryRow GetMultiplayerJobCategory(UObject* inWCO, const FGameplayTag inMultiplayerJobCategoryID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_MultiplayerJobCategoryItemRow> GetJobsInCategory(UObject* inWCO, FGameplayTag inCategoryTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_MultiplayerJobCategoryItemRow GetItemRow(UObject* inWCO, const FGameplayTag inItemRowID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_MultiplayerJobCategoryRow> GetAllCategories(UObject* inWCO);
     
 };

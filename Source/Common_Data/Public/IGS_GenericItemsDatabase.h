@@ -17,7 +17,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_GenericItemsInventoryObject>& inClass) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_GenericItemsTableRow GetDataGenericItem(UObject* inWCO, const TSubclassOf<UIGS_GenericItemsInventoryObject>& inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

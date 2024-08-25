@@ -85,7 +85,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SortEquipmentQuality(UPARAM(Ref) TArray<UMETA_Equipment*>& Equipment);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SortEquipmentByQuality(UObject* inWCO, UPARAM(Ref) TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>& Equipment);
     
     UFUNCTION(BlueprintCallable)

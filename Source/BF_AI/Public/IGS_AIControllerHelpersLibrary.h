@@ -51,10 +51,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetScope(AIGS_AIControllerGame* Controller, uint8 scope);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetGlobalSniperPointOfInterestPos(const UObject* inWCO, FVector InPosition);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetGlobalSniperPointOfInterestActor(const UObject* inWCO, AActor* inActor);
     
     UFUNCTION(BlueprintCallable)
@@ -102,7 +102,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FVector GetNextPathPoint(AAIController* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<AIGS_MonsterCloset*> GetMonsterClosetsInBox(UObject* inWCO, FVector inOrigin, FVector InBoxExtent);
     
     UFUNCTION(BlueprintCallable)
@@ -117,7 +117,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void FocusToOffence(AIGS_AIControllerBase* InController, UIGS_OffenceData* inOffence);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void DeactivateHeistersDefend(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

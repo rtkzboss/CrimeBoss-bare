@@ -20,10 +20,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static void UpdateNavigationData(UActorComponent* comp);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool ProjectPointToNavigation(const UObject* inWCO, const FVector& inPoint, FVector& OutLocation, const FVector inQueryExtent, const bool inFilterFromWco, TSubclassOf<UNavigationQueryFilter> inFilterClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsInDangerArea(const UObject* inWCO, const FVector InLocation, const float InRadius, const bool inAddCapsuleRadiusIfCharacterWco);
     
     UFUNCTION(BlueprintCallable)

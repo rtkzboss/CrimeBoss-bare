@@ -29,7 +29,7 @@ protected:
 public:
     UStoryGraphManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     UMETA_StoryGraph* GetCurrentGraph(UObject* inWCO);
     
 };

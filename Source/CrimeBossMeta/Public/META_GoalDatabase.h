@@ -18,7 +18,7 @@ class CRIMEBOSSMETA_API UMETA_GoalDatabase : public UGameInstanceSubsystem {
 public:
     UMETA_GoalDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void GetPreparedGoalData(UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inClass, bool& outSucceeded, bool& outUseLockRespectCondition, EMETA_RespectLvl& outUnlockRespect, EMETA_RespectLvl& outLockRespect, EMETA_Partner& outInstigatorPartner);
     
     UFUNCTION(BlueprintCallable)
@@ -30,13 +30,13 @@ public:
     UFUNCTION(BlueprintCallable)
     EMETA_GoalType GetGoalType(TSubclassOf<UMETA_BaseGoal> inGoalID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     UMETA_BaseGoal* GetGoalObject(const UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inGoalID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetGoalIDByGraph(UObject* inWCO, TSoftObjectPtr<UStoryGraphManager> inGraph, bool& outSucceeded, TSubclassOf<UMETA_BaseGoal>& outClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_GoalTableRow GetGoalData(UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

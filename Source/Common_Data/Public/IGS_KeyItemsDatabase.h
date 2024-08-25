@@ -17,7 +17,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_KeyItemInventoryObject>& inClass) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_KeyItemTableRow GetDataKeyItem(UObject* inWCO, const TSubclassOf<UIGS_KeyItemInventoryObject>& inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

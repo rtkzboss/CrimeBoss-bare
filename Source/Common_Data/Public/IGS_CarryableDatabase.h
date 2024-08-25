@@ -17,7 +17,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_CarryableInventoryObject>& inClass) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CarryableTableRow GetDataCarryable(const UObject* inWCO, const TSubclassOf<UIGS_CarryableInventoryObject>& inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

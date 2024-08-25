@@ -55,19 +55,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SwitchBackToMainScreen(bool directlyToMainMenu);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void RequestSwitchToScreen(UObject* inWCO, FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void RequestOpenScreenByTag(UObject* inWCO, FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void RequestOpenScreen(UObject* inWCO, UIGS_Screen* inScreen, bool AddToViewport);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void RequestCloseScreenByTag(UObject* inWCO, FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void RequestCloseScreen(UObject* inWCO, UIGS_Screen* inScreen, bool destroyAfterClose);
     
     UFUNCTION(BlueprintCallable)

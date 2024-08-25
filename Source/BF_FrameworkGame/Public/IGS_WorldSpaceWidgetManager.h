@@ -129,7 +129,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetWorldSpaceWidgetTypeVisibility(EIGS_WorldWidgetType inType, bool inEnabled);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_WorldSpaceWidgetManager* GetWorldWidgetManager(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

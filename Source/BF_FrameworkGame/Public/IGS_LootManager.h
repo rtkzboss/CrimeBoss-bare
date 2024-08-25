@@ -146,7 +146,7 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static float UpdateLootWeightMultiplier(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -188,7 +188,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetThrowableItemSize(EIGS_LootSize inWeight) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_LootManager* GetLootManager(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -203,7 +203,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ForceSetMissionBagsInWeight(int32 inRequiredBags);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void DisableLootVoiceLines(UObject* inWCO, bool bDisable);
     
     UFUNCTION(BlueprintCallable)

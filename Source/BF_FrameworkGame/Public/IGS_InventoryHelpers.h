@@ -20,10 +20,10 @@ class BF_FRAMEWORKGAME_API UIGS_InventoryHelpers : public UBlueprintFunctionLibr
 public:
     UIGS_InventoryHelpers();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool RemoveItemFromGlobalInventory(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool HasWTInGlobalInventory(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -32,13 +32,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static int32 GetItemCountInPlayerInventory(AIGS_GameCharacterFramework* inPlayer, TSubclassOf<UIGS_InventoryObjectFramework> inItemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetItemCountInGlobalInventory(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetGlobalInventoryFreeSlotsCount(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_GlobalInventory* GetGlobalInventory(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -53,28 +53,28 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool DoesPlayerHaveItemCountInInventory(AIGS_GameCharacterFramework* inPlayer, TSubclassOf<UIGS_InventoryObjectFramework> inItemClass, int32 inCount);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static bool DoesGlobalInventoryHaveItem(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool BindOnGlobalInventoryWTAdded(const UObject* inWCO, FIGS_GlobalItemChangedDelegate InDelegate);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool BindOnGlobalInventoryModified(const UObject* inWCO, FIGS_GlobalInventoryModifiedDelegate InDelegate);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool BindOnGlobalInventoryItemRemoved(const UObject* inWCO, FIGS_GlobalItemChangedDelegate InDelegate);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool BindOnGlobalInventoryItemAdded(const UObject* inWCO, FIGS_GlobalItemChangedDelegate InDelegate);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool AddWTToGlobalInventory(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inWTClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool AddItemToGlobalInventory(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool AddItemsToGlobalInventory(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass, int32 inCount);
     
 };

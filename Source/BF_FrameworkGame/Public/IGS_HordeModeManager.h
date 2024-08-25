@@ -32,10 +32,10 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetHordeModeCounterValues(const UObject* inWCO, int32 inTotalValue, float inCurrentProgress);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetHordeModeActive(const UObject* inWCO, bool Inactive);
     
 private:
@@ -46,7 +46,7 @@ private:
     void OnRep_HordeModeActive(bool inOldHordeModeActive);
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void AddTokensToAllPlayers(const UObject* inWCO, int32 inTokensCount);
     
 };

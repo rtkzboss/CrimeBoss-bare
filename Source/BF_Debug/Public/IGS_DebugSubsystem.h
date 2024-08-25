@@ -406,19 +406,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SpawnHeister(FVector InLocation, int32 inCount, bool inUseCrosshairLocation);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetPacketLoss(const UObject* inWCO, int32 inPacketLoss);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetPacketLagVariance(const UObject* inWCO, int32 inPacketLagVariance);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetPacketLag(const UObject* inWCO, int32 inPacketLag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetPacketJitter(const UObject* inWCO, int32 inPacketLoss);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetPacketEmulationEnabled(const UObject* inWCO, bool inEnabled);
     
     UFUNCTION(BlueprintCallable)
@@ -730,7 +730,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsToggledOn_AIBarksDebug() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_DebugSubsystem* Instance(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

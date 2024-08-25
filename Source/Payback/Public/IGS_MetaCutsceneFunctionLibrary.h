@@ -28,10 +28,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static UDataTable* GetCutsceneDatabase();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<ULevelStreaming*> GetAllStreamedLevel(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EditorCutsceneInfo GetAllDialoguesForCutscene(UObject* inWCO, UIGS_MetaCutsceneDataAsset* inCutsceneData, FIGS_MetaCutsceneCharacters inCharacterParameters);
     
 };

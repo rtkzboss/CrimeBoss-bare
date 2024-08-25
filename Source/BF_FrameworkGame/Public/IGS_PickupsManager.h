@@ -45,7 +45,7 @@ protected:
 public:
     UIGS_PickupsManager(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PickupsManager* GetPickupsManager(UObject* inWCO);
     
 };

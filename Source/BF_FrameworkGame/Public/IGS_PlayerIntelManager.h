@@ -62,7 +62,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnCharacterKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PlayerIntelManager* GetPlayerIntelManager(UObject* inWCO);
     
 };

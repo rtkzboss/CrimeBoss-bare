@@ -35,21 +35,21 @@ public:
     UIGS_GameInstanceFramework();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void StartMissionInternal(const UObject* inWCO, TSubclassOf<UIGS_BaseMissionObject> inMissionID);
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void StartMission(const UObject* inWCO, TSubclassOf<UIGS_BaseMissionObject> inMissionID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void ServerTravel(const UObject* inWCO, const FString& inLevelName, bool inAbsolute);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void QuitToMeta(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void QuitToLobby(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -80,21 +80,21 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsMissionTagTurfWar(FGameplayTag inMissionTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsMissionEndIgnored(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void IgnoreMissionEnd(const UObject* inWCO, bool inIgnoreMissionEnd);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EIGS_PlatformServerConnectionStatus GetPlatformServerConnectionStatus() const;
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void FinishMissionInternal(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void FinishMission(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
 protected:
@@ -102,7 +102,7 @@ protected:
     void CreateLoadingFaderInternal();
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void CreateLoadingFader(const UObject* inWCO);
     
 };

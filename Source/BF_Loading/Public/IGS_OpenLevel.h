@@ -22,7 +22,7 @@ public:
     
     UIGS_OpenLevel();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_OpenLevel* OpenLevel(UObject* inWCO, FName inLevelName, bool inAbsolute, const FString& inOptions);
     
 protected:

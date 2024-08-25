@@ -18,7 +18,7 @@ private:
 public:
     UMETA_MoneyMaking();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetDataFromSave(const UObject* inWCO, const FMETA_MoneyMakingMissionSave& inMoneyMakingMissionSave);
     
     UFUNCTION(BlueprintCallable)

@@ -18,7 +18,7 @@ public:
     
     UIGS_SetFinalDialogue();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_SetFinalDialogue* SetFinalDialogue(UObject* inWCO, FText DialogueID, AActor* Character);
     
 

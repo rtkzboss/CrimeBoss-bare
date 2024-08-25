@@ -8,7 +8,7 @@ AIGS_SquadBase::AIGS_SquadBase(const FObjectInitializer& ObjectInitializer) : Su
     (*this).BehaviorTreeComponent = CreateDefaultSubobject<UBehaviorTreeComponent>(TEXT("BehaviorTreeComponent"));
     (*this).BlackboardComponent = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BlackboardComponent"));
     (*this).TeamSide = EIGS_TeamSideEnum::TS_Unknown;
-    (*this).DebugColor.G = 255;
+    (*this).DebugColor.B = 255;
     (*this).DebugColor.R = 213;
     (*this).DebugColor.A = 255;
 }

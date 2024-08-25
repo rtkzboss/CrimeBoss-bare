@@ -36,13 +36,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static void IsValidClass(UClass* inClass, EValidNotValidExecPin& outBranches);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void IsServerOrStandalone(UObject* inWCO, EBoolExecPin& outBranches);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsLocallyControlledPlayerPawn(const APawn* inPawn);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void IsinEditor(UObject* inWCO, EBoolExecPin& outBranches);
     
     UFUNCTION(BlueprintCallable)
@@ -54,10 +54,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetUniqueNetID(APlayerController* PlayerController, FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static APlayerController* GetLocalPlayerControllerForWorld(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static APlayerController* GetLocalPlayerController(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

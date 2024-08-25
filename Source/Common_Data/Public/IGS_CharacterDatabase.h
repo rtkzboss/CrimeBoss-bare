@@ -23,34 +23,34 @@ public:
     UFUNCTION(BlueprintCallable)
     void ModAppendDataTable(UDataTable* inNewTable);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static int32 GetNextMutableIndex(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_MutableProfileData GetMutableVariationByIndex(UObject* inWCO, TSoftObjectPtr<UCustomizableObjectPopulation> inCustomizableInstance, int32 inIndex);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_MutableProfile GetMutableProfile(UObject* inWCO, TSoftObjectPtr<UCustomizableObjectPopulation> inCustomizableInstance);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIndex(EIGS_CharacterID inID) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CharacterTableRow GetDataCharacterByTagID(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CharacterTableRow GetDataCharacter(UObject* inWCO, EIGS_CharacterID inID, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FIGS_CharacterTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSoftClassPtr<APaperDollAbstract> GetCharacterPaperDoll(UObject* inWCO, EIGS_CharacterID inID, int32 inGenericID, bool inIsMaxLeveled, FGameplayTag inCharacterSkinID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static int32 GetCharacterGenericIDFromEntitlements(UObject* inWCO, EIGS_CharacterID inID, int32 inOriginalGenericID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_CharacterDatabase* GetCharacterDatabaseInstance(UObject* inWCO);
     
 };

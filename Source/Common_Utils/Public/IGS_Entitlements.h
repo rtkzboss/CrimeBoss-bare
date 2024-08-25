@@ -25,7 +25,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void Refresh();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool OpenStore(const UObject* inWCO, FGameplayTag inEntitlementTag);
     
     UFUNCTION(BlueprintCallable)
@@ -37,7 +37,7 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FGameplayTag> GetOwnedEntitlements();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetEntitlementTitle(UObject* inWCO, const FGameplayTag inEntitlement, FText& OutText);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

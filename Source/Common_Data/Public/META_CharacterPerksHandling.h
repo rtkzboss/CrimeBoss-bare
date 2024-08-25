@@ -31,7 +31,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static float GetPriceCoefficientOfHealingAction(UMETA_Character* inCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetPerkStats(const UObject* inWCO, const FGameplayTag inPerkID, bool& outSuccess, TMap<FGameplayAttribute, float>& outStats);
     
     UFUNCTION(BlueprintCallable)
@@ -73,7 +73,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static float GetHealingMultiplier(UMETA_Character* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static FText GetFormattedPerkDescription(const UObject* inWCO, const FGameplayTag inPerkID, const bool inEnableRichText, const FString& inOverrideStyle);
     
     UFUNCTION(BlueprintCallable)
@@ -82,7 +82,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static int32 GetConvertsAmountFromDeathToRestingAfterFps(UMETA_Character* inCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetCombinedPerkStats(const UObject* inWCO, const UMETA_PerkStatsData* inPerkStatsData, const FGameplayTag inPerkID, bool& outSuccess, TMap<FMETA_PerkStatGroup, int32>& outStats);
     
     UFUNCTION(BlueprintCallable)

@@ -20,7 +20,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FIGS_ClassTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_ClassTableRow GetClassData(const UObject* inWCO, const TSubclassOf<UIGS_GameplayEffect_Class>& inClass, bool& outSucceeded);
     
 };

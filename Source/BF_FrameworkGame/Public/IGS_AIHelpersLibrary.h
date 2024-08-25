@@ -54,7 +54,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetFocusActorHelper(AIGS_GameCharacterFramework* inCharacter, AActor* inActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void MarkPlayerNearVan(UObject* inWCO, AIGS_GameCharacterFramework* inPlayer, bool inIsNear);
     
     UFUNCTION(BlueprintCallable)
@@ -84,10 +84,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool IsLootCarryablePickupValidFor(const AIGS_CarryableItemPickup* inCarryablePickup, const AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsLastPlayerAlive(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsLastHeisterAlive(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -96,16 +96,16 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool IsCarryablePickupValidFor(const AIGS_CarryableItemPickup* inCarryablePickup, const AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsBossCharacterDowned(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
     static bool IsArmed(const AActor* inCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsAnyPlayerWithinDistace(const UObject* inWCO, FVector InPosition, float inDistance);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsAnyHeisterDowned(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -126,13 +126,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<AActor*> GetPlayerDetectingCharacters(AIGS_GameCharacterFramework* inPlayer);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_GameCharacterFramework* GetNearestCharacterOfTeamSide(const UObject* inWCO, EIGS_TeamSideEnum inTeamSide, const FVector& InLocation);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_GameCharacterFramework* GetNearestBot(const UObject* inWCO, const FVector& InLocation);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_GameCharacterFramework* GetLocalPlayerCharacter(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -141,31 +141,31 @@ public:
     UFUNCTION(BlueprintCallable)
     static FGenericTeamId GetGenericTeamId(const AActor* inActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetFriendsOfSide(const UObject* inWCO, EIGS_TeamSideEnum inTeamSide, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetEnemiesOfSideInRange(const UObject* inWCO, EIGS_TeamSideEnum inTeamSide, const FVector& InLocation, float InRange, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetEnemiesOfSide(const UObject* inWCO, EIGS_TeamSideEnum inTeamSide, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
     UFUNCTION(BlueprintCallable)
     static float GetDestinationDistanceBetweenCharacters(AIGS_GameCharacterFramework* inQuerrier, FVector inPoint1, FVector inPoint2);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAlivePlayersWithDownedState(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAlivePlayers(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAliveHeisters(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAliveBots(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetCharactersOfSide(const UObject* inWCO, EIGS_TeamSideEnum inTeamSide, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
     UFUNCTION(BlueprintCallable)
@@ -177,25 +177,25 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static void GetAllPlayers(const UObject* inWorldContextObject, TArray<AIGS_GameCharacterFramework*>& outArray);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetAllPlayerCharacters(const UObject* inWCO, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetAllHeisterCharacters(const UObject* inWCO, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<AIGS_GameCharacterFramework*> GetAllCharacterThatCanBeShoutDown(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetAllCharactersInRange(const UObject* inWCO, const FVector& InLocation, float InRange, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetAllBotsInRange(const UObject* inWCO, const FVector& InLocation, float InRange, TArray<AIGS_GameCharacterFramework*>& outBots);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetAllBots(const UObject* inWCO, TArray<AIGS_GameCharacterFramework*>& outBots);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetAllAliveHeisterCharacters(const UObject* inWCO, TArray<AIGS_GameCharacterFramework*>& outCharacters);
     
     UFUNCTION(BlueprintCallable)
@@ -213,7 +213,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void CalculateAreaOfOperation(AIGS_RoomBase* fromRoom, int32 IterationCount, TArray<AIGS_RoomBase*>& outArea);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static bool AreAllHeistersDead(UObject* inWCO);
     
 };

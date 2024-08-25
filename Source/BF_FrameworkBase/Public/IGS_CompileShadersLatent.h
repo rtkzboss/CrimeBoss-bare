@@ -28,7 +28,7 @@ private:
     void ExecFinish();
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_CompileShadersLatent* CompileShadersLatent(UObject* inWCO, float inUpdateFrequence);
     
     UFUNCTION(BlueprintCallable)

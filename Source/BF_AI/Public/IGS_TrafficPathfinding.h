@@ -41,22 +41,22 @@ protected:
     void OnPopulationFinished();
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetClosestDestinationPointOrArea(const UObject* inWCO, FVector InPosition, EIGS_VehicleSplineGroup inVehicleGroup, bool inStartup, AActor*& outDestination);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetClosestDestinationPoint(const UObject* inWCO, FVector InPosition, EIGS_VehicleSplineGroup inVehicleGroup, bool inStartup, AIGS_VehicleDestinationPoint*& outDestinationPoint);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetClosestDestinationArea(const UObject* inWCO, FVector InPosition, EIGS_VehicleSplineGroup inVehicleGroup, bool inStartup, AIGS_VehicleDestinationArea*& outDestinationArea);
     
     UFUNCTION(BlueprintCallable)
     static void ForceSetVehicleGroup(UObject* inDestination, int32 InValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<AIGS_VehicleBase*> CallCarsWithPassengersToPosition(const UObject* inWCO, FIGS_NoSpawnPointDefinition inCustomPassengers, FVector InPosition, EIGS_VehicleSpawnGroup inVehicleGroup, int32 inAmount, float MaxDistance);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<AIGS_VehicleBase*> CallCarsToPosition(const UObject* inWCO, FVector InPosition, EIGS_VehicleSpawnGroup inVehicleGroup, int32 inAmount, int32 inMinPassengers, int32 inMaxPassengers);
     
 };

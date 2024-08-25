@@ -24,7 +24,7 @@ protected:
 public:
     UIGS_SquadManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_SquadManager* Instance(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

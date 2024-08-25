@@ -15,13 +15,13 @@ class BF_GUI_API UIGS_WorldWidgetDatabase : public UGameInstanceSubsystem {
 public:
     UIGS_WorldWidgetDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSubclassOf<UUserWidget> GetWorldWidgetIcon(UObject* inWCO, EIGS_WorldWidgetType inWorldWidgetType);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WorldWidgetData GetWidgetIconData(UObject* inWCO, EIGS_WorldWidgetType inWorldWidgetType);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetProgressVisibilityForWidgetType(UObject* inWCO, EIGS_WorldWidgetType inWorldWidgetType);
     
     UFUNCTION(BlueprintCallable)

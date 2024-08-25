@@ -22,16 +22,16 @@ class BF_IMPACTS_API UIGS_ImpactFunctionLibrary : public UBlueprintFunctionLibra
 public:
     UIGS_ImpactFunctionLibrary();
 
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateImpactDecal(const UObject* inWCO, FHitResult inHitResult, TEnumAsByte<EPhysicalSurface> inSurfaceType, TSubclassOf<UIGS_ImpactTypeObject> inImpactID, FGameplayTag inGameplayTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateImpact(const UObject* inWCO, EIGS_ImpactTable inImpactTable, TEnumAsByte<EPhysicalSurface> inPhysicalSurface, EIGS_ImpactType inImpactType, const FIGS_ImpactParameters& inParameters);
     
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateHitImpact(const UObject* inWCO, const AActor* InstigatorActor, const UPrimitiveComponent* InstigatorComponent, const UPrimitiveComponent* TargetComponent, const FHitResult& Hit, const FIGS_ImpactHitParameter& Param);
     
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateAllImpacts(const UObject* inWCO, EIGS_ImpactTable inImpactTable, TEnumAsByte<EPhysicalSurface> inPhysicalSurface, const FIGS_ImpactParameters& inParameters);
     
 };

@@ -19,7 +19,7 @@ class COMMON_DATA_API UChainMissionsDatabase : public UGameInstanceSubsystem {
 public:
     UChainMissionsDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<TSubclassOf<UMETA_MissionID>> GetMoneyMakingChainMissionIDsWithLootTypeByUnlockRespect(const UObject* inWCO, FGameplayTag inLootType, EMETA_RespectLvl inUnlockRespect);
     
     UFUNCTION(BlueprintCallable)
@@ -28,10 +28,10 @@ public:
     UFUNCTION(BlueprintCallable)
     FMETA_FPSMissionInfo GetFPSMissionInfoBP(TSubclassOf<UMETA_MissionID> inMissionID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UMETA_BaseMission* GetChainMissionObject(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inMissionID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_MissionDatabase GetChainMissionDataBP(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inClass, bool& outSucceeded);
     
 };

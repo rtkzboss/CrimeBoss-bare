@@ -35,7 +35,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsActive() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static AIGS_GeneralListener* GetGeneralListener(const UObject* inWCO);
     
 

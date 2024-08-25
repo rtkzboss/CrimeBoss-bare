@@ -13,7 +13,7 @@ class BF_VOICEOVER_API UIGS_PlayScriptedDialogue : public UIGS_PlayDialogueNodeB
 public:
     UIGS_PlayScriptedDialogue();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PlayScriptedDialogue* PlayScriptedDialogue(UObject* inWCO, FText DialogueID, UPARAM(Ref) TArray<AActor*>& inCharacters);
     
 };

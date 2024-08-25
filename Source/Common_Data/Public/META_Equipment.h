@@ -37,10 +37,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetPrice(int32 inNewPrice);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool SetInfoByTag(UObject* inWCO, FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool SetInfo(UObject* inWCO, const TSubclassOf<UIGS_EquipmentInventoryObject>& inEquipmentId);
     
     UFUNCTION(BlueprintCallable)

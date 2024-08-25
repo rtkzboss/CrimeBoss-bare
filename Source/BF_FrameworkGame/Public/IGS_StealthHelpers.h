@@ -16,10 +16,10 @@ class BF_FRAMEWORKGAME_API UIGS_StealthHelpers : public UBlueprintFunctionLibrar
 public:
     UIGS_StealthHelpers();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void WholeMissionIsTresspassing(UObject* inWCO, bool securityArea);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void TresspassingAllowed(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -82,19 +82,19 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ReportBash(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ReportAlarmSirens(UObject* inWCO, FVector InLocation, float inLoudness);
     
     UFUNCTION(BlueprintCallable)
     static bool IsTrespassing(AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void CreateLockpickedEvents(UObject* inWCO, FVector InLocation, AActor* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void CreateBrokenEventsTwoSided(UObject* inWCO, FVector InLocation, FVector inForward, AActor* inInstigator, bool inIsImportant);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void CreateBrokenEvents(UObject* inWCO, FVector InLocation, AActor* inInstigator, bool inIsImportant, float inLoudness);
     
 };

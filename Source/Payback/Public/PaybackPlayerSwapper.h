@@ -25,7 +25,7 @@ public:
     
     UPaybackPlayerSwapper(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     int32 GetNextViableBotNumber(UObject* inWCO, int32 inCurrentHeisterNumber, bool& outSuccess);
     
     UFUNCTION(BlueprintCallable)

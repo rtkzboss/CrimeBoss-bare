@@ -104,7 +104,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static int32 PostAkEventExternalSource(UAkGameObject* AkGameObject, const UAkAudioEvent* Event, UAkExternalMediaAsset* Media, int32 CookieCount);
     
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=WCO))
     static int32 PostAkEventAtLocation(UObject* WCO, UAkAudioEvent* Event, FVector Location, FRotator Rotation);
     
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)

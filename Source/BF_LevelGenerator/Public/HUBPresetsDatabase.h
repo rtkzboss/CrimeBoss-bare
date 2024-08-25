@@ -13,10 +13,10 @@ class BF_LEVELGENERATOR_API UHUBPresetsDatabase : public UGameInstanceSubsystem 
 public:
     UHUBPresetsDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_HubGeneratorPresetRow GetHUBPresetsDataBP(const UObject* inWCO, FGameplayTag inGameplayTag, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_HubGeneratorPresetRow> GetAllHUBPresetsDataBP(const UObject* inWCO);
     
 };

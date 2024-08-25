@@ -46,13 +46,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<UMETA_Equipment*> SortEquipmentStash(TArray<UMETA_Equipment*> inEquipmentArray);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_HeisterLoadout MakeMetaHeisterLoadoutFromSave(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, FMETA_WeaponSaveData inPrimaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, FMETA_WeaponSaveData inSecondaryWeaponSaveData, FMETA_EquipmentSaveData inEquipmentSaveData);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_HeisterLoadout MakeMetaHeisterLoadoutChains(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, FMETA_WeaponSaveData inPrimaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, FMETA_WeaponSaveData inSecondaryWeaponSaveData, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inPrimaryWeapons, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inSecondaryWeapons, FMETA_EquipmentSaveData inEquipmentSaveData, const TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>& inChainEquipments);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_HeisterLoadout MakeMetaHeisterLoadout(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, const TSubclassOf<UIGS_EquipmentInventoryObject>& inEquipment, const TArray<FGameplayTag>& inUnlockedWeaponSkins);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -100,10 +100,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsExplosive(FIGS_WieldableBaseData inWieldableData);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WieldableBaseData GetWieldableDataForClassBP(const UObject* inWCO, const TSubclassOf<UIGS_WieldableInventoryObjectBase> inItemClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WeaponDefinitionTableRow GetWeaponDefinitionDataBP(const UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject> inWeaponDefinitionID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -112,13 +112,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<UMETA_Weapon*> GetUnequippedWeapons(const FMETA_WeaponAmountInfo& inWeaponArray);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSubclassOf<UIGS_ThrowableInventoryObject> GetThrowableForEquipment(const UObject* inWCO, TSubclassOf<UIGS_EquipmentInventoryObject> inEquipment);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSoftClassPtr<UIGS_ThrowableInventoryObject> GetSoftThrowableForEquipment(const UObject* inWCO, TSoftClassPtr<UIGS_EquipmentInventoryObject> inEquipment);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSoftClassPtr<UIGS_EquipmentInventoryObject> GetSoftEquipmentForThrowable(const UObject* inWCO, TSoftClassPtr<UIGS_ThrowableInventoryObject> inThrowable);
     
     UFUNCTION(BlueprintCallable)
@@ -130,7 +130,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FIGS_ModTableRow GetModDataFromObject(UIGS_ModInventoryObject* inModObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     static FIGS_LootItemsData GetLootItemData(UObject* inWCO, TSubclassOf<UIGS_LootItemInventoryObject> inClass, bool& outSucceeded);
     
     UFUNCTION(BlueprintCallable)
@@ -142,19 +142,19 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetItemNameFromID(FGameplayTag inTagID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSubclassOf<UIGS_EquipmentInventoryObject> GetEquipmentForThrowable(const UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowable);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FGameplayTag GetEntitlementTagFromContainer(const FGameplayTagContainer& inTagContainer);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CommonItemData GetCommonDataForClassBP(const UObject* inWCO, const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass);
     
     UFUNCTION(BlueprintCallable)
     static FIGS_CarryableTableRow GetCarryableDataFromObject(UIGS_CarryableInventoryObject* inCarryableObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool DoesItemClassHaveProperty(const UObject* inWCO, const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass, EIGS_ItemPropertyFlags inItemFlag);
     
     UFUNCTION(BlueprintCallable)

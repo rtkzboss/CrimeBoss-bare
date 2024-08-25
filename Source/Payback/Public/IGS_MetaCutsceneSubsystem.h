@@ -225,7 +225,7 @@ public:
     UFUNCTION(BlueprintCallable)
     EIGS_MetaDialogueCharacterSlot GetCutsceneSlot(EIGS_MetaDialogueCharacterSlot inDialogueSlot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSoftObjectPtr<UIGS_MetaCutsceneDataAsset> GetCutsceneDataAsset(UObject* inWCO, FText inCutsceneID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -240,7 +240,7 @@ public:
     UFUNCTION(BlueprintCallable)
     FIGS_MetaCutsceneCharacterPoseData GetCharacterPose(EIGS_MetaDialogueCharacter inCharacter, FGameplayTag inCharacterPoseSet, EIGS_MetaCutsceneCharacterPose InPose);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_MetaCutsceneDataRow> GetAllCutscenesData(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

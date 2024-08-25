@@ -25,7 +25,7 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<TSoftClassPtr<UMETA_BaseActionCard>> GetDatabaseIDs();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_ActionCardTableRow GetDataActionCard(UObject* inWCO, TSoftClassPtr<UMETA_BaseActionCard> inClass, bool& outSucceeded);
     
 };

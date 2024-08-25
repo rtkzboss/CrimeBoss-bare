@@ -22,7 +22,7 @@ private:
 public:
     UMETA_PlotlineAsset();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetInfo(UObject* inWCO, const FGameplayTag& inPlotlineAssetId);
     
     UFUNCTION(BlueprintCallable)

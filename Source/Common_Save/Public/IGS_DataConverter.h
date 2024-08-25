@@ -16,13 +16,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static FMETA_MissionsSave ConvertQuickplayMissionsToSave(TArray<UMETA_BaseMission*> inMissions);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<UMETA_BaseMission*> ConvertQuickplayMissionsFromSave(const UObject* inWCO, UPARAM(Ref) FMETA_MissionsSave& inMissions);
     
     UFUNCTION(BlueprintCallable)
     static FMETA_MissionsSave ConvertChainMissionsToSave(TArray<UMETA_BaseMission*> inMissions);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<UMETA_BaseMission*> ConvertChainMissionsFromSave(const UObject* inWCO, UPARAM(Ref) FMETA_MissionsSave& inMissions);
     
 };

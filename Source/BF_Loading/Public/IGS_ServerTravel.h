@@ -22,7 +22,7 @@ public:
     
     UIGS_ServerTravel();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_ServerTravel* ServerTravel(UObject* inWCO, FName inLevelName, const FString& inOptions);
     
 protected:

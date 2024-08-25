@@ -23,22 +23,22 @@ class BF_INPUT_API UIGS_InputHelpers : public UBlueprintFunctionLibrary {
 public:
     UIGS_InputHelpers();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetUserFriendlyActionNames(UObject* inWCO, FName inActionName, TArray<FText>& outTexts);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetInputActionString(UObject* inWCO, EIGS_InputAction InAction, FName& OutText);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<EIGS_InputAction> GetInputActionsFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FText> GetInputActionNamesFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static EIGS_InputAction GetInputActionFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_InputActionEntry GetInputActionEntry(UObject* inWCO, EIGS_InputAction InAction);
     
     UFUNCTION(BlueprintCallable)

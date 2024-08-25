@@ -19,28 +19,28 @@ class BF_FRAMEWORKGAME_API UIGS_ThrowableHelpers : public UBlueprintFunctionLibr
 public:
     UIGS_ThrowableHelpers();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableObjectCustom(UObject* inWCO, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inVelocity, float inTimeHeldInHand);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableObjectAt(UObject* inWCO, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inTargetPoint, float inTimeHeldInHand);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableObject(UObject* inWCO, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, bool inThrowLow, float inTimeHeldInHand);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableClassCustom(UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inVelocity, float inTimeHeldInHand);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableClassAt(UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inTargetPoint, float inTimeHeldInHand);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableClass(UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, bool inThrowLow, float inTimeHeldInHand);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* SpawnThrowableObject(UObject* inWCO, AActor* inOwner, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, float inTimeHeldInHand, bool inStartWithPhysics);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* SpawnThrowableClass(UObject* inWCO, AActor* inOwner, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, float inTimeHeldInHand, bool inStartWithPhysics);
     
     UFUNCTION(BlueprintCallable)

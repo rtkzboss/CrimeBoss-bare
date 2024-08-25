@@ -29,7 +29,7 @@ public:
     
     UIGS_SubtitleManager(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ShowDialogueTestSubtitle(const UObject* inWCO, const FString& inDialogueText);
     
     UFUNCTION(BlueprintCallable)

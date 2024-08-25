@@ -165,7 +165,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMissionCutPercentWithModifiers();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetMaxLevel(UObject* inWCO) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -204,7 +204,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCurrentAmountOfJobsWhichCanBeCompletedToday() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     FCommonHeisterData GetCommonHeisterData(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

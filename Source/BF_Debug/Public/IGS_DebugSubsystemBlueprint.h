@@ -77,7 +77,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSquandToAI(AActor* inAI, AActor* inSquad);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, meta=(WorldContext=inWCO))
     AActor* CreateSquad(UObject* inWCO, EIGS_TeamSideEnum inTeamSide);
     
 };

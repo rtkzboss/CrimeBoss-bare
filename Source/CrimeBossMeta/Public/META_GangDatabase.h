@@ -13,7 +13,7 @@ class CRIMEBOSSMETA_API UMETA_GangDatabase : public UGameInstanceSubsystem {
 public:
     UMETA_GangDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_GangTableRow GetGangData(UObject* inWCO, const EMETA_Gang inGang, bool& outSucceeded);
     
 };

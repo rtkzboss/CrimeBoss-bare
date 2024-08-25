@@ -59,16 +59,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetWeaponSkin(FGameplayTag inSkinTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool SetRandomWeaponSkin(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs);
     
     UFUNCTION(BlueprintCallable)
     void SetPrice(int32 inNewPrice);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool SetInfoByTag(UObject* inWCO, FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool SetInfo(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inWeaponId);
     
     UFUNCTION(BlueprintCallable)
@@ -98,7 +98,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EIGS_WeaponSubtype GetWeaponSubtype() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     TSoftObjectPtr<UIGS_WeaponSkinData> GetWeaponSkinAsset(UObject* inWCO) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -149,7 +149,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetDaysInShop() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     FGameplayTagContainer GetCompatibleWeaponSkins(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -164,7 +164,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetAdditionalPercentageOfWeaponPrice() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void FillTargetWeaponsForUpgrade(UObject* inWCO, bool bForce);
     
     UFUNCTION(BlueprintCallable)

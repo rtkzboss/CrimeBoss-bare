@@ -17,13 +17,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static FPredictProjectilePathPointData PredictTargetLocation(const AActor* Target, float Radius, float After);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static float GetGravityZ(const UObject* WCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static FVector GetBallisticVelocity(const UObject* WCO, const FVector& PositionStart, const FVector& PositionEnd, float Speed);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static FVector GetBallisticPositionInTime(const UObject* WCO, const FVector& PositionStart, const FVector& PositionEnd, float Speed, float NormalizedPosition);
     
     UFUNCTION(BlueprintCallable)

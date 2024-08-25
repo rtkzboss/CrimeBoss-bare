@@ -31,7 +31,7 @@ protected:
 public:
     AIGS_GlobalGASActor(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_GlobalGASActor* GetGlobalGASActor(UObject* inWCO);
     
 

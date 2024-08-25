@@ -43,7 +43,7 @@ public:
     UFUNCTION(BlueprintCallable)
     EMETA_Gang GetEnemyGang();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetDefenseLosePenaltyCost(const UObject* inWCO);
     
 };

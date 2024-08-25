@@ -18,13 +18,13 @@ class BF_VOICEOVER_API UIGS_DialogueFunctionLibrary : public UBlueprintFunctionL
 public:
     UIGS_DialogueFunctionLibrary();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void StopHeisterDialogue(UObject* inWCO, FText inDialogueID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void StopDialogueOnCharacter(UObject* inWCO, FText inDialogueID, AActor* inCharacter);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void StopAllDialogues(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

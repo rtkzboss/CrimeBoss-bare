@@ -279,7 +279,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMinAmountOfSoldiersForAttack() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void GetIncome(const UObject* inWCO, int32& OutValue, FGameplayTag& outLootItem);
     
     UFUNCTION(BlueprintCallable)
@@ -312,10 +312,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EMETA_Gang GetConquestState() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<FMETA_TileRewardData> GetCalculatedCaptureRewards(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<FMETA_BossEliminationRewardData> GetCalculatedBossEliminationRewards(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

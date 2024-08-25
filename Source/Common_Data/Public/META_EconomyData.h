@@ -219,7 +219,7 @@ protected:
 public:
     UMETA_EconomyData();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void RandomizePerksByIDAndLevel(const UObject* inWCO, EIGS_CharacterID inID, int32 inHeisterLevel, const TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>>& inForbiddenPerks, const TArray<FMETA_PerkData>& inCurrentPerks, TArray<FMETA_PerkData>& outRandomizedPerks, bool bIsPromotion);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -264,7 +264,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetWarehouseAttackCooldown() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     bool GetUniqueCharacterConfiguration(const UObject* inWCO, FGameplayTag inCharacter, FMETA_UniqueCharacterConfiguration& outConfig) const;
     
     UFUNCTION(BlueprintCallable)
@@ -297,7 +297,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRewardValueReductionMultiplierForRepeatedCapture() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
     EMETA_ItemQuality GetRandomizedQualityAccordingToPlayerRespect(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -384,7 +384,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void GetGraphEconomyVariableByTag(FGameplayTag inVariableTag, FMETA_EconomyGraphVariableModeData& outData, bool& outSuccess);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<FMETA_CharacterInfo> GetGenericHeistersPoolForBlackmarketWithOneFree(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -438,7 +438,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FMETA_BossCharacterConfiguration GetBossCharacterConfiguration() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     FMETA_BMEventWeaponData GetBmEventWeaponInfoByBossRespect(UObject* inWCO, EMETA_RespectLvl inBossRespectLvl, bool& outSuccess);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -453,7 +453,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetBMEventLootCooldown() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     FMETA_BMEventEquipmentData GetBmEventEquipmentInfoByBossRespect(UObject* inWCO, EMETA_RespectLvl inBossRespectLvl, bool& outSuccess);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -486,7 +486,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FMETA_MissionAdditionalMonetaryValue GetAdditionalWealthOfMission(const TSubclassOf<UMETA_MissionID>& inMission) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     FMETA_CharacterInfo GenerateGenericHeisterByPlayerRespectWithHireValue(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants, bool inIsFree, bool& outSuccess);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -495,10 +495,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void CalculateArmyUpkeepCost(EMETA_ArmyTier inTier, int32 inSoldiersAmount, int32& outArmyUpkeepCost) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void CalculateArmyCostForDefense(const UObject* inWCO, EMETA_ArmyTier inTier, int32 inSoldiersAmount, int32& outArmyCost);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void CalculateArmyCostForAttack(const UObject* inWCO, EMETA_ArmyTier inTier, int32 inSoldiersAmount, int32& outArmyCost);
     
 };

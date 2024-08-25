@@ -17,7 +17,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetRenderInDepthPass(UPrimitiveComponent* InComponent, bool InValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsEOSOnlineSubsystemActive(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

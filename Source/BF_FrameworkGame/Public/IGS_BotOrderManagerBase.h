@@ -39,10 +39,10 @@ public:
     UFUNCTION(BlueprintCallable)
     bool DoAction(UPARAM(Ref) FIGS_BotOrderAction& InAction);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_BotOrderAction> CreateBotOrderActions(const UObject* inWCO, const EIGS_BotCommandDefinition inType, AIGS_GameCharacterFramework* inInstigator, const AIGS_GameCharacterFramework* inBot, UObject* inObject, const FVector InLocation);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_BotOrderAction CreateBotOrderAction(const UObject* inWCO, const EIGS_BotCommandDefinition inType, AIGS_GameCharacterFramework* inInstigator, const AIGS_GameCharacterFramework* inBot, UObject* inObject, const FVector InLocation);
     
 };

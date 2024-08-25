@@ -34,22 +34,22 @@ protected:
 public:
     UIGS_LoadingScreenManager();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenSetupType(UObject* inWCO, FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenSecondaryText(UObject* inWCO, FText InText);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenMainText(UObject* inWCO, FText InText);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenBackgroundTexture(UObject* inWCO, TSoftObjectPtr<UTexture> inBackgroundTexture);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetDebugState(UObject* inWCO, bool inState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetAdditionalLoadingScreenTips(UObject* inWCO, FGameplayTagContainer inTagContainer);
     
 protected:
@@ -57,10 +57,10 @@ protected:
     void OnInputDeviceChanged(EIGS_InputDevice inInputDevice);
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsLoadingScreenSetupTypeSet(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetDebugState(UObject* inWCO, bool inState);
     
 };

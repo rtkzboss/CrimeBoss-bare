@@ -14,10 +14,10 @@ class BF_FRAMEWORKGAME_API UIGS_RichPresenceLocalizationHelper : public UGameIns
 public:
     UIGS_RichPresenceLocalizationHelper();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static FText GetMissionName(const UObject* WCO, FGameplayTag MissionTag, bool& Succeeded);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static FText GetChainName(const UObject* WCO, TSubclassOf<UIGS_ChainContractID> ChainID, bool& Succeeded);
     
 };

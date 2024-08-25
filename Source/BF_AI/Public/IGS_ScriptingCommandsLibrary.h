@@ -58,7 +58,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ScriptingCommandRevive(AIGS_GameCharacterFramework* Instigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ScriptingCommandPauseAI(UObject* inWCO, AIGS_GameCharacterFramework* inInstigator, const bool inPause);
     
     UFUNCTION(BlueprintCallable)
@@ -70,13 +70,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ScriptingCommandIsValidTarget(AIGS_GameCharacterFramework* Instigator, bool InValue, UObject* inLocker);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ScriptingCommandHeistersStopDefend(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ScriptingCommandHeistersReviveEnabled(const UObject* inWCO, bool Value);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ScriptingCommandHeistersBackupReviveEnabled(const UObject* inWCO, bool Value);
     
     UFUNCTION(BlueprintCallable)
@@ -100,7 +100,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ScriptingCommandEnableFire(AIGS_GameCharacterFramework* Instigator, bool Enabled);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ScriptingCommandEnableBotSwitch(UObject* inWCO, AIGS_GameCharacterFramework* inInstigator, const bool inEnabled);
     
     UFUNCTION(BlueprintCallable)

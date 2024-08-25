@@ -13,7 +13,7 @@ class BF_AUDIO_API UMETA_MusicPacksDatabase : public UGameInstanceSubsystem {
 public:
     UMETA_MusicPacksDatabase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_MusicPacksTableRow GetMusicData(UObject* inWCO, const FGameplayTag inMusicID, bool& outSucceeded);
     
 };

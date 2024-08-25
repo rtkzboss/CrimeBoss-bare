@@ -2,10 +2,10 @@
 #include "EHoudiniInputObjectType.h"
 
 UHoudiniInputGeometryCollectionComponent::UHoudiniInputGeometryCollectionComponent() {
-    (*this).Guid.A = 1152134713;
-    (*this).Guid.B = 1076721324;
-    (*this).Guid.C = -1133417338;
-    (*this).Guid.D = 696161961;
+    (*this).Guid.A = 854017673;
+    (*this).Guid.B = 1269624127;
+    (*this).Guid.C = 133305532;
+    (*this).Guid.D = -314294903;
 }
 
 
