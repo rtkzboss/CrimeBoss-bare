@@ -2,10 +2,10 @@
 #include "EHoudiniInputObjectType.h"
 
 UHoudiniInputFoliageType_InstancedStaticMesh::UHoudiniInputFoliageType_InstancedStaticMesh() {
-    (*this).Guid.A = 1825867982;
-    (*this).Guid.B = 1123594579;
-    (*this).Guid.C = -1032240487;
-    (*this).Guid.D = -2022761316;
+    (*this).Guid.A = 675383889;
+    (*this).Guid.B = 1267857294;
+    (*this).Guid.C = 1751488640;
+    (*this).Guid.D = 1462940329;
 }
 
 

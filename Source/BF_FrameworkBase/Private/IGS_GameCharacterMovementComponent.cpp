@@ -2,6 +2,7 @@
 #include "ComponentInstanceDataCache.h"
 #include "Engine/EngineTypes.h"
 #include "GameFramework/MovementComponent.h"
+#include "GameplayEffect.h"
 
 UIGS_GameCharacterMovementComponent::UIGS_GameCharacterMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).SlopeAngleMax = 3.000000000e+01f;

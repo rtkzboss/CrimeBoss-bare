@@ -6,6 +6,7 @@
 #include "Engine/EngineTypes.h"
 #include "Engine/EngineTypes.h"
 #include "EIGS_CharacterID.h"
+#include "IGS_ImpactTypeObject.h"
 #include "IGS_DangerAreaComponent.h"
 #include "IGS_IdleAvoidanceComponent.h"
 #include "IGS_ItemDropComponent.h"

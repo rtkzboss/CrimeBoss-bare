@@ -1,4 +1,5 @@
 #include "IGS_TutorialsSettings.h"
+#include "IGS_TutorialScreen.h"
 
 UIGS_TutorialsSettings::UIGS_TutorialsSettings() {
     (*this).TutorialsSystemEnabled = true;

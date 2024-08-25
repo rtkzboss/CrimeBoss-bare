@@ -1,6 +1,7 @@
 #include "IGS_FallDamageComponent.h"
 #include "Curves/CurveFloat.h"
 #include "ComponentInstanceDataCache.h"
+#include "IGS_DamageTypeFallDamage.h"
 
 UIGS_FallDamageComponent::UIGS_FallDamageComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bAddMaxStepHeightToFellHeight = true;
