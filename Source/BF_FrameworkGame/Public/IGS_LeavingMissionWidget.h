@@ -9,7 +9,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_LeavingMissionWidget : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true, BindWidget))
     UTextBlock* Title;
     
     UIGS_LeavingMissionWidget();
