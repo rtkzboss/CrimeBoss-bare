@@ -50,7 +50,7 @@ public:
     void SetActivePlanningBoard(FGameplayTag planningBoardTag, bool callEvent);
     
     UFUNCTION(BlueprintCallable)
-    void SaveData(UIGS_PaybackSaveGameCareer* saveObject);
+    void SaveData(UIGS_PaybackSaveGameCareer* SaveObject);
     
 private:
     UFUNCTION(BlueprintCallable)

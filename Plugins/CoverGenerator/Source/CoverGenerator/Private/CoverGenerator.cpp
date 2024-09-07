@@ -20,6 +20,7 @@ ACoverGenerator::ACoverGenerator(const FObjectInitializer& ObjectInitializer) : 
     (*this).OffsetWhenStandingUp = 3.500000000e+01f;
     (*this).OffsetFrontAim = 2.000000000e+02f;
     (*this).DebugDistance = 2.500000000e+04f;
+    (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
 }
 

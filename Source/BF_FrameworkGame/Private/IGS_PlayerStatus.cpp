@@ -9,6 +9,8 @@ UIGS_PlayerStatus::UIGS_PlayerStatus(const FObjectInitializer& ObjectInitializer
     (*this).bHealthRegenAllowed = true;
     (*this).HealthRegenDelayAttribute = 1.000000000e+00f;
     (*this).HealthRegenMultiplierAttribute = 1.000000000e+00f;
+    (*this).PrimaryComponentTick.bCanEverTick = true;
+    (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
 }
 
 void UIGS_PlayerStatus::SetRegenerationBlocked(bool inIsBlocked) {

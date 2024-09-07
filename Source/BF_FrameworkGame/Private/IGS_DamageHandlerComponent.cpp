@@ -20,6 +20,8 @@ UIGS_DamageHandlerComponent::UIGS_DamageHandlerComponent(const FObjectInitialize
     (*this).FireDamageReceivedMultiplierAttribute = 1.000000000e+00f;
     (*this).MeleeDamageReceivedMultiplierAttribute = 1.000000000e+00f;
     (*this).GlobalEnemyAIDamageReceivedAttribute = 1.000000000e+00f;
+    (*this).PrimaryComponentTick.bCanEverTick = true;
+    (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
 }
 
 void UIGS_DamageHandlerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

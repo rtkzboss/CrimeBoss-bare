@@ -4,8 +4,7 @@
 #include "EIGS_TeamSideEnum.h"
 
 AIGS_SquadEmployee::AIGS_SquadEmployee(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).DebugColor.G = 224;
-    (*this).DebugColor.R = 0;
+    (*this).DebugColor.B = 248;
 }
 
 

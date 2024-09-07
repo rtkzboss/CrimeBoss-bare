@@ -4,7 +4,8 @@
 #include "EIGS_TeamSideEnum.h"
 
 AIGS_SquadHeavies::AIGS_SquadHeavies(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).DebugColor.R = 232;
+    (*this).DebugColor.B = 255;
+    (*this).DebugColor.R = 157;
 }
 
 

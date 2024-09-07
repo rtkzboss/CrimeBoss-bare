@@ -6,7 +6,7 @@ UIGS_HUDKantanDatasourceHolder::UIGS_HUDKantanDatasourceHolder(const FObjectInit
     (*this).PressureGraphDataSource = CreateDefaultSubobject<UKantanSimpleCartesianDatasource>(TEXT("PressureGraphDataSource"));
     (*this).PressureGraphCatId_Value = TEXT("KantanSimpleSeries__0");
     (*this).PressureGraphExpectedId_Value = TEXT("KantanSimpleSeries__1");
-    (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
+    (*this).PrimaryComponentTick.bCanEverTick = true;
 }
 
 

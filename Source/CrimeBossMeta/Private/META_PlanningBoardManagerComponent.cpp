@@ -10,7 +10,7 @@ void UMETA_PlanningBoardManagerComponent::SetPlanningBoardItemStatus(FGameplayTa
 void UMETA_PlanningBoardManagerComponent::SetActivePlanningBoard(FGameplayTag planningBoardTag, bool callEvent) {
 }
 
-void UMETA_PlanningBoardManagerComponent::SaveData(UIGS_PaybackSaveGameCareer* saveObject) {
+void UMETA_PlanningBoardManagerComponent::SaveData(UIGS_PaybackSaveGameCareer* SaveObject) {
 }
 
 void UMETA_PlanningBoardManagerComponent::OnGraphVariableValueChanged(FGameplayTag variableTag, int32 Value) {

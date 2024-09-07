@@ -10,6 +10,8 @@ AIGS_AISpawnPoint::AIGS_AISpawnPoint(const FObjectInitializer& ObjectInitializer
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).SpawnAnimTag, 0)) = TEXT("Anim.Spawn.None");
     (*this).SquadID = -1;
     (*this).CanBeSeen = true;
+    (*this).PrimaryActorTick.bCanEverTick = true;
+    (*this).PrimaryActorTick.bStartWithTickEnabled = false;
 }
 
 void AIGS_AISpawnPoint::SpawnUnitParametrized(EIGS_TeamSideEnum inTeamSide, uint8 inUnitVariation, EIGS_UnitSpecialization inUnitSpecialization) {

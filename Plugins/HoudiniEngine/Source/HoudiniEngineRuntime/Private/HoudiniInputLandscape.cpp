@@ -2,10 +2,10 @@
 #include "EHoudiniInputObjectType.h"
 
 UHoudiniInputLandscape::UHoudiniInputLandscape() {
-    (*this).Guid.A = -934139916;
-    (*this).Guid.B = 1162646989;
-    (*this).Guid.C = -1684748111;
-    (*this).Guid.D = -1866670799;
+    (*this).Guid.A = -107899238;
+    (*this).Guid.B = 1276156685;
+    (*this).Guid.C = 1997198485;
+    (*this).Guid.D = -959778391;
 }
 
 

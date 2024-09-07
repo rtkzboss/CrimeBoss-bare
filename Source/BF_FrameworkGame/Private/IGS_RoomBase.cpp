@@ -6,6 +6,8 @@
 AIGS_RoomBase::AIGS_RoomBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Tag, 0)) = TEXT("Room.Area.Unknown");
     (*this).OwnerTeamSide = EIGS_TeamSideEnum::TS_Unknown;
+    (*this).PrimaryActorTick.bCanEverTick = true;
+    (*this).PrimaryActorTick.bStartWithTickEnabled = false;
     (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
 }
 

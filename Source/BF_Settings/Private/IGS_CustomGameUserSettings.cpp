@@ -17,8 +17,8 @@ UIGS_CustomGameUserSettings::UIGS_CustomGameUserSettings() {
     (*this).InputBindSettings = CreateDefaultSubobject<UIGS_InputBindSettings>(TEXT("InputBindSettings"));
     (*this).ResolutionSizeX = 2560;
     (*this).ResolutionSizeY = 1440;
-    (*this).LastUserConfirmedResolutionSizeX = 2560;
-    (*this).LastUserConfirmedResolutionSizeY = 1440;
+    (*this).LastUserConfirmedResolutionSizeX = 1920;
+    (*this).LastUserConfirmedResolutionSizeY = 1080;
     (*this).LastConfirmedFullscreenMode = 2;
     (*this).Version = 5;
 }
