@@ -12,19 +12,19 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FEndGameCutscenesDefinitionRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText CutsceneID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UBinkMediaPlayer* Movie;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<EMETA_CareerCompletionReason> EndReason;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag AssetTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_Gang Gang;
     
     FEndGameCutscenesDefinitionRow();

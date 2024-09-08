@@ -3,18 +3,18 @@
 #include "IGS_BTTask_FireBase.h"
 #include "IGS_BTTask_FireOffsetToCenter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_FireOffsetToCenter : public UIGS_BTTask_FireBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Distance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float VerticalAngle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float FireTime;
     
 public:

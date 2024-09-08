@@ -6,14 +6,14 @@
 
 class UIGS_ChainContractID;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_RichPresenceChainNameTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSubclassOf<UIGS_ChainContractID> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FText Name;
     
     BF_FRAMEWORKGAME_API FIGS_RichPresenceChainNameTableRow();

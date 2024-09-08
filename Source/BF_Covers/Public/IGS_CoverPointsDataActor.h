@@ -5,11 +5,11 @@
 
 class UIGS_CoverPointsDataAsset;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_COVERS_API AIGS_CoverPointsDataActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UIGS_CoverPointsDataAsset* CoverPointsDataAsset;
     
     AIGS_CoverPointsDataActor(const FObjectInitializer& ObjectInitializer);

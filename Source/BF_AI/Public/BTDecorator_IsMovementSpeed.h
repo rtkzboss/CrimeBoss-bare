@@ -4,11 +4,11 @@
 #include "EIGS_Speed.h"
 #include "BTDecorator_IsMovementSpeed.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_IsMovementSpeed : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_Speed Speed;
     
     UBTDecorator_IsMovementSpeed();

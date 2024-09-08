@@ -6,14 +6,14 @@
 
 class UIGS_ModalScreen;
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(DefaultConfig, Config=Game)
 class CRIMEBOSSMETA_API UIGS_ModalWindowSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_ModalScreen> DefaultBasicModalScreenClass;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_ModalScreen> DefaultAdvancedModalScreenClass;
     
     UIGS_ModalWindowSettings();

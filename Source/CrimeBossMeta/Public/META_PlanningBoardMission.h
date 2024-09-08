@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FMETA_PlanningBoardMission {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UMETA_MissionID> MissionID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Priority;
     
     FMETA_PlanningBoardMission();

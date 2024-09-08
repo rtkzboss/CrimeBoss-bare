@@ -18,90 +18,90 @@ class AController;
 class UDamageType;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_ObjectStatus : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusHealthChangedEventSignature OnHealthChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusMaxHealthChangedEventSignature OnMaxHealthChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusHealthChangedEventSignature OnDeath;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusAccumulatedDamageEventSignature OnAccumulatedDamage;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusAccumulatedDamageEventSignature OnAccumulatedDeath;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusHealthResetEventSignature OnHealthReset;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusHealthResetEventSignature OnResurrection;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusHealthStateChangedEventSignature OnHealthStateChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bCurrentHealthWasReplicated;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Replicated)
     float MaxHealth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Replicated)
     float MaxShield;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_EncryptedF32 CurrentHealth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ReplicatedCurrentHealth, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_ReplicatedCurrentHealth)
     float mR_ReplicatedCurrentHealth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_EncryptedF32 CurrentShield;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float HealthMultiplierAttribute;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsDead, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsDead)
     bool R_IsDead;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     bool Unkillable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     bool ScriptInvulnerable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     bool DifficultyInvulnerable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool HealthDecayDisabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool InstantKillable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_HealthState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_HealthState)
     EIGS_HealthState HealthState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Replicated)
     bool IsInjured;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     float AccumulateDamagePeriod;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool m_OverrideReportingOfDamageDealt;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool m_OverrideReportingOfDamageDealtValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     float mR_BaseMaxHealth;
     
 public:
@@ -119,101 +119,101 @@ public:
     void Reset();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTakePointDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection, const UDamageType* DamageType, AActor* DamageCauser);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTakeAnyDamage(AActor* inDamagedActor, float inDamage, const UDamageType* inDamageType, AController* inInstigatedBy, AActor* inDamageCauser);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ReplicatedCurrentHealth();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsDead();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_HealthState() const;
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable, WithValidation)
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_SetMaxHealth(float inMaxHealth);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable, WithValidation)
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_SetAllData(float inHealthChange, float inMaxHealth, EIGS_HealthState inHealthState, const FIGS_HitInfo& inHitInfo, bool inAllowWhileDead);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable, WithValidation)
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_DoHeal(float inHealthChange, const FIGS_HealInfo& inHealInfo);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable, WithValidation)
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_DoDamage(float inHealthChange, const FIGS_HitInfo& inHitInfo);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable, WithValidation)
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_Die(float inHealthChange, const FIGS_HitInfo& inHitInfo);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable, WithValidation)
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_ChangeHealthState(EIGS_HealthState inHealthState);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable, WithValidation)
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_ChangeHealth(float inHealthChange, const FIGS_HitInfo& inHitInfo, bool inAllowWhileDead);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_DoHeal(float inHealthChange, const FIGS_HealInfo& inHealInfo);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsDeadForSomeTime() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAliveInNormalHealthState() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAlive() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasRecentlyDownstated() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasRecentlyDied() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetRelativeShield() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetRelativeHealth() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetMaxShield() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetMaxHealth() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetLastShieldDelta() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetLastHealthDelta() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_HealthState GetHealthState() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetHealthDecayDisabled();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentShield() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentHealthWithAccumulatedDamage() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentHealthNormalized() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentHealth() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetBaseReviveHealth() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetBaseMaxHealth() const;
     
 };

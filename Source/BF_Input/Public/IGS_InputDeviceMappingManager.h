@@ -8,23 +8,23 @@
 class UIGS_InputActionMapDataAsset;
 class UIGS_InputDeviceIconsDataAsset;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_INPUT_API UIGS_InputDeviceMappingManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* PS5InputDeviceIconDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* XBOXInputDeviceIconDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* SteamDeckInputDeviceIconDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* PCInputDeviceIconDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputActionMapDataAsset* InputActionMapDataAsset;
     
     UIGS_InputDeviceMappingManager();

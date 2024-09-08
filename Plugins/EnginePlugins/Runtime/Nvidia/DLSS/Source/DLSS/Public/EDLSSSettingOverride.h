@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDLSSSettingOverride.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EDLSSSettingOverride : uint8 {
     Enabled,
     Disabled,

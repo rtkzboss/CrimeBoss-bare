@@ -14,21 +14,21 @@ class AActor;
 class IIGS_DialogueAsyncActionInterface;
 class UIGS_DialogueAsyncActionInterface;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_DialogueSubsystem : public UWorldSubsystem, public IIGS_LoadingInProgressInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueCharacterEvent OnCharacterReminderEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueEvent OnDialogueFinishedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_HudDebugEvent OnNewHudDebugLogEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FIGS_DialogueNodeKey, TScriptInterface<IIGS_DialogueAsyncActionInterface>> RegisteredDialogueNodesMap;
     
 public:
@@ -74,7 +74,7 @@ public:
     void PlayDialogueOnCharacter(FText inDialogueID, AActor* inCharacter);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnGameLoadingFinished();
     
 

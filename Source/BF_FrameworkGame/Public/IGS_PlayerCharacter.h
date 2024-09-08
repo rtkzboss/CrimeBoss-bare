@@ -60,191 +60,191 @@ class UIGS_ThrowableTrajectoryComponent;
 class UIGS_UseComponent;
 class USpringArmComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PlayerCharacter : public AIGS_IntelligentGameCharacter, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface, public IIGS_SuspicionInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FOnPlayerUseStop OnPlayerUseStop;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DeathCameraEndedSignature OnDeathCameraSkippable;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DeathCameraEndedSignature OnDeathCameraEnded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnZiptyingEvent OnZiptyingEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PlayerStateChangedSignature OnPlayerStateChangedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_UseComponent* UseComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerPingComponent* PingComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_ReviveComponent* ReviveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerSuspicionComponent* PlayerSuspicionComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USpringArmComponent* SpringArmComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerCommandComponent* PlayerCommandComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerWorldTracingComponent* PlayerWorldTracingComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_BasherComponent* UnarmedMeleeBasherComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UIGS_EthnicityVoices* EthnicityVoices;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UIGS_MeleeWeaponInventoryObject> DefaultUnarmedMeleeItemClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UGameplayAbility> DefaultUnarmedMeleeAbility;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float DefaultAimingChangePercent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float VisibilityCrouchMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     AActor* Child3PVCameraActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_ListInventory* PlayerInventory;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float DeathCamUnskippableTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float DeathCamMaximumTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bIsSomeoneSpectating;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bIsInDeathCam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bDeathCamSkippable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bIsInSpectatingCam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     uint8 R_Yaw;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCanSlide;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bCanUseUnarmedMelee;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FVector LastTeleportableLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool m_IsPendingCarryable;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 CachedLootBagCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerCameraComponent* Camera;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<AIGS_PlayerFPVArms> DefaultArmsAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
     AIGS_PlayerFPVArms* m_ArmsActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PostProcessManagerComponent* PostProcessManagerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerEffectsComponent* PlayerEffectsComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerSuppressionHandlerComponent* SuppressionHandlerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerIgnoreCollisionComponent* PlayerIgnoreCollisionComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerLoadoutComponent* PlayerLoadoutComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerMetaTransferComponent* PlayerMetaTransferComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_CampThreatMeterComponent* CampThreatMeterComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_LootBagInteractiveComponent* LootBagInteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_CarryableInteractiveComponent* CarryableInteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_ThrowableTrajectoryComponent* ThrowableTrajectoryComponent;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FIGS_GameplayAbilityGrantDataHolder> DefaultGrantedAbilities;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName CarryableInteractionSocket;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* FallAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* FallDeathAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* ZiptieMountAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* ZiptieDismountAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* RappelMountAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* RappelDismountAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* RappelSlowDownAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkStateValue* NotOutOfBoundsAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkStateValue* OutOfBoundsAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkSwitchValue* PersonPrespectiveFPPAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkSwitchValue* PersonPrespectiveTPPAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FText CharNameForDialogues;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> TmpShoutCharacters;
     
 public:
@@ -267,16 +267,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SwitchToDeathCamera();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SwapPlayerWithBotController(AController* inBotController);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SwapPlayerForBotWhileDead(AController* inBotController);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SwapPlayer(int32 inBotNumber);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void ShowChatWheelIcon(const FText& inIconText);
     
     UFUNCTION(BlueprintCallable)
@@ -328,40 +328,40 @@ public:
     void SetArmsHidden(bool inHidden);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_Shout(FShoutScanData inScanData);
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_RequestStopCustomMontage(FGameplayTag inCustomAnimType);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_RequestPlayCustomMontage(FGameplayTag inCustomAnimType);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_ProxyEnterCameraFeed();
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_PerformStealthTakedown(AIGS_GameCharacterFramework* inCharacter);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_OnInteractionEnded(UIGS_InteractiveComponent* inInteractiveComponent);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_OnInteracting(UIGS_InteractiveComponent* inInteractiveComponent);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_OnBagCountChanged(int32 inCount);
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_HandleSpectating();
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_AbilityUnequip();
     
 public:
@@ -381,24 +381,24 @@ public:
     void ProxyEnterCameraFeed(AIGS_SecurityCameraViewer* InViewer);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void PostArmsLoadedEvent();
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void Ping() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OwnerUnpossess();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OwnerPossess();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnPlayerStateChanged(AIGS_PlayerStateGame* inPlayerState);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnemyKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult);
     
 public:
@@ -408,45 +408,45 @@ public:
     UFUNCTION(BlueprintCallable)
     void NotifyDeathCameraEnded();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_RequestStopCustomMontage(FGameplayTag inCustomAnimType);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_RequestPlayCustomMontage(FGameplayTag inCustomAnimType);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_PlayZiptieMountEvent();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_PlayZiptieDismountEvent();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_PlayRappelSlowDownEvent();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_PlayRappelMountEvent();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_PlayRappelDismountEvent();
     
 protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnInteractionEnded(UIGS_InteractiveComponent* inInteractiveComponent);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnInteracting(UIGS_InteractiveComponent* inInteractiveComponent);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnBagCountChanged(int32 inCount);
     
 public:
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_DeathSoundEffect();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_CheatChangeSize(float InSize);
     
-    UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
+    UFUNCTION(Server, Unreliable, WithValidation)
     void MessageToServer_LadderInput(FIGS_ReplicatedLadder inLadderData);
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -455,52 +455,52 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void JumpFromLadder() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsUsingVehicle() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsUsingBuzzsaw() const;
     
     UFUNCTION(BlueprintCallable)
     bool IsThirdPersonCamActive();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsSlidingOnZipline() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsSliding() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsRappelling() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsRadialMenuInputIgnored() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPingInputIgnored() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsOnLadder() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsMenuInputIgnored() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInVentShaft() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInteractionInputIgnored() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInInteraction() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInElevator() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsFalling() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsBotSwapInputIgnored() const;
     
     UFUNCTION(BlueprintCallable)
@@ -509,46 +509,46 @@ public:
     UFUNCTION(BlueprintCallable)
     static EIGS_DialogueHeisterCharacter GetVoiceAccordingToEthnicityAndGender(UIGS_EthnicityVoices* inEthnicityVoices, EIGS_Ethnicity inEthnicity, bool inIsFemale);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_RideableVehicleBaseFramework* GetUsedVehicle() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetShowPlayerOutline();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_PlayerCommandComponent* GetPlayerCommandComponent() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_PlayerCharacterMovementComponent* GetPlayerCharacterMovementComponent();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_PlayerCameraComponent* GetPlayerCamera() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsAimingAtFriendly() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsAimingAtEnemy() const;
     
     UFUNCTION(BlueprintCallable)
     static EIGS_Ethnicity GetEthnicityFromMutable(UCustomizableSkeletalComponent* inCSCBody);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_TeamSideEnum GetAimingAtTeamside() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_TeamSideEnum GetAimAtTeam() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetAimAtCharacter() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AActor* GetAimAtActor() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetAbilityRechargeMult() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetAbility1ChargeCount() const;
     
     UFUNCTION(BlueprintCallable)
@@ -575,20 +575,20 @@ public:
     void DisableDeathCam();
     
 protected:
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_ForceUseInteraction(UIGS_InteractiveComponent* inInteraction);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable, WithValidation)
+    UFUNCTION(Client, Reliable, WithValidation)
     void Client_CameraSpy(AIGS_SecurityCameraViewer* inCamera);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_AddItemsAfterSwitch(const TArray<TSubclassOf<UIGS_InventoryObjectFramework>>& inItems);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_AddItem(TSubclassOf<UIGS_InventoryObjectFramework> inItemToAdd);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanMoveOnLadder() const;
     
     UFUNCTION(BlueprintCallable)

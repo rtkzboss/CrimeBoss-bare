@@ -7,29 +7,29 @@
 
 class USceneComponent;
 
-UCLASS(Blueprintable, Config=Engine)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BreakableGlassBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_GlassRegularPreset GlassPanelPreset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ScaleUniform;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ScaleY;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ScaleZ;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<EGlassShape> GlassType;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
     bool bCanEverAffectNavigation;
     
     AIGS_BreakableGlassBase(const FObjectInitializer& ObjectInitializer);

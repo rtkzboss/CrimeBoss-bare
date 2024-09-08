@@ -5,11 +5,11 @@
 
 class UPFPathComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PATHFOLLOW_API APFPathBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UPFPathComponent* PathToFollow;
     
     APFPathBase(const FObjectInitializer& ObjectInitializer);

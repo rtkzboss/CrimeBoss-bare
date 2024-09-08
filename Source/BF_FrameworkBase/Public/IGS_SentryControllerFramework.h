@@ -6,12 +6,12 @@
 #include "IGS_CharacterIDInterface.h"
 #include "IGS_SentryControllerFramework.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_SentryControllerFramework : public AAIController, public IIGS_CharacterIDInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 GenericId;
     
 public:

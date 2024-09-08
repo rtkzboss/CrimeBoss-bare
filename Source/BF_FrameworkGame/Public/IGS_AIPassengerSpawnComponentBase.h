@@ -18,53 +18,53 @@ class AIGS_GameCharacterFramework;
 class UIGS_SettingsID;
 class USkeletalMeshComponent;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AIPassengerSpawnComponentBase : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     EIGS_TeamSideEnum TeamSide;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_TeamUnitVariationHolder TeamUnitVariationHolder;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_SettingsID> SettingsOverride;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_CarType CarType;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FInt32Interval PassangersCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_PassangerDefinition> PassengersDefinition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool PlaySpawnVoiceovers;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnCharacterDeathSignature OnCharacterDeath;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnCharactersSpawnedSignature OnCharactersSpawned;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnPassengerGettingOutDynamicSignature OnPassengerGettingOut;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_GameCharacterFramework*> Passengers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USkeletalMeshComponent* SocketParentMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_NoSpawnPointDefinition CustomPassengerDefinition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool EnableDebugSpheres;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 AmountOfPassengersToSpawn;
     
     UIGS_AIPassengerSpawnComponentBase(const FObjectInitializer& ObjectInitializer);
@@ -72,7 +72,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SpawnGroup(int32 inPassengersCount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SetCustomPassengersDefinition(const FIGS_NoSpawnPointDefinition& inCustomPassengers);
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -84,7 +84,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void MakePassengersGetOut();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetRandomPassengerAmountInRange();
     
     UFUNCTION(BlueprintCallable)

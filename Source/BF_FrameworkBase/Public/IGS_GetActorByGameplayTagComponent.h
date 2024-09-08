@@ -4,11 +4,11 @@
 #include "GameplayTagContainer.h"
 #include "IGS_GetActorByGameplayTagComponent.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_GetActorByGameplayTagComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTags;
     
     UIGS_GetActorByGameplayTagComponent(const FObjectInitializer& ObjectInitializer);

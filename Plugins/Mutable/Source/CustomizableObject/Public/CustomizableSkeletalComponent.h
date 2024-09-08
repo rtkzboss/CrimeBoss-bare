@@ -6,17 +6,17 @@
 
 class UCustomizableObjectInstance;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CUSTOMIZABLEOBJECT_API UCustomizableSkeletalComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     float SkippedLastRenderTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UCustomizableObjectInstance* CustomizableObjectInstance;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
     FLightingChannels LightingChannels;
     
     UCustomizableSkeletalComponent(const FObjectInitializer& ObjectInitializer);

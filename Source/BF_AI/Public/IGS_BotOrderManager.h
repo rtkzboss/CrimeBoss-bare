@@ -3,7 +3,7 @@
 #include "IGS_BotOrderManagerBase.h"
 #include "IGS_BotOrderManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BotOrderManager : public UIGS_BotOrderManagerBase {
     GENERATED_BODY()
 public:

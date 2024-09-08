@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_WeaponStatUIData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FText Name;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     float Value;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool DisplayAsBar;
     
     FIGS_WeaponStatUIData();

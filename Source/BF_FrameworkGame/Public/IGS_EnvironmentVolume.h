@@ -8,21 +8,21 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_EnvironmentVolume : public AIGS_PostProcessVolumeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float EffectBlendStartDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float EffectBlendStopDuration;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_EnvironmentVolumeType VolumeType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool m_IsEnabled;
     
 public:
@@ -32,14 +32,14 @@ public:
     void SetEnabled(bool inNewIsEnabled);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnvironmentVolumeEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnvironmentVolumeBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetEnabled() const;
     
 };

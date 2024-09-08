@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CrashDetectType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_CrashDetectType : uint8 {
     CDT_None,
     CDT_All,

@@ -22,12 +22,12 @@ class UMETA_Equipment;
 class UMETA_Weapon;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_Character : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_CharacterInfo m_CharacterInfo;
     
 public:
@@ -105,13 +105,13 @@ public:
     UFUNCTION(BlueprintCallable)
     bool RemoveTrait(FGameplayTag inTrait);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsThereWeaponInSlot(EIGS_InventorySlot inSlot) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsTemporary() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsMaxLeveled() const;
     
     UFUNCTION(BlueprintCallable)
@@ -120,88 +120,88 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IncreaseLevel();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_Weapon* GetWeaponInSlot(EIGS_InventorySlot inSlot) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<FGameplayTag, int32> GetVariables() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetUpkeepCostWithModifiers();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetUnlockedForQP() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetTraits() const;
     
     UFUNCTION(BlueprintCallable)
     int32 GetTimesHealed();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetSurname() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_CharacterState GetState() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetReviveCount() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_ItemQuality GetQualityTier() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FMETA_PerkData> GetPerks() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMutableIndex();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_CharacterMood GetMood() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionWasPlayed() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionCutPercentWithModifiers();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetMaxLevel(UObject* inWCO) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetLostReviveCount() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_HeisterLoadout GetLoadoutReference();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_HeisterLoadout GetLoadout() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetLevel() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsUnseenInShop() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_CharacterInfo GetInfo() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_CharacterID GetId() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetHireCost();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetGenericVariantID();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetFullName() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetFirstName() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetCurrentAmountOfJobsWhichCanBeCompletedToday() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -213,22 +213,22 @@ public:
     UFUNCTION(BlueprintCallable)
     float GetCharacterPreviousPromoteProgress();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetBaseUpkeepCost() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetBaseMissionCutPercent();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetBaseLevelUpMultiplier() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetBaseHireCost() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTagQuery GetAllowedWiedables() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetAditionalReviveCount() const;
     
     UFUNCTION(BlueprintCallable)

@@ -5,7 +5,7 @@
 #include "UStreamlineFeatureSupport.h"
 #include "StreamlineLibraryDLSSG.generated.h"
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(BlueprintType, MinimalAPI)
 class UStreamlineLibraryDLSSG : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -14,25 +14,25 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetDLSSGMode(UStreamlineDLSSGMode DLSSGMode);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UStreamlineFeatureSupport QueryDLSSGSupport();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsDLSSGSupported();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsDLSSGModeSupported(UStreamlineDLSSGMode DLSSGMode);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TArray<UStreamlineDLSSGMode> GetSupportedDLSSGModes();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UStreamlineDLSSGMode GetDLSSGMode();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetDLSSGFrameTiming(float& FrameRateInHertz, int32& FramesPresented);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UStreamlineDLSSGMode GetDefaultDLSSGMode();
     
 };

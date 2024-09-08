@@ -7,17 +7,17 @@
 
 class AMETA_BaseGameMode;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API UMETA_BaseNode_SG : public UGenericGraphNode, public IMETA_GraphNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     EMETA_NodeType Type;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bShouldBeResetted;
     
     UMETA_BaseNode_SG();

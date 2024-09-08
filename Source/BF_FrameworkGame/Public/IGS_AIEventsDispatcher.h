@@ -10,7 +10,7 @@ class AActor;
 class AIGS_GameCharacterFramework;
 class AIGS_SquadFramework;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIEventsDispatcher : public UObject {
     GENERATED_BODY()
 public:

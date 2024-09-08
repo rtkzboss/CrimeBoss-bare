@@ -6,21 +6,21 @@
 
 class UEnvQuery;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateThrowingComponents : public UBTService {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplateAlways;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplateControl;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootCollection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootCarryable;
     
 public:

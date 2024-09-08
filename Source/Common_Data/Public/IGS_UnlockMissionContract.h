@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_UnlockMissionContract {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag MissionID;
     
     FIGS_UnlockMissionContract();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DefendPointRotationType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_DefendPointRotationType : uint8 {
     TS_Unknown = 255,
     TS_None = 0,

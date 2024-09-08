@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_UnlockCategory.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_UnlockCategory : uint8 {
     UC_Weapons,
     UC_WeaponSkins,

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AmmoBoxSpawnArray {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_AmmoBoxSpawnItem> Items;
     
     FIGS_AmmoBoxSpawnArray();

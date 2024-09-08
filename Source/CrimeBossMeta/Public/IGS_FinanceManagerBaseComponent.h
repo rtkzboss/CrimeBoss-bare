@@ -11,17 +11,17 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_FinanceManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_FinancialManangerInitialized OnManagerInitialized;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_FinancialBalanceChanged OnBalanceChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool bIsManagerDataDirty;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool bIsManagerInitialized;
     
 public:
@@ -30,7 +30,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void IsPlayerInBankruptState(bool& outResult, int32& outDaysLeftForRehabilitation);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsManagerInitialized() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

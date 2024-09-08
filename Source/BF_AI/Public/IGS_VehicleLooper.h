@@ -8,27 +8,27 @@
 class AIGS_TrafficSegment;
 class AIGS_VehicleBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_VehicleLooper : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     AIGS_TrafficSegment* InitialTrafficPath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_VehicleSplineGroup ForVehicleGroup;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MinLoopLenght;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MaxLoopLenght;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float PrefferedLoopLenght;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_TrafficLoopfindingResult PossibleLoops;
     
 public:

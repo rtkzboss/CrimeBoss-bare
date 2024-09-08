@@ -5,16 +5,16 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_RideableVehicleBaseFramework : public APawn {
     GENERATED_BODY()
 public:
     AIGS_RideableVehicleBaseFramework(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetSeatIndexForPawn(AIGS_GameCharacterFramework* inCharacter) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetLocalSeatIndex() const;
     
 };

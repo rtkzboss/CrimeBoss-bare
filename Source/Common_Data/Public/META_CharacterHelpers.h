@@ -9,7 +9,7 @@ class UIGS_EconomyData_Base;
 class UMETA_Character;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UMETA_CharacterHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -21,7 +21,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FMETA_PerkData> RecalculateBossRandomPerks(UObject* inWCO, FGameplayTag inCharacterTag, const TArray<FMETA_PerkData>& inCurrentPerks, int32 inPerkLimit);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static FMETA_PerkData GetClassPerkForCharacter(UObject* inWCO, FGameplayTag inCharacterTag);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

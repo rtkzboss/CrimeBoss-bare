@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_ChainAction {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_CharacterID CharacterID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_CharacterState CharacterState;
     
     FIGS_ChainAction();

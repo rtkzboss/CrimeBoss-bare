@@ -5,24 +5,24 @@
 #include "IGS_BTTask_MoveToAsync.h"
 #include "IGS_BTTask_MoveToBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToBase : public UIGS_BTTask_MoveToAsync {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookPosKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector AcceptableRadiusKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool CanSprint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool CanEndInDanger;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_CharacterVsHeistersCollisionStatus m_MovingCharacterVsHeistersCollisionStatus;
     
 public:

@@ -4,5 +4,5 @@
 
 class UMETA_BaseMission;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnToggleIconSelectedDelegate, bool, isIconSelected, UMETA_BaseMission*, MissionID);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnToggleIconSelectedDelegate, bool, isIconSelected, UMETA_BaseMission*, MissionID);
 

@@ -5,12 +5,12 @@
 
 class UMETA_Weapon;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_WeaponNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMETA_Weapon* m_Weapon;
     
 public:
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetWeapon(UMETA_Weapon* inWeapon);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_Weapon* GetWeapon() const;
     
 };

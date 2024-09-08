@@ -4,18 +4,18 @@
 #include "PaybackAICharacter.h"
 #include "PaybackSniperCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API APaybackSniperCharacter : public APaybackAICharacter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_WeaponVisibilityType, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_WeaponVisibilityType)
     EIGS_WeaponVisibilityType WeaponVisibilityType;
     
     APaybackSniperCharacter(const FObjectInitializer& ObjectInitializer);
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_WeaponVisibilityType() const;
     
 };

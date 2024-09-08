@@ -9,14 +9,14 @@ class APlayerController;
 class UFindFriendSessionCallbackProxy;
 class UObject;
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(MinimalAPI)
 class UFindFriendSessionCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintFindFriendSessionDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintFindFriendSessionDelegate OnFailure;
     
     UFindFriendSessionCallbackProxy();

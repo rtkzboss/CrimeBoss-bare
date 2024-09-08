@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct BF_IMPACTS_API FIGS_SoundImpactSettings : public FIGS_ImpactSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> AkAudioEventPath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SoundMaxLength;
     
     FIGS_SoundImpactSettings();

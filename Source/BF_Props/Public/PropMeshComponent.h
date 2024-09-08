@@ -7,17 +7,17 @@
 
 class UStaticMesh;
 
-UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_PROPS_API UPropMeshComponent : public UStaticMeshComponent, public IPropInfoInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropInfoStruct mPropInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UStaticMesh> StaticMeshPtr;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool RenderMesh;
     
     UPropMeshComponent(const FObjectInitializer& ObjectInitializer);

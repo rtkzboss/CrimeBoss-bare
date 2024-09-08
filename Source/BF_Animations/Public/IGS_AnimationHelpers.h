@@ -10,7 +10,7 @@ class UAnimMontage;
 class UIGS_PlayerAnimInstance;
 class UIGS_UArmsAniminstance;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_ANIMATIONS_API UIGS_AnimationHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

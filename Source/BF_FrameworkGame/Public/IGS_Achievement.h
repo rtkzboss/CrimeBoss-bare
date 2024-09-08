@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FIGS_Achievement {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 CurrentValue;
     
     BF_FRAMEWORKGAME_API FIGS_Achievement();

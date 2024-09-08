@@ -19,44 +19,44 @@ class UIGS_StashManagerBaseComponent;
 class UMETA_LevelActorsManagerComponent;
 class UMETA_UIEventsManagerComponent;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_MainWidget : public UIGS_BaseMenuWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TScriptInterface<IMETA_UIEventsManager> UIEventsManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UMETA_UIEventsManagerComponent* UIEventsManagerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_CrewManagerBaseComponent* CrewManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_BlackmarketManagerBaseComponent* BlackmarketManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_FinanceManagerBaseComponent* FinanceManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_GoalManagerBaseComponent* GoalsManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_JobManagerBaseComponent* JobsManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_StashManagerBaseComponent* StashManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_DailyManagerBaseComponent* DailyManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UMETA_LevelActorsManagerComponent* LevelActorsManagerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AMETA_BaseGameMode* MetaGameMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AMETA_GameStateBase* MetaGameState;
     
     UMETA_MainWidget();
@@ -82,7 +82,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetAdditionalButtonText(const FText& InText);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnGamemodeReady();
     
 };

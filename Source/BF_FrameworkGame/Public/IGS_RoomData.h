@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_RoomData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float Size;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     int32 MaxSwats;
     
     FIGS_RoomData();

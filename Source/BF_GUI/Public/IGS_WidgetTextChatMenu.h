@@ -8,18 +8,18 @@ class APlayerController;
 class UEditableTextBox;
 class UIGS_GUIController;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetTextChatMenu : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<APlayerController> OwningPlayer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_GUIController> GUIController;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UEditableTextBox* ChatInput;
     
 public:
@@ -30,17 +30,17 @@ protected:
     void OpenChat();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnTextCommited(const FText& Text, TEnumAsByte<ETextCommit::Type> CommitMethod);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnTextChatStateChangedEvent(bool inOpen);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTextChatStateChanged(bool inOpen);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnTextChatSetup();
     
     UFUNCTION(BlueprintCallable)
@@ -60,7 +60,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void CloseChat();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void BindToMessages();
     
 };

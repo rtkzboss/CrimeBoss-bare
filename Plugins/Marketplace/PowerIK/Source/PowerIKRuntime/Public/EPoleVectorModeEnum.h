@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPoleVectorModeEnum.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum EPoleVectorModeEnum {
     PV_None,
     PV_Position,

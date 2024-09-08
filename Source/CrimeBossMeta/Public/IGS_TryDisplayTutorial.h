@@ -9,15 +9,15 @@ class UIGS_TryDisplayTutorial;
 class UIGS_TutorialScreen;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UIGS_TryDisplayTutorial : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_TutorialResponse OnCompleted;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_TutorialScreen* m_TutorialScreen;
     
 public:
@@ -27,7 +27,7 @@ public:
     static UIGS_TryDisplayTutorial* TryDisplayTutorial(UObject* inWCO, FGameplayTag inTutorialTag, bool& outTutorialAlreadyFinished, bool ShowEvenFinished, bool DEBUG_SaveTutorialCompleted);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTutorialScreenClosed(const FGameplayTag& inTag);
     
 };

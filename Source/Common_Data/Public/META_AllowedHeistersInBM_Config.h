@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_AllowedHeistersInBM_Config {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_ItemQuality, int32> HeisterQualityPercent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 Amount;
     
     FMETA_AllowedHeistersInBM_Config();

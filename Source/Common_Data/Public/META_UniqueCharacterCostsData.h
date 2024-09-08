@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_UniqueCharacterCostsData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FloatInterval HireCostMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FloatInterval UpkeepMultiplier;
     
     FMETA_UniqueCharacterCostsData();

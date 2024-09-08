@@ -4,11 +4,11 @@
 #include "EIGS_GRWaitType.h"
 #include "IGS_BTTask_GeneralReactionWait.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_GeneralReactionWait : public UBTTask_Wait {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_GRWaitType Type;
     
     UIGS_BTTask_GeneralReactionWait();

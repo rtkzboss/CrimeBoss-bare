@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "GenericGraphManager.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class GENERICGRAPHRUNTIME_API UGenericGraphManager : public UObject {
     GENERATED_BODY()
 public:

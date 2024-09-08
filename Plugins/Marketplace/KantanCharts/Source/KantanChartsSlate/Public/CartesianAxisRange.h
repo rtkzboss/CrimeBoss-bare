@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FCartesianAxisRange {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Min;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Max;
     
     KANTANCHARTSSLATE_API FCartesianAxisRange();

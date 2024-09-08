@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMETA_SequenceItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag Tag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_MenuState RequiredMenuState;
     
     CRIMEBOSSMETA_API FMETA_SequenceItem();

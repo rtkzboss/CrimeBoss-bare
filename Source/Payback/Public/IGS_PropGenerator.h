@@ -6,21 +6,21 @@
 class UIGS_PropLogicComponent;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API AIGS_PropGenerator : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PropLogicComponent* m_PropLogicComponent;
     
 public:
     AIGS_PropGenerator(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_PropLogicComponent* GetLogicComponent() const;
     
 };

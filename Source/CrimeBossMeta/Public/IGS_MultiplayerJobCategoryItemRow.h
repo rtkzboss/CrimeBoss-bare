@@ -10,16 +10,16 @@ USTRUCT(BlueprintType)
 struct FIGS_MultiplayerJobCategoryItemRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer MissionScenarios;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag EntitlementTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_JobCategoryItemUIData UIData;
     
     CRIMEBOSSMETA_API FIGS_MultiplayerJobCategoryItemRow();

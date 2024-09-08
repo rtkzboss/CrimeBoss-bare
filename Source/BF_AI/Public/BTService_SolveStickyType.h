@@ -5,27 +5,27 @@
 #include "UObject/NoExportTypes.h"
 #include "BTService_SolveStickyType.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_SolveStickyType : public UBTService {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector StickyTypeKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutStickyCharacterKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool AllowStickyMove;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float StickyMoveChance;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval InvalidTimeCommon;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval InvalidTimeOutside;
     
 public:

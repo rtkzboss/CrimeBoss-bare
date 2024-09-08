@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_ActionCardGraph {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UMETA_BaseActionCard> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardStrength Strength;
     
     FMETA_ActionCardGraph();

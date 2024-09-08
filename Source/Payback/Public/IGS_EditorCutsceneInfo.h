@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_EditorCutsceneInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_EditorDialogueInfo> Dialogues;
     
     FIGS_EditorCutsceneInfo();

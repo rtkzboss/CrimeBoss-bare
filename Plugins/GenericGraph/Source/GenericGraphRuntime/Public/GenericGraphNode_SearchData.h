@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FGenericGraphNode_SearchData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UGenericGraphNode* Node;
     
     GENERICGRAPHRUNTIME_API FGenericGraphNode_SearchData();

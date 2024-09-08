@@ -9,23 +9,23 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable)
+UCLASS()
 class UEnvQueryTest_IsCoverPosition : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FEnvTraceData TraceData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
     FAIDataProviderFloatValue ContextHorizontalDistanceOffset;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
     FAIDataProviderFloatValue ContextVerticalDistanceOffset;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
     FAIDataProviderBoolValue DebugData;
     
     UEnvQueryTest_IsCoverPosition();

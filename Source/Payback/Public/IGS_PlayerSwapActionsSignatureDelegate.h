@@ -4,5 +4,5 @@
 
 class AIGS_GameCharacterBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_PlayerSwapActionsSignature, AIGS_GameCharacterBase*, inPlayer, AIGS_GameCharacterBase*, inBot);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_PlayerSwapActionsSignature, AIGS_GameCharacterBase*, inPlayer, AIGS_GameCharacterBase*, inBot);
 

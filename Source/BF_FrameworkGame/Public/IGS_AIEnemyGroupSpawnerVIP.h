@@ -3,7 +3,7 @@
 #include "IGS_AIEnemyGroupSpawner.h"
 #include "IGS_AIEnemyGroupSpawnerVIP.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AIEnemyGroupSpawnerVIP : public AIGS_AIEnemyGroupSpawner {
     GENERATED_BODY()
 public:

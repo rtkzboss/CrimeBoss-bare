@@ -12,16 +12,16 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_AmbushMissionSave : public FMETA_BaseMissionSave {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UMETA_MissionID> InstigatorMissionID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag InstigatorMissionTileID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> Parameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_PreviousMissionData PreviousFPSMissionData;
     
     FMETA_AmbushMissionSave();

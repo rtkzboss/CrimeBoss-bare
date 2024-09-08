@@ -4,11 +4,11 @@
 #include "META_PerkParameters.h"
 #include "IGS_GameplayEffect_PerkMeta.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UIGS_GameplayEffect_PerkMeta : public UIGS_GameplayEffect_PerkBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_PerkParameters Parameters;
     
     UIGS_GameplayEffect_PerkMeta();

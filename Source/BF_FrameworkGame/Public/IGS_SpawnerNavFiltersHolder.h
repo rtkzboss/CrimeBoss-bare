@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_SpawnerNavFiltersHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UNavigationQueryFilter> DefaultNavFilter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UNavigationQueryFilter> NoDangerNavFilter;
     
     BF_FRAMEWORKGAME_API FIGS_SpawnerNavFiltersHolder();

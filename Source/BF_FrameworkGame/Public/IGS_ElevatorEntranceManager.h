@@ -5,7 +5,7 @@
 
 class AIGS_Rope;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_ElevatorEntranceManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:

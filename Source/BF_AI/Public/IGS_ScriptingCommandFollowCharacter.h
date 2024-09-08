@@ -9,11 +9,11 @@ class AActor;
 class AIGS_GameCharacterFramework;
 class UIGS_ScriptingCommandFollowCharacter;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandFollowCharacter : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Finished;
     
     UIGS_ScriptingCommandFollowCharacter();
@@ -22,7 +22,7 @@ public:
     static UIGS_ScriptingCommandFollowCharacter* ScriptingCommandFollowCharacter(AIGS_GameCharacterFramework* inFollowingCharacter, AIGS_GameCharacterFramework* inFollowedCharacter, EIGS_Speed inSpeed, float inFollowDistance);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnFinished(AActor* inNewFollowActor);
     
 };

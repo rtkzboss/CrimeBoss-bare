@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DetectorState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_DetectorState : uint8 {
     Patrolling,
     Detecting,

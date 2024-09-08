@@ -7,17 +7,17 @@
 class UIGS_ServerTravel;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_LOADING_API UIGS_ServerTravel : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSimpleSignature LevelLoadAttemptSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSimpleSignature LevelLoadAttemptFailure;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSimpleSignature LevelLoadStarted;
     
     UIGS_ServerTravel();
@@ -26,13 +26,13 @@ public:
     static UIGS_ServerTravel* ServerTravel(UObject* inWCO, FName inLevelName, const FString& inOptions);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnLevelLoadStarted(FName inLevelName, bool inIsServerTravel);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnLevelLoadAttemptSuccess(FName inLevelName, bool inIsServerTravel);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnLevelLoadAttemptFailure(FName inLevelName, bool inIsServerTravel);
     
 };

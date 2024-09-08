@@ -8,24 +8,24 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_SearchPoints : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> SearchPoints;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderBoolValue FilterLocked;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderBoolValue FilterVisited;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue FilterVisitedTime;
     
 public:

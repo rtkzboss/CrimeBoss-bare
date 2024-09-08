@@ -9,20 +9,20 @@
 class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachTakePos : public UIGS_BTTask_SquadDoorBreachBase {
     GENERATED_BODY()
 public:
     UIGS_BTTask_SquadDoorBreachTakePos();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnNotifyReceived(EIGS_AINotif Type, AIGS_GameCharacterFramework* Instigator, AIGS_GameCharacterFramework* Target, FVector Pos, FVector dir);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool IsCommandActive(UIGS_AICommand* AICommand);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static UIGS_AICommand* CommandToTakePosition(AIGS_GameCharacterFramework* agent, FVector InPos, FVector inMoveLookPos, FVector inFinalLookPos, EIGS_AIMontageBreachVariant MontageVariant);
     
 };

@@ -5,11 +5,11 @@
 
 class UIGS_DebugSubsystemBlueprint;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_DebugSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_DebugSettings")
 class BF_DEBUG_API UIGS_DebugDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftClassPtr<UIGS_DebugSubsystemBlueprint> DamageSubsystemBlueprint;
     
     UIGS_DebugDevSettings();

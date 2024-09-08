@@ -4,11 +4,11 @@
 #include "BinkSubtitleItem.h"
 #include "IGS_BinkSubtitleDataAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACK_API UIGS_BinkSubtitleDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FBinkSubtitleItem> Subtitles;
     
     UIGS_BinkSubtitleDataAsset();

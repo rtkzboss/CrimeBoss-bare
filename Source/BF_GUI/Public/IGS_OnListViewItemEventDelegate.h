@@ -5,5 +5,5 @@
 class UObject;
 class UUserWidget;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnListViewItemEvent, UUserWidget*, InWidget, UObject*, inItem);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnListViewItemEvent, UUserWidget*, InWidget, UObject*, inItem);
 

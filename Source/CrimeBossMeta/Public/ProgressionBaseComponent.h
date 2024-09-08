@@ -18,23 +18,23 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UProgressionBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ProcessMissionProgressionResult OnProcessMissionProgressionResult;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_ProgressionResult AccumulatedProgressionResult;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_SaveManager* m_SaveManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ProgressionManager* m_ProgressionManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_UnlockManager* m_UnlockManager;
     
 public:
@@ -75,29 +75,29 @@ public:
     UFUNCTION(BlueprintCallable)
     void ProcessMissionResults(UPARAM(Ref) FIGS_MissionResult& inMissionResult, bool inAccumulateResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasSomePendingUnlockRewards() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasSomePendingLevels() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FGameplayTag> GetPendingUnlockRewards() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetPendingPoints() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetPendingLevelsCount() const;
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FDateTime GetLastClaimedDailyMultiplayerDateTime() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetDailyXPBonus(int32 inLevel) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetDailyCashBonus(int32 inLevel) const;
     
 public:
@@ -105,7 +105,7 @@ public:
     void ClearPendingUnlockedRewards();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanRewardBeClaimed(FDateTime InDateTime) const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

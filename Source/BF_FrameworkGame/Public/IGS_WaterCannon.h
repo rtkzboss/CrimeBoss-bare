@@ -6,21 +6,21 @@
 
 class AIGS_HoseSegmentBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WaterCannon : public AIGS_MountedWeapon {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FInteractedWithWaterTurret InteractedWithWaterTurret;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_HoseSegmentBase* WaterHoseObject;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 TurretID;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     bool IsItemInInventory;
     
 public:
@@ -29,13 +29,13 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void RemoveUnusedTurrets_MULTICAST();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MakeVisible_MULTICAST();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void CheckItemAndMakeVisible_SERVER();
     
 };

@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_ObjectivePresetTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer Objectives;
     
     FMETA_ObjectivePresetTableRow();

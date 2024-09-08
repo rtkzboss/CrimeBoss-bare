@@ -6,12 +6,12 @@
 
 class UIGS_MeshOverlappableComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_StaticMeshPenetrableActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_MeshOverlappableComponent* MeshOverlappableComponent;
     
 public:

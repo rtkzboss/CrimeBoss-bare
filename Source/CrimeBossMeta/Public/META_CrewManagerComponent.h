@@ -15,51 +15,51 @@
 class UMETA_Character;
 class UMETA_MissionID;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_CrewManagerComponent : public UIGS_CrewManagerBaseComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<FMETA_PerkData> LastPromotePerks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<UMETA_Character*> CrewHeisters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<UMETA_Character*> HeistersOnJob;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FMETA_CharacterID, float> RecoveryInfoOfHeistersInjures;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<FMETA_RemovedCharacter> RemovedCrewHeisters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FMETA_CharacterID, int32> HeistersMoodResetCounter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TSet<EIGS_CharacterID> CharactersRevengePool;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TSet<EIGS_CharacterID> CharactersPriorityRandomPool;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TSet<EIGS_CharacterID> CharactersNormalRandomPool;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TSet<EIGS_CharacterID> UnlockedCharacters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 RemainAmountOfCompletedMissionsBeforeUnlock;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FMETA_CharacterID, int32> RemainAmountOfDaysForHealingCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FMETA_CharacterID, int32> CounterOfDeathPreventingUsage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<FIGS_CharacterClasses> ActiveGenericVariants;
     
 public:
@@ -77,13 +77,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetActiveGenericVariants();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsHeisterRemovedFromCampaign(EIGS_CharacterID inCharacterID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<EIGS_CharacterID> GetUniqueCharactersAvailableForGeneration(bool inIncludeCharacterMissions) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetCharacterMissionProgressForCharacter(FGameplayTag inCharacter, bool& outFound, FIGS_CharacterMissionProgress& outMissionProgress) const;
     
     UFUNCTION(BlueprintCallable)

@@ -8,14 +8,14 @@
 
 class UIGS_InventoryObjectFramework;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, BlueprintType)
 class COMMON_DATA_API UIGS_InventoryObjectFramework : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_ItemType ItemType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bUseCustomName;
     
     UIGS_InventoryObjectFramework();
@@ -26,53 +26,53 @@ public:
     UFUNCTION(BlueprintCallable)
     void LoadInventoryObjectData(FIGS_InventoryObjectUniversalData inUniversalData);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsWieldable();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsWeapon();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsThrowable();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPlayerForbidden();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsMetal();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsLootBag();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsDroppable();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsCarryable();
     
     UFUNCTION(BlueprintCallable)
     void InitDefaultInventoryObjectData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetWasPickedUpBefore();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetItemName();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsBonusLoot();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_InventoryObjectUniversalData GetInventoryObjectData();
     
     UFUNCTION(BlueprintCallable)
     int32 GetIndex();
     
 private:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetDefaultName();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetCustomName();
     
 public:

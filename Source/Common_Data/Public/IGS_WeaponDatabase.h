@@ -12,12 +12,12 @@ class UIGS_WeaponDatabase;
 class UIGS_WeaponInventoryObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_WeaponDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_PerWeaponClassSettingsDataAsset* PerClassWeaponSettings;
     
 public:
@@ -29,13 +29,13 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WeaponTableRow GetWeaponDataByTag(UObject* inWCO, FGameplayTag inTag, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_WeaponDatabase* GetWeaponDatabaseInstance(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WeaponTableRow GetWeaponData(UObject* inWCO, const TSubclassOf<UIGS_WeaponInventoryObject>& inClass, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_WeaponTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
 };

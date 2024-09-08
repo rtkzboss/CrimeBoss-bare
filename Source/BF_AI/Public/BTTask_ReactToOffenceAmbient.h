@@ -4,12 +4,12 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTTask_ReactToOffenceAmbient.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_ReactToOffenceAmbient : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
 public:

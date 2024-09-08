@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FCommonSmallHitTile {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bSpecificTiles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<uint8> SpecifiedTiles;
     
     FCommonSmallHitTile();

@@ -5,12 +5,12 @@
 
 class AIGS_MountedWeapon;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_MountedWeaponManager : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_MountedWeapon*> m_MountedWeapons;
     
 public:

@@ -4,14 +4,14 @@
 #include "IGS_AICommandBreachRemoveObstacle.h"
 #include "IGS_AICommandBreachRemoveGate.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_AICommandBreachRemoveGate : public UIGS_AICommandBreachRemoveObstacle {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Location;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector LookAtPosition;
     
     UIGS_AICommandBreachRemoveGate();

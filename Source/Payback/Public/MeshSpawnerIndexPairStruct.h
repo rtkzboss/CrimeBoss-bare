@@ -4,14 +4,14 @@
 
 class UIGS_PropMeshSpawner;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMeshSpawnerIndexPairStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_PropMeshSpawner* PropMeshSpawner;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 Index;
     
     PAYBACK_API FMeshSpawnerIndexPairStruct();

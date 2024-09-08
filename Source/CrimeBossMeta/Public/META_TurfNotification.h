@@ -6,12 +6,12 @@
 
 class UMapTile;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_TurfNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMapTile* m_Tile;
     
 public:
@@ -20,7 +20,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetData(UMapTile* inTile, const EMETA_Gang inGang);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMapTile* GetTile() const;
     
 };

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMETA_WeaponClassChance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag WeaponClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Chance;
     
     PAYBACKDEFINITIONS_API FMETA_WeaponClassChance();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_LightingScenarioType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_LightingScenarioType : uint8 {
     Midday,
     Sunrise,

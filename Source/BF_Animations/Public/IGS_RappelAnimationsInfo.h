@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_RappelAnimationsInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool IsOnRappel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool ShouldRotateView;
     
     BF_ANIMATIONS_API FIGS_RappelAnimationsInfo();

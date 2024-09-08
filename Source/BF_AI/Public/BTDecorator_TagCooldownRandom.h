@@ -4,23 +4,23 @@
 #include "GameplayTagContainer.h"
 #include "BTDecorator_TagCooldownRandom.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_TagCooldownRandom : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag CooldownTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CooldownDurationMin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float CooldownDurationMax;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bAddToExistingDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bActivatesCooldown;
     
     UBTDecorator_TagCooldownRandom();

@@ -6,12 +6,12 @@
 class AIGS_GameCharacterFramework;
 class UIGS_ActionToken;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_TokenPool : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<UIGS_ActionToken*> UsedTokens;
     
 public:

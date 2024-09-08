@@ -6,21 +6,21 @@
 
 class UMETA_MediaCondition;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_MediaNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_MediaCondition* ExecutionBlueprint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 ExpireTimerResultNode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TMap<int32, int32> ResultNodesMap;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EMETA_MediaNodeType MediaNodeType;
     
 public:

@@ -4,17 +4,17 @@
 #include "EIGS_TeamSideEnum.h"
 #include "IGS_EnvQueryGenerator_GetCharactersForShoutAt.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_GetCharactersForShoutAt : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<EIGS_TeamSideEnum> TeamSides;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float DistanceCalm;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float DistanceDetecting;
     
     UIGS_EnvQueryGenerator_GetCharactersForShoutAt();

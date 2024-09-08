@@ -7,18 +7,18 @@ class AIGS_IntelligentGameCharacter;
 class UIGS_CharacterWieldablesHolderComponent;
 class UIGS_ListInventory;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetWeaponRadialMenu : public UIGS_WidgetRadialMenuBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_ListInventory> OwningPlayerInventory;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_IntelligentGameCharacter> OwningPlayerCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_CharacterWieldablesHolderComponent> WieldableHolder;
     
 public:

@@ -13,16 +13,16 @@ public:
     UPaybackHarmlessBarksManager(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void EscapingStart(const AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void EscapingEnd(const AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void DetectionStart(const AIGS_GameCharacterFramework* inInstigator, const AActor* inDetectingCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void DetectionEnd(const AIGS_GameCharacterFramework* inInstigator, const AActor* inDetectingCharacter);
     
 };

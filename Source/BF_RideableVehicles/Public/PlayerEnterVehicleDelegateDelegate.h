@@ -4,5 +4,5 @@
 
 class APawn;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPlayerEnterVehicleDelegate, APawn*, inPawn, int32, inSeatIndex);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPlayerEnterVehicleDelegate, APawn*, inPawn, int32, inSeatIndex);
 

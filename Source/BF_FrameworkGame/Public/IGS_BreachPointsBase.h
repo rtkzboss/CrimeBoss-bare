@@ -8,18 +8,18 @@
 class ATriggerBase;
 class USceneComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_BreachPointsBase : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PointsColor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<ATriggerBase> NavModifier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* BreachingPointsRootComponent;
     
 public:

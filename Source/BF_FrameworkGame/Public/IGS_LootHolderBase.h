@@ -10,46 +10,46 @@ class AIGS_GameCharacterFramework;
 class AIGS_LootCollectionBase;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LootHolderBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AIGS_LootCollectionBase* LootCollection;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LootHolderOpened OnLootHolderOpened;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, EditAnywhere)
     FIGS_OnDisplayCaseBrokenEvent OnDisplayCaseBrokenEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USceneComponent* AttachableComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     bool OpenManually;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     bool OpeningAffectsLootCollection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float InteractOpenDelay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MaxAIAttempts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool OutlineWithCollection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EIGS_AIStealthLootBehavior AIStealthLooting;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     bool BreakToOpen;
     
     AIGS_LootHolderBase(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool ShouldBotBreakToOpen() const;
     
     UFUNCTION(BlueprintCallable)
@@ -62,26 +62,26 @@ public:
     void OpenByAI(AActor* inInstigator);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnLockPicked(AIGS_GameCharacterFramework* inInstigator, const bool inSuccess);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInteracted(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnComponentBroken(AActor* inDmgCauser, const bool inOpen);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void LootHolderOpenedEvent(AActor* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsOpened() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsBroken() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanBeOpenedSilently() const;
     
 };

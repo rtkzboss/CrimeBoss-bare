@@ -14,37 +14,37 @@ public:
     UPaybackHarmfullBarksManager(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void StickyStart(const AIGS_GameCharacterFramework* inInstigator, const AActor* inStickyTarget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void StickyEndWithoutLOS(const AIGS_GameCharacterFramework* inInstigator, const AActor* inStickyTarget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void StickyEndWithLOS(const AIGS_GameCharacterFramework* inInstigator, const AActor* inStickyTarget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void StickyChanged(const AIGS_GameCharacterFramework* inInstigator, const AActor* inStickyTarget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void StickyArrive(const AIGS_GameCharacterFramework* inInstigator, const AActor* inStickyTarget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void StealthIdle(const AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ShoutDownRefused(const AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void PlayerDirectionCue(const AIGS_GameCharacterFramework* inCharacter, const AIGS_GameCharacterFramework* inPlayer, const EIGS_PlayerDirectionalCueDefinition inPlayerDirectionCue);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void DetectionStart(const AIGS_GameCharacterFramework* inInstigator, const AActor* inDetectingCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void DetectionEnd(const AIGS_GameCharacterFramework* inInstigator, const AActor* inDetectingCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CombatTaunt(const AIGS_GameCharacterFramework* inInstigator, bool hasVisibleTarget);
     
 };

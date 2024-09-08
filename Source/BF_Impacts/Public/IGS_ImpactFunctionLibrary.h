@@ -16,7 +16,7 @@ class UIGS_ImpactTypeObject;
 class UObject;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_IMPACTS_API UIGS_ImpactFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -7,14 +7,14 @@
 
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_WeakSpotComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_WeakSpotSignature OnWeakSpotCompromisedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_WeakSpotObjectStatusHealthChangedEventSignature OnWeakSpotHealthChangedEvent;
     
     UIGS_WeakSpotComponent(const FObjectInitializer& ObjectInitializer);

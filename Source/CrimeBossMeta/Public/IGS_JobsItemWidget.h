@@ -7,28 +7,28 @@
 #include "IGS_JobItemSelectedDelegate.h"
 #include "IGS_JobsItemWidget.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_JobsItemWidget : public UCommonButtonBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FGameplayTag JobIDTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool IsOwned;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_JobItemSelected OnJobItemSelected;
     
     UIGS_JobsItemWidget();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SetUIData(const FIGS_JobCategoryItemUIData& inUIData);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnIsOwnedChanged(bool inIsOwned);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void InitializeUIData(const FIGS_JobCategoryItemUIData& inUIData);
     
     UFUNCTION(BlueprintCallable)

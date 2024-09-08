@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct FIGS_DialogueSpeakerSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float PlayVoiceDelay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float FinishVoiceExtraDelay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAkSwitchValue* SpeakerAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FIGS_DialogueGroupCharacterHolder, UAkSwitchValue*> SpeakerCharacterAkSwitchMap;
     
     BF_NETWORK_API FIGS_DialogueSpeakerSettings();

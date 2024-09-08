@@ -6,11 +6,11 @@
 
 class UEnvQueryContext;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UEnvQueryTest_PathDistanceFromTargetsBase : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Characters;
     
     UEnvQueryTest_PathDistanceFromTargetsBase();

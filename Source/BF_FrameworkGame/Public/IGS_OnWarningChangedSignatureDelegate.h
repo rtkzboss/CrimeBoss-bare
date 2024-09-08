@@ -4,5 +4,5 @@
 #include "EIGS_InteractionWarningType.h"
 #include "IGS_OnWarningChangedSignatureDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FIGS_OnWarningChangedSignature, EIGS_InteractionWarningType, inType, EIGS_InteractionWarningPriority, InPriority, bool, inIsVisible);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FIGS_OnWarningChangedSignature, EIGS_InteractionWarningType, inType, EIGS_InteractionWarningPriority, InPriority, bool, inIsVisible);
 

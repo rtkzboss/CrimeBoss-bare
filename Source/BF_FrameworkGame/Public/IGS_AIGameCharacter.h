@@ -3,7 +3,7 @@
 #include "IGS_IntelligentGameCharacter.h"
 #include "IGS_AIGameCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AIGameCharacter : public AIGS_IntelligentGameCharacter {
     GENERATED_BODY()
 public:

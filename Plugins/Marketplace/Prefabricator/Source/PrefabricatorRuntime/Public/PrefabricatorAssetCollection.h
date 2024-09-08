@@ -4,14 +4,14 @@
 #include "PrefabricatorAssetInterface.h"
 #include "PrefabricatorAssetCollection.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PREFABRICATORRUNTIME_API UPrefabricatorAssetCollection : public UPrefabricatorAssetInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FPrefabricatorAssetCollectionItem> Prefabs;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint32 Version;
     
     UPrefabricatorAssetCollection();

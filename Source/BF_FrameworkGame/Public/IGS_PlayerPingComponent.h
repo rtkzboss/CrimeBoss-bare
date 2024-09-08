@@ -13,56 +13,56 @@ class AIGS_PlayerControllerFramework;
 class AIGS_SmartPingableWidgetActor;
 class UIGS_PingableComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerPingComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<AIGS_PingableWidgetActor> GenericPingWidgetActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<AIGS_SmartPingableWidgetActor> SmartPingWidgetActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float GenericPingDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ValidSmartPingDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float InvalidSmartPingDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float PingRange;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float PingMaxAngle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SmartPingHoldDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SmartPingMagnetismDegrees;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnPinged OnPingedEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_PlayerControllerFramework* m_CharacterController;
     
 private:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<AActor*, TWeakObjectPtr<AIGS_SmartPingableWidgetActor>> m_UsedSmartPingWidgets;
     
 public:
     UIGS_PlayerPingComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_Ping(EIGS_PingableType inType, FVector_NetQuantize InLocation, UIGS_PingableComponent* InComponent, AActor* inActor);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_Ping(UIGS_PingableComponent* InComponent, EIGS_PingableType inType, FVector_NetQuantize InLocation);
     
 };

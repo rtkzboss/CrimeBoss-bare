@@ -7,17 +7,17 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class UEnvQueryGenerator_CoverFMemory : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue SquareExtent;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue BoxHeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> GenerateAround;
     
     UEnvQueryGenerator_CoverFMemory();

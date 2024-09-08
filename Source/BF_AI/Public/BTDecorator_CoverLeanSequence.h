@@ -3,7 +3,7 @@
 #include "BTDecorator_CoverAttackSequenceBase.h"
 #include "BTDecorator_CoverLeanSequence.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_CoverLeanSequence : public UBTDecorator_CoverAttackSequenceBase {
     GENERATED_BODY()
 public:

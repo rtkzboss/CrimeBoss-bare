@@ -11,35 +11,35 @@ class UIGS_ProgressionManagerData;
 class UIGS_UnlockManagerData;
 class UMaterialParameterCollection;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_FrameworkBaseSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_FrameworkBaseSettings")
 class BF_FRAMEWORKBASE_API UIGS_FrameworkBaseDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkSwitchValue> FootstepNoneAkSwitch;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> DeathAkEvent;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> StopInspectAkEvent;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMaterialParameterCollection> WieldableMPCPath;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftClassPtr<UGameplayEffect> MoveSpeedGameplayEffect;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_GASDefaultAttributesDataAsset> DefaultCharacterAttributes;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_GASDefaultAttributesDataAsset> DefaultGlobalAttributes;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_UnlockManagerData> UnlockManagerData;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_ProgressionManagerData> ProgressionManagerData;
     
     UIGS_FrameworkBaseDevSettings();

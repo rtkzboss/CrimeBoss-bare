@@ -3,7 +3,7 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_GameplayRenderingSubsystem.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_RENDERING_API UIGS_GameplayRenderingSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:

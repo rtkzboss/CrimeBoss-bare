@@ -8,20 +8,20 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_EntitlementItemsManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_EntitlementItemsManangerInitialized OnManagerInitialized;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool bIsManagerDataDirty;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool bIsManagerInitialized;
     
 public:
     UIGS_EntitlementItemsManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsManagerInitialized() const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

@@ -3,7 +3,7 @@
 #include "BTDecorator_SquadBase.h"
 #include "BTDecorator_SquadHeistersIsPlayerSpawned.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_SquadHeistersIsPlayerSpawned : public UBTDecorator_SquadBase {
     GENERATED_BODY()
 public:

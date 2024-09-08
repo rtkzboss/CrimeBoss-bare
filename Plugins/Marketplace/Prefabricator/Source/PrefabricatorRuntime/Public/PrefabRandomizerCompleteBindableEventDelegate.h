@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "PrefabRandomizerCompleteBindableEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPrefabRandomizerCompleteBindableEvent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPrefabRandomizerCompleteBindableEvent);
 

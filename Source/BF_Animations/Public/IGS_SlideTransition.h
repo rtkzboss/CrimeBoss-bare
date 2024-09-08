@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "IGS_SlideTransition.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_ANIMATIONS_API UIGS_SlideTransition : public UObject {
     GENERATED_BODY()
 public:

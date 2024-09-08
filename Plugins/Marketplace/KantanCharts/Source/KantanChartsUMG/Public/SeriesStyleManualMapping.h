@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FSeriesStyleManualMapping {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName SeriesId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FKantanSeriesStyle Style;
     
     KANTANCHARTSUMG_API FSeriesStyleManualMapping();

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_HUBLevelWithTag {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ScenarioTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_BuildConfigurationTileable LevelDA;
     
     BF_LEVELGENERATOR_API FIGS_HUBLevelWithTag();

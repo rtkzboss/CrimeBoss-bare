@@ -14,28 +14,28 @@
 class UIGS_BaseMissionObject;
 class UObject;
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(NonTransient)
 class BF_FRAMEWORKBASE_API UIGS_GameInstanceFramework : public UAdvancedFriendsGameInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FPaybackFPS2MetaDataRequestedDynamicSignature OnFPS2MetaDataRequested;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnConnectionStatusChanged OnConnectionStatusChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool bComesFromMission;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer TurfWarMissionTags;
     
 public:
     UIGS_GameInstanceFramework();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void StartMissionInternal(const UObject* inWCO, TSubclassOf<UIGS_BaseMissionObject> inMissionID);
     
 public:
@@ -46,35 +46,35 @@ public:
     void ServerTravel(const UObject* inWCO, const FString& inLevelName, bool inAbsolute);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void QuitToMeta(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void QuitToLobby(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnWindowStateChanged(bool inState);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool OnWindowCloseRequested();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnConnectionStatusChangedEvent(EIGS_PlatformServerConnectionStatus InStatus);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnApplicationWillEnterBackground();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnApplicationHasReactivated();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnApplicationHasEnteredForeground();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void JoinSessionFailed(EIGS_SessionJoinFailureReason Reason);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool IsTextChatAllowed();
     
     UFUNCTION(BlueprintCallable)
@@ -86,11 +86,11 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void IgnoreMissionEnd(const UObject* inWCO, bool inIgnoreMissionEnd);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_PlatformServerConnectionStatus GetPlatformServerConnectionStatus() const;
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintNativeEvent, meta=(WorldContext=inWCO))
     void FinishMissionInternal(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
 public:
@@ -98,7 +98,7 @@ public:
     static void FinishMission(const UObject* inWCO, ECommonMissionResult inMissionResult);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CreateLoadingFaderInternal();
     
 public:

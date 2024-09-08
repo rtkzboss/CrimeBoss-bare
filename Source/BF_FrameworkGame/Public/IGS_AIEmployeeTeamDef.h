@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeTeamDef : public FIGS_AIBaseTeamDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<EIGS_EmployeesVariationType, FIGS_AIEmployeeTierDef> Variations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeBaseDataDefaults DefaultStats;
     
     FIGS_AIEmployeeTeamDef();

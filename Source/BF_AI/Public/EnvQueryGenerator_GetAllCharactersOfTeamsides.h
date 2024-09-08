@@ -7,14 +7,14 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_GetAllCharactersOfTeamsides : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> GenerateAround;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<EIGS_TeamSideEnum> TeamSides;
     
     UEnvQueryGenerator_GetAllCharactersOfTeamsides();

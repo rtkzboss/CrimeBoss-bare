@@ -4,5 +4,5 @@
 
 class AController;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PossessedByDynamicSignature, AController*, NewController);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PossessedByDynamicSignature, AController*, NewController);
 

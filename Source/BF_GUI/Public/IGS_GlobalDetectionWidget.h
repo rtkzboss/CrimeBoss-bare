@@ -3,17 +3,17 @@
 #include "IGS_HUDSubwidgetBase.h"
 #include "IGS_GlobalDetectionWidget.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_GlobalDetectionWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
     UIGS_GlobalDetectionWidget();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnDetectionFullEvent();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnDetectionChangedEvent(float InValue);
     
 };

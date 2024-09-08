@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_SupersamplingMode.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_SupersamplingMode : uint8 {
+UENUM()
+enum class EIGS_SupersamplingMode {
     SSM_Off,
     SSM_DLSS,
     SSM_XeSS,

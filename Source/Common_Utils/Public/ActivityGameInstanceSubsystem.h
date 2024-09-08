@@ -7,16 +7,16 @@
 #include "EActivityTask.h"
 #include "ActivityGameInstanceSubsystem.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_UTILS_API UActivityGameInstanceSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FActivitySubsystemActivityRequestedEvent OnActivityRequestedEvent;
     
     UActivityGameInstanceSubsystem();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EActivityTask TileIdToActivityTask(FGameplayTag TileID) const;
     
     UFUNCTION(BlueprintCallable)
@@ -31,7 +31,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ParseCityMapSaveData(const TMap<FGameplayTag, FMETA_TileSaveData>& inTilesSaveData);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsActivityRequested() const;
     
     UFUNCTION(BlueprintCallable)

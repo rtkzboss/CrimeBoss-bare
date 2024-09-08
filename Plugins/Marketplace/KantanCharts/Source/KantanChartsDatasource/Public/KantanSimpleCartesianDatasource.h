@@ -7,7 +7,7 @@
 
 class UKantanSimpleCartesianDatasource;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(BlueprintType, EditInlineNew)
 class KANTANCHARTSDATASOURCE_API UKantanSimpleCartesianDatasource : public UObject, public IKantanCartesianDatasourceInterface {
     GENERATED_BODY()
 public:

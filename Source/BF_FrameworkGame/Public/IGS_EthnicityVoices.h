@@ -5,14 +5,14 @@
 #include "IGS_EthnicityVoiceArray.h"
 #include "IGS_EthnicityVoices.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_EthnicityVoices : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_Ethnicity, FIGS_EthnicityVoiceArray> MaleMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_Ethnicity, FIGS_EthnicityVoiceArray> FemaleMap;
     
     UIGS_EthnicityVoices();

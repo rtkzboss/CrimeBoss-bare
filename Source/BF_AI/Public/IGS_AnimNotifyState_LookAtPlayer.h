@@ -5,11 +5,11 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable, CollapseCategories, EditInlineNew)
+UCLASS(CollapseCategories, EditInlineNew)
 class BF_AI_API UIGS_AnimNotifyState_LookAtPlayer : public UAnimNotifyState {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_Players;
     
     UIGS_AnimNotifyState_LookAtPlayer();

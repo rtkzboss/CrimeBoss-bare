@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_WeakenMissionTurfActionGenData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 WeaknessChance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NeutralizeChance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CaptureChance;
     
     FMETA_WeakenMissionTurfActionGenData();

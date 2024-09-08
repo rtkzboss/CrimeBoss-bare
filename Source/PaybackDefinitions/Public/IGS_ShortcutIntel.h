@@ -3,11 +3,11 @@
 #include "IGS_IntelBase.h"
 #include "IGS_ShortcutIntel.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UIGS_ShortcutIntel : public UIGS_IntelBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bShortcutFound;
     
     UIGS_ShortcutIntel();

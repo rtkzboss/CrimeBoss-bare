@@ -5,12 +5,12 @@
 
 class AActor;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_HeavyUseShock : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* m_Target;
     
 public:

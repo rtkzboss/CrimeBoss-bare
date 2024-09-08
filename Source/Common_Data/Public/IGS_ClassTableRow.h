@@ -11,10 +11,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_ClassTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_GameplayEffect_Class> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_ClassData Data;
     
     FIGS_ClassTableRow();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_RespectLvl.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_RespectLvl : uint8 {
     Low,
     Connected,

@@ -9,7 +9,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UIGS_MultiplayerJobsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

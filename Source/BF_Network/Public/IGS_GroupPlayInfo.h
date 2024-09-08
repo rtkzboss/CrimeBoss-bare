@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_GroupPlayInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_GroupPlayInfo {
     GENERATED_BODY()
 public:

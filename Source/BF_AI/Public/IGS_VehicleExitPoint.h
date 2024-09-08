@@ -5,15 +5,15 @@
 
 class AIGS_TrafficSegment;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_VehicleExitPoint : public AIGS_VehicleExitPointFramework {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     uint32 VehicleGroups;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     AIGS_TrafficSegment* PossiblePath;
     
 public:

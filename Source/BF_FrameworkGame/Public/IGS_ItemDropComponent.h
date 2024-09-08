@@ -14,48 +14,48 @@ class UIGS_CharacterWieldablesHolderComponent;
 class UIGS_InventoryObjectFramework;
 class UIGS_PickupClassesData;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ItemDropComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> ItemsUponDeath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> ItemsUponTie;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<AIGS_PickupActorBase> WalkieTalkieClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<AIGS_PickupActorInventoryItem> PickupActorTemplate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool SpawnWalkieTalkie;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bDropUponZipAndDeath;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnDeathItemsDropped OnDeathItemsDroppedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_ItemDropped OnItemDropped;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UIGS_PickupClassesData* PickupClasses;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool GenerateAmmoBox;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_GameCharacterFramework* CharacterOwner;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_CharacterWieldablesHolderComponent* CharacterWieldablesHolderComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTransform ItemSpawnPointTransform;
     
 public:
@@ -64,7 +64,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void DropItem(TSubclassOf<UIGS_InventoryObjectFramework> inClass) const;
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_DropBags() const;
     
     UFUNCTION(BlueprintCallable)

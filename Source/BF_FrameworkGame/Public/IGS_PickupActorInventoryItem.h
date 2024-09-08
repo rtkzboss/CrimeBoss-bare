@@ -17,55 +17,55 @@ class UIGS_OutlineComponent;
 class UIGS_PickupInteractiveComponent;
 class UIGS_WeaponSkinData;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PickupActorInventoryItem : public AIGS_PickupActorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleDefaultsOnly)
     UIGS_PickupInteractiveComponent* InteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleDefaultsOnly)
     UIGS_OutlineComponent* OutlineComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_WeaponSkin, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_WeaponSkin)
     TSoftObjectPtr<UIGS_WeaponSkinData> R_WeaponSkin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_WeaponSkinData* LoadedWeaponSkin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_WeaponSkinData* LoadedWeaponSpecificSkin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemClass, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemClass)
     TSubclassOf<UIGS_InventoryObjectFramework> R_ItemClassToAdd;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemMods, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ItemMods)
     TArray<TSubclassOf<UIGS_ModInventoryObject>> R_ItemModsToAdd;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemCount, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemCount)
     int32 R_GlobalItemCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemCount, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemCount)
     bool R_bCustomStackCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemCount, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ItemCount)
     int32 R_EquipmentCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_UniversalData, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_UniversalData)
     FIGS_InventoryObjectUniversalData R_UniversalData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FText PrefixText;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     bool mR_bWasDropped;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     bool m_bIsGlobalItem;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     bool m_bIsEquipment;
     
 public:
@@ -77,34 +77,34 @@ public:
     void Setup(const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_WeaponSkin();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_UniversalData();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ItemMods();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ItemCount();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ItemClass();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPickupDamageEvent(float inDamage, const FHitResult& inHitInfo, AController* inEventInstigator, AActor* inDamageCauser);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnMeshUpdated();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     FIGS_ImpactHitParameter OnCustomizeHitImpactParam(FIGS_ImpactHitParameter InParams);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FBoxSphereBounds GetMeshBounds();
     
     UFUNCTION(BlueprintCallable)

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EBaseScreenModifier.generated.h"
 
-UENUM(BlueprintType)
-enum class EBaseScreenModifier : uint8 {
+UENUM()
+enum class EBaseScreenModifier {
     None,
     Top,
     Bottom,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_HitReactionDirection.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_HitReactionDirection : uint8 {
+UENUM()
+enum class EIGS_HitReactionDirection {
     D_Front,
     D_Left,
     D_Back,

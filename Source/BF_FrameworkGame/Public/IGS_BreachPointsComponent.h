@@ -9,47 +9,47 @@ class ATriggerBase;
 class UIGS_BreachPointComponent;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BreachPointsComponent : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PointsColor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<ATriggerBase> NavModifier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* BreachingPointsRootComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* LeftNearEntryPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* LeftFarEntryPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* MiddleEntryPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* RightNearEntryPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* RightFarEntryPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* LeftNearExitPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* LeftFarExitPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* MiddleExitPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* RightNearExitPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* RightFarExitPoint;
     
     AIGS_BreachPointsComponent(const FObjectInitializer& ObjectInitializer);

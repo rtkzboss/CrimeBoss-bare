@@ -7,7 +7,7 @@ class AIGS_AIEnemyGroupSpawner;
 class AIGS_GameCharacterFramework;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_WarzoneHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

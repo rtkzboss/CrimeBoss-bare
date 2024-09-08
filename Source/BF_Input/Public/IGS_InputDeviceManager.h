@@ -11,41 +11,41 @@
 #include "IGS_OnMouseMovedDelegate.h"
 #include "IGS_InputDeviceManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_INPUT_API UIGS_InputDeviceManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnInputDeviceChanged OnInputDeviceChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnInputKeyPressed OnInputKeyPressed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnMouseEvent OnMouseEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnMouseMoved OnMouseMoved;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnCurrentControllerDisconnected OnCurrentControllerDisconnected;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnControllerInputEstablished OnControllerInputEstablished;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     EIGS_InputDevice DefaultDevice;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     EIGS_InputDevice DefaultGamepadDevice;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     EIGS_InputDevice DefaultVRDevice;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ControllerSpeakerConnectionChanged OnControllerConnectionChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ControllerSpeakerConnectionChanged OnControllerHeadphonesConnectionChangedEvent;
     
     UIGS_InputDeviceManager();
@@ -56,7 +56,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RefreshCurrentInputDevice();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_InputDevice GetCurrentInputDevice() const;
     
 };

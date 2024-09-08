@@ -4,15 +4,15 @@
 #include "IGS_LaserTrapTriggeredEventDelegate.h"
 #include "IGS_LaserTrapManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LaserTrapManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LaserTrapTriggeredEvent OnLaserTriggeredEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsStimuliForAI;
     
 public:
@@ -22,14 +22,14 @@ public:
     void SetLasersEnabled(bool inState);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnLaserTriggered();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetLaserState() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsStimuliForAI() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)

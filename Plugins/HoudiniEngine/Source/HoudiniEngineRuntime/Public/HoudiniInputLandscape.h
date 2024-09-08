@@ -4,14 +4,14 @@
 #include "HoudiniInputActor.h"
 #include "HoudiniInputLandscape.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputLandscape : public UHoudiniInputActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FTransform CachedInputLandscapeTraqnsform;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 CachedNumLandscapeComponents;
     
     UHoudiniInputLandscape();

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FIGS_UnlockItemInfoList {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_UnlockItemInfo> UnlockItemInfoList;
     
     BF_FRAMEWORKBASE_API FIGS_UnlockItemInfoList();

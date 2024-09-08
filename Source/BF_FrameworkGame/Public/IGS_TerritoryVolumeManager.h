@@ -9,15 +9,15 @@ class AIGS_TerritoryVolume;
 class AVolume;
 class UIGS_TerritoryData;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_TerritoryVolumeManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_TerritoryData* TerritoryData;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_TerritoryVolume*> m_TerritoryVolumes;
     
 public:
@@ -27,17 +27,17 @@ public:
     void RemoveRestrictionTag(const FName& inTag);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTerritoryVolumeEndOverlap(AVolume* inOverlappedActorVolume, EIGS_TerritoryVolumeType EnvironmentType, AActor* inOtherActor) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTerritoryVolumeBeginOverlap(AVolume* inOverlappedActorVolume, EIGS_TerritoryVolumeType EnvironmentType, AActor* inOtherActor) const;
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FName> GetRestrictionTags() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FName> GetRestrictedTags() const;
     
     UFUNCTION(BlueprintCallable)

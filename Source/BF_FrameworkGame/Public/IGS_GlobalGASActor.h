@@ -14,18 +14,18 @@ class UIGS_GlobalGASAttributeSet;
 class UIGS_GlobalGASComponent;
 class UObject;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_GlobalGASActor : public AActor, public IIGS_GameplayTagAssetInterfaceCustom, public IAbilitySystemInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_GlobalGASComponent* GlobalGASComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_GlobalGASAttributeSet* GlobalGASAttributeSet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_GetActorByGameplayTagComponent* GetActorByGameplayTagComponent;
     
 public:

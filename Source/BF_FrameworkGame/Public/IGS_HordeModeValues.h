@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_HordeModeValues {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 TotalValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentProgress;
     
     BF_FRAMEWORKGAME_API FIGS_HordeModeValues();

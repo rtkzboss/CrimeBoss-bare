@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniInstancerType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EHoudiniInstancerType : uint8 {
     Invalid,
     ObjectInstancer,

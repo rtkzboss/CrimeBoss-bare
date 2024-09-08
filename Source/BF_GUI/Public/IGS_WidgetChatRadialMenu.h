@@ -7,15 +7,15 @@ class UDataTable;
 class UIGS_PlayerChatWheelComponent;
 class UIGS_WidgetChatRadialSlice;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetChatRadialMenu : public UIGS_WidgetRadialMenuBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UDataTable* m_DataTable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_PlayerChatWheelComponent* PlayerChatWheelComponent;
     
 public:

@@ -7,26 +7,26 @@
 
 class UIGS_BuildConfigurationDataAsset;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_GeneratorBuildConfiguration : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FString> Filters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_BuildConfigurationDataAsset* BuildConfigurationDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName VariantName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName ConnectionName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FIGS_ConnectionPointData> Cooked_ConnectionPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FIGS_VariantDefinition> Cooked_Variants;
     
     UIGS_GeneratorBuildConfiguration();

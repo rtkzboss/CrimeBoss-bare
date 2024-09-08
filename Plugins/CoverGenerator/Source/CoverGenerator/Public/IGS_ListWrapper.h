@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COVERGENERATOR_API FIGS_ListWrapper {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_RangeWithDistance> List;
     
     FIGS_ListWrapper();

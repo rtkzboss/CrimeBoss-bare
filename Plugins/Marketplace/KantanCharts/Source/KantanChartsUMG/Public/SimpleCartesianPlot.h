@@ -5,7 +5,7 @@
 #include "KantanCartesianPlotBase.h"
 #include "SimpleCartesianPlot.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSUMG_API USimpleCartesianPlot : public UKantanCartesianPlotBase, public IKantanCartesianDatasourceInterface {
     GENERATED_BODY()
 public:

@@ -3,14 +3,14 @@
 #include "GameFramework/Actor.h"
 #include "PrefabDebugActor.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PREFABRICATORRUNTIME_API APrefabDebugActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     AActor* Actor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<uint8> ActorData;
     
     APrefabDebugActor(const FObjectInitializer& ObjectInitializer);

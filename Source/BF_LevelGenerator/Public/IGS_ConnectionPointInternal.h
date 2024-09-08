@@ -4,11 +4,11 @@
 #include "IGS_ConnectionPointBase.h"
 #include "IGS_ConnectionPointInternal.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_LEVELGENERATOR_API AIGS_ConnectionPointInternal : public AIGS_ConnectionPointBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<EIGS_Event> Event;
     
     AIGS_ConnectionPointInternal(const FObjectInitializer& ObjectInitializer);

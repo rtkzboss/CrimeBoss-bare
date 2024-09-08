@@ -10,7 +10,7 @@ class UIGS_ModDatabase;
 class UIGS_ModInventoryObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_ModDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ModAppendDataTable(UDataTable* inNewTable);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_ModDatabase* GetModDatabaseInstance(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

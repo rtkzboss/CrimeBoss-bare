@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_SpeakerID.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_SpeakerID {
     GENERATED_BODY()
 public:

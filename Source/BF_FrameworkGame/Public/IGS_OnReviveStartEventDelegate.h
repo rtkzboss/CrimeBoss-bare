@@ -4,5 +4,5 @@
 
 class APawn;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnReviveStartEvent, APawn*, inHealer);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnReviveStartEvent, APawn*, inHealer);
 

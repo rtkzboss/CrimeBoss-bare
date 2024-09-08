@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/Items/EnvQueryItemType_VectorBase.h"
 #include "EnvQueryItemType_Cover.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COVERGENERATOR_API UEnvQueryItemType_Cover : public UEnvQueryItemType_VectorBase {
     GENERATED_BODY()
 public:

@@ -9,22 +9,22 @@ class UIGS_LightingScenariosSubsystem;
 class ULevelStreamingDynamic;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_LightingScenariosSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EIGS_LightingScenarioType LightingScenario;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bUseLightScenarios;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bForceMovableSkylight;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     ULevelStreamingDynamic* m_RootLevelScenarioStreaming;
     
 public:
@@ -39,10 +39,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void RepropagateLightingScenarioChangesOnStaticMeshes();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_LightingScenariosSubsystem* Instance(const UObject* inWorldContextObject);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetUseLightScenarios() const;
     
 protected:
@@ -50,7 +50,7 @@ protected:
     TArray<FIGS_LightingScenarioLevelPair> GetLoadedLightingScenarios();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_LightingScenarioType GetCurrentLightingScenarioType() const;
     
     UFUNCTION(BlueprintCallable)

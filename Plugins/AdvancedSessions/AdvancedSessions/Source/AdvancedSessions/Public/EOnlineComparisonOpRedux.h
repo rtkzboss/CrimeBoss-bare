@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EOnlineComparisonOpRedux.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EOnlineComparisonOpRedux : uint8 {
     Equals,
     NotEquals,

@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_NoiseOffenceTableRow : public FIGS_SuspicionDataBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName NoiseEventTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bAddsDetection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DetectionAddedMult;
     
     FIGS_NoiseOffenceTableRow();

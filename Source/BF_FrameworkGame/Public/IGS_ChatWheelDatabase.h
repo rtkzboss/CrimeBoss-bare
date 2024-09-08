@@ -7,7 +7,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_ChatWheelDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -16,19 +16,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetLastIconText(FText InText);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetLastIconText() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(FGameplayTag inID) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_ChatWheelDataRow GetDataChatWheel(UObject* inWCO, FGameplayTag inID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_ChatWheelDataRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_ChatWheelDataRow> GetDatabaseTableBP() const;
     
 };

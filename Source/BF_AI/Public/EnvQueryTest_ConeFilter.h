@@ -8,33 +8,33 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_ConeFilter : public UEnvQueryTest {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue InnerConeAngle;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue InnerConeScore;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue PeripheralConeAngle;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue PeripheralConeScore;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue OutsideConeScore;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderBoolValue Is2DOnly;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     bool bDrawDebugLines;
     
 public:

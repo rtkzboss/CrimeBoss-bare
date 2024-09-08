@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "IGS_BlueprintAsyncActionBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_BlueprintAsyncActionBase : public UObject {
     GENERATED_BODY()
 public:

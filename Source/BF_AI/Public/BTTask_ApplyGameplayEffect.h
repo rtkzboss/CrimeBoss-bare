@@ -8,17 +8,17 @@
 
 class UGameplayEffect;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_ApplyGameplayEffect : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_GameplayEffectTarget Target;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval Duration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSubclassOf<UGameplayEffect> GameplayEffect;
     
     UBTTask_ApplyGameplayEffect();

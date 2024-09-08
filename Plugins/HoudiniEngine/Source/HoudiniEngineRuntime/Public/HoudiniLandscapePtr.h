@@ -6,17 +6,17 @@
 
 class ALandscapeProxy;
 
-UCLASS(Blueprintable)
+UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniLandscapePtr : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSoftObjectPtr<ALandscapeProxy> LandscapeSoftPtr;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EHoudiniLandscapeOutputBakeType BakeType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FName EditLayerName;
     
     UHoudiniLandscapePtr();

@@ -23,119 +23,119 @@ class UIGS_DamageHandlerComponentFramework;
 class UIGS_ObjectStatus;
 class USceneComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_DetectorBase : public APawn, public IGenericTeamAgentInterface, public IAISightTargetInterface, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DetectorTeamSideChanged OnTeamSideChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDetectorBaseStateChangedEvent OnEnabledEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDetectorBaseStateChangedEvent OnDisabledEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDetectorBaseStateChangedEvent OnDetectorDestroyedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDetectorBaseStateChangedEvent OnDetectionStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDetectorBaseStateChangedEvent OnTargetDetectedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDetectorBaseStateChangedEvent OnDetectionFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DetectorTargetChanged OnTargetChangedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_SentryControllerFramework* DefaultController;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 SquadID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AActor*> AllreadyReportedObjects;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bDisableOnAlarm;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BeforeReenablingEventTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BeforeReenablingSoundTime;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_RotationType RotationType;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleDefaultsOnly)
     USceneComponent* RotationPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleDefaultsOnly)
     USceneComponent* DetectionConeOrigin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UDetectorRotation* DetectorRotation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldMoveWhenNoTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldRotateToHiddenTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector2D TimeToLoseTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool DisabledByEMP;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DetectingPlayers, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_DetectingPlayers)
     TArray<AIGS_PlayerCharacter*> mR_DetectingPlayers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_ObjectStatus* ObjectStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_DamageHandlerComponentFramework* DamageHandlerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TotalHorizontalRotationAngleDegrees;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TotalVerticalRotationAngleDegrees;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FullRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FollowRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PatrollingRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ControlledRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DetectorState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_DetectorState)
     EIGS_DetectorState DetectorState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnDetectionChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnDetectionChanged)
     float mR_TargetDetection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_WTSatusChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_WTSatusChanged)
     EIGS_WalkieTalkieStatus mR_WalkieTalkieStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnTargetChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnTargetChanged)
     AActor* mR_Target;
     
 public:
@@ -150,50 +150,50 @@ public:
     void SetTeamSideID(EIGS_TeamSideEnum inNewID);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_WTSatusChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnTargetChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnDetectionChanged(float inOldDetection);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_DetectorState(EIGS_DetectorState inOldState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_DetectingPlayers();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnDetectorStateChanged(EIGS_DetectorState inNewState);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_CosmeticDetectorNearlyEnabled();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_CosmeticDetectorEnabled();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_CosmeticDetectorDisabled();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_CosmeticDetectorDestroyed();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_CosmeticDetectorControlled();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsDisabled() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsDestroyed() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_TeamSideEnum GetTeamSideId() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetFocusPoint() const;
     
     UFUNCTION(BlueprintCallable)
@@ -225,25 +225,25 @@ protected:
     UFUNCTION(BlueprintCallable)
     void DestroyDetector(AActor* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticStartServoSound();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticDetectorStateChanged(EIGS_DetectorState inNewState, EIGS_DetectorState inOldState);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticDetectorNearlyEnabled();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticDetectorEnabled();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticDetectorDisabled();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticDetectorDestroyed();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticDetectorControlled();
     
 

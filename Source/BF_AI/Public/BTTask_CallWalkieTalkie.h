@@ -4,12 +4,12 @@
 #include "BTTask_CallWalkieTalkieBase.h"
 #include "BTTask_CallWalkieTalkie.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_CallWalkieTalkie : public UBTTask_CallWalkieTalkieBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
 public:

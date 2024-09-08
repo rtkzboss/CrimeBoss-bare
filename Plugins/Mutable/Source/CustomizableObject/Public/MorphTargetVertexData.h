@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FMorphTargetVertexData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector PositionDelta;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector TangentZDelta;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 MorphIndex;
     
     CUSTOMIZABLEOBJECT_API FMorphTargetVertexData();

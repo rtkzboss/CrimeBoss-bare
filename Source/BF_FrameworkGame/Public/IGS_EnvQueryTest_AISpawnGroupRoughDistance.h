@@ -6,11 +6,11 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_EnvQueryTest_AISpawnGroupRoughDistance : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> DistanceTo;
     
     UIGS_EnvQueryTest_AISpawnGroupRoughDistance();

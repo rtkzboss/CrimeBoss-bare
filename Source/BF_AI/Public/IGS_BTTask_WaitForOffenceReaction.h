@@ -4,11 +4,11 @@
 #include "EIGS_OffenceReactionType.h"
 #include "IGS_BTTask_WaitForOffenceReaction.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_WaitForOffenceReaction : public UBTTask_Wait {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_OffenceReactionType Type;
     
     UIGS_BTTask_WaitForOffenceReaction();

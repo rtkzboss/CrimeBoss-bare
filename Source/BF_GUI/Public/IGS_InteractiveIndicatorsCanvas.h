@@ -12,36 +12,36 @@ class UIGS_InteractiveComponent;
 class UIGS_InteractiveObjectsManager;
 class UIGS_UseComponent;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_InteractiveIndicatorsCanvas : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_InteractionIndicatorSingleWidget> WidgetIconClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float FadeDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UCanvasPanel* IconCanvas;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InteractiveObjectsManager* m_InteractiveObjectsManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<UIGS_InteractiveComponent*> m_InteractionsArray;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<UIGS_InteractionIndicatorSingleWidget*> m_SpawnedWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export)
     TWeakObjectPtr<UIGS_UseComponent> m_OwningUseComponent;
     
 public:
     UIGS_InteractiveIndicatorsCanvas();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void GetWidgetXY(FVector InLocation, FVector2D& outXY, float& outAngle);
     
 };

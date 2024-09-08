@@ -6,7 +6,7 @@
 #include "EIGS_MantleType.h"
 #include "IGS_GameplayAbilityTargetActor_Mantle.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GameplayAbilityTargetActor_Mantle : public AGameplayAbilityTargetActor {
     GENERATED_BODY()
 public:

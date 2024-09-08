@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_SkyDome.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_RENDERING_API AIGS_SkyDome : public AActor {
     GENERATED_BODY()
 public:

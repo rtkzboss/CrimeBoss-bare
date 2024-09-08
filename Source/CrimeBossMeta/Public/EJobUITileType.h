@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EJobUITileType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EJobUITileType : uint8 {
     Big,
     Small,

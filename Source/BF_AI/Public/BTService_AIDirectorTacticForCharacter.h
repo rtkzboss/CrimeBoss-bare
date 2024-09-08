@@ -4,12 +4,12 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTService_AIDirectorTacticForCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_AIDirectorTacticForCharacter : public UBTService {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector WaveManagerTacticKey;
     
 public:

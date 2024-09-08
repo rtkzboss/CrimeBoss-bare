@@ -4,14 +4,14 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "IGS_BTTask_PickupActor.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_PickupActor : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float PickupDelay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestPickupActor;
     
     UIGS_BTTask_PickupActor();

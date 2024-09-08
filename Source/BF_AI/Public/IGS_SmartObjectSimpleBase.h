@@ -6,18 +6,18 @@
 
 class USceneComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_SmartObjectSimpleBase : public AActor, public IIGS_SmartObjectInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     bool bShouldPlayAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bCanPlayerBumpInto;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* RootComp;
     
 public:

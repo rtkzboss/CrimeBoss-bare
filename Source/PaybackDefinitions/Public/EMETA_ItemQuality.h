@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ItemQuality.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_ItemQuality : uint8 {
     None,
     Common,

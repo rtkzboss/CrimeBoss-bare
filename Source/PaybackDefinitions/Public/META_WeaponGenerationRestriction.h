@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_WeaponGenerationRestriction {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer WaponFilter;
     
     FMETA_WeaponGenerationRestriction();

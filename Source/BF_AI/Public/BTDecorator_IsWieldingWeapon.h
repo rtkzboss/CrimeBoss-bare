@@ -4,12 +4,12 @@
 #include "EIGS_SwitchWeaponTask_WeaponType.h"
 #include "BTDecorator_IsWieldingWeapon.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_IsWieldingWeapon : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_SwitchWeaponTask_WeaponType WeaponType;
     
 public:

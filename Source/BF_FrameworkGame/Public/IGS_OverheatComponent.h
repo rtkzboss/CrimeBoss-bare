@@ -14,35 +14,35 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_OverheatComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bAutoBindShooter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UCurveFloat* OverheatCurve;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float IncreasePerBullet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float IncreasePerSecond;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DecreasePerSecond;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float TimeUntilCooldown;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnOverheatValueChanged OnOverheatValueChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnOverheatStateChanged OnOverheatStateChangedEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsOverheated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_IsOverheated)
     bool mR_bIsOverheated;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CurrentOverheat, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_CurrentOverheat)
     float mR_CurrentOverheat;
     
 public:
@@ -53,19 +53,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetStaticMeshToApplyOverheat(UStaticMeshComponent* inStaticMesh, const int32 inIndex);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsOverheated();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CurrentOverheat();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void HandleOverheatStateChanged(bool inState);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsOverheated() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentOverheatValue() const;
     
     UFUNCTION(BlueprintCallable)

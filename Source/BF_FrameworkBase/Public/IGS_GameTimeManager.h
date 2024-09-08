@@ -5,12 +5,12 @@
 
 class UIGS_TimeLineHolder;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_GameTimeManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UIGS_TimeLineHolder*> m_Timelines;
     
 public:

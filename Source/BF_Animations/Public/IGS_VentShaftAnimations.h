@@ -5,12 +5,12 @@
 
 class AIGS_IntelligentGameCharacter;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_ANIMATIONS_API UIGS_VentShaftAnimations : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     AIGS_IntelligentGameCharacter* m_Character;
     
 public:

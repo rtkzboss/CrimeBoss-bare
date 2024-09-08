@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_DialogueMissionState.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_DialogueMissionState : uint8 {
+UENUM()
+enum class EIGS_DialogueMissionState {
     Stealth,
     Limbo,
     Control,

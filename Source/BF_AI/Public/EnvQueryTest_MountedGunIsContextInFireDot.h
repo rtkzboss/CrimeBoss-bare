@@ -6,14 +6,14 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_MountedGunIsContextInFireDot : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float RotationBoundsMutlipier;
     
     UEnvQueryTest_MountedGunIsContextInFireDot();

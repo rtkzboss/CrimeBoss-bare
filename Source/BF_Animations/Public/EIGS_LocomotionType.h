@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_LocomotionType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_LocomotionType : uint8 {
     BT_None,
     BT_Normal,

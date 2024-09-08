@@ -5,17 +5,17 @@
 
 class UIGS_HealthSectionWidget;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_PlayerHealthList : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
     UIGS_PlayerHealthList();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void PostPlayerListChanged();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnNewPlayerWidget(UIGS_HealthSectionWidget* InWidget);
     
     UFUNCTION(BlueprintCallable)

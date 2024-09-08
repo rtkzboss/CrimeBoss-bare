@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_PlayerCountWaveManagerModifierDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_WaveManagerModifierDef TwoPlayers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_WaveManagerModifierDef ThreePlayers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_WaveManagerModifierDef FourPlayers;
     
     FIGS_PlayerCountWaveManagerModifierDef();

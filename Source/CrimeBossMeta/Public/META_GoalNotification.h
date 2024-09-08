@@ -5,12 +5,12 @@
 
 class UMETA_BaseGoal;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_GoalNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMETA_BaseGoal* m_Goal;
     
 public:
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetGoal(UMETA_BaseGoal* inGoal);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_BaseGoal* GetGoal() const;
     
 };

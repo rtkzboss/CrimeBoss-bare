@@ -19,78 +19,78 @@ class USceneComponent;
 class UStaticMeshComponent;
 class UTimelineComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LaserTrap : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* RootObject;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* BeamOrigin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UBoxComponent* BeamDetectionBox;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UArrowComponent* BeamDirectionArrow;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UParticleSystemComponent* BeamEmitter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UStaticMeshComponent* LaserMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UPointLightComponent* StatusLight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UAkComponent* AkAudioComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* LaserOnAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* LaserOffAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* LaserChargingAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* LaserDetectionAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkRtpc* LaserChargingAkRtpc;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInterface* LaserMeshOffMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInterface* LaserMeshOnMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UCurveFloat* LightIntensityCurve;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UTimelineComponent* LightTimeline;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StartTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ChargeTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool EnableFromStart;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnSetEnabled, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnSetEnabled)
     bool mR_bIsEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnSetBeamEnabled, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnSetBeamEnabled)
     bool mR_bIsBeamEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_RecalculateBeam, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_RecalculateBeam)
     FVector mR_EndBeamPoint;
     
 public:
@@ -102,22 +102,22 @@ public:
     void SetEnabled(bool inState, bool inIgnoreChargeTime);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SetBeamEnabledDelayed(bool inState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_RecalculateBeam() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnSetEnabled() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnSetBeamEnabled();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void OnPlayerDetected();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnLightTimelineUpdate(float InValue);
     
     UFUNCTION(BlueprintCallable)

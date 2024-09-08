@@ -4,11 +4,11 @@
 #include "IGS_IntelBase.h"
 #include "IGS_EventIntel.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UIGS_EventIntel : public UIGS_IntelBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_Event EventType;
     
     UIGS_EventIntel();

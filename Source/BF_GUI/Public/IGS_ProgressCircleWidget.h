@@ -12,47 +12,47 @@ class UIGS_InteractiveComponent;
 class UIGS_ReloaderBase;
 class UIGS_WieldableInventoryObjectBase;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ProgressCircleWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float m_ReloadDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_WeaponBase* m_ActiveWeapon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_ReloaderBase* m_ActiveWeaponReloader;
     
 public:
     UIGS_ProgressCircleWidget();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SpawnReloadCircle(bool inEnabled, float inDuration);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnReviveStateChanged(bool bState, float inTotalTime);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInteractionFinished(bool inResult, UIGS_InteractiveComponent* inInteractiveComponent);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnActiveWieldableChangedOnPlayer(EIGS_WieldableSlot inSlotType, AIGS_WieldableBase* inWieldableBase, UIGS_WieldableInventoryObjectBase* inInventoryObject);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void InterruptReloadCircle();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandleProgressCircle(bool inEnabled, float inDuration);
     
 };

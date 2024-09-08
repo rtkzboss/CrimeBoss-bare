@@ -6,7 +6,7 @@
 
 class UKantanSimpleCategoryDatasource;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(BlueprintType, EditInlineNew)
 class KANTANCHARTSDATASOURCE_API UKantanSimpleCategoryDatasource : public UObject, public IKantanCategoryDatasourceInterface {
     GENERATED_BODY()
 public:

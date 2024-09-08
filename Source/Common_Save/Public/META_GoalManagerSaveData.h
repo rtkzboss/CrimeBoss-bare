@@ -15,25 +15,25 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_GoalManagerSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_GoalSave> StoryGoalsSave;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_MoneyMakingGoalSave> MoneyMakingGoalsSave;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<TSubclassOf<UMETA_BaseGoal>> GoalsPools;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<TSubclassOf<UMETA_BaseGoal>> BacklogGoalsPools;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_FinishedGoal> FinishedGoals;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_GoalsObjectIDCounter> GoalsRepeatCounters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<TSubclassOf<UMETA_HiddenGoalID>, FMETA_HiddenGoalsSaveInfo> HiddenGoalsData;
     
     FMETA_GoalManagerSaveData();

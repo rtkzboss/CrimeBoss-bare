@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FIGS_PlotlineGraphNestedCondition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UObject*> Conditions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ConditionExprOperator InnerConditionOperator;
     
     PAYBACKDEFINITIONS_API FIGS_PlotlineGraphNestedCondition();

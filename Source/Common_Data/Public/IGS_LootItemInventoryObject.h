@@ -3,7 +3,7 @@
 #include "IGS_GenericItemsInventoryObject.h"
 #include "IGS_LootItemInventoryObject.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class COMMON_DATA_API UIGS_LootItemInventoryObject : public UIGS_GenericItemsInventoryObject {
     GENERATED_BODY()
 public:

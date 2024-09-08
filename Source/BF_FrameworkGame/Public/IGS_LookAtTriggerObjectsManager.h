@@ -5,16 +5,16 @@
 
 class UIGS_LookAtTriggerComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_LookAtTriggerObjectsManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UIGS_LookAtTriggerObjectsManager();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnregisterInteractiveComponent(UIGS_LookAtTriggerComponent* InComponent);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RegisterInteractiveComponent(UIGS_LookAtTriggerComponent* InComponent);
     
 };

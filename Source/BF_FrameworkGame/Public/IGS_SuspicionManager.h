@@ -20,73 +20,73 @@ class UIGS_SuspicionComponent;
 class UIGS_SuspicionManager;
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SuspicionManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Strikes, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Strikes)
     int32 CurrentStrikes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Replicated)
     FGameplayTag BlameTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     EIGS_AlarmReason AlarmReason;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Alarm, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Alarm)
     bool IsAlarmed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool HeistCanStart;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     TArray<UIGS_SuspicionComponent*> SuspicionComponents;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_StrikesAddedSignature OnStrikeAdded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LimboSignature OnBotLimboStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_AlarmedSignature OnAlarmed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_AllGuardsDeadSignature OnAllGuardsDead;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_HeisteCanStart OnHeistCanStartChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CamerasDisabledSignature OnCamerasDisabled;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DetectorPacifiedStateChanged OnHQSuspicionStart;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DetectorPacifiedStateChanged OnHQSuspicionEnd;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DetectorPacifiedStateChanged OnHQAllDead;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DetectorPacifiedStateChanged OnHQSuspicionChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<AActor*, FIGS_VaultOffenceDefinition> m_VaultOpenDefinitions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<AActor*, AIGS_SuspicionEventActor*> m_SusOpenDefinitions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_TmpCharacters;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString MessagesLocTableNamespace;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString MessageHQReportKey;
     
 public:
@@ -94,7 +94,7 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool WouldStrikeCauseAlarm(int32 inStrikeCount) const;
     
     UFUNCTION(BlueprintCallable)
@@ -104,29 +104,29 @@ public:
     void ReportCivEscaped(AIGS_GameCharacterFramework* inCivilian);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Strikes(int32 inLastStrikes);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Alarm();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnStrikeAdded(int32 inNewStrikes, int32 inIncrease, const FGameplayTag inBlameTag);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_AddSuspicionInfoMessage(int32 inStrikesIncrease, const FText& inBlame);
     
 public:
     UFUNCTION(BlueprintCallable)
     void IsSuitableForHeist(const bool inIsSuitable);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsStrikeAllowed() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsLastStrike() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_SuspicionManager* GetSuspicionManager(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

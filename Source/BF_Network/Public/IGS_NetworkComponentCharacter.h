@@ -52,107 +52,107 @@ class UIGS_WeaponSkinData;
 class UIGS_WieldableInventoryObjectBase;
 class UMETA_WeaponInventoryObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentCharacter : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UIGS_PickupClassesData* PickupClasses;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_AimAtPoint, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_AimAtPoint)
     FIGS_InterestPointHolder mR_AimAtPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_LookAtPoint, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_LookAtPoint)
     FIGS_InterestPointHolder mR_LookAtPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CharacterAiming, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterAiming)
     FIGS_ReplicationCharacterAimingDataHolder mR_CharacterAiming;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_PlayingAnimations, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_PlayingAnimations)
     FIGS_ReplicationAnimationDataHolder mR_PlayingAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_LootBagInfo, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_LootBagInfo)
     FIGS_BagInfo mR_LootBagInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     TArray<FIGS_LootBagInfo> mR_FullLootBagInfos;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CharacterState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterState)
     EIGS_CharacterState mR_CharacterState;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MovementSpeed, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_MovementSpeed)
     EIGS_Speed mR_MovementSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_RequestLeadSide, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_RequestLeadSide)
     EIGS_LeanSide mR_RequestedLeanSide;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_LeaningDirection, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_LeaningDirection)
     EIGS_CharacterLeaningDirectionEnum mR_LeaningDirection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsMovingForced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_IsMovingForced)
     bool mR_IsMovingForced;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsMantling, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_IsMantling)
     bool mR_IsMantling;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ReplicatedAcceleration, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient, ReplicatedUsing=OnRep_ReplicatedAcceleration)
     FIGS_ReplicatedAcceleration mR_ReplicatedAcceleration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_ReplicatedLadder, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient, ReplicatedUsing=OnRep_ReplicatedLadder)
     FIGS_ReplicatedLadder mR_ReplicatedLadder;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsVisibilityModOn, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_IsVisibilityModOn)
     bool mR_IsVisibilityModOn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsRunningAttack, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_IsRunningAttack)
     bool mR_IsRunningAttack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ShooterType, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_ShooterType)
     EIGS_WeaponAttackType mR_ShooterType;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_AvailableWieldables, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_AvailableWieldables)
     TArray<FIGS_WieldableReplicatedData> mR_AvailableWieldables;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UIGS_InventoryObjectFramework*> m_OwningInventoryObjects;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CurrentSlot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_CurrentSlot)
     EIGS_WieldableSlot mR_CurrentSlot;
     
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_NetworkDialogueEvent OnVoiceStartedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_NetworkDialogueEvent OnVoiceStopedEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkSwitchValue* OverrideCharacterAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ComponentDialogueDataAsset* ComponentData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ComponentVoiceExpressionDataAsset* Data;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ComponentDialogueDataAsset* DialogueData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool VoiceExpressionEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float NearDeathHealthPercentage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UAkSwitchValue* SpeakerAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UAkSwitchValue* CharacterAkSwitch;
     
 public:
@@ -172,179 +172,179 @@ public:
     UFUNCTION(BlueprintCallable)
     void PlayVoice(const FIGS_PlayVariationData& inPlayVariationData);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWieldableRemoved(EIGS_WieldableSlot inSlot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWieldableAddedToSlot(UIGS_WieldableInventoryObjectBase* inInventoryObject, EIGS_WieldableSlot inSlot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSlotChanged(EIGS_WieldableSlot inSlot);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ShooterType();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_RequestLeadSide() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ReplicatedLadder() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ReplicatedAcceleration() const;
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_PlayingAnimations();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_MovementSpeed() const;
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_LootBagInfo(FIGS_BagInfo inOldInfo) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_LookAtPoint() const;
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_LeaningDirection() const;
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsVisibilityModOn() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsRunningAttack();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsMovingForced() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsMantling() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CurrentSlot();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CharacterState() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CharacterAiming() const;
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_AvailableWieldables();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_AimAtPoint() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnExpressionVoiceDuration(EAkCallbackType CallbackType, UAkCallbackInfo* CallbackInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCurrentlyFilledBagChanged();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_RequestAnimationTaskTag(FGameplayTag inMontageTag, float inRequestedDuration, int32 inRandomSeed);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_AnimationTaskCanceledTag(FGameplayTag inMontageTag, EIGS_AnimationTaskFinishedReason inCancelReason, int32 inRandomSeed);
     
-    UFUNCTION(BlueprintCallable, Server, Unreliable)
+    UFUNCTION(Server, Unreliable)
     void MessageToServer_WeaponMagCheckInterrupt();
     
-    UFUNCTION(BlueprintCallable, Server, Unreliable)
+    UFUNCTION(Server, Unreliable)
     void MessageToServer_WeaponMagCheck();
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_UpdateAvailableWieldables(const TArray<FIGS_WieldableReplicatedData>& inWieldables);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_ToggleVisibility(bool inVisible);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_ThrowThrowable(TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableObjectClass, const FVector& inSpawnLocation, const FQuat& inSpawnRotation, bool inThrowLow, float inTimeHeldInHand);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_ThrowAwayItem(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObjectClass, TSubclassOf<UMETA_WeaponInventoryObject> inWeaponId, const TSoftObjectPtr<UIGS_WeaponSkinData>& inWeaponSkin, FIGS_InventoryObjectUniversalData inUniversalData, FTransform InTransform, const TSoftClassPtr<AIGS_PickupActorBase>& inCustomPickupClass);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void MessageToServer_ThrowAwayBag(FIGS_LootBagItemHolder inLootBagInfo, FTransform InTransform, bool inThrow);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_StopAttack();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_SpawnMovingProjectile(const FTransform& inSpawnTransform);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void MessageToServer_SpawnBag(FIGS_LootBagItemHolder inLootBagInfo, FTransform InTransform);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_Shoot(const TArray<FIGS_NetProjectileData>& inNetProjectileDataList);
     
 private:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_SetRequestedLeanSide(EIGS_LeanSide inRequestedLeanSide);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_SetMovementSpeed(EIGS_Speed inMovementSpeed);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_SetLeaningDirection(EIGS_CharacterLeaningDirectionEnum inLeaningDirection);
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_SetCurrentSlot(EIGS_WieldableSlot inSlot);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_Reload(bool inIsCombat, bool inIsEmptyMagazine);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_PocketLootClear();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_PocketLootAdded(TSubclassOf<UIGS_InventoryObjectFramework> inPocketLoot);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_PlantThrowable(TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableObjectClass, const FVector& inPlantLocation, const FRotator& inPlantRotation);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_OnThrowStart(bool inThrowLow);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_OnThrowFinish(bool inThrowLow);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_OnThrowCancel(bool inThrowLow);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_OnPlayerSpecialAction(EIGS_SpecialActionType inType);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_OnLootBagCountChanged(int32 inCount, const TArray<EIGS_BagType>& inBagTypes);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_OnCurrentLootBagChanged(const TArray<FIGS_LootBagInfo>& inBagInfos);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_NotifyHitBash(const FIGS_BashResultNetwork& inBashData);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_NotifyHit(const FIGS_NetProjectileHitData& inHitData, const FIGS_NetProjectileHitResult& inProjectileHit);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_MeleeAttack(EIGS_MeleeAttackType inMeleeAttackType);
     
     UFUNCTION(Reliable, Server, WithValidation)
@@ -353,90 +353,90 @@ protected:
     UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_ItemAdded(TSubclassOf<UIGS_InventoryObjectFramework> inClass, uint32 inID, FIGS_InventoryObjectUniversalData inUniversalData);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_InventoryCleared();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_InterruptReload(EIGS_ReloadInterruptReasonEnum inInterruptReason, bool inImmediateInterrupt);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_ExplodedInHand(TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableObjectClass);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_DropDownItem(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObjectClass, TSubclassOf<UMETA_WeaponInventoryObject> inWeaponId, const TSoftObjectPtr<UIGS_WeaponSkinData>& inWeaponSkin, FIGS_InventoryObjectUniversalData inUniversalData, FTransform InTransform, const TSoftClassPtr<AIGS_PickupActorBase>& inCustomPickupClass);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_DetonateThrowable(TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableObjectClass);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_CharacterAim(bool inIsAiming, float inAimInSpeedMult, float inAimOutSpeedMult);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_ChangeShooter(EIGS_WeaponAttackType inAttackType);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_BeginAttack();
     
 private:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_AdvancedMovementEvent(EIGS_AdvancedMovementEvent inAdvancedMovementEvent);
     
 protected:
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void MessageToClient_Rollback(AActor* inActor, float inHealth) const;
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_WeaponMagCheckInterrupt();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_WeaponMagCheck();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_StopAttack();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_Shoot(const TArray<FIGS_NetProjectileData>& inNetProjectileDataList);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_Reload(bool inIsCombat, bool inIsEmptyMagazine);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_OnThrowStart(bool inThrowLow);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_OnThrowFinish(bool inThrowLow);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_OnThrowCancel(bool inThrowLow);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_OnPlayerSpecialAction(EIGS_SpecialActionType inType);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_MeleeAttack(EIGS_MeleeAttackType inMeleeAttackType);
     
 private:
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_IsMovingForced(bool inIsMovingForced);
     
 protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_InterruptReload(EIGS_ReloadInterruptReasonEnum inInterruptReason, const bool inImmediateInterrupt);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_HitSynchronizedBash(const FIGS_BashResultNetwork& inBashData);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_HitSynchronized(const FIGS_NetProjectileHitData& inHitData, const FIGS_NetProjectileHitResult& inProjectileHit);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_ChangeShooter(EIGS_WeaponAttackType inAttackType);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_BeginAttack();
     
 private:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_AdvancedMovementEvent(EIGS_AdvancedMovementEvent inAdvancedMovementEvent);
     
 public:
@@ -449,17 +449,17 @@ public:
     UFUNCTION(BlueprintCallable)
     FIGS_InventoryObjectUniversalData GetUniversalDataByItemID(int32 inID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetPlayerBaggedLootWeight();
     
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void All_ResetVoiceSFX(uint16 inGroupID);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void All_OnStopVoice(FIGS_PlayVariationData inPlayVariationData);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void All_OnPlayVoice(FIGS_PlayVariationData inPlayVariationData);
     
 };

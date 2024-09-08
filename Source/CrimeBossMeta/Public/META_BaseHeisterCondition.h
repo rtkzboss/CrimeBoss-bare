@@ -4,12 +4,12 @@
 #include "META_BaseCondition.h"
 #include "META_BaseHeisterCondition.generated.h"
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseHeisterCondition : public UMETA_BaseCondition {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     FMETA_CharacterID ConsideredHeisterID;
     
 public:
@@ -18,7 +18,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetConsideredHeister(FMETA_CharacterID inHeisterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_CharacterID GetConsideredHeister();
     
 };

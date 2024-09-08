@@ -5,18 +5,18 @@
 #include "GameplayTagContainer.h"
 #include "BTTask_Strafe.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_Strafe : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector IsDodgingKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DodgeDistanceKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
     
 public:

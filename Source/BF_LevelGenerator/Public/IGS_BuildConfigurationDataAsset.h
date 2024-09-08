@@ -7,17 +7,17 @@
 
 class UWorld;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_BuildConfigurationDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_ConnectionPointData> ConnectionPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_VariantDefinition> Variants;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSoftObjectPtr<UWorld> Level;
     
     UIGS_BuildConfigurationDataAsset();

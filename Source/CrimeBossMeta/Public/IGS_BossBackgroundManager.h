@@ -6,37 +6,37 @@
 
 class UDataTable;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_BossBackgroundManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBackgroundChangeFinished OnBackgroundChangeFinished;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UDataTable* m_DataTable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool m_BackgroundChangeInProgress;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FName m_CurrentLevelToLoad;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FName m_WaitingLevelToLoad;
     
 public:
     UIGS_BossBackgroundManager(const FObjectInitializer& ObjectInitializer);
 
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnloadIncorrectLevel(FName inLevelToUnload);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LoadCorrectLevel(FName inLevelToLoad);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LevelHandlingFinished();
     
 public:
@@ -47,7 +47,7 @@ public:
     bool IsAnyBackgroundLoaded();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void IncorrectLevelUnloaded();
     
 public:
@@ -58,7 +58,7 @@ public:
     FName GetNameForLevel(int32 inLevel);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     TArray<FName> GetLoadedBackgroundLevelNames() const;
     
 };

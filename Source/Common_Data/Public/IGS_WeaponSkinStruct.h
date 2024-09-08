@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_WeaponSkinStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag TagID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UIGS_WeaponSkinData> WeaponSkinID;
     
     FIGS_WeaponSkinStruct();

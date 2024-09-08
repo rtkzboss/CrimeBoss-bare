@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_FaceExpressionInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float HitDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AttackDuration;
     
     BF_ANIMATIONS_API FIGS_FaceExpressionInfo();

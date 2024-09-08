@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_BleedingDowstatePinned.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_BleedingDowstatePinned : public UBTTaskNode {
     GENERATED_BODY()
 public:

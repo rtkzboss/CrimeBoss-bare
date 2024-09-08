@@ -17,133 +17,133 @@ class UBlueprint;
 class UCameraComponent;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class DEBUGFUNCTIONLIBRARY_API UDFLDebugFL : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UDFLDebugFL();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static void SetDebugPropertiesPrintDebug(const UBlueprint* Blueprint, bool bNewPrintDebug);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static void SetDebugPropertiesLogDebug(const UBlueprint* Blueprint, bool bNewLogDebug);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static void SetDebugPropertiesDrawDebug(const UBlueprint* Blueprint, bool bNewDrawDebug);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static void SetDebugPropertiesDebug(const UBlueprint* Blueprint, bool bNewDebug);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static void SetDebugPropertiesBoolByName(const UBlueprint* Blueprint, const FString& Name, bool bNewValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FColor GetTertiaryColour_FColor(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FLinearColor GetTertiaryColour(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetSize(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int32 GetSegments(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FColor GetSecondaryColour_FColor(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FLinearColor GetSecondaryColour(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetScale(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetRadius(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FLinearColor GetPrintWarningColour(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetPrintFunction(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FLinearColor GetPrintErrorColour(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetPrintDuration(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetPrintDebug(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FLinearColor GetPrintColour(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetPrintClass(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FColor GetPrimaryColour_FColor(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FLinearColor GetPrimaryColour(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetLogFunction(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetLogDebug(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetLogClass(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetLineThickness(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetLineLength(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetHalfHeight(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetDrawDuration(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TEnumAsByte<EDrawDebugTrace::Type> GetDrawDebugTrace(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetDrawDebug(UObject* Owner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FVector GetDirectionFromAxis(EDFLDrawDebugAxis Axis);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool GetDebugPropertiesPrintDebug(const UBlueprint* Blueprint);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool GetDebugPropertiesLogDebug(const UBlueprint* Blueprint);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool GetDebugPropertiesDrawDebug(const UBlueprint* Blueprint);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool GetDebugPropertiesDebug(const UBlueprint* Blueprint);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool GetDebugPropertiesBoolByName(const UBlueprint* Blueprint, const FString& Name);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool GetDebugProperties(UObject* Owner, FDFLDebugProperties& ActorDebugProperties);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FLinearColor GetDebugColour(UObject* Owner, EDFLDrawDebugColour DebugColour);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FColor GetDebug_FColour(UObject* Owner, EDFLDrawDebugColour DebugColour);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetArrowSize(UObject* Owner);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContext))
@@ -308,7 +308,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void DFLDrawDebugActor(UObject* Owner, AActor* Actor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool BlueprintHasDebugProperties(const UBlueprint* Blueprint);
     
 };

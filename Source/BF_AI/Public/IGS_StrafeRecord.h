@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_StrafeRecord {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* Target;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float Time;
     
     FIGS_StrafeRecord();

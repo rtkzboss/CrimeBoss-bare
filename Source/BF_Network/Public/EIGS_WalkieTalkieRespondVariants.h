@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_WalkieTalkieRespondVariants.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_WalkieTalkieRespondVariants : uint8 {
+UENUM()
+enum class EIGS_WalkieTalkieRespondVariants {
     EIGS_Started,
     EIGS_Stopped,
 };

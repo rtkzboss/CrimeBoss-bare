@@ -7,28 +7,28 @@ class UTacticalPathfindingFilterBase;
 class UTacticalPathfindingNode;
 class UTacticalPathfindingNodeRoom;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_TactitalPathfinding : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTacticalPathfindingNode*> m_Nodes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTacticalPathfindingNodeRoom*> m_RoomNodes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTacticalPathfindingNode*> m_TmpPath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<uint8, UTacticalPathfindingFilterBase*> m_FiltersCache;
     
 public:
     UIGS_TactitalPathfinding();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnPopulationFinished();
     
 };

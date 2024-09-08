@@ -8,23 +8,23 @@
 class UIGS_CompileShadersLatent;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_CompileShadersLatent : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CompileShadersProgressPin Update;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ComipleShadersFinishedPin Finished;
     
     UIGS_CompileShadersLatent();
 
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecUpdate();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecFinish();
     
 public:

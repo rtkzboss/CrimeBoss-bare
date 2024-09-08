@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FIGS_MetaCutsceneOverrideData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<TSoftClassPtr<AIGS_CharacterPaperDoll>> OverrideSlotCharacterPaperDolls;
     
     PAYBACK_API FIGS_MetaCutsceneOverrideData();

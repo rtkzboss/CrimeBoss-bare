@@ -7,7 +7,7 @@ class AIGS_GameCharacterFramework;
 class AIGS_ProgressGadgetBase;
 class AIGS_ThrowableProjectileBase;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_VoiceoversHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

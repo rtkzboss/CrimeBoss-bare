@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_EquipmentScopeKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UIGS_EquipmentInventoryObject> EquipmentClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ItemQuality Quality;
     
     FMETA_EquipmentScopeKey();

@@ -3,7 +3,7 @@
 #include "Engine/AssetManager.h"
 #include "PaybackAssetManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACKDEFINITIONS_API UPaybackAssetManager : public UAssetManager {
     GENERATED_BODY()
 public:

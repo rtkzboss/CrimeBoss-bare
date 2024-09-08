@@ -3,7 +3,7 @@
 #include "Animation/AnimInstance.h"
 #include "IGS_GadgetAnimInstance.generated.h"
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_GadgetAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
@@ -24,19 +24,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnDrillEnded();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void Drill_UnJammed_Event();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void Drill_Started_Event(float InTime);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void Drill_SpeedUp_Event(bool IsSpeedUp, float inMaxSpeedUp);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void Drill_Jammed_Event();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void Drill_Ended_Event();
     
 };

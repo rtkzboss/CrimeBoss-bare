@@ -8,25 +8,25 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_DefaultWeaponModData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultMagazineMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultStockMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultSightMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultDynamicSightMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultBarrelMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultVisibilityMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DefaultZoomMagnification;
     
     FIGS_DefaultWeaponModData();

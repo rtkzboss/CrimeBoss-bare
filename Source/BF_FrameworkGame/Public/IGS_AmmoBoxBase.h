@@ -9,24 +9,24 @@
 class UAkAudioEvent;
 class UIGS_InteractiveComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AmmoBoxBase : public AIGS_PickupActorBase, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* PickupSoundAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_InteractiveComponent* InteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AmmoBoxItem InitialBoxID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_BoxIDChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_BoxIDChanged)
     EIGS_AmmoBoxItem mR_BoxID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_CommonItemData CommonData;
     
 public:
@@ -38,7 +38,7 @@ public:
     void SetBox(EIGS_AmmoBoxItem inBoxID);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_BoxIDChanged();
     
 

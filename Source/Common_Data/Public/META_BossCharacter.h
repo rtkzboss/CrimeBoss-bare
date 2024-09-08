@@ -5,7 +5,7 @@
 #include "META_PerkData.h"
 #include "META_BossCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_BossCharacter : public UMETA_Character {
     GENERATED_BODY()
 public:
@@ -17,19 +17,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetCharacterSkinTag(FGameplayTag inSkinTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetSlotByPerkTag(FGameplayTag inTagID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_PerkData GetPerkInSlot(int32 inSlot) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetEquippedSecondaryWeaponID() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetEquippedPrimaryWeaponID() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetCharacterSkinTag() const;
     
 };

@@ -9,34 +9,34 @@ class AIGS_VentShaft;
 class UCapsuleComponent;
 class UIGS_InteractiveComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_CoopClimb : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector EndLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_InteractiveComponent* CoopClimbInteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> User;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<AIGS_VentShaft> VentShaft;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UCapsuleComponent* CapsuleComponent;
     
 public:
     AIGS_CoopClimb(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnUsed(AIGS_GameCharacterFramework* inInstigator);
     
 };

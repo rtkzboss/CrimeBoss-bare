@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_GangStrategy.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_GangStrategy : uint8 {
     Normal,
     Defensive,

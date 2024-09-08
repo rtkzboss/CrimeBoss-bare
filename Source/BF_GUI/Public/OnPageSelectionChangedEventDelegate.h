@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnPageSelectionChangedEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPageSelectionChangedEvent, int32, NewIndex);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPageSelectionChangedEvent, int32, NewIndex);
 

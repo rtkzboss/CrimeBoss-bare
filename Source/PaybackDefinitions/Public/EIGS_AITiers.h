@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AITiers.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_AITiers : uint8 {
     AT_Tier1,
     AT_Tier2 = 2,

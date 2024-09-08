@@ -9,12 +9,12 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_StoryMission : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_StoryMissionSave m_StoryMissionSave;
     
 public:
@@ -38,7 +38,7 @@ public:
     UFUNCTION(BlueprintCallable)
     FMETA_StoryMissionSave GetSaveData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_FPSMissionRowInfo GetInfo() const;
     
 };

@@ -3,14 +3,14 @@
 #include "PopulationClassParameterOptions.h"
 #include "PopulationClassParameter.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FPopulationClassParameter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FString> Tags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FString, FPopulationClassParameterOptions> ParameterOptions;
     
     CUSTOMIZABLEOBJECTPOPULATION_API FPopulationClassParameter();

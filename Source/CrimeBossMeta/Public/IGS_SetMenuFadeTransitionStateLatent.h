@@ -7,17 +7,17 @@
 class UIGS_SetMenuFadeTransitionStateLatent;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UIGS_SetMenuFadeTransitionStateLatent : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnTransitionFinished OnTransitionFinished;
     
     UIGS_SetMenuFadeTransitionStateLatent();
 
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void TransitionFinished_Internal();
     
 public:

@@ -4,11 +4,11 @@
 #include "GameplayTagContainer.h"
 #include "IGS_GeneralReactionData_Base.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_GeneralReactionData_Base : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag Tag;
     
     UIGS_GeneralReactionData_Base();

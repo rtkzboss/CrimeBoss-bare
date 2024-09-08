@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_StickyType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_StickyType : uint8 {
+UENUM()
+enum class EIGS_StickyType {
     StickyType_None,
     StickyType_Static,
     StickyType_Moving,

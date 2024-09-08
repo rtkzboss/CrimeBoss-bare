@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_AdditionalHeister {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsUnique;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 Quality;
     
     FMETA_AdditionalHeister();

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_GraphNodeSave {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UObject> Graph;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NodeId;
     
     FMETA_GraphNodeSave();

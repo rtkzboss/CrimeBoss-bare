@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FIGS_HeisterMenuSlot {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString DisplayName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MenuSlotOccupation SlotOccupation;
     
     FIGS_HeisterMenuSlot();

@@ -8,17 +8,17 @@
 class UPrefabComponent;
 class UPrefabricatorAsset;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PREFABRICATORRUNTIME_API APrefabActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UPrefabComponent* PrefabComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGuid LastUpdateID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Seed;
     
     APrefabActor(const FObjectInitializer& ObjectInitializer);
@@ -32,10 +32,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void LoadPrefab();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPrefabOutdated();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UPrefabricatorAsset* GetPrefabAsset();
     
 };

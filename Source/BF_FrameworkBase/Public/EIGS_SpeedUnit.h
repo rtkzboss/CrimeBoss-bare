@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SpeedUnit.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_SpeedUnit : uint8 {
     CentimeterPerSecond,
     FootPerSecond,

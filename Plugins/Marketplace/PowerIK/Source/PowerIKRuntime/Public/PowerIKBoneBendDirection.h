@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct POWERIKRUNTIME_API FPowerIKBoneBendDirection {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FVector BendDirection;
     
     FPowerIKBoneBendDirection();

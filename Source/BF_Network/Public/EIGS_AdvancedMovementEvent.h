@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AdvancedMovementEvent.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_AdvancedMovementEvent : uint8 {
     AME_Slide,
     AME_StopSlide,

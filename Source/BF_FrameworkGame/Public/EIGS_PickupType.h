@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PickupType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_PickupType : uint8 {
     Default,
     Bag,

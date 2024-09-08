@@ -6,12 +6,12 @@
 #include "META_TaskManagment.h"
 #include "META_MoneyMakingGoal.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API UMETA_MoneyMakingGoal : public UMETA_BaseGoal, public IMETA_TaskManagment {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_MoneyMakingGoalData m_Goal;
     
 public:
@@ -20,10 +20,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetMonetaryValue(int32 inMonetaryValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMonetaryValue();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetLootType();
     
 

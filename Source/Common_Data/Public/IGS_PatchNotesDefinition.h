@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_PatchNotesDefinition : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString GameVersion;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Text;
     
     FIGS_PatchNotesDefinition();

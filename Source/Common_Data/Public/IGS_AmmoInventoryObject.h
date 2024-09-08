@@ -6,14 +6,14 @@
 
 class UIGS_WeaponInventoryObject;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class COMMON_DATA_API UIGS_AmmoInventoryObject : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_AmmoInventoryObjectAmmoChangedSignature OnAmmoChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_AmmoInventoryObjectAmmoChangedSignature OnAmmoDepleted;
     
     UIGS_AmmoInventoryObject();
@@ -21,7 +21,7 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 TakeAmmoForWeapon(int32 inCount, UIGS_WeaponInventoryObject* inWeapon);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAmmoFull() const;
     
     UFUNCTION(BlueprintCallable)
@@ -30,10 +30,10 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 GetPreciseAmmoValue(UIGS_WeaponInventoryObject* inWeapon);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetAmmoPercent() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetAmmoCountInterpolated(int32 inWeaponMaxAmmoCount) const;
     
     UFUNCTION(BlueprintCallable)

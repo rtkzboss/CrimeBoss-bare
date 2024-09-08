@@ -5,15 +5,15 @@
 #include "IGS_WeatherConfig.h"
 #include "IGS_WeatherConfigActor.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WeatherConfigActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_WeatherConfig WeatherConfig;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_VisualStyleConfig VisualStyleConfig;
     
 public:

@@ -5,13 +5,13 @@
 
 class UIGS_AIDifficultyManager;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIDifficultyManager : public UObject {
     GENERATED_BODY()
 public:
     UIGS_AIDifficultyManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_AIDifficultyManager* Instance(const UObject* inWorldContextObject);
     
 };

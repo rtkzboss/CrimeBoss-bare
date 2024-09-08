@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct COVERGENERATOR_API FIGS_RangeWithDistance : public FIGS_Range {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float Range;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float Weight;
     
     FIGS_RangeWithDistance();

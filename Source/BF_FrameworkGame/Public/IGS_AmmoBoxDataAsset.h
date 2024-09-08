@@ -7,11 +7,11 @@
 
 class UIGS_AmmoInventoryObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AmmoBoxDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSubclassOf<UIGS_AmmoInventoryObject>, FIGS_AmmoBoxData> AmmoData;
     
     UIGS_AmmoBoxDataAsset();

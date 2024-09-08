@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_ThreatPointPriority.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_ThreatPointPriority : uint8 {
+UENUM()
+enum class EIGS_ThreatPointPriority {
     TPP_Low,
     TPP_High,
 };

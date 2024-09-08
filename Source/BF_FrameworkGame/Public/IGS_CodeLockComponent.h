@@ -10,45 +10,45 @@
 class AActor;
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CodeLockComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 Code;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MinCylinderValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxCylinderValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Cylinders, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Cylinders)
     TArray<int32> R_Cylinders;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsLocked, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsLocked)
     bool R_IsLocked;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     bool R_bIsOccupied;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CylinderValueChanged OnCylinderValueChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CodeLockStateChanged OnCodeLockStateChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CodeLockOccupiedChanged OnCodeLockOccupiedChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CodeLockEndPlayEvent OnCodeLockEndPlayEvent;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 m_DigitCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* m_OldOwner;
     
 public:
@@ -65,31 +65,31 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetCode(int32 inCode);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_SetInstigator(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_SetCylinderValue(int32 InValue, int32 inCylinderIndex);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsLocked(bool inOldLocked);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Cylinders(TArray<int32> inOldCylinders);
     
     UFUNCTION(BlueprintCallable)
     void IncreaseCylinderValue(int32 inCylinderIndex);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsLocked();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetCode();
     
     UFUNCTION(BlueprintCallable)
     void DecreaseCylinderValue(int32 inCylinderIndex);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_SetCylinderValue(int32 InValue, int32 inCylinderIndex);
     
 };

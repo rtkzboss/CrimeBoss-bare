@@ -5,5 +5,5 @@
 
 class AActor;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_GeneralListenerHeardEvent, AActor*, inActor, FAIStimulus, inStimulus);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_GeneralListenerHeardEvent, AActor*, inActor, FAIStimulus, inStimulus);
 

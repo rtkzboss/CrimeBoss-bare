@@ -5,14 +5,14 @@
 
 class UIGS_TrafficPathComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_TrafficSegment : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_TrafficPathComponent* PathComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool Hidden;
     
     AIGS_TrafficSegment(const FObjectInitializer& ObjectInitializer);

@@ -12,7 +12,7 @@ public:
     UPaybackFriendliesBarksManager(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CombatTaunt(const AIGS_GameCharacterFramework* inInstigator, bool hasVisibleTarget);
     
 };

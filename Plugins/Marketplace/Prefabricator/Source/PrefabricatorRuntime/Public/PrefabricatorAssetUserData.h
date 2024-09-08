@@ -6,14 +6,14 @@
 
 class APrefabActor;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class PREFABRICATORRUNTIME_API UPrefabricatorAssetUserData : public UAssetUserData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<APrefabActor> PrefabActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FGuid ItemId;
     
     UPrefabricatorAssetUserData();

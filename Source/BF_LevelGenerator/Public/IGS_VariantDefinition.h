@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct BF_LEVELGENERATOR_API FIGS_VariantDefinition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName Name;
     
     FIGS_VariantDefinition();

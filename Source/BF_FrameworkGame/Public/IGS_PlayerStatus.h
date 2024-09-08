@@ -6,39 +6,39 @@
 
 class UAkAudioEvent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerStatus : public UIGS_ObjectStatus {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FScalableFloat HealthRegenDelay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FScalableFloat HealthRegenHPS;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FScalableFloat HealthRegenTickRateInSeconds;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bHealthRegenAllowed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float HealthRegenDelayAttribute;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float HealthRegenMultiplierAttribute;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bAutoregenMaxOverriden;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float AutoregenMaxOverride;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkAudioEvent* RegenerationStartAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkAudioEvent* RegenerationFinishedAkEvent;
     
 public:
@@ -48,10 +48,10 @@ public:
     void SetRegenerationBlocked(bool inIsBlocked);
     
 protected:
-    UFUNCTION(BlueprintCallable, Client, Unreliable)
+    UFUNCTION(Client, Unreliable)
     void MessageToClient_RegenStarted();
     
-    UFUNCTION(BlueprintCallable, Client, Unreliable)
+    UFUNCTION(Client, Unreliable)
     void MessageToClient_RegenFinished();
     
 public:
@@ -61,7 +61,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsRegenerationBlocked();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentMaxAutoregenHealth() const;
     
     UFUNCTION(BlueprintCallable)

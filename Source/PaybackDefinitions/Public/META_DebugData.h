@@ -4,42 +4,42 @@
 #include "META_Interval.h"
 #include "META_DebugData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_DebugData : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FMETA_Interval HeistersAlwaysSurvive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 ChanceBeKIAAfterSuccess;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 ChanceBeMIAAfterSuccess;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 ChanceBeKIAAfterFail;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 ChanceBeMIAAfterFail;
     
 public:
     UMETA_DebugData();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_Interval GetHeistersAlwaysSurvive() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetChanceBeMiaAfterSuccess() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetChanceBeMiaAfterFail() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetChanceBeKiaAfterSuccess() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetChanceBeKiaAfterFail() const;
     
 };

@@ -5,15 +5,15 @@
 #include "EIGS_CivOffenceReactionBehavior.h"
 #include "IGS_BTDecorator_OffenceAmbientReaction.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTDecorator_OffenceAmbientReaction : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_CivOffenceReactionBehavior DesiredBehavior;
     
 public:

@@ -3,18 +3,18 @@
 #include "META_MediaCondition.h"
 #include "META_TextScreenCondition.generated.h"
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_TextScreenCondition : public UMETA_MediaCondition {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ScreenText;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText SecondaryText;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Duration;
     
 public:

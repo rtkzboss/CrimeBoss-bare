@@ -9,22 +9,22 @@ USTRUCT(BlueprintType)
 struct FStreamlineFeatureRequirements {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     UStreamlineFeatureSupport Support;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     UStreamlineFeatureRequirementsFlags Requirements;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion RequiredOperatingSystemVersion;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion DetectedOperatingSystemVersion;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion RequiredDriverVersion;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion DetectedDriverVersion;
     
     STREAMLINEBLUEPRINT_API FStreamlineFeatureRequirements();

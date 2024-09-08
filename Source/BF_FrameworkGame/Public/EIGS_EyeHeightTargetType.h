@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_EyeHeightTargetType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_EyeHeightTargetType : uint8 {
     EHT_Unknown,
     EHT_Standing,

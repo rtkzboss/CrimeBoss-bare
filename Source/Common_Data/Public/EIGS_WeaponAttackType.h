@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WeaponAttackType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_WeaponAttackType : uint8 {
     AT_SemiAuto,
     AT_Burst2,

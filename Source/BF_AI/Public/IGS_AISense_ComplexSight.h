@@ -3,27 +3,27 @@
 #include "Perception/AISense.h"
 #include "IGS_AISense_ComplexSight.generated.h"
 
-UCLASS(Blueprintable, Config=Game)
+UCLASS(Config=Game)
 class BF_AI_API UIGS_AISense_ComplexSight : public UAISense {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditDefaultsOnly)
     int32 MaxTracesPerTick;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditDefaultsOnly)
     int32 MinQueriesPerTimeSliceCheck;
     
-    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditDefaultsOnly)
     double MaxTimeSlicePerTick;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditDefaultsOnly)
     float HighImportanceQueryDistanceThreshold;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditDefaultsOnly)
     float MaxQueryImportance;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditDefaultsOnly)
     float SightLimitQueryImportance;
     
 public:

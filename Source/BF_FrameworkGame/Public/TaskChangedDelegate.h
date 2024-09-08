@@ -3,5 +3,5 @@
 #include "EIGS_ObjectiveState.h"
 #include "TaskChangedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_OneParam(FTaskChanged, EIGS_ObjectiveState, inState);
+UDELEGATE() DECLARE_DYNAMIC_DELEGATE_OneParam(FTaskChanged, EIGS_ObjectiveState, inState);
 

@@ -7,31 +7,31 @@
 
 class UBinkMediaPlayer;
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_ModalScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_ModalWindowResponse OnConfirmed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_ModalWindowResponse OnExtraOptionSelected;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_ModalWindowResponse OnCancelled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FIGS_ModalTableRow ModalData;
     
     UIGS_ModalScreen();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetModalTexts(const FText& InTitle, const FText& inDescription, const FText& inConfirmText, const FText& inCancelText, const FText& inExtraOptionText);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetModalData(const FIGS_ModalTableRow& inData);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void PlayVideo(const UBinkMediaPlayer* inMedia, bool inSlowDown);
     
 };

@@ -9,33 +9,33 @@ class AIGS_GameCharacterFramework;
 class AIGS_WaypointBase;
 class AIGS_WaypointFramework;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_ScriptPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool Enabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bHasDirection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_ScriptPointExecuteOn ExecuteOn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float DirectionLookAtPosDistance;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditInstanceOnly)
     bool CanEverBeEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointFramework* OptionalNextPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_WaypointBase* OptionalNextPointCasted;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
     TArray<AIGS_GameCharacterFramework*> VisitingCharacters;
     
 public:
@@ -44,40 +44,40 @@ public:
     UFUNCTION(BlueprintCallable)
     bool TryActivateScriptPoint(AIGS_GameCharacterFramework* inActivator);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnVisit(AIGS_GameCharacterFramework* inActivator);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnLeave(AIGS_GameCharacterFramework* inActivator, bool inIsAbort);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnArrive(AIGS_GameCharacterFramework* inActivator);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnApproach(AIGS_GameCharacterFramework* inActivator);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool IsRedirectPointBlueprint();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool IsLockedBlueprint() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsEnabled() const;
     
     UFUNCTION(BlueprintCallable)
     AIGS_WaypointBase* GetNextPoint();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     TArray<AActor*> GetExtraArrowActors();
     
     UFUNCTION(BlueprintCallable)
     void Finish(AIGS_GameCharacterFramework* inActivator);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void Execute(AIGS_GameCharacterFramework* inActivator);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool CanBeActivatedBy(AIGS_GameCharacterFramework* inActivator);
     
 };

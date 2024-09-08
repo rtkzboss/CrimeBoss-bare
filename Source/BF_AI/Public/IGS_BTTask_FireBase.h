@@ -8,27 +8,27 @@ class AActor;
 class AIGS_IntelligentGameCharacter;
 class AIGS_WeaponBase;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UIGS_BTTask_FireBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag AfterFireCooldownTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AActor* Target;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_IntelligentGameCharacter* AIGameCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     int32 DesiredWeaponShootAmmo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     int32 CurrWeaponShootAmmo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_WeaponBase* Weapon;
     
 public:

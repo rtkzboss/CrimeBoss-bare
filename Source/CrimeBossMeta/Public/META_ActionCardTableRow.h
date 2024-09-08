@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FMETA_ActionCardTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UMETA_BaseActionCard> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_ActionCardData Data;
     
     FMETA_ActionCardTableRow();

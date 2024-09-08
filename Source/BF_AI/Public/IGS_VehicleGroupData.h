@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_VehicleGroupData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FColor> Colors;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_VehicleDatabaseData> VehiclesData;
     
     FIGS_VehicleGroupData();

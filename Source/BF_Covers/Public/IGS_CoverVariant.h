@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct BF_COVERS_API FIGS_CoverVariant {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName Name;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_CoverPointDataHolder> CoverPointDataHolders;
     
     FIGS_CoverVariant();

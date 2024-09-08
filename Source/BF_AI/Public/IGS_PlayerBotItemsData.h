@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_PlayerBotItemsData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_PlayerBotSettings DefaultSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_PlayerBotOverrideSettings> OverridetSettings;
     
     FIGS_PlayerBotItemsData();

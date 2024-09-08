@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FCartesianRangeBound {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ECartesianRangeBoundType Type;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FixedBoundValue;
     
     KANTANCHARTSSLATE_API FCartesianRangeBound();

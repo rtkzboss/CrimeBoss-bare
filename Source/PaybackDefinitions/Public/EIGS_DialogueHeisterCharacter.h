@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DialogueHeisterCharacter.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_DialogueHeisterCharacter : uint8 {
     None,
     GenericPlanner,

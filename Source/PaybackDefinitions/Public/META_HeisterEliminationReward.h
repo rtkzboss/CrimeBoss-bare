@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_HeisterEliminationReward {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<EMETA_ItemQuality> Quality;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsUnique;
     
     FMETA_HeisterEliminationReward();

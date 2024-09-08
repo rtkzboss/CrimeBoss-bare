@@ -4,7 +4,7 @@
 #include "KantanBarChartBase.h"
 #include "SimpleBarChart.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSUMG_API USimpleBarChart : public UKantanBarChartBase, public IKantanCategoryDatasourceInterface {
     GENERATED_BODY()
 public:

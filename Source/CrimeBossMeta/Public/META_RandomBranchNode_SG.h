@@ -4,11 +4,11 @@
 #include "META_RandomWayChance.h"
 #include "META_RandomBranchNode_SG.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_RandomBranchNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_RandomWayChance> WaysChances;
     
     UMETA_RandomBranchNode_SG();

@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FIGS_ExplosionParams {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector_NetQuantize Origin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TWeakObjectPtr<AActor> CausingActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float EffectRadius;
     
     BF_FRAMEWORKGAME_API FIGS_ExplosionParams();

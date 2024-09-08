@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_MissionOnTileInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag OwningTileTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 TilePositionIndex;
     
     FMETA_MissionOnTileInfo();

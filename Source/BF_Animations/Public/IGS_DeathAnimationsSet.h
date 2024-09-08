@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FIGS_DeathAnimationsSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> DeathAnimationMontages;
     
     BF_ANIMATIONS_API FIGS_DeathAnimationsSet();

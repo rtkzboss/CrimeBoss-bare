@@ -7,14 +7,14 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_SniperPoints : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> IgnoreSniperPoints;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderBoolValue OnlyCanVisit;
     
     UEnvQueryGenerator_SniperPoints();

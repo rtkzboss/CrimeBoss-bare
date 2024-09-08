@@ -16,7 +16,7 @@ class UIGS_GeneratorBuildConfiguration;
 class UIGS_RandomStreamHolder;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_LevelGeneratorFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -43,7 +43,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void GetGameplayTagParent(const FGameplayTag& inGameplayTag, FGameplayTag& outTagParent);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FIGS_ConnectionPointData GetConnectionPointData(AIGS_ConnectionPointBase* ConnectionPoint);
     
     UFUNCTION(BlueprintCallable)

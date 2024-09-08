@@ -9,22 +9,22 @@
 class AActor;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_POOL_API UIGS_PoolManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FIGS_PoolKey, FIGS_Pool> PoolMap;
     
 public:
     UIGS_PoolManager();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void StopTimers();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void StartTimers();
     
 public:

@@ -5,14 +5,14 @@
 
 class UIGS_PropLogicComponentBase;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropsManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     TArray<UIGS_PropLogicComponentBase*> PropLogicComponentArray;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bInitialized;
     
     UIGS_PropsManager(const FObjectInitializer& ObjectInitializer);
@@ -20,7 +20,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void Setup(int32 InSeed);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetInitialSeed() const;
     
 };

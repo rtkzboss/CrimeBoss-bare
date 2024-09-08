@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_AIBaseSpecializationHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIBaseSpecializationHolder {
     GENERATED_BODY()
 public:

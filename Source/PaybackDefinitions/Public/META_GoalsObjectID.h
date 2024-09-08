@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_GoalsObjectID {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UMETA_BaseGoal>> Goals;
     
     FMETA_GoalsObjectID();

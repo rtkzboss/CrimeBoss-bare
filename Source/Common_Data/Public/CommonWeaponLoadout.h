@@ -11,13 +11,13 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FCommonWeaponLoadout {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UMETA_WeaponInventoryObject> METAWeaponClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_WeaponInventoryObject> WeaponClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UIGS_ModInventoryObject>> WeaponMods;
     
     FCommonWeaponLoadout();

@@ -3,7 +3,7 @@
 #include "NavAreas/NavArea.h"
 #include "NavAreaRoomBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_NAVIGATION_API UNavAreaRoomBase : public UNavArea {
     GENERATED_BODY()
 public:

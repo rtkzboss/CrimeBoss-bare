@@ -16,31 +16,31 @@ public:
     UPaybackSystemsBarksManager(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void WaveManagerControlStart(EIGS_StormTacticType inStormTactic);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void WaveManagerAssaultStart(EIGS_TeamSideEnum inTeamSideEnum);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void WaveManagerAssaultEndingSoon(EIGS_TeamSideEnum inTeamSideEnum);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SuspicionManagerMultiKillGuard(const AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SuspicionManagerHQFinished(const AActor* inCharacter, bool inWasStrikeAdded);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SuspicionManagerHeistStarted();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SuspicionManagerFirstKillGuard(const AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SuspicionManagerAllGuardsDead(const AIGS_GameCharacterFramework* inLastCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SuspicioManagerOnAlarm(EIGS_AlarmReason inReason, const AActor* inOffender);
     
 };

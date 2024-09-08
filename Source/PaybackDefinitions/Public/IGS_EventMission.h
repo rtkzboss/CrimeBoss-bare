@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FIGS_EventMission {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Chance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FDataTableRowHandle Event;
     
     FIGS_EventMission();

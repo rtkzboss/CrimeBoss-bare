@@ -6,11 +6,11 @@
 
 class UIGS_AISense_Danger;
 
-UCLASS(Blueprintable, EditInlineNew, Config=Engine)
+UCLASS(EditInlineNew)
 class BF_AI_API UIGS_AISenseConfig_Danger : public UAISenseConfig {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, NoClear, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly, NoClear)
     TSubclassOf<UIGS_AISense_Danger> Implementation;
     
     UIGS_AISenseConfig_Danger();

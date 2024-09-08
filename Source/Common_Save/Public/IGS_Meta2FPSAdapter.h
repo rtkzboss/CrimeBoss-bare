@@ -9,7 +9,7 @@
 class UMETA_Character;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_SAVE_API UIGS_Meta2FPSAdapter : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

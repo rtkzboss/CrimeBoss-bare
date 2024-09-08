@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_ActiveTPVMontageHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_ActiveTPVMontageHolder {
     GENERATED_BODY()
 public:

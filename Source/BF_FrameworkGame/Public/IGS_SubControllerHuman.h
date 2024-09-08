@@ -7,23 +7,23 @@
 
 class ACharacter;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UIGS_SubControllerHuman : public UIGS_SubControllerCommon {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayAbilitySpecHandle m_RunningAbilitySpecHandle;
     
 public:
     UIGS_SubControllerHuman(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnMoveModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode);
     
 private:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void MessageToServer_StopUsingVehicle();
     
 };

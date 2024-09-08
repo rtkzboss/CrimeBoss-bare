@@ -6,22 +6,22 @@
 
 class UIGS_WaveManager;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WaveManagerWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_WaveManager> WaveManager;
     
 public:
     UIGS_WaveManagerWidget();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void PhaseChanged(EIGS_PressurePhase inPressurePhase);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void EnemyCountChanged();
     
 };

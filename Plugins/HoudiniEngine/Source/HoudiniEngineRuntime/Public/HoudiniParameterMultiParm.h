@@ -4,38 +4,38 @@
 #include "HoudiniParameter.h"
 #include "HoudiniParameterMultiParm.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterMultiParm : public UHoudiniParameter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bIsShown;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 Value;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString TemplateName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 MultiparmValue;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint32 MultiParmInstanceNum;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint32 MultiParmInstanceLength;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint32 MultiParmInstanceCount;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint32 InstanceStartOffset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<EHoudiniMultiParmModificationType> MultiParmInstanceLastModifyArray;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 DefaultInstanceCount;
     
     UHoudiniParameterMultiParm();

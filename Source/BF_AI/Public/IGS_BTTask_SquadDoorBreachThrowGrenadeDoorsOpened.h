@@ -9,25 +9,25 @@ class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 class UIGS_ThrowableInventoryObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachThrowGrenadeDoorsOpened : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSubclassOf<UIGS_ThrowableInventoryObject> Grenade;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* ContextActionCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* ContextActionCommand;
     
 public:
     UIGS_BTTask_SquadDoorBreachThrowGrenadeDoorsOpened();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     UIGS_AICommand* CommandToThrowGrenade(AIGS_GameCharacterFramework* inAgent, FVector position);
     
 };

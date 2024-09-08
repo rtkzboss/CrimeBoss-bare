@@ -3,11 +3,11 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_LevelPlayerSpawnManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_LevelPlayerSpawnManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool IsSpawnEnabled;
     
     UIGS_LevelPlayerSpawnManager();

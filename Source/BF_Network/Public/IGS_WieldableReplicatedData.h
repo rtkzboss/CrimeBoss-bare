@@ -13,31 +13,31 @@ USTRUCT(BlueprintType)
 struct FIGS_WieldableReplicatedData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint32 UniqueId;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int8 TableIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EIGS_WieldableSlot Slot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EIGS_ItemType ItemType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSoftObjectPtr<UIGS_WeaponSkinData> WeaponSkin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<UMETA_WeaponInventoryObject> WeaponDefinition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSoftObjectPtr<UIGS_WeaponSkinData> DefaultWeaponSkin;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<int16> Mods;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_InventoryObjectUniversalData UniversalData;
     
     BF_NETWORK_API FIGS_WieldableReplicatedData();

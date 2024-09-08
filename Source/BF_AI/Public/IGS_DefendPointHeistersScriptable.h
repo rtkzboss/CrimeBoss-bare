@@ -3,7 +3,7 @@
 #include "IGS_DefendPointBase.h"
 #include "IGS_DefendPointHeistersScriptable.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_DefendPointHeistersScriptable : public AIGS_DefendPointBase {
     GENERATED_BODY()
 public:

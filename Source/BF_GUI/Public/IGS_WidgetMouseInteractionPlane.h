@@ -4,14 +4,14 @@
 #include "OnHoverBorderHoverEventDelegate.h"
 #include "IGS_WidgetMouseInteractionPlane.generated.h"
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetMouseInteractionPlane : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FOnHoverBorderHoverEvent OnHoverBorderHover;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FOnHoverBorderHoverEvent OnHoverBorderUnhover;
     
     UIGS_WidgetMouseInteractionPlane();

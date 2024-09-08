@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_TPP_Mutable_Speed_Animaitons {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UClass* Animation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Speed;
     
     BF_ANIMATIONS_API FIGS_TPP_Mutable_Speed_Animaitons();

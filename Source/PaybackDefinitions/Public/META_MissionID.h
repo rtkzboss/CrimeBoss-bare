@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "META_MissionID.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACKDEFINITIONS_API UMETA_MissionID : public UObject {
     GENERATED_BODY()
 public:

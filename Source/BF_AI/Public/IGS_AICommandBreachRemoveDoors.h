@@ -3,7 +3,7 @@
 #include "IGS_AICommandBreachRemoveObstacle.h"
 #include "IGS_AICommandBreachRemoveDoors.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_AICommandBreachRemoveDoors : public UIGS_AICommandBreachRemoveObstacle {
     GENERATED_BODY()
 public:

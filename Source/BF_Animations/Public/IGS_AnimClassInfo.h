@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FIGS_AnimClassInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftClassPtr<AIGS_WieldableBase> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UClass* ArmsAnimClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UClass* CharacterAnimClass;
     
     BF_ANIMATIONS_API FIGS_AnimClassInfo();

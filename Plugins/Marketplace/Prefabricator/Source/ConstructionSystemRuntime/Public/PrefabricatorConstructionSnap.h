@@ -5,12 +5,12 @@
 
 class UPrefabricatorConstructionSnapComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CONSTRUCTIONSYSTEMRUNTIME_API APrefabricatorConstructionSnap : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UPrefabricatorConstructionSnapComponent* ConstructionSnapComponent;
     
 public:

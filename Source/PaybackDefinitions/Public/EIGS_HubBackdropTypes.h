@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HubBackdropTypes.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_HubBackdropTypes : uint8 {
     AllRandom,
     Ocean1Side_HarborSK4,

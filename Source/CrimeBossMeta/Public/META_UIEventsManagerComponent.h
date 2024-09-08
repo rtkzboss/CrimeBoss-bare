@@ -14,7 +14,7 @@ class UMETA_BaseMission;
 class UMETA_Character;
 class UMapTile;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_UIEventsManagerComponent : public UIGS_UIEventsManagerBaseComponent {
     GENERATED_BODY()
 public:
@@ -42,85 +42,85 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_BossPointChanged, float, PreviousPoints, float, CurrentPoints);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FIGS_BossLevelChanged, int32, PreviousLevel, int32, CurrentLevel, float, PreviousPoints, float, CurrentPoints);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMETA_AIGangDefendedAttackFromAnotherAIGang OnAIGangDefendedAttackFromAnotherAIGang;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMETA_LoanIsAbleToBeActivatedDueToBankruption OnLoanIsAbleToBeActivatedDueToBankruption;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMETA_LoanHasBeenFullyRepaid OnLoanHasBeenFullyRepaid;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMETA_PlayerBrokeFriendshipAndBecameTopEnemyForAllGangs OnPlayerBrokeFriendshipAndBecameTopEnemyForAllGangs;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMETA_GangHaveIsolatedTilesAndAutomaticallyCapturedThem OnGangHaveIsolatedTilesAndAutomaticallyCapturedThem;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnHeisterDeserted OnHeisterDeserted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_UnpaidHeisterLeftCrew OnUnpaidHeisterLeftCrew;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_UniqueHeisterLvlChanged OnUniqueHeisterLvlChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnPlayerReachedBankruptState OnPlayerReachedBankruptState;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnPlayerRehabilitatedFromBankruptState OnPlayerRehabilitatedFromBankruptState;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnMissionObjectiveForCompletionInNDaysFailed OnMissionObjectiveForCompletionInNDaysFailed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnSwitchToScreenEvent OnSwitchToScreenEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnUnlockFeatureEvent OnUnlockFeatureEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnJobForcedEvent OnJobForcedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnReadyRandEventChanged OnReadyRandEventChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnActiveRandEventChanged OnActiveRandEventChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_SurvivalMissionForMissingCrewSpawned OnSurvivalMissionForMissingCrewSpawned;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MissingHeisterReturnedToCrew OnMissingHeisterReturnedToCrew;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MissingHeisterDead OnMissingHeisterDead;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FIGS_JobCompletedInfo PendingCompletedJob;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool PendingCareerCompleted;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     EMETA_CareerCompletionReason PendingCareerCompletedReason;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     EMETA_Gang PendingCareerCompletedGang;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_IntelLevelChanged OnIntelLevelChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_GatherIntelCompleted OnGatherIntelCompleted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_BossLevelChanged OnBossLevelChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_BossPointChanged OnBossPointChanged;
     
     UMETA_UIEventsManagerComponent(const FObjectInitializer& ObjectInitializer);

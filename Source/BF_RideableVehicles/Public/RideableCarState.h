@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FRideableCarState {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FTransform Tranform;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector Velocity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FRideableCarMove LastMove;
     
     BF_RIDEABLEVEHICLES_API FRideableCarState();

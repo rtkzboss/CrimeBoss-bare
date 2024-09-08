@@ -6,30 +6,30 @@
 class UMETA_StoryGraph;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UStoryGraphManager : public UMETA_BaseStoryGraphManager {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FString, UMETA_StoryGraph*> GraphVersions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FString> SavedVersions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UMETA_StoryGraph* CurrentGraph;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     FString CurrentGraphVersion;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FString> DeprecatedVersions;
     
 public:
     UStoryGraphManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     UMETA_StoryGraph* GetCurrentGraph(UObject* inWCO);
     
 };

@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_WaveManagerModifierDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 MaxSpawnedEnemiesAddition;
     
     FIGS_WaveManagerModifierDef();

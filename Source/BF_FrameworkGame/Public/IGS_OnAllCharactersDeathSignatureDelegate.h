@@ -4,5 +4,5 @@
 
 class AIGS_AIEnemyGroupSpawner;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnAllCharactersDeathSignature, AIGS_AIEnemyGroupSpawner*, inSpawnGroup);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnAllCharactersDeathSignature, AIGS_AIEnemyGroupSpawner*, inSpawnGroup);
 

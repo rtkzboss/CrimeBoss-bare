@@ -4,5 +4,5 @@
 
 class AIGS_DetectorBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_CameraViewerChangeCameraEvent, AIGS_DetectorBase*, inNewCamera);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_CameraViewerChangeCameraEvent, AIGS_DetectorBase*, inNewCamera);
 

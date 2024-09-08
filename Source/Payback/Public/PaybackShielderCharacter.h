@@ -6,12 +6,12 @@
 
 class UIGS_WeakSpotComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API APaybackShielderCharacter : public APaybackAICharacter, public IIGS_HasWeakSpotInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_WeakSpotComponent* m_WeakSpotComponent;
     
 public:

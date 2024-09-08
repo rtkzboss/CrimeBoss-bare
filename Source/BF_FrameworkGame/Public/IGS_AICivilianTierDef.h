@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AICivilianTierDef : public FIGS_AIBaseTierDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AICivilianBaseDataModifiers Stats;
     
     FIGS_AICivilianTierDef();

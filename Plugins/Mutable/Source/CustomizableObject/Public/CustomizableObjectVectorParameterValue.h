@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FCustomizableObjectVectorParameterValue {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FString ParameterName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FLinearColor ParameterValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FString Uid;
     
     CUSTOMIZABLEOBJECT_API FCustomizableObjectVectorParameterValue();

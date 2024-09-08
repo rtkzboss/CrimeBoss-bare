@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_FinishedGoals {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_FinishedGoal> Goals;
     
     FMETA_FinishedGoals();

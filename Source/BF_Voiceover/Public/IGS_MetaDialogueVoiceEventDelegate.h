@@ -4,5 +4,5 @@
 
 class UAkExternalMediaAsset;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_MetaDialogueVoiceEvent, UAkExternalMediaAsset*, VoiceMedia);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_MetaDialogueVoiceEvent, UAkExternalMediaAsset*, VoiceMedia);
 

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_CharacterMissionProgress {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, EMETA_JobResult> MissionsStatuses;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool Completed;
     
     FIGS_CharacterMissionProgress();

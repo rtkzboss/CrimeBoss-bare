@@ -5,12 +5,12 @@
 
 class UMETA_Character;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_CharacterNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMETA_Character* m_Character;
     
 public:
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetCharacter(UMETA_Character* inCharacter, FText inOption);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_Character* GetCharacter() const;
     
 };

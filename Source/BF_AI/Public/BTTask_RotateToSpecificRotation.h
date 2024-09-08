@@ -3,12 +3,12 @@
 #include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "BTTask_RotateToSpecificRotation.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_RotateToSpecificRotation : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AcceptedAngle;
     
 public:

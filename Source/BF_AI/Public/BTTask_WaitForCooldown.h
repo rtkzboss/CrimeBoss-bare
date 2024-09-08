@@ -4,11 +4,11 @@
 #include "GameplayTagContainer.h"
 #include "BTTask_WaitForCooldown.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_WaitForCooldown : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag CooldownTag;
     
     UBTTask_WaitForCooldown();

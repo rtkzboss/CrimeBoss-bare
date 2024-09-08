@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_GenericItemsData : public FIGS_CommonItemData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_ItemWeight ItemWeight;
     
     FIGS_GenericItemsData();

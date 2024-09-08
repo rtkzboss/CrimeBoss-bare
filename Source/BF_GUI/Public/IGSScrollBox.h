@@ -3,12 +3,12 @@
 #include "Components/ScrollBox.h"
 #include "IGSScrollBox.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_GUI_API UIGSScrollBox : public UScrollBox {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Speed;
     
 public:

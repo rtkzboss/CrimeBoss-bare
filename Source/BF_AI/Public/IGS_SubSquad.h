@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_SubSquad {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_GameCharacterFramework* Leader;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UIGS_AICommand* LeaderCommand;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_GameCharacterFramework* Backup;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UIGS_AICommand* BackUpCommand;
     
     FIGS_SubSquad();

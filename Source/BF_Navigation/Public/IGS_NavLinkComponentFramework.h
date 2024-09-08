@@ -5,17 +5,17 @@
 #include "OnMoveReachedLinkDelegate.h"
 #include "IGS_NavLinkComponentFramework.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NAVIGATION_API UIGS_NavLinkComponentFramework : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FOnMoveReachedLink OnMoveReachedLink;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FOnMoveReachedLink OnTransitionStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FOnMoveLeftLink OnMoveLeftLink;
     
     UIGS_NavLinkComponentFramework(const FObjectInitializer& ObjectInitializer);
@@ -23,10 +23,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetEnabled(bool inEnabled);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsEnabled() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasMovingAgents() const;
     
 };

@@ -20,12 +20,12 @@
 
 class UIGS_BaseMissionObject;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class COMMON_DATA_API UMETA_BaseFPSMission : public UMETA_BaseMission {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool m_StealthCompletionFlag;
     
 public:
@@ -97,79 +97,79 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetBonusLoot(TMap<FGameplayTag, int32> inBonusLoot);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetWantedBadges();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_AITiers GetSWATTier() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_StealthMode GetStealthMode();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetStealthCompletionFlag();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetSelectedLoot();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_ReturnedDataProcessingMode GetReturnedDataProcessingMode();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_RespectLvl GetRespectValueOnMissionSpawn();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetRequiredSoldiersForFullRevealIntel();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_SWATVariationType GetPrimarySwatVariation() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_GangsterVariationType GetPrimaryEnemyVariation() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_ObjectiveState GetObjectiveState();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_ObjectiveRewardData GetObjectiveReward();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_ObjectiveTableRow GetObjectiveDataBP();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_FPSMissionSubtype GetMissionSubtype() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetMissionRewardMultiplierFromIntel() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionOutCome() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionObjectiveMonetaryValue() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetMissionMonetaryValueMultiplier() const;
     
     UFUNCTION(BlueprintCallable)
     void GetMissionMonetaryRewards(int32& out1stStarReward, int32& out2ndStarReward, int32& out3rdStarReward, int32& outLootMonetaryValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionMaxMonetaryValue() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionHeisterCut() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionExpenses() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionBonusCash() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetLootPercentageFromSuccess() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_AITiers GetGangsterTier() const;
     
     UFUNCTION(BlueprintCallable)
@@ -178,16 +178,16 @@ public:
     UFUNCTION(BlueprintCallable)
     TSubclassOf<UIGS_BaseMissionObject> GetFPSMissionID();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetFencingExpenses() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_ScenarioDifficulty GetDifficulty() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<FGameplayTag, int32> GetBonusLoot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_HeistersBackupVariationType GetAllyVariation() const;
     
     UFUNCTION(BlueprintCallable)
@@ -196,7 +196,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ChangeAmountOfSoldiersWereSentByValue(int32 ByValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float CalculateCombinedMissionRewardMultiplier() const;
     
     UFUNCTION(BlueprintCallable)

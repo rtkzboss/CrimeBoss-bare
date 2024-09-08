@@ -4,20 +4,20 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTService_LookAt.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_LookAt : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookAtBlackBoardKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bRotateIfBehind;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     float LookAtStartMaxAngle;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     float LookAtStopMaxAngle;
     
     UBTService_LookAt();

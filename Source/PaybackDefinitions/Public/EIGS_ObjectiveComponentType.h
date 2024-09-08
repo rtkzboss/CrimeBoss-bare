@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ObjectiveComponentType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_ObjectiveComponentType : uint8 {
     Default,
     Populator,

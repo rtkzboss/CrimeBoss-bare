@@ -10,12 +10,12 @@
 
 class UMETA_MissionID;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_Ambush : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_AmbushMissionSave m_AmbushMissionSave;
     
 public:
@@ -33,16 +33,16 @@ public:
     UFUNCTION(BlueprintCallable)
     FMETA_AmbushMissionSave GetSaveData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_PreviousMissionData GetPreviousFPSMissionData() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetInstigatorMissionTileID() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_MissionID> GetInstigatorMissionID() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_AmbushMissionRowInfo GetInfo() const;
     
 };

@@ -6,21 +6,21 @@
 class UConstructionSystemCursor;
 class UPrefabricatorAssetInterface;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemBuildTool : public UConstructionSystemTool {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TraceDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CursorRotationStepAngle;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UConstructionSystemCursor* Cursor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UPrefabricatorAssetInterface* ActivePrefabAsset;
     
 public:
@@ -30,16 +30,16 @@ public:
     void SetActivePrefab(UPrefabricatorAssetInterface* InActivePrefabAsset);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandleInput_RotateCursorStep(float NumSteps);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandleInput_CursorMovePrev();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandleInput_CursorMoveNext();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandleInput_ConstructAtCursor();
     
 };

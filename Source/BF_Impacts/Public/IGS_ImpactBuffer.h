@@ -5,14 +5,14 @@
 
 class AIGS_ImpactBase;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_IMPACTS_API FIGS_ImpactBuffer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_ImpactBase*> Impacts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<AIGS_ImpactBase> ImpactClass;
     
     FIGS_ImpactBuffer();

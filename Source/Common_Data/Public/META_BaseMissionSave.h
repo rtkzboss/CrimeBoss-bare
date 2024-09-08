@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_BaseMissionSave {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UMETA_MissionID> MissionID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_MissionOnTileInfo MissionOnTileInfo;
     
     FMETA_BaseMissionSave();

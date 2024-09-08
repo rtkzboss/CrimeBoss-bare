@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_HasLineOfSight.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_HasLineOfSight : public UBTDecorator {
     GENERATED_BODY()
 public:

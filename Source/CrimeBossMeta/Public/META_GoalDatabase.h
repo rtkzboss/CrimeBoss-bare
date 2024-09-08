@@ -12,7 +12,7 @@ class UMETA_BaseGoal;
 class UObject;
 class UStoryGraphManager;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_GoalDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -24,7 +24,7 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_GoalTableRow> GetMoneyMakingGoalsForPartner(EMETA_Partner inPartner);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UMETA_BaseGoal>& inClass) const;
     
     UFUNCTION(BlueprintCallable)
@@ -39,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_GoalTableRow GetGoalData(UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inClass, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_GoalTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
     UFUNCTION(BlueprintCallable)

@@ -7,24 +7,24 @@ class ANavigationData;
 class UIGS_LevelGeneratorSubsystem;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_LevelGeneratorSubsystem : public UTickableWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bIsBuildingFinished;
     
     UIGS_LevelGeneratorSubsystem();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_LevelGeneratorSubsystem* Instance(const UObject* inWorldContextObject);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void InitializeRooms_Server(ANavigationData* inNavData);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetDefaultSeed() const;
     
     virtual TStatId GetStatId() const override { return {}; }

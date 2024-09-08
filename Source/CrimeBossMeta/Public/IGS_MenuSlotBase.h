@@ -9,7 +9,7 @@
 class AIGS_PlayerStateGame;
 class APlayerState;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API AIGS_MenuSlotBase : public AActor {
     GENERATED_BODY()
 public:
@@ -18,19 +18,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void UpdatePlayerHeisterData(APlayerState* inPlayerState, const FCommonHeisterData& inHeisterData);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void IsConfirmed(bool& NewIsConfirmed);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     EIGS_StorePlatform GetStorePlatform() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetPlayerState(AIGS_PlayerStateGame*& PlayerState);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetOccupation(EIGS_MenuSlotOccupation& Occupation);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetHeisterData(FCommonHeisterData& HeisterData);
     
 };

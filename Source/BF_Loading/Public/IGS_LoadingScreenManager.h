@@ -11,24 +11,24 @@ class UIGS_RichTextBlockDecoratorBase;
 class UObject;
 class UTexture;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LOADING_API UIGS_LoadingScreenManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_LoadingScreenDataAsset* Data;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UTexture* BackgroundTexture;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UTexture* ThrobberBrush;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSoftObjectPtr<UTexture> CustomBackgroundTexture;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UIGS_RichTextBlockDecoratorBase*> m_LoadingTipsDecoratorOwner;
     
 public:
@@ -53,7 +53,7 @@ public:
     static void SetAdditionalLoadingScreenTips(UObject* inWCO, FGameplayTagContainer inTagContainer);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInputDeviceChanged(EIGS_InputDevice inInputDevice);
     
 public:

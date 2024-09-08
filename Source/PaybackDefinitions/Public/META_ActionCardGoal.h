@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_ActionCardGoal {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardTheme Theme;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardStrength MinStrength;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardStrength MaxStrength;
     
     FMETA_ActionCardGoal();

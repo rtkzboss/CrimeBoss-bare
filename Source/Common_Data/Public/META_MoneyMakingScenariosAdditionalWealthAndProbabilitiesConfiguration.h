@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer MoneyMakingScenarios;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_RespectLvl, FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios> RewardsAndProbabilities;
     
     FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration();

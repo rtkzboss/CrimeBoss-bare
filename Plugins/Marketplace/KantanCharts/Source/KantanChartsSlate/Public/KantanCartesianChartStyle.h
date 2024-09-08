@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct KANTANCHARTSSLATE_API FKantanCartesianChartStyle : public FKantanChartStyle {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DataOpacity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DataLineThickness;
     
     FKantanCartesianChartStyle();

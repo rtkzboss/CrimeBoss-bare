@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_GeneralReactionTeamHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, EditFixedSize)
     TMap<EIGS_GRWaitType, FIGS_GeneralReactionsDef> Defaults;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<EIGS_TeamSideEnum, FIGS_GeneralReactionSpecHolder> TeamOverrides;
     
     FIGS_GeneralReactionTeamHolder();

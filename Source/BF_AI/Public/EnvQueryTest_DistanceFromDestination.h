@@ -3,7 +3,7 @@
 #include "EnvQueryTest_DistanceFromDestinationBase.h"
 #include "EnvQueryTest_DistanceFromDestination.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_DistanceFromDestination : public UEnvQueryTest_DistanceFromDestinationBase {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@
 
 class APlayerController;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UAdvancedExternalUILibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

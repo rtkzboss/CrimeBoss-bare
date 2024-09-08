@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneProp {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<AActor> Actor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FTransform Transform;
     
     FIGS_MetaCutsceneProp();

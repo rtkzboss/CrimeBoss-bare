@@ -3,5 +3,5 @@
 #include "EIGS_ObjectiveState.h"
 #include "OnObjectiveStateChangedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_OneParam(FOnObjectiveStateChanged, EIGS_ObjectiveState, outResult);
+UDELEGATE() DECLARE_DYNAMIC_DELEGATE_OneParam(FOnObjectiveStateChanged, EIGS_ObjectiveState, outResult);
 

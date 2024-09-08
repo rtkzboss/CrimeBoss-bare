@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "IGS_BTTask_SentryDetecting.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SentryDetecting : public UBTTaskNode {
     GENERATED_BODY()
 public:

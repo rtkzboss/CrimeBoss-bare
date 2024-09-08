@@ -5,14 +5,14 @@
 class AIGS_GameCharacterFramework;
 class UObject;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_IdleChatterEventNotificationData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UObject* AsyncRequest;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> Characters;
     
     FIGS_IdleChatterEventNotificationData();

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FBPSteamGroupOfficer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FBPUniqueNetId OfficerUniqueNetID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsOwner;
     
     ADVANCEDSTEAMSESSIONS_API FBPSteamGroupOfficer();

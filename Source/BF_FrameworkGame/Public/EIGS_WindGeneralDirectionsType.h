@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WindGeneralDirectionsType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_WindGeneralDirectionsType : uint8 {
     Any,
     WorldDir_N,

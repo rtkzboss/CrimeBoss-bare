@@ -15,7 +15,7 @@
 class UMETA_MissionID;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_RandEventsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

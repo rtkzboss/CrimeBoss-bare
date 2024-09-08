@@ -5,18 +5,18 @@
 #include "UObject/NoExportTypes.h"
 #include "BTDecorator_GR_IsSafeFromGrenade.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_GR_IsSafeFromGrenade : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval CheckInterval;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ExplosionRangeMultiplier;
     
 public:

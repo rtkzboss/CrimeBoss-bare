@@ -5,12 +5,12 @@
 
 class UIGS_CharacterData;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_LocationsAroundTarget : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_CharacterData> OwnerCharacterData;
     
 public:

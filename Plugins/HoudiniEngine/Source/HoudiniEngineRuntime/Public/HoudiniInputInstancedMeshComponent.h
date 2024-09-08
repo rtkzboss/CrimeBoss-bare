@@ -4,11 +4,11 @@
 #include "HoudiniInputMeshComponent.h"
 #include "HoudiniInputInstancedMeshComponent.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputInstancedMeshComponent : public UHoudiniInputMeshComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FTransform> InstanceTransforms;
     
     UHoudiniInputInstancedMeshComponent();

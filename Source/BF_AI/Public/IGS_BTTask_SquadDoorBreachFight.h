@@ -6,15 +6,15 @@
 class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachFight : public UIGS_BTTask_SquadDoorBreachBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* FightingCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* BreachFightCommand;
     
 public:

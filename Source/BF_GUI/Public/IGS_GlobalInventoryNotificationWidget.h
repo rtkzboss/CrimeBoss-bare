@@ -6,17 +6,17 @@
 
 class UIGS_GlobalInventoryObject;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_GlobalInventoryNotificationWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
     UIGS_GlobalInventoryNotificationWidget();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void RemovedItemMessage(TSubclassOf<UIGS_GlobalInventoryObject> inObject, int32 inCurrentCount);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void AddedItemMessage(TSubclassOf<UIGS_GlobalInventoryObject> inObject, int32 inCurrentCount);
     
 };

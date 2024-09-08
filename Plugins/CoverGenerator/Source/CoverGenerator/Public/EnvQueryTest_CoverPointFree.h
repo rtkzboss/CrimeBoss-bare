@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "EnvQueryTest_CoverPointFree.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class UEnvQueryTest_CoverPointFree : public UEnvQueryTest {
     GENERATED_BODY()
 public:

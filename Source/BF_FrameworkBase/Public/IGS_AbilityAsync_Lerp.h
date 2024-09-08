@@ -7,7 +7,7 @@
 class AActor;
 class UIGS_AbilityAsync_Lerp;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_AbilityAsync_Lerp : public UAbilityAsync {
     GENERATED_BODY()
 public:

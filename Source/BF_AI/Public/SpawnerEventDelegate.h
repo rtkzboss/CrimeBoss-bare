@@ -4,5 +4,5 @@
 
 class AIGS_VehicleSpawner;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FSpawnerEvent, AIGS_VehicleSpawner*, inSpawner);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FSpawnerEvent, AIGS_VehicleSpawner*, inSpawner);
 

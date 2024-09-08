@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PerkCategory.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_PerkCategory : uint8 {
     PC_Negative,
     PC_Positive,

@@ -7,14 +7,14 @@
 
 class USlider;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetSlider : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     USlider* Slider;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_WidgetSliderBlueprintEventSignature OnValueChangedEvent;
     
     UIGS_WidgetSlider();
@@ -26,7 +26,7 @@ public:
     void SetRange(const FVector2D& InRange);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnValueChanged(float InValue);
     
     UFUNCTION(BlueprintCallable)

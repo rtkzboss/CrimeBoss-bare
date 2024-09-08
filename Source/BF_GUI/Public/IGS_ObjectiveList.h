@@ -7,14 +7,14 @@
 class UIGS_ObjectiveWidget;
 class UVerticalBox;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ObjectiveList : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UVerticalBox* ObjectiveBox;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_ObjectiveWidget> ObjectiveWidgetClass;
     
     UIGS_ObjectiveList();

@@ -5,11 +5,11 @@
 
 class UDataTable;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_LevelGeneratorSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_LevelGeneratorSettings")
 class BF_LEVELGENERATOR_API UIGS_LevelGeneratorDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> HubPresetsDataTable;
     
     UIGS_LevelGeneratorDevSettings();

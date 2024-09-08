@@ -4,12 +4,12 @@
 #include "EIGS_CharacterState.h"
 #include "BTService_OverrideStateWhenRelevant.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_OverrideStateWhenRelevant : public UBTService {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_CharacterState ForcedCharacterState;
     
 public:

@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct PREFABRICATORRUNTIME_API FPrefabricatorPropertyAssetMapping {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FSoftObjectPath AssetReference;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString AssetClassName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FName AssetObjectPath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bUseQuotes;
     
     FPrefabricatorPropertyAssetMapping();

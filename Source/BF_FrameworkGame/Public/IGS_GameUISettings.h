@@ -8,32 +8,32 @@
 
 class UDataTable;
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(BlueprintType, DefaultConfig, Config=Game)
 class BF_FRAMEWORKGAME_API UIGS_GameUISettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TArray<EIGS_InputAction> AllowedMenuInputActions;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float LeftThumbstickMenuThreshold;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TMap<EMETA_ItemQuality, FIGS_UITileQualityColors> UITileQualityColors;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> ChatWheelDataTable;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     int32 ChatWheelActionLimit;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float ChatWheelActionLimitTime;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float ChatWheelCooldownTime;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     float IconVisibilityDuration;
     
     UIGS_GameUISettings();

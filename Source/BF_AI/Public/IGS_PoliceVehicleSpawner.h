@@ -4,19 +4,19 @@
 #include "IGS_VehicleSpawner.h"
 #include "IGS_PoliceVehicleSpawner.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_PoliceVehicleSpawner : public AIGS_VehicleSpawner {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bSpawnAfterAlarmed;
     
 public:
     AIGS_PoliceVehicleSpawner(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAlarmed(EIGS_AlarmReason inReason);
     
 };

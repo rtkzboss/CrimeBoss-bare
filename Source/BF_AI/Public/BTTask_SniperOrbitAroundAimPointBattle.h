@@ -3,7 +3,7 @@
 #include "BTTask_SniperOrbitAroundAimPoint.h"
 #include "BTTask_SniperOrbitAroundAimPointBattle.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_SniperOrbitAroundAimPointBattle : public UBTTask_SniperOrbitAroundAimPoint {
     GENERATED_BODY()
 public:

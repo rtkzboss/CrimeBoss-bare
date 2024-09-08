@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct PATHFOLLOW_API FPFSpeedCurve {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FInterpCurveFloat _speedCurve;
     
     FPFSpeedCurve();

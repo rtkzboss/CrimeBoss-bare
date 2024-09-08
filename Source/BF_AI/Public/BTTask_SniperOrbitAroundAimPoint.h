@@ -5,15 +5,15 @@
 #include "EIGS_AimType.h"
 #include "BTTask_SniperOrbitAroundAimPoint.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_SniperOrbitAroundAimPoint : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SnipePointKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_AimType AimType;
     
 public:

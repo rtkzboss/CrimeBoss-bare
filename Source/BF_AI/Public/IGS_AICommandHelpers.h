@@ -37,7 +37,7 @@ class UIGS_AICommandWait;
 class UIGS_SearchPointComponent;
 class UIGS_ThrowableInventoryObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_AICommandHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

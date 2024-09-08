@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_HitReactionBodyParts.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_HitReactionBodyParts : uint8 {
+UENUM()
+enum class EIGS_HitReactionBodyParts {
     D_UpperBody,
     D_LowerBody,
     D_Head,

@@ -4,14 +4,14 @@
 #include "IGS_TeamUnitVariationHolder.h"
 #include "IGS_AIDetectiveEntourageDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIDetectiveEntourageDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_TeamUnitVariationHolder TeamUnitVariationHolder;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     EIGS_UnitSpecialization Specialization;
     
     FIGS_AIDetectiveEntourageDef();

@@ -4,17 +4,17 @@
 #include "IGS_InventoryObjectFramework.h"
 #include "IGS_KeyItemInventoryObject.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class COMMON_DATA_API UIGS_KeyItemInventoryObject : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_RoomType KeyRoomType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 UniqueId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText UniqueName;
     
     UIGS_KeyItemInventoryObject();

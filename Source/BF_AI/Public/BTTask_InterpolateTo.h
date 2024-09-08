@@ -4,15 +4,15 @@
 #include "EIGS_CharacterVsHeistersCollisionStatus.h"
 #include "BTTask_InterpolateTo.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_InterpolateTo : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float InterpolationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_CharacterVsHeistersCollisionStatus MovingCharacterVsHeistersCollisionStatus;
     
 public:

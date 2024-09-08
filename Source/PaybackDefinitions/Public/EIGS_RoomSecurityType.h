@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_RoomSecurityType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_RoomSecurityType : uint8 {
     Outside,
     Public,

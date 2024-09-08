@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "IGS_BTDecorator_IsSentryEnabled.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTDecorator_IsSentryEnabled : public UBTDecorator {
     GENERATED_BODY()
 public:

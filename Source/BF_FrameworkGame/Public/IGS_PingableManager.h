@@ -7,18 +7,18 @@
 class UIGS_PingableManager;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_PingableManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_PingablePair> Pingables;
     
 public:
     UIGS_PingableManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_PingableManager* Instance(const UObject* inWorldContextObject);
     
 };

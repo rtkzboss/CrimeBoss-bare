@@ -6,14 +6,14 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_HasLosThroughCharacters : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> LosTargetContext;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> OtherCharactersContext;
     
     UEnvQueryTest_HasLosThroughCharacters();

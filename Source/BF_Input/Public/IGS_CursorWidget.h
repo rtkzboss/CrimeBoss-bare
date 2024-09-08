@@ -3,18 +3,18 @@
 #include "Blueprint/UserWidget.h"
 #include "IGS_CursorWidget.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_INPUT_API UIGS_CursorWidget : public UUserWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bHovering;
     
 public:
     UIGS_CursorWidget();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsCursorHovering() const;
     
 };

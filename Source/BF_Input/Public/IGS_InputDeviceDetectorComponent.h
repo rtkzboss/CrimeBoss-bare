@@ -4,16 +4,16 @@
 #include "EIGS_InputDevice.h"
 #include "IGS_InputDeviceDetectorComponent.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_INPUT_API UIGS_InputDeviceDetectorComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float GamepadDeadzone;
     
     UIGS_InputDeviceDetectorComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_InputDevice GetCurrentInputDevice() const;
     
 };

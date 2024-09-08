@@ -3,7 +3,7 @@
 #include "IGS_AIBaseDefaultTierData.h"
 #include "IGS_AICopDefaultTierData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AICopDefaultTierData : public FIGS_AIBaseDefaultTierData {
     GENERATED_BODY()
 public:

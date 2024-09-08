@@ -9,46 +9,46 @@
 class AIGS_TrafficSegment;
 class AIGS_VehicleBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_VehicleGenerator : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<FColor> PossibleColors;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<TSubclassOf<AIGS_VehicleBase>> PossibleVehicles;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<AIGS_TrafficSegment*> PossiblePaths;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float FirstDelayInSeconds;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SpawnFrequencyMinRangeInSeconds;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SpawnFrequencyMaxRangeInSeconds;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bUseMaxSpeedRandomizer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float CarMaxSpeedMaxRangeValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float CarMaxSpeedMinRangeValue;
     
 public:
     AIGS_VehicleGenerator(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnVehicleDriveFinished(AIGS_VehicleBase* inVehicle);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAlarmed(EIGS_AlarmReason inReason);
     
 };

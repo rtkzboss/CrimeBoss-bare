@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ChainDifficulty.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_ChainDifficulty : uint8 {
     Unknown,
     Easy,

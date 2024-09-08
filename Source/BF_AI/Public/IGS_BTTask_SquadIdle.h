@@ -3,7 +3,7 @@
 #include "IGS_BTTask_SquadSwatBase.h"
 #include "IGS_BTTask_SquadIdle.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadIdle : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:

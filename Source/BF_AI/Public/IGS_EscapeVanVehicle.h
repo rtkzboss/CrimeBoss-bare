@@ -10,63 +10,63 @@ class UAnimMontage;
 class UIGS_InteractiveComponent;
 class UStaticMeshComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_EscapeVanVehicle : public AIGS_EscapeVehicle {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEscapeVanDoorStatusChanged OnDoorStatusChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<UAnimMontage*> RearDoorsOpeningAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* MiddleDoorOpeningAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* PassengerDoorOpeningAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_InteractiveComponent* MiddleRightDoorInteractive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_InteractiveComponent* RearRightDoorInteractive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_InteractiveComponent* RearLeftDoorInteractive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UStaticMeshComponent* RearLeftDoorMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UStaticMeshComponent* RearRightDoorMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UStaticMeshComponent* MiddleDoorMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsRearDoorsOpened, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_IsRearDoorsOpened)
     bool mR_bIsRearDoorsOpened;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsMiddleDoorOpened, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_IsMiddleDoorOpened)
     bool mR_bIsMiddleDoorOpened;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsPassDoorOpened, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_IsPassDoorOpened)
     bool mR_bIsPassDoorOpened;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool mR_bDisableAutoDoors;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAkAudioEvent* RearDoorOpenAudio;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAkAudioEvent* RearDoorCloseAudio;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAkAudioEvent* SlidingDoorOpenAudio;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAkAudioEvent* SlidingDoorCloseAudio;
     
 public:
@@ -75,13 +75,13 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsRearDoorsOpened();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsPassDoorOpened();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsMiddleDoorOpened();
     
     UFUNCTION(BlueprintCallable)
@@ -93,13 +93,13 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnMiddleDoorInteraction(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnRearDoorInteraction(bool inIsOpened);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnPassengerDoorInteraction(bool inIsOpened);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnMiddleDoorInteraction(bool inIsOpened);
     
     UFUNCTION(BlueprintCallable)

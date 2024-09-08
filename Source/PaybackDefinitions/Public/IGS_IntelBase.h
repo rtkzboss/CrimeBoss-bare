@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "IGS_IntelBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACKDEFINITIONS_API UIGS_IntelBase : public UObject {
     GENERATED_BODY()
 public:

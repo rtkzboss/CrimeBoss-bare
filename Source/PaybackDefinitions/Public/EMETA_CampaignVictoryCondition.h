@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_CampaignVictoryCondition.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_CampaignVictoryCondition : uint8 {
     Default,
     Plotline,

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct ST_FRAMEWORK_API FMapToTestInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FFilePath FilePath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsDisabled;
     
     FMapToTestInfo();

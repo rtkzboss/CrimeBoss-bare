@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneCharacterPoseData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_MetaCutsceneCharacterPose PoseType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<UAnimMontage*> Variations;
     
     FIGS_MetaCutsceneCharacterPoseData();

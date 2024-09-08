@@ -11,14 +11,14 @@ class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 class UIGS_ScriptingCommandMoveTo;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandMoveTo : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Succeed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Failed;
     
     UIGS_ScriptingCommandMoveTo();
@@ -27,7 +27,7 @@ public:
     static UIGS_ScriptingCommandMoveTo* ScriptingCommandMoveTo(AIGS_GameCharacterFramework* Character, int32 scope, FVector inPositon, FVector inLookAtPos, bool inUseLookAtPos, EIGS_Speed inMovementSpeed, float inStoppingDistance);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCommandFinished(AIGS_AIControllerGame* inOwningContoller, UIGS_AICommand* inCommand, bool inFailed);
     
 };

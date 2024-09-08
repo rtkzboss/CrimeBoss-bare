@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AIWeaponDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UMETA_WeaponInventoryObject> WeaponDefinition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag WeaponTag;
     
     FIGS_AIWeaponDef();

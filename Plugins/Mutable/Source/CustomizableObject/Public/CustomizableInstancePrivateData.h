@@ -11,30 +11,30 @@ class UMaterialInterface;
 class UPhysicsAsset;
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS()
 class UCustomizableInstancePrivateData : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<FGeneratedMaterial> GeneratedMaterials;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<FGeneratedMesh> GeneratedMeshes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<FGeneratedTexture> GeneratedTextures;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<FParameterDecorations> ParameterDecorations;
     
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FString, TWeakObjectPtr<UTexture2D>> TextureReuseCache;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<UMaterialInterface*> ReferencedMaterials;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<UPhysicsAsset*> PhysicsAssetsToMerge;
     
 public:

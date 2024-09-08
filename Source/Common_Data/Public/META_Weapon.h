@@ -18,39 +18,39 @@ class UMETA_WeaponInventoryObject;
 class UObject;
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_Weapon : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsUnseenInShop;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 m_Price;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 m_AdditionalPercentageOfWeaponPrice;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 m_AdditionalPercentageOfWeaponPriceFromMods;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMETA_Character* m_Character;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 m_SuccessfulMissions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<TSubclassOf<UMETA_WeaponInventoryObject>> m_TargetWeaponsForUpgrade;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EMETA_ItemQuality m_TargetQualityToUpdateWeapon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 m_DaysInShop;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayTag m_WeaponSkinTag;
     
 public:
@@ -83,85 +83,85 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAdditionalPercentageOfWeaponPrice(int32 inAdditionalPercentageOfPrice);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void IsSignatureWeapon(bool& outSignature, EIGS_CharacterID& outSignatureCharacter) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsMeleeWeapon() const;
     
     UFUNCTION(BlueprintCallable)
     void IncreaseDaysInShopByOne();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_WeaponTableRow GetWeaponTableRow() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_WeaponSubtype GetWeaponSubtype() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     TSoftObjectPtr<UIGS_WeaponSkinData> GetWeaponSkinAsset(UObject* inWCO) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetWeaponSkin() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetUpgradeCostMultiplier() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetUpgradeCost() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetTitle() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UMETA_WeaponInventoryObject>> GetTargetWeaponsForUpgrade() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_ItemQuality GetTargetQualityToUpdateWeapon() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetSuccessfulMissions() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetSalePrice() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_ItemQuality GetQuality() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetPrice() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_MeleeWeaponTableRow GetMeleeWeaponTableRow() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_InventorySlot GetInventorySlot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UTexture2D> GetImage() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_WeaponInventoryObject> GetId() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetDescription() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetDaysInShop() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     FGameplayTagContainer GetCompatibleWeaponSkins(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_Character* GetCharacter() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetBasePrice() const;
     
     UFUNCTION(BlueprintCallable)
     int32 GetAdditionalPercentageOfWeaponPriceFromMods();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetAdditionalPercentageOfWeaponPrice() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AchievementsWorldManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_LEVELGENERATOR_API FIGS_BuildConfigurationTileable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_BuildConfigurationDataAsset* BuildConfigurationDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 VariantIndex;
     
     FIGS_BuildConfigurationTileable();

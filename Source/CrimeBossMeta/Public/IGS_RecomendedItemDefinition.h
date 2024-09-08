@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FIGS_RecomendedItemDefinition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 AmountToBeSelected;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer JobCategoryPool;
     
     CRIMEBOSSMETA_API FIGS_RecomendedItemDefinition();

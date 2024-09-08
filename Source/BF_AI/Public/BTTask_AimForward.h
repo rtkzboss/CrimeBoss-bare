@@ -5,14 +5,14 @@
 
 class AActor;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_AimForward : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     AActor* LookatActorNew;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* LookatActor;
     
     UBTTask_AimForward();

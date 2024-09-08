@@ -11,34 +11,34 @@ class AIGS_PlayerControllerRoot;
 class AIGS_WeaponBase;
 class UIGS_SimpleHitScanShooter;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_HitMarkerWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_WeaponBase* CurrentWeapon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_HitMarkersSetting HitMarkersSetting;
     
     UIGS_HitMarkerWidget();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnProjectileKillEnemy(bool inIsHeadshot, const FHitResult& inHitResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnProjectileHitEnemy(const FHitResult& inHitResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnProjectileHeadshotEnemy(const FHitResult& inHitResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAiming() const;
     
     UFUNCTION(BlueprintCallable)

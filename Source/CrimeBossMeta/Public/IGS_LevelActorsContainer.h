@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FIGS_LevelActorsContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<UObject*> Objects;
     
     CRIMEBOSSMETA_API FIGS_LevelActorsContainer();

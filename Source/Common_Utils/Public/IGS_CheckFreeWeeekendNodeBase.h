@@ -7,17 +7,17 @@
 class UIGS_CheckFreeWeeekendNodeBase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_UTILS_API UIGS_CheckFreeWeeekendNodeBase : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_FreeWeekendDelegate FreeWeekendActive;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_FreeWeekendDelegate FreeWeekendNonActive;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_FreeWeekendDelegate FreeWeekendCheckFailed;
     
     UIGS_CheckFreeWeeekendNodeBase();

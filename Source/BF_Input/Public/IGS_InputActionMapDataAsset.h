@@ -4,11 +4,11 @@
 #include "IGS_InputActionEntry.h"
 #include "IGS_InputActionMapDataAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_INPUT_API UIGS_InputActionMapDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<FIGS_InputActionEntry> InputActions;
     
     UIGS_InputActionMapDataAsset();

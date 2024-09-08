@@ -11,45 +11,45 @@ class UAkSwitchValue;
 class UIGS_MusicSongDataAsset;
 class UStaticMeshComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AUDIO_API AIGS_MusicPlayer : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UStaticMeshComponent* PlayerMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UAkComponent* AkComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* StartSongAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* StopSongAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* StreamerModeAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsDestroyable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool PlayOnStart;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool StopScenicMusicOnStart;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool StopWhenAlarm;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkSwitchValue* PlayerTypeSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UIGS_MusicSongDataAsset*> Playlist;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_PlayerDestroyed, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_PlayerDestroyed)
     bool mR_bIsDestroyed;
     
 public:
@@ -64,10 +64,10 @@ public:
     void StartMusic();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSongDuration(EAkCallbackType CallbackType, UAkCallbackInfo* CallbackInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_PlayerDestroyed();
     
 };

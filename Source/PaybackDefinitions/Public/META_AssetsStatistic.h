@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_AssetsStatistic {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> AssetsEarned;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> AssetsBought;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> AssetsLost;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> TotalAssets;
     
     FMETA_AssetsStatistic();

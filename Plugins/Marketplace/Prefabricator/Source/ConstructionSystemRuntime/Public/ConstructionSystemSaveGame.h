@@ -5,20 +5,20 @@
 #include "ConstructionSystemSavePlayerInfo.h"
 #include "ConstructionSystemSaveGame.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemSaveGame : public USaveGame {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FString SaveSlotName;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     uint32 UserIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FConstructionSystemSavePlayerInfo PlayerInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FConstructionSystemSaveConstructedItem> ConstructedItems;
     
     UConstructionSystemSaveGame();

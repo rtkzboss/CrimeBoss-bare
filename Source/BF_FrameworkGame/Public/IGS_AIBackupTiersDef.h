@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AIBackupTiersDef : public FIGS_AIBaseTiersDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Tier1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Tier2;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Tier3;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Special;
     
     FIGS_AIBackupTiersDef();

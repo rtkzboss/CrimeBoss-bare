@@ -3,7 +3,7 @@
 #include "META_BaseNotification.h"
 #include "META_TextNotification.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_TextNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@ class UIGS_WeaponInventoryObject;
 class UIGS_WeaponSkinData;
 class UMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_WeaponDummyMeshHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

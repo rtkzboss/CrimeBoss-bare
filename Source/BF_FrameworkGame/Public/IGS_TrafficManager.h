@@ -13,30 +13,30 @@ class AIGS_VehicleExitPointFramework;
 class AIGS_VehicleSpawnerFramework;
 class UIGS_TrafficPathComponentFramework;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_TrafficManager : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_VehicleSpawnerFramework*> m_Spawners;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_VehicleDestinationPointFramework*> m_DestinationPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_VehicleDestinationAreaFramework*> m_DestinationAreas;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_VehicleExitPointFramework*> m_ExitPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<UIGS_TrafficPathComponentFramework*> m_TrafficPathComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<UIGS_TrafficPathComponentFramework*, FIGS_TrespassersInfo> m_Trespassers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<UIGS_TrafficPathComponentFramework*, FIGS_TrafficDirectionLocks> m_DirectionLocks;
     
 public:

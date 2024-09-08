@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FMETA_LoadingTipCondition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer Scenarios;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UMETA_BaseCondition*> Conditions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_ConditionExprOperator Operator;
     
     CRIMEBOSSMETA_API FMETA_LoadingTipCondition();

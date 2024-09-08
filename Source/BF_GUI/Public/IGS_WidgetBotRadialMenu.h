@@ -9,35 +9,35 @@ class AController;
 class AIGS_GameCharacterFramework;
 class UIGS_PlayerCommandComponent;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetBotRadialMenu : public UIGS_WidgetRadialMenuBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AController*> BotControllers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_PlayerCommandComponent* PlayerCommandComponent;
     
 public:
     UIGS_WidgetBotRadialMenu();
 
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnLootBagsCountChanged_Internal(int32 inCount, const TArray<EIGS_BagType>& inBagTypes);
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnLootBagsCountChanged();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCommandedBot(EIGS_BotCommandDefinition inCommandDefinition);
     
     UFUNCTION(BlueprintCallable)
     void CancelBotMenu();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanBotDeliver(const AIGS_GameCharacterFramework* inBotReference) const;
     
     UFUNCTION(BlueprintCallable)

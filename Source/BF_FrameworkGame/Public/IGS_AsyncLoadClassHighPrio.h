@@ -7,11 +7,11 @@
 class UIGS_AsyncLoadClassHighPrio;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AsyncLoadClassHighPrio : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FClassLoadedPin ClassLoaded;
     
     UIGS_AsyncLoadClassHighPrio();

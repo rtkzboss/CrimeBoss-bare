@@ -5,14 +5,14 @@
 
 class AIGS_AIEnemyGroupSpawner;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_SpawnDefHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<TWeakObjectPtr<AIGS_AIEnemyGroupSpawner>> SpawnGroups;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayTagContainer DefendTags;
     
     BF_FRAMEWORKGAME_API FIGS_SpawnDefHolder();

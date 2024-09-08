@@ -3,7 +3,7 @@
 #include "KantanCartesianChartBase.h"
 #include "KantanCartesianPlotBase.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class KANTANCHARTSUMG_API UKantanCartesianPlotBase : public UKantanCartesianChartBase {
     GENERATED_BODY()
 public:

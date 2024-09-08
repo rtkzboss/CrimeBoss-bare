@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_PerkDataToFPS {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UGameplayEffect> Perk;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Level;
     
     FMETA_PerkDataToFPS();

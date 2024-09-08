@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECustomizableObjectGroupType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ECustomizableObjectGroupType : uint8 {
     COGT_TOGGLE,
     COGT_ALL,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PlayerEffect.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_PlayerEffect : uint8 {
     PE_VisorEffect,
     PE_ArmorEffect,

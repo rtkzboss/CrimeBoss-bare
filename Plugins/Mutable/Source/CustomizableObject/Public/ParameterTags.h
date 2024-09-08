@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FParameterTags {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FString> Tags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FString, FFParameterOptionsTags> ParameterOptions;
     
     CUSTOMIZABLEOBJECT_API FParameterTags();

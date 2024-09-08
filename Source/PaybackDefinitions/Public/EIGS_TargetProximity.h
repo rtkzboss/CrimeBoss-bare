@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TargetProximity.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_TargetProximity : uint8 {
     None,
     Close,

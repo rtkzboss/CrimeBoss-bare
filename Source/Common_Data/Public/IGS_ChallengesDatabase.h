@@ -7,7 +7,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_ChallengesDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

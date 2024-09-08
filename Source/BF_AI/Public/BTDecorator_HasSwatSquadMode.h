@@ -4,12 +4,12 @@
 #include "EIGS_SquadSwatMode.h"
 #include "BTDecorator_HasSwatSquadMode.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_HasSwatSquadMode : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_SquadSwatMode SwatMode;
     
 public:

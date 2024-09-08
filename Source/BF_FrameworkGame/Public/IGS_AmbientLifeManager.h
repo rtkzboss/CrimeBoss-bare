@@ -6,12 +6,12 @@
 class AIGS_AIEnemyGroupSpawner;
 class AIGS_WaypointFramework;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AmbientLifeManager : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_AIEnemyGroupSpawner*> m_SpawnGroups;
     
 public:

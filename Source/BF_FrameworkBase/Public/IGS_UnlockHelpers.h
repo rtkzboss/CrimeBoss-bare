@@ -8,7 +8,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_UnlockHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

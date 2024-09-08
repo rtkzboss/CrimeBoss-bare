@@ -4,5 +4,5 @@
 
 class UAnimMontage;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PlayObjectAnimationDelegate, UAnimMontage*, inAnim);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PlayObjectAnimationDelegate, UAnimMontage*, inAnim);
 

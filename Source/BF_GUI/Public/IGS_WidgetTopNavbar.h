@@ -9,18 +9,18 @@
 class UHorizontalBox;
 class UIGS_TabButton;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetTopNavbar : public UIGS_WidgetWithInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_TabSelectedEvent OnTabSelectedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UHorizontalBox* TabsOnly;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<UIGS_TabButton*> m_Tabs;
     
 public:
@@ -35,7 +35,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTabSelected(FGameplayTag inScreenTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_TabButton* GetTabByScreenTag(FGameplayTag inScreenTag) const;
     
     UFUNCTION(BlueprintCallable)

@@ -6,14 +6,14 @@
 class UAkAudioEvent;
 class UAkSwitchValue;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AUDIO_API UIGS_MusicSongDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UAkSwitchValue> SongAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkAudioEvent* SongAkEvent;
     
     UIGS_MusicSongDataAsset();

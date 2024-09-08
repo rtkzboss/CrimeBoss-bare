@@ -31,13 +31,13 @@ class UPrimitiveComponent;
 class UTexture2D;
 class UTextureRenderTarget2D;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_BadFlyGameplayStaticsFramework : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UIGS_BadFlyGameplayStaticsFramework();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool WasComponentRecentlyRenderedOnScreen(const UPrimitiveComponent* inPrimitiveComponent, float inTolerance);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -85,7 +85,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static UTexture2D* RenderTargetCreateStaticTexture2DEditorOnlyToSameFile(UTextureRenderTarget2D* RenderTarget, const FString& Name, const FString& InPath, TEnumAsByte<TextureCompressionSettings> CompressionSettings, TEnumAsByte<TextureMipGenSettings> MipSettings);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int32 RemainingCompilingShaders();
     
     UFUNCTION(BlueprintCallable)
@@ -97,28 +97,28 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void MakeTouchEventForAI(UObject* inWCO, AActor* inTouchReceiver, AActor* inOtherActor, const FVector& inEventLocation);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionsSearchSetting MakeStringSessionSearchProperty(const EIGS_SessionPropertyKey Key, const FString& Value, EOnlineComparisonOpRedux ComparisonOp);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionPropertyKeyPair MakeStringSessionProperty(const EIGS_SessionPropertyKey Key, const FString& Value);
     
     UFUNCTION(BlueprintCallable)
     static void MakeNoiseForAI(FVector inNoiseLocation, float inLoudness, AActor* inInstigator, float inMaxRange, FName inTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsProcessingSessionInvite(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsPlayerOwnerOfSession(const FBPUniqueNetId& PlayerToCheck, const FBlueprintSessionResult& Result);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsNetDriverReady(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsMultiplayerSessionInValidState(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsMultiplayerSessionCreationInProgress(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -133,16 +133,16 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AActor* GetRandomActorWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FString GetProjectVersion();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FString GetOnlyRevisionNumber();
     
     UFUNCTION(BlueprintCallable)
     static void GetNicknames(APlayerController* InPlayerController, FString& outPlatformNickname, FString& outNickname);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int32 GetMaxPlayers(const FBlueprintSessionResult& Result);
     
     UFUNCTION(BlueprintCallable)
@@ -154,25 +154,25 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AActor* GetFirstActorWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FVector GetCurrentInterestPointLocation(FIGS_InterestPointHolder inInterestPoint);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<AActor*> GetAllActorsWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FVector GetActorBoundsCenter(const AActor* inActor);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool DoesMultiplayerSessionExist(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FIGS_InterestPointHolder CreateInterestPointFromLocation(FVector InLocation);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FIGS_InterestPointHolder CreateInterestPointFromActor(AActor* inActor, FVector inOffset);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FIGS_InterestPointHolder CreateEmptyInterestPoint();
     
     UFUNCTION(BlueprintCallable)

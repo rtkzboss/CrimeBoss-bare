@@ -11,13 +11,13 @@ USTRUCT(BlueprintType)
 struct FMETA_MoneyMakingMissionMainDataFromDatabase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UMETA_MissionID> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag UnlockTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_RespectLvl UnlockRespectLvl;
     
     PAYBACKDEFINITIONS_API FMETA_MoneyMakingMissionMainDataFromDatabase();

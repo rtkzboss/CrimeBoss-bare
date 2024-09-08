@@ -3,20 +3,20 @@
 #include "Engine/DataAsset.h"
 #include "PaybackCoreMapsData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UPaybackCoreMapsData : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName MainMenuMapName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName MetaGameMapName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName GamePreparationLobbyMapName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName GameEndLobbyMapName;
     
     UPaybackCoreMapsData();

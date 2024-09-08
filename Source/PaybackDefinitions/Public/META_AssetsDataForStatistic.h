@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_AssetsDataForStatistic {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGameplayTag> AssetsTags;
     
     FMETA_AssetsDataForStatistic();

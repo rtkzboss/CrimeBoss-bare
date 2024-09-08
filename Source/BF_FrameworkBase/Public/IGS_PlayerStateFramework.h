@@ -8,7 +8,7 @@
 #include "IGS_HeisterNumberInterface.h"
 #include "IGS_PlayerStateFramework.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_PlayerStateFramework : public APlayerState, public IIGS_CharacterIDInterface, public IIGS_HeisterNumberInterface {
     GENERATED_BODY()
 public:
@@ -23,16 +23,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetIsReady();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsReady() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInitialized() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_RespectLvl GetRespect() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetProgressionLevel() const;
     
 

@@ -3,20 +3,20 @@
 #include "IGS_PlayerJoinInfo.h"
 #include "IGS_JoinedPlayers.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_JoinedPlayers {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_PlayerJoinInfo FirstPlayer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_PlayerJoinInfo SecondPlayer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_PlayerJoinInfo ThirdPlayer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_PlayerJoinInfo FourthPlayer;
     
     FIGS_JoinedPlayers();

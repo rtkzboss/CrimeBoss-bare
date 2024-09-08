@@ -5,12 +5,12 @@
 
 class AIGS_Splitter;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_NavHintVolume : public AVolume {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<AIGS_Splitter*> ExclusiveEntrances;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WindScenarioType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_WindScenarioType : uint8 {
     Wind_Still,
     Wind_LightAir,

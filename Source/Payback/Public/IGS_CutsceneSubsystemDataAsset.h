@@ -8,29 +8,29 @@ class AIGS_CharacterPaperDoll;
 class UAkAudioEvent;
 class UAkStateValue;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACK_API UIGS_CutsceneSubsystemDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FIGS_CutsceneCharacterKey, TSoftClassPtr<AIGS_CharacterPaperDoll>> CharactersPaperdoll;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkStateValue* CutsceneAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkStateValue* NoMusicAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkStateValue* NoSoundAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkStateValue* NoCutsceneAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkStateValue* ResetEnvironmentAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* CustomMusicStopAkEvent;
     
     UIGS_CutsceneSubsystemDataAsset();

@@ -5,20 +5,20 @@
 
 class UAnimMontage;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_ANIMATIONS_API UIGS_DownStateDatabase : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAnimMontage* DownStateMontage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAnimMontage* DownMovableToPinned;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAnimMontage* ReviveHelpMovableStateMontage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAnimMontage* ReviveHelpPinnedStateMontage;
     
     UIGS_DownStateDatabase();

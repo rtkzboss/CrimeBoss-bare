@@ -6,14 +6,14 @@
 class AActor;
 class AIGS_BreachExplodable;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_AICommandBreachRemoveObstacle : public UIGS_AICommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* BreachableObject;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_BreachExplodable* ExplosiveObject;
     
     UIGS_AICommandBreachRemoveObstacle();

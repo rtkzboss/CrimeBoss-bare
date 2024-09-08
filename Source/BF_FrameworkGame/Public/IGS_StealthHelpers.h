@@ -10,7 +10,7 @@ class AIGS_SuspicionEventActor;
 class AIGS_ThrowableProjectileBase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_StealthHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

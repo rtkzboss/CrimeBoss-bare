@@ -10,19 +10,19 @@ USTRUCT(BlueprintType)
 struct BF_ANIMATIONS_API FIGS_FirstPersonCarryablesAnimDatabase : public FIGS_FirstPersonAnimationDatabaseBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_CarryableBase> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemThrow;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemThrowLow;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemObjectThrow;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemObjectThrowLow;
     
     FIGS_FirstPersonCarryablesAnimDatabase();

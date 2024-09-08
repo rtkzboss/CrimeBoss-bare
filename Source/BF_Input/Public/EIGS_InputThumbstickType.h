@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_InputThumbstickType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_InputThumbstickType : uint8 {
     IA_UNKNOWN = 255,
     IA_LeftThumbstick = 0,

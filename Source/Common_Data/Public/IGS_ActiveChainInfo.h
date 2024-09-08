@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_ActiveChainInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ActiveMissionIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_ChainContractID> ActiveChainContractID;
     
     FIGS_ActiveChainInfo();

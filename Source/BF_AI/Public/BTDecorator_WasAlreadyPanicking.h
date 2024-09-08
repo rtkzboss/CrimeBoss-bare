@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_WasAlreadyPanicking.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_WasAlreadyPanicking : public UBTDecorator {
     GENERATED_BODY()
 public:

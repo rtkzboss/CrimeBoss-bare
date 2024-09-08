@@ -5,18 +5,18 @@
 #include "META_CinematicMissionRowInfo.h"
 #include "META_Cinematic.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_Cinematic : public UMETA_BaseMission {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_BaseMissionSave m_CinematicMissionSave;
     
 public:
     UMETA_Cinematic();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_CinematicMissionRowInfo GetInfo() const;
     
 };

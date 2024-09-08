@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AIGuardSpecializationHolder : public FIGS_AIBaseSpecializationHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIGuardDefaultTierDef Default;
     
     FIGS_AIGuardSpecializationHolder();

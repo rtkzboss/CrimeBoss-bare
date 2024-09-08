@@ -31,7 +31,7 @@ class UStoryGraphManager;
 class UTexture2D;
 class UUserWidget;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_EventFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -43,16 +43,16 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ToStartedGraphs(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus>& outStartedGraphs, const TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GraphStatus>& StartedGraphs);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void ToSaveSavedParentGraphs(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& outSavedParentGraphs, const TMap<TSoftObjectPtr<UStoryGraphManager>, TSoftObjectPtr<UStoryGraphManager>>& SavedParentGraphs);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void ToSavePreparedPlotlines(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>& outPreparedPlotlines, const TMap<TSoftObjectPtr<UStoryGraphManager>, int32>& PreparedPlotlines);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void ToSaveFinishedGraphsResults(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>& outFinishedGraphsResults, const TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus>& FinishedGraphsResults);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void ToSaveCrewEventsAndTheirGraphs(TMap<FGameplayTag, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& outCrewEventsAndTheirGraphs, const TMap<FGameplayTag, TSoftObjectPtr<UStoryGraphManager>>& CrewEventsAndTheirGraphs);
     
     UFUNCTION(BlueprintCallable)
@@ -94,25 +94,25 @@ public:
     UFUNCTION(BlueprintCallable)
     static void GetMetaObjectType(UMETA_BaseObject* inObject, EMETA_ObjectType& outObjectType, UMETA_Character*& outCharacter, UMETA_Weapon*& outWeapon, UMETA_PlotlineAsset*& outPlotlineAsset, UMETA_Equipment*& outEquipment);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TSoftObjectPtr<UStoryGraphManager> FromStringToStoryGraphManager(const FString& inSoftPath);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TSoftObjectPtr<UMETA_BaseStoryGraphManager> FromStoryToMeta(const TSoftObjectPtr<UStoryGraphManager> inMetaGraphManager);
     
     UFUNCTION(BlueprintCallable)
     static void FromStartedGraphs(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus>& StartedGraphs, TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GraphStatus>& outStartedGraphs);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void FromSaveSavedParentGraphs(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& SavedParentGraphs, TMap<TSoftObjectPtr<UStoryGraphManager>, TSoftObjectPtr<UStoryGraphManager>>& outSavedParentGraphs);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void FromSavePreparedPlotlines(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>& PreparedPlotlines, TMap<TSoftObjectPtr<UStoryGraphManager>, int32>& outPreparedPlotlines);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void FromSaveFinishedGraphsResults(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>& FinishedGraphsResults, TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus>& outFinishedGraphsResults);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void FromSaveCrewEventsAndTheirGraphs(const TMap<FGameplayTag, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& CrewEventsAndTheirGraphs, TMap<FGameplayTag, TSoftObjectPtr<UStoryGraphManager>>& outCrewEventsAndTheirGraphs);
     
     UFUNCTION(BlueprintCallable)
@@ -121,7 +121,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void FromPlotlineGraphs(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FMETA_PlotlineGraphStartTime>& PlotlineGraphs, TMap<TSoftObjectPtr<UStoryGraphManager>, FMETA_PlotlineGraphStartTime>& outPlotlineGraphs);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TSoftObjectPtr<UStoryGraphManager> FromMetaToStory(const TSoftObjectPtr<UMETA_BaseStoryGraphManager> inMetaGraphManager);
     
     UFUNCTION(BlueprintCallable)

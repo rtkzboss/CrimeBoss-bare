@@ -8,55 +8,55 @@
 class AIGS_AIControllerGame;
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_SettingsHelpersLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UIGS_SettingsHelpersLibrary();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool UseCoverInCombatRange(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetTotalTimeInCover(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetTimeInCover(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetStrafeShootingChance(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetReactionThrashTreshold(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetReactionTargetFirstTimeSeenCooldown(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetReactionRollToCoverCooldown(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetReactionCooldown(AIGS_AIControllerGame* Controller, bool Randomize);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetMaxHealthForReaction(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetMaxHealthForCover(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static FIGS_FollowSettings GetFollowSettings(AIGS_GameCharacterFramework* Character);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static EIGS_CoverPreset GetCoverPreset(AIGS_AIControllerGame* Controller);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetCombatRangeMin(AIGS_AIControllerGame* InController, const bool inRawValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetCombatRangeMax(AIGS_AIControllerGame* InController, const bool inRawValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float GetCombatMoveCooldown(AIGS_AIControllerGame* Controller);
     
 };

@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FMETA_CampaignModeMatchingData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UMETA_PlotlineSelection> CampaignMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_CampaignModeCondition> Conditions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ConditionExprOperator ExpressionOperator;
     
     PAYBACKDEFINITIONS_API FMETA_CampaignModeMatchingData();

@@ -11,7 +11,7 @@ class UCanvasPanelSlot;
 class UObject;
 class UUserWidget;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_GUI_API UIGS_GUIUtilityFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

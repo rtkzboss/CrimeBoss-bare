@@ -9,14 +9,14 @@ class AActor;
 class AIGS_GameCharacterFramework;
 class UIGS_ScriptingCommandUseObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandUseObject : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Succeed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Failed;
     
     UIGS_ScriptingCommandUseObject();

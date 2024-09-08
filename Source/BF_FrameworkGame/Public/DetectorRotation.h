@@ -7,48 +7,48 @@
 
 class USceneComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UDetectorRotation : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     USceneComponent* RotationPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_LookAtTarget, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_LookAtTarget)
     FIGS_InterestPointHolder LookAtTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float FullRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float FollowRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float PatrollingRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float ControlledRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float TotalHorizontalRotationAngleDegrees;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float TotalVerticalRotationAngleDegrees;
     
     UDetectorRotation(const FObjectInitializer& ObjectInitializer);
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UpdateRotationPointByDelta(float inHorizontalDeltaRotation, float inVerticalDeltaRotation);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_LookAtTarget(FIGS_InterestPointHolder inPreviousLookAtTarget);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     bool IsCloseToFollowedPoint(float inDesiredHorzintalAngle, float inDesiredVerticalAngle) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void FullRotation(FVector inTarget, float inDeltaSeconds);
     
 };

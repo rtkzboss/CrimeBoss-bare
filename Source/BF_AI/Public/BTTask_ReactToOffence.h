@@ -5,11 +5,11 @@
 #include "IGS_DialogueAsyncActionInterface.h"
 #include "BTTask_ReactToOffence.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_ReactToOffence : public UBTTaskNode, public IIGS_DialogueAsyncActionInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
     UBTTask_ReactToOffence();

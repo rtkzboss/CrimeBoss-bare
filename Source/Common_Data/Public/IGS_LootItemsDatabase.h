@@ -8,19 +8,19 @@
 class UIGS_LootItemInventoryObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_LootItemsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UIGS_LootItemsDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_LootItemInventoryObject>& inClass) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_LootItemTableRow GetDataLootItem(UObject* inWCO, const TSubclassOf<UIGS_LootItemInventoryObject>& inClass, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_LootItemTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
     UFUNCTION(BlueprintCallable)

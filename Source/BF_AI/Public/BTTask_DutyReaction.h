@@ -3,7 +3,7 @@
 #include "BTTask_ReactToOffenceAmbient.h"
 #include "BTTask_DutyReaction.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_DutyReaction : public UBTTask_ReactToOffenceAmbient {
     GENERATED_BODY()
 public:

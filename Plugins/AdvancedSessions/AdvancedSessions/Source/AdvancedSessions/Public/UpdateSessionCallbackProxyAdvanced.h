@@ -8,14 +8,14 @@
 class UObject;
 class UUpdateSessionCallbackProxyAdvanced;
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(MinimalAPI)
 class UUpdateSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnFailure;
     
     UUpdateSessionCallbackProxyAdvanced();

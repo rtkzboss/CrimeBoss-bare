@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct POWERIKRUNTIME_API FPowerIKBoneLimit {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float Stiffness;
     
     FPowerIKBoneLimit();

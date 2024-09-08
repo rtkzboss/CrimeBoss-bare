@@ -6,20 +6,20 @@
 class AIGS_PlayerCharacter;
 class UIGS_LootBagComponent;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_LootBagInfoWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_LootBagComponent* LootBagComponent;
     
     UIGS_LootBagInfoWidget();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void UnregisterGameCharacterEvents(AIGS_PlayerCharacter* inGameCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void RegisterGameCharacterEvents(AIGS_PlayerCharacter* inGameCharacter);
     
 };

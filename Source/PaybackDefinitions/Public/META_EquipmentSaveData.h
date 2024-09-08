@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FMETA_EquipmentSaveData : public FMETA_ItemSaveDataBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* EquipmentID;
     
     PAYBACKDEFINITIONS_API FMETA_EquipmentSaveData();

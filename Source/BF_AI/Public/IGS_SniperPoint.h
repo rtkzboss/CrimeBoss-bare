@@ -7,30 +7,30 @@
 class AIGS_AIControllerSniper;
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_SniperPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SnipeAngleVertical;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SnipeAngleHorizontal;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SnipeAngleVerticalOffset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bRandomSnipingPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_SnipePointData> SnipingBehavior;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> m_Sniper;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<AIGS_AIControllerSniper> m_SniperController;
     
 public:
@@ -39,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetVisitorManually(AIGS_GameCharacterFramework* inGameCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetVisitor() const;
     
 };

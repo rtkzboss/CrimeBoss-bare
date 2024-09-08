@@ -10,18 +10,18 @@ class UIGS_GlobalPostProcessSubsystem;
 class UIGS_GlobalPostProcessesDataAsset;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_RENDERING_API UIGS_GlobalPostProcessSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_GlobalPostProcessesDataAsset* m_GloballyAppliedPostProcesses;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FWeightedBlendable> m_VisualStylePostProcesses;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FWeightedBlendable> m_VisorPostProcesses;
     
 public:

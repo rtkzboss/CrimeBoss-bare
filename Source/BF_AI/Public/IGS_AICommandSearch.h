@@ -5,11 +5,11 @@
 
 class UIGS_SearchPointComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_AICommandSearch : public UIGS_AICommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UIGS_SearchPointComponent*> PointsToSearch;
     
     UIGS_AICommandSearch();

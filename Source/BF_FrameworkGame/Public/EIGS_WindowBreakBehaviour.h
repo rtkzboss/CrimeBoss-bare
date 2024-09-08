@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WindowBreakBehaviour.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_WindowBreakBehaviour : uint8 {
     Breakable,
     Unbreakable,

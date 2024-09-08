@@ -12,19 +12,19 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_Quick_ChainContractManagerSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FIGS_Quick_ActiveChainContractData> ActiveChainsData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     EIGS_ChainType ActiveChainType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 LastUsedGenericID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<TSubclassOf<UIGS_ChainContractID>, FIGS_Quick_ChainResultsSaveData> ChainContractResults;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool WasPlayingChainMission;
     
     FIGS_Quick_ChainContractManagerSaveData();

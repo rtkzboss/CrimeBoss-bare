@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnIGSSliderKeyDownEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnIGSSliderKeyDownEvent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnIGSSliderKeyDownEvent);
 

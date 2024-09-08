@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_ClassTagSettingPair {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ClassTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_WeaponClassSettingsDataAsset* Settings;
     
     FIGS_ClassTagSettingPair();

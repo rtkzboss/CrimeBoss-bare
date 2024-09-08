@@ -14,33 +14,33 @@ class AIGS_TrafficSegment;
 class AIGS_VehicleBase;
 class UIGS_VehicleObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_VehicleDestinationPoint : public AIGS_VehicleDestinationPointFramework, public IIGS_VehicleDestinationInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FCarArrived OnCarArrived;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bStartupOnly;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool IsActive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool Hidden;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Transient)
     TArray<AActor*> SpawnedVisuals;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int32 VehicleGroups;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AIGS_TrafficSegment* PossiblePath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TSubclassOf<AActor> VehicleVisual;
     
 public:
@@ -61,13 +61,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void TriggerCarArrival(EIGS_VehicleSpawnGroup inVehicleGroup, AIGS_VehicleBase*& outSpawnedCar, int32 minPassengers, int32 maxPassengers);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ShowPossibleVehicleLocationsDebug();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CleanPossibleVehicleLocationsDebug();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CheckRequestedCar(EIGS_VehicleSplineGroup inSplineGroup, EIGS_VehicleSpawnGroup inVehicleGroup, TSoftClassPtr<AIGS_VehicleBase> invehicleToSpawn, FIGS_NoSpawnPointDefinition inCustomPassengersDefinition, AIGS_VehicleBase*& outSpawnedCar, int32 minPassengers, int32 maxPassengers);
     
 

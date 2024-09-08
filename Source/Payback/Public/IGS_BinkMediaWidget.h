@@ -8,11 +8,11 @@ class UBinkMediaPlayer;
 class UBinkMediaTexture;
 class UIGS_PlayBinkMedia;
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class PAYBACK_API UIGS_BinkMediaWidget : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintCallable)
     FBinkWidgetEvent OnSkipButton;
     
     UIGS_BinkMediaWidget();

@@ -11,7 +11,7 @@ class PREFABRICATORRUNTIME_API UPrefabricatorEventListener : public UObject {
 public:
     UPrefabricatorEventListener();
 
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void PostSpawn(APrefabActor* Prefab);
     
 };

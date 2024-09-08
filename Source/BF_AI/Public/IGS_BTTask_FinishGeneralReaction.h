@@ -3,11 +3,11 @@
 #include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "IGS_BTTask_FinishGeneralReaction.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_FinishGeneralReaction : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bSuccess;
     
     UIGS_BTTask_FinishGeneralReaction();

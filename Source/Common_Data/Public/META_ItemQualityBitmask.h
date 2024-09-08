@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_ItemQualityBitmask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 Quality;
     
     FMETA_ItemQualityBitmask();

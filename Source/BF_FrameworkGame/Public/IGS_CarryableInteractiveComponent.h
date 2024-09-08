@@ -7,15 +7,15 @@
 class AIGS_PlayerCharacter;
 class UIGS_CarryableInventoryObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CarryableInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_PlayerCharacter* OwnerPlayer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     TSubclassOf<UIGS_CarryableInventoryObject> mR_CarryableInventoryObject;
     
 public:

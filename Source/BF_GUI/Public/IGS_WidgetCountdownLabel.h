@@ -3,14 +3,14 @@
 #include "IGS_Widget.h"
 #include "IGS_WidgetCountdownLabel.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetCountdownLabel : public UIGS_Widget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 RemainingSeconds;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool AllowNegativeSeconds;
     
     UIGS_WidgetCountdownLabel();
@@ -21,11 +21,11 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartCountdown(int32 InSeconds);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetRemainingSecondsValue(int32 InSeconds);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandleCountdownTick();
     
 };

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ChangedHeisterAttribute.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_ChangedHeisterAttribute : uint8 {
     Upkeep,
     MissionCutPercent,

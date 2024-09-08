@@ -8,15 +8,15 @@
 class UMETA_DetectiveID;
 class UMapTile;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_DetectiveNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<UMETA_DetectiveID> m_Detective;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMapTile* m_Tile;
     
 public:
@@ -25,10 +25,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetData(TSubclassOf<UMETA_DetectiveID> inDetective, EMETA_Gang inGang, UMapTile* inTile);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMapTile* GetTile() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_DetectiveID> GetDetective() const;
     
 };

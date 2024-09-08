@@ -9,27 +9,27 @@ class UEnvQuery;
 class UIGS_AIDirector;
 class UIGS_SuspicionManager;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_GuardControlRoomComponent : public UIGS_GuardControlRoomComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UEnvQuery* CloseGuardEQS;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UEnvQuery* AnyGuardEQS;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_SquadBase> OwningSquad;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_ControlRoom> ConnectedControlRoom;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UIGS_AIDirector> AIDirector;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export)
     TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
     
 public:

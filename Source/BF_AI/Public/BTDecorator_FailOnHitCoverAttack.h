@@ -3,7 +3,7 @@
 #include "BTDecorator_FailOnHit.h"
 #include "BTDecorator_FailOnHitCoverAttack.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_FailOnHitCoverAttack : public UBTDecorator_FailOnHit {
     GENERATED_BODY()
 public:

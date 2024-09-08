@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_RandEventReward.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_RandEventReward : uint8 {
     None,
     Money,

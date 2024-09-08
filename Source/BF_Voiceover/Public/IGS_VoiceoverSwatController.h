@@ -3,7 +3,7 @@
 #include "IGS_VoiceoverGroupController.h"
 #include "IGS_VoiceoverSwatController.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_VOICEOVER_API UIGS_VoiceoverSwatController : public UIGS_VoiceoverGroupController {
     GENERATED_BODY()
 public:

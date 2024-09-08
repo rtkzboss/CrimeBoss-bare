@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PowerIKEffectorData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct POWERIKRUNTIME_API FPowerIKEffectorData {
     GENERATED_BODY()
 public:

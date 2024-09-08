@@ -4,5 +4,5 @@
 
 class AActor;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_TriggerEventEvent, AActor*, inActor);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_TriggerEventEvent, AActor*, inActor);
 

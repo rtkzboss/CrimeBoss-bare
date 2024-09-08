@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "IGS_DebugHelpers.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_DEBUG_API UIGS_DebugHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -4,5 +4,5 @@
 
 class AIGS_RoomBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_AreaOfOperationsChangedEventSignature, TArray<AIGS_RoomBase*>&, AreaOfOperations);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_AreaOfOperationsChangedEventSignature, TArray<AIGS_RoomBase*>&, AreaOfOperations);
 

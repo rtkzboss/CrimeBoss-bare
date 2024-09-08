@@ -6,15 +6,15 @@
 
 class UIGS_VoiceoverSubsystemDataAsset;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API AAssetsPreloader : public AActor, public IIGS_LoadingInProgressInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldPreload;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_VoiceoverSubsystemDataAsset* VODatabase;
     
 public:

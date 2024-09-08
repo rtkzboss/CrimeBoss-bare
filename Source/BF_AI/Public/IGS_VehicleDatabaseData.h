@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_VehicleDatabaseData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_StaticVehicleBase> VehicleBlueprint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float PickProbability;
     
     FIGS_VehicleDatabaseData();

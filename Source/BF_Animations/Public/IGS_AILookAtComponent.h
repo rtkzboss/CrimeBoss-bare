@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_ANIMATIONS_API UIGS_AILookAtComponent : public UActorComponent {
     GENERATED_BODY()
 public:
@@ -18,10 +18,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetLookAtTarget(AActor* LookAtTarget);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AActor* GetLookAtTargetActor() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetLookAtTarget(float& OutHorizontalWeight, float& OutVerticalWeight, float& OutSmoothness) const;
     
 };

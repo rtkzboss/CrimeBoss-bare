@@ -3,7 +3,7 @@
 #include "PaybackAICharacter.h"
 #include "PaybackDetectiveCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API APaybackDetectiveCharacter : public APaybackAICharacter {
     GENERATED_BODY()
 public:

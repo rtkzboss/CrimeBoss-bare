@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FIGS_MeshDeformationBoneAlphaInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<float> RotationAlphas;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<float> LocationAlphas;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<float> ScaleAlphas;
     
     BF_ANIMATIONS_API FIGS_MeshDeformationBoneAlphaInfo();

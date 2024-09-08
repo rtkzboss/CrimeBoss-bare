@@ -8,22 +8,22 @@ class AIGS_PlayerCharacter;
 class AIGS_PlayerControllerRoot;
 class AIGS_WeaponBase;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_HitMarkerWidgetSingle : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_WeaponBase* CurrentWeapon;
     
     UIGS_HitMarkerWidgetSingle();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAiming() const;
     
     UFUNCTION(BlueprintCallable)

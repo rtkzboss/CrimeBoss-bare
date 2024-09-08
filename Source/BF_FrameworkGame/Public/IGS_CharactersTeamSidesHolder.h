@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_CharactersTeamSidesHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<AIGS_GameCharacterFramework*> Characters;
     
     FIGS_CharactersTeamSidesHolder();

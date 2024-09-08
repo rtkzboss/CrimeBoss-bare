@@ -15,76 +15,76 @@ class UIGS_LootItemBaseComponent;
 class ULightComponentBase;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LootCollectionBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float CurrentValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float CurrentWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float TotalValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float TotalLootValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float TotalMoneyValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float TotalBagSize;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient)
     FVector LootingPos;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient)
     FRotator LootingRotation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_InteractiveComponent* LootCollectionInteraction;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_GameCharacterFramework* LootingCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_GameCharacterFramework* LootSuggestedFor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     bool bIsCosmetic;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* DefaultSceneRoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, ReplicatedUsing=OnRep_LootItems, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere, ReplicatedUsing=OnRep_LootItems)
     TArray<UIGS_LootItemBaseComponent*> LootItems;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_bIsEmpty, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_bIsEmpty)
     bool bIsEmpty;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     TArray<ULightComponentBase*> LightsToDestroy;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_FullyLooted OnFullyLooted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_FullyLooted OnSingleItemLooted;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsShineEnabled;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     EIGS_AILootingBehavior m_AILootingBehavior;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> AllowedCharacters;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_bIsInCase, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_bIsInCase)
     bool m_bIsInCase;
     
 public:
@@ -121,29 +121,29 @@ public:
     UFUNCTION(BlueprintCallable)
     void RegisterLootComponent(UIGS_LootItemBaseComponent* inLootComponent);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_LootItems();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_bIsInCase();
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_bIsEmpty();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnNavigationBuildFinished(ANavigationData* inNavData);
     
 public:
     UFUNCTION(BlueprintCallable)
     void LootItemsChanged();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsLootValidForAI(const bool inIgnoreOnlyUnlocked) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_LootHolderBase* GetLootHolder() const;
     
     UFUNCTION(BlueprintCallable)

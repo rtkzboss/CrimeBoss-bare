@@ -4,5 +4,5 @@
 
 class AActor;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_TriggerEventOutputPin, AActor*, OverlappedActor, AActor*, inOtherActor);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_TriggerEventOutputPin, AActor*, OverlappedActor, AActor*, inOtherActor);
 

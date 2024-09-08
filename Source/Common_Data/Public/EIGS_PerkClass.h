@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PerkClass.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_PerkClass : uint8 {
     PC_Generic,
     PC_Combat,

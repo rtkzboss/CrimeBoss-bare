@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryGenerator.h"
 #include "EnvQueryGenerator_MountedGun.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_MountedGun : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:

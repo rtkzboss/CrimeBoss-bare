@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct BF_INPUT_API FIGS_InputDeviceButtonData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName ButtonSymbol;
     
     FIGS_InputDeviceButtonData();

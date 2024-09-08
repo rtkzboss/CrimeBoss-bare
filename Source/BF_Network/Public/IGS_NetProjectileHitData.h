@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FIGS_NetProjectileHitData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float Damage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<UDamageType> DamageType;
     
     BF_NETWORK_API FIGS_NetProjectileHitData();

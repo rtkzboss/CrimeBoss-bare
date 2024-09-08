@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnCampingChangedEventSignatureDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnCampingChangedEventSignature, bool, inIsCamping);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnCampingChangedEventSignature, bool, inIsCamping);
 

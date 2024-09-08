@@ -8,16 +8,16 @@
 class AActor;
 class AIGS_RoomBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_DoorBreachAdapter : public UObject {
     GENERATED_BODY()
 public:
     UIGS_DoorBreachAdapter();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static FExitPoints GetExitPoints(AActor* Actor, AIGS_RoomBase* priorRoom);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static FEntryPoints GetEnterPoints(AActor* Actor, AIGS_RoomBase* priorRoom);
     
 };

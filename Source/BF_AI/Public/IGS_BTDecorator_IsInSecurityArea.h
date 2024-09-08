@@ -4,12 +4,12 @@
 #include "IGS_BTDecorator_Base.h"
 #include "IGS_BTDecorator_IsInSecurityArea.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTDecorator_IsInSecurityArea : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_RoomSecurityType RoomSecurityType;
     
 public:

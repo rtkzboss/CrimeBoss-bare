@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ConditionOperator.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_ConditionOperator : uint8 {
     Equal,
     NotEqual,

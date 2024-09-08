@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HubTileType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_HubTileType : uint8 {
     Block,
     Straight,

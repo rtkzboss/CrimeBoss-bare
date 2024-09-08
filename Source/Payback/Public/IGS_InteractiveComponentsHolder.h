@@ -4,14 +4,14 @@
 
 class UIGS_InteractiveComponent;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_InteractiveComponentsHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export)
     TWeakObjectPtr<UIGS_InteractiveComponent> InteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float Progress;
     
     PAYBACK_API FIGS_InteractiveComponentsHolder();

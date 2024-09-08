@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CoverAttackType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_CoverAttackType : uint8 {
     CAT_Unknown = 255,
     CAT_Lean = 0,

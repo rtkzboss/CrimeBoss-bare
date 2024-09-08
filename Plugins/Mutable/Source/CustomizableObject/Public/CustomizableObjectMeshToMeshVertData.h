@@ -7,25 +7,25 @@ USTRUCT(BlueprintType)
 struct FCustomizableObjectMeshToMeshVertData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector4 PositionBaryCoordsAndDist;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector4 NormalBaryCoordsAndDist;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector4 TangentBaryCoordsAndDist;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint16 SourceMeshVertIndices[4];
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float Weight;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int16 SourceAssetIndex;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int16 SourceAssetLodIndex;
     
     CUSTOMIZABLEOBJECT_API FCustomizableObjectMeshToMeshVertData();

@@ -7,7 +7,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_SAVE_API UQuickplay2FPSAdapter : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

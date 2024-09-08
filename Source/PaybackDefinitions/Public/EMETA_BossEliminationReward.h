@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_BossEliminationReward.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_BossEliminationReward : uint8 {
     None,
     Cash,

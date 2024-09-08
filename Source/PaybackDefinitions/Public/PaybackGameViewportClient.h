@@ -4,14 +4,14 @@
 #include "BF_FocusSignatureDelegate.h"
 #include "PaybackGameViewportClient.generated.h"
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(NonTransient)
 class PAYBACKDEFINITIONS_API UPaybackGameViewportClient : public UCommonGameViewportClient {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBF_FocusSignature OnLostFocus;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBF_FocusSignature OnFocusReceived;
     
     UPaybackGameViewportClient();

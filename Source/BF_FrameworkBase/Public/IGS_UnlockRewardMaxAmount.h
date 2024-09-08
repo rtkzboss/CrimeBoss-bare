@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FIGS_UnlockRewardMaxAmount {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_ItemQuality, int32> MaxAmountMap;
     
     BF_FRAMEWORKBASE_API FIGS_UnlockRewardMaxAmount();

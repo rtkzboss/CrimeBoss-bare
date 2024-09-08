@@ -11,16 +11,16 @@ UCLASS(Blueprintable)
 class GENERICGRAPHRUNTIME_API UGenericGraphNode : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     UGenericGraph* Graph;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<UGenericGraphNode*> ParentNodes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<UGenericGraphNode*> ChildrenNodes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TMap<UGenericGraphNode*, UGenericGraphEdge*> Edges;
     
     UGenericGraphNode();
@@ -28,19 +28,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void RefreshValuesOnSaveGraph();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsLeafNode() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetNodeId() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UGenericGraph* GetGraph() const;
     
     UFUNCTION(BlueprintCallable)
     UGenericGraphEdge* GetEdge(UGenericGraphNode* ChildNode);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     FText GetDescription() const;
     
 };

@@ -7,7 +7,7 @@
 class AIGS_WieldableBase;
 class UDataTable;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_GUI_API UIGS_HUDDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

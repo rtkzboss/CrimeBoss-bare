@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_WeaponCachedData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UMETA_WeaponInventoryObject> Weapon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag WeaponTag;
     
     FMETA_WeaponCachedData();

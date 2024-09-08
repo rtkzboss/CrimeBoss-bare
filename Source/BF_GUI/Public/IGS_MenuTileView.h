@@ -6,11 +6,11 @@
 
 class UUserWidget;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_GUI_API UIGS_MenuTileView : public UCommonTileView {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UUserWidget> ItemWidgetTemplate;
     
     UIGS_MenuTileView();

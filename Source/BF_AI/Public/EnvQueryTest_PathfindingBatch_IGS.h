@@ -4,11 +4,11 @@
 #include "EnvironmentQuery/Tests/EnvQueryTest_Pathfinding.h"
 #include "EnvQueryTest_PathfindingBatch_IGS.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_PathfindingBatch_IGS : public UEnvQueryTest_Pathfinding {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
     FAIDataProviderFloatValue ScanRangeMultiplier;
     
     UEnvQueryTest_PathfindingBatch_IGS();

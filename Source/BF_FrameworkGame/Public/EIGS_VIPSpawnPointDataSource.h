@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_VIPSpawnPointDataSource.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_VIPSpawnPointDataSource : uint8 {
+UENUM()
+enum class EIGS_VIPSpawnPointDataSource {
     VD_Automatic,
     VD_FPS,
     VD_Story,

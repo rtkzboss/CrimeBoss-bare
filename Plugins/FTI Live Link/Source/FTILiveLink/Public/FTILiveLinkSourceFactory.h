@@ -3,7 +3,7 @@
 #include "LiveLinkSourceFactory.h"
 #include "FTILiveLinkSourceFactory.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class UFTILiveLinkSourceFactory : public ULiveLinkSourceFactory {
     GENERATED_BODY()
 public:

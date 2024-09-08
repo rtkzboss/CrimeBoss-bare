@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_WieldableActionType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_WieldableActionType : uint8 {
+UENUM()
+enum class EIGS_WieldableActionType {
     PrimaryAction,
     SecondaryAction,
 };

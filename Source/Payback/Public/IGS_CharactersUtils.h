@@ -7,7 +7,7 @@
 class UMETA_Character;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACK_API UIGS_CharactersUtils : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

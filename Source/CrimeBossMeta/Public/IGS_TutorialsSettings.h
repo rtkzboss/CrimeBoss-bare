@@ -6,17 +6,17 @@
 
 class UIGS_TutorialScreen;
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(DefaultConfig, Config=Game)
 class CRIMEBOSSMETA_API UIGS_TutorialsSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool TutorialsSystemEnabled;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_TutorialScreen> DefaultTutorialScreenClass;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_TutorialScreen> DefaultVideoTutorialScreenClass;
     
     UIGS_TutorialsSettings();

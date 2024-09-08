@@ -3,7 +3,7 @@
 #include "BTTask_SwitchWeaponBase.h"
 #include "BTTask_SwitchBestWeapon.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_SwitchBestWeapon : public UBTTask_SwitchWeaponBase {
     GENERATED_BODY()
 public:

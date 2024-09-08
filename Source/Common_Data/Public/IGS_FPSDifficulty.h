@@ -5,12 +5,12 @@
 
 class UIGS_FPSDifficultyDataAsset;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UIGS_FPSDifficulty : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_FPSDifficultyDataAsset* m_FPSDifficultyDA;
     
 public:

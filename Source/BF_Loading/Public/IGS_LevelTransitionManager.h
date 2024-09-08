@@ -8,36 +8,36 @@
 
 class UIGS_LevelTransitionDataAsset;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LOADING_API UIGS_LevelTransitionManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSignature OnLevelLoadAttemptSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSignature OnLevelLoadAttemptFailure;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSignature OnLevelLoadInterrupted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSignature OnLevelLoadStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSignature OnLevelLoadFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionStateChangedSignature OnLevelTransitionStateChangeStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionStateChangedSignature OnLevelTransitionStateChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_LevelTransitionType CurrentState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_LevelTransitionDataAsset* Data;
     
 public:
@@ -49,13 +49,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetLevelLoadTransitionState(EIGS_LevelTransitionType inState);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_LevelTransitionType GetLevelTransitionState() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetLevelLoadState() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetDelayTime() const;
     
     UFUNCTION(BlueprintCallable)

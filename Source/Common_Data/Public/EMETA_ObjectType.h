@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ObjectType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_ObjectType : uint8 {
     None,
     Character,

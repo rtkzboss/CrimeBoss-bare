@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_LootBagItemHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TArray<FIGS_LootBagSingleItem> Items;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     EIGS_ItemType ItemType;
     
     FIGS_LootBagItemHolder();

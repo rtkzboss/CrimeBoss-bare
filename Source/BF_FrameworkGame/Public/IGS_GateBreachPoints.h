@@ -5,17 +5,17 @@
 
 class UIGS_BreachPointComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GateBreachPoints : public AIGS_BreachPointsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* StackEntryPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* BreachEntryPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* StackExitPoint;
     
     AIGS_GateBreachPoints(const FObjectInitializer& ObjectInitializer);

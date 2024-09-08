@@ -4,5 +4,5 @@
 
 class AIGS_GameCharacterFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnServerTriggerSignature, AIGS_GameCharacterFramework*, inInstigator);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnServerTriggerSignature, AIGS_GameCharacterFramework*, inInstigator);
 

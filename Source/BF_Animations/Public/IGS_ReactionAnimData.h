@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_ReactionAnimData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAnimMontage* Anim;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAnimMontage* OptionalOutAnim;
     
     BF_ANIMATIONS_API FIGS_ReactionAnimData();

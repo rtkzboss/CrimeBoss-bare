@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_PlayerStateData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FCommonHeisterData HeisterDataHolder;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     EIGS_StorePlatform StorePlatform;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 HordeModeTokens;
     
     FIGS_PlayerStateData();

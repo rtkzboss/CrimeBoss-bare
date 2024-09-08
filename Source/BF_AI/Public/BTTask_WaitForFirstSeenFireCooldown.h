@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_WaitForFirstSeenFireCooldown.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_WaitForFirstSeenFireCooldown : public UBTTaskNode {
     GENERATED_BODY()
 public:

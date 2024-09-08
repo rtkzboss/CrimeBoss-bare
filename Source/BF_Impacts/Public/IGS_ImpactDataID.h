@@ -5,11 +5,11 @@
 
 class UIGS_ImpactTypeObject;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_IMPACTS_API FIGS_ImpactDataID {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<UIGS_ImpactTypeObject> ObjectId;
     
     FIGS_ImpactDataID();

@@ -3,12 +3,12 @@
 #include "GameFramework/Volume.h"
 #include "IGS_SplitterRemover.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SplitterRemover : public AVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     FName RemoveSplittersWithTag;
     
 public:

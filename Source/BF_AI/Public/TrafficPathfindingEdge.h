@@ -5,14 +5,14 @@
 
 class UTrafficPathfindingNode;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UTrafficPathfindingEdge : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UTrafficPathfindingNode* FromNode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UTrafficPathfindingNode* ToNode;
     
     UTrafficPathfindingEdge();

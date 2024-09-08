@@ -14,35 +14,35 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WorldSpaceWidgetBase : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bForceHidden;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bAutoActivateWidget;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_HeisterNumberChanged OnHeisterNumberChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_StatusProgressChangedEvent OnStatusProgressChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ProgressWidgetTypeChangedEvent OnWidgetSubtypeChangedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AActor* WorldWidgetOwner;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_WidgetType, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, ReplicatedUsing=OnRep_WidgetType)
     EIGS_WorldWidgetType WidgetType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_HeisterNumber, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, ReplicatedUsing=OnRep_HeisterNumber)
     uint8 HeisterNumber;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float Progress;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_ProgressGadgetSubtype ProgressWidgetSubtype;
     
 public:
@@ -50,7 +50,7 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SetWorldSpaceWidgetVisibility(bool InVisibility);
     
     UFUNCTION(BlueprintCallable)
@@ -65,27 +65,27 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetOwnerForBinding(AActor* inOwner);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SetHeisterNumber(int32 inNumber);
     
     UFUNCTION(BlueprintCallable)
     void SetForceHidden(bool inHidden);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnWidgetTypeChanged();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_WidgetType(const EIGS_WorldWidgetType inOldType);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_HeisterNumber();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnProgressChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     bool GetIsWidgetGroupVisible();
     
 };

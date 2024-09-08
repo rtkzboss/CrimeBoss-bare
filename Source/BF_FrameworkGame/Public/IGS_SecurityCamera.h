@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_SecurityCamera : public AIGS_DetectorBase {
     GENERATED_BODY()
 public:
@@ -15,10 +15,10 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnWireCut(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_CosmeticWireCut();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CosmeticWireCut();
     
 };

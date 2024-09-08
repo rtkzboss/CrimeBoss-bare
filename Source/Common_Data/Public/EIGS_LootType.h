@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_LootType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_LootType : uint8 {
+UENUM()
+enum class EIGS_LootType {
     Generic,
     Drugs,
     MoneyCash,

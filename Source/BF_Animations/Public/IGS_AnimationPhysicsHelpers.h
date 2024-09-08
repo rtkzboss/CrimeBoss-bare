@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "IGS_AnimationPhysicsHelpers.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_ANIMATIONS_API UIGS_AnimationPhysicsHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

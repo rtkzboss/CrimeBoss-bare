@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniXformType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EHoudiniXformType : uint8 {
     None,
     IntoThisObject,

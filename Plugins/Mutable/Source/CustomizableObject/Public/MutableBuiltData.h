@@ -3,14 +3,14 @@
 #include "UObject/NoExportTypes.h"
 #include "MutableBuiltData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMutableBuiltData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGuid CompilationId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 SupportedVersion;
     
     CUSTOMIZABLEOBJECT_API FMutableBuiltData();

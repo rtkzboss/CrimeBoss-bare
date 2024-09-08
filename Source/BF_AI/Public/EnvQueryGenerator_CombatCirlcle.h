@@ -8,20 +8,20 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(BlueprintType, EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_CombatCirlcle : public UEnvQueryGenerator_ProjectedPoints {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue Radius;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue SpaceBetweenFront;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> GenerateAround;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETraceTypeQuery> TraceChannel;
     
     UEnvQueryGenerator_CombatCirlcle();

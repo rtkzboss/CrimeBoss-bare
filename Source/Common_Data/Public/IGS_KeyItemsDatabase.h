@@ -8,19 +8,19 @@
 class UIGS_KeyItemInventoryObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_KeyItemsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UIGS_KeyItemsDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_KeyItemInventoryObject>& inClass) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_KeyItemTableRow GetDataKeyItem(UObject* inWCO, const TSubclassOf<UIGS_KeyItemInventoryObject>& inClass, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_KeyItemTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
 };

@@ -7,25 +7,25 @@ class UIGS_InteractiveComponent;
 class UIGS_InteractiveObjectsManager;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_InteractiveObjectsManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     TArray<UIGS_InteractiveComponent*> InteractiveComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bAlreadyReset;
     
     UIGS_InteractiveObjectsManager();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnregisterInteractiveComponent(UIGS_InteractiveComponent* InComponent);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RegisterInteractiveComponent(UIGS_InteractiveComponent* InComponent);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_InteractiveObjectsManager* Instance(const UObject* inWorldContextObject);
     
 };

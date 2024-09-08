@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_BossLevelCategory.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_BossLevelCategory : uint8 {
     Boss,
     Progression,

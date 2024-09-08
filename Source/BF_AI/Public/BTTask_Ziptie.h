@@ -8,21 +8,21 @@ class AIGS_GameCharacterFramework;
 class AIGS_PlayerCharacter;
 class UIGS_ZiptieComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_Ziptie : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CivToZiptieKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_PlayerCharacter* Character;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_GameCharacterFramework* CivToZiptie;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_ZiptieComponent* ZiptieComponent;
     
 public:

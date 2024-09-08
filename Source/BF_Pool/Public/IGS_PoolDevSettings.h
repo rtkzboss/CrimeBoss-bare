@@ -5,11 +5,11 @@
 
 class UDataTable;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_PoolSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_PoolSettings")
 class BF_POOL_API UIGS_PoolDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> PoolItemsDataTable;
     
     UIGS_PoolDevSettings();

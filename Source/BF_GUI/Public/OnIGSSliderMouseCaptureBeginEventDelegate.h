@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnIGSSliderMouseCaptureBeginEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnIGSSliderMouseCaptureBeginEvent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnIGSSliderMouseCaptureBeginEvent);
 

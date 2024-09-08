@@ -6,20 +6,20 @@
 class AIGS_VehicleDestinationArea;
 class AIGS_VehicleDestinationPoint;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_VehicleDestinationInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector Position;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 Amount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_VehicleDestinationPoint* DestinationPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_VehicleDestinationArea* DestinationArea;
     
     FIGS_VehicleDestinationInfo();

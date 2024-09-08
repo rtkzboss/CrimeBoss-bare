@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AIGangsterHeavyTierDef : public FIGS_AIGangsterTierDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIGangsterHeavyTierData SpecStats;
     
     FIGS_AIGangsterHeavyTierDef();

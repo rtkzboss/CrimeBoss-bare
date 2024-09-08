@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "IGS_ActionToken.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_ActionToken : public UObject {
     GENERATED_BODY()
 public:
@@ -15,10 +15,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void ReturnTokenToPool();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsValid() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetPriority() const;
     
 };

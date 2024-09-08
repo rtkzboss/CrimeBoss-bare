@@ -5,7 +5,7 @@
 #include "UStreamlineReflexMode.h"
 #include "StreamlineLibraryReflex.generated.h"
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(BlueprintType, MinimalAPI)
 class UStreamlineLibraryReflex : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -14,25 +14,25 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetReflexMode(const UStreamlineReflexMode Mode);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UStreamlineFeatureSupport QueryReflexSupport();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsReflexSupported();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetRenderLatencyInMs();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UStreamlineReflexMode GetReflexMode();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetGameToRenderLatencyInMs();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetGameLatencyInMs();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UStreamlineReflexMode GetDefaultReflexMode();
     
 };

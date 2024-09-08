@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct PREFABRICATORRUNTIME_API FPrefabricatorAssetCollectionItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UPrefabricatorAsset> PrefabAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Weight;
     
     FPrefabricatorAssetCollectionItem();

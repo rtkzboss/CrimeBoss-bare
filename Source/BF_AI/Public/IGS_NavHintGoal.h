@@ -6,15 +6,15 @@
 
 class AAIController;
 
-UCLASS(Blueprintable, NotPlaceable, Transient)
+UCLASS(NotPlaceable, Transient)
 class BF_AI_API AIGS_NavHintGoal : public AActor, public INavAgentInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     AAIController* Querier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     AActor* GoalActor;
     
 public:

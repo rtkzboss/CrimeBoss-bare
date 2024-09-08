@@ -5,23 +5,23 @@
 #include "PrefabricatorPropertyAssetMapping.h"
 #include "PrefabricatorProperty.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PREFABRICATORRUNTIME_API UPrefabricatorProperty : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString PropertyName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString ExportedValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FPrefabricatorPropertyAssetMapping> AssetSoftReferenceMappings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bIsCrossReferencedActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGuid CrossReferencePrefabActorId;
     
     UPrefabricatorProperty();

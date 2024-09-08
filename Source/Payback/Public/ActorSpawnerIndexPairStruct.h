@@ -4,14 +4,14 @@
 
 class UIGS_PropActorSpawner;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FActorSpawnerIndexPairStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_PropActorSpawner* PropActorSpawner;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 Index;
     
     PAYBACK_API FActorSpawnerIndexPairStruct();

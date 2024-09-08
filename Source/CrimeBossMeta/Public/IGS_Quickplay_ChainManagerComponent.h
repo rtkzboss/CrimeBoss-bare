@@ -11,22 +11,22 @@ class CRIMEBOSSMETA_API UIGS_Quickplay_ChainManagerComponent : public UIGS_Chain
 public:
     UIGS_Quickplay_ChainManagerComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool WasCurrentMissionUrbanLegendMission();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool WasCurrentMissionChainMission();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool ShouldUseChainCrew();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool IsCurrentMissionUrbanLegendMission();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool IsCurrentMissionChainMission();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     TArray<UMETA_Character*> GetChainCharacters();
     
 };

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_SearchPointType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_SearchPointType : uint8 {
+UENUM()
+enum class EIGS_SearchPointType {
     Generic,
     Safe,
     Vault,

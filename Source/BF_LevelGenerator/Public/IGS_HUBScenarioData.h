@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_HUBScenarioData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_HubScenarioType ScenarioType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_BuildConfigurationTileable ScenarioDA;
     
     BF_LEVELGENERATOR_API FIGS_HUBScenarioData();

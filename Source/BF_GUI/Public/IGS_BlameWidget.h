@@ -5,22 +5,22 @@
 
 class UIGS_SuspicionManager;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_BlameWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
     
 public:
     UIGS_BlameWidget();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void StrikesAdded(int32 inStrikes, int32 inStrikeIncrease, const FText& inBlame);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnAlarmTriggered(const FText& inBlame);
     
 };

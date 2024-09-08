@@ -12,7 +12,7 @@ class UIGS_EquipmentDatabase;
 class UIGS_EquipmentInventoryObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_EquipmentDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -21,10 +21,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void ModAppendDataTable(UDataTable* inNewTable);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_EquipmentInventoryObject>& inClass) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_EquipmentDatabase* GetEquipmentDatabaseInstance(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -36,7 +36,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EquipmentTableRow GetDataEquipment(UObject* inWCO, const TSubclassOf<UIGS_EquipmentInventoryObject>& inClass, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_EquipmentTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
 };

@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct BF_LEVELGENERATOR_API FIGS_UsedNumbersHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<bool> SelectedNumbers;
     
     FIGS_UsedNumbersHolder();

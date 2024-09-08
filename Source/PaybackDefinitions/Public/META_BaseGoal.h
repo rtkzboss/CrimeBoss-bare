@@ -14,18 +14,18 @@ class UMETA_BaseGoal;
 class UMETA_MissionID;
 class UTexture2D;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_BaseGoal : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EMETA_GoalType Type;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EMETA_GoalPriority Priority;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayTag EntitlementTag;
     
 public:
@@ -43,46 +43,46 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveMission(TSubclassOf<UMETA_MissionID> inMissionID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsGoalRepeatable(int32& outDaysBeetwenAttempts) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSet<int32> GetVisitedNodeIDs() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_GoalType GetType() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetTitle() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_GoalPurpose GetPurpose() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_GoalPriority GetPriority() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UTexture2D> GetPicture() const;
     
     UFUNCTION(BlueprintCallable)
     TArray<TSubclassOf<UMETA_MissionID>> GetMissions();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_Partner GetInstigatorPartner() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_BaseGoal> GetId() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UTexture2D> GetIcon() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_GoalStatus GetGoalResult() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetEntitlementTag() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetDescription() const;
     
     UFUNCTION(BlueprintCallable)

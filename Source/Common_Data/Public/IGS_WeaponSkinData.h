@@ -4,11 +4,11 @@
 #include "IGS_WeaponSkinMaterial.h"
 #include "IGS_WeaponSkinData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_WeaponSkinData : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FName, FIGS_WeaponSkinMaterial> SkinMaterialSlot;
     
     UIGS_WeaponSkinData();

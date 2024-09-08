@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct ST_FRAMEWORK_API FIGS_AssetCollectionTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName CollectionName;
     
     FIGS_AssetCollectionTableRow();

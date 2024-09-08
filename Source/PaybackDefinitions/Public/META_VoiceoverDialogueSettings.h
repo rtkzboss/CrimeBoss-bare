@@ -5,30 +5,30 @@
 #include "META_VODialoguesCommonTypeSettings.h"
 #include "META_VoiceoverDialogueSettings.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_VoiceoverDialogueSettings : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float DelayAfterScreenSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 DefaultTypePriority;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float DefaultTypeChance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, FMETA_VODialoguesCommonTypeSettings> CommonTypeSettings;
     
 public:
     UMETA_VoiceoverDialogueSettings();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_VODialoguesCommonTypeSettings GetTypeSettings(FGameplayTag inType);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetDelayAfterScreenSwitch();
     
 };

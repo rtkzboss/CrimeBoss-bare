@@ -8,18 +8,18 @@ class UBoxComponent;
 class UIGS_GetActorByGameplayTagComponent;
 class UIGS_NavLinkComponentFramework;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AITransitionObjectBase : public AActor, public IIGS_BreachInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_NavLinkComponentFramework* NavLink;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsForced;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_GetActorByGameplayTagComponent* m_GetActorByGameplayTagComponent;
     
 public:

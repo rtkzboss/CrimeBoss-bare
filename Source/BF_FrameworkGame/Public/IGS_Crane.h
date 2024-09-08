@@ -21,108 +21,108 @@ class UPrimitiveComponent;
 class USceneComponent;
 class USphereComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Crane : public APawn, public IIGS_SubControllerMountableInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* RootObject;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_InteractiveComponent* InteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPrimitiveComponent* CraneTopModule;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* MagnetComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UArrowComponent* MagnetComponentMinMovePoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UArrowComponent* MagnetComponentMaxMovePoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPrimitiveComponent* MagnetHead;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UBoxComponent* MagnetHeadSweepComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* MagnetHeadPinPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UArrowComponent* MagnetHeadTopPosition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UInstancedStaticMeshComponent* CableInstancedMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UBoxComponent* MagnetBox;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USphereComponent* DetectionSphere;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UAkComponent* AkAudioComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* RotateStartAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* RotateStopAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* MagnetToggleOnAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* MagnetToggleOffAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* MagnetLiftStartAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* MagnetLiftStopAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* MagnetMoveStartAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* MagnetMoveStopAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* EngineStartAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* EngineStopAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AActor*> CraneIgnoreList;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CableMeshHeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float MoveSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float LiftSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float RotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CraneTopModuleRotationChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_CraneTopModuleRotationChanged)
     FRotator mR_CraneTopModuleRotator;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MagnetComponentLocationChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_MagnetComponentLocationChanged)
     FVector mR_MagnetComponentLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MagnetHeadLocationChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_MagnetHeadLocationChanged)
     FVector mR_MagnetHeadLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CableInstancesCountChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_CableInstancesCountChanged)
     int32 mR_CableInstancesCount;
     
 public:
@@ -152,76 +152,76 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ExitCraneControl();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_MagnetHeadLocationChanged() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_MagnetComponentLocationChanged() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CraneTopModuleRotationChanged() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CableInstancesCountChanged() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnMagnetStateChanged(bool inState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnMagnetBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCraneObjectsDetectorEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCraneObjectsDetectorBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCraneObjectReleaseStateChanged(bool inState);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCraneObjectReleased(UIGS_CraneObjectComponent* CraneObjectComponent);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCraneObjectPicked(UIGS_CraneObjectComponent* CraneObjectComponent);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void InitComponents();
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_SetObjectOutlineState(AActor* inOutlineObject, EIGS_CameraOutlineState inState);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_OnCraneObjectPickStatusChanged(UIGS_CraneObjectComponent* inCraneObject, bool inState);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_OnCraneObjectDetectionStatusChanged(UIGS_CraneObjectComponent* inCraneObject, bool inState);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_ExitCraneControl();
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_EnterCraneControl();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void All_RotateCraneStop();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void All_RotateCraneStart();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void All_OnMagnetStateChanged(bool inState);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void All_MoveMagnetStop();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void All_MoveMagnetStart();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void All_LiftMagnetStop();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void All_LiftMagnetStart();
     
 

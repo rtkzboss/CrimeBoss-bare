@@ -5,14 +5,14 @@
 
 class UDataTable;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_CommonUtilsSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_CommonUtilsSettings")
 class COMMON_UTILS_API UIGS_CommonUtilsDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> EntitlementsDataTable;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     FString FreeWeekend_URL;
     
     UIGS_CommonUtilsDevSettings();

@@ -3,7 +3,7 @@
 #include "IGS_VoiceoverGroupController.h"
 #include "IGS_VoiceoverUniController.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_VOICEOVER_API UIGS_VoiceoverUniController : public UIGS_VoiceoverGroupController {
     GENERATED_BODY()
 public:

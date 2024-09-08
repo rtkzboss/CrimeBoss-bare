@@ -6,15 +6,15 @@
 
 class AActor;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_UseSmartObject : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SmartObjectBBKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* SmartObject;
     
 public:

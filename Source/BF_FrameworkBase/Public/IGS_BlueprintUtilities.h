@@ -15,7 +15,7 @@ class APawn;
 class APlayerController;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_BlueprintUtilities : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -39,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void IsServerOrStandalone(UObject* inWCO, EBoolExecPin& outBranches);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsLocallyControlledPlayerPawn(const APawn* inPawn);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -51,16 +51,16 @@ public:
     UFUNCTION(BlueprintCallable)
     static void IsDedicatedServer(EBoolExecPin& outBranches);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUniqueNetID(APlayerController* PlayerController, FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static APlayerController* GetLocalPlayerControllerForWorld(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static APlayerController* GetLocalPlayerController(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FColor GetColorForTeamSide(EIGS_TeamSideEnum inTeamSide);
     
     UFUNCTION(BlueprintCallable)

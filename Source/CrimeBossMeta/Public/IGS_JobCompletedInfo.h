@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FIGS_JobCompletedInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UMETA_BaseMission* MetaMissionID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_FPS2Meta_Data MetaData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_SharedMetaTransfer_Data SharedData;
     
     CRIMEBOSSMETA_API FIGS_JobCompletedInfo();

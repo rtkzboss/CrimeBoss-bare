@@ -3,7 +3,7 @@
 #include "LiveLinkSourceSettings.h"
 #include "FTILiveLinkSourceSettings.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class UFTILiveLinkSourceSettings : public ULiveLinkSourceSettings {
     GENERATED_BODY()
 public:

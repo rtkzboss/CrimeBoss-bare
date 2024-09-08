@@ -6,15 +6,15 @@
 
 class UIGS_AICommand;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_SOCommandState : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_AICommandState CommandState;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_AICommand* Command;
     
 public:

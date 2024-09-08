@@ -4,13 +4,13 @@
 #include "META_BaseObject.h"
 #include "META_CharacterSkin.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_CharacterSkin : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
     UMETA_CharacterSkin();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_CharacterSkinTableRow GetCharacterSkinData();
     
 };

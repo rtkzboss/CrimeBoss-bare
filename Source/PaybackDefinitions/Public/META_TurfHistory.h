@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_TurfHistory {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Gang, FMETA_GangTurfHistory> GangTurfHistory;
     
     FMETA_TurfHistory();

@@ -12,36 +12,36 @@ class UIGS_JobsItemWidget;
 class UIGS_JobsScreenCategoryWidget;
 class UUserWidget;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_JobsScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UHorizontalBox* JobsCategoriesContent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGSScrollBox* IGSScrollBoxWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float ScrollPaddingOnCategorySelect;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSubclassOf<UIGS_JobsScreenCategoryWidget> CategoryWidgetClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 SelectedCategoryIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool AllowEndlessScroll;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     TArray<UIGS_JobsScreenCategoryWidget*> CategoryWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_JobsScreenCategoryWidget* RecomendedCategoryWidget;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_MultiplayerJobCategoryRow RecomendedCategoryData;
     
 public:
@@ -59,28 +59,28 @@ public:
     void ScrollToCategory(int32 categoryIndex);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSelectCategory_NoScrollNoFocus(UIGS_JobsScreenCategoryWidget* categoryWidget);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSelectCategory_Internal(UIGS_JobsScreenCategoryWidget* categoryWidget, int32 Direction);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnJobScreenInitialized();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnJobItemSelected_Internal(UIGS_JobsItemWidget* JobWidget);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnJobItemSelected(UIGS_JobsItemWidget* JobWidget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnItemSelected(int32 categoryIndex, UIGS_JobsItemWidget* itemWidget);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCategorySelected(int32 categoryIndex);
     
     UFUNCTION(BlueprintCallable)
@@ -89,16 +89,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void GoToCategory(int32 Direction);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UUserWidget* GetWidgetByJobTag(FGameplayTag inTag, bool inIncludeRecomended) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_JobsScreenCategoryWidget* GetSelectedCategoryWidget() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_JobsScreenCategoryWidget* GetCategoryByIndex(int32 Index);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetCategoriesCount();
     
 };

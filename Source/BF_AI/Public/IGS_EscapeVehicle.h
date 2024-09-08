@@ -3,7 +3,7 @@
 #include "IGS_VehicleCar.h"
 #include "IGS_EscapeVehicle.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_EscapeVehicle : public AIGS_VehicleCar {
     GENERATED_BODY()
 public:

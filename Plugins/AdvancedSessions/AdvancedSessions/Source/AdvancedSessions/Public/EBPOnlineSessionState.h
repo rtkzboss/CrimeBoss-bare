@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBPOnlineSessionState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EBPOnlineSessionState : uint8 {
     NoSession,
     Creating,

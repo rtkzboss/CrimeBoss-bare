@@ -6,12 +6,12 @@
 #include "META_TradeMissionSave.h"
 #include "META_Trade.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_Trade : public UMETA_BaseMission {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_TradeMissionSave m_TradeMissionSave;
     
 public:
@@ -20,13 +20,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDataFromSave(const FMETA_TradeMissionSave& inTradeMissionSave);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FMETA_TradeExpense> GetTradeExpenses() const;
     
     UFUNCTION(BlueprintCallable)
     FMETA_TradeMissionSave GetSaveData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_TradeMissionRowInfo GetInfo() const;
     
 };

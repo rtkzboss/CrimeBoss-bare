@@ -7,27 +7,27 @@
 
 class UPhysicalMaterial;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_ShootablePartsHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ShootablePart> ShootableParts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UPhysicalMaterial* PartPhysMatOverride;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ShootOffVelocity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpawnDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, ReplicatedUsing=OnRep_CollisionComponents, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, ReplicatedUsing=OnRep_CollisionComponents)
     TArray<UActorComponent*> mR_CollisionComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, ReplicatedUsing=OnRep_VisibleComponents, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, ReplicatedUsing=OnRep_VisibleComponents)
     TArray<UActorComponent*> mR_VisibleComponents;
     
 public:
@@ -36,14 +36,14 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_VisibleComponents();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CollisionComponents();
     
 public:
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_ShootOffPart(UActorComponent* inCollisionComponent, UActorComponent* inVisibleComponent, const FIGS_HitInfo& inHit, float inDamage);
     
 };

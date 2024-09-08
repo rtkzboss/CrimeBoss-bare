@@ -8,25 +8,25 @@ class UIGS_MenuScreenWidget;
 class UIGS_MenuWidgetManager;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_MenuWidgetManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     TArray<UIGS_MenuScreenWidget*> MenuWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bAlreadyReset;
     
     UIGS_MenuWidgetManager();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnregisterWidget(UIGS_MenuScreenWidget* InWidget);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RegisterWidget(UIGS_MenuScreenWidget* InWidget);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_MenuWidgetManager* Instance(const UObject* inWorldContextObject);
     
     UFUNCTION(BlueprintCallable)

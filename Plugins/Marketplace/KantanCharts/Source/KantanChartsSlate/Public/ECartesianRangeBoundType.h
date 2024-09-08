@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECartesianRangeBoundType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ECartesianRangeBoundType : uint8 {
     FixedValue,
     FitToData,

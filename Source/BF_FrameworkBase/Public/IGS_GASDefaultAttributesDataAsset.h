@@ -6,11 +6,11 @@
 
 class UGameplayEffect;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_GASDefaultAttributesDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UGameplayEffect>> AttributeInitGEs;
     
     UIGS_GASDefaultAttributesDataAsset();

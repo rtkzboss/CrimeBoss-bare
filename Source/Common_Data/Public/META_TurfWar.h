@@ -8,12 +8,12 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_TurfWar : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_TurfWarMissionSave m_TurfWarMissionSave;
     
 public:
@@ -31,19 +31,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDataFromSave(const FMETA_TurfWarMissionSave& inTurfWarMissionSave);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetWarTile() const;
     
     UFUNCTION(BlueprintCallable)
     FMETA_TurfWarMissionSave GetSaveData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetPLayersSoldiersAmount() const;
     
     UFUNCTION(BlueprintCallable)
     EMETA_Gang GetEnemyGang();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetDefenseLosePenaltyCost(const UObject* inWCO);
     
 };

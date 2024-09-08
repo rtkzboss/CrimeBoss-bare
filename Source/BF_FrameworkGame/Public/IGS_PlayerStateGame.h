@@ -14,37 +14,37 @@
 
 class AController;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerStateGame : public AIGS_PlayerStateFramework, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_IsLevelLoadedDelegate OnIsJustLevelLoaded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_IsLevelLoadedDelegate OnIsLevelLoaded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PlayerStatePlayerDataUpdateReceivedDelegate OnPlayerStateDataUpdateReceived;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsJustLevelLoaded, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsJustLevelLoaded)
     bool IsJustLevelLoaded;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsLevelLoaded, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsLevelLoaded)
     bool IsLevelLoaded;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_bIsReady, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_bIsReady)
     bool bIsReady;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleInstanceOnly)
     FIGS_PlayerStateData PlayerStateData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     int32 HeisterNumber;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AController* m_OwningController;
     
 public:
@@ -65,37 +65,37 @@ public:
     void SetCachedPlayerName(FText InName);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_SetIsReady();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_SetIsLevelLoaded();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_SetIsJustLevelLoaded();
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void SendTextChatMessageTextOnly(const FText& inMessage);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void SendTextChatMessage(const FText& InText, const FString& inUserId, const TArray<FString>& inBlockedUsersList);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsLevelLoaded() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsJustLevelLoaded() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_bIsReady() const;
     
 public:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_HandleChatWheelReaction(FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_SendPlayerData(FIGS_PlayerStateData inPlayerData);
     
 protected:
@@ -103,16 +103,16 @@ protected:
     FUniqueNetIdRepl GetUniquePlayerID();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetTeammateStatus(float& outCurrentHP, float& outMaxHP, float& outRelativeHP, float& outRelativeShield, float& outRelativeArmor) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_StorePlatform GetStorePlatform() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetHordeModeTokens() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FCommonHeisterData GetHeisterData() const;
     
 

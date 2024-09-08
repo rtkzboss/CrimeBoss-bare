@@ -3,11 +3,11 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "IGS_AnimNotify_MocapEvent.generated.h"
 
-UCLASS(Blueprintable, CollapseCategories)
+UCLASS(CollapseCategories)
 class BF_AI_API UIGS_AnimNotify_MocapEvent : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName EventName;
     
     UIGS_AnimNotify_MocapEvent();

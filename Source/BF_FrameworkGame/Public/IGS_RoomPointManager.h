@@ -13,20 +13,20 @@ class ARoomNavmesh;
 class UIGS_RoomPointManager;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_RoomPointManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     TArray<AIGS_RoomBase*> Rooms;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_RoomPolysGeneratedDelegate OnRoomPolysGeneratedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bRoomPolysGathered;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     TArray<FIGS_RoomData> RoomsData;
     
     UIGS_RoomPointManager();
@@ -36,7 +36,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void RefreshBadRooms(const bool inHighlight);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_RoomPointManager* Instance(const UObject* inWorldContextObject);
     
     UFUNCTION(BlueprintCallable)
@@ -45,13 +45,13 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<AIGS_RoomBase*> GetRoomsWithGameplayTag(FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     ARoomNavmesh* GetRoomNavData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_HumanNavMesh* GetHumanNavData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<AIGS_RoomBase*> GetAllRoomsInBox(FVector inOrigin, FVector InBoxExtent) const;
     
 };

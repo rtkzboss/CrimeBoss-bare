@@ -15,50 +15,50 @@ class UIGS_ObjectStatus;
 class UIGS_VisbilityComponent;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_EntranceBase : public AActor, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     USceneComponent* EntranceRootComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_ObjectStatus* DoorObjectStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_VisbilityComponent* VisibilityComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UChildActorComponent* FrontBreachingPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UChildActorComponent* BackBreachingPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bPortalDoor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_bLocked, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bLocked)
     bool bLocked;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_bOpen, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bOpen)
     bool bOpen;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     bool bFullyProgressed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FIGS_HitInfo KillHitInfo;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEntranceStateChangedSignature OnEntranceStateChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEntranceLockStateChangedSignature OnEntranceLockStateChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnBrokenEvent OnBrokenEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UBoxComponent* NavigationBlock;
     
     AIGS_EntranceBase(const FObjectInitializer& ObjectInitializer);
@@ -74,43 +74,43 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetFullyProgressed(bool inFullyProgressed);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_bOpen();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_bLocked();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnOpenStateChanged(bool inOpen);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnLockStateChanged(bool inLocked);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnEntranceStateFullyChanged();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnBroken();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_OnOpenStateChanged(bool inOpen);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetOpenState();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     bool GetIsLocked() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsBroken() const;
     
     UFUNCTION(BlueprintCallable)
     bool GetFullyProgressed();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetDoorOrientationFromLocation(FVector InLocation);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetDoorOrientationFromDirection(FVector InDirection);
     
 

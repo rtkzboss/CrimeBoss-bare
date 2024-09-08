@@ -5,17 +5,17 @@
 
 class UParticleSystemComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_POOL_API AIGS_PooledParticle : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient, VisibleAnywhere)
     UParticleSystemComponent* ParticleComponent;
     
     AIGS_PooledParticle(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent);
     
 };

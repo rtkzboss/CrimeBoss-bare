@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_FPSDifficulty.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_FPSDifficulty : uint8 {
     FD_Unknown,
     FD_Normal,

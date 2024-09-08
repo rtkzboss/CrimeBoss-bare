@@ -5,7 +5,7 @@
 #include "EXeSSQualityMode.h"
 #include "XeSSBlueprintLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UXeSSBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -14,19 +14,19 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetXeSSQualityMode(EXeSSQualityMode QualityMode);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsXeSSSupported();
     
     UFUNCTION(BlueprintCallable)
     static bool GetXeSSQualityModeInformation(EXeSSQualityMode QualityMode, float& ScreenPercentage);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static EXeSSQualityMode GetXeSSQualityMode();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TArray<EXeSSQualityMode> GetSupportedXeSSQualityModes();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static EXeSSQualityMode GetDefaultXeSSQualityMode(FIntPoint ScreenResolution);
     
 };

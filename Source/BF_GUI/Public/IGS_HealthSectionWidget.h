@@ -8,37 +8,37 @@
 class AIGS_GameCharacterFramework;
 class AIGS_PlayerStateFramework;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_HealthSectionWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float CurrentHealth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float MaxHealth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bLocalPlayer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_GameCharacterFramework* PawnToMonitor;
     
     UIGS_HealthSectionWidget();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetShowRevives(bool inShow);
     
     UFUNCTION(BlueprintCallable)
     void SetPawnToMonitor(AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void RequestHide();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPlayerStateReadyEvent(AIGS_PlayerStateFramework* inPS);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPlayerSlotsChanged();
     
 protected:
@@ -60,7 +60,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnDeath();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LootBagCountChanged(int32 inCount, const TArray<EIGS_BagType>& inBagTypes);
     
 };

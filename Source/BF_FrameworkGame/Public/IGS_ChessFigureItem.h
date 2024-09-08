@@ -3,7 +3,7 @@
 #include "IGS_StaticMeshInventoryItemPickup.h"
 #include "IGS_ChessFigureItem.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ChessFigureItem : public AIGS_StaticMeshInventoryItemPickup {
     GENERATED_BODY()
 public:
@@ -12,7 +12,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetThrowCount(int32 inNewCount);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetThrowCount();
     
 };

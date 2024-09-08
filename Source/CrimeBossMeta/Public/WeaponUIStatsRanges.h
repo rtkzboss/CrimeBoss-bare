@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FWeaponUIStatsRanges : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector2D Range;
     
     FWeaponUIStatsRanges();

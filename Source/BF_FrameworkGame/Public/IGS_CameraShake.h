@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FIGS_CameraShake {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag CameraShakeTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Intensity;
     
     BF_FRAMEWORKGAME_API FIGS_CameraShake();

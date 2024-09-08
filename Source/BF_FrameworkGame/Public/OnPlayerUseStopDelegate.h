@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnPlayerUseStopDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerUseStop);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerUseStop);
 

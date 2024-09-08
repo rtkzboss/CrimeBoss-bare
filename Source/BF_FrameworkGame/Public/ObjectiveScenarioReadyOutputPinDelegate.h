@@ -4,5 +4,5 @@
 
 class AIGS_ObjectiveScenarioBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FObjectiveScenarioReadyOutputPin, AIGS_ObjectiveScenarioBase*, ObjectiveScenario);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FObjectiveScenarioReadyOutputPin, AIGS_ObjectiveScenarioBase*, ObjectiveScenario);
 

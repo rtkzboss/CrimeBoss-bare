@@ -9,14 +9,14 @@ class APlayerController;
 class UCreateSessionCallbackProxyAdvanced;
 class UObject;
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(MinimalAPI)
 class UCreateSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnFailure;
     
     UCreateSessionCallbackProxyAdvanced();

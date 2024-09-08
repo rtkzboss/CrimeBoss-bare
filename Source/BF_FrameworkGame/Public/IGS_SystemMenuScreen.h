@@ -3,11 +3,11 @@
 #include "IGS_Screen.h"
 #include "IGS_SystemMenuScreen.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_SystemMenuScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool IsClosingInProcess;
     
     UIGS_SystemMenuScreen();

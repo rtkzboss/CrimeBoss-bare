@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_FootstepSpecial.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_FootstepSpecial : uint8 {
+UENUM()
+enum class EIGS_FootstepSpecial {
     None,
     WaterPuddle,
     Foliage,

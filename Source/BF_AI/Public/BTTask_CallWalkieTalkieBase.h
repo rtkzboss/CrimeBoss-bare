@@ -3,12 +3,12 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_CallWalkieTalkieBase.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UBTTask_CallWalkieTalkieBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Duration;
     
 public:

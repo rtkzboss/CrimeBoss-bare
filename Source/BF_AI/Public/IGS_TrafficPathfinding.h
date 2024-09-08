@@ -16,28 +16,28 @@ class UObject;
 class UTrafficPathfindingFilterBase;
 class UTrafficPathfindingNode;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_TrafficPathfinding : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTrafficPathfindingNode*> m_Nodes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<uint8, UTrafficPathfindingFilterBase*> m_FiltersCache;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<UIGS_TrafficPathComponent*, UTrafficPathfindingNode*> m_TrafficSegmentToNode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTrafficPathfindingNode*> m_TmpPath;
     
 public:
     UIGS_TrafficPathfinding();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnPopulationFinished();
     
 public:

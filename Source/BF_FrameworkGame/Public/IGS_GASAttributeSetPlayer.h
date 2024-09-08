@@ -3,7 +3,7 @@
 #include "IGS_GASAttributeSetBase.h"
 #include "IGS_GASAttributeSetPlayer.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_GASAttributeSetPlayer : public UIGS_GASAttributeSetBase {
     GENERATED_BODY()
 public:

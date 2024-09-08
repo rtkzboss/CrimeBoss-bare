@@ -22,57 +22,57 @@ class UMETA_MissionID;
 class UMETA_Weapon;
 class UMETA_WeaponInventoryObject;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_StashManagerComponent : public UIGS_StashManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_PartnerInfoChanged OnPartnerInfoChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_LootChanged OnLootChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_LootChanged OnLootSold;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_Partner, FMETA_PartnerInfo> PartnersInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<UMETA_Equipment*> Equipment;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FGameplayTag, int32> Loot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<TSubclassOf<UMETA_WeaponInventoryObject>, FMETA_WeaponAmountInfo> Weapons;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<TSoftClassPtr<UMETA_BaseActionCard>, FMETA_ActionCardStrenghtAmount> ActionCards;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FMETA_ActionCardID, int32> ActionCardsDurationCounter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 CurrentLootValueWasSoldToPawnShop;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FGameplayTag, FMETA_PawnShopTrendDataRuntime> PawnShopTrends;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 LastDayWhenWarehouseAttackStarted;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 ChanceWarehouseAttack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TSubclassOf<UMETA_MissionID> WarehouseAttackMissionID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 MoneyWarehouseAttackWasRemoved;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<FGameplayTag, int32> LootWarehouseattackWasRemoved;
     
 public:
@@ -87,16 +87,16 @@ public:
     UFUNCTION(BlueprintCallable)
     bool RemoveEquipmentFromStashByObject(UMETA_Equipment* inEquipment);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetWeaponsFromStashByID(TSubclassOf<UMETA_WeaponInventoryObject> inWeaponId, UMETA_Weapon*& outWeaponsData, int32& outAmount);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetWarehouseAttackLosses(int32& outRemovedMoney, TMap<FGameplayTag, int32>& outRemovedLoot) const;
     
     UFUNCTION(BlueprintCallable)
     TMap<FGameplayTag, int32> GetSortedLoot(bool inAscSort);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     void GetPlayersArmyTier(EMETA_ArmyTier& ArmyTier) const;
     
     UFUNCTION(BlueprintCallable)

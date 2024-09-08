@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FIGS_UnlockStatsQualities {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_ItemQuality, FIGS_UnlockStatsLevels> Qualities;
     
     BF_FRAMEWORKBASE_API FIGS_UnlockStatsQualities();

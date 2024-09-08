@@ -8,20 +8,20 @@
 class UMETA_BossCharacter;
 class UMETA_Character;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_CrewManagerComponent : public UIGS_CrewManagerBaseComponent {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnBossItemsChanged);
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnBossItemsChanged OnBossItemsChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMETA_Character*> Characters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMETA_BossCharacter* BossCharacter;
     
 public:
@@ -39,25 +39,25 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveBossItem(FGameplayTag inItemTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsCharacterOwned(FGameplayTag inCharacterTag);
     
     UFUNCTION(BlueprintCallable)
     void InitBoss();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasBossItemEquipped(FGameplayTag inItemTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<UMETA_Character*> GetCharactersAndBoss();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<UMETA_Character*> GetCharacters();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_Character* GetCharacter(FGameplayTag inCharacterTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_BossCharacter* GetBossCharacter() const;
     
     UFUNCTION(BlueprintCallable)

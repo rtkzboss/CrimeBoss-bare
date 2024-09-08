@@ -6,27 +6,27 @@
 
 class UIGS_GameUISettings;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_GUI_API UIGS_PlayerChatWheelComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_GameUISettings* m_Settings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool m_SpamPreventionActive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<float> m_ActionsTimestampsQueue;
     
 public:
     UIGS_PlayerChatWheelComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ShowSpamPreventionMessage();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_HandleChatWheelReaction(FGameplayTag inTag);
     
     UFUNCTION(BlueprintCallable)

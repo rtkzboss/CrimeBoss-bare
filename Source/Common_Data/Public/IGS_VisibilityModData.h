@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_VisibilityModData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsFlashlight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsLaser;
     
     FIGS_VisibilityModData();

@@ -4,11 +4,11 @@
 #include "IGS_LinkedGraphDefinition.h"
 #include "IGS_AnimationDatabaseBase.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_ANIMATIONS_API FIGS_AnimationDatabaseBase : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_LinkedGraphDefinition> LinkedGraphs;
     
     FIGS_AnimationDatabaseBase();

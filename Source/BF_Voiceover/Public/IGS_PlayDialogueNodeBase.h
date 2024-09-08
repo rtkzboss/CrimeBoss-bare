@@ -5,20 +5,20 @@
 #include "IGS_DialogueAsyncNodeDelegateDelegate.h"
 #include "IGS_PlayDialogueNodeBase.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_VOICEOVER_API UIGS_PlayDialogueNodeBase : public UBlueprintAsyncActionBase, public IIGS_DialogueAsyncActionInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueAsyncNodeDelegate DialogueFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueAsyncNodeDelegate DialogueStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueAsyncNodeDelegate DialogueLineStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueAsyncNodeDelegate DialogueLineFinished;
     
     UIGS_PlayDialogueNodeBase();

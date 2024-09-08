@@ -4,5 +4,5 @@
 
 class AActor;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_CarExplodedEventSignature, AActor*, inVehicleCar);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_CarExplodedEventSignature, AActor*, inVehicleCar);
 

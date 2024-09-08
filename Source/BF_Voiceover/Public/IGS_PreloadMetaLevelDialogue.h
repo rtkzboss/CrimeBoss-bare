@@ -8,14 +8,14 @@
 class UIGS_PreloadMetaLevelDialogue;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_VOICEOVER_API UIGS_PreloadMetaLevelDialogue : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueDelegate PreloadFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueDelegate PreloadCanceled;
     
     UIGS_PreloadMetaLevelDialogue();
@@ -23,7 +23,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PreloadMetaLevelDialogue* PreloadMetaLevelDialogues(UObject* inWCO, FText DialogueID, UPARAM(Ref) TArray<EIGS_MetaDialogueCharacter>& inCharacters);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void FinishPreload();
     
 };

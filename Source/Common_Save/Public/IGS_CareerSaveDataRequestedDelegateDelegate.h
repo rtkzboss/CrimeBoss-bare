@@ -4,5 +4,5 @@
 
 class UIGS_PaybackSaveGameCareer;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_CareerSaveDataRequestedDelegate, UIGS_PaybackSaveGameCareer*, CareerSaveGame);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_CareerSaveDataRequestedDelegate, UIGS_PaybackSaveGameCareer*, CareerSaveGame);
 

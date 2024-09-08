@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_LightReactionPoseVariant.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_LightReactionPoseVariant : uint8 {
+UENUM()
+enum class EIGS_LightReactionPoseVariant {
     D_Standing,
     D_Crouching,
     D_LyingOnGround,

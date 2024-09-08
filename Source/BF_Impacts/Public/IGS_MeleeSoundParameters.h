@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_IMPACTS_API FIGS_MeleeSoundParameters {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseThis;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<UAkSwitchValue> WeaponNameAkSwitch;
     
     FIGS_MeleeSoundParameters();

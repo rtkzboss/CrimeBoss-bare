@@ -6,18 +6,18 @@
 
 class USkeletalMeshComponentBudgeted;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AnimBudgetAllocatorComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float SignificanceUpdateInterval;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<USkeletalMeshComponentBudgeted*, FIGS_Mesh_BudgetAllocator_Settings> m_ChildMeshesDefaultSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<USkeletalMeshComponentBudgeted*, FIGS_Mesh_BudgetAllocator_Settings> m_ChildMeshesOptimizedSettings;
     
 public:

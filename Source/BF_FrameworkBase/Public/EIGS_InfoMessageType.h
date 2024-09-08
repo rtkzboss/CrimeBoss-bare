@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_InfoMessageType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_InfoMessageType : uint8 {
     Info_Generic,
     Info_ItemAdded,

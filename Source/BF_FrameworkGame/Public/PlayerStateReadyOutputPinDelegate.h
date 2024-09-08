@@ -4,5 +4,5 @@
 
 class AIGS_PlayerStateFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPlayerStateReadyOutputPin, AIGS_PlayerStateFramework*, PlayerState);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPlayerStateReadyOutputPin, AIGS_PlayerStateFramework*, PlayerState);
 

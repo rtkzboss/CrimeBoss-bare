@@ -6,21 +6,21 @@
 #include "EMETA_NodeType.h"
 #include "META_NodesColorData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_NodesColorData : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FLinearColor STORY_ACTIVE_NODE_COLOR;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_NodeType, FLinearColor> STORY_NODES_COLORS;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_NodeType, FLinearColor> STORY_NODES_BODY_COLORS;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_GoalStatus, FLinearColor> END_NODE_COLOR_BY_RESULT;
     
 public:

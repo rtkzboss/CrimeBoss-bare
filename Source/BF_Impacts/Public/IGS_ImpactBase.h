@@ -4,7 +4,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_ImpactBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_IMPACTS_API AIGS_ImpactBase : public AActor, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:

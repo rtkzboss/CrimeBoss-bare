@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_InspectRecord {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_GameCharacterFramework* Character;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector Position;
     
     FIGS_InspectRecord();

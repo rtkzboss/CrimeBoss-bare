@@ -5,14 +5,14 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_AISpawnPointVIP : public AIGS_AISpawnPoint {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSoftClassPtr<AIGS_GameCharacterFramework>> Characters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bSpawnUnique;
     
     AIGS_AISpawnPointVIP(const FObjectInitializer& ObjectInitializer);

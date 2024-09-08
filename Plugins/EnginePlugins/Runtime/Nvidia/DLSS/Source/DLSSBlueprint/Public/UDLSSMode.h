@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UDLSSMode.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class UDLSSMode : uint8 {
     Off,
     Auto,

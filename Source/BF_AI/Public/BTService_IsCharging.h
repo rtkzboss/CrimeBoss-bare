@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTService.h"
 #include "BTService_IsCharging.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_IsCharging : public UBTService {
     GENERATED_BODY()
 public:

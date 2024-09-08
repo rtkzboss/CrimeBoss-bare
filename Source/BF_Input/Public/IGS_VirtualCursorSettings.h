@@ -9,71 +9,71 @@
 
 class UIGS_CursorWidget;
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(BlueprintType, DefaultConfig, Config=Game)
 class BF_INPUT_API UIGS_VirtualCursorSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FRuntimeFloatCurve VirtualCursorAccelerationCurve;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float MaxVirtualCursorSpeed;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float MaxVirtualCursorSpeedWhenHovering;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float VirtualCursorDragCoefficient;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float VirtualCursorDragCoefficientWhenHovering;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float MinVirtualCursorSpeed;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float VirtualCursorDeadZone;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float VirtualCursorAccelerationMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float VirtualCursorSize;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bUseEngineDefaultVirtualCursor;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bVirtualCursorNoAcceleration;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     EIGS_VirtualCursorStick VirtualCursorStick;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FName VirtualHardwareCursorNormal;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FName VirtualHardwareCursorHovering;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FName NativeHardwareCursorNormal;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FName NativeHardwareCursorHovering;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FVector2D VirtualHardwareCursorHotspot;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FVector2D NativeHardwareCursorHotspot;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_CursorWidget> VirtualSoftwareCursorWidgetClass;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_CursorWidget> NativeSoftwareCursorWidgetClass;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
     bool bUseSoftwareCursor;
     
     UIGS_VirtualCursorSettings();

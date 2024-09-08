@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_AIControllerFramework : public AAIController {
     GENERATED_BODY()
 public:

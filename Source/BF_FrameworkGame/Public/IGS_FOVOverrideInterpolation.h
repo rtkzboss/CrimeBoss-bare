@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_FOVOverrideInterpolation.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_FOVOverrideInterpolation {
     GENERATED_BODY()
 public:

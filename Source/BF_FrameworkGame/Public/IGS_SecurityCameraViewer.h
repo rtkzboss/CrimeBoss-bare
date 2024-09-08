@@ -19,87 +19,87 @@ class UAkStateValue;
 class UIGS_InteractiveComponent;
 class UStaticMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SecurityCameraViewer : public APawn, public IIGS_SubControllerMountableInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CameraViewerChangeCameraEvent OnActiveCameraChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CameraViewerCamerasDisabledEvent OnCamerasDisabled;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CameraViewerIsUsedChangedEvent OnIsUsedChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_AllCamerasDisabled, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AllCamerasDisabled)
     bool mR_AllCamerasDisabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAllowFreezing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bTemporaryDisable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TemporaryDisableDuration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_AllowDisablingCameras, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AllowDisablingCameras)
     bool mR_AllowDisablingCameras;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_PossedPawn, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_PossedPawn)
     AIGS_DetectorBase* PossedPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bSetListenerOnPossessed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkStateValue* EnterAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkStateValue* ExitAkState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<AIGS_SentryControllerPlayerBase> SecurityCameraPlayerController;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     AIGS_SentryControllerPlayerBase* PlayerController;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_InteractiveComponent* InteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UStaticMeshComponent* MonitorMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UAkComponent* AkAudioListener;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* EnterCameraAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* ExitCameraAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* ServoStartAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* ServoStopAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* ChangeCameraAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkStateValue* AkStateMountNormal;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkStateValue* AkStateMountSecurityCamera;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkStateValue* AkStateMountSecurityCameraNoSignal;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AController* DefaultController;
     
 public:
@@ -111,13 +111,13 @@ public:
     void UseCameraViewer(AIGS_GameCharacterFramework* inInstigator);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void UpdateHUD(int32 inActiveCameraIndex, bool inIsDisabled);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ShowHUD(int32 inActiveCameraIndex, int32 inCameraSourcesCount);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetPlayerHUDVisibility(bool inState);
     
 public:
@@ -128,79 +128,79 @@ public:
     void SetCameraSources(TArray<AIGS_SecurityCamera*> inCameras);
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_TurnCamera(float inAxisValue) const;
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_LookUpCamera(float inAxisValue) const;
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_FreezeCamera();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_ExitCameraControl();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_DisableAllCameras();
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void Server_ChangeCamera(bool inNextCamera);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_PossedPawn(AIGS_DetectorBase* inPreviousPossedPawn);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_AllowDisablingCameras();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_AllCamerasDisabled();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnDisableTimerChanged(bool inState);
     
     UFUNCTION(BlueprintCallable)
     void OnClientInteractiveUsed(AIGS_GameCharacterFramework* inInstigator);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCameraDestroyed(AIGS_DetectorBase* inDetector);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     bool IsAnyValidCamera();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsActiveCameraDisabled() const;
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void HideHUD();
     
 public:
     UFUNCTION(BlueprintCallable)
     AIGS_GameCharacterFramework* GetUser();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetSourcesCount() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetActiveCameraIndex() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_SecurityCamera* GetActiveCamera() const;
     
     UFUNCTION(BlueprintCallable)
     void DisableAllCameras();
     
 protected:
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_OnActiveCameraChanged(AIGS_SecurityCamera* inCamera, int32 inActiveCameraID, bool inIsDisabled);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_ExitCameraControl(int32 inActiveCameraID);
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_EnterCameraControl(int32 inActiveCameraID, int32 inCameraSourcesCount);
     
 public:

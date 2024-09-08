@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FMETA_FPSBonusesFromMeta {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_PerkDataToFPS> ArmyPerkData;
     
     COMMON_DATA_API FMETA_FPSBonusesFromMeta();

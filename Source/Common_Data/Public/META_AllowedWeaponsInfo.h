@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_AllowedWeaponsInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 MaxNumberOfWeapons;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, int32> WeaponClassChance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_ItemQuality, int32> WeaponQualityChance;
     
     FMETA_AllowedWeaponsInfo();

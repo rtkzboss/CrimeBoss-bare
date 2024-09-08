@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ConnectionPointTag.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_ConnectionPointTag : uint8 {
     FirstFloor,
     SecondFloor,

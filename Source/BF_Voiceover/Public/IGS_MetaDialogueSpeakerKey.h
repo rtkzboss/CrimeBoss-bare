@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FIGS_MetaDialogueSpeakerKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_MetaDialogueSpeaker Speaker;
     
     BF_VOICEOVER_API FIGS_MetaDialogueSpeakerKey();

@@ -6,7 +6,7 @@
 
 class AController;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerSwapActor : public AActor {
     GENERATED_BODY()
 public:
@@ -15,7 +15,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void Setup(AController* InController, EIGS_CharacterID inCharacterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnSetup(AController* InController, EIGS_CharacterID inCharacterID);
     
 };

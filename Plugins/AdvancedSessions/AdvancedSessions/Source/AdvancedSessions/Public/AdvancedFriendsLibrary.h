@@ -9,7 +9,7 @@
 
 class APlayerController;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UAdvancedFriendsLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -21,7 +21,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SendSessionInviteToFriend(APlayerController* PlayerController, const FBPUniqueNetId& FriendUniqueNetId, EBlueprintResultSwitch& Result);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void IsAFriend(APlayerController* PlayerController, const FBPUniqueNetId UniqueNetId, bool& IsFriend);
     
     UFUNCTION(BlueprintCallable)

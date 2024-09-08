@@ -3,7 +3,7 @@
 #include "IGS_AIControllerGame.h"
 #include "IGS_AIControllerGangster.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_AIControllerGangster : public AIGS_AIControllerGame {
     GENERATED_BODY()
 public:

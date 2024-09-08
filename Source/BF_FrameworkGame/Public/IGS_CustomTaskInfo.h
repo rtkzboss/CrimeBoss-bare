@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_CustomTaskInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EIGS_ObjectiveComponentType ObjectiveCompType;
     
     FIGS_CustomTaskInfo();

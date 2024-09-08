@@ -4,14 +4,14 @@
 
 class AActor;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_AIComplexSightEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* SeenActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* Observer;
     
     FIGS_AIComplexSightEvent();

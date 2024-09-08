@@ -18,60 +18,60 @@
 #include "META_GangWasAddedToAttitudeListDelegate.h"
 #include "META_WarManagerComponent.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_WarManagerComponent : public UIGS_WarManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_GangArmyTierChanged OnGangArmyTierChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_GangWasAddedToAttitudeList OnGangWasAddedToAttitudeList;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_Gang, FMETA_GangInfo> GangsInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_TradeVendor, EMETA_TradeRelationship> TradeRelationshipWithGangs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_Gang, float> ChanceCounterToAttackAdjacentTerritory;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_TradeVendor, int32> TradeVendorsCooldown;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<FGameplayTag> TodaysLockedTilesForAI;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<int32, FMETA_TurfHistory> TurfHistory;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<FMETA_ConditionForArmyTierChanging> CompletedConditionsForArmyTierChanging;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int32 NeutralDaysThresholdFromAttack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int32 UnfriendlyDaysThresholdFromAttack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 TodayAttemptsToAttackTurf;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_Gang, int32> GangAttacksCooldown;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_Gang, int32> CounterForSpecialTier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 CountOfDaysForMoreAttack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 CurrentLastTileConfigIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_Gang, FMETA_GangArmyTierChangeQueueData> GangsArmyTierChangeQueue;
     
 public:
@@ -128,31 +128,31 @@ public:
     UFUNCTION(BlueprintCallable)
     void RecomputeAIBossStrengthOnNewDay(EMETA_Gang inGang);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsTradeVendorHasCooldown(EMETA_TradeVendor inTradeVendor) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsThereGangInAttitudeList(EMETA_GangAttitudeList inAttitudeList, EMETA_Gang inOwnerGang, EMETA_Gang inTargetGang);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool IsCampaignWon();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsArmyTierChangingConditionAlreadyCompleted(EMETA_Gang inGang, const FMETA_ConditionForArmyTierChanging& inCompletedCondition) const;
     
     UFUNCTION(BlueprintCallable)
     void InitTradeRelationship();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_TurfHistory GetTurfHistoryOfDay(int32 inDay) const;
     
     UFUNCTION(BlueprintCallable)
     FMETA_TurfHistory GetTurfHistoryOfAmountOfPreviousDays(int32 inCurrentDay, int32 inConsideringDaysAmount, bool inIncludeCurrentDay);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<EMETA_TradeVendor, EMETA_TradeRelationship> GetTradeRelationshipInfo() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_TradeRelationship GetTradeRelationshipForGang(EMETA_TradeVendor inTradeVendor) const;
     
     UFUNCTION(BlueprintCallable)
@@ -161,10 +161,10 @@ public:
     UFUNCTION(BlueprintCallable)
     TMap<FGameplayTag, int32> GetLostTiles(EMETA_Gang inGang);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_GangStrategy GetGangStrategy(EMETA_Gang inGang) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetGangModifierDuration(EMETA_Gang inGang, FGameplayTag inModifier, bool& outSuccess) const;
     
     UFUNCTION(BlueprintCallable)
@@ -173,19 +173,19 @@ public:
     UFUNCTION(BlueprintCallable)
     bool GetGangAttitudeList(EMETA_GangAttitudeList inAttitudeList, EMETA_Gang inOwnerGang, TMap<EMETA_Gang, int32>& outAttitudeList);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     EMETA_ArmyTier GetGangArmyTier(EMETA_Gang inGang) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetChanceToAttackAnyAdjacentTerritory(EMETA_Gang inGang) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetBaseAIBossStrength(EMETA_Gang inGang) const;
     
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_EffectOnAIBossStrength> GetAIBossStrengthEffects(EMETA_Gang inGang);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetAIBossStrengthChangeFromTerritory(EMETA_Gang inGang) const;
     
     UFUNCTION(BlueprintCallable)

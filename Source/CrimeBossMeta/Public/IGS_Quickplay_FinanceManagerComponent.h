@@ -6,12 +6,12 @@
 #include "IGS_FinanceManagerBaseComponent.h"
 #include "IGS_Quickplay_FinanceManagerComponent.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_FinanceManagerComponent : public UIGS_FinanceManagerBaseComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 Balance;
     
 public:
@@ -20,13 +20,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetBalance(int32 InValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 CalculateUnlockItemCostFromInfo(const FIGS_UnlockItemInfo& inUnlockItemInfo, const float inRelativePrice) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 CalculateUnlockItemCost(const FGameplayTag inTagID, const float inRelativePrice) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void CalculateMissionRewardWithMultipliers(const FIGS_MissionResult& inMissionResult, int32& outMissionReward, float& outMultiplier) const;
     
     UFUNCTION(BlueprintCallable)

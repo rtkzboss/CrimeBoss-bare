@@ -7,15 +7,15 @@
 class UIGS_ImpactManagerSettings;
 class UIGS_ImpactTypeObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_IMPACTS_API UIGS_ImpactManagerPreload : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<TSubclassOf<UIGS_ImpactTypeObject>> LoadedIDs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ImpactManagerSettings* ImpactManagerSettings;
     
 public:

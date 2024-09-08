@@ -4,17 +4,17 @@
 #include "GameplayTagContainer.h"
 #include "IGS_PoolID.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_POOL_API UIGS_PoolID : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* PoolObjectClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer PoolTagContainer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString PoolName;
     
     UIGS_PoolID();

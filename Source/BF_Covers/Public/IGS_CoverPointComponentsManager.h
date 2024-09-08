@@ -6,18 +6,18 @@
 class ANavigationData;
 class UIGS_CoverPointComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_COVERS_API UIGS_CoverPointComponentsManager : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool AutomaticStart;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool ShouldCheckMoving;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     TArray<UIGS_CoverPointComponent*> CoverPointComponents;
     
 public:
@@ -26,7 +26,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetCoverPointComponents(const TArray<UIGS_CoverPointComponent*>& inComponents);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnNavigationBuildFinished(ANavigationData* inNavData);
     
     UFUNCTION(BlueprintCallable)

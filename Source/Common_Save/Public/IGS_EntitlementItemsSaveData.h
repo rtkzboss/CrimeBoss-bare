@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_EntitlementItemsSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTagContainer IDs;
     
     FIGS_EntitlementItemsSaveData();

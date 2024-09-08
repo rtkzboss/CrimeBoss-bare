@@ -14,48 +14,48 @@ class UAkAudioEvent;
 class UIGS_InteractiveComponent;
 class UPrimitiveComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PickupActorBase : public AIGS_SuspicionActorBase, public IIGS_HitEffectHandlerInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ShouldMove, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ShouldMove)
     bool bShouldMove;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     bool bRegistersToPickupsManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float SquaredVelocityForInAirNeeded;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool IsPickableByAI;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UPrimitiveComponent* PickupMeshComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> OwningPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> BeingPickedUpByBot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> PickupSuggestedFor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float DisableInteractionOnThrowTime;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnPickedUp OnPickedUpEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_WasThrown, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_WasThrown)
     bool mR_bWasThrown;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* DefaultThrownAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* DefaultPickupAkEvent;
     
 public:
@@ -88,42 +88,42 @@ protected:
     UFUNCTION(BlueprintCallable)
     void PlayPickupAkEvent(AIGS_GameCharacterFramework* inInstigator, UAkAudioEvent* inPickupEvent);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_WasThrown();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ShouldMove();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnRefresh();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPickupThrow(const FIGS_CommonItemData& inCommonItemData, AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPickupPickedUp(const FIGS_CommonItemData& inCommonItemData, AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPickupHit(const FIGS_CommonItemData& inCommonItemData, UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPickupFirstHit(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPickupBeginOverlap(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, const FHitResult& inHit);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnComponentHit(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnComponentBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inbFromSweep, const FHitResult& inSweepResult);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_Pickup(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Multicast_AddImpulse(FVector inImpulse);
     
 public:
@@ -138,7 +138,7 @@ protected:
     void HandleBotPickupOverlap(AActor* inActor);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetWasThrown();
     
     UFUNCTION(BlueprintCallable)

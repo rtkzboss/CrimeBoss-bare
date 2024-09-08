@@ -3,7 +3,7 @@
 #include "TacticalPathfindingFilterBase.h"
 #include "TacticalPathfindingFilter_CheckSpawnerValidity.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UTacticalPathfindingFilter_CheckSpawnerValidity : public UTacticalPathfindingFilterBase {
     GENERATED_BODY()
 public:

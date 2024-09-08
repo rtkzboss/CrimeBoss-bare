@@ -16,18 +16,18 @@ class UIGS_FlashlightSettingsDataAsset;
 class UObject;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_EnvironmentVolumeManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<UIGS_EnvironmentBoxComponent*> m_EnvironmentBoxComponents;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<UBoxComponent*, TWeakObjectPtr<APostProcessVolume>> m_PostProcessVolumes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_EnvironmentVolume*> m_EnvironmentVolumes;
     
 public:
@@ -37,28 +37,28 @@ public:
     void SetFlashlightSettingsDataAsset(UIGS_FlashlightSettingsDataAsset* inFlashlightSettingsDataAsset);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnPostProcessVolumeEndOverlap(AActor* OverlappedActor, AActor* OtherActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnPostProcessVolumeBeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInteriorVolumeEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInteriorVolumeBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnvironmentVolumeEndOverlap(UActorComponent* inOverlappedComponent, EIGS_EnvironmentVolumeType EnvironmentType, AActor* inOtherActor) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnvironmentVolumeBeginOverlap(UActorComponent* inOverlappedComponent, EIGS_EnvironmentVolumeType EnvironmentType, AActor* inOtherActor) const;
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_EnvironmentVolumeManager* Instance(const UObject* inWorldContextObject);
     
 };

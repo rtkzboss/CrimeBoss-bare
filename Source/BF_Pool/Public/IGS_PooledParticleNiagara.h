@@ -6,11 +6,11 @@
 class UNiagaraComponent;
 class UNiagaraSystem;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_POOL_API AIGS_PooledParticleNiagara : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, Transient, VisibleAnywhere)
     UNiagaraComponent* NiagaraComponent;
     
     AIGS_PooledParticleNiagara(const FObjectInitializer& ObjectInitializer);
@@ -19,7 +19,7 @@ public:
     void SetTemplate(UNiagaraSystem* inNewTemplate) const;
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnNiagaraSystemFinished(UNiagaraComponent* FinishedComponent);
     
 };

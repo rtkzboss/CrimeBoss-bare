@@ -10,14 +10,14 @@ class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 class UIGS_ScriptingCommandCallAlarm;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandCallAlarm : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Succeed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Failed;
     
     UIGS_ScriptingCommandCallAlarm();
@@ -26,7 +26,7 @@ public:
     static UIGS_ScriptingCommandCallAlarm* ScriptingCommandCallAlarm(AIGS_GameCharacterFramework* Character, EIGS_AlarmReason inReason);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCommandFinished(AIGS_AIControllerGame* inOwningContoller, UIGS_AICommand* inCommand, bool inFailed);
     
 };

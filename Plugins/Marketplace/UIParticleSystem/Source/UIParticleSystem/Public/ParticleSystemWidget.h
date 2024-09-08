@@ -8,24 +8,24 @@ class UParticleSystem;
 class UParticleSystemComponent;
 class UUIParticleComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class UIPARTICLESYSTEM_API UParticleSystemWidget : public UWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UParticleSystem* ParticleSystemTemplate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bAutoActivate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bReactivate;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UUIParticleComponent* WorldParticleComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AActor* WorldParticleActor;
     
 public:
@@ -34,7 +34,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetReactivate(bool bActivateAndReset);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UParticleSystemComponent* GetParticleComponent() const;
     
     UFUNCTION(BlueprintCallable)

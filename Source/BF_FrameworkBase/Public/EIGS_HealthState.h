@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HealthState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_HealthState : uint8 {
     HS_Normal,
     HS_DownMoveable,

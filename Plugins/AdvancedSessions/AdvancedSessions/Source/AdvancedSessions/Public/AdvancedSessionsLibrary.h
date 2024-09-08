@@ -15,13 +15,13 @@ class APlayerController;
 class APlayerState;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UAdvancedSessionsLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UAdvancedSessionsLibrary();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void UniqueNetIdToString(const FBPUniqueNetId& UniqueNetId, FString& String);
     
     UFUNCTION(BlueprintCallable)
@@ -30,46 +30,46 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static bool ServerTravel(UObject* WorldContextObject, const FString& InURL, bool bAbsolute, bool bShouldSkipGameNotify);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionsSearchSetting MakeLiteralSessionSearchProperty(FSessionPropertyKeyPair SessionSearchProperty, EOnlineComparisonOpRedux ComparisonOp);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionPropertyKeyPair MakeLiteralSessionPropertyString(FName Key, const FString& Value);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionPropertyKeyPair MakeLiteralSessionPropertyInt(FName Key, int32 Value);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionPropertyKeyPair MakeLiteralSessionPropertyFloat(FName Key, float Value);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionPropertyKeyPair MakeLiteralSessionPropertyByte(FName Key, uint8 Value);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FSessionPropertyKeyPair MakeLiteralSessionPropertyBool(FName Key, bool Value);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static bool KickPlayer(UObject* WorldContextObject, APlayerController* PlayerToKick, FText KickReason);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsValidUniqueNetID(const FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsValidSession(const FBlueprintSessionResult& SessionResult);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static void IsPlayerInSession(UObject* WorldContextObject, const FBPUniqueNetId& PlayerToCheck, bool& bIsInSession);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool HasOnlineSubsystem(FName SubSystemName);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUniqueNetIDFromPlayerState(APlayerState* PlayerState, FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUniqueNetID(APlayerController* PlayerController, FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUniqueBuildID(FBlueprintSessionResult SessionResult, int32& UniqueBuildId);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
@@ -96,25 +96,25 @@ public:
     UFUNCTION(BlueprintCallable)
     static void GetSessionPropertyBool(const TArray<FSessionPropertyKeyPair>& ExtraSettings, FName SettingName, ESessionSettingSearchResult& SearchResult, bool& SettingValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetSessionID_AsString(const FBlueprintSessionResult& SessionResult, FString& SessionId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetPlayerName(APlayerController* PlayerController, FString& PlayerName);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=WorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=WorldContextObject))
     static void GetNumberOfNetworkPlayers(UObject* WorldContextObject, int32& NumNetPlayers);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetNetPlayerIndex(APlayerController* PlayerController, int32& NetPlayerIndex);
     
     UFUNCTION(BlueprintCallable)
     static void GetExtraSettings(FBlueprintSessionResult SessionResult, TArray<FSessionPropertyKeyPair>& ExtraSettings);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetCurrentUniqueBuildID(int32& UniqueBuildId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=WorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=WorldContextObject))
     static void GetCurrentSessionID_AsString(UObject* WorldContextObject, FString& SessionId);
     
     UFUNCTION(BlueprintCallable)
@@ -123,7 +123,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void FindSessionPropertyByName(const TArray<FSessionPropertyKeyPair>& ExtraSettings, FName SettingsName, EBlueprintResultSwitch& Result, FSessionPropertyKeyPair& OutProperty);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool EqualEqual_UNetIDUnetID(const FBPUniqueNetId& A, const FBPUniqueNetId& B);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))

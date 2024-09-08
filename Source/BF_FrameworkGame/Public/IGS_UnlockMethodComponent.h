@@ -8,23 +8,23 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_UnlockMethodComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBF_OnUnlockMethodChosen OnServerUnlockMethodChosenEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBF_OnUnlockMethodChosen OnClientUnlockMethodChosenEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bShowUnusableMethods;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_GameCharacterFramework* CurrentInstigator;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FGameplayTagContainer UnlockMethods;
     
     UIGS_UnlockMethodComponent(const FObjectInitializer& ObjectInitializer);
@@ -32,10 +32,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void InitUnlockMethodComponent(FGameplayTagContainer inMethods);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetUnlockMethods();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetUnlockMethodCount();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

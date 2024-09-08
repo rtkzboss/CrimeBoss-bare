@@ -4,15 +4,15 @@
 #include "BTTask_MoveToWithRepath.h"
 #include "BTTask_MoveToCover.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_MoveToCover : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverBlackboardKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector IsApproachMoveKey;
     
 public:

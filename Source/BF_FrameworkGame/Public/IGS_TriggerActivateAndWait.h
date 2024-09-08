@@ -7,11 +7,11 @@
 class AIGS_Trigger;
 class UIGS_TriggerActivateAndWait;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_TriggerActivateAndWait : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_TriggerEventOutputPin Triggered;
     
     UIGS_TriggerActivateAndWait();

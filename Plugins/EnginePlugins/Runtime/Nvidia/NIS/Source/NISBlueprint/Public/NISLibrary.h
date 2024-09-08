@@ -4,7 +4,7 @@
 #include "UNISMode.h"
 #include "NISLibrary.generated.h"
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(BlueprintType, MinimalAPI)
 class UNISLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -19,22 +19,22 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetNISCustomScreenPercentage(float CustomScreenPercentage);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsNISSupported();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsNISModeSupported(UNISMode NISMode);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TArray<UNISMode> GetSupportedNISModes();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetNISScreenPercentageRange(float& MinScreenPercentage, float& MaxScreenPercentage);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetNISRecommendedScreenPercentage(UNISMode NISMode);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UNISMode GetDefaultNISMode();
     
 };

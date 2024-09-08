@@ -16,7 +16,7 @@ class UIGS_AICommandPlayAnimation;
 class UIGS_AICommandUseObject;
 class UIGS_AICommandWait;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_WaypointHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

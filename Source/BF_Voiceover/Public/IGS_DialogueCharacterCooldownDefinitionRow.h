@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_DialogueCharacterCooldownDefinitionRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_DialogueCharacterCooldown ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CooldownSeconds;
     
     FIGS_DialogueCharacterCooldownDefinitionRow();

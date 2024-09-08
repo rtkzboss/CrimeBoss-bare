@@ -6,28 +6,28 @@
 
 class UIGS_ObjectiveManager;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ObjectiveNotificationManagerWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_ObjectiveManager* m_ObjectiveManager;
     
 public:
     UIGS_ObjectiveNotificationManagerWidget();
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnObjectiveStateChangedEvent(FIGS_MissionObjective inObjectiveStruct);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnObjectiveStateChanged(int32 inID);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnObjectiveAddedEvent(FIGS_MissionObjective inObjectiveStruct);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnObjectiveAdded(int32 inID);
     
 public:

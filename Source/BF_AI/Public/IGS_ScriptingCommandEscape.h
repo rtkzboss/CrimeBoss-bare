@@ -8,17 +8,17 @@
 class AIGS_GameCharacterFramework;
 class UIGS_ScriptingCommandEscape;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandEscape : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Approach;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Arrive;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Leave;
     
     UIGS_ScriptingCommandEscape();

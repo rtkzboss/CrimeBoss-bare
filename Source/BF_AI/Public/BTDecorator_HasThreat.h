@@ -3,12 +3,12 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_HasThreat.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_HasThreat : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Value;
     
 public:

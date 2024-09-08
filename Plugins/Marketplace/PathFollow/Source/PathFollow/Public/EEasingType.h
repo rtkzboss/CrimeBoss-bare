@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEasingType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EEasingType : uint8 {
     Linear,
     CircularIn,

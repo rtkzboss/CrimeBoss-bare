@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_EquipmentEconomyData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<TSubclassOf<UIGS_EquipmentInventoryObject>, int32> EquipmentCost;
     
     FMETA_EquipmentEconomyData();

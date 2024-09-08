@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETileComparisonUIData.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ETileComparisonUIData : uint8 {
     None,
     Better,

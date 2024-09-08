@@ -7,16 +7,16 @@
 class UMETA_BaseActionCard;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_ActionCardDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UMETA_ActionCardDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSoftClassPtr<UMETA_BaseActionCard>& inClass) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_ActionCardTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
     UFUNCTION(BlueprintCallable)

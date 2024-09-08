@@ -15,30 +15,30 @@ class AGameStateBase;
 class UIGS_InputDeviceManager;
 class UIGS_Screen;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class IGS_UIFRAMEWORK_API UIGS_ScreenHandler : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_ScreenHandlerMulticastEvent);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnScreenOpenWithTag, FGameplayTag, screenTag);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnScreenOpenWithTag OnScreenOpenWithTag;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnScreenOpenWithTag OnScreenSwitched;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ScreenHandlerMulticastEvent OnViewportResized;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TMap<FGameplayTag, UIGS_Screen*> m_RegisteredScreens;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<UIGS_Screen*> m_ScreensStack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputDeviceManager* m_InputDeviceManager;
     
 public:
@@ -57,55 +57,55 @@ public:
     UIGS_Screen* OpenScreenByClass(const TSubclassOf<UIGS_Screen> inClass, EScreenZOrder zOrderOverride);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWidgetInputReleased(EIGS_InputAction InAction);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWidgetInputPressed(EIGS_InputAction InAction);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInputDeviceChanged(EIGS_InputDevice newDevice);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnGameStateSet(AGameStateBase* GameState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAnalogInputRequested(EIGS_InputThumbstickType Type, FVector2D Value);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<EIGS_InputAction> KeyEventToInputActions(const FKeyEvent& InKeyEvent) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsScreenWithTagOpen(FGameplayTag inTag, bool includeOverlay) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsScreenRegistered(FGameplayTag inGameplayTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsModalScreenOpen() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAnyScreenOpen(bool includeOverlays) const;
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void InitializeDeviceManager();
     
     UFUNCTION(BlueprintCallable)
     bool HandleBack(UIGS_Screen* screen);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetTopScreenTag(bool includeOverlay) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_Screen* GetTopScreen(bool includeOverlay) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_Screen* GetOpenedScreenByTag(FGameplayTag inTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool AreOnlyOverlaysOpen() const;
     
 };

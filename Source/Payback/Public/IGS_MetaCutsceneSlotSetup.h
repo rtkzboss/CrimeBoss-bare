@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneSlotSetup {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotASpeaker;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotBSpeaker;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotCSpeaker;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotDSpeaker;
     
     FIGS_MetaCutsceneSlotSetup();

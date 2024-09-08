@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SecurityTier.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_SecurityTier : uint8 {
     Tier0,
     Tier1,

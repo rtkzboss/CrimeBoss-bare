@@ -7,24 +7,24 @@
 
 class UMETA_PlotlineSelection;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_PlotlineSelectionMapping : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UMETA_PlotlineSelection> DefaultCampaignMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<FGameplayTag, TSoftObjectPtr<UMETA_PlotlineSelection>> CampaignModesMapping;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_CampaignModeMapping> CampaignModeMappings;
     
 public:
     UMETA_PlotlineSelectionMapping();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UMETA_PlotlineSelection> GetDefaultCampaignMode() const;
     
 };

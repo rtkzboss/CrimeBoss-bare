@@ -7,12 +7,12 @@
 #include "META_TradeDealSellMissionSave.h"
 #include "META_TradeDealSell.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_TradeDealSell : public UMETA_BaseMission {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_TradeDealSellMissionSave m_TradeDealMissionSave;
     
 public:
@@ -30,22 +30,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDataFromSave(const FMETA_TradeDealSellMissionSave& inTradeMissionSave);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_TradeVendor GetVendor();
     
     UFUNCTION(BlueprintCallable)
     FMETA_TradeDealSellMissionSave GetSaveData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetPrice();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetLootAmount();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetLoot();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_TradeDealSellMissionRowInfo GetInfo() const;
     
 };

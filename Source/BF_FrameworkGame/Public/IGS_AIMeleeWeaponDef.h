@@ -4,11 +4,11 @@
 #include "IGS_AIMeleeDef.h"
 #include "IGS_AIMeleeWeaponDef.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIMeleeWeaponDef : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_AIMeleeDef Weapon;
     
     UIGS_AIMeleeWeaponDef();

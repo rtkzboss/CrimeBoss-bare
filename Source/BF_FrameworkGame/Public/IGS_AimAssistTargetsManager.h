@@ -7,21 +7,21 @@
 
 class UIGS_AimAssistTargetComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AimAssistTargetsManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient)
     TArray<UIGS_AimAssistTargetComponent*> AimAssistTargets;
     
 public:
     UIGS_AimAssistTargetsManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<UIGS_AimAssistTargetComponent*> GetAllAimAssistTargetsInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<UIGS_AimAssistTargetComponent*> GetAllAimAssistTargets() const;
     
 };

@@ -7,18 +7,18 @@
 class AIGS_GameCharacterFramework;
 class UIGS_PlayIdleChatterAsyncAction;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API UIGS_PlayIdleChatterAsyncAction : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIdleChatterOutputPin Succeed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIdleChatterOutputPin Canceled;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_Characters;
     
 public:

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FIGS_BleedingShuffleBagItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     EIGS_BleedType BleedType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float Weight;
     
     BF_FRAMEWORKGAME_API FIGS_BleedingShuffleBagItem();

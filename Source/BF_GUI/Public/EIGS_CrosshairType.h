@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_CrosshairType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_CrosshairType : uint8 {
+UENUM()
+enum class EIGS_CrosshairType {
     None,
     Dot,
     LinesTriProng,

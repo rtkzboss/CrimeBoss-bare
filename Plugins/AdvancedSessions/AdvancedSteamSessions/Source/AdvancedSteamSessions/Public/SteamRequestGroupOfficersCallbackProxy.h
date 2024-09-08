@@ -8,14 +8,14 @@
 class UObject;
 class USteamRequestGroupOfficersCallbackProxy;
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(MinimalAPI)
 class USteamRequestGroupOfficersCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintGroupOfficerDetailsDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintGroupOfficerDetailsDelegate OnFailure;
     
     USteamRequestGroupOfficersCallbackProxy();

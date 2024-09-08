@@ -3,26 +3,26 @@
 #include "UObject/Object.h"
 #include "StreamlineSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Engine)
+UCLASS(DefaultConfig)
 class STREAMLINERHI_API UStreamlineSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bEnableStreamlineD3D12;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bEnableStreamlineD3D11;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bEnableDLSSFGInPlayInEditorViewports;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bLoadDebugOverlay;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bAllowOTAUpdate;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
     int32 NVIDIANGXApplicationId;
     
     UStreamlineSettings();

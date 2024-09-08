@@ -6,7 +6,7 @@
 
 class UAnimInstance;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_ANIMATIONS_API UPlayerAnimationHelpers : public UObject {
     GENERATED_BODY()
 public:

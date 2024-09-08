@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_HeisterPerksDataByLevel {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<int32, FMETA_HeisterPerksEconomyData> Data;
     
     FMETA_HeisterPerksDataByLevel();

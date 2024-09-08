@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_BossCharacterConfiguration {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_Interval LevelRange;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float MissionBonusReward;
     
     FMETA_BossCharacterConfiguration();

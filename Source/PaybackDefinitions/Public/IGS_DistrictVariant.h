@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FIGS_DistrictVariant {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 DistrictVariant;
     
     FIGS_DistrictVariant();

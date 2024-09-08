@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FBrokenStage {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float HealthPercentage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UStaticMesh* Mesh;
     
     BF_FRAMEWORKGAME_API FBrokenStage();

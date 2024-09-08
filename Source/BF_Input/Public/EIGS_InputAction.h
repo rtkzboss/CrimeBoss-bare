@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_InputAction.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_InputAction : uint8 {
     IA_UNKNOWN = 255,
     IA_MoveForward = 0,

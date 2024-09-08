@@ -5,11 +5,11 @@
 #include "IGS_InputDeviceButtonData.h"
 #include "IGS_InputDeviceIconsDataAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_INPUT_API UIGS_InputDeviceIconsDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<FKey, FIGS_InputDeviceButtonData> ButtonIconData;
     
     UIGS_InputDeviceIconsDataAsset();

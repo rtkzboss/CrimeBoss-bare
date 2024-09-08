@@ -3,7 +3,7 @@
 #include "IGS_IntelBase.h"
 #include "IGS_LootIntel.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACKDEFINITIONS_API UIGS_LootIntel : public UIGS_IntelBase {
     GENERATED_BODY()
 public:

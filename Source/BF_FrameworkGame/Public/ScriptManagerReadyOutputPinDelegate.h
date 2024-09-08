@@ -4,5 +4,5 @@
 
 class AIGS_ScriptManagerBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FScriptManagerReadyOutputPin, AIGS_ScriptManagerBase*, ScriptManager);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FScriptManagerReadyOutputPin, AIGS_ScriptManagerBase*, ScriptManager);
 

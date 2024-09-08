@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBPServerPresenceSearchType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EBPServerPresenceSearchType : uint8 {
     AllServers,
     ClientServersOnly,

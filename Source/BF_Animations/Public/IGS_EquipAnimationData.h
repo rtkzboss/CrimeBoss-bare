@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_EquipAnimationData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_EquipAnimationData {
     GENERATED_BODY()
 public:

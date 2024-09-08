@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGlassShape.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum EGlassShape {
     Rectangular,
     Circular,

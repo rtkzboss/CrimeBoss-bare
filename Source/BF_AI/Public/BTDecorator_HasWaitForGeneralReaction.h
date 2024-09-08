@@ -4,11 +4,11 @@
 #include "EIGS_GRWaitType.h"
 #include "BTDecorator_HasWaitForGeneralReaction.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_HasWaitForGeneralReaction : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_GRWaitType Type;
     
     UBTDecorator_HasWaitForGeneralReaction();

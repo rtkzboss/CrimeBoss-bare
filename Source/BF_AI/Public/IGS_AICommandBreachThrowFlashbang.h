@@ -5,11 +5,11 @@
 
 class AIGS_GrenadeProjectileBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_AICommandBreachThrowFlashbang : public UIGS_AICommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_GrenadeProjectileBase* Grenade;
     
     UIGS_AICommandBreachThrowFlashbang();

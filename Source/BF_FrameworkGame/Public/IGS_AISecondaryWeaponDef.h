@@ -4,11 +4,11 @@
 #include "IGS_AIAmmoWeaponDef.h"
 #include "IGS_AISecondaryWeaponDef.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AISecondaryWeaponDef : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_AIAmmoWeaponDef Weapon;
     
     UIGS_AISecondaryWeaponDef();

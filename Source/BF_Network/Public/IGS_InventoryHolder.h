@@ -4,14 +4,14 @@
 
 class UIGS_InventoryObjectFramework;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_InventoryHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TWeakObjectPtr<UIGS_InventoryObjectFramework> InventoryObjectFramework;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint32 ID;
     
     BF_NETWORK_API FIGS_InventoryHolder();

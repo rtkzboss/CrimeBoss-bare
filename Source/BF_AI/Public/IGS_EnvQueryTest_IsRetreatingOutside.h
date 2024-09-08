@@ -6,11 +6,11 @@
 
 class UEnvQueryContext;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_EnvQueryTest_IsRetreatingOutside : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UEnvQueryContext>> Contexts;
     
     UIGS_EnvQueryTest_IsRetreatingOutside();

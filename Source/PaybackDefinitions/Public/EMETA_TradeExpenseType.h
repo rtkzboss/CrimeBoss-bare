@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_TradeExpenseType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_TradeExpenseType : uint8 {
     Unknown,
     Money,

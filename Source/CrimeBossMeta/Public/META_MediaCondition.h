@@ -5,12 +5,12 @@
 
 class AMETA_BaseGameMode;
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_MediaCondition : public UMETA_BaseGraphComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     AMETA_BaseGameMode* CachedGameMode;
     
 public:
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     int32 GetResultsCount();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     FText GetEdgeResultText(uint8 inResultID);
     
 };

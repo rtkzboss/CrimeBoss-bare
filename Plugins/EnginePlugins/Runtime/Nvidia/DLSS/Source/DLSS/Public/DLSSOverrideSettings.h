@@ -4,23 +4,23 @@
 #include "EDLSSSettingOverride.h"
 #include "DLSSOverrideSettings.generated.h"
 
-UCLASS(Blueprintable, ProjectUserConfig, Config=Engine)
+UCLASS(ProjectUserConfig)
 class DLSS_API UDLSSOverrideSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride EnableDLSSInEditorViewportsOverride;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride EnableScreenpercentageManipulationInDLSSEditorViewportsOverride;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride EnableDLSSInPlayInEditorViewportsOverride;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bShowDLSSIncompatiblePluginsToolsWarnings;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride ShowDLSSSDebugOnScreenMessages;
     
     UDLSSOverrideSettings();

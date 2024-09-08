@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AICivilianTiersDef : public FIGS_AIBaseTiersDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICivilianSpecializationHolder Tier1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICivilianSpecializationHolder Tier2;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICivilianSpecializationHolder Tier3;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICivilianSpecializationHolder Special;
     
     FIGS_AICivilianTiersDef();

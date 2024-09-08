@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDFLDrawDebugColour.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EDFLDrawDebugColour : uint8 {
     Primary,
     Secondary,

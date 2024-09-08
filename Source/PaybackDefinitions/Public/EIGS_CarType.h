@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CarType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_CarType : uint8 {
     C_Unknown = 255,
     C_Sedan = 0,

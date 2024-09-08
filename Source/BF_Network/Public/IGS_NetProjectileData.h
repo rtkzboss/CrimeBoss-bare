@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_NetProjectileData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_NetProjectileHitResult NetProjectileHitResult;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_NetProjectileHitData NetProjectileHitData;
     
     BF_NETWORK_API FIGS_NetProjectileData();

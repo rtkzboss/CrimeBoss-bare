@@ -3,7 +3,7 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_NavGridManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_NAVIGATION_API UIGS_NavGridManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:

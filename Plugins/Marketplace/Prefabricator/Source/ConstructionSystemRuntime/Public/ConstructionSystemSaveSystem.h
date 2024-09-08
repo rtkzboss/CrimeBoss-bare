@@ -5,7 +5,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemSaveSystem : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

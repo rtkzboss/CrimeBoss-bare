@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CopsVariationType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_CopsVariationType : uint8 {
     US_None,
     US_Specnaz,

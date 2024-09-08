@@ -6,11 +6,11 @@
 
 class AMETA_BaseGameMode;
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseCondition : public UMETA_BaseGraphComponent, public IMETA_Condition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool InvertResult;
     
     UMETA_BaseCondition();

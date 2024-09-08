@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct BF_IMPACTS_API FIGS_DecalImpactSettings : public FIGS_ImpactSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UIGS_DecalImpactDataAsset> DecalImpactDataPath;
     
     FIGS_DecalImpactSettings();

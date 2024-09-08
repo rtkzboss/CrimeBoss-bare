@@ -4,12 +4,12 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "IGS_BTService_SetAnimCommandLookAt.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTService_SetAnimCommandLookAt : public UBTService {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutLookPos;
     
 public:

@@ -44,7 +44,7 @@ class UMETA_WeaponInventoryObject;
 class UObject;
 class UPaybackGameViewportClient;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API UIGS_PaybackGameplayStatics : public UIGS_BadFlyGameplayStatics {
     GENERATED_BODY()
 public:
@@ -92,10 +92,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static void RandomChanceFromStream(int32 inChance, UPARAM(Ref) UIGS_RandomStreamHolder*& inRandomStream, EIGS_ChanceEnum& outBranches);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void OwnsCommonHeisterData(const APlayerState* inPlayerState, const FCommonHeisterData inCommonHeisterData, bool& OwnsHeisterData);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void OwnsChainPlayerCharacters(const APlayerState* inPlayerState, const FIGS_Quick_ChainPlayerCharacters inChainPlayerCharacters, bool& OwnsPlayerCharacters);
     
     UFUNCTION(BlueprintCallable)
@@ -107,13 +107,13 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void OutlineAllPickups(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsAccountVariableUnlocked(UObject* inWCO, FGameplayTag inVariable);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static TArray<FIGS_UnlockedCharacterSaveData> GetUnlockedCharactersAccountWide(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUniqueIdFromPlayerState(APlayerState* inPlayerState, FUniqueNetIdRepl& inUnqiueNetId);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -125,16 +125,16 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetPlayerLoadoutFromAICharacter(const UObject* inWCO, UPARAM(Ref) AIGS_IntelligentGameCharacter*& inCharacter, TSubclassOf<UMETA_WeaponInventoryObject>& outPrimary, TSubclassOf<UMETA_WeaponInventoryObject>& outSecondary, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FString GetPlayerIdFromUniqueNetId(const FUniqueNetIdRepl& inUniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UPaybackGameViewportClient* GetPaybackViewport(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static AIGS_GameStateGame* GetGameStateGame(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static APaybackGameModeBase* GetGameModeBase(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -152,7 +152,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void GetAlarmLocalizedText(UIGS_AlarmLocalizationTable* inTable, EIGS_AlarmReason inReason, FText& OutText);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable, bool inIsDebugSave);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -167,7 +167,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void EndMission(UObject* inWCO, ECommonMissionResult inMissionResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void ChainPlayerMatchesHeisterDataUniqueId(const FIGS_Quick_ChainPlayerCharacters inChainPlayerCharacters, const FCommonHeisterData inHeisterData, bool& MatchesUniqueId);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

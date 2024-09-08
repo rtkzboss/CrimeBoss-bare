@@ -5,17 +5,17 @@
 
 class UIGS_CursorWidget;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_INPUT_API UIGS_CursorComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleInstanceOnly)
     UIGS_CursorWidget* VirtualSoftwareCursorWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleInstanceOnly)
     UIGS_CursorWidget* NativeSoftwareCursorWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bUsingVirtualCursor;
     
     UIGS_CursorComponent(const FObjectInitializer& ObjectInitializer);
@@ -26,7 +26,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void UseNativeCursor();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsHovering() const;
     
 };

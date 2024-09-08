@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FKantanSeriesStyle {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName StyleId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UKantanPointStyle* PointStyle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FLinearColor Color;
     
     KANTANCHARTSSLATE_API FKantanSeriesStyle();

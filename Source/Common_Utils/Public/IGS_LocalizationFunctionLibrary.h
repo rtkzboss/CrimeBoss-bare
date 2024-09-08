@@ -6,7 +6,7 @@
 #include "IGS_LocalizationParam.h"
 #include "IGS_LocalizationFunctionLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_UTILS_API UIGS_LocalizationFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -27,7 +27,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static FText GetEvaluatedLocalizedText(FText Text, UPARAM(Ref) TArray<FIGS_LocalizationParam>& Params);
     
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCosmetic, BlueprintPure)
     static FText ConvertTextToInvariant(const FText& Text);
     
 };

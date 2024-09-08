@@ -4,17 +4,17 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_AnimBudgetAllocatorSettings.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_ANIMATIONS_API UIGS_AnimBudgetAllocatorSettings : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinimumSignificance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaximumSignificance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float PauseAnimSignificanceThreshold;
     
     UIGS_AnimBudgetAllocatorSettings();

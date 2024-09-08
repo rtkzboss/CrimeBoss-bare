@@ -4,14 +4,14 @@
 #include "Blueprint/UserWidget.h"
 #include "IGS_WidgetDecorationBorder.generated.h"
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetDecorationBorder : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor BorderTint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float BorderWidth;
     
     UIGS_WidgetDecorationBorder();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_LogCategory.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_LogCategory : uint8 {
     None,
     Graph,

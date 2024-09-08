@@ -9,15 +9,15 @@
 class UMETA_TutorialWidgetBase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_TutorialTextDatabase : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     FGameplayTagContainer MetaMenuActiveTags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient)
     TArray<UMETA_TutorialWidgetBase*> TutorialWidgets;
     
 public:

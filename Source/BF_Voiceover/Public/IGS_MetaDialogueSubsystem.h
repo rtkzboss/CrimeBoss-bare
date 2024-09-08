@@ -17,45 +17,45 @@ class UAnimMontage;
 class UIGS_MetaDialogueSubsystemDataAsset;
 class UIGS_SubtitleManager;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_MetaDialogueSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueEvent OnDatabaseLoadFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueEvent OnMetaDialogueLevelPreloaded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueResultEvent OnDialogueLineStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueResultEvent OnDialogueLineFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueEvent OnDialogueStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueEvent OnDialogueFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueVoiceEvent OnPlayVoiceExternally;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueEvent OnStopVoiceExternally;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_MetaDialogueSubsystemDataAsset* Data;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_SubtitleManager* SubtitleManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_AkActor* AkActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UAkAudioEvent* PlayMetaDialogueAkEvent;
     
 public:
@@ -91,10 +91,10 @@ public:
     UFUNCTION(BlueprintCallable)
     FIGS_MetaDialogueSpeakerVoiceLengthData GetCurrentSpeakerVoiceLength();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_MetaDialogueCharacterSlot GetCurrentSpeakerSlot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_MetaDialogueSpeaker GetCurrentSpeaker() const;
     
     UFUNCTION(BlueprintCallable)

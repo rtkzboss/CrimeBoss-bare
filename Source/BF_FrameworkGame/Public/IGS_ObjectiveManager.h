@@ -25,68 +25,68 @@ class UIGS_ObjectiveComponent;
 class UIGS_ObjectiveManager;
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ObjectiveManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Tasks, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Tasks)
     TArray<FIGS_MissionTask> Tasks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Objectives, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Objectives)
     TArray<FIGS_MissionObjective> Objectives;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ActiveObjective, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_ActiveObjective)
     FIGS_MissionObjective ActiveObjective;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ShowCustomObjective, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_ShowCustomObjective)
     bool bShowCustomObjective;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CustomObjectiveProgressBar, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveProgressBar)
     bool bShowCustomObjectiveProgressBar;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CustomObjectiveValues, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
     FText CustomObjectiveText;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CustomObjectiveValues, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
     int32 CurrentCustomObjectiveValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CustomObjectiveValues, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
     int32 GoalCustomObjectiveValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CleanExecutionState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CleanExecutionState)
     EIGS_CleanExecutionState CleanExecutionState;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnCustomObjectiveEnabled OnCustomObjectiveStateChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnCustomObjectiveValuesChanged OnCustomObjectiveValuesChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnCleanExecutionStateChanged OnCleanExecutionStateChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FObjectiveAdded OnActiveObjectiveChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FOnActiveObjectiveChangedEvent OnActiveObjectiveChangedEventBP;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FObjectiveAdded OnObjectiveAddedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FObjectiveAdded OnObjectiveStateChangedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FTaskChanged OnTaskStateChangedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* ObjectiveFinishedAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* ObjectiveAddedAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated)
     TArray<UIGS_ObjectiveComponent*> ObjectiveComponents;
     
     UIGS_ObjectiveManager(const FObjectInitializer& ObjectInitializer);
@@ -105,7 +105,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetTaskCountToComplete(UObject* inWCO, int32 inCountToComplete, FIGS_MissionTask inMissionTask);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SetObjectiveState(int32 inID, EIGS_ObjectiveState inState);
     
     UFUNCTION(BlueprintCallable)
@@ -129,52 +129,52 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void PauseTimerForTask(UObject* inWCO, FIGS_MissionTask inTask);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTimerPassed(int32 inID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTaskValuesUpdated(int32 inID, EIGS_ObjectiveState inState) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTaskStateUpdated(int32 inID, EIGS_ObjectiveState inState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Tasks(TArray<FIGS_MissionTask> inOldTasks);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ShowCustomObjective();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Objectives(TArray<FIGS_MissionObjective> inOldObjectives);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CustomObjectiveValues();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CustomObjectiveProgressBar();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CleanExecutionState(EIGS_CleanExecutionState inOldState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_ActiveObjective(FIGS_MissionObjective inOldObjective);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnOrTaskStateChanged(int32 inID, EIGS_ObjectiveState inState, int32 inOrTaskID, bool isA);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnObjectiveStateChanged(int32 inID, EIGS_ObjectiveState inState);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnObjectiveComponentStateChanged(EIGS_ObjectiveState inState, bool inForceMissionTaskStateChange, UIGS_ObjectiveComponent* inComp);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCustomTaskStateChanged(EIGS_ObjectiveState inState, int32 inTaskID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCharacterDied(AIGS_GameCharacterFramework* inCharacter, EIGS_UnregisterReason inReason);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnActiveObjectiveChanged(int32 inID) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

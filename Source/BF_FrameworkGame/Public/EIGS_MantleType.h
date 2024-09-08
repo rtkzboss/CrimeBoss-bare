@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MantleType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_MantleType : uint8 {
     MantleType_None,
     MantleType_Stand,

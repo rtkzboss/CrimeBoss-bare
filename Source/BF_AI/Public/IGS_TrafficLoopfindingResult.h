@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_TrafficLoopfindingResult {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TArray<FIGS_TrafficLoop> ClassicLoops;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TArray<FIGS_TrafficLoop> ReversedLoops;
     
     FIGS_TrafficLoopfindingResult();

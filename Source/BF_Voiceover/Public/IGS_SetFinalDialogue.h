@@ -9,11 +9,11 @@ class AActor;
 class UIGS_SetFinalDialogue;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_VOICEOVER_API UIGS_SetFinalDialogue : public UBlueprintAsyncActionBase, public IIGS_DialogueAsyncActionInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_FinalDialogueDelegate DialogueFinished;
     
     UIGS_SetFinalDialogue();

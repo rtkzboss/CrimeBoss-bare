@@ -7,25 +7,25 @@ class UIGS_AkVoiceInputComponent;
 class UIGS_AudioSubsystemDataAsset;
 class UIGS_PersistentAkComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AUDIOBASE_API UIGS_AudioSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_PersistentAkComponent* PersistenAudioAkComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_AkVoiceInputComponent* VoiceInputComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_AudioSubsystemDataAsset* Data;
     
 public:
     UIGS_AudioSubsystem();
 
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnControllerHeadphonesConnectionChanged(bool inIsConnected);
     
 };

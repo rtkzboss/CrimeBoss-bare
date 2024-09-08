@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_PlotlineAssetAvailability.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_PlotlineAssetAvailability : uint8 {
     INVALID,
     Now,

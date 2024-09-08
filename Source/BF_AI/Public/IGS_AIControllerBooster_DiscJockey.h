@@ -3,7 +3,7 @@
 #include "IGS_AIControllerBooster_Base.h"
 #include "IGS_AIControllerBooster_DiscJockey.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_AIControllerBooster_DiscJockey : public AIGS_AIControllerBooster_Base {
     GENERATED_BODY()
 public:

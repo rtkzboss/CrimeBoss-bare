@@ -20,13 +20,13 @@ class UMETA_BaseMission;
 class UMETA_MissionID;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UMETA_MissionsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UMETA_MissionsDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsItTurfWarMissionID(const TSubclassOf<UMETA_MissionID>& inMissionID, EMETA_JobType& outMissionType) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -35,13 +35,13 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UMETA_BaseMission* GetMissionObject(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inMissionID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_MissionID> GetMissionIDByTurfWarTypeAndDistrict(EMETA_TurfWarMissionType inTurfWarType, EIGS_HubBackdropTypes inBackdropType) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_MissionID> GetMissionIDByTurfWarType(EMETA_TurfWarMissionType inTurfWarType) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_MissionID> GetMissionIDByTradeVendor(EMETA_TradeVendor inVendor) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

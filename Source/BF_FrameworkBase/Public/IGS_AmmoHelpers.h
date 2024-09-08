@@ -10,7 +10,7 @@ class UIGS_AmmoInventoryObject;
 class UIGS_InventoryObjectFramework;
 class UIGS_WeaponInventoryObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_AmmoHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -14,7 +14,7 @@ class UDataTable;
 class UIGS_CharacterDatabase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_CharacterDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -32,7 +32,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_MutableProfile GetMutableProfile(UObject* inWCO, TSoftObjectPtr<UCustomizableObjectPopulation> inCustomizableInstance);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(EIGS_CharacterID inID) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -41,7 +41,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CharacterTableRow GetDataCharacter(UObject* inWCO, EIGS_CharacterID inID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_CharacterTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -50,7 +50,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static int32 GetCharacterGenericIDFromEntitlements(UObject* inWCO, EIGS_CharacterID inID, int32 inOriginalGenericID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_CharacterDatabase* GetCharacterDatabaseInstance(UObject* inWCO);
     
 };

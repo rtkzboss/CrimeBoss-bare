@@ -8,18 +8,18 @@
 class UIGS_BasherComponent;
 class UIGS_SkinHandlerBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MeleeWeaponBase : public AIGS_WieldableBase, public IIGS_BashInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_WeaponAttackType PrimaryShooter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BasherComponent* Basher;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SkinHandlerBase* SkinHandler;
     
 public:
@@ -28,7 +28,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsAttacking();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanAttack() const;
     
 

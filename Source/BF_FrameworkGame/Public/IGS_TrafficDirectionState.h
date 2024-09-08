@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "IGS_TrafficDirectionState.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_TrafficDirectionState {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool IsLocked;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool Reversed;
     
     FIGS_TrafficDirectionState();

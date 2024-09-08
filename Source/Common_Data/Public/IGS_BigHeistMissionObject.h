@@ -3,7 +3,7 @@
 #include "IGS_BaseMissionObject.h"
 #include "IGS_BigHeistMissionObject.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class COMMON_DATA_API UIGS_BigHeistMissionObject : public UIGS_BaseMissionObject {
     GENERATED_BODY()
 public:

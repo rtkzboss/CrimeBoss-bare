@@ -6,18 +6,18 @@
 
 class UShapeComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_DefendPointInitial : public AIGS_DefendPointBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UShapeComponent* AssignCharShape;
     
 public:
     AIGS_DefendPointInitial(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInAssignCharArea(FVector Pos) const;
     
 };

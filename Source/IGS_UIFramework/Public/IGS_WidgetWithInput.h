@@ -7,7 +7,7 @@
 #include "IGS_Widget.h"
 #include "IGS_WidgetWithInput.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class IGS_UIFRAMEWORK_API UIGS_WidgetWithInput : public UIGS_Widget {
     GENERATED_BODY()
 public:

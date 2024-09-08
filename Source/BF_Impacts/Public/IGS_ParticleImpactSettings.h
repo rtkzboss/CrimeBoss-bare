@@ -11,13 +11,13 @@ USTRUCT(BlueprintType)
 struct BF_IMPACTS_API FIGS_ParticleImpactSettings : public FIGS_ImpactSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UParticleSystem> ParticleSystemPath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UNiagaraSystem> NiagaraSystemPath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftClassPtr<UIGS_ImpactTypeObject> ParticleDecalIDSoft;
     
     FIGS_ParticleImpactSettings();

@@ -3,7 +3,7 @@
 #include "IGS_DebugCheatManager.h"
 #include "PaybackCheatManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API UPaybackCheatManager : public UIGS_DebugCheatManager {
     GENERATED_BODY()
 public:
@@ -111,7 +111,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void MuteMusic();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_ChangeSize(float InSize);
     
     UFUNCTION(BlueprintCallable, Exec)

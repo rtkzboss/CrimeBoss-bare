@@ -10,17 +10,17 @@
 
 class UStaticMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API AIGS_PlanningBoardItem : public AActor, public IVirtualCursorTarget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UStaticMeshComponent* StaticMeshComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FMETA_PlanningBoardItemRow itemData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     EMETA_PlanningBoardItemStatus Status;
     
     AIGS_PlanningBoardItem(const FObjectInitializer& ObjectInitializer);
@@ -31,16 +31,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetItemData(const FMETA_PlanningBoardItemRow& inItemData);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnStatusChanged(EMETA_PlanningBoardItemStatus NewStatus);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetZoomOffset() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetId() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FMETA_PlanningBoardItemConnectionData> GetConnections() const;
     
 

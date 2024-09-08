@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_MeleeWeaponData : public FIGS_WieldableBaseData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UAkSwitchValue> WwiseWeaponName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_WeaponBashAttackDefinition> AttackDefinitions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponBashAttackDefinition AIAttackDefinition;
     
     FIGS_MeleeWeaponData();

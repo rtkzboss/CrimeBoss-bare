@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_GUI_API FIGS_WorldWidgetDataRow : public FIGS_WorldWidgetData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_WorldWidgetType ID;
     
     FIGS_WorldWidgetDataRow();

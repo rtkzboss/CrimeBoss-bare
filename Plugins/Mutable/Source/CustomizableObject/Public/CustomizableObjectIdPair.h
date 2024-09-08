@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct CUSTOMIZABLEOBJECT_API FCustomizableObjectIdPair {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FString CustomizableObjectGroupName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FString CustomizableObjectName;
     
     FCustomizableObjectIdPair();

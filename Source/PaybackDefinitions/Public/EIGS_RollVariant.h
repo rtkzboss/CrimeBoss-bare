@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_RollVariant.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_RollVariant : uint8 {
+UENUM()
+enum class EIGS_RollVariant {
     ROLL_Unknown = 255,
     ROLL_None = 0,
     ROLL_ToStand_Short,

@@ -7,14 +7,14 @@
 class UAkComponent;
 class UIGS_NetworkComponentDialogue;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API AIGS_GlobalDialoguePlayer : public AActor, public IIGS_DialogueInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentDialogue* NetworkDialogue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UAkComponent* AkComponent;
     
     AIGS_GlobalDialoguePlayer(const FObjectInitializer& ObjectInitializer);

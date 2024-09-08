@@ -8,25 +8,25 @@ class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 class UIGS_AICommandBreachThrowFlashbang;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachThrowGrenade : public UIGS_BTTask_SquadDoorBreachBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* ContextActionCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* ContextActionCommand;
     
 public:
     UIGS_BTTask_SquadDoorBreachThrowGrenade();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool HasFlashbangExploded(UIGS_AICommandBreachThrowFlashbang* Command);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static UIGS_AICommand* CommandToThrowFlashbang(AIGS_GameCharacterFramework* inAgent, FVector position, bool IsRight);
     
 };

@@ -5,11 +5,11 @@
 
 class UIGS_NavLinkComponentBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_NavLink : public AIGS_NavLinkBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_NavLinkComponentBase* LinkComponent;
     
     AIGS_NavLink(const FObjectInitializer& ObjectInitializer);

@@ -24,7 +24,7 @@ class APawn;
 class UActorComponent;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIHelpersLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -84,10 +84,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool IsLootCarryablePickupValidFor(const AIGS_CarryableItemPickup* inCarryablePickup, const AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsLastPlayerAlive(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsLastHeisterAlive(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -153,16 +153,16 @@ public:
     UFUNCTION(BlueprintCallable)
     static float GetDestinationDistanceBetweenCharacters(AIGS_GameCharacterFramework* inQuerrier, FVector inPoint1, FVector inPoint2);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAlivePlayersWithDownedState(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAlivePlayers(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAliveHeisters(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCountOfAliveBots(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -213,7 +213,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void CalculateAreaOfOperation(AIGS_RoomBase* fromRoom, int32 IterationCount, TArray<AIGS_RoomBase*>& outArea);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool AreAllHeistersDead(UObject* inWCO);
     
 };

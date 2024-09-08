@@ -50,7 +50,7 @@ class UPrimitiveComponent;
 class USceneComponent;
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_BadFlyGameplayStatics : public UIGS_BadFlyGameplayStaticsFramework {
     GENERATED_BODY()
 public:
@@ -209,7 +209,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool MatchesTagDepth(FGameplayTag inTagLeft, FGameplayTag inTagRight, int32 InDepth);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsTearingDown(const UObject* inCaller);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -242,16 +242,16 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static int32 GetStrikeCountForOffender(const UObject* inWCO, FGameplayTagContainer inOffences, AActor* inDetector, AActor* inOffender);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static EIGS_StorePlatform GetStorePlatformType(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ScriptManagerBase* GetScriptManager(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetPingForLocalPlayer(APlayerState* inPlayerState);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static FString GetPersistentLevelName(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -266,7 +266,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FGameplayTag GetMainCategoryTagFromMetaHierarchy(FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int32 GetLatencyForPlayerState(APlayerState* inPlayerState);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -278,7 +278,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FGameplayTagContainer GetGameplayTagHierarchy(FGameplayTag inTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FString GetCurrentTextPlatformName();
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -350,10 +350,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<FString> CompareStrings(TArray<FString> inStringArray);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool CheckIsRunningCommandlet();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static float ApplyDamage(const FHitResult& inHitResult, AIGS_GameCharacterFramework* inOwner, float inDamage, const TSubclassOf<UDamageType> inDamageType);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

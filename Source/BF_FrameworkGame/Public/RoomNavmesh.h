@@ -3,12 +3,12 @@
 #include "IGS_NavMeshBase.h"
 #include "RoomNavmesh.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API ARoomNavmesh : public AIGS_NavMeshBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     uint8 bLockRebuild: 1;
     
 public:

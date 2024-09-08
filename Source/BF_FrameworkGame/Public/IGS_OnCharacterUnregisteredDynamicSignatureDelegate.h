@@ -5,5 +5,5 @@
 
 class AIGS_GameCharacterFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnCharacterUnregisteredDynamicSignature, AIGS_GameCharacterFramework*, inCharacter, EIGS_UnregisterReason, inReason);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnCharacterUnregisteredDynamicSignature, AIGS_GameCharacterFramework*, inCharacter, EIGS_UnregisterReason, inReason);
 

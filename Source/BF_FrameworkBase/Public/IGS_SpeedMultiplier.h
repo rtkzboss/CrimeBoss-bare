@@ -5,14 +5,14 @@
 
 class UObject;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKBASE_API FIGS_SpeedMultiplier {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UObject* Owner;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FActiveGameplayEffectHandle ActiveGEHandle;
     
     FIGS_SpeedMultiplier();

@@ -15,7 +15,7 @@ class IIGS_PoolableInterface : public IInterface {
     GENERATED_BODY()
 public:
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void SetPoolTagContainer(FGameplayTagContainer inTagContainer);
     
 public:
@@ -23,22 +23,22 @@ public:
     void Release();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnSpawnedEvent();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnReleasedEvent();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool OnFindEvent(UObject* inCompareItem);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnActivatedEvent();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnAcquiredEvent();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     FGameplayTagContainer GetPoolTagContainer();
     
 public:

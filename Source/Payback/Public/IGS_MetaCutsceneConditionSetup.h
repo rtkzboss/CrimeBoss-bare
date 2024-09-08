@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneConditionSetup {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_MetaCutsceneConditionExecuter* ConditionExecuter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UObject* MetaCondition;
     
     FIGS_MetaCutsceneConditionSetup();

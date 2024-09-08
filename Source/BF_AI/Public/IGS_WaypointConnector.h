@@ -7,21 +7,21 @@ class AIGS_WaypointBase;
 class UIGS_CustomBoxComponent;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_WaypointConnector : public AIGS_WaypointFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointBase* NextPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient, VisibleInstanceOnly)
     TArray<AIGS_WaypointBase*> BackPointers;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* Root;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_CustomBoxComponent* BoxComponent;
     
 public:

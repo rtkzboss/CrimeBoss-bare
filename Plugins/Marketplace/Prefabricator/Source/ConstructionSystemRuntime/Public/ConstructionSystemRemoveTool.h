@@ -5,22 +5,22 @@
 
 class APrefabActor;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemRemoveTool : public UConstructionSystemTool {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TraceDistance;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TWeakObjectPtr<APrefabActor> FocusedActor;
     
 public:
     UConstructionSystemRemoveTool();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandleInput_RemoveAtCursor();
     
 };

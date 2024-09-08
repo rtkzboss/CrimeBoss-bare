@@ -3,7 +3,7 @@
 #include "NavAreas/NavArea.h"
 #include "NavArea_Test.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_NAVIGATION_API UNavArea_Test : public UNavArea {
     GENERATED_BODY()
 public:

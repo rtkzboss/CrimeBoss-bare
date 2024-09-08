@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_WarzoneTiles.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_WarzoneTiles : uint8 {
+UENUM()
+enum class EIGS_WarzoneTiles {
     INVALID = 255,
     Warehouse = 0,
     ParkingLot,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UIGS_LevelTestDataStruct.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct ST_FRAMEWORK_API FUIGS_LevelTestDataStruct {
     GENERATED_BODY()
 public:

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FPropMeshInfoStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PivotVariationMax;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FMeshInfoStruct> MeshesToSpawn;
     
     BF_FRAMEWORKGAME_API FPropMeshInfoStruct();

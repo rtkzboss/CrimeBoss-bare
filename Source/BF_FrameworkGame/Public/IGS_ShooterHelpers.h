@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "IGS_ShooterHelpers.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_ShooterHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

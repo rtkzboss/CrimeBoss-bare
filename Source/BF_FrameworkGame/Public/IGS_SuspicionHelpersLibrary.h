@@ -13,7 +13,7 @@ class UIGS_SuspicionComponent;
 class UObject;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_SuspicionHelpersLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -34,19 +34,19 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_SuspicionEventActor* SpawnSuspicionEventActor(const UObject* inWCO, const FTransform& InTransform, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool ShouldDetectSusComp(UIGS_SuspicionComponent* inSusComp, AActor* inDetector);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool ShouldDetectOffender(AActor* inOffender, AActor* inDetector);
     
     UFUNCTION(BlueprintCallable)
     static void MakeExplosionNoiseAndEvent(const AActor* inSource, AIGS_GameCharacterFramework* inInstigator, const float inLoudness);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetOffenceBasedDetectionMultiplier(UIGS_PlayerSuspicionComponent* inOffender, AActor* inDetector);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetAttributeBasedDetectionMultiplier(AIGS_GameCharacterFramework* inOffender);
     
 };

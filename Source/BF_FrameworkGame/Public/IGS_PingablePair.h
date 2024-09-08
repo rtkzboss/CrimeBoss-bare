@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FIGS_PingablePair {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AActor* Pingable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_PingableComponent* PingableComponent;
     
     BF_FRAMEWORKGAME_API FIGS_PingablePair();

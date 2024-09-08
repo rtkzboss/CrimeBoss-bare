@@ -7,13 +7,13 @@
 class AActor;
 class AIGS_RoomBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_GateBreachAdapter : public UObject {
     GENERATED_BODY()
 public:
     UIGS_GateBreachAdapter();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static FGateExplosiveInfo GetExplosivePoint(AActor* Actor, AIGS_RoomBase* priorRoom);
     
 };

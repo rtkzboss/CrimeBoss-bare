@@ -9,23 +9,23 @@ class AIGS_PatrolPoint;
 class AIGS_WaypointFramework;
 class UIGS_AICommand;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_PatrolGroup : public AIGS_WaypointBase {
     GENERATED_BODY()
 public:
     UPROPERTY()
     TArray<AIGS_PatrolPoint*> PatrolPoints_DEPRECATED;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<AIGS_WaypointFramework*> Waypoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TArray<AIGS_WaypointBase*> WaypointsCasted;
     
     AIGS_PatrolGroup(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWaitFinished(AIGS_AIControllerGame* inOwningContoller, UIGS_AICommand* inCommand, bool inFailed);
     
 public:
@@ -33,7 +33,7 @@ public:
     AIGS_WaypointBase* GetPatrolPoint(AIGS_GameCharacterFramework* inCharacter);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<AIGS_WaypointBase*> GetAllVisitablePoints(AIGS_GameCharacterFramework* inCharacter) const;
     
 };

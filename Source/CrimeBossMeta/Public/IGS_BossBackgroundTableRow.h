@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FIGS_BossBackgroundTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName SubLevelName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ActiveFromTreshold;
     
     FIGS_BossBackgroundTableRow();

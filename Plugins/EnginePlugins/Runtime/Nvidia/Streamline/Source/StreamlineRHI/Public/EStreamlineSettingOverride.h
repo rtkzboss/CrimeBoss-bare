@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EStreamlineSettingOverride.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EStreamlineSettingOverride : uint8 {
     Enabled,
     Disabled,

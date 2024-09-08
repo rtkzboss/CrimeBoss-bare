@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESquadEventType.generated.h"
 
-UENUM(BlueprintType)
-enum class ESquadEventType : uint8 {
+UENUM()
+enum class ESquadEventType {
     EnemySeen,
     EnemyLost,
     NextRoomChanged,

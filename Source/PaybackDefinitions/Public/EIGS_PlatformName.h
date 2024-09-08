@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PlatformName.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_PlatformName : uint8 {
     PN_Unknown,
     PN_Windows,

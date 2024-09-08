@@ -12,34 +12,34 @@ class UGenericTeamAgentInterface;
 class IIGS_GameplayTagAssetInterfaceCustom;
 class UIGS_GameplayTagAssetInterfaceCustom;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SuspicionComponent : public UAIPerceptionStimuliSourceComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDisablePerceptionOnOffenceReported;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float NoticedWantsReactionRearmDelay;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     uint8 bOverrideTeamSide: 1;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSideOverride;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> m_OwningCharacter;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TScriptInterface<IGenericTeamAgentInterface> m_OwningActorTeamAgentInterface;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TScriptInterface<IIGS_GameplayTagAssetInterfaceCustom> m_OwningActorGameplayTagAssetInterfaceCustom;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<AIGS_GameCharacterFramework*> IgnoredBy;
     
 public:
@@ -54,7 +54,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDisablePerceptionOnOffenceReported(bool inDisablePerceptionOnOffenceReported);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsIgnoredBy(AIGS_GameCharacterFramework* inTest) const;
     
     UFUNCTION(BlueprintCallable)
@@ -63,10 +63,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void InitFromItem(const FIGS_CommonItemData& inItemData);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetOwningCharacter() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetOffences() const;
     
     UFUNCTION(BlueprintCallable)

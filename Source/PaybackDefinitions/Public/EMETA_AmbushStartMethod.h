@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_AmbushStartMethod.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_AmbushStartMethod : uint8 {
     Calculate,
     DEGUB_ForceDecline,

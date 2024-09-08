@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_InteractionAnimationTypes.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_InteractionAnimationTypes : uint8 {
     EIGS_DoorOpened,
     EIGS_DoorClosed,

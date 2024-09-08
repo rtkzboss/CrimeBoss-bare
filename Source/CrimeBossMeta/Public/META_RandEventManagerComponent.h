@@ -18,72 +18,72 @@
 class UMETA_MissionID;
 class UStoryGraphManager;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_RandEventManagerComponent : public UIGS_RandEventManagerBaseComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FMETA_CharacterID, FMETA_HeisterStateChangeHistory> HeistersStateChangesHistory;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FMETA_CharacterID, FMETA_MissingHeisterEventData> MissingHeistersEvents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, TSoftObjectPtr<UStoryGraphManager>> CrewEventsAndTheirGraphs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, TSubclassOf<UMETA_MissionID>> CrewEventMissions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSubclassOf<UMETA_MissionID>, FGameplayTag> CrewEventMissionsPrices;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CutscenesStartedCounter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CutscenesFinishedCounter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, FMETA_RandEventRewardRuntimeDataStorage> EventRewards;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_RandEventCategory, FMETA_RandEventCategoryInfo> RandEventCategoriesInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Partner, FGameplayTag> ActivePartnersRandEvents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Partner, FGameplayTag> ReadyForActivationEvents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> EventsSpecificCooldown;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, EMETA_Gang> SelectedGangsForEvents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, FText> GenericEventAndItsCutscene;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> CalculatedCostForGenericEvents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CooldownCounterForFuneralOfGenericHeisters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, bool> UnfulfilledEvents;
     
 public:
     UMETA_RandEventManagerComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     bool ShouldStateChangeBeNoted(FMETA_HeisterStateChangeNote inNote) const;
     
     UFUNCTION(BlueprintCallable)
     void RemoveEventForMissingHeister(FMETA_CharacterID inCharacterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     TArray<EMETA_CharacterState> GetStatesWhichChangesShouldBeNotedInHistory() const;
     
     UFUNCTION(BlueprintCallable)
@@ -95,13 +95,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void GetNoteAboutLastChangeFromState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_CharacterID GetMissingHeisterForMission(TSubclassOf<UMETA_MissionID> inMissionID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetEventIdForMissingHeister(FMETA_CharacterID inCharacterID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetEventDataForMissingHeister(FMETA_CharacterID inCharacterID, FMETA_MissingHeisterEventData& outData, bool& outSuccess) const;
     
     UFUNCTION(BlueprintCallable)

@@ -8,14 +8,14 @@ class APlayerController;
 class UGetFriendsCallbackProxy;
 class UObject;
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(MinimalAPI)
 class UGetFriendsCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintGetFriendsListDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintGetFriendsListDelegate OnFailure;
     
     UGetFriendsCallbackProxy();

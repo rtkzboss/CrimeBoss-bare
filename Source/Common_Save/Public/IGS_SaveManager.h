@@ -18,45 +18,45 @@ class UIGS_PaybackSaveGameQuickplay;
 class UMETA_DebugCareerSaveGame;
 class UObject;
 
-UCLASS(Blueprintable, Config=Game)
+UCLASS(BlueprintType, Config=Game)
 class COMMON_SAVE_API UIGS_SaveManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_AccountSaveDataRequestedDelegate OnAccountSaveDataRequested;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_QuickplaySaveDataRequestedDelegate OnQuickplaySaveDataRequested;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CareerSaveDataRequestedDelegate OnCareerSaveDataRequested;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CareerDeletedDelegate OnCareerDeleted;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config)
     FString CareerSlotName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_PaybackSaveGameAccount* CachedAccountSave;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_PaybackSaveGameQuickplay* CachedQuickplaySave;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_PaybackSaveGameCareer* CachedCareerSave;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UMETA_DebugCareerSaveGame* CachedCareerDebugSave;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_DebugWeaponCheatSelection* WeaponCheatSelectionDebugSave;
     
 public:
     UIGS_SaveManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool ShouldUnlockVeteranRewards() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -110,46 +110,46 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PaybackSaveGameAccount* LoadAccount(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsCareerDebugDataFilled(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasQuickplaySaveValidData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasNormalCareerSaveValidData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasDebugCareerSaveValidData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasCareerSaveValidData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool GetDebugMode(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static FString GetCareerSlotName(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_SaveData_DebugCareer GetCareerDebugData(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_CareerSlotInfo> GetAllCareerSaveFiles() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool DoesQuickplaySaveExist();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool DoesNormalCareerSaveExist();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool DoesDebugWeaponCheatSelectionSaveExist(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool DoesDebugCareerSaveExist();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool DoesCareerSaveExist();
     
     UFUNCTION(BlueprintCallable)

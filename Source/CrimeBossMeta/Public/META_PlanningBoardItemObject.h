@@ -5,7 +5,7 @@
 #include "META_PlanningBoardItemRow.h"
 #include "META_PlanningBoardItemObject.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_PlanningBoardItemObject : public UObject {
     GENERATED_BODY()
 public:
@@ -17,10 +17,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetData(FMETA_PlanningBoardItemRow& itemData, EMETA_PlanningBoardItemStatus Status);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_PlanningBoardItemStatus GetStatus() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_PlanningBoardItemRow GetData() const;
     
 };

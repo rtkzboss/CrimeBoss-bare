@@ -12,19 +12,19 @@
 class AIGS_GameCharacterFramework;
 class UObject;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_BotOrderManagerBase : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BotOrderGenericDelegate OnBotOrderStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BotOrderGenericDelegate OnBotOrderEnded;
     
     UIGS_BotOrderManagerBase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_BotOrderResult GetLastGetBestActionForResult() const;
     
     UFUNCTION(BlueprintCallable)

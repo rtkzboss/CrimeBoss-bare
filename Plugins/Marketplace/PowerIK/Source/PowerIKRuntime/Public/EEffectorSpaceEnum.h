@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEffectorSpaceEnum.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum EEffectorSpaceEnum {
     ES_Additive,
     ES_World,

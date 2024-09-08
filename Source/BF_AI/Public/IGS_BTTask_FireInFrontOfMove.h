@@ -3,15 +3,15 @@
 #include "IGS_BTTask_FireBase.h"
 #include "IGS_BTTask_FireInFrontOfMove.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_FireInFrontOfMove : public UIGS_BTTask_FireBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float Distance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float FireTime;
     
 public:

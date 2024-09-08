@@ -9,11 +9,11 @@ USTRUCT(BlueprintType)
 struct PATHFOLLOW_API FPFPathRoller {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FInterpCurveVector _rollAnglesCurve;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UObject*> _curves;
     
 public:

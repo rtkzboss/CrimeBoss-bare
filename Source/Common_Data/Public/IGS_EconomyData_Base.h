@@ -47,183 +47,183 @@ class UMETA_Weapon;
 class UMETA_WeaponInventoryObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_EconomyData_Base : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_CharacterID, FMETA_HeisterDataByTier> SetupHeisterDataPerGenericCharacterAndQuality;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_CharacterID, FMETA_HeisterPerksDataByLevel> SetupHeisterPerksPerLevel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FMETA_UniqueCharacterCostsData BasicUniqueCharacterCosts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_CharacterID, FMETA_UniqueCharacterCostsData> UniqueCharacterCostsOverride;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FMETA_Interval MissionsCutForUniqueCharacters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_CharacterID, FMETA_Interval> MissionsCutOverrideForUniqueCharacters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> ForbiddenPerksForFirstHeristerGeneraion;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> ForbiddenPerksForGenericHeisters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FMETA_Interval ReduceHirePriceByPercentForEachBadPerk;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 ChanceRegenerateAllPerksIfTheyAreNegative;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_ItemQuality, FMETA_WeaponEconomyData> SetupWeaponDataPerWeaponQuality;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, float> BuyCostModifierByWeaponClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_ModType, int32> BuyCostModifierByWeaponAttachmens;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_ItemQuality, FMETA_EquipmentPriceIntervalsPerQuality> SetupEquipmentDataPerEquipmentQuality;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, float> BuyCostModifierByEquipmentClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_ModType, int32> BuyCostModifierByEquipmentAttachmens;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_ItemQuality, float> HeisterUpkeepMultiplierPerEquipmentQuality;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_MissionMonetaryValue> MissionsCommonWealthConfiguration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<TSubclassOf<UMETA_MissionID>, FMETA_MissionAdditionalMonetaryValue> MissionsAdditionalWealthConfiguration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration> MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 DefaultMoneyMakingScenariosProbabilities;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_ScenarioDifficulty, float> RewardMultipliersForDifficulties;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float StoryMissionRewardMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 FailNassaraExpenses;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NassaraExpensesFor1stStar;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NassaraExpensesFor2stStar;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NassaraExpensesFor3stStar;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float WeaponCoefficientPriceForHeister;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float EquipmentCoefficientPriceForHeister;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 HeisterMarketAvailableInDays;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 HeisterMarketCooldownInDays;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float PriceMultiplierForFirstGeneration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 HeistersAmountOverrideInFirstGeneration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_AllowedHeistersInBM_Config> AllowedHeistersPerRespectStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float HeistersPoolRefreshCostMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float HeistersPoolRefreshStartPriceMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 WeaponMarketAvailableInDays;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 WeaponMarketCooldownInDays;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float WeaponsPoolRefreshStartPriceMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_AllowedWeaponsInfo> AllowedWeaponsPerRespectStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_AllowedEquipmentInfo> AllowedEquipmentPerRespectStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float WeaponsPoolRefreshCostMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float NumberOfHPSegmentsForAutomaticRecovery;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float MultiplierForHealing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, int32> HealCostPerRespectLevel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<int32, float> HealCostMultiplierPerHeisterLevel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float HealCostMultiplierForUniqueCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float CostModifierForInstantHealing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 DurationOfHealing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_ScenarioDifficulty, float> TotalLootBagsMultiplierPerDificulty;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<int32, float> TotalLootBagsMultiplierPerNumberOfPlayers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<int32, FMETA_Interval> RangeBagsPerNumberOfPlayers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FloatInterval RandomBagSpread;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_LootBagConfiguration> LootBagConfigurations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     FMETA_EquipmentEconomyData EquipmentEconomyData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FMETA_WeaponScopeKey, FMETA_WeaponsArrayCached> WeaponsCachedData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FMETA_EquipmentScopeKey, FMETA_EquipmentArrayCached> EquipmentCachedData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_MenuCommonData_Base* CommonData;
     
 public:
@@ -257,10 +257,10 @@ protected:
     void RefreshCommonData(const UObject* inWCO);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsMoneyMakingScenariosAdditionalWealthAndProbabilitiesContainData(FGameplayTag inFGameplayTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsItemUnlocked(TArray<FGameplayTag> inUnlockedPool, FGameplayTag inItemTag);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -272,13 +272,13 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<TSubclassOf<UMETA_WeaponInventoryObject>> GetWeaponsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inAlreadySelectedWeapons, const TArray<FGameplayTag>& inUnlockedWeapons, bool inIgnoreUnlock);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetWeaponEconomyDataByQuality(EMETA_ItemQuality inWeaponQuality, FMETA_WeaponEconomyData& outEconomyData, bool& bSuccess) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetUniqueCharacterMissionCut(EIGS_CharacterID inCharacterID) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -287,34 +287,34 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool GetSuitableEquipmentAfterHeisterUpgrade(const UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, EMETA_ItemQuality inHeisterQuality, const FMETA_HeisterEconomyData inEconomyData, TArray<FMETA_PerkData> inCurrentPerks, TSubclassOf<UIGS_EquipmentInventoryObject> inCurrentEquipments, const TArray<FGameplayTag>& inUnlockedEquipment, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetStartingPerkCountOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetStartingLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetRewardMultiplierForDifficulty(EIGS_ScenarioDifficulty inDifficulty) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, int32& outUpkeepCost, int32& outHireCost);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios GetMoneyMakingScenariosAdditionalWealthAndProbabilitiesData(EMETA_RespectLvl RespectLevel, FGameplayTag inFGameplayTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetMissionObjectiveMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionMaxMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMissionAverageMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
     
     UFUNCTION(BlueprintCallable)
     TMap<TSubclassOf<UMETA_MissionID>, FMETA_MissionAdditionalMonetaryValue> GetMissionAdditionalWealthMissions();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetMaxLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -323,28 +323,28 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     FMETA_HeisterRandomizedData GetGenericHeisterRandomizedData(UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, EMETA_ItemQuality inHeisterQuality, int32 inHeisterLevel, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FMETA_PerkData>& inCurrentPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedEquipment, bool bIsPromotion, bool& bOutSuccess);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetGenericHeisterEconomyData(EIGS_CharacterID inGenericCharacterID, EMETA_ItemQuality inCharacterQuality, FMETA_HeisterEconomyData& outEconomyData, bool& bSuccess) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> GetForbiddenPerksForGenericHeisters() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     TArray<UMETA_Equipment*> GetEquipmentPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FGameplayTag>& inUnseenUnlockedEquipment, UPARAM(Ref) TArray<UMETA_Equipment*>& inOldEquipmentPool, int32 inTargetAmountOfUnseenItemsForPurchase);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetEquipmentEconomyDataByQuality(EMETA_ItemQuality inEquipmentQuality, FMETA_EquipmentPriceIntervalsPerQuality& outEconomyData, bool& bSuccess) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetDefaultProbabilitiesDataForCommonMissions() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_MissionMonetaryValue GetCommonWealthOfMission(EMETA_RespectLvl inRespectLevel) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetBuyCostModifierByWeaponClass(FGameplayTag inWeaponClassTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration> GetAllMoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

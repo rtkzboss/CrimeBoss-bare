@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_PerkModeUsage.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_PerkModeUsage : uint8 {
+UENUM()
+enum class EIGS_PerkModeUsage {
     None,
     Singleplayer,
     Multiplayer,

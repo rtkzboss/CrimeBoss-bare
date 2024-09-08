@@ -4,11 +4,11 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "EnvQueryTest_HasRelevantPath.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_HasRelevantPath : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue MaxCostCoef;
     
     UEnvQueryTest_HasRelevantPath();

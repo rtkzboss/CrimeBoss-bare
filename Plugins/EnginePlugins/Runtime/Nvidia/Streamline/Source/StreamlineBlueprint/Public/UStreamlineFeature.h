@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UStreamlineFeature.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class UStreamlineFeature : uint8 {
     DLSSG,
     Reflex,

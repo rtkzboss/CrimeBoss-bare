@@ -32,306 +32,306 @@ class AIGS_RoomFramework;
 class UObject;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_CharacterData : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_IsTargetChangedSignature OnIsTargetChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_SecurityTierChangedSignature OnSecurityTierChangedBP;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_RoomTypeChangedSignature OnRoomTypeChangedBP;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bIsInCombat;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bWasEverLooting;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PanicChangedSignature OnZiptieChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float TargetFirstSeenTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float TargetLostTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Replicated, VisibleAnywhere)
     AActor* VisibleTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     AActor* AggroTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     AActor* LastTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     AActor* TraceTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float DistanceToTargetOnNavmesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool NeedHideFromGuard;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_TargetProximity TargetProximity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float EnteringDistanceProximity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_TargetProximity ProximityForEnteringDistanceProximity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_RoomFramework* CurrRoom;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SecurityLocation, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_SecurityLocation)
     EIGS_RoomSecurityType CurrentSecurityLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_RoomType CurrentRoomType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 CurrentRoomIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CoverExpirationTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool HasValidCover;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CoverInvalidateTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UObject* CurrentCover;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UObject* LastCover;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool IsInsideValidCover;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     EIGS_CoverAttackSide CoverAttackSide;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     int32 CharacterID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool SniperShouldHit;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool HasEverMoved;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsMovingWithSprint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsTryingToSurprisePlayer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsTriggeredByBumping;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnNavlinkChangedSignature OnNavlinkChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnNavlinkChangedSignature OnTraversingNavlinkChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AActor* FollowActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float FollowActorDistance;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PanicChangedSignature OnIsOnGroundChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PanicStateChangedSignature OnPanicChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BumpIntoSignature OnCharacterAboutToBump;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BumpIntoSignature OnBumpInto;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     bool mR_HasReactionEnabledByScript;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_FloatChangedSignature OnEnemyDetectionChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FCharDetectingPlayersChangedEvent OnDetectingPlayersChangedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AActor*> m_PlayersDetectingActors;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     EIGS_AIMontageType InjuryPlaying;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UActorComponent* ThrowRequestComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 IsDefending: 1;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PanicStateChangedSignature OnHintShout;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PanicStateChangedSignature OnSubdueTargetChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PanicStateChangedSignature OnStealthKillChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PanicStateChangedSignature OnPlayerCanBreakChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool bIsCharging;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_IsChargingChanged OnIsChargingChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     bool isTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     EIGS_PushForTarget PushForTarget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     TArray<UObject*> FireLocks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     TArray<UObject*> NearVanLocks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     TArray<UObject*> ReactionLocks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     TArray<UObject*> ShootingRotationLocks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     TArray<UObject*> BotSwitchLocks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     EIGS_CarType m_CarType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     EIGS_CarSeatVariant m_SeatVariant;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector m_LastNavmeshLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsOnNavlink;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsTraversingNavlink;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnZiptieChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere, ReplicatedUsing=OnRep_OnZiptieChanged)
     bool bR_IsZiptied;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bCanAbortAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsPanicking, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_IsPanicking)
     uint8 bIsPanicking: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 bWasEverPanicking: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 bIsComplaining: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 bIsAlerting: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 bDuty: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 bGetDownKneel: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_GoingToGroundChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_GoingToGroundChanged)
     uint8 bGoingToGround: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 bScared: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsOnGroundChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_IsOnGroundChanged)
     uint8 bIsLayingOnGround: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_EscapingChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_EscapingChanged)
     uint8 bIsEscaping: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 bIsRunningForAlarmDevice: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     EIGS_AlarmDeviceType AlarmDeviceType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     bool m_DutyAlertingCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     bool bAlreadyUsedAlarmDevice;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_StickyChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_StickyChanged)
     uint8 bIsSticky: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool SpawnedByWaveManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     TArray<UObject*> InvalidTargetLocks;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_WalkieTalkieStatus, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_WalkieTalkieStatus)
     EIGS_WalkieTalkieStatus mR_WalkieTalkieStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnDetectionChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnDetectionChanged)
     float mR_CurrentDetection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DetectionSecondPhase, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_DetectionSecondPhase)
     bool mR_DetectionSecondPhase;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_DetectingPlayers, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_DetectingPlayers)
     TArray<AIGS_GameCharacterFramework*> mR_DetectingPlayers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnReportDetectionChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnReportDetectionChanged)
     bool mR_ReportDetection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, Transient)
     TSet<UPrimitiveComponent*> ChokeSpaces;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FShoutScanData m_ShoutScanData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_GameCharacterFramework* m_SubdueTargetCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_GameCharacterFramework* m_SubdueTargetCharacterCached;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated, VisibleAnywhere)
     uint8 mR_SubdueAllowed: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnRevivingChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnRevivingChanged)
     bool mR_Reviving;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnLockPickingChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnLockPickingChanged)
     bool mR_LockPicking;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_OnInspectingChanged, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_OnInspectingChanged)
     bool mR_Inspecting;
     
 public:
@@ -339,74 +339,74 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UpdateIsCharging(bool inIsCharging);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_WalkieTalkieStatus();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_StickyChanged();
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_SecurityLocation(EIGS_RoomSecurityType inOldTier);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnZiptieChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnRevivingChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnReportDetectionChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnLockPickingChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnInspectingChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_OnDetectionChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsPanicking();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsOnGroundChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_GoingToGroundChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_EscapingChanged();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_DetectionSecondPhase();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_DetectingPlayers();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnComponentEndOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inOtherComponent, int32 ini);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnComponentBeginOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inOtherComponent, int32 ini, bool inArg, const FHitResult& inHitResult);
     
 public:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_SetSeatVariant(const EIGS_CarSeatVariant inSeatVariant);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_SetCarType(const EIGS_CarType inCarType);
     
     UFUNCTION(BlueprintCallable)
     bool IsShoutHint();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetSubduedBy() const;
     
     UFUNCTION(BlueprintCallable)
@@ -418,13 +418,13 @@ public:
     UFUNCTION(BlueprintCallable)
     bool GetPlayerCanBreak();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetLastNavmeshLocation() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<AIGS_GameCharacterFramework*> GetDetectingPlayers() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetCharacterOwner() const;
     
 };

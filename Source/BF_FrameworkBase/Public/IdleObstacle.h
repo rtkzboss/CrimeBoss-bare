@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IdleObstacle.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIdleObstacle {
     GENERATED_BODY()
 public:

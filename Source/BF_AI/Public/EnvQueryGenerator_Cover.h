@@ -4,11 +4,11 @@
 #include "EnvironmentQuery/EnvQueryGenerator.h"
 #include "EnvQueryGenerator_Cover.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_Cover : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue BoxHeight;
     
     UEnvQueryGenerator_Cover();

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FGeneratedMesh {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int32 ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UStaticMesh* Mesh;
     
     CUSTOMIZABLEOBJECT_API FGeneratedMesh();

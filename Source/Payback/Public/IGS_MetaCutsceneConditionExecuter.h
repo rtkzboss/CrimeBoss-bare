@@ -11,7 +11,7 @@ class PAYBACK_API UIGS_MetaCutsceneConditionExecuter : public UObject {
 public:
     UIGS_MetaCutsceneConditionExecuter();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     bool ExecuteCondition(AGameModeBase* inGameMode, UObject* inMetaCondition);
     
 };

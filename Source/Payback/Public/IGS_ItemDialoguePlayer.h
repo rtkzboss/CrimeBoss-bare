@@ -9,25 +9,25 @@ class UAkComponent;
 class UAkSwitchValue;
 class UIGS_NetworkComponentDialogue;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class PAYBACK_API AIGS_ItemDialoguePlayer : public AActor, public IIGS_DialogueInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_DialogueGroupCharacterHolder DialogueCharacterHolder;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsFPP;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Instanced)
     UIGS_NetworkComponentDialogue* NetworkDialogue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkSwitchValue* FPPAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UAkComponent* AkComponent;
     
 public:

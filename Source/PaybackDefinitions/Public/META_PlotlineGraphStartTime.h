@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMETA_PlotlineGraphStartTime {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_PlotlineGraphStartTime Time;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MinDay;
     
     PAYBACKDEFINITIONS_API FMETA_PlotlineGraphStartTime();

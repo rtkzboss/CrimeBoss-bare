@@ -4,18 +4,18 @@
 #include "EIGS_MusicMissionState.h"
 #include "IGS_NetworkComponentMusic.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentMusic : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MusicMissionState, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_MusicMissionState)
     EIGS_MusicMissionState mR_MusicMissionState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MusicPackIndex, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_MusicPackIndex)
     int32 mR_MusicPackIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_MusicCustomPackName, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_MusicCustomPackName)
     FName mR_MusicCustomPackName;
     
 public:
@@ -24,13 +24,13 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_MusicPackIndex() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_MusicMissionState() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_MusicCustomPackName() const;
     
 };

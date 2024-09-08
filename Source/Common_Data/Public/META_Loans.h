@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_Loans {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_Loan> Loans;
     
     FMETA_Loans();

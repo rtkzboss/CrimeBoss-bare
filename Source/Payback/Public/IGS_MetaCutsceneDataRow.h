@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneDataRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UIGS_MetaCutsceneDataAsset> CutsceneData;
     
     FIGS_MetaCutsceneDataRow();

@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnDisplayModeChangedDelegateDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDisplayModeChangedDelegate);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDisplayModeChangedDelegate);
 

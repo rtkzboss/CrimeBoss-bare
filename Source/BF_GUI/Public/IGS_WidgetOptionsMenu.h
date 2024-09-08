@@ -11,35 +11,35 @@ class UIGS_GUIController;
 class UIGS_WidgetButtonSimple;
 class UWidgetSwitcher;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetOptionsMenu : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetButtonSimple* GameSetButton;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetButtonSimple* GraphicsSetButton;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetButtonSimple* SoundSetButton;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetButtonSimple* ControlsSetButton;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetButtonSimple* ApplyButton;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetButtonSimple* RevertButton;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetButtonSimple* CloseButton;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UWidgetSwitcher* SettingsWidgetSwitcher;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_NotifyWantCloseEventSignature OnWantCloseEvent;
     
     UIGS_WidgetOptionsMenu();
@@ -60,13 +60,13 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SetSettingsButtonsState(bool inState) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void RevertButtonClickedEvent() const;
     
     UFUNCTION(BlueprintCallable)
     void OpenFirstTab();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnSubmenuChanged(EIGS_MenuSettingsIndex inType);
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -75,7 +75,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void OnApplyButtonClicked() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ApplyButtonClickedEvent() const;
     
 };

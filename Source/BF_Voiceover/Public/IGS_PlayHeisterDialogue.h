@@ -6,7 +6,7 @@
 class UIGS_PlayHeisterDialogue;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_VOICEOVER_API UIGS_PlayHeisterDialogue : public UIGS_PlayDialogueNodeBase {
     GENERATED_BODY()
 public:

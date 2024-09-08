@@ -10,20 +10,20 @@ class UAnimMontage;
 class UIGS_AICommand;
 class UIGS_ScriptingCommandPlayMocapAnimation;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandPlayMocapAnimation : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandMocapEventOutputPin Succeed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandMocapEventOutputPin Failed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandMocapEventOutputPin EventStart;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandMocapEventOutputPin EventEnd;
     
     UIGS_ScriptingCommandPlayMocapAnimation();
@@ -32,7 +32,7 @@ public:
     static UIGS_ScriptingCommandPlayMocapAnimation* ScriptingCommandPlayMocapAnimation(AIGS_GameCharacterFramework* Character, int32 scope, UAnimMontage* inAnimMontage, FName inSectionName, float InPlayRate, float inStartPosition);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCommandFinished(AIGS_AIControllerGame* inOwningController, UIGS_AICommand* inCommand, bool inFailed);
     
 };

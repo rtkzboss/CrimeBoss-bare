@@ -10,7 +10,7 @@ class UIGS_PersistentAkComponent;
 class UObject;
 class USkeletalMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AUDIOBASE_API UIGS_AudioFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -19,7 +19,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static AIGS_GameCharacterFramework* ResolveGameCharacterFromSkeletalMesh(USkeletalMeshComponent* inSkeletalMeshComponent);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_PersistentAkComponent* GetPersistentAkComponent(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

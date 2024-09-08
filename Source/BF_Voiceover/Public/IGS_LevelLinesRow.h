@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_LevelLinesRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UDataTable> CharacterLines;
     
     FIGS_LevelLinesRow();

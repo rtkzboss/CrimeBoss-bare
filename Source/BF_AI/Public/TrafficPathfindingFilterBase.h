@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TrafficPathfindingFilterBase.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UTrafficPathfindingFilterBase : public UObject {
     GENERATED_BODY()
 public:

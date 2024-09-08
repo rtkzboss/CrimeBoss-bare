@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_KeyItemsData : public FIGS_CommonItemData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_RoomSecurityType KeySecurity;
     
     FIGS_KeyItemsData();

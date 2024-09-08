@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_VehiclesRecord {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export)
     TArray<TWeakObjectPtr<UPFPathFollowerComponent>> Vehicles;
     
     FIGS_VehiclesRecord();

@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnCurrentControllerDisconnectedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnCurrentControllerDisconnected);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnCurrentControllerDisconnected);
 

@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "IGS_Range.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct COVERGENERATOR_API FIGS_Range {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float AngleStart;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float AngleEnd;
     
     FIGS_Range();

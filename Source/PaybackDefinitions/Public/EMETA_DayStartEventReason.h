@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EMETA_DayStartEventReason.generated.h"
 
-UENUM(BlueprintType)
-enum class EMETA_DayStartEventReason : uint8 {
+UENUM()
+enum class EMETA_DayStartEventReason {
     NewDay,
     NewCampaign,
     CampaignLoad,

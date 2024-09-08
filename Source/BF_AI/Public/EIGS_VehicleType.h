@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_VehicleType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_VehicleType : uint8 {
+UENUM()
+enum class EIGS_VehicleType {
     None,
     EscapeVan,
     SwatVan,

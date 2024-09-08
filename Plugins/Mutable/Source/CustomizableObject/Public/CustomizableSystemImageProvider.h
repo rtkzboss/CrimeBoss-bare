@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "CustomizableSystemImageProvider.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class CUSTOMIZABLEOBJECT_API UCustomizableSystemImageProvider : public UObject {
     GENERATED_BODY()
 public:

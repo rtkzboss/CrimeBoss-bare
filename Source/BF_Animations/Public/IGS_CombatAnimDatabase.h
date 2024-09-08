@@ -6,17 +6,17 @@
 
 class UAnimMontage;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_CombatAnimDatabase : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> AnimVariations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool isLooped;
     
     BF_ANIMATIONS_API FIGS_CombatAnimDatabase();

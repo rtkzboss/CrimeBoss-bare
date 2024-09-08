@@ -6,15 +6,15 @@
 
 class UIGS_AISuspiciousnessComponentBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_CallWalkieTalkieAlertedByOtherChar : public UBTTask_CallWalkieTalkieBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_AISuspiciousnessComponentBase* m_SusComp;
     
 public:

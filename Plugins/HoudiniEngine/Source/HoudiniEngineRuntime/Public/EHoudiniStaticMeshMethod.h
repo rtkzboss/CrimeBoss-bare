@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniStaticMeshMethod.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EHoudiniStaticMeshMethod : uint8 {
     RawMesh,
     FMeshDescription,

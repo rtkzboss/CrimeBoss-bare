@@ -10,7 +10,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UCommonCharacterIDHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -28,7 +28,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsValidGenericCharacter(const UObject* inWCO, EIGS_CharacterID inCharacterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsValidCharacterTag(UObject* inWCO, FGameplayTag inTagID);
     
     UFUNCTION(BlueprintCallable)
@@ -43,13 +43,13 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsValidBossCharacter(const UObject* inWCO, EIGS_CharacterID inCharacterID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsUniqueCharacterTag(UObject* inWCO, FGameplayTag inTagID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsGenericCharacterTag(UObject* inWCO, FGameplayTag inTagID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsBossCharacterTag(UObject* inWCO, FGameplayTag inTagID);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -97,10 +97,10 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_CharacterSkinTableRow> GetAllCharacterSkinsData(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static EIGS_CharacterID ConvertTagIDToCharacterID(UObject* inWCO, FGameplayTag inTagID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static FGameplayTag ConvertCharacterIDToTagID(UObject* inWCO, EIGS_CharacterID inCharacterID);
     
 };

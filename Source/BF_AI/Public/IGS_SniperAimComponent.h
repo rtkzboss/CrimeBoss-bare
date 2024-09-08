@@ -11,27 +11,27 @@ class AIGS_AIControllerBase;
 class AIGS_WieldableBase;
 class UIGS_WieldableInventoryObjectBase;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SniperAimComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SniperAimData, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_SniperAimData)
     FIGS_SniperAimData mR_SniperAimData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool mR_IsLocked;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval HorizontalOffset;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval VerticalOffset;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval HorizontalSpeed;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FFloatInterval VerticalSpeed;
     
 public:
@@ -40,16 +40,16 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWieldableChanged(EIGS_WieldableSlot inSlotType, AIGS_WieldableBase* inWieldableBase, UIGS_WieldableInventoryObjectBase* inInventoryObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_SniperAimData();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAggroTargetChanged(AIGS_AIControllerBase* InController, AActor* inAggroTarget);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_ReportFire(bool inIsHit);
     
 };

@@ -8,7 +8,7 @@
 class AActor;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_Physics : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_DodgeVariant.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_DodgeVariant : uint8 {
+UENUM()
+enum class EIGS_DodgeVariant {
     DODGE_Unknown = 255,
     DODGE_None = 0,
     DODGE_Flinch,

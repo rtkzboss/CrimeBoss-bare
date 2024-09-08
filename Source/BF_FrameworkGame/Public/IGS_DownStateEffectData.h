@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_DownStateEffectData : public FIGS_PlayerEffectData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UIGS_DownStateEffectDataAsset* DownStateEffectDataAsset;
     
     FIGS_DownStateEffectData();

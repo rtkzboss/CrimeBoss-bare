@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_Quick_ContractManagerSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<TSubclassOf<UIGS_ContractID>> AvailableContracts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FMETA_MissionsSave ActiveContractMissions;
     
     FIGS_Quick_ContractManagerSaveData();

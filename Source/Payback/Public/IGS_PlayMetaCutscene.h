@@ -11,17 +11,17 @@
 class UIGS_PlayMetaCutscene;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API UIGS_PlayMetaCutscene : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneResultDelegate CutsceneStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneResultDelegate CutsceneFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneResultDelegate CutsceneUnloaded;
     
     UIGS_PlayMetaCutscene();
@@ -30,19 +30,19 @@ public:
     static UIGS_PlayMetaCutscene* PlayMetaCutscene(UObject* inWCO, FText inCutsceneID, FText inDebugText, TMap<FGameplayTag, FIGS_CutsceneTagValue> inTagParams, FIGS_MetaCutsceneCharacters inCharacters, bool inAutoStart);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCutsceneUnloaded(FName inCutsceneID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCutsceneStarted(FName inCutsceneID, FIGS_MetaCutsceneResults inResults);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCutsceneLoaded(FName inCutsceneID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCutsceneFinished(FName inCutsceneID, FIGS_MetaCutsceneResults inResult);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LoadCutscene(FName inCutsceneID);
     
 };

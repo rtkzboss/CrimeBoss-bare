@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnCustomObjectiveEnabledDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnCustomObjectiveEnabled, bool, inEnabled);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnCustomObjectiveEnabled, bool, inEnabled);
 

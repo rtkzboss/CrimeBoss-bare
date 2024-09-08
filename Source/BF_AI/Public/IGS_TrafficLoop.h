@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_TrafficLoop {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TArray<FIGS_TrafficLoopSegment> Segments;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float Lenght;
     
     FIGS_TrafficLoop();

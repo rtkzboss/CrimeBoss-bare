@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_RopeMaterialSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName ParNameTilingU;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaterialTilingU;
     
     BF_FRAMEWORKGAME_API FIGS_RopeMaterialSettings();

@@ -3,11 +3,11 @@
 #include "ISoundfieldEndpoint.h"
 #include "AudioOut2SoundfieldEndpointSettings.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class UAudioOut2SoundfieldEndpointSettings : public USoundfieldEndpointSettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int32 ControllerIndex;
     
     UAudioOut2SoundfieldEndpointSettings();

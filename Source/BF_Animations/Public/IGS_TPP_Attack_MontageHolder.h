@@ -4,14 +4,14 @@
 
 class UAnimMontage;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_TPP_Attack_MontageHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UAnimMontage* ActiveAttackMontage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UAnimMontage* ActiveWeaponAttackMontage;
     
     BF_ANIMATIONS_API FIGS_TPP_Attack_MontageHolder();

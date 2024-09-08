@@ -6,14 +6,14 @@
 class APrefabActor;
 class UPrefabSeedLinkerComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PREFABRICATORRUNTIME_API APrefabSeedLinker : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<APrefabActor>> LinkedActors;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UPrefabSeedLinkerComponent* SeedLinkerComponent;
     
     APrefabSeedLinker(const FObjectInitializer& ObjectInitializer);

@@ -4,12 +4,12 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTDecorator_CoverAttackSequenceBase.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UBTDecorator_CoverAttackSequenceBase : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector UpdateCoverKey;
     
 public:

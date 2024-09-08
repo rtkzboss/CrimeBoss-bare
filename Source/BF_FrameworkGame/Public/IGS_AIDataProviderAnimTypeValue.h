@@ -4,11 +4,11 @@
 #include "EIGS_SpawnAnimType.h"
 #include "IGS_AIDataProviderAnimTypeValue.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIDataProviderAnimTypeValue : public FAIDataProviderTypedValue {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_SpawnAnimType DefaultValue;
     
     FIGS_AIDataProviderAnimTypeValue();

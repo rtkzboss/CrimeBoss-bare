@@ -3,7 +3,7 @@
 #include "Blueprint/UserWidget.h"
 #include "IGS_WidgetGridContainerItem.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetGridContainerItem : public UUserWidget {
     GENERATED_BODY()
 public:

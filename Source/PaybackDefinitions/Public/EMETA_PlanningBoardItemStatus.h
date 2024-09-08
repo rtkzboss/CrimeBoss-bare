@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_PlanningBoardItemStatus.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_PlanningBoardItemStatus : uint8 {
     None,
     InProgress,

@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct FIGS_UnlockStats {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, FIGS_UnlockStatsLevels> ItemStats;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_UnlockCategory, FIGS_UnlockStatsQualities> CategoryStats;
     
     BF_FRAMEWORKBASE_API FIGS_UnlockStats();

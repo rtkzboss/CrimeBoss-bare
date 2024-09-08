@@ -4,5 +4,5 @@
 
 class AIGS_GameCharacterFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnLockPickEndedEventSignature, AIGS_GameCharacterFramework*, inInstigator, bool, inSuccess);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnLockPickEndedEventSignature, AIGS_GameCharacterFramework*, inInstigator, bool, inSuccess);
 

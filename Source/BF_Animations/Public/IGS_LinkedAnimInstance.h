@@ -3,7 +3,7 @@
 #include "Animation/AnimInstance.h"
 #include "IGS_LinkedAnimInstance.generated.h"
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_LinkedAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:

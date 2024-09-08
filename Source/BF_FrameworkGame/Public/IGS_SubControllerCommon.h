@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "IGS_SubControllerCommon.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SubControllerCommon : public UActorComponent {
     GENERATED_BODY()
 public:

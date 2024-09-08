@@ -3,7 +3,7 @@
 #include "IGS_SentryControllerPlayerBase.h"
 #include "IGS_SentryCameraPlayerController.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_SentryCameraPlayerController : public AIGS_SentryControllerPlayerBase {
     GENERATED_BODY()
 public:

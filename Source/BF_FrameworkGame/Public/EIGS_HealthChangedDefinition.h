@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_HealthChangedDefinition.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_HealthChangedDefinition : uint8 {
+UENUM()
+enum class EIGS_HealthChangedDefinition {
     Unknown = 255,
     Normal = 0,
     Accumulated,

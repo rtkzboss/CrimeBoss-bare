@@ -13,7 +13,7 @@ UCLASS(Blueprintable)
 class CRIMEBOSSMETA_API UMETA_StoryGraph : public UMETA_BaseStoryGraph {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EMETA_RandEventCategory Type;
     
     UMETA_StoryGraph();
@@ -21,7 +21,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ResetGraph();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UStoryGraphManager* GetOwningManager();
     
     UFUNCTION(BlueprintCallable)

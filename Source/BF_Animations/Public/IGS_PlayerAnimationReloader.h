@@ -10,10 +10,10 @@ struct BF_ANIMATIONS_API FIGS_PlayerAnimationReloader {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient)
     UIGS_ReloaderBase* m_ReloadBase;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     AIGS_WeaponBase* m_WeaponBase;
     
 public:

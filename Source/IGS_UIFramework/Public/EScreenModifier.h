@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EScreenModifier.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EScreenModifier : uint8 {
     None,
     HideUnderlayingViews,

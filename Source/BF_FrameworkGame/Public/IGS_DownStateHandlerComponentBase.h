@@ -6,17 +6,17 @@
 #include "IGS_OnRevivedEventDelegate.h"
 #include "IGS_DownStateHandlerComponentBase.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DownStateHandlerComponentBase : public UIGS_DownStateHandlerComponentFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnReviveStartEvent OnReviveStartedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnReviveStopEvent OnReviveStopEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnRevivedEvent OnRevivedEvent;
     
     UIGS_DownStateHandlerComponentBase(const FObjectInitializer& ObjectInitializer);

@@ -5,14 +5,14 @@
 #include "IGS_ReactionAnimData.h"
 #include "IGS_ReactionAnimsTableRow.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_ReactionAnimsTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_ReactionAnimData> AnimVariations;
     
     BF_ANIMATIONS_API FIGS_ReactionAnimsTableRow();

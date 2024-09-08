@@ -3,14 +3,14 @@
 #include "UObject/Object.h"
 #include "KiBLIISettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Engine)
+UCLASS(DefaultConfig)
 class UKiBLIISettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bEnableInGame;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bEnableInEditor;
     
     UKiBLIISettings();

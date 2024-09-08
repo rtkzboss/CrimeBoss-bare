@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "MiniLerpOutputFinishPinDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMiniLerpOutputFinishPin);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FMiniLerpOutputFinishPin);
 

@@ -5,14 +5,14 @@
 
 class UDataAsset;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_AudioSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_AudioSettings")
 class BF_AUDIOBASE_API UIGS_AudioDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> MusicSubsystemDataAsset;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> AudioSubsystemDataAsset;
     
     UIGS_AudioDevSettings();

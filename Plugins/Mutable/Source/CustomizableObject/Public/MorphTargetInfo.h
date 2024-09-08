@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FMorphTargetInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FName Name;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 LodNum;
     
     CUSTOMIZABLEOBJECT_API FMorphTargetInfo();

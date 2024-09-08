@@ -7,24 +7,24 @@ class UIGS_CharacterData;
 class UIGS_LocationsAroundTarget;
 class UIGS_TokenPool;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_GroupSharedData : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_CharacterData> OwnerCharacterData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_TokenPool* TokenPool;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_LocationsAroundTarget* LocationsAroundTarget;
     
 public:
     UIGS_GroupSharedData();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_TokenPool* GetTokenPool() const;
     
 };

@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "IGS_BTTask_MountedGunPatrol.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UIGS_BTTask_MountedGunPatrol : public UBTTaskNode {
     GENERATED_BODY()
 public:

@@ -5,13 +5,13 @@
 
 class UIGS_GuardControlRoomComponentBase;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_FRAMEWORKBASE_API AIGS_ControlRoomBase : public AVolume {
     GENERATED_BODY()
 public:
     AIGS_ControlRoomBase(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_GuardControlRoomComponentBase* GetGuardSquadControlRoomComponent() const;
     
 };

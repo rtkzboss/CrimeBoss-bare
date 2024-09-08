@@ -4,11 +4,11 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTTask_PlayMocapAnimation.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_PlayMocapAnimation : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector AnimationCommandKey;
     
     UBTTask_PlayMocapAnimation();

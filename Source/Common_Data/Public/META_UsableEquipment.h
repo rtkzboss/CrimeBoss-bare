@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_UsableEquipment {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<EMETA_ItemQuality, FGameplayTag> Data;
     
     FMETA_UsableEquipment();

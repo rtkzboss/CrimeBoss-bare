@@ -7,7 +7,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_RichPresenceWorldManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:

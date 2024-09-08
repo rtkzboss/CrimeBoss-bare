@@ -16,7 +16,7 @@ class AIGS_MountedWeapon;
 class UDamageType;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_ScriptingCommandsLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

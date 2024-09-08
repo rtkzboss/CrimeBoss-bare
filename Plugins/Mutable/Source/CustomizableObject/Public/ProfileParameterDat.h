@@ -8,29 +8,29 @@
 #include "CustomizableObjectVectorParameterValue.h"
 #include "ProfileParameterDat.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FProfileParameterDat {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString ProfileName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FCustomizableObjectBoolParameterValue> BoolParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FCustomizableObjectIntParameterValue> IntParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FCustomizableObjectFloatParameterValue> FloatParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FCustomizableObjectTextureParameterValue> TextureParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FCustomizableObjectVectorParameterValue> VectorParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FCustomizableObjectProjectorParameterValue> ProjectorParameters;
     
     CUSTOMIZABLEOBJECT_API FProfileParameterDat();

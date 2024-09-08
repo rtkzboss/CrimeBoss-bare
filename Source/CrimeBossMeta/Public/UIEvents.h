@@ -5,12 +5,12 @@
 
 class UMETA_Character;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UUIEvents : public UTickableWorldSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UMETA_Character*> m_HiredHeisters;
     
 public:

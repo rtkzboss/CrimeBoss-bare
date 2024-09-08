@@ -4,11 +4,11 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTService_AIDirectorTacticForHeavy.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_AIDirectorTacticForHeavy : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector WaveManagerTacticKey;
     
     UBTService_AIDirectorTacticForHeavy();

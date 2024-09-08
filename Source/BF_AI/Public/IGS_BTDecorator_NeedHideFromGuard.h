@@ -3,7 +3,7 @@
 #include "IGS_BTDecorator_Base.h"
 #include "IGS_BTDecorator_NeedHideFromGuard.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTDecorator_NeedHideFromGuard : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:

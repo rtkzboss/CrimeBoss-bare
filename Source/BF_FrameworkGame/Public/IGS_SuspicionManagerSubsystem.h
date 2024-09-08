@@ -5,12 +5,12 @@
 
 class UIGS_SuspicionManager;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_SuspicionManagerSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_SuspicionManager* CachedSuspicionManager;
     
 public:

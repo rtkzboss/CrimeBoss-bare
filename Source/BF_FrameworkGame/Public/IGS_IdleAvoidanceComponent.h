@@ -4,18 +4,18 @@
 #include "EIGS_CharacterVsHeistersCollisionStatus.h"
 #include "IGS_IdleAvoidanceComponent.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_IdleAvoidanceComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float VelocityTreshold;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float AvoidanceWeihgtOverride;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CharacterVsHeistersCollisionStatus, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_CharacterVsHeistersCollisionStatus)
     EIGS_CharacterVsHeistersCollisionStatus m_CharacterVsHeistersCollisionStatus;
     
 public:
@@ -24,7 +24,7 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CharacterVsHeistersCollisionStatus();
     
 };

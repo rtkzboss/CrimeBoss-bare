@@ -3,7 +3,7 @@
 #include "IGS_BTDecorator_Base.h"
 #include "BTDecorator_IsAlarmOn.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_IsAlarmOn : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:

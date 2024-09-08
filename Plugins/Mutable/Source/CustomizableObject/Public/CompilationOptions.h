@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "CompilationOptions.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCompilationOptions {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bTextureCompression;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 OptimizationLevel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bUseParallelCompilation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bUseDiskCompilation;
     
     CUSTOMIZABLEOBJECT_API FCompilationOptions();

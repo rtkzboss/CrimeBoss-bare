@@ -4,15 +4,15 @@
 #include "PropMeshInfoStruct.h"
 #include "IGS_PropMeshBase.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PropMeshBase : public UIGS_BreakableMeshComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropMeshInfoStruct PropMeshInfo;
     
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_Spawned, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_Spawned)
     int16 mR_SpawnedIndex;
     
 public:
@@ -20,7 +20,7 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Spawned();
     
 };

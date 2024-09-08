@@ -7,7 +7,7 @@ class ACharacter;
 class UAnimMontage;
 class USkeletalMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_Animations : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

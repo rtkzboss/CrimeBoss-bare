@@ -9,19 +9,19 @@ USTRUCT(BlueprintType)
 struct BF_LEVELGENERATOR_API FIGS_LightingScenarioWorldSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FString LightingScenarioHelp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bLevelIsPersistent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UWorld> DefaultLightingScenarioLevel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bUseDefaultScenario;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<EIGS_LightingScenarioType, TSoftObjectPtr<UWorld>> LightingScenarioMapPairs;
     
     FIGS_LightingScenarioWorldSettings();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_UnregisterReason.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_UnregisterReason : uint8 {
     UR_EndPlay,
     UR_Death,

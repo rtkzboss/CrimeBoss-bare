@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FIGS_StormTypeHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_ScenarioDifficulty, FIGS_StormHolder> StormHolders;
     
     BF_FRAMEWORKGAME_API FIGS_StormTypeHolder();

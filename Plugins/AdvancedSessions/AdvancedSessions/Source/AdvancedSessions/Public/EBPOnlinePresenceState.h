@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBPOnlinePresenceState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EBPOnlinePresenceState : uint8 {
     Online,
     Offline,

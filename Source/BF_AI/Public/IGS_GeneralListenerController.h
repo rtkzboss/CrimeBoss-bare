@@ -6,14 +6,14 @@
 
 class AActor;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_GeneralListenerController : public AAIController {
     GENERATED_BODY()
 public:
     AIGS_GeneralListenerController(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus);
     
 };

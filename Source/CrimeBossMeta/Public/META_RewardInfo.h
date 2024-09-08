@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FMETA_RewardInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Title;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardTheme Theme;
     
     CRIMEBOSSMETA_API FMETA_RewardInfo();

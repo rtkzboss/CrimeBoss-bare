@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ObjectiveReward.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_ObjectiveReward : uint8 {
     None,
     Cash,

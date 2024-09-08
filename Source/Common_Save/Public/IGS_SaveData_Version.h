@@ -6,16 +6,16 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_SaveData_Version {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(SaveGame)
     uint32 JsonVersion;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(SaveGame)
     FString RevisionCreated;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(SaveGame)
     FString RevisionSaved;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(SaveGame)
     FString SnapshotRevision;
     
     FIGS_SaveData_Version();

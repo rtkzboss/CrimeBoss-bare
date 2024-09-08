@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnZiptyingStartedSignatureDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnZiptyingStartedSignature);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnZiptyingStartedSignature);
 

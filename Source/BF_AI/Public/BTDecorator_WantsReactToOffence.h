@@ -4,12 +4,12 @@
 #include "IGS_BTDecorator_Base.h"
 #include "BTDecorator_WantsReactToOffence.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_WantsReactToOffence : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
 public:

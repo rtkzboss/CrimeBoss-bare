@@ -9,7 +9,7 @@
 class UMETA_PlotlineAsset;
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_PlotlineAssetsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -18,46 +18,46 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<UMETA_PlotlineAsset*> SortAssetsByPrice(TArray<UMETA_PlotlineAsset*> inAssets, bool inAscending);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPersistent(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetUnlockBossLevel(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetScore(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetPreviousVersion(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetNextTier(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetName(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UTexture2D> GetImage(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_PlotlineAssetTableRow GetEventInfo(FGameplayTag inAssetID, bool& outSuccess) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FText GetDescription(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetCanBeLost(FGameplayTag inAssetID, bool& outSuccess) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetCanBeBought(FGameplayTag inAssetID, FGameplayTag& outPriceTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetBossPointMultiplier(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_PlotlineAssetAvailability GetAvailability(FGameplayTag inAssetID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FGameplayTag> GetAssetsTags() const;
     
 };

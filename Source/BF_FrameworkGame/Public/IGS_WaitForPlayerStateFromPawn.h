@@ -8,11 +8,11 @@ class AIGS_PlayerCharacter;
 class UIGS_WaitForPlayerStateFromPawn;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForPlayerStateFromPawn : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FPlayerStateFromPawnReadyOutputPin WhenPlayerStateReady;
     
     UIGS_WaitForPlayerStateFromPawn();

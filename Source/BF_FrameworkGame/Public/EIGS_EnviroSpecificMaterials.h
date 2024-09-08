@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_EnviroSpecificMaterials.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_EnviroSpecificMaterials : uint8 {
+UENUM()
+enum class EIGS_EnviroSpecificMaterials {
     ESM_Water,
 };
 

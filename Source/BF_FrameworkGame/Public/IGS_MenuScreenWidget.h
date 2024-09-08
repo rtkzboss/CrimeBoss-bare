@@ -7,11 +7,11 @@
 #include "Blueprint/UserWidget.h"
 #include "IGS_MenuScreenWidget.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_MenuScreenWidget : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag screenTag;
     
     UIGS_MenuScreenWidget();
@@ -22,19 +22,19 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RefreshFocus();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnSwitchedTo();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnSwitchedFrom();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnMenuInput(EIGS_InputAction InAction);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnMainScreenSwitch(FGameplayTag inEntireScreenTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnExit();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -43,13 +43,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnAnalogInput(EIGS_InputThumbstickType Type, FVector2D Value);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool GoBackInternal();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool GoBack();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ConfirmInternal();
     
 };

@@ -5,12 +5,12 @@
 
 class UCustomizableObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CUSTOMIZABLEOBJECTPOPULATION_API UCustomizableObjectPopulationGenerator : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UCustomizableObject*> PopulationObjects;
     
 public:

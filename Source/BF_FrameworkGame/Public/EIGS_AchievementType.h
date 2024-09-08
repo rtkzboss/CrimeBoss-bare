@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AchievementType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_AchievementType : uint8 {
     PerAccount,
     PerCareer,

@@ -13,35 +13,35 @@ class UHorizontalBox;
 class UIGS_JobsItemWidget;
 class UTextBlock;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_JobsScreenCategoryWidget : public UIGS_WidgetWithInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UHorizontalBox* CategoryContentBox;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UTextBlock* CategoryNameText;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_JobsItemWidget> JobsItemWidgetClass;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_JobsCategorySelect OnJobsCategorySelect;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_JobsCategorySelectNoScrollNoFocus OnJobsCategorySelectNoScrollNoFocus;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_JobsCategoryHovered OnJobItemHovered;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_JobItemSelected OnJobItemSelected;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     TArray<UIGS_JobsItemWidget*> JobItemWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool isSelected;
     
     UIGS_JobsScreenCategoryWidget();
@@ -53,26 +53,26 @@ public:
     void SetIsCategorySelected(bool inIsSelected);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnJobItemSelected_Internal(UIGS_JobsItemWidget* JobWidget);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnJobItemHovered_Internal();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCategorySelected();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCategoryInitialized();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCategoryDeselected();
     
     UFUNCTION(BlueprintCallable)
     void InitCategory(const FIGS_MultiplayerJobCategoryRow& categoryData);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_JobsItemWidget* GetFirstJobWidget() const;
     
 };

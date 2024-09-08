@@ -4,14 +4,14 @@
 #include "IGS_DefaultInputDeviceSingleSetting.h"
 #include "IGS_InputActionDefaultKeysDataAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_INPUT_API UIGS_InputActionDefaultKeysDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_DefaultInputDeviceSingleSetting KeyboardDefaultKeyInputs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_DefaultInputDeviceSingleSetting GamepadDefaultKeyInputs;
     
     UIGS_InputActionDefaultKeysDataAsset();

@@ -5,12 +5,12 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSUMG_API UCartesianPlot : public UKantanCartesianPlotBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
     UObject* DataSource;
     
 public:

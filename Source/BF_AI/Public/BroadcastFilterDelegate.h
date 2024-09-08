@@ -5,5 +5,5 @@
 class UIGS_NavLinkComponentBase;
 class UObject;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FBroadcastFilter, const UIGS_NavLinkComponentBase*, ThisComp, TArray<UObject*>&, NotifyList);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FBroadcastFilter, const UIGS_NavLinkComponentBase*, ThisComp, TArray<UObject*>&, NotifyList);
 

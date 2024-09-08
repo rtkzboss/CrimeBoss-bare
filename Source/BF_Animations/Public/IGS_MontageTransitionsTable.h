@@ -5,11 +5,11 @@
 
 class UAnimMontage;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_ANIMATIONS_API UIGS_MontageTransitionsTable : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> MontageTransitions;
     
     UIGS_MontageTransitionsTable();

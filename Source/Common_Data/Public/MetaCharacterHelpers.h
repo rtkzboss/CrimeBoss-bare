@@ -5,7 +5,7 @@
 
 class UMETA_Character;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UMetaCharacterHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -14,21 +14,21 @@ class UIGS_ImpactTypeObject;
 class UObject;
 class USkinnedDecalSampler;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_IMPACTS_API UIGS_ImpactManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool DisableBloodImpacts;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<TSubclassOf<UIGS_ImpactTypeObject>> LoadedIDs;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<TWeakObjectPtr<UObject>, float> HitImpactCooldownMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ImpactManagerSettings* ImpactManagerSettings;
     
 public:

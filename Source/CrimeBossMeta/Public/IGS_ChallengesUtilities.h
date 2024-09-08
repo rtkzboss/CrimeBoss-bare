@@ -6,13 +6,13 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UIGS_ChallengesUtilities : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UIGS_ChallengesUtilities();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCompletedCampaignCount(UObject* inWCO, EIGS_UserDifficulty inDifficulty);
     
 };

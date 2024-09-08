@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EChartAxisPosition.generated.h"
 
-UENUM(BlueprintType)
-enum class EChartAxisPosition : uint8 {
+UENUM()
+enum class EChartAxisPosition {
     LeftBottom,
     RightTop,
     Floating,

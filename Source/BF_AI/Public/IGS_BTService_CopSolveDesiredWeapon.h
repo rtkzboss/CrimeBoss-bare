@@ -4,15 +4,15 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "IGS_BTService_CopSolveDesiredWeapon.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTService_CopSolveDesiredWeapon : public UBTService {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MeleeTypeKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DesiredWeaponKey;
     
 public:

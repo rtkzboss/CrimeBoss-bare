@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FPopulationClassParameterOptions {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FString> Tags;
     
     CUSTOMIZABLEOBJECTPOPULATION_API FPopulationClassParameterOptions();

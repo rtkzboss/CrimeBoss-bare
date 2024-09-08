@@ -10,27 +10,27 @@
 
 class UIGS_GlobalInventoryObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_GlobalInventory : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_GlobalInventoryModifiedDynamicSignature OnInventoryModified;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_GlobalItemChangedDynamicSignature OnItemAdded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_GlobalItemChangedDynamicSignature OnItemRemoved;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_GlobalItemChangedDynamicSignature OnWTAdded;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Slots, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_Slots)
     TArray<FIGS_GlobalItemSlot> mR_Slots;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_WTSlot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_WTSlot)
     FIGS_GlobalItemSlot mR_WTSlot;
     
 public:
@@ -42,10 +42,10 @@ public:
     bool RemoveItem(const TSubclassOf<UIGS_GlobalInventoryObject>& inItemClass, bool inRemoveAll);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_WTSlot(FIGS_GlobalItemSlot inWTSlot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Slots(const TArray<FIGS_GlobalItemSlot>& inOldSlots);
     
 public:
@@ -55,13 +55,13 @@ public:
     UFUNCTION(BlueprintCallable)
     bool HasItemWithProperty(EIGS_ItemPropertyFlags inProperty);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetWTCount() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetItemCount(const TSubclassOf<UIGS_GlobalInventoryObject>& inItemClass) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_GlobalItemSlot> GetAllSlotsBP() const;
     
     UFUNCTION(BlueprintCallable)

@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct BF_AUDIO_API FMETA_MusicPacksTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSoftObjectPtr<UAkStateValue>> MusicPacks;
     
     FMETA_MusicPacksTableRow();

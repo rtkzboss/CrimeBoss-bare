@@ -4,14 +4,14 @@
 #include "EStreamlineSettingOverride.h"
 #include "StreamlineOverrideSettings.generated.h"
 
-UCLASS(Blueprintable, ProjectUserConfig, Config=Engine)
+UCLASS(ProjectUserConfig)
 class STREAMLINERHI_API UStreamlineOverrideSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     EStreamlineSettingOverride EnableDLSSFGInPlayInEditorViewportsOverride;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     EStreamlineSettingOverride LoadDebugOverlayOverride;
     
     UStreamlineOverrideSettings();

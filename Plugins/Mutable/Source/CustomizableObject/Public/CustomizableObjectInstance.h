@@ -20,45 +20,45 @@ class UCustomizableObjectInstance;
 class USkeletalMesh;
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CUSTOMIZABLEOBJECT_API UCustomizableObjectInstance : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UCustomizableObject* CustomizableObject;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient, VisibleAnywhere)
     USkeletalMesh* SkeletalMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
     TArray<FCustomizableObjectBoolParameterValue> BoolParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
     TArray<FCustomizableObjectIntParameterValue> IntParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
     TArray<FCustomizableObjectFloatParameterValue> FloatParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
     TArray<FCustomizableObjectTextureParameterValue> TextureParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
     TArray<FCustomizableObjectVectorParameterValue> VectorParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
     TArray<FCustomizableObjectProjectorParameterValue> ProjectorParameters;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     bool bBuildParameterDecorations;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, Transient)
     FObjectInstanceUpdatedDelegate UpdatedDelegate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString SkeletalMeshStatus;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UCustomizableInstancePrivateData* PrivateData;
     
 public:
@@ -103,70 +103,70 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 RemoveValueFromFloatRange(const FString& ParamName);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsParamMultidimensional(const FString& ParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsParameterRelevant(const FString& ParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetProjectorValue(const FString& ProjectorParamName, FVector& Pos, FVector& Direction, FVector& Up, FVector& Scale, float& Angle, ECustomizableObjectProjectorType& Type, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetProjectorUp(const FString& ParamName, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetProjectorScale(const FString& ParamName, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetProjectorPosition(const FString& ParamName, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     ECustomizableObjectProjectorType GetProjectorParameterType(const FString& ParamName, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetProjectorDirection(const FString& ParamName, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetProjectorAngle(const FString& ParamName, int32 RangeIndex) const;
     
     UFUNCTION(BlueprintCallable)
     UTexture2D* GetParameterDescription(const FString& ParamName, int32 DescIndex);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FString GetIntParameterSelectedOption(const FString& ParamName, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetFloatParameterSelectedOption(const FString& FloatParamName, int32 RangeIndex) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_CustomizationArchive GetCustomizationArchive();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FString GetCurrentState() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FLinearColor GetColorParameterSelectedOption(const FString& ColorParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetBoolParameterSelectedOption(const FString& BoolParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 FindVectorParameterNameIndex(const FString& ParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 FindProjectorParameterNameIndex(const FString& ParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 FindIntParameterNameIndex(const FString& ParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 FindFloatParameterNameIndex(const FString& ParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 FindBoolParameterNameIndex(const FString& ParamName) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 CurrentParamRange(const FString& ParamName) const;
     
     UFUNCTION(BlueprintCallable)

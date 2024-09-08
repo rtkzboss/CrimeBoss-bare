@@ -15,24 +15,24 @@ class UIGS_MusicSubsystemDataAsset;
 class UIGS_PersistentMusicAkComponent;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AUDIO_API UIGS_MusicSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MusicPropertyChanged OnMusicSystemInitialized;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MusicPropertyChanged OnMusicPropertyChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MusicLevelTransition OnMusicGameStageChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_PersistentMusicAkComponent* PersistentMusicAkComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_MusicSubsystemDataAsset* Data;
     
 public:
@@ -63,14 +63,14 @@ public:
     void SetAutoSwitchingEnable(bool inState);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSongDuration(EAkCallbackType CallbackType, UAkCallbackInfo* CallbackInfo);
     
 public:
     UFUNCTION(BlueprintCallable)
     UIGS_PersistentMusicAkComponent* GetPersistentMusicAkComponent();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FString GetCurrerntMusicPack() const;
     
     UFUNCTION(BlueprintCallable)

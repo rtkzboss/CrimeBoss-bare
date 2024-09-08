@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_WeatherParameters.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_WeatherParameters {
     GENERATED_BODY()
 public:

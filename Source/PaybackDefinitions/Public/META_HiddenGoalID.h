@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "META_HiddenGoalID.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class PAYBACKDEFINITIONS_API UMETA_HiddenGoalID : public UObject {
     GENERATED_BODY()
 public:

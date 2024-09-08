@@ -3,19 +3,19 @@
 #include "GameFramework/PlayerController.h"
 #include "IGS_MenuController.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_MenuController : public APlayerController {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool bComesFromMission;
     
     AIGS_MenuController(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ClientWasKickedEvent(const FText& KickReason);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ClientForcedToLeaveLobbyEvent();
     
     UFUNCTION(BlueprintCallable, Client, Reliable)

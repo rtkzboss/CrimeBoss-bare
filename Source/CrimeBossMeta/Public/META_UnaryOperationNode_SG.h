@@ -5,14 +5,14 @@
 #include "META_BaseNode_SG.h"
 #include "META_UnaryOperationNode_SG.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_UnaryOperationNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_UnaryOperation UnaryOperation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag GraphVariable;
     
     UMETA_UnaryOperationNode_SG();

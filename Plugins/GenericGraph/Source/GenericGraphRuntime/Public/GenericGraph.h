@@ -8,32 +8,32 @@
 class UGenericGraphEdge;
 class UGenericGraphNode;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, BlueprintType)
 class GENERICGRAPHRUNTIME_API UGenericGraph : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 END_GRAPH_VALUE;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     int32 START_GRAPH_VALUE;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString Name;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleDefaultsOnly)
     TSubclassOf<UGenericGraphNode> NodeType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleDefaultsOnly)
     TSubclassOf<UGenericGraphEdge> EdgeType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayTagContainer GraphTags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* RootNode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TMap<int32, UGenericGraphNode*> AllNodes;
     
     UGenericGraph();
@@ -44,7 +44,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void GetNodesByLevel(int32 Level, TArray<UGenericGraphNode*>& Nodes);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetLevelNum() const;
     
 };

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBPUserPrivileges.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EBPUserPrivileges : uint8 {
     CanPlay,
     CanPlayOnline,

@@ -6,11 +6,11 @@
 class APlayerState;
 class UObject;
 
-UCLASS(Blueprintable, NonTransient)
+UCLASS(NonTransient)
 class BF_FRAMEWORKBASE_API AIGS_GameModeFramework : public AGameModeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<APlayerState*> InactivePlayerArray;
     
     AIGS_GameModeFramework(const FObjectInitializer& ObjectInitializer);

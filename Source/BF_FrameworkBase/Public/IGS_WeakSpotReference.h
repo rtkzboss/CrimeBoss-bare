@@ -4,11 +4,11 @@
 
 class UIGS_ObjectStatus;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKBASE_API FIGS_WeakSpotReference {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_ObjectStatus* WeakSpotObjectStatus;
     
     FIGS_WeakSpotReference();

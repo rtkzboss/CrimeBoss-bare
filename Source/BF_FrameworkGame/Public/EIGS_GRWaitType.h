@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_GRWaitType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_GRWaitType : uint8 {
     GW_None,
     GW_Barrel_Notice,

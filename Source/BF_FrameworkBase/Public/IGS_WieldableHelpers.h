@@ -7,7 +7,7 @@
 class AActor;
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_WieldableHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

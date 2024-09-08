@@ -17,52 +17,52 @@ class UPrimitiveComponent;
 class UProjectileMovementComponent;
 class USkeletalMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ThrowableProjectileBase : public AIGS_ThrowableProjectileFramework {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UCapsuleComponent* CapsuleCollision;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USkeletalMeshComponent* ThrowableMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UProjectileMovementComponent* ProjectileMovementComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bDamageOnBounce;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Thrower, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Thrower)
     TWeakObjectPtr<AIGS_GameCharacterFramework> mR_Thrower;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient)
     FIGS_ThrowableData ThrowableData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     float mR_TimeHeldInHand;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Thrown, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_Thrown)
     FIGS_ThrowableThrownData mR_ThrownData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_InventoryObjectClass, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_InventoryObjectClass)
     TSubclassOf<UIGS_ThrowableInventoryObject> mR_ThrowableObjectClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsCollisionEnabled, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_IsCollisionEnabled)
     bool mR_IsCollisionEnabled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bMakeImpactNoise;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool mR_bStoppedMoving;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool mR_bHasHit;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool mR_bThrowedByAI;
     
 public:
@@ -71,10 +71,10 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool WasThrownByAI() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool WasThrown() const;
     
 public:
@@ -91,39 +91,39 @@ public:
     void StartPhysics();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnThrown();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnThrowableInit();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Thrown();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Thrower();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_IsCollisionEnabled() const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_InventoryObjectClass();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnProjectileStopped(const FHitResult& inImpactResult);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnProjectileBounced(const FHitResult& inImpactResult, const FVector& inImpactVelocity);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnComponentHit(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inSweepResult);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsOwner(AActor* inOwner) const;
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInitialized() const;
     
 public:
@@ -131,13 +131,13 @@ public:
     void Init(TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, float inTimeHeldInHand);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasHit() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetInitialVelocity() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetInitialThrowSpeed() const;
     
     UFUNCTION(BlueprintCallable)

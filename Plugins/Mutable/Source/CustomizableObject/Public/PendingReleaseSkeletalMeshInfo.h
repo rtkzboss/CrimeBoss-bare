@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FPendingReleaseSkeletalMeshInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     USkeletalMesh* SkeletalMesh;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     double Timestamp;
     
     CUSTOMIZABLEOBJECT_API FPendingReleaseSkeletalMeshInfo();

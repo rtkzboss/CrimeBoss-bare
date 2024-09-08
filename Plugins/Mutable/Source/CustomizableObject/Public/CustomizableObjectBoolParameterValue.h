@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FCustomizableObjectBoolParameterValue {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FString ParameterName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     bool ParameterValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FString Uid;
     
     CUSTOMIZABLEOBJECT_API FCustomizableObjectBoolParameterValue();

@@ -10,7 +10,7 @@ class UMETA_Character;
 class UMETA_PerkStatsData;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UMETA_CharacterPerksHandling : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -73,7 +73,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static float GetHealingMultiplier(UMETA_Character* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static FText GetFormattedPerkDescription(const UObject* inWCO, const FGameplayTag inPerkID, const bool inEnableRichText, const FString& inOverrideStyle);
     
     UFUNCTION(BlueprintCallable)

@@ -3,7 +3,7 @@
 #include "IGS_DamageTypeBase.h"
 #include "IGS_DamageTypeBleedOut.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_DamageTypeBleedOut : public UIGS_DamageTypeBase {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MetaCutsceneCharacterPose.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_MetaCutsceneCharacterPose : uint8 {
     None,
     Listening,

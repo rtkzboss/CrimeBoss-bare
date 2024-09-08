@@ -9,24 +9,24 @@
 #include "META_DifficultyConfig.h"
 #include "IGS_MenuCommonData_Base.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UIGS_MenuCommonData_Base : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FGameplayTag BossCharacterTagID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 AmountOfMissionsCanBeCompletedByEachHeisterPerDay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_DifficultyConfig> ChancesForGeneratingMissionWithDifficulty;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FGameplayTag EdgeCaseObjective;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FGameplayTagContainer AllowedLoot;
     
 public:
@@ -35,19 +35,19 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<EIGS_UserDifficulty> GetSupportedDifficulties();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_ScenarioDifficulty GetRandomizedDifficulty(EMETA_RespectLvl inRespectLvl) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetEdgeCaseObjective() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetBossCharacterTagID() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetAmountOfMissionsCanBeCompletedByEachHeisterPerDay() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetAllowedLoot() const;
     
 };

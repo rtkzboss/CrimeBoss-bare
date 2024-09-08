@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniLandscapeExportType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EHoudiniLandscapeExportType : uint8 {
     Heightfield,
     Mesh,

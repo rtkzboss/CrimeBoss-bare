@@ -4,5 +4,5 @@
 
 class UIGS_InteractiveComponent;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnInteractionProgressEvent, bool, inEnabled, UIGS_InteractiveComponent*, inInteractiveComponent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnInteractionProgressEvent, bool, inEnabled, UIGS_InteractiveComponent*, inInteractiveComponent);
 

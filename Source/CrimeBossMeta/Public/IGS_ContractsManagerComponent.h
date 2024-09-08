@@ -16,19 +16,19 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_ContractsManagerComponent : public UIGS_ContractManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSubclassOf<UIGS_ContractID>, UMETA_BaseFPSMission*> ActiveContracts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UIGS_ContractID>> AvailableContracts;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnContractActivated OnActiveContractAdded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnActiveContractRemoved OnActiveContractRemoved;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnAvailableContractAdded OnAvailableContractAdded;
     
     UIGS_ContractsManagerComponent(const FObjectInitializer& ObjectInitializer);
@@ -45,7 +45,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsContractActivated(TSubclassOf<UIGS_ContractID> inID);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     TSubclassOf<UMETA_MissionID> GetRandomMissionIDFromContract(TSubclassOf<UIGS_ContractID> inContractID);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

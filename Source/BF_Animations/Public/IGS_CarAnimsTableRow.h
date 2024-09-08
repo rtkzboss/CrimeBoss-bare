@@ -6,23 +6,23 @@
 
 class UAnimMontage;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_CarAnimsTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> Idle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> GetOut_Normal;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> GetOut_Fast;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> GetOutMontages;
     
     BF_ANIMATIONS_API FIGS_CarAnimsTableRow();

@@ -4,12 +4,12 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "IGS_BTService_SetWaitLookAt.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTService_SetWaitLookAt : public UBTService {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutLookPos;
     
 public:

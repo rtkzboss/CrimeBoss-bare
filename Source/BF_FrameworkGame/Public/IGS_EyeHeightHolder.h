@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_EyeHeightHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TargetEyeHeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float InterpSpeed;
     
     BF_FRAMEWORKGAME_API FIGS_EyeHeightHolder();

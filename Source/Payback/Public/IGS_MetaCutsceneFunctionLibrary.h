@@ -13,7 +13,7 @@ class UIGS_MetaCutsceneDataAsset;
 class ULevelStreaming;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACK_API UIGS_MetaCutsceneFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_DialogueCameraOverride {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     FText DialogueID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<ACineCameraActor*> TranscriptCameras;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<float> TranscriptDelayes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<FIGS_DialoguePoseAnimationOverride> TranscriptPoseAnimation;
     
     FIGS_DialogueCameraOverride();

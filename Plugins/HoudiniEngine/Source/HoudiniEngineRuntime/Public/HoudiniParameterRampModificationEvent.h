@@ -5,31 +5,31 @@
 #include "EHoudiniRampInterpolationType.h"
 #include "HoudiniParameterRampModificationEvent.generated.h"
 
-UCLASS(Blueprintable, DefaultToInstanced)
+UCLASS(DefaultToInstanced)
 class HOUDINIENGINERUNTIME_API UHoudiniParameterRampModificationEvent : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bIsInsertEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bIsFloatRamp;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 DeleteInstanceIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float InsertPosition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float InsertFloat;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FLinearColor InsertColor;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EHoudiniRampInterpolationType InsertInterpolation;
     
     UHoudiniParameterRampModificationEvent();

@@ -3,7 +3,7 @@
 #include "IGS_ControlRoom.h"
 #include "IGS_ControlRoomVirtual.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_ControlRoomVirtual : public AIGS_ControlRoom {
     GENERATED_BODY()
 public:

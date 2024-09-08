@@ -3,7 +3,7 @@
 #include "IGS_DamageTypeBase.h"
 #include "IGS_DamageTypeTemporaryHealth.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_DamageTypeTemporaryHealth : public UIGS_DamageTypeBase {
     GENERATED_BODY()
 public:

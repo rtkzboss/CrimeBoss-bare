@@ -18,28 +18,28 @@ class UMETA_TaskCondition;
 class UObject;
 class UStoryGraphManager;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_GoalManagerComponent : public UIGS_GoalManagerBaseComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<UMETA_BaseGoal*> CurrentGoals;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<TSubclassOf<UMETA_BaseGoal>> GoalsPools;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<TSubclassOf<UMETA_BaseGoal>> BacklogGoalsPools;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<FMETA_FinishedGoal> FinishedGoals;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<FMETA_GoalsObjectIDCounter> GoalsRepeatCounters;
     
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_TaskAddedOrRemoved OnTaskAddedOrRemoved;
     
     UMETA_GoalManagerComponent(const FObjectInitializer& ObjectInitializer);
@@ -75,7 +75,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void LoadTasksForMoneyMakingGoal(UMETA_MoneyMakingGoal* inGoal, UPARAM(Ref) FMETA_MoneyMakingGoalSave& inGoalSave);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void IsThereSuccessComplitedGoal(bool& bSuccess);
     
 protected:
@@ -83,10 +83,10 @@ protected:
     void GetFinishedGoalsFromPool(TArray<FMETA_FinishedGoal>& outGoals);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<UMETA_BaseGoal*> GetCurrentGoals() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_BaseGoal* GetCurrentGoalByID(TSubclassOf<UMETA_BaseGoal> inGoalID);
     
     UFUNCTION(BlueprintCallable)

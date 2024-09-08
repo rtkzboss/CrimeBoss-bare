@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_MetaDialogueTranscript {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_MetaDialogueCharacterSlot SpeakerSlot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName LineID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_MetaDialogueCharacterSlot, EIGS_MetaCutsceneCharacterPose> CharactersPose;
     
     FIGS_MetaDialogueTranscript();

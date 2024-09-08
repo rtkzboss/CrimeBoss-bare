@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_RopeEventsSignatureDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_RopeEventsSignature);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_RopeEventsSignature);
 

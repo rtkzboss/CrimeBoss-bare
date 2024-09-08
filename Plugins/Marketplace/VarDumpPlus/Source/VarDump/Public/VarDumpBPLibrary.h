@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "VarDumpBPLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class VARDUMP_API UVarDumpBPLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

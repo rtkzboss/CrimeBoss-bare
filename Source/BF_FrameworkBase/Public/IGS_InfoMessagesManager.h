@@ -8,13 +8,13 @@ class UIGS_InfoMessagesManager;
 class UIGS_InventoryObjectFramework;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_InfoMessagesManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UIGS_InfoMessagesManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_InfoMessagesManager* Instance(const UObject* inWorldContextObject);
     
     UFUNCTION(BlueprintCallable)

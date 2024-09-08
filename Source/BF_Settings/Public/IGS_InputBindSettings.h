@@ -11,20 +11,20 @@ class UIGS_InputActionDefaultKeysDataAsset;
 class UIGS_InputActionMapDataAsset;
 class UIGS_InputBindSettings;
 
-UCLASS(Blueprintable, DefaultConfig, Config=Engine)
+UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_InputBindSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputActionMapDataAsset* InputActionMapDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputActionDefaultKeysDataAsset* InputActionDefaultKeysAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FIGS_CachedInputBinding CachedBindings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<EIGS_InputAction, FKey> GamepadMappings;
     
     UIGS_InputBindSettings();
@@ -44,7 +44,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetGamepadBindings();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UIGS_InputBindSettings* Instance();
     
     UFUNCTION(BlueprintCallable)

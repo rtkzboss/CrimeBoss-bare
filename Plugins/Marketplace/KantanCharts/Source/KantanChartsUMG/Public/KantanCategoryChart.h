@@ -7,17 +7,17 @@
 
 class UKantanCategoryStyleSet;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class KANTANCHARTSUMG_API UKantanCategoryChart : public UKantanChart {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bAutoPerCategoryStyles;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     UKantanCategoryStyleSet* CategoryStyleSet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FCategoryStyleManualMapping> ManualStyleMappings;
     
     UKantanCategoryChart();

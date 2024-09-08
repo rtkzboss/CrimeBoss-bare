@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MetaDialogueSpeaker.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_MetaDialogueSpeaker : uint8 {
     None,
     Heister1,

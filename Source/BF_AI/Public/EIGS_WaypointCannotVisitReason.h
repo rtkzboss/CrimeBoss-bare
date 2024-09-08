@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_WaypointCannotVisitReason.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_WaypointCannotVisitReason : uint8 {
+UENUM()
+enum class EIGS_WaypointCannotVisitReason {
     Reason_UNKNOWN = 255,
     Reason_PointIsLocked = 0,
     Reason_WrongTeamside,

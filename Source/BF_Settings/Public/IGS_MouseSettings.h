@@ -5,28 +5,28 @@
 
 class UIGS_MouseSettings;
 
-UCLASS(Blueprintable, DefaultConfig, Config=Engine)
+UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_MouseSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     float MouseSensitivity;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool InvertedVerticalLook;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MouseSensitivityStepSize;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MinMouseSensitivity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float MaxMouseSensitivity;
     
     UIGS_MouseSettings();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UIGS_MouseSettings* Instance();
     
 };

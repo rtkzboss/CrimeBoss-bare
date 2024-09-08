@@ -7,23 +7,23 @@
 class UIGS_BotOrderPlanner;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BotOrderPlanner : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBotOrderPlannerOutputPin Finished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBotOrderPlannerOutputPin Interrupted;
     
     UIGS_BotOrderPlanner();
 
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecFinish(bool inPlayerResponse);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecExpire();
     
 public:

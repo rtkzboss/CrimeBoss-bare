@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CharacterLeaningDirectionEnum.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_CharacterLeaningDirectionEnum : uint8 {
     None,
     Left,

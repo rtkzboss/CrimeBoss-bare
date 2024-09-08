@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "CharDetectingPlayersChangedEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCharDetectingPlayersChangedEvent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCharDetectingPlayersChangedEvent);
 

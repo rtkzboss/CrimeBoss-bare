@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "IGS_LoadLevelLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_LEVELGENERATOR_API UIGS_LoadLevelLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

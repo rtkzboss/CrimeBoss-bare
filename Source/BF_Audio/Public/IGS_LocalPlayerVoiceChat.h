@@ -5,12 +5,12 @@
 
 class UIGS_VoiceChatAudioInputComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AUDIO_API UIGS_LocalPlayerVoiceChat : public ULocalPlayerSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_VoiceChatAudioInputComponent* m_WwiseInputComponent;
     
 public:

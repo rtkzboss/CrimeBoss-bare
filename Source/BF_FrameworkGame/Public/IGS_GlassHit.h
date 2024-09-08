@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FIGS_GlassHit {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector_NetQuantize10 Location;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector2D UVLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float SizeRatio;
     
     BF_FRAMEWORKGAME_API FIGS_GlassHit();

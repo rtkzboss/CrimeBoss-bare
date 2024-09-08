@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_CutsceneCharacterKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MetaDialogueCharacter CharacterID;
     
     FIGS_CutsceneCharacterKey();

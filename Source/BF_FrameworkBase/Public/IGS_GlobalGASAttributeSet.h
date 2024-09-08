@@ -4,14 +4,14 @@
 #include "AttributeSet.h"
 #include "IGS_GlobalGASAttributeSet.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_GlobalGASAttributeSet : public UAttributeSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_EnemyAIDamage, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_EnemyAIDamage)
     FGameplayAttributeData EnemyAIDamage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_EnemyAIDamage, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_EnemyAIDamage)
     FGameplayAttributeData EnemyAIReceiveDamage;
     
     UIGS_GlobalGASAttributeSet();
@@ -19,10 +19,10 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_EnemyAIReceiveDamage(const FGameplayAttributeData& inOldValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_EnemyAIDamage(const FGameplayAttributeData& inOldValue);
     
 };

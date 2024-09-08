@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKBASE_API FIGS_ProgressionResult {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LevelsAdded;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PointsAdded;
     
     FIGS_ProgressionResult();

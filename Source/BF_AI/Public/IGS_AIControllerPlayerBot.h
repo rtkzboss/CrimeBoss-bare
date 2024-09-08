@@ -10,12 +10,12 @@
 
 class UIGS_PlayerBotControllerComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_AIControllerPlayerBot : public AIGS_AIControllerGame, public IIGS_HeisterDataInterface, public IIGS_HeisterNumberInterface, public IIGS_CharacterIDInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_PlayerBotControllerComponent* m_PlayerBotComponent;
     
 public:

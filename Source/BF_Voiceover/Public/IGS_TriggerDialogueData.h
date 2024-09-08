@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FIGS_TriggerDialogueData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_DialogueGroup Group;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName DialogueID;
     
     BF_VOICEOVER_API FIGS_TriggerDialogueData();

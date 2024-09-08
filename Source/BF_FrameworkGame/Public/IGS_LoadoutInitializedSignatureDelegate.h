@@ -4,5 +4,5 @@
 
 class UIGS_PlayerLoadoutComponent;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_LoadoutInitializedSignature, UIGS_PlayerLoadoutComponent*, inPlayerLoadoutComponent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_LoadoutInitializedSignature, UIGS_PlayerLoadoutComponent*, inPlayerLoadoutComponent);
 

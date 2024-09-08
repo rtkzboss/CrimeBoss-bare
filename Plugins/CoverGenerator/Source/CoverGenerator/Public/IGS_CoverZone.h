@@ -3,7 +3,7 @@
 #include "GameFramework/Volume.h"
 #include "IGS_CoverZone.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COVERGENERATOR_API AIGS_CoverZone : public AVolume {
     GENERATED_BODY()
 public:

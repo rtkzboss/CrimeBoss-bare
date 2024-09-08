@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_Quick_ChainPlayerCharacters {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, SaveGame)
     int32 PlayerId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, SaveGame)
     FUniqueNetIdRepl UniquePlayerId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, SaveGame)
     TArray<FCommonHeisterData> Heisters;
     
     FIGS_Quick_ChainPlayerCharacters();

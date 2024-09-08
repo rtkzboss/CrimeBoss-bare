@@ -7,14 +7,14 @@
 
 class AIGS_WaypointBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_DefendPointTugOfWar : public AIGS_DefendPointBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointBase* AdvancePoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointBase* RetreatPoint;
     
     AIGS_DefendPointTugOfWar(const FObjectInitializer& ObjectInitializer);

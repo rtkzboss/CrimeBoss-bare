@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_WeaponScopeKeyChance : public FMETA_WeaponScopeKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float Chance;
     
     FMETA_WeaponScopeKeyChance();

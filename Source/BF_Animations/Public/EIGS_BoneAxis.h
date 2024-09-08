@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_BoneAxis.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_BoneAxis : uint8 {
     BA_None,
     BA_X,

@@ -7,22 +7,22 @@
 class AActor;
 class UIGS_RandomStreamHolder;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_GetActorByGameplayTagManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
     UIGS_GetActorByGameplayTagManager();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AActor* GetRandomActorWithGameplayTagAndRandomStream(const FGameplayTag& inGameplayTag, UIGS_RandomStreamHolder* inRandomStreamHolder) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AActor* GetRandomActorWithGameplayTag(const FGameplayTag& inGameplayTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AActor* GetFirstActorWithGameplayTag(const FGameplayTag& inGameplayTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<AActor*> GetAllActorsWithGameplayTag(const FGameplayTag& inGameplayTag) const;
     
 };

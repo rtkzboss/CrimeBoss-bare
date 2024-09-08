@@ -3,7 +3,7 @@
 #include "ComponentInstanceDataCache.h"
 #include "PathFollowerInstanceData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FPathFollowerInstanceData : public FActorComponentInstanceData {
     GENERATED_BODY()
 public:

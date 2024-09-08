@@ -7,7 +7,7 @@ class UCoverPoint;
 class UObject;
 class UShapeComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_CoverHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

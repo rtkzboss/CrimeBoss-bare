@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_UnlockMagazineType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_UnlockMagazineType : uint8 {
+UENUM()
+enum class EIGS_UnlockMagazineType {
     None,
     Weapons,
     WeaponSkins,

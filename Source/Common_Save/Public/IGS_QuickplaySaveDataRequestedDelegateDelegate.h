@@ -4,5 +4,5 @@
 
 class UIGS_PaybackSaveGameQuickplay;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_QuickplaySaveDataRequestedDelegate, UIGS_PaybackSaveGameQuickplay*, QuickplaySaveGame);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_QuickplaySaveDataRequestedDelegate, UIGS_PaybackSaveGameQuickplay*, QuickplaySaveGame);
 

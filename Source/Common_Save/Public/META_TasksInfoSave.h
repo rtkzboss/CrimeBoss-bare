@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_TasksInfoSave {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_TaskInfoSave> Tasks;
     
     FMETA_TasksInfoSave();

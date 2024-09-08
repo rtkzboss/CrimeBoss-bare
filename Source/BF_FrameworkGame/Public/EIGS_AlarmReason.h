@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AlarmReason.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_AlarmReason : uint8 {
     Alarm_UNKNOWN = 255,
     Alarm_CalledByScript = 0,

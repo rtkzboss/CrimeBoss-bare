@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FCarExitPointsPair {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Left;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Right;
     
     BF_RIDEABLEVEHICLES_API FCarExitPointsPair();

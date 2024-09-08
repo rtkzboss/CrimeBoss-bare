@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMETA_CampaignModeMapping {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag CampaignModeTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_CampaignModeMatchingData> MatchingData;
     
     PAYBACKDEFINITIONS_API FMETA_CampaignModeMapping();

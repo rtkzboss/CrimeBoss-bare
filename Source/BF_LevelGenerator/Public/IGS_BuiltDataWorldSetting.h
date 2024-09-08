@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct BF_LEVELGENERATOR_API FIGS_BuiltDataWorldSetting {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bUsesRotatedData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bUsedWithGenerator;
     
     FIGS_BuiltDataWorldSetting();

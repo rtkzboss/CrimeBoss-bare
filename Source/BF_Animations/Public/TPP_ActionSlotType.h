@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TPP_ActionSlotType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class TPP_ActionSlotType : uint8 {
     EBF_TPP_Throw_Started,
     EBF_TPP_Throw_Finished,

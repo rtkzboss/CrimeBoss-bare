@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ObjectiveState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_ObjectiveState : uint8 {
     InProgress,
     Success,

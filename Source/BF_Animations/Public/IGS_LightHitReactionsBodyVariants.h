@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FIGS_LightHitReactionsBodyVariants {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> UpperBody;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> LowerBody;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> head;
     
     BF_ANIMATIONS_API FIGS_LightHitReactionsBodyVariants();

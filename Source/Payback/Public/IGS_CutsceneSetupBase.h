@@ -6,11 +6,11 @@
 
 class ALevelSequenceActor;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class PAYBACK_API AIGS_CutsceneSetupBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleInstanceOnly)
     TMap<FName, FIGS_DialogueCameraOverride> DialoguesCameraOverdrive;
     
     AIGS_CutsceneSetupBase(const FObjectInitializer& ObjectInitializer);

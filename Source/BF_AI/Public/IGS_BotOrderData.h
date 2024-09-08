@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_BotOrderData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     AIGS_GameCharacterFramework* Character;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float EnterTime;
     
     BF_AI_API FIGS_BotOrderData();

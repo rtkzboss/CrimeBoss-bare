@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_WaveDirectionType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_WaveDirectionType : uint8 {
+UENUM()
+enum class EIGS_WaveDirectionType {
     WDT_None,
     WDT_North,
     WDT_East,

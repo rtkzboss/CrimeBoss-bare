@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "CustomizableInstanceLODManagementBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CUSTOMIZABLEOBJECT_API UCustomizableInstanceLODManagementBase : public UObject {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UDLSSSupport.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class UDLSSSupport : uint8 {
     Supported,
     NotSupported,

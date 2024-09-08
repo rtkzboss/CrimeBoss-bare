@@ -6,7 +6,7 @@
 class AIGS_SquadFramework;
 class AIGS_SquadSwat;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_SquadHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

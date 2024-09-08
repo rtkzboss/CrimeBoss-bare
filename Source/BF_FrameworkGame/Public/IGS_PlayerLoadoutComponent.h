@@ -14,46 +14,46 @@ class UIGS_InventoryInterface;
 class UGameplayEffect;
 class UIGS_EquipmentInventoryObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerLoadoutComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LoadoutInitializedSignature OnLoadoutInitializedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_Ability1Changed OnAbility1Changed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsInited;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<UIGS_EquipmentInventoryObject> CurrentEquipment;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UGameplayEffect> SubtractChargeGE;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TScriptInterface<IIGS_InventoryInterface> OwningCharacterInventoryInterface;
     
 public:
     UIGS_PlayerLoadoutComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_OverrideAbility1Charges(const int32 inCharges);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_GivePerks(const TArray<FMETA_PerkDataToFPS>& inPerkIDs);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    UFUNCTION(Reliable, Server, WithValidation)
     void Server_GiveMPPerks(const TArray<FMETA_PerkDataToFPS>& inPerkIDs);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void Selfrevive();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnemyKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult);
     
 public:
@@ -61,16 +61,16 @@ public:
     void InitializeLoadout();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void HandlePlayerDownState();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_EquipmentInventoryObject* GetCurrentEquipmentObject();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ForceDownstateUseAbility();
     
-    UFUNCTION(BlueprintCallable, Client, Reliable)
+    UFUNCTION(Client, Reliable)
     void Client_SetEquipmentData(float inTimestamp, int32 inCount, int32 inKillCount);
     
 };

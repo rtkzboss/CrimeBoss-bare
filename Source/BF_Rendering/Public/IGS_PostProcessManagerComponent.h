@@ -7,12 +7,12 @@ class IBlendableInterface;
 class UBlendableInterface;
 class UCameraComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_RENDERING_API UIGS_PostProcessManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UCameraComponent* Camera;
     
 public:

@@ -7,20 +7,20 @@ class UDataTable;
 class UIGS_LevelTransitionDataAsset;
 class UIGS_LoadingScreenDataAsset;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_LoadingSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_LoadingSettings")
 class BF_LOADING_API UIGS_LoadingDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> LoadingSetupDataTable;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> LoadingScreenTipsDataTable;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_LevelTransitionDataAsset> LevelTransitionDataAsset;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_LoadingScreenDataAsset> LoadingScreenDataAsset;
     
     UIGS_LoadingDevSettings();

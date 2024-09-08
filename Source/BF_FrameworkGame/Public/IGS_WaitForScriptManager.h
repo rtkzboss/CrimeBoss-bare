@@ -8,11 +8,11 @@ class AIGS_ScriptManagerBase;
 class UIGS_WaitForScriptManager;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForScriptManager : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptManagerReadyOutputPin WhenScriptManagerReady;
     
     UIGS_WaitForScriptManager();
@@ -21,7 +21,7 @@ public:
     static UIGS_WaitForScriptManager* WaitForScriptManager(UObject* inWorldContextObject);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecuteOnScriptManagerReady(AIGS_ScriptManagerBase* inScriptManager) const;
     
 };

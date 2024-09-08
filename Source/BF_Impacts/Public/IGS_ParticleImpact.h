@@ -10,31 +10,31 @@ class UNiagaraComponent;
 class UParticleSystemComponent;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_IMPACTS_API AIGS_ParticleImpact : public AIGS_ImpactBase, public INiagaraParticleCallbackHandler {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     USceneComponent* SceneComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UParticleSystemComponent* ParticleComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UNiagaraComponent* NiagaraComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<UIGS_ImpactTypeObject> ParticleDecalID;
     
 public:
     AIGS_ParticleImpact(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnNiagaraSystemFinished(UNiagaraComponent* inNiagaraComponent);
     
 

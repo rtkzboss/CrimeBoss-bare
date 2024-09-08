@@ -11,24 +11,24 @@
 class UIGS_VoiceoverGroupController;
 class UIGS_VoiceoverSubsystemDataAsset;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_VoiceoverSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueLineEvent OnDialogueLineVoiceStart;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueLineEvent OnDialogueLineVoiceEnd;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DialogueSwapPlayerEvent OnBeforeSwapPlayerFinishEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UIGS_VoiceoverSubsystemDataAsset* Data;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FIGS_VoiceoverControllerKey, UIGS_VoiceoverGroupController*> VoiceoverControllers;
     
 public:
@@ -40,7 +40,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetGlobalCharacter(FIGS_DialogueGroupCharacterHolder inCharacterHolder);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     uint8 GetGlobalCharacter(EIGS_DialogueSpeaker inSpeaker) const;
     
 };

@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_JobLootSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_LootItemInventoryObject> Item;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval RandomAmountInterval;
     
     FMETA_JobLootSettings();

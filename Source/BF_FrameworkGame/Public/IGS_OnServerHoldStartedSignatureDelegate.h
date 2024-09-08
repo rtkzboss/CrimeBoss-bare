@@ -4,5 +4,5 @@
 
 class AIGS_GameCharacterFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnServerHoldStartedSignature, AIGS_GameCharacterFramework*, inInstigator, float, inTimerDuration);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnServerHoldStartedSignature, AIGS_GameCharacterFramework*, inInstigator, float, inTimerDuration);
 

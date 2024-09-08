@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SecurityVariationType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_SecurityVariationType : uint8 {
     US_None,
     US_RDR,

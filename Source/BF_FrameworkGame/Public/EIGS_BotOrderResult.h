@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_BotOrderResult.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_BotOrderResult : uint8 {
     Unknown = 255,
     Success = 0,

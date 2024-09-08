@@ -8,7 +8,7 @@ class UDataTable;
 class UObject;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_UTILS_API UIGS_ToolFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -23,10 +23,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static FString GetRegionCodeFromLocation(const FString& CountryCode, const FString& RegionCode, const FString& City);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TArray<FString> GetRecentLevels();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int32 EvaluateGeoLocation(const FString& LocalRegion, const FString& RemoteRegion);
     
     UFUNCTION(BlueprintCallable)

@@ -8,18 +8,18 @@
 
 class UStoryGraphManager;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API UMETA_StoryGoal : public UMETA_BaseGoal, public IMETA_TaskManagment, public IMETA_ActionCardsManagment {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_Goal m_Goal;
     
 public:
     UMETA_StoryGoal();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UStoryGraphManager> GetGraph();
     
 

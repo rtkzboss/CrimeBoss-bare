@@ -5,17 +5,17 @@
 #include "Abilities/GameplayAbilityTargetActor.h"
 #include "IGS_GameplayAbilityTargetActor_DropEquipment.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GameplayAbilityTargetActor_DropEquipment : public AGameplayAbilityTargetActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector BoxDimensions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpawnDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTransform LocalSpawnTransform;
     
     AIGS_GameplayAbilityTargetActor_DropEquipment(const FObjectInitializer& ObjectInitializer);

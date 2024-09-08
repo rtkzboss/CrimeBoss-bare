@@ -3,7 +3,7 @@
 #include "IGS_DamageTypeElemental.h"
 #include "IGS_DamageTypeSonic.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_DamageTypeSonic : public UIGS_DamageTypeElemental {
     GENERATED_BODY()
 public:

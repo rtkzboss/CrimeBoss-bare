@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_KeypadButton.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_KeypadButton : uint8 {
+UENUM()
+enum class EIGS_KeypadButton {
     Number,
     Escape,
     Clear,

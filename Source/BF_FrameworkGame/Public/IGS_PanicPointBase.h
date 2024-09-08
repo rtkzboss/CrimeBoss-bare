@@ -5,11 +5,11 @@
 
 class UIGS_PanicPointComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PanicPointBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_PanicPointComponent* PanicPointComponent;
     
     AIGS_PanicPointBase(const FObjectInitializer& ObjectInitializer);

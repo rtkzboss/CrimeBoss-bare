@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ReturnedDataProcessingMode.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_ReturnedDataProcessingMode : uint8 {
     AcceptLoot,
     IgnoreLoot,

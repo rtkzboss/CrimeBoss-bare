@@ -5,28 +5,28 @@
 
 class UIGS_TogglesSettings;
 
-UCLASS(Blueprintable, DefaultConfig, Config=Engine)
+UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_TogglesSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bSprintToggleable;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bCrouchToggleable;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bAimToggleable;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bSprintInterruptsReload;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bMagCheckInSprintAllowed;
     
     UIGS_TogglesSettings();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UIGS_TogglesSettings* Instance();
     
 };

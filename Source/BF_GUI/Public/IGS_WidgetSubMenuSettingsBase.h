@@ -4,11 +4,11 @@
 #include "IGS_WidgetSubMenuBase.h"
 #include "IGS_WidgetSubMenuSettingsBase.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetSubMenuSettingsBase : public UIGS_WidgetSubMenuBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_SettingsValueChangedEvent OnSettingsValueChanged;
     
     UIGS_WidgetSubMenuSettingsBase();
@@ -22,13 +22,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RefreshFocus();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnRevertToDefaults();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnRevert();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnApply();
     
 };

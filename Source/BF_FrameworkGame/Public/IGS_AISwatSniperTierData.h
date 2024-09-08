@@ -3,7 +3,7 @@
 #include "IGS_AIBaseSniperTierData.h"
 #include "IGS_AISwatSniperTierData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AISwatSniperTierData : public FIGS_AIBaseSniperTierData {
     GENERATED_BODY()
 public:

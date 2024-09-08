@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_TPP_DeathDamageTypeReaction.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_TPP_DeathDamageTypeReaction : uint8 {
+UENUM()
+enum class EIGS_TPP_DeathDamageTypeReaction {
     D_OnlyPhysics,
     D_AnimationAndPhysics,
 };

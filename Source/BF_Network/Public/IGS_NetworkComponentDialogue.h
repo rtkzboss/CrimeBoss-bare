@@ -9,21 +9,21 @@
 class UAkSwitchValue;
 class UIGS_ComponentDialogueDataAsset;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentDialogue : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_NetworkDialogueEvent OnVoiceStartedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_NetworkDialogueEvent OnVoiceStopedEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkSwitchValue* OverrideCharacterAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ComponentDialogueDataAsset* ComponentData;
     
 public:
@@ -48,10 +48,10 @@ protected:
     UFUNCTION(NetMulticast, Reliable)
     void All_ResetVoiceSGX(uint16 inGroupID);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void All_OnStopVoice(FIGS_PlayVariationData inPlayVariationData);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void All_OnPlayVoice(FIGS_PlayVariationData inPlayVariationData);
     
 };

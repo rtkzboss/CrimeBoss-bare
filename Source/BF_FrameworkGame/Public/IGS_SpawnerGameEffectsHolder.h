@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct FIGS_SpawnerGameEffectsHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> AIBaseUnitMultipliersGE;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> AISpreadIncreasedGE;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> FlashedGE;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> StunnedGE;
     
     BF_FRAMEWORKGAME_API FIGS_SpawnerGameEffectsHolder();

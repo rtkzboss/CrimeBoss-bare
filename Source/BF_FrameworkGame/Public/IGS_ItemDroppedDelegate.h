@@ -4,5 +4,5 @@
 
 class AIGS_PickupActorInventoryItem;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_OneParam(FIGS_ItemDropped, AIGS_PickupActorInventoryItem*, outItem);
+UDELEGATE() DECLARE_DYNAMIC_DELEGATE_OneParam(FIGS_ItemDropped, AIGS_PickupActorInventoryItem*, outItem);
 

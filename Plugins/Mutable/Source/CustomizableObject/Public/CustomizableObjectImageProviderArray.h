@@ -5,11 +5,11 @@
 
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CUSTOMIZABLEOBJECT_API UCustomizableObjectImageProviderArray : public UCustomizableSystemImageProvider {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UTexture2D*> Textures;
     
     UCustomizableObjectImageProviderArray();

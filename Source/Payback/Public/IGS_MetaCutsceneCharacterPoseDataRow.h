@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneCharacterPoseDataRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_MetaDialogueCharacter ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FGameplayTag, FIGS_MetaCutscenePoseSet> PoseSetsMap;
     
     FIGS_MetaCutsceneCharacterPoseDataRow();

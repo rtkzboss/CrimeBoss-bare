@@ -14,7 +14,7 @@ class UIGS_InventoryObjectFramework;
 class UIGS_ListInventory;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_InventoryHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -32,13 +32,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static int32 GetItemCountInPlayerInventory(AIGS_GameCharacterFramework* inPlayer, TSubclassOf<UIGS_InventoryObjectFramework> inItemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetItemCountInGlobalInventory(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetGlobalInventoryFreeSlotsCount(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_GlobalInventory* GetGlobalInventory(const UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)
@@ -53,7 +53,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool DoesPlayerHaveItemCountInInventory(AIGS_GameCharacterFramework* inPlayer, TSubclassOf<UIGS_InventoryObjectFramework> inItemClass, int32 inCount);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool DoesGlobalInventoryHaveItem(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

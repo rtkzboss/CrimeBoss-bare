@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "StealthIdleDialogueReport.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FStealthIdleDialogueReport {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ImportantLocationsPriorities.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_ImportantLocationsPriorities : uint8 {
     BT_Squad,
     BT_Character,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPFEventFireMode.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EPFEventFireMode : uint8 {
     Forward,
     Reverse,

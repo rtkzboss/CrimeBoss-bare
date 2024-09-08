@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FWaterTurretElements {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_WaterCannon* Turret;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     USplineComponent* Hose;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<USplineMeshComponent*> HoseMeshes;
     
     BF_FRAMEWORKGAME_API FWaterTurretElements();

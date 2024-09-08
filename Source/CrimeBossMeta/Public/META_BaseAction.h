@@ -6,7 +6,7 @@
 
 class AMETA_BaseGameMode;
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseAction : public UMETA_BaseGraphComponent, public IMETA_Action {
     GENERATED_BODY()
 public:

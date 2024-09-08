@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_TextDeviceType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_TextDeviceType : uint8 {
+UENUM()
+enum class EIGS_TextDeviceType {
     Keyboard,
     Gamepad,
     Other,

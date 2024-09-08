@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_UnlockedCharacterSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     EIGS_CharacterID CharacterID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bCharacterMaxLeveled;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     uint8 bCharacterQuestlineCompleted: 1;
     
     FIGS_UnlockedCharacterSaveData();

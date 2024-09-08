@@ -26,133 +26,133 @@ class UParticleSystem;
 class USkeletalMeshComponent;
 class USpeedometer;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_RIDEABLEVEHICLES_API AIGS_RideableVehicle_Base : public AIGS_RideableVehicleBaseFramework, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FPlayerEnterVehicleDelegate OnEnterVehicle;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FPlayerExitVehicleDelegate OnExitVehicle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_PlayerSlots, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere, ReplicatedUsing=OnRep_PlayerSlots)
     TArray<AIGS_GameCharacterFramework*> PlayerSlots;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_RuntimeBagInfo, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_RuntimeBagInfo)
     TArray<AIGS_LootBagPickup*> RuntimeBagInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Transient)
     UCurveVector* NudgeCurve;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FName NudgeBoneName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     TSubclassOf<USpeedometer> SpeedometerWidgetClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxKilometersPerHour;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RotationNormalizationFactor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
     bool CanInteract;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float LocationSyncLerpForce;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RotationSyncLerpForce;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float ThrottleTiming;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_ObjectStatus* ObjectStatus;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* EngineDestroyEffect;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* DestroyEffect;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EngineOffOnHealthPercent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_EngineDestroed, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_EngineDestroed)
     bool bIsEngineDestroyed;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UAkComponent* AkComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkSwitchValue* VehicleTypeAkSwitch;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* HornStartAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* HornStopAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, Transient, VisibleDefaultsOnly)
     UIGS_InteractiveComponent* InteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, Transient, VisibleDefaultsOnly)
     UCameraComponent* FirstPersonCameraComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UBoxComponent* EntryTrigger;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float BaseMass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FName> SeatSocketNames;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FName> SeatMeshSocketNames;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FName> BagSocketNames;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 NumFreeBags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float BagWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float BagInteractionDistance;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, Transient, VisibleDefaultsOnly, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* Mesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     USpeedometer* m_Speedometer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRepLocation, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRepLocation)
     FVector mR_location;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRepRotation, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRepRotation)
     FRotator mR_rotation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRepLinearDrag, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRepLinearDrag)
     FVector mR_linearDrag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRepAngularDrag, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRepAngularDrag)
     FVector mR_angularDrag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector m_AccumulatedLocDif;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FRotator m_AccumulatedRotDif;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     APawn* m_Driver;
     
 public:
@@ -160,123 +160,123 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void VehicleDestroy(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnVehicleExitedCosmetic();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnVehicleEnteredCosmetic();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnVehicleDriverExitedCosmetic();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnVehicleDriverEnteredCosmetic();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnUpdateThrottleTiming();
     
-    UFUNCTION(BlueprintCallable, Server, Unreliable)
+    UFUNCTION(Server, Unreliable)
     void OnStopUsing_SERVER(int32 inSeatIndex);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void OnStopUsing_MULTICAST(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void OnStartUsing_SERVER(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void OnStartUsing_MULTICAST(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRepRotation();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRepLocation();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRepLinearDrag();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRepAngularDrag();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_RuntimeBagInfo();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_PlayerSlots();
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_EngineDestroed();
     
 protected:
-    UFUNCTION(BlueprintCallable, Server, Unreliable)
+    UFUNCTION(Server, Unreliable)
     void OnDetachBag_SERVER(int32 inBagIndex);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void OnDetachBag_MULTICAST(AIGS_LootBagPickup* inBag, int32 inBagIndex);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void OnAttachBag_SERVER(AIGS_LootBagPickup* inBag, int32 inBagIndex);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void OnAttachBag_MULTICAST(AIGS_LootBagPickup* inBag, int32 inBagIndex);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool OfferPositionToDismount(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex, FTransform& OutPosition) const;
     
 protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void LootBagDestroyed_SERVER(int32 inIndex);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void LootBagDestroyed(AIGS_LootBagPickup* inBagPickup);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void InteractClient(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void Interact(AIGS_GameCharacterFramework* inInstigator);
     
 protected:
-    UFUNCTION(BlueprintCallable, Server, Unreliable)
+    UFUNCTION(Server, Unreliable)
     void Horn_SERVER(bool inStartPlaying);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Unreliable)
     void Horn_MULTICAST(bool inStartPlaying);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetMaxVelocity() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static float GetKmPerHAspect();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void FakeBoatCrouch();
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(Reliable, Server)
     void EngineDestroy();
     
 protected:
     UFUNCTION(BlueprintCallable)
     bool CheckIsEngineOn();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void CharacterSatInside(AIGS_GameCharacterFramework* inCharacter);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     bool CanPickBag(AIGS_LootBagPickup* inBag, int32 inTargetSlot);
     
 

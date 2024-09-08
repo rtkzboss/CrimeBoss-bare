@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_PlayerMovingDirection.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_PlayerMovingDirection : uint8 {
+UENUM()
+enum class EIGS_PlayerMovingDirection {
     D_Dorward,
     D_Backward,
     D_Left,

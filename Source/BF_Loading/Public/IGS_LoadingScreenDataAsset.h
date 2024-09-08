@@ -7,29 +7,29 @@
 
 class UIGS_RichTextBlockDecoratorBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_LOADING_API UIGS_LoadingScreenDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo MainTextFont;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo SecondaryTextFont;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FTextBlockStyle LoadingTipTextBlockStyle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FTextBlockStyle LoadingTipDecoratorTextBlockStyle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TArray<TSoftClassPtr<UIGS_RichTextBlockDecoratorBase>> LoadingTipTextDecorators;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo LoadingTextFont;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo LoadingIconFont;
     
     UIGS_LoadingScreenDataAsset();

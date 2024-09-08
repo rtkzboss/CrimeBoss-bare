@@ -4,5 +4,5 @@
 
 class UIGS_PaybackSaveGameAccount;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_AccountSaveDataRequestedDelegate, UIGS_PaybackSaveGameAccount*, AccountSaveGame);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_AccountSaveDataRequestedDelegate, UIGS_PaybackSaveGameAccount*, AccountSaveGame);
 

@@ -12,24 +12,24 @@ class UIGS_CharacterWieldablesHolderComponent;
 class UIGS_PlayerCharacterMovementComponent;
 class UIGS_WieldableInventoryObjectBase;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_CrosshairSectionWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_PlayerCharacterMovementComponent* PlayerMovementComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_CharacterWieldablesHolderComponent* PlayerWieldableHolder;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_WieldableBase* ActiveWieldableActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     UIGS_WieldableInventoryObjectBase* ActiveWieldableObject;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_ShowCrosshairSetting ShowCrosshairSetting;
     
 public:
@@ -39,31 +39,31 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RefreshCrosshairType();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnWeaponAccuracyChangedEvent(const FIGS_WeaponAccuracyInfoHolder& inAccuracy);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnShowCrosshairSettingChangedEvent(EIGS_ShowCrosshairSetting inShowCrosshairSetting);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnShooterChangedEvent(EIGS_WeaponAttackType inShooter);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnReloadingChangedEvent(bool inIsReloading);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnMovementSpeedChangedEvent(EIGS_Speed inNewSpeed);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnGameplayTagsChangedEvent();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnAimingChangedEvent(bool inIsAiming);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAimingAtFriendly() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAimingAtEnemy() const;
     
 };

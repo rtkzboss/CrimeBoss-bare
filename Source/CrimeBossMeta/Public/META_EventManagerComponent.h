@@ -29,75 +29,75 @@ class UMETA_Graph;
 class UMETA_TaskCondition;
 class UStoryGraphManager;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_EventManagerComponent : public UIGS_EventManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_GraphVariableChange OnGraphVariableChange;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_OwnedAssetsChanged OnOwnedAssetsChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, SaveGame)
     TMap<FGameplayTag, FMETA_HeistersOnEvent> HeistersOnEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer ActivePlanningBoardsTags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, EMETA_PlanningBoardItemStatus> PlanningBoardItemsStatuses;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_EventTime EventTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bPoolFrozen;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FMETA_GraphNodeSave, FMETA_TimerNodeSaveData> TimerNodesSaveData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> GraphVariables;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FMETA_GraphNodeSave, FMETA_LoopBranchNodeSaveData> LoopBranchNodesSaveData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDataLoaded;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus> FinishedGraphsResults;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSoftObjectPtr<UStoryGraphManager>, int32> PreparedPlotlines;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSoftObjectPtr<UStoryGraphManager>, TSoftObjectPtr<UStoryGraphManager>> ParentGraphs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> EconomyGraphVaribales;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bShouldCallEndDay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bEndDayIsRunning;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool AreGraphsInProcessing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool RequestForGraphsReprocess;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> LocalRemovedGraph;
     
 public:
     UMETA_EventManagerComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool WasGraphStarted(const FMETA_GraphStruct& inGraphData);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -142,13 +142,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool GetTimerNodesSaveData(const FMETA_GraphNodeSave& inNodeID, FMETA_TimerNodeSaveData& TimerData);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     int32 GetPersistentVarValue(FGameplayTag inVarTag);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TSoftObjectPtr<UStoryGraphManager> GetParentGraphByStoryGraph(const TSoftObjectPtr<UStoryGraphManager>& inGraph);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     UMETA_Graph* GetMasterGraphNodeByStoryGraph(UStoryGraphManager* Graph);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -160,7 +160,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FMETA_CharacterID GetHeisterFromEvent(FGameplayTag inEventTag, int32 inHeisterIndex, bool& outSuccess);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     int32 GetGraphVarValue(FGameplayTag inVarTag);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -182,14 +182,14 @@ protected:
     UFUNCTION(BlueprintCallable)
     void FilterByPlotlineConditions(const TArray<FIGS_PlotlineGraphData>& PlotlineGraphs, const int32 inUsedPlotlinesCount, TArray<FIGS_PlotlineGraphData>& outPlotlineGraphs);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool EvaluatePlotlineConditions(const FIGS_PlotlineGraphData& inGraphData, const int32 inUsedPlotlinesCount);
     
 public:
     UFUNCTION(BlueprintCallable)
     bool EvaluateManyHeisterConditions(const FMETA_CharacterID inCharacter, TArray<UMETA_BaseHeisterCondition*> inConditions, const EMETA_ConditionExprOperator inConditionOperator);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool EvaluateManyGraphConditions(const TArray<UMETA_BaseCondition*>& inConditions, const EMETA_ConditionExprOperator inConditionOperator) const;
     
     UFUNCTION(BlueprintCallable)
@@ -198,7 +198,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ChangeGraphVarValue(FGameplayTag inVarTag, int32 inChangeByValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanGraphBeExecutedFromBeginning(const FMETA_GraphStruct& inGraphData);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

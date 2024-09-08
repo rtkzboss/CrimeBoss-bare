@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_MatchHasEndedDelegateDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_MatchHasEndedDelegate);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_MatchHasEndedDelegate);
 

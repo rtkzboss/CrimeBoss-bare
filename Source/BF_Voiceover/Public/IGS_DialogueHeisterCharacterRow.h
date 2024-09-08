@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_DialogueHeisterCharacterRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_DialogueHeisterCharacter ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpeechScore;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_DialogueCharacterCooldownData CooldownData;
     
     FIGS_DialogueHeisterCharacterRow();

@@ -12,7 +12,7 @@
 class AActor;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_DialogueFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

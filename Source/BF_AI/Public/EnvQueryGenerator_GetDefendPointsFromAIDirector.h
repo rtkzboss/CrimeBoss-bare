@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryGenerator.h"
 #include "EnvQueryGenerator_GetDefendPointsFromAIDirector.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_GetDefendPointsFromAIDirector : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:

@@ -4,14 +4,14 @@
 #include "EIGS_AICommandType.h"
 #include "BTDecorator_HasSOCommand.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_HasSOCommand : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_AICommandType commandType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool RestartOnNewCommand;
     
     UBTDecorator_HasSOCommand();

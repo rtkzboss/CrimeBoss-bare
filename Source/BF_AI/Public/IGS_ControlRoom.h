@@ -8,30 +8,30 @@ class UIGS_AIDirector;
 class UIGS_GuardControlRoomComponent;
 class UIGS_SuspicionManager;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_ControlRoom : public AIGS_ControlRoomBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 SquadID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditInstanceOnly)
     bool DEBUG_DisableRadio;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditInstanceOnly)
     bool DEBUG_DisableAlarmButtonReaction;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_SquadGuard> GuardSquad;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export)
     TWeakObjectPtr<UIGS_GuardControlRoomComponent> GuardSquadControlRoomComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UIGS_AIDirector> AIDirector;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export)
     TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
     
 public:

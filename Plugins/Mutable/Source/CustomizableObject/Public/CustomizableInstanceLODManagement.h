@@ -3,7 +3,7 @@
 #include "CustomizableInstanceLODManagementBase.h"
 #include "CustomizableInstanceLODManagement.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CUSTOMIZABLEOBJECT_API UCustomizableInstanceLODManagement : public UCustomizableInstanceLODManagementBase {
     GENERATED_BODY()
 public:

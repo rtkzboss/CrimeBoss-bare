@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FDelayedCommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FTimerHandle Timer;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_AICommand* AICommand;
     
     BF_AI_API FDelayedCommand();

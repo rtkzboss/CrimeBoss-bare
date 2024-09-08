@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_MetaVoiceoverDialogueDataRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMETA_DialogueUIData DialogueData;
     
     FIGS_MetaVoiceoverDialogueDataRow();

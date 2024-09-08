@@ -6,25 +6,25 @@
 class UArrowComponent;
 class USceneComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MovingLaserTrap : public AIGS_TickingLaserTrap {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* ExtraRootObject;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UArrowComponent* RootObjectEnd;
     
 public:
     AIGS_MovingLaserTrap(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void TickTimelineUpdate(float InValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void TickTimelineFinished();
     
 };

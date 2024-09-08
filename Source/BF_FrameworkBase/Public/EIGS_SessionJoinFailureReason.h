@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SessionJoinFailureReason.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_SessionJoinFailureReason : uint8 {
     FR_SessionIsFull,
     FR_SessionDoesNotExist,

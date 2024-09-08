@@ -6,20 +6,20 @@
 #include "IGS_WidgetButtonWithReferenceEventBlueprintSignatureDelegate.h"
 #include "IGS_WidgetButtonSimple.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetButtonSimple : public UCommonButtonBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_InputAction BoundInputAction;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_WidgetButtonWithReferenceEventBlueprintSignature OnClickedWithReferenceEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_WidgetButtonEventBlueprintSignature OnReleasedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_WidgetButtonEventBlueprintSignature OnClickedEvent;
     
     UIGS_WidgetButtonSimple();

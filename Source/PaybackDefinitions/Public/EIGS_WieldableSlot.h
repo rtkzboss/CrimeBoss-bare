@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WieldableSlot.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_WieldableSlot : uint8 {
     S_PrimaryWeapon,
     S_MIN = S_PrimaryWeapon,

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FPropActorInfoStruct {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PivotVariationMax;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FActorInfoStruct> ActorsToSpawn;
     
     PAYBACK_API FPropActorInfoStruct();

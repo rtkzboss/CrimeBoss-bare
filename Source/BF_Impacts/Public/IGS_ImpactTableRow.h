@@ -6,17 +6,17 @@
 
 class UPhysicalMaterial;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_IMPACTS_API FIGS_ImpactTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UPhysicalMaterial* PhysicalMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_ImpactItem FallBackItem;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_ImpactItem> ImpactItem;
     
     FIGS_ImpactTableRow();

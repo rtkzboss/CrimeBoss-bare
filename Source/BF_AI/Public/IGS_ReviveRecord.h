@@ -10,16 +10,16 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_ReviveRecord {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> InjuredCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UIGS_AICommandBeingRevived* BeingRevivedCommand;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> RevivingCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UIGS_AICommandRevive* RevivingCommand;
     
     FIGS_ReviveRecord();

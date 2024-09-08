@@ -10,7 +10,7 @@ class UIGS_ThrowableDatabase;
 class UIGS_ThrowableInventoryObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_ThrowableDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -19,16 +19,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void ModAppendDataTable(UDataTable* inNewTable);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_ThrowableDatabase* GetThrowableDatabaseInstance(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_ThrowableInventoryObject>& inClass) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_ThrowableTableRow GetDataThrowable(UObject* inWCO, const TSubclassOf<UIGS_ThrowableInventoryObject>& inClass, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_ThrowableTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
 };

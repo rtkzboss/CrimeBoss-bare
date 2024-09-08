@@ -6,14 +6,14 @@
 
 class UPrefabricatorEventListener;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class PREFABRICATORRUNTIME_API UPrefabricatorAssetInterface : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSubclassOf<UPrefabricatorEventListener> EventListener;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bReplicates;
     
     UPrefabricatorAssetInterface();

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_EditorDialogueInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText DialogueID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_MetaDialogueVariationData> Lines;
     
     FIGS_EditorDialogueInfo();

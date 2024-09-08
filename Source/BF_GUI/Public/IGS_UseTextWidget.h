@@ -11,53 +11,53 @@ class AIGS_GameCharacterFramework;
 class UIGS_InteractiveComponent;
 class UIGS_InventoryObjectFramework;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_UseTextWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_InteractiveComponent* m_CurrentInteraction;
     
 public:
     UIGS_UseTextWidget();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void UpdateWarningText(EIGS_InteractionWarningType inType, EIGS_InteractionWarningPriority InPriority, bool inIsVisible);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void UpdateObjectiveVisual(bool inIsVisible, bool inObjectiveCompleted);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void UpdateBossDownVisual(bool inIsVisible, bool inIsBossDown);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ResetVisibility();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInteractiveObjectIsNear(bool inEnabled, EIGS_InteractionType inType, UIGS_InteractiveComponent* inInteractiveComponent, TSubclassOf<UIGS_InventoryObjectFramework> inNeededItem);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnInteractionProgress(bool inEnabled, UIGS_InteractiveComponent* inInteractiveComponent);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnInteractionClose(bool inEnabled, EIGS_InteractionType inType, UIGS_InteractiveComponent* inInteractiveComponent);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnHoldUsed(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnHoldStarted(AIGS_GameCharacterFramework* inInstigator, float inHoldTime);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnHoldCanceled(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCanUseChanged(bool inResult, TSubclassOf<UIGS_InventoryObjectFramework> inNeededItem);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_InteractiveComponent* GetCurrentInteraction();
     
 };

@@ -4,15 +4,15 @@
 #include "IGS_SettingsChangedEventDelegate.h"
 #include "IGS_SettingsBase.generated.h"
 
-UCLASS(Abstract, Blueprintable, Config=GameUserSettings)
+UCLASS(Abstract, Config=GameUserSettings)
 class BF_SETTINGS_API UIGS_SettingsBase : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_SettingsChangedEvent OnSettingsChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config)
     bool bSettingsValid;
     
 public:

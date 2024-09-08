@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct BF_ANIMATIONS_API FIGS_FirstPersonLadderAnimDatabase : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_WeaponBase> ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_ArmsLocomotion Locomotion;
     
     FIGS_FirstPersonLadderAnimDatabase();

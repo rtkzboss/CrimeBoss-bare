@@ -4,5 +4,5 @@
 
 class AIGS_PlayerCharacter;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OutOfBoundsChangedSignature, AIGS_PlayerCharacter*, inCharacter, bool, inIsOutOfBounds);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OutOfBoundsChangedSignature, AIGS_PlayerCharacter*, inCharacter, bool, inIsOutOfBounds);
 

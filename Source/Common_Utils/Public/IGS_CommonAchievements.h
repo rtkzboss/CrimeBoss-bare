@@ -3,7 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "IGS_CommonAchievements.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_UTILS_API UIGS_CommonAchievements : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

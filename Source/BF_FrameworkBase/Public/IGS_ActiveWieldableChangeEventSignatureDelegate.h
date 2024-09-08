@@ -6,5 +6,5 @@
 class AIGS_WieldableBase;
 class UIGS_WieldableInventoryObjectBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FIGS_ActiveWieldableChangeEventSignature, EIGS_WieldableSlot, SlotType, AIGS_WieldableBase*, WieldableBase, UIGS_WieldableInventoryObjectBase*, InventoryObject);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FIGS_ActiveWieldableChangeEventSignature, EIGS_WieldableSlot, SlotType, AIGS_WieldableBase*, WieldableBase, UIGS_WieldableInventoryObjectBase*, InventoryObject);
 

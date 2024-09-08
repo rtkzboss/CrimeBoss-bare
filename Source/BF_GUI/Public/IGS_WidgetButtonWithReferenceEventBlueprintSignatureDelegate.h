@@ -4,5 +4,5 @@
 
 class UIGS_WidgetButtonSimple;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_WidgetButtonWithReferenceEventBlueprintSignature, UIGS_WidgetButtonSimple*, InWidget);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_WidgetButtonWithReferenceEventBlueprintSignature, UIGS_WidgetButtonSimple*, InWidget);
 

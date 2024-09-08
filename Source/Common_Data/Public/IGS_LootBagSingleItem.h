@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_LootBagSingleItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSubclassOf<UIGS_InventoryObjectFramework> ItemClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_InventoryObjectUniversalData UniversalData;
     
     FIGS_LootBagSingleItem();

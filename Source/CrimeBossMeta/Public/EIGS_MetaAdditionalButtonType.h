@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MetaAdditionalButtonType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_MetaAdditionalButtonType : uint8 {
     MABT_Detail,
 };

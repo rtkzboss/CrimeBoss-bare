@@ -3,7 +3,7 @@
 #include "Roles/LiveLinkBasicRole.h"
 #include "FTILiveLinkRole.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class FTILIVELINK_API UFTILiveLinkRole : public ULiveLinkBasicRole {
     GENERATED_BODY()
 public:

@@ -12,27 +12,27 @@ class UIGS_PlayerLoadoutComponent;
 class UIGS_PlayerMetaTransferComponent;
 class UIGS_SuppressionHandlerComponent;
 
-UCLASS(Blueprintable, Deprecated, NotPlaceable)
+UCLASS(Deprecated, NotPlaceable)
 class BF_AI_API ADEPRECATED_IGS_AICharacterPlayerBot : public AIGS_AIGameCharacter, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerLoadoutComponent* PlayerLoadoutComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_ListInventory* BotInventory;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerMetaTransferComponent* PlayerMetaTransferComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_SuppressionHandlerComponent* BotSuppressionHandlerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_LootBagInteractiveComponent* LootBagInteractiveComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentCharacter* NetworkCharacter;
     
 public:

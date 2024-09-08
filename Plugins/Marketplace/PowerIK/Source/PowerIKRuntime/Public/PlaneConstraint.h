@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PlaneConstraint.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct POWERIKRUNTIME_API FPlaneConstraint {
     GENERATED_BODY()
 public:

@@ -9,23 +9,23 @@ class AIGS_GameCharacterFramework;
 class AIGS_ScriptActorBase;
 class UIGS_RandomStreamHolder;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ScriptManagerBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_ScriptActorBase*> ScriptActors;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     int32 ScriptSeed;
     
     UPROPERTY()
     FRandomStream RandomStream_DEPRECATED;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bFinished;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_RandomStreamHolder* m_RandomStreamHolder;
     
     AIGS_ScriptManagerBase(const FObjectInitializer& ObjectInitializer);
@@ -33,25 +33,25 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetManagerFinished();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     bool OnWarzonePlayerSwapRequested(AController* inInstigatorController);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnManagerReady(int32 inReplicatedSeed);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnCharacterRegistered(AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<AIGS_ScriptActorBase*> GetScriptsActorsWithTag(FName inTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_RandomStreamHolder* GetRandomStreamHolder();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FRandomStream GetRandomStream_TEMP();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetRandomStream(FRandomStream& outRandomStream);
     
 };

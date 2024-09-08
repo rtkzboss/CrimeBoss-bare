@@ -5,5 +5,5 @@
 
 class AActor;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnDirectionalPlayerCueSignature, const AActor*, inSourceActor, const EIGS_DirectionalCueType, inType);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnDirectionalPlayerCueSignature, const AActor*, inSourceActor, const EIGS_DirectionalCueType, inType);
 

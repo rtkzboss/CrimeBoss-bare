@@ -30,32 +30,32 @@ class UMETA_RandEventManagerComponent;
 class UMETA_StashManagerComponent;
 class UMETA_UIEventsManagerComponent;
 
-UCLASS(Abstract, Blueprintable, NonTransient)
+UCLASS(Abstract, NonTransient)
 class CRIMEBOSSMETA_API AMETA_BaseGameMode : public AIGS_GameModeMenuBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     EMETA_MenuState MenuState;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UMETA_MainWidget* MainWidget;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnMetaMenuStateChanged OnMetaMenuStateChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnComponentsInitializedEvent OnComponentsInitializedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool bGamemodeComponentsInitialized;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UMETA_PlanningBoardManagerComponent* PlanningBoardManagerComponent;
     
     AMETA_BaseGameMode(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool ShouldLoadMetaDebugSave();
     
 public:
@@ -74,7 +74,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void MenuStateChangeHandled(EMETA_MenuState inState);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsMetaInDebugMode();
     
 public:
@@ -85,7 +85,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void IncreaseCompletedCampaignCount(EIGS_UserDifficulty inDifficulty);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void HandleMenuStateChange(EMETA_MenuState inState);
     
 public:
@@ -101,7 +101,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UMETA_PopupManagerComponent* GetPopupManagerComponent();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     UMETA_PlanningBoardManagerComponent* GetPlanningBoardManagerComponent() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -116,7 +116,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UMETA_EventManagerComponent* GetEventManagerComponent();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     UMETA_PlotlineSelection* GetCurrentCampaignMode() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -128,17 +128,17 @@ public:
     UFUNCTION(BlueprintCallable)
     TSoftObjectPtr<UMETA_PlotlineSelection> GetCampaignModeOnInitByTag(const UMETA_PlotlineSelectionMapping* inCampaignMapping, FGameplayTag inModeTag, bool& outSuccess);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void GetCampaignDifficulty(EIGS_UserDifficulty& outUserDifficulty, FMETA_CampaignUserDifficultyConfiguration& outConfiguration) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     UMETA_BossLevelComponent* GetBossLevelComponent() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UIGS_ActivityManagerBaseComponent* GetActivityManagerComponent();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_ActiveCampaignConfiguration GetActiveCampaignConfiguration() const;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_AttackLocations.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_AttackLocations {
     GENERATED_BODY()
 public:

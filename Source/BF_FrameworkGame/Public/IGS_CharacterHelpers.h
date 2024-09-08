@@ -6,7 +6,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_CharacterHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

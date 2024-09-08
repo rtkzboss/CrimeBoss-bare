@@ -7,12 +7,12 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_MoneyMaking : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FMETA_MoneyMakingMissionSave m_MoneyMakingMissionSave;
     
 public:
@@ -24,7 +24,7 @@ public:
     UFUNCTION(BlueprintCallable)
     FMETA_MoneyMakingMissionSave GetSaveData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_FPSMissionRowInfo GetInfo() const;
     
 };

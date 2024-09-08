@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPFFactorOperation.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EPFFactorOperation : uint8 {
     None,
     Add,

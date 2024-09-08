@@ -6,15 +6,15 @@
 class UAkAudioEvent;
 class UAkComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_IMPACTS_API AIGS_SoundImpact : public AIGS_ImpactBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient)
     UAkComponent* AkComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UAkAudioEvent* AkAudioEvent;
     
 public:

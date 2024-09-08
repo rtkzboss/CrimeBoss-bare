@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_WeaponHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

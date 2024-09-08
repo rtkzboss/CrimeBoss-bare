@@ -10,7 +10,7 @@ class APrefabActor;
 class UObject;
 class UPrefabricatorAssetInterface;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PREFABRICATORRUNTIME_API UPrefabricatorBlueprintLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

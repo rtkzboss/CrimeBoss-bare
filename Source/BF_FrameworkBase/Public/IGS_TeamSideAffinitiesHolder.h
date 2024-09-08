@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FIGS_TeamSideAffinitiesHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<EIGS_TeamSideEnum> EnemySides;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<EIGS_TeamSideEnum> FriendlySides;
     
     BF_FRAMEWORKBASE_API FIGS_TeamSideAffinitiesHolder();

@@ -6,7 +6,7 @@
 class UIGS_ClientTravel;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_LOADING_API UIGS_ClientTravel : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:

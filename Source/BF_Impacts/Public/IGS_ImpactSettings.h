@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "IGS_ImpactSettings.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_IMPACTS_API FIGS_ImpactSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float DistanceSpawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bOverrideFallbackSettings;
     
     FIGS_ImpactSettings();

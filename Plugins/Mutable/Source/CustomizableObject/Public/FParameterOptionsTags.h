@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FFParameterOptionsTags {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FString> Tags;
     
     CUSTOMIZABLEOBJECT_API FFParameterOptionsTags();

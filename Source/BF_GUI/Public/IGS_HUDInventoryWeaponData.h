@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct BF_GUI_API FIGS_HUDInventoryWeaponData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TSoftClassPtr<AIGS_WieldableBase> WieldableID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     EIGS_WieldableSlot Slot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<UTexture> WieldableIcon;
     
     FIGS_HUDInventoryWeaponData();

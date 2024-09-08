@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct FIGS_LightHitReactionsVariant {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Front;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Right;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Back;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Left;
     
     BF_ANIMATIONS_API FIGS_LightHitReactionsVariant();

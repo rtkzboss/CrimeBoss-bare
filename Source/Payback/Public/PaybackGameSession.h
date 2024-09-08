@@ -3,7 +3,7 @@
 #include "GameFramework/GameSession.h"
 #include "PaybackGameSession.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API APaybackGameSession : public AGameSession {
     GENERATED_BODY()
 public:

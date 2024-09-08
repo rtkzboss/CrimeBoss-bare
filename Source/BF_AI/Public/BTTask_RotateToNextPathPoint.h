@@ -3,12 +3,12 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_RotateToNextPathPoint.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_RotateToNextPathPoint : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float AccaptedAngle;
     
 public:

@@ -5,7 +5,7 @@
 #include "META_ManagersExplorer.h"
 #include "IGS_GameModeMenuBase.generated.h"
 
-UCLASS(Abstract, Blueprintable, NonTransient)
+UCLASS(Abstract, NonTransient)
 class CRIMEBOSSMETA_API AIGS_GameModeMenuBase : public AGameModeBase, public IMETA_ManagersExplorer, public IMETA_GameModeAdapter {
     GENERATED_BODY()
 public:

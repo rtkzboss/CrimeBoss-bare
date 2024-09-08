@@ -4,5 +4,5 @@
 
 class UMETA_BaseMission;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMissionRemovedDelegate, UMETA_BaseMission*, RemovedMission);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMissionRemovedDelegate, UMETA_BaseMission*, RemovedMission);
 

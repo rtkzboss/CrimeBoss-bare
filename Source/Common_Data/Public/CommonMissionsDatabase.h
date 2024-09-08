@@ -8,7 +8,7 @@
 class UIGS_BaseMissionObject;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UCommonMissionsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

@@ -4,12 +4,12 @@
 #include "BTTask_DutyReaction.h"
 #include "BTTask_AlertCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_AlertCharacter : public UBTTask_DutyReaction {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharacterToAlert;
     
 public:

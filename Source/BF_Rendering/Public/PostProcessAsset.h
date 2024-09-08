@@ -5,14 +5,14 @@
 
 class UMaterialInstance;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UPostProcessAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMaterialInstance*> PostProcessMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
     
     UPostProcessAsset();

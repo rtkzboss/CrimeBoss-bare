@@ -7,7 +7,7 @@
 class AController;
 class UCoverPoint;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_COVERS_API UIGS_CoverSystem : public UObject {
     GENERATED_BODY()
 public:

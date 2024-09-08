@@ -4,5 +4,5 @@
 
 class UPFPathFollowerComponent;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FReachedStartSignature, UPFPathFollowerComponent*, FollowerComp);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FReachedStartSignature, UPFPathFollowerComponent*, FollowerComp);
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CivOffenceReactionBehavior.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_CivOffenceReactionBehavior : uint8 {
     UNKNOWN = 255,
     None = 0,

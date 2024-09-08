@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_ThrowableLiveObjectsHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ThrowableInventoryObject* InventoryObject;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UClass* Projectile;
     
     BF_AI_API FIGS_ThrowableLiveObjectsHolder();

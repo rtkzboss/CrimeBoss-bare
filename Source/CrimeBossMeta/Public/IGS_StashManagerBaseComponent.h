@@ -18,14 +18,14 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_StashManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_StashManangerInitialized OnManagerInitialized;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool bIsManagerDataDirty;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     bool bIsManagerInitialized;
     
 public:
@@ -43,7 +43,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RemoveWeaponsFromStash(TSubclassOf<UMETA_WeaponInventoryObject> inWeaponsId, int32 inAmount, bool inBetweenHeisterAndStash, int32& outRemovedAmount);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsManagerInitialized() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -55,10 +55,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TMap<TSubclassOf<UMETA_WeaponInventoryObject>, FMETA_WeaponAmountInfo> GetStashWeapons(bool inIsLobby);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     TArray<UMETA_Equipment*> GetStashUnequippedEquipment() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     TArray<UMETA_Equipment*> GetStashEquipment() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -85,7 +85,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TMap<FGameplayTag, int32> GetLoot();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_CharacterID GetBossCharacterID();
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

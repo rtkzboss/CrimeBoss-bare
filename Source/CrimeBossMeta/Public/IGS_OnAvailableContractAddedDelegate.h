@@ -5,5 +5,5 @@
 
 class UIGS_ContractID;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnAvailableContractAdded, TSubclassOf<UIGS_ContractID>, inID);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnAvailableContractAdded, TSubclassOf<UIGS_ContractID>, inID);
 

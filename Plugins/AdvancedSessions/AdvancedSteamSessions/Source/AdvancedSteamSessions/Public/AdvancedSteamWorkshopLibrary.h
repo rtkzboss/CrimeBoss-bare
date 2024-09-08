@@ -4,7 +4,7 @@
 #include "BPSteamWorkshopID.h"
 #include "AdvancedSteamWorkshopLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UAdvancedSteamWorkshopLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct BF_GUI_API FIGS_HUDPlayerWieldableData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TSoftClassPtr<AIGS_WieldableBase> WieldableID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_WieldableBase> WieldableInstance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     EIGS_WieldableSlot Slot;
     
     FIGS_HUDPlayerWieldableData();

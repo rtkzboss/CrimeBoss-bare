@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_VehicleSplineGroup.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_VehicleSplineGroup : uint8 {
     None,
     CarFriendly,

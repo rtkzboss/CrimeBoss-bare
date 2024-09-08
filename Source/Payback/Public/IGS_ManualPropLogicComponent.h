@@ -3,11 +3,11 @@
 #include "IGS_PropLogicComponent.h"
 #include "IGS_ManualPropLogicComponent.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UIGS_ManualPropLogicComponent : public UIGS_PropLogicComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bGenerateAutomatically;
     
     UIGS_ManualPropLogicComponent(const FObjectInitializer& ObjectInitializer);

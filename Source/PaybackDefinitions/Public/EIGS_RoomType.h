@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_RoomType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_RoomType : uint8 {
     Lobby,
     Toilets,

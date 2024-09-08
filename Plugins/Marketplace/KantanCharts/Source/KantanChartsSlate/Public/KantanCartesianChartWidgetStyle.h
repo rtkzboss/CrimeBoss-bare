@@ -4,11 +4,11 @@
 #include "KantanCartesianChartStyle.h"
 #include "KantanCartesianChartWidgetStyle.generated.h"
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(MinimalAPI)
 class UKantanCartesianChartWidgetStyle : public USlateWidgetStyleContainerBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FKantanCartesianChartStyle ChartStyle;
     
     UKantanCartesianChartWidgetStyle();

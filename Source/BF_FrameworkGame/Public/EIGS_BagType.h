@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_BagType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_BagType : uint8 {
     Bag_Unknown,
     Bag_Generic,

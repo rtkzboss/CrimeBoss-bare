@@ -14,27 +14,27 @@ class UIGS_LeavingMissionWidget;
 class UIGS_LevelBlockingBoundsSettings;
 class UUserWidget;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_OutOfBoundsManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UIGS_LevelBlockingBoundsSettings* Settings;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OutOfBoundsChangedSignature OnOutOfBoundsChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<AIGS_PlayerCharacter*, FIGS_OutOfBoundsCharacterData> CharacterData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UUserWidget> OutOfBoundsWidgetClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_LeavingMissionWidget* OutOfBoundsWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<AIGS_LevelBlockingBounds*> LevelBlockingBounds;
     
 public:
@@ -46,13 +46,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void LeftOutOfBoundsArea(AIGS_PlayerCharacter* inCharacter);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsOutOfBounds(const AIGS_PlayerCharacter* inCharacter) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<AIGS_LevelBlockingBounds*> GetAllLevelBlockingBoundsInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<AIGS_LevelBlockingBounds*> GetAllLevelBlockingBounds() const;
     
     UFUNCTION(BlueprintCallable)

@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "IGS_DevAnalytics.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_ANALYTICS_API UIGS_DevAnalytics : public UObject {
     GENERATED_BODY()
 public:

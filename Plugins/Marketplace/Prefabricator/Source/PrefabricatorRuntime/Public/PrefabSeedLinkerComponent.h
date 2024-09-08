@@ -3,7 +3,7 @@
 #include "Components/SceneComponent.h"
 #include "PrefabSeedLinkerComponent.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PREFABRICATORRUNTIME_API UPrefabSeedLinkerComponent : public USceneComponent {
     GENERATED_BODY()
 public:

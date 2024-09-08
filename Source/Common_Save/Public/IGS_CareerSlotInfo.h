@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_CareerSlotInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FString CareerSlotName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsDebugSaveFile;
     
     COMMON_SAVE_API FIGS_CareerSlotInfo();

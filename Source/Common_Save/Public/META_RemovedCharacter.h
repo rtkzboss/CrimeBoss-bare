@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_RemovedCharacter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_CharacterID ID;
     
     FMETA_RemovedCharacter();

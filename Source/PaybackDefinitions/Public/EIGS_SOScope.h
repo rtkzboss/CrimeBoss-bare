@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_SOScope.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_SOScope : uint8 {
+UENUM()
+enum class EIGS_SOScope {
     None,
     OverrideLimbo,
     OverrideAlarm,

@@ -3,7 +3,7 @@
 #include "GenericGraphEdge.h"
 #include "META_BaseEdge_SG.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_BaseEdge_SG : public UGenericGraphEdge {
     GENERATED_BODY()
 public:

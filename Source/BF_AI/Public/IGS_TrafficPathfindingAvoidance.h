@@ -6,15 +6,15 @@
 
 class UIGS_TrafficPathComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_TrafficPathfindingAvoidance : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<TWeakObjectPtr<UIGS_TrafficPathComponent>, FIGS_VehiclesRecord> VehiclesOnPaths;
     
-    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export)
     TArray<TWeakObjectPtr<UIGS_TrafficPathComponent>> m_VisitedPathsTmp;
     
 public:

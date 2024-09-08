@@ -4,5 +4,5 @@
 #include "EMETA_Gang.h"
 #include "META_GangArmyTierChangedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FMETA_GangArmyTierChanged, EMETA_Gang, Gang, EMETA_ArmyTier, ArmyTier);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FMETA_GangArmyTierChanged, EMETA_Gang, Gang, EMETA_ArmyTier, ArmyTier);
 

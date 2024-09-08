@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EAggroType.generated.h"
 
-UENUM(BlueprintType)
-enum class EAggroType : uint8 {
+UENUM()
+enum class EAggroType {
     AT_Sight,
     AT_Hear,
     AT_Damage,

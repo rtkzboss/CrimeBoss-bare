@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECameraMode.generated.h"
 
-UENUM(BlueprintType)
-enum class ECameraMode : uint8 {
+UENUM()
+enum class ECameraMode {
     ModeFPV,
     Mode3PV,
 };

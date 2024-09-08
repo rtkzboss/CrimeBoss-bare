@@ -3,7 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "IGS_GeneralReactionDatabase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_GeneralReactionDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

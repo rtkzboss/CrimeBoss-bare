@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTService.h"
 #include "BTService_AlertingCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_AlertingCharacter : public UBTService {
     GENERATED_BODY()
 public:

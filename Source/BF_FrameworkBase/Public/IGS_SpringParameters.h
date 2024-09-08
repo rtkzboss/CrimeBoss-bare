@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKBASE_API FIGS_SpringParameters {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector Stiffness;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector Damping;
     
     FIGS_SpringParameters();

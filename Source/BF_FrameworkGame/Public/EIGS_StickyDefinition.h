@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_StickyDefinition.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_StickyDefinition : uint8 {
+UENUM()
+enum class EIGS_StickyDefinition {
     Unknown = 255,
     Start = 0,
     Arrived,

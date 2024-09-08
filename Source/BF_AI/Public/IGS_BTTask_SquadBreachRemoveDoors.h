@@ -9,28 +9,28 @@ class UIGS_AICommand;
 class UIGS_AICommandBreachRemoveObstacle;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadBreachRemoveDoors : public UIGS_BTTask_SquadDoorBreachBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* ContextActionCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* ContextActionCommand;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UObject* BreachObject;
     
 public:
     UIGS_BTTask_SquadBreachRemoveDoors();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static bool IsObstacleCleared(UIGS_AICommandBreachRemoveObstacle* Command);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static UIGS_AICommand* CommandToClearObstacle(AIGS_GameCharacterFramework* inAgent, AActor* BreachableObject, bool IsRight);
     
 };

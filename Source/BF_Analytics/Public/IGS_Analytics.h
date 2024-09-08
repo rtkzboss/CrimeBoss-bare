@@ -4,7 +4,7 @@
 #include "IGS_AnalyticsCommonMetaAttributes.h"
 #include "IGS_Analytics.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_ANALYTICS_API UIGS_Analytics : public UEngineSubsystem {
     GENERATED_BODY()
 public:

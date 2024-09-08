@@ -9,23 +9,23 @@
 
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_HordeModeManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_HordeModeActiveSignature OnHordeModeActiveChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_HordeModeValuesChangedSignature OnHordeModeValuesChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_HordeModeTokenAddedSignature OnHordeModeTokenAdded;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_HordeModeActive, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HordeModeActive)
     bool bIsHordeModeActive;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_HordeModeValues, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HordeModeValues)
     FIGS_HordeModeValues HordeModeValues;
     
     UIGS_HordeModeManager(const FObjectInitializer& ObjectInitializer);
@@ -39,10 +39,10 @@ public:
     static void SetHordeModeActive(const UObject* inWCO, bool Inactive);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_HordeModeValues(FIGS_HordeModeValues inOldValues);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_HordeModeActive(bool inOldHordeModeActive);
     
 public:

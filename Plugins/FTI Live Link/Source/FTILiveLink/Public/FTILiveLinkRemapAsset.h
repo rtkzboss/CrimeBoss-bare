@@ -3,11 +3,11 @@
 #include "LiveLinkRemapAsset.h"
 #include "FTILiveLinkRemapAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class FTILIVELINK_API UFTILiveLinkRemapAsset : public ULiveLinkRemapAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FName, FName> AnimationNamesMap;
     
     UFTILiveLinkRemapAsset();

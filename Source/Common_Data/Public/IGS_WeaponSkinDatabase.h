@@ -13,7 +13,7 @@ class UIGS_WeaponSkinData;
 class UIGS_WeaponSkinDatabase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_WeaponSkinDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -31,7 +31,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_WeaponSkinStruct GetWeaponSkinStructData(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_WeaponSkinDatabase* GetWeaponSkinDatabaseInstance(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

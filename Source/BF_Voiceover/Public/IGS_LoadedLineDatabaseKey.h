@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_LoadedLineDatabaseKey.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_VOICEOVER_API FIGS_LoadedLineDatabaseKey {
     GENERATED_BODY()
 public:

@@ -21,7 +21,7 @@ class UIGS_OffenceData;
 class UIGS_ThrowBagDefinitionComponent;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_AIControllerHelpersLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -57,7 +57,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetGlobalSniperPointOfInterestActor(const UObject* inWCO, AActor* inActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static void SendStimuliToFriends(AIGS_GameCharacterFramework* Instigator, EStimuliType stimuliType, FIGS_StimuliData stimuliData, float Range);
     
     UFUNCTION(BlueprintCallable)

@@ -5,15 +5,15 @@
 #include "DangerArea.h"
 #include "IGS_DangerManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_DangerManager : public UTickableWorldSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FDangerArea> m_DangerAreas;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FAfraidOfDanger> m_AfraidOfDanger;
     
 public:

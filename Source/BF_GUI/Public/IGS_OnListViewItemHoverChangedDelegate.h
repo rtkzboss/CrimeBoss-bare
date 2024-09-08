@@ -4,5 +4,5 @@
 
 class UObject;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnListViewItemHoverChanged, const UObject*, inObject, bool, inHovered);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnListViewItemHoverChanged, const UObject*, inObject, bool, inHovered);
 

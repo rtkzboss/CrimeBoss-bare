@@ -15,36 +15,36 @@
 
 class UMETA_VoiceoverDialogueSettings;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_MediaManagerComponent : public UIGS_MediaManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<FMETA_CutsceneUIData> QueuedCutscenes;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnCutsceneStartedLatent OnCutsceneStartedLatent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnCutsceneFinishedLatent OnCutsceneFinishedLatent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<FMETA_MovieUIData> QueuedMovies;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnMovieStartedLatent OnMovieStartedLatent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnMovieFinishedLatent OnMovieFinishedLatent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<FMETA_DialogueUIData> QueuedDialogues;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<FMETA_TextScreenUIData> QueuedTextScreens;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     UMETA_VoiceoverDialogueSettings* DialogueSettings;
     
 public:
@@ -71,22 +71,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveAllDialoguesOfType(FGameplayTag inScreenTag, FGameplayTag inTypeTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void PlayMovieLatent(FMETA_MovieUIData inMovieData);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void PlayCutsceneLatent(FMETA_CutsceneUIData inCutsceneData);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAnyTextScreenPending() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void IsAnyMediaCurrentlyPlaying(bool& outPlaying);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAnyInstantCutscenePending() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAnyDelayedCutscenePending(EMETA_Partner inPartner) const;
     
     UFUNCTION(BlueprintCallable)

@@ -7,11 +7,11 @@
 class UMaterialInstanceDynamic;
 class UMaterialInterface;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_DynamicMaterialHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_DynamicMaterialsRegeneratedOnActorEvent OnDynamicMaterialsRegeneratedOnActorEvent;
     
     UIGS_DynamicMaterialHandlerComponent(const FObjectInitializer& ObjectInitializer);

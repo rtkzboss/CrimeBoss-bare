@@ -14,42 +14,42 @@ class UBoxComponent;
 class UIGS_WeakSpotComponent;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API APaybackRobotCharacter : public APaybackAICharacter, public IIGS_HasWeakSpotInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly, Instanced)
     UBoxComponent* WeakSpotCollision;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float WeakSpotHealth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float WeakSpotAIDamageMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float MaxHealthPercentageTaken;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float ForcedOverloadTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float OverloadOuterDamageRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float OverloadInnerDamageRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float OverloadEffectRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float OverloadBaseDamage;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FGameplayTag OverloadAnimationTag;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_WeakSpotComponent* m_WeakSpotComponent;
     
 public:
@@ -61,54 +61,54 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartOverloadSequence(AController* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnWeakSpotCompromised();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnStunnedEvent(bool inStart);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnOverloadStared();
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnOverloadForcedTimeEnd(AController* inInstigator);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnOverloadEnded(const AController* inInstigator);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnOverloadAnimationEvent(EIGS_AnimationEventType inEventType, AController* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnOverloadAnimationEnd(EIGS_AnimationTaskFinishedReason inReason, AController* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnHealthChangedWithCompromisedWeakSpot(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnHeadShotOff();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnFlashedEvent(bool inStart);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnEnableVfx(const bool inEnable);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEffectApplied(const FGameplayTag inGameplayTag, int32 inCount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAnyWeakSpotCompromisedEvent(const UPrimitiveComponent* inWeakSpotReference, const FIGS_HitInfo& inLastHitInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAnyShootablePartShotOff(const UActorComponent* InComponent, float inDamageAmount, const FIGS_HitInfo& inHit);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_Overload(AController* inInstigator);
     
 public:

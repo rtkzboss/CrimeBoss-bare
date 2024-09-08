@@ -5,5 +5,5 @@
 
 class UIGS_ThrowableInventoryObject;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnChangeShowPredictionSignature, bool, inShow, TSubclassOf<UIGS_ThrowableInventoryObject>, inPredictedClass);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnChangeShowPredictionSignature, bool, inShow, TSubclassOf<UIGS_ThrowableInventoryObject>, inPredictedClass);
 

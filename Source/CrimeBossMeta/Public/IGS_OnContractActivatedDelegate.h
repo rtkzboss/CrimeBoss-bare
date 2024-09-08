@@ -6,5 +6,5 @@
 class UIGS_ContractID;
 class UMETA_MissionID;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnContractActivated, TSubclassOf<UIGS_ContractID>, inContractID, TSubclassOf<UMETA_MissionID>, inMissionID);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnContractActivated, TSubclassOf<UIGS_ContractID>, inContractID, TSubclassOf<UMETA_MissionID>, inMissionID);
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_WaitingAgentData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_WaitingAgentData {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_LevelRangeBit.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_LevelRangeBit : uint8 {
     None,
     All,

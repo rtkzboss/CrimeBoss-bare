@@ -3,12 +3,12 @@
 #include "META_BaseNotification.h"
 #include "META_FinancialNotification.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_FinancialNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 m_Money;
     
 public:
@@ -17,7 +17,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetMoney(int32 inMoney, bool inShowAbsolute);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetMoney() const;
     
 };

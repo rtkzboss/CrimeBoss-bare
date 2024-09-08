@@ -6,14 +6,14 @@
 #include "IGS_TeamSideAffinitiesHolder.h"
 #include "IGS_PaybackGameSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Game)
+UCLASS(DefaultConfig, Config=Game)
 class BF_FRAMEWORKBASE_API UIGS_PaybackGameSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TMap<EIGS_TeamSideEnum, FColor> TeamSideColors;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     TMap<EIGS_TeamSideEnum, FIGS_TeamSideAffinitiesHolder> TeamSideAffinitiesMap;
     
     UIGS_PaybackGameSettings();

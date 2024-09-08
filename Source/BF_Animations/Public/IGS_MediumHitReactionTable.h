@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct BF_ANIMATIONS_API FIGS_MediumHitReactionTable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> AnimVariations;
     
     FIGS_MediumHitReactionTable();

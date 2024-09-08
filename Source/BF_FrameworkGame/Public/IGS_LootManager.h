@@ -28,117 +28,117 @@ class UIGS_LootItemInventoryObject;
 class UIGS_LootManager;
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnHeisterItemAdded OnHeisterItemAdded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnHeisterItemAdded OnHeisterItemRemoved;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnLootCollectionRegistered OnLootCollectionRegistered;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_LootCollectionBase*> LootCollections;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnSecuredLootChanged OnSecuredLootChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnSecuredBonusLootChanged OnSecuredBonusLootChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnAllowedLootChanged OnAllowedLootChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnHalfNeededLootCollected OnHalfNeededLootCollected;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnNeededLootCollected OnNeededLootCollected;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnStartCollectionBonusLoot OnStartCollectionBonusLoot;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnAllLootCollected OnAllLootCollected;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnHalfNeededLootSecured OnHalfLootSecured;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnNeededLootSecured OnAllneededLootSecured;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnAllCollectedLootSecured OnAllCollectedLootSecured;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float TotalValueSpawned;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float TotalLootValueSpawned;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float TotalMoneyValueSpawned;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     float TotalObjectiveValueSpawned;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Replicated)
     float NeededObjectiveWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     float AllSpawnedLootWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SecuredLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_SecuredLoot)
     float SecuredLootValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float SecuredOldLootValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float SecuredLootWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SecuredBonusLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_SecuredBonusLoot)
     float SecuredBonusLootValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float SecuredOldBonusLootValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float BonusWeightFromRequiredLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TMap<FGameplayTag, float> SecuredLootByTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TMap<FGameplayTag, float> SecuredBonusLootByTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float SecuredObjectiveLootWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float SecuredBonusLootWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bDisableLootVoiceLines;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     TArray<FGameplayTag> AllowedLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated)
     float LootWeightMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_LootItemInventoryObject> DummyLootItem;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AActor*> SpecialSpawners;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bHasShownError;
     
 public:
@@ -149,13 +149,13 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static float UpdateLootWeightMultiplier(UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     TMap<FGameplayTag, float> SortLootByTag(TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inLoot);
     
     UFUNCTION(BlueprintCallable)
     void SetMissionBagsInWeight(int32 inRequiredBags);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SendNewValueToHeisterData(AIGS_GameCharacterFramework* inOwningPawn, float inValueToAdd, bool inIsBonus) const;
     
     UFUNCTION(BlueprintCallable)
@@ -170,13 +170,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void RegisterLootCarryable(TSubclassOf<UIGS_CarryableInventoryObject> inCarryable);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_SecuredLoot(float inOldSecuredLootValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_SecuredBonusLoot(float inOldSecuredBonusLootValue);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnPocketLootWeightChanged();
     
     UFUNCTION(BlueprintCallable)
@@ -185,19 +185,19 @@ public:
     UFUNCTION(BlueprintCallable)
     float GetValuePercentage(float InValue);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetThrowableItemSize(EIGS_LootSize inWeight) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_LootManager* GetLootManager(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     float GetItemValueFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     FGameplayTag GetItemTypeFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetItemSize(EIGS_ItemWeight inWeight) const;
     
     UFUNCTION(BlueprintCallable)
@@ -206,19 +206,19 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void DisableLootVoiceLines(UObject* inWCO, bool bDisable);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     float CalculateSpecialLootItemValue(FGameplayTag inItemTag, float inItemWeight);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CalculateNewLootValue(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObject, AIGS_GameCharacterFramework* OwningPawn);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CalculateNewBonusLootValue(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObject, AIGS_GameCharacterFramework* OwningPawn);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     float CalculateLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem, AIGS_GameCharacterFramework* OwningPawn);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     float CalculateBonusLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem);
     
 };

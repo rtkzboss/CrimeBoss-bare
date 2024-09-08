@@ -6,7 +6,7 @@
 class APlayerState;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AUDIO_API UIGS_VoiceChatSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

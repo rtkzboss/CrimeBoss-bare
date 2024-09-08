@@ -11,13 +11,13 @@ USTRUCT(BlueprintType)
 struct FIGS_AILoadout {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UIGS_AIPrimaryWeaponDef> PrimaryWeapon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UIGS_AISecondaryWeaponDef> SecondaryWeapon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UIGS_AIMeleeWeaponDef> MeleeWeapon;
     
     BF_FRAMEWORKGAME_API FIGS_AILoadout();

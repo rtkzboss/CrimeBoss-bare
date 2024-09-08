@@ -3,7 +3,7 @@
 #include "CommonUserWidget.h"
 #include "IGS_Widget.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class IGS_UIFRAMEWORK_API UIGS_Widget : public UCommonUserWidget {
     GENERATED_BODY()
 public:

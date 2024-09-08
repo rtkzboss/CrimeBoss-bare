@@ -5,19 +5,19 @@
 
 class ANavigationData;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_NAVIGATION_API UIGS_NavigationDebugSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     ANavigationData* HumanNavmesh;
     
     UIGS_NavigationDebugSubsystem();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnNavUpdated(ANavigationData* inNavData);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void NavigationFinished(ANavigationData* inNavigation);
     
 };

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FMutableModelParameterValue {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString Name;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 Value;
     
     CUSTOMIZABLEOBJECT_API FMutableModelParameterValue();

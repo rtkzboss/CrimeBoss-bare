@@ -6,14 +6,14 @@
 
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSSLATE_API UKantanPointStyle : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UTexture2D* DataPointTexture;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIntPoint PointSizeTextureOffsets[3];
     
     UKantanPointStyle();

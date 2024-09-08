@@ -3,14 +3,14 @@
 #include "Engine/DeveloperSettings.h"
 #include "XeSSSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, Config=Engine)
+UCLASS(DefaultConfig)
 class XESSPLUGIN_API UXeSSSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     bool bEnableXeSSInEditorViewports;
     
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Config, EditAnywhere)
     FString DebugDataDumpPath;
     
     UXeSSSettings();

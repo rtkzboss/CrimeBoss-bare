@@ -6,25 +6,25 @@
 
 class AActor;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AUDIOBASE_API AIGS_SpatialAudioVolume : public AAkSpatialAudioVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_AkEnvironmentSpace AkEnviroSpace;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool CopyTransmissionLossToSurfaces;
     
 public:
     AIGS_SpatialAudioVolume(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnOverlapEnd(AActor* inOverlappedActor, AActor* inOtherActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnOverlapBegin(AActor* inOverlappedActor, AActor* inOtherActor);
     
 };

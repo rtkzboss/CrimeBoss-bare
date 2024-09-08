@@ -6,11 +6,11 @@
 
 class UTacticalPathfindingNode;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UTacticalPathfindingNode : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<UTacticalPathfindingNode*, FIGS_TacticalPathfindingEdge> Edges;
     
     UTacticalPathfindingNode();

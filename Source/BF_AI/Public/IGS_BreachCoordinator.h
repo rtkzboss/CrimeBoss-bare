@@ -3,7 +3,7 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_BreachCoordinator.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BreachCoordinator : public UWorldSubsystem {
     GENERATED_BODY()
 public:

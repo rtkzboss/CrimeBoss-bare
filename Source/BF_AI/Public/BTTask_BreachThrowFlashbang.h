@@ -7,16 +7,16 @@
 class AIGS_AIControllerGame;
 class UIGS_ThrowableInventoryObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_BreachThrowFlashbang : public UBTTaskNode {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSubclassOf<UIGS_ThrowableInventoryObject> FlashGrenadeClass;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_AIControllerGame* m_Controller;
     
 public:

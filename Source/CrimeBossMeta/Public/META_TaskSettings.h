@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FMETA_TaskSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 NodeId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bShouldBeRemovedFromTaskListAfterExecution;
     
     CRIMEBOSSMETA_API FMETA_TaskSettings();

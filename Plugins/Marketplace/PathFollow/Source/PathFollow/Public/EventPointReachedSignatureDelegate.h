@@ -5,5 +5,5 @@
 class UObject;
 class UPFPathFollowerComponent;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FEventPointReachedSignature, UPFPathFollowerComponent*, FollowerComp, float, Distance, UObject*, ExtraData);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FEventPointReachedSignature, UPFPathFollowerComponent*, FollowerComp, float, Distance, UObject*, ExtraData);
 

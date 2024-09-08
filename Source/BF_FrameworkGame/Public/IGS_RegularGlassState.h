@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct FIGS_RegularGlassState {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector_NetQuantize10 RelativeHoleLocation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FVector_NetQuantize100 UVOffset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bIsBroken;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<uint8> BrokenGlassShards;
     
     BF_FRAMEWORKGAME_API FIGS_RegularGlassState();

@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "IGS_WeaponModsMeshHandler.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WeaponModsMeshHandler : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

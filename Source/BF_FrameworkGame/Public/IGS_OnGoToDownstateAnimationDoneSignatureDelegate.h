@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnGoToDownstateAnimationDoneSignatureDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnGoToDownstateAnimationDoneSignature);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnGoToDownstateAnimationDoneSignature);
 

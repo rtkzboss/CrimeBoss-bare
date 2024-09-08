@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FIGS_AnimationWidgetData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_AnimatedWidget* AnimatedWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* PayloadData;
     
     FIGS_AnimationWidgetData();

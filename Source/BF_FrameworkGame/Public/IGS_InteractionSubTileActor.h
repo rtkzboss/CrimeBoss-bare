@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_InteractionSubTileActor : public AActor {
     GENERATED_BODY()
 public:
@@ -14,10 +14,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void Success(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnShownEvent();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnHiddenEvent();
     
     UFUNCTION(BlueprintCallable)

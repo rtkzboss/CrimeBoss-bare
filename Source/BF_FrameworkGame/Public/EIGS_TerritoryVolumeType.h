@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TerritoryVolumeType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_TerritoryVolumeType : uint8 {
     Exterior,
     Interior,

@@ -8,11 +8,11 @@ class AIGS_ObjectiveScenarioBase;
 class UIGS_WaitForObjectiveScenario;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForObjectiveScenario : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FObjectiveScenarioReadyOutputPin WhenObjectiveScenarioReady;
     
     UIGS_WaitForObjectiveScenario();
@@ -21,7 +21,7 @@ public:
     static UIGS_WaitForObjectiveScenario* WaitForObjectiveScenario(UObject* inWorldContextObject);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecuteOnObjectiveScenarioReady(AIGS_ObjectiveScenarioBase* inObjScenario) const;
     
 };

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBPLoginStatus.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EBPLoginStatus : uint8 {
     NotLoggedIn,
     UsingLocalProfile,

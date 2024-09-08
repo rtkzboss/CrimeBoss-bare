@@ -8,14 +8,14 @@
 class UObject;
 class USteamWSRequestUGCDetailsCallbackProxy;
 
-UCLASS(Blueprintable, MinimalAPI)
+UCLASS(MinimalAPI)
 class USteamWSRequestUGCDetailsCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintWorkshopDetailsDelegate OnSuccess;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBlueprintWorkshopDetailsDelegate OnFailure;
     
     USteamWSRequestUGCDetailsCallbackProxy();

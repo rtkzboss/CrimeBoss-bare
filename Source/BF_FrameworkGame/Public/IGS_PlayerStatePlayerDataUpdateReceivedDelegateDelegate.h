@@ -4,5 +4,5 @@
 
 class APlayerState;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PlayerStatePlayerDataUpdateReceivedDelegate, APlayerState*, inPlayerState);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PlayerStatePlayerDataUpdateReceivedDelegate, APlayerState*, inPlayerState);
 

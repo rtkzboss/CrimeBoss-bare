@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_AIGuardTeamDef : public FIGS_AIBaseTeamDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<EIGS_SecurityVariationType, FIGS_AIGuardTierDef> Variations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIGuardBaseDataDefaults DefaultStats;
     
     FIGS_AIGuardTeamDef();

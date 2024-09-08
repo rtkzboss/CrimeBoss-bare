@@ -7,7 +7,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_LogEditorSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

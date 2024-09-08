@@ -4,19 +4,19 @@
 #include "IGS_InventoryObjectFramework.h"
 #include "IGS_GenericItemsInventoryObject.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class COMMON_DATA_API UIGS_GenericItemsInventoryObject : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_ItemWeight LootWeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 UniversalID;
     
     UIGS_GenericItemsInventoryObject();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int32 GetItemWeightValue(EIGS_ItemWeight inWeight);
     
 };

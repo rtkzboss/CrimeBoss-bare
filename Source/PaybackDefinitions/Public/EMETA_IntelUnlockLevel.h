@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_IntelUnlockLevel.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_IntelUnlockLevel : uint8 {
     LOCK,
     PlayMission,

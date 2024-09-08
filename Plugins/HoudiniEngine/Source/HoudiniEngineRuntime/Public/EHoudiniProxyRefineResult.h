@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHoudiniProxyRefineResult.generated.h"
 
-UENUM(BlueprintType)
-enum class EHoudiniProxyRefineResult : uint8 {
+UENUM()
+enum class EHoudiniProxyRefineResult {
     Invalid,
     Failed,
     Success,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_RadialImpactChassis.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_RadialImpactChassis : uint8 {
     Hit_None,
     Hit_Front,

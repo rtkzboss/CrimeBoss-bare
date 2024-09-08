@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct BF_GUI_API FIGS_HUDTableRow : public FIGS_HUDData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_WieldableBase> ID;
     
     FIGS_HUDTableRow();

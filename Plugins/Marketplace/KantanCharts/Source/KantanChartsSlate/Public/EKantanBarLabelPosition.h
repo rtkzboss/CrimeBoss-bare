@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EKantanBarLabelPosition.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EKantanBarLabelPosition : uint8 {
     NoLabels,
     Standard,

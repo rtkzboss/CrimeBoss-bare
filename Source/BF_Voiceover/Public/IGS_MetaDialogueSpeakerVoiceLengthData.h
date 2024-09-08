@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_MetaDialogueSpeakerVoiceLengthData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float VoiceLength;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LinesCount;
     
     FIGS_MetaDialogueSpeakerVoiceLengthData();

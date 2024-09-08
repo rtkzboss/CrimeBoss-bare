@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PathPointInsaneSpawnData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FPathPointInsaneSpawnData {
     GENERATED_BODY()
 public:

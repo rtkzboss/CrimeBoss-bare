@@ -5,5 +5,5 @@
 class AIGS_AIControllerGame;
 class UIGS_AICommand;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_ThreeParams(FIGS_AICommandFinishedDelegate, AIGS_AIControllerGame*, inOwningContoller, UIGS_AICommand*, inCommand, bool, inFailed);
+UDELEGATE() DECLARE_DYNAMIC_DELEGATE_ThreeParams(FIGS_AICommandFinishedDelegate, AIGS_AIControllerGame*, inOwningContoller, UIGS_AICommand*, inCommand, bool, inFailed);
 

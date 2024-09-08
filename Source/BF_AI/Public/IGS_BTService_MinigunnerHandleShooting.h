@@ -6,14 +6,14 @@
 
 class UIGS_WieldableInventoryObjectBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTService_MinigunnerHandleShooting : public UBTService {
     GENERATED_BODY()
 public:
     UIGS_BTService_MinigunnerHandleShooting();
 
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWieldableAdded(UIGS_WieldableInventoryObjectBase* inObject, EIGS_WieldableSlot inSlot);
     
 };

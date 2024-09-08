@@ -12,13 +12,13 @@ UCLASS(Abstract, Blueprintable, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseGraphComponent : public UObject, public IMETA_GraphComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* OwnerNode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AMETA_BaseGameMode* GameMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bAlreadyActivated;
     
     UMETA_BaseGraphComponent();

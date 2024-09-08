@@ -14,21 +14,21 @@ class UDamageType;
 class UIGS_ImpactTypeObject;
 class UIGS_WeaponInventoryObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ProjectileBase : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<EDrawDebugTrace::Type> DrawDebugTrace;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETraceTypeQuery> TraceChannel;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UDamageType> DamageType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_ImpactTypeObject> ShotImpactType;
     
 public:
@@ -55,19 +55,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetCharacterOwner(AIGS_GameCharacterFramework* inOwner);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnProjectileProcessed(float inDistance, bool inHit, const FHitResult& inHitResult, const bool bIsPenetratingHit, float inDamageDealt);
     
     UFUNCTION(BlueprintCallable)
     void MakeImpactNoiseAndEvent(FVector inNoiseLocation);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetDamageForRange(float inDistance) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AActor* GetCharacterOwner() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetCharacterInstigator() const;
     
     UFUNCTION(BlueprintCallable)

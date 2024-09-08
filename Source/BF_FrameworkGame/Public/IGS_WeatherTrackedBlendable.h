@@ -5,12 +5,12 @@
 
 class UIGS_PostProcessManagerComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeatherTrackedBlendable : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_PostProcessManagerComponent> m_PostProcessManager;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETopNavbarDirection.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ETopNavbarDirection : uint8 {
     Next,
     Previous,

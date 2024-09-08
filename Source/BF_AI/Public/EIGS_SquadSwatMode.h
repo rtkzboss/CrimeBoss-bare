@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SquadSwatMode.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_SquadSwatMode : uint8 {
     None,
     ChasePlayer,

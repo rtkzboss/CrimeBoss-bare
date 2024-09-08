@@ -4,5 +4,5 @@
 
 class AIGS_GameCharacterFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnCharacterDeathSignature, AIGS_GameCharacterFramework*, inCharacter, AIGS_GameCharacterFramework*, inInstigator);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_OnCharacterDeathSignature, AIGS_GameCharacterFramework*, inCharacter, AIGS_GameCharacterFramework*, inInstigator);
 

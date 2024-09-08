@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_BreakPushImpulse.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_BreakPushImpulse : uint8 {
     Break_Impulse_None,
     Break_Impulse_Forward,

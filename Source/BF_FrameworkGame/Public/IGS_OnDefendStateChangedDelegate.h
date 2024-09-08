@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnDefendStateChangedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnDefendStateChanged, bool, inState);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnDefendStateChanged, bool, inState);
 

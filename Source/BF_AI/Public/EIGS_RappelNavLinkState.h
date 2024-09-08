@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_RappelNavLinkState.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_RappelNavLinkState : uint8 {
+UENUM()
+enum class EIGS_RappelNavLinkState {
     In,
     Running,
     Out,

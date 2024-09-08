@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FMETA_PlotlineAssetMaterialStructure {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TMap<UStaticMeshComponent*, FMETA_PlotlineAssetMaterialSlots> MaterialStructure;
     
     FMETA_PlotlineAssetMaterialStructure();

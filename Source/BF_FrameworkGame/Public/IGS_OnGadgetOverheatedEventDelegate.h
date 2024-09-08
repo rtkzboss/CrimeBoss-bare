@@ -3,5 +3,5 @@
 #include "EIGS_ProgressGadgetSubtype.h"
 #include "IGS_OnGadgetOverheatedEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnGadgetOverheatedEvent, EIGS_ProgressGadgetSubtype, inType);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnGadgetOverheatedEvent, EIGS_ProgressGadgetSubtype, inType);
 

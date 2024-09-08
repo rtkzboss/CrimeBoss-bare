@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FGeneratedMaterial {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TArray<FGeneratedTexture> Textures;
     
     CUSTOMIZABLEOBJECT_API FGeneratedMaterial();

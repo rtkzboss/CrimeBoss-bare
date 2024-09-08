@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_GlassRegularPreset.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_GlassRegularPreset : uint8 {
     Panel_None,
     Panel_400X105,

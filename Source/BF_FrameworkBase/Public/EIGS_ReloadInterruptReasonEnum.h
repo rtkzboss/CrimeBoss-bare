@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ReloadInterruptReasonEnum.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_ReloadInterruptReasonEnum : uint8 {
     Other,
     Shooting,

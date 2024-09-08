@@ -4,11 +4,11 @@
 #include "UObject/NoExportTypes.h"
 #include "IGS_RandomStreamHolder.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_RandomStreamHolder : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FRandomStream RandomStream;
     
     UIGS_RandomStreamHolder();

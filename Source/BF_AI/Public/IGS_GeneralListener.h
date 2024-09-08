@@ -9,21 +9,21 @@ class AIGS_GeneralListener;
 class AIGS_GeneralListenerExclusionVolume;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_GeneralListener : public APawn, public IGenericTeamAgentInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FName> SupportedHearingTags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bStartsActive;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_GeneralListenerHeardEvent OnHeardEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_GeneralListenerExclusionVolume*> ExclusionVolumes;
     
 public:
@@ -32,10 +32,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetActive(bool Inactive);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsActive() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static AIGS_GeneralListener* GetGeneralListener(const UObject* inWCO);
     
 

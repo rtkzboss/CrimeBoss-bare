@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "IGS_EnvQueryContext_ValidCoversInDefend.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryContext_ValidCoversInDefend : public UEnvQueryContext {
     GENERATED_BODY()
 public:

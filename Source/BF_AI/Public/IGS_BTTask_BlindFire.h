@@ -3,11 +3,11 @@
 #include "IGS_BTTask_FireBase.h"
 #include "IGS_BTTask_BlindFire.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_BlindFire : public UIGS_BTTask_FireBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     float Distance;
     
     UIGS_BTTask_BlindFire();

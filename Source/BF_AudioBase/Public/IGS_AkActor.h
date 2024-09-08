@@ -7,26 +7,26 @@
 class UAkComponent;
 class UIGS_SignificanceComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AUDIOBASE_API AIGS_AkActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Instanced)
     UIGS_SignificanceComponent* SignificanceComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, Instanced)
     UAkComponent* AkComponent;
     
 public:
     AIGS_AkActor(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPostSignificance(const UIGS_SignificanceComponent* inObjectInfo, EIGS_SignificanceValue inSignificanceValue);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UAkComponent* GetAkComponent() const;
     
 };

@@ -5,19 +5,19 @@
 #include "IGS_TutorialPage.h"
 #include "IGS_TutorialScreen.generated.h"
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_TutorialScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     FGameplayTag TutorialTag;
     
     UIGS_TutorialScreen();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetVideoTutorialData(const FIGS_TutorialPage& videoPageData, bool inSlowDownGame);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetTutorialData(const TArray<FIGS_TutorialPage>& Pages, bool inSlowDownGame);
     
 };

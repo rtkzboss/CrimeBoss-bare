@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FlyingCurveInterpolationMode.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class FlyingCurveInterpolationMode : uint8 {
     Mode_Bezier,
     Mode_Catmull,

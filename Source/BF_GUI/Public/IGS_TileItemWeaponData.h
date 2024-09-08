@@ -4,12 +4,12 @@
 #include "IGS_TileItemData.h"
 #include "IGS_TileItemWeaponData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_GUI_API UIGS_TileItemWeaponData : public UIGS_TileItemData {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     ETileComparisonUIData m_ComparisonUIData;
     
 public:
@@ -18,7 +18,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetComparisonData(ETileComparisonUIData inComparisonUIData);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     ETileComparisonUIData GetComparisonData() const;
     
 };

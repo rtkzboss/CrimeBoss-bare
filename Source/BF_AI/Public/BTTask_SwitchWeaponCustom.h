@@ -5,11 +5,11 @@
 
 class UIGS_MeleeWeaponInventoryObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UBTTask_SwitchWeaponCustom : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_MeleeWeaponInventoryObject* WeaponDefinition;
     
     UBTTask_SwitchWeaponCustom();

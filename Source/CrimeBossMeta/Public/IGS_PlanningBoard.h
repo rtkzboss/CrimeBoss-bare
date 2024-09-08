@@ -8,11 +8,11 @@
 
 class UMETA_BaseMission;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API AIGS_PlanningBoard : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FMETA_PlanningBoardRow PlanningBoardData;
     
     AIGS_PlanningBoard(const FObjectInitializer& ObjectInitializer);
@@ -20,10 +20,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetPlanningBoardData(FGameplayTag inPlanningBoardID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetPlanningBoardID() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UMETA_BaseMission* GetMissionFromMapByPriority(TArray<FMETA_PlanningBoardMission> planningBoardItemMissions, UPARAM(Ref) TArray<UMETA_BaseMission*>& missionsOnMap) const;
     
 };

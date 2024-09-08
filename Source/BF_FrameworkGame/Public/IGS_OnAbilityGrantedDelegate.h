@@ -5,5 +5,5 @@
 
 class UGameplayAbility;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnAbilityGranted, TSubclassOf<UGameplayAbility>, inAbility);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnAbilityGranted, TSubclassOf<UGameplayAbility>, inAbility);
 

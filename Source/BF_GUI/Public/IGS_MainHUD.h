@@ -8,30 +8,30 @@
 class UIGS_HUDKantanDatasourceHolder;
 class UIGS_MainHUDWidget;
 
-UCLASS(Abstract, Blueprintable, NonTransient)
+UCLASS(Abstract, NonTransient)
 class BF_GUI_API AIGS_MainHUD : public AHUD {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MostImportantHintChangedSignature OnMostImportantHintChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_HUDKantanDatasourceHolder* KantanDatasourceHolder;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_MainHUDWidget* MainHUDWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     EIGS_MostPrioHintType CurrMostPrioHintType;
     
 public:
     AIGS_MainHUD(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, Exec)
+    UFUNCTION(Exec)
     void ToggleGASDebugSimple();
     
-    UFUNCTION(BlueprintCallable, Exec)
+    UFUNCTION(Exec)
     void ToggleGASDebugFull();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

@@ -4,14 +4,14 @@
 #include "GameplayTagContainer.h"
 #include "IGS_RichPresenceMissionNameTableRow.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_RichPresenceMissionNameTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FText Name;
     
     BF_FRAMEWORKGAME_API FIGS_RichPresenceMissionNameTableRow();

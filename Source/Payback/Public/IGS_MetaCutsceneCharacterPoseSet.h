@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneCharacterPoseSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_MetaDialogueCharacterSlot, FGameplayTagContainer> CharacterPoses;
     
     FIGS_MetaCutsceneCharacterPoseSet();

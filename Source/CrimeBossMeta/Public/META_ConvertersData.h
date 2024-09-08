@@ -37,7 +37,7 @@ class UMETA_WeaponSkin;
 class UMapTile;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_ConvertersData : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -67,7 +67,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<UMETA_Weapon*> ConvertWeaponsArrayFromSave(UObject* inWCO, const TMap<TSubclassOf<UMETA_WeaponInventoryObject>, FMETA_WeaponSaveData>& inWeapons);
     
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    UFUNCTION(meta=(WorldContext=inWCO))
     static TArray<UMETA_Character*> ConvertUniqueCharactersFromSaveForBlackmarket(UObject* inWCO, EMETA_RespectLvl inBossRespect, UPARAM(Ref) TArray<FMETA_HeisterSaveData>& inUniqueCharacters);
     
     UFUNCTION(BlueprintCallable)
@@ -91,10 +91,10 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<UMETA_BaseMission*> ConvertMissionsFromSave(const UObject* inWCO, UPARAM(Ref) FMETA_MissionsSave& inMissions, TArray<UMETA_BaseMission*>& outTurfWarMissions);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void ConvertMissionResultMeta2FPS(EMETA_JobResult MetaResult, ECommonMissionResult& FPSResult);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void ConvertMissionResultFPS2Meta(ECommonMissionResult FPSResult, EMETA_JobResult& MetaResult);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

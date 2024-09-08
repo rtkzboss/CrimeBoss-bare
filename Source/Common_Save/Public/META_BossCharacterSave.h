@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_BossCharacterSave {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_HeisterLoadoutSave Loadout;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_PerkData> Perks;
     
     FMETA_BossCharacterSave();

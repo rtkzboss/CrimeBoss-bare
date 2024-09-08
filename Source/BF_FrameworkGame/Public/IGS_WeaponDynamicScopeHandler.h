@@ -15,55 +15,55 @@ class BF_FRAMEWORKGAME_API UIGS_WeaponDynamicScopeHandler : public UActorCompone
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<AIGS_WeaponBase> OwningWeapon;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, VisibleAnywhere)
     TWeakObjectPtr<UStaticMeshComponent> DynamicScopeMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, VisibleAnywhere)
     TWeakObjectPtr<UStaticMeshComponent> SightMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_WeaponModsHandler> WeaponModsHandler;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     UMaterialInterface* ScopePostprocessMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     UMaterialInterface* ScopePostprocessVerticalMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     UMaterialInterface* SniperScopePostprocessMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     UMaterialInterface* SniperScopePostprocessVerticalMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMaterialInstanceDynamic* DynamicScopePostprocessMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMaterialInstanceDynamic* DynamicScopePostprocessVerticalMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMaterialInstanceDynamic* DynamicSniperScopePostprocessMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UMaterialInstanceDynamic* DynamicSniperScopePostprocessVerticalMaterial;
     
 public:
     UIGS_WeaponDynamicScopeHandler(const FObjectInitializer& ObjectInitializer);
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWeaponDestroyed(AActor* inDestroyed);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnAimChanged(bool inAim);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void DisableAimPostprocess() const;
     
 };

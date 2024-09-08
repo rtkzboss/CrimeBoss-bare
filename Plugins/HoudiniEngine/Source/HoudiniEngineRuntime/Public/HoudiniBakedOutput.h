@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct HOUDINIENGINERUNTIME_API FHoudiniBakedOutput {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FHoudiniBakedOutputObjectIdentifier, FHoudiniBakedOutputObject> BakedOutputObjects;
     
     FHoudiniBakedOutput();

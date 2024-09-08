@@ -19,17 +19,17 @@ class UIGS_MenuCommonData_Base;
 class UIGS_UnlockManagerComponent;
 class UMETA_LevelActorsManagerComponent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API AIGS_GameStateMenuBase : public AIGS_GameStateBaseWithData, public IMETA_GameModeAdapter, public IMETA_ManagersExplorer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UIGS_EconomyData_Base* EconomyBaseData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UIGS_MenuCommonData_Base* CommonBaseData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsPreloadEnabled;
     
     AIGS_GameStateMenuBase(const FObjectInitializer& ObjectInitializer);
@@ -55,10 +55,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void PostInitGameData();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetUnlockManager(UIGS_UnlockManagerComponent*& UnlockManager);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetMenuSlots(TArray<AIGS_MenuSlotBase*>& outMenuSlots) const;
     
     UFUNCTION(BlueprintCallable)
@@ -73,7 +73,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UMETA_LevelActorsManagerComponent* GetLevelActorsManagerComponent();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetEntitlementItemsManager(UIGS_EntitlementItemsManagerBaseComponent*& EntitlmentItemsManager);
     
     UFUNCTION(BlueprintCallable)

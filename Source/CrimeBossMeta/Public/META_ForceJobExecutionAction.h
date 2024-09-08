@@ -4,11 +4,11 @@
 #include "META_BaseAction.h"
 #include "META_ForceJobExecutionAction.generated.h"
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_ForceJobExecutionAction : public UMETA_BaseAction {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_JobForceResult ForcedJobResultFromUI;
     
     UMETA_ForceJobExecutionAction();

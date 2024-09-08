@@ -10,36 +10,36 @@ class UAkStateValue;
 class UIGS_MenuBackgroundMusicStatesDataAsset;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_MenuBackgroundDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MenuBackgroundDataRefreshed OnMenuBackgroundDataRefreshed;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_MenuBackgroundMusicStatesDataAsset* AkStatesDataAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool isDebugEnabled;
     
 public:
     UIGS_MenuBackgroundDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FText> GetSelectableMenuBackgroundsNames() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(FGameplayTag inID) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_MenuBackgroundTableRow GetDataMenuBackground(UObject* inWCO, FGameplayTag inID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_MenuBackgroundTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_MenuBackgroundTableRow> GetDatabaseTableBP() const;
     
     UFUNCTION(BlueprintCallable)

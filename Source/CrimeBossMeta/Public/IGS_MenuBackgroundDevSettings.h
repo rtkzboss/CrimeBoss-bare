@@ -5,11 +5,11 @@
 
 class UDataTable;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_CrimeBossMetaSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_CrimeBossMetaSettings")
 class CRIMEBOSSMETA_API UIGS_MenuBackgroundDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> BossBackgroundDataTable;
     
     UIGS_MenuBackgroundDevSettings();

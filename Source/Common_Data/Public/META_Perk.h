@@ -4,16 +4,16 @@
 #include "META_BaseObject.h"
 #include "META_Perk.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UMETA_Perk : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
     UMETA_Perk();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetPerkLevel();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_PerksTableRow GetPerkData();
     
 };

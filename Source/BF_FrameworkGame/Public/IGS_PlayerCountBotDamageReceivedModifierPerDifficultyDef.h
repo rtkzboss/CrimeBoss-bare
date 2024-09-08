@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly, EditFixedSize)
     TMap<EIGS_FPSDifficulty, FIGS_PlayerCountBotDamageReceivedModifierDef> Difficulties;
     
     FIGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef();

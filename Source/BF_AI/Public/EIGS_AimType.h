@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AimType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_AimType : uint8 {
     None,
     Idle,

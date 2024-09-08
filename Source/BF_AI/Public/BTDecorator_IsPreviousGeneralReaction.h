@@ -4,14 +4,14 @@
 #include "GameplayTagContainer.h"
 #include "BTDecorator_IsPreviousGeneralReaction.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_IsPreviousGeneralReaction : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag PreviousGlobalReactionTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MaxTimeSince;
     
     UBTDecorator_IsPreviousGeneralReaction();

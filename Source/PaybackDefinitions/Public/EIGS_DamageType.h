@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DamageType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_DamageType : uint8 {
     Unknown,
     Fire,

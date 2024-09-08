@@ -5,11 +5,11 @@
 
 class UIGS_ThreatPointComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ThreatPointBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_ThreatPointComponent* ThreatPointComponent;
     
     AIGS_ThreatPointBase(const FObjectInitializer& ObjectInitializer);

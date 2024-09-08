@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_WeaponScopeKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag WieldableClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ItemQuality Quality;
     
     FMETA_WeaponScopeKey();

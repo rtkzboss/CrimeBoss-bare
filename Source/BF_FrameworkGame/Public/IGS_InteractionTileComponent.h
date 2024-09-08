@@ -12,16 +12,16 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractionTileComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnTileCompSuccess OnTileSuccessEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnTileCompSuccess OnTileActivatedEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     AIGS_InteractionSubTileActor* SubTileChildActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<AIGS_InteractionSubTileActor> SubTileActorClass;
     
     UIGS_InteractionTileComponent(const FObjectInitializer& ObjectInitializer);
@@ -31,13 +31,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void Show();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSubTileSuccess(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnSubTileActorSpawned();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSubTileActivate(AIGS_GameCharacterFramework* inInstigator);
     
     UFUNCTION(BlueprintCallable)

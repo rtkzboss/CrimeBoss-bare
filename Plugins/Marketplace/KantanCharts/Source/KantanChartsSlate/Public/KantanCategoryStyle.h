@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FKantanCategoryStyle {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName CategoryStyleId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FLinearColor Color;
     
     KANTANCHARTSSLATE_API FKantanCategoryStyle();

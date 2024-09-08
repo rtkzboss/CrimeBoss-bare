@@ -12,19 +12,19 @@ class UAnimMontage;
 class UAnimNotify_Footstep;
 class UAnimSequence;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_ANIMATIONS_API UIGS_AnimationFunctionsLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UIGS_AnimationFunctionsLibrary();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsValidAnimNotifyTrackName(const UAnimSequence* AnimationSequence, FName NotifyTrackName);
     
     UFUNCTION(BlueprintCallable)
     static bool IsPlayingSlotMontage(UAnimInstance* inInstance, UAnimMontage* inMontage, FName SlotName);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FTransform GetRootMotionTransform(UAnimInstance* inAnimInstance, const FName& SlotName);
     
     UFUNCTION(BlueprintCallable)

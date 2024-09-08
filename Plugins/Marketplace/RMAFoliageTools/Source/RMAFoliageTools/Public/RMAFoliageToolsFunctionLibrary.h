@@ -5,16 +5,16 @@
 
 class AInstancedFoliageActor;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class RMAFOLIAGETOOLS_API URMAFoliageToolsFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URMAFoliageToolsFunctionLibrary();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FName GetVersion();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static AInstancedFoliageActor* GetInstancedFoliageActor();
     
 };

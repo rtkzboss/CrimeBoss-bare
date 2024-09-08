@@ -11,7 +11,7 @@ class UNavigationQueryFilter;
 class UObject;
 class UStaticMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UIGS_AINavigationHelpersLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

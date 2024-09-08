@@ -6,14 +6,14 @@
 #include "IGS_ProjectileOverlappable.h"
 #include "IGS_BoxOverlappableComponent.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_BoxOverlappableComponent : public UBoxComponent, public IIGS_ProjectileOverlappable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnBoxProjectileOverlap OnProjectileOverlapEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_OverlapResponseType OverlappableType;
     
     UIGS_BoxOverlappableComponent(const FObjectInitializer& ObjectInitializer);

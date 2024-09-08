@@ -5,11 +5,11 @@
 
 class UMETA_BaseCallback;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UMETA_CallbackNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_BaseCallback* CallbackObject;
     
     UMETA_CallbackNode_SG();

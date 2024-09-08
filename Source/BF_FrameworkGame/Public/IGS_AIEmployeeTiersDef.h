@@ -4,20 +4,20 @@
 #include "IGS_AIEmployeeSpecializationHolder.h"
 #include "IGS_AIEmployeeTiersDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeTiersDef : public FIGS_AIBaseTiersDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Tier1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Tier2;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Tier3;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Special;
     
     FIGS_AIEmployeeTiersDef();

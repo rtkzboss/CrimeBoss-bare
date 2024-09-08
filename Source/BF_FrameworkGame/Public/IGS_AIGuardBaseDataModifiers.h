@@ -3,7 +3,7 @@
 #include "IGS_AIUnitBaseDataModifiers.h"
 #include "IGS_AIGuardBaseDataModifiers.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIGuardBaseDataModifiers : public FIGS_AIUnitBaseDataModifiers {
     GENERATED_BODY()
 public:

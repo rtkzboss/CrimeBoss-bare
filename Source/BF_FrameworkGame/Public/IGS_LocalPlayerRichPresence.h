@@ -3,7 +3,7 @@
 #include "Subsystems/LocalPlayerSubsystem.h"
 #include "IGS_LocalPlayerRichPresence.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_LocalPlayerRichPresence : public ULocalPlayerSubsystem {
     GENERATED_BODY()
 public:

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_GlobalItemSlot {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 ItemClassIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 ItemCount;
     
     BF_FRAMEWORKGAME_API FIGS_GlobalItemSlot();

@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FIGS_ReplicatedAcceleration {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint8 AccelXYRadians;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     uint8 AccelXYMagnitude;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int8 AccelZ;
     
     BF_NETWORK_API FIGS_ReplicatedAcceleration();

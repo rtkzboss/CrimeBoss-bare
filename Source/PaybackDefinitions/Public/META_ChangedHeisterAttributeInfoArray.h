@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_ChangedHeisterAttributeInfoArray {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_ChangedHeisterAttributeInfo> ChangedAttributeArray;
     
     FMETA_ChangedHeisterAttributeInfoArray();

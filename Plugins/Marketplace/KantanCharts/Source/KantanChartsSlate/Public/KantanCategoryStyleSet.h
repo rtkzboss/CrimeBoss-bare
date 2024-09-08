@@ -4,11 +4,11 @@
 #include "KantanCategoryStyle.h"
 #include "KantanCategoryStyleSet.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSSLATE_API UKantanCategoryStyleSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FKantanCategoryStyle> Styles;
     
     UKantanCategoryStyleSet();

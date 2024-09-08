@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_DialoguePoseAnimationOverride {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     TMap<EIGS_MetaDialogueCharacterSlot, UAnimMontage*> PoseAnimations;
     
     FIGS_DialoguePoseAnimationOverride();

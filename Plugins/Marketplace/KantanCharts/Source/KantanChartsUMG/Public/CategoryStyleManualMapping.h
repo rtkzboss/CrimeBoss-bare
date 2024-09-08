@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FCategoryStyleManualMapping {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName CategoryId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FKantanCategoryStyle Style;
     
     KANTANCHARTSUMG_API FCategoryStyleManualMapping();

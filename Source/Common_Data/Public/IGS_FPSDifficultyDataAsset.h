@@ -5,11 +5,11 @@
 #include "IGS_FPSDifficultySettings.h"
 #include "IGS_FPSDifficultyDataAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_FPSDifficultyDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<EIGS_FPSDifficulty, FIGS_FPSDifficultySettings> FPSDifficultySettings;
     
     UIGS_FPSDifficultyDataAsset();

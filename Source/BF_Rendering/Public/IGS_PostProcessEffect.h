@@ -5,11 +5,11 @@
 class IBlendableInterface;
 class UBlendableInterface;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_PostProcessEffect {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TScriptInterface<IBlendableInterface> PostProcessMaterial;
     
     BF_RENDERING_API FIGS_PostProcessEffect();

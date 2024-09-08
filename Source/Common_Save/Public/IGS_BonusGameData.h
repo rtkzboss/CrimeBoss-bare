@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FIGS_BonusGameData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FDateTime LastClaimedDailyMultiplayerDateTime;
     
     COMMON_SAVE_API FIGS_BonusGameData();

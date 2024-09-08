@@ -4,5 +4,5 @@
 
 class AIGS_PickupActorInventoryItem;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnDeathItemsDropped, const TArray<AIGS_PickupActorInventoryItem*>&, outDroppedItems);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnDeathItemsDropped, const TArray<AIGS_PickupActorInventoryItem*>&, outDroppedItems);
 

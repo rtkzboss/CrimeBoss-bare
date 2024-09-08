@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_FakeLightConfig.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_FakeLightConfig {
     GENERATED_BODY()
 public:

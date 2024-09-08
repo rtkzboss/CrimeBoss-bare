@@ -3,7 +3,7 @@
 #include "IGS_AIControllerGame.h"
 #include "IGS_AIControllerSwat.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_AIControllerSwat : public AIGS_AIControllerGame {
     GENERATED_BODY()
 public:

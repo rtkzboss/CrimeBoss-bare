@@ -5,12 +5,12 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSUMG_API UTimeSeriesPlot : public UKantanTimeSeriesPlotBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
     UObject* DataSource;
     
 public:

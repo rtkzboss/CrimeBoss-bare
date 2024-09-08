@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FIGS_CustomizationArchive {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TArray<uint8> StoredArchive;
     
     CUSTOMIZABLEOBJECT_API FIGS_CustomizationArchive();

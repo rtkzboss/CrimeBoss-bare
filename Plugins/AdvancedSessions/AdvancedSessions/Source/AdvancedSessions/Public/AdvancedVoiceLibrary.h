@@ -4,7 +4,7 @@
 #include "BPUniqueNetId.h"
 #include "AdvancedVoiceLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UAdvancedVoiceLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -43,19 +43,19 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool MuteRemoteTalker(uint8 LocalUserNum, const FBPUniqueNetId& UniqueNetId, bool bIsSystemWide);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsRemotePlayerTalking(const FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsPlayerMuted(uint8 LocalUserNumChecking, const FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsLocalPlayerTalking(uint8 LocalPlayerNum);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void IsHeadsetPresent(bool& bHasHeadset, uint8 LocalPlayerNum);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetNumLocalTalkers(int32& NumLocalTalkers);
     
 };

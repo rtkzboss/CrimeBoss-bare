@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_SwitchWeaponBase.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API UBTTask_SwitchWeaponBase : public UBTTaskNode {
     GENERATED_BODY()
 public:

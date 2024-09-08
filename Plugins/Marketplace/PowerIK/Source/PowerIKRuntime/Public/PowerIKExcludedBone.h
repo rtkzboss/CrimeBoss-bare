@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct POWERIKRUNTIME_API FPowerIKExcludedBone {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
     
     FPowerIKExcludedBone();

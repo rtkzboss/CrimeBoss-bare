@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPDGWorkResultState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EPDGWorkResultState : uint8 {
     None,
     ToLoad,

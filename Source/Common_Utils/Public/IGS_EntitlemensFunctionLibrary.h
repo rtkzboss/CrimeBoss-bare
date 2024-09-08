@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_UTILS_API UIGS_EntitlemensFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

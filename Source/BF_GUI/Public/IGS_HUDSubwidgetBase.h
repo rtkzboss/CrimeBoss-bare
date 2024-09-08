@@ -6,25 +6,25 @@
 
 class AIGS_PlayerCharacter;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_HUDSubwidgetBase : public UIGS_WidgetWithInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 bShowWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     int32 bCurrentlyRelevant;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_HUDVisibilityMode VisibilityMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bHiddenOnStartup;
     
     UIGS_HUDSubwidgetBase();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void UnbindPawnEvent(AIGS_PlayerCharacter* inCharacter);
     
     UFUNCTION(BlueprintCallable)
@@ -42,16 +42,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void RefreshShowWidget();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void PlayWidgetAnimation(bool InVisibility);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnNewPawnEvent(AIGS_PlayerCharacter* inCharacter);
     
     UFUNCTION(BlueprintCallable)
     bool IsRelevant();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void HideAndDestroy();
     
     UFUNCTION(BlueprintCallable)

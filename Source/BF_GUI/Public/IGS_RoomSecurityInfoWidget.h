@@ -7,23 +7,23 @@
 class AIGS_PlayerCharacter;
 class AIGS_PlayerControllerRoot;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_RoomSecurityInfoWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
     
     UIGS_RoomSecurityInfoWidget();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void ShowSecurityChanged(EIGS_RoomSecurityType inType);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSecurityTierChanged(EIGS_RoomSecurityType inType);
     
 };

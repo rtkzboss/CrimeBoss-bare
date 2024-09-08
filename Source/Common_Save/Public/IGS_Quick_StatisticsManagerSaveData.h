@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_Quick_StatisticsManagerSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<int32, FMETA_StatisticNoteSaveData> Statistic;
     
     FIGS_Quick_StatisticsManagerSaveData();

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_PlayerStateMachineState.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_PlayerStateMachineState : uint8 {
+UENUM()
+enum class EIGS_PlayerStateMachineState {
     EIGS_Stand,
     EIGS_Down,
 };

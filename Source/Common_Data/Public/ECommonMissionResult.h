@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECommonMissionResult.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ECommonMissionResult : uint8 {
     Res_UNKNOWN = 255,
     Res_Abort = 0,

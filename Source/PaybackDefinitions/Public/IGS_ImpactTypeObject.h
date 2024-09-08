@@ -6,17 +6,17 @@
 
 class UAkSwitchValue;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class PAYBACKDEFINITIONS_API UIGS_ImpactTypeObject : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UAkSwitchValue* SwitchValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool bShouldSpawnBloodImpacts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_WoundType WoundType;
     
     UIGS_ImpactTypeObject();

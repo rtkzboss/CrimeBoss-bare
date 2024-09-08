@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SpecialActionType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_SpecialActionType : uint8 {
     SAT_None,
     SAT_Ping,

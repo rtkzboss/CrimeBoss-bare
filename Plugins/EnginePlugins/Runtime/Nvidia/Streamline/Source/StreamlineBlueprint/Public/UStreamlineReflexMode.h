@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UStreamlineReflexMode.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class UStreamlineReflexMode : uint8 {
     Disabled,
     Enabled,

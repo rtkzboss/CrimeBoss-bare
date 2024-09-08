@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FGateExplosiveInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_BreachPointComponent* ExplosivePoint;
     
     BF_AI_API FGateExplosiveInfo();

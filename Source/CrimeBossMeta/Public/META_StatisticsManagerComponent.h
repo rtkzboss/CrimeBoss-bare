@@ -24,34 +24,34 @@ class UMETA_Character;
 class UMETA_Weapon;
 class UMapTile;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_StatisticsManagerComponent : public UIGS_StatisticsManagerBaseComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<int32, FMETA_StatisticNoteSaveData> Statistic;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CurrentDay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CareerScore;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 StartDayForStatistics;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag killed_civilians_tag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag killed_gangsters_tag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag killed_police_tag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag killed_swat_tag;
     
 public:
@@ -60,7 +60,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool TryModifyGlobalStatistic(const FGameplayTag inStatistic, const float InValue, float& outNewValue, const bool inExpand, const EMETA_StatisticModificationType inMode);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool TryGetExpandedStatisticsTag(FGameplayTag inRootTag, FGameplayTag& outExpandedTag) const;
     
     UFUNCTION(BlueprintCallable)
@@ -75,25 +75,25 @@ public:
     UFUNCTION(BlueprintCallable)
     void InitStatisticCurrentDay(int32 inDay);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_StatisticsRootTags GetStatisticsRootTags() const;
     
     UFUNCTION(BlueprintCallable)
     TMap<int32, FMETA_StatisticNoteSaveData> GetStatisticForSave();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_StatisticNoteSaveData GetStatisticForInteraval(int32 inStartDay, int32 inEndDay) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_StatisticNoteSaveData GetStatisticByDay(int32 inDay) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetGlobalStatistic(const FGameplayTag inStatistic, const bool inExpand) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_StatisticNoteSaveData GetFullStatistic() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetFinalScoreMultiplier() const;
     
     UFUNCTION(BlueprintCallable)

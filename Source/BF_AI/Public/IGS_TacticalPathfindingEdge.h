@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_TacticalPathfindingEdge {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTacticalPathfindingNode*> TresspasingNodes;
     
     FIGS_TacticalPathfindingEdge();

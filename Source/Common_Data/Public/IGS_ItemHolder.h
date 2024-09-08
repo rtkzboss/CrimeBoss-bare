@@ -3,14 +3,14 @@
 #include "EIGS_ItemType.h"
 #include "IGS_ItemHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct COMMON_DATA_API FIGS_ItemHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     int32 ItemId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     EIGS_ItemType ItemType;
     
     FIGS_ItemHolder();

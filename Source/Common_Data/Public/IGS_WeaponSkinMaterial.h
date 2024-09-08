@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_WeaponSkinMaterial {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UMaterialInterface* TortillaMaterial;
     
     FIGS_WeaponSkinMaterial();

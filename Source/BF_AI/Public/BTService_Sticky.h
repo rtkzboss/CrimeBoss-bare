@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTService.h"
 #include "BTService_Sticky.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_Sticky : public UBTService {
     GENERATED_BODY()
 public:

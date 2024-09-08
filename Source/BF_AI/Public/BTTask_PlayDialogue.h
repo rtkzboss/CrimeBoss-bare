@@ -4,12 +4,12 @@
 #include "IGS_DialogueAsyncActionInterface.h"
 #include "BTTask_PlayDialogue.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_PlayDialogue : public UBTTaskNode, public IIGS_DialogueAsyncActionInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FText DialogueID;
     
 public:

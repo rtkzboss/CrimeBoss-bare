@@ -4,7 +4,7 @@
 #include "META_UIEventsManager.h"
 #include "IGS_UIEventsManagerBaseComponent.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_UIEventsManagerBaseComponent : public UActorComponent, public IMETA_UIEventsManager {
     GENERATED_BODY()
 public:

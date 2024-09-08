@@ -13,34 +13,34 @@ class UIGS_PlayBinkMedia;
 class UIGS_ScreenHandler;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API UIGS_PlayBinkMedia : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BinkMediaEvent Finished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BinkMediaEvent Started;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BinkMediaEvent Stopped;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BinkMediaEvent Failed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BinkMediaEvent Prepared;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_BinkMediaEvent SubtitleEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_BinkMediaWidget* BinkMediaWidget;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ScreenHandler* m_ScreenHandler;
     
 public:
@@ -62,13 +62,13 @@ public:
     static UIGS_PlayBinkMedia* PlayBinkMedia(UObject* inWCO, UBinkMediaPlayer* inBinkMediaPlayer, bool inAutoStart, bool inAddToScreenHandler);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWidgetSkipTriggered();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnMediaReachedEnd();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnLevelLoadStarted(FName inLevelName, bool inIsServerTravel);
     
 public:

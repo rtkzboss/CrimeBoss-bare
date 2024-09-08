@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "UNISSupport.generated.h"
 
-UENUM(BlueprintType)
-enum class UNISSupport : uint8 {
+UENUM()
+enum class UNISSupport {
     Supported,
     NotSupported,
 };

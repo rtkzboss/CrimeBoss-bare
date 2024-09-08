@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/Items/EnvQueryItemType_Actor.h"
 #include "IGS_EnvQueryItemType_PickupActorBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_EnvQueryItemType_PickupActorBase : public UEnvQueryItemType_Actor {
     GENERATED_BODY()
 public:

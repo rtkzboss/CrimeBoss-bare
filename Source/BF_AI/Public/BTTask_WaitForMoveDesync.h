@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_WaitForMoveDesync.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_WaitForMoveDesync : public UBTTaskNode {
     GENERATED_BODY()
 public:

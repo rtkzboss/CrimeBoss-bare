@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_ReactionVariant.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_ReactionVariant : uint8 {
+UENUM()
+enum class EIGS_ReactionVariant {
     React_Unknown = 255,
     React_ReportIn = 0,
     React_WaveAtPlayer,

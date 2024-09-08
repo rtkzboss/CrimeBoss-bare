@@ -8,21 +8,21 @@ class AIGS_IntelligentGameCharacter;
 class UCoverPoint;
 class UIGS_CharacterData;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_InCoverBleeding : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UCoverPoint* m_CoverPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_AIControllerBase* m_Controller;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_IntelligentGameCharacter* m_Character;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_CharacterData* m_CharacterData;
     
 public:

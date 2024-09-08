@@ -11,11 +11,11 @@
 class AIGS_GameCharacterFramework;
 class UActorComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_PlayerControllerFramework : public APlayerController, public IIGS_CharacterIDInterface, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_GameCharacterFramework* CurrentPawn;
     
     AIGS_PlayerControllerFramework(const FObjectInitializer& ObjectInitializer);
@@ -23,13 +23,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SetShowCrosshair(bool inShowCrosshair) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetLocalPlayerVoiceMute(bool inMute);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnPreClientTravel();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     UActorComponent* GetGUIController();
     
 

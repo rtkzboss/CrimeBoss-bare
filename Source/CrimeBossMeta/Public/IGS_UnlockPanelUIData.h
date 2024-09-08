@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct CRIMEBOSSMETA_API FIGS_UnlockPanelUIData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Title;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Text;
     
     FIGS_UnlockPanelUIData();

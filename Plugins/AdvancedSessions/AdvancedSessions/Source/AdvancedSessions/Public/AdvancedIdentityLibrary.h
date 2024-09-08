@@ -9,7 +9,7 @@
 
 class APlayerController;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UAdvancedIdentityLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -18,13 +18,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetUserAccountAttribute(const FBPUserOnlineAccount& AccountInfo, const FString& AttributeName, const FString& NewAttributeValue, EBlueprintResultSwitch& Result);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUserID(const FBPUserOnlineAccount& AccountInfo, FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUserAccountRealName(const FBPUserOnlineAccount& AccountInfo, FString& UserName);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUserAccountDisplayName(const FBPUserOnlineAccount& AccountInfo, FString& DisplayName);
     
     UFUNCTION(BlueprintCallable)
@@ -33,13 +33,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static void GetUserAccountAttribute(const FBPUserOnlineAccount& AccountInfo, const FString& AttributeName, FString& AttributeValue, EBlueprintResultSwitch& Result);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetUserAccountAccessToken(const FBPUserOnlineAccount& AccountInfo, FString& AccessToken);
     
     UFUNCTION(BlueprintCallable)
     static void GetUserAccount(const FBPUniqueNetId& UniqueNetId, FBPUserOnlineAccount& AccountInfo, EBlueprintResultSwitch& Result);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static void GetPlayerNickname(const FBPUniqueNetId& UniqueNetId, FString& PlayerNickname);
     
     UFUNCTION(BlueprintCallable)

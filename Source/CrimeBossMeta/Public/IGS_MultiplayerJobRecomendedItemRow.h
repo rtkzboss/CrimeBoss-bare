@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FIGS_MultiplayerJobRecomendedItemRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMETA_Interval LevelRange;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_RecomendedItemDefinition> JobCategoryItemPools;
     
     CRIMEBOSSMETA_API FIGS_MultiplayerJobRecomendedItemRow();

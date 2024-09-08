@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnDoomTimerStartEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnDoomTimerStartEvent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnDoomTimerStartEvent);
 

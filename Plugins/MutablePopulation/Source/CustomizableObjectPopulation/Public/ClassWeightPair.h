@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FClassWeightPair {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UCustomizableObjectPopulationClass* Class;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int32 ClassWeight;
     
     CUSTOMIZABLEOBJECTPOPULATION_API FClassWeightPair();

@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnDetectivesChangedDelegateDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDetectivesChangedDelegate);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDetectivesChangedDelegate);
 

@@ -12,34 +12,34 @@ class UIGS_RenderingSettings;
 class UIGS_SoundSettings;
 class UIGS_TogglesSettings;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_SETTINGS_API UIGS_CustomGameUserSettings : public UGameUserSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_SoundSettings* SoundSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_GameSettings* GameSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_RenderingSettings* RenderingSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_ControllerSettings* ControllerSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_TogglesSettings* TogglesSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_MouseSettings* MouseSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_InputBindSettings* InputBindSettings;
     
     UIGS_CustomGameUserSettings();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static UIGS_CustomGameUserSettings* Instance();
     
 };

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_ScenarioDifficultyCombinedWithHeat.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_ScenarioDifficultyCombinedWithHeat : uint8 {
+UENUM()
+enum class EIGS_ScenarioDifficultyCombinedWithHeat {
     SDCWH_Unknown,
     SDCWH_LightForce,
     SDCWH_MediumForce,

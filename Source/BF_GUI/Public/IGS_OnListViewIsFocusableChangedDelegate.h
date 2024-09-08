@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnListViewIsFocusableChangedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnListViewIsFocusableChanged, bool, inFocusable);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnListViewIsFocusableChanged, bool, inFocusable);
 

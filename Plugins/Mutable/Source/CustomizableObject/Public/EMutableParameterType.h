@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMutableParameterType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMutableParameterType : uint8 {
     None,
     Bool,

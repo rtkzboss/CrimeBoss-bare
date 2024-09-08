@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FIGS_UnlockStatsLevels {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<int32> Levels;
     
     BF_FRAMEWORKBASE_API FIGS_UnlockStatsLevels();

@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "IGS_ScriptingCommandAsyncBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandAsyncBase : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:

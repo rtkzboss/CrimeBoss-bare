@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "CustomizableObjectExportOptions.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectExportOptions {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bTextureCompression;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString TargetPlatform;
     
     CUSTOMIZABLEOBJECT_API FCustomizableObjectExportOptions();

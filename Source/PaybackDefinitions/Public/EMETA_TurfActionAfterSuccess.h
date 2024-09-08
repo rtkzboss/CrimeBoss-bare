@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_TurfActionAfterSuccess.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_TurfActionAfterSuccess : uint8 {
     None,
     NeutralizeTurf,

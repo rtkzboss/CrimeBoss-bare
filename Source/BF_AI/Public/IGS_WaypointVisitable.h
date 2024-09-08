@@ -3,7 +3,7 @@
 #include "IGS_WaypointBase.h"
 #include "IGS_WaypointVisitable.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_WaypointVisitable : public AIGS_WaypointBase {
     GENERATED_BODY()
 public:

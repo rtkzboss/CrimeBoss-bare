@@ -13,27 +13,27 @@ class AIGS_GameCharacterFramework;
 class UCoverPoint;
 class UShapeComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_DefendPointBase : public AIGS_WaypointVisitable, public IIGS_GameplayTagAssetInterfaceCustom {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UShapeComponent* DefendShape;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 OverrideCapacity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseOnlyManualCovers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_DefendPointRotationType RotationType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UCoverPoint*> Covers;
     
 public:
@@ -42,10 +42,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDefendRotationPoint(FVector Pos);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInDefenedArea(FVector position) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetDefendLookAtPosition(FVector querrierPos) const;
     
     UFUNCTION(BlueprintCallable)

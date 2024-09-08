@@ -3,14 +3,14 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "AnimNotify_ApplyPhysAnimProfile.generated.h"
 
-UCLASS(Blueprintable, CollapseCategories)
+UCLASS(CollapseCategories)
 class BF_ANIMATIONS_API UAnimNotify_ApplyPhysAnimProfile : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName ProfileName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName PhysBodyName;
     
     UAnimNotify_ApplyPhysAnimProfile();

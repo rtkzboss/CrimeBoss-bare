@@ -4,16 +4,16 @@
 #include "Components/RichTextBlock.h"
 #include "IGS_RichTextBlockBase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_GUIBASE_API UIGS_RichTextBlockBase : public URichTextBlock {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_InputDevice PreviewInputDevice;
     
     UIGS_RichTextBlockBase();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnInputDeviceChanged(EIGS_InputDevice inInputDevice);
     
 };

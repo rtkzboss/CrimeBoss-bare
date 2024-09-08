@@ -8,16 +8,16 @@
 class UIGS_GameplayEffect_Class;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_ClassDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UIGS_ClassDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_GameplayEffect_Class>& inClass) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_ClassTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

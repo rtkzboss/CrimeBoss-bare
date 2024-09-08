@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FIGS_HolsterAnimationInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentHolster;
     
     BF_ANIMATIONS_API FIGS_HolsterAnimationInfo();

@@ -29,72 +29,72 @@ class UIGS_MetaCutsceneDataAsset;
 class ULevelStreamingDynamic;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACK_API UIGS_MetaCutsceneSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneDelegate OnCutsceneDatabaseLoaded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneDelegate OnCutsceneLoadStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneDelegate OnCutsceneLoadFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneDelegate OnCutsceneUnloadFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneResultDelegate OnCutsceneStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneResultDelegate OnCutsceneStartedAfterDelay;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneDelegate OnCutsceneFinishedBeforeDelay;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneResultDelegate OnCutsceneFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneNodeStartedDelegate OnCutsceneNodeStarted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneNodeFinishedDelegate OnCutsceneNodeFinished;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneNodeStartedDelegate OnCutsceneNodeEndDialogue;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneOptionsDelegate OnShowOptions;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneOptionSelectedDelegate OnOptionSelected;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneSkipDelegate OnSkipStateChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneNodeStartedDelegate OnSkipSequence;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_CutsceneSubsystemDataAsset* Data;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_MetaCutsceneDataAsset* CutsceneData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<ULevelStreamingDynamic*> AdditionalLevels;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AActor*> AdditionalProps;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     ULevelStreamingDynamic* EnviromentLevel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     ULevelStreamingDynamic* SetupLevel;
     
 public:
@@ -146,59 +146,59 @@ public:
     void PlayCurrentNodeDialogue();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSetupLevelUnloaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnSetupLevelLoaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnOriginalSublevelHidden();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnvironmentLevelUnloaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnvironmentLevelLoaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnDialogueStarted();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnDialogueLevelPreloaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnDialogueFinished();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnDialogueDatabasesLoaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAdditionalPropsLoaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAdditionalLevelUnloaded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAdditionalLevelLoaded();
     
 public:
     UFUNCTION(BlueprintCallable)
     void LoadCutscene(FName inCutsceneID, FText inDebugText, FIGS_MetaCutsceneCharacters inCharacters);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsSkipCutsceneDialogueActivated() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsDatabaseLoaded() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsCutscenePreloaded() const;
     
     UFUNCTION(BlueprintCallable)
     bool HasCurrentNodeOptions();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<FGameplayTag, FIGS_CutsceneTagValue> GetTagsValues() const;
     
     UFUNCTION(BlueprintCallable)
@@ -213,10 +213,10 @@ public:
     UFUNCTION(BlueprintCallable)
     EIGS_MetaDialogueCharacterSlot GetDialogueSlot(EIGS_MetaDialogueCharacterSlot inCutsceneSlot);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_CutsceneSubsystemDataAsset* GetCutsceneSubsystemDataAsset() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EIGS_CutsceneState GetCutsceneState() const;
     
     UFUNCTION(BlueprintCallable)
@@ -228,10 +228,10 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSoftObjectPtr<UIGS_MetaCutsceneDataAsset> GetCutsceneDataAsset(UObject* inWCO, FText inCutsceneID);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCurrentNodeSkipTime() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UIGS_MetaCutsceneDataAsset* GetCurrentCutsceneDataAsset() const;
     
     UFUNCTION(BlueprintCallable)

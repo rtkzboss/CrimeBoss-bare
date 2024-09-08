@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FParameterDecorations {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<UTexture2D*> Images;
     
     CUSTOMIZABLEOBJECT_API FParameterDecorations();

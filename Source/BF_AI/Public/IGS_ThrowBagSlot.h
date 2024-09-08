@@ -8,17 +8,17 @@ class AIGS_GameCharacterFramework;
 class USceneComponent;
 class USkeletalMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UIGS_ThrowBagSlot : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     USkeletalMeshComponent* SkeletalMeshComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     USceneComponent* SceneComponent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnSlotReached OnSlotReached;
     
     UIGS_ThrowBagSlot();

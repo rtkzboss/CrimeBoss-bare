@@ -5,11 +5,11 @@
 
 class UGenericGraphNode;
 
-UCLASS(Abstract, Blueprintable, EditInlineNew)
+UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseCallback : public UMETA_BaseGraphComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bNeedForceExecuteAfterCallbackTrigger;
     
     UMETA_BaseCallback();

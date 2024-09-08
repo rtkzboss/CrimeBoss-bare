@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_ChainMissionStep {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ChainMissionEntry> PossibleMissions;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ChainAction> PostMissionActions;
     
     FIGS_ChainMissionStep();

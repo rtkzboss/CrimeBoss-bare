@@ -5,7 +5,7 @@
 #include "KantanTimeSeriesPlotBase.h"
 #include "SimpleTimeSeriesPlot.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSUMG_API USimpleTimeSeriesPlot : public UKantanTimeSeriesPlotBase, public IKantanCartesianDatasourceInterface {
     GENERATED_BODY()
 public:

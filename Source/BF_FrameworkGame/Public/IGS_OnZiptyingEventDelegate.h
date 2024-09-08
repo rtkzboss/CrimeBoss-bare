@@ -4,5 +4,5 @@
 
 class AIGS_GameCharacterFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnZiptyingEvent, AIGS_GameCharacterFramework*, inTargetCharacter);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnZiptyingEvent, AIGS_GameCharacterFramework*, inTargetCharacter);
 

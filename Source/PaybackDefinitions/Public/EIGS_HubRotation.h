@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HubRotation.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_HubRotation : uint8 {
     RotateAll,
     Rotate180,

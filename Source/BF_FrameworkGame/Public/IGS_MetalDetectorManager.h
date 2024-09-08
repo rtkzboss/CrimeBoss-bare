@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_MetalDetectorManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MetalDetectorManager : public AActor {
     GENERATED_BODY()
 public:
@@ -13,11 +13,11 @@ public:
     void SetDetectorsEnabled(bool inState);
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnDetected();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetMetalDetectorsState() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)

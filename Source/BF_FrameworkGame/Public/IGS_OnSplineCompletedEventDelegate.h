@@ -4,5 +4,5 @@
 
 class AIGS_GameCharacterFramework;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnSplineCompletedEvent, AIGS_GameCharacterFramework*, inPlayer);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnSplineCompletedEvent, AIGS_GameCharacterFramework*, inPlayer);
 

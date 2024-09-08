@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_IsInLimboOblivion.generated.h"
 
-UCLASS(Blueprintable, Deprecated, NotPlaceable)
+UCLASS(Deprecated, NotPlaceable)
 class BF_AI_API UDEPRECATED_BTDecorator_IsInLimboOblivion : public UBTDecorator {
     GENERATED_BODY()
 public:

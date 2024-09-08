@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_POOL_API FIGS_Pool {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AActor*> Items;
     
     FIGS_Pool();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniFolderParameterType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EHoudiniFolderParameterType : uint8 {
     Invalid,
     Collapsible,

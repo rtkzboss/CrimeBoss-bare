@@ -8,18 +8,18 @@ class AIGS_GameCharacterFramework;
 class AIGS_SquadBase;
 class UIGS_AICommand;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_SquadBase* Squad;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     TArray<UIGS_AICommand*> Commands;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<TWeakObjectPtr<AIGS_GameCharacterFramework>, FDelayedCommand> DelayedCommands;
     
 public:

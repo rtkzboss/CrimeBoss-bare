@@ -4,12 +4,12 @@
 #include "EIGS_AICommandType.h"
 #include "BTDecorator_HasActiveAICommand.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_HasActiveAICommand : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_AICommandType commandType;
     
 public:

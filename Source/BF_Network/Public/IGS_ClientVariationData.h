@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_NETWORK_API FIGS_ClientVariationData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UAnimMontage> VoiceFacialAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     float VoiceProgress;
     
     FIGS_ClientVariationData();

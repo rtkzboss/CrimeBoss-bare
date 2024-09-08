@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FIGS_VoiceMediaInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkExternalMediaAsset* VoiceAkExternalMediaAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString VoiceMediaName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float VoiceFilenameLength;
     
     BF_VOICEOVER_API FIGS_VoiceMediaInfo();

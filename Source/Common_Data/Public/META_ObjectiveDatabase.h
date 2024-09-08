@@ -11,15 +11,15 @@ class UDataTable;
 class UMETA_BaseFPSMission;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UMETA_ObjectiveDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UDataTable* m_ObjectiveDatabase;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UDataTable* m_ObjectivePresetsDatabase;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CutsceneState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_CutsceneState : uint8 {
     Unloaded,
     Loaded,

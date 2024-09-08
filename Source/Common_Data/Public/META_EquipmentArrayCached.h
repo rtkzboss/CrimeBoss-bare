@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_EquipmentArrayCached {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_EquipmentCachedData> EquipmentItems;
     
     FMETA_EquipmentArrayCached();

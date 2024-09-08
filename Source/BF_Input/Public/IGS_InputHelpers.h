@@ -17,7 +17,7 @@
 class APlayerController;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_INPUT_API UIGS_InputHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

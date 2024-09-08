@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTService.h"
 #include "IGS_BTService_BotThrowSolveSpeed.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTService_BotThrowSolveSpeed : public UBTService {
     GENERATED_BODY()
 public:

@@ -4,14 +4,14 @@
 #include "MaskOutTexture.h"
 #include "MutableMaskOutCache.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class CUSTOMIZABLEOBJECT_API UMutableMaskOutCache : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FString, FString> Materials;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FString, FMaskOutTexture> Textures;
     
     UMutableMaskOutCache();

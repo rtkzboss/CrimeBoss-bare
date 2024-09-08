@@ -11,15 +11,15 @@ class UMETA_WeaponInventoryObject;
 class UObject;
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForWeaponIcon : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_WeaponIconReadyOutputPin WhenWeaponIconReady;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<UMETA_WeaponInventoryObject> m_WeaponObject;
     
 public:
@@ -29,7 +29,7 @@ public:
     static UIGS_WaitForWeaponIcon* WaitForWeaponIcon(UObject* inWorldContextObject, TSubclassOf<UMETA_WeaponInventoryObject> inWeaponObject, TSoftObjectPtr<UIGS_WeaponSkinData> inSkin);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecuteOnIconReady(TSoftObjectPtr<UTexture2D> inWeaponIcon);
     
 };

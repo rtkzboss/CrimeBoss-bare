@@ -5,5 +5,5 @@
 
 class UIGS_GlobalInventoryObject;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_GlobalItemChangedDynamicSignature, TSubclassOf<UIGS_GlobalInventoryObject>, inItemClass, int32, inCurrentCount);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_GlobalItemChangedDynamicSignature, TSubclassOf<UIGS_GlobalInventoryObject>, inItemClass, int32, inCurrentCount);
 

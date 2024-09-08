@@ -6,20 +6,20 @@
 #include "WeaponReloadSignatureDelegate.h"
 #include "IGS_ReloaderBase.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ReloaderBase : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     bool bIsInterruptible;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FWeaponReloadSignature OnWeaponBeginReload;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FWeaponReloadSignature OnWeaponStopReload;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FWeaponInterrutpReloadSignature OnWeaponInterruptReload;
     
     UIGS_ReloaderBase(const FObjectInitializer& ObjectInitializer);
@@ -33,7 +33,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnAddAmmoToWeapon();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsReloading() const;
     
     UFUNCTION(BlueprintCallable)
@@ -45,7 +45,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool CanReload();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanBeInterrupted() const;
     
 };

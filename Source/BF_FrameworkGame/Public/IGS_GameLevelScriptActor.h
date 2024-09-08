@@ -6,14 +6,14 @@
 class AIGS_ObjectiveScenarioBase;
 class AIGS_ScriptManagerBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GameLevelScriptActor : public ALevelScriptActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_ObjectiveScenarioBase* ObjectiveScenarioInstance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_ScriptManagerBase* ScriptManagerInstance;
     
     AIGS_GameLevelScriptActor(const FObjectInitializer& ObjectInitializer);

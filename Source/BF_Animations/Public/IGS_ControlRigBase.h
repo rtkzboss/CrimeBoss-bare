@@ -5,11 +5,11 @@
 
 class UControlRig;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_ANIMATIONS_API UIGS_ControlRigBase : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UControlRig* ControlRig;
     
     UIGS_ControlRigBase();

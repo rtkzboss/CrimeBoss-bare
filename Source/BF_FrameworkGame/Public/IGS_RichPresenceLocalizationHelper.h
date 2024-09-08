@@ -8,7 +8,7 @@
 class UIGS_ChainContractID;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_RichPresenceLocalizationHelper : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

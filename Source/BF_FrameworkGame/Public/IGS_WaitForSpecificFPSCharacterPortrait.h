@@ -9,11 +9,11 @@ class UIGS_WaitForSpecificFPSCharacterPortrait;
 class UObject;
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForSpecificFPSCharacterPortrait : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FSpecificFPSCharacterPortraitReadyOutputPin WhenCharacterPortraitReady;
     
     UIGS_WaitForSpecificFPSCharacterPortrait();
@@ -22,7 +22,7 @@ public:
     static UIGS_WaitForSpecificFPSCharacterPortrait* WaitForCharacterPortrait(UObject* inWorldContextObject, AIGS_GameCharacterFramework* inCharacter);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecuteOnCharacterPortraitReady(TSoftObjectPtr<UTexture2D> inCharacterPortrait);
     
 };

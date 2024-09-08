@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_MuzzleLightState.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_MuzzleLightState : uint8 {
+UENUM()
+enum class EIGS_MuzzleLightState {
     MZLS_Off,
     MZLS_FadingIn,
     MZLS_Lit,

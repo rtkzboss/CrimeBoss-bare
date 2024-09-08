@@ -4,7 +4,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "IGS_EditorSubsystemFunctionLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACK_API UIGS_EditorSubsystemFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

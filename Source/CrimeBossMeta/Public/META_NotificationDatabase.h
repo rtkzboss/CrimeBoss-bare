@@ -32,7 +32,7 @@ class UMETA_WeaponNotification;
 class UMapTile;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_NotificationDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

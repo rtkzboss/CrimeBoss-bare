@@ -3,7 +3,7 @@
 #include "BTDecorator_SquadBase.h"
 #include "BTDecorator_SquadBreachDoors.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_SquadBreachDoors : public UBTDecorator_SquadBase {
     GENERATED_BODY()
 public:

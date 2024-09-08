@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_SystemEventNotificationType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_SystemEventNotificationType : uint8 {
+UENUM()
+enum class EIGS_SystemEventNotificationType {
     Unknown = 255,
     WaveManager = 0,
     SuspicionManager,

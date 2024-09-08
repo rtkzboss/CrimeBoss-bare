@@ -4,15 +4,15 @@
 #include "IGS_BTDecorator_Base.h"
 #include "IGS_BTDecorator_HasThrowTicket.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTDecorator_HasThrowTicket : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowRequestKey;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotKey;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PlayerSwapPreventedReason.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_PlayerSwapPreventedReason : uint8 {
     SP_Unknown,
     SP_PlayerBusy,

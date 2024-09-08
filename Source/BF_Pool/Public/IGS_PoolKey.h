@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct BF_POOL_API FIGS_PoolKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UClass* PoolObjectClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayTagContainer PoolTagContainer;
     
     FIGS_PoolKey();

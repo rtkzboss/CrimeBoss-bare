@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct FDeathAnimations {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeathFront;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeathBack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeathLeft;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeatRight;
     
     BF_ANIMATIONS_API FDeathAnimations();

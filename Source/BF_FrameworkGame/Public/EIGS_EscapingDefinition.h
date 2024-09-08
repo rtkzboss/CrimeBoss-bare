@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_EscapingDefinition.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_EscapingDefinition : uint8 {
+UENUM()
+enum class EIGS_EscapingDefinition {
     Unknown = 255,
     Start = 0,
     Finished,

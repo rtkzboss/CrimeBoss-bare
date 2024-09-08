@@ -8,21 +8,21 @@
 
 class UIGS_CommonAchievements;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_LocalPlayerAchievements : public ULocalPlayerSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_LocalPlayerAchievementsInitialized OnInitialized;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_CommonAchievements* m_CommonAchievements;
     
 public:
     UIGS_LocalPlayerAchievements();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsInitialized() const;
     
     UFUNCTION(BlueprintCallable)

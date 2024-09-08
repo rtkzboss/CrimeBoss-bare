@@ -4,12 +4,12 @@
 #include "BTTask_SwitchWeaponBase.h"
 #include "BTTask_SwitchWeapon.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_SwitchWeapon : public UBTTask_SwitchWeaponBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_SwitchWeaponTask_WeaponType WeaponTypeToSwitchTo;
     
 public:

@@ -3,7 +3,7 @@
 #include "IGS_Screen.h"
 #include "IGS_HUDScreen.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_HUDScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:

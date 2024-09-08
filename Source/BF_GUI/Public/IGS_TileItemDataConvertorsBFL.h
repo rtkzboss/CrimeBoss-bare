@@ -17,7 +17,7 @@ class UMETA_BossCharacter;
 class UMETA_Character;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_GUI_API UIGS_TileItemDataConvertorsBFL : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -41,7 +41,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_TileItemData* MetaBaseObjectToTileItemData(const UIGS_UnlockManager* inUnlockManager, const UMETA_BaseObject* inBaseObject, EIGS_TileItemState inState, UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static FIGS_CharacterPanelDataStruct HeisterDataToCharacterPanelData(UPARAM(Ref) FCommonHeisterData& inHeisterData, UObject* inWCO);
     
     UFUNCTION(BlueprintCallable)

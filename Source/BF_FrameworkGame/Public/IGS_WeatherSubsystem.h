@@ -21,39 +21,39 @@ class UIGS_WieldableInventoryObjectBase;
 class UMaterialParameterCollection;
 class UMaterialParameterCollectionInstance;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_WeatherSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UMaterialParameterCollection* WeatherMPC;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UMaterialParameterCollectionInstance* WeatherMPCInstance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_WeatherConfig WeatherConfig;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_VisualStyleConfig VisualStyleConfig;
     
-    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, Transient)
     TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_RainEmittingComponent>> m_RainEmittingActors;
     
-    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, Transient)
     TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_WeatherTrackedBlendable>> m_WeatherTrackedBlendables;
     
-    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Export, Transient)
     TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_PlayerEffectsComponent>> m_WeatherTrackedPlayerEffects;
     
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<TWeakObjectPtr<AActor>, FIGS_WaterVolumeActorTracker> m_WeatherTrackedActors;
     
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<TWeakObjectPtr<AActor>, FIGS_ActorEnvironmentTracker> m_LightingTrackedActors;
     
-    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TArray<TWeakObjectPtr<AIGS_GameCharacterFramework>> m_RegisteredCharacters;
     
 public:
@@ -69,22 +69,22 @@ public:
     void SetupVisualStyleOverride(FIGS_VisualStyleConfig inVisualStyleConfig);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void PostProcessVolumeEndOverlap(APostProcessVolume* inOverlappedComponent, EIGS_EnvironmentVolumeType inEnvironmentType, AActor* inOtherActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void PostProcessVolumeBeginOverlap(APostProcessVolume* inOverlappedComponent, EIGS_EnvironmentVolumeType inEnvironmentType, AActor* inOtherActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWieldableChanged(EIGS_WieldableSlot inSlotType, AIGS_WieldableBase* inWieldableBase, UIGS_WieldableInventoryObjectBase* inInventoryObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnWieldableBeginChange(EIGS_WieldableSlot inSlotType, AIGS_WieldableBase* inWieldableBase, UIGS_WieldableInventoryObjectBase* inInventoryObject);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void EnvironmentVolumeEndOverlap(UActorComponent* inOverlappedComponent, EIGS_EnvironmentVolumeType inEnvironmentType, AActor* inOtherActor);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void EnvironmentVolumeBeginOverlap(UActorComponent* inOverlappedComponent, EIGS_EnvironmentVolumeType inEnvironmentType, AActor* inOtherActor);
     
 public:

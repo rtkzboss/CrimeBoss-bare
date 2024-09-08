@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EValidNotValidExecPin.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EValidNotValidExecPin : uint8 {
     Valid,
     NotValid,

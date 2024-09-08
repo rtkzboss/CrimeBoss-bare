@@ -4,5 +4,5 @@
 
 class UIGS_JobsScreenCategoryWidget;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_JobsCategorySelect, UIGS_JobsScreenCategoryWidget*, categoryWidget, int32, Direction);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_JobsCategorySelect, UIGS_JobsScreenCategoryWidget*, categoryWidget, int32, Direction);
 

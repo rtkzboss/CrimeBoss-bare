@@ -8,48 +8,48 @@ class UAnimMontage;
 class UGameplayAbility;
 class UIGS_AbilityTask_PlayFPVMontageAndWait;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_PlayFPVMontageAndWait : public UAbilityTask {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMontageWaitSimpleDelegate OnCompleted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMontageWaitSimpleDelegate OnBlendOut;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMontageWaitSimpleDelegate OnInterrupted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMontageWaitSimpleDelegate OnCancelled;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UAnimMontage* MontageToPlay;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float Rate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FName StartSection;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float StartTimeSeconds;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool bStopWhenAbilityEnds;
     
 public:
     UIGS_AbilityTask_PlayFPVMontageAndWait();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnMontageInterrupted();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);
     
     UFUNCTION(BlueprintCallable)

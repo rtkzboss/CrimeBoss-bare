@@ -7,14 +7,14 @@
 class UIGS_MiniTimer;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_MiniTimer : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMiniTimerOutputPin Update;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMiniTimerOutputPin Finished;
     
     UIGS_MiniTimer();
@@ -23,10 +23,10 @@ public:
     static UIGS_MiniTimer* MiniTimer(UObject* inWorldContextObject, float inTimerInterval, float inTimerDuration);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecUpdate();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecFinish();
     
 };

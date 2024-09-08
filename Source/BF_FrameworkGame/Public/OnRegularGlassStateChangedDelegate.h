@@ -5,5 +5,5 @@
 
 class AActor;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnRegularGlassStateChanged, FVector, HitLocation, bool, IsFirstFracture, AActor*, Instigator);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnRegularGlassStateChanged, FVector, HitLocation, bool, IsFirstFracture, AActor*, Instigator);
 

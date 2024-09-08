@@ -4,11 +4,11 @@
 #include "IGS_HubGroupTileSetup.h"
 #include "IGS_PresetData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_PresetData : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_HubGroupTileSetup> Tiles;
     
     UIGS_PresetData();

@@ -3,7 +3,7 @@
 #include "NavMesh/NavMeshBoundsVolume.h"
 #include "IGS_NavMeshBoundsVolume.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_NavMeshBoundsVolume : public ANavMeshBoundsVolume {
     GENERATED_BODY()
 public:

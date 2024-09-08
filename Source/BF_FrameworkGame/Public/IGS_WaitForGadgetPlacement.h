@@ -8,14 +8,14 @@ class AIGS_GameCharacterFramework;
 class AIGS_ItemPlacementBase;
 class UIGS_WaitForGadgetPlacement;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForGadgetPlacement : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnGadgetPlaced OnGadgetPlaced;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnGadgetPlaced OnGadgetFinished;
     
     UIGS_WaitForGadgetPlacement();
@@ -24,10 +24,10 @@ public:
     static UIGS_WaitForGadgetPlacement* WaitForGadgetPlacement(AIGS_ItemPlacementBase* GadgetActor, bool EnablePlacement);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnItemPlacedInternal(AIGS_ItemPlacementBase* inPlacementActor, AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnActionReturnedInternal(AIGS_ItemPlacementBase* inPlacementActor, AIGS_GameCharacterFramework* inInstigator);
     
 };

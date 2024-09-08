@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_TileType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_TileType : uint8 {
     Empty,
     Airport,

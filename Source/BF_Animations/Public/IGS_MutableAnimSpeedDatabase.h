@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct BF_ANIMATIONS_API FIGS_MutableAnimSpeedDatabase : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_TPP_Mutable_Speed_Animaitons MutableSpeedAnimaitons;
     
     FIGS_MutableAnimSpeedDatabase();

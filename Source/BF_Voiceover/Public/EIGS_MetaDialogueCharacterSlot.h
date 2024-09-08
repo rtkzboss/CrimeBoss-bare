@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MetaDialogueCharacterSlot.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_MetaDialogueCharacterSlot : uint8 {
     None,
     SlotA,

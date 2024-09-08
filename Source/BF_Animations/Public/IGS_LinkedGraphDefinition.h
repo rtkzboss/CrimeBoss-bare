@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct BF_ANIMATIONS_API FIGS_LinkedGraphDefinition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftClassPtr<UIGS_LinkedAnimInstance> LinkedAnimInstance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FName GraphTag;
     
     FIGS_LinkedGraphDefinition();

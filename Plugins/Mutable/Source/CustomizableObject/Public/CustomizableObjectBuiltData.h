@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "CustomizableObjectBuiltData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class UCustomizableObjectBuiltData : public UObject {
     GENERATED_BODY()
 public:

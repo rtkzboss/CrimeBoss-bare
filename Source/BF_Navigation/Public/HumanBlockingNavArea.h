@@ -3,7 +3,7 @@
 #include "NavAreas/NavArea_Null.h"
 #include "HumanBlockingNavArea.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_NAVIGATION_API UHumanBlockingNavArea : public UNavArea_Null {
     GENERATED_BODY()
 public:

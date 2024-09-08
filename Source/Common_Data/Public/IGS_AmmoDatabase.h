@@ -3,7 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "IGS_AmmoDatabase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class COMMON_DATA_API UIGS_AmmoDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

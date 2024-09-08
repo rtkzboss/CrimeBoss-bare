@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_SequencePriority.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_SequencePriority : uint8 {
     Normal,
     High,

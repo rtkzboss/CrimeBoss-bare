@@ -3,7 +3,7 @@
 #include "IGS_ScriptPoint.h"
 #include "IGS_ScriptPointCharacterRemover.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_ScriptPointCharacterRemover : public AIGS_ScriptPoint {
     GENERATED_BODY()
 public:

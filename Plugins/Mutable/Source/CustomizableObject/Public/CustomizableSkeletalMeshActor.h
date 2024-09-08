@@ -5,12 +5,12 @@
 
 class UCustomizableSkeletalComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CUSTOMIZABLEOBJECT_API ACustomizableSkeletalMeshActor : public ASkeletalMeshActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UCustomizableSkeletalComponent* CustomizableSkeletalComponent;
     
 public:

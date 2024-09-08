@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "IGS_ImpactManagerHelper.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_IMPACTS_API UIGS_ImpactManagerHelper : public UObject {
     GENERATED_BODY()
 public:

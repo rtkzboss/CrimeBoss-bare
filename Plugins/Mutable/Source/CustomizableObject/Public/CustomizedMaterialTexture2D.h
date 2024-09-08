@@ -4,14 +4,14 @@
 
 class UTexture2D;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizedMaterialTexture2D {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FName Name;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     UTexture2D* Texture;
     
     CUSTOMIZABLEOBJECT_API FCustomizedMaterialTexture2D();

@@ -7,21 +7,21 @@
 class UIGS_GameScreenHandler;
 class UIGS_Screen;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_BaseMenuWidget : public UIGS_ScreenWithSubscreens {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     bool IsForceHidden;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float OpenScreenDelayAfterInitialization;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayTag m_ActiveScreenTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_GameScreenHandler* m_GameScreenHandler;
     
 public:
@@ -39,11 +39,11 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetBottomContentVisibility(bool inIsVisible);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void SetBaseScreenVisibility(bool IsVisible);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OpenScreenOnInitialization();
     
 public:
@@ -51,26 +51,26 @@ public:
     void OpenDebugMenu();
     
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnScreensInitialized(FGameplayTag inScreenTag);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnScreenOpen_Internal(FGameplayTag inScreenTag);
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnScreenOpen(FGameplayTag inScreenTag);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsTopContentVisible() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsBottomContentVisible() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsBaseScreenVisible() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     UIGS_Screen* GetScreenToBeOpenOnInitialization();
     
 };

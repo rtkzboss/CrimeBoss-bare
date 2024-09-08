@@ -5,11 +5,11 @@
 
 class UIGS_GlobalPostProcessesDataAsset;
 
-UCLASS(Blueprintable, DefaultConfig, Config="DeveloperSettings/Dev_RenderingSettings")
+UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_RenderingSettings")
 class BF_RENDERING_API UIGS_RenderingDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_GlobalPostProcessesDataAsset> GlobalPostProcessesDataAsset;
     
     UIGS_RenderingDevSettings();

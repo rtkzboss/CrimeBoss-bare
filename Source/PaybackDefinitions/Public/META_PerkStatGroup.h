@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FMETA_PerkStatGroup {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString GroupName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSet<FGameplayAttribute> PerkAttributes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_PerkStatGroupUsage Type;
     
     PAYBACKDEFINITIONS_API FMETA_PerkStatGroup();

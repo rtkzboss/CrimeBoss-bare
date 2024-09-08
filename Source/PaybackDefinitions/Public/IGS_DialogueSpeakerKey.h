@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FIGS_DialogueSpeakerKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_DialogueSpeaker Speaker;
     
     PAYBACKDEFINITIONS_API FIGS_DialogueSpeakerKey();

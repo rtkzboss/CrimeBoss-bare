@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct PREFABRICATORRUNTIME_API FPrefabricatorComponentData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FTransform RelativeTransform;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FString ComponentName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UPrefabricatorProperty*> Properties;
     
     FPrefabricatorComponentData();

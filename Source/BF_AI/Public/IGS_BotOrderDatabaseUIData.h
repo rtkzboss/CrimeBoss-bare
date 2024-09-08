@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct BF_AI_API FIGS_BotOrderDatabaseUIData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString IconCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ActionName;
     
     FIGS_BotOrderDatabaseUIData();

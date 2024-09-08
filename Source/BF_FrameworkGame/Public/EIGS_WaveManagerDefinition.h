@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_WaveManagerDefinition.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_WaveManagerDefinition : uint8 {
+UENUM()
+enum class EIGS_WaveManagerDefinition {
     Unknown = 255,
     AssaultStart = 0,
     ControlStart,

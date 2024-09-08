@@ -9,34 +9,34 @@
 class AIGS_GameCharacterFramework;
 class UIGS_RopeComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_RopeActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_RopeComponent* RopeComponent;
     
     AIGS_RopeActor(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void UnLockEndParticle();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void ThrowRope();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void SetUser(AIGS_GameCharacterFramework* inCharacter);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void SetParameters(EIGS_RopeType inRopeType, FRotator InRotation, FVector inStart, FVector inEnd);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void SetEnableUpdateClimbDownPoints();
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void RopeEndTransition(bool OptimizeRope);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void RollOffRope();
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
@@ -45,7 +45,7 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void PlayerStartUsingRope(AIGS_GameCharacterFramework* inUser, EIGS_RopeType inRopeType);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void AllowEndPointMove();
     
 };

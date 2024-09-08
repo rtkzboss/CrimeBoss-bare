@@ -3,7 +3,7 @@
 #include "IGS_AIUnitBaseDataDefaults.h"
 #include "IGS_AISwatBaseDataDefaults.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AISwatBaseDataDefaults : public FIGS_AIUnitBaseDataDefaults {
     GENERATED_BODY()
 public:

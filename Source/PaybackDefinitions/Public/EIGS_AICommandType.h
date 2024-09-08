@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AICommandType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_AICommandType : uint8 {
     AICT_Unknown = 255,
     AICT_Search = 0,

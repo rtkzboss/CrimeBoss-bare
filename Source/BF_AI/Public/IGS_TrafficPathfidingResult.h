@@ -5,14 +5,14 @@
 class AIGS_VehicleSpawnerFramework;
 class UIGS_TrafficPathComponent;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_TrafficPathfidingResult {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     AIGS_VehicleSpawnerFramework* Spawner;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     TArray<UIGS_TrafficPathComponent*> Path;
     
     FIGS_TrafficPathfidingResult();

@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_OnButtonUnfocusedEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnButtonUnfocusedEvent);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnButtonUnfocusedEvent);
 

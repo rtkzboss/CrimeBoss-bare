@@ -5,11 +5,11 @@
 
 class UIGS_SettingsID;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_AISpawnerParameters {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSubclassOf<UIGS_SettingsID> SettingsOverride;
     
     BF_FRAMEWORKGAME_API FIGS_AISpawnerParameters();

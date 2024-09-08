@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_OffenceNoticedByFlags.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_OffenceNoticedByFlags : uint8 {
+UENUM()
+enum class EIGS_OffenceNoticedByFlags {
     Notices_Security,
     Notices_Camera,
     Notices_Employees,

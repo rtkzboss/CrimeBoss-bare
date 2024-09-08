@@ -7,18 +7,18 @@ class UIGS_RoomPathfindingComponent;
 class UIGS_SquadAggroComponent;
 class UIGS_SquadSpeedSynchronizationComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BTTask_SquadSwatBase : public UIGS_BTTask_SquadBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_RoomPathfindingComponent* RoomPathfindingComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_SquadSpeedSynchronizationComponent* SpeedSyncroComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_SquadAggroComponent* SquadAggroComponent;
     
 public:

@@ -5,11 +5,11 @@
 
 class APawn;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_DownStateHandlerComponentFramework : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Replicated)
     bool UseDownState;
     
     UIGS_DownStateHandlerComponentFramework(const FObjectInitializer& ObjectInitializer);
@@ -19,10 +19,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void Revive(APawn* healer);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetReviveTime(APawn* healer);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetDownStateLengthInSeconds() const;
     
 };

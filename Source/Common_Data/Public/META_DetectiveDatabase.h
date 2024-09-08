@@ -8,13 +8,13 @@
 class UMETA_DetectiveID;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UMETA_DetectiveDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UMETA_DetectiveDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     TArray<TSubclassOf<UMETA_DetectiveID>> GetDetectivesIDs(UObject* inWCO) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

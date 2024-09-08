@@ -3,7 +3,7 @@
 #include "BTService_AIDirectorTacticForCharacter.h"
 #include "BTService_AIDirectorTacticForDetective.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTService_AIDirectorTacticForDetective : public UBTService_AIDirectorTacticForCharacter {
     GENERATED_BODY()
 public:

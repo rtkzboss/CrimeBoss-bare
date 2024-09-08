@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FMETA_AdditionalConditionChance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_BaseCondition* Condition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float Chance;
     
     CRIMEBOSSMETA_API FMETA_AdditionalConditionChance();

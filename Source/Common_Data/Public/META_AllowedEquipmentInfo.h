@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_AllowedEquipmentInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     int32 MaxNumberOfEquipment;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<TSubclassOf<UIGS_EquipmentInventoryObject>, int32> EquipmentClassChance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_ItemQuality, int32> EquipmentQualityChance;
     
     FMETA_AllowedEquipmentInfo();

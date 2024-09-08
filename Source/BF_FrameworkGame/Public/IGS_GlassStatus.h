@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_GlassStatus {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EIGS_TemperedGlassStatus State;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FIGS_GlassHit> PreviousHitPoints;
     
     BF_FRAMEWORKGAME_API FIGS_GlassStatus();

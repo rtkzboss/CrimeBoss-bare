@@ -3,7 +3,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Speedometer.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_RIDEABLEVEHICLES_API USpeedometer : public UUserWidget {
     GENERATED_BODY()
 public:

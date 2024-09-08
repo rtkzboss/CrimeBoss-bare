@@ -12,17 +12,17 @@ class UIGS_ModalScreen;
 class UIGS_RequestOpenModalWindow;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API UIGS_RequestOpenModalWindow : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_ModalWindowResponse OnConfirmed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ModalWindowResponse OnExtraOption;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ModalWindowResponse OnCancelled;
     
     UIGS_RequestOpenModalWindow();
@@ -37,13 +37,13 @@ public:
     static UIGS_RequestOpenModalWindow* RequestOpenModalWindow(UObject* WorldContextObject, TSubclassOf<UIGS_ModalScreen> modalScreenClass, FText InTitle, FText inDescription, FText inConfirmText, FText inCancelText, FText inExtraOptionText, EScreenZOrder screenOrder);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ModalWindowExtraSelected_Internal();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ModalWindowConfirmed_Internal();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ModalWindowCancelled_Internal();
     
 };

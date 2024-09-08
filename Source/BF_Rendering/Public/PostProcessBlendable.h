@@ -5,14 +5,14 @@
 #include "BlendablePostProcessSettings.h"
 #include "PostProcessBlendable.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_RENDERING_API UPostProcessBlendable : public UObject, public IBlendableInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FBlendablePostProcessSettings Settings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BlendWeight;
     
     UPostProcessBlendable();

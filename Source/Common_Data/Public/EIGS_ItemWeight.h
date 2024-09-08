@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ItemWeight.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_ItemWeight : uint8 {
     VeryLight,
     Light,

@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct BF_FRAMEWORKGAME_API FIGS_SusManagerEventNotificationData : public FIGS_SystemEventNotificationData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AActor* PointOfInterest;
     
     FIGS_SusManagerEventNotificationData();

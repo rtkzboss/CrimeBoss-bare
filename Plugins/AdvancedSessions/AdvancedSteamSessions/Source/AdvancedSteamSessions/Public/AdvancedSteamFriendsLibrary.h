@@ -12,7 +12,7 @@
 
 class UTexture2D;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class UAdvancedSteamFriendsLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -24,10 +24,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool OpenSteamUserOverlay(const FBPUniqueNetId UniqueNetId, ESteamUserOverlayType DialogType);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsSteamInBigPictureMode();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static bool IsOverlayEnabled();
     
     UFUNCTION(BlueprintCallable)
@@ -45,7 +45,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static UTexture2D* GetSteamFriendAvatar(const FBPUniqueNetId UniqueNetId, EBlueprintAsyncResultSwitch& Result, SteamAvatarSize AvatarSize);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FBPUniqueNetId GetLocalSteamIDFromSteam();
     
     UFUNCTION(BlueprintCallable)
@@ -54,7 +54,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool FilterText(const FString& TextToFilter, EBPTextFilteringContext Context, const FBPUniqueNetId TextSourceID, FString& FilteredText);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FBPUniqueNetId CreateSteamIDFromString(const FString& SteamID64);
     
 };

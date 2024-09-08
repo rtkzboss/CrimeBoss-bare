@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnRMAnimationStopDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnRMAnimationStop);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnRMAnimationStop);
 

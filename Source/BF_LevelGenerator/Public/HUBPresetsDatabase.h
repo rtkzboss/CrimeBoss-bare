@@ -7,7 +7,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UHUBPresetsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

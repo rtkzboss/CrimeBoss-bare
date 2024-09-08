@@ -11,20 +11,20 @@
 
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_VOICEOVER_API UIGS_SubtitleManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDialogueTestSubtitleInsertEvent OnDialogueTestSubtitleInsertEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDialogueSubtitleInsertEvent OnDialogueSubtitleInsertEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDialogueSubtitleRemoveEvent OnDialogueSubtitleClearEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FDialogueSubtitleEnabledEvent OnDialogueSubtitleEnabledEvent;
     
     UIGS_SubtitleManager(const FObjectInitializer& ObjectInitializer);

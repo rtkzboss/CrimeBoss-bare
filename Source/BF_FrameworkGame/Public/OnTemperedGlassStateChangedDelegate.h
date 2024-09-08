@@ -3,5 +3,5 @@
 #include "UObject/NoExportTypes.h"
 #include "OnTemperedGlassStateChangedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTemperedGlassStateChanged, FVector, HitLocation);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTemperedGlassStateChanged, FVector, HitLocation);
 

@@ -13,39 +13,39 @@
 
 class UIGS_UnlockManagerData;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_UnlockManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnRewardItemUnlockedSignature OnRewardItemUnlocked;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnUnlockManagerInitedSignature OnManagerInited;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_UnlockManagerData* UnlockManagerData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsInited;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> UnlockableItemsMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_UnlockItemInfo> UnlockableItemsList;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> UnlockedItemsMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_UnlockItemInfo> UnlockedItemsList;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> EntitledItemsMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_UnlockItemInfo> EntitledItemsList;
     
 public:
@@ -75,64 +75,64 @@ public:
     UFUNCTION(BlueprintCallable)
     void PrintAllAvailableRewards(const int32 inLevel);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsUnlocked(FGameplayTag inTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPendingUnlockedItemByID(FGameplayTag inTagID, bool inExact) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPendingUnlockedItem(const FIGS_UnlockItemInfo& inUnlockItemInfo, bool inExact) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsChallengeItem(FGameplayTag inTagID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasSomePendingItemsByInventorySlot(EIGS_InventorySlot inSlot);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetUnlockItemInfos(const TArray<FGameplayTag>& inTagIDs) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_UnlockItemInfo GetUnlockItemInfo(FGameplayTag inTagID, bool inMustBeUnlockable) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetForcedUnlockRewards(const TArray<FIGS_UnlockItemInfo>& inUnlockItemInfos, const int32 inLevel) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetChallengeTags(FGameplayTag inTagID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllUnlockedItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllUnlockedItems() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllUnlockableItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllUnlockableItems() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllPendingUnlockedItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllPendingUnlockedItems() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllLockedItemsByCategory(EIGS_UnlockCategory inUnlockCategory, bool inGetOnlyOwnable) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllLockedItems(bool inGetOnlyOwnable) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllEntitledItemsByEntitlementID(FGameplayTag inTagID) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllEntitledItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockItemInfo> GetAllEntitledItems() const;
     
     UFUNCTION(BlueprintCallable)

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_ListItemHolder {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_InventoryObjectFramework* InventoryItem;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ListItemID;
     
     BF_FRAMEWORKGAME_API FIGS_ListItemHolder();

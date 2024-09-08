@@ -10,18 +10,18 @@ class AIGS_DefendPointBase;
 class AIGS_RoomBase;
 class UCoverPoint;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ScriptableBehaviorComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FBoolParamChangedBP2 OnIsDefendingChangedBP2;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_RoomBase*> EmptyRoomArray;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     AIGS_AIControllerGame* m_Controller;
     
 public:
@@ -38,7 +38,7 @@ protected:
     void SetDefending(bool NewValue);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsDefending() const;
     
     UFUNCTION(BlueprintCallable)
@@ -47,7 +47,7 @@ public:
     UFUNCTION(BlueprintCallable)
     FVector GetDefendPos();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FVector GetDefendLookAt(FVector querrierLocation) const;
     
     UFUNCTION(BlueprintCallable)

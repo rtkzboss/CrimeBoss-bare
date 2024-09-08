@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_StatisticsManagerSaveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<int32, FMETA_StatisticNoteSaveData> Statistic;
     
     FMETA_StatisticsManagerSaveData();

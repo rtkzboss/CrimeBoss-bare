@@ -10,22 +10,22 @@ class UVirtualCursorTarget;
 class UIGS_GameScreenHandler;
 class UStaticMeshComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CRIMEBOSSMETA_API AIGS_VirtualCursor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag SupportedScreenGameplayTag;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UStaticMeshComponent* m_ColliderComponent;
     
 public:
     AIGS_VirtualCursor(const FObjectInitializer& ObjectInitializer);
 
 private:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsSupportedScreenOpen(UIGS_GameScreenHandler* inGameScreenHandler) const;
     
     UFUNCTION(BlueprintCallable)

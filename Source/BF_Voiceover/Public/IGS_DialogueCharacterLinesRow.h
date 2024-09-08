@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_DialogueCharacterLinesRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_DialogueGroupCharacterHolder ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UDataTable> CharacterDataTable;
     
     FIGS_DialogueCharacterLinesRow();

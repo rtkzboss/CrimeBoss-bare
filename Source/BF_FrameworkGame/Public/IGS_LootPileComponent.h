@@ -11,7 +11,7 @@ class BF_FRAMEWORKGAME_API UIGS_LootPileComponent : public USceneComponent {
 public:
     UIGS_LootPileComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void AddItem(AActor* inActor);
     
 };

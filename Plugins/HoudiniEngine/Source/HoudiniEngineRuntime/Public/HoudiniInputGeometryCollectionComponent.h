@@ -3,7 +3,7 @@
 #include "HoudiniInputSceneComponent.h"
 #include "HoudiniInputGeometryCollectionComponent.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputGeometryCollectionComponent : public UHoudiniInputSceneComponent {
     GENERATED_BODY()
 public:

@@ -17,7 +17,7 @@ protected:
     void StartNewDay();
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     int32 GetCurrentDay() const;
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

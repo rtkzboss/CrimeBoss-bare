@@ -6,11 +6,11 @@
 
 class UStaticMesh;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AISpawnPointData : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FGameplayTag, TSoftObjectPtr<UStaticMesh>> TestMeshesTags;
     
     UIGS_AISpawnPointData();

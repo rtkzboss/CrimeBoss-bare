@@ -3,7 +3,7 @@
 #include "IGS_SquadBase.h"
 #include "IGS_SquadHeistersBackup.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class BF_AI_API AIGS_SquadHeistersBackup : public AIGS_SquadBase {
     GENERATED_BODY()
 public:

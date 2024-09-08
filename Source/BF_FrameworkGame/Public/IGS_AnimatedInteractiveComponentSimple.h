@@ -6,14 +6,14 @@
 
 class UAnimMontage;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AnimatedInteractiveComponentSimple : public UIGS_AnimatedInteractiveComponentBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_PlayObjectAnimationDelegate OnPlayObjectAnimation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UAnimMontage> ObjectMontageToPlay;
     
     UIGS_AnimatedInteractiveComponentSimple(const FObjectInitializer& ObjectInitializer);

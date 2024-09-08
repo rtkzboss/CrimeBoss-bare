@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HeistersBackupVariationType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_HeistersBackupVariationType : uint8 {
     US_None,
     US_GI_US_Soldiers,

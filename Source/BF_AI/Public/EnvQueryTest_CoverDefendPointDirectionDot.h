@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "EnvQueryTest_CoverDefendPointDirectionDot.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_CoverDefendPointDirectionDot : public UEnvQueryTest {
     GENERATED_BODY()
 public:

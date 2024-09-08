@@ -7,11 +7,11 @@
 
 class UIGS_WeaponSkinData;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class COMMON_DATA_API UIGS_WieldableInventoryObjectBase : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTagContainer WieldableStateTagsContainer;
     
     UIGS_WieldableInventoryObjectBase();
@@ -19,16 +19,16 @@ public:
     UFUNCTION(BlueprintCallable)
     bool WasAlreadyEquipped();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsSecondary();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPrimary();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsMelee();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsExplosive();
     
     UFUNCTION(BlueprintCallable)

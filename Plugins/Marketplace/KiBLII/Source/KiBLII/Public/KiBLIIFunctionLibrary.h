@@ -5,22 +5,22 @@
 #include "Input/Events.h"
 #include "KiBLIIFunctionLibrary.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class KIBLII_API UKiBLIIFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UKiBLIIFunctionLibrary();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FKeyEvent RemapKeyEvent_SystemToQwerty(const FKeyEvent& KeyEvent);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FKeyEvent RemapKeyEvent_QwertyToSystem(const FKeyEvent& KeyEvent);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FKey RemapKey_QwertyToSystem(FKey Key);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FString GetKeyboardLayoutsChars();
     
 };

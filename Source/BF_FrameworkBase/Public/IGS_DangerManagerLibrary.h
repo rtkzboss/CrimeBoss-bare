@@ -9,7 +9,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_DamageTypeBase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_DangerManagerLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

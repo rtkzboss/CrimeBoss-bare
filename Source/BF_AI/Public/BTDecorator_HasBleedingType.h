@@ -4,11 +4,11 @@
 #include "EIGS_BleedType.h"
 #include "BTDecorator_HasBleedingType.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_HasBleedingType : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_BleedType DesiredBleedType;
     
     UBTDecorator_HasBleedingType();

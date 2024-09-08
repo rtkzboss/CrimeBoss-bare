@@ -3,7 +3,7 @@
 #include "GenericGraph.h"
 #include "META_BaseStoryGraph.generated.h"
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract)
 class PAYBACKDEFINITIONS_API UMETA_BaseStoryGraph : public UGenericGraph {
     GENERATED_BODY()
 public:

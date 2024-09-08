@@ -8,7 +8,7 @@
 class AIGS_GameCharacterFramework;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AmmoPickupManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:

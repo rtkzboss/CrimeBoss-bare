@@ -9,33 +9,33 @@ class AIGS_VehicleSpawnerFramework;
 class UIGS_TrafficPathComponent;
 class UTrafficPathfindingEdge;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UTrafficPathfindingNode : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesOut;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesIn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesOutReversed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesInReversed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_TrafficPathComponent* Segment;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_VehicleDestinationPointFramework*> DestinationPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_VehicleExitPointFramework*> ExitPoints;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<AIGS_VehicleSpawnerFramework*> VehicleSpawners;
     
 public:

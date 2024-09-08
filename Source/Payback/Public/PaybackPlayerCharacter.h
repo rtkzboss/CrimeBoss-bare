@@ -6,15 +6,15 @@
 class UIGS_NetworkComponentAnimation;
 class UIGS_NetworkComponentCharacter;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API APaybackPlayerCharacter : public AIGS_PlayerCharacter {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentCharacter* NetworkCharacter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentAnimation* NetworkAnimation;
     
 public:

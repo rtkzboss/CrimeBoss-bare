@@ -4,12 +4,12 @@
 #include "IGS_ReviveRecord.h"
 #include "BTTask_SquadHeistersRevive.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTTask_SquadHeistersRevive : public UIGS_BTTask_SquadBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FIGS_ReviveRecord> m_RevivingRecord;
     
 public:

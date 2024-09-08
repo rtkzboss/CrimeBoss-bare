@@ -7,15 +7,15 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootBagInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Items, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_Items)
     FIGS_LootBagItemHolder mR_ItemInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FIGS_LootBagSingleItem> ItemsToAdd;
     
 public:
@@ -26,10 +26,10 @@ public:
     UFUNCTION(BlueprintCallable)
     bool PutItemToInventory(AIGS_GameCharacterFramework* inInstigator);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_Items();
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void OnCantBePicked();
     
     UFUNCTION(BlueprintCallable)

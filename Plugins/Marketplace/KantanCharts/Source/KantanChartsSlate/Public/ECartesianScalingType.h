@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECartesianScalingType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ECartesianScalingType : uint8 {
     FixedScale,
     FixedRange,

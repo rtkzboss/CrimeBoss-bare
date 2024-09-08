@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_LocalPlayerAchievementsInitializedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_LocalPlayerAchievementsInitialized);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_LocalPlayerAchievementsInitialized);
 

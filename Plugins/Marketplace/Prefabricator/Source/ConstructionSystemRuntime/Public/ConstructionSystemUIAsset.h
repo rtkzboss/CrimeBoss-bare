@@ -4,14 +4,14 @@
 #include "ConstructionSystemUICategory.h"
 #include "ConstructionSystemUIAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemUIAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText MenuTitle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FConstructionSystemUICategory> Categories;
     
     UConstructionSystemUIAsset();

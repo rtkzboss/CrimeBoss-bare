@@ -12,61 +12,61 @@ class UIGS_CarryableInventoryObject;
 class UIGS_InventoryObjectFramework;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_GameStateFramework : public AIGS_GameStateBaseWithData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnSecuredLootAdded OnSecuredLootAdded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnSecuredLootAdded OnBonusLootChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnPocketLootChangedBP OnPocketLootChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnSecuredLootAdded OnBonusPocketLootChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnLootBagCountChanged OnLootBagCountChangedEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Replicated)
     bool mR_PlayersImmortality;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_PocketLootValue, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_PocketLootValue)
     float PocketLootValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_BaggedLootValue, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_BaggedLootValue)
     float BaggedLootValue;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SecuredLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_SecuredLoot)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> PocketLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_BonusPocketLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_BonusPocketLoot)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> BonusPocketLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CarryablePocketLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_CarryablePocketLoot)
     TArray<TSubclassOf<UIGS_CarryableInventoryObject>> CarryablePocketLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CarryablePickedUpLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_CarryablePickedUpLoot)
     TArray<TSubclassOf<UIGS_CarryableInventoryObject>> CarryablePickedUpLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SecuredLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_SecuredLoot)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> SecuredLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_BonusLoot, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_BonusLoot)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> BonusLoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_LootBagCount, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_LootBagCount)
     int32 LootBagCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SecuredLootBagCount, meta=(AllowPrivateAccess=true))
+    UPROPERTY(ReplicatedUsing=OnRep_SecuredLootBagCount)
     int32 SecuredLootBagCount;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     bool m_bIsEndMission;
     
 public:
@@ -90,35 +90,35 @@ public:
     void RecalculateBaggedLoot();
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_SecuredLootBagCount(int32 inOldCount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_SecuredLoot(TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inOldSecuredLoot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_PocketLootValue();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_LootBagCount(int32 inOldCount);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CarryablePocketLoot(TArray<TSubclassOf<UIGS_CarryableInventoryObject>> inOldSecuredLoot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_CarryablePickedUpLoot(TArray<TSubclassOf<UIGS_CarryableInventoryObject>> inOldSecuredLoot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_BonusPocketLoot(TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inOldSecuredLoot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_BonusLoot(TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inOldSecuredLoot);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_BaggedLootValue(float inOldValue);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetSecuredLootWeight() const;
     
     UFUNCTION(BlueprintCallable)
@@ -127,37 +127,37 @@ public:
     UFUNCTION(BlueprintCallable)
     int32 GetSecuredLootBagsCount();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetSecuredLoot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetPocketLootWeight() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetPocketLootValue() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetPocketLoot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetIsEndMission() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCarryablePocketLootWeight() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UIGS_CarryableInventoryObject>> GetCarryablePocketLoot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetCarryablePickedUpLootWeight() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UIGS_CarryableInventoryObject>> GetCarryablePickedUpLoot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetBonusPocketLoot() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetBonusLoot() const;
     
     UFUNCTION(BlueprintCallable)

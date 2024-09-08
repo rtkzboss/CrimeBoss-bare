@@ -7,43 +7,43 @@ class AIGS_PlayerCharacter;
 class UCanvasPanel;
 class UIGS_HUDSubwidgetBase;
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_MainHUDWidget : public UIGS_HUDScreen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UCanvasPanel* MainCanvas;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced)
     TArray<UIGS_HUDSubwidgetBase*> WidgetInstances;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UIGS_HUDSubwidgetBase*> StealthWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UIGS_HUDSubwidgetBase*> SpectatorWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UIGS_HUDSubwidgetBase*> BattleWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UIGS_HUDSubwidgetBase*> HordeModeWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UIGS_HUDSubwidgetBase*> EndMissionWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UIGS_HUDSubwidgetBase*> InAbilityWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export)
     TSet<UIGS_HUDSubwidgetBase*> AllWidgets;
     
     UIGS_MainHUDWidget();
 
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void UnbindPawn();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -82,13 +82,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveRelevancyFromAllWidgets();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void PostHUDInit();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PauseCustomTimer();
     
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintImplementableEvent)
     void OnNewPawn();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

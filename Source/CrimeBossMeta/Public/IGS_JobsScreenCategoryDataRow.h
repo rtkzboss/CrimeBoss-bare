@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FIGS_JobsScreenCategoryDataRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText CategoryName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_JobsScreenCategoryColumn> Columns;
     
     CRIMEBOSSMETA_API FIGS_JobsScreenCategoryDataRow();

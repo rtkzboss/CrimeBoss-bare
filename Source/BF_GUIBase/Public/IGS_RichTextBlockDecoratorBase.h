@@ -10,29 +10,29 @@ class UIGS_InputActionMapDataAsset;
 class UIGS_InputDeviceIconsDataAsset;
 class UUserWidget;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_GUIBASE_API UIGS_RichTextBlockDecoratorBase : public URichTextBlockDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UIGS_InputActionMapDataAsset* InputActionMapAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UIGS_InputDeviceIconsDataAsset* InputKeyIconMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<EIGS_InputDevice> SupportedInputDevices;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateFontInfo IconFont;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateFontInfo FallbackIconFont;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UUserWidget> WidgetToSpawn;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bGamepadDecorator;
     
     UIGS_RichTextBlockDecoratorBase();

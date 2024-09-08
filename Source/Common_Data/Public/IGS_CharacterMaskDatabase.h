@@ -8,19 +8,19 @@
 class UIGS_CharacterMaskBase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_CharacterMaskDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
     UIGS_CharacterMaskDatabase();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(TSubclassOf<UIGS_CharacterMaskBase> inID) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CharacterMaskTableRow GetDataCharacterMask(UObject* inWCO, TSubclassOf<UIGS_CharacterMaskBase> inID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_CharacterMaskTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
 };

@@ -4,12 +4,12 @@
 #include "EIGS_ShootingOverrideType.h"
 #include "BTDecorator_HasShootOverrideType.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_HasShootOverrideType : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_ShootingOverrideType ShootingType;
     
 public:

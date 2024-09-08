@@ -4,11 +4,11 @@
 #include "GameFramework/OnlineReplStructs.h"
 #include "AdvancedGameSession.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class AAdvancedGameSession : public AGameSession {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FUniqueNetIdRepl, FText> BanList;
     
     AAdvancedGameSession(const FObjectInitializer& ObjectInitializer);

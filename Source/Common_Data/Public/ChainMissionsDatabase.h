@@ -13,7 +13,7 @@ class UMETA_BaseMission;
 class UMETA_MissionID;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UChainMissionsDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

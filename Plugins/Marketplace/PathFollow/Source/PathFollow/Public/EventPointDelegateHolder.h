@@ -4,11 +4,11 @@
 #include "EventPointReachedSignatureDelegate.h"
 #include "EventPointDelegateHolder.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PATHFOLLOW_API UEventPointDelegateHolder : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FEventPointReachedSignature OnEventPointReached;
     
     UEventPointDelegateHolder();

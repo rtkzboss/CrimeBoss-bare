@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct BF_VOICEOVER_API FIGS_DialogueOverrideDataKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText DialogueID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     uint8 LineOrder;
     
     FIGS_DialogueOverrideDataKey();

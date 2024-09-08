@@ -3,7 +3,7 @@
 #include "BTDecorator_CanFire.h"
 #include "BTDecorator_CanFirePlayerBot.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_CanFirePlayerBot : public UBTDecorator_CanFire {
     GENERATED_BODY()
 public:

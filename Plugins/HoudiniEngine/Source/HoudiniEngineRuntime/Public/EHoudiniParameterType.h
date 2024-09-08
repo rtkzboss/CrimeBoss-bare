@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniParameterType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EHoudiniParameterType : uint8 {
     Invalid,
     Button,

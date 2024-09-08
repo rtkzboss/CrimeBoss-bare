@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPopulationConstraintType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EPopulationConstraintType : uint8 {
     NONE,
     BOOL,

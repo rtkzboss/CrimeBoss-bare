@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TransitionState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_TransitionState : uint8 {
     None,
     Waiting,

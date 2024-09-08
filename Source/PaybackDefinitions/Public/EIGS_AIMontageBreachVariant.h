@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AIMontageBreachVariant.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_AIMontageBreachVariant : uint8 {
     Breach_Unknown = 255,
     Breach_Left_1 = 0,

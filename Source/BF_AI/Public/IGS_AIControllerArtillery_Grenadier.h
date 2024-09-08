@@ -3,7 +3,7 @@
 #include "IGS_AIControllerArtillery_Base.h"
 #include "IGS_AIControllerArtillery_Grenadier.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API AIGS_AIControllerArtillery_Grenadier : public AIGS_AIControllerArtillery_Base {
     GENERATED_BODY()
 public:

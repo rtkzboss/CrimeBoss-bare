@@ -15,7 +15,7 @@ class AIGS_GameCharacterFramework;
 class AIGS_RoomBase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_RoomHelpers : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
@@ -42,7 +42,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<AActor*> GetTransitionPointsBetweenRooms(AIGS_RoomBase* inLeftRoom, AIGS_RoomBase* inRightRoom);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static TArray<EIGS_RoomType> GetRoomTypesFromBitflagInt(int32 inBitFlag);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
@@ -57,13 +57,13 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static AIGS_RoomBase* GetRoomByIndex(const UObject* inWorldContextObject, int32 inIndex);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static FText GetLockNameFromRoom(AIGS_RoomBase* inRoom);
     
     UFUNCTION(BlueprintCallable)
     static bool GetIsLocationFrontFacing(AActor* inActor, FVector inQueryLocation);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     static int32 GetIntFromRoomTypes(TArray<EIGS_RoomType> inRoomTypes);
     
     UFUNCTION(BlueprintCallable)

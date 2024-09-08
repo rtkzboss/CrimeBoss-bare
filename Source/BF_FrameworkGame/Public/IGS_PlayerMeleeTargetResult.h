@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_PlayerMeleeTargetResult.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_PlayerMeleeTargetResult {
     GENERATED_BODY()
 public:

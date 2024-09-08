@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FCustomizableObjectPopulationCharacteristic {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FString ParameterName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FCustomizableObjectPopulationConstraint> Constraints;
     
     CUSTOMIZABLEOBJECTPOPULATION_API FCustomizableObjectPopulationCharacteristic();

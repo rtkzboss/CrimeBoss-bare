@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FIGS_LevelBuilderRepProperties {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     int32 ReplicatedSeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     FString OptionsString;
     
     BF_LEVELGENERATOR_API FIGS_LevelBuilderRepProperties();

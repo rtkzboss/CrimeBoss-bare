@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EConstructionSystemCursorVisiblity.generated.h"
 
-UENUM(BlueprintType)
-enum class EConstructionSystemCursorVisiblity : uint8 {
+UENUM()
+enum class EConstructionSystemCursorVisiblity {
     Visible,
     VisibleInvalid,
     Hidden,

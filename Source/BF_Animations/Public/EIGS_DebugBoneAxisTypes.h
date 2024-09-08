@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DebugBoneAxisTypes.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_DebugBoneAxisTypes : uint8 {
     X,
     Y,

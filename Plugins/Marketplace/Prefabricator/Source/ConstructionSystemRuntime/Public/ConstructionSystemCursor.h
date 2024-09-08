@@ -7,27 +7,27 @@ class APrefabActor;
 class UMaterialInterface;
 class UPrefabricatorConstructionSnapComponent;
 
-UCLASS(Blueprintable)
+UCLASS()
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemCursor : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     APrefabActor* CursorGhostActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     int32 CursorSeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UMaterialInterface* CursorMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     UMaterialInterface* CursorInvalidMaterial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient)
     TArray<UPrefabricatorConstructionSnapComponent*> SnapComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     int32 ActiveSnapComponentIndex;
     
 public:

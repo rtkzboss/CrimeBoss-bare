@@ -8,16 +8,16 @@
 class UAbilitySystemComponent;
 class UIGS_AsyncTaskEffectStackChanged;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AsyncTaskEffectStackChanged : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnGameplayEffectStackChanged OnGameplayEffectStackChange;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UAbilitySystemComponent* ASC;
     
 public:

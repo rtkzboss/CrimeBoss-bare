@@ -4,11 +4,11 @@
 #include "EIGS_AICommandState.h"
 #include "BTDecorator_AICommandState.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_AICommandState : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_AICommandState CommandState;
     
     UBTDecorator_AICommandState();

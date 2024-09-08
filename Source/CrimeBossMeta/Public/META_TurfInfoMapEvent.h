@@ -5,7 +5,7 @@
 #include "META_BaseMapEvent.h"
 #include "META_TurfInfoMapEvent.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_TurfInfoMapEvent : public UMETA_BaseMapEvent {
     GENERATED_BODY()
 public:
@@ -14,13 +14,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void Init(FGameplayTag inTileTag, EMETA_Gang inNewGang, EMETA_Gang inPrevGang);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetTileTag();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_Gang GetPrevGang();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_Gang GetNewGang();
     
 };

@@ -3,7 +3,7 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_HeatMapManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class HEATMAPSRUNTIME_API UIGS_HeatMapManager : public UTickableWorldSubsystem {
     GENERATED_BODY()
 public:

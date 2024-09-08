@@ -4,11 +4,11 @@
 #include "EIGS_PickupType.h"
 #include "IGS_EnvQueryGenerator_Pickups.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_Pickups : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_PickupType PickupType;
     
     UIGS_EnvQueryGenerator_Pickups();

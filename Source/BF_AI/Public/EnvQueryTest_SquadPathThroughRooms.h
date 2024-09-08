@@ -4,11 +4,11 @@
 #include "EIGS_NavFilterType.h"
 #include "EnvQueryTest_SquadPathThroughRooms.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_SquadPathThroughRooms : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     EIGS_NavFilterType NavFilterType;
     
     UEnvQueryTest_SquadPathThroughRooms();

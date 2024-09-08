@@ -5,11 +5,11 @@
 
 class UPrefabricatorAssetInterface;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PREFABRICATORRUNTIME_API UPrefabComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UPrefabricatorAssetInterface> PrefabAssetInterface;
     
     UPrefabComponent(const FObjectInitializer& ObjectInitializer);

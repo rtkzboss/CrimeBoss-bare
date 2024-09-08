@@ -9,17 +9,17 @@
 class UObject;
 class UUserWidget;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_GUI_API UIGS_MenuListView : public UListView {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnListViewItemHoverChanged OnListViewItemHoverChangedEvent;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnListViewIsFocusableChanged OnListViewIsFocusableChanged;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UUserWidget> ItemWidgetTemplate;
     
     UIGS_MenuListView();
@@ -33,7 +33,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void HoverListItem(UObject* inItem);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UUserWidget* GetSelectedWidget();
     
     UFUNCTION(BlueprintCallable)

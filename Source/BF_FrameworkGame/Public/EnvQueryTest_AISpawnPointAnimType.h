@@ -4,15 +4,15 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "EnvQueryTest_AISpawnPointAnimType.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UEnvQueryTest_AISpawnPointAnimType : public UEnvQueryTest {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue AnimType;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue CheckAnimType;
     
 public:

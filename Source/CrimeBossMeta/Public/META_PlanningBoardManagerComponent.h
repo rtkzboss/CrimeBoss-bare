@@ -10,7 +10,7 @@
 class UIGS_PaybackSaveGameCareer;
 class UMETA_PlanningBoardItemObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_PlanningBoardManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
@@ -18,26 +18,26 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPlanningBoardFeatureStateChanged, bool, IsUnlocked);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPlanningBoardDataChanged);
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FPlanningBoardItemStatusChanged OnPlanningBoardItemStatusChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FPlanningBoardDataChanged OnPlanningBoardChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FPlanningBoardDataChanged OnPlanningBoardEventsChanged;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FPlanningBoardFeatureStateChanged OnPlanningBoardFeatureStateChanged;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FGameplayTag m_ActivePlanningBoardTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TMap<FGameplayTag, UMETA_PlanningBoardItemObject*> m_PlanningBoardItemsMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FMETA_ChangeStatusPlanningBoardEvent> m_ChangeStatusEvents;
     
 public:
@@ -53,38 +53,38 @@ public:
     void SaveData(UIGS_PaybackSaveGameCareer* SaveObject);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnGraphVariableValueChanged(FGameplayTag variableTag, int32 Value);
     
 public:
     UFUNCTION(BlueprintCallable)
     void LoadData();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsThereAnyChangeStatusEvent() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsPlanningBoardUnlocked() const;
     
     UFUNCTION(BlueprintCallable)
     void HandleChangeStatusEvent(UPARAM(Ref) FMETA_ChangeStatusPlanningBoardEvent& Event);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<FGameplayTag, EMETA_PlanningBoardItemStatus> GetPlanningBoardStatuses() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     EMETA_PlanningBoardItemStatus GetPlanningBoardItemStatus(FGameplayTag itemTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TMap<FGameplayTag, UMETA_PlanningBoardItemObject*> GetPlanningBoardItemsMap() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_PlanningBoardItemRow GetPlanningBoardItemData(FGameplayTag itemTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FMETA_ChangeStatusPlanningBoardEvent GetNextChangeStatusEvent() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetActivePlanningBoardTag() const;
     
     UFUNCTION(BlueprintCallable)

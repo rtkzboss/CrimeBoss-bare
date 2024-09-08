@@ -4,5 +4,5 @@
 
 class AIGS_ThrowableProjectileBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_ThrowableSpawnedDelegate, AIGS_ThrowableProjectileBase*, inProjectile);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_ThrowableSpawnedDelegate, AIGS_ThrowableProjectileBase*, inProjectile);
 

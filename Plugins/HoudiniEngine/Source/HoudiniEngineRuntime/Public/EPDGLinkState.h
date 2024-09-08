@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPDGLinkState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EPDGLinkState : uint8 {
     Inactive,
     Linking,

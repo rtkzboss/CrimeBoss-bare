@@ -3,11 +3,11 @@
 #include "IAudioEndpoint.h"
 #include "AudioOut2ExternalEndpointSettings.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
+UCLASS(EditInlineNew)
 class UAudioOut2ExternalEndpointSettings : public UAudioEndpointSettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     int32 ControllerIndex;
     
     UAudioOut2ExternalEndpointSettings();

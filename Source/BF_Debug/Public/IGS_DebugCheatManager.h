@@ -3,7 +3,7 @@
 #include "GameFramework/CheatManager.h"
 #include "IGS_DebugCheatManager.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_DEBUG_API UIGS_DebugCheatManager : public UCheatManager {
     GENERATED_BODY()
 public:

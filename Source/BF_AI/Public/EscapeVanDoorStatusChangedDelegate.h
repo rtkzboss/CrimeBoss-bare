@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "EscapeVanDoorStatusChangedDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FEscapeVanDoorStatusChanged);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FEscapeVanDoorStatusChanged);
 

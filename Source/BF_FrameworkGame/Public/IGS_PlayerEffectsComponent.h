@@ -27,66 +27,66 @@ class UObject;
 class UParticleSystemComponent;
 class UTexture;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerEffectsComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_DamageEffectData DamageEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_DownStateEffectData DownStateEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_FallingEffectData FallingEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_FlashbangEffectData FlashbangEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_HealthEffectData HealthEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_VisorEffectData VisorEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_RainOnCameraEffectData RainOnCameraEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_OnFireEffectData OnFireEffectData;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     FIGS_StimshotEffectData StimshotEffectData;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float FlashEffectivityMultiplierAttribute;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     float StunEffectivityMultiplierAttribute;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FString, UMaterialInstance*> m_RequestedMaterialInstances;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient)
     TMap<FString, UParticleSystemComponent*> m_RequestedParticleSystemComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced, Transient)
     TMap<FString, UNiagaraComponent*> m_RequestedNiagaraSystemComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FString, UCurveFloat*> m_RequestedCurves;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FString, UAkAudioEvent*> m_RequestedAkAudioEvents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FString, UAkRtpc*> m_RequestedAkRtpcs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FString, UTexture*> m_RequestedTextures;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Transient)
     TMap<FString, UObject*> m_RequestedBlendableInterfaces;
     
 public:
@@ -113,7 +113,7 @@ public:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure=false)
     void PlayFlashbangEffects(float inDistanceBasedNormalizedPower, float inDOT) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void PlayExplosionEffect(const FIGS_ExplosionParams& inExplosionParams) const;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure=false)
@@ -122,20 +122,20 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void OnHealthStateChanged(EIGS_HealthState inHealthState) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     void OnHealthChanged(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo) const;
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnDrillDestroyed(AActor* inDrillActor);
     
 protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_PlayFlashbangEffectsWithDurationAndPower_Internal(float inOverrideDuration, float inOverridePower);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_PlayFlashbangEffects_Internal(float inDistanceBasedNormalizedPower, float inDOT);
     
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_PlayExplosionEffects(const FIGS_ExplosionParams& inExplosionParams) const;
     
 public:

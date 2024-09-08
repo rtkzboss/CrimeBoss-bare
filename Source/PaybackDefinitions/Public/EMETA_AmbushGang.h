@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_AmbushGang.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_AmbushGang : uint8 {
     None,
     Police,

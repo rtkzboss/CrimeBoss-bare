@@ -5,23 +5,23 @@
 #include "IGS_SpecialObjectiveAnimData.h"
 #include "IGS_SpecialObjectiveAnimsTableRow.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_SpecialObjectiveAnimsTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     FGameplayTag ID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_SpecialObjectiveAnimData> AnimVariations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_SpecialObjectiveAnimData> FemaleAnimVariations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FIGS_SpecialObjectiveAnimData> FemaleWithHeelsAnimVariations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     bool Looped;
     
     BF_ANIMATIONS_API FIGS_SpecialObjectiveAnimsTableRow();

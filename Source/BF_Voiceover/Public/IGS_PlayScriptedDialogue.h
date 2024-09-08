@@ -7,7 +7,7 @@ class AActor;
 class UIGS_PlayScriptedDialogue;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_VOICEOVER_API UIGS_PlayScriptedDialogue : public UIGS_PlayDialogueNodeBase {
     GENERATED_BODY()
 public:

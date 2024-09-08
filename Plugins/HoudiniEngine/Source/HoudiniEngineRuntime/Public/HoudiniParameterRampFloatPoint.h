@@ -7,29 +7,29 @@
 class UHoudiniParameterChoice;
 class UHoudiniParameterFloat;
 
-UCLASS(Blueprintable, DefaultToInstanced)
+UCLASS(DefaultToInstanced)
 class HOUDINIENGINERUNTIME_API UHoudiniParameterRampFloatPoint : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float Position;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     float Value;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     EHoudiniRampInterpolationType Interpolation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     int32 InstanceIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UHoudiniParameterFloat* PositionParentParm;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UHoudiniParameterFloat* ValueParentParm;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UHoudiniParameterChoice* InterpolationParentParm;
     
     UHoudiniParameterRampFloatPoint();

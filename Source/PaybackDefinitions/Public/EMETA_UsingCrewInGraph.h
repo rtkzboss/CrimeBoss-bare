@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_UsingCrewInGraph.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EMETA_UsingCrewInGraph : uint8 {
     TemporaryCrew,
     KeepCrewOnlySuccess,

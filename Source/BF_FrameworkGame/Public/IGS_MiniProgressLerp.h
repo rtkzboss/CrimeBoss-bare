@@ -9,14 +9,14 @@
 class UIGS_MiniProgressLerp;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_MiniProgressLerp : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMiniLerpOutputPin Update;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FMiniLerpOutputFinishPin Finished;
     
     UIGS_MiniProgressLerp();
@@ -24,17 +24,17 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_MiniProgressLerp* MiniProgressLerp(UObject* inWorldContextObject, UIGS_MiniProgressLerp*& outSelf, float inDuration, float inFromValue, float inToValue, EIGS_LerpCurve inCurve);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsActive() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     float GetToValue() const;
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecUpdate();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ExecFinish();
     
 public:

@@ -4,11 +4,11 @@
 #include "KantanSeriesStyle.h"
 #include "KantanSeriesStyleSet.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class KANTANCHARTSSLATE_API UKantanSeriesStyleSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TArray<FKantanSeriesStyle> Styles;
     
     UKantanSeriesStyleSet();

@@ -8,23 +8,23 @@
 class UIGS_LoadCutsceneMetaData;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API UIGS_LoadCutsceneMetaData : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneDataDelegate Loaded;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneDataDelegate Failed;
     
     UIGS_LoadCutsceneMetaData();
 
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCutsceneDatabaseLoaded(FName inCutsceneID);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnAssetLoaded(FSoftObjectPath inAssetPath);
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MetaCutsceneNodeAction.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_MetaCutsceneNodeAction : uint8 {
     MoveToNode,
     ResultA,

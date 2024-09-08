@@ -3,7 +3,7 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_SuspicionOffenceDatabase.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_SuspicionOffenceDatabase : public UWorldSubsystem {
     GENERATED_BODY()
 public:

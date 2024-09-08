@@ -7,11 +7,11 @@
 class UIGS_LoadMetaCutscenePaperDolls;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACK_API UIGS_LoadMetaCutscenePaperDolls : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneLoadPaperDollDelegate Loaded;
     
     UIGS_LoadMetaCutscenePaperDolls();

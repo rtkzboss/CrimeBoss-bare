@@ -3,7 +3,7 @@
 #include "EnvQueryTest_PathDistanceFromTargetsBase.h"
 #include "EnvQueryTest_CoverPathDistanceFromTargets.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UEnvQueryTest_CoverPathDistanceFromTargets : public UEnvQueryTest_PathDistanceFromTargetsBase {
     GENERATED_BODY()
 public:

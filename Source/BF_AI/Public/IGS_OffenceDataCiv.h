@@ -3,7 +3,7 @@
 #include "IGS_OffenceData.h"
 #include "IGS_OffenceDataCiv.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class UIGS_OffenceDataCiv : public UIGS_OffenceData {
     GENERATED_BODY()
 public:

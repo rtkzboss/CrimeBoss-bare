@@ -4,11 +4,11 @@
 #include "IGS_TileManagerDatabaseRow.h"
 #include "IGS_TileManagerDatabaseAsset.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_TileManagerDatabaseAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FString, FIGS_TileManagerDatabaseRow> TileData;
     
     UIGS_TileManagerDatabaseAsset();

@@ -16,20 +16,20 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_UnlockManagerComponent : public UIGS_UnlockManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_ContractUnlocked OnContractUnlocked;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_CharacterUnlocked OnCharacterUnlocked;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_SaveManager* m_SaveManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FGameplayTag> m_PendingUnlockRewards;
     
 public:
@@ -44,13 +44,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void UnlockContract(FGameplayTag inTagUnlock);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsUniqueCharacterUnlocked(EIGS_CharacterID inCharacter, bool bMaxLeveled) const;
     
     UFUNCTION(BlueprintCallable)
     void IsRewardAlreadyUnlocked(FGameplayTag inRewardID, bool& outUnlocked);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool HasPendingRewards() const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -59,10 +59,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void GetUnlockRewardIdForCharacter(EIGS_CharacterID inCharacter, bool bMaxLeveled, FGameplayTag& outRewardID, bool& outFound);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FIGS_UnlockedCharacterSaveData> GetUnlockedUniqueCharacters();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FGameplayTag> GetUnlockedContractTags();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -71,7 +71,7 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FGameplayTag> GetPendingRewards();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetAccountVariableValue(FGameplayTag inTagUnlock);
     
     UFUNCTION(BlueprintCallable)

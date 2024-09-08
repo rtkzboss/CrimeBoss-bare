@@ -7,11 +7,11 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_UTILS_API UIGS_Entitlements : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_EntitlementsDataRefreshedSignature OnEntitlementDataRefreshed;
     
     UIGS_Entitlements();
@@ -31,7 +31,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void LoadDebugEntitlements();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsEntitlementDLC(FGameplayTag inEntitlement) const;
     
     UFUNCTION(BlueprintCallable)
@@ -40,7 +40,7 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetEntitlementTitle(UObject* inWCO, const FGameplayTag inEntitlement, FText& OutText);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<FGameplayTag> GetAllEntitlements();
     
     UFUNCTION(BlueprintCallable)

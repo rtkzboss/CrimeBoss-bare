@@ -6,22 +6,22 @@
 class UGenericGraph;
 class UGenericGraphNode;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class GENERICGRAPHRUNTIME_API UGenericGraphEdge : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(VisibleAnywhere)
     UGenericGraph* Graph;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* StartNode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* EndNode;
     
     UGenericGraphEdge();
 
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     UGenericGraph* GetGraph() const;
     
 };

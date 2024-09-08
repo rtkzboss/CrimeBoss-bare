@@ -11,33 +11,33 @@ class UIGS_ScreenHandler;
 class UIGS_TutorialsManager;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UIGS_TutorialsManager : public ULocalPlayerSubsystem {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnDisplayedTutorialsOpened);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnDisplayedTutorialsCompleted);
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnDisplayedTutorialsCompleted OnDisplayedTutorialsCompleted;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnDisplayedTutorialsOpened OnDisplayedTutorialsOpened;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_SaveManager* m_SaveManager;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     TArray<UIGS_Screen*> m_PendingTutorials;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(Instanced)
     UIGS_Screen* m_CurrentlyDisplayedTutorial;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FGameplayTag> m_ForbiddenScreensForTutorials;
     
 public:
@@ -55,25 +55,25 @@ public:
     UFUNCTION(BlueprintCallable)
     bool MoveOpenedTutorialBackToPending();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsTutorialCompleted(const FGameplayTag inTag) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAnyTutorialPending() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool IsAnyTutorialOpened() const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_TutorialsManager* GetTutorialsManager(const UObject* inWCO);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool GetTutorialsEnabled() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     TArray<UIGS_Screen*> GetPendingTutorials() const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     bool CanOpenTutorialScreen(const UIGS_ScreenHandler* inScreenHandler) const;
     
     UFUNCTION(BlueprintCallable)

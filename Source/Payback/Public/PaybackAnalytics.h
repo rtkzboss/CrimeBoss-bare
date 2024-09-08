@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class PAYBACK_API UPaybackAnalytics : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

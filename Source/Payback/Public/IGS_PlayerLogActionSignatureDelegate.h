@@ -4,5 +4,5 @@
 
 class APlayerController;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PlayerLogActionSignature, APlayerController*, PlayerController);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_PlayerLogActionSignature, APlayerController*, PlayerController);
 

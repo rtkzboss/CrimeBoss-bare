@@ -7,13 +7,13 @@ class AActor;
 class AIGS_BreachPointsBase;
 class AIGS_RoomBase;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_BreachPointsHelper : public UObject {
     GENERATED_BODY()
 public:
     UIGS_BreachPointsHelper();
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     static AIGS_BreachPointsBase* GetBreachPoints(AActor* Actor, AIGS_RoomBase* priorRoom);
     
 };

@@ -4,11 +4,11 @@
 #include "IGS_RestrictedTagsHolder.h"
 #include "IGS_TerritoryData.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_TerritoryData : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TMap<FName, FIGS_RestrictedTagsHolder> RestrictedTagsHolders;
     
     UIGS_TerritoryData();

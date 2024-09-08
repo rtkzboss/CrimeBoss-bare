@@ -8,12 +8,12 @@
 class AActor;
 class UObject;
 
-UCLASS(Blueprintable, Config=Game)
+UCLASS(Config=Game)
 class BF_AI_API UIGS_AISense_Danger : public UAISense {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TArray<FIGS_AIDangerEvent> RegisteredEvents;
     
 public:

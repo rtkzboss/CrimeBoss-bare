@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_RideableVehicleType.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_RideableVehicleType : uint8 {
+UENUM()
+enum class EIGS_RideableVehicleType {
     Vessel,
     QuadBike,
     None,

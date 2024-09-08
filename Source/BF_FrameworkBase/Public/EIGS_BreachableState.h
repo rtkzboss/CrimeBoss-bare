@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_BreachableState.generated.h"
 
-UENUM(BlueprintType)
-enum class EIGS_BreachableState : uint8 {
+UENUM()
+enum class EIGS_BreachableState {
     Clear,
     Open,
     HalfOpen,

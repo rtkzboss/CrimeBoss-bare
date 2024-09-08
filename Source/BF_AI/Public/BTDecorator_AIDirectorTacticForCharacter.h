@@ -4,12 +4,12 @@
 #include "EIGS_StormTacticType.h"
 #include "BTDecorator_AIDirectorTacticForCharacter.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_AIDirectorTacticForCharacter : public UBTDecorator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_StormTacticType DesiredTactic;
     
 public:

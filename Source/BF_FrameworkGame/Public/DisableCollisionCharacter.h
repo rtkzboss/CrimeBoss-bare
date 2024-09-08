@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "DisableCollisionCharacter.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FDisableCollisionCharacter {
     GENERATED_BODY()
 public:

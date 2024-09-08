@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_ActiveCampaignConfiguration {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTag CampaignMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     EIGS_UserDifficulty Difficulty;
     
     FMETA_ActiveCampaignConfiguration();

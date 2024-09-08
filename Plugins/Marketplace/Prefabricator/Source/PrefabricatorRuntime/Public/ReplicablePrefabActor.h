@@ -3,7 +3,7 @@
 #include "PrefabActor.h"
 #include "ReplicablePrefabActor.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PREFABRICATORRUNTIME_API AReplicablePrefabActor : public APrefabActor {
     GENERATED_BODY()
 public:

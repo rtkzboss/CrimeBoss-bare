@@ -3,14 +3,14 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_ReactionRandomChance.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_ReactionRandomChance : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float HighIntensityChance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     float LowIntensityChance;
     
     UBTDecorator_ReactionRandomChance();

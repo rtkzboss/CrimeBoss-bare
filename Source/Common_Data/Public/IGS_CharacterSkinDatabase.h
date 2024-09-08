@@ -10,7 +10,7 @@ class UDataTable;
 class UIGS_CharacterSkinDatabase;
 class UObject;
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_CharacterSkinDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
@@ -19,16 +19,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void ModAppendDataTable(UDataTable* inNewTable);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     int32 GetIndex(FGameplayTag inID) const;
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CharacterSkinTableRow GetDataCharacterSkin(UObject* inWCO, FGameplayTag inID, bool& outSucceeded);
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintPure)
     FIGS_CharacterSkinTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
     
-    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext=inWCO))
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_CharacterSkinDatabase* GetCharacterSkinDatabaseInstance(UObject* inWCO);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))

@@ -3,7 +3,7 @@
 #include "IGS_ProjectileInstant.h"
 #include "IGS_ProjectileSniperInstant.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ProjectileSniperInstant : public AIGS_ProjectileInstant {
     GENERATED_BODY()
 public:

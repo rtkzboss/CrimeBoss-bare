@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECurveColor.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ECurveColor : uint8 {
     RED,
     GREEN,

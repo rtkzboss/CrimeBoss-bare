@@ -5,7 +5,8 @@
 
 AIGS_SquadGuardians::AIGS_SquadGuardians(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).DebugColor.B = 0;
-    (*this).DebugColor.G = 240;
+    (*this).DebugColor.G = 75;
+    (*this).DebugColor.R = 255;
 }
 
 

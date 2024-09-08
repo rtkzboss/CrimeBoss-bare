@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "IGS_EditableNumberChangedDelegateSignatureDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_EditableNumberChangedDelegateSignature, float, inNumber);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_EditableNumberChangedDelegateSignature, float, inNumber);
 

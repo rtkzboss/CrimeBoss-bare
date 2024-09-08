@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_BoxSphereShape.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class EIGS_BoxSphereShape : uint8 {
     EBF_Box,
     EBF_Sphere,

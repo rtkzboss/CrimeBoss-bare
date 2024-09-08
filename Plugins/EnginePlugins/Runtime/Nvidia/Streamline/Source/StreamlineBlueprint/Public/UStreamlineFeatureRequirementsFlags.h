@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UStreamlineFeatureRequirementsFlags.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class UStreamlineFeatureRequirementsFlags : uint8 {
     None,
     D3D11Supported,

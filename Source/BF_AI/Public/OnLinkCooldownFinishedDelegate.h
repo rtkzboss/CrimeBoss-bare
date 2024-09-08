@@ -4,5 +4,5 @@
 
 class UIGS_NavLinkComponentBase;
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLinkCooldownFinished, UIGS_NavLinkComponentBase*, inSmartLink);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLinkCooldownFinished, UIGS_NavLinkComponentBase*, inSmartLink);
 

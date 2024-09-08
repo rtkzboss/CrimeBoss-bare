@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EXformParameter.generated.h"
 
-UENUM(BlueprintType)
-enum class EXformParameter : uint8 {
+UENUM()
+enum class EXformParameter {
     TX,
     TY,
     TZ,

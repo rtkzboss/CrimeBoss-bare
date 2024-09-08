@@ -9,14 +9,14 @@ class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 class UIGS_ScriptingCommandLayOnGround;
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UIGS_ScriptingCommandLayOnGround : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Succeed;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Failed;
     
     UIGS_ScriptingCommandLayOnGround();
@@ -25,7 +25,7 @@ public:
     static UIGS_ScriptingCommandLayOnGround* ScriptingCommandLayOnGround(AIGS_GameCharacterFramework* Character, int32 scope, float InTime);
     
 private:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnCommandFinished(AIGS_AIControllerGame* inOwningContoller, UIGS_AICommand* inCommand, bool inFailed);
     
 };

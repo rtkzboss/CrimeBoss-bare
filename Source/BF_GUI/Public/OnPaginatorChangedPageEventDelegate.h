@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "OnPaginatorChangedPageEventDelegate.generated.h"
 
-UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPaginatorChangedPageEvent, int32, NewIndex);
+UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPaginatorChangedPageEvent, int32, NewIndex);
 

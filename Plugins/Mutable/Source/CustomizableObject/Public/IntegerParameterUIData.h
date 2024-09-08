@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FIntegerParameterUIData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FString Name;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite)
     FMutableParamUIMetadata ParamUIMetadata;
     
     CUSTOMIZABLEOBJECT_API FIntegerParameterUIData();

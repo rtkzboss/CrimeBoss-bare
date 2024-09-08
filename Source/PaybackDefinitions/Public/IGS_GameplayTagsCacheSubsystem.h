@@ -3,7 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "IGS_GameplayTagsCacheSubsystem.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class PAYBACKDEFINITIONS_API UIGS_GameplayTagsCacheSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:

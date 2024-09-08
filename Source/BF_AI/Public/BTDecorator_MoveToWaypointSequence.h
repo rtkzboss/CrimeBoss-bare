@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_MoveToWaypointSequence.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class BF_AI_API UBTDecorator_MoveToWaypointSequence : public UBTDecorator {
     GENERATED_BODY()
 public:

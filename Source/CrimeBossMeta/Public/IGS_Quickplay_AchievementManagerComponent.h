@@ -3,7 +3,7 @@
 #include "IGS_AchievementManagerBaseComponent.h"
 #include "IGS_Quickplay_AchievementManagerComponent.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_AchievementManagerComponent : public UIGS_AchievementManagerBaseComponent {
     GENERATED_BODY()
 public:

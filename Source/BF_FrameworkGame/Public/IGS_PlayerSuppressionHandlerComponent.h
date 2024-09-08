@@ -10,30 +10,30 @@ class AIGS_GameCharacterBase;
 class UAkAudioEvent;
 class UAkRtpc;
 
-UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerSuppressionHandlerComponent : public UIGS_SuppressionHandlerComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnBulletMissCameraShakeSignature OnBulletMissCameraShake;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable)
     FIGS_OnDirectionalPlayerCueSignature OnPlayDirectionalPlayerCueEvent;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* DirectionalBulletWhizAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* DirectionalMeleeCueAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* BulletWhizAkAudioEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* SniperSonicCrackAkEvent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditDefaultsOnly)
     UAkRtpc* SniperSonicCrackRtpc;
     
 public:
@@ -43,7 +43,7 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void PlayWhizSound() const;
     
-    UFUNCTION(BlueprintCallable, Client, Unreliable)
+    UFUNCTION(Client, Unreliable)
     void PlayDirectionalPlayerCue_Client(const AIGS_GameCharacterBase* inSourceCharacter, const EIGS_DirectionalCueType inType) const;
     
 };
