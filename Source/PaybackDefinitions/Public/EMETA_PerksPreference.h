@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_PerksPreference.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_PerksPreference : uint8 {
     Any,
     OnlyPositive,

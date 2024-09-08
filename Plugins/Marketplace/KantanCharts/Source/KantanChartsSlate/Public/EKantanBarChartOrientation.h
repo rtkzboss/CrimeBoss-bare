@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EKantanBarChartOrientation.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EKantanBarChartOrientation : uint8 {
     Vertical,
     Horizontal,

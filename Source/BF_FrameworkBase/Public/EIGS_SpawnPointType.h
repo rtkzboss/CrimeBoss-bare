@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_SpawnPointType.generated.h"
 
-UENUM()
-enum class EIGS_SpawnPointType {
+UENUM(BlueprintType)
+enum class EIGS_SpawnPointType : uint8 {
     SPT_Unknown,
     SPT_Card,
     SPT_Computer,

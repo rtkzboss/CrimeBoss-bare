@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_BotCommandDefinition.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_BotCommandDefinition : uint8 {
     Unknown = 255,
     Cancel = 0,

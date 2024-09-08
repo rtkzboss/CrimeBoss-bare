@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AmmoBoxItem.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AmmoBoxItem : uint8 {
     None,
     BaseSmall,

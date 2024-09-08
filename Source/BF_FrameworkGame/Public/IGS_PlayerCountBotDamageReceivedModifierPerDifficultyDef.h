@@ -4,7 +4,7 @@
 #include "IGS_PlayerCountBotDamageReceivedModifierDef.h"
 #include "IGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef {
     GENERATED_BODY()
 public:

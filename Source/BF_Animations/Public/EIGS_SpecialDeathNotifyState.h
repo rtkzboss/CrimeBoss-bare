@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SpecialDeathNotifyState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SpecialDeathNotifyState : uint8 {
     SD_None,
     SD_Started,

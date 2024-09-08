@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_PlayerCustomAnimationType.generated.h"
 
-UENUM()
-enum class EIGS_PlayerCustomAnimationType {
+UENUM(BlueprintType)
+enum class EIGS_PlayerCustomAnimationType : uint8 {
     PCA_PressButton,
     PCA_Hold,
     PCA_Push,

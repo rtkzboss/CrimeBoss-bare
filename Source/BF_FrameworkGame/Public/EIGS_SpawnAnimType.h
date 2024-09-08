@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SpawnAnimType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SpawnAnimType : uint8 {
     SA_None,
     SA_Window,

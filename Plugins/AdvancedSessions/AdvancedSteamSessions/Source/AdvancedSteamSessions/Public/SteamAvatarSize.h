@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SteamAvatarSize.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class SteamAvatarSize : uint8 {
     SteamAvatar_INVALID,
     SteamAvatar_Small,

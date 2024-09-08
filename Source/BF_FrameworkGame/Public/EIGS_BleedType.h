@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_BleedType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_BleedType : uint8 {
     BT_None,
     BT_MoveableWithCovers,

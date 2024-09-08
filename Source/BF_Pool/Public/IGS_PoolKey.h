@@ -3,7 +3,7 @@
 #include "GameplayTagContainer.h"
 #include "IGS_PoolKey.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_POOL_API FIGS_PoolKey {
     GENERATED_BODY()
 public:

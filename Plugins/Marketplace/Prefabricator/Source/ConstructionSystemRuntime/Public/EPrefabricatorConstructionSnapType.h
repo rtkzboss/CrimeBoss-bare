@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPrefabricatorConstructionSnapType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPrefabricatorConstructionSnapType : uint8 {
     Floor,
     Wall,

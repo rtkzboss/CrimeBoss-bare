@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WeaponVisibilityType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WeaponVisibilityType : uint8 {
     VT_None,
     VT_Laser,

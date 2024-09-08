@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniCurveOutputType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHoudiniCurveOutputType : uint8 {
     UnrealSpline,
     HoudiniSpline,

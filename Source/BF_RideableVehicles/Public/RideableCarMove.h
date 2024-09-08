@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "RideableCarMove.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FRideableCarMove {
     GENERATED_BODY()
 public:

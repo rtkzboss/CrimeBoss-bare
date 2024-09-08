@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBPTextFilteringContext.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBPTextFilteringContext : uint8 {
     FContext_Unknown,
     FContext_GameContent,

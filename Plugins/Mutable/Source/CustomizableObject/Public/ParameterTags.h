@@ -3,7 +3,7 @@
 #include "FParameterOptionsTags.h"
 #include "ParameterTags.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FParameterTags {
     GENERATED_BODY()
 public:

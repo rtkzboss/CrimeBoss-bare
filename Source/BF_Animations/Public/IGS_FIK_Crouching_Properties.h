@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_FIK_Crouching_Properties.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_FIK_Crouching_Properties {
     GENERATED_BODY()
 public:

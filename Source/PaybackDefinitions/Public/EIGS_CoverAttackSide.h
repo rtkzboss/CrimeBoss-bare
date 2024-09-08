@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CoverAttackSide.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_CoverAttackSide : uint8 {
     CAS_Unknown = 255,
     CAS_None = 0,

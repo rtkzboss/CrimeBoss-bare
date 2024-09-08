@@ -8,7 +8,7 @@ class AIGS_GameCharacterFramework;
 class UDamageType;
 class UIGS_ImpactTypeObject;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_BashResultNetwork {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class AActor;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FAfraidOfDanger {
     GENERATED_BODY()
 public:

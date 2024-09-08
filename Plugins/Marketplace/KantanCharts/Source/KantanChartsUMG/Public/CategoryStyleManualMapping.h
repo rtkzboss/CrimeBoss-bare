@@ -3,7 +3,7 @@
 #include "KantanCategoryStyle.h"
 #include "CategoryStyleManualMapping.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCategoryStyleManualMapping {
     GENERATED_BODY()
 public:

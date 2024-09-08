@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TileItemState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_TileItemState : uint8 {
     Locked,
     Unlocked,

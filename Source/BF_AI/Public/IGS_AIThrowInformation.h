@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_AIThrowInformation.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_AIThrowInformation {
     GENERATED_BODY()
 public:

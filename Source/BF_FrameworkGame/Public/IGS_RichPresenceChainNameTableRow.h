@@ -6,7 +6,7 @@
 
 class UIGS_ChainContractID;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FIGS_RichPresenceChainNameTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:

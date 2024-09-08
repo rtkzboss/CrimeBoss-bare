@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IKProperties.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIKProperties {
     GENERATED_BODY()
 public:

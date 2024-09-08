@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CharacterID.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_CharacterID : uint8 {
     Char_Unknown = 255,
     Char_Gen_M_Thug = 0,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniLandscapeOutputBakeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHoudiniLandscapeOutputBakeType : uint8 {
     Detachment,
     BakeToImage,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "CartesianAxisInstanceConfig.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCartesianAxisInstanceConfig {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "IGS_RangeWithDistance.h"
 #include "IGS_ListWrapper.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct COVERGENERATOR_API FIGS_ListWrapper {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class UIGS_AICommand;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FDelayedCommand {
     GENERATED_BODY()
 public:

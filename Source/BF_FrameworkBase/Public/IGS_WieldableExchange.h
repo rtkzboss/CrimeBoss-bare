@@ -7,7 +7,7 @@
 class AIGS_WieldableBase;
 class UIGS_WieldableInventoryObjectBase;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKBASE_API FIGS_WieldableExchange {
     GENERATED_BODY()
 public:

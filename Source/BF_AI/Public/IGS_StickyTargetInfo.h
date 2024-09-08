@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_StickyTargetInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_StickyTargetInfo {
     GENERATED_BODY()
 public:

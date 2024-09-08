@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_VaultOffenceDefinition.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_VaultOffenceDefinition {
     GENERATED_BODY()
 public:

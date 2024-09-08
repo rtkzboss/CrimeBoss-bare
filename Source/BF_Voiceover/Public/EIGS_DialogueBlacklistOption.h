@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DialogueBlacklistOption.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_DialogueBlacklistOption : uint8 {
     NoBlacklist,
     OnlyDefault,

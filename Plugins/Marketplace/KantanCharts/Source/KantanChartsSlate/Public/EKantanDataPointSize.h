@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EKantanDataPointSize.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EKantanDataPointSize : uint8 {
     Small,
     Medium,

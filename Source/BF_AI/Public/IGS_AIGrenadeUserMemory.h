@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_AIGrenadeUserMemory.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_AIGrenadeUserMemory {
     GENERATED_BODY()
 public:

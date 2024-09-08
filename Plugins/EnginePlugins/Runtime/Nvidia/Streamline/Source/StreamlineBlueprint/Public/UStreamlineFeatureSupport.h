@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UStreamlineFeatureSupport.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class UStreamlineFeatureSupport : uint8 {
     Supported,
     NotSupported,

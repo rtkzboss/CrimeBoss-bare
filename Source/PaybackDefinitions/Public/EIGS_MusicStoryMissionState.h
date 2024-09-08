@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MusicStoryMissionState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_MusicStoryMissionState : uint8 {
     None,
     Custom1,

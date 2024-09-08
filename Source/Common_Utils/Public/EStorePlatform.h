@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EStorePlatform.generated.h"
 
-UENUM()
-enum class EStorePlatform {
+UENUM(BlueprintType)
+enum class EStorePlatform : uint8 {
     Epic,
     Steam,
 };

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UStreamlineDLSSGMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class UStreamlineDLSSGMode : uint8 {
     Off,
     On,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_LocomotionState.generated.h"
 
-UENUM()
-enum class EIGS_LocomotionState {
+UENUM(BlueprintType)
+enum class EIGS_LocomotionState : uint8 {
     BT_None,
     BT_IdleStart,
     BT_IdleStop,

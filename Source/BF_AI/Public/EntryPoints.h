@@ -4,7 +4,7 @@
 
 class UIGS_BreachPointComponent;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FEntryPoints {
     GENERATED_BODY()
 public:

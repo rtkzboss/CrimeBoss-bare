@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EStimuliType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EStimuliType : uint8 {
     EnemySeen,
     EnemyLost,

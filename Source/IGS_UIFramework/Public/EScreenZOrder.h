@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EScreenZOrder.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EScreenZOrder : uint8 {
     Normal,
     Overlay = 32,

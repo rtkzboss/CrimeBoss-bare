@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AIMontageSOVariant.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AIMontageSOVariant : uint8 {
     SO_Unknown = 255,
     SO_Yawn = 0,

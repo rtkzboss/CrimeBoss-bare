@@ -4,7 +4,7 @@
 #include "IGS_LinkedGraphDefinition.h"
 #include "IGS_AnimationDatabaseBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct BF_ANIMATIONS_API FIGS_AnimationDatabaseBase : public FTableRowBase {
     GENERATED_BODY()
 public:

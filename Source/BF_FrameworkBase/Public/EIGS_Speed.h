@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_Speed.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_Speed : uint8 {
     MS_Walk,
     MS_Run,

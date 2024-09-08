@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPFRollInterpType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPFRollInterpType : uint8 {
     Constant,
     Linear,

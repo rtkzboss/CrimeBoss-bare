@@ -3,7 +3,7 @@
 #include "CustomizableObjectProjector.h"
 #include "CustomizableObjectProjectorParameterValue.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectProjectorParameterValue {
     GENERATED_BODY()
 public:

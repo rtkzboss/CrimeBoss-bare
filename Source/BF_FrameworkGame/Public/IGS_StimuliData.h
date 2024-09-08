@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_StimuliData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_StimuliData {
     GENERATED_BODY()
 public:

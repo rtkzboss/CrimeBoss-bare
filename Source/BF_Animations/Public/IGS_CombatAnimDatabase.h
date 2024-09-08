@@ -6,7 +6,7 @@
 
 class UAnimMontage;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FIGS_CombatAnimDatabase : public FTableRowBase {
     GENERATED_BODY()
 public:

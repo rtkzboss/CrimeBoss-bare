@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "IGS_SwatHeavyWeakSpotSettings.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_SwatHeavyWeakSpotSettings {
     GENERATED_BODY()
 public:

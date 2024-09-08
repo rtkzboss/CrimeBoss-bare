@@ -6,7 +6,7 @@
 #include "IGS_GeneralReactionsDefsHolder.h"
 #include "IGS_GeneralReactionSpecHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_GeneralReactionSpecHolder {
     GENERATED_BODY()
 public:

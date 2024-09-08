@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_WireBoxWireInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_WireBoxWireInfo {
     GENERATED_BODY()
 public:

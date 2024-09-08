@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SessionPropertyKey.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SessionPropertyKey : uint8 {
     State,
     MissionName,

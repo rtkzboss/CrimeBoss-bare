@@ -5,7 +5,7 @@
 #include "Engine/TextureDefines.h"
 #include "MutableModelImageProperties.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMutableModelImageProperties {
     GENERATED_BODY()
 public:

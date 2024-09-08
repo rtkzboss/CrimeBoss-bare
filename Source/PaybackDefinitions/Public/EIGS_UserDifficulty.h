@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_UserDifficulty.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_UserDifficulty : uint8 {
     UD_Unknown,
     UD_Easy,

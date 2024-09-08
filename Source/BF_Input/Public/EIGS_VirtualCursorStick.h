@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_VirtualCursorStick.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_VirtualCursorStick : uint8 {
     Invalid = 255,
     Left = 0,

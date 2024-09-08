@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_FootstepType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_FootstepType : uint8 {
     None,
     Land,

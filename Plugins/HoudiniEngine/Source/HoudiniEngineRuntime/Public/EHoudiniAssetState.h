@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniAssetState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHoudiniAssetState : uint8 {
     NeedInstantiation,
     NewHDA,

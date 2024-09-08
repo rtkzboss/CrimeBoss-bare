@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SmartLinkAnimVariant.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SmartLinkAnimVariant : uint8 {
     AIM_Unknown = 255,
     AIM_None = 0,

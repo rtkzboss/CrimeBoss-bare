@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EVectorSideEnum.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EVectorSideEnum : uint8 {
     VS_Forward,
     VS_Right45,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CarSeatVariant.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_CarSeatVariant : uint8 {
     CS_Unknown = 255,
     CS_0 = 0,

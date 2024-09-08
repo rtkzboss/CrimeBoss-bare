@@ -3,7 +3,7 @@
 #include "IGS_ThrowableCooldownModifierDef.h"
 #include "IGS_PlayerCountThrowableCooldownModifierDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_PlayerCountThrowableCooldownModifierDef {
     GENERATED_BODY()
 public:

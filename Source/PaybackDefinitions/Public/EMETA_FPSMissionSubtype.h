@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_FPSMissionSubtype.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_FPSMissionSubtype : uint8 {
     MoneyMaking,
     Story,

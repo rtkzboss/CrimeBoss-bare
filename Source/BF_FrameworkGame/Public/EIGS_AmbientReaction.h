@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AmbientReaction.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AmbientReaction : uint8 {
     UNKNOWN = 255,
     None = 0,

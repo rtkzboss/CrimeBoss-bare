@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ERMAFoliageToolsIncludeMode.generated.h"
 
-UENUM()
-enum class ERMAFoliageToolsIncludeMode {
+UENUM(BlueprintType)
+enum class ERMAFoliageToolsIncludeMode : uint8 {
     RMAIM_All,
     RMAIM_Selection,
 };

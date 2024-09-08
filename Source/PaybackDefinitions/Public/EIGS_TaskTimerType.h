@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TaskTimerType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_TaskTimerType : uint8 {
     None,
     Timer,

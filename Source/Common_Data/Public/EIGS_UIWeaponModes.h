@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_UIWeaponModes.generated.h"
 
-UENUM()
-enum class EIGS_UIWeaponModes {
+UENUM(BlueprintType)
+enum class EIGS_UIWeaponModes : uint8 {
     None,
     FullAuto,
     Burst,

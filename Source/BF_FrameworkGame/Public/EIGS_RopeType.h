@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_RopeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_RopeType : uint8 {
     RT_None,
     RT_Navlink,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_WieldableAnimType.generated.h"
 
-UENUM()
-enum class EIGS_WieldableAnimType {
+UENUM(BlueprintType)
+enum class EIGS_WieldableAnimType : uint8 {
     EIGS_Weapon,
     EIGS_MeleeWeapon,
     EIGS_Throwable,

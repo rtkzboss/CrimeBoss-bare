@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "CustomizableObjectTextureParameterValue.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectTextureParameterValue {
     GENERATED_BODY()
 public:

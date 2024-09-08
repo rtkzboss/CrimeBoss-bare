@@ -4,7 +4,7 @@
 
 class UCustomizableObjectPopulationClass;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FClassWeightPair {
     GENERATED_BODY()
 public:

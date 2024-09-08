@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DialogueSwatCharacter.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_DialogueSwatCharacter : uint8 {
     None,
     GenericCommand,

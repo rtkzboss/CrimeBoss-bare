@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FParameterOptionsTags.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FFParameterOptionsTags {
     GENERATED_BODY()
 public:

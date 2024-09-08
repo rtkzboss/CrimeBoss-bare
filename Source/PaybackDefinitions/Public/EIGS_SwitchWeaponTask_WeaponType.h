@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SwitchWeaponTask_WeaponType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SwitchWeaponTask_WeaponType : uint8 {
     WT_Unknown = 255,
     WT_Primary = 0,

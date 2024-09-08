@@ -3,7 +3,7 @@
 #include "KantanSeriesStyle.h"
 #include "SeriesStyleManualMapping.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FSeriesStyleManualMapping {
     GENERATED_BODY()
 public:

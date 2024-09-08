@@ -4,7 +4,7 @@
 #include "IGS_GlassHit.h"
 #include "IGS_GlassStatus.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_GlassStatus {
     GENERATED_BODY()
 public:

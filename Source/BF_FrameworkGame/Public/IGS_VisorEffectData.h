@@ -9,7 +9,7 @@ class UCurveFloat;
 class UMaterialInterface;
 class UNiagaraSystem;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_VisorEffectData : public FIGS_PlayerEffectData {
     GENERATED_BODY()
 public:

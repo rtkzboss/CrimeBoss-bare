@@ -2,10 +2,10 @@
 #include "EHoudiniInputObjectType.h"
 
 UHoudiniInputActor::UHoudiniInputActor() {
-    (*this).Guid.A = -1914090124;
-    (*this).Guid.B = 1219974712;
-    (*this).Guid.C = -505702210;
-    (*this).Guid.D = -1405476847;
+    (*this).Guid.A = -348836991;
+    (*this).Guid.B = 1247657503;
+    (*this).Guid.C = -1228408166;
+    (*this).Guid.D = -177493127;
 }
 
 

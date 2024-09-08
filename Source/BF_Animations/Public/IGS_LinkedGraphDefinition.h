@@ -4,7 +4,7 @@
 
 class UIGS_LinkedAnimInstance;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_ANIMATIONS_API FIGS_LinkedGraphDefinition {
     GENERATED_BODY()
 public:

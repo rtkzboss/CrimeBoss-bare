@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_Partner.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_Partner : uint8 {
     None,
     Secretary,

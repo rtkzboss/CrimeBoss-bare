@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_AIBossStrengthChangeIntensity.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_AIBossStrengthChangeIntensity : uint8 {
     None,
     Weakness_Low,

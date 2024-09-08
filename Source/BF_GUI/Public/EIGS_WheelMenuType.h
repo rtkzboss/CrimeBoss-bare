@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WheelMenuType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WheelMenuType : uint8 {
     None,
     Bots,

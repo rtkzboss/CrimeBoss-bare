@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EActivityTask.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EActivityTask : uint8 {
     Campaign,
     Edgewood,

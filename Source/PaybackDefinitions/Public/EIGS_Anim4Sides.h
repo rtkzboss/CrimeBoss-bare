@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_Anim4Sides.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_Anim4Sides : uint8 {
     Side_Back,
     Side_Front,

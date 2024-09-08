@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_GangsterVariationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_GangsterVariationType : uint8 {
     US_None,
     US_White,

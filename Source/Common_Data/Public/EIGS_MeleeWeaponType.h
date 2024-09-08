@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_MeleeWeaponType.generated.h"
 
-UENUM()
-enum class EIGS_MeleeWeaponType {
+UENUM(BlueprintType)
+enum class EIGS_MeleeWeaponType : uint8 {
     MAT_Blunt,
     MAT_Sharp,
 };

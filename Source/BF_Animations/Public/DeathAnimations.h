@@ -4,7 +4,7 @@
 
 class UAnimSequence;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FDeathAnimations {
     GENERATED_BODY()
 public:

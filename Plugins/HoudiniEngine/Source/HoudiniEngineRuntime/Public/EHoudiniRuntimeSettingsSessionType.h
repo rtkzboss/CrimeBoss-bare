@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniRuntimeSettingsSessionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EHoudiniRuntimeSettingsSessionType {
     HRSST_InProcess,
     HRSST_Socket,

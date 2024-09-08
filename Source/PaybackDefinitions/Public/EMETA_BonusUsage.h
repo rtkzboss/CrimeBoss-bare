@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_BonusUsage.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_BonusUsage : uint8 {
     Other,
     PercentageX100,

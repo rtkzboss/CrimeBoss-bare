@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_Heat.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_Heat : uint8 {
     INVALID,
     VeryLow,

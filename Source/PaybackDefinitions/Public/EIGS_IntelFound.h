@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_IntelFound.generated.h"
 
-UENUM()
-enum class EIGS_IntelFound {
+UENUM(BlueprintType)
+enum class EIGS_IntelFound : uint8 {
     Found,
     NotFound,
 };

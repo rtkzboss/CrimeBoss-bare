@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_TaskStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_TaskStatus : uint8 {
     None,
     Failed,

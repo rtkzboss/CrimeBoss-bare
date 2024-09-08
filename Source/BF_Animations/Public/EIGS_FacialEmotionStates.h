@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_FacialEmotionStates.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_FacialEmotionStates : uint8 {
     FES_Default,
     FES_Angry,

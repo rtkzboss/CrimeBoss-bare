@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "IGS_ThrowableThrownData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_ThrowableThrownData {
     GENERATED_BODY()
 public:

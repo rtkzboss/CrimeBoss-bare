@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_VoiceoverControllerKey.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_VOICEOVER_API FIGS_VoiceoverControllerKey {
     GENERATED_BODY()
 public:

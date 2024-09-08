@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AIUnitDBSource.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AIUnitDBSource : uint8 {
     US_Unknown,
     US_FPS,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ObjectiveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_ObjectiveType : uint8 {
     None,
     ReviveMaximumXTimes,

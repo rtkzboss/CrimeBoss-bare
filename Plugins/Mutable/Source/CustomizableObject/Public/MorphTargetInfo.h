@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "MorphTargetInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMorphTargetInfo {
     GENERATED_BODY()
 public:

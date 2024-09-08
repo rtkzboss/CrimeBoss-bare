@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_DetectorVerticalDirection.generated.h"
 
-UENUM()
-enum class EIGS_DetectorVerticalDirection {
+UENUM(BlueprintType)
+enum class EIGS_DetectorVerticalDirection : uint8 {
     Down,
     Up,
 };

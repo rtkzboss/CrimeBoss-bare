@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_VehicleGroup.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_VehicleGroup : uint8 {
     CommonCivilian,
     CommonPolice,

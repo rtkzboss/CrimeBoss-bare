@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_HeliSpawnInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_HeliSpawnInfo {
     GENERATED_BODY()
 public:

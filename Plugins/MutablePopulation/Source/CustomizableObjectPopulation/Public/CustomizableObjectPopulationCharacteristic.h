@@ -3,7 +3,7 @@
 #include "CustomizableObjectPopulationConstraint.h"
 #include "CustomizableObjectPopulationCharacteristic.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectPopulationCharacteristic {
     GENERATED_BODY()
 public:

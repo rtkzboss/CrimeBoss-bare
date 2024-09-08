@@ -3,7 +3,7 @@
 #include "TOPWorkResultObject.h"
 #include "TOPWorkResult.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FTOPWorkResult {
     GENERATED_BODY()
 public:

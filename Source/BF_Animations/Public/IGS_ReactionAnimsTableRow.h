@@ -5,7 +5,7 @@
 #include "IGS_ReactionAnimData.h"
 #include "IGS_ReactionAnimsTableRow.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FIGS_ReactionAnimsTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:

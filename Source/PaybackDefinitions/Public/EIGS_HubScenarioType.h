@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HubScenarioType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_HubScenarioType : uint8 {
     Empty,
     Ambush,

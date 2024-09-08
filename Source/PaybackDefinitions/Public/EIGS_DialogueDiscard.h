@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DialogueDiscard.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_DialogueDiscard : uint8 {
     None,
     LessPriority,

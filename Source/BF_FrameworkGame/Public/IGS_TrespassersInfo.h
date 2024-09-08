@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_TrespassersInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_TrespassersInfo {
     GENERATED_BODY()
 public:

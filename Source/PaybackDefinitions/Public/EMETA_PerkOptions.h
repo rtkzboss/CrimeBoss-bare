@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_PerkOptions.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_PerkOptions : uint8 {
     UNDEFINED,
     Bluff,

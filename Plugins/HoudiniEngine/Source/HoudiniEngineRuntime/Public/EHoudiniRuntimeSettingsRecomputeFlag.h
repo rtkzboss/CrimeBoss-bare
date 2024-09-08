@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniRuntimeSettingsRecomputeFlag.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EHoudiniRuntimeSettingsRecomputeFlag {
     HRSRF_Always,
     HRSRF_OnlyIfMissing,

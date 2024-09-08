@@ -6,7 +6,7 @@
 #include "HoudiniMeshSocket.h"
 #include "HoudiniGeoPartObject.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FHoudiniGeoPartObject {
     GENERATED_BODY()
 public:

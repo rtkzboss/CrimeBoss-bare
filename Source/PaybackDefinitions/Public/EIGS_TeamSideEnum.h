@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TeamSideEnum.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_TeamSideEnum : uint8 {
     TS_Heisters,
     TS_Security,

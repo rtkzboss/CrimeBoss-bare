@@ -4,7 +4,7 @@
 
 class UIGS_TrafficPathComponent;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_TrafficLoopSegment {
     GENERATED_BODY()
 public:

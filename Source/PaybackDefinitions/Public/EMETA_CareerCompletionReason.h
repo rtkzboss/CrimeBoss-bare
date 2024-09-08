@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_CareerCompletionReason.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_CareerCompletionReason : uint8 {
     NoTurfTiles,
     NoTurfTilesGang,

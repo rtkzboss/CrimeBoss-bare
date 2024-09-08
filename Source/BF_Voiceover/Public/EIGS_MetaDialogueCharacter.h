@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MetaDialogueCharacter.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_MetaDialogueCharacter : uint8 {
     None,
     GenericHeister = 29,

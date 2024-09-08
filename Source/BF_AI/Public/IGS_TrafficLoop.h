@@ -3,7 +3,7 @@
 #include "IGS_TrafficLoopSegment.h"
 #include "IGS_TrafficLoop.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_TrafficLoop {
     GENERATED_BODY()
 public:

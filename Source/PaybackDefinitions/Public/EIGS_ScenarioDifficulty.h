@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ScenarioDifficulty.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ScenarioDifficulty : uint8 {
     SD_Unknown,
     SD_LightForce,

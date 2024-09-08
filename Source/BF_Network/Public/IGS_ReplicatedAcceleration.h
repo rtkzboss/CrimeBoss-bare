@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_ReplicatedAcceleration.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_ReplicatedAcceleration {
     GENERATED_BODY()
 public:

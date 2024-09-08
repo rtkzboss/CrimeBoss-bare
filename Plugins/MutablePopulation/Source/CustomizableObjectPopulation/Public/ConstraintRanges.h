@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ConstraintRanges.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FConstraintRanges {
     GENERATED_BODY()
 public:

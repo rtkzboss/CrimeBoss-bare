@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDLSSPreset.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDLSSPreset : uint8 {
     Default,
     A,

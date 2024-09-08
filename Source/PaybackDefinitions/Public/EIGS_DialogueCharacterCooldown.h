@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DialogueCharacterCooldown.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_DialogueCharacterCooldown : uint8 {
     Instant,
     Short,

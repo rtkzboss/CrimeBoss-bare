@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_BonusType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_BonusType : uint8 {
     PoliceInvestigation,
     BossPointBoost,

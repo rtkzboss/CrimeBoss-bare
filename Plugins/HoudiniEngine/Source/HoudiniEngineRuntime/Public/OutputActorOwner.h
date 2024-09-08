@@ -4,7 +4,7 @@
 
 class AActor;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FOutputActorOwner {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CutsceneChoiceVisibility.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_CutsceneChoiceVisibility : uint8 {
     Visible,
     Disabled,

@@ -4,7 +4,7 @@
 
 class AIGS_RoomBase;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_AreaOfOperations {
     GENERATED_BODY()
 public:

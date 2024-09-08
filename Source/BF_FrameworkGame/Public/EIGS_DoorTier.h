@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DoorTier.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_DoorTier : uint8 {
     DT_Tier1,
     DT_Tier2,

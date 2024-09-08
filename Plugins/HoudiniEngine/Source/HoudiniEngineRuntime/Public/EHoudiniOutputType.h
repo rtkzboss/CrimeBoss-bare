@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniOutputType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHoudiniOutputType : uint8 {
     Invalid,
     Mesh,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AIMontageType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AIMontageType : uint8 {
     AIM_Unknown = 255,
     AIM_Breach = 0,

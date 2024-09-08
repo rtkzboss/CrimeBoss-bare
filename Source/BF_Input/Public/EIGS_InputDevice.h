@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_InputDevice.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_InputDevice : uint8 {
     ID_UNKNOWN = 255,
     ID_KeyboardAndMouse = 0,

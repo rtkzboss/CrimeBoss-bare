@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_NodeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_NodeType : uint8 {
     None,
     Root,

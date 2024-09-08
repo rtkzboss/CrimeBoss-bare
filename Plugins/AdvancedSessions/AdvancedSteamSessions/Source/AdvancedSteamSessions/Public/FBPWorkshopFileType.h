@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FBPWorkshopFileType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class FBPWorkshopFileType : uint8 {
     k_EWorkshopFileTypeCommunity,
     k_EWorkshopFileTypeMicrotransaction,

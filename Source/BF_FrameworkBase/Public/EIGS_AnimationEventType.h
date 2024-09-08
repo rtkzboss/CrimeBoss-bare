@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AnimationEventType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AnimationEventType : uint8 {
     Event_Unknown = 255,
     Event_Default = 0,

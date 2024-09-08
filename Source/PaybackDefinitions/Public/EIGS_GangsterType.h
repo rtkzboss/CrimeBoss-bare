@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_GangsterType.generated.h"
 
-UENUM()
-enum class EIGS_GangsterType {
+UENUM(BlueprintType)
+enum class EIGS_GangsterType : uint8 {
     INVALID = 255,
     Nasara = 0,
     KarlKhan,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_OverlapResponseType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_OverlapResponseType : uint8 {
     ORT_None,
     ORT_NotifyOnly,

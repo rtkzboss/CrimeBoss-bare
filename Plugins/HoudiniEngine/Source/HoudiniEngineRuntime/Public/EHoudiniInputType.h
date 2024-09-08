@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniInputType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHoudiniInputType : uint8 {
     Invalid,
     Geometry,

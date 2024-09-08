@@ -4,7 +4,7 @@
 #include "HoudiniBakedOutputObjectIdentifier.h"
 #include "HoudiniBakedOutput.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FHoudiniBakedOutput {
     GENERATED_BODY()
 public:

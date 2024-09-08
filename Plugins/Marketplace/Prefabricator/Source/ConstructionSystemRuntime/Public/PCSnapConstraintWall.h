@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PCSnapConstraintWall.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct CONSTRUCTIONSYSTEMRUNTIME_API FPCSnapConstraintWall {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 #include "IGS_PS5Entitlement.h"
 #include "IGS_EntitlementDatabaseRow.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FIGS_EntitlementDatabaseRow : public FTableRowBase {
     GENERATED_BODY()
 public:

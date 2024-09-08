@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_StatisticModificationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_StatisticModificationType : uint8 {
     None,
     Increment,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_TradeVendor.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_TradeVendor : uint8 {
     UNDEFINED,
     ICE,

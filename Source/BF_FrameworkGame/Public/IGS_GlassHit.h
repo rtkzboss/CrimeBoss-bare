@@ -4,7 +4,7 @@
 #include "Engine/NetSerialization.h"
 #include "IGS_GlassHit.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_GlassHit {
     GENERATED_BODY()
 public:

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_TextPlatformName.generated.h"
 
-UENUM()
-enum class EIGS_TextPlatformName {
+UENUM(BlueprintType)
+enum class EIGS_TextPlatformName : uint8 {
     Windows,
     PS5,
     XSX,

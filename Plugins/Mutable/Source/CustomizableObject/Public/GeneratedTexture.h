@@ -4,7 +4,7 @@
 
 class UTexture2D;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FGeneratedTexture {
     GENERATED_BODY()
 public:

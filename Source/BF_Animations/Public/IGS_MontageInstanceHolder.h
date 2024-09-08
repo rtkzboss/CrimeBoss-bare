@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_MontageInstanceHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_MontageInstanceHolder {
     GENERATED_BODY()
 public:

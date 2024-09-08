@@ -5,7 +5,7 @@
 
 class UMaterialInterface;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_FallingEffectData : public FIGS_PlayerEffectData {
     GENERATED_BODY()
 public:

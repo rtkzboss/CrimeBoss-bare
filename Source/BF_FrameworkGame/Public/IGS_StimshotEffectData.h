@@ -5,7 +5,7 @@
 
 class UIGS_StimshotEffectDataAsset;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_StimshotEffectData : public FIGS_PlayerEffectData {
     GENERATED_BODY()
 public:

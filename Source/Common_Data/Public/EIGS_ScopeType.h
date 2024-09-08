@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ScopeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ScopeType : uint8 {
     Scope_Normal,
     Scope_Thermal,

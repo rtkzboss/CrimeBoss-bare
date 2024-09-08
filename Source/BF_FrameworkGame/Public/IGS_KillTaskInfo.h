@@ -3,7 +3,7 @@
 #include "EIGS_TeamSideEnum.h"
 #include "IGS_KillTaskInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_KillTaskInfo {
     GENERATED_BODY()
 public:

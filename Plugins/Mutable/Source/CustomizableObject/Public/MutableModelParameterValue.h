@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "MutableModelParameterValue.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMutableModelParameterValue {
     GENERATED_BODY()
 public:

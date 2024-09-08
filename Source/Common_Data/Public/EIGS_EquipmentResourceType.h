@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_EquipmentResourceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_EquipmentResourceType : uint8 {
     ERT_Charges,
     ERT_Cooldown,

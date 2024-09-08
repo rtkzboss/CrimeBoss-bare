@@ -6,7 +6,7 @@
 
 class UIGS_EquipmentInventoryObject;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct COMMON_DATA_API FMETA_AllowedEquipmentInfo {
     GENERATED_BODY()
 public:

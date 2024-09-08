@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_JumpLinkState.generated.h"
 
-UENUM()
-enum class EIGS_JumpLinkState {
+UENUM(BlueprintType)
+enum class EIGS_JumpLinkState : uint8 {
     In,
     Running,
     Out,

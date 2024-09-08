@@ -3,7 +3,7 @@
 #include "GeneratedTexture.h"
 #include "GeneratedMaterial.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FGeneratedMaterial {
     GENERATED_BODY()
 public:

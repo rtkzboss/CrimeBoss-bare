@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_MenuState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_MenuState : uint8 {
     MS_Default,
     MS_PostMission,

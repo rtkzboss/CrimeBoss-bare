@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_CharacterMood.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_CharacterMood : uint8 {
     Unhappy,
     Neutral,

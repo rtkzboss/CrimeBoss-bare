@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ObjectiveState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ObjectiveState : uint8 {
     Active,
     Completed,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EMutableCompileMeshType.generated.h"
 
-UENUM()
-enum class EMutableCompileMeshType {
+UENUM(BlueprintType)
+enum class EMutableCompileMeshType : uint8 {
     Full,
     Local,
     LocalAndChildren,

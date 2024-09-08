@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPDGNodeState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPDGNodeState : uint8 {
     None,
     Dirtied,

@@ -4,7 +4,7 @@
 
 class UAnimMontage;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct BF_ANIMATIONS_API FIGS_ThirdPersonSpecailAnimations {
     GENERATED_BODY()
 public:

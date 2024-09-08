@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_RandEventCategory.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_RandEventCategory : uint8 {
     None,
     HeatAndInvestigation,

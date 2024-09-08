@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TriggerExecuteOn.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_TriggerExecuteOn : uint8 {
     EIGS_BeginOverlap,
     EIGS_EndOverlap,

@@ -3,7 +3,7 @@
 #include "IGS_AIUnitBaseDataMultipliers.h"
 #include "IGS_PlayerCountAIDifficultyModifierDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_PlayerCountAIDifficultyModifierDef {
     GENERATED_BODY()
 public:

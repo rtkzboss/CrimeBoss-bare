@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_NavFilterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_NavFilterType : uint8 {
     None,
     TraceTarget,

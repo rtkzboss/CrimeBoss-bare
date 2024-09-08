@@ -6,7 +6,7 @@
 #include "IGS_GeneralReactionsDef.h"
 #include "IGS_GeneralReactionTeamHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_GeneralReactionTeamHolder {
     GENERATED_BODY()
 public:

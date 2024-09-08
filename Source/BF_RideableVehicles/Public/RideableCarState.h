@@ -5,7 +5,7 @@
 #include "RideableCarMove.h"
 #include "RideableCarState.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FRideableCarState {
     GENERATED_BODY()
 public:

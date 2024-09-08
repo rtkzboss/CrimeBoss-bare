@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPrefabricatorPivotPosition.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPrefabricatorPivotPosition : uint8 {
     ExtremeLeft,
     ExtremeRight,

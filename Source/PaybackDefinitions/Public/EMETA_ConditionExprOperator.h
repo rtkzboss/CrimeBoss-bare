@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ConditionExprOperator.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_ConditionExprOperator : uint8 {
     And,
     Or,

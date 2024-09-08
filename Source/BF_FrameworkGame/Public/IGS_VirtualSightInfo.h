@@ -7,7 +7,7 @@ class USkeletalMeshSocket;
 class UStaticMeshComponent;
 class UStaticMeshSocket;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_VirtualSightInfo {
     GENERATED_BODY()
 public:

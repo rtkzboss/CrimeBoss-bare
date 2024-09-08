@@ -4,7 +4,7 @@
 #include "GameplayTagContainer.h"
 #include "IGS_RichPresenceMissionNameTableRow.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FIGS_RichPresenceMissionNameTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CoverPreset.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_CoverPreset : uint8 {
     AICS_None,
     AICS_Reckless,

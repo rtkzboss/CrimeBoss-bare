@@ -6,7 +6,7 @@
 
 class UTexture2D;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct PATHFOLLOW_API FPFSpeedPointsDrawConfig {
     GENERATED_BODY()
 public:

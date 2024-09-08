@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_BuoyancySimulation.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_BuoyancySimulation {
     GENERATED_BODY()
 public:

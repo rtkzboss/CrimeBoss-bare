@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_StormType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_StormType : uint8 {
     ST_Low,
     ST_Medium,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UNISMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class UNISMode : uint8 {
     Off,
     UltraQuality,

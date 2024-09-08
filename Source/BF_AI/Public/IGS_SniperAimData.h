@@ -7,7 +7,7 @@
 class AActor;
 class AIGS_SniperPoint;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_SniperAimData {
     GENERATED_BODY()
 public:

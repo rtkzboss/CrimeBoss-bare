@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_DeathSpecialAnimations {
     GENERATED_BODY()
 public:

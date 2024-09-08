@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHoudiniProxyRefineRequestResult.generated.h"
 
-UENUM()
-enum class EHoudiniProxyRefineRequestResult {
+UENUM(BlueprintType)
+enum class EHoudiniProxyRefineRequestResult : uint8 {
     Invalid,
     None,
     PendingCooks,

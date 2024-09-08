@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EConstructionSystemToolType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EConstructionSystemToolType : uint8 {
     BuildTool,
     RemoveTool,

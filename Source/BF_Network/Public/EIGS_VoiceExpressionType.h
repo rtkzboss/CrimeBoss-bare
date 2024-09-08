@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_VoiceExpressionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_VoiceExpressionType : uint8 {
     None,
     Hit,

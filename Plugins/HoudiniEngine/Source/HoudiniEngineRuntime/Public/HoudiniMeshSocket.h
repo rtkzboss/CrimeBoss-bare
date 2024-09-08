@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "HoudiniMeshSocket.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FHoudiniMeshSocket {
     GENERATED_BODY()
 public:

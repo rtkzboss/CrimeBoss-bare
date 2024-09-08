@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_NotificationEffect.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_NotificationEffect : uint8 {
     Neutral,
     Negative,

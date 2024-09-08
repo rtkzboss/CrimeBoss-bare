@@ -4,7 +4,7 @@
 #include "Engine/NetSerialization.h"
 #include "IGS_RegularGlassState.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_RegularGlassState {
     GENERATED_BODY()
 public:

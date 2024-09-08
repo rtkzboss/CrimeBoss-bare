@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ArmyTier.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_ArmyTier : uint8 {
     Low,
     Normal,

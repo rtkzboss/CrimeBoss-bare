@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HeistersEventNotificationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_HeistersEventNotificationType : uint8 {
     Unknown = 255,
     EquipGun = 0,

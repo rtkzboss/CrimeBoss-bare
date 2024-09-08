@@ -4,7 +4,7 @@
 #include "IGS_AIUnitBaseDataDefaults.h"
 #include "IGS_AIBaseUnitDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIBaseUnitDef {
     GENERATED_BODY()
 public:

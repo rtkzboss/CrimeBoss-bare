@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESessionSettingSearchResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESessionSettingSearchResult : uint8 {
     Found,
     NotFound,

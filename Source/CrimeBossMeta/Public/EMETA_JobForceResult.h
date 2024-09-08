@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_JobForceResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_JobForceResult : uint8 {
     JobSuccess,
     JobFailed,

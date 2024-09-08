@@ -3,7 +3,7 @@
 #include "EIGS_UnitSpecialization.h"
 #include "IGS_AIBaseDisabledSpecializations.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIBaseDisabledSpecializations {
     GENERATED_BODY()
 public:

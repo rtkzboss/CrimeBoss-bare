@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WieldableAction.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WieldableAction : uint8 {
     StartAction,
     StopAction,

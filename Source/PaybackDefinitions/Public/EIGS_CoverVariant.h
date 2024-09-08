@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_CoverVariant.generated.h"
 
-UENUM()
-enum class EIGS_CoverVariant {
+UENUM(BlueprintType)
+enum class EIGS_CoverVariant : uint8 {
     CV_Unknown = 255,
     CV_None = 0,
     AIM_CoverPeekLeft_In,

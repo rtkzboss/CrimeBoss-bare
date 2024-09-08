@@ -4,7 +4,7 @@
 
 class AIGS_GameCharacterFramework;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_ZiptieRecord {
     GENERATED_BODY()
 public:

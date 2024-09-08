@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_BuiltDataWorldSetting.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_LEVELGENERATOR_API FIGS_BuiltDataWorldSetting {
     GENERATED_BODY()
 public:

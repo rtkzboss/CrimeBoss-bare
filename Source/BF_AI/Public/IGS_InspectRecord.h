@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_InspectRecord {
     GENERATED_BODY()
 public:

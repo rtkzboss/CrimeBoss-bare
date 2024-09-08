@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ChainType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ChainType : uint8 {
     UrbanLegend,
     CrimeTime,

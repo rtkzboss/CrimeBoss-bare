@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ENavAreaFlag.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace ENavAreaFlag {
     enum Type {
         Default,

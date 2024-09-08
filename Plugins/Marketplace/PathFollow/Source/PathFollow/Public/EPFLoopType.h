@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPFLoopType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPFLoopType : uint8 {
     Replay,
     ReplayFromStart,

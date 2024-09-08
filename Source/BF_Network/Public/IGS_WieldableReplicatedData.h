@@ -9,7 +9,7 @@
 class UIGS_WeaponSkinData;
 class UMETA_WeaponInventoryObject;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_WieldableReplicatedData {
     GENERATED_BODY()
 public:

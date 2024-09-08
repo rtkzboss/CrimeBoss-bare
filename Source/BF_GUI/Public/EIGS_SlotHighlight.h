@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SlotHighlight.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SlotHighlight : uint8 {
     SH_Normal,
     SH_Hovered,

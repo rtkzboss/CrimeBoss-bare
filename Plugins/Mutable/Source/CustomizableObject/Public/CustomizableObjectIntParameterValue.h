@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "CustomizableObjectIntParameterValue.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectIntParameterValue {
     GENERATED_BODY()
 public:

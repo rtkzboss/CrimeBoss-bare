@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_HubGridPlacement.generated.h"
 
-UENUM()
-enum class EIGS_HubGridPlacement {
+UENUM(BlueprintType)
+enum class EIGS_HubGridPlacement : uint8 {
     OuterCorner,
     Outer,
     Inner,

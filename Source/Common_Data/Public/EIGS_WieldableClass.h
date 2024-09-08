@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WieldableClass.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WieldableClass : uint8 {
     C_Generic,
     C_Pistol,

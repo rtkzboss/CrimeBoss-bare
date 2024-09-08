@@ -4,7 +4,7 @@
 
 class UIGS_ThrowableInventoryObject;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_ThrowableLiveObjectsHolder {
     GENERATED_BODY()
 public:

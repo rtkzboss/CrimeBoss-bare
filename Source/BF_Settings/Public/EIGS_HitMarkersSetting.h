@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HitMarkersSetting.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_HitMarkersSetting : uint8 {
     None,
     Kill,

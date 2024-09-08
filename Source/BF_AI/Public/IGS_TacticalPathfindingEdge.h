@@ -4,7 +4,7 @@
 
 class UTacticalPathfindingNode;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_TacticalPathfindingEdge {
     GENERATED_BODY()
 public:

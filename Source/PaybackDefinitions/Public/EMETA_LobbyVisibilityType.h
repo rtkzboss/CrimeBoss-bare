@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_LobbyVisibilityType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_LobbyVisibilityType : uint8 {
     Unknown,
     Public,

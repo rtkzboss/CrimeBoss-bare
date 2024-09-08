@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_GoalStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_GoalStatus : uint8 {
     None,
     InPool,

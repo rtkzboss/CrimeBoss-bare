@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_LeaningVariant.generated.h"
 
-UENUM()
-enum class EIGS_LeaningVariant {
+UENUM(BlueprintType)
+enum class EIGS_LeaningVariant : uint8 {
     AIM_Unknown = 255,
     AIM_None = 0,
     AIM_Left_In,

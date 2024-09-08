@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "ConstructionSystemSavePlayerInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct CONSTRUCTIONSYSTEMRUNTIME_API FConstructionSystemSavePlayerInfo {
     GENERATED_BODY()
 public:

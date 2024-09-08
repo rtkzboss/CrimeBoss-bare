@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "MorphTargetVertexData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMorphTargetVertexData {
     GENERATED_BODY()
 public:

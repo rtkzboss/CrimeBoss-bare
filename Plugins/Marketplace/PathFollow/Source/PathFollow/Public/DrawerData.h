@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "DrawerData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct PATHFOLLOW_API FDrawerData {
     GENERATED_BODY()
 public:

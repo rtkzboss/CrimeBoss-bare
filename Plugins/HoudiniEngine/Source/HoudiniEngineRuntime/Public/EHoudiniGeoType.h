@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHoudiniGeoType.generated.h"
 
-UENUM()
-enum class EHoudiniGeoType {
+UENUM(BlueprintType)
+enum class EHoudiniGeoType : uint8 {
     Invalid,
     Default,
     Intermediate,

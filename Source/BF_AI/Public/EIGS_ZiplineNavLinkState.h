@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_ZiplineNavLinkState.generated.h"
 
-UENUM()
-enum class EIGS_ZiplineNavLinkState {
+UENUM(BlueprintType)
+enum class EIGS_ZiplineNavLinkState : uint8 {
     In,
     Running,
     Out,

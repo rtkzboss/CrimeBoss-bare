@@ -4,7 +4,7 @@
 
 class UPrefabricatorAsset;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct PREFABRICATORRUNTIME_API FPrefabricatorAssetCollectionItem {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 class AActor;
 class AIGS_RoomBase;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_NeighborData {
     GENERATED_BODY()
 public:

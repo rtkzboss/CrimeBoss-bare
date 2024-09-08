@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "IKPressets.generated.h"
 
-UENUM()
-enum class IKPressets {
+UENUM(BlueprintType)
+enum class IKPressets : uint8 {
     Thing,
     Harphy,
 };

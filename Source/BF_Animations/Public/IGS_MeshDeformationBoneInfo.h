@@ -7,7 +7,7 @@
 #include "EIGS_LocationOrScaleBoneAxis.h"
 #include "IGS_MeshDeformationBoneInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_MeshDeformationBoneInfo {
     GENERATED_BODY()
 public:

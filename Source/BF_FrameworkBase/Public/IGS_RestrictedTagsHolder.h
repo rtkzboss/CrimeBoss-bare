@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_RestrictedTagsHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_RestrictedTagsHolder {
     GENERATED_BODY()
 public:

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_TPP_DeathStates.generated.h"
 
-UENUM()
-enum class EIGS_TPP_DeathStates {
+UENUM(BlueprintType)
+enum class EIGS_TPP_DeathStates : uint8 {
     D_Stand,
     D_HeadShot,
     D_CrouchHeadShot,

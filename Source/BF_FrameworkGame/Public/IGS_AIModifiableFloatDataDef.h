@@ -3,7 +3,7 @@
 #include "IGS_AIModifiableDataDef.h"
 #include "IGS_AIModifiableFloatDataDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIModifiableFloatDataDef : public FIGS_AIModifiableDataDef {
     GENERATED_BODY()
 public:

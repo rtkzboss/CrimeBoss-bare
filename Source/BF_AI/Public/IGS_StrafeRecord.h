@@ -4,7 +4,7 @@
 
 class AActor;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_StrafeRecord {
     GENERATED_BODY()
 public:

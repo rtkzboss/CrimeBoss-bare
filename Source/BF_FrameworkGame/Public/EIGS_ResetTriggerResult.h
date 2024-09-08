@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ResetTriggerResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ResetTriggerResult : uint8 {
     Fail,
     SuccessCharacter,

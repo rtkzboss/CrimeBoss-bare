@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PushForTarget.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_PushForTarget : uint8 {
     None,
     Low,

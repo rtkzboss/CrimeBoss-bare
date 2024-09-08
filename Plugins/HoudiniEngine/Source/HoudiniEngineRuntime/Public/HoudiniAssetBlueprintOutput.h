@@ -3,7 +3,7 @@
 #include "HoudiniOutputObject.h"
 #include "HoudiniAssetBlueprintOutput.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FHoudiniAssetBlueprintOutput {
     GENERATED_BODY()
 public:

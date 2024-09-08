@@ -8,7 +8,7 @@ class AActor;
 class UPhysicalMaterial;
 class UPrimitiveComponent;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_NetProjectileHitResult {
     GENERATED_BODY()
 public:

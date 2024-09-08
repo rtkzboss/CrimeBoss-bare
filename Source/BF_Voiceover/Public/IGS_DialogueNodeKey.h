@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_DialogueNodeKey.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_VOICEOVER_API FIGS_DialogueNodeKey {
     GENERATED_BODY()
 public:

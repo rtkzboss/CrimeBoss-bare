@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECustomizableObjectProjectorType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECustomizableObjectProjectorType : uint8 {
     Planar,
     Cylindrical,

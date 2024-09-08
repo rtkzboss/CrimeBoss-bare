@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_LeanSide.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_LeanSide : uint8 {
     LeanSide_None,
     LeanSide_Avoid,

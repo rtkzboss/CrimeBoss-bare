@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_RopeMaterialSettings.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_RopeMaterialSettings {
     GENERATED_BODY()
 public:

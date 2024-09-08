@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "CustomizableObjectVectorParameterValue.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectVectorParameterValue {
     GENERATED_BODY()
 public:

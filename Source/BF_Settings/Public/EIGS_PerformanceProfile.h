@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_PerformanceProfile.generated.h"
 
-UENUM()
-enum class EIGS_PerformanceProfile {
+UENUM(BlueprintType)
+enum class EIGS_PerformanceProfile : uint8 {
     PP_Custom,
     PP_Low,
     PP_Medium,

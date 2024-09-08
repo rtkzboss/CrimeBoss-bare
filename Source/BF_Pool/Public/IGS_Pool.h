@@ -4,7 +4,7 @@
 
 class AActor;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_POOL_API FIGS_Pool {
     GENERATED_BODY()
 public:

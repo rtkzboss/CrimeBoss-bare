@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETransitionResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ETransitionResult {
     TR_None,
     TR_Success,

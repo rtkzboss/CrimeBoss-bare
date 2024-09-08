@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBoolExecPin.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBoolExecPin : uint8 {
     ETrue,
     EFalse,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_StatisticsHeisterState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_StatisticsHeisterState : uint8 {
     None,
     Hired,

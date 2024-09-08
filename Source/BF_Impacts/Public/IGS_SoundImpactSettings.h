@@ -5,7 +5,7 @@
 
 class UAkAudioEvent;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_IMPACTS_API FIGS_SoundImpactSettings : public FIGS_ImpactSettings {
     GENERATED_BODY()
 public:

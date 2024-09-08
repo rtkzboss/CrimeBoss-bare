@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_UnitSpecialization.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_UnitSpecialization : uint8 {
     US_None,
     US_Sniper,

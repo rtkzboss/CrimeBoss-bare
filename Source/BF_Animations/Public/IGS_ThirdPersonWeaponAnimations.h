@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_ThirdPersonWeaponAnimations.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_ANIMATIONS_API FIGS_ThirdPersonWeaponAnimations {
     GENERATED_BODY()
 public:

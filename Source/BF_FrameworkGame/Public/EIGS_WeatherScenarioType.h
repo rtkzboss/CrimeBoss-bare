@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WeatherScenarioType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WeatherScenarioType : uint8 {
     Weather_ClearSky,
     Weather_DryOvercast,

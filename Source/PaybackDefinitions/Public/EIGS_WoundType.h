@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WoundType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WoundType : uint8 {
     EWT_None,
     EWT_Gunshot,

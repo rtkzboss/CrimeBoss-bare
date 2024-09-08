@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniExecutableType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EHoudiniExecutableType {
     HRSHE_Houdini,
     HRSHE_HoudiniFX,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_StealthMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_StealthMode : uint8 {
     NotAvailable,
     Supported,

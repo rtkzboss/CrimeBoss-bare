@@ -7,7 +7,7 @@
 
 class ABrush;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FHoudiniBrushInfo {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@ class UIGS_ImpactTypeObject;
 class UNiagaraSystem;
 class UParticleSystem;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_IMPACTS_API FIGS_ParticleImpactSettings : public FIGS_ImpactSettings {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "PFSpeedCurve.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct PATHFOLLOW_API FPFSpeedCurve {
     GENERATED_BODY()
 public:

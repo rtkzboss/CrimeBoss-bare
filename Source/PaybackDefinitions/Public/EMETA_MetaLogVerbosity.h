@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_MetaLogVerbosity.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_MetaLogVerbosity : uint8 {
     Log,
     Display,

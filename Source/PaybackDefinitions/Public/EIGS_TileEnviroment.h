@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TileEnviroment.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_TileEnviroment : uint8 {
     Street,
     None,

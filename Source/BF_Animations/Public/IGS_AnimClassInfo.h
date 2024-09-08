@@ -4,7 +4,7 @@
 
 class AIGS_WieldableBase;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_AnimClassInfo {
     GENERATED_BODY()
 public:

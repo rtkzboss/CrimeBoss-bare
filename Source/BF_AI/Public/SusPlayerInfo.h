@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SusPlayerInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FSusPlayerInfo {
     GENERATED_BODY()
 public:

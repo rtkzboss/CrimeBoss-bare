@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EInclusionPresetType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EInclusionPresetType : uint8 {
     None,
     CharacterMissions,

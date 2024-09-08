@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_ReactionTarget.generated.h"
 
-UENUM()
-enum class EIGS_ReactionTarget {
+UENUM(BlueprintType)
+enum class EIGS_ReactionTarget : uint8 {
     Target_UNKNOWN = 255,
     Target_Actor = 0,
     Target_Offender,

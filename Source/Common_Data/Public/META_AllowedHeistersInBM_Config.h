@@ -3,7 +3,7 @@
 #include "EMETA_ItemQuality.h"
 #include "META_AllowedHeistersInBM_Config.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct COMMON_DATA_API FMETA_AllowedHeistersInBM_Config {
     GENERATED_BODY()
 public:

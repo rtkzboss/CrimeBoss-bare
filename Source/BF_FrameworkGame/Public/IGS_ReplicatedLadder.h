@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_ReplicatedLadder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_ReplicatedLadder {
     GENERATED_BODY()
 public:

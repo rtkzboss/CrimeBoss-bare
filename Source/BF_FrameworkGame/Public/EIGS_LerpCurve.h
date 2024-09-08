@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_LerpCurve.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_LerpCurve : uint8 {
     LerpCurve_None,
     LerpCurve_EaseIn,

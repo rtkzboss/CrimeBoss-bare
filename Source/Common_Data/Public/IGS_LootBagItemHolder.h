@@ -4,7 +4,7 @@
 #include "IGS_LootBagSingleItem.h"
 #include "IGS_LootBagItemHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct COMMON_DATA_API FIGS_LootBagItemHolder {
     GENERATED_BODY()
 public:

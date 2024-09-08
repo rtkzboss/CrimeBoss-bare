@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIG_PS5SKU.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIG_PS5SKU : uint8 {
     SIEE,
     SIEA,

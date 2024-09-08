@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "PFAutoRollVisualConfig.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct PATHFOLLOW_API FPFAutoRollVisualConfig {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AdvancedMovementType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AdvancedMovementType : uint8 {
     AMT_None,
     AMT_ZiplineGrab,

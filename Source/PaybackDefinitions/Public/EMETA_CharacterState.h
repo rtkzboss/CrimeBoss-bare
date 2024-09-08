@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_CharacterState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_CharacterState : uint8 {
     None,
     Available,

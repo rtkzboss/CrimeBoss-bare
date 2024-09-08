@@ -4,7 +4,7 @@
 
 class AIGS_GameCharacterFramework;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_CharactersTeamSidesHolder {
     GENERATED_BODY()
 public:

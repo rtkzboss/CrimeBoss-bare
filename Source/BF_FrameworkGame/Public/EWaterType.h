@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EWaterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EWaterType {
     enum Type {
         Puddle,

@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "IGS_SwatHeavyInjuredSettings.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_SwatHeavyInjuredSettings {
     GENERATED_BODY()
 public:

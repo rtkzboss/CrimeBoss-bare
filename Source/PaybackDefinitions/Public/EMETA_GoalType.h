@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_GoalType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_GoalType : uint8 {
     INVALID,
     Story,

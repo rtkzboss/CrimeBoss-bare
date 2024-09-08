@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DamageEventType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_DamageEventType : uint8 {
     Any,
     Point,

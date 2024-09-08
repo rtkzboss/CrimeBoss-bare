@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MeleeAttackType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_MeleeAttackType : uint8 {
     MAT_Bash,
     MAT_Primary,

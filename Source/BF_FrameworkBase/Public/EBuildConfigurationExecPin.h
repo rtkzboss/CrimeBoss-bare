@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBuildConfigurationExecPin.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBuildConfigurationExecPin : uint8 {
     Debug,
     Development,

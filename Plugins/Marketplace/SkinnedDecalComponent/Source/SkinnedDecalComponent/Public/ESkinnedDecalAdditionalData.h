@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESkinnedDecalAdditionalData.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESkinnedDecalAdditionalData {
     NoAdditionalData,
     SpawnTime,

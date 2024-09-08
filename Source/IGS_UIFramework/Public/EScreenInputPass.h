@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EScreenInputPass.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EScreenInputPass : uint8 {
     NoPass,
     PassNotHandled,

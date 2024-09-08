@@ -4,7 +4,7 @@
 
 class UAnimMontage;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_TPP_EquipAnimationData {
     GENERATED_BODY()
 public:

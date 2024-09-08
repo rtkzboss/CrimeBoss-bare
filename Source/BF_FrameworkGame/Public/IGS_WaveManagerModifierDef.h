@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_WaveManagerModifierDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_WaveManagerModifierDef {
     GENERATED_BODY()
 public:

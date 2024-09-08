@@ -5,7 +5,7 @@
 #include "IGS_SpecialObjectiveAnimData.h"
 #include "IGS_SpecialObjectiveAnimsTableRow.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FIGS_SpecialObjectiveAnimsTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:

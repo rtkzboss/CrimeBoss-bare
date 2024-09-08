@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ModType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ModType : uint8 {
     Mod_Sight,
     Mod_Visibility,

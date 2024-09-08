@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EScreenInputMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EScreenInputMode : uint8 {
     NoChange,
     GameAndUI,

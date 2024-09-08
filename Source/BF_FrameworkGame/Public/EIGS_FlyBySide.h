@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_FlyBySide.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_FlyBySide : uint8 {
     EST_Left,
     EST_Right,

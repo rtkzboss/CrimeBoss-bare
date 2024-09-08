@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_SentryRotationType.generated.h"
 
-UENUM()
-enum class EIGS_SentryRotationType {
+UENUM(BlueprintType)
+enum class EIGS_SentryRotationType : uint8 {
     None,
     Point,
     Actor,

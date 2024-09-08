@@ -3,7 +3,7 @@
 #include "WorkItemTallyBase.h"
 #include "WorkItemTally.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FWorkItemTally : public FWorkItemTallyBase {
     GENERATED_BODY()
 public:

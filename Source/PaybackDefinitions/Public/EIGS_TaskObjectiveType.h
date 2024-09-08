@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_TaskObjectiveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_TaskObjectiveType : uint8 {
     None,
     Kill,

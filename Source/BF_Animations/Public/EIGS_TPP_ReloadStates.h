@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_TPP_ReloadStates.generated.h"
 
-UENUM()
-enum class EIGS_TPP_ReloadStates {
+UENUM(BlueprintType)
+enum class EIGS_TPP_ReloadStates : uint8 {
     Is_Not_Reloading,
     Reload_Start,
     Reload_Out,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PressureRecord.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FPressureRecord {
     GENERATED_BODY()
 public:

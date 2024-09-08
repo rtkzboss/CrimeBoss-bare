@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_SaveData_Version.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct COMMON_SAVE_API FIGS_SaveData_Version {
     GENERATED_BODY()
 public:

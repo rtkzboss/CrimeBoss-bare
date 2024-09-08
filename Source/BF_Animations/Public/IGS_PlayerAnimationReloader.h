@@ -5,7 +5,7 @@
 class AIGS_WeaponBase;
 class UIGS_ReloaderBase;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_ANIMATIONS_API FIGS_PlayerAnimationReloader {
     GENERATED_BODY()
 public:

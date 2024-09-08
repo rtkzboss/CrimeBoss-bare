@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_RoomArea.generated.h"
 
-UENUM()
-enum class EIGS_RoomArea {
+UENUM(BlueprintType)
+enum class EIGS_RoomArea : uint8 {
     Unknown,
     Backdrop,
     NonPlayable,

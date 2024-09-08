@@ -4,7 +4,7 @@
 
 class USkeletalMesh;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FPendingReleaseSkeletalMeshInfo {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class UHoudiniOutput;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FTOPWorkResultObject {
     GENERATED_BODY()
 public:

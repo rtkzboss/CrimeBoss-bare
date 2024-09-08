@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "FIGS_ZiplineAnimationStates.generated.h"
 
-UENUM()
-enum class FIGS_ZiplineAnimationStates {
+UENUM(BlueprintType)
+enum class FIGS_ZiplineAnimationStates : uint8 {
     LD_Started,
     LD_Ended,
 };

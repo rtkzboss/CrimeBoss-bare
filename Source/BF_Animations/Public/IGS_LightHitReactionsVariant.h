@@ -3,7 +3,7 @@
 #include "IGS_LightHitReactionsBodyVariants.h"
 #include "IGS_LightHitReactionsVariant.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_LightHitReactionsVariant {
     GENERATED_BODY()
 public:

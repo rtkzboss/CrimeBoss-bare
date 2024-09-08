@@ -4,7 +4,7 @@
 
 class UAnimMontage;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_ReactionAnimData {
     GENERATED_BODY()
 public:

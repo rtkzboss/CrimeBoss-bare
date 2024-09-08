@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_InteractionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_InteractionType : uint8 {
     Interaction_Press,
     Interaction_Hold,

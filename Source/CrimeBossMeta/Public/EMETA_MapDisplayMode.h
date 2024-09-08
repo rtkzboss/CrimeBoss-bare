@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_MapDisplayMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_MapDisplayMode : uint8 {
     Missions,
     Turfs,

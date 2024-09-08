@@ -3,7 +3,7 @@
 #include "IGS_WaveManagerModifierDef.h"
 #include "IGS_PlayerCountWaveManagerModifierDef.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_PlayerCountWaveManagerModifierDef {
     GENERATED_BODY()
 public:

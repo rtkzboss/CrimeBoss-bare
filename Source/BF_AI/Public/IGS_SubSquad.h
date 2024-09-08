@@ -5,7 +5,7 @@
 class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_SubSquad {
     GENERATED_BODY()
 public:

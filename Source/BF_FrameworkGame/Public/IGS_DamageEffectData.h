@@ -6,7 +6,7 @@
 class UAkAudioEvent;
 class UMaterialInstance;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_DamageEffectData : public FIGS_PlayerEffectData {
     GENERATED_BODY()
 public:

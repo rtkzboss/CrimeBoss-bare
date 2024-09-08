@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AkEnvironmentSpace.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AkEnvironmentSpace : uint8 {
     Indoors,
     Outdoors,

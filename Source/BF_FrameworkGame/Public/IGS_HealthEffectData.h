@@ -5,7 +5,7 @@
 
 class UIGS_LowHealthEffectDataAsset;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_HealthEffectData : public FIGS_PlayerEffectData {
     GENERATED_BODY()
 public:

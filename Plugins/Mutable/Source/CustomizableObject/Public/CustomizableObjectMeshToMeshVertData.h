@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "CustomizableObjectMeshToMeshVertData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectMeshToMeshVertData {
     GENERATED_BODY()
 public:

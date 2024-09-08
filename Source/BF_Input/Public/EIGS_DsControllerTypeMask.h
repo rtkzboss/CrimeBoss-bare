@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_DsControllerTypeMask.generated.h"
 
-UENUM()
-enum class EIGS_DsControllerTypeMask {
+UENUM(BlueprintType)
+enum class EIGS_DsControllerTypeMask : uint8 {
     PlayerController,
     ExternalInputDevices,
     BothControllerTypes,

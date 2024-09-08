@@ -4,7 +4,7 @@
 
 class AIGS_AIControllerFramework;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FControllerDefaultsHolder {
     GENERATED_BODY()
 public:

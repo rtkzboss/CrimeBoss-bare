@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ItemPropertyFlags.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ItemPropertyFlags : uint8 {
     Property_Droppable,
     Property_Stackable,

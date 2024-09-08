@@ -4,7 +4,7 @@
 #include "ECustomizableObjectProjectorType.h"
 #include "CustomizableObjectProjector.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct CUSTOMIZABLEOBJECT_API FCustomizableObjectProjector {
     GENERATED_BODY()
 public:

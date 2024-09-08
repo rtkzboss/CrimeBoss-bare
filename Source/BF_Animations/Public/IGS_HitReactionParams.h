@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_HitReactionParams.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_HitReactionParams {
     GENERATED_BODY()
 public:

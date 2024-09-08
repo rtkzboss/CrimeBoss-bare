@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESteamUserOverlayType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESteamUserOverlayType : uint8 {
     steamid,
     chat,

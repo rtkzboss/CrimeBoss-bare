@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniAssetStateResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHoudiniAssetStateResult : uint8 {
     None,
     Working,

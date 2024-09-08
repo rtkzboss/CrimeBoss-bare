@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_CameraOutlineState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_CameraOutlineState : uint8 {
     None,
     Visible,

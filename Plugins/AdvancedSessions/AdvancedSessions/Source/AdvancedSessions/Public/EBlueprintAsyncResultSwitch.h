@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBlueprintAsyncResultSwitch.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBlueprintAsyncResultSwitch : uint8 {
     OnSuccess,
     AsyncLoading,

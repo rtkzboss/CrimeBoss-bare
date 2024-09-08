@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_GangAttitudeList.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_GangAttitudeList : uint8 {
     TopEnemies,
     Enemies,

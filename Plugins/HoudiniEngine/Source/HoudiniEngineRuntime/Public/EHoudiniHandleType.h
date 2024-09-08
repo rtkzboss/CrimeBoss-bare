@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHoudiniHandleType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHoudiniHandleType : uint8 {
     Xform,
     Bounder,

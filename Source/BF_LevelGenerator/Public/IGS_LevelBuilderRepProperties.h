@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_LevelBuilderRepProperties.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_LevelBuilderRepProperties {
     GENERATED_BODY()
 public:

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_VoiceChatActivationMode.generated.h"
 
-UENUM()
-enum class EIGS_VoiceChatActivationMode {
+UENUM(BlueprintType)
+enum class EIGS_VoiceChatActivationMode : uint8 {
     VoiceThreshold,
     PushToTalk,
 };

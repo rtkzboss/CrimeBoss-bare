@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SignificanceValue.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SignificanceValue : uint8 {
     None,
     Low,

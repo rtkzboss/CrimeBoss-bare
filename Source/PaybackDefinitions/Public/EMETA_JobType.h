@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_JobType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_JobType : uint8 {
     TerritoryNeutralAttack,
     TerritoryRivalAttack,

@@ -5,7 +5,7 @@
 #include "ECartesianScalingType.h"
 #include "KantanCartesianPlotScale.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FKantanCartesianPlotScale {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 
 class UCurveFloat;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_PlayerCountBotDamageReceivedModifierDef {
     GENERATED_BODY()
 public:

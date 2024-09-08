@@ -5,7 +5,7 @@
 #include "MutableParamUIMetadata.h"
 #include "MutableModelParameterProperties.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMutableModelParameterProperties {
     GENERATED_BODY()
 public:

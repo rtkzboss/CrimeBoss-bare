@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PingableType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_PingableType : uint8 {
     Generic,
     Pickupable,

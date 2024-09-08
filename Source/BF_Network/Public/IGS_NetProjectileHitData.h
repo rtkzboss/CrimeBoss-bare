@@ -5,7 +5,7 @@
 
 class UDamageType;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_NetProjectileHitData {
     GENERATED_BODY()
 public:

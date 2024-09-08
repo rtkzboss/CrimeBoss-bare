@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESpringTypeEnum.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace ESpringTypeEnum {
     enum Type {
         ST_Position,

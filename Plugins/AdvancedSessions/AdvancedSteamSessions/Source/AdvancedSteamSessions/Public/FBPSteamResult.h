@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FBPSteamResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class FBPSteamResult : uint8 {
     K_EResultInvalid,
     k_EResultOK,

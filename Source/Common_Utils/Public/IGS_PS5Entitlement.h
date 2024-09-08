@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_PS5Entitlement.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_PS5Entitlement {
     GENERATED_BODY()
 public:

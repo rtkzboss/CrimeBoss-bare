@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MenuCategory.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_MenuCategory : uint8 {
     UNKNOWN = 255,
     BigHeists = 0,

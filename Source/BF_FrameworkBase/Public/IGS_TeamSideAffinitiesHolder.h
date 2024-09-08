@@ -3,7 +3,7 @@
 #include "EIGS_TeamSideEnum.h"
 #include "IGS_TeamSideAffinitiesHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_TeamSideAffinitiesHolder {
     GENERATED_BODY()
 public:

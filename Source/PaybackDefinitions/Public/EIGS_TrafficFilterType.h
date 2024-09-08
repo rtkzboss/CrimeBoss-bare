@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_TrafficFilterType.generated.h"
 
-UENUM()
-enum class EIGS_TrafficFilterType {
+UENUM(BlueprintType)
+enum class EIGS_TrafficFilterType : uint8 {
     None,
 };
 

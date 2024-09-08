@@ -5,7 +5,7 @@
 #include "EHoudiniCurveType.h"
 #include "HoudiniCurveOutputProperties.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FHoudiniCurveOutputProperties {
     GENERATED_BODY()
 public:

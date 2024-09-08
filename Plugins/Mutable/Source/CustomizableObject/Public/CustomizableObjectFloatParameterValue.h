@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "CustomizableObjectFloatParameterValue.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FCustomizableObjectFloatParameterValue {
     GENERATED_BODY()
 public:

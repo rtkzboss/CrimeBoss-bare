@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_AICommandState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_AICommandState : uint8 {
     AICS_Running,
     AICS_Finished,

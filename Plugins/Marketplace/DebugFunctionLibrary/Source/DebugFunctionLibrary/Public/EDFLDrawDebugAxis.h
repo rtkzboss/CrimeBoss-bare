@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDFLDrawDebugAxis.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDFLDrawDebugAxis : uint8 {
     X,
     Y,

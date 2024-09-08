@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_PlayerCommandType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_PlayerCommandType : uint8 {
     Command_SingleTap,
     Command_Follow,

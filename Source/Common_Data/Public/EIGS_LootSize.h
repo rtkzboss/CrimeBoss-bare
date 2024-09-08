@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_LootSize.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_LootSize : uint8 {
     Small,
     Medium,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EKantanBarValueExtents.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EKantanBarValueExtents : uint8 {
     NoValueLines,
     ZeroLineOnly,

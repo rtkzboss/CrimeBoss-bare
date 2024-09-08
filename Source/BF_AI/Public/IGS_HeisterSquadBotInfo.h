@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_HeisterSquadBotInfo.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_HeisterSquadBotInfo {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDamageMeleeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDamageMeleeType : uint8 {
     Default,
     Claws,

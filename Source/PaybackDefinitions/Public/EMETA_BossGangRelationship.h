@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_BossGangRelationship.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_BossGangRelationship : uint8 {
     Neutral,
     Friendly,

@@ -5,7 +5,7 @@
 
 class UKantanPointStyle;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FKantanSeriesStyle {
     GENERATED_BODY()
 public:

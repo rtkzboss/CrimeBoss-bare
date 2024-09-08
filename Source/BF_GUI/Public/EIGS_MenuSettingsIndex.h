@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MenuSettingsIndex.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_MenuSettingsIndex : uint8 {
     MS_INVALID = 255,
     MS_GameSet = 0,

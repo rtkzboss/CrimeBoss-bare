@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WorldWidgetType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WorldWidgetType : uint8 {
     Widget_Hidden,
     Widget_Objective,

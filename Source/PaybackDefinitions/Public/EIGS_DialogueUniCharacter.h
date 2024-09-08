@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_DialogueUniCharacter.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_DialogueUniCharacter : uint8 {
     None,
     GenericHarmless = 40,

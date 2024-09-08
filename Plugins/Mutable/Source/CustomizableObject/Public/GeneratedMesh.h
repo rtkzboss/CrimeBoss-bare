@@ -4,7 +4,7 @@
 
 class UStaticMesh;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FGeneratedMesh {
     GENERATED_BODY()
 public:

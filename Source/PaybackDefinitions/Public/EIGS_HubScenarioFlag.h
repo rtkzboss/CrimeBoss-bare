@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_HubScenarioFlag.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_HubScenarioFlag : uint8 {
     Empty,
     Start,

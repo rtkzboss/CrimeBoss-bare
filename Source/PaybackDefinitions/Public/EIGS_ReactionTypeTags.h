@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ReactionTypeTags.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ReactionTypeTags : uint8 {
     RT_UNKNOWN = 255,
     RT_Actor_Report = 0,

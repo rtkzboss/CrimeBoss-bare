@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EDFLOutputMethod.generated.h"
 
-UENUM()
-enum class EDFLOutputMethod {
+UENUM(BlueprintType)
+enum class EDFLOutputMethod : uint8 {
     PrintOutputLog,
     Print,
     OutputLog,

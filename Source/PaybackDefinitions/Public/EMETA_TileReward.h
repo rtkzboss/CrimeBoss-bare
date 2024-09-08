@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_TileReward.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_TileReward : uint8 {
     None,
     Cash,

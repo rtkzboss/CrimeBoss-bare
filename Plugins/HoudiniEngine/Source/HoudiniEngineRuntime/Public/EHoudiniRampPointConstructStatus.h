@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHoudiniRampPointConstructStatus.generated.h"
 
-UENUM()
-enum class EHoudiniRampPointConstructStatus {
+UENUM(BlueprintType)
+enum class EHoudiniRampPointConstructStatus : uint8 {
     None,
     INITIALIZED,
     POSITION_INSERTED,

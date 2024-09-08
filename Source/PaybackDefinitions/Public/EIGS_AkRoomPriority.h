@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_AkRoomPriority.generated.h"
 
-UENUM()
-enum class EIGS_AkRoomPriority {
+UENUM(BlueprintType)
+enum class EIGS_AkRoomPriority : uint8 {
     None,
     Min,
     Low = 5,

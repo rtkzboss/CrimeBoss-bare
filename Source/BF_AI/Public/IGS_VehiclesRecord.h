@@ -4,7 +4,7 @@
 
 class UPFPathFollowerComponent;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_VehiclesRecord {
     GENERATED_BODY()
 public:

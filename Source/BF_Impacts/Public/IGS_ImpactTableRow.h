@@ -6,7 +6,7 @@
 
 class UPhysicalMaterial;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct BF_IMPACTS_API FIGS_ImpactTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:

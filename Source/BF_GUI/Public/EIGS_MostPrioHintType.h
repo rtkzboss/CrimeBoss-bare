@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_MostPrioHintType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_MostPrioHintType : uint8 {
     None,
     StartHeist,

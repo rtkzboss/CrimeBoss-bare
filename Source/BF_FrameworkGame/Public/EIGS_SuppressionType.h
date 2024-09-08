@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_SuppressionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_SuppressionType : uint8 {
     EST_Normal,
     EST_Sniper,

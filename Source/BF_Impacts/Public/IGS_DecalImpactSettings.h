@@ -5,7 +5,7 @@
 
 class UIGS_DecalImpactDataAsset;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_IMPACTS_API FIGS_DecalImpactSettings : public FIGS_ImpactSettings {
     GENERATED_BODY()
 public:

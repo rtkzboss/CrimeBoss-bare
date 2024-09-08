@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_FollowSettings.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_FollowSettings {
     GENERATED_BODY()
 public:

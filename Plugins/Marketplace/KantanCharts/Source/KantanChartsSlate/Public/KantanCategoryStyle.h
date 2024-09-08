@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "KantanCategoryStyle.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FKantanCategoryStyle {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WallType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WallType : uint8 {
     Wall_Wall,
     Wall_Door,

@@ -5,7 +5,7 @@
 
 class UPrefabricatorProperty;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct PREFABRICATORRUNTIME_API FPrefabricatorComponentData {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_VehicleSpawnGroup.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_VehicleSpawnGroup : uint8 {
     None,
     CommonPolice,

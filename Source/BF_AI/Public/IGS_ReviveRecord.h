@@ -6,7 +6,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_AICommandBeingRevived;
 class UIGS_AICommandRevive;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_AI_API FIGS_ReviveRecord {
     GENERATED_BODY()
 public:

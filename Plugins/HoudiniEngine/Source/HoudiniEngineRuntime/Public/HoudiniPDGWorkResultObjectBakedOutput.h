@@ -3,7 +3,7 @@
 #include "HoudiniBakedOutput.h"
 #include "HoudiniPDGWorkResultObjectBakedOutput.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct HOUDINIENGINERUNTIME_API FHoudiniPDGWorkResultObjectBakedOutput {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "UObject/NoExportTypes.h"
 #include "PrefabricatorPropertyAssetMapping.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct PREFABRICATORRUNTIME_API FPrefabricatorPropertyAssetMapping {
     GENERATED_BODY()
 public:

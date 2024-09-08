@@ -5,7 +5,7 @@
 
 class UAkSwitchValue;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_DialogueSpeakerSettings {
     GENERATED_BODY()
 public:

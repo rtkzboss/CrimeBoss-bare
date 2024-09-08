@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_ActionCardTheme.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_ActionCardTheme : uint8 {
     Wealth,
     Luck,

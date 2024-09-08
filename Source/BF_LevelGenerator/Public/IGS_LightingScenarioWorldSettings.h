@@ -5,7 +5,7 @@
 
 class UWorld;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_LEVELGENERATOR_API FIGS_LightingScenarioWorldSettings {
     GENERATED_BODY()
 public:

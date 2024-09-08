@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EMETA_ForceJobFillCharacter.generated.h"
 
-UENUM()
-enum class EMETA_ForceJobFillCharacter {
+UENUM(BlueprintType)
+enum class EMETA_ForceJobFillCharacter : uint8 {
     RandomGenericCrew,
     Manual,
     RevengePool,

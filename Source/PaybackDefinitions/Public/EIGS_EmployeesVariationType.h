@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_EmployeesVariationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_EmployeesVariationType : uint8 {
     US_None,
     US_Office,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECustomizableObjectRelevancy.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECustomizableObjectRelevancy : uint8 {
     All,
     ClientOnly,

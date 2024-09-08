@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_WeaponSubtype.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_WeaponSubtype : uint8 {
     None = 255,
     AssaultRifle = 0,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "PopulationClassParameterOptions.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FPopulationClassParameterOptions {
     GENERATED_BODY()
 public:

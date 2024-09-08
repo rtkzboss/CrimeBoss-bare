@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_TradeRelationship.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_TradeRelationship : uint8 {
     UNDEFINED,
     Good,

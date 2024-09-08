@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_ANIMATIONS_API FIGS_RollAnimTable {
     GENERATED_BODY()
 public:

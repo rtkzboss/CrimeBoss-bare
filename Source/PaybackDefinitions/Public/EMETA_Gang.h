@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_Gang.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_Gang : uint8 {
     None,
     Baker,

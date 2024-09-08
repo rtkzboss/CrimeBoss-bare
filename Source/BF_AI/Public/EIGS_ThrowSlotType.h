@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_ThrowSlotType.generated.h"
 
-UENUM()
-enum class EIGS_ThrowSlotType {
+UENUM(BlueprintType)
+enum class EIGS_ThrowSlotType : uint8 {
     None,
     Socket,
     SceneComponent,

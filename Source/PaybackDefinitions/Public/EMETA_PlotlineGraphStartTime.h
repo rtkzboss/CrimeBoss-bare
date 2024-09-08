@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_PlotlineGraphStartTime.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_PlotlineGraphStartTime : uint8 {
     First,
     Universal,

@@ -4,7 +4,7 @@
 #include "IGS_AICopDefaultTierDef.h"
 #include "IGS_AICopSpecializationHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AICopSpecializationHolder : public FIGS_AIBaseSpecializationHolder {
     GENERATED_BODY()
 public:

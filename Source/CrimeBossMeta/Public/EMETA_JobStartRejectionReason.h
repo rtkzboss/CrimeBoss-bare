@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMETA_JobStartRejectionReason.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMETA_JobStartRejectionReason : uint8 {
     None,
     RandEvent_NotEnoughMoney,

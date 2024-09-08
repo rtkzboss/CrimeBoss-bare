@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EIGS_ItemType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EIGS_ItemType : uint8 {
     Item_Weapon,
     Item_Ammo,

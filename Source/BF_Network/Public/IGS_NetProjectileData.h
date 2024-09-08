@@ -4,7 +4,7 @@
 #include "IGS_NetProjectileHitResult.h"
 #include "IGS_NetProjectileData.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_NetProjectileData {
     GENERATED_BODY()
 public:

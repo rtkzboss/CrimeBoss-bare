@@ -4,7 +4,7 @@
 #include "IGS_AIEmployeeDefaultTierDef.h"
 #include "IGS_AIEmployeeSpecializationHolder.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeSpecializationHolder : public FIGS_AIBaseSpecializationHolder {
     GENERATED_BODY()
 public:

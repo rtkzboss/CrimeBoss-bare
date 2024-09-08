@@ -3,7 +3,7 @@
 #include "IGS_ActorEnvironmentTracker.h"
 #include "IGS_WaterVolumeActorTracker.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FIGS_WaterVolumeActorTracker : public FIGS_ActorEnvironmentTracker {
     GENERATED_BODY()
 public:

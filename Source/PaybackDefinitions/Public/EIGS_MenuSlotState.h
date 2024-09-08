@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIGS_MenuSlotState.generated.h"
 
-UENUM()
-enum class EIGS_MenuSlotState {
+UENUM(BlueprintType)
+enum class EIGS_MenuSlotState : uint8 {
     NotSeleced,
     Selecting,
     NotReady,

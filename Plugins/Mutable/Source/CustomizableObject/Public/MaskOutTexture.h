@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "MaskOutTexture.generated.h"
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct FMaskOutTexture {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class UPrefabricatorAssetInterface;
 
-USTRUCT(BlueprintType)
+USTRUCT()
 struct CONSTRUCTIONSYSTEMRUNTIME_API FConstructionSystemSaveConstructedItem {
     GENERATED_BODY()
 public:
