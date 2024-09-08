@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_RoomFramework.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_RoomFramework : public AActor {
     GENERATED_BODY()
 public:

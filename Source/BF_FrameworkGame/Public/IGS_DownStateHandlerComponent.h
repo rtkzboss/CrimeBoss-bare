@@ -13,7 +13,7 @@ class UAkAudioEvent;
 class UGameplayEffect;
 class UIGS_DamageTypeBase;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DownStateHandlerComponent : public UIGS_DownStateHandlerComponentBase {
     GENERATED_BODY()
 public:

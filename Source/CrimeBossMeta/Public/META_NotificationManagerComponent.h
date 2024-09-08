@@ -6,7 +6,7 @@
 class UMETA_BaseNotification;
 class UMETA_NotificationID;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_NotificationManagerComponent : public UIGS_NotificationManagerBaseComponent {
     GENERATED_BODY()
 public:

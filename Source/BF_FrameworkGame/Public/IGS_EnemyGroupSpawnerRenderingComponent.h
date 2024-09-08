@@ -3,7 +3,7 @@
 #include "Components/PrimitiveComponent.h"
 #include "IGS_EnemyGroupSpawnerRenderingComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_EnemyGroupSpawnerRenderingComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:

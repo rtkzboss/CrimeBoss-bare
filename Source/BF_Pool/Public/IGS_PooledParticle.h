@@ -5,7 +5,7 @@
 
 class UParticleSystemComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_POOL_API AIGS_PooledParticle : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@ class UBoxComponent;
 class UPrimitiveComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_CraneObjectPlace : public AActor {
     GENERATED_BODY()
 public:

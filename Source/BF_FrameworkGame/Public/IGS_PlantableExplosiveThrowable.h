@@ -3,7 +3,7 @@
 #include "IGS_ThrowableBase.h"
 #include "IGS_PlantableExplosiveThrowable.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PlantableExplosiveThrowable : public AIGS_ThrowableBase {
     GENERATED_BODY()
 public:

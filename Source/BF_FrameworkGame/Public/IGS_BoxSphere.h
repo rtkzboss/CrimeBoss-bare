@@ -13,7 +13,7 @@ class UIGS_CustomSphereComponent;
 class USceneComponent;
 class UShapeComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_BoxSphere : public AActor {
     GENERATED_BODY()
 public:

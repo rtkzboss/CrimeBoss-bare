@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SuspicionEventActor : public AIGS_SuspicionActorBase, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:

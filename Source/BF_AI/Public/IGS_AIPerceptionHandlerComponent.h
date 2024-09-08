@@ -10,7 +10,7 @@ class AActor;
 class AIGS_GameCharacterFramework;
 class UAISense;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIPerceptionHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:

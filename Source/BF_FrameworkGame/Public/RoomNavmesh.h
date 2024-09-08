@@ -3,7 +3,7 @@
 #include "IGS_NavMeshBase.h"
 #include "RoomNavmesh.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API ARoomNavmesh : public AIGS_NavMeshBase {
     GENERATED_BODY()
 public:

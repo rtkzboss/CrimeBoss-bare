@@ -6,7 +6,7 @@
 #include "OnInstanceBreakableStateChangedDelegateDelegate.h"
 #include "IGS_InstancedBreakableWindow.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InstancedBreakableWindow : public UIGS_BreakableWindowComponent {
     GENERATED_BODY()
 public:

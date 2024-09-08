@@ -9,7 +9,7 @@ class AIGS_PatrolPoint;
 class AIGS_WaypointFramework;
 class UIGS_AICommand;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_PatrolGroup : public AIGS_WaypointBase {
     GENERATED_BODY()
 public:

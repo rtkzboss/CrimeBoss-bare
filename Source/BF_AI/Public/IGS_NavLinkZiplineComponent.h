@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkZiplineComponent : public UIGS_NavLinkComponentBase {
     GENERATED_BODY()
 public:

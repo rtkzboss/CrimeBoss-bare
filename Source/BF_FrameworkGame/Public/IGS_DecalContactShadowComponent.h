@@ -8,7 +8,7 @@ class UDecalComponent;
 class UMaterialInstanceDynamic;
 class UMaterialInterface;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DecalContactShadowComponent : public USceneComponent {
     GENERATED_BODY()
 public:

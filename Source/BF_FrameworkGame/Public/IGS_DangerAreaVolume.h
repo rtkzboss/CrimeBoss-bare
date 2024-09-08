@@ -7,7 +7,7 @@
 
 class UNavModifierComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_DangerAreaVolume : public AIGS_BoxSphere, public IDangerAreaInterface {
     GENERATED_BODY()
 public:

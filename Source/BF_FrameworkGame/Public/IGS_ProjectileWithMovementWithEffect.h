@@ -6,7 +6,7 @@
 class UAudioComponent;
 class UParticleSystemComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ProjectileWithMovementWithEffect : public AIGS_ProjectileWithMovement {
     GENERATED_BODY()
 public:

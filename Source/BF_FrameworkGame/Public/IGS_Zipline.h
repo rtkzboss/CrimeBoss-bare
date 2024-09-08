@@ -7,7 +7,7 @@
 class AIGS_GameCharacterFramework;
 class UIGS_ZiplineInteractiveComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_Zipline : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:

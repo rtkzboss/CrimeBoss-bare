@@ -19,7 +19,7 @@ class UPrimitiveComponent;
 class USceneComponent;
 class UStaticMesh;
 
-UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DeflatableTireComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 public:

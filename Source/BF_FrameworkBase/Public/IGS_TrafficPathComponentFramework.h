@@ -3,7 +3,7 @@
 #include "PFPathComponent.h"
 #include "IGS_TrafficPathComponentFramework.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_TrafficPathComponentFramework : public UPFPathComponent {
     GENERATED_BODY()
 public:

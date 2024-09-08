@@ -3,7 +3,7 @@
 #include "IGS_WaypointFramework.h"
 #include "IGS_SnipePoint.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_SnipePoint : public AIGS_WaypointFramework {
     GENERATED_BODY()
 public:

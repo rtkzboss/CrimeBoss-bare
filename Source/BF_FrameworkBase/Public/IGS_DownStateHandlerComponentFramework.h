@@ -5,7 +5,7 @@
 
 class APawn;
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_DownStateHandlerComponentFramework : public UActorComponent {
     GENERATED_BODY()
 public:

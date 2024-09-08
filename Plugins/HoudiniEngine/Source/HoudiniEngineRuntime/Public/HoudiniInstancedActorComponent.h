@@ -6,7 +6,7 @@
 class AActor;
 class UObject;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniInstancedActorComponent : public USceneComponent {
     GENERATED_BODY()
 public:

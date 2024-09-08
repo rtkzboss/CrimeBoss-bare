@@ -11,7 +11,7 @@ class AIGS_GameCharacterFramework;
 class UBillboardComponent;
 class UEnvQuery;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ChaseRitualDemonSpawnManager : public AActor {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "IGS_ProjectileWithMovementWithEffect.h"
 #include "IGS_SimpleProjectile.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SimpleProjectile : public AIGS_ProjectileWithMovementWithEffect {
     GENERATED_BODY()
 public:

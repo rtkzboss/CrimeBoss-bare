@@ -8,7 +8,7 @@ class AActor;
 class UAkSwitchValue;
 class UPrimitiveComponent;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_AkSwitchVolumeComponent : public UBoxComponent {
     GENERATED_BODY()
 public:

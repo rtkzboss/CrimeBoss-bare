@@ -10,7 +10,7 @@ class AIGS_GameCharacterFramework;
 class AIGS_LootCollectionBase;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_LootHolderBase : public AActor {
     GENERATED_BODY()
 public:

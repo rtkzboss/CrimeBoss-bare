@@ -30,7 +30,7 @@ class UMETA_RandEventManagerComponent;
 class UMETA_StashManagerComponent;
 class UMETA_UIEventsManagerComponent;
 
-UCLASS(Abstract, NonTransient)
+UCLASS(Abstract, NonTransient, Config=Inherit)
 class CRIMEBOSSMETA_API AMETA_BaseGameMode : public AIGS_GameModeMenuBase {
     GENERATED_BODY()
 public:

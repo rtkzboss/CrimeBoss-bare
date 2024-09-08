@@ -8,7 +8,7 @@
 class UMETA_BossCharacter;
 class UMETA_Character;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_CrewManagerComponent : public UIGS_CrewManagerBaseComponent {
     GENERATED_BODY()
 public:

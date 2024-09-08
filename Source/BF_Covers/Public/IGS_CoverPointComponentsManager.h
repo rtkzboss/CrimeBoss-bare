@@ -6,7 +6,7 @@
 class ANavigationData;
 class UIGS_CoverPointComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_COVERS_API UIGS_CoverPointComponentsManager : public UActorComponent {
     GENERATED_BODY()
 public:

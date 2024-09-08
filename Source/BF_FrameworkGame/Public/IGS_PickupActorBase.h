@@ -14,7 +14,7 @@ class UAkAudioEvent;
 class UIGS_InteractiveComponent;
 class UPrimitiveComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PickupActorBase : public AIGS_SuspicionActorBase, public IIGS_HitEffectHandlerInterface {
     GENERATED_BODY()
 public:

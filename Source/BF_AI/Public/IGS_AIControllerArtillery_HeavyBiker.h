@@ -3,7 +3,7 @@
 #include "IGS_AIControllerArtillery_Base.h"
 #include "IGS_AIControllerArtillery_HeavyBiker.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_AIControllerArtillery_HeavyBiker : public AIGS_AIControllerArtillery_Base {
     GENERATED_BODY()
 public:

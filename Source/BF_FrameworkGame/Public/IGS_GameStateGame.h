@@ -20,7 +20,7 @@ class UIGS_LootManager;
 class UIGS_PickupsManager;
 class UIGS_PlayerIntelManager;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_GameStateGame : public AIGS_GameStateFramework {
     GENERATED_BODY()
 public:

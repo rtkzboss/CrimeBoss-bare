@@ -6,7 +6,7 @@
 
 class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_SmartObjectSimpleBase : public AActor, public IIGS_SmartObjectInterface {
     GENERATED_BODY()
 public:

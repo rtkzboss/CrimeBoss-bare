@@ -5,7 +5,7 @@
 
 class AActor;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootPileComponent : public USceneComponent {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class AIGS_TrafficSegment;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_VehicleExitPoint : public AIGS_VehicleExitPointFramework {
     GENERATED_BODY()
 public:

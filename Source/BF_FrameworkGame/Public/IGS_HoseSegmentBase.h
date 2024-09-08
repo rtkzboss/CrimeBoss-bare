@@ -16,7 +16,7 @@ class UMaterialInterface;
 class UStaticMesh;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_HoseSegmentBase : public AActor {
     GENERATED_BODY()
 public:

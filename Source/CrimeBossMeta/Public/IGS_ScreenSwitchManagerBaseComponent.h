@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "IGS_ScreenSwitchManagerBaseComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_ScreenSwitchManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

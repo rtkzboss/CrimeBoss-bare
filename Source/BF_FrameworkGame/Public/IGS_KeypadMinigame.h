@@ -14,7 +14,7 @@ class UAkComponent;
 class UIGS_InteractiveComponent;
 class UInputComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_KeypadMinigame : public AActor {
     GENERATED_BODY()
 public:

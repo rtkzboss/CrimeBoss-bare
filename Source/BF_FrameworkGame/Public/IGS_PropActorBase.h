@@ -7,7 +7,7 @@
 
 class UIGS_ObjectStatus;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PropActorBase : public AActor, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:

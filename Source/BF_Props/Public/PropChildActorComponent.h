@@ -8,7 +8,7 @@
 
 class AActor;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_PROPS_API UPropChildActorComponent : public UChildActorComponent, public IPropInfoInterface {
     GENERATED_BODY()
 public:

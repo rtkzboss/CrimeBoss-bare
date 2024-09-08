@@ -5,7 +5,7 @@
 #include "OnMoveReachedLinkDelegate.h"
 #include "IGS_NavLinkComponentFramework.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_NAVIGATION_API UIGS_NavLinkComponentFramework : public UPrimitiveComponent {
     GENERATED_BODY()
 public:

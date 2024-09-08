@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_MetalDetectorManager.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_MetalDetectorManager : public AActor {
     GENERATED_BODY()
 public:

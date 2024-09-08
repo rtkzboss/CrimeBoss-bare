@@ -57,7 +57,7 @@ class UPhysicalMaterial;
 class UPrimitiveComponent;
 class USkinnedDecalSampler;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_GameCharacterFramework : public ACharacter, public IGenericTeamAgentInterface, public IIGS_GameplayTagAssetInterfaceCustom, public IIGS_DialogueInterface, public IVisualLoggerDebugSnapshotInterface, public IIGS_HasObjectStatusInterface, public IAbilitySystemInterface, public IIGS_CharacterIDInterface, public IIGS_WieldAnyItemInterface {
     GENERATED_BODY()
 public:

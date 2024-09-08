@@ -6,7 +6,7 @@
 class UCurveFloat;
 class UTimelineComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_TickingLaserTrap : public AIGS_LaserTrap {
     GENERATED_BODY()
 public:

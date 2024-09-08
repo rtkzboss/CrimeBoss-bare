@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PlayerFPVArms : public AIGS_PlayerFPVArmsFramework, public IIGS_WieldAnyItemInterface {
     GENERATED_BODY()
 public:

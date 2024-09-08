@@ -8,7 +8,7 @@ class AActor;
 class UIGS_CarryableInventoryObject;
 class UIGS_SkinHandlerBase;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_CarryableBase : public AIGS_WieldableBase {
     GENERATED_BODY()
 public:

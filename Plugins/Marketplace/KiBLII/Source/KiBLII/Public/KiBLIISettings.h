@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "KiBLIISettings.generated.h"
 
-UCLASS(DefaultConfig)
+UCLASS(DefaultConfig, Config=Inherit)
 class UKiBLIISettings : public UObject {
     GENERATED_BODY()
 public:

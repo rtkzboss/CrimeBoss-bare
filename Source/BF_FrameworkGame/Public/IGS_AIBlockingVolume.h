@@ -3,7 +3,7 @@
 #include "NavModifierVolume.h"
 #include "IGS_AIBlockingVolume.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_AIBlockingVolume : public ANavModifierVolume {
     GENERATED_BODY()
 public:

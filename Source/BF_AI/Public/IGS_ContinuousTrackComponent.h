@@ -9,7 +9,7 @@ class UPoseableMeshComponent;
 class USkeletalMesh;
 class UStaticMesh;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ContinuousTrackComponent : public USplineComponent {
     GENERATED_BODY()
 public:

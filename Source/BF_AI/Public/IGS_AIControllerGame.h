@@ -17,7 +17,7 @@ class UIGS_BlackboardGameComponent;
 class UIGS_NavLinkHandlerComponent;
 class UIGS_ScriptingCommandAsyncBase;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_AIControllerGame : public AIGS_AIControllerBase {
     GENERATED_BODY()
 public:

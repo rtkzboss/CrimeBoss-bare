@@ -12,7 +12,7 @@ class UGenericTeamAgentInterface;
 class IIGS_GameplayTagAssetInterfaceCustom;
 class UIGS_GameplayTagAssetInterfaceCustom;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SuspicionComponent : public UAIPerceptionStimuliSourceComponent {
     GENERATED_BODY()
 public:

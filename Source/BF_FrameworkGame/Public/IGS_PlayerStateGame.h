@@ -14,7 +14,7 @@
 
 class AController;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PlayerStateGame : public AIGS_PlayerStateFramework, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:

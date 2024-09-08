@@ -4,7 +4,7 @@
 #include "IGS_PingableWidgetActor.h"
 #include "IGS_SmartPingableWidgetActor.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SmartPingableWidgetActor : public AIGS_PingableWidgetActor {
     GENERATED_BODY()
 public:

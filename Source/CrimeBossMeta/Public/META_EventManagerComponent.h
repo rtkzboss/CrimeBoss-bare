@@ -29,7 +29,7 @@ class UMETA_Graph;
 class UMETA_TaskCondition;
 class UStoryGraphManager;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_EventManagerComponent : public UIGS_EventManagerBaseComponent {
     GENERATED_BODY()
 public:

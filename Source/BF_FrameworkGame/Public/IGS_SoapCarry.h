@@ -3,7 +3,7 @@
 #include "IGS_CarryableBase.h"
 #include "IGS_SoapCarry.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SoapCarry : public AIGS_CarryableBase {
     GENERATED_BODY()
 public:

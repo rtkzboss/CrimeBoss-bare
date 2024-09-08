@@ -10,7 +10,7 @@ class AActor;
 class AIGS_GameCharacterFramework;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_BotOrderTrigger : public ATriggerBox {
     GENERATED_BODY()
 public:

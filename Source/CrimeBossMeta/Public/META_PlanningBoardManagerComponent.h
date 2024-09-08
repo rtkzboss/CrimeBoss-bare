@@ -10,7 +10,7 @@
 class UIGS_PaybackSaveGameCareer;
 class UMETA_PlanningBoardItemObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_PlanningBoardManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:

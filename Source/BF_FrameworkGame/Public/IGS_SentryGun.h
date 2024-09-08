@@ -11,7 +11,7 @@ class UIGS_OverheatComponent;
 class UIGS_SimpleHitScanShooter;
 class UIGS_WeaponInventoryObject;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SentryGun : public AIGS_DetectorBase {
     GENERATED_BODY()
 public:

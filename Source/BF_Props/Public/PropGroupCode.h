@@ -5,7 +5,7 @@
 
 class UActorComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_PROPS_API APropGroupCode : public AActor {
     GENERATED_BODY()
 public:

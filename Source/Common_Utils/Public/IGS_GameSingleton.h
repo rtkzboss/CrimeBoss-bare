@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "IGS_GameSingleton.generated.h"
 
-UCLASS(NotPlaceable, Config=Game)
+UCLASS(NotPlaceable)
 class COMMON_UTILS_API UIGS_GameSingleton : public UObject {
     GENERATED_BODY()
 public:

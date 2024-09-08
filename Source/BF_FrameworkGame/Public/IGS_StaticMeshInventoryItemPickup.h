@@ -6,7 +6,7 @@
 class UStaticMesh;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_StaticMeshInventoryItemPickup : public AIGS_PickupActorInventoryItem {
     GENERATED_BODY()
 public:

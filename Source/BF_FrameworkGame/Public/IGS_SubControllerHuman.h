@@ -7,7 +7,7 @@
 
 class ACharacter;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class UIGS_SubControllerHuman : public UIGS_SubControllerCommon {
     GENERATED_BODY()
 public:

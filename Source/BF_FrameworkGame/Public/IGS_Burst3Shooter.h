@@ -3,7 +3,7 @@
 #include "IGS_BurstShooter.h"
 #include "IGS_Burst3Shooter.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_Burst3Shooter : public UIGS_BurstShooter {
     GENERATED_BODY()
 public:

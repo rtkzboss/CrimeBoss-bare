@@ -6,7 +6,7 @@
 class UDecalComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_IMPACTS_API AIGS_DecalImpact : public AIGS_ImpactBase {
     GENERATED_BODY()
 public:

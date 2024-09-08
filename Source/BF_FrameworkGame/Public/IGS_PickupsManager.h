@@ -13,7 +13,7 @@ class AIGS_WeaponPickupActor;
 class UIGS_PickupsManager;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PickupsManager : public UActorComponent {
     GENERATED_BODY()
 public:

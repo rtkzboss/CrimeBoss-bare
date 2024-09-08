@@ -3,7 +3,7 @@
 #include "IGS_NavMeshBase.h"
 #include "IGS_CarNavMesh.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_NAVIGATION_API AIGS_CarNavMesh : public AIGS_NavMeshBase {
     GENERATED_BODY()
 public:

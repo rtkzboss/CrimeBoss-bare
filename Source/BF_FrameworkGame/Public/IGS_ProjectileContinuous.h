@@ -3,7 +3,7 @@
 #include "IGS_ProjectileInstant.h"
 #include "IGS_ProjectileContinuous.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ProjectileContinuous : public AIGS_ProjectileInstant {
     GENERATED_BODY()
 public:

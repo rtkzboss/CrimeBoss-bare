@@ -9,7 +9,7 @@
 class AIGS_PlayerStateGame;
 class APlayerState;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class CRIMEBOSSMETA_API AIGS_MenuSlotBase : public AActor {
     GENERATED_BODY()
 public:

@@ -14,7 +14,7 @@ class UMETA_Equipment;
 class UMETA_Weapon;
 class UMETA_WeaponInventoryObject;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_StashManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

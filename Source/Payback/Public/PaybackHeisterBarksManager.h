@@ -12,7 +12,7 @@ class AActor;
 class AIGS_DetectorBase;
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UPaybackHeisterBarksManager : public UActorComponent {
     GENERATED_BODY()
 public:

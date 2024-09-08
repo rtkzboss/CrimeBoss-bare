@@ -6,7 +6,7 @@
 
 class UIGS_GameUISettings;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_GUI_API UIGS_PlayerChatWheelComponent : public UActorComponent {
     GENERATED_BODY()
 public:

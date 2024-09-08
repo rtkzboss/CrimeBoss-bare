@@ -6,7 +6,7 @@
 
 class ALevelSequenceActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class PAYBACK_API AIGS_CutsceneSetupBase : public AActor {
     GENERATED_BODY()
 public:

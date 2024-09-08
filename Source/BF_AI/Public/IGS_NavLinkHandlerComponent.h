@@ -3,7 +3,7 @@
 #include "IGS_TransitionHandlerBaseComponent.h"
 #include "IGS_NavLinkHandlerComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkHandlerComponent : public UIGS_TransitionHandlerBaseComponent {
     GENERATED_BODY()
 public:

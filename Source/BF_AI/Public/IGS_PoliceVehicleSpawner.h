@@ -4,7 +4,7 @@
 #include "IGS_VehicleSpawner.h"
 #include "IGS_PoliceVehicleSpawner.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_PoliceVehicleSpawner : public AIGS_VehicleSpawner {
     GENERATED_BODY()
 public:

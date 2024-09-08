@@ -10,7 +10,7 @@ class UVirtualCursorTarget;
 class UIGS_GameScreenHandler;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class CRIMEBOSSMETA_API AIGS_VirtualCursor : public AActor {
     GENERATED_BODY()
 public:

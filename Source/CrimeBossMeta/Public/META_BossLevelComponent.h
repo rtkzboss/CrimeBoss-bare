@@ -8,7 +8,7 @@
 
 class UMETA_BossLevelData;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_BossLevelComponent : public UIGS_BossLevelBaseComponent {
     GENERATED_BODY()
 public:

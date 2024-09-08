@@ -5,7 +5,7 @@
 
 class UIGS_SoundSettings;
 
-UCLASS(BlueprintType, DefaultConfig)
+UCLASS(BlueprintType, DefaultConfig, Config=Inherit)
 class BF_SETTINGS_API UIGS_SoundSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:

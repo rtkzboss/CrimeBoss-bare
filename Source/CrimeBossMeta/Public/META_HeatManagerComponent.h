@@ -10,7 +10,7 @@
 
 class UMETA_DetectiveID;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_HeatManagerComponent : public UIGS_HeatManagerBaseComponent {
     GENERATED_BODY()
 public:

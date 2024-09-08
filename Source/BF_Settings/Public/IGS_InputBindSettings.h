@@ -11,7 +11,7 @@ class UIGS_InputActionDefaultKeysDataAsset;
 class UIGS_InputActionMapDataAsset;
 class UIGS_InputBindSettings;
 
-UCLASS(BlueprintType, DefaultConfig)
+UCLASS(BlueprintType, DefaultConfig, Config=Inherit)
 class BF_SETTINGS_API UIGS_InputBindSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:

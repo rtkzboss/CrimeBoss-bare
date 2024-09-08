@@ -3,7 +3,7 @@
 #include "Components/SceneComponent.h"
 #include "HoudiniHandleComponent_V1.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class UHoudiniHandleComponent_V1 : public USceneComponent {
     GENERATED_BODY()
 public:

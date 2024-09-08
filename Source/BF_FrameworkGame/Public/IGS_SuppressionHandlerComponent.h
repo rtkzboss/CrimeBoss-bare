@@ -4,7 +4,7 @@
 #include "IGS_SphereOverlappableComponent.h"
 #include "IGS_SuppressionHandlerComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SuppressionHandlerComponent : public UIGS_SphereOverlappableComponent {
     GENERATED_BODY()
 public:

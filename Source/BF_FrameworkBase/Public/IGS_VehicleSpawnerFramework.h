@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_VehicleSpawnerFramework.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_VehicleSpawnerFramework : public AActor {
     GENERATED_BODY()
 public:

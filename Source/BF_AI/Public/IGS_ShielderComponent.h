@@ -10,7 +10,7 @@ class AController;
 class AIGS_ShieldBase;
 class UDamageType;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ShielderComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@
 
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_BreakableGlassBase : public AActor {
     GENERATED_BODY()
 public:

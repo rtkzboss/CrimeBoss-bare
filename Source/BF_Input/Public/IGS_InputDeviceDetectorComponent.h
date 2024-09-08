@@ -4,7 +4,7 @@
 #include "EIGS_InputDevice.h"
 #include "IGS_InputDeviceDetectorComponent.generated.h"
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_INPUT_API UIGS_InputDeviceDetectorComponent : public UActorComponent {
     GENERATED_BODY()
 public:

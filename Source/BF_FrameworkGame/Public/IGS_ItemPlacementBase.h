@@ -4,7 +4,7 @@
 #include "IGS_OnGadgetPlacedDelegate.h"
 #include "IGS_ItemPlacementBase.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ItemPlacementBase : public AActor {
     GENERATED_BODY()
 public:

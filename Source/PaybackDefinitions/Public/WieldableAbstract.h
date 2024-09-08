@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "WieldableAbstract.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class PAYBACKDEFINITIONS_API AWieldableAbstract : public AActor {
     GENERATED_BODY()
 public:

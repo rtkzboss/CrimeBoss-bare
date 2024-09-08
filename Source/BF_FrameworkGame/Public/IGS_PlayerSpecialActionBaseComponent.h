@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerSpecialActionBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

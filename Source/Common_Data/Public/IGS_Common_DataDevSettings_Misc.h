@@ -8,7 +8,7 @@ class UDataTable;
 class UGameplayEffect;
 class UMaterialInterface;
 
-UCLASS(BlueprintType)
+UCLASS(BlueprintType, Config=Inherit)
 class COMMON_DATA_API UIGS_Common_DataDevSettings_Misc : public UIGS_Common_DataDevSettings_Base {
     GENERATED_BODY()
 public:

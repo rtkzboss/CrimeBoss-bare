@@ -3,7 +3,7 @@
 #include "IGS_SubControllerCommon.h"
 #include "IGS_SubControllerVehicle.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SubControllerVehicle : public UIGS_SubControllerCommon {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "IGS_SafePointComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SafePointComponent : public UActorComponent {
     GENERATED_BODY()
 public:

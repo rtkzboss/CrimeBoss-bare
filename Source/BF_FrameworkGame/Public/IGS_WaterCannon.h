@@ -6,7 +6,7 @@
 
 class AIGS_HoseSegmentBase;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_WaterCannon : public AIGS_MountedWeapon {
     GENERATED_BODY()
 public:

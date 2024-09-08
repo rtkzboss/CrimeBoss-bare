@@ -9,7 +9,7 @@
 class AIGS_GameCharacterFramework;
 class UIGS_RopeComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_RopeActor : public AActor {
     GENERATED_BODY()
 public:

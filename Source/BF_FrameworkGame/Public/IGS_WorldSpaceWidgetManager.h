@@ -9,7 +9,7 @@ class UIGS_WorldSpaceWidgetBase;
 class UIGS_WorldSpaceWidgetManager;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WorldSpaceWidgetManager : public UActorComponent {
     GENERATED_BODY()
 public:

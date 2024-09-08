@@ -7,7 +7,7 @@
 
 class ATargetPoint;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_ANIMATIONS_API AIGS_PathPointsInterp : public AActor {
     GENERATED_BODY()
 public:

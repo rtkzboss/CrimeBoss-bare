@@ -8,7 +8,7 @@ class UAnimMontage;
 class UGameplayAbility;
 class UIGS_AbilityTask_PlayFPVMontageAndWait;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_PlayFPVMontageAndWait : public UAbilityTask {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@
 class AIGS_AIControllerSniper;
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_SniperPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:

@@ -9,7 +9,7 @@ class AIGS_GameCharacterFramework;
 class AIGS_ScriptActorBase;
 class UIGS_RandomStreamHolder;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ScriptManagerBase : public AActor {
     GENERATED_BODY()
 public:

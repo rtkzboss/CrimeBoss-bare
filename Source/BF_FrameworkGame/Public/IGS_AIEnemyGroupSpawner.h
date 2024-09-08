@@ -17,7 +17,7 @@
 class AIGS_AISpawnPoint;
 class UIGS_AISpawnerData;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_AIEnemyGroupSpawner : public AActor, public IIGS_GameplayTagAssetInterfaceCustom {
     GENERATED_BODY()
 public:

@@ -16,7 +16,7 @@ class UMaterialParameterCollection;
 class UMaterialParameterCollectionInstance;
 class USkeletalMeshComponentBudgeted;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_WieldableBase : public AWieldableAbstract {
     GENERATED_BODY()
 public:

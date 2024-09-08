@@ -4,7 +4,7 @@
 #include "PaybackAICharacter.h"
 #include "PaybackSniperCharacter.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PAYBACK_API APaybackSniperCharacter : public APaybackAICharacter {
     GENERATED_BODY()
 public:

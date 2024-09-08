@@ -12,7 +12,7 @@ class UIGS_ContractID;
 class UMETA_BaseFPSMission;
 class UMETA_MissionID;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_ContractsManagerComponent : public UIGS_ContractManagerBaseComponent {
     GENERATED_BODY()
 public:

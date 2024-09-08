@@ -6,7 +6,7 @@
 class UArrowComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_MovingLaserTrap : public AIGS_TickingLaserTrap {
     GENERATED_BODY()
 public:

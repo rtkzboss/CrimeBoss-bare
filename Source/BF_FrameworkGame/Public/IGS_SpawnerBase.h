@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_SpawnerBase.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SpawnerBase : public AActor {
     GENERATED_BODY()
 public:

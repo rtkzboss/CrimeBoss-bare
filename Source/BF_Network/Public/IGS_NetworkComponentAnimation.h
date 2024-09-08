@@ -4,7 +4,7 @@
 #include "EIGS_InteractionAnimationTypes.h"
 #include "IGS_NetworkComponentAnimation.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentAnimation : public UActorComponent {
     GENERATED_BODY()
 public:

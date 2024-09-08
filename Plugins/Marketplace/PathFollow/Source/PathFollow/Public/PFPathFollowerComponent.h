@@ -26,7 +26,7 @@ class UPFPathComponent;
 class USceneComponent;
 class USplineComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PATHFOLLOW_API UPFPathFollowerComponent : public UActorComponent {
     GENERATED_BODY()
 public:

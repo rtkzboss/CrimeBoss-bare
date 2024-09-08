@@ -3,7 +3,7 @@
 #include "Components/BoxComponent.h"
 #include "IGS_CustomBoxComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CustomBoxComponent : public UBoxComponent {
     GENERATED_BODY()
 public:

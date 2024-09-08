@@ -15,7 +15,7 @@
 
 class UMETA_VoiceoverDialogueSettings;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_MediaManagerComponent : public UIGS_MediaManagerBaseComponent {
     GENERATED_BODY()
 public:

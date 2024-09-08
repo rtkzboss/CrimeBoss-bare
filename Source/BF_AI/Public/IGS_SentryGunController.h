@@ -3,7 +3,7 @@
 #include "IGS_SentryControllerBase.h"
 #include "IGS_SentryGunController.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_SentryGunController : public AIGS_SentryControllerBase {
     GENERATED_BODY()
 public:

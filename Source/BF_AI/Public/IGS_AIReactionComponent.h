@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "IGS_AIReactionComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIReactionComponent : public UActorComponent {
     GENERATED_BODY()
 public:

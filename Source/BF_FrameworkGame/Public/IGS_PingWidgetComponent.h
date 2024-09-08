@@ -5,7 +5,7 @@
 
 class UIGS_PingableComponent;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PingWidgetComponent : public UIGS_WorldSpaceWidgetBase {
     GENERATED_BODY()
 public:

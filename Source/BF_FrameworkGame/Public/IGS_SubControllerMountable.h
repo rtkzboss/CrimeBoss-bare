@@ -6,7 +6,7 @@
 class IIGS_SubControllerMountableInterface;
 class UIGS_SubControllerMountableInterface;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SubControllerMountable : public UIGS_SubControllerCommon {
     GENERATED_BODY()
 public:

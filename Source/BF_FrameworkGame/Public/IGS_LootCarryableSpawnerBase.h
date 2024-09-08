@@ -9,7 +9,7 @@ class AIGS_StaticMeshInventoryItemPickup;
 class USceneComponent;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_LootCarryableSpawnerBase : public AIGS_SpawnerBase {
     GENERATED_BODY()
 public:

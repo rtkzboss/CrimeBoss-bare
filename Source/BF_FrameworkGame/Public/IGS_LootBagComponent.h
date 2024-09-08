@@ -14,7 +14,7 @@
 class UAkAudioEvent;
 class UGameplayEffect;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootBagComponent : public UActorComponent {
     GENERATED_BODY()
 public:

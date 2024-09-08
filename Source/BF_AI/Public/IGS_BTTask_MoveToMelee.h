@@ -4,7 +4,7 @@
 #include "BTTask_MoveToWithRepath.h"
 #include "IGS_BTTask_MoveToMelee.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API UIGS_BTTask_MoveToMelee : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:

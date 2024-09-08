@@ -5,7 +5,7 @@
 #include "Components/ActorComponent.h"
 #include "IGS_WeaponRecoilComponent.generated.h"
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeaponRecoilComponent : public UActorComponent {
     GENERATED_BODY()
 public:

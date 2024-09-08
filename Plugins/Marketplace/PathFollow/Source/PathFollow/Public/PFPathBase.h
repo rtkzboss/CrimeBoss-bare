@@ -5,7 +5,7 @@
 
 class UPFPathComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PATHFOLLOW_API APFPathBase : public AActor {
     GENERATED_BODY()
 public:

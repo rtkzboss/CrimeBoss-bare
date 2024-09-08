@@ -14,7 +14,7 @@ class UCameraShakeBase;
 class UPrimitiveComponent;
 class USkinnedDecalSampler;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BreakableWindowComponent : public UIGS_BreakableMeshComponent, public IIGS_GlassInterface {
     GENERATED_BODY()
 public:

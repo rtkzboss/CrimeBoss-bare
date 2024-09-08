@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "ActiveSubControllerHandler.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UActiveSubControllerHandler : public UActorComponent {
     GENERATED_BODY()
 public:

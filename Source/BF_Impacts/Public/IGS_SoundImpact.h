@@ -6,7 +6,7 @@
 class UAkAudioEvent;
 class UAkComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_IMPACTS_API AIGS_SoundImpact : public AIGS_ImpactBase {
     GENERATED_BODY()
 public:

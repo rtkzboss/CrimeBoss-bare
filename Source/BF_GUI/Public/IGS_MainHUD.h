@@ -8,7 +8,7 @@
 class UIGS_HUDKantanDatasourceHolder;
 class UIGS_MainHUDWidget;
 
-UCLASS(Abstract, NonTransient)
+UCLASS(Abstract, NonTransient, Config=Inherit)
 class BF_GUI_API AIGS_MainHUD : public AHUD {
     GENERATED_BODY()
 public:

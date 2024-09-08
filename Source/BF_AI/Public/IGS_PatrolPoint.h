@@ -12,7 +12,7 @@ class AIGS_WaypointBase;
 class AIGS_WaypointFramework;
 class UIGS_AICommand;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_PatrolPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:

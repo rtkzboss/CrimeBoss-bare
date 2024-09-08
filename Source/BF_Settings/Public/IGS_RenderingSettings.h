@@ -8,7 +8,7 @@
 class UIGS_RenderingSettings;
 class UMaterialParameterCollection;
 
-UCLASS(BlueprintType, DefaultConfig)
+UCLASS(BlueprintType, DefaultConfig, Config=Inherit)
 class BF_SETTINGS_API UIGS_RenderingSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:

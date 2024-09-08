@@ -18,7 +18,7 @@ class AController;
 class UDamageType;
 class UPrimitiveComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_ObjectStatus : public UActorComponent {
     GENERATED_BODY()
 public:

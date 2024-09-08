@@ -16,7 +16,7 @@ class AIGS_GameCharacterFramework;
 class UNavArea;
 class UObject;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkComponentBase : public UIGS_NavLinkComponentFramework, public INavLinkCustomInterface {
     GENERATED_BODY()
 public:

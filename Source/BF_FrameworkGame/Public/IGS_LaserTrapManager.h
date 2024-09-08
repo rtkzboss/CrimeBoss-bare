@@ -4,7 +4,7 @@
 #include "IGS_LaserTrapTriggeredEventDelegate.h"
 #include "IGS_LaserTrapManager.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_LaserTrapManager : public AActor {
     GENERATED_BODY()
 public:

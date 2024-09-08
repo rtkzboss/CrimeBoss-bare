@@ -6,7 +6,7 @@
 class UIGS_PropLogicComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PAYBACK_API AIGS_PropGenerator : public AActor {
     GENERATED_BODY()
 public:

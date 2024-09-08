@@ -11,7 +11,7 @@
 
 class UGameplayEffect;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIHeavySettingsComponent : public UIGS_AISettingsComponent, public IIGS_MeleeWeaponActivationSettingsInterface, public IIGS_WeaponSettingsInterface, public IIGS_CombatRangeSettingsInterface, public IIGS_HeavyShockSettingsInterface, public IIGS_HeavyWeakSpotSettingsInterface {
     GENERATED_BODY()
 public:

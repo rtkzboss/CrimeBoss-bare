@@ -12,7 +12,7 @@
 class UMETA_BaseMission;
 class UMETA_MissionID;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_JobManagerComponent : public UIGS_JobManagerBaseComponent {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@ class UIGS_LevelBlockingBoundsSettings;
 class UIGS_NavModifierComponent;
 class UPostProcessComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_LevelBlockingBounds : public AIGS_BoxSphere {
     GENERATED_BODY()
 public:

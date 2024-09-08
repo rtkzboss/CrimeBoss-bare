@@ -20,7 +20,7 @@ class UPrimitiveComponent;
 class UStaticMesh;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PAYBACK_API APaybackHeavyCharacter : public APaybackAICharacter, public IIGS_HasWeakSpotInterface {
     GENERATED_BODY()
 public:

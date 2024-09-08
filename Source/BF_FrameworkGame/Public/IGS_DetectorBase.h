@@ -23,7 +23,7 @@ class UIGS_DamageHandlerComponentFramework;
 class UIGS_ObjectStatus;
 class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_DetectorBase : public APawn, public IGenericTeamAgentInterface, public IAISightTargetInterface, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:

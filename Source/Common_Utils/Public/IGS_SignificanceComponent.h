@@ -5,7 +5,7 @@
 #include "IGS_PostSignificanceDelegateDelegate.h"
 #include "IGS_SignificanceComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class COMMON_UTILS_API UIGS_SignificanceComponent : public USceneComponent {
     GENERATED_BODY()
 public:

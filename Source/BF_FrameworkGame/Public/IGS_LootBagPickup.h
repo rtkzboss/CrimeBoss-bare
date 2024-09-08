@@ -14,7 +14,7 @@ class UIGS_InventoryObjectFramework;
 class UIGS_LootBagInteractiveComponent;
 class USkeletalMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_LootBagPickup : public AIGS_PickupActorBase {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@
 class AIGS_TrafficSegment;
 class AIGS_VehicleBase;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_VehicleLooper : public AActor {
     GENERATED_BODY()
 public:

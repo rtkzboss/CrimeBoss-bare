@@ -5,7 +5,7 @@
 
 class UIGS_PropLogicComponentBase;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropsManager : public UActorComponent {
     GENERATED_BODY()
 public:

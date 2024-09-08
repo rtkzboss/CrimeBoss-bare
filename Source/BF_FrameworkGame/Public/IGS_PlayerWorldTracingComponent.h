@@ -15,7 +15,7 @@
 class AActor;
 class AIGS_GameCharacterFramework;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerWorldTracingComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -14,7 +14,7 @@ class UPrimitiveComponent;
 class USceneComponent;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_RIDEABLEVEHICLES_API AIGS_Pier : public AActor {
     GENERATED_BODY()
 public:

@@ -9,7 +9,7 @@
 class AIGS_StaticVehicleBase;
 class UArrowComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_VehicleSpawnPoint : public AActor {
     GENERATED_BODY()
 public:

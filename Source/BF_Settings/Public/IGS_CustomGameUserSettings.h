@@ -12,7 +12,7 @@ class UIGS_RenderingSettings;
 class UIGS_SoundSettings;
 class UIGS_TogglesSettings;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_SETTINGS_API UIGS_CustomGameUserSettings : public UGameUserSettings {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "IGS_InteractiveComponent.h"
 #include "IGS_InteractiveFollowComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractiveFollowComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@ class UAkAudioEvent;
 class UAkRtpc;
 class UAkSwitchValue;
 
-UCLASS(BlueprintType)
+UCLASS(BlueprintType, Config=Inherit)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings_Audio : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:

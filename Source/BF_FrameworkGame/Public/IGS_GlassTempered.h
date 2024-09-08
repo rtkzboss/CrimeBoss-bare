@@ -29,7 +29,7 @@ class UStaticMesh;
 class UTexture;
 class UTextureRenderTarget2D;
 
-UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_GlassTempered : public UStaticMeshComponent, public IIGS_ProjectileOverlappable, public IIGS_GlassInterface {
     GENERATED_BODY()
 public:

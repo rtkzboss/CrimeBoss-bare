@@ -13,7 +13,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_AICommand;
 class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_WaypointBase : public AIGS_WaypointFramework {
     GENERATED_BODY()
 public:

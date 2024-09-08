@@ -15,7 +15,7 @@ class UIGS_ObjectStatus;
 class UIGS_VisbilityComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_EntranceBase : public AActor, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:

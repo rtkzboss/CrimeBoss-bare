@@ -3,7 +3,7 @@
 #include "NavModifierComponent.h"
 #include "IGS_NavModifierComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_NAVIGATION_API UIGS_NavModifierComponent : public UNavModifierComponent {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@ class UMETA_BaseMapEvent;
 class UMETA_BaseMission;
 class UMapTile;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_CityMapManagerComponent : public UIGS_CityMapManagerBaseComponent {
     GENERATED_BODY()
 public:

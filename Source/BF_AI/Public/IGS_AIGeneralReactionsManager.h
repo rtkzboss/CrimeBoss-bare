@@ -7,7 +7,7 @@
 class AActor;
 class UIGS_GeneralReactionData_Base;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIGeneralReactionsManager : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -27,7 +27,7 @@ class UObject;
 class UParticleSystemComponent;
 class UTexture;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerEffectsComponent : public UActorComponent {
     GENERATED_BODY()
 public:

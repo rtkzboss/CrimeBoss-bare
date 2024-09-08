@@ -7,7 +7,7 @@ class AIGS_ControlRoomBase;
 class AIGS_GameCharacterFramework;
 class UIGS_StealthSettingsInstance;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_TelephoneBase : public AIGS_AlarmDeviceBase {
     GENERATED_BODY()
 public:

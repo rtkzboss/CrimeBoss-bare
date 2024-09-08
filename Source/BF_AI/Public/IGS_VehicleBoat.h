@@ -21,7 +21,7 @@ class UNavArea;
 class UNavModifierComponent;
 class UStaticMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_VehicleBoat : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:

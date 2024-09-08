@@ -3,7 +3,7 @@
 #include "IGS_ShooterBase.h"
 #include "IGS_ChargedShooter.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ChargedShooter : public UIGS_ShooterBase {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class UIGS_WorldSpaceWidgetBase;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PingableWidgetActor : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:

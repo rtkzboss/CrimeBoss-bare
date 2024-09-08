@@ -15,7 +15,7 @@ class UParticleSystem;
 class UPrimitiveComponent;
 class UWheeledVehicleMovementComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_RIDEABLEVEHICLES_API AIGS_RideableCar_Base : public AIGS_RideableVehicle_Base {
     GENERATED_BODY()
 public:

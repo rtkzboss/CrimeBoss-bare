@@ -3,7 +3,7 @@
 #include "Components/ChildActorComponent.h"
 #include "IGS_AuthoritativeChildActorComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_AuthoritativeChildActorComponent : public UChildActorComponent {
     GENERATED_BODY()
 public:

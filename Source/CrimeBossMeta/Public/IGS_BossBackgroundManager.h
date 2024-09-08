@@ -6,7 +6,7 @@
 
 class UDataTable;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_BossBackgroundManager : public UActorComponent {
     GENERATED_BODY()
 public:

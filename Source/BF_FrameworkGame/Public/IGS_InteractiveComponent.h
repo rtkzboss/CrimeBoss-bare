@@ -22,7 +22,7 @@ class UIGS_InventoryObjectFramework;
 class UIGS_OutlineComponent;
 class UPrimitiveComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractiveComponent : public USceneComponent {
     GENERATED_BODY()
 public:

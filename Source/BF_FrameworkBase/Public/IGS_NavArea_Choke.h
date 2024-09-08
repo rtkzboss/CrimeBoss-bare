@@ -3,7 +3,7 @@
 #include "NavAreas/NavArea.h"
 #include "IGS_NavArea_Choke.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKBASE_API UIGS_NavArea_Choke : public UNavArea {
     GENERATED_BODY()
 public:

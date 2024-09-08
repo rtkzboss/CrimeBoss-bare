@@ -7,7 +7,7 @@
 class UIGS_WeaponSkinData;
 class UMeshComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_SkinHandlerBase : public UActorComponent {
     GENERATED_BODY()
 public:

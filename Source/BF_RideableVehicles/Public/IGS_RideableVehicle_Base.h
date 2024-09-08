@@ -26,7 +26,7 @@ class UParticleSystem;
 class USkeletalMeshComponent;
 class USpeedometer;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_RIDEABLEVEHICLES_API AIGS_RideableVehicle_Base : public AIGS_RideableVehicleBaseFramework, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@ class UBoxComponent;
 class UCurveFloat;
 class UNiagaraComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_FireVolume : public AActor {
     GENERATED_BODY()
 public:

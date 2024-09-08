@@ -5,7 +5,7 @@
 
 class UPrefabricatorAssetInterface;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PREFABRICATORRUNTIME_API UPrefabComponent : public USceneComponent {
     GENERATED_BODY()
 public:

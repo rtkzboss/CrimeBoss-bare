@@ -5,7 +5,7 @@
 
 class UIGS_CoverPointsDataAsset;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_COVERS_API AIGS_CoverPointsDataActor : public AActor {
     GENERATED_BODY()
 public:

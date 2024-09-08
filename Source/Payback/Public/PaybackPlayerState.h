@@ -3,7 +3,7 @@
 #include "IGS_PlayerStateGame.h"
 #include "PaybackPlayerState.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PAYBACK_API APaybackPlayerState : public AIGS_PlayerStateGame {
     GENERATED_BODY()
 public:

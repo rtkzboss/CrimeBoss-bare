@@ -4,7 +4,7 @@
 #include "EIGS_AIMontageBreachVariant.h"
 #include "IGS_BreachPointComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BreachPointComponent : public UArrowComponent {
     GENERATED_BODY()
 public:

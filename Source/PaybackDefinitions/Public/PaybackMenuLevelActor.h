@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "PaybackMenuLevelActor.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PAYBACKDEFINITIONS_API APaybackMenuLevelActor : public AActor {
     GENERATED_BODY()
 public:

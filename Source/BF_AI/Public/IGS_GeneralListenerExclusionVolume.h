@@ -3,7 +3,7 @@
 #include "IGS_BoxSphere.h"
 #include "IGS_GeneralListenerExclusionVolume.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_GeneralListenerExclusionVolume : public AIGS_BoxSphere {
     GENERATED_BODY()
 public:

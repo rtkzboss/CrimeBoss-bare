@@ -14,7 +14,7 @@ class USkinnedDecalInstance;
 class USkinnedDecalSampler;
 class UTextureRenderTarget2D;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class SKINNEDDECALCOMPONENT_API USkinnedDecalSampler : public UActorComponent {
     GENERATED_BODY()
 public:

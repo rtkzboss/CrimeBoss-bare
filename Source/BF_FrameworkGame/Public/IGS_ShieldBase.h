@@ -8,7 +8,7 @@ class UIGS_BreakableWindowComponent;
 class UIGS_ObjectStatus;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ShieldBase : public AActor, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:

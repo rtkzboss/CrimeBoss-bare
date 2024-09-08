@@ -18,7 +18,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_SettingsID;
 class USkeletalMeshComponent;
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AIPassengerSpawnComponentBase : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 class AIGS_DetectorBase;
 class AIGS_PlayerControllerRoot;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SentryControllerPlayerBase : public AIGS_SentryControllerFramework {
     GENERATED_BODY()
 public:

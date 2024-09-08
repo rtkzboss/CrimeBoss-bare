@@ -10,7 +10,7 @@ class UMaterialInterface;
 class UPrimitiveComponent;
 class UTimelineComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_InteractiveWireBox2 : public AIGS_InteractiveWireBoxBase {
     GENERATED_BODY()
 public:

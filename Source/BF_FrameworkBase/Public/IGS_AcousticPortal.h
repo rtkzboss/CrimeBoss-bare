@@ -6,7 +6,7 @@
 
 class UIGS_SignificanceComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_AcousticPortal : public AAkAcousticPortal {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_InteractiveWireBoxBase : public AActor {
     GENERATED_BODY()
 public:

@@ -24,7 +24,7 @@ class UMETA_Character;
 class UMETA_Weapon;
 class UMapTile;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_StatisticsManagerComponent : public UIGS_StatisticsManagerBaseComponent {
     GENERATED_BODY()
 public:

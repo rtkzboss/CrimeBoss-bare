@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_VehicleExitPointFramework.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_VehicleExitPointFramework : public AActor {
     GENERATED_BODY()
 public:

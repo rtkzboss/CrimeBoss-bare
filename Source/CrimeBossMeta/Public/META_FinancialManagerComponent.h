@@ -5,7 +5,7 @@
 #include "IGS_FinanceManagerBaseComponent.h"
 #include "META_FinancialManagerComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_FinancialManagerComponent : public UIGS_FinanceManagerBaseComponent {
     GENERATED_BODY()
 public:

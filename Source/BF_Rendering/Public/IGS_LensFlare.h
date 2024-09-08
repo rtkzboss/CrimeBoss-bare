@@ -10,7 +10,7 @@ class UMaterialInterface;
 class USphereComponent;
 class UTexture;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_RENDERING_API AIGS_LensFlare : public AActor {
     GENERATED_BODY()
 public:

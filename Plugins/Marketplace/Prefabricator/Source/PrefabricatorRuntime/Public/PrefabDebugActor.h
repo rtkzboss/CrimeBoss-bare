@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "PrefabDebugActor.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PREFABRICATORRUNTIME_API APrefabDebugActor : public AActor {
     GENERATED_BODY()
 public:

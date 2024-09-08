@@ -4,7 +4,7 @@
 #include "IGS_OnZiptyingStartedSignatureDelegate.h"
 #include "IGS_WeaponAnimationComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_ANIMATIONS_API UIGS_WeaponAnimationComponent : public UActorComponent {
     GENERATED_BODY()
 public:

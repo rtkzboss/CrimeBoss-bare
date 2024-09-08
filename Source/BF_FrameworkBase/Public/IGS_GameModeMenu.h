@@ -3,7 +3,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "IGS_GameModeMenu.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(NonTransient, Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_GameModeMenu : public AGameModeBase {
     GENERATED_BODY()
 public:

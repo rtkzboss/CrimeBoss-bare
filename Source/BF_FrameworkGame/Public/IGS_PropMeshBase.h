@@ -4,7 +4,7 @@
 #include "PropMeshInfoStruct.h"
 #include "IGS_PropMeshBase.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PropMeshBase : public UIGS_BreakableMeshComponent {
     GENERATED_BODY()
 public:

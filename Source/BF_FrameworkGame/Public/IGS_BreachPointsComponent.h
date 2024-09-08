@@ -9,7 +9,7 @@ class ATriggerBase;
 class UIGS_BreachPointComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_BreachPointsComponent : public AActor {
     GENERATED_BODY()
 public:

@@ -13,7 +13,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_NavLinkComponentFramework;
 class UShapeComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_DoorBase : public AIGS_EntranceBase, public IIGS_DoorBreachInterface {
     GENERATED_BODY()
 public:

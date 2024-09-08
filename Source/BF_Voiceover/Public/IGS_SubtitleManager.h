@@ -11,7 +11,7 @@
 
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_VOICEOVER_API UIGS_SubtitleManager : public UActorComponent {
     GENERATED_BODY()
 public:

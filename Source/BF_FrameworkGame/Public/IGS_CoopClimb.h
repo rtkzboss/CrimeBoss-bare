@@ -9,7 +9,7 @@ class AIGS_VentShaft;
 class UCapsuleComponent;
 class UIGS_InteractiveComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_CoopClimb : public AActor {
     GENERATED_BODY()
 public:

@@ -10,7 +10,7 @@ class UAnimMontage;
 class UIGS_InteractiveComponent;
 class UStaticMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_EscapeVanVehicle : public AIGS_EscapeVehicle {
     GENERATED_BODY()
 public:

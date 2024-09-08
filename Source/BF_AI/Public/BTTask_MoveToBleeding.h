@@ -6,7 +6,7 @@
 
 class UEnvQuery;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API UBTTask_MoveToBleeding : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:

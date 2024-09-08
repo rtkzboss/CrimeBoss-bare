@@ -5,7 +5,7 @@
 
 class UPrefabricatorConstructionSnapComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class CONSTRUCTIONSYSTEMRUNTIME_API APrefabricatorConstructionSnap : public AActor {
     GENERATED_BODY()
 public:

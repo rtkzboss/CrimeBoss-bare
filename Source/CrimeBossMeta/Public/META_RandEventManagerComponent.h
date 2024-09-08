@@ -18,7 +18,7 @@
 class UMETA_MissionID;
 class UStoryGraphManager;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_RandEventManagerComponent : public UIGS_RandEventManagerBaseComponent {
     GENERATED_BODY()
 public:

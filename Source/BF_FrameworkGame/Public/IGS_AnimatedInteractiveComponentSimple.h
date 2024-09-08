@@ -6,7 +6,7 @@
 
 class UAnimMontage;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AnimatedInteractiveComponentSimple : public UIGS_AnimatedInteractiveComponentBase {
     GENERATED_BODY()
 public:

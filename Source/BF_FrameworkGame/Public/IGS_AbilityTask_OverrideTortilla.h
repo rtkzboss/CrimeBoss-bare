@@ -7,7 +7,7 @@
 class UGameplayAbility;
 class UIGS_AbilityTask_OverrideTortilla;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_OverrideTortilla : public UAbilityTask {
     GENERATED_BODY()
 public:

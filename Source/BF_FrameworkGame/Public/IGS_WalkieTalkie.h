@@ -9,7 +9,7 @@ class UAkAudioEvent;
 class UIGS_GlobalInventoryObject;
 class UIGS_InteractiveComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_WalkieTalkie : public AIGS_PickupActorBase {
     GENERATED_BODY()
 public:

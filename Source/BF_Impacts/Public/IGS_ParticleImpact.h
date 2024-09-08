@@ -10,7 +10,7 @@ class UNiagaraComponent;
 class UParticleSystemComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_IMPACTS_API AIGS_ParticleImpact : public AIGS_ImpactBase, public INiagaraParticleCallbackHandler {
     GENERATED_BODY()
 public:

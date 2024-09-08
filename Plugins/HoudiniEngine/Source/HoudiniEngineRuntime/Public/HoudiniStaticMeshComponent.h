@@ -6,7 +6,7 @@
 
 class UHoudiniStaticMesh;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniStaticMeshComponent : public UMeshComponent {
     GENERATED_BODY()
 public:

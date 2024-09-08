@@ -4,7 +4,7 @@
 #include "GameplayTagContainer.h"
 #include "IGS_PatrolEQSFilterBox.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_PatrolEQSFilterBox : public AIGS_BoxSphere {
     GENERATED_BODY()
 public:

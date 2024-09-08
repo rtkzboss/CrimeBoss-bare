@@ -7,7 +7,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootBagInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:

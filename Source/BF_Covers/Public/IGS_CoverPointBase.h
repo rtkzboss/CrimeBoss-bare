@@ -5,7 +5,7 @@
 
 class UBillboardComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_COVERS_API AIGS_CoverPointBase : public AActor {
     GENERATED_BODY()
 public:

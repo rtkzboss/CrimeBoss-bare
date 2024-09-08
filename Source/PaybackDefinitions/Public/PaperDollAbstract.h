@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "PaperDollAbstract.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class PAYBACKDEFINITIONS_API APaperDollAbstract : public AActor {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@ class AIGS_LootCollectionSpawnerBase;
 class AIGS_LootHolderBase;
 class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_LootpointBase : public AActor {
     GENERATED_BODY()
 public:

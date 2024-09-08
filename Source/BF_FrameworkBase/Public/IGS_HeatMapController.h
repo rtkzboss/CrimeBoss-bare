@@ -3,7 +3,7 @@
 #include "IGS_HeatMapBasePawnComponent.h"
 #include "IGS_HeatMapController.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_HeatMapController : public UIGS_HeatMapBasePawnComponent {
     GENERATED_BODY()
 public:

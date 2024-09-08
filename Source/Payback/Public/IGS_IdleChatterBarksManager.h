@@ -6,7 +6,7 @@
 class AIGS_GameCharacterFramework;
 class UIGS_PlayIdleChatterAsyncAction;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_IdleChatterBarksManager : public UActorComponent {
     GENERATED_BODY()
 public:

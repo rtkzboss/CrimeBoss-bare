@@ -19,7 +19,7 @@ class USceneComponent;
 class UStaticMeshComponent;
 class UTimelineComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_LaserTrap : public AActor {
     GENERATED_BODY()
 public:

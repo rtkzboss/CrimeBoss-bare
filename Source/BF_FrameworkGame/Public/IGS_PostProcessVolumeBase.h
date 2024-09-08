@@ -7,7 +7,7 @@
 
 class UMaterialInterface;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PostProcessVolumeBase : public AIGS_VolumeBase, public IInterface_PostProcessVolume {
     GENERATED_BODY()
 public:

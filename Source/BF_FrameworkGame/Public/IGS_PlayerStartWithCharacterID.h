@@ -4,7 +4,7 @@
 #include "EIGS_CharacterID.h"
 #include "IGS_PlayerStartWithCharacterID.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PlayerStartWithCharacterID : public APlayerStart {
     GENERATED_BODY()
 public:

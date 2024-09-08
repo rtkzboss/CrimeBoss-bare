@@ -5,7 +5,7 @@
 #include "IGS_LightingScenarioWorldSettings.h"
 #include "IGS_WorldSettingsExtension.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_LEVELGENERATOR_API AIGS_WorldSettingsExtension : public AWorldSettings {
     GENERATED_BODY()
 public:

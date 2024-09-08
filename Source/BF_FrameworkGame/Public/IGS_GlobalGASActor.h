@@ -14,7 +14,7 @@ class UIGS_GlobalGASAttributeSet;
 class UIGS_GlobalGASComponent;
 class UObject;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_GlobalGASActor : public AActor, public IIGS_GameplayTagAssetInterfaceCustom, public IAbilitySystemInterface {
     GENERATED_BODY()
 public:

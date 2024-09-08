@@ -7,7 +7,7 @@
 class AIGS_NavHintVolume;
 class UObject;
 
-UCLASS(NonTransient)
+UCLASS(NonTransient, Config=Inherit)
 class BF_AI_API UIGS_NavigationSystem : public UNavigationSystemV1, public INavEdgeProviderInterface {
     GENERATED_BODY()
 public:

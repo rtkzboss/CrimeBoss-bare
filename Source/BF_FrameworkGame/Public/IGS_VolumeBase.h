@@ -3,7 +3,7 @@
 #include "GameFramework/Volume.h"
 #include "IGS_VolumeBase.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_VolumeBase : public AVolume {
     GENERATED_BODY()
 public:

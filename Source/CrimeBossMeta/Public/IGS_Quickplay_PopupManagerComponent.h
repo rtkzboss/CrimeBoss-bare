@@ -3,7 +3,7 @@
 #include "IGS_PopupManagerBaseComponent.h"
 #include "IGS_Quickplay_PopupManagerComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_PopupManagerComponent : public UIGS_PopupManagerBaseComponent {
     GENERATED_BODY()
 public:

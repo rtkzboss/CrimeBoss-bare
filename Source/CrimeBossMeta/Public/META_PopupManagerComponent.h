@@ -5,7 +5,7 @@
 
 class UIGS_TutorialsManager;
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_PopupManagerComponent : public UIGS_PopupManagerBaseComponent {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "NavAreas/NavArea.h"
 #include "NavAreaNavLink.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_NAVIGATION_API UNavAreaNavLink : public UNavArea {
     GENERATED_BODY()
 public:

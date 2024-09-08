@@ -13,7 +13,7 @@ class UIGS_InteractiveComponent;
 class USpotLightComponent;
 class UTextRenderComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_Keypad : public AActor {
     GENERATED_BODY()
 public:

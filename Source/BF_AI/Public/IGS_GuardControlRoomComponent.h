@@ -9,7 +9,7 @@ class UEnvQuery;
 class UIGS_AIDirector;
 class UIGS_SuspicionManager;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_GuardControlRoomComponent : public UIGS_GuardControlRoomComponentBase {
     GENERATED_BODY()
 public:

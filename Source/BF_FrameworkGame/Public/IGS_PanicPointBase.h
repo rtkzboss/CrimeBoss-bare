@@ -5,7 +5,7 @@
 
 class UIGS_PanicPointComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PanicPointBase : public AActor {
     GENERATED_BODY()
 public:

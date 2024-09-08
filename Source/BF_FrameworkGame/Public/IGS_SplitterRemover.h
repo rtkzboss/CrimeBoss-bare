@@ -3,7 +3,7 @@
 #include "GameFramework/Volume.h"
 #include "IGS_SplitterRemover.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SplitterRemover : public AVolume {
     GENERATED_BODY()
 public:

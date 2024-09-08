@@ -10,7 +10,7 @@
 
 class UIGS_PlayerBotControllerComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_AIControllerPlayerBot : public AIGS_AIControllerGame, public IIGS_HeisterDataInterface, public IIGS_HeisterNumberInterface, public IIGS_CharacterIDInterface {
     GENERATED_BODY()
 public:

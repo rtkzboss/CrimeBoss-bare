@@ -7,7 +7,7 @@
 class UIGS_SkinHandlerBase;
 class UIGS_ThrowableInventoryObject;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ThrowableBase : public AIGS_WieldableBase {
     GENERATED_BODY()
 public:

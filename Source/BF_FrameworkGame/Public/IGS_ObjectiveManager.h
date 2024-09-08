@@ -25,7 +25,7 @@ class UIGS_ObjectiveComponent;
 class UIGS_ObjectiveManager;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ObjectiveManager : public UActorComponent {
     GENERATED_BODY()
 public:

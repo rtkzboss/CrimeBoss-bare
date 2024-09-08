@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_AIControllerFramework : public AAIController {
     GENERATED_BODY()
 public:

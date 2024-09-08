@@ -6,7 +6,7 @@
 
 class UIGS_MeshOverlappableComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKBASE_API AIGS_StaticMeshPenetrableActor : public AActor {
     GENERATED_BODY()
 public:

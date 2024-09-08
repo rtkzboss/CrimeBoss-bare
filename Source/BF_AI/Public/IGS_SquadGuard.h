@@ -5,7 +5,7 @@
 
 class UIGS_GuardControlRoomComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_SquadGuard : public AIGS_SquadGuardians {
     GENERATED_BODY()
 public:

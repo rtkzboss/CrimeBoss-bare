@@ -6,7 +6,7 @@
 
 class UIGS_VoiceoverSubsystemDataAsset;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class PAYBACK_API AAssetsPreloader : public AActor, public IIGS_LoadingInProgressInterface {
     GENERATED_BODY()
 public:

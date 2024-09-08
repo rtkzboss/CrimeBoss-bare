@@ -31,7 +31,7 @@ class UIGS_SignificanceComponent;
 class UIGS_ZiptieComponent;
 class USkeletalMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_IntelligentGameCharacter : public AIGS_GameCharacterBase {
     GENERATED_BODY()
 public:

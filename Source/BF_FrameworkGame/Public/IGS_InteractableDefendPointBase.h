@@ -11,7 +11,7 @@ class UIGS_InteractiveComponent;
 class UPrimitiveComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_InteractableDefendPointBase : public AActor {
     GENERATED_BODY()
 public:

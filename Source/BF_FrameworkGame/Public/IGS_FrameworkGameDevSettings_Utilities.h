@@ -10,7 +10,7 @@ class UMaterialInterface;
 class UMaterialParameterCollection;
 class USoundBase;
 
-UCLASS(BlueprintType)
+UCLASS(BlueprintType, Config=Inherit)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings_Utilities : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:

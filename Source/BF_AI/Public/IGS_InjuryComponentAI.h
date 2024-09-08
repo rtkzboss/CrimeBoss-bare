@@ -11,7 +11,7 @@ class UIGS_CharacterData;
 class UIGS_ObjectStatus;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_InjuryComponentAI : public UActorComponent {
     GENERATED_BODY()
 public:

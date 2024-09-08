@@ -14,7 +14,7 @@ class UIGS_InventoryInterface;
 class UGameplayEffect;
 class UIGS_EquipmentInventoryObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerLoadoutComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "IGS_EntitlementItemsManangerInitializedDelegate.h"
 #include "IGS_EntitlementItemsManagerBaseComponent.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_EntitlementItemsManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

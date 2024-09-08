@@ -7,7 +7,7 @@
 
 class UEnvQuery;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API UIGS_BTTask_MoveToBestPosInCombatRange : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:

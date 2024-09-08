@@ -10,7 +10,7 @@ class AIGS_AIEnemyGroupSpawner;
 class AIGS_RoomBase;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_TerritoryVolume : public AVolume {
     GENERATED_BODY()
 public:

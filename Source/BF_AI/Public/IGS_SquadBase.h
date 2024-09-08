@@ -12,7 +12,7 @@ class UBehaviorTree;
 class UBehaviorTreeComponent;
 class UBlackboardComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_SquadBase : public AIGS_SquadFramework {
     GENERATED_BODY()
 public:

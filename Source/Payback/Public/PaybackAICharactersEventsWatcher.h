@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "PaybackAICharactersEventsWatcher.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UPaybackAICharactersEventsWatcher : public UActorComponent {
     GENERATED_BODY()
 public:

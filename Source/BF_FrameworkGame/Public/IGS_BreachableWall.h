@@ -9,7 +9,7 @@ class UBoxComponent;
 class UChildActorComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_BreachableWall : public AActor, public IIGS_DoorBreachInterface {
     GENERATED_BODY()
 public:

@@ -11,7 +11,7 @@ class ANavigationData;
 class UCoverPoint;
 class UObject;
 
-UCLASS(Transient)
+UCLASS(Transient, Config=Inherit)
 class COVERGENERATOR_API ACoverGenerator : public AActor {
     GENERATED_BODY()
 public:

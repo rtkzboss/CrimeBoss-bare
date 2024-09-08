@@ -12,7 +12,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_PlayerCharacterMovementComponent;
 class USceneComponent;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AnimatedInteractiveComponentBase : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:

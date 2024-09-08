@@ -9,7 +9,7 @@ class UParticleSystemComponent;
 class UPointLightComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_MuzzleFlash : public AActor {
     GENERATED_BODY()
 public:

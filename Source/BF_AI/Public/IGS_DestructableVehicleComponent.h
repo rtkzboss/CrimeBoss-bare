@@ -18,7 +18,7 @@ class USkeletalMeshComponent;
 class UStaticMesh;
 class UStaticMeshComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_DestructableVehicleComponent : public USceneComponent {
     GENERATED_BODY()
 public:

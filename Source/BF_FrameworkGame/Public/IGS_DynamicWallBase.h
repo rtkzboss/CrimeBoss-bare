@@ -16,7 +16,7 @@ class USceneComponent;
 class UStaticMesh;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_DynamicWallBase : public AActor {
     GENERATED_BODY()
 public:

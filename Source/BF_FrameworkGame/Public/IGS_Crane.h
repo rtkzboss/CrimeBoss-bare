@@ -21,7 +21,7 @@ class UPrimitiveComponent;
 class USceneComponent;
 class USphereComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_Crane : public APawn, public IIGS_SubControllerMountableInterface {
     GENERATED_BODY()
 public:

@@ -9,7 +9,7 @@
 class UBoxComponent;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PayloadBase : public AActor {
     GENERATED_BODY()
 public:

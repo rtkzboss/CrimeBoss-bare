@@ -8,7 +8,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_AIDirector;
 class UIGS_SuspicionManager;
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UAIBarksManagerBase : public UActorComponent {
     GENERATED_BODY()
 public:

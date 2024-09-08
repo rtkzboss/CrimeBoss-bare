@@ -12,7 +12,7 @@ class IIGS_InventoryInterface;
 class UIGS_InventoryInterface;
 class UIGS_WieldableInventoryObjectBase;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerMetaTransferComponent : public UActorComponent {
     GENERATED_BODY()
 public:

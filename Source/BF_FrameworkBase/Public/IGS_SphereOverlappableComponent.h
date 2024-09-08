@@ -6,7 +6,7 @@
 #include "IGS_ProjectileOverlappable.h"
 #include "IGS_SphereOverlappableComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_SphereOverlappableComponent : public USphereComponent, public IIGS_ProjectileOverlappable {
     GENERATED_BODY()
 public:

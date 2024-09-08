@@ -3,7 +3,7 @@
 #include "IGS_ObjectStatus.h"
 #include "IGS_CarryableObjectStatus.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CarryableObjectStatus : public UIGS_ObjectStatus {
     GENERATED_BODY()
 public:

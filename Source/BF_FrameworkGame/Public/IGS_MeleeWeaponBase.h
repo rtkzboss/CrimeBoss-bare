@@ -8,7 +8,7 @@
 class UIGS_BasherComponent;
 class UIGS_SkinHandlerBase;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_MeleeWeaponBase : public AIGS_WieldableBase, public IIGS_BashInterface {
     GENERATED_BODY()
 public:

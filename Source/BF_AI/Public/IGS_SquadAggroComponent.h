@@ -5,7 +5,7 @@
 
 class AActor;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SquadAggroComponent : public UActorComponent {
     GENERATED_BODY()
 public:

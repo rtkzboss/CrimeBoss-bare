@@ -30,7 +30,7 @@
 #include "META_FPSBonusesFromMeta.h"
 #include "IGS_GameStateBaseWithData.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class COMMON_DATA_API AIGS_GameStateBaseWithData : public AGameStateBase {
     GENERATED_BODY()
 public:

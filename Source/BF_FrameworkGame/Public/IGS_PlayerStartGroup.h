@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_PlayerStartGroup.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_PlayerStartGroup : public AActor {
     GENERATED_BODY()
 public:

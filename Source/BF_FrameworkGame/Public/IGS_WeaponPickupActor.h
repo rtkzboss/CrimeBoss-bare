@@ -21,7 +21,7 @@ class USkeletalMesh;
 class USkeletalMeshComponentBudgeted;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_WeaponPickupActor : public AIGS_PickupActorBase, public IIGS_ModMeshInterface, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:

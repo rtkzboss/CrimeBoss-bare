@@ -5,7 +5,7 @@
 
 class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_VehicleCarTest : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:

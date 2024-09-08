@@ -9,7 +9,7 @@
 class AIGS_IntelligentGameCharacter;
 class UMETA_DetectiveID;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_AIControllerDetective : public AIGS_AIControllerGame {
     GENERATED_BODY()
 public:

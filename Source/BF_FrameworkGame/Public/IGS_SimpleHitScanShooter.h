@@ -11,7 +11,7 @@
 class UDamageType;
 class UIGS_ImpactTypeObject;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SimpleHitScanShooter : public UIGS_SimpleShooter {
     GENERATED_BODY()
 public:

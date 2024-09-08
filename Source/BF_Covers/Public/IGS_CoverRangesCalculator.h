@@ -6,7 +6,7 @@
 
 class UWorld;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_COVERS_API AIGS_CoverRangesCalculator : public AActor {
     GENERATED_BODY()
 public:

@@ -9,7 +9,7 @@
 #include "HoudiniEngineCopyPropertiesInterface.h"
 #include "HoudiniSplineComponent.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniSplineComponent : public USceneComponent, public IHoudiniEngineCopyPropertiesInterface {
     GENERATED_BODY()
 public:

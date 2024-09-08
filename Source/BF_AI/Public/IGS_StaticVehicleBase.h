@@ -7,7 +7,7 @@
 class UNavModifierComponent;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_StaticVehicleBase : public AActor {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AUDIOBASE_API AIGS_SpatialAudioVolume : public AAkSpatialAudioVolume {
     GENERATED_BODY()
 public:

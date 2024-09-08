@@ -8,7 +8,7 @@ class UIGS_AIDirector;
 class UIGS_GuardControlRoomComponent;
 class UIGS_SuspicionManager;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_ControlRoom : public AIGS_ControlRoomBase {
     GENERATED_BODY()
 public:

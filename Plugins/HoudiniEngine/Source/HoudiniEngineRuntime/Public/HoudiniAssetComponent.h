@@ -24,7 +24,7 @@ class UHoudiniPDGAssetLink;
 class UHoudiniParameter;
 class UObject;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniAssetComponent : public UPrimitiveComponent, public IHoudiniAssetStateEvents {
     GENERATED_BODY()
 public:

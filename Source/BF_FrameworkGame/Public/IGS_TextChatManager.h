@@ -9,7 +9,7 @@
 class UIGS_TextChatManager;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_TextChatManager : public UActorComponent {
     GENERATED_BODY()
 public:

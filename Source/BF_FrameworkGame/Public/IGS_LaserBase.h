@@ -6,7 +6,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_LaserBase : public AActor {
     GENERATED_BODY()
 public:

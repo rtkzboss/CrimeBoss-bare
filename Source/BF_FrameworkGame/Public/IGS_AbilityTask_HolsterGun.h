@@ -7,7 +7,7 @@
 class UGameplayAbility;
 class UIGS_AbilityTask_HolsterGun;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_HolsterGun : public UAbilityTask {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class UCustomizableObjectInstance;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CUSTOMIZABLEOBJECT_API UCustomizableSkeletalComponent : public USceneComponent {
     GENERATED_BODY()
 public:

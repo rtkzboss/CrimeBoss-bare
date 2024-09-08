@@ -12,7 +12,7 @@ class UIGS_PlayerLoadoutComponent;
 class UIGS_PlayerMetaTransferComponent;
 class UIGS_SuppressionHandlerComponent;
 
-UCLASS(Deprecated, NotPlaceable)
+UCLASS(Deprecated, NotPlaceable, Config=Inherit)
 class BF_AI_API ADEPRECATED_IGS_AICharacterPlayerBot : public AIGS_AIGameCharacter, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:

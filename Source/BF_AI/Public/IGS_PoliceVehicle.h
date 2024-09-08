@@ -6,7 +6,7 @@
 class UAkAudioEvent;
 class UAkRtpc;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_AI_API AIGS_PoliceVehicle : public AIGS_VehicleCar {
     GENERATED_BODY()
 public:

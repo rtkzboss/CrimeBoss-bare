@@ -9,7 +9,7 @@ class UIGS_BreakableWindowComponent;
 class USceneComponent;
 class UStaticMeshComponent;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ItemDisplayBase : public AActor {
     GENERATED_BODY()
 public:

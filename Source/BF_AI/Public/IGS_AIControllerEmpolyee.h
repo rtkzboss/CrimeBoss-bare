@@ -3,7 +3,7 @@
 #include "IGS_AIControllerAmbientLife.h"
 #include "IGS_AIControllerEmpolyee.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_AIControllerEmpolyee : public AIGS_AIControllerAmbientLife {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 class AActor;
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UPaybackHarmlessBarksManager : public UActorComponent {
     GENERATED_BODY()
 public:

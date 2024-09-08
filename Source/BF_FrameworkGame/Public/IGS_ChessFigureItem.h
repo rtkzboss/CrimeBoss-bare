@@ -3,7 +3,7 @@
 #include "IGS_StaticMeshInventoryItemPickup.h"
 #include "IGS_ChessFigureItem.generated.h"
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_ChessFigureItem : public AIGS_StaticMeshInventoryItemPickup {
     GENERATED_BODY()
 public:

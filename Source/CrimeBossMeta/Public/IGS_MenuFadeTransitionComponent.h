@@ -4,7 +4,7 @@
 #include "IGS_OnTransitionFinishedDelegate.h"
 #include "IGS_MenuFadeTransitionComponent.generated.h"
 
-UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_MenuFadeTransitionComponent : public UActorComponent {
     GENERATED_BODY()
 public:

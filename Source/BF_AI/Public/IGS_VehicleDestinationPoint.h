@@ -14,7 +14,7 @@ class AIGS_TrafficSegment;
 class AIGS_VehicleBase;
 class UIGS_VehicleObject;
 
-UCLASS()
+UCLASS(Config=Inherit)
 class BF_AI_API AIGS_VehicleDestinationPoint : public AIGS_VehicleDestinationPointFramework, public IIGS_VehicleDestinationInterface {
     GENERATED_BODY()
 public:

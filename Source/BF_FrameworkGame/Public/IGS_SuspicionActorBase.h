@@ -17,7 +17,7 @@ class UBoxComponent;
 class UIGS_SuspicionComponent;
 class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Config=Inherit)
 class BF_FRAMEWORKGAME_API AIGS_SuspicionActorBase : public AActor, public IGenericTeamAgentInterface, public IAISightTargetInterface, public IIGS_GameplayTagAssetInterfaceCustom, public IIGS_SuspicionInterface {
     GENERATED_BODY()
 public:
