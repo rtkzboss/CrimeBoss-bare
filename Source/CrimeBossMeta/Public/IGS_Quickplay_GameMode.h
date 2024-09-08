@@ -3,7 +3,7 @@
 #include "IGS_GameModeMenuBase.h"
 #include "IGS_Quickplay_GameMode.generated.h"
 
-UCLASS(Abstract, NonTransient, Config=Inherit)
+UCLASS(Abstract, NonTransient)
 class CRIMEBOSSMETA_API AIGS_Quickplay_GameMode : public AIGS_GameModeMenuBase {
     GENERATED_BODY()
 public:

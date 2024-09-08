@@ -3,7 +3,7 @@
 #include "PaybackAICharacter.h"
 #include "PaybackBackupHeisterCharacter.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API APaybackBackupHeisterCharacter : public APaybackAICharacter {
     GENERATED_BODY()
 public:

@@ -8,7 +8,7 @@
 #include "IGS_WeaponSettingsInterface.h"
 #include "IGS_AICopSettingsComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AICopSettingsComponent : public UIGS_AISettingsComponent, public IIGS_MeleeWeaponActivationSettingsInterface, public IIGS_WeaponSettingsInterface, public IIGS_CombatRangeSettingsInterface, public IIGS_CoverSettingsInterface, public IIGS_ReactionsSettingsInterface {
     GENERATED_BODY()
 public:

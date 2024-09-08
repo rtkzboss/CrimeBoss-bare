@@ -14,7 +14,7 @@ class UAkComponent;
 class UIGS_InteractiveComponent;
 class UInputComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LockpickMinigame : public AActor {
     GENERATED_BODY()
 public:

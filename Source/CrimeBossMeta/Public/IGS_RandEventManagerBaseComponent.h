@@ -8,7 +8,7 @@
 
 class UMETA_MissionID;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_RandEventManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

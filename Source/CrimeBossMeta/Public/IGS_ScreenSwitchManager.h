@@ -11,7 +11,7 @@ class UIGS_ScreenSwitchManager;
 class UMETA_UIEventsManagerComponent;
 class UObject;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_ScreenSwitchManager : public UIGS_ScreenSwitchManagerBaseComponent {
     GENERATED_BODY()
 public:

@@ -18,7 +18,7 @@
 #include "META_GangWasAddedToAttitudeListDelegate.h"
 #include "META_WarManagerComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_WarManagerComponent : public UIGS_WarManagerBaseComponent {
     GENERATED_BODY()
 public:

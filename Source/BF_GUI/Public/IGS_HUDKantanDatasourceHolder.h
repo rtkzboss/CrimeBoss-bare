@@ -5,7 +5,7 @@
 
 class UKantanSimpleCartesianDatasource;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_GUI_API UIGS_HUDKantanDatasourceHolder : public UActorComponent {
     GENERATED_BODY()
 public:

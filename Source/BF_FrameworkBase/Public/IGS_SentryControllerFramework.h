@@ -6,7 +6,7 @@
 #include "IGS_CharacterIDInterface.h"
 #include "IGS_SentryControllerFramework.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_SentryControllerFramework : public AAIController, public IIGS_CharacterIDInterface {
     GENERATED_BODY()
 public:

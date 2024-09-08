@@ -5,7 +5,7 @@
 
 class AIGS_Splitter;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_NavHintVolume : public AVolume {
     GENERATED_BODY()
 public:

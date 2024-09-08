@@ -15,7 +15,7 @@ class UDamageType;
 class UIGS_ThrowableInventoryObject;
 class USkeletalMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LauncherProjectileBase : public AIGS_ProjectileWithMovement {
     GENERATED_BODY()
 public:

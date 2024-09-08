@@ -9,7 +9,7 @@
 class UAkAudioEvent;
 class UIGS_InteractiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AmmoBoxBase : public AIGS_PickupActorBase, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:

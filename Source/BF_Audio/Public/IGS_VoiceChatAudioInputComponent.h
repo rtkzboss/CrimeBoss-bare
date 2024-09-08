@@ -5,7 +5,7 @@
 
 class UIGS_LocalPlayerVoiceChat;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AUDIO_API UIGS_VoiceChatAudioInputComponent : public UAkAudioInputComponent {
     GENERATED_BODY()
 public:

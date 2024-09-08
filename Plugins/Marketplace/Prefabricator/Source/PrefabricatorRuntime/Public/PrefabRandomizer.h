@@ -6,7 +6,7 @@
 
 class APrefabActor;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PREFABRICATORRUNTIME_API APrefabRandomizer : public AActor {
     GENERATED_BODY()
 public:

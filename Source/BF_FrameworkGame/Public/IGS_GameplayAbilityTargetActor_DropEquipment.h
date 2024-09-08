@@ -5,7 +5,7 @@
 #include "Abilities/GameplayAbilityTargetActor.h"
 #include "IGS_GameplayAbilityTargetActor_DropEquipment.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GameplayAbilityTargetActor_DropEquipment : public AGameplayAbilityTargetActor {
     GENERATED_BODY()
 public:

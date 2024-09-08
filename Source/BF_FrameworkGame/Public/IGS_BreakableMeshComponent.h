@@ -25,7 +25,7 @@ class UParticleSystem;
 class UPrimitiveComponent;
 class UStaticMesh;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BreakableMeshComponent : public UStaticMeshComponent, public IIGS_ProjectileOverlappable {
     GENERATED_BODY()
 public:

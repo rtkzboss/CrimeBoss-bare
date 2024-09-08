@@ -21,7 +21,7 @@ class UIGS_MeleeWeaponInventoryObject;
 class UIGS_ScriptableBehaviorComponent;
 class UIGS_WeaponInventoryObject;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_AIControllerBase : public AIGS_AIControllerFramework {
     GENERATED_BODY()
 public:

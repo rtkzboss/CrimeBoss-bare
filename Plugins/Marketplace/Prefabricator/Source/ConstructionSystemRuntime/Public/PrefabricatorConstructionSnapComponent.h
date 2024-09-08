@@ -6,7 +6,7 @@
 #include "PCSnapConstraintWall.h"
 #include "PrefabricatorConstructionSnapComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CONSTRUCTIONSYSTEMRUNTIME_API UPrefabricatorConstructionSnapComponent : public UBoxComponent {
     GENERATED_BODY()
 public:

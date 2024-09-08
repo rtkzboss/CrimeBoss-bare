@@ -17,7 +17,7 @@ class UPrimitiveComponent;
 class UProjectileMovementComponent;
 class USkeletalMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ThrowableProjectileBase : public AIGS_ThrowableProjectileFramework {
     GENERATED_BODY()
 public:

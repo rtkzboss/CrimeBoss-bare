@@ -5,7 +5,7 @@
 
 class UHoudiniAssetComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class HOUDINIENGINERUNTIME_API AHoudiniAssetActor : public AActor {
     GENERATED_BODY()
 public:

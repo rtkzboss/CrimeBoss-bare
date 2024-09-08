@@ -16,7 +16,7 @@ class UIGS_NavLinkComponent;
 class UNavArea;
 class USceneComponent;
 
-UCLASS(Deprecated, NotPlaceable, Config=Inherit)
+UCLASS(Deprecated, NotPlaceable)
 class BF_AI_API ADEPRECATED_IGS_NavLinkGroupBase : public AActor, public IIGS_NavLinksBreachInterface {
     GENERATED_BODY()
 public:

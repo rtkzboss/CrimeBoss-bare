@@ -13,7 +13,7 @@ class UIGS_SystemMenuScreen;
 class UIGS_WidgetRadialMenuBase;
 class UIGS_WidgetTextChatMenu;
 
-UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_GUI_API UIGS_GUIController : public UActorComponent {
     GENERATED_BODY()
 public:

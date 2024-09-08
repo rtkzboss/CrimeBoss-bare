@@ -4,7 +4,7 @@
 #include "IGS_OnCharacterSpawnedSignatureDelegate.h"
 #include "IGS_BotStart.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BotStart : public ANavigationObjectBase {
     GENERATED_BODY()
 public:

@@ -9,7 +9,7 @@
 class AIGS_GameCharacterFramework;
 class UDamageType;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_VulnerableActor : public AActor {
     GENERATED_BODY()
 public:

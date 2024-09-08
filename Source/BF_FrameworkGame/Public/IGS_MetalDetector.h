@@ -9,7 +9,7 @@ class UBoxComponent;
 class UPointLightComponent;
 class UPrimitiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MetalDetector : public AActor {
     GENERATED_BODY()
 public:

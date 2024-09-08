@@ -3,7 +3,7 @@
 #include "IGS_BTTask_MoveToBase.h"
 #include "BTTask_MoveToWithRepath.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UBTTask_MoveToWithRepath : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:

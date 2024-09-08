@@ -6,7 +6,7 @@
 class APlayerState;
 class UObject;
 
-UCLASS(NonTransient, Config=Inherit)
+UCLASS(NonTransient)
 class BF_FRAMEWORKBASE_API AIGS_GameModeFramework : public AGameModeBase {
     GENERATED_BODY()
 public:

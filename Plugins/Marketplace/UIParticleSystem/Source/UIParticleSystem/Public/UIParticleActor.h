@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "UIParticleActor.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class AUIParticleActor : public AActor {
     GENERATED_BODY()
 public:

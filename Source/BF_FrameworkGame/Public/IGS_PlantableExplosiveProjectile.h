@@ -11,7 +11,7 @@ class AActor;
 class UPrimitiveComponent;
 class USphereComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlantableExplosiveProjectile : public AIGS_GrenadeProjectileBase {
     GENERATED_BODY()
 public:

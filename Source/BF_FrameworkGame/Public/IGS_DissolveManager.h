@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "IGS_DissolveManager.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DissolveManager : public UActorComponent {
     GENERATED_BODY()
 public:

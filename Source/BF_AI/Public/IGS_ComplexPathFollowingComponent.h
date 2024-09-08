@@ -7,7 +7,7 @@
 
 class UNavigationQueryFilter;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ComplexPathFollowingComponent : public UPathFollowingComponent {
     GENERATED_BODY()
 public:

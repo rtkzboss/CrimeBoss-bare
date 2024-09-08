@@ -11,7 +11,7 @@ class UIGS_ChildActorComponentWithNotify;
 class UIGS_VentShaftInteractiveComponent;
 class UPrimitiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_VentShaft : public AActor {
     GENERATED_BODY()
 public:

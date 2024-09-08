@@ -18,7 +18,7 @@ class UMETA_TaskCondition;
 class UObject;
 class UStoryGraphManager;
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_GoalManagerComponent : public UIGS_GoalManagerBaseComponent {
     GENERATED_BODY()
 public:

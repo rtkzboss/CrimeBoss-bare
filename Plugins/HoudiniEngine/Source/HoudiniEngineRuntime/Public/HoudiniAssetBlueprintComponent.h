@@ -5,7 +5,7 @@
 #include "HoudiniOutputObjectIdentifier.h"
 #include "HoudiniAssetBlueprintComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniAssetBlueprintComponent : public UHoudiniAssetComponent {
     GENERATED_BODY()
 public:

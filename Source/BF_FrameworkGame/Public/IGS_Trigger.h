@@ -12,7 +12,7 @@ class AIGS_GameCharacterFramework;
 class AIGS_PlayerCharacter;
 class UTexture2D;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Trigger : public AIGS_BoxSphere {
     GENERATED_BODY()
 public:

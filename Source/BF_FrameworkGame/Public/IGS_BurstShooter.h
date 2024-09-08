@@ -5,7 +5,7 @@
 
 class UAkAudioEvent;
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BurstShooter : public UIGS_SemiAutoShooter {
     GENERATED_BODY()
 public:

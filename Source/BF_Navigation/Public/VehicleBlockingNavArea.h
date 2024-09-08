@@ -3,7 +3,7 @@
 #include "NavAreas/NavArea_Null.h"
 #include "VehicleBlockingNavArea.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_NAVIGATION_API UVehicleBlockingNavArea : public UNavArea_Null {
     GENERATED_BODY()
 public:

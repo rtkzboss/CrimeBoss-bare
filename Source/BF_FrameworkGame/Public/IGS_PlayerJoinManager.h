@@ -13,7 +13,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_PlayerJoinManager;
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerJoinManager : public UActorComponent {
     GENERATED_BODY()
 public:

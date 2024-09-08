@@ -7,7 +7,7 @@
 
 class UIGS_AISense_ComplexSight;
 
-UCLASS(EditInlineNew, Config=Inherit)
+UCLASS(EditInlineNew, Config=Game)
 class BF_AI_API UIGS_AISenseConfig_ComplexSight : public UAISenseConfig {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "IGS_LevelBuilder_LevelScriptActor.h"
 #include "IGS_Streaming_LevelScriptActor.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_LEVELGENERATOR_API AIGS_Streaming_LevelScriptActor : public AIGS_LevelBuilder_LevelScriptActor {
     GENERATED_BODY()
 public:

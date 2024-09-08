@@ -6,7 +6,7 @@
 
 class UIGS_ImpactTypeObject;
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_FootstepsBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

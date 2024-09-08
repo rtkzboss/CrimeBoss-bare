@@ -6,7 +6,7 @@
 
 class AIGS_AIEnemyGroupSpawner;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AISpawnGroupChooser : public AActor {
     GENERATED_BODY()
 public:

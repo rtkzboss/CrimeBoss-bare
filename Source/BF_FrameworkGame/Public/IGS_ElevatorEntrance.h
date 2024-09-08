@@ -6,7 +6,7 @@
 
 class AIGS_Elevator;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ElevatorEntrance : public AActor {
     GENERATED_BODY()
 public:

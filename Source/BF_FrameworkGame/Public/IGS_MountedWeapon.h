@@ -24,7 +24,7 @@ class UIGS_SimpleReloader;
 class UIGS_WeaponInventoryObject;
 class UTimelineComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MountedWeapon : public AIGS_WeaponBase {
     GENERATED_BODY()
 public:

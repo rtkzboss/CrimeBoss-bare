@@ -28,7 +28,7 @@ class UPrimitiveComponent;
 class USceneComponent;
 class USkeletalMesh;
 
-UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_GlassRegular : public USkeletalMeshComponent, public IIGS_ProjectileOverlappable, public IIGS_GlassInterface {
     GENERATED_BODY()
 public:

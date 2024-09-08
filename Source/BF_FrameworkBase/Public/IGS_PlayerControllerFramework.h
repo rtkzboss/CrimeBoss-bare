@@ -11,7 +11,7 @@
 class AIGS_GameCharacterFramework;
 class UActorComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_PlayerControllerFramework : public APlayerController, public IIGS_CharacterIDInterface, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:

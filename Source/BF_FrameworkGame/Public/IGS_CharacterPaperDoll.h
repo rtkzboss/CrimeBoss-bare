@@ -16,7 +16,7 @@ class USceneComponent;
 class USkeletalMeshComponent;
 class USkeletalMeshComponentBudgeted;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_CharacterPaperDoll : public APaperDollAbstract, public IIGS_WieldAnyItemInterface, public IIGS_DialogueInterface {
     GENERATED_BODY()
 public:

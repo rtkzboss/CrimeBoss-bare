@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_LevelActorsManagerComponent : public UIGS_LevelActorsManagerBaseComponent {
     GENERATED_BODY()
 public:

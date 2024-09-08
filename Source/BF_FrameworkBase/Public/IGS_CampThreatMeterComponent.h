@@ -5,7 +5,7 @@
 #include "IGS_OnCampingChangedEventSignatureDelegate.h"
 #include "IGS_CampThreatMeterComponent.generated.h"
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_CampThreatMeterComponent : public UActorComponent {
     GENERATED_BODY()
 public:

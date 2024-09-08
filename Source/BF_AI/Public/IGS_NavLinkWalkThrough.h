@@ -3,7 +3,7 @@
 #include "IGS_NavLinkBase.h"
 #include "IGS_NavLinkWalkThrough.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_NavLinkWalkThrough : public AIGS_NavLinkBase {
     GENERATED_BODY()
 public:

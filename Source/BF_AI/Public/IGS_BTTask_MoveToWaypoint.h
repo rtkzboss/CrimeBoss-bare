@@ -4,7 +4,7 @@
 #include "BTTask_MoveToWithRepath.h"
 #include "IGS_BTTask_MoveToWaypoint.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToWaypoint : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:

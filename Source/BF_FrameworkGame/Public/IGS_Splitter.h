@@ -6,7 +6,7 @@
 
 class UShapeComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Splitter : public AActor, public IIGS_BreachInterface {
     GENERATED_BODY()
 public:

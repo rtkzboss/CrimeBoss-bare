@@ -9,7 +9,7 @@
 
 class AIGS_PlayerCharacter;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerCameraComponent : public UIGS_CameraComponentBase {
     GENERATED_BODY()
 public:

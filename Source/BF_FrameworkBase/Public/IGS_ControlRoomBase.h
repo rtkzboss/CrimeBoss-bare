@@ -5,7 +5,7 @@
 
 class UIGS_GuardControlRoomComponentBase;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKBASE_API AIGS_ControlRoomBase : public AVolume {
     GENERATED_BODY()
 public:

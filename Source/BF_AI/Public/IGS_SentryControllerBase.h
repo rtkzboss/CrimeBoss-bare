@@ -10,7 +10,7 @@ class UIGS_SentryAggroComponent;
 class UIGS_SentryMemoryComponent;
 class UIGS_SentryPerceptionComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_SentryControllerBase : public AIGS_SentryControllerFramework {
     GENERATED_BODY()
 public:

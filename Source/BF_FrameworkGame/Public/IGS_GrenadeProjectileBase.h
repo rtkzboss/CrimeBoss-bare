@@ -14,7 +14,7 @@ class UNiagaraSystem;
 class UParticleSystem;
 class UPointLightComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GrenadeProjectileBase : public AIGS_ThrowableProjectileBase {
     GENERATED_BODY()
 public:

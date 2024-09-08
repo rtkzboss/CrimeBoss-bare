@@ -3,7 +3,7 @@
 #include "IGS_AlarmDeviceBase.h"
 #include "IGS_AlarmButtonBase.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AlarmButtonBase : public AIGS_AlarmDeviceBase {
     GENERATED_BODY()
 public:

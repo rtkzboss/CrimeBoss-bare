@@ -6,7 +6,7 @@
 #include "IGS_OnRevivedEventDelegate.h"
 #include "IGS_DownStateHandlerComponentBase.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DownStateHandlerComponentBase : public UIGS_DownStateHandlerComponentFramework {
     GENERATED_BODY()
 public:

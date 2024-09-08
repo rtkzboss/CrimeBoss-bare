@@ -20,7 +20,7 @@ class AIGS_GameCharacterBase;
 class AIGS_WaypointFramework;
 class UIGS_SettingsID;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_AISpawnPoint : public ANavigationObjectBase {
     GENERATED_BODY()
 public:

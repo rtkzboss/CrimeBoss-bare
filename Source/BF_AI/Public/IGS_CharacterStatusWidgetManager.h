@@ -6,7 +6,7 @@
 class AIGS_IntelligentGameCharacter;
 class UIGS_CharacterData;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_CharacterStatusWidgetManager : public UIGS_WorldSpaceWidgetBase {
     GENERATED_BODY()
 public:

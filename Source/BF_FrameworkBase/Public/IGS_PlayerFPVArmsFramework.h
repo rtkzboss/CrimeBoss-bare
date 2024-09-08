@@ -9,7 +9,7 @@ class UMaterialParameterCollectionInstance;
 class USceneComponent;
 class USkeletalMeshComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKBASE_API AIGS_PlayerFPVArmsFramework : public AFPVArmsAbstract {
     GENERATED_BODY()
 public:

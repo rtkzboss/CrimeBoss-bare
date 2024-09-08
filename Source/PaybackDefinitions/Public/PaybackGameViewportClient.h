@@ -4,7 +4,7 @@
 #include "BF_FocusSignatureDelegate.h"
 #include "PaybackGameViewportClient.generated.h"
 
-UCLASS(NonTransient, Config=Inherit)
+UCLASS(NonTransient)
 class PAYBACKDEFINITIONS_API UPaybackGameViewportClient : public UCommonGameViewportClient {
     GENERATED_BODY()
 public:

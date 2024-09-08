@@ -8,7 +8,7 @@ class AActor;
 class UMeshComponent;
 class USceneComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_OutlineComponent : public UActorComponent {
     GENERATED_BODY()
 public:

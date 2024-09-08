@@ -11,7 +11,7 @@ class UAkSwitchValue;
 class UIGS_MusicSongDataAsset;
 class UStaticMeshComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AUDIO_API AIGS_MusicPlayer : public AActor {
     GENERATED_BODY()
 public:

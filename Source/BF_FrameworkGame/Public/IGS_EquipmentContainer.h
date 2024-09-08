@@ -9,7 +9,7 @@ class UIGS_EquipmentInventoryObject;
 class UIGS_PickupInteractiveComponent;
 class UStaticMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_EquipmentContainer : public AActor {
     GENERATED_BODY()
 public:

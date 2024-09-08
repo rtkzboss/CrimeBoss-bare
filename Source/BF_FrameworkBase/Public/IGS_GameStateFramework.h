@@ -12,7 +12,7 @@ class UIGS_CarryableInventoryObject;
 class UIGS_InventoryObjectFramework;
 class UObject;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_GameStateFramework : public AIGS_GameStateBaseWithData {
     GENERATED_BODY()
 public:

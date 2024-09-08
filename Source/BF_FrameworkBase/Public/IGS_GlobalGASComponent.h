@@ -3,7 +3,7 @@
 #include "IGS_GASComponentBase.h"
 #include "IGS_GlobalGASComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_GlobalGASComponent : public UIGS_GASComponentBase {
     GENERATED_BODY()
 public:

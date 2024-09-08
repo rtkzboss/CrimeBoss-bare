@@ -24,7 +24,7 @@ class UIGS_ItemDropComponent;
 class UIGS_RollbackComponent;
 class UIGS_SettingsID;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_GameCharacterBase : public AIGS_GameCharacterFramework, public IAISightTargetInterface, public IRollbackable, public IIGS_HitEffectHandlerInterface {
     GENERATED_BODY()
 public:

@@ -10,7 +10,7 @@ class UIGS_ModInventoryObject;
 class UIGS_OutlineComponent;
 class UIGS_WeaponInventoryObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeaponModsHandler : public UActorComponent {
     GENERATED_BODY()
 public:

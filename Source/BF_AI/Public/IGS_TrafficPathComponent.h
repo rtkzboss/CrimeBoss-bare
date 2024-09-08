@@ -5,7 +5,7 @@
 
 class UObject;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_TrafficPathComponent : public UIGS_TrafficPathComponentFramework {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "EDLSSSettingOverride.h"
 #include "DLSSOverrideSettings.generated.h"
 
-UCLASS(ProjectUserConfig, Config=Inherit)
+UCLASS(ProjectUserConfig, Config=Engine)
 class DLSS_API UDLSSOverrideSettings : public UObject {
     GENERATED_BODY()
 public:

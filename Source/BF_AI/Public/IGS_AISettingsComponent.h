@@ -10,7 +10,7 @@ class UIGS_AIPrimaryWeaponDef;
 class UIGS_AISecondaryWeaponDef;
 class UIGS_SettingsID;
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AISettingsComponent : public UActorComponent {
     GENERATED_BODY()
 public:

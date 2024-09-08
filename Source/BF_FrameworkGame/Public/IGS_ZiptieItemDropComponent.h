@@ -8,7 +8,7 @@
 class AIGS_GameCharacterFramework;
 class AIGS_PickupActorBase;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ZiptieItemDropComponent : public UActorComponent {
     GENERATED_BODY()
 public:

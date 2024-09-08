@@ -6,7 +6,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, NotPlaceable, Config=Inherit)
+UCLASS(Abstract, NotPlaceable)
 class BF_FRAMEWORKBASE_API AIGS_SquadFramework : public AActor {
     GENERATED_BODY()
 public:

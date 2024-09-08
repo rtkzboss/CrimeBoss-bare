@@ -3,7 +3,7 @@
 #include "IGS_AnimatedInteractiveComponentSimple.h"
 #include "IGS_InteractionStealthKillComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractionStealthKillComponent : public UIGS_AnimatedInteractiveComponentSimple {
     GENERATED_BODY()
 public:

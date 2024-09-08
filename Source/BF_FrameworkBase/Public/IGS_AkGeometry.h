@@ -6,7 +6,7 @@
 class UAkGeometryComponent;
 class UStaticMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_AkGeometry : public AActor {
     GENERATED_BODY()
 public:

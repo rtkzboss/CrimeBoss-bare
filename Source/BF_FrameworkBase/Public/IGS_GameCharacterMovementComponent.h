@@ -14,7 +14,7 @@
 class UGameplayEffect;
 class UObject;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_GameCharacterMovementComponent : public UCharacterMovementComponent {
     GENERATED_BODY()
 public:

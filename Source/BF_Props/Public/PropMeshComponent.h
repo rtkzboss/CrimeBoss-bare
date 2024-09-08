@@ -7,7 +7,7 @@
 
 class UStaticMesh;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_PROPS_API UPropMeshComponent : public UStaticMeshComponent, public IPropInfoInterface {
     GENERATED_BODY()
 public:

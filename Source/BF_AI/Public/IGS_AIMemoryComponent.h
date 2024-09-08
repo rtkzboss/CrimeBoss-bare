@@ -9,7 +9,7 @@
 class AActor;
 class UIGS_SuspicionComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIMemoryComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "Camera/CameraComponent.h"
 #include "IGS_CameraComponentBase.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CameraComponentBase : public UCameraComponent {
     GENERATED_BODY()
 public:

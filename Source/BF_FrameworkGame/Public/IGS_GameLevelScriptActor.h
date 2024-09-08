@@ -6,7 +6,7 @@
 class AIGS_ObjectiveScenarioBase;
 class AIGS_ScriptManagerBase;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GameLevelScriptActor : public ALevelScriptActor {
     GENERATED_BODY()
 public:

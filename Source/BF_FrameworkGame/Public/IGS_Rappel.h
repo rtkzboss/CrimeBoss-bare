@@ -7,7 +7,7 @@
 class AIGS_GameCharacterFramework;
 class UIGS_RappelInteractiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Rappel : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:

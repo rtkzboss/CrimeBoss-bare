@@ -12,7 +12,7 @@ class AActor;
 class AIGS_RopeActor;
 class UAnimMontage;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_VehicleHeli : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:

@@ -15,7 +15,7 @@ class UIGS_DownStateDatabase;
 class UPhysicalAnimationComponent;
 class UPlayerDeathAnimationDatabase;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_ANIMATIONS_API UIGS_UPlayerAnimationComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class UIGS_ControllerSettings;
 
-UCLASS(BlueprintType, DefaultConfig, Config=Inherit)
+UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_ControllerSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:

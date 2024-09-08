@@ -5,7 +5,7 @@
 
 class UIGS_ThreatPointComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ThreatPointBase : public AActor {
     GENERATED_BODY()
 public:

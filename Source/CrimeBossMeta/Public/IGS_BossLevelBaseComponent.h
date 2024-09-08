@@ -8,7 +8,7 @@
 #include "META_BossLevelSaveData.h"
 #include "IGS_BossLevelBaseComponent.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_BossLevelBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

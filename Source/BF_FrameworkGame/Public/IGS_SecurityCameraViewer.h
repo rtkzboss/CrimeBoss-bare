@@ -19,7 +19,7 @@ class UAkStateValue;
 class UIGS_InteractiveComponent;
 class UStaticMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SecurityCameraViewer : public APawn, public IIGS_SubControllerMountableInterface {
     GENERATED_BODY()
 public:

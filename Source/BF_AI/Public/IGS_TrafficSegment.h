@@ -5,7 +5,7 @@
 
 class UIGS_TrafficPathComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_TrafficSegment : public AActor {
     GENERATED_BODY()
 public:

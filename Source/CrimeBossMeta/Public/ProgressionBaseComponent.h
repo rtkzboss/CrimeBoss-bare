@@ -14,7 +14,7 @@ class UIGS_ProgressionManager;
 class UIGS_SaveManager;
 class UIGS_UnlockManager;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UProgressionBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

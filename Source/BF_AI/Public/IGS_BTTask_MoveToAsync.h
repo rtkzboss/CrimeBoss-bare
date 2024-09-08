@@ -3,7 +3,7 @@
 #include "BehaviorTree/Tasks/BTTask_MoveTo.h"
 #include "IGS_BTTask_MoveToAsync.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class UIGS_BTTask_MoveToAsync : public UBTTask_MoveTo {
     GENERATED_BODY()
 public:

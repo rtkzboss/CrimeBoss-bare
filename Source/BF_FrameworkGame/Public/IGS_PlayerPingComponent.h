@@ -13,7 +13,7 @@ class AIGS_PlayerControllerFramework;
 class AIGS_SmartPingableWidgetActor;
 class UIGS_PingableComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerPingComponent : public UActorComponent {
     GENERATED_BODY()
 public:

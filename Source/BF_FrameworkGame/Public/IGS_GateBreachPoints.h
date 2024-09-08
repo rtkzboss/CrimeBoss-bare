@@ -5,7 +5,7 @@
 
 class UIGS_BreachPointComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GateBreachPoints : public AIGS_BreachPointsBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "BehaviorTree/Tasks/BTTask_RotateToFaceBBEntry.h"
 #include "IGS_BTTask_ComplexRotateToFaceBBEntry.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UIGS_BTTask_ComplexRotateToFaceBBEntry : public UBTTask_RotateToFaceBBEntry {
     GENERATED_BODY()
 public:

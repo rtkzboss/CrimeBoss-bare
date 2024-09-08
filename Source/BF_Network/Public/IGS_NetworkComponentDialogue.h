@@ -9,7 +9,7 @@
 class UAkSwitchValue;
 class UIGS_ComponentDialogueDataAsset;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentDialogue : public UActorComponent {
     GENERATED_BODY()
 public:

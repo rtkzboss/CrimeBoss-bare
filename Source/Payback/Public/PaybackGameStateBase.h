@@ -27,7 +27,7 @@ class UIGS_WorldSpaceWidgetManager;
 class UObject;
 class UPaybackWaveManager;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API APaybackGameStateBase : public AIGS_GameStateGame {
     GENERATED_BODY()
 public:

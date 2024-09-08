@@ -8,7 +8,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LookAtTriggerComponent : public USceneComponent {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "IGS_AIControllerScout_Base.h"
 #include "IGS_AIControllerScout_RapidFire.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_AIControllerScout_RapidFire : public AIGS_AIControllerScout_Base {
     GENERATED_BODY()
 public:

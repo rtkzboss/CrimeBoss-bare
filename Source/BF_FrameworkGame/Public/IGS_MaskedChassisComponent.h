@@ -17,7 +17,7 @@ class UCurveVector;
 class UDamageType;
 class UPrimitiveComponent;
 
-UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_MaskedChassisComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 public:

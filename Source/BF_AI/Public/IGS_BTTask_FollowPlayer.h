@@ -7,7 +7,7 @@
 
 class UEnvQuery;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UIGS_BTTask_FollowPlayer : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:

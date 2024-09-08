@@ -10,7 +10,7 @@
 class AIGS_GameCharacterFramework;
 class UIGS_InventoryObjectFramework;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ListInventory : public UActorComponent, public IIGS_InventoryInterface {
     GENERATED_BODY()
 public:

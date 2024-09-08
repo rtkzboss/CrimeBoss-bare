@@ -60,7 +60,7 @@ class UIGS_ThrowableTrajectoryComponent;
 class UIGS_UseComponent;
 class USpringArmComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PlayerCharacter : public AIGS_IntelligentGameCharacter, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface, public IIGS_SuspicionInterface {
     GENERATED_BODY()
 public:

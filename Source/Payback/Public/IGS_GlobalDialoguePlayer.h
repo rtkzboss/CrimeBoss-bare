@@ -7,7 +7,7 @@
 class UAkComponent;
 class UIGS_NetworkComponentDialogue;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API AIGS_GlobalDialoguePlayer : public AActor, public IIGS_DialogueInterface {
     GENERATED_BODY()
 public:

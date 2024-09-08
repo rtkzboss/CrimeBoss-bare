@@ -6,7 +6,7 @@
 
 class UEnvQuery;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToBestProximityPos : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:

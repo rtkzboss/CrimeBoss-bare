@@ -7,7 +7,7 @@
 class AIGS_RoomBase;
 class UIGS_SquadHeistersEventWatchComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_SquadHeisters : public AIGS_SquadBase {
     GENERATED_BODY()
 public:

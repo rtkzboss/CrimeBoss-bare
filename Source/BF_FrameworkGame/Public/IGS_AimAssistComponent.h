@@ -8,7 +8,7 @@
 class AActor;
 class UIGS_AimAssistConfigDataAsset;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AimAssistComponent : public UActorComponent {
     GENERATED_BODY()
 public:

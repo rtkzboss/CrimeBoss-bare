@@ -19,7 +19,7 @@ class UMETA_Equipment;
 class UMETA_PlotlineAsset;
 class UMETA_Weapon;
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_BlackmarketManagerComponent : public UIGS_BlackmarketManagerBaseComponent {
     GENERATED_BODY()
 public:

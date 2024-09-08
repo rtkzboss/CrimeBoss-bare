@@ -10,7 +10,7 @@
 
 class UStaticMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class CRIMEBOSSMETA_API AIGS_PlanningBoardItem : public AActor, public IVirtualCursorTarget {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class UIGS_WeakSpotComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API APaybackShielderCharacter : public APaybackAICharacter, public IIGS_HasWeakSpotInterface {
     GENERATED_BODY()
 public:

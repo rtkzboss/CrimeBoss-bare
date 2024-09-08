@@ -31,7 +31,7 @@ class USceneComponent;
 class USpotLightComponent;
 class UStaticMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WeaponBase : public AIGS_WieldableBase, public IIGS_BashInterface, public IIGS_ModMeshInterface {
     GENERATED_BODY()
 public:

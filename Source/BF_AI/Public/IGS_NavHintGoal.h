@@ -6,7 +6,7 @@
 
 class AAIController;
 
-UCLASS(NotPlaceable, Transient, Config=Inherit)
+UCLASS(NotPlaceable, Transient)
 class BF_AI_API AIGS_NavHintGoal : public AActor, public INavAgentInterface {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 #include "IGS_WeatherConfig.h"
 #include "IGS_WeatherConfigActor.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WeatherConfigActor : public AActor {
     GENERATED_BODY()
 public:

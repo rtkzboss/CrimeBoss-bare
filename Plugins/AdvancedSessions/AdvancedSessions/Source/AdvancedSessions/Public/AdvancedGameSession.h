@@ -4,7 +4,7 @@
 #include "GameFramework/OnlineReplStructs.h"
 #include "AdvancedGameSession.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class AAdvancedGameSession : public AGameSession {
     GENERATED_BODY()
 public:

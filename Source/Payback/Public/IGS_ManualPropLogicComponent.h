@@ -3,7 +3,7 @@
 #include "IGS_PropLogicComponent.h"
 #include "IGS_ManualPropLogicComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UIGS_ManualPropLogicComponent : public UIGS_PropLogicComponent {
     GENERATED_BODY()
 public:

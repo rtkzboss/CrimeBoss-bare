@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "IGS_AchievementManagerBaseComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_AchievementManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

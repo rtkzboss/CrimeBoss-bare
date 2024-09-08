@@ -14,7 +14,7 @@ class UIGS_CharacterWieldablesHolderComponent;
 class UIGS_InventoryObjectFramework;
 class UIGS_PickupClassesData;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ItemDropComponent : public UActorComponent {
     GENERATED_BODY()
 public:

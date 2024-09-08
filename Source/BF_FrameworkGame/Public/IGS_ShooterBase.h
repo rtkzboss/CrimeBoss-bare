@@ -12,7 +12,7 @@ class UAkRtpc;
 class UAkSwitchValue;
 class UForceFeedbackEffect;
 
-UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ShooterBase : public UActorComponent {
     GENERATED_BODY()
 public:

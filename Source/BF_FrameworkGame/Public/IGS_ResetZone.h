@@ -10,7 +10,7 @@ class AIGS_LootBagPickup;
 class AIGS_PlayerCharacter;
 class UBoxComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ResetZone : public AActor {
     GENERATED_BODY()
 public:

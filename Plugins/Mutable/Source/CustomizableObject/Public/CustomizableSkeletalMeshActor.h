@@ -5,7 +5,7 @@
 
 class UCustomizableSkeletalComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class CUSTOMIZABLEOBJECT_API ACustomizableSkeletalMeshActor : public ASkeletalMeshActor {
     GENERATED_BODY()
 public:

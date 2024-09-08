@@ -9,7 +9,7 @@ class AIGS_GameCharacterFramework;
 class AIGS_WaypointBase;
 class AIGS_WaypointFramework;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_ScriptPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:

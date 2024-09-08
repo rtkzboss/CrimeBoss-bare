@@ -9,7 +9,7 @@ class USpotLightComponent;
 class UStaticMesh;
 class UTimelineComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_InteractiveWireBox : public AIGS_InteractiveWireBoxBase {
     GENERATED_BODY()
 public:

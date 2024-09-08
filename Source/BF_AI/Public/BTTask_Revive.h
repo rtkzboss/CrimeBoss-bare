@@ -6,7 +6,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UBTTask_Revive : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:

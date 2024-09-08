@@ -9,7 +9,7 @@
 #include "EMETA_Partner.h"
 #include "IGS_MediaManagerBaseComponent.generated.h"
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_MediaManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -20,7 +20,7 @@ class UIGS_SearchPointComponent;
 class UIGS_ThreatPointComponent;
 class UPrimitiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_RoomBase : public AIGS_RoomFramework, public INavRelevantInterface {
     GENERATED_BODY()
 public:

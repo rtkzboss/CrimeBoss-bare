@@ -6,7 +6,7 @@
 #include "EIGS_StormType.h"
 #include "IGS_WaveManagerWatcher.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WaveManagerWatcher : public AActor {
     GENERATED_BODY()
 public:

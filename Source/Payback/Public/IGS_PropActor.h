@@ -3,7 +3,7 @@
 #include "IGS_PropActorBase.h"
 #include "IGS_PropActor.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API AIGS_PropActor : public AIGS_PropActorBase {
     GENERATED_BODY()
 public:

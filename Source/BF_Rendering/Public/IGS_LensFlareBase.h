@@ -7,7 +7,7 @@ class UMaterialInstanceDynamic;
 class USceneComponent;
 class USphereComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_RENDERING_API AIGS_LensFlareBase : public AActor {
     GENERATED_BODY()
 public:

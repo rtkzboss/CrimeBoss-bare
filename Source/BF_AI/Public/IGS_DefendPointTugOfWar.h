@@ -7,7 +7,7 @@
 
 class AIGS_WaypointBase;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_DefendPointTugOfWar : public AIGS_DefendPointBase {
     GENERATED_BODY()
 public:

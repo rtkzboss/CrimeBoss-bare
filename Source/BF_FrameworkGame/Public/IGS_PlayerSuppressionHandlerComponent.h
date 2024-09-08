@@ -10,7 +10,7 @@ class AIGS_GameCharacterBase;
 class UAkAudioEvent;
 class UAkRtpc;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerSuppressionHandlerComponent : public UIGS_SuppressionHandlerComponent {
     GENERATED_BODY()
 public:

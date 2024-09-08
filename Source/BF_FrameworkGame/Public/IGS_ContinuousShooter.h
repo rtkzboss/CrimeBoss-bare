@@ -5,7 +5,7 @@
 
 class AIGS_ProjectileContinuous;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ContinuousShooter : public UIGS_ShooterBase {
     GENERATED_BODY()
 public:

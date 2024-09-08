@@ -6,7 +6,7 @@
 
 class UEnvQuery;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UBTTask_MoveToDefendPos : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:

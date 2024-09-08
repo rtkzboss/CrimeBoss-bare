@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_RideableVehicleBaseFramework : public APawn {
     GENERATED_BODY()
 public:

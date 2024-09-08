@@ -3,7 +3,7 @@
 #include "IGS_AIControllerGame.h"
 #include "IGS_AIControllerHeistersBackup.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_AIControllerHeistersBackup : public AIGS_AIControllerGame {
     GENERATED_BODY()
 public:

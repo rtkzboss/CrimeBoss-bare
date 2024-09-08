@@ -10,7 +10,7 @@ class AIGS_GameCharacterFramework;
 class UBoxComponent;
 class UIGS_NavLinkComponentFramework;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_NavLinkBase : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:

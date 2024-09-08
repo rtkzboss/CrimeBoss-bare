@@ -6,7 +6,7 @@
 #include "IGS_ProjectileOverlappable.h"
 #include "IGS_CapsuleOverlappableComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_CapsuleOverlappableComponent : public UCapsuleComponent, public IIGS_ProjectileOverlappable {
     GENERATED_BODY()
 public:

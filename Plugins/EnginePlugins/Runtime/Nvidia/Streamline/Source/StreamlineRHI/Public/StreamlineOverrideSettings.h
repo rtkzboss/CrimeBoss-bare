@@ -4,7 +4,7 @@
 #include "EStreamlineSettingOverride.h"
 #include "StreamlineOverrideSettings.generated.h"
 
-UCLASS(ProjectUserConfig, Config=Inherit)
+UCLASS(ProjectUserConfig, Config=Engine)
 class STREAMLINERHI_API UStreamlineOverrideSettings : public UObject {
     GENERATED_BODY()
 public:

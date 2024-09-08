@@ -5,7 +5,7 @@
 #include "IGS_BTTask_MoveToAsync.h"
 #include "IGS_BTTask_MoveToBase.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToBase : public UIGS_BTTask_MoveToAsync {
     GENERATED_BODY()
 public:

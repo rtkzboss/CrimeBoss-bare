@@ -3,7 +3,7 @@
 #include "Components/SphereComponent.h"
 #include "IGS_CustomSphereComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CustomSphereComponent : public USphereComponent {
     GENERATED_BODY()
 public:

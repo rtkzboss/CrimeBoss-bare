@@ -13,7 +13,7 @@ class AIGS_GameCharacterFramework;
 class UCoverPoint;
 class UShapeComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_DefendPointBase : public AIGS_WaypointVisitable, public IIGS_GameplayTagAssetInterfaceCustom {
     GENERATED_BODY()
 public:

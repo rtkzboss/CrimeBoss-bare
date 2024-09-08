@@ -5,7 +5,7 @@
 
 class UStaticMesh;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropMeshSpawner : public UIGS_PropMeshBase {
     GENERATED_BODY()
 public:

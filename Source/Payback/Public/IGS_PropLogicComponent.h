@@ -8,7 +8,7 @@ class AActor;
 class UIGS_PropActorSpawner;
 class UIGS_PropMeshSpawner;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropLogicComponent : public UIGS_PropLogicComponentBase {
     GENERATED_BODY()
 public:

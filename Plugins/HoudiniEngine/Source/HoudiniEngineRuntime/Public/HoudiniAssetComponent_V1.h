@@ -10,7 +10,7 @@ class UAssetUserData;
 class UFoliageType_InstancedStaticMesh;
 class UPhysicalMaterial;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHoudiniAssetComponent_V1 : public UPrimitiveComponent {
     GENERATED_BODY()
 public:

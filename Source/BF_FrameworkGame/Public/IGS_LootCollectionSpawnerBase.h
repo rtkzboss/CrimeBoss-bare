@@ -9,7 +9,7 @@ class AIGS_LootCollectionBase;
 class USceneComponent;
 class UStaticMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LootCollectionSpawnerBase : public AIGS_SpawnerBase {
     GENERATED_BODY()
 public:

@@ -10,7 +10,7 @@ class UIGS_ShooterBase;
 class UIGS_SimpleHitScanShooter;
 class UStaticMeshComponent;
 
-UCLASS(Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_OverheatComponent : public UActorComponent {
     GENERATED_BODY()
 public:

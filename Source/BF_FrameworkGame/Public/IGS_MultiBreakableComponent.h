@@ -3,7 +3,7 @@
 #include "IGS_BreakableWindowComponent.h"
 #include "IGS_MultiBreakableComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_MultiBreakableComponent : public UIGS_BreakableWindowComponent {
     GENERATED_BODY()
 public:

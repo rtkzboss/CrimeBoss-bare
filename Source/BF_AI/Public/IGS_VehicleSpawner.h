@@ -13,7 +13,7 @@ class AIGS_VehicleBase;
 class UIGS_TrafficPathComponent;
 class UIGS_VehicleObject;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_VehicleSpawner : public AIGS_VehicleSpawnerFramework {
     GENERATED_BODY()
 public:

@@ -7,7 +7,7 @@ class IBlendableInterface;
 class UBlendableInterface;
 class UCameraComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_RENDERING_API UIGS_PostProcessManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:

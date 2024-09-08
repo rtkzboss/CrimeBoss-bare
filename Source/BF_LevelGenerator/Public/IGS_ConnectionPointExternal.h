@@ -3,7 +3,7 @@
 #include "IGS_ConnectionPointBase.h"
 #include "IGS_ConnectionPointExternal.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_LEVELGENERATOR_API AIGS_ConnectionPointExternal : public AIGS_ConnectionPointBase {
     GENERATED_BODY()
 public:

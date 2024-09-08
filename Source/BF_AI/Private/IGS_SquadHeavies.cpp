@@ -5,7 +5,7 @@
 
 AIGS_SquadHeavies::AIGS_SquadHeavies(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).DebugColor.G = 255;
-    (*this).DebugColor.R = 141;
+    (*this).DebugColor.R = 166;
 }
 
 

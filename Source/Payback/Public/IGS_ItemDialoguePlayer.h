@@ -9,7 +9,7 @@ class UAkComponent;
 class UAkSwitchValue;
 class UIGS_NetworkComponentDialogue;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class PAYBACK_API AIGS_ItemDialoguePlayer : public AActor, public IIGS_DialogueInterface {
     GENERATED_BODY()
 public:

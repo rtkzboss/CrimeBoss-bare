@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerBotOrderComponent : public UActorComponent {
     GENERATED_BODY()
 public:

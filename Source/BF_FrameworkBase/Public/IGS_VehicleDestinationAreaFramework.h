@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_VehicleDestinationAreaFramework.generated.h"
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKBASE_API AIGS_VehicleDestinationAreaFramework : public AActor {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "IGS_SquadGuardians.h"
 #include "IGS_SquadCop.generated.h"
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_SquadCop : public AIGS_SquadGuardians {
     GENERATED_BODY()
 public:

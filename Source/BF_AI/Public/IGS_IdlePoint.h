@@ -4,7 +4,7 @@
 #include "IGS_PatrolPoint.h"
 #include "IGS_IdlePoint.generated.h"
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_IdlePoint : public AIGS_PatrolPoint {
     GENERATED_BODY()
 public:

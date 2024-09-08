@@ -6,7 +6,7 @@
 
 class UAkAudioEvent;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerStatus : public UIGS_ObjectStatus {
     GENERATED_BODY()
 public:

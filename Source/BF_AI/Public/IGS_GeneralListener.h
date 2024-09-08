@@ -9,7 +9,7 @@ class AIGS_GeneralListener;
 class AIGS_GeneralListenerExclusionVolume;
 class UObject;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_GeneralListener : public APawn, public IGenericTeamAgentInterface {
     GENERATED_BODY()
 public:

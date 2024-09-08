@@ -3,7 +3,7 @@
 #include "Components/SceneComponent.h"
 #include "IGS_VehicleDestinationAreaPointComponent.generated.h"
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_VehicleDestinationAreaPointComponent : public USceneComponent {
     GENERATED_BODY()
 public:

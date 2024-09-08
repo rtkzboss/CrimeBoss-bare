@@ -3,7 +3,7 @@
 #include "IGS_Ladder.h"
 #include "IGS_Rope.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Rope : public AIGS_Ladder {
     GENERATED_BODY()
 public:

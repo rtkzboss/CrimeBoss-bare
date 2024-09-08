@@ -8,7 +8,7 @@ class UBoxComponent;
 class UIGS_GetActorByGameplayTagComponent;
 class UIGS_NavLinkComponentFramework;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AITransitionObjectBase : public AActor, public IIGS_BreachInterface {
     GENERATED_BODY()
 public:

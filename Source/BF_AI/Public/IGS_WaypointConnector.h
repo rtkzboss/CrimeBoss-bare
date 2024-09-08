@@ -7,7 +7,7 @@ class AIGS_WaypointBase;
 class UIGS_CustomBoxComponent;
 class USceneComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_WaypointConnector : public AIGS_WaypointFramework {
     GENERATED_BODY()
 public:

@@ -12,7 +12,7 @@ class UPrimitiveComponent;
 class USplineComponent;
 class UTextRenderComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WalkRope : public AActor {
     GENERATED_BODY()
 public:

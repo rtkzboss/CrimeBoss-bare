@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_SecurityCamera : public AIGS_DetectorBase {
     GENERATED_BODY()
 public:

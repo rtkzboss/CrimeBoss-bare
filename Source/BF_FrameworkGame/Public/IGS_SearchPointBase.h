@@ -5,7 +5,7 @@
 
 class UIGS_SearchPointComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SearchPointBase : public AActor {
     GENERATED_BODY()
 public:

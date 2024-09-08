@@ -6,7 +6,7 @@
 
 class UEnvQuery;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UIGS_BTTask_GetOutOfAgent : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:

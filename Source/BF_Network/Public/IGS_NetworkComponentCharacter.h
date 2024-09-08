@@ -52,7 +52,7 @@ class UIGS_WeaponSkinData;
 class UIGS_WieldableInventoryObjectBase;
 class UMETA_WeaponInventoryObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentCharacter : public UActorComponent {
     GENERATED_BODY()
 public:

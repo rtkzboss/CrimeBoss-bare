@@ -28,7 +28,7 @@ class UIGS_LootItemInventoryObject;
 class UIGS_LootManager;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootManager : public UActorComponent {
     GENERATED_BODY()
 public:

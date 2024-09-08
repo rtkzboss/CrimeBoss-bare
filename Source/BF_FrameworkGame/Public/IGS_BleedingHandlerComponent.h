@@ -12,7 +12,7 @@ class AIGS_RoomBase;
 class UIGS_DamageTypeBase;
 class UPhysicalMaterial;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BleedingHandlerComponent : public UIGS_DownStateHandlerComponentBase {
     GENERATED_BODY()
 public:

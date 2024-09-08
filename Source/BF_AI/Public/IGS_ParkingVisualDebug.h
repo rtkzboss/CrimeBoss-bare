@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_ParkingVisualDebug.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_ParkingVisualDebug : public AActor {
     GENERATED_BODY()
 public:

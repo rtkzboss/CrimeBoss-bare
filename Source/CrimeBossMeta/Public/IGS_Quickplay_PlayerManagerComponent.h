@@ -3,7 +3,7 @@
 #include "IGS_PlayerManagerBaseComponent.h"
 #include "IGS_Quickplay_PlayerManagerComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_PlayerManagerComponent : public UIGS_PlayerManagerBaseComponent {
     GENERATED_BODY()
 public:

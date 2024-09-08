@@ -5,7 +5,7 @@
 #include "IGS_AILeanChangedEventDelegate.h"
 #include "IGS_AIWorldTracingComponent.generated.h"
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AIWorldTracingComponent : public UActorComponent {
     GENERATED_BODY()
 public:

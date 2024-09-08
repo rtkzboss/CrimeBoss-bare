@@ -6,7 +6,7 @@
 
 class UShapeComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_DefendPointInitial : public AIGS_DefendPointBase {
     GENERATED_BODY()
 public:

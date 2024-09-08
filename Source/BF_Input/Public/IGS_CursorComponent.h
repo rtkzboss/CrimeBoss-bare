@@ -5,7 +5,7 @@
 
 class UIGS_CursorWidget;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_INPUT_API UIGS_CursorComponent : public UActorComponent {
     GENERATED_BODY()
 public:

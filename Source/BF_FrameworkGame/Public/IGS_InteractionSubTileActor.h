@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_InteractionSubTileActor : public AActor {
     GENERATED_BODY()
 public:

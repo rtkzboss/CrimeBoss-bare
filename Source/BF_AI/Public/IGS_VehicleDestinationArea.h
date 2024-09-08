@@ -16,7 +16,7 @@ class UIGS_TrafficPathComponent;
 class UIGS_VehicleDestinationAreaPointComponent;
 class USceneComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_VehicleDestinationArea : public AIGS_VehicleDestinationAreaFramework, public IIGS_VehicleDestinationInterface {
     GENERATED_BODY()
 public:

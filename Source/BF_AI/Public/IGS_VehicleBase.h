@@ -26,7 +26,7 @@ class UIGS_VehiclePathFollowerComponent;
 class UPFPathFollowerComponent;
 class USkeletalMeshComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_VehicleBase : public AActor, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:

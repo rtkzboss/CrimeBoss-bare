@@ -6,7 +6,7 @@
 
 class USceneComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_LEVELGENERATOR_API AIGS_ConnectionPointBase : public AActor {
     GENERATED_BODY()
 public:

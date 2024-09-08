@@ -27,7 +27,7 @@ class USceneComponent;
 class USimpleWheeledVehicleMovementComponent;
 class UStaticMeshComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_VehicleCar : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:

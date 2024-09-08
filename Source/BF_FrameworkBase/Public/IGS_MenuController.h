@@ -3,7 +3,7 @@
 #include "GameFramework/PlayerController.h"
 #include "IGS_MenuController.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_MenuController : public APlayerController {
     GENERATED_BODY()
 public:

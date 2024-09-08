@@ -4,7 +4,7 @@
 #include "GameFramework/Actor.h"
 #include "ScalableMap.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class ST_FRAMEWORK_API AScalableMap : public AActor {
     GENERATED_BODY()
 public:

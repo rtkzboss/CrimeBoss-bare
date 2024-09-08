@@ -7,7 +7,7 @@
 class AIGS_PlayerCharacter;
 class UIGS_CarryableInventoryObject;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CarryableInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:

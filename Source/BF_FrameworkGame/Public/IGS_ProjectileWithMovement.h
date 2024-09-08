@@ -9,7 +9,7 @@ class AActor;
 class UPrimitiveComponent;
 class UProjectileMovementComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_ProjectileWithMovement : public AIGS_ProjectileBase {
     GENERATED_BODY()
 public:

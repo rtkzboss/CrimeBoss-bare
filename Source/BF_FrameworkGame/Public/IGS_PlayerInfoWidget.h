@@ -5,7 +5,7 @@
 
 class AIGS_IntelligentGameCharacter;
 
-UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerInfoWidget : public UWidgetComponent {
     GENERATED_BODY()
 public:

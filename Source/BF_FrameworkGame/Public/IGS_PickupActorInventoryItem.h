@@ -17,7 +17,7 @@ class UIGS_OutlineComponent;
 class UIGS_PickupInteractiveComponent;
 class UIGS_WeaponSkinData;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PickupActorInventoryItem : public AIGS_PickupActorBase {
     GENERATED_BODY()
 public:

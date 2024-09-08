@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_WaypointFramework.generated.h"
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKBASE_API AIGS_WaypointFramework : public AActor {
     GENERATED_BODY()
 public:

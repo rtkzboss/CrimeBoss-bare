@@ -8,7 +8,7 @@
 #include "IGS_HeisterNumberInterface.h"
 #include "IGS_PlayerStateFramework.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_PlayerStateFramework : public APlayerState, public IIGS_CharacterIDInterface, public IIGS_HeisterNumberInterface {
     GENERATED_BODY()
 public:

@@ -15,7 +15,7 @@ class UGameplayEffect;
 class UIGS_GASDefaultAttributesDataAsset;
 class UObject;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_GASComponentBase : public UAbilitySystemComponent {
     GENERATED_BODY()
 public:

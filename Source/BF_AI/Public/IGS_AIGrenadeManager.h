@@ -15,7 +15,7 @@ class UIGS_AIGrenadeManager;
 class UIGS_ThrowableInventoryObject;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIGrenadeManager : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "GameFramework/Volume.h"
 #include "IGS_AIVisionBlockingVolume.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AIVisionBlockingVolume : public AVolume {
     GENERATED_BODY()
 public:

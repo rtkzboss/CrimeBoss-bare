@@ -6,7 +6,7 @@
 #include "EIGS_SpawnAnimType.h"
 #include "IGS_AISpawningTest.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AISpawningTest : public AActor {
     GENERATED_BODY()
 public:

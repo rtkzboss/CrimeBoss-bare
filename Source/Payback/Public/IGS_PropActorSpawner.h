@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropActorSpawner : public USceneComponent {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "GameFramework/Volume.h"
 #include "IGS_HideInGameVolume.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_HideInGameVolume : public AVolume {
     GENERATED_BODY()
 public:

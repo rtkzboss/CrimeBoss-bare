@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "IGS_SimpleActor.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SimpleActor : public AActor {
     GENERATED_BODY()
 public:

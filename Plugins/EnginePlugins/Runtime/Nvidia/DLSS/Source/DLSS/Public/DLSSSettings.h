@@ -4,7 +4,7 @@
 #include "EDLSSPreset.h"
 #include "DLSSSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Inherit)
+UCLASS(DefaultConfig, Config=Engine)
 class DLSS_API UDLSSSettings : public UObject {
     GENERATED_BODY()
 public:

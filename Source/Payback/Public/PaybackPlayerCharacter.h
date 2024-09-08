@@ -6,7 +6,7 @@
 class UIGS_NetworkComponentAnimation;
 class UIGS_NetworkComponentCharacter;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API APaybackPlayerCharacter : public AIGS_PlayerCharacter {
     GENERATED_BODY()
 public:

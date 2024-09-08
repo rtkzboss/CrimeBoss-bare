@@ -8,7 +8,7 @@
 
 class UIGS_GameSettings;
 
-UCLASS(BlueprintType, DefaultConfig, Config=Inherit)
+UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_GameSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:

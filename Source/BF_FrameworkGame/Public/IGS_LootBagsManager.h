@@ -7,7 +7,7 @@ class AIGS_LootBagPickup;
 class UIGS_LootBagsManager;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootBagsManager : public UActorComponent {
     GENERATED_BODY()
 public:

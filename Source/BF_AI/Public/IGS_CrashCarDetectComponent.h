@@ -12,7 +12,7 @@ class AIGS_VehicleCar;
 class UPrimitiveComponent;
 class UShapeComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_CrashCarDetectComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "Engine/DebugCameraController.h"
 #include "PaybackDebugCameraController.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API APaybackDebugCameraController : public ADebugCameraController {
     GENERATED_BODY()
 public:

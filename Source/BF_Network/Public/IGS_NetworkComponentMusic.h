@@ -4,7 +4,7 @@
 #include "EIGS_MusicMissionState.h"
 #include "IGS_NetworkComponentMusic.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentMusic : public UActorComponent {
     GENERATED_BODY()
 public:

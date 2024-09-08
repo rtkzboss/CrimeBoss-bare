@@ -5,7 +5,7 @@
 
 class AIGS_GameCharacterFramework;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_AISpawnPointVIP : public AIGS_AISpawnPoint {
     GENERATED_BODY()
 public:

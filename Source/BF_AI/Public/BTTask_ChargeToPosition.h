@@ -3,7 +3,7 @@
 #include "IGS_BTTask_MoveToBase.h"
 #include "BTTask_ChargeToPosition.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UBTTask_ChargeToPosition : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:

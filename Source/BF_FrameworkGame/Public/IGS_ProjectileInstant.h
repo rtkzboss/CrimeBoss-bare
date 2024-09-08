@@ -5,7 +5,7 @@
 
 class UNiagaraSystem;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ProjectileInstant : public AIGS_ProjectileBase {
     GENERATED_BODY()
 public:

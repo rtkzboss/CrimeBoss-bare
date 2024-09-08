@@ -9,7 +9,7 @@ class UIGS_AIMemoryComponent;
 class UIGS_CharacterData;
 class UIGS_ObjectStatus;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIThreatComponent : public UActorComponent {
     GENERATED_BODY()
 public:

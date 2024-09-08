@@ -9,7 +9,7 @@ class UGameplayAbility;
 class UIGS_AbilityTask_SpawnThrowableProjectile;
 class UIGS_ThrowableInventoryObject;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_SpawnThrowableProjectile : public UAbilityTask {
     GENERATED_BODY()
 public:

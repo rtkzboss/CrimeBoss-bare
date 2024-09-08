@@ -8,7 +8,7 @@ class AIGS_GameCharacterFramework;
 class UIGS_LadderInteractiveComponent;
 class USceneComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Ladder : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:

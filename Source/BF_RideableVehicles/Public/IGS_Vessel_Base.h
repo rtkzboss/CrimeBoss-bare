@@ -14,7 +14,7 @@ class UCurveFloat;
 class UParticleSystemComponent;
 class UPrimitiveComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_RIDEABLEVEHICLES_API AIGS_Vessel_Base : public AIGS_RideableVehicle_Base {
     GENERATED_BODY()
 public:

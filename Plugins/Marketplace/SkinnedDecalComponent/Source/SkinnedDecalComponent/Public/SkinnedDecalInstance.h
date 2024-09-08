@@ -5,7 +5,7 @@
 
 class USkinnedDecalSampler;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SKINNEDDECALCOMPONENT_API USkinnedDecalInstance : public USceneComponent {
     GENERATED_BODY()
 public:

@@ -4,7 +4,7 @@
 #include "BTTask_MoveToWithRepath.h"
 #include "BTTask_MoveToCover.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API UBTTask_MoveToCover : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:

@@ -5,7 +5,7 @@
 
 class UIGS_MouseSettings;
 
-UCLASS(BlueprintType, DefaultConfig, Config=Inherit)
+UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_MouseSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:

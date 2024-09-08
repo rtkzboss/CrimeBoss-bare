@@ -5,7 +5,7 @@
 
 class UDataTable;
 
-UCLASS(BlueprintType, Config=Inherit)
+UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings_Achievements : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:

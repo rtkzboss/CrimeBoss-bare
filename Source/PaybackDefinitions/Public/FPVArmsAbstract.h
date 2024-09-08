@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "FPVArmsAbstract.generated.h"
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class PAYBACKDEFINITIONS_API AFPVArmsAbstract : public AActor {
     GENERATED_BODY()
 public:

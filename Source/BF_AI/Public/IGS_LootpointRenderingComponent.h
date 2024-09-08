@@ -3,7 +3,7 @@
 #include "Components/PrimitiveComponent.h"
 #include "IGS_LootpointRenderingComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_LootpointRenderingComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:

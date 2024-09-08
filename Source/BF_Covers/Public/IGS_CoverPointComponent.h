@@ -5,7 +5,7 @@
 
 class UCoverPoint;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_COVERS_API UIGS_CoverPointComponent : public UCapsuleComponent {
     GENERATED_BODY()
 public:

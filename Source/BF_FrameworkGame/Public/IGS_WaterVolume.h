@@ -12,7 +12,7 @@ class UAudioComponent;
 class UPrimitiveComponent;
 class USoundBase;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WaterVolume : public APhysicsVolume, public IInterface_PostProcessVolume {
     GENERATED_BODY()
 public:

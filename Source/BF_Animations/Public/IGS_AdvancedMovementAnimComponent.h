@@ -6,7 +6,7 @@
 class AIGS_PlayerFPVArmsFramework;
 class AIGS_WieldableBase;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_ANIMATIONS_API UIGS_AdvancedMovementAnimComponent : public UActorComponent {
     GENERATED_BODY()
 public:

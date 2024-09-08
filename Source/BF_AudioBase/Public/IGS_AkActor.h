@@ -7,7 +7,7 @@
 class UAkComponent;
 class UIGS_SignificanceComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AUDIOBASE_API AIGS_AkActor : public AActor {
     GENERATED_BODY()
 public:

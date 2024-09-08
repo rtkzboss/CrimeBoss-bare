@@ -9,7 +9,7 @@
 class AIGS_GameCharacterFramework;
 class ANavigationData;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_ProgressGadgetBase : public AIGS_SuspicionActorBase {
     GENERATED_BODY()
 public:

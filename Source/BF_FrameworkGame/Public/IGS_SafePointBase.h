@@ -5,7 +5,7 @@
 
 class UIGS_SafePointComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SafePointBase : public AActor {
     GENERATED_BODY()
 public:

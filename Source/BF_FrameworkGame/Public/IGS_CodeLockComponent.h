@@ -10,7 +10,7 @@
 class AActor;
 class AIGS_GameCharacterFramework;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CodeLockComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -19,7 +19,7 @@ class UIGS_MenuCommonData_Base;
 class UIGS_UnlockManagerComponent;
 class UMETA_LevelActorsManagerComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API AIGS_GameStateMenuBase : public AIGS_GameStateBaseWithData, public IMETA_GameModeAdapter, public IMETA_ManagersExplorer {
     GENERATED_BODY()
 public:

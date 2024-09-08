@@ -7,7 +7,7 @@ class UMaterialInterface;
 class UStaticMesh;
 class UStaticMeshComponent;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniMeshSplitInstancerComponent : public USceneComponent {
     GENERATED_BODY()
 public:

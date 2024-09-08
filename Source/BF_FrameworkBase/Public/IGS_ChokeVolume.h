@@ -7,7 +7,7 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_ChokeVolume : public ANavModifierVolume {
     GENERATED_BODY()
 public:

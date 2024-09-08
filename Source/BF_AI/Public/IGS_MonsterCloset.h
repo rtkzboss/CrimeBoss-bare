@@ -8,7 +8,7 @@ class AIGS_AIEnemyGroupSpawner;
 class AIGS_ScriptPoint;
 class UBoxComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_MonsterCloset : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:

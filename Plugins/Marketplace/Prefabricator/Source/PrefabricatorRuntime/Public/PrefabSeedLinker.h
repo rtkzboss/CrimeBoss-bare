@@ -6,7 +6,7 @@
 class APrefabActor;
 class UPrefabSeedLinkerComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PREFABRICATORRUNTIME_API APrefabSeedLinker : public AActor {
     GENERATED_BODY()
 public:

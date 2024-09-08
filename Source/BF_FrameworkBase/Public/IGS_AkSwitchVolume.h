@@ -5,7 +5,7 @@
 
 class UAkSwitchValue;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_AkSwitchVolume : public AVolume {
     GENERATED_BODY()
 public:

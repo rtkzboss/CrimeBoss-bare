@@ -5,7 +5,7 @@
 
 class UTimelineComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BlinkingLaserTrap : public AIGS_LaserTrap {
     GENERATED_BODY()
 public:

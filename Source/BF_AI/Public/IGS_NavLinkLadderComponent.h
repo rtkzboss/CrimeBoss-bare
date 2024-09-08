@@ -5,7 +5,7 @@
 
 class UAnimMontage;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkLadderComponent : public UIGS_NavLinkComponentBase {
     GENERATED_BODY()
 public:

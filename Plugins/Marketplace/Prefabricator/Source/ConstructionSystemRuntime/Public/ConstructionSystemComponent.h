@@ -11,7 +11,7 @@ class UConstructionSystemUIAsset;
 class UMaterialInterface;
 class UUserWidget;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemComponent : public UActorComponent {
     GENERATED_BODY()
 public:

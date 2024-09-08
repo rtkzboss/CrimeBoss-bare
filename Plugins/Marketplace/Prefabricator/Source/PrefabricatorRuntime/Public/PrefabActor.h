@@ -8,7 +8,7 @@
 class UPrefabComponent;
 class UPrefabricatorAsset;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PREFABRICATORRUNTIME_API APrefabActor : public AActor {
     GENERATED_BODY()
 public:

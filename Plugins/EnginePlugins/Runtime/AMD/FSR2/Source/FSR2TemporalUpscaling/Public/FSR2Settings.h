@@ -8,7 +8,7 @@
 #include "EFSR2QualityMode.h"
 #include "FSR2Settings.generated.h"
 
-UCLASS(DefaultConfig, Config=Inherit)
+UCLASS(DefaultConfig, Config=Engine)
 class FSR2TEMPORALUPSCALING_API UFSR2Settings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

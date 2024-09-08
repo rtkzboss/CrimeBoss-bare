@@ -12,7 +12,7 @@
 class AActor;
 class USceneComponent;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_RopeComponent : public UMeshComponent {
     GENERATED_BODY()
 public:

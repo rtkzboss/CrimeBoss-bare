@@ -3,7 +3,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "XeSSSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Inherit)
+UCLASS(DefaultConfig, Config=Engine)
 class XESSPLUGIN_API UXeSSSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

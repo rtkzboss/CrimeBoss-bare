@@ -8,7 +8,7 @@ class UIGS_BreachInterface;
 class UAkAudioEvent;
 class UStaticMeshComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_BreachExplodable : public AActor {
     GENERATED_BODY()
 public:

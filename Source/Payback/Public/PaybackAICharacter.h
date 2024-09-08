@@ -12,7 +12,7 @@ class UIGS_NetworkComponentCharacter;
 class UPaybackAICharactersEventsWatcher;
 class USphereComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API APaybackAICharacter : public AIGS_AIGameCharacter {
     GENERATED_BODY()
 public:

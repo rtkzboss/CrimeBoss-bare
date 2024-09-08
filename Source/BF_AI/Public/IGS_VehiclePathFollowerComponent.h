@@ -4,7 +4,7 @@
 #include "PFPathFollowerComponent.h"
 #include "IGS_VehiclePathFollowerComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_VehiclePathFollowerComponent : public UPFPathFollowerComponent {
     GENERATED_BODY()
 public:

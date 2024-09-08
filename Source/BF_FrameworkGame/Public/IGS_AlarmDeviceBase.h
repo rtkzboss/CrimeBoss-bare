@@ -10,7 +10,7 @@
 class AIGS_GameCharacterFramework;
 class UIGS_AIDirector;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AlarmDeviceBase : public AActor, public IIGS_SmartObjectInterface {
     GENERATED_BODY()
 public:

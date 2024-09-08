@@ -6,7 +6,7 @@
 
 class AController;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerSwapActor : public AActor {
     GENERATED_BODY()
 public:

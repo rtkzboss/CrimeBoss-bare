@@ -5,7 +5,7 @@
 
 class UDataTable;
 
-UCLASS(BlueprintType, Config=Inherit)
+UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_Common_DataDevSettings_Missions : public UIGS_Common_DataDevSettings_Base {
     GENERATED_BODY()
 public:

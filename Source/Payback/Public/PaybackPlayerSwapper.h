@@ -10,7 +10,7 @@ class AIGS_PlayerSwapActor;
 class APawn;
 class UObject;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UPaybackPlayerSwapper : public UActorComponent {
     GENERATED_BODY()
 public:

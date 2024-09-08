@@ -28,7 +28,7 @@ class UIGS_SubControllerMountable;
 class UIGS_SubControllerVehicle;
 class USphereComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerControllerRoot : public AIGS_PlayerControllerFramework {
     GENERATED_BODY()
 public:

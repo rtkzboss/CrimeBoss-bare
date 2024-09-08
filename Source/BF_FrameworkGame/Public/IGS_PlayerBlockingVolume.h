@@ -8,7 +8,7 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerBlockingVolume : public AVolume {
     GENERATED_BODY()
 public:

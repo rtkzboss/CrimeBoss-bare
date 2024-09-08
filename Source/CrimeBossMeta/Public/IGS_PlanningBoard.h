@@ -8,7 +8,7 @@
 
 class UMETA_BaseMission;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class CRIMEBOSSMETA_API AIGS_PlanningBoard : public AActor {
     GENERATED_BODY()
 public:

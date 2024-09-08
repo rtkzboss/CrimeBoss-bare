@@ -7,7 +7,7 @@
 class AIGS_GameCharacterFramework;
 class UShapeComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_AgentsCollectorBase : public AActor {
     GENERATED_BODY()
 public:

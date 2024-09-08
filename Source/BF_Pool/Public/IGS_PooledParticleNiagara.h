@@ -6,7 +6,7 @@
 class UNiagaraComponent;
 class UNiagaraSystem;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_POOL_API AIGS_PooledParticleNiagara : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:

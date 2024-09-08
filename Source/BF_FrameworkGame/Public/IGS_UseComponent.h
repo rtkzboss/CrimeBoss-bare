@@ -15,7 +15,7 @@ class AIGS_PlayerCharacter;
 class AIGS_PlayerControllerFramework;
 class UIGS_InteractiveComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_UseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -18,7 +18,7 @@ class UGameMetaTransferComponent;
 class UObject;
 class UPaybackPlayerSwapper;
 
-UCLASS(NonTransient, Config=Inherit)
+UCLASS(NonTransient)
 class PAYBACK_API APaybackGameModeBase : public AIGS_GameModeFramework {
     GENERATED_BODY()
 public:

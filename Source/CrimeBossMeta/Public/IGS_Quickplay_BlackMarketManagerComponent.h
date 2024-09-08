@@ -12,7 +12,7 @@ class UMETA_Perk;
 class UMETA_Weapon;
 class UMETA_WeaponSkin;
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_BlackMarketManagerComponent : public UIGS_BlackmarketManagerBaseComponent {
     GENERATED_BODY()
 public:

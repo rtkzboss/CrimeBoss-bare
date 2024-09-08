@@ -12,7 +12,7 @@ class AIGS_ObjectiveScenarioBase;
 class AIGS_ScriptManagerBase;
 class UIGS_RandomStreamHolder;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_LEVELGENERATOR_API AIGS_LevelBuilder_LevelScriptActor : public AIGS_GameLevelScriptActor {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class UIGS_AISense_Danger;
 
-UCLASS(EditInlineNew, Config=Inherit)
+UCLASS(EditInlineNew, Config=Game)
 class BF_AI_API UIGS_AISenseConfig_Danger : public UAISenseConfig {
     GENERATED_BODY()
 public:

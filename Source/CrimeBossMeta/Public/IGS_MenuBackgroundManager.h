@@ -4,7 +4,7 @@
 #include "GameplayTagContainer.h"
 #include "IGS_MenuBackgroundManager.generated.h"
 
-UCLASS(BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_MenuBackgroundManager : public UActorComponent {
     GENERATED_BODY()
 public:

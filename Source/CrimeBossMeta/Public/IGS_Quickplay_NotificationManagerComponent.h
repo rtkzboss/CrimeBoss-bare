@@ -3,7 +3,7 @@
 #include "IGS_NotificationManagerBaseComponent.h"
 #include "IGS_Quickplay_NotificationManagerComponent.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_NotificationManagerComponent : public UIGS_NotificationManagerBaseComponent {
     GENERATED_BODY()
 public:

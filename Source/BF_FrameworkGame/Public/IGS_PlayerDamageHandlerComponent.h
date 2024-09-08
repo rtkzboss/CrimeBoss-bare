@@ -7,7 +7,7 @@
 
 class UCurveFloat;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerDamageHandlerComponent : public UIGS_DamageHandlerComponent {
     GENERATED_BODY()
 public:

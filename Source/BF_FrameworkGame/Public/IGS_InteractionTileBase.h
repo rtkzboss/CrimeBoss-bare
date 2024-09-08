@@ -6,7 +6,7 @@
 
 class AIGS_InteractionSubTileActor;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractionTileBase : public UChildActorComponent {
     GENERATED_BODY()
 public:

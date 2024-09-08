@@ -6,7 +6,7 @@
 
 class UHoudiniHandleParameter;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniHandleComponent : public USceneComponent {
     GENERATED_BODY()
 public:

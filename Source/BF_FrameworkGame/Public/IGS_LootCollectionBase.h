@@ -15,7 +15,7 @@ class UIGS_LootItemBaseComponent;
 class ULightComponentBase;
 class USceneComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LootCollectionBase : public AActor {
     GENERATED_BODY()
 public:

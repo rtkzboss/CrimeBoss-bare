@@ -10,7 +10,7 @@ class UIGS_SubtitleManager;
 class UMETA_CommonData;
 class UMETA_EconomyData;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API AMETA_GameStateBase : public AIGS_GameStateMenuBase {
     GENERATED_BODY()
 public:

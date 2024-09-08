@@ -9,7 +9,7 @@ class UIGS_RoomPathfindingComponent;
 class UIGS_SquadAggroComponent;
 class UIGS_SquadSpeedSynchronizationComponent;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_SquadSwat : public AIGS_SquadBase {
     GENERATED_BODY()
 public:

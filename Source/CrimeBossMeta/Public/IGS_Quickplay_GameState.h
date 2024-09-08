@@ -10,7 +10,7 @@ class UIGS_SubtitleManager;
 class UMETA_NotificationManagerComponent;
 class UMETA_QuickPlayData;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class CRIMEBOSSMETA_API AIGS_Quickplay_GameState : public AIGS_GameStateMenuBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "NavMesh/RecastNavMesh.h"
 #include "IGS_NavMeshBase.generated.h"
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_NAVIGATION_API AIGS_NavMeshBase : public ARecastNavMesh {
     GENERATED_BODY()
 public:

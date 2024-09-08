@@ -6,7 +6,7 @@
 
 class UPhysicalMaterial;
 
-UCLASS(ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DamageHandlerComponent : public UIGS_DamageHandlerComponentFramework {
     GENERATED_BODY()
 public:

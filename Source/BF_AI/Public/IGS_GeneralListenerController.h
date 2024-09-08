@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_AI_API AIGS_GeneralListenerController : public AAIController {
     GENERATED_BODY()
 public:

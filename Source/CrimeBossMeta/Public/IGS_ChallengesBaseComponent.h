@@ -11,7 +11,7 @@ class UIGS_ChallengesDatabase;
 class UIGS_PaybackSaveGameAccount;
 class UIGS_SaveManager;
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_ChallengesBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:

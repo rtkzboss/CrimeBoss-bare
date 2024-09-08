@@ -8,7 +8,7 @@ class UIGS_AICommand;
 class UIGS_CoverPointComponent;
 class UIGS_CoverPointComponentsManager;
 
-UCLASS(Abstract, Config=Inherit)
+UCLASS(Abstract)
 class BF_AI_API AIGS_CoverPointActor : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:

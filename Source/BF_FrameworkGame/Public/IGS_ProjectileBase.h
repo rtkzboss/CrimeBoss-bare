@@ -14,7 +14,7 @@ class UDamageType;
 class UIGS_ImpactTypeObject;
 class UIGS_WeaponInventoryObject;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ProjectileBase : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:

@@ -14,7 +14,7 @@ class UBoxComponent;
 class UIGS_WeakSpotComponent;
 class UPrimitiveComponent;
 
-UCLASS(Config=Inherit)
+UCLASS()
 class PAYBACK_API APaybackRobotCharacter : public APaybackAICharacter, public IIGS_HasWeakSpotInterface {
     GENERATED_BODY()
 public:

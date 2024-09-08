@@ -5,7 +5,7 @@
 
 class UMETA_Character;
 
-UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Inherit, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_ChainManagerComponent : public UIGS_ChainManagerBaseComponent {
     GENERATED_BODY()
 public:
