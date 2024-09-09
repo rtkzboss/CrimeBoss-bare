@@ -711,6 +711,11 @@
 			]
 		},
 		{
+			"Name": "CrimeBoss",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "PS5AudioFeatures",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"

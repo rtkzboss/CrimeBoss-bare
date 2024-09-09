@@ -5,10 +5,10 @@ UHoudiniInputCameraComponent::UHoudiniInputCameraComponent() {
     (*this).AspectRatio = 1.000000000e+00f;
     (*this).OrthoWidth = 2.000000000e+00f;
     (*this).OrthoFarClipPlane = -1.000000000e+00f;
-    (*this).Guid.A = 1018788714;
-    (*this).Guid.B = 1268112136;
-    (*this).Guid.C = -1219407475;
-    (*this).Guid.D = -1131999000;
+    (*this).Guid.A = -648279538;
+    (*this).Guid.B = 1246969819;
+    (*this).Guid.C = 81422490;
+    (*this).Guid.D = -170260133;
 }
 
 
