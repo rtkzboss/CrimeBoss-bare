@@ -4,8 +4,6 @@
 #include "EIGS_TeamSideEnum.h"
 
 AIGS_SquadCivlian::AIGS_SquadCivlian(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).DebugColor.G = 0;
-    (*this).DebugColor.R = 122;
 }
 
 

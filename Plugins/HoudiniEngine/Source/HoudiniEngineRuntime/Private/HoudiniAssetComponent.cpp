@@ -85,10 +85,6 @@ UHoudiniAssetComponent::UHoudiniAssetComponent(const FObjectInitializer& ObjectI
     (*this).bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride = true;
     (*this).bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride = true;
     (*this).AssetId = -1;
-    (*this).ComponentGUID.A = 1760194047;
-    (*this).ComponentGUID.B = 1335619248;
-    (*this).ComponentGUID.C = 1001638328;
-    (*this).ComponentGUID.D = -888655117;
     (*this).AssetState = EHoudiniAssetState::NewHDA;
     (*this).SubAssetIndex = 4294967295;
     (*this).bEnableCooking = true;
