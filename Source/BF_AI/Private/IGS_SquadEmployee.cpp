@@ -5,7 +5,7 @@
 
 AIGS_SquadEmployee::AIGS_SquadEmployee(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).DebugColor.B = 255;
-    (*this).DebugColor.G = 250;
+    (*this).DebugColor.G = 204;
     (*this).DebugColor.R = 0;
 }
 

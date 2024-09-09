@@ -53,7 +53,7 @@ void UPFPathFollowerComponent::SetMaxFollowerSpeed(float MaxSpeed) {
 void UPFPathFollowerComponent::SetCurrentDistance(float NewDistance) {
 }
 
-void UPFPathFollowerComponent::Reverse(bool NewReverse) {
+void UPFPathFollowerComponent::Reverse(bool Reverse) {
 }
 
 void UPFPathFollowerComponent::Pause() {

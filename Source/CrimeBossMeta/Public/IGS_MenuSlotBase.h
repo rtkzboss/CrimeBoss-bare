@@ -19,7 +19,7 @@ public:
     void UpdatePlayerHeisterData(APlayerState* inPlayerState, const FCommonHeisterData& inHeisterData);
     
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
-    void IsConfirmed(bool& NewIsConfirmed);
+    void IsConfirmed(bool& IsConfirmed);
     
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     EIGS_StorePlatform GetStorePlatform() const;

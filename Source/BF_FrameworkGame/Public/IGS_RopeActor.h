@@ -40,7 +40,7 @@ public:
     void RollOffRope();
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void PlayerStopUsingRope(bool NewRollOffRope, bool DestroyAfterUse);
+    void PlayerStopUsingRope(bool RollOffRope, bool DestroyAfterUse);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void PlayerStartUsingRope(AIGS_GameCharacterFramework* inUser, EIGS_RopeType inRopeType);

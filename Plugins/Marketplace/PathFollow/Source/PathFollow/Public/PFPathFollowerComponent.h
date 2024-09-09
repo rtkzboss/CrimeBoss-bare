@@ -258,7 +258,7 @@ public:
     void SetCurrentDistance(float NewDistance);
     
     UFUNCTION(BlueprintCallable)
-    void Reverse(bool NewReverse);
+    void Reverse(bool Reverse);
     
     UFUNCTION(BlueprintCallable)
     void Pause();
