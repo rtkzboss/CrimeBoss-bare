@@ -33,7 +33,7 @@ public:
     UPROPERTY()
     FText goalName;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UOverlay* ObjectiveOverlay;
     
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)

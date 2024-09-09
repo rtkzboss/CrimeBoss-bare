@@ -23,25 +23,25 @@ protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnSegmentTimeReset();
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UTimeSeriesPlot* PlotDS;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UBorder* GraphBorder;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UEditableTextBox* CurrPressure;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UEditableTextBox* ExpectedPressure;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UEditableTextBox* SpawnIntensity;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UEditableTextBox* IsActive;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UEditableTextBox* LastSegmentInfo;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

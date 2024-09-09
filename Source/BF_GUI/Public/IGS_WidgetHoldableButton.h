@@ -78,19 +78,19 @@ public:
     FOnButtonClickedEvent OnHoldFinished;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UBorder* HoldBorder;
     
     UPROPERTY(BlueprintReadWrite)
     UMaterialInstanceDynamic* ProgressMaterial;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UImage* Progress;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UTextBlock* ButtonText;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UIGS_WidgetInputKeyIcon* InputKeyIcon;
     
 };

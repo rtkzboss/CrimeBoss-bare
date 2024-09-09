@@ -20,16 +20,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetForceHidden(const bool inForceHidden);
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced, meta=(BindWidget))
     UTextBlock* Cyan;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced, meta=(BindWidget))
     UTextBlock* Magenta;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced, meta=(BindWidget))
     UTextBlock* White;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced, meta=(BindWidget))
     UTextBlock* TopLayer;
     
 };

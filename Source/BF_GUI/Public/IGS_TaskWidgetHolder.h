@@ -49,7 +49,7 @@ public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TSubclassOf<UIGS_TaskWidgetBase> TaskWidgetClass;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UHorizontalBox* HolderBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

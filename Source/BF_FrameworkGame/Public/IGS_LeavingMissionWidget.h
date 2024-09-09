@@ -17,7 +17,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetDefaultText();
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced, meta=(BindWidget))
     UTextBlock* Title;
     
 };

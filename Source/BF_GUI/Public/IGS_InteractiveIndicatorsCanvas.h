@@ -27,7 +27,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float FadeDistance;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(BindWidget))
     UCanvasPanel* IconCanvas;
     
 private:

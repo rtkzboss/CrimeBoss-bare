@@ -18,19 +18,19 @@ class BF_GUI_API UIGS_WidgetButton : public UIGS_WidgetButtonSimple {
 public:
     UIGS_WidgetButton();
 
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UImage* ButtonImage;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UTextBlock* ButtonText;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetDecorationBorder* ButtonBorder;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UImage* ButtonFlag;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     USizeBox* ButtonFlagSizeBox;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

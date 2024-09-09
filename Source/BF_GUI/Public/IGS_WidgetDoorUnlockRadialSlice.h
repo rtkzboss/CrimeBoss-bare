@@ -45,7 +45,7 @@ public:
     UIGS_GUIController* GUIController;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UImage* SliceImage;
     
 };

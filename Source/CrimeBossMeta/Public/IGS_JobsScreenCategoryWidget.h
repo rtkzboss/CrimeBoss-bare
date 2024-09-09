@@ -48,10 +48,10 @@ public:
     UFUNCTION(BlueprintPure)
     UIGS_JobsItemWidget* GetFirstJobWidget() const;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(Instanced, meta=(BindWidget))
     UHorizontalBox* CategoryContentBox;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(Instanced, meta=(BindWidget))
     UTextBlock* CategoryNameText;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

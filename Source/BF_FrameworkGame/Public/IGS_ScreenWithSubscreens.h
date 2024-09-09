@@ -16,7 +16,7 @@ public:
     UFUNCTION(BlueprintImplementableEvent)
     void RequestSubscreenChange(FGameplayTag inTag);
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UCommonActivatableWidgetSwitcher* WidgetSwitcher;
     
 protected:

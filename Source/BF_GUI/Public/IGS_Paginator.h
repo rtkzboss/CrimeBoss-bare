@@ -66,7 +66,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float AutoSwithcingRate;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced, meta=(BindWidget))
     UNamedSlot* ContentSlot;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
@@ -105,13 +105,13 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float InactivePageIndicatorScale;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UHorizontalBox* PageIndicatorsContainer;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UButton* LeftArrow;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UButton* RightArrow;
     
 };

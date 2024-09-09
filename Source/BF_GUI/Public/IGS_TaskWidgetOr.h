@@ -13,10 +13,10 @@ class BF_GUI_API UIGS_TaskWidgetOr : public UIGS_TaskWidgetBase {
 public:
     UIGS_TaskWidgetOr();
 
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UOverlay* FirstTaskBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UOverlay* SecondTaskBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

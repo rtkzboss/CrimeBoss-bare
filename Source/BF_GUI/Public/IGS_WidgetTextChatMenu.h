@@ -58,7 +58,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_GUIController> GUIController;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UEditableTextBox* ChatInput;
     
 };

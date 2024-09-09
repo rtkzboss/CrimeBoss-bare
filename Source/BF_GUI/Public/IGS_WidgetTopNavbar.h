@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_TabSelectedEvent OnTabSelectedEvent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UHorizontalBox* TabsOnly;
     
 private:

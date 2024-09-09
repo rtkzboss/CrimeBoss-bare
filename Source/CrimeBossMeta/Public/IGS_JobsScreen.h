@@ -72,10 +72,10 @@ public:
     UFUNCTION(BlueprintPure)
     int32 GetCategoriesCount();
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UHorizontalBox* JobsCategoriesContent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UIGSScrollBox* IGSScrollBoxWidget;
     
     UPROPERTY(EditAnywhere)

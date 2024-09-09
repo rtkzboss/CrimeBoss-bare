@@ -11,10 +11,10 @@ class BF_GUI_API UIGS_SubMenuConsoleGraphicsSettings : public UIGS_WidgetSubMenu
 public:
     UIGS_SubMenuConsoleGraphicsSettings();
 
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* FOVSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* RenderingModeSpinBox;
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)

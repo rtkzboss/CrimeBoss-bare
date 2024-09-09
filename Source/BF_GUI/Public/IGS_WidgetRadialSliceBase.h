@@ -32,7 +32,7 @@ public:
     FLinearColor HoverColor;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UImage* BackgroundImage;
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)

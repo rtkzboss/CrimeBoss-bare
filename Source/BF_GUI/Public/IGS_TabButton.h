@@ -22,10 +22,10 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer ScreenTags;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UIGS_FancyText* Icon;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UIGS_FancyText* CategoryTitle;
     
     UPROPERTY(BlueprintAssignable, BlueprintCallable)

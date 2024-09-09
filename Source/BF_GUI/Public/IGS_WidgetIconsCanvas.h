@@ -42,7 +42,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector2D EdgeMarginY;
     
-    UPROPERTY(Instanced)
+    UPROPERTY(Instanced, meta=(BindWidget))
     UCanvasPanel* IconCanvas;
     
 protected:

@@ -43,7 +43,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_InputAction InputActionToShow;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UTextBlock* CharacterText;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

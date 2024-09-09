@@ -42,7 +42,7 @@ public:
     FIGS_ObjectiveEvent OnObjectivesShown;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UVerticalBox* TaskBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

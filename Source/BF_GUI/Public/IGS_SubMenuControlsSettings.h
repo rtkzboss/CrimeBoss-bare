@@ -12,64 +12,64 @@ class BF_GUI_API UIGS_SubMenuControlsSettings : public UIGS_WidgetSubMenuSetting
 public:
     UIGS_SubMenuControlsSettings();
 
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* InvertVerticalLookSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSlider* ControllerSensitivitySlider;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ControllerSensitivityMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSlider* ControllerLeftDeadzoneSlider;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSlider* ControllerRightDeadzoneSlider;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DeadzoneMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSlider* ControllerADSMultiplierSlider;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* ControllerLinearExpoSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* ControllerVibrationIntensitySpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* ControllerUseOverReloadPrioSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* ControllerSwitchPingAndDropItemSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSlider* ControllerAimAssistIntensitySlider;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* InvertMouseSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSlider* MouseSensitivitySlider;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MouseSensitivityMultiplier;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* SprintToggleSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* CrouchToggleSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* AimToggleSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* SprintInterruptReloadToggleSpinBox;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* MagCheckInterruptSprintToggleSpinBox;
     
 };

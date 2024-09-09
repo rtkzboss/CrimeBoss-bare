@@ -62,13 +62,13 @@ protected:
     void OnValueChanged(float InValue);
     
 public:
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UTextBlock* SliderName;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetEditableNumberBox* SliderText;
     
-    UPROPERTY(BlueprintReadWrite, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetButtonInternal* ClickDetector;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
@@ -171,7 +171,7 @@ public:
     bool IsInFocusPath;
     
 protected:
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(Instanced, VisibleAnywhere, meta=(BindWidget))
     USlider* ValueSlider;
     
 };
