@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-USpeedometer::USpeedometer() : UUserWidget(FObjectInitializer::Get()) {
+USpeedometer::USpeedometer() : Super(FObjectInitializer::Get()) {
 }
 
 void USpeedometer::SetSpeed_Implementation(float inSpeed) {

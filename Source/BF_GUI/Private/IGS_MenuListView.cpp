@@ -4,7 +4,7 @@
 #include "Layout/Clipping.h"
 #include "Components/SlateWrapperTypes.h"
 
-UIGS_MenuListView::UIGS_MenuListView() : UListView(FObjectInitializer::Get()) {
+UIGS_MenuListView::UIGS_MenuListView() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_MenuListView::UnhoverListItem(UObject* inItem) {

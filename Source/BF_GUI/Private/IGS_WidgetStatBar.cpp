@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetStatBar::UIGS_WidgetStatBar() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetStatBar::UIGS_WidgetStatBar() : Super(FObjectInitializer::Get()) {
     (*this).ProgressBarBackground.R = 2.999999933e-02f;
     (*this).ProgressBarBackground.G = 3.700000048e-02f;
     (*this).ProgressBarBackground.B = 3.429999948e-02f;

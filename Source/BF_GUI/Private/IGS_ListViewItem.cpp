@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_ListViewItem::UIGS_ListViewItem() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_ListViewItem::UIGS_ListViewItem() : Super(FObjectInitializer::Get()) {
     (*this).bHoldEnabled = true;
     (*this).HoldTime = 1.000000000e+00f;
     (*this).HoldTicksPerSecond = 60;

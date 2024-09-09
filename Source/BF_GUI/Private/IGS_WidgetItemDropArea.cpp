@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetItemDropArea::UIGS_WidgetItemDropArea() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetItemDropArea::UIGS_WidgetItemDropArea() : Super(FObjectInitializer::Get()) {
 }
 
 

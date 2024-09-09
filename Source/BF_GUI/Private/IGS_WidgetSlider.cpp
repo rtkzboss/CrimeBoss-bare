@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetSlider::UIGS_WidgetSlider() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetSlider::UIGS_WidgetSlider() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_WidgetSlider::SetValue(float InValue) {

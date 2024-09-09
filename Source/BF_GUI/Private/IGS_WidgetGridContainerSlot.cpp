@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetGridContainerSlot::UIGS_WidgetGridContainerSlot() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetGridContainerSlot::UIGS_WidgetGridContainerSlot() : Super(FObjectInitializer::Get()) {
     (*this).NormalColor.R = 5.000000000e-01f;
     (*this).NormalColor.G = 5.000000000e-01f;
     (*this).NormalColor.B = 5.000000000e-01f;

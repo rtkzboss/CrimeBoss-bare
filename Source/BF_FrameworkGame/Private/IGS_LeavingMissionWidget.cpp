@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_LeavingMissionWidget::UIGS_LeavingMissionWidget() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_LeavingMissionWidget::UIGS_LeavingMissionWidget() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_LeavingMissionWidget::SetText(FText Text) {

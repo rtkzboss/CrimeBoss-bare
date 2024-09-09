@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetMainInventory::UIGS_WidgetMainInventory() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetMainInventory::UIGS_WidgetMainInventory() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_WidgetMainInventory::Setup(UIGS_ListInventory* inOwningContainer) {

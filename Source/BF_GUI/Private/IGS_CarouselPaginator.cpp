@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_CarouselPaginator::UIGS_CarouselPaginator() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_CarouselPaginator::UIGS_CarouselPaginator() : Super(FObjectInitializer::Get()) {
     (*this).AutoSwithcingRate = 5.000000000e+00f;
     (*this).ShowDots = true;
     (*this).AllowEndlessScroll = true;

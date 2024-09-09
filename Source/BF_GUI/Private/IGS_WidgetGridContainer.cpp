@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetGridContainer::UIGS_WidgetGridContainer() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetGridContainer::UIGS_WidgetGridContainer() : Super(FObjectInitializer::Get()) {
 }
 
 

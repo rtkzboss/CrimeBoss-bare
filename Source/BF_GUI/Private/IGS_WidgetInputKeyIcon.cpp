@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetInputKeyIcon::UIGS_WidgetInputKeyIcon() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetInputKeyIcon::UIGS_WidgetInputKeyIcon() : Super(FObjectInitializer::Get()) {
     (*this).InputActionToShow = EIGS_InputAction::IA_UNKNOWN;
 }
 

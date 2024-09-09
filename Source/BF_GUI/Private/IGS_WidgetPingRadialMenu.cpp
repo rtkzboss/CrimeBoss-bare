@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetPingRadialMenu::UIGS_WidgetPingRadialMenu() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetPingRadialMenu::UIGS_WidgetPingRadialMenu() : Super(FObjectInitializer::Get()) {
     (*this).MaxItemCount = 12;
     (*this).MinimalItemCountRadius = 8;
     (*this).RadiusIncreasePerItem = 2.400000000e+01f;

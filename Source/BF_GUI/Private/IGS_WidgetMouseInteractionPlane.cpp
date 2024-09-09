@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetMouseInteractionPlane::UIGS_WidgetMouseInteractionPlane() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetMouseInteractionPlane::UIGS_WidgetMouseInteractionPlane() : Super(FObjectInitializer::Get()) {
 }
 
 

@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetMainInventoryItem::UIGS_WidgetMainInventoryItem() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetMainInventoryItem::UIGS_WidgetMainInventoryItem() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_WidgetMainInventoryItem::TemporaryOnClickItem() {

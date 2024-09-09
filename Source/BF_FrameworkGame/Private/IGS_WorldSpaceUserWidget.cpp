@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WorldSpaceUserWidget::UIGS_WorldSpaceUserWidget() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WorldSpaceUserWidget::UIGS_WorldSpaceUserWidget() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_WorldSpaceUserWidget::SetTargeted(bool inTargeted) {

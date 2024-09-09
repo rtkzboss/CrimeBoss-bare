@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetFocusableSlider::UIGS_WidgetFocusableSlider() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetFocusableSlider::UIGS_WidgetFocusableSlider() : Super(FObjectInitializer::Get()) {
     (*this).SpinBoxNameText = FText::FromString(TEXT("##SPINBOX_NAME##"));
     (*this).MaxValue = 1.000000000e+00f;
     (*this).StepSize = 9.999999776e-03f;

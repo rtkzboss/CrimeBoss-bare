@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_DebugTogglesWidget::UIGS_DebugTogglesWidget() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_DebugTogglesWidget::UIGS_DebugTogglesWidget() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_DebugTogglesWidget::Toggle_WeaponVisibilityDraw(bool inChecked) const {

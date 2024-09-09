@@ -2,10 +2,10 @@
 #include "EHoudiniInputObjectType.h"
 
 UHoudiniInputDataTable::UHoudiniInputDataTable() {
-    (*this).Guid.A = 228066325;
-    (*this).Guid.B = 1238429213;
-    (*this).Guid.C = -860577902;
-    (*this).Guid.D = 1515419905;
+    (*this).Guid.A = -446742582;
+    (*this).Guid.B = 1082603013;
+    (*this).Guid.C = 53257112;
+    (*this).Guid.D = -467258927;
 }
 
 

@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_CursorWidget::UIGS_CursorWidget() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_CursorWidget::UIGS_CursorWidget() : Super(FObjectInitializer::Get()) {
 }
 
 bool UIGS_CursorWidget::IsCursorHovering() const {

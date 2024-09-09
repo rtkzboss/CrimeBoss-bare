@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetItemStat::UIGS_WidgetItemStat() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetItemStat::UIGS_WidgetItemStat() : Super(FObjectInitializer::Get()) {
     (*this).TextColor.R = 6.000000238e-01f;
     (*this).TextColor.G = 6.859999895e-01f;
     (*this).TextColor.B = 5.649999976e-01f;

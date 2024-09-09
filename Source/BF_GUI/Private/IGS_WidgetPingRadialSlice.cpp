@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetPingRadialSlice::UIGS_WidgetPingRadialSlice() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetPingRadialSlice::UIGS_WidgetPingRadialSlice() : Super(FObjectInitializer::Get()) {
     (*this).NormalColor.R = 5.000000000e-01f;
     (*this).NormalColor.G = 5.000000000e-01f;
     (*this).NormalColor.B = 5.000000000e-01f;

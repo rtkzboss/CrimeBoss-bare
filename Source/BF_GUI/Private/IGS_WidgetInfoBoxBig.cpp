@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_WidgetInfoBoxBig::UIGS_WidgetInfoBoxBig() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_WidgetInfoBoxBig::UIGS_WidgetInfoBoxBig() : Super(FObjectInitializer::Get()) {
     (*this).Name = FText::FromString(TEXT("UNKNOWN"));
     (*this).Info = FText::FromString(TEXT("UNKNOWN"));
     (*this).Type = FText::FromString(TEXT("UNKNOWN"));

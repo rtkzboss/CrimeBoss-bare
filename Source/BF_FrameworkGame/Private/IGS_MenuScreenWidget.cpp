@@ -4,7 +4,7 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Blueprint/UserWidget.h"
 
-UIGS_MenuScreenWidget::UIGS_MenuScreenWidget() : UUserWidget(FObjectInitializer::Get()) {
+UIGS_MenuScreenWidget::UIGS_MenuScreenWidget() : Super(FObjectInitializer::Get()) {
 }
 
 void UIGS_MenuScreenWidget::RequestSubscreenChange_Implementation(FGameplayTag inTag) {
