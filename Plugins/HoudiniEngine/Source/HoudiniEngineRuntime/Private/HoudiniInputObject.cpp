@@ -4,10 +4,10 @@ UHoudiniInputObject::UHoudiniInputObject() {
     (*this).InputObject = nullptr;
     (*this).InputNodeId = -1;
     (*this).InputObjectNodeId = -1;
-    (*this).Guid.A = 473513502;
-    (*this).Guid.B = 1092411497;
-    (*this).Guid.C = -706857589;
-    (*this).Guid.D = -883252708;
+    (*this).Guid.A = -1114578393;
+    (*this).Guid.B = 1176290400;
+    (*this).Guid.C = 1098753430;
+    (*this).Guid.D = -1922607404;
     (*this).bCanDeleteHoudiniNodes = true;
 }
 
