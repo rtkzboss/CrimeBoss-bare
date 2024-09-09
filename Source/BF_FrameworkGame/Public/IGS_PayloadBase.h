@@ -13,35 +13,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PayloadBase : public AActor {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnPayloadActiveChanged OnPayloadStateChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnPayloadActiveChanged OnPayloadEnabledChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnPayloadFinished OnPayloadFinishedEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UBoxComponent* BoxCollisionComponent;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_IsEnabled)
-    bool mR_bIsEnabled;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_IsActive)
-    bool mR_bIsActive;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_IsFinished)
-    bool mR_bIsFinished;
-    
-    UPROPERTY()
-    TArray<TWeakObjectPtr<AActor>> m_OverlappedActors;
-    
-public:
     AIGS_PayloadBase(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void SetEnabled(bool inState);
@@ -83,5 +55,32 @@ protected:
     UFUNCTION(BlueprintCallable)
     void FinishPayload();
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnPayloadActiveChanged OnPayloadStateChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnPayloadActiveChanged OnPayloadEnabledChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnPayloadFinished OnPayloadFinishedEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UBoxComponent* BoxCollisionComponent;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_IsEnabled)
+    bool mR_bIsEnabled;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_IsActive)
+    bool mR_bIsActive;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_IsFinished)
+    bool mR_bIsFinished;
+    
+    UPROPERTY()
+    TArray<TWeakObjectPtr<AActor>> m_OverlappedActors;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

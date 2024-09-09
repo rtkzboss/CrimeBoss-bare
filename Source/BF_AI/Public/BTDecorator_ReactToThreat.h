@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_ReactToThreat : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_ReactToThreat();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ReactToThreathKey;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
     
-public:
-    UBTDecorator_ReactToThreat();
-
 };
 

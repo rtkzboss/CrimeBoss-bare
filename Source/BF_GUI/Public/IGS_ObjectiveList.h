@@ -11,16 +11,16 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ObjectiveList : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_ObjectiveList();
+
+    UFUNCTION(BlueprintCallable)
+    void InitializeObjective();
+    
     UPROPERTY(BlueprintReadWrite, Instanced)
     UVerticalBox* ObjectiveBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_ObjectiveWidget> ObjectiveWidgetClass;
-    
-    UIGS_ObjectiveList();
-
-    UFUNCTION(BlueprintCallable)
-    void InitializeObjective();
     
 };
 

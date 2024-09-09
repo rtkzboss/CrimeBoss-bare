@@ -11,6 +11,11 @@ UCLASS()
 class COMMON_UTILS_API UIGS_CheckFreeWeeekendNodeBase : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
+    UIGS_CheckFreeWeeekendNodeBase();
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
+    static UIGS_CheckFreeWeeekendNodeBase* CheckFreeWeekendNodeBase(UObject* inWorldContextObject);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_FreeWeekendDelegate FreeWeekendActive;
     
@@ -19,11 +24,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_FreeWeekendDelegate FreeWeekendCheckFailed;
-    
-    UIGS_CheckFreeWeeekendNodeBase();
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
-    static UIGS_CheckFreeWeeekendNodeBase* CheckFreeWeekendNodeBase(UObject* inWorldContextObject);
     
 };
 

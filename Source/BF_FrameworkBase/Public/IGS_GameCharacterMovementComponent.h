@@ -18,6 +18,110 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_GameCharacterMovementComponent : public UCharacterMovementComponent {
     GENERATED_BODY()
 public:
+    UIGS_GameCharacterMovementComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void StopSlidingOnZipline();
+    
+    UFUNCTION(BlueprintCallable)
+    void StartRappelling();
+    
+    UFUNCTION(BlueprintCallable)
+    void SlideOnZipline(const FVector& inStartLocation, const FVector& inEndLocation);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMovementSpeed(EIGS_Speed inMovementSpeed);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLeaning(EIGS_CharacterLeaningDirectionEnum InDirection);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIsMantling(bool inIsMantling);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveMovementSpeedMultiplier(UObject* Owner);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnStartedFalling();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnLanded();
+    
+    UFUNCTION(BlueprintPure)
+    bool IsUsingBuzzsaw() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsSprinting() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsSlidingOnZipline() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsSliding() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsSlideInCooldown() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsRappelling() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsPartiallyInWater() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsOnRope() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsOnLadder() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsMantling() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsLeaning() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsInWater() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsInVentShaft() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetWalkSpeed() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetSprintSpeed() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool GetShouldRotateView() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetMovementSpeedMultiplier() const;
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_Speed GetMovementSpeed() const;
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_CharacterLeaningDirectionEnum GetLeaningDirection() const;
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetLastGroundedLocation() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetFullRunSpeed() const;
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetAdvancedMoveInteractionLocation() const;
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetAdvancedMoveForwardDir() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool CanMoveOnLadder() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void AddMovementSpeedMultiplier(UObject* Owner, float Multiplier);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseDafultUnrealRotation_TMP;
     
@@ -219,111 +323,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector LastGroundedLocation;
-    
-public:
-    UIGS_GameCharacterMovementComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void StopSlidingOnZipline();
-    
-    UFUNCTION(BlueprintCallable)
-    void StartRappelling();
-    
-    UFUNCTION(BlueprintCallable)
-    void SlideOnZipline(const FVector& inStartLocation, const FVector& inEndLocation);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMovementSpeed(EIGS_Speed inMovementSpeed);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLeaning(EIGS_CharacterLeaningDirectionEnum InDirection);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIsMantling(bool inIsMantling);
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveMovementSpeedMultiplier(UObject* Owner);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnStartedFalling();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnLanded();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsUsingBuzzsaw() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsSprinting() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsSlidingOnZipline() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsSliding() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsSlideInCooldown() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsRappelling() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsPartiallyInWater() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsOnRope() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsOnLadder() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsMantling() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsLeaning() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsInWater() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsInVentShaft() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetWalkSpeed() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetSprintSpeed() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool GetShouldRotateView() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetMovementSpeedMultiplier() const;
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_Speed GetMovementSpeed() const;
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_CharacterLeaningDirectionEnum GetLeaningDirection() const;
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetLastGroundedLocation() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetFullRunSpeed() const;
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetAdvancedMoveInteractionLocation() const;
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetAdvancedMoveForwardDir() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool CanMoveOnLadder() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void AddMovementSpeedMultiplier(UObject* Owner, float Multiplier);
     
 };
 

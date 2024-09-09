@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_PickupBag : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_PickupBag();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestPickupBag;
     
-    UIGS_BTTask_PickupBag();
-
 };
 

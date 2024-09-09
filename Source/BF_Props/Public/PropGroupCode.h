@@ -9,6 +9,8 @@ UCLASS()
 class BF_PROPS_API APropGroupCode : public AActor {
     GENERATED_BODY()
 public:
+    APropGroupCode(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(Instanced)
     TArray<UActorComponent*> PropCanSpawnList;
@@ -25,8 +27,5 @@ protected:
     UPROPERTY(Instanced)
     TMap<FName, UActorComponent*> ComponentMap;
     
-public:
-    APropGroupCode(const FObjectInitializer& ObjectInitializer);
-
 };
 

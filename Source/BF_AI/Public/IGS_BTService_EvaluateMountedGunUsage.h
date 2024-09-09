@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateMountedGunUsage : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateMountedGunUsage();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestMountedGunKey;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
     
-public:
-    UIGS_BTService_EvaluateMountedGunUsage();
-
 };
 

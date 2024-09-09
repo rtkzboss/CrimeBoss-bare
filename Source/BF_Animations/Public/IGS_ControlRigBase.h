@@ -9,10 +9,10 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_ControlRigBase : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_ControlRigBase();
+
     UPROPERTY()
     UControlRig* ControlRig;
     
-    UIGS_ControlRigBase();
-
 };
 

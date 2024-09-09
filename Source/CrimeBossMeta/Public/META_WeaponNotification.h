@@ -9,11 +9,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_WeaponNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    UMETA_Weapon* m_Weapon;
-    
-public:
     UMETA_WeaponNotification();
 
     UFUNCTION(BlueprintCallable)
@@ -21,6 +16,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     UMETA_Weapon* GetWeapon() const;
+    
+private:
+    UPROPERTY()
+    UMETA_Weapon* m_Weapon;
     
 };
 

@@ -8,6 +8,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterColor : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterColor();
+
 protected:
     UPROPERTY()
     FLinearColor Color;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY()
     bool bIsChildOfRamp;
     
-public:
-    UHoudiniParameterColor();
-
 };
 

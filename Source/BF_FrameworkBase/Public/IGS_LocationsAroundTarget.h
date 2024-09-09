@@ -9,12 +9,11 @@ UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_LocationsAroundTarget : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_LocationsAroundTarget();
+
 private:
     UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_CharacterData> OwnerCharacterData;
     
-public:
-    UIGS_LocationsAroundTarget();
-
 };
 

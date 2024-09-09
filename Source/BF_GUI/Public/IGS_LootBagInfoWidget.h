@@ -10,9 +10,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_LootBagInfoWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_LootBagComponent* LootBagComponent;
-    
     UIGS_LootBagInfoWidget();
 
 protected:
@@ -21,6 +18,10 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void RegisterGameCharacterEvents(AIGS_PlayerCharacter* inGameCharacter);
+    
+public:
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_LootBagComponent* LootBagComponent;
     
 };
 

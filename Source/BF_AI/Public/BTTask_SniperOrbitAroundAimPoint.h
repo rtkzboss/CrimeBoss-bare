@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTTask_SniperOrbitAroundAimPoint : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_SniperOrbitAroundAimPoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SnipePointKey;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(EditAnywhere)
     EIGS_AimType AimType;
     
-public:
-    UBTTask_SniperOrbitAroundAimPoint();
-
 };
 

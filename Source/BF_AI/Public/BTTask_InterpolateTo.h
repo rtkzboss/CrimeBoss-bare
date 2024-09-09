@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTTask_InterpolateTo : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UBTTask_InterpolateTo();
+
 private:
     UPROPERTY(EditAnywhere)
     float InterpolationSpeed;
@@ -15,8 +17,5 @@ private:
     UPROPERTY(EditAnywhere)
     EIGS_CharacterVsHeistersCollisionStatus MovingCharacterVsHeistersCollisionStatus;
     
-public:
-    UBTTask_InterpolateTo();
-
 };
 

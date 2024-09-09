@@ -20,6 +20,20 @@ UCLASS()
 class BF_AI_API AIGS_VehicleDestinationArea : public AIGS_VehicleDestinationAreaFramework, public IIGS_VehicleDestinationInterface {
     GENERATED_BODY()
 public:
+    AIGS_VehicleDestinationArea(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    TArray<AIGS_VehicleBase*> TriggerSpecificPassengersCarArrival(EIGS_VehicleSpawnGroup vehicleGroup, FIGS_NoSpawnPointDefinition inCustomPassengers, int32 vehicleCount);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<AIGS_VehicleBase*> TriggerCarArrivalBase(EIGS_VehicleSpawnGroup inVehicleGroup, FIGS_NoSpawnPointDefinition inCustomPassengers, int32 vehicleCount, int32 minPassengers, int32 maxPassengers);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<AIGS_VehicleBase*> TriggerCarArrival(EIGS_VehicleSpawnGroup vehicleGroup, int32 vehicleCount, int32 minPassengers, int32 maxPassengers);
+    
+    UFUNCTION()
+    void OnShowParkingAreasChanged(bool inOn);
+    
     UPROPERTY()
     TArray<TWeakObjectPtr<AIGS_VehicleBase>> Vehicles;
     
@@ -65,21 +79,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool IsActive;
-    
-public:
-    AIGS_VehicleDestinationArea(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    TArray<AIGS_VehicleBase*> TriggerSpecificPassengersCarArrival(EIGS_VehicleSpawnGroup vehicleGroup, FIGS_NoSpawnPointDefinition inCustomPassengers, int32 vehicleCount);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<AIGS_VehicleBase*> TriggerCarArrivalBase(EIGS_VehicleSpawnGroup inVehicleGroup, FIGS_NoSpawnPointDefinition inCustomPassengers, int32 vehicleCount, int32 minPassengers, int32 maxPassengers);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<AIGS_VehicleBase*> TriggerCarArrival(EIGS_VehicleSpawnGroup vehicleGroup, int32 vehicleCount, int32 minPassengers, int32 maxPassengers);
-    
-    UFUNCTION()
-    void OnShowParkingAreasChanged(bool inOn);
     
 
     // Fix for true pure virtual functions not being implemented

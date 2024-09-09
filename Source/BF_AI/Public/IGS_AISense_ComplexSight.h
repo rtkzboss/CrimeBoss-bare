@@ -7,6 +7,8 @@ UCLASS(Config=Game)
 class BF_AI_API UIGS_AISense_ComplexSight : public UAISense {
     GENERATED_BODY()
 public:
+    UIGS_AISense_ComplexSight();
+
 protected:
     UPROPERTY(Config, EditDefaultsOnly)
     int32 MaxTracesPerTick;
@@ -26,8 +28,5 @@ protected:
     UPROPERTY(Config, EditDefaultsOnly)
     float SightLimitQueryImportance;
     
-public:
-    UIGS_AISense_ComplexSight();
-
 };
 

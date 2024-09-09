@@ -11,6 +11,14 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_TabButton : public UIGS_WidgetButtonSimple {
     GENERATED_BODY()
 public:
+    UIGS_TabButton();
+
+    UFUNCTION(BlueprintCallable)
+    void SetIconText(const FText& InText);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCategoryTitleText(const FText& InText);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer ScreenTags;
     
@@ -25,14 +33,6 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_TabEvent OnTabFocused;
-    
-    UIGS_TabButton();
-
-    UFUNCTION(BlueprintCallable)
-    void SetIconText(const FText& InText);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCategoryTitleText(const FText& InText);
     
 };
 

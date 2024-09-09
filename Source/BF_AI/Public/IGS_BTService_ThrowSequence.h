@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_ThrowSequence : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_ThrowSequence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowRequestKey;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotKey;
     
-public:
-    UIGS_BTService_ThrowSequence();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_CallbackWithActions : public UMETA_BaseCallback {
     GENERATED_BODY()
 public:
+    UMETA_CallbackWithActions();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseCondition*> Conditions;
     
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 NextNode;
     
-public:
-    UMETA_CallbackWithActions();
-
 };
 

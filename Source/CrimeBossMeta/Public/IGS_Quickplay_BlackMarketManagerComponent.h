@@ -16,35 +16,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_BlackMarketManagerComponent : public UIGS_BlackmarketManagerBaseComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Character*> CharactersPool;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Weapon*> WeaponsPool;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Equipment*> EquipmentPool;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Perk*> PerksPool;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_CharacterSkin*> BossCharacterSkinsPool;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_WeaponSkin*> WeaponSkinsPool;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnseenUnlockedCharacterTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnseenUnlockedWeaponTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnseenUnlockedEquipmentTagIDs;
-    
-public:
     UIGS_Quickplay_BlackMarketManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -109,6 +80,34 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddItemsToPool(FGameplayTagContainer inItemTags);
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Character*> CharactersPool;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Weapon*> WeaponsPool;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Equipment*> EquipmentPool;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Perk*> PerksPool;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_CharacterSkin*> BossCharacterSkinsPool;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_WeaponSkin*> WeaponSkinsPool;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnseenUnlockedCharacterTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnseenUnlockedWeaponTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnseenUnlockedEquipmentTagIDs;
     
 };
 

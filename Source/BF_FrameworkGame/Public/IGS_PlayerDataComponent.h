@@ -7,6 +7,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerDataComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerDataComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastEnemyHitTime;
     
@@ -16,7 +18,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastInjuredTime;
     
-    UIGS_PlayerDataComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

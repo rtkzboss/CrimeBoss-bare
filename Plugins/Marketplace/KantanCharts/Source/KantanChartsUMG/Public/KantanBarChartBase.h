@@ -12,6 +12,26 @@ UCLASS(Abstract)
 class KANTANCHARTSUMG_API UKantanBarChartBase : public UKantanCategoryChart {
     GENERATED_BODY()
 public:
+    UKantanBarChartBase();
+
+    UFUNCTION(BlueprintCallable)
+    void SetValueAxisConfig(const FCartesianAxisConfig& InCfg);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetOrientation(EKantanBarChartOrientation InOrientation);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMaxBarValue(float InMaxValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLabelPosition(EKantanBarLabelPosition InPosition);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetExtentsDisplay(EKantanBarValueExtents InExtents);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetBarToGapRatio(float InRatio);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FKantanBarChartStyle WidgetStyle;
     
@@ -32,26 +52,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FCartesianAxisConfig ValueAxisCfg;
-    
-    UKantanBarChartBase();
-
-    UFUNCTION(BlueprintCallable)
-    void SetValueAxisConfig(const FCartesianAxisConfig& InCfg);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetOrientation(EKantanBarChartOrientation InOrientation);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMaxBarValue(float InMaxValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLabelPosition(EKantanBarLabelPosition InPosition);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetExtentsDisplay(EKantanBarValueExtents InExtents);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetBarToGapRatio(float InRatio);
     
 };
 

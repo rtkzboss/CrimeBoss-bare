@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToMelee : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_MoveToMelee();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BattleTarget;
     
-public:
-    UIGS_BTTask_MoveToMelee();
-
 };
 

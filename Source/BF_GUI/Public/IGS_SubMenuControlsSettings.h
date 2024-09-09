@@ -10,6 +10,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_SubMenuControlsSettings : public UIGS_WidgetSubMenuSettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_SubMenuControlsSettings();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* InvertVerticalLookSpinBox;
     
@@ -70,7 +72,5 @@ public:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* MagCheckInterruptSprintToggleSpinBox;
     
-    UIGS_SubMenuControlsSettings();
-
 };
 

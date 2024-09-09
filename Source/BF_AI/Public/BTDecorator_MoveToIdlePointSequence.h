@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_MoveToIdlePointSequence : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_MoveToIdlePointSequence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector PatrolPointKey;
     
-public:
-    UBTDecorator_MoveToIdlePointSequence();
-
 };
 

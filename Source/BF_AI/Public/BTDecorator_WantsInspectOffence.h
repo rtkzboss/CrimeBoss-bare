@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_WantsInspectOffence : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_WantsInspectOffence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTDecorator_WantsInspectOffence();
-
 };
 

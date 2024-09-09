@@ -7,6 +7,8 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UIGS_ProgressBarAnimationData : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_ProgressBarAnimationData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText PreviousText;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
     
-    UIGS_ProgressBarAnimationData();
-
 };
 

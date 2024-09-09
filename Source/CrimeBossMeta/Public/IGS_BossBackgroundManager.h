@@ -10,23 +10,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_BossBackgroundManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FBackgroundChangeFinished OnBackgroundChangeFinished;
-    
-private:
-    UPROPERTY()
-    UDataTable* m_DataTable;
-    
-    UPROPERTY()
-    bool m_BackgroundChangeInProgress;
-    
-    UPROPERTY()
-    FName m_CurrentLevelToLoad;
-    
-    UPROPERTY()
-    FName m_WaitingLevelToLoad;
-    
-public:
     UIGS_BossBackgroundManager(const FObjectInitializer& ObjectInitializer);
 
 private:
@@ -60,6 +43,23 @@ public:
 private:
     UFUNCTION()
     TArray<FName> GetLoadedBackgroundLevelNames() const;
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FBackgroundChangeFinished OnBackgroundChangeFinished;
+    
+private:
+    UPROPERTY()
+    UDataTable* m_DataTable;
+    
+    UPROPERTY()
+    bool m_BackgroundChangeInProgress;
+    
+    UPROPERTY()
+    FName m_CurrentLevelToLoad;
+    
+    UPROPERTY()
+    FName m_WaitingLevelToLoad;
     
 };
 

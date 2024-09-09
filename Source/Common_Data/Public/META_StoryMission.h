@@ -13,11 +13,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_StoryMission : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    FMETA_StoryMissionSave m_StoryMissionSave;
-    
-public:
     UMETA_StoryMission();
 
     UFUNCTION(BlueprintCallable)
@@ -40,6 +35,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FMETA_FPSMissionRowInfo GetInfo() const;
+    
+private:
+    UPROPERTY()
+    FMETA_StoryMissionSave m_StoryMissionSave;
     
 };
 

@@ -10,18 +10,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LaserBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    bool Indestructible;
-    
-    UPROPERTY(EditDefaultsOnly)
-    bool DestroyingReportsToHQ;
-    
-    UPROPERTY(EditDefaultsOnly)
-    bool DestroyingIsSuspicious;
-    
-    UPROPERTY(EditDefaultsOnly)
-    bool DisablingIsSuspicious;
-    
     AIGS_LaserBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -37,6 +25,18 @@ private:
 public:
     UFUNCTION(BlueprintCallable)
     void DisableLaser(AIGS_GameCharacterFramework* inInstigator);
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool Indestructible;
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool DestroyingReportsToHQ;
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool DestroyingIsSuspicious;
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool DisablingIsSuspicious;
     
 };
 

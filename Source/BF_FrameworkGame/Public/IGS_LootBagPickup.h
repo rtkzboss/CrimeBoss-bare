@@ -18,35 +18,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LootBagPickup : public AIGS_PickupActorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LootBagDestroyed OnLootBagDestroyed;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bHasItemName;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FText PrefixText;
-    
-    UPROPERTY(EditInstanceOnly)
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> PlacedInLevelItems;
-    
-    UPROPERTY(EditInstanceOnly)
-    EIGS_ItemType PlacedInLevelItemType;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    UAkAudioEvent* LootGrabAkEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FIGS_CommonItemData CommonData;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    UIGS_LootBagInteractiveComponent* InteractiveComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    USkeletalMeshComponent* SkeletalMesh;
-    
-public:
     AIGS_LootBagPickup(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -77,6 +48,35 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DisableLootBagPhysics();
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LootBagDestroyed OnLootBagDestroyed;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bHasItemName;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    FText PrefixText;
+    
+    UPROPERTY(EditInstanceOnly)
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> PlacedInLevelItems;
+    
+    UPROPERTY(EditInstanceOnly)
+    EIGS_ItemType PlacedInLevelItemType;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UAkAudioEvent* LootGrabAkEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FIGS_CommonItemData CommonData;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UIGS_LootBagInteractiveComponent* InteractiveComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    USkeletalMeshComponent* SkeletalMesh;
     
 };
 

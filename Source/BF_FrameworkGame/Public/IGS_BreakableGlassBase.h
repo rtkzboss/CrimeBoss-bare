@@ -11,6 +11,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BreakableGlassBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_BreakableGlassBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     USceneComponent* Root;
     
@@ -32,7 +34,5 @@ public:
     UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
     bool bCanEverAffectNavigation;
     
-    AIGS_BreakableGlassBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

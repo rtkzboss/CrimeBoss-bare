@@ -12,9 +12,6 @@ UCLASS()
 class CRIMEBOSSMETA_API AIGS_PlanningBoard : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FMETA_PlanningBoardRow PlanningBoardData;
-    
     AIGS_PlanningBoard(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -25,6 +22,9 @@ public:
     
     UFUNCTION(BlueprintPure)
     UMETA_BaseMission* GetMissionFromMapByPriority(TArray<FMETA_PlanningBoardMission> planningBoardItemMissions, UPARAM(Ref) TArray<UMETA_BaseMission*>& missionsOnMap) const;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FMETA_PlanningBoardRow PlanningBoardData;
     
 };
 

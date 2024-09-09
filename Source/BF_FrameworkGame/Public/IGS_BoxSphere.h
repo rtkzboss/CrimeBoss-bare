@@ -17,48 +17,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BoxSphere : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FBodyInstance BodyInstance;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ActiveStateChangedDynamicSignature OnActiveStateChanged;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    EIGS_BoxSphereShape Shape;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FColor Color;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_IsActive)
-    bool bIsActive;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ExtentOrRadius)
-    FVector BoxExtent;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ExtentOrRadius)
-    float SphereRadius;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint8 bGenerateOverlapEvents: 1;
-    
-    UPROPERTY(Instanced, VisibleAnywhere)
-    USceneComponent* Root;
-    
-    UPROPERTY()
-    bool bDisableShapeSelection;
-    
-private:
-    UPROPERTY(Instanced, VisibleDefaultsOnly)
-    UIGS_CustomBoxComponent* BoxCollisionComponent;
-    
-    UPROPERTY(Instanced, VisibleDefaultsOnly)
-    UIGS_CustomSphereComponent* SphereCollisionComponent;
-    
-public:
     AIGS_BoxSphere(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void SetSphereRadius(float InSphereRadius);
@@ -102,5 +61,46 @@ public:
     UFUNCTION(BlueprintCallable)
     void Activate();
     
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FBodyInstance BodyInstance;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ActiveStateChangedDynamicSignature OnActiveStateChanged;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    EIGS_BoxSphereShape Shape;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FColor Color;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_IsActive)
+    bool bIsActive;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ExtentOrRadius)
+    FVector BoxExtent;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ExtentOrRadius)
+    float SphereRadius;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    uint8 bGenerateOverlapEvents: 1;
+    
+    UPROPERTY(Instanced, VisibleAnywhere)
+    USceneComponent* Root;
+    
+    UPROPERTY()
+    bool bDisableShapeSelection;
+    
+private:
+    UPROPERTY(Instanced, VisibleDefaultsOnly)
+    UIGS_CustomBoxComponent* BoxCollisionComponent;
+    
+    UPROPERTY(Instanced, VisibleDefaultsOnly)
+    UIGS_CustomSphereComponent* SphereCollisionComponent;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

@@ -8,6 +8,11 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PropMeshBase : public UIGS_BreakableMeshComponent {
     GENERATED_BODY()
 public:
+    UIGS_PropMeshBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void OnRep_Spawned();
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropMeshInfoStruct PropMeshInfo;
@@ -16,12 +21,7 @@ protected:
     int16 mR_SpawnedIndex;
     
 public:
-    UIGS_PropMeshBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void OnRep_Spawned();
-    
 };
 

@@ -41,6 +41,110 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_UArmsAniminstance : public UIGS_GameEventsAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_UArmsAniminstance();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_Leave(bool InUp);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_JumpDown();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_InputUp(float inSpeed);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_InputDown(float inSpeed);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_Grab_Start(bool InUp);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_Grab_Finish(bool InUp);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RequestStopCustomAnimation(FGameplayTag inAnimationType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RequestStopCameraShake(FGameplayTag inCameraShakeTag, float inIntensity);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RequestPlayCustomAnimation(FGameplayTag inAnimationType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RequestPlayCameraShake(FGameplayTag inCameraShakeTag, float inIntensity);
+    
+    UFUNCTION(BlueprintCallable)
+    void PlayHolsterChangeAnimation(bool inIsHolstering, bool inSkipAnimation, float inHolsterTimeInSeconds);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnZiplineStart_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnZiplineEnd_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnWeaponShooterChange_Event(EIGS_WeaponAttackType InWeaponAttackType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnUnEquipEnded_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSlideStarted_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSlideEnded_Event();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void OnReloadMontageNotifyAddAmmoToWeapon() const;
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnReloadInterrupt_Event(EIGS_ReloadInterruptReasonEnum inReason);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPushPlayerAwayStarted(FVector InDirection);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnMagCheckInterrupt_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnMagCheckEnd();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnInspectInterrupt_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnInspectEnd();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnEquipEnded_Event();
+    
+    UFUNCTION(BlueprintPure)
+    void OnDownstateChanged(EIGS_HealthState& outDownState) const;
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnCharacterFell(float inFallHeight);
+    
+    UFUNCTION(BlueprintCallable)
+    FIGS_FirstPersonAnimationDatabase GetWeaponAnimations();
+    
+    UFUNCTION(BlueprintCallable)
+    FIGS_FirstPersonThrowablesAnimDatabase GetThrowablesAnimationsDatabase();
+    
+    UFUNCTION(BlueprintCallable)
+    FIGS_FirstPersonMeleeAnimDatabase GetMeleeAnimationsDatabase();
+    
+    UFUNCTION(BlueprintPure)
+    void GetHolsterAnimationData(FIGS_HolsterAnimationInfo& outHolsterAnimationInfo) const;
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_WeaponAttackType GetAttackType() const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetAimAnimationData(FIGS_AimAnimationInfo& outAimAnimationInfo) const;
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void ArmsInit_Event();
+    
     UPROPERTY(BlueprintReadWrite)
     EIGS_SlideEnumState SlideState;
     
@@ -191,111 +295,6 @@ private:
     
     UPROPERTY(Transient)
     UIGS_UWeaponAniminstance* m_Weapon_AnimInstance;
-    
-public:
-    UIGS_UArmsAniminstance();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_Leave(bool InUp);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_JumpDown();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_InputUp(float inSpeed);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_InputDown(float inSpeed);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_Grab_Start(bool InUp);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_Grab_Finish(bool InUp);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RequestStopCustomAnimation(FGameplayTag inAnimationType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RequestStopCameraShake(FGameplayTag inCameraShakeTag, float inIntensity);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RequestPlayCustomAnimation(FGameplayTag inAnimationType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RequestPlayCameraShake(FGameplayTag inCameraShakeTag, float inIntensity);
-    
-    UFUNCTION(BlueprintCallable)
-    void PlayHolsterChangeAnimation(bool inIsHolstering, bool inSkipAnimation, float inHolsterTimeInSeconds);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnZiplineStart_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnZiplineEnd_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnWeaponShooterChange_Event(EIGS_WeaponAttackType InWeaponAttackType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnUnEquipEnded_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSlideStarted_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSlideEnded_Event();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void OnReloadMontageNotifyAddAmmoToWeapon() const;
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnReloadInterrupt_Event(EIGS_ReloadInterruptReasonEnum inReason);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPushPlayerAwayStarted(FVector InDirection);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMagCheckInterrupt_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnMagCheckEnd();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnInspectInterrupt_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnInspectEnd();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnEquipEnded_Event();
-    
-    UFUNCTION(BlueprintPure)
-    void OnDownstateChanged(EIGS_HealthState& outDownState) const;
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnCharacterFell(float inFallHeight);
-    
-    UFUNCTION(BlueprintCallable)
-    FIGS_FirstPersonAnimationDatabase GetWeaponAnimations();
-    
-    UFUNCTION(BlueprintCallable)
-    FIGS_FirstPersonThrowablesAnimDatabase GetThrowablesAnimationsDatabase();
-    
-    UFUNCTION(BlueprintCallable)
-    FIGS_FirstPersonMeleeAnimDatabase GetMeleeAnimationsDatabase();
-    
-    UFUNCTION(BlueprintPure)
-    void GetHolsterAnimationData(FIGS_HolsterAnimationInfo& outHolsterAnimationInfo) const;
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_WeaponAttackType GetAttackType() const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetAimAnimationData(FIGS_AimAnimationInfo& outAimAnimationInfo) const;
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void ArmsInit_Event();
     
 };
 

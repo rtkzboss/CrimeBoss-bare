@@ -10,10 +10,10 @@ UCLASS()
 class BF_AI_API UIGS_EnvQueryTest_DotFromTargets : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryTest_DotFromTargets();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Characters;
     
-    UIGS_EnvQueryTest_DotFromTargets();
-
 };
 

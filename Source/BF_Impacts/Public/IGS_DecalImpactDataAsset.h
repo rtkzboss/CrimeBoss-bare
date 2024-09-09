@@ -10,6 +10,8 @@ UCLASS()
 class BF_IMPACTS_API UIGS_DecalImpactDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_DecalImpactDataAsset();
+
     UPROPERTY(EditAnywhere)
     TArray<UMaterialInterface*> Materials;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY(EditAnywhere)
     float FadeTime;
     
-    UIGS_DecalImpactDataAsset();
-
 };
 

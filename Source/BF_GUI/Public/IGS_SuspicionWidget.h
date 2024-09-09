@@ -13,17 +13,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_SuspicionWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<AIGS_PlayerCharacter> PlayerPawn;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<AIGS_PlayerControllerRoot> PlayerController;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
-    
-public:
     UIGS_SuspicionWidget();
 
 protected:
@@ -47,6 +36,15 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void Alarmed(const FText& inBlameText);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<AIGS_PlayerCharacter> PlayerPawn;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<AIGS_PlayerControllerRoot> PlayerController;
+    
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
     
 };
 

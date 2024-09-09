@@ -18,29 +18,6 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnDisplayedTutorialsOpened);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnDisplayedTutorialsCompleted);
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnDisplayedTutorialsCompleted OnDisplayedTutorialsCompleted;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnDisplayedTutorialsOpened OnDisplayedTutorialsOpened;
-    
-private:
-    UPROPERTY()
-    UIGS_SaveManager* m_SaveManager;
-    
-    UPROPERTY()
-    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
-    
-    UPROPERTY(Instanced)
-    TArray<UIGS_Screen*> m_PendingTutorials;
-    
-    UPROPERTY(Instanced)
-    UIGS_Screen* m_CurrentlyDisplayedTutorial;
-    
-    UPROPERTY()
-    TArray<FGameplayTag> m_ForbiddenScreensForTutorials;
-    
-public:
     UIGS_TutorialsManager();
 
     UFUNCTION(BlueprintCallable)
@@ -78,6 +55,28 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddPendingTutorialScreen(UIGS_Screen* inScreen);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnDisplayedTutorialsCompleted OnDisplayedTutorialsCompleted;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnDisplayedTutorialsOpened OnDisplayedTutorialsOpened;
+    
+private:
+    UPROPERTY()
+    UIGS_SaveManager* m_SaveManager;
+    
+    UPROPERTY()
+    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
+    
+    UPROPERTY(Instanced)
+    TArray<UIGS_Screen*> m_PendingTutorials;
+    
+    UPROPERTY(Instanced)
+    UIGS_Screen* m_CurrentlyDisplayedTutorial;
+    
+    UPROPERTY()
+    TArray<FGameplayTag> m_ForbiddenScreensForTutorials;
     
 };
 

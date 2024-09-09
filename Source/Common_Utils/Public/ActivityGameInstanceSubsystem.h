@@ -11,9 +11,6 @@ UCLASS(BlueprintType)
 class COMMON_UTILS_API UActivityGameInstanceSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FActivitySubsystemActivityRequestedEvent OnActivityRequestedEvent;
-    
     UActivityGameInstanceSubsystem();
 
     UFUNCTION(BlueprintPure)
@@ -36,6 +33,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void EndLocalActivity(EActivityTask Task, bool bSuccess);
+    
+    UPROPERTY(BlueprintAssignable)
+    FActivitySubsystemActivityRequestedEvent OnActivityRequestedEvent;
     
 };
 

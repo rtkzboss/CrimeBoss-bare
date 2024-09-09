@@ -8,10 +8,10 @@ UCLASS()
 class BF_COVERS_API UIGS_CoverPointsDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_CoverPointsDataAsset();
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_CoverVariant> CoverVariants;
     
-    UIGS_CoverPointsDataAsset();
-
 };
 

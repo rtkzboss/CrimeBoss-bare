@@ -11,6 +11,19 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_ShootablePartsHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_ShootablePartsHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnRep_VisibleComponents();
+    
+    UFUNCTION()
+    void OnRep_CollisionComponents();
+    
+public:
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_ShootOffPart(UActorComponent* inCollisionComponent, UActorComponent* inVisibleComponent, const FIGS_HitInfo& inHit, float inDamage);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ShootablePart> ShootableParts;
@@ -31,20 +44,7 @@ protected:
     TArray<UActorComponent*> mR_VisibleComponents;
     
 public:
-    UIGS_ShootablePartsHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnRep_VisibleComponents();
-    
-    UFUNCTION()
-    void OnRep_CollisionComponents();
-    
-public:
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_ShootOffPart(UActorComponent* inCollisionComponent, UActorComponent* inVisibleComponent, const FIGS_HitInfo& inHit, float inDamage);
-    
 };
 

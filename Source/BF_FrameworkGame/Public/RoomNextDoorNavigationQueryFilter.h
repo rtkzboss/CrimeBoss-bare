@@ -7,6 +7,8 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API URoomNextDoorNavigationQueryFilter : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
+    URoomNextDoorNavigationQueryFilter();
+
     UPROPERTY(EditAnywhere)
     int32 AllowedRoomTypes;
     
@@ -20,8 +22,5 @@ protected:
     UPROPERTY()
     int32 AllowedRoomTypesBitMask;
     
-public:
-    URoomNextDoorNavigationQueryFilter();
-
 };
 

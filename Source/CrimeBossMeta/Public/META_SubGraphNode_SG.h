@@ -10,6 +10,14 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_SubGraphNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_SubGraphNode_SG();
+
+    UFUNCTION(BlueprintCallable)
+    void SetSubGraphResult(EMETA_GoalStatus inResult);
+    
+    UFUNCTION(BlueprintCallable)
+    int32 GetNextNodeIDByResult();
+    
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UStoryGraphManager> SubGraph;
     
@@ -31,15 +39,6 @@ private:
     
     UPROPERTY()
     int32 OldConnectionsCount;
-    
-public:
-    UMETA_SubGraphNode_SG();
-
-    UFUNCTION(BlueprintCallable)
-    void SetSubGraphResult(EMETA_GoalStatus inResult);
-    
-    UFUNCTION(BlueprintCallable)
-    int32 GetNextNodeIDByResult();
     
 };
 

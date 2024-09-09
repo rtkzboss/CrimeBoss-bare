@@ -12,6 +12,8 @@ UCLASS()
 class UIGS_EnvQueryTest_HasLos : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryTest_HasLos();
+
     UPROPERTY(EditDefaultsOnly)
     FEnvTraceData TraceData;
     
@@ -24,7 +26,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue VerticalOffsetTarget;
     
-    UIGS_EnvQueryTest_HasLos();
-
 };
 

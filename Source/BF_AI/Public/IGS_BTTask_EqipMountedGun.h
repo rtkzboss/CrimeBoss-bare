@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_EqipMountedGun : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_EqipMountedGun();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestMountedGunKey;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MountedGunKey;
     
-public:
-    UIGS_BTTask_EqipMountedGun();
-
 };
 

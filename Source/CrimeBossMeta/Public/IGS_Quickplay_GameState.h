@@ -14,15 +14,6 @@ UCLASS(Abstract)
 class CRIMEBOSSMETA_API AIGS_Quickplay_GameState : public AIGS_GameStateMenuBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UMETA_QuickPlayData* QuickPlayData;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UIGS_Quickplay_EconomyData* EconomyQuickData;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_SubtitleManager* SubtitleManager;
-    
     AIGS_Quickplay_GameState(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
@@ -33,6 +24,15 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     UIGS_BossBackgroundManager* GetBossBackgroundManager();
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UMETA_QuickPlayData* QuickPlayData;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UIGS_Quickplay_EconomyData* EconomyQuickData;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_SubtitleManager* SubtitleManager;
     
 };
 

@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class PAYBACK_API UIGS_BinkSubtitleDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_BinkSubtitleDataAsset();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FBinkSubtitleItem> Subtitles;
     
-    UIGS_BinkSubtitleDataAsset();
-
 };
 

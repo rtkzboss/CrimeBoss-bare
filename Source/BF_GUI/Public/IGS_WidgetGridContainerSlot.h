@@ -12,6 +12,14 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetGridContainerSlot : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetGridContainerSlot();
+
+    UFUNCTION(BlueprintCallable)
+    void SetIsOccupied(bool inOccupied);
+    
+    UFUNCTION(BlueprintPure)
+    bool GetIsOccupied() const;
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor NormalColor;
     
@@ -57,15 +65,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsMouseOver;
-    
-public:
-    UIGS_WidgetGridContainerSlot();
-
-    UFUNCTION(BlueprintCallable)
-    void SetIsOccupied(bool inOccupied);
-    
-    UFUNCTION(BlueprintPure)
-    bool GetIsOccupied() const;
     
 };
 

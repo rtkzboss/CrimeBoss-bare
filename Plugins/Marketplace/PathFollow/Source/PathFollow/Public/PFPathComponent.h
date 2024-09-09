@@ -18,6 +18,20 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PATHFOLLOW_API UPFPathComponent : public USplineComponent {
     GENERATED_BODY()
 public:
+    UPFPathComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    float GetTimeForPath();
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetLocationAtSplinePointMirrored(int32 PointIdx, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetLocationAtSplineInputKeyMirrored(float Key, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetLocationAtDistanceAlongSplineMirrored(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
+    
     UPROPERTY(EditAnywhere)
     FDrawerData DrawerConfig;
     
@@ -47,20 +61,6 @@ public:
     
     UPROPERTY(Instanced)
     UPFPathFollowerComponent* _FollowerComponent;
-    
-    UPFPathComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    float GetTimeForPath();
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetLocationAtSplinePointMirrored(int32 PointIdx, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetLocationAtSplineInputKeyMirrored(float Key, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetLocationAtDistanceAlongSplineMirrored(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
     
 };
 

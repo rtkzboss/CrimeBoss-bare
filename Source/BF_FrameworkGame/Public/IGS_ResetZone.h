@@ -14,6 +14,28 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ResetZone : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_ResetZone(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    bool ResetCharacter(AIGS_PlayerCharacter* Character, FVector& safeResetLocation);
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void KillCharacter(AIGS_PlayerCharacter* Character);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void HandleResetTrigger(AActor* inOtherActor, bool bKillOnFail);
+    
+    UFUNCTION(BlueprintCallable)
+    void HandleReset(AIGS_PlayerCharacter* Character, FVector& safeResetLocation);
+    
+    UFUNCTION(BlueprintCallable)
+    bool HandleBagReset(AIGS_LootBagPickup* bag, FVector& safeResetLocation);
+    
+    UFUNCTION(BlueprintCallable)
+    void HandleBagDestroy(AIGS_LootBagPickup* bag);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UBoxComponent* ResetTrigger;
     
@@ -48,28 +70,6 @@ public:
     
     UPROPERTY(EditAnywhere)
     bool bShowDebugCapsule;
-    
-    AIGS_ResetZone(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    bool ResetCharacter(AIGS_PlayerCharacter* Character, FVector& safeResetLocation);
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void KillCharacter(AIGS_PlayerCharacter* Character);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void HandleResetTrigger(AActor* inOtherActor, bool bKillOnFail);
-    
-    UFUNCTION(BlueprintCallable)
-    void HandleReset(AIGS_PlayerCharacter* Character, FVector& safeResetLocation);
-    
-    UFUNCTION(BlueprintCallable)
-    bool HandleBagReset(AIGS_LootBagPickup* bag, FVector& safeResetLocation);
-    
-    UFUNCTION(BlueprintCallable)
-    void HandleBagDestroy(AIGS_LootBagPickup* bag);
     
 };
 

@@ -21,6 +21,53 @@ UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class BF_FRAMEWORKGAME_API UIGS_MaskedChassisComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 public:
+    UIGS_MaskedChassisComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void TriggerCarAlarm();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetBreakable(bool Enabled);
+    
+    UFUNCTION()
+    void OnWindowInstanceBroken(int32 InstanceIndex);
+    
+    UFUNCTION()
+    void OnTirePuncturedUpdate(FVector CurveValue);
+    
+    UFUNCTION()
+    void OnTirePuncturedFinish();
+    
+    UFUNCTION()
+    void OnTirePunctured();
+    
+    UFUNCTION()
+    void OnRep_ChassisState();
+    
+    UFUNCTION()
+    void OnRadialImpactUpdate(FVector CurveValue);
+    
+    UFUNCTION()
+    void OnRadialImpactFinish();
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsBreakable();
+    
+    UFUNCTION()
+    void ChassisTakeRadialDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, FVector Origin, FHitResult HitInfo, AController* InstigatedBy, AActor* DamageCauser);
+    
+    UFUNCTION()
+    void ChassisTakeDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection, const UDamageType* DamageType, AActor* DamageCauser);
+    
+    UFUNCTION()
+    void BreakSection(int32 InVIndex, int32 InDesiredVIndex, int32 InDesiredShaderSlot, FName InDesiredSocketName, TSubclassOf<AActor> InDesiredDebris, bool& OutSectionState);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_HandleMaskedSection(FVector_NetQuantize ImpactPoint, FVector_NetQuantizeNormal ShotFrom);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_BreakSection(int32 InVIndex, int32 InDesiredVIndex, int32 InDesiredShaderSlot, FName InDesiredSocketName, TSubclassOf<AActor> InDesiredDebris, bool OutSectionState);
+    
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bBreakableEnabled;
     
@@ -140,54 +187,7 @@ private:
     bool bCarAlarmTriggered;
     
 public:
-    UIGS_MaskedChassisComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void TriggerCarAlarm();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetBreakable(bool Enabled);
-    
-    UFUNCTION()
-    void OnWindowInstanceBroken(int32 InstanceIndex);
-    
-    UFUNCTION()
-    void OnTirePuncturedUpdate(FVector CurveValue);
-    
-    UFUNCTION()
-    void OnTirePuncturedFinish();
-    
-    UFUNCTION()
-    void OnTirePunctured();
-    
-    UFUNCTION()
-    void OnRep_ChassisState();
-    
-    UFUNCTION()
-    void OnRadialImpactUpdate(FVector CurveValue);
-    
-    UFUNCTION()
-    void OnRadialImpactFinish();
-    
-    UFUNCTION(BlueprintCallable)
-    bool IsBreakable();
-    
-    UFUNCTION()
-    void ChassisTakeRadialDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, FVector Origin, FHitResult HitInfo, AController* InstigatedBy, AActor* DamageCauser);
-    
-    UFUNCTION()
-    void ChassisTakeDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection, const UDamageType* DamageType, AActor* DamageCauser);
-    
-    UFUNCTION()
-    void BreakSection(int32 InVIndex, int32 InDesiredVIndex, int32 InDesiredShaderSlot, FName InDesiredSocketName, TSubclassOf<AActor> InDesiredDebris, bool& OutSectionState);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_HandleMaskedSection(FVector_NetQuantize ImpactPoint, FVector_NetQuantizeNormal ShotFrom);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_BreakSection(int32 InVIndex, int32 InDesiredVIndex, int32 InDesiredShaderSlot, FName InDesiredSocketName, TSubclassOf<AActor> InDesiredDebris, bool OutSectionState);
-    
 };
 

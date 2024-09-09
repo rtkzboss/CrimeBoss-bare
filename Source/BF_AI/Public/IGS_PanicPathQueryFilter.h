@@ -7,6 +7,8 @@ UCLASS(Abstract)
 class BF_AI_API UIGS_PanicPathQueryFilter : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
+    UIGS_PanicPathQueryFilter();
+
 protected:
     UPROPERTY(EditAnywhere)
     float InnerRadiusMultiplier;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool IsActive;
     
-public:
-    UIGS_PanicPathQueryFilter();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTService_SolveCivilianToZip : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_SolveCivilianToZip();
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float RefreshDelay;
     
-public:
-    UBTService_SolveCivilianToZip();
-
 };
 

@@ -20,6 +20,14 @@ UCLASS(Deprecated, NotPlaceable)
 class BF_AI_API ADEPRECATED_IGS_NavLinkGroupBase : public AActor, public IIGS_NavLinksBreachInterface {
     GENERATED_BODY()
 public:
+    ADEPRECATED_IGS_NavLinkGroupBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetEnableArea(TSubclassOf<UNavArea> NavArea);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetDisableArea(TSubclassOf<UNavArea> NavArea);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 NavLinkCount;
     
@@ -71,15 +79,6 @@ public:
 protected:
     UPROPERTY(Instanced)
     TArray<UIGS_NavLinkComponent*> NavLinks;
-    
-public:
-    ADEPRECATED_IGS_NavLinkGroupBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetEnableArea(TSubclassOf<UNavArea> NavArea);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetDisableArea(TSubclassOf<UNavArea> NavArea);
     
 
     // Fix for true pure virtual functions not being implemented

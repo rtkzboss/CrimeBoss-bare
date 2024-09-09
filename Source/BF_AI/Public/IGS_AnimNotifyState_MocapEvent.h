@@ -7,10 +7,10 @@ UCLASS(CollapseCategories, EditInlineNew)
 class BF_AI_API UIGS_AnimNotifyState_MocapEvent : public UAnimNotifyState {
     GENERATED_BODY()
 public:
+    UIGS_AnimNotifyState_MocapEvent();
+
     UPROPERTY(EditAnywhere)
     FName EventName;
     
-    UIGS_AnimNotifyState_MocapEvent();
-
 };
 

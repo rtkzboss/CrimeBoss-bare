@@ -15,35 +15,6 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_GraphsData : public UDataAsset {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval FirstPlotlineDays;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval SecondPlotlineDays;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval AnyNextPlotlineDays;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> StartedGraphs;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EIGS_CharacterID, FMETA_UniqueCharacterGraphInfo> CharacterStoryGraphs;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FIGS_PlotlineGraphData> PlotlineGraphs;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSoftObjectPtr<UMETA_BaseStoryGraphManager> CrewRandEventsGraph;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSoftObjectPtr<UMETA_BaseStoryGraphManager> SpecialCrewEventsGraph;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> EntitlementGraphs;
-    
-public:
     UMETA_GraphsData();
 
     UFUNCTION(BlueprintCallable)
@@ -72,6 +43,34 @@ public:
     
     UFUNCTION(BlueprintPure)
     FMETA_Interval GetAnyNextPlotlineDays() const;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval FirstPlotlineDays;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval SecondPlotlineDays;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval AnyNextPlotlineDays;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> StartedGraphs;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EIGS_CharacterID, FMETA_UniqueCharacterGraphInfo> CharacterStoryGraphs;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FIGS_PlotlineGraphData> PlotlineGraphs;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSoftObjectPtr<UMETA_BaseStoryGraphManager> CrewRandEventsGraph;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSoftObjectPtr<UMETA_BaseStoryGraphManager> SpecialCrewEventsGraph;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> EntitlementGraphs;
     
 };
 

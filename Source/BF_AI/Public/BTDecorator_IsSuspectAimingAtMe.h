@@ -7,6 +7,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsSuspectAimingAtMe : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsSuspectAimingAtMe();
+
 protected:
     UPROPERTY(EditAnywhere)
     float SeePlayerConeHalfAngleDeg;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool ShouldCheckLineTrace;
     
-public:
-    UBTDecorator_IsSuspectAimingAtMe();
-
 };
 

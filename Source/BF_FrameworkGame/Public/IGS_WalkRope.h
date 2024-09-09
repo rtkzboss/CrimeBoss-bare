@@ -16,6 +16,28 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WalkRope : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_WalkRope(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintNativeEvent)
+    void SetTargetLook(FRotator inTargetLook);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetPlayerOnRope(bool inOnRope);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void ResetTargetLook();
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void OnStartTriggerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnEndTriggerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+    
+public:
+    UFUNCTION(BlueprintNativeEvent)
+    void BlueprintEditorTick(float DeltaTime);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseEditorTick;
     
@@ -52,29 +74,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool OnRopeWalking;
-    
-public:
-    AIGS_WalkRope(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintNativeEvent)
-    void SetTargetLook(FRotator inTargetLook);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetPlayerOnRope(bool inOnRope);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void ResetTargetLook();
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void OnStartTriggerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnEndTriggerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-    
-public:
-    UFUNCTION(BlueprintNativeEvent)
-    void BlueprintEditorTick(float DeltaTime);
     
 };
 

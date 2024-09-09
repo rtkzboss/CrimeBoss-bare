@@ -31,7 +31,55 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_VehicleCar : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:
+    AIGS_VehicleCar(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION(BlueprintCallable)
+    void SpawnPassengers();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetupWheels(TArray<UIGS_DrivableTireComponent*> inAllWheels);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetupAsStaticVehicle();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetSocketMesh(UStaticMeshComponent* InMesh, FName inSocket) const;
+    
+    UFUNCTION()
+    void PushPlayersOfVehicle();
+    
+    UFUNCTION()
+    void PushPlayerAway(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+    UFUNCTION(BlueprintCallable)
+    void PlayDoorAnimation(int32 inPassengerID);
+    
+    UFUNCTION()
+    void OnRep_OpenedDoors(TArray<int32> inPreviousOpenedDoors);
+    
+private:
+    UFUNCTION()
+    void OnRep_DisableCar(bool bPreviousDisable);
+    
+protected:
+    UFUNCTION()
+    void OnPassengerGettingOut(int32 inPassengerID);
+    
+private:
+    UFUNCTION(NetMulticast, Reliable)
+    void Multi_EndDrive();
+    
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void EnableMeshTick() const;
+    
+    UFUNCTION()
+    void DelayDisableCar();
+    
+    UFUNCTION()
+    void CheckParkingLocation();
+    
     UPROPERTY(BlueprintAssignable)
     FCarBraking OnCarBraking;
     
@@ -193,56 +241,7 @@ private:
     FRotator mR_FinalWheelRotation;
     
 public:
-    AIGS_VehicleCar(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintCallable)
-    void SpawnPassengers();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetupWheels(TArray<UIGS_DrivableTireComponent*> inAllWheels);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetupAsStaticVehicle();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetSocketMesh(UStaticMeshComponent* InMesh, FName inSocket) const;
-    
-    UFUNCTION()
-    void PushPlayersOfVehicle();
-    
-    UFUNCTION()
-    void PushPlayerAway(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-    UFUNCTION(BlueprintCallable)
-    void PlayDoorAnimation(int32 inPassengerID);
-    
-    UFUNCTION()
-    void OnRep_OpenedDoors(TArray<int32> inPreviousOpenedDoors);
-    
-private:
-    UFUNCTION()
-    void OnRep_DisableCar(bool bPreviousDisable);
-    
-protected:
-    UFUNCTION()
-    void OnPassengerGettingOut(int32 inPassengerID);
-    
-private:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multi_EndDrive();
-    
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void EnableMeshTick() const;
-    
-    UFUNCTION()
-    void DelayDisableCar();
-    
-    UFUNCTION()
-    void CheckParkingLocation();
-    
 };
 

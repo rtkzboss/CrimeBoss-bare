@@ -7,6 +7,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_StealthVoiceovers : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_StealthVoiceovers();
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Idle;
@@ -56,8 +58,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ReactionVoiceoversDistanceMaxToPlayer;
     
-public:
-    UIGS_StealthVoiceovers();
-
 };
 

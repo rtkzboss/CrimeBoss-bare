@@ -15,6 +15,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInput : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniInput();
+
 protected:
     UPROPERTY()
     FString Name;
@@ -170,7 +172,5 @@ public:
     UPROPERTY()
     bool bCanDeleteHoudiniNodes;
     
-    UHoudiniInput();
-
 };
 

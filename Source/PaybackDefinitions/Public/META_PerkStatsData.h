@@ -9,14 +9,6 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_PerkStatsData : public UDataAsset {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(EditDefaultsOnly)
-    FString RichTextStyle;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FMETA_PerkStatGroup> StatGroups;
-    
-public:
     UMETA_PerkStatsData();
 
     UFUNCTION(BlueprintPure)
@@ -24,6 +16,13 @@ public:
     
     UFUNCTION(BlueprintPure)
     void GetCombinedStatGroupsFromAttributes(const TMap<FGameplayAttribute, float>& inAttributes, bool& outSuccess, TMap<FMETA_PerkStatGroup, int32>& outStatGroups) const;
+    
+private:
+    UPROPERTY(EditDefaultsOnly)
+    FString RichTextStyle;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FMETA_PerkStatGroup> StatGroups;
     
 };
 

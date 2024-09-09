@@ -11,21 +11,6 @@ UCLASS()
 class KANTANCHARTSUMG_API UKantanChartLegend : public UWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FMargin Margins;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FMargin SeriesPadding;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FSlateBrush Background;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    int32 FontSize;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    TWeakObjectPtr<UKantanCartesianChartBase> Chart;
-    
     UKantanChartLegend();
 
     UFUNCTION(BlueprintCallable)
@@ -42,6 +27,21 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetBackground(const FSlateBrush& InBrush);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FMargin Margins;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FMargin SeriesPadding;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FSlateBrush Background;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    int32 FontSize;
+    
+    UPROPERTY(BlueprintReadOnly, Export)
+    TWeakObjectPtr<UKantanCartesianChartBase> Chart;
     
 };
 

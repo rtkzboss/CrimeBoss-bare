@@ -11,6 +11,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_InputSettings
 class BF_INPUT_API UIGS_InputDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_InputDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputActionMapDataAsset> InputActionMap;
     
@@ -29,7 +31,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputActionDefaultKeysDataAsset> InputActionDefaultKeys;
     
-    UIGS_InputDevSettings();
-
 };
 

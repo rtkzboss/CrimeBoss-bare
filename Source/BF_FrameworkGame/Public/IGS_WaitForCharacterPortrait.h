@@ -14,9 +14,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForCharacterPortrait : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FCharacterPortraitReadyOutputPin WhenCharacterPortraitReady;
-    
     UIGS_WaitForCharacterPortrait();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
@@ -25,6 +22,10 @@ public:
 private:
     UFUNCTION()
     void ExecuteOnCharacterPortraitReady(TSoftObjectPtr<UTexture2D> inCharacterPortrait);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FCharacterPortraitReadyOutputPin WhenCharacterPortraitReady;
     
 };
 

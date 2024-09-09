@@ -12,14 +12,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_LocalPlayerAchievements : public ULocalPlayerSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LocalPlayerAchievementsInitialized OnInitialized;
-    
-private:
-    UPROPERTY()
-    UIGS_CommonAchievements* m_CommonAchievements;
-    
-public:
     UIGS_LocalPlayerAchievements();
 
     UFUNCTION(BlueprintPure)
@@ -27,6 +19,13 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void GetAchievementData(const FGameplayTag& AchievementID, bool& outFound, FIGS_Achievement& outAchievementData);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LocalPlayerAchievementsInitialized OnInitialized;
+    
+private:
+    UPROPERTY()
+    UIGS_CommonAchievements* m_CommonAchievements;
     
 };
 

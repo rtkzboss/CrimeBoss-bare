@@ -18,17 +18,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_StashManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_StashManangerInitialized OnManagerInitialized;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerDataDirty;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerInitialized;
-    
-public:
     UIGS_StashManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -105,6 +94,16 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void AddWeaponsToStash(TSubclassOf<UMETA_WeaponInventoryObject> inWeaponsId, int32 inAmount, bool inBetweenHeisterAndStash);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_StashManangerInitialized OnManagerInitialized;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerDataDirty;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerInitialized;
     
 };
 

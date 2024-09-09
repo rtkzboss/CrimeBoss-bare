@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_WantsStayInCover : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_WantsStayInCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     float RefreshTime;
@@ -31,8 +33,5 @@ protected:
     UPROPERTY(Instanced)
     UIGS_ObjectStatus* ObjectStatus;
     
-public:
-    UBTDecorator_WantsStayInCover();
-
 };
 

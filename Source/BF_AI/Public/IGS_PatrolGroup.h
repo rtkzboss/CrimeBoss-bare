@@ -13,15 +13,6 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_PatrolGroup : public AIGS_WaypointBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    TArray<AIGS_PatrolPoint*> PatrolPoints_DEPRECATED;
-    
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
-    TArray<AIGS_WaypointFramework*> Waypoints;
-    
-    UPROPERTY(VisibleAnywhere)
-    TArray<AIGS_WaypointBase*> WaypointsCasted;
-    
     AIGS_PatrolGroup(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -35,6 +26,16 @@ public:
 protected:
     UFUNCTION(BlueprintPure)
     TArray<AIGS_WaypointBase*> GetAllVisitablePoints(AIGS_GameCharacterFramework* inCharacter) const;
+    
+public:
+    UPROPERTY()
+    TArray<AIGS_PatrolPoint*> PatrolPoints_DEPRECATED;
+    
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    TArray<AIGS_WaypointFramework*> Waypoints;
+    
+    UPROPERTY(VisibleAnywhere)
+    TArray<AIGS_WaypointBase*> WaypointsCasted;
     
 };
 

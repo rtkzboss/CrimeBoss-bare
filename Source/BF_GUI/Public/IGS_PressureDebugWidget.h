@@ -17,7 +17,12 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_PressureDebugWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_PressureDebugWidget();
+
 protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSegmentTimeReset();
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UTimeSeriesPlot* PlotDS;
     
@@ -65,13 +70,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_HUDKantanDatasourceHolder> KantanDatasourceHolder;
-    
-public:
-    UIGS_PressureDebugWidget();
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSegmentTimeReset();
     
 };
 

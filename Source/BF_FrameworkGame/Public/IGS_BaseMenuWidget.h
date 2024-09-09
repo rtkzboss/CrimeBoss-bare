@@ -11,20 +11,6 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_BaseMenuWidget : public UIGS_ScreenWithSubscreens {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    bool IsForceHidden;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float OpenScreenDelayAfterInitialization;
-    
-private:
-    UPROPERTY()
-    FGameplayTag m_ActiveScreenTag;
-    
-    UPROPERTY()
-    UIGS_GameScreenHandler* m_GameScreenHandler;
-    
-public:
     UIGS_BaseMenuWidget();
 
     UFUNCTION(BlueprintCallable)
@@ -72,6 +58,19 @@ public:
     
     UFUNCTION(BlueprintNativeEvent)
     UIGS_Screen* GetScreenToBeOpenOnInitialization();
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool IsForceHidden;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float OpenScreenDelayAfterInitialization;
+    
+private:
+    UPROPERTY()
+    FGameplayTag m_ActiveScreenTag;
+    
+    UPROPERTY()
+    UIGS_GameScreenHandler* m_GameScreenHandler;
     
 };
 

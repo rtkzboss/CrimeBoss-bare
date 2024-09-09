@@ -9,9 +9,6 @@ UCLASS()
 class BF_NAVIGATION_API UIGS_NavigationDebugSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    ANavigationData* HumanNavmesh;
-    
     UIGS_NavigationDebugSubsystem();
 
     UFUNCTION()
@@ -19,6 +16,9 @@ public:
     
     UFUNCTION()
     void NavigationFinished(ANavigationData* inNavigation);
+    
+    UPROPERTY()
+    ANavigationData* HumanNavmesh;
     
 };
 

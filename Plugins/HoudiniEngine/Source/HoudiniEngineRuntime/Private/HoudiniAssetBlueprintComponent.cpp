@@ -12,10 +12,10 @@ UHoudiniAssetBlueprintComponent::UHoudiniAssetBlueprintComponent(const FObjectIn
     (*this).bEnableProxyStaticMeshOverride = false;
     (*this).bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride = false;
     (*this).bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride = false;
-    (*this).ComponentGUID.A = -48540494;
-    (*this).ComponentGUID.B = 1131073738;
-    (*this).ComponentGUID.C = -1344183888;
-    (*this).ComponentGUID.D = -668782753;
+    (*this).ComponentGUID.A = 51994768;
+    (*this).ComponentGUID.B = 1200439058;
+    (*this).ComponentGUID.C = 1817498558;
+    (*this).ComponentGUID.D = -1857614500;
     (*this).AssetState = EHoudiniAssetState::None;
     (*this).Mobility = EComponentMobility::Movable;
 }

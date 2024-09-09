@@ -15,17 +15,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_InfoMessageManagerWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_InfoMessagesManager> InfoMessagesManager;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_ListInventory> PlayerInventory;
-    
-public:
     UIGS_InfoMessageManagerWidget();
 
 protected:
@@ -37,6 +26,15 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void AddGlobalItemMessage(TSubclassOf<UIGS_GlobalInventoryObject> inClass);
+    
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_InfoMessagesManager> InfoMessagesManager;
+    
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_ListInventory> PlayerInventory;
     
 };
 

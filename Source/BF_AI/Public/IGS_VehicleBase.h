@@ -30,6 +30,93 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_VehicleBase : public AActor, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:
+    AIGS_VehicleBase(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintCallable)
+    void UpdateEscapeInteractions(bool inIsObjectiveCompleted, float inHoldTime);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void StartEscapeSequence();
+    
+    UFUNCTION(BlueprintCallable)
+    void StartDrive(TArray<UIGS_TrafficPathComponent*> InPath);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetPassengerCount(int32 Min, int32 Max);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCustomPassengersDefinition(const FIGS_NoSpawnPointDefinition& inCustomPassengersDefinition, bool bInForceFilled);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCanBeAutoPinged(const bool InValue);
+    
+    UFUNCTION(Reliable, Server)
+    void Server_SetColor(FColor InColor);
+    
+    UFUNCTION(Reliable, Server)
+    void Server_FinishDrive();
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void RegisterEndMissionInteractions(TArray<UIGS_InteractiveComponent*> inInteractiveComponents);
+    
+    UFUNCTION()
+    void PlayerHealthStateChanged(EIGS_HealthState inState);
+    
+    UFUNCTION()
+    void OnSegmentFinished(UPFPathFollowerComponent* inFollower);
+    
+    UFUNCTION()
+    void OnRep_Color() const;
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnDriveStarted();
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnDriveFinished();
+    
+    UFUNCTION()
+    void OnCharactersSpawned(const TArray<AIGS_GameCharacterFramework*>& inCharacters);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnChangePingedStatusEvent(const bool inPinged);
+    
+public:
+    UFUNCTION(NetMulticast, Reliable)
+    void Multi_SetAudio(UAkAudioEvent* inNewAudio);
+    
+    UFUNCTION(BlueprintCallable)
+    void Leave();
+    
+    UFUNCTION(BlueprintCallable)
+    void GoToDestination(AIGS_VehicleDestinationPoint* inDestinationPoint, bool& outPathFound);
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_VehicleSpawnGroup GetVehicleSpawnGroup() const;
+    
+protected:
+    UFUNCTION(BlueprintPure)
+    FVector GetLocationAtDistanceAlongSpline(float inDistance) const;
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    bool GetIsDriving();
+    
+protected:
+    UFUNCTION()
+    void EvaluatePingStatus();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void Despawn();
+    
+protected:
+    UFUNCTION()
+    void BindHeistersHealthState();
+    
+public:
     UPROPERTY(BlueprintReadOnly, Replicated)
     bool isEscaping;
     
@@ -122,94 +209,8 @@ protected:
     TArray<UIGS_InteractiveComponent*> endMissionInteractiveComponents;
     
 public:
-    AIGS_VehicleBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintCallable)
-    void UpdateEscapeInteractions(bool inIsObjectiveCompleted, float inHoldTime);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void StartEscapeSequence();
-    
-    UFUNCTION(BlueprintCallable)
-    void StartDrive(TArray<UIGS_TrafficPathComponent*> InPath);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetPassengerCount(int32 Min, int32 Max);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCustomPassengersDefinition(const FIGS_NoSpawnPointDefinition& inCustomPassengersDefinition, bool bInForceFilled);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCanBeAutoPinged(const bool InValue);
-    
-    UFUNCTION(Reliable, Server)
-    void Server_SetColor(FColor InColor);
-    
-    UFUNCTION(Reliable, Server)
-    void Server_FinishDrive();
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void RegisterEndMissionInteractions(TArray<UIGS_InteractiveComponent*> inInteractiveComponents);
-    
-    UFUNCTION()
-    void PlayerHealthStateChanged(EIGS_HealthState inState);
-    
-    UFUNCTION()
-    void OnSegmentFinished(UPFPathFollowerComponent* inFollower);
-    
-    UFUNCTION()
-    void OnRep_Color() const;
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnDriveStarted();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnDriveFinished();
-    
-    UFUNCTION()
-    void OnCharactersSpawned(const TArray<AIGS_GameCharacterFramework*>& inCharacters);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnChangePingedStatusEvent(const bool inPinged);
-    
-public:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multi_SetAudio(UAkAudioEvent* inNewAudio);
-    
-    UFUNCTION(BlueprintCallable)
-    void Leave();
-    
-    UFUNCTION(BlueprintCallable)
-    void GoToDestination(AIGS_VehicleDestinationPoint* inDestinationPoint, bool& outPathFound);
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_VehicleSpawnGroup GetVehicleSpawnGroup() const;
-    
-protected:
-    UFUNCTION(BlueprintPure)
-    FVector GetLocationAtDistanceAlongSpline(float inDistance) const;
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    bool GetIsDriving();
-    
-protected:
-    UFUNCTION()
-    void EvaluatePingStatus();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void Despawn();
-    
-protected:
-    UFUNCTION()
-    void BindHeistersHealthState();
-    
 
     // Fix for true pure virtual functions not being implemented
 };

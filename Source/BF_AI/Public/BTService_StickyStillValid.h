@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTService_StickyStillValid : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_StickyStillValid();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector StickToChar;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval InvalidTimeOutside;
     
-public:
-    UBTService_StickyStillValid();
-
 };
 

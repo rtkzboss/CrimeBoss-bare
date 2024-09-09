@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UIGS_BTDecorator_IsTimeFromLastMove : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UIGS_BTDecorator_IsTimeFromLastMove();
+
 protected:
     UPROPERTY(EditAnywhere)
     float Seconds;
     
-public:
-    UIGS_BTDecorator_IsTimeFromLastMove();
-
 };
 

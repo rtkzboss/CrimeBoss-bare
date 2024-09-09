@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_ConeFilter : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_ConeFilter();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue InnerConeAngle;
@@ -37,8 +39,5 @@ private:
     UPROPERTY(EditDefaultsOnly)
     bool bDrawDebugLines;
     
-public:
-    UEnvQueryTest_ConeFilter();
-
 };
 

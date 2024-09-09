@@ -14,23 +14,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeaponModsHandler : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<AIGS_WeaponBase> OwningWeapon;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_WeaponInventoryObject> OwningWeaponObject;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_OutlineComponent> OutlineComponent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<UIGS_ModInventoryObject*> ActiveMods;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<EIGS_ModType> ActiveModTypes;
-    
-public:
     UIGS_WeaponModsHandler(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
@@ -65,6 +48,22 @@ public:
     
     UFUNCTION(BlueprintPure)
     void GetCurrentAccuracyModifications(float& outHipFireSpreadMultiplier, float& outADSSpreadMultiplier, float& outSpreadIncreasePerShotMultiplier, float& outMovementSpreadMultiplier) const;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<AIGS_WeaponBase> OwningWeapon;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_WeaponInventoryObject> OwningWeaponObject;
+    
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_OutlineComponent> OutlineComponent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<UIGS_ModInventoryObject*> ActiveMods;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<EIGS_ModType> ActiveModTypes;
     
 };
 

@@ -9,10 +9,10 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_RenderingSett
 class BF_RENDERING_API UIGS_RenderingDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_RenderingDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_GlobalPostProcessesDataAsset> GlobalPostProcessesDataAsset;
     
-    UIGS_RenderingDevSettings();
-
 };
 

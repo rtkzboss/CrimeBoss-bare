@@ -8,13 +8,13 @@ UCLASS()
 class PREFABRICATORRUNTIME_API UPrefabricatorAssetCollection : public UPrefabricatorAssetInterface {
     GENERATED_BODY()
 public:
+    UPrefabricatorAssetCollection();
+
     UPROPERTY(EditAnywhere)
     TArray<FPrefabricatorAssetCollectionItem> Prefabs;
     
     UPROPERTY()
     uint32 Version;
     
-    UPrefabricatorAssetCollection();
-
 };
 

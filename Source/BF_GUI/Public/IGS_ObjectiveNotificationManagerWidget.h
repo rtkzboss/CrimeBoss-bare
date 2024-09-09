@@ -10,11 +10,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ObjectiveNotificationManagerWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Instanced)
-    UIGS_ObjectiveManager* m_ObjectiveManager;
-    
-public:
     UIGS_ObjectiveNotificationManagerWidget();
 
 protected:
@@ -33,6 +28,10 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void BindToObjectiveManager();
+    
+private:
+    UPROPERTY(Instanced)
+    UIGS_ObjectiveManager* m_ObjectiveManager;
     
 };
 

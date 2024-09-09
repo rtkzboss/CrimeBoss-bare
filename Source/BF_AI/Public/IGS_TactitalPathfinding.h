@@ -11,7 +11,12 @@ UCLASS()
 class BF_AI_API UIGS_TactitalPathfinding : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_TactitalPathfinding();
+
 protected:
+    UFUNCTION()
+    void OnPopulationFinished();
+    
     UPROPERTY()
     TArray<UTacticalPathfindingNode*> m_Nodes;
     
@@ -23,13 +28,6 @@ protected:
     
     UPROPERTY()
     TMap<uint8, UTacticalPathfindingFilterBase*> m_FiltersCache;
-    
-public:
-    UIGS_TactitalPathfinding();
-
-protected:
-    UFUNCTION()
-    void OnPopulationFinished();
     
 };
 

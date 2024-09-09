@@ -16,23 +16,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_CrosshairSectionWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_PlayerCharacterMovementComponent* PlayerMovementComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_CharacterWieldablesHolderComponent* PlayerWieldableHolder;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_WieldableBase* ActiveWieldableActor;
-    
-    UPROPERTY(BlueprintReadOnly)
-    UIGS_WieldableInventoryObjectBase* ActiveWieldableObject;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    EIGS_ShowCrosshairSetting ShowCrosshairSetting;
-    
-public:
     UIGS_CrosshairSectionWidget();
 
 protected:
@@ -65,6 +48,23 @@ protected:
     
     UFUNCTION(BlueprintPure)
     bool IsAimingAtEnemy() const;
+    
+public:
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_PlayerCharacterMovementComponent* PlayerMovementComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_CharacterWieldablesHolderComponent* PlayerWieldableHolder;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_WieldableBase* ActiveWieldableActor;
+    
+    UPROPERTY(BlueprintReadOnly)
+    UIGS_WieldableInventoryObjectBase* ActiveWieldableObject;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    EIGS_ShowCrosshairSetting ShowCrosshairSetting;
     
 };
 

@@ -11,6 +11,14 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CraneObjectComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_CraneObjectComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetOutlineState(EIGS_CameraOutlineState inState);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetComponentsForOutline(const TArray<UPrimitiveComponent*>& inComponents);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USceneComponent* MagnetPinPoint;
@@ -20,15 +28,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UPrimitiveComponent* SweepComponent;
-    
-public:
-    UIGS_CraneObjectComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetOutlineState(EIGS_CameraOutlineState inState);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetComponentsForOutline(const TArray<UPrimitiveComponent*>& inComponents);
     
 };
 

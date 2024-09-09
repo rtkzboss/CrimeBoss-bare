@@ -8,10 +8,10 @@ UCLASS()
 class KANTANCHARTSSLATE_API UKantanSeriesStyleSet : public UDataAsset {
     GENERATED_BODY()
 public:
+    UKantanSeriesStyleSet();
+
     UPROPERTY(EditAnywhere)
     TArray<FKantanSeriesStyle> Styles;
     
-    UKantanSeriesStyleSet();
-
 };
 

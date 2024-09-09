@@ -9,15 +9,14 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropMeshSpawner : public UIGS_PropMeshBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    UStaticMesh* m_SpawnedMesh;
-    
-public:
     UIGS_PropMeshSpawner(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
     void Despawn();
+    
+protected:
+    UPROPERTY()
+    UStaticMesh* m_SpawnedMesh;
     
 };
 

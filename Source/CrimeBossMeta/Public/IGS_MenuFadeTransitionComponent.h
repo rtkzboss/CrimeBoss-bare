@@ -8,9 +8,6 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_MenuFadeTransitionComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnTransitionFinished OnTransitionFinished;
-    
     UIGS_MenuFadeTransitionComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -18,6 +15,9 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     void Hide(bool ShouldFade, float FadeTime);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnTransitionFinished OnTransitionFinished;
     
 };
 

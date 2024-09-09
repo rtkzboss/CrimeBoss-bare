@@ -8,10 +8,10 @@ UCLASS()
 class BF_ANIMATIONS_API UAIAnimationDatabase : public UDataAsset {
     GENERATED_BODY()
 public:
+    UAIAnimationDatabase();
+
     UPROPERTY(EditAnywhere)
     FDeathAnimations DeathAnimations;
     
-    UAIAnimationDatabase();
-
 };
 

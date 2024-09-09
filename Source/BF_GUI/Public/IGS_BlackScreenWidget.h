@@ -7,13 +7,13 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_BlackScreenWidget : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool ShowBlackScreen;
-    
     UIGS_BlackScreenWidget();
 
     UFUNCTION(BlueprintCallable)
     void ToggleGlobalInvalidation(bool inEnabled);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool ShowBlackScreen;
     
 };
 

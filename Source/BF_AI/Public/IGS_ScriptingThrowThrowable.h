@@ -16,6 +16,16 @@ UCLASS()
 class BF_AI_API UIGS_ScriptingThrowThrowable : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
+    UIGS_ScriptingThrowThrowable();
+
+    UFUNCTION(BlueprintCallable)
+    static UIGS_ScriptingThrowThrowable* ScriptingCommandThrowThrowable(AIGS_GameCharacterFramework* inCharacter, FIGS_InterestPointHolder inTarget, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowable);
+    
+private:
+    UFUNCTION()
+    void OnCommandFinished(AIGS_AIControllerGame* inOwningController, UIGS_AICommand* inCommand, bool inFailed);
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Succeed;
     
@@ -25,16 +35,6 @@ public:
 protected:
     UPROPERTY()
     TSubclassOf<UIGS_ThrowableInventoryObject> m_Throwable;
-    
-public:
-    UIGS_ScriptingThrowThrowable();
-
-    UFUNCTION(BlueprintCallable)
-    static UIGS_ScriptingThrowThrowable* ScriptingCommandThrowThrowable(AIGS_GameCharacterFramework* inCharacter, FIGS_InterestPointHolder inTarget, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowable);
-    
-private:
-    UFUNCTION()
-    void OnCommandFinished(AIGS_AIControllerGame* inOwningController, UIGS_AICommand* inCommand, bool inFailed);
     
 };
 

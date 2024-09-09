@@ -14,6 +14,16 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerSuppressionHandlerComponent : public UIGS_SuppressionHandlerComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerSuppressionHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void PlayWhizSound() const;
+    
+    UFUNCTION(Client, Unreliable)
+    void PlayDirectionalPlayerCue_Client(const AIGS_GameCharacterBase* inSourceCharacter, const EIGS_DirectionalCueType inType) const;
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FIGS_OnBulletMissCameraShakeSignature OnBulletMissCameraShake;
     
@@ -35,16 +45,6 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     UAkRtpc* SniperSonicCrackRtpc;
-    
-public:
-    UIGS_PlayerSuppressionHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void PlayWhizSound() const;
-    
-    UFUNCTION(Client, Unreliable)
-    void PlayDirectionalPlayerCue_Client(const AIGS_GameCharacterBase* inSourceCharacter, const EIGS_DirectionalCueType inType) const;
     
 };
 

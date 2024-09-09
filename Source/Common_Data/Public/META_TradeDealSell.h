@@ -11,11 +11,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_TradeDealSell : public UMETA_BaseMission {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    FMETA_TradeDealSellMissionSave m_TradeDealMissionSave;
-    
-public:
     UMETA_TradeDealSell();
 
     UFUNCTION(BlueprintCallable)
@@ -47,6 +42,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FMETA_TradeDealSellMissionRowInfo GetInfo() const;
+    
+private:
+    UPROPERTY()
+    FMETA_TradeDealSellMissionSave m_TradeDealMissionSave;
     
 };
 

@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachBase : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadDoorBreachBase();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BreachRolesKey;
@@ -33,8 +35,5 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     TArray<UIGS_AICommand*> StackCommands;
     
-public:
-    UIGS_BTTask_SquadDoorBreachBase();
-
 };
 

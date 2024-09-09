@@ -20,6 +20,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_FrameworkGameDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> AmmoBoxDataTable;
     
@@ -59,7 +61,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_SuspicionOffenceDataTablesAsset> OffenceTablesDataAsset;
     
-    UIGS_FrameworkGameDevSettings();
-
 };
 

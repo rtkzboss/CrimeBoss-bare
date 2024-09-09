@@ -15,6 +15,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniOutput : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniOutput();
+
 protected:
     UPROPERTY()
     EHoudiniOutputType Type;
@@ -56,8 +58,5 @@ private:
     UPROPERTY()
     bool bCanDeleteHoudiniNodes;
     
-public:
-    UHoudiniOutput();
-
 };
 

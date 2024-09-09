@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DamageHandlerComponent : public UIGS_DamageHandlerComponentFramework {
     GENERATED_BODY()
 public:
+    UIGS_DamageHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<UPhysicalMaterial*, FScalableFloat> BodyPartMaterialMultipliers;
@@ -75,8 +77,6 @@ protected:
     float GlobalEnemyAIDamageReceivedAttribute;
     
 public:
-    UIGS_DamageHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };

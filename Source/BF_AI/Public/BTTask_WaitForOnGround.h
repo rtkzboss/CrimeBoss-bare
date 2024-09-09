@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTTask_WaitForOnGround : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_WaitForOnGround();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CivlianToZipKey;
     
-    UBTTask_WaitForOnGround();
-
 };
 

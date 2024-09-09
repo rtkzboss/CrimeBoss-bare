@@ -11,6 +11,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_TaskWidgetOr : public UIGS_TaskWidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_TaskWidgetOr();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UOverlay* FirstTaskBox;
     
@@ -26,7 +28,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_TaskWidgetBase> TaskWidgetClass;
     
-    UIGS_TaskWidgetOr();
-
 };
 

@@ -11,6 +11,14 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_SniperPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:
+    AIGS_SniperPoint(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetVisitorManually(AIGS_GameCharacterFramework* inGameCharacter);
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_GameCharacterFramework* GetVisitor() const;
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SnipeAngleVertical;
     
@@ -32,15 +40,6 @@ protected:
     
     UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<AIGS_AIControllerSniper> m_SniperController;
-    
-public:
-    AIGS_SniperPoint(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetVisitorManually(AIGS_GameCharacterFramework* inGameCharacter);
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_GameCharacterFramework* GetVisitor() const;
     
 };
 

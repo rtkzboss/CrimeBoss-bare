@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_CanDodgeToCover : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_CanDodgeToCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MoveToPositionKey;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
     
-public:
-    UBTDecorator_CanDodgeToCover();
-
 };
 

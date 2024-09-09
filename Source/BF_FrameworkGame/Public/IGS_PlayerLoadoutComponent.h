@@ -18,26 +18,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerLoadoutComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LoadoutInitializedSignature OnLoadoutInitializedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_Ability1Changed OnAbility1Changed;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool IsInited;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_EquipmentInventoryObject> CurrentEquipment;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UGameplayEffect> SubtractChargeGE;
-    
-    UPROPERTY()
-    TScriptInterface<IIGS_InventoryInterface> OwningCharacterInventoryInterface;
-    
-public:
     UIGS_PlayerLoadoutComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -72,6 +52,26 @@ protected:
     
     UFUNCTION(Client, Reliable)
     void Client_SetEquipmentData(float inTimestamp, int32 inCount, int32 inKillCount);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LoadoutInitializedSignature OnLoadoutInitializedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_Ability1Changed OnAbility1Changed;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool IsInited;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_EquipmentInventoryObject> CurrentEquipment;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UGameplayEffect> SubtractChargeGE;
+    
+    UPROPERTY()
+    TScriptInterface<IIGS_InventoryInterface> OwningCharacterInventoryInterface;
     
 };
 

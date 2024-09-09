@@ -10,10 +10,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_PathThroughRooms : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_PathThroughRooms();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
     
-    UEnvQueryTest_PathThroughRooms();
-
 };
 

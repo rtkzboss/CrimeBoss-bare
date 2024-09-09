@@ -10,14 +10,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SentryMemoryComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FIGS_SentryEnemyHolder> Enemies;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<AActor> m_CurrentTarget;
-    
-public:
     UIGS_SentryMemoryComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -25,6 +17,13 @@ public:
     
     UFUNCTION(BlueprintPure)
     AActor* GetCurrentTarget() const;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<FIGS_SentryEnemyHolder> Enemies;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<AActor> m_CurrentTarget;
     
 };
 

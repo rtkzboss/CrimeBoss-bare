@@ -11,13 +11,13 @@ UCLASS()
 class PAYBACK_API UIGS_LoadMetaCutscenePaperDolls : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneLoadPaperDollDelegate Loaded;
-    
     UIGS_LoadMetaCutscenePaperDolls();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_LoadMetaCutscenePaperDolls* LoadMetaCutscenePaperDolls(UObject* inWCO);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneLoadPaperDollDelegate Loaded;
     
 };
 

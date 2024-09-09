@@ -11,6 +11,8 @@ UCLASS(EditInlineNew, Config=Game)
 class BF_AI_API UIGS_AISenseConfig_ComplexSight : public UAISenseConfig {
     GENERATED_BODY()
 public:
+    UIGS_AISenseConfig_ComplexSight();
+
     UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly, NoClear)
     TSubclassOf<UIGS_AISense_ComplexSight> Implementation;
     
@@ -77,7 +79,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float SixthSenseVisionStrengthLimit;
     
-    UIGS_AISenseConfig_ComplexSight();
-
 };
 

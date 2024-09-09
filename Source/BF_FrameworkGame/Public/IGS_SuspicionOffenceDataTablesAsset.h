@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_SuspicionOffenceDataTablesAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_SuspicionOffenceDataTablesAsset();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* PlayerOffenceTable;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* SpecialOffenceTable;
     
-    UIGS_SuspicionOffenceDataTablesAsset();
-
 };
 

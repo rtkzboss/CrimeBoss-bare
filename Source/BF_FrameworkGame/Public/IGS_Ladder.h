@@ -12,6 +12,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Ladder : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:
+    AIGS_Ladder(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
     
@@ -45,7 +47,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> User;
     
-    AIGS_Ladder(const FObjectInitializer& ObjectInitializer);
-
 };
 

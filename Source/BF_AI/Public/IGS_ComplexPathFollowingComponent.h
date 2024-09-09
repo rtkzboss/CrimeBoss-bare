@@ -11,11 +11,6 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ComplexPathFollowingComponent : public UPathFollowingComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditAnywhere)
-    bool bAcceptPartialPaths;
-    
-public:
     UIGS_ComplexPathFollowingComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
@@ -23,6 +18,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ForceStopTransition();
+    
+protected:
+    UPROPERTY(EditAnywhere)
+    bool bAcceptPartialPaths;
     
 };
 

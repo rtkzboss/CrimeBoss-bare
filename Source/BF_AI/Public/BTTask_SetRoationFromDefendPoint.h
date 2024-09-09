@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTTask_SetRoationFromDefendPoint : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_SetRoationFromDefendPoint();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookPosKey;
     
-    UBTTask_SetRoationFromDefendPoint();
-
 };
 

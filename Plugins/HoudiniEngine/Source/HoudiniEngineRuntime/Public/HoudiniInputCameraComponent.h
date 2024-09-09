@@ -7,6 +7,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputCameraComponent : public UHoudiniInputSceneComponent {
     GENERATED_BODY()
 public:
+    UHoudiniInputCameraComponent();
+
     UPROPERTY()
     float FOV;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY()
     float OrthoFarClipPlane;
     
-    UHoudiniInputCameraComponent();
-
 };
 

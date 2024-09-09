@@ -10,6 +10,16 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InstancedBreakableWindow : public UIGS_BreakableWindowComponent {
     GENERATED_BODY()
 public:
+    UIGS_InstancedBreakableWindow(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void HideWindowInstance(const int32& InstanceIndex);
+    
+public:
+    UFUNCTION(NetMulticast, Reliable)
+    void All_ImpactInstance(FVector_NetQuantize Location, int32 InstanceIndex);
+    
     UPROPERTY(BlueprintAssignable)
     FOnInstanceBreakableStateChangedDelegate OnInstanceBroken;
     
@@ -21,17 +31,7 @@ protected:
     TArray<FInstancedBreakableWindowParam> mR_BreakableWindowInstances;
     
 public:
-    UIGS_InstancedBreakableWindow(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void HideWindowInstance(const int32& InstanceIndex);
-    
-public:
-    UFUNCTION(NetMulticast, Reliable)
-    void All_ImpactInstance(FVector_NetQuantize Location, int32 InstanceIndex);
-    
 };
 

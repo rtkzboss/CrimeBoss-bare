@@ -11,15 +11,14 @@ UCLASS()
 class BF_AI_API AIGS_AgentsCollectorBase : public AActor {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UShapeComponent* Shape;
-    
-public:
     AIGS_AgentsCollectorBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
     TArray<AIGS_GameCharacterFramework*> Collect(EIGS_TeamSideEnum TeamSide) const;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UShapeComponent* Shape;
     
 };
 

@@ -12,16 +12,16 @@ UCLASS(MinimalAPI)
 class UCancelFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
+    UCancelFindSessionsCallbackProxy();
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
+    static UCancelFindSessionsCallbackProxy* CancelFindSessions(UObject* WorldContextObject, APlayerController* PlayerController);
+    
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnSuccess;
     
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnFailure;
-    
-    UCancelFindSessionsCallbackProxy();
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
-    static UCancelFindSessionsCallbackProxy* CancelFindSessions(UObject* WorldContextObject, APlayerController* PlayerController);
     
 };
 

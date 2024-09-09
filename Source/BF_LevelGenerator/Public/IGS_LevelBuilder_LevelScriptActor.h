@@ -16,6 +16,21 @@ UCLASS()
 class BF_LEVELGENERATOR_API AIGS_LevelBuilder_LevelScriptActor : public AIGS_GameLevelScriptActor {
     GENERATED_BODY()
 public:
+    AIGS_LevelBuilder_LevelScriptActor(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void RunDefaultVariant(UIGS_RandomStreamHolder* RandomStreamHolder, FIGS_GeneratorVariantData GeneratorVariantData);
+    
+private:
+    UFUNCTION()
+    void OnRep_Seed();
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPrepareData(UIGS_RandomStreamHolder* RandomStreamHolder);
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_LevelSettings LevelSettings;
     
@@ -46,21 +61,7 @@ private:
     UIGS_RandomStreamHolder* m_RandomStreamHolder;
     
 public:
-    AIGS_LevelBuilder_LevelScriptActor(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void RunDefaultVariant(UIGS_RandomStreamHolder* RandomStreamHolder, FIGS_GeneratorVariantData GeneratorVariantData);
-    
-private:
-    UFUNCTION()
-    void OnRep_Seed();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPrepareData(UIGS_RandomStreamHolder* RandomStreamHolder);
-    
 };
 

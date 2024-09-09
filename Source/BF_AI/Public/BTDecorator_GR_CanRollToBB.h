@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_GR_CanRollToBB : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_GR_CanRollToBB();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetLocation;
@@ -50,8 +52,5 @@ protected:
     UPROPERTY(EditAnywhere)
     TSet<EIGS_TeamSideEnum> TeamSidesWithRoll;
     
-public:
-    UBTDecorator_GR_CanRollToBB();
-
 };
 

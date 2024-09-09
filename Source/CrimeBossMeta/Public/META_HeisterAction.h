@@ -14,6 +14,8 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_HeisterAction : public UMETA_BaseAction {
     GENERATED_BODY()
 public:
+    UMETA_HeisterAction();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_HeistersSourceEvent HeistersSource;
     
@@ -47,7 +49,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UMETA_BaseHeisterCondition*> SortingConditions;
     
-    UMETA_HeisterAction();
-
 };
 

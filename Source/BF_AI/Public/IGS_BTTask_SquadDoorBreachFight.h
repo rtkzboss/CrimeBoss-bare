@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachFight : public UIGS_BTTask_SquadDoorBreachBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadDoorBreachFight();
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* FightingCharacter;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* BreachFightCommand;
     
-public:
-    UIGS_BTTask_SquadDoorBreachFight();
-
 };
 

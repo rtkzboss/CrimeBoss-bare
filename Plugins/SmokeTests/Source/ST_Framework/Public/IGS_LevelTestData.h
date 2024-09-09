@@ -10,6 +10,8 @@ UCLASS(BlueprintType)
 class ST_FRAMEWORK_API UIGS_LevelTestData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_LevelTestData();
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UWorld> Level;
     
@@ -34,7 +36,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RenderTargetGamma;
     
-    UIGS_LevelTestData();
-
 };
 

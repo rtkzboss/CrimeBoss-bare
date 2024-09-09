@@ -10,10 +10,10 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_MenuBackgroundMusicStatesDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_MenuBackgroundMusicStatesDataAsset();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FGameplayTag, UAkStateValue*> AkEvents;
     
-    UIGS_MenuBackgroundMusicStatesDataAsset();
-
 };
 

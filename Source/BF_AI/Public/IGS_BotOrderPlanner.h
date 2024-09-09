@@ -11,12 +11,6 @@ UCLASS()
 class BF_AI_API UIGS_BotOrderPlanner : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FBotOrderPlannerOutputPin Finished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FBotOrderPlannerOutputPin Interrupted;
-    
     UIGS_BotOrderPlanner();
 
 private:
@@ -29,6 +23,12 @@ private:
 public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_BotOrderPlanner* BotOrderPlanner(UObject* inWorldContextObject, FText Text, float Cooldown, bool OverwriteExistingOrder, int32 AliveBotsNeeded);
+    
+    UPROPERTY(BlueprintAssignable)
+    FBotOrderPlannerOutputPin Finished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FBotOrderPlannerOutputPin Interrupted;
     
 };
 

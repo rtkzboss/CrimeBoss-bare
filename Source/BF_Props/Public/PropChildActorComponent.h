@@ -12,6 +12,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_PROPS_API UPropChildActorComponent : public UChildActorComponent, public IPropInfoInterface {
     GENERATED_BODY()
 public:
+    UPropChildActorComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropInfoStruct mPropInfo;
     
@@ -21,8 +23,6 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<AActor> ActorClass;
     
-    UPropChildActorComponent(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

@@ -16,32 +16,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetMainInventory : public UUserWidget {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UScrollBox* WeaponsScrollBox;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UScrollBox* GadgetsScrollBox;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UScrollBox* ItemsScrollBox;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UScrollBox* LootScrollBox;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UIGS_WidgetMainInventoryItem> WidgetMainInventoryItemClass;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UIGS_WidgetDragItem> WidgetDragItemClass;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_ListInventory* OwningInventory;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UWidgetSwitcher* InventoryCategorySwitcher;
-    
-public:
     UIGS_WidgetMainInventory();
 
     UFUNCTION(BlueprintCallable)
@@ -75,6 +49,31 @@ public:
     
     UFUNCTION(BlueprintPure)
     UIGS_ListInventory* GetOwningContainer() const;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UScrollBox* WeaponsScrollBox;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UScrollBox* GadgetsScrollBox;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UScrollBox* ItemsScrollBox;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UScrollBox* LootScrollBox;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UIGS_WidgetMainInventoryItem> WidgetMainInventoryItemClass;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UIGS_WidgetDragItem> WidgetDragItemClass;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_ListInventory* OwningInventory;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UWidgetSwitcher* InventoryCategorySwitcher;
     
 };
 

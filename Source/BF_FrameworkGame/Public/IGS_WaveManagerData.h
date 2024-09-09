@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_WaveManagerData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_WaveManagerData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool StartOnAlarm;
     
@@ -33,7 +35,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_StormType, FIGS_StormTypeHolder> StormTypeHolders;
     
-    UIGS_WaveManagerData();
-
 };
 

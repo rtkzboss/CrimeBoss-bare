@@ -10,7 +10,15 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_RotatingLaserTrap : public AIGS_TickingLaserTrap {
     GENERATED_BODY()
 public:
+    AIGS_RotatingLaserTrap(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION()
+    void TickTimelineUpdate(float InValue);
+    
+    UFUNCTION()
+    void TickTimelineFinished();
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* ExtraRootObject;
     
@@ -25,16 +33,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool Looping;
-    
-public:
-    AIGS_RotatingLaserTrap(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void TickTimelineUpdate(float InValue);
-    
-    UFUNCTION()
-    void TickTimelineFinished();
     
 };
 

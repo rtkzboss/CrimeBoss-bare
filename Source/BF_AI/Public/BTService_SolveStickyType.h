@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTService_SolveStickyType : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_SolveStickyType();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector StickyTypeKey;
@@ -28,8 +30,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval InvalidTimeOutside;
     
-public:
-    UBTService_SolveStickyType();
-
 };
 

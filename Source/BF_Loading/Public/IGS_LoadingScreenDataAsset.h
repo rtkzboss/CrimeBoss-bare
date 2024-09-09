@@ -11,6 +11,8 @@ UCLASS()
 class BF_LOADING_API UIGS_LoadingScreenDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_LoadingScreenDataAsset();
+
     UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo MainTextFont;
     
@@ -32,7 +34,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo LoadingIconFont;
     
-    UIGS_LoadingScreenDataAsset();
-
 };
 

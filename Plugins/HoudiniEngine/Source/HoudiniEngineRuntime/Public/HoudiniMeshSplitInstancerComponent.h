@@ -11,6 +11,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniMeshSplitInstancerComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UHoudiniMeshSplitInstancerComponent(const FObjectInitializer& ObjectInitializer);
+
 private:
     UPROPERTY(Instanced, VisibleInstanceOnly)
     TArray<UStaticMeshComponent*> Instances;
@@ -21,8 +23,5 @@ private:
     UPROPERTY(VisibleAnywhere)
     UStaticMesh* InstancedMesh;
     
-public:
-    UHoudiniMeshSplitInstancerComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

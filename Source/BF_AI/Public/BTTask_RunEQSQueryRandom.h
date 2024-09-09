@@ -14,6 +14,8 @@ UCLASS()
 class BF_AI_API UBTTask_RunEQSQueryRandom : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UBTTask_RunEQSQueryRandom();
+
     UPROPERTY(VisibleAnywhere)
     UEnvQuery* QueryTemplate;
     
@@ -38,7 +40,5 @@ public:
     UPROPERTY(EditAnywhere)
     FEQSParametrizedQueryExecutionRequest EQSRequest;
     
-    UBTTask_RunEQSQueryRandom();
-
 };
 

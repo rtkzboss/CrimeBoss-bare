@@ -10,6 +10,8 @@ UCLASS()
 class BF_GUI_API UIGS_TileItemWeaponFamilyData : public UMETA_ComparableItemData {
     GENERATED_BODY()
 public:
+    UIGS_TileItemWeaponFamilyData();
+
     UPROPERTY(BlueprintReadWrite)
     FGameplayTag ID;
     
@@ -28,7 +30,5 @@ public:
     UPROPERTY(BlueprintReadWrite)
     bool HasDlcItem;
     
-    UIGS_TileItemWeaponFamilyData();
-
 };
 

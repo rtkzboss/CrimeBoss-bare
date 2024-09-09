@@ -10,20 +10,6 @@ UCLASS(BlueprintType)
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemBuildTool : public UConstructionSystemTool {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float TraceDistance;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float CursorRotationStepAngle;
-    
-private:
-    UPROPERTY(Transient)
-    UConstructionSystemCursor* Cursor;
-    
-    UPROPERTY(Transient)
-    UPrefabricatorAssetInterface* ActivePrefabAsset;
-    
-public:
     UConstructionSystemBuildTool();
 
     UFUNCTION(BlueprintCallable)
@@ -41,6 +27,20 @@ private:
     
     UFUNCTION()
     void HandleInput_ConstructAtCursor();
+    
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float TraceDistance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float CursorRotationStepAngle;
+    
+private:
+    UPROPERTY(Transient)
+    UConstructionSystemCursor* Cursor;
+    
+    UPROPERTY(Transient)
+    UPrefabricatorAssetInterface* ActivePrefabAsset;
     
 };
 

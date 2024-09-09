@@ -13,6 +13,22 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ContinuousTrackComponent : public USplineComponent {
     GENERATED_BODY()
 public:
+    UIGS_ContinuousTrackComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetDriveSprocketAngle(float Angle);
+    
+    UFUNCTION(BlueprintPure)
+    float GetDriveSprocketAngleAtDistance(float SprocketRadius, float Distance);
+    
+private:
+    UFUNCTION()
+    void CreateSplineCurve();
+    
+    UFUNCTION()
+    void CreateContinuousTrack();
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     USkeletalMesh* SK_BaseMesh;
     
@@ -45,21 +61,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float OscillationScale;
-    
-    UIGS_ContinuousTrackComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetDriveSprocketAngle(float Angle);
-    
-    UFUNCTION(BlueprintPure)
-    float GetDriveSprocketAngleAtDistance(float SprocketRadius, float Distance);
-    
-private:
-    UFUNCTION()
-    void CreateSplineCurve();
-    
-    UFUNCTION()
-    void CreateContinuousTrack();
     
 };
 

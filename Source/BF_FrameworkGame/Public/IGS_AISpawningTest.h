@@ -10,6 +10,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AISpawningTest : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_AISpawningTest(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SpawnPeriod;
     
-    AIGS_AISpawningTest(const FObjectInitializer& ObjectInitializer);
-
 };
 

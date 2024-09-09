@@ -19,6 +19,14 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIGrenadeManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AIGrenadeManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void RemoveThrowableCooldown(const TSoftClassPtr<UIGS_ThrowableInventoryObject> inObject, const EIGS_UnitSpecialization inSpecialization, const AActor* inInstigator);
+    
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    static UIGS_AIGrenadeManager* Instance(const UObject* inWorldContextObject);
+    
     UPROPERTY(VisibleAnywhere)
     TMap<TSoftClassPtr<UIGS_ThrowableInventoryObject>, FIGS_ThrowableLiveObjectsHolder> ThrowableObjects;
     
@@ -106,15 +114,6 @@ private:
     
     UPROPERTY()
     TArray<TSoftClassPtr<UIGS_ThrowableInventoryObject>> m_DetectiveThrowablesOnCooldown;
-    
-public:
-    UIGS_AIGrenadeManager(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION()
-    void RemoveThrowableCooldown(const TSoftClassPtr<UIGS_ThrowableInventoryObject> inObject, const EIGS_UnitSpecialization inSpecialization, const AActor* inInstigator);
-    
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
-    static UIGS_AIGrenadeManager* Instance(const UObject* inWorldContextObject);
     
 };
 

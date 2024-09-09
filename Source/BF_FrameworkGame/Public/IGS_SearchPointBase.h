@@ -9,10 +9,10 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SearchPointBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_SearchPointBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_SearchPointComponent* SearchPointComponent;
     
-    AIGS_SearchPointBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

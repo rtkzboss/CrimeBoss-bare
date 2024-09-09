@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_GR_IsSafeFromVehicle : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_GR_IsSafeFromVehicle();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -22,8 +24,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float SafeDistanceFromVehicle;
     
-public:
-    UBTDecorator_GR_IsSafeFromVehicle();
-
 };
 

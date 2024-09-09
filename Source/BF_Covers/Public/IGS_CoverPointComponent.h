@@ -9,12 +9,6 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_COVERS_API UIGS_CoverPointComponent : public UCapsuleComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
-    bool ForceDeactivate;
-    
-    UPROPERTY(Instanced, VisibleAnywhere)
-    UCoverPoint* CoverPoint;
-    
     UIGS_CoverPointComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -22,6 +16,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     bool ActivateCoverPoint(bool inForceActivate);
+    
+    UPROPERTY(EditAnywhere)
+    bool ForceDeactivate;
+    
+    UPROPERTY(Instanced, VisibleAnywhere)
+    UCoverPoint* CoverPoint;
     
 };
 

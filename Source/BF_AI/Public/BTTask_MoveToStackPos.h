@@ -10,13 +10,13 @@ UCLASS()
 class BF_AI_API UBTTask_MoveToStackPos : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UBTTask_MoveToStackPos();
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
     
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
     
-    UBTTask_MoveToStackPos();
-
 };
 

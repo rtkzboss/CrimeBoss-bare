@@ -11,6 +11,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CarryableInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
+    UIGS_CarryableInteractiveComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     AIGS_PlayerCharacter* OwnerPlayer;
@@ -19,8 +21,6 @@ protected:
     TSubclassOf<UIGS_CarryableInventoryObject> mR_CarryableInventoryObject;
     
 public:
-    UIGS_CarryableInteractiveComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };

@@ -11,6 +11,8 @@ UCLASS()
 class ST_FRAMEWORK_API UIGS_MisplacedAssetsTestData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_MisplacedAssetsTestData();
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UWorld> Level;
     
@@ -32,7 +34,5 @@ public:
     UPROPERTY(EditAnywhere)
     TArray<FName> IncludedCollections;
     
-    UIGS_MisplacedAssetsTestData();
-
 };
 

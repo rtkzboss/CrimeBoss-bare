@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTTask_RequestAnimationTask : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_RequestAnimationTask();
+
     UPROPERTY(EditAnywhere)
     FGameplayTag AnimationTypeTag;
     
@@ -36,7 +38,5 @@ public:
     UPROPERTY(EditAnywhere)
     float PlayTime;
     
-    UBTTask_RequestAnimationTask();
-
 };
 

@@ -15,18 +15,6 @@ UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_InputBindSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    UIGS_InputActionMapDataAsset* InputActionMapDataAsset;
-    
-    UPROPERTY()
-    UIGS_InputActionDefaultKeysDataAsset* InputActionDefaultKeysAsset;
-    
-    UPROPERTY()
-    FIGS_CachedInputBinding CachedBindings;
-    
-    UPROPERTY()
-    TMap<EIGS_InputAction, FKey> GamepadMappings;
-    
     UIGS_InputBindSettings();
 
     UFUNCTION(BlueprintCallable)
@@ -55,6 +43,18 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ApplySettings(bool inSave);
+    
+    UPROPERTY()
+    UIGS_InputActionMapDataAsset* InputActionMapDataAsset;
+    
+    UPROPERTY()
+    UIGS_InputActionDefaultKeysDataAsset* InputActionDefaultKeysAsset;
+    
+    UPROPERTY()
+    FIGS_CachedInputBinding CachedBindings;
+    
+    UPROPERTY()
+    TMap<EIGS_InputAction, FKey> GamepadMappings;
     
 };
 

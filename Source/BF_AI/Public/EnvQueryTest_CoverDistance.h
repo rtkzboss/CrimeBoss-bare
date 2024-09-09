@@ -10,10 +10,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_CoverDistance : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_CoverDistance();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
     
-    UEnvQueryTest_CoverDistance();
-
 };
 

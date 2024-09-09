@@ -9,6 +9,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_DoorsBreachPoints : public AIGS_BreachPointsBase {
     GENERATED_BODY()
 public:
+    AIGS_DoorsBreachPoints(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* LeftNearEntryPoint;
     
@@ -39,7 +41,5 @@ public:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* RightFarExitPoint;
     
-    AIGS_DoorsBreachPoints(const FObjectInitializer& ObjectInitializer);
-
 };
 

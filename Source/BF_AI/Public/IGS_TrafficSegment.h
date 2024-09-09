@@ -9,13 +9,13 @@ UCLASS()
 class BF_AI_API AIGS_TrafficSegment : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_TrafficSegment(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_TrafficPathComponent* PathComponent;
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool Hidden;
     
-    AIGS_TrafficSegment(const FObjectInitializer& ObjectInitializer);
-
 };
 

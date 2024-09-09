@@ -10,13 +10,13 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_HasLosThroughCharacters : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_HasLosThroughCharacters();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> LosTargetContext;
     
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> OtherCharactersContext;
     
-    UEnvQueryTest_HasLosThroughCharacters();
-
 };
 

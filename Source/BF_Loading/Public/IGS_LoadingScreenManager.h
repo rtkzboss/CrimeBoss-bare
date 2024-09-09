@@ -15,23 +15,6 @@ UCLASS(BlueprintType)
 class BF_LOADING_API UIGS_LoadingScreenManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    UIGS_LoadingScreenDataAsset* Data;
-    
-    UPROPERTY()
-    UTexture* BackgroundTexture;
-    
-    UPROPERTY()
-    UTexture* ThrobberBrush;
-    
-    UPROPERTY()
-    TSoftObjectPtr<UTexture> CustomBackgroundTexture;
-    
-    UPROPERTY()
-    TArray<UIGS_RichTextBlockDecoratorBase*> m_LoadingTipsDecoratorOwner;
-    
-public:
     UIGS_LoadingScreenManager();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -62,6 +45,22 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetDebugState(UObject* inWCO, bool inState);
+    
+protected:
+    UPROPERTY()
+    UIGS_LoadingScreenDataAsset* Data;
+    
+    UPROPERTY()
+    UTexture* BackgroundTexture;
+    
+    UPROPERTY()
+    UTexture* ThrobberBrush;
+    
+    UPROPERTY()
+    TSoftObjectPtr<UTexture> CustomBackgroundTexture;
+    
+    UPROPERTY()
+    TArray<UIGS_RichTextBlockDecoratorBase*> m_LoadingTipsDecoratorOwner;
     
 };
 

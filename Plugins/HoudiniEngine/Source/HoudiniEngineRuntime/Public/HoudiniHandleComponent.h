@@ -10,6 +10,8 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniHandleComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UHoudiniHandleComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY()
     TArray<UHoudiniHandleParameter*> XformParms;
     
@@ -26,8 +28,5 @@ private:
     UPROPERTY()
     FString HandleName;
     
-public:
-    UHoudiniHandleComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

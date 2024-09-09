@@ -7,6 +7,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_IsAimingAtMeComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_IsAimingAtMeComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(VisibleAnywhere)
     bool IsAimingAtMe;
     
@@ -22,7 +24,5 @@ public:
     UPROPERTY(EditAnywhere)
     bool ShouldCheckLineTrace;
     
-    UIGS_IsAimingAtMeComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

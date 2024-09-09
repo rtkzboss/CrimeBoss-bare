@@ -12,6 +12,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_CarryableBase : public AIGS_WieldableBase {
     GENERATED_BODY()
 public:
+    AIGS_CarryableBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SkinHandlerBase* SkinHandler;
@@ -22,8 +24,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSubclassOf<AActor> PickupClassReference;
     
-public:
-    AIGS_CarryableBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

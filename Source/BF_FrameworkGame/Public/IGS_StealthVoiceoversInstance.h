@@ -9,9 +9,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_StealthVoiceoversInstance : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    UIGS_StealthVoiceovers* StealthVoiceovers;
-    
     UIGS_StealthVoiceoversInstance();
 
     UFUNCTION(BlueprintPure)
@@ -61,6 +58,9 @@ public:
     
     UFUNCTION(BlueprintPure)
     FText GetAmbientDutyItem() const;
+    
+    UPROPERTY(BlueprintReadOnly)
+    UIGS_StealthVoiceovers* StealthVoiceovers;
     
 };
 

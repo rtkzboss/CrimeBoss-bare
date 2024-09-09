@@ -12,6 +12,8 @@ UCLASS(Abstract)
 class BF_AI_API UIGS_BTTask_FireBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_FireBase();
+
 protected:
     UPROPERTY(EditAnywhere)
     FGameplayTag AfterFireCooldownTag;
@@ -31,8 +33,5 @@ protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_WeaponBase* Weapon;
     
-public:
-    UIGS_BTTask_FireBase();
-
 };
 

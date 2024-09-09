@@ -9,6 +9,8 @@ UCLASS(DefaultToInstanced)
 class HOUDINIENGINERUNTIME_API UHoudiniParameterRampModificationEvent : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniParameterRampModificationEvent();
+
 private:
     UPROPERTY()
     bool bIsInsertEvent;
@@ -32,7 +34,5 @@ public:
     UPROPERTY()
     EHoudiniRampInterpolationType InsertInterpolation;
     
-    UHoudiniParameterRampModificationEvent();
-
 };
 

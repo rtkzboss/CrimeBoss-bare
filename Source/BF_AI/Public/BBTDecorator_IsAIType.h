@@ -9,13 +9,13 @@ UCLASS(BlueprintType)
 class BF_AI_API UBBTDecorator_IsAIType : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBBTDecorator_IsAIType();
+
     UPROPERTY(EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_UnitSpecialization UnitSpecialization;
     
-    UBBTDecorator_IsAIType();
-
 };
 

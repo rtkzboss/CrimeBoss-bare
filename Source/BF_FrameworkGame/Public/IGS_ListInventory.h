@@ -14,6 +14,17 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ListInventory : public UActorComponent, public IIGS_InventoryInterface {
     GENERATED_BODY()
 public:
+    UIGS_ListInventory(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    float GetPocketLootWeight();
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetAndClearPocketLoot();
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetAndClearBonusPocketLoot();
+    
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bIsReady;
     
@@ -34,17 +45,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     TArray<TSubclassOf<UIGS_InventoryObjectFramework>> BonusPocketLoot;
-    
-    UIGS_ListInventory(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    float GetPocketLootWeight();
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetAndClearPocketLoot();
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> GetAndClearBonusPocketLoot();
     
 
     // Fix for true pure virtual functions not being implemented

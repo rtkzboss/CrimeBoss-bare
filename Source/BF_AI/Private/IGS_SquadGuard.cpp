@@ -6,8 +6,8 @@
 
 AIGS_SquadGuard::AIGS_SquadGuard(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).GuardControlRoomComponent = CreateDefaultSubobject<UIGS_GuardControlRoomComponent>(TEXT("GuardControlRoomComponent"));
-    (*this).DebugColor.B = 0;
-    (*this).DebugColor.R = 141;
+    (*this).DebugColor.B = 255;
+    (*this).DebugColor.R = 213;
 }
 
 UIGS_GuardControlRoomComponent* AIGS_SquadGuard::GetGuardControlRoomComponent() const {

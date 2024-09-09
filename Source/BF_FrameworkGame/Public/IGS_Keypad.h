@@ -17,53 +17,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Keypad : public AActor {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 KeypadCode;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UIGS_InteractiveComponent* InteractiveComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UAkComponent* AkComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* KeycodePassAkAudioEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* KeycodeFailAkAudioEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ButtonPressAkAudioEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    USpotLightComponent* GreenLight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    USpotLightComponent* RedLight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UTextRenderComponent* CodeTextRenderComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    TArray<UTextRenderComponent*> ButtonsTextRenderComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float ButtonHighlightTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float TimeToClearAfterFail;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MaximalCodeLength;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    bool mR_IsInUse;
-    
-public:
     AIGS_Keypad(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
     UFUNCTION()
@@ -117,5 +71,50 @@ protected:
     UFUNCTION(NetMulticast, Unreliable)
     void All_OnButtonHighlightOff(int32 inButtonId);
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 KeypadCode;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UIGS_InteractiveComponent* InteractiveComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UAkComponent* AkComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* KeycodePassAkAudioEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* KeycodeFailAkAudioEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ButtonPressAkAudioEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    USpotLightComponent* GreenLight;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    USpotLightComponent* RedLight;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UTextRenderComponent* CodeTextRenderComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    TArray<UTextRenderComponent*> ButtonsTextRenderComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float ButtonHighlightTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float TimeToClearAfterFail;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 MaximalCodeLength;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
+    bool mR_IsInUse;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

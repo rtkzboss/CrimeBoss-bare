@@ -10,13 +10,13 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseCondition : public UMETA_BaseGraphComponent, public IMETA_Condition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool InvertResult;
-    
     UMETA_BaseCondition();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ExecuteCondition(AMETA_BaseGameMode* inGameMode);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool InvertResult;
     
 
     // Fix for true pure virtual functions not being implemented

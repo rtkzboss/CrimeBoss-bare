@@ -11,6 +11,11 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_ScreenWithSubscreens : public UIGS_Screen {
     GENERATED_BODY()
 public:
+    UIGS_ScreenWithSubscreens();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void RequestSubscreenChange(FGameplayTag inTag);
+    
     UPROPERTY(BlueprintReadOnly, Instanced)
     UCommonActivatableWidgetSwitcher* WidgetSwitcher;
     
@@ -20,12 +25,6 @@ protected:
     
     UPROPERTY(Instanced)
     UIGS_ScreenWithSubscreens* m_ActiveScreenWithSubscreens;
-    
-public:
-    UIGS_ScreenWithSubscreens();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void RequestSubscreenChange(FGameplayTag inTag);
     
 };
 

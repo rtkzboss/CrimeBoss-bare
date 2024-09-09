@@ -10,15 +10,15 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_SentryControllerFramework : public AAIController, public IIGS_CharacterIDInterface {
     GENERATED_BODY()
 public:
+    AIGS_SentryControllerFramework(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 GenericId;
     
-public:
-    AIGS_SentryControllerFramework(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
+public:
     UFUNCTION(BlueprintCallable)
     void SetIsMaxLeveled(bool inIsMaxLeveled) override PURE_VIRTUAL(SetIsMaxLeveled,);
     

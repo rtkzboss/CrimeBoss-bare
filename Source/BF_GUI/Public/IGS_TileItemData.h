@@ -16,17 +16,6 @@ UCLASS()
 class BF_GUI_API UIGS_TileItemData : public UMETA_ComparableItemData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FTileDataChangedDelegate OnTileDataChanged;
-    
-private:
-    UPROPERTY()
-    FIGS_TileItemDataStruct m_Data;
-    
-    UPROPERTY()
-    FIGS_UITileQualityColors m_QualityColorSet;
-    
-public:
     UIGS_TileItemData();
 
     UFUNCTION(BlueprintCallable)
@@ -103,6 +92,16 @@ public:
     
     UFUNCTION(BlueprintPure)
     EIGS_UnlockCategory GetCategory() const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FTileDataChangedDelegate OnTileDataChanged;
+    
+private:
+    UPROPERTY()
+    FIGS_TileItemDataStruct m_Data;
+    
+    UPROPERTY()
+    FIGS_UITileQualityColors m_QualityColorSet;
     
 };
 

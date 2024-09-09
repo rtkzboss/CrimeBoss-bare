@@ -10,18 +10,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ReloaderBase : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    bool bIsInterruptible;
-    
-    UPROPERTY(BlueprintAssignable)
-    FWeaponReloadSignature OnWeaponBeginReload;
-    
-    UPROPERTY(BlueprintAssignable)
-    FWeaponReloadSignature OnWeaponStopReload;
-    
-    UPROPERTY(BlueprintAssignable)
-    FWeaponInterrutpReloadSignature OnWeaponInterruptReload;
-    
     UIGS_ReloaderBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -47,6 +35,18 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool CanBeInterrupted() const;
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool bIsInterruptible;
+    
+    UPROPERTY(BlueprintAssignable)
+    FWeaponReloadSignature OnWeaponBeginReload;
+    
+    UPROPERTY(BlueprintAssignable)
+    FWeaponReloadSignature OnWeaponStopReload;
+    
+    UPROPERTY(BlueprintAssignable)
+    FWeaponInterrutpReloadSignature OnWeaponInterruptReload;
     
 };
 

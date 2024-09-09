@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_IsCharacterOfTeamSide : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_IsCharacterOfTeamSide();
+
     UPROPERTY(EditDefaultsOnly)
     EIGS_TeamSideEnum TeamSide;
     
-    UEnvQueryTest_IsCharacterOfTeamSide();
-
 };
 

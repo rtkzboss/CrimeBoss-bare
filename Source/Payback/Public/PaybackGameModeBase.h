@@ -22,81 +22,6 @@ UCLASS(NonTransient)
 class PAYBACK_API APaybackGameModeBase : public AIGS_GameModeFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_AllDiedSignature OnAllDiedOrDowned;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_BossDiedSignature OnBossDied;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 GuardsCount;
-    
-protected:
-    UPROPERTY(Transient)
-    FName MatchState;
-    
-public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 bDelayedStart: 1;
-    
-    UPROPERTY(BlueprintReadOnly)
-    int32 NumSpectators;
-    
-    UPROPERTY(BlueprintReadOnly)
-    int32 NumPlayers;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSubclassOf<AAIController> BotControllerClass;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSubclassOf<AIGS_GameCharacterBase> BotPawnClass;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 QuickPlayBotCount;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool SpawnUniqueBotIDsInQuickPlay;
-    
-    UPROPERTY(BlueprintReadOnly)
-    int32 numBots;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float MinRespawnDelay;
-    
-    UPROPERTY(BlueprintReadOnly)
-    int32 NumTravelingPlayers;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<APlayerState*> ConnectedPlayerStates;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PlayerLogActionSignature OnPlayerLoggedOut;
-    
-    UPROPERTY(VisibleAnywhere)
-    TArray<AController*> BotControllers;
-    
-protected:
-    UPROPERTY(EditAnywhere)
-    float InactivePlayerStateLifeSpan;
-    
-    UPROPERTY(EditAnywhere)
-    int32 MaxInactivePlayers;
-    
-public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PlayerSwapActionsSignature OnPlayerSwapBeginEventDelegate;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PlayerSwapActionsSignature OnPlayerSwapEndEventDelegate;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UPaybackPlayerSwapper* m_PlayerSwapper;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UGameMetaTransferComponent* MetaTransferComponent;
-    
-public:
     APaybackGameModeBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -201,6 +126,80 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AbortMatch();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_AllDiedSignature OnAllDiedOrDowned;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_BossDiedSignature OnBossDied;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 GuardsCount;
+    
+protected:
+    UPROPERTY(Transient)
+    FName MatchState;
+    
+public:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    uint8 bDelayedStart: 1;
+    
+    UPROPERTY(BlueprintReadOnly)
+    int32 NumSpectators;
+    
+    UPROPERTY(BlueprintReadOnly)
+    int32 NumPlayers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSubclassOf<AAIController> BotControllerClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSubclassOf<AIGS_GameCharacterBase> BotPawnClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 QuickPlayBotCount;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool SpawnUniqueBotIDsInQuickPlay;
+    
+    UPROPERTY(BlueprintReadOnly)
+    int32 numBots;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float MinRespawnDelay;
+    
+    UPROPERTY(BlueprintReadOnly)
+    int32 NumTravelingPlayers;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<APlayerState*> ConnectedPlayerStates;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PlayerLogActionSignature OnPlayerLoggedOut;
+    
+    UPROPERTY(VisibleAnywhere)
+    TArray<AController*> BotControllers;
+    
+protected:
+    UPROPERTY(EditAnywhere)
+    float InactivePlayerStateLifeSpan;
+    
+    UPROPERTY(EditAnywhere)
+    int32 MaxInactivePlayers;
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PlayerSwapActionsSignature OnPlayerSwapBeginEventDelegate;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PlayerSwapActionsSignature OnPlayerSwapEndEventDelegate;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPaybackPlayerSwapper* m_PlayerSwapper;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UGameMetaTransferComponent* MetaTransferComponent;
     
 };
 

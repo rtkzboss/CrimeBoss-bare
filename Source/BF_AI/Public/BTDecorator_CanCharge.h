@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_CanCharge : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_CanCharge();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BlackboardKey;
@@ -21,8 +23,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float ExtraChargeDistanceBehindPlayer;
     
-public:
-    UBTDecorator_CanCharge();
-
 };
 

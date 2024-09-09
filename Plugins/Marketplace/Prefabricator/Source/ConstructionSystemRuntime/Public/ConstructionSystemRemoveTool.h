@@ -9,19 +9,19 @@ UCLASS(BlueprintType)
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemRemoveTool : public UConstructionSystemTool {
     GENERATED_BODY()
 public:
+    UConstructionSystemRemoveTool();
+
+protected:
+    UFUNCTION()
+    void HandleInput_RemoveAtCursor();
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TraceDistance;
     
 private:
     UPROPERTY(Transient)
     TWeakObjectPtr<APrefabActor> FocusedActor;
-    
-public:
-    UConstructionSystemRemoveTool();
-
-protected:
-    UFUNCTION()
-    void HandleInput_RemoveAtCursor();
     
 };
 

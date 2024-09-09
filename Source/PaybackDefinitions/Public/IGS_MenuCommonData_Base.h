@@ -13,23 +13,6 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UIGS_MenuCommonData_Base : public UDataAsset {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTag BossCharacterTagID;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 AmountOfMissionsCanBeCompletedByEachHeisterPerDay;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, FMETA_DifficultyConfig> ChancesForGeneratingMissionWithDifficulty;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTag EdgeCaseObjective;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTagContainer AllowedLoot;
-    
-public:
     UIGS_MenuCommonData_Base();
 
     UFUNCTION(BlueprintCallable)
@@ -49,6 +32,22 @@ public:
     
     UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetAllowedLoot() const;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTag BossCharacterTagID;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 AmountOfMissionsCanBeCompletedByEachHeisterPerDay;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, FMETA_DifficultyConfig> ChancesForGeneratingMissionWithDifficulty;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTag EdgeCaseObjective;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTagContainer AllowedLoot;
     
 };
 

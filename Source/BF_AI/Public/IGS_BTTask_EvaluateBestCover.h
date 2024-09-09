@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_EvaluateBestCover : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_EvaluateBestCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestCoverKey;
     
-public:
-    UIGS_BTTask_EvaluateBestCover();
-
 };
 

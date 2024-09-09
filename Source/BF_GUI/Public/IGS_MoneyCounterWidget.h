@@ -7,11 +7,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_MoneyCounterWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 SecuredLoot;
-    
-public:
     UIGS_MoneyCounterWidget();
 
 protected:
@@ -20,6 +15,9 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void AddValue(int32 InValue);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 SecuredLoot;
     
 };
 

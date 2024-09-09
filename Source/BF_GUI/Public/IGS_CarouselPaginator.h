@@ -13,6 +13,31 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_CarouselPaginator : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_CarouselPaginator();
+
+    UFUNCTION(BlueprintCallable)
+    void StartAutopaging();
+    
+    UFUNCTION(BlueprintCallable)
+    void SelectPage(int32 NewIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetPaginator();
+    
+    UFUNCTION(BlueprintPure)
+    bool IsLastPageSelected() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void InitCarousel(int32 newPageCount);
+    
+private:
+    UFUNCTION()
+    void HandleAutoPageSwitch();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void ChangePage(int32 Direction);
+    
     UPROPERTY(BlueprintAssignable)
     FOnPaginatorChangedPageEvent OnPageSelectionChanged;
     
@@ -72,31 +97,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, Instanced)
     UButton* RightArrow;
-    
-    UIGS_CarouselPaginator();
-
-    UFUNCTION(BlueprintCallable)
-    void StartAutopaging();
-    
-    UFUNCTION(BlueprintCallable)
-    void SelectPage(int32 NewIndex);
-    
-    UFUNCTION(BlueprintCallable)
-    void ResetPaginator();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsLastPageSelected() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void InitCarousel(int32 newPageCount);
-    
-private:
-    UFUNCTION()
-    void HandleAutoPageSwitch();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void ChangePage(int32 Direction);
     
 };
 

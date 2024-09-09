@@ -15,353 +15,6 @@ UCLASS(BlueprintType, ConfigDoNotCheckDefaults, Config=GameUserSettings)
 class BF_DEBUG_API UIGS_DebugSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_DebugSystemSettingsUpdatedEventSignature OnDebugSystemSettingsUpdatedEvent;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AutomaticLeanVisualization;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool WeaponVisibilityDraw;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerUseComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerScanComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowEnemies;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowEnemyHealth;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowFear;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowDetectionValue;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowVisibilityValue;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowDangerEvents;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowObstacles;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowCovers;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowSpawnPoints;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerSuppression;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool Throwables;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool Ping;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool MetricsMeasure;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AIVisibilityTrace;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AIVisionShapes;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DrawSuspicion;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerPosition;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerWeaponShootingTrace;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AIWeaponShootingTrace;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool MeleeWeaponTrace;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool TrafficSystem;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AimAssistDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool NPCDirectionArrows;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool FootIK;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ArmsAnimations;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerAnimations;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool IsMoving;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool IsLying;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerDamageReceivedDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AllDamageReceivedDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerHealth;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DisableSpread;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DisableRecoil;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool EnableFullFriendlyFire;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool BlockHealthRegen;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DisableTracerEffects;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DisableAimAssist;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool Buddha;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool RoomNavigation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PolysWithoutRoom;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PopulatorSolutionLocation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool HumanPolys;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool FightNavigation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PathFollowNavigation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AvoidanceNavigation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool CoverNavigation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool TacticalNavigation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool TrafficNavigation;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PatrolPoints;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PatrolPointsVisibleInPIE;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PatrolPointsLogging;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PatrolPointsLoggingVerbose;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool UseOldDetectionMeter;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool SwatAIDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool KillCameras;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool KillHeartbeat;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool KillControlRadio;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool KillAlarmButtons;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PressureDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PressureDebugGraph;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PressureSpawnIntensityEnabled;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DialoguesDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DialoguesDebugWidget;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DialoguesUseGenericCharacters;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DialoguesPlayTTS;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AkEventList;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AkEventWorld;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DebugSounds;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool FloatingDamageNumbers;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ForceFullHud;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool RoomCapacity;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DistantSpawnPoints;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ConnectionPointsVisibleInPIE;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool SpawnPointsVisibleInPIE;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool VehiclesDisabled;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AllowRespawn;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool MarkMutable;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool MarkTemporary;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ReloadWeaponDatabase;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool HeisterBarksDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AIBarksDebug;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerCrosshairEnabled;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool PlayerInput;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool UseMaxLevelUniqueCharacter;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool RandomizeWeaponSkins;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ShowMissionBagCount;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool MetaHumanAI;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool ForceHideDebugInfo;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool VarDump;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool MutableInfo;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DetectiveSpawnsIgnoreMeta;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool SessionRevisionCheck;
-    
-    UPROPERTY(Config, VisibleAnywhere)
-    bool UseCustomMission;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool DebugAIGrenadeManager;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AssetsPreloader;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AssetsPreloaderLogging;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool AlarmEnabled;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    bool KillStrikeDisabled;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    int32 PacketLag;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    int32 PacketLagVariance;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    int32 PacketLoss;
-    
-    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
-    int32 PacketJitter;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool InfiniteAmmo;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool InfiniteMagazines;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool MaximumDamage;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool AIDamageDisabled;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool AIPerceptionDisabled;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool AILogicDisabled;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool DisableOutlines;
-    
-    UPROPERTY(BlueprintReadOnly)
-    UIGS_DebugSubsystemBlueprint* DebugSubsystemBlueprint;
-    
-public:
     UIGS_DebugSubsystem();
 
     UFUNCTION(BlueprintCallable)
@@ -750,6 +403,352 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ApplySettings();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_DebugSystemSettingsUpdatedEventSignature OnDebugSystemSettingsUpdatedEvent;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AutomaticLeanVisualization;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool WeaponVisibilityDraw;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerUseComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerScanComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowEnemies;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowEnemyHealth;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowFear;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowDetectionValue;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowVisibilityValue;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowDangerEvents;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowObstacles;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowCovers;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowSpawnPoints;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerSuppression;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool Throwables;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool Ping;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool MetricsMeasure;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AIVisibilityTrace;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AIVisionShapes;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DrawSuspicion;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerPosition;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerWeaponShootingTrace;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AIWeaponShootingTrace;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool MeleeWeaponTrace;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool TrafficSystem;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AimAssistDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool NPCDirectionArrows;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool FootIK;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ArmsAnimations;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerAnimations;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool IsMoving;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool IsLying;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerDamageReceivedDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AllDamageReceivedDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerHealth;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DisableSpread;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DisableRecoil;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool EnableFullFriendlyFire;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool BlockHealthRegen;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DisableTracerEffects;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DisableAimAssist;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool Buddha;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool RoomNavigation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PolysWithoutRoom;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PopulatorSolutionLocation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool HumanPolys;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool FightNavigation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PathFollowNavigation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AvoidanceNavigation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool CoverNavigation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool TacticalNavigation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool TrafficNavigation;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PatrolPoints;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PatrolPointsVisibleInPIE;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PatrolPointsLogging;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PatrolPointsLoggingVerbose;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool UseOldDetectionMeter;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool SwatAIDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool KillCameras;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool KillHeartbeat;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool KillControlRadio;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool KillAlarmButtons;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PressureDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PressureDebugGraph;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PressureSpawnIntensityEnabled;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DialoguesDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DialoguesDebugWidget;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DialoguesUseGenericCharacters;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DialoguesPlayTTS;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AkEventList;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AkEventWorld;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DebugSounds;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool FloatingDamageNumbers;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ForceFullHud;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool RoomCapacity;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DistantSpawnPoints;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ConnectionPointsVisibleInPIE;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool SpawnPointsVisibleInPIE;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool VehiclesDisabled;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AllowRespawn;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool MarkMutable;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool MarkTemporary;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ReloadWeaponDatabase;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool HeisterBarksDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AIBarksDebug;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerCrosshairEnabled;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool PlayerInput;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool UseMaxLevelUniqueCharacter;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool RandomizeWeaponSkins;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ShowMissionBagCount;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool MetaHumanAI;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool ForceHideDebugInfo;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool VarDump;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool MutableInfo;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DetectiveSpawnsIgnoreMeta;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool SessionRevisionCheck;
+    
+    UPROPERTY(Config, VisibleAnywhere)
+    bool UseCustomMission;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool DebugAIGrenadeManager;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AssetsPreloader;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AssetsPreloaderLogging;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool AlarmEnabled;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    bool KillStrikeDisabled;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    int32 PacketLag;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    int32 PacketLagVariance;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    int32 PacketLoss;
+    
+    UPROPERTY(BlueprintReadOnly, Config, VisibleAnywhere)
+    int32 PacketJitter;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool InfiniteAmmo;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool InfiniteMagazines;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool MaximumDamage;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool AIDamageDisabled;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool AIPerceptionDisabled;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool AILogicDisabled;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool DisableOutlines;
+    
+    UPROPERTY(BlueprintReadOnly)
+    UIGS_DebugSubsystemBlueprint* DebugSubsystemBlueprint;
     
 };
 

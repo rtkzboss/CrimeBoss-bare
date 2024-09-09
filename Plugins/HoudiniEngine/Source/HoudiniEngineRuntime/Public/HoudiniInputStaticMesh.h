@@ -7,10 +7,10 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputStaticMesh : public UHoudiniInputObject {
     GENERATED_BODY()
 public:
+    UHoudiniInputStaticMesh();
+
     UPROPERTY()
     TArray<UHoudiniInputObject*> BlueprintStaticMeshes;
     
-    UHoudiniInputStaticMesh();
-
 };
 

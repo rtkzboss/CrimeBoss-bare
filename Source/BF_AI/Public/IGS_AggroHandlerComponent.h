@@ -10,6 +10,14 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AggroHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AggroHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    AActor* GetRecommendedTarget() const;
+    
+    UFUNCTION(BlueprintPure)
+    FIGS_EnemyHolder BPGetRecommendedTargetHolder() const;
+    
 protected:
     UPROPERTY(EditDefaultsOnly)
     float AggroUpdateTick;
@@ -19,15 +27,6 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     float GlobalAggroChangeDivisor;
-    
-public:
-    UIGS_AggroHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    AActor* GetRecommendedTarget() const;
-    
-    UFUNCTION(BlueprintPure)
-    FIGS_EnemyHolder BPGetRecommendedTargetHolder() const;
     
 };
 

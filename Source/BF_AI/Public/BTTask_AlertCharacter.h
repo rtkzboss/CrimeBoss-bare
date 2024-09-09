@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_AlertCharacter : public UBTTask_DutyReaction {
     GENERATED_BODY()
 public:
+    UBTTask_AlertCharacter();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharacterToAlert;
     
-public:
-    UBTTask_AlertCharacter();
-
 };
 

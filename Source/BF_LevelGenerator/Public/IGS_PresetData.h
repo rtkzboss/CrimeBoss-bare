@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_PresetData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_PresetData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_HubGroupTileSetup> Tiles;
     
-    UIGS_PresetData();
-
 };
 

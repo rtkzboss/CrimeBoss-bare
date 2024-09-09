@@ -13,6 +13,8 @@ UCLASS()
 class UIGS_ComponentDialogueDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_ComponentDialogueDataAsset();
+
     UPROPERTY(EditAnywhere)
     UAkAudioEvent* PlayVoiceAkEvent;
     
@@ -49,7 +51,5 @@ public:
     UPROPERTY(EditAnywhere)
     TMap<FIGS_DialogueSpeakerKey, FIGS_DialogueSpeakerSettings> SpeakerPlayVoiceDelayMap;
     
-    UIGS_ComponentDialogueDataAsset();
-
 };
 

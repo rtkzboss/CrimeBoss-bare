@@ -20,20 +20,6 @@ UCLASS(BlueprintType)
 class BF_AI_API UIGS_TrafficPathfinding : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TArray<UTrafficPathfindingNode*> m_Nodes;
-    
-    UPROPERTY()
-    TMap<uint8, UTrafficPathfindingFilterBase*> m_FiltersCache;
-    
-    UPROPERTY()
-    TMap<UIGS_TrafficPathComponent*, UTrafficPathfindingNode*> m_TrafficSegmentToNode;
-    
-    UPROPERTY()
-    TArray<UTrafficPathfindingNode*> m_TmpPath;
-    
-public:
     UIGS_TrafficPathfinding();
 
 protected:
@@ -58,6 +44,19 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<AIGS_VehicleBase*> CallCarsToPosition(const UObject* inWCO, FVector InPosition, EIGS_VehicleSpawnGroup inVehicleGroup, int32 inAmount, int32 inMinPassengers, int32 inMaxPassengers);
+    
+protected:
+    UPROPERTY()
+    TArray<UTrafficPathfindingNode*> m_Nodes;
+    
+    UPROPERTY()
+    TMap<uint8, UTrafficPathfindingFilterBase*> m_FiltersCache;
+    
+    UPROPERTY()
+    TMap<UIGS_TrafficPathComponent*, UTrafficPathfindingNode*> m_TrafficSegmentToNode;
+    
+    UPROPERTY()
+    TArray<UTrafficPathfindingNode*> m_TmpPath;
     
 };
 

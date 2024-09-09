@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_SmartObjectNotLocked : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_SmartObjectNotLocked();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SmartObjectToUse;
     
-public:
-    UBTDecorator_SmartObjectNotLocked();
-
 };
 

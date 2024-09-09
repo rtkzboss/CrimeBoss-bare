@@ -28,6 +28,37 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_GameCharacterBase : public AIGS_GameCharacterFramework, public IAISightTargetInterface, public IRollbackable, public IIGS_HitEffectHandlerInterface {
     GENERATED_BODY()
 public:
+    AIGS_GameCharacterBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(NetMulticast, Reliable)
+    void RM_StopAnimation(UAnimMontage* Montage);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void RM_PlayAnimation(UAnimMontage* Montage, FName SectionName, float PlayRate, float StartPosition);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetAICollisionSettings();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void OnSpawnedByAI(AIGS_AISpawnPoint* inSpawnPoint);
+    
+protected:
+    UFUNCTION()
+    void OnRep_IsInTransition() const;
+    
+    UFUNCTION()
+    void OnRep_DisabledPropCollision();
+    
+public:
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_IsInTransitionChanged(bool inIsInTransition);
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_WaypointFramework* GetSpawnGoToWaypoint() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void DisableAIPropCollision();
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_HasDisabledPropCollisionChangedSignature OnHasDisabledPropCollisionChanged;
     
@@ -102,39 +133,8 @@ protected:
     UAkAudioEvent* SlideStopAkAudioEvent;
     
 public:
-    AIGS_GameCharacterBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(NetMulticast, Reliable)
-    void RM_StopAnimation(UAnimMontage* Montage);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void RM_PlayAnimation(UAnimMontage* Montage, FName SectionName, float PlayRate, float StartPosition);
-    
-    UFUNCTION(BlueprintCallable)
-    void ResetAICollisionSettings();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void OnSpawnedByAI(AIGS_AISpawnPoint* inSpawnPoint);
-    
-protected:
-    UFUNCTION()
-    void OnRep_IsInTransition() const;
-    
-    UFUNCTION()
-    void OnRep_DisabledPropCollision();
-    
-public:
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_IsInTransitionChanged(bool inIsInTransition);
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_WaypointFramework* GetSpawnGoToWaypoint() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void DisableAIPropCollision();
-    
 
     // Fix for true pure virtual functions not being implemented
 };

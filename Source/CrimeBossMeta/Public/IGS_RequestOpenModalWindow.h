@@ -16,15 +16,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UIGS_RequestOpenModalWindow : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_ModalWindowResponse OnConfirmed;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ModalWindowResponse OnExtraOption;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ModalWindowResponse OnCancelled;
-    
     UIGS_RequestOpenModalWindow();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
@@ -45,6 +36,16 @@ private:
     
     UFUNCTION()
     void ModalWindowCancelled_Internal();
+    
+public:
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_ModalWindowResponse OnConfirmed;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ModalWindowResponse OnExtraOption;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ModalWindowResponse OnCancelled;
     
 };
 

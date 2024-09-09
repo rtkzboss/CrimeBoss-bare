@@ -16,11 +16,6 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_WeaponDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Transient)
-    UIGS_PerWeaponClassSettingsDataAsset* PerClassWeaponSettings;
-    
-public:
     UIGS_WeaponDatabase();
 
     UFUNCTION(BlueprintCallable)
@@ -37,6 +32,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FIGS_WeaponTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
+    
+private:
+    UPROPERTY(Transient)
+    UIGS_PerWeaponClassSettingsDataAsset* PerClassWeaponSettings;
     
 };
 

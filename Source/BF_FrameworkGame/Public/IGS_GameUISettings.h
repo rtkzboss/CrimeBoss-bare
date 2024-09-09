@@ -12,6 +12,8 @@ UCLASS(BlueprintType, DefaultConfig, Config=Game)
 class BF_FRAMEWORKGAME_API UIGS_GameUISettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_GameUISettings();
+
     UPROPERTY(Config, EditAnywhere)
     TArray<EIGS_InputAction> AllowedMenuInputActions;
     
@@ -36,7 +38,5 @@ public:
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     float IconVisibilityDuration;
     
-    UIGS_GameUISettings();
-
 };
 

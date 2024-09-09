@@ -10,7 +10,15 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_TickingLaserTrap : public AIGS_LaserTrap {
     GENERATED_BODY()
 public:
+    AIGS_TickingLaserTrap(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION(NetMulticast, Reliable)
+    void Client_StopRotationTimeline() const;
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Client_PlayRotationTimeline(bool inReverting) const;
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UTimelineComponent* TickTimeline;
     
@@ -25,16 +33,7 @@ private:
     UCurveFloat* m_TickingCurve;
     
 public:
-    AIGS_TickingLaserTrap(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(NetMulticast, Reliable)
-    void Client_StopRotationTimeline() const;
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Client_PlayRotationTimeline(bool inReverting) const;
-    
 };
 

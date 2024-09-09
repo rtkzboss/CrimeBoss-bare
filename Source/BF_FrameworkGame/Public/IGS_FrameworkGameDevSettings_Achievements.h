@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings_Achievements : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_FrameworkGameDevSettings_Achievements();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> AchievementsSummaryDataTable;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> RichPresenceMissionsDataTable;
     
-    UIGS_FrameworkGameDevSettings_Achievements();
-
 };
 

@@ -14,6 +14,22 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_GoalWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_GoalWidget();
+
+protected:
+    UFUNCTION()
+    void SpawnObjectiveWidget(int32 inID);
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnObjectivesShown();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnActiveObjectiveChanged();
+    
+    UFUNCTION(BlueprintCallable)
+    void InitializeObjective();
+    
     UPROPERTY()
     FText goalName;
     
@@ -41,23 +57,6 @@ public:
 private:
     UPROPERTY(Instanced)
     UIGS_ObjectiveManager* m_ObjectiveManager;
-    
-public:
-    UIGS_GoalWidget();
-
-protected:
-    UFUNCTION()
-    void SpawnObjectiveWidget(int32 inID);
-    
-public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnObjectivesShown();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnActiveObjectiveChanged();
-    
-    UFUNCTION(BlueprintCallable)
-    void InitializeObjective();
     
 };
 

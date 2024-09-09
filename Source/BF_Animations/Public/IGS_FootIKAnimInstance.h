@@ -12,6 +12,17 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_FootIKAnimInstance : public UIGS_FootstepAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_FootIKAnimInstance();
+
+    UFUNCTION(BlueprintCallable)
+    void SetPoleVectorOffsets(const FName& R_PoleVector_Offset_X, const FName& R_PoleVector_Offset_Y, const FName& R_PoleVector_Offset_Z, const FName& L_PoleVector_Offset_X, const FName& L_PoleVector_Offset_Y, const FName& L_PoleVector_Offset_Z);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetEnableFootPlacement(bool Enable);
+    
+    UFUNCTION(BlueprintCallable)
+    bool GetEnablePlacement();
+    
     UPROPERTY(BlueprintReadOnly)
     bool IsInjured;
     
@@ -126,17 +137,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite)
     TArray<bool> IsBonesHit;
-    
-    UIGS_FootIKAnimInstance();
-
-    UFUNCTION(BlueprintCallable)
-    void SetPoleVectorOffsets(const FName& R_PoleVector_Offset_X, const FName& R_PoleVector_Offset_Y, const FName& R_PoleVector_Offset_Z, const FName& L_PoleVector_Offset_X, const FName& L_PoleVector_Offset_Y, const FName& L_PoleVector_Offset_Z);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetEnableFootPlacement(bool Enable);
-    
-    UFUNCTION(BlueprintCallable)
-    bool GetEnablePlacement();
     
 };
 

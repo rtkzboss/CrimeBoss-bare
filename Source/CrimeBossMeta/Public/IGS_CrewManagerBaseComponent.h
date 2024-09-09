@@ -16,17 +16,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_CrewManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_CrewManangerInitialized OnManagerInitialized;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerDataDirty;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerInitialized;
-    
-public:
     UIGS_CrewManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -79,6 +68,16 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void FireCharacter(UMETA_Character* Character);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_CrewManangerInitialized OnManagerInitialized;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerDataDirty;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerInitialized;
     
 };
 

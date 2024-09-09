@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_HasShootOverrideType : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_HasShootOverrideType();
+
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_ShootingOverrideType ShootingType;
     
-public:
-    UBTDecorator_HasShootOverrideType();
-
 };
 

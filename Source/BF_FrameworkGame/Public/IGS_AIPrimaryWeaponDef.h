@@ -8,10 +8,10 @@ UCLASS(Abstract, BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIPrimaryWeaponDef : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_AIPrimaryWeaponDef();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_AIAmmoWeaponDef Weapon;
     
-    UIGS_AIPrimaryWeaponDef();
-
 };
 

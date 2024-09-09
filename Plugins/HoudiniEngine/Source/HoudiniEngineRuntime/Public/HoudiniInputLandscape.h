@@ -8,13 +8,13 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputLandscape : public UHoudiniInputActor {
     GENERATED_BODY()
 public:
+    UHoudiniInputLandscape();
+
     UPROPERTY()
     FTransform CachedInputLandscapeTraqnsform;
     
     UPROPERTY()
     int32 CachedNumLandscapeComponents;
     
-    UHoudiniInputLandscape();
-
 };
 

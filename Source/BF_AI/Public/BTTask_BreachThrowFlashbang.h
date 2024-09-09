@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API UBTTask_BreachThrowFlashbang : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_BreachThrowFlashbang();
+
 private:
     UPROPERTY(EditAnywhere)
     TSubclassOf<UIGS_ThrowableInventoryObject> FlashGrenadeClass;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY()
     AIGS_AIControllerGame* m_Controller;
     
-public:
-    UBTTask_BreachThrowFlashbang();
-
 };
 

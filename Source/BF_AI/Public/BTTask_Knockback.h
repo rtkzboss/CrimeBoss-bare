@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTTask_Knockback : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_Knockback();
+
 protected:
     UPROPERTY(EditAnywhere)
     bool bKnockbackFromLocation;
@@ -34,8 +36,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FGameplayTag Right;
     
-public:
-    UBTTask_Knockback();
-
 };
 

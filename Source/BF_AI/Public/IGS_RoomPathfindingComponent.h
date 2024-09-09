@@ -10,6 +10,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_RoomPathfindingComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_RoomPathfindingComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AActor*> Path;
     
@@ -35,8 +37,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_RoomBase*> EmptyRoomArray;
     
-public:
-    UIGS_RoomPathfindingComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

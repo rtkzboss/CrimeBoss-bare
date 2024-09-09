@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_GR_IsSafeFromGrenade : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_GR_IsSafeFromGrenade();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float ExplosionRangeMultiplier;
     
-public:
-    UBTDecorator_GR_IsSafeFromGrenade();
-
 };
 

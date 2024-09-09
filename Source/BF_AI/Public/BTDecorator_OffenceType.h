@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_OffenceType : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_OffenceType();
+
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_OffenceReactionType DesiredOffenceReactionType;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTDecorator_OffenceType();
-
 };
 

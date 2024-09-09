@@ -16,6 +16,34 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerCharacterMovementComponent : public UIGS_GameCharacterMovementComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerCharacterMovementComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void StopUsingBuzzsaw();
+    
+    UFUNCTION(BlueprintCallable)
+    void StartUsingBuzzsaw();
+    
+protected:
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_LadderEnterInterpolationClientSyncPoint();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void NetMulticast_LadderTopEnterInterpolationFinished();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void NetMulticast_LadderBottomEnterStage2InterpolationFinished();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void NetMulticast_LadderBottomEnterStage1InterpolationFinished();
+    
+public:
+    UFUNCTION(NetMulticast, Reliable)
+    void NetMulticast_BotSlideOnZiplineStarted();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void NetMulticast_BotSlideOnZiplineEnded();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_AdvancedMovementData* AdvancedMovementData;
     
@@ -127,35 +155,6 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
     TWeakObjectPtr<AIGS_PlayerCharacter> m_OwningPlayer;
-    
-public:
-    UIGS_PlayerCharacterMovementComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void StopUsingBuzzsaw();
-    
-    UFUNCTION(BlueprintCallable)
-    void StartUsingBuzzsaw();
-    
-protected:
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_LadderEnterInterpolationClientSyncPoint();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void NetMulticast_LadderTopEnterInterpolationFinished();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void NetMulticast_LadderBottomEnterStage2InterpolationFinished();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void NetMulticast_LadderBottomEnterStage1InterpolationFinished();
-    
-public:
-    UFUNCTION(NetMulticast, Reliable)
-    void NetMulticast_BotSlideOnZiplineStarted();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void NetMulticast_BotSlideOnZiplineEnded();
     
 };
 

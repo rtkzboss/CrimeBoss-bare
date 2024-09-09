@@ -33,6 +33,11 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIDatabaseFPS : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AIDatabaseFPS();
+
+    UFUNCTION(BlueprintPure)
+    FIGS_AILoadout GetLoadout(const FIGS_AILoadoutHolder& inLoadoutHolder, FGameplayTagContainer inLoadoutTags, const TSubclassOf<UIGS_SettingsID> inSettingsOverride, const bool inIsStory, const UObject* inDebugWco) const;
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICivilianTeamDef Civilians;
     
@@ -104,11 +109,6 @@ public:
     
     UPROPERTY()
     uint8 CanEdit;
-    
-    UIGS_AIDatabaseFPS();
-
-    UFUNCTION(BlueprintPure)
-    FIGS_AILoadout GetLoadout(const FIGS_AILoadoutHolder& inLoadoutHolder, FGameplayTagContainer inLoadoutTags, const TSubclassOf<UIGS_SettingsID> inSettingsOverride, const bool inIsStory, const UObject* inDebugWco) const;
     
 };
 

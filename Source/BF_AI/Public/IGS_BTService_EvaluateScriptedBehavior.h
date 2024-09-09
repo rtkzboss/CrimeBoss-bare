@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateScriptedBehavior : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateScriptedBehavior();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector PickupBagKey;
     
-    UIGS_BTService_EvaluateScriptedBehavior();
-
 };
 

@@ -13,6 +13,14 @@ UCLASS(Abstract)
 class BF_FRAMEWORKBASE_API AIGS_PlayerFPVArmsFramework : public AFPVArmsAbstract {
     GENERATED_BODY()
 public:
+    AIGS_PlayerFPVArmsFramework(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    AIGS_GameCharacterFramework* GetOwningPlayerCharacter() const;
+    
+    UFUNCTION(BlueprintPure)
+    USkeletalMeshComponent* GetArmsSkeletalMesh() const;
+    
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UMaterialParameterCollection* WieldableMPC;
@@ -25,15 +33,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USceneComponent* ArmsRootComponent;
-    
-public:
-    AIGS_PlayerFPVArmsFramework(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    AIGS_GameCharacterFramework* GetOwningPlayerCharacter() const;
-    
-    UFUNCTION(BlueprintPure)
-    USkeletalMeshComponent* GetArmsSkeletalMesh() const;
     
 };
 

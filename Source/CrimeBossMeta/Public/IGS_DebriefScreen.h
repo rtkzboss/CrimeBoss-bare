@@ -13,20 +13,6 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_DebriefScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    bool IsSkipped;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TArray<FIGS_DebriefBonus> DebriefBonuses;
-    
-private:
-    UPROPERTY(Instanced)
-    TArray<UIGS_AnimatedWidget*> m_AnimationQueue;
-    
-    UPROPERTY(Instanced)
-    UIGS_AnimatedWidget* m_CurrentAnimatedWidget;
-    
-public:
     UIGS_DebriefScreen();
 
     UFUNCTION(BlueprintCallable)
@@ -65,6 +51,19 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void AddAnimation(UIGS_AnimatedWidget* inAnimatedWidget, UObject* inPayloadData);
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool IsSkipped;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<FIGS_DebriefBonus> DebriefBonuses;
+    
+private:
+    UPROPERTY(Instanced)
+    TArray<UIGS_AnimatedWidget*> m_AnimationQueue;
+    
+    UPROPERTY(Instanced)
+    UIGS_AnimatedWidget* m_CurrentAnimatedWidget;
     
 };
 

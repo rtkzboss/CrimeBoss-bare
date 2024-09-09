@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class BF_IMPACTS_API UIGS_ImpactManagerSettings : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_ImpactManagerSettings();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIntPoint GunshotSubUVs;
     
@@ -75,7 +77,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DecalImpactCountCap;
     
-    UIGS_ImpactManagerSettings();
-
 };
 

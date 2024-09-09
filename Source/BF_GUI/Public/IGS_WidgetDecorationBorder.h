@@ -8,12 +8,6 @@ UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetDecorationBorder : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FLinearColor BorderTint;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float BorderWidth;
-    
     UIGS_WidgetDecorationBorder();
 
     UFUNCTION(BlueprintCallable)
@@ -28,6 +22,13 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnBorderTintChanged(FLinearColor inBorderTint);
+    
+public:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FLinearColor BorderTint;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float BorderWidth;
     
 };
 

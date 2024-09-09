@@ -9,12 +9,11 @@ UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UMETA_PopupManagerComponent : public UIGS_PopupManagerBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_PopupManagerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite)
     UIGS_TutorialsManager* TutorialsManager;
     
-public:
-    UMETA_PopupManagerComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

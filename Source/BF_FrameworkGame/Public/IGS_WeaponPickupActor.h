@@ -25,6 +25,31 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WeaponPickupActor : public AIGS_PickupActorBase, public IIGS_ModMeshInterface, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:
+    AIGS_WeaponPickupActor(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void Setup(const TSubclassOf<UMETA_WeaponInventoryObject>& inItemClass, const TSoftObjectPtr<UIGS_WeaponSkinData> inSkin);
+    
+protected:
+    UFUNCTION()
+    void OnRep_WeaponSkin();
+    
+    UFUNCTION()
+    void OnRep_WeaponClass();
+    
+    UFUNCTION()
+    void OnRep_UniversalData();
+    
+    UFUNCTION()
+    void OnRep_IsVisible();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    bool DoesItemHaveProperty(EIGS_ItemPropertyFlags inItemFlag);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void ApplyUniversalData(FIGS_InventoryObjectUniversalData inUniversalData);
+    
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleDefaultsOnly)
     UIGS_PickupInteractiveComponent* InteractiveComponent;
     
@@ -108,33 +133,8 @@ protected:
     bool mR_IsVisible;
     
 public:
-    AIGS_WeaponPickupActor(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void Setup(const TSubclassOf<UMETA_WeaponInventoryObject>& inItemClass, const TSoftObjectPtr<UIGS_WeaponSkinData> inSkin);
-    
-protected:
-    UFUNCTION()
-    void OnRep_WeaponSkin();
-    
-    UFUNCTION()
-    void OnRep_WeaponClass();
-    
-    UFUNCTION()
-    void OnRep_UniversalData();
-    
-    UFUNCTION()
-    void OnRep_IsVisible();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    bool DoesItemHaveProperty(EIGS_ItemPropertyFlags inItemFlag);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void ApplyUniversalData(FIGS_InventoryObjectUniversalData inUniversalData);
-    
 
     // Fix for true pure virtual functions not being implemented
 };

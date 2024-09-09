@@ -15,7 +15,7 @@ void UIGS_AbilityTask_PlayFPVMontageAndWait::OnMontageEnded(UAnimMontage* Montag
 void UIGS_AbilityTask_PlayFPVMontageAndWait::OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted) {
 }
 
-UIGS_AbilityTask_PlayFPVMontageAndWait* UIGS_AbilityTask_PlayFPVMontageAndWait::CreatePlayMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* NewMontageToPlay, float NewRate, FName NewStartSection, bool NewBStopWhenAbilityEnds, float NewStartTimeSeconds) {
+UIGS_AbilityTask_PlayFPVMontageAndWait* UIGS_AbilityTask_PlayFPVMontageAndWait::CreatePlayMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* MontageToPlay, float Rate, FName StartSection, bool bStopWhenAbilityEnds, float StartTimeSeconds) {
     return NULL;
 }
 

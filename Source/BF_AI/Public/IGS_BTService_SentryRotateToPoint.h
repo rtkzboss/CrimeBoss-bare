@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_SentryRotateToPoint : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_SentryRotateToPoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetPoint;
     
-public:
-    UIGS_BTService_SentryRotateToPoint();
-
 };
 

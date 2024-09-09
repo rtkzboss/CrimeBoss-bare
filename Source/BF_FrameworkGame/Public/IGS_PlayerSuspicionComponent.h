@@ -14,11 +14,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerSuspicionComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTagQuery ShouldFootstepsBeDetectableQuery;
-    
-public:
     UIGS_PlayerSuspicionComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
@@ -43,6 +38,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetCurrentOffences();
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTagQuery ShouldFootstepsBeDetectableQuery;
     
 };
 

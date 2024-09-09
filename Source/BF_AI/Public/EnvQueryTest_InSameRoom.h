@@ -10,10 +10,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_InSameRoom : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_InSameRoom();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> DesiredRoomPoint;
     
-    UEnvQueryTest_InSameRoom();
-
 };
 

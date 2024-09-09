@@ -9,10 +9,10 @@ UCLASS()
 class CUSTOMIZABLEOBJECT_API UCustomizableObjectImageProviderArray : public UCustomizableSystemImageProvider {
     GENERATED_BODY()
 public:
+    UCustomizableObjectImageProviderArray();
+
     UPROPERTY(EditAnywhere)
     TArray<UTexture2D*> Textures;
     
-    UCustomizableObjectImageProviderArray();
-
 };
 

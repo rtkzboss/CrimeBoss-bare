@@ -7,10 +7,10 @@ UCLASS(EditInlineNew)
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemItemUserData : public UAssetUserData {
     GENERATED_BODY()
 public:
+    UConstructionSystemItemUserData();
+
     UPROPERTY(VisibleAnywhere)
     int32 Seed;
     
-    UConstructionSystemItemUserData();
-
 };
 

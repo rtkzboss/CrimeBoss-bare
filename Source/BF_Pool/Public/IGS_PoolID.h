@@ -8,6 +8,8 @@ UCLASS(BlueprintType)
 class BF_POOL_API UIGS_PoolID : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_PoolID();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* PoolObjectClass;
     
@@ -17,7 +19,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString PoolName;
     
-    UIGS_PoolID();
-
 };
 

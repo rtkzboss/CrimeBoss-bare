@@ -18,50 +18,7 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PickupActorBase : public AIGS_SuspicionActorBase, public IIGS_HitEffectHandlerInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ShouldMove)
-    bool bShouldMove;
-    
-    UPROPERTY(EditDefaultsOnly)
-    bool bRegistersToPickupsManager;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float SquaredVelocityForInAirNeeded;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool IsPickableByAI;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UPrimitiveComponent* PickupMeshComp;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    TWeakObjectPtr<AIGS_GameCharacterFramework> OwningPawn;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TWeakObjectPtr<AIGS_GameCharacterFramework> BeingPickedUpByBot;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TWeakObjectPtr<AIGS_GameCharacterFramework> PickupSuggestedFor;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float DisableInteractionOnThrowTime;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnPickedUp OnPickedUpEvent;
-    
-protected:
-    UPROPERTY(ReplicatedUsing=OnRep_WasThrown)
-    bool mR_bWasThrown;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* DefaultThrownAkEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* DefaultPickupAkEvent;
-    
-public:
     AIGS_PickupActorBase(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void WakePhysics(bool inThrownPhysics);
@@ -152,6 +109,49 @@ public:
     UFUNCTION(BlueprintCallable)
     void AI_Use(AIGS_GameCharacterFramework* inInstigator);
     
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_ShouldMove)
+    bool bShouldMove;
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool bRegistersToPickupsManager;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float SquaredVelocityForInAirNeeded;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool IsPickableByAI;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UPrimitiveComponent* PickupMeshComp;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
+    TWeakObjectPtr<AIGS_GameCharacterFramework> OwningPawn;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TWeakObjectPtr<AIGS_GameCharacterFramework> BeingPickedUpByBot;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TWeakObjectPtr<AIGS_GameCharacterFramework> PickupSuggestedFor;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float DisableInteractionOnThrowTime;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnPickedUp OnPickedUpEvent;
+    
+protected:
+    UPROPERTY(ReplicatedUsing=OnRep_WasThrown)
+    bool mR_bWasThrown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* DefaultThrownAkEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* DefaultPickupAkEvent;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 
     // Fix for true pure virtual functions not being implemented
 };

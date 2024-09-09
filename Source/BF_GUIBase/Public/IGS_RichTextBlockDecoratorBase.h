@@ -14,6 +14,8 @@ UCLASS(BlueprintType)
 class BF_GUIBASE_API UIGS_RichTextBlockDecoratorBase : public URichTextBlockDecorator {
     GENERATED_BODY()
 public:
+    UIGS_RichTextBlockDecoratorBase();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UIGS_InputActionMapDataAsset* InputActionMapAsset;
     
@@ -35,7 +37,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bGamepadDecorator;
     
-    UIGS_RichTextBlockDecoratorBase();
-
 };
 

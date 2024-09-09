@@ -40,6 +40,200 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_PlayerAnimInstance : public UIGS_CharacterAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_PlayerAnimInstance();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void ZiptieStarted_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void ZiplineStarted();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void ZiplineEnded();
+    
+    UFUNCTION(BlueprintCallable)
+    void TriggerAnimationEvent();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void ThrowAwayLoot_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void StunnedStart_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void StunnedEnd_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_Leave(bool InUp);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_JumpDown();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_InputUp(float inSpeed);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_InputDown(float inSpeed);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_Grab_Start(bool InUp);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SimpleLadder_Grab_Finish(bool InUp);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIsInLocomotionState(bool inIsInLocomotion);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RequestStopCustomAnimation(FGameplayTag inAnimationType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RequestPlayCustomAnimation(FGameplayTag inAnimationType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RappelLeaveStarted();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RappelGrabStarted();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void PushCargo_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void PlayHolsterChangeAnimation(bool inIsHolstering, bool inSkipAnimation, float inHolsterTimeInSeconds);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void PickupInteraction_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OpenDoor_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnZiptieFinished();
+    
+private:
+    UFUNCTION()
+    void OnWieldableSlotChange(EIGS_WieldableSlot Type, AIGS_WieldableBase* inWieldable, UIGS_InventoryObjectFramework* inWeaponObject);
+    
+public:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnWeaponShooterChange_Event(EIGS_WeaponAttackType InWeaponAttackType);
+    
+private:
+    UFUNCTION()
+    void OnWeaponObjectChange(AIGS_WieldableBase* InWeaponBase);
+    
+    UFUNCTION()
+    void OnWeaponAimChange(bool IsAiming);
+    
+public:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnUnEquipEnded_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnStoodUp();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSlideTransitionEnded_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSlideStarted_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSlideEnded_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnReviveStart();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnReloadInterrupt_Event(EIGS_ReloadInterruptReasonEnum inReason);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnReactionAnimFinished();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPushPlayerStarted(FVector InDirection);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPlayerBotInitialize(bool inIsBot);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnMagCheckInterrupt_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnMagCheckEnd();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnGotToGround();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnEquipEnded_Event();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnDownstateStart();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void OnDownStateInputEnabled() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void OnDownStateInputDisabled() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void OnDownStateDeath();
+    
+private:
+    UFUNCTION()
+    void OnBeginReload(bool inIsCombat, bool inIsEmptyMagazine);
+    
+    UFUNCTION()
+    void OnAttack();
+    
+public:
+    UFUNCTION(BlueprintImplementableEvent)
+    void LootCollectionStart_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void LootCollectionEnd_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void LootBagPickup_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void HasDisabledPropCollisionChanged_Event(bool inHasDisabledPropCollision);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void GrenadeThrow_Event(TPP_ActionSlotType InAction, bool inLow);
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetReplicatedRandomInt(int32 inMin, int32 inMax) const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetReplicatedRandomFloat(float inMin, float inMax) const;
+    
+    UFUNCTION(BlueprintCallable)
+    FIGS_ThirdPersonCarryablesAnimDatabase GetCarryableDatabse();
+    
+    UFUNCTION(BlueprintPure)
+    void GetAnimationDatabase(FPlayerAnimationsDatabase& AnimDatabase) const;
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void FlashedStart_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void FlashedEnd_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void EmployeeReaction_Stop();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void EmployeeReaction_Start();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void CloseDoor_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void CarryableThrow_Event(bool inLow);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool ReloadInterruptUseEvents;
     
@@ -333,200 +527,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite)
     bool DisableHolsterAnimation;
-    
-    UIGS_PlayerAnimInstance();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void ZiptieStarted_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void ZiplineStarted();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void ZiplineEnded();
-    
-    UFUNCTION(BlueprintCallable)
-    void TriggerAnimationEvent();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void ThrowAwayLoot_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void StunnedStart_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void StunnedEnd_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_Leave(bool InUp);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_JumpDown();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_InputUp(float inSpeed);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_InputDown(float inSpeed);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_Grab_Start(bool InUp);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SimpleLadder_Grab_Finish(bool InUp);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIsInLocomotionState(bool inIsInLocomotion);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RequestStopCustomAnimation(FGameplayTag inAnimationType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RequestPlayCustomAnimation(FGameplayTag inAnimationType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RappelLeaveStarted();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RappelGrabStarted();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void PushCargo_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void PlayHolsterChangeAnimation(bool inIsHolstering, bool inSkipAnimation, float inHolsterTimeInSeconds);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void PickupInteraction_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OpenDoor_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnZiptieFinished();
-    
-private:
-    UFUNCTION()
-    void OnWieldableSlotChange(EIGS_WieldableSlot Type, AIGS_WieldableBase* inWieldable, UIGS_InventoryObjectFramework* inWeaponObject);
-    
-public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnWeaponShooterChange_Event(EIGS_WeaponAttackType InWeaponAttackType);
-    
-private:
-    UFUNCTION()
-    void OnWeaponObjectChange(AIGS_WieldableBase* InWeaponBase);
-    
-    UFUNCTION()
-    void OnWeaponAimChange(bool IsAiming);
-    
-public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnUnEquipEnded_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnStoodUp();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSlideTransitionEnded_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSlideStarted_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSlideEnded_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnReviveStart();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnReloadInterrupt_Event(EIGS_ReloadInterruptReasonEnum inReason);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnReactionAnimFinished();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPushPlayerStarted(FVector InDirection);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPlayerBotInitialize(bool inIsBot);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMagCheckInterrupt_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnMagCheckEnd();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnGotToGround();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnEquipEnded_Event();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnDownstateStart();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void OnDownStateInputEnabled() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void OnDownStateInputDisabled() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void OnDownStateDeath();
-    
-private:
-    UFUNCTION()
-    void OnBeginReload(bool inIsCombat, bool inIsEmptyMagazine);
-    
-    UFUNCTION()
-    void OnAttack();
-    
-public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void LootCollectionStart_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void LootCollectionEnd_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void LootBagPickup_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void HasDisabledPropCollisionChanged_Event(bool inHasDisabledPropCollision);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void GrenadeThrow_Event(TPP_ActionSlotType InAction, bool inLow);
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetReplicatedRandomInt(int32 inMin, int32 inMax) const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetReplicatedRandomFloat(float inMin, float inMax) const;
-    
-    UFUNCTION(BlueprintCallable)
-    FIGS_ThirdPersonCarryablesAnimDatabase GetCarryableDatabse();
-    
-    UFUNCTION(BlueprintPure)
-    void GetAnimationDatabase(FPlayerAnimationsDatabase& AnimDatabase) const;
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void FlashedStart_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void FlashedEnd_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void EmployeeReaction_Stop();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void EmployeeReaction_Start();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void CloseDoor_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void CarryableThrow_Event(bool inLow);
     
 };
 

@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_Common_DataDevSettings_SkinTextures : public UIGS_Common_DataDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_Common_DataDevSettings_SkinTextures();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UTexture> Albedo_Texture;
     
@@ -27,7 +29,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UTexture> Scratches_BreakupMask;
     
-    UIGS_Common_DataDevSettings_SkinTextures();
-
 };
 

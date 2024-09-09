@@ -8,10 +8,10 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_ANIMATIONS_API UIGS_WeaponAnimationComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WeaponAnimationComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnZiptyingStartedSignature OnZiptyingStarted;
     
-    UIGS_WeaponAnimationComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

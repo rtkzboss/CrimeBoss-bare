@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_GR_IsSafeFromActor : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_GR_IsSafeFromActor();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -28,8 +30,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool SafeWhenHidden;
     
-public:
-    UBTDecorator_GR_IsSafeFromActor();
-
 };
 

@@ -9,10 +9,10 @@ UCLASS()
 class BF_COVERS_API AIGS_CoverPointsDataActor : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_CoverPointsDataActor(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(VisibleAnywhere)
     UIGS_CoverPointsDataAsset* CoverPointsDataAsset;
     
-    AIGS_CoverPointsDataActor(const FObjectInitializer& ObjectInitializer);
-
 };
 

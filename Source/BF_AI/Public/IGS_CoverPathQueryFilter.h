@@ -7,6 +7,8 @@ UCLASS(Abstract)
 class BF_AI_API UIGS_CoverPathQueryFilter : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
+    UIGS_CoverPathQueryFilter();
+
 protected:
     UPROPERTY(EditAnywhere)
     float CostMultiplier;
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool IsActive;
     
-public:
-    UIGS_CoverPathQueryFilter();
-
 };
 

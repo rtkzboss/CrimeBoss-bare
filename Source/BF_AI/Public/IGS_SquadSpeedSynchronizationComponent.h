@@ -9,6 +9,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SquadSpeedSynchronizationComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SquadSpeedSynchronizationComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(VisibleAnywhere)
     TMap<AIGS_GameCharacterFramework*, float> NextSpeedChange;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(VisibleAnywhere)
     TArray<float> TmpDistanceToDestination;
     
-public:
-    UIGS_SquadSpeedSynchronizationComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

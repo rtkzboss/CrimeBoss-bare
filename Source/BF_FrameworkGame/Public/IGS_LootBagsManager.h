@@ -11,18 +11,17 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootBagsManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_LootBagsManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static UIGS_LootBagsManager* GetLootBagsManager(UObject* inWCO);
+    
 protected:
     UPROPERTY()
     TArray<AIGS_LootBagPickup*> m_LootBags;
     
     UPROPERTY()
     TArray<AIGS_LootBagPickup*> m_GadgetBags;
-    
-public:
-    UIGS_LootBagsManager(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static UIGS_LootBagsManager* GetLootBagsManager(UObject* inWCO);
     
 };
 

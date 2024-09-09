@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTService_OverrideStateWhenRelevant : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_OverrideStateWhenRelevant();
+
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_CharacterState ForcedCharacterState;
     
-public:
-    UBTService_OverrideStateWhenRelevant();
-
 };
 

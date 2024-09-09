@@ -16,6 +16,8 @@ UCLASS(BlueprintType)
 class BF_AI_API UIGS_DestructableVehicleSettings : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_DestructableVehicleSettings();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UDamageType> ExplosionDamageType;
     
@@ -88,7 +90,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UCurveFloat* ExplosionBounceCurve;
     
-    UIGS_DestructableVehicleSettings();
-
 };
 

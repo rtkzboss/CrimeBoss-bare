@@ -11,6 +11,8 @@ UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_BuildConfigurationDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_BuildConfigurationDataAsset();
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_ConnectionPointData> ConnectionPoints;
     
@@ -20,7 +22,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSoftObjectPtr<UWorld> Level;
     
-    UIGS_BuildConfigurationDataAsset();
-
 };
 

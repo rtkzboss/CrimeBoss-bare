@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadMoveToEscapePoint : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadMoveToEscapePoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector EscapePointKey;
     
-public:
-    UIGS_BTTask_SquadMoveToEscapePoint();
-
 };
 

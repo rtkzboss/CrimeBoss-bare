@@ -61,147 +61,7 @@ UCLASS(Abstract)
 class BF_FRAMEWORKBASE_API AIGS_GameCharacterFramework : public ACharacter, public IGenericTeamAgentInterface, public IIGS_GameplayTagAssetInterfaceCustom, public IIGS_DialogueInterface, public IVisualLoggerDebugSnapshotInterface, public IIGS_HasObjectStatusInterface, public IAbilitySystemInterface, public IIGS_CharacterIDInterface, public IIGS_WieldAnyItemInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkSwitchValue* AkEnviroSwitchIndoors;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkSwitchValue* AkEnviroSwitchOutdoors;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkStateValue* AkEnviroStateIndoors;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkStateValue* AkEnviroStateOutdoors;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FIGS_DialogueGroupCharacterHolder DialogueHolder;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bSpawnedForFirstTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FIGS_BodyInfo BodyInfo;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString MutableRootGroupName;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FGameplayTagContainer InitSpawnTags;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
-    AActor* LeftHandAttachedActor;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
-    AActor* RightHandAttachedActor;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TArray<UPhysicalMaterial*> PhysicalMaterialToPreloadImpacts;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PossessedByDynamicSignature OwnerOnPossessedByEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PossessedByDynamicSignature ServerOnlyOnPossessedByEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PossessedByDynamicSignature OwningClientOnPossessedByEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PickupThrownSignature OnPickupThrown;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CrouchChangedEventSignature OnCrouchingChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CharacterHitEventSignature OnCharacterHitEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CharacterAimEventSignature OnCharacterAimEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GameplayTagsChangedOnCharacterDynamicSignature OnGameplayTagsChangedEvent;
-    
-    UPROPERTY()
-    TSubclassOf<UDamageType> CharacterDeathCauseType;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    FIGS_InterestPointHolder DesiredLookAtPoint;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    FIGS_InterestPointHolder DesiredAimAtPoint;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_CharacterData* CharacterData;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_ObjectStatus* ObjectStatus;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_DamageHandlerComponentFramework* DamageHandlerComponent2;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_DealtDamageEventsWatcher* DealtDamageEventsWatcher;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_DownStateHandlerComponentFramework* DownStateHandlerComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_OutlineComponent* OutlineComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_GASComponentBase* GASComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    USkinnedDecalSampler* SkinnedDecalSampler;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_GASAttributeSetBase* GASAttributeSet;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    int32 SquadID;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    int32 LastSquadID;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    float CurrentAim;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    bool bWantsAim;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bCanAttack;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bStartsWithCombatStance;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    bool bCombatStance;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsMovementDisabled)
-    bool mR_IsMovementDisabled;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Replicated)
-    EIGS_CharacterID CharacterIDEnum;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleInstanceOnly)
-    int32 GenericCharacterID;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bIsMaxLeveled;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FGameplayTag CharacterSkinID;
-    
-private:
-    UPROPERTY(Instanced)
-    UIGS_GameCharacterMovementComponent* GameCMC;
-    
-public:
     AIGS_GameCharacterFramework(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintPure)
     bool WantsAim() const;
@@ -469,6 +329,146 @@ public:
     UFUNCTION(BlueprintCallable)
     void AddGameplayTag(FGameplayTag inTagToAdd, bool inRemoveTimed);
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkSwitchValue* AkEnviroSwitchIndoors;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkSwitchValue* AkEnviroSwitchOutdoors;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkStateValue* AkEnviroStateIndoors;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkStateValue* AkEnviroStateOutdoors;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FIGS_DialogueGroupCharacterHolder DialogueHolder;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bSpawnedForFirstTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FIGS_BodyInfo BodyInfo;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FString MutableRootGroupName;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FGameplayTagContainer InitSpawnTags;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
+    AActor* LeftHandAttachedActor;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
+    AActor* RightHandAttachedActor;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    TArray<UPhysicalMaterial*> PhysicalMaterialToPreloadImpacts;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PossessedByDynamicSignature OwnerOnPossessedByEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PossessedByDynamicSignature ServerOnlyOnPossessedByEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PossessedByDynamicSignature OwningClientOnPossessedByEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PickupThrownSignature OnPickupThrown;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CrouchChangedEventSignature OnCrouchingChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CharacterHitEventSignature OnCharacterHitEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CharacterAimEventSignature OnCharacterAimEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GameplayTagsChangedOnCharacterDynamicSignature OnGameplayTagsChangedEvent;
+    
+    UPROPERTY()
+    TSubclassOf<UDamageType> CharacterDeathCauseType;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    FIGS_InterestPointHolder DesiredLookAtPoint;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    FIGS_InterestPointHolder DesiredAimAtPoint;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_CharacterData* CharacterData;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_ObjectStatus* ObjectStatus;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_DamageHandlerComponentFramework* DamageHandlerComponent2;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_DealtDamageEventsWatcher* DealtDamageEventsWatcher;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_DownStateHandlerComponentFramework* DownStateHandlerComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_OutlineComponent* OutlineComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_GASComponentBase* GASComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    USkinnedDecalSampler* SkinnedDecalSampler;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_GASAttributeSetBase* GASAttributeSet;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    int32 SquadID;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    int32 LastSquadID;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    float CurrentAim;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    bool bWantsAim;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bCanAttack;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bStartsWithCombatStance;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    bool bCombatStance;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsMovementDisabled)
+    bool mR_IsMovementDisabled;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Replicated)
+    EIGS_CharacterID CharacterIDEnum;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleInstanceOnly)
+    int32 GenericCharacterID;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bIsMaxLeveled;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    FGameplayTag CharacterSkinID;
+    
+private:
+    UPROPERTY(Instanced)
+    UIGS_GameCharacterMovementComponent* GameCMC;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)

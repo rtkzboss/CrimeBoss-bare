@@ -13,14 +13,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_TerritoryVolumeManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    UIGS_TerritoryData* TerritoryData;
-    
-private:
-    UPROPERTY()
-    TArray<AIGS_TerritoryVolume*> m_TerritoryVolumes;
-    
-public:
     UIGS_TerritoryVolumeManager();
 
     UFUNCTION(BlueprintCallable)
@@ -42,6 +34,13 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddRestrictionTag(const FName& inTag);
+    
+    UPROPERTY()
+    UIGS_TerritoryData* TerritoryData;
+    
+private:
+    UPROPERTY()
+    TArray<AIGS_TerritoryVolume*> m_TerritoryVolumes;
     
 };
 

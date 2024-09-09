@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateDisruptingGadgets : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateDisruptingGadgets();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestGadget;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
     
-public:
-    UIGS_BTService_EvaluateDisruptingGadgets();
-
 };
 

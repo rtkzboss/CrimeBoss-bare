@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadSwatBase : public UIGS_BTTask_SquadBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadSwatBase();
+
 protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_RoomPathfindingComponent* RoomPathfindingComponent;
@@ -21,8 +23,5 @@ protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_SquadAggroComponent* SquadAggroComponent;
     
-public:
-    UIGS_BTTask_SquadSwatBase();
-
 };
 

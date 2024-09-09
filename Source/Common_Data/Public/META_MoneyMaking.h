@@ -11,11 +11,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_MoneyMaking : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    FMETA_MoneyMakingMissionSave m_MoneyMakingMissionSave;
-    
-public:
     UMETA_MoneyMaking();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -26,6 +21,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FMETA_FPSMissionRowInfo GetInfo() const;
+    
+private:
+    UPROPERTY()
+    FMETA_MoneyMakingMissionSave m_MoneyMakingMissionSave;
     
 };
 

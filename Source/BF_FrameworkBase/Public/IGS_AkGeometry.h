@@ -10,6 +10,8 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_AkGeometry : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_AkGeometry(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UStaticMeshComponent* StaticMeshComponent;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UAkGeometryComponent* AkGeometry;
     
-public:
-    AIGS_AkGeometry(const FObjectInitializer& ObjectInitializer);
-
 };
 

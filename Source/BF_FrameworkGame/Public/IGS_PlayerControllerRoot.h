@@ -32,131 +32,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerControllerRoot : public AIGS_PlayerControllerFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    bool bEntranceUnlockMenuOpen;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PawnChangedEventSignature OnPawnChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnStartHeistHoldChanged OnStartHeistHoldChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnCinematicModeChanged OnCinematicModeChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PawnChangedEventSignature OnSpectatorPawnChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GiveUpEvent OnHoldingGiveUpEvent;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bIsCurrentlySwappingPawns;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bInvertLook;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftClassPtr<AHUD> DefaultHUDClass;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bAllowShootingInSprint;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bAllowAimingInSprint;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bAllowReloadingInSprint;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bAllowSwitchFireModeInSprint;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bAllowChangeSlotInSprint;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bToggleSprint;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bToggleCrouch;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bToggleAim;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bSprintInterruptsReload;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bMagCheckInSprintAllowed;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bGamepadPrioritizeUseInsteadOfReload;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float HoldTimeInSeconds;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float StartHeistHoldTimeInSeconds;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float DoublePingThresholdInSeconds;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float ContextualDoublePingThresholdInSeconds;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float PingCooldownInSeconds;
-    
-    UPROPERTY(EditAnywhere)
-    TArray<TSubclassOf<UAISense>> RegisterAsSourceForSenses;
-    
-    UPROPERTY(Instanced, VisibleAnywhere)
-    UActiveSubControllerHandler* ActiveSubControllerHandler;
-    
-    UPROPERTY(Instanced, VisibleAnywhere)
-    UIGS_SubControllerHuman* SubControllerHuman;
-    
-    UPROPERTY(Instanced, VisibleAnywhere)
-    UIGS_SubControllerMountable* SubControllerMountable;
-    
-    UPROPERTY(Instanced, VisibleAnywhere)
-    UIGS_SubControllerVehicle* SubControllerVehicle;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    TArray<UIGS_SubControllerCommon*> m_Subcontrollers;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_SubControllerCommon* m_ActiveSubController;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    USphereComponent* m_StreamingVolumeCollision;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_InputDeviceDetectorComponent* m_InputDeviceDetectorComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_PlayerDataComponent* PlayerDataComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_PlayerBotOrderComponent* PlayerBotOrderComponent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    AIGS_PlayerCharacter* CurrentPlayerCharacter;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    AIGS_PlayerCharacter* CurrentlySpectatedPlayer;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AimAssistComponent* m_AimAssistComponent;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float m_GivingUpTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float HUDReconstructTimePeriod;
-    
-public:
     AIGS_PlayerControllerRoot(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -374,6 +249,130 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void CallBotCommand(EIGS_BotCommandDefinition inCommand);
+    
+    UPROPERTY()
+    bool bEntranceUnlockMenuOpen;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PawnChangedEventSignature OnPawnChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnStartHeistHoldChanged OnStartHeistHoldChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnCinematicModeChanged OnCinematicModeChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PawnChangedEventSignature OnSpectatorPawnChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GiveUpEvent OnHoldingGiveUpEvent;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bIsCurrentlySwappingPawns;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bInvertLook;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSoftClassPtr<AHUD> DefaultHUDClass;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bAllowShootingInSprint;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bAllowAimingInSprint;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bAllowReloadingInSprint;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bAllowSwitchFireModeInSprint;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bAllowChangeSlotInSprint;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bToggleSprint;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bToggleCrouch;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bToggleAim;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bSprintInterruptsReload;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bMagCheckInSprintAllowed;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bGamepadPrioritizeUseInsteadOfReload;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float HoldTimeInSeconds;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float StartHeistHoldTimeInSeconds;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float DoublePingThresholdInSeconds;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float ContextualDoublePingThresholdInSeconds;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float PingCooldownInSeconds;
+    
+    UPROPERTY(EditAnywhere)
+    TArray<TSubclassOf<UAISense>> RegisterAsSourceForSenses;
+    
+    UPROPERTY(Instanced, VisibleAnywhere)
+    UActiveSubControllerHandler* ActiveSubControllerHandler;
+    
+    UPROPERTY(Instanced, VisibleAnywhere)
+    UIGS_SubControllerHuman* SubControllerHuman;
+    
+    UPROPERTY(Instanced, VisibleAnywhere)
+    UIGS_SubControllerMountable* SubControllerMountable;
+    
+    UPROPERTY(Instanced, VisibleAnywhere)
+    UIGS_SubControllerVehicle* SubControllerVehicle;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    TArray<UIGS_SubControllerCommon*> m_Subcontrollers;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_SubControllerCommon* m_ActiveSubController;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    USphereComponent* m_StreamingVolumeCollision;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_InputDeviceDetectorComponent* m_InputDeviceDetectorComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_PlayerDataComponent* PlayerDataComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_PlayerBotOrderComponent* PlayerBotOrderComponent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    AIGS_PlayerCharacter* CurrentPlayerCharacter;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    AIGS_PlayerCharacter* CurrentlySpectatedPlayer;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AimAssistComponent* m_AimAssistComponent;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float m_GivingUpTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float HUDReconstructTimePeriod;
     
 };
 

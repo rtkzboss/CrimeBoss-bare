@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_CoverAngle : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_CoverAngle();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
     
@@ -19,7 +21,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     float CombatRangeMax;
     
-    UEnvQueryTest_CoverAngle();
-
 };
 

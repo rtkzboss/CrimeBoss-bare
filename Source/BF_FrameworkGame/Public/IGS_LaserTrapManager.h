@@ -8,14 +8,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LaserTrapManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LaserTrapTriggeredEvent OnLaserTriggeredEvent;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bIsStimuliForAI;
-    
-public:
     AIGS_LaserTrapManager(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -34,6 +26,13 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void DeleteObstacle() const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LaserTrapTriggeredEvent OnLaserTriggeredEvent;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bIsStimuliForAI;
     
 };
 

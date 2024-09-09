@@ -13,6 +13,19 @@ UCLASS()
 class BF_AI_API AIGS_VehicleSpawnPoint : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_VehicleSpawnPoint(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void Server_Spawn();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void Server_RemoveVehicle() const;
+    
+protected:
+    UFUNCTION()
+    void OnDebugSubsystemUpdated();
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDoNotGenerate;
     
@@ -49,19 +62,6 @@ protected:
     
     UPROPERTY(Transient)
     AIGS_StaticVehicleBase* SpawnedVehicle;
-    
-public:
-    AIGS_VehicleSpawnPoint(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void Server_Spawn();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void Server_RemoveVehicle() const;
-    
-protected:
-    UFUNCTION()
-    void OnDebugSubsystemUpdated();
     
 };
 

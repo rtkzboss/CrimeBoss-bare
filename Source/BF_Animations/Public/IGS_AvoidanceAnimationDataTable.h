@@ -9,6 +9,8 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_AvoidanceAnimationDataTable : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AvoidanceAnimationDataTable();
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_RollAnimTable> RollAnimations;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(EditAnywhere)
     TArray<FIGS_DodgeAnimTable> DodgeAnimationsCrouching;
     
-    UIGS_AvoidanceAnimationDataTable();
-
 };
 

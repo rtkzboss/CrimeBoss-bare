@@ -13,6 +13,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BreachPointsComponent : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_BreachPointsComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PointsColor;
     
@@ -52,7 +54,5 @@ public:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* RightFarExitPoint;
     
-    AIGS_BreachPointsComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

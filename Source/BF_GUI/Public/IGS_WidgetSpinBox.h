@@ -14,6 +14,46 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetSpinBox : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetSpinBox();
+
+    UFUNCTION(BlueprintCallable)
+    void SetUseEnumMode(bool inUseEnumMode);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetStepSizeValue(int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMinValue(int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMaxValue(int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetEnumNames(const TArray<FText>& inEnumNames);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCurrentValue(int32 InValue);
+    
+protected:
+    UFUNCTION()
+    void OnValueIncreased(int32 InValue);
+    
+    UFUNCTION()
+    void OnValueDecreased(int32 InValue);
+    
+private:
+    UFUNCTION()
+    void OnRightArrowClicked();
+    
+protected:
+    UFUNCTION()
+    void OnOnValueChanged(int32 InValue);
+    
+private:
+    UFUNCTION()
+    void OnLeftArrowClicked();
+    
+public:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* SpinBoxName;
     
@@ -124,45 +164,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_WidgetSpinBoxBlueprintEventSignature OnValueChangedEvent;
-    
-    UIGS_WidgetSpinBox();
-
-    UFUNCTION(BlueprintCallable)
-    void SetUseEnumMode(bool inUseEnumMode);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetStepSizeValue(int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMinValue(int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMaxValue(int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetEnumNames(const TArray<FText>& inEnumNames);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCurrentValue(int32 InValue);
-    
-protected:
-    UFUNCTION()
-    void OnValueIncreased(int32 InValue);
-    
-    UFUNCTION()
-    void OnValueDecreased(int32 InValue);
-    
-private:
-    UFUNCTION()
-    void OnRightArrowClicked();
-    
-protected:
-    UFUNCTION()
-    void OnOnValueChanged(int32 InValue);
-    
-private:
-    UFUNCTION()
-    void OnLeftArrowClicked();
     
 };
 

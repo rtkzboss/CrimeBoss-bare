@@ -8,6 +8,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BotStart : public ANavigationObjectBase {
     GENERATED_BODY()
 public:
+    AIGS_BotStart(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnCharacterSpawnedSignature OnCharacterSpawned;
     
@@ -17,7 +19,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName BotStartTag;
     
-    AIGS_BotStart(const FObjectInitializer& ObjectInitializer);
-
 };
 

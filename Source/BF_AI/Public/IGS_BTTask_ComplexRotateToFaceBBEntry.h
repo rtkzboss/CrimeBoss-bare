@@ -7,6 +7,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_ComplexRotateToFaceBBEntry : public UBTTask_RotateToFaceBBEntry {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_ComplexRotateToFaceBBEntry();
+
     UPROPERTY(EditAnywhere)
     float RandomAngle;
     
@@ -19,7 +21,5 @@ public:
     UPROPERTY(EditAnywhere)
     float PredictionTimePerMeter;
     
-    UIGS_BTTask_ComplexRotateToFaceBBEntry();
-
 };
 

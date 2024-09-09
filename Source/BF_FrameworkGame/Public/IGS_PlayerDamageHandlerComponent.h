@@ -11,6 +11,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerDamageHandlerComponent : public UIGS_DamageHandlerComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerDamageHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     TMap<EIGS_DamageLimiterType, UCurveFloat*> DamageLimiterCurves;
@@ -42,8 +44,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FScalableFloat LowHealthThresholdAbsolute;
     
-public:
-    UIGS_PlayerDamageHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

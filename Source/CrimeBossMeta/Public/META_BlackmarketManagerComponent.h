@@ -23,110 +23,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_BlackmarketManagerComponent : public UIGS_BlackmarketManagerBaseComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_Character*> UniqueHeistersPool;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_Character*> GenericHeistersPool;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_Weapon*> WeaponsPool;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_Equipment*> EquipmentPool;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_PlotlineAsset*> PlotlineAssetsPool;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 GenericPrevID;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 DayWhenHeistersMarketBecameAvailable;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 DayWhenWeaponsMarketBecameAvailable;
-    
-    UPROPERTY(BlueprintReadWrite)
-    FGameplayTagContainer TemporaryLockedPlotlineAssetsTags;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 AmountOfBoughtCheapHeisters;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 RefreshWeaponsPoolCounter;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 RefreshHeistersPoolCounter;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 RefreshWeaponsPoolStartPrice;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 RefreshHeistersPoolStartPrice;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 BaseDayForLootEvents;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<FMETA_VendorLootKey, FMETA_BMEventLootData> ReadyForActivationLootEvents;
-    
-    UPROPERTY(BlueprintReadWrite)
-    FMETA_BMActiveEventLootData ActiveLootEvent;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 BaseDayForWeaponEvents;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_Weapon*> WeaponsOfBMEvent;
-    
-    UPROPERTY(BlueprintReadWrite)
-    FMETA_BMEventWeaponData WeaponEvent;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 BaseDayForHireArmyEvent;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 AmountOfGeneratedSoldiers;
-    
-    UPROPERTY(BlueprintReadWrite)
-    FMETA_ArmyTierConfiguration ArmyHireEventData;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool IsHireArmyEventClamped;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 BaseDayForEquipmentEvent;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_Equipment*> EquipmentOfBMEvent;
-    
-    UPROPERTY(BlueprintReadWrite)
-    FMETA_BMEventEquipmentData EquipmentEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnlockedCharacterTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnlockedWeaponTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnlockedWeaponSkinTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnlockedEquipmentTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnseenUnlockedCharacterTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnseenUnlockedWeaponTagIDs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FGameplayTag> UnseenUnlockedEquipmentTagIDs;
-    
-public:
     UMETA_BlackmarketManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -240,6 +136,109 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ActivateLootEventByVendor(FMETA_VendorLootKey inVendorLootKey);
+    
+protected:
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_Character*> UniqueHeistersPool;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_Character*> GenericHeistersPool;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_Weapon*> WeaponsPool;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_Equipment*> EquipmentPool;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_PlotlineAsset*> PlotlineAssetsPool;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 GenericPrevID;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 DayWhenHeistersMarketBecameAvailable;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 DayWhenWeaponsMarketBecameAvailable;
+    
+    UPROPERTY(BlueprintReadWrite)
+    FGameplayTagContainer TemporaryLockedPlotlineAssetsTags;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 AmountOfBoughtCheapHeisters;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 RefreshWeaponsPoolCounter;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 RefreshHeistersPoolCounter;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 RefreshWeaponsPoolStartPrice;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 RefreshHeistersPoolStartPrice;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 BaseDayForLootEvents;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<FMETA_VendorLootKey, FMETA_BMEventLootData> ReadyForActivationLootEvents;
+    
+    UPROPERTY(BlueprintReadWrite)
+    FMETA_BMActiveEventLootData ActiveLootEvent;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 BaseDayForWeaponEvents;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_Weapon*> WeaponsOfBMEvent;
+    
+    UPROPERTY(BlueprintReadWrite)
+    FMETA_BMEventWeaponData WeaponEvent;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 BaseDayForHireArmyEvent;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 AmountOfGeneratedSoldiers;
+    
+    UPROPERTY(BlueprintReadWrite)
+    FMETA_ArmyTierConfiguration ArmyHireEventData;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool IsHireArmyEventClamped;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 BaseDayForEquipmentEvent;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_Equipment*> EquipmentOfBMEvent;
+    
+    UPROPERTY(BlueprintReadWrite)
+    FMETA_BMEventEquipmentData EquipmentEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnlockedCharacterTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnlockedWeaponTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnlockedWeaponSkinTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnlockedEquipmentTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnseenUnlockedCharacterTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnseenUnlockedWeaponTagIDs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FGameplayTag> UnseenUnlockedEquipmentTagIDs;
     
 };
 

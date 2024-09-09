@@ -9,17 +9,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_SecuredLootInfoWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float SecuredLootValue;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float SoftCollectedLootValue;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    float GoalValue;
-    
-public:
     UIGS_SecuredLootInfoWidget();
 
 protected:
@@ -31,6 +20,15 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void RefreshLootInfo();
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float SecuredLootValue;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float SoftCollectedLootValue;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    float GoalValue;
     
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_BagPickupSequence : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_BagPickupSequence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestPickupBag;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_HelpersCharacters;
     
-public:
-    UIGS_BTService_BagPickupSequence();
-
 };
 

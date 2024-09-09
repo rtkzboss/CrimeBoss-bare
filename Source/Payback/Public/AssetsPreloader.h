@@ -10,6 +10,8 @@ UCLASS()
 class PAYBACK_API AAssetsPreloader : public AActor, public IIGS_LoadingInProgressInterface {
     GENERATED_BODY()
 public:
+    AAssetsPreloader(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldPreload;
     
@@ -17,9 +19,6 @@ protected:
     UPROPERTY(Transient)
     UIGS_VoiceoverSubsystemDataAsset* VODatabase;
     
-public:
-    AAssetsPreloader(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

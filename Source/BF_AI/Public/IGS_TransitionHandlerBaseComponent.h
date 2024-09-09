@@ -8,6 +8,8 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_TransitionHandlerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_TransitionHandlerBaseComponent(const FObjectInitializer& ObjectInitializer);
+
 private:
     UPROPERTY(EditAnywhere)
     float AngleToStartTransition;
@@ -18,8 +20,5 @@ private:
     UPROPERTY(EditAnywhere)
     EIGS_TransitionState m_State;
     
-public:
-    UIGS_TransitionHandlerBaseComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

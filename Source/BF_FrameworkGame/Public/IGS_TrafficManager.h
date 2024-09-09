@@ -17,29 +17,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_TrafficManager : public UObject {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TArray<AIGS_VehicleSpawnerFramework*> m_Spawners;
-    
-    UPROPERTY()
-    TArray<AIGS_VehicleDestinationPointFramework*> m_DestinationPoints;
-    
-    UPROPERTY()
-    TArray<AIGS_VehicleDestinationAreaFramework*> m_DestinationAreas;
-    
-    UPROPERTY()
-    TArray<AIGS_VehicleExitPointFramework*> m_ExitPoints;
-    
-    UPROPERTY(Instanced)
-    TArray<UIGS_TrafficPathComponentFramework*> m_TrafficPathComponents;
-    
-    UPROPERTY()
-    TMap<UIGS_TrafficPathComponentFramework*, FIGS_TrespassersInfo> m_Trespassers;
-    
-    UPROPERTY()
-    TMap<UIGS_TrafficPathComponentFramework*, FIGS_TrafficDirectionLocks> m_DirectionLocks;
-    
-public:
     UIGS_TrafficManager();
 
     UFUNCTION(BlueprintCallable)
@@ -65,6 +42,28 @@ public:
     
     UFUNCTION(BlueprintCallable)
     TArray<AIGS_VehicleDestinationAreaFramework*> GetAllDestinationAreasInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent);
+    
+protected:
+    UPROPERTY()
+    TArray<AIGS_VehicleSpawnerFramework*> m_Spawners;
+    
+    UPROPERTY()
+    TArray<AIGS_VehicleDestinationPointFramework*> m_DestinationPoints;
+    
+    UPROPERTY()
+    TArray<AIGS_VehicleDestinationAreaFramework*> m_DestinationAreas;
+    
+    UPROPERTY()
+    TArray<AIGS_VehicleExitPointFramework*> m_ExitPoints;
+    
+    UPROPERTY(Instanced)
+    TArray<UIGS_TrafficPathComponentFramework*> m_TrafficPathComponents;
+    
+    UPROPERTY()
+    TMap<UIGS_TrafficPathComponentFramework*, FIGS_TrespassersInfo> m_Trespassers;
+    
+    UPROPERTY()
+    TMap<UIGS_TrafficPathComponentFramework*, FIGS_TrafficDirectionLocks> m_DirectionLocks;
     
 };
 

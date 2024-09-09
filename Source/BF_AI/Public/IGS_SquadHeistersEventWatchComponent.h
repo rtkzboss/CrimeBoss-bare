@@ -9,6 +9,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SquadHeistersEventWatchComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SquadHeistersEventWatchComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_HittingCharacters;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_FiringCharacters;
     
-public:
-    UIGS_SquadHeistersEventWatchComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

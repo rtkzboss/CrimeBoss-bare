@@ -18,29 +18,6 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPlanningBoardFeatureStateChanged, bool, IsUnlocked);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPlanningBoardDataChanged);
     
-    UPROPERTY(BlueprintAssignable)
-    FPlanningBoardItemStatusChanged OnPlanningBoardItemStatusChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FPlanningBoardDataChanged OnPlanningBoardChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FPlanningBoardDataChanged OnPlanningBoardEventsChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FPlanningBoardFeatureStateChanged OnPlanningBoardFeatureStateChanged;
-    
-private:
-    UPROPERTY()
-    FGameplayTag m_ActivePlanningBoardTag;
-    
-    UPROPERTY()
-    TMap<FGameplayTag, UMETA_PlanningBoardItemObject*> m_PlanningBoardItemsMap;
-    
-    UPROPERTY()
-    TArray<FMETA_ChangeStatusPlanningBoardEvent> m_ChangeStatusEvents;
-    
-public:
     UMETA_PlanningBoardManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -89,6 +66,28 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddChangeStatusEvent(FGameplayTag itemTag, FGameplayTag voiceoverTag, EMETA_PlanningBoardItemStatus fromStatus, EMETA_PlanningBoardItemStatus toStatus);
+    
+    UPROPERTY(BlueprintAssignable)
+    FPlanningBoardItemStatusChanged OnPlanningBoardItemStatusChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FPlanningBoardDataChanged OnPlanningBoardChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FPlanningBoardDataChanged OnPlanningBoardEventsChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FPlanningBoardFeatureStateChanged OnPlanningBoardFeatureStateChanged;
+    
+private:
+    UPROPERTY()
+    FGameplayTag m_ActivePlanningBoardTag;
+    
+    UPROPERTY()
+    TMap<FGameplayTag, UMETA_PlanningBoardItemObject*> m_PlanningBoardItemsMap;
+    
+    UPROPERTY()
+    TArray<FMETA_ChangeStatusPlanningBoardEvent> m_ChangeStatusEvents;
     
 };
 

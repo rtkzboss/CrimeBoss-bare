@@ -12,11 +12,6 @@ UCLASS(Config=Game)
 class BF_AI_API UIGS_AISense_Danger : public UAISense {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    TArray<FIGS_AIDangerEvent> RegisteredEvents;
-    
-public:
     UIGS_AISense_Danger();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
@@ -27,6 +22,10 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static void ReportDangerArea(UObject* WorldContextObject, AActor* DangerActor, float Radius, float Duration);
+    
+private:
+    UPROPERTY()
+    TArray<FIGS_AIDangerEvent> RegisteredEvents;
     
 };
 

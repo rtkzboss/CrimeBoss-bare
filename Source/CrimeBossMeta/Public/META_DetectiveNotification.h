@@ -12,14 +12,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_DetectiveNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    TSubclassOf<UMETA_DetectiveID> m_Detective;
-    
-    UPROPERTY()
-    UMapTile* m_Tile;
-    
-public:
     UMETA_DetectiveNotification();
 
     UFUNCTION(BlueprintCallable)
@@ -30,6 +22,13 @@ public:
     
     UFUNCTION(BlueprintPure)
     TSubclassOf<UMETA_DetectiveID> GetDetective() const;
+    
+private:
+    UPROPERTY()
+    TSubclassOf<UMETA_DetectiveID> m_Detective;
+    
+    UPROPERTY()
+    UMapTile* m_Tile;
     
 };
 

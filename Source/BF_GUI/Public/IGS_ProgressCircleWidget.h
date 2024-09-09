@@ -16,23 +16,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ProgressCircleWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_PlayerCharacter* PlayerPawn;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_PlayerControllerRoot* PlayerController;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly)
-    float m_ReloadDuration;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_WeaponBase* m_ActiveWeapon;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_ReloaderBase* m_ActiveWeaponReloader;
-    
-public:
     UIGS_ProgressCircleWidget();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -54,6 +37,22 @@ public:
     
     UFUNCTION()
     void HandleProgressCircle(bool inEnabled, float inDuration);
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_PlayerCharacter* PlayerPawn;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_PlayerControllerRoot* PlayerController;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly)
+    float m_ReloadDuration;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_WeaponBase* m_ActiveWeapon;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_ReloaderBase* m_ActiveWeaponReloader;
     
 };
 

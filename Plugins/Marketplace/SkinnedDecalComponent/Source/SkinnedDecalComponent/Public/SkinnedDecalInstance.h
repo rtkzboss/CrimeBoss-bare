@@ -9,6 +9,14 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SKINNEDDECALCOMPONENT_API USkinnedDecalInstance : public USceneComponent {
     GENERATED_BODY()
 public:
+    USkinnedDecalInstance(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void UpdateDecal();
+    
+    UFUNCTION(BlueprintCallable)
+    USkinnedDecalSampler* GetSampler();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Index;
     
@@ -17,14 +25,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Size;
-    
-    USkinnedDecalInstance(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void UpdateDecal();
-    
-    UFUNCTION(BlueprintCallable)
-    USkinnedDecalSampler* GetSampler();
     
 };
 

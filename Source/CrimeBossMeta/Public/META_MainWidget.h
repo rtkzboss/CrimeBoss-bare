@@ -23,6 +23,32 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_MainWidget : public UIGS_BaseMenuWidget {
     GENERATED_BODY()
 public:
+    UMETA_MainWidget();
+
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void UpdateVisibilityMenuState(EMETA_MenuState inState);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetConfirmButtonVisibility(bool inVisible);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetConfirmButtonText(const FText& InText);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetBackButtonVisibility(bool inVisible);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetAdditionalButtonVisibility(bool inVisible);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetAdditionalButtonType(EIGS_MetaAdditionalButtonType inType);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetAdditionalButtonText(const FText& InText);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnGamemodeReady();
+    
     UPROPERTY(BlueprintReadOnly)
     TScriptInterface<IMETA_UIEventsManager> UIEventsManager;
     
@@ -58,32 +84,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     AMETA_GameStateBase* MetaGameState;
-    
-    UMETA_MainWidget();
-
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void UpdateVisibilityMenuState(EMETA_MenuState inState);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetConfirmButtonVisibility(bool inVisible);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetConfirmButtonText(const FText& InText);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetBackButtonVisibility(bool inVisible);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetAdditionalButtonVisibility(bool inVisible);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetAdditionalButtonType(EIGS_MetaAdditionalButtonType inType);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetAdditionalButtonText(const FText& InText);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnGamemodeReady();
     
 };
 

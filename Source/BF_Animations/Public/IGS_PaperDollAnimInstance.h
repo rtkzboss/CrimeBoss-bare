@@ -11,6 +11,11 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_PaperDollAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_PaperDollAnimInstance();
+
+    UFUNCTION(BlueprintPure)
+    AIGS_CharacterPaperDoll* GetOwningPaperDoll() const;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bLookAtAnim;
     
@@ -19,11 +24,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite)
     FPoseSnapshot HeadSnapshot;
-    
-    UIGS_PaperDollAnimInstance();
-
-    UFUNCTION(BlueprintPure)
-    AIGS_CharacterPaperDoll* GetOwningPaperDoll() const;
     
 };
 

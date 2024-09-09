@@ -18,26 +18,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_OutOfBoundsManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UIGS_LevelBlockingBoundsSettings* Settings;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OutOfBoundsChangedSignature OnOutOfBoundsChanged;
-    
-protected:
-    UPROPERTY()
-    TMap<AIGS_PlayerCharacter*, FIGS_OutOfBoundsCharacterData> CharacterData;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UUserWidget> OutOfBoundsWidgetClass;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
-    UIGS_LeavingMissionWidget* OutOfBoundsWidget;
-    
-    UPROPERTY(Transient)
-    TArray<AIGS_LevelBlockingBounds*> LevelBlockingBounds;
-    
-public:
     UIGS_OutOfBoundsManager();
 
     UFUNCTION(BlueprintCallable)
@@ -57,6 +37,25 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void EnteredOutOfBoundsArea(AIGS_PlayerCharacter* inCharacter);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UIGS_LevelBlockingBoundsSettings* Settings;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OutOfBoundsChangedSignature OnOutOfBoundsChanged;
+    
+protected:
+    UPROPERTY()
+    TMap<AIGS_PlayerCharacter*, FIGS_OutOfBoundsCharacterData> CharacterData;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UUserWidget> OutOfBoundsWidgetClass;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UIGS_LeavingMissionWidget* OutOfBoundsWidget;
+    
+    UPROPERTY(Transient)
+    TArray<AIGS_LevelBlockingBounds*> LevelBlockingBounds;
     
 };
 

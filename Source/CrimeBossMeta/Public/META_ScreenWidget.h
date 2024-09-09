@@ -20,6 +20,11 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_ScreenWidget : public UIGS_Screen {
     GENERATED_BODY()
 public:
+    UMETA_ScreenWidget();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnGamemodeReady();
+    
     UPROPERTY(BlueprintReadOnly, Instanced)
     UMETA_UIEventsManagerComponent* UIEventsManager;
     
@@ -55,11 +60,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     AMETA_BaseGameMode* MetaGameMode;
-    
-    UMETA_ScreenWidget();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnGamemodeReady();
     
 };
 

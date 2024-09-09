@@ -7,6 +7,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterToggle : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterToggle();
+
 protected:
     UPROPERTY()
     TArray<int32> Values;
@@ -14,8 +16,5 @@ protected:
     UPROPERTY()
     TArray<int32> DefaultValues;
     
-public:
-    UHoudiniParameterToggle();
-
 };
 

@@ -17,6 +17,80 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_DoorBase : public AIGS_EntranceBase, public IIGS_DoorBreachInterface {
     GENERATED_BODY()
 public:
+    AIGS_DoorBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void UpdateDoorOrientation(AIGS_GameCharacterFramework* inCharacter);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void UnlockEvent();
+    
+    UFUNCTION(BlueprintCallable)
+    void Unlock();
+    
+protected:
+    UFUNCTION()
+    void SwitchPortalComponent(bool inOpened);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetHardLocked(bool inHardLocked);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void RelockEvent();
+    
+    UFUNCTION(BlueprintCallable)
+    void Relock();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void PostInitializeComponentsBP();
+    
+protected:
+    UFUNCTION()
+    void OpenPortalComponent(bool inState);
+    
+public:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OpenDoor_Internal(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void OpenDoor(AIGS_GameCharacterFramework* inInstigator);
+    
+protected:
+    UFUNCTION()
+    void OnRep_HardLock();
+    
+public:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPreBreach();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void LockEvent();
+    
+    UFUNCTION(BlueprintCallable)
+    void Lock();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void HardLockedEvent(bool inHardLocked);
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceChangeDoorOpenState(FVector inInstigatorLocation, bool inOpen);
+    
+    UFUNCTION(BlueprintCallable)
+    static void EnableNavigationBlockingOnCollision(UShapeComponent* InComponent, bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ConvertToStaticDoor();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void CloseDoor_Internal();
+    
+    UFUNCTION(BlueprintCallable)
+    void CloseDoor();
+    
+    UFUNCTION(BlueprintCallable)
+    void CallDoorOpened(AIGS_GameCharacterFramework* inInstigator);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AkAcousticPortalState AcousticPortalInitState;
     
@@ -98,82 +172,8 @@ private:
     FVector InteractionFinalRotation;
     
 public:
-    AIGS_DoorBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void UpdateDoorOrientation(AIGS_GameCharacterFramework* inCharacter);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void UnlockEvent();
-    
-    UFUNCTION(BlueprintCallable)
-    void Unlock();
-    
-protected:
-    UFUNCTION()
-    void SwitchPortalComponent(bool inOpened);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void SetHardLocked(bool inHardLocked);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void RelockEvent();
-    
-    UFUNCTION(BlueprintCallable)
-    void Relock();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void PostInitializeComponentsBP();
-    
-protected:
-    UFUNCTION()
-    void OpenPortalComponent(bool inState);
-    
-public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OpenDoor_Internal(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void OpenDoor(AIGS_GameCharacterFramework* inInstigator);
-    
-protected:
-    UFUNCTION()
-    void OnRep_HardLock();
-    
-public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPreBreach();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void LockEvent();
-    
-    UFUNCTION(BlueprintCallable)
-    void Lock();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void HardLockedEvent(bool inHardLocked);
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceChangeDoorOpenState(FVector inInstigatorLocation, bool inOpen);
-    
-    UFUNCTION(BlueprintCallable)
-    static void EnableNavigationBlockingOnCollision(UShapeComponent* InComponent, bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void ConvertToStaticDoor();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void CloseDoor_Internal();
-    
-    UFUNCTION(BlueprintCallable)
-    void CloseDoor();
-    
-    UFUNCTION(BlueprintCallable)
-    void CallDoorOpened(AIGS_GameCharacterFramework* inInstigator);
-    
 
     // Fix for true pure virtual functions not being implemented
 };

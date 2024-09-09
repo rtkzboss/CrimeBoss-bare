@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_AICommandMoveTo : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandMoveTo();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Position;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_Speed MovementSpeed;
     
-    UIGS_AICommandMoveTo();
-
 };
 

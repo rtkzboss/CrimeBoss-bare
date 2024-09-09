@@ -10,10 +10,10 @@ UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_GASDefaultAttributesDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_GASDefaultAttributesDataAsset();
+
     UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UGameplayEffect>> AttributeInitGEs;
     
-    UIGS_GASDefaultAttributesDataAsset();
-
 };
 

@@ -10,10 +10,10 @@ UCLASS()
 class BF_AI_API UIGS_EnvQueryTest_IsRetreatingOutside : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryTest_IsRetreatingOutside();
+
     UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UEnvQueryContext>> Contexts;
     
-    UIGS_EnvQueryTest_IsRetreatingOutside();
-
 };
 

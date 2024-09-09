@@ -12,6 +12,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_DownStateEffectDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_DownStateEffectDataAsset();
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> DownedEffectPostProcessInterface;
     
@@ -45,7 +47,5 @@ public:
     UPROPERTY(EditAnywhere)
     float ReviveEffectDuration;
     
-    UIGS_DownStateEffectDataAsset();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateBags : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateBags();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestBagKey;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
     
-public:
-    UIGS_BTService_EvaluateBags();
-
 };
 

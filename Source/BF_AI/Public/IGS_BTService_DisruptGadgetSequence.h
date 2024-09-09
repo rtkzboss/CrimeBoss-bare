@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_DisruptGadgetSequence : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_DisruptGadgetSequence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestGadget;
     
-public:
-    UIGS_BTService_DisruptGadgetSequence();
-
 };
 

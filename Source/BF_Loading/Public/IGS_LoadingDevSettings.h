@@ -11,6 +11,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_LoadingSettin
 class BF_LOADING_API UIGS_LoadingDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_LoadingDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> LoadingSetupDataTable;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_LoadingScreenDataAsset> LoadingScreenDataAsset;
     
-    UIGS_LoadingDevSettings();
-
 };
 

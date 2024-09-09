@@ -8,12 +8,11 @@ UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_HasSwatSquadMode : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_HasSwatSquadMode();
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_SquadSwatMode SwatMode;
     
-public:
-    UBTDecorator_HasSwatSquadMode();
-
 };
 

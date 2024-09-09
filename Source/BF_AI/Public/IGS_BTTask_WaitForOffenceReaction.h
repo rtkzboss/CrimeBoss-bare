@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_WaitForOffenceReaction : public UBTTask_Wait {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_WaitForOffenceReaction();
+
     UPROPERTY(EditAnywhere)
     EIGS_OffenceReactionType Type;
     
-    UIGS_BTTask_WaitForOffenceReaction();
-
 };
 

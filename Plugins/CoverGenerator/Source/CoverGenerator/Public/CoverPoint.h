@@ -10,6 +10,8 @@ UCLASS(BlueprintType)
 class COVERGENERATOR_API UCoverPoint : public UObject {
     GENERATED_BODY()
 public:
+    UCoverPoint();
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector Location;
     
@@ -60,7 +62,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     uint8 IsValid: 1;
     
-    UCoverPoint();
-
 };
 

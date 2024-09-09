@@ -13,6 +13,13 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachThrowGrenadeDoorsOpened : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadDoorBreachThrowGrenadeDoorsOpened();
+
+protected:
+    UFUNCTION()
+    UIGS_AICommand* CommandToThrowGrenade(AIGS_GameCharacterFramework* inAgent, FVector position);
+    
+public:
     UPROPERTY(EditAnywhere)
     TSubclassOf<UIGS_ThrowableInventoryObject> Grenade;
     
@@ -22,13 +29,6 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* ContextActionCommand;
-    
-public:
-    UIGS_BTTask_SquadDoorBreachThrowGrenadeDoorsOpened();
-
-protected:
-    UFUNCTION()
-    UIGS_AICommand* CommandToThrowGrenade(AIGS_GameCharacterFramework* inAgent, FVector position);
     
 };
 

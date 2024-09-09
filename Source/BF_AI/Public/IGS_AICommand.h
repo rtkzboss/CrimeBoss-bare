@@ -12,6 +12,14 @@ UCLASS(BlueprintType)
 class BF_AI_API UIGS_AICommand : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_AICommand();
+
+    UFUNCTION(BlueprintCallable)
+    void Finish();
+    
+    UFUNCTION(BlueprintCallable)
+    void Fail();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AICommandState State;
     
@@ -23,14 +31,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite)
     FIGS_AICommandFinishedDelegate OnAICommandFinished;
-    
-    UIGS_AICommand();
-
-    UFUNCTION(BlueprintCallable)
-    void Finish();
-    
-    UFUNCTION(BlueprintCallable)
-    void Fail();
     
 };
 

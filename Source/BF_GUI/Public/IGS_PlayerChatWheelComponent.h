@@ -10,17 +10,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_GUI_API UIGS_PlayerChatWheelComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    UIGS_GameUISettings* m_Settings;
-    
-    UPROPERTY()
-    bool m_SpamPreventionActive;
-    
-    UPROPERTY()
-    TArray<float> m_ActionsTimestampsQueue;
-    
-public:
     UIGS_PlayerChatWheelComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION()
@@ -31,6 +20,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void HandleChatWheelReaction(FGameplayTag inTag);
+    
+private:
+    UPROPERTY()
+    UIGS_GameUISettings* m_Settings;
+    
+    UPROPERTY()
+    bool m_SpamPreventionActive;
+    
+    UPROPERTY()
+    TArray<float> m_ActionsTimestampsQueue;
     
 };
 

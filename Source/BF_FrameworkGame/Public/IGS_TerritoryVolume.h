@@ -14,6 +14,20 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_TerritoryVolume : public AVolume {
     GENERATED_BODY()
 public:
+    AIGS_TerritoryVolume(const FObjectInitializer& ObjectInitializer);
+
+private:
+    UFUNCTION()
+    void OnTerritoryVolumeEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
+    
+    UFUNCTION()
+    void OnTerritoryVolumeBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void HandleCoolDown();
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
     
@@ -50,20 +64,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 EnemiesCount;
-    
-public:
-    AIGS_TerritoryVolume(const FObjectInitializer& ObjectInitializer);
-
-private:
-    UFUNCTION()
-    void OnTerritoryVolumeEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
-    UFUNCTION()
-    void OnTerritoryVolumeBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void HandleCoolDown();
     
 };
 

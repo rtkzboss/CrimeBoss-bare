@@ -7,6 +7,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ChargedShooter : public UIGS_ShooterBase {
     GENERATED_BODY()
 public:
+    UIGS_ChargedShooter(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ChargeDuration;
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DischargeAfter;
     
-public:
-    UIGS_ChargedShooter(const FObjectInitializer& ObjectInitializer);
-
 };
 

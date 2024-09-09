@@ -16,6 +16,37 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SimpleShooter : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SimpleShooter(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void StopAttack(const bool inForced);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetWeaponObject(UIGS_WeaponInventoryObject* inWeaponObject);
+    
+protected:
+    UFUNCTION()
+    void OnRep_ShootingChanged(bool inWasShooting);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    void IsShooting(bool& outIsShooting);
+    
+    UFUNCTION(BlueprintCallable)
+    void InitializeMuzzleReference(UChildActorComponent* inMuzzleComponent);
+    
+    UFUNCTION(BlueprintCallable)
+    void InitAkComponent(UAkComponent* inAkComponent);
+    
+    UFUNCTION(BlueprintPure)
+    float GetRPM() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetProjectilesPerShot() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void BeginAttack(const bool inForced);
+    
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ShotAILoudness;
@@ -63,38 +94,7 @@ protected:
     bool mR_bIsShooting;
     
 public:
-    UIGS_SimpleShooter(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void StopAttack(const bool inForced);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetWeaponObject(UIGS_WeaponInventoryObject* inWeaponObject);
-    
-protected:
-    UFUNCTION()
-    void OnRep_ShootingChanged(bool inWasShooting);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    void IsShooting(bool& outIsShooting);
-    
-    UFUNCTION(BlueprintCallable)
-    void InitializeMuzzleReference(UChildActorComponent* inMuzzleComponent);
-    
-    UFUNCTION(BlueprintCallable)
-    void InitAkComponent(UAkComponent* inAkComponent);
-    
-    UFUNCTION(BlueprintPure)
-    float GetRPM() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetProjectilesPerShot() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void BeginAttack(const bool inForced);
-    
 };
 

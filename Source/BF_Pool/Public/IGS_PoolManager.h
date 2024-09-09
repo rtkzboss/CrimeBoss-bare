@@ -13,11 +13,6 @@ UCLASS(BlueprintType)
 class BF_POOL_API UIGS_PoolManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TMap<FIGS_PoolKey, FIGS_Pool> PoolMap;
-    
-public:
     UIGS_PoolManager();
 
 protected:
@@ -45,6 +40,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     AActor* AcquireAndActivateItem(UClass* inItemClass);
+    
+protected:
+    UPROPERTY()
+    TMap<FIGS_PoolKey, FIGS_Pool> PoolMap;
     
 };
 

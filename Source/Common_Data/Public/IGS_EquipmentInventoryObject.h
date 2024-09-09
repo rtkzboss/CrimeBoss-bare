@@ -9,12 +9,6 @@ UCLASS(Abstract)
 class COMMON_DATA_API UIGS_EquipmentInventoryObject : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnChargeCountChangedEvent OnChargeCountChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnKillCountChangedNative OnKillCountChangedNative;
-    
     UIGS_EquipmentInventoryObject();
 
     UFUNCTION(BlueprintPure)
@@ -28,6 +22,12 @@ public:
     
     UFUNCTION(BlueprintPure)
     int32 GetChargeCount() const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnChargeCountChangedEvent OnChargeCountChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnKillCountChangedNative OnKillCountChangedNative;
     
 };
 

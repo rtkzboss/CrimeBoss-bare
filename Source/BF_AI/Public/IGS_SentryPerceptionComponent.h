@@ -12,19 +12,19 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SentryPerceptionComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SentryPerceptionComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus);
+    
+public:
     UPROPERTY(EditAnywhere)
     TArray<TSubclassOf<UAISense>> RegisterAsSourceForSenses;
     
 protected:
     UPROPERTY()
     TArray<AActor*> m_SeenActors;
-    
-public:
-    UIGS_SentryPerceptionComponent(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus);
     
 };
 

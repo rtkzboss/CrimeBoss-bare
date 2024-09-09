@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_WantsUseMountedGun : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_WantsUseMountedGun();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MountedGunKey;
     
-public:
-    UIGS_BTService_WantsUseMountedGun();
-
 };
 

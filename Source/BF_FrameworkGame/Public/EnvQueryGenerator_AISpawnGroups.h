@@ -12,6 +12,8 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UEnvQueryGenerator_AISpawnGroups : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UEnvQueryGenerator_AISpawnGroups();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
     
@@ -24,7 +26,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue UnitSpecialization;
     
-    UEnvQueryGenerator_AISpawnGroups();
-
 };
 

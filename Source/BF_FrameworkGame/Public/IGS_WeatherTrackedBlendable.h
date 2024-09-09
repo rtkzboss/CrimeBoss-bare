@@ -9,12 +9,11 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeatherTrackedBlendable : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WeatherTrackedBlendable(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_PostProcessManagerComponent> m_PostProcessManager;
     
-public:
-    UIGS_WeatherTrackedBlendable(const FObjectInitializer& ObjectInitializer);
-
 };
 

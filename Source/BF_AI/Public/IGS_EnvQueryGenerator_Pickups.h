@@ -8,10 +8,10 @@ UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_Pickups : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryGenerator_Pickups();
+
     UPROPERTY(EditAnywhere)
     EIGS_PickupType PickupType;
     
-    UIGS_EnvQueryGenerator_Pickups();
-
 };
 

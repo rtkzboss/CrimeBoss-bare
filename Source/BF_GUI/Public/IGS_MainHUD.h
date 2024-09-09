@@ -12,20 +12,6 @@ UCLASS(Abstract, NonTransient)
 class BF_GUI_API AIGS_MainHUD : public AHUD {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MostImportantHintChangedSignature OnMostImportantHintChanged;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    UIGS_HUDKantanDatasourceHolder* KantanDatasourceHolder;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    UIGS_MainHUDWidget* MainHUDWidget;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    EIGS_MostPrioHintType CurrMostPrioHintType;
-    
-public:
     AIGS_MainHUD(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(Exec)
@@ -54,6 +40,19 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void AddHUDMessage(const FText& InText, float inDuration, int32 inCountdown);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MostImportantHintChangedSignature OnMostImportantHintChanged;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UIGS_HUDKantanDatasourceHolder* KantanDatasourceHolder;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UIGS_MainHUDWidget* MainHUDWidget;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    EIGS_MostPrioHintType CurrMostPrioHintType;
     
 };
 

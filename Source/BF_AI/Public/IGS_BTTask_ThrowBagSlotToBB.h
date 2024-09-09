@@ -8,13 +8,13 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_ThrowBagSlotToBB : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_ThrowBagSlotToBB();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowRequestKey;
     
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotKey;
     
-    UIGS_BTTask_ThrowBagSlotToBB();
-
 };
 

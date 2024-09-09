@@ -11,6 +11,8 @@ UCLASS(CollapseCategories)
 class BF_ANIMATIONS_API UIGS_AnimNotify_PlayNiagaraParticleTortilla : public UAnimNotify {
     GENERATED_BODY()
 public:
+    UIGS_AnimNotify_PlayNiagaraParticleTortilla();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UNiagaraSystem> NiagaraTemplate;
     
@@ -39,8 +41,5 @@ private:
     UPROPERTY(Transient)
     UNiagaraSystem* NiagaraTemplate3PVHard;
     
-public:
-    UIGS_AnimNotify_PlayNiagaraParticleTortilla();
-
 };
 

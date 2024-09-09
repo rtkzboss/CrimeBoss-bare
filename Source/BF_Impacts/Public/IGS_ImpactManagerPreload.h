@@ -11,6 +11,8 @@ UCLASS()
 class BF_IMPACTS_API UIGS_ImpactManagerPreload : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_ImpactManagerPreload();
+
 protected:
     UPROPERTY()
     TArray<TSubclassOf<UIGS_ImpactTypeObject>> LoadedIDs;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY()
     UIGS_ImpactManagerSettings* ImpactManagerSettings;
     
-public:
-    UIGS_ImpactManagerPreload();
-
 };
 

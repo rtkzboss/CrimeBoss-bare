@@ -12,6 +12,11 @@ UCLASS()
 class BF_AI_API AIGS_VehicleLooper : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_VehicleLooper(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void StartLooping(AIGS_VehicleBase* Vehicle);
+    
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     AIGS_TrafficSegment* InitialTrafficPath;
@@ -30,12 +35,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_TrafficLoopfindingResult PossibleLoops;
-    
-public:
-    AIGS_VehicleLooper(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void StartLooping(AIGS_VehicleBase* Vehicle);
     
 };
 

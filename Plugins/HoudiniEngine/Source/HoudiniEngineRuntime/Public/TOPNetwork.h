@@ -9,6 +9,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UTOPNetwork : public UObject {
     GENERATED_BODY()
 public:
+    UTOPNetwork();
+
     UPROPERTY(NonTransactional, Transient)
     int32 NodeId;
     
@@ -33,7 +35,5 @@ public:
     UPROPERTY()
     bool bAutoLoadResults;
     
-    UTOPNetwork();
-
 };
 

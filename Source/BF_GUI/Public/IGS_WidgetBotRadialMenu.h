@@ -13,14 +13,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetBotRadialMenu : public UIGS_WidgetRadialMenuBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<AController*> BotControllers;
-    
-    UPROPERTY(Instanced)
-    UIGS_PlayerCommandComponent* PlayerCommandComponent;
-    
-public:
     UIGS_WidgetBotRadialMenu();
 
 private:
@@ -42,6 +34,12 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void CallBotCommand(EIGS_BotCommandDefinition inCommand);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<AController*> BotControllers;
+    
+    UPROPERTY(Instanced)
+    UIGS_PlayerCommandComponent* PlayerCommandComponent;
     
 };
 

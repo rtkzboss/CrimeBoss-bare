@@ -9,6 +9,8 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_FinancialManagerComponent : public UIGS_FinanceManagerBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_FinancialManagerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite)
     FMETA_Loan CurrentLoan;
@@ -46,8 +48,5 @@ protected:
     UPROPERTY(BlueprintReadWrite)
     int32 InitialBalance;
     
-public:
-    UMETA_FinancialManagerComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

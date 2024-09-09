@@ -9,6 +9,11 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_TradeNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
+    UMETA_TradeNotification();
+
+    UFUNCTION(BlueprintCallable)
+    void SetData(EMETA_TradeVendor inVendor, FGameplayTag inLoot, FText inMoney);
+    
 private:
     UPROPERTY()
     EMETA_TradeVendor m_Vendor;
@@ -18,12 +23,6 @@ private:
     
     UPROPERTY()
     FText m_Money;
-    
-public:
-    UMETA_TradeNotification();
-
-    UFUNCTION(BlueprintCallable)
-    void SetData(EMETA_TradeVendor inVendor, FGameplayTag inLoot, FText inMoney);
     
 };
 

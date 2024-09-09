@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_HasWaitForGeneralReaction : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_HasWaitForGeneralReaction();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_GRWaitType Type;
     
-    UBTDecorator_HasWaitForGeneralReaction();
-
 };
 

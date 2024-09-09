@@ -12,6 +12,11 @@ UCLASS(BlueprintType)
 class UIGS_ThrowBagSlot : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_ThrowBagSlot();
+
+    UFUNCTION(BlueprintCallable)
+    void ReportSlotReached(AIGS_GameCharacterFramework* inCharacter);
+    
     UPROPERTY(Instanced)
     USkeletalMeshComponent* SkeletalMeshComponent;
     
@@ -20,11 +25,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_OnSlotReached OnSlotReached;
-    
-    UIGS_ThrowBagSlot();
-
-    UFUNCTION(BlueprintCallable)
-    void ReportSlotReached(AIGS_GameCharacterFramework* inCharacter);
     
 };
 

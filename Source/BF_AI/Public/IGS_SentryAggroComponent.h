@@ -9,6 +9,11 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SentryAggroComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SentryAggroComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    AActor* GetRecommendedTarget() const;
+    
 protected:
     UPROPERTY(EditDefaultsOnly)
     float AggroUpdateTick;
@@ -24,12 +29,6 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     float GlobalAggroChangeDivisor;
-    
-public:
-    UIGS_SentryAggroComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    AActor* GetRecommendedTarget() const;
     
 };
 

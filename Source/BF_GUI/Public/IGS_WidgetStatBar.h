@@ -11,6 +11,8 @@ UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetStatBar : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetStatBar();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* StatNameTextBlock;
     
@@ -42,8 +44,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StatMaxValue;
     
-public:
-    UIGS_WidgetStatBar();
-
 };
 

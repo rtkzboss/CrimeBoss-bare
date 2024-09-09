@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API AIGS_NavLinkRappel : public AIGS_NavLinkBase {
     GENERATED_BODY()
 public:
+    AIGS_NavLinkRappel(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EndTransitionDistance;
     
@@ -29,7 +31,5 @@ public:
     UPROPERTY()
     AIGS_RopeActor* RopeActor;
     
-    AIGS_NavLinkRappel(const FObjectInitializer& ObjectInitializer);
-
 };
 

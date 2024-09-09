@@ -16,23 +16,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_UnlockManagerComponent : public UIGS_UnlockManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ContractUnlocked OnContractUnlocked;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CharacterUnlocked OnCharacterUnlocked;
-    
-protected:
-    UPROPERTY()
-    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
-    
-    UPROPERTY()
-    UIGS_SaveManager* m_SaveManager;
-    
-    UPROPERTY()
-    TArray<FGameplayTag> m_PendingUnlockRewards;
-    
-public:
     UIGS_UnlockManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -76,6 +59,22 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ConsumePendingReward(FGameplayTag inRewardID);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ContractUnlocked OnContractUnlocked;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CharacterUnlocked OnCharacterUnlocked;
+    
+protected:
+    UPROPERTY()
+    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
+    
+    UPROPERTY()
+    UIGS_SaveManager* m_SaveManager;
+    
+    UPROPERTY()
+    TArray<FGameplayTag> m_PendingUnlockRewards;
     
 };
 

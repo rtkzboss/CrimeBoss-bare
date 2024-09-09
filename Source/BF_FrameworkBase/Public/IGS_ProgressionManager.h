@@ -15,36 +15,6 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_ProgressionManagerEvent);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FIGS_ProgressionDataChanged, int32, Level, float, Points, bool, isMaxLevel);
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 CurrentLevel;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float CurrentPoints;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float ProgressToNextLevel;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float PreviousPoints;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 PreviousLevel;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 PendingLevelUps;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UIGS_ProgressionManagerData* ProgressionManagerData;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ProgressionDataChanged OnProgressionDataChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ProgressionManagerEvent OnInitialized;
-    
-    UPROPERTY(BlueprintReadOnly)
-    UCurveTable* ProgressionCurveTable;
-    
     UIGS_ProgressionManager();
 
     UFUNCTION(BlueprintCallable)
@@ -85,6 +55,36 @@ public:
     
     UFUNCTION(BlueprintPure)
     float GetDebugMultiplier() const;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 CurrentLevel;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float CurrentPoints;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float ProgressToNextLevel;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float PreviousPoints;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 PreviousLevel;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 PendingLevelUps;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UIGS_ProgressionManagerData* ProgressionManagerData;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ProgressionDataChanged OnProgressionDataChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ProgressionManagerEvent OnInitialized;
+    
+    UPROPERTY(BlueprintReadOnly)
+    UCurveTable* ProgressionCurveTable;
     
 };
 

@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API AIGS_MonsterCloset : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:
+    AIGS_MonsterCloset(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<AIGS_AIEnemyGroupSpawner*> AIEnemyGroupSpawners;
     
@@ -34,8 +36,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool CheckValidityInRuntime;
     
-public:
-    AIGS_MonsterCloset(const FObjectInitializer& ObjectInitializer);
-
 };
 

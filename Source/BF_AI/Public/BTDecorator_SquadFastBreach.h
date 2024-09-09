@@ -7,12 +7,11 @@ UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_SquadFastBreach : public UBTDecorator_SquadBase {
     GENERATED_BODY()
 public:
+    UBTDecorator_SquadFastBreach();
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float LastBreachAllowedTime;
     
-public:
-    UBTDecorator_SquadFastBreach();
-
 };
 

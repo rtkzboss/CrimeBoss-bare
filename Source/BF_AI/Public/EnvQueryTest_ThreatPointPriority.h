@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_ThreatPointPriority : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_ThreatPointPriority();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
@@ -24,8 +26,5 @@ private:
     UPROPERTY(EditDefaultsOnly)
     bool bDrawDebugLines;
     
-public:
-    UEnvQueryTest_ThreatPointPriority();
-
 };
 

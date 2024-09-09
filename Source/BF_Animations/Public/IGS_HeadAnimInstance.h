@@ -16,6 +16,26 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_HeadAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_HeadAnimInstance();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnDeathAnimationEnded_Event();
+    
+    UFUNCTION(BlueprintPure)
+    bool IsPlayer() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsBot() const;
+    
+    UFUNCTION(BlueprintCallable)
+    UIGS_PlayerAnimInstance* GetOwningPlayerAnimInstance();
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetLOD_Index() const;
+    
+    UFUNCTION(BlueprintPure)
+    void FindEyesLookAt(const FVector& inFromLocation, FVector2D& OutEyesOffset) const;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector LookAtLocation;
     
@@ -75,26 +95,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     bool LOD3Plus;
-    
-    UIGS_HeadAnimInstance();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnDeathAnimationEnded_Event();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsPlayer() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsBot() const;
-    
-    UFUNCTION(BlueprintCallable)
-    UIGS_PlayerAnimInstance* GetOwningPlayerAnimInstance();
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetLOD_Index() const;
-    
-    UFUNCTION(BlueprintPure)
-    void FindEyesLookAt(const FVector& inFromLocation, FVector2D& OutEyesOffset) const;
     
 };
 

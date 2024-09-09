@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API AIGS_ControlRoom : public AIGS_ControlRoomBase {
     GENERATED_BODY()
 public:
+    AIGS_ControlRoom(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 SquadID;
@@ -34,8 +36,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Export)
     TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
     
-public:
-    AIGS_ControlRoom(const FObjectInitializer& ObjectInitializer);
-
 };
 

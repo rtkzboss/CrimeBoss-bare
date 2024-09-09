@@ -16,68 +16,6 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ShooterBase : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bShootFromCamera;
-    
-    UPROPERTY(AdvancedDisplay, VisibleAnywhere)
-    bool bIsSuppressed;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EIGS_WeaponAttackType ShooterType;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bIsExtraFireMode;
-    
-    UPROPERTY()
-    TSubclassOf<AIGS_ProjectileBase> m_ProjectileClass;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkAudioEvent* SingleShotAudioEvent;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkAudioEvent* EmptyShotAudioEvent;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkAudioEvent* HipAimAkEvent;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkAudioEvent* SightsAimAkEvent;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkSwitchValue* NormalStateAkSwitch;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkSwitchValue* SuppressedStateAkSwitch;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkSwitchValue* NormalFireModeStateAkSwitch;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkSwitchValue* ExtraFireModeStateAkSwitch;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkRtpc* FireRateAkRtpc;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkRtpc* RoundsLeftAkRtpc;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkRtpc* AdsAkRtpc;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UForceFeedbackEffect* ForceFeedbackEffect;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bForceFeedbackLooped;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FName ForceFeedbackName;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FScalableFloat ShotgunHorizontalSpreadMultiplier;
-    
-public:
     UIGS_ShooterBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -158,6 +96,68 @@ protected:
     
     UFUNCTION(BlueprintNativeEvent)
     void OnProjectileAcquired(AIGS_ProjectileBase* inProjectile);
+    
+public:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bShootFromCamera;
+    
+    UPROPERTY(AdvancedDisplay, VisibleAnywhere)
+    bool bIsSuppressed;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    EIGS_WeaponAttackType ShooterType;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bIsExtraFireMode;
+    
+    UPROPERTY()
+    TSubclassOf<AIGS_ProjectileBase> m_ProjectileClass;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkAudioEvent* SingleShotAudioEvent;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkAudioEvent* EmptyShotAudioEvent;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkAudioEvent* HipAimAkEvent;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkAudioEvent* SightsAimAkEvent;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkSwitchValue* NormalStateAkSwitch;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkSwitchValue* SuppressedStateAkSwitch;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkSwitchValue* NormalFireModeStateAkSwitch;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkSwitchValue* ExtraFireModeStateAkSwitch;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkRtpc* FireRateAkRtpc;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkRtpc* RoundsLeftAkRtpc;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UAkRtpc* AdsAkRtpc;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UForceFeedbackEffect* ForceFeedbackEffect;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bForceFeedbackLooped;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FName ForceFeedbackName;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FScalableFloat ShotgunHorizontalSpreadMultiplier;
     
 };
 

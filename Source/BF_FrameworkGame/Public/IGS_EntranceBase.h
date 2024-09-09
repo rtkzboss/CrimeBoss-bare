@@ -19,51 +19,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_EntranceBase : public AActor, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    USceneComponent* EntranceRootComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_ObjectStatus* DoorObjectStatus;
-    
-    UPROPERTY(Instanced)
-    UIGS_VisbilityComponent* VisibilityComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UChildActorComponent* FrontBreachingPoints;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UChildActorComponent* BackBreachingPoints;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bPortalDoor;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bLocked)
-    bool bLocked;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bOpen)
-    bool bOpen;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated)
-    bool bFullyProgressed;
-    
-    UPROPERTY(BlueprintReadOnly)
-    FIGS_HitInfo KillHitInfo;
-    
-    UPROPERTY(BlueprintAssignable)
-    FEntranceStateChangedSignature OnEntranceStateChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FEntranceLockStateChangedSignature OnEntranceLockStateChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnBrokenEvent OnBrokenEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UBoxComponent* NavigationBlock;
-    
     AIGS_EntranceBase(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void SetOpenState(bool inOpen);
@@ -113,6 +69,50 @@ public:
     UFUNCTION(BlueprintPure)
     bool GetDoorOrientationFromDirection(FVector InDirection);
     
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    USceneComponent* EntranceRootComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_ObjectStatus* DoorObjectStatus;
+    
+    UPROPERTY(Instanced)
+    UIGS_VisbilityComponent* VisibilityComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UChildActorComponent* FrontBreachingPoints;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UChildActorComponent* BackBreachingPoints;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bPortalDoor;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bLocked)
+    bool bLocked;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bOpen)
+    bool bOpen;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated)
+    bool bFullyProgressed;
+    
+    UPROPERTY(BlueprintReadOnly)
+    FIGS_HitInfo KillHitInfo;
+    
+    UPROPERTY(BlueprintAssignable)
+    FEntranceStateChangedSignature OnEntranceStateChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FEntranceLockStateChangedSignature OnEntranceLockStateChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnBrokenEvent OnBrokenEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UBoxComponent* NavigationBlock;
+    
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 
     // Fix for true pure virtual functions not being implemented
 };

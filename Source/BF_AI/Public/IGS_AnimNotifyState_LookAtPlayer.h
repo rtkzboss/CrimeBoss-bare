@@ -9,10 +9,10 @@ UCLASS(CollapseCategories, EditInlineNew)
 class BF_AI_API UIGS_AnimNotifyState_LookAtPlayer : public UAnimNotifyState {
     GENERATED_BODY()
 public:
+    UIGS_AnimNotifyState_LookAtPlayer();
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_Players;
     
-    UIGS_AnimNotifyState_LookAtPlayer();
-
 };
 

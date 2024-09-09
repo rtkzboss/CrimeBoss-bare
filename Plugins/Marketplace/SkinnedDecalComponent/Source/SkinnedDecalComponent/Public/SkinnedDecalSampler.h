@@ -18,6 +18,41 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SKINNEDDECALCOMPONENT_API USkinnedDecalSampler : public UActorComponent {
     GENERATED_BODY()
 public:
+    USkinnedDecalSampler(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void UpdateInstance(USkinnedDecalInstance* Instance);
+    
+    UFUNCTION(BlueprintCallable)
+    void UpdateAllDecals();
+    
+    UFUNCTION(BlueprintCallable)
+    int32 SpawnDecal(FVector Location, const FQuat Rotation, FName BoneName, float Size, int32 SubUV, int32 Index);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetupMaterials();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetupComponentMaterials(USkeletalMeshComponent* Component);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMeshComponent(USkeletalMeshComponent* MeshComponent, bool Child);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveDecal(const int32 Index);
+    
+    UFUNCTION(BlueprintPure)
+    UTextureRenderTarget2D* GetDataTarget();
+    
+    UFUNCTION(BlueprintCallable)
+    void CloneDecals(USkinnedDecalSampler* Source);
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearAllDecals();
+    
+    UFUNCTION(BlueprintCallable)
+    void AutoSetup();
+    
     UPROPERTY(BlueprintReadOnly, Instanced)
     USkeletalMeshComponent* Mesh;
     
@@ -65,41 +100,6 @@ public:
     
     UPROPERTY()
     UTextureRenderTarget2D* DataTarget;
-    
-    USkinnedDecalSampler(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION()
-    void UpdateInstance(USkinnedDecalInstance* Instance);
-    
-    UFUNCTION(BlueprintCallable)
-    void UpdateAllDecals();
-    
-    UFUNCTION(BlueprintCallable)
-    int32 SpawnDecal(FVector Location, const FQuat Rotation, FName BoneName, float Size, int32 SubUV, int32 Index);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetupMaterials();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetupComponentMaterials(USkeletalMeshComponent* Component);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMeshComponent(USkeletalMeshComponent* MeshComponent, bool Child);
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveDecal(const int32 Index);
-    
-    UFUNCTION(BlueprintPure)
-    UTextureRenderTarget2D* GetDataTarget();
-    
-    UFUNCTION(BlueprintCallable)
-    void CloneDecals(USkinnedDecalSampler* Source);
-    
-    UFUNCTION(BlueprintCallable)
-    void ClearAllDecals();
-    
-    UFUNCTION(BlueprintCallable)
-    void AutoSetup();
     
 };
 

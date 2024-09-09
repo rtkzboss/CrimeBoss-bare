@@ -11,15 +11,6 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_JobsItemWidget : public UCommonButtonBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    FGameplayTag JobIDTag;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool IsOwned;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_JobItemSelected OnJobItemSelected;
-    
     UIGS_JobsItemWidget();
 
     UFUNCTION()
@@ -33,6 +24,15 @@ public:
     
     UFUNCTION(BlueprintCallable)
     EJobUITileType GetDisplayType();
+    
+    UPROPERTY(BlueprintReadOnly)
+    FGameplayTag JobIDTag;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool IsOwned;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_JobItemSelected OnJobItemSelected;
     
 };
 

@@ -9,6 +9,11 @@ UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_TogglesSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_TogglesSettings();
+
+    UFUNCTION(BlueprintPure)
+    static UIGS_TogglesSettings* Instance();
+    
     UPROPERTY(Config, EditAnywhere)
     bool bSprintToggleable;
     
@@ -23,11 +28,6 @@ public:
     
     UPROPERTY(Config, EditAnywhere)
     bool bMagCheckInSprintAllowed;
-    
-    UIGS_TogglesSettings();
-
-    UFUNCTION(BlueprintPure)
-    static UIGS_TogglesSettings* Instance();
     
 };
 

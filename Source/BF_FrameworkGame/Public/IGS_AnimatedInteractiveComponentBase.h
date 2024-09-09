@@ -16,6 +16,35 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AnimatedInteractiveComponentBase : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
+    UIGS_AnimatedInteractiveComponentBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void StopAnimation(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void StartAnimation(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Server_OnPreInteractionLerpFinished(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void ReleaseInput(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION()
+    void OnRep_Progress(float inOldProgress);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnInteractionStarted();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnInteractionEnded();
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void MovePlayerToPointInternal();
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_OnPreInteractionLerpFinished(AIGS_GameCharacterFramework* inInstigator);
+    
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Progress)
     float R_Progress;
     
@@ -105,36 +134,7 @@ protected:
     FTimerHandle m_FailsafeTimerHandle;
     
 public:
-    UIGS_AnimatedInteractiveComponentBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void StopAnimation(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void StartAnimation(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Server_OnPreInteractionLerpFinished(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void ReleaseInput(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION()
-    void OnRep_Progress(float inOldProgress);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnInteractionStarted();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnInteractionEnded();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void MovePlayerToPointInternal();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_OnPreInteractionLerpFinished(AIGS_GameCharacterFramework* inInstigator);
-    
 };
 

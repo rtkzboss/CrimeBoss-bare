@@ -10,17 +10,6 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_MissionMapEvent : public UMETA_BaseMapEvent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    UMETA_BaseMission* m_Mission;
-    
-    UPROPERTY()
-    FGameplayTag m_TileTag;
-    
-    UPROPERTY()
-    bool m_IsNew;
-    
-public:
     UMETA_MissionMapEvent();
 
     UFUNCTION(BlueprintCallable)
@@ -34,6 +23,16 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool GetIsNew();
+    
+protected:
+    UPROPERTY()
+    UMETA_BaseMission* m_Mission;
+    
+    UPROPERTY()
+    FGameplayTag m_TileTag;
+    
+    UPROPERTY()
+    bool m_IsNew;
     
 };
 

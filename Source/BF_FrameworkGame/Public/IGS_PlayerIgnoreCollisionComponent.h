@@ -7,13 +7,13 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerIgnoreCollisionComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    bool bDisableCollisionWithBackupHeisters;
-    
     UIGS_PlayerIgnoreCollisionComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
     void Initialize();
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool bDisableCollisionWithBackupHeisters;
     
 };
 

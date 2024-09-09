@@ -11,11 +11,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_RENDERING_API UIGS_PostProcessManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Instanced, VisibleAnywhere)
-    UCameraComponent* Camera;
-    
-public:
     UIGS_PostProcessManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -29,6 +24,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ActivatePostProcess(const TScriptInterface<IBlendableInterface>& PostProcess, float Weight, float Duration, float Speed);
+    
+private:
+    UPROPERTY(Instanced, VisibleAnywhere)
+    UCameraComponent* Camera;
     
 };
 

@@ -28,33 +28,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_StatisticsManagerComponent : public UIGS_StatisticsManagerBaseComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<int32, FMETA_StatisticNoteSaveData> Statistic;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 CurrentDay;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 CareerScore;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 StartDayForStatistics;
-    
-private:
-    UPROPERTY(EditAnywhere)
-    FGameplayTag killed_civilians_tag;
-    
-    UPROPERTY(EditAnywhere)
-    FGameplayTag killed_gangsters_tag;
-    
-    UPROPERTY(EditAnywhere)
-    FGameplayTag killed_police_tag;
-    
-    UPROPERTY(EditAnywhere)
-    FGameplayTag killed_swat_tag;
-    
-public:
     UMETA_StatisticsManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -161,6 +134,32 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddAssetToStatistic(FGameplayTag InAsset, EMETA_PlotlineAssetAvailability inAvailability);
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<int32, FMETA_StatisticNoteSaveData> Statistic;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 CurrentDay;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 CareerScore;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 StartDayForStatistics;
+    
+private:
+    UPROPERTY(EditAnywhere)
+    FGameplayTag killed_civilians_tag;
+    
+    UPROPERTY(EditAnywhere)
+    FGameplayTag killed_gangsters_tag;
+    
+    UPROPERTY(EditAnywhere)
+    FGameplayTag killed_police_tag;
+    
+    UPROPERTY(EditAnywhere)
+    FGameplayTag killed_swat_tag;
     
 };
 

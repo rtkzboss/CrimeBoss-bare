@@ -18,38 +18,6 @@ class BF_FRAMEWORKGAME_API UIGS_GameScreenHandler : public UIGS_ScreenHandler {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_GameScreenHandlerEvent);
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_GameScreenHandlerEvent OnSystemMenuOpen;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_GameScreenHandlerEvent OnSystemMenuClosed;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_GameScreenHandlerEvent OnDeinitialized;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_GameScreenHandlerEvent OnScreensStackChanged;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_GameScreenHandlerEvent OnMovieFinished;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool GoDirectlyToMainMenu;
-    
-private:
-    UPROPERTY(Instanced)
-    UIGS_BaseMenuWidget* m_BaseScreen;
-    
-    UPROPERTY(Instanced)
-    UIGS_SystemMenuScreen* m_SystemMenuScreen;
-    
-    UPROPERTY()
-    UIGS_GameUISettings* m_Settings;
-    
-    UPROPERTY()
-    FDateTime m_ScreenTime;
-    
-public:
     UIGS_GameScreenHandler();
 
     UFUNCTION(BlueprintCallable)
@@ -98,6 +66,37 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CloseSystemMenuScreen();
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_GameScreenHandlerEvent OnSystemMenuOpen;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_GameScreenHandlerEvent OnSystemMenuClosed;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_GameScreenHandlerEvent OnDeinitialized;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_GameScreenHandlerEvent OnScreensStackChanged;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_GameScreenHandlerEvent OnMovieFinished;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool GoDirectlyToMainMenu;
+    
+private:
+    UPROPERTY(Instanced)
+    UIGS_BaseMenuWidget* m_BaseScreen;
+    
+    UPROPERTY(Instanced)
+    UIGS_SystemMenuScreen* m_SystemMenuScreen;
+    
+    UPROPERTY()
+    UIGS_GameUISettings* m_Settings;
+    
+    UPROPERTY()
+    FDateTime m_ScreenTime;
     
 };
 

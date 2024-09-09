@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AreaOfOperationsComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AreaOfOperationsComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     TArray<FIGS_AreaOfOperations> AreaOfOperations;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(VisibleAnywhere)
     TArray<AIGS_RoomBase*> EmptyArray;
     
-public:
-    UIGS_AreaOfOperationsComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

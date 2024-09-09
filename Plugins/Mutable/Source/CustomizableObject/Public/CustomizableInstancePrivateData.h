@@ -15,6 +15,8 @@ UCLASS()
 class UCustomizableInstancePrivateData : public UObject {
     GENERATED_BODY()
 public:
+    UCustomizableInstancePrivateData();
+
     UPROPERTY(Transient)
     TArray<FGeneratedMaterial> GeneratedMaterials;
     
@@ -37,8 +39,5 @@ private:
     UPROPERTY(Transient)
     TArray<UPhysicsAsset*> PhysicsAssetsToMerge;
     
-public:
-    UCustomizableInstancePrivateData();
-
 };
 

@@ -8,13 +8,13 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AdvancedMovementData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AdvancedMovementData();
+
     UPROPERTY(EditAnywhere)
     TMap<EIGS_AdvancedMovementType, float> InterpolationSpeeds;
     
     UPROPERTY(EditAnywhere)
     TMap<EIGS_AdvancedMovementType, float> InterpolationSpeedsRotation;
     
-    UIGS_AdvancedMovementData();
-
 };
 

@@ -10,6 +10,35 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_WorldSpaceUserWidget : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WorldSpaceUserWidget();
+
+    UFUNCTION(BlueprintCallable)
+    void SetTargeted(bool inTargeted);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetOccluded(bool inOccluded);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void ProxyTickLastBeforeDormant(float InDeltaTime);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void ProxyTick(float InDeltaTime);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnWidgetTypeChanged(EIGS_WorldWidgetType inType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnTargetedChanged();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnOnScreenChanged(bool inOnScreen);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    bool IsFullyFaded();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    float GetFadeDistanceEnd();
+    
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bTickDormant;
     
@@ -39,35 +68,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bOccluded;
-    
-    UIGS_WorldSpaceUserWidget();
-
-    UFUNCTION(BlueprintCallable)
-    void SetTargeted(bool inTargeted);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetOccluded(bool inOccluded);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void ProxyTickLastBeforeDormant(float InDeltaTime);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void ProxyTick(float InDeltaTime);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnWidgetTypeChanged(EIGS_WorldWidgetType inType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnTargetedChanged();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnOnScreenChanged(bool inOnScreen);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    bool IsFullyFaded();
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    float GetFadeDistanceEnd();
     
 };
 

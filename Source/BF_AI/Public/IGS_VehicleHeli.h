@@ -16,6 +16,11 @@ UCLASS()
 class BF_AI_API AIGS_VehicleHeli : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:
+    AIGS_VehicleHeli(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetLookAt(AActor* Actor);
+    
     UPROPERTY(BlueprintAssignable)
     FVehiclePassengersSpawned OnPassengerSpawnReady;
     
@@ -60,12 +65,7 @@ protected:
     TArray<AIGS_RopeActor*> RopeActors;
     
 public:
-    AIGS_VehicleHeli(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetLookAt(AActor* Actor);
-    
 };
 

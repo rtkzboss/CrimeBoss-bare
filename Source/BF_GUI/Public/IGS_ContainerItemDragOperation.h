@@ -9,6 +9,8 @@ UCLASS()
 class BF_GUI_API UIGS_ContainerItemDragOperation : public UDragDropOperation {
     GENERATED_BODY()
 public:
+    UIGS_ContainerItemDragOperation();
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 ItemRootSlotId;
     
@@ -48,7 +50,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<UIGS_InventoryObjectFramework> InventoryItem;
     
-    UIGS_ContainerItemDragOperation();
-
 };
 

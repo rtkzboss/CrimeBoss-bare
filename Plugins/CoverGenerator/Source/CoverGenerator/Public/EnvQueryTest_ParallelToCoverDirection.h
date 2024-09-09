@@ -11,13 +11,13 @@ UCLASS()
 class UEnvQueryTest_ParallelToCoverDirection : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_ParallelToCoverDirection();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
     
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue MaxEpsilon;
     
-    UEnvQueryTest_ParallelToCoverDirection();
-
 };
 

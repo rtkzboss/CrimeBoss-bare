@@ -10,6 +10,8 @@ UCLASS(DefaultConfig, Config=Game)
 class CRIMEBOSSMETA_API UIGS_TutorialsSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_TutorialsSettings();
+
     UPROPERTY(Config, EditAnywhere)
     bool TutorialsSystemEnabled;
     
@@ -19,7 +21,5 @@ public:
     UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_TutorialScreen> DefaultVideoTutorialScreenClass;
     
-    UIGS_TutorialsSettings();
-
 };
 

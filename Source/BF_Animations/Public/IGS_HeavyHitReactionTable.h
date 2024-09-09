@@ -8,13 +8,13 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_HeavyHitReactionTable : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_HeavyHitReactionTable();
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_HeavyHitReactionData> HitReactionDataStand;
     
     UPROPERTY(EditAnywhere)
     TArray<FIGS_HeavyHitReactionData> HitReactionDataCrouch;
     
-    UIGS_HeavyHitReactionTable();
-
 };
 

@@ -13,9 +13,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_RopeActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UIGS_RopeComponent* RopeComponent;
-    
     AIGS_RopeActor(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(NetMulticast, Reliable)
@@ -47,6 +44,9 @@ public:
     
     UFUNCTION(NetMulticast, Reliable)
     void AllowEndPointMove();
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UIGS_RopeComponent* RopeComponent;
     
 };
 

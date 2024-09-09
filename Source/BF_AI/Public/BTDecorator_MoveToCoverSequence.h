@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_MoveToCoverSequence : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_MoveToCoverSequence();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ReactToThreathKey;
     
@@ -45,8 +47,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float m_ReactionDefaultTime;
     
-public:
-    UBTDecorator_MoveToCoverSequence();
-
 };
 

@@ -13,12 +13,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UIGS_PlayCutsceneLatent : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnCutsceneStartedLatent OnCutsceneStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnCutsceneFinishedLatent OnCutsceneFinished;
-    
     UIGS_PlayCutsceneLatent();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
@@ -30,6 +24,13 @@ private:
     
     UFUNCTION()
     void CutsceneFinished_Internal();
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnCutsceneStartedLatent OnCutsceneStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnCutsceneFinishedLatent OnCutsceneFinished;
     
 };
 

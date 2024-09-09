@@ -8,13 +8,13 @@ UCLASS()
 class BF_INPUT_API UIGS_InputActionDefaultKeysDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_InputActionDefaultKeysDataAsset();
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_DefaultInputDeviceSingleSetting KeyboardDefaultKeyInputs;
     
     UPROPERTY(EditDefaultsOnly)
     FIGS_DefaultInputDeviceSingleSetting GamepadDefaultKeyInputs;
     
-    UIGS_InputActionDefaultKeysDataAsset();
-
 };
 

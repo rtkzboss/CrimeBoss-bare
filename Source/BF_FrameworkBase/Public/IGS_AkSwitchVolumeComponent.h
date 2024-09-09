@@ -12,14 +12,6 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_AkSwitchVolumeComponent : public UBoxComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkSwitchValue* FootstepAkSwitch;
-    
-    UPROPERTY()
-    UAkSwitchValue* FootstepNoneAkSwitch;
-    
-public:
     UIGS_AkSwitchVolumeComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION()
@@ -27,6 +19,13 @@ public:
     
     UFUNCTION()
     void NotifyActorBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkSwitchValue* FootstepAkSwitch;
+    
+    UPROPERTY()
+    UAkSwitchValue* FootstepNoneAkSwitch;
     
 };
 

@@ -8,6 +8,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_FlashlightSettingsDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_FlashlightSettingsDataAsset();
+
     UPROPERTY(EditAnywhere)
     float SpotIntensity;
     
@@ -59,7 +61,5 @@ public:
     UPROPERTY(EditAnywhere)
     float PointShadowFilterSharpen;
     
-    UIGS_FlashlightSettingsDataAsset();
-
 };
 

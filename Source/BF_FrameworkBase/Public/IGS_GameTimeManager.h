@@ -9,12 +9,11 @@ UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_GameTimeManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_GameTimeManager();
+
 private:
     UPROPERTY()
     TArray<UIGS_TimeLineHolder*> m_Timelines;
     
-public:
-    UIGS_GameTimeManager();
-
 };
 

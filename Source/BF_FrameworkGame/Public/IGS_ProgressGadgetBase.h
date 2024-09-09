@@ -13,23 +13,6 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_ProgressGadgetBase : public AIGS_SuspicionActorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
-    bool bManualDisruptLocation;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector DisruptLocationOffset;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EIGS_ProgressGadgetSubtype GadgetSubtype;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable, EditAnywhere)
-    FIGS_OnGadgetOverheatedEvent OnGadgetOverheatedEvent;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool CanByDisrubtedByAI;
-    
-public:
     AIGS_ProgressGadgetBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION()
@@ -48,6 +31,22 @@ public:
     
     UFUNCTION(BlueprintPure)
     FVector GetDisruptLocation() const;
+    
+    UPROPERTY(EditAnywhere)
+    bool bManualDisruptLocation;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FVector DisruptLocationOffset;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    EIGS_ProgressGadgetSubtype GadgetSubtype;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, EditAnywhere)
+    FIGS_OnGadgetOverheatedEvent OnGadgetOverheatedEvent;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool CanByDisrubtedByAI;
     
 };
 

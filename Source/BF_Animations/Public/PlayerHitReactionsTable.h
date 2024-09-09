@@ -9,6 +9,8 @@ UCLASS()
 class BF_ANIMATIONS_API UPlayerHitReactionsTable : public UDataAsset {
     GENERATED_BODY()
 public:
+    UPlayerHitReactionsTable();
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* Front_UpperBody;
     
@@ -45,7 +47,5 @@ public:
     UPROPERTY(EditAnywhere)
     UAnimMontage* Left_Head;
     
-    UPlayerHitReactionsTable();
-
 };
 

@@ -7,13 +7,13 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_TPP_PostProcessAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_TPP_PostProcessAnimInstance();
+
     UPROPERTY(BlueprintReadOnly)
     int32 LODLevel;
     
     UPROPERTY(BlueprintReadOnly)
     bool DeathAnimationEnded;
     
-    UIGS_TPP_PostProcessAnimInstance();
-
 };
 

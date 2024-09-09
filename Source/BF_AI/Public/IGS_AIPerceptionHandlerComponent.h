@@ -14,6 +14,19 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIPerceptionHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AIPerceptionHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus);
+    
+    UFUNCTION()
+    void OnSusActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    AIGS_GameCharacterFramework* GetPossesedPawn() const;
+    
     UPROPERTY(EditAnywhere)
     TArray<TSubclassOf<UAISense>> RegisterAsSourceForSenses;
     
@@ -40,19 +53,6 @@ public:
     
     UPROPERTY(EditDefaultsOnly)
     float SightRadiusOverride;
-    
-    UIGS_AIPerceptionHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus);
-    
-    UFUNCTION()
-    void OnSusActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    AIGS_GameCharacterFramework* GetPossesedPawn() const;
     
 };
 

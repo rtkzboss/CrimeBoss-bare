@@ -17,38 +17,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_UnlockManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnRewardItemUnlockedSignature OnRewardItemUnlocked;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnUnlockManagerInitedSignature OnManagerInited;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UIGS_UnlockManagerData* UnlockManagerData;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool IsInited;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> UnlockableItemsMap;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FIGS_UnlockItemInfo> UnlockableItemsList;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> UnlockedItemsMap;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FIGS_UnlockItemInfo> UnlockedItemsList;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> EntitledItemsMap;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FIGS_UnlockItemInfo> EntitledItemsList;
-    
-public:
     UIGS_UnlockManager();
 
     UFUNCTION(BlueprintCallable)
@@ -161,6 +129,37 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddRandomRewards(UPARAM(Ref) TArray<FIGS_UnlockItemInfo>& inOutLockedItems, UPARAM(Ref) TArray<FIGS_UnlockItemInfo>& inOutResultItems, const int32 inMaxRewardsCount);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnRewardItemUnlockedSignature OnRewardItemUnlocked;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnUnlockManagerInitedSignature OnManagerInited;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UIGS_UnlockManagerData* UnlockManagerData;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool IsInited;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> UnlockableItemsMap;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<FIGS_UnlockItemInfo> UnlockableItemsList;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> UnlockedItemsMap;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<FIGS_UnlockItemInfo> UnlockedItemsList;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TMap<EIGS_UnlockCategory, FIGS_UnlockItemInfoList> EntitledItemsMap;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<FIGS_UnlockItemInfo> EntitledItemsList;
     
 };
 

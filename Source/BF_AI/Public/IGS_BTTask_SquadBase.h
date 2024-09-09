@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadBase();
+
 protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_SquadBase* Squad;
@@ -22,8 +24,5 @@ protected:
     UPROPERTY()
     TMap<TWeakObjectPtr<AIGS_GameCharacterFramework>, FDelayedCommand> DelayedCommands;
     
-public:
-    UIGS_BTTask_SquadBase();
-
 };
 

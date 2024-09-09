@@ -15,12 +15,6 @@ UCLASS()
 class BF_AI_API UIGS_ScriptingCommandPlayAnimation : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FScriptingCommandOutputPin Succeed;
-    
-    UPROPERTY(BlueprintAssignable)
-    FScriptingCommandOutputPin Failed;
-    
     UIGS_ScriptingCommandPlayAnimation();
 
     UFUNCTION(BlueprintCallable)
@@ -29,6 +23,13 @@ public:
 private:
     UFUNCTION()
     void OnCommandFinished(AIGS_AIControllerGame* inOwningController, UIGS_AICommand* inCommand, bool inFailed);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FScriptingCommandOutputPin Succeed;
+    
+    UPROPERTY(BlueprintAssignable)
+    FScriptingCommandOutputPin Failed;
     
 };
 

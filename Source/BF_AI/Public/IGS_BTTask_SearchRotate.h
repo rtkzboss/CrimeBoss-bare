@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SearchRotate : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SearchRotate();
+
     UPROPERTY(EditAnywhere)
     bool bKeepFacingForward;
     
@@ -41,7 +43,5 @@ public:
     UPROPERTY(EditAnywhere)
     float HighPrioThreatPointRotateAngle;
     
-    UIGS_BTTask_SearchRotate();
-
 };
 

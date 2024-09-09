@@ -9,14 +9,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_DefendManager : public UObject {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TArray<AIGS_WaypointFramework*> m_DefendPoints;
-    
-    UPROPERTY()
-    TArray<AIGS_WaypointFramework*> m_DefendPointsInitial;
-    
-public:
     UIGS_DefendManager();
 
     UFUNCTION(BlueprintCallable)
@@ -30,6 +22,13 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void RegisterDefendPoint(AIGS_WaypointFramework* inDefendPoint);
+    
+protected:
+    UPROPERTY()
+    TArray<AIGS_WaypointFramework*> m_DefendPoints;
+    
+    UPROPERTY()
+    TArray<AIGS_WaypointFramework*> m_DefendPointsInitial;
     
 };
 

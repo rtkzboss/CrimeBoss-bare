@@ -16,6 +16,42 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Trigger : public AIGS_BoxSphere {
     GENERATED_BODY()
 public:
+    AIGS_Trigger(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void ResetCount();
+    
+protected:
+    UFUNCTION()
+    void OnActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason);
+    
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
+    void Multicast_OnPossessed(AIGS_GameCharacterFramework* inPlayerCharacter);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool IsActorInTrigger(AActor* inActor) const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_PlayerCharacter*> GetAllPlayersInTrigger() const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_GameCharacterFramework*> GetAllCharactersInTrigger() const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AActor*> GetAllActorsInTrigger() const;
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void Execute(AActor* inExecutingActor);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    bool CustomFilter(AActor* inOtherActor);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    int32 CheckAllCharactersInTrigger();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_TriggerExecuteOn TriggerExecuteOn;
     
@@ -67,43 +103,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* SpriteDisabled;
-    
-public:
-    AIGS_Trigger(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void ResetCount();
-    
-protected:
-    UFUNCTION()
-    void OnActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason);
-    
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_OnPossessed(AIGS_GameCharacterFramework* inPlayerCharacter);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool IsActorInTrigger(AActor* inActor) const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_PlayerCharacter*> GetAllPlayersInTrigger() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_GameCharacterFramework*> GetAllCharactersInTrigger() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AActor*> GetAllActorsInTrigger() const;
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void Execute(AActor* inExecutingActor);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    bool CustomFilter(AActor* inOtherActor);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    int32 CheckAllCharactersInTrigger();
     
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_SolveCharactersToControl : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_SolveCharactersToControl();
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* ShoutAtQueryTemplate;
@@ -26,8 +28,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float RefreshDelay;
     
-public:
-    UIGS_BTService_SolveCharactersToControl();
-
 };
 

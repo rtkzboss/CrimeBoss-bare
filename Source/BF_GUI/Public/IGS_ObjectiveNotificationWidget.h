@@ -10,7 +10,15 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ObjectiveNotificationWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_ObjectiveNotificationWidget();
+
 protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnNotificationReady();
+    
+    UFUNCTION(BlueprintCallable)
+    void InitializeObjectiveNotification(FIGS_MissionObjective inObjectiveStruct, bool bAddedObjective);
+    
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FText ObjectiveName;
     
@@ -20,16 +28,6 @@ protected:
 private:
     UPROPERTY(Instanced)
     UIGS_ObjectiveManager* m_ObjectiveManager;
-    
-public:
-    UIGS_ObjectiveNotificationWidget();
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnNotificationReady();
-    
-    UFUNCTION(BlueprintCallable)
-    void InitializeObjectiveNotification(FIGS_MissionObjective inObjectiveStruct, bool bAddedObjective);
     
 };
 

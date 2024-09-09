@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_OffenceStrikes : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_OffenceStrikes();
+
 protected:
     UPROPERTY(EditAnywhere)
     int32 DesiredStrikes;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTDecorator_OffenceStrikes();
-
 };
 

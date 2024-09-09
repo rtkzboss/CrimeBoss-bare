@@ -10,15 +10,6 @@ UCLASS(Abstract, NotPlaceable)
 class BF_FRAMEWORKBASE_API AIGS_SquadFramework : public AActor {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 SquadID;
-    
-private:
-    UPROPERTY(Transient)
-    TArray<AIGS_GameCharacterFramework*> EMPTY_FOR_COMPILE_ONLY;
-    
-public:
     AIGS_SquadFramework(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -38,6 +29,14 @@ public:
     
     UFUNCTION(BlueprintPure)
     int32 GetAliveMemberCount() const;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 SquadID;
+    
+private:
+    UPROPERTY(Transient)
+    TArray<AIGS_GameCharacterFramework*> EMPTY_FOR_COMPILE_ONLY;
     
 };
 

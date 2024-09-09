@@ -9,6 +9,8 @@ UCLASS()
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemSaveGame : public USaveGame {
     GENERATED_BODY()
 public:
+    UConstructionSystemSaveGame();
+
     UPROPERTY(VisibleAnywhere)
     FString SaveSlotName;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY()
     TArray<FConstructionSystemSaveConstructedItem> ConstructedItems;
     
-    UConstructionSystemSaveGame();
-
 };
 

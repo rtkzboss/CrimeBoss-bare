@@ -11,9 +11,6 @@ UCLASS(BlueprintType)
 class COMMON_UTILS_API UIGS_Entitlements : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_EntitlementsDataRefreshedSignature OnEntitlementDataRefreshed;
-    
     UIGS_Entitlements();
 
     UFUNCTION(BlueprintCallable)
@@ -48,6 +45,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddDebugEntitlement(FGameplayTag inEntitlement);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_EntitlementsDataRefreshedSignature OnEntitlementDataRefreshed;
     
 };
 

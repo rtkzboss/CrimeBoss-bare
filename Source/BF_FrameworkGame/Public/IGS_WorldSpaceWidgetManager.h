@@ -13,6 +13,23 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WorldSpaceWidgetManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WorldSpaceWidgetManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void UnregisterWidget(UIGS_WorldSpaceWidgetBase* inWidgetComponent, EIGS_WorldWidgetType inType);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetWorldSpaceWidgetTypeVisibility(EIGS_WorldWidgetType inType, bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static UIGS_WorldSpaceWidgetManager* GetWorldWidgetManager(UObject* inWCO);
+    
+    UFUNCTION(BlueprintCallable)
+    bool GetWidgetGroupVisibility(EIGS_WorldWidgetType inType);
+    
+    UFUNCTION(BlueprintCallable)
+    bool GetWidgetGroupScreenEdgeVisibility(EIGS_WorldWidgetType inType);
+    
     UPROPERTY()
     int32 ObjectiveWidgetsVisibility;
     
@@ -120,23 +137,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     TArray<UIGS_WorldSpaceWidgetBase*> WorldSpaceWidgets;
-    
-    UIGS_WorldSpaceWidgetManager(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void UnregisterWidget(UIGS_WorldSpaceWidgetBase* inWidgetComponent, EIGS_WorldWidgetType inType);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetWorldSpaceWidgetTypeVisibility(EIGS_WorldWidgetType inType, bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static UIGS_WorldSpaceWidgetManager* GetWorldWidgetManager(UObject* inWCO);
-    
-    UFUNCTION(BlueprintCallable)
-    bool GetWidgetGroupVisibility(EIGS_WorldWidgetType inType);
-    
-    UFUNCTION(BlueprintCallable)
-    bool GetWidgetGroupScreenEdgeVisibility(EIGS_WorldWidgetType inType);
     
 };
 

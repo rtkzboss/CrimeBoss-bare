@@ -8,11 +8,6 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseHeisterCondition : public UMETA_BaseCondition {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Transient)
-    FMETA_CharacterID ConsideredHeisterID;
-    
-public:
     UMETA_BaseHeisterCondition();
 
     UFUNCTION(BlueprintCallable)
@@ -20,6 +15,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FMETA_CharacterID GetConsideredHeister();
+    
+private:
+    UPROPERTY(Transient)
+    FMETA_CharacterID ConsideredHeisterID;
     
 };
 

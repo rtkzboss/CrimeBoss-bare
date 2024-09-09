@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_FocusOnPoint : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_FocusOnPoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector PointKey;
     
-public:
-    UIGS_BTService_FocusOnPoint();
-
 };
 

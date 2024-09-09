@@ -11,6 +11,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PostProcessVolumeBase : public AIGS_VolumeBase, public IInterface_PostProcessVolume {
     GENERATED_BODY()
 public:
+    AIGS_PostProcessVolumeBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     TArray<UMaterialInterface*> BlendableMaterials;
@@ -33,9 +35,6 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
     FPostProcessSettings Settings;
     
-public:
-    AIGS_PostProcessVolumeBase(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
     virtual bool EncompassesPoint(FVector Point, float SphereRadius/*=0.f*/, float* OutDistanceToPoint) override { return false; }

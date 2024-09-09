@@ -20,6 +20,22 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_HoseSegmentBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_HoseSegmentBase(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void StartInteraction_SERVER();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void StartInteraction_MULTICAST();
+    
+    UFUNCTION()
+    void SpawnWaterCannon(FVector Loc, FRotator Rot);
+    
+    UFUNCTION()
+    void OnRep_ViewState();
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FInteractedWithWaterHose InteractedWithWaterHose;
     
@@ -88,22 +104,7 @@ protected:
     WaterHoseState mR_ViewState;
     
 public:
-    AIGS_HoseSegmentBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void StartInteraction_SERVER();
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void StartInteraction_MULTICAST();
-    
-    UFUNCTION()
-    void SpawnWaterCannon(FVector Loc, FRotator Rot);
-    
-    UFUNCTION()
-    void OnRep_ViewState();
-    
 };
 

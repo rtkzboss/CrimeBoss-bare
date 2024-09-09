@@ -15,12 +15,6 @@ UCLASS(MinimalAPI)
 class UFindSessionsCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FBlueprintFindSessionsResultDelegate OnSuccess;
-    
-    UPROPERTY(BlueprintAssignable)
-    FBlueprintFindSessionsResultDelegate OnFailure;
-    
     UFindSessionsCallbackProxyAdvanced();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
@@ -28,6 +22,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static void FilterSessionResults(const TArray<FBlueprintSessionResult>& SessionResults, const TArray<FSessionsSearchSetting>& Filters, TArray<FBlueprintSessionResult>& FilteredResults);
+    
+    UPROPERTY(BlueprintAssignable)
+    FBlueprintFindSessionsResultDelegate OnSuccess;
+    
+    UPROPERTY(BlueprintAssignable)
+    FBlueprintFindSessionsResultDelegate OnFailure;
     
 };
 

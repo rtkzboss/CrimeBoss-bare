@@ -18,20 +18,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ProjectileBase : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TEnumAsByte<EDrawDebugTrace::Type> DrawDebugTrace;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TEnumAsByte<ETraceTypeQuery> TraceChannel;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UDamageType> DamageType;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UIGS_ImpactTypeObject> ShotImpactType;
-    
-public:
     AIGS_ProjectileBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -78,6 +64,19 @@ public:
     
     UFUNCTION(BlueprintCallable)
     float ApplyDamage(float inDistance, const FHitResult& inHitInfo);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TEnumAsByte<EDrawDebugTrace::Type> DrawDebugTrace;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TEnumAsByte<ETraceTypeQuery> TraceChannel;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UDamageType> DamageType;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UIGS_ImpactTypeObject> ShotImpactType;
     
 };
 

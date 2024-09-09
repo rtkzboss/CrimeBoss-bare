@@ -12,12 +12,6 @@ UCLASS(Abstract, BlueprintType)
 class COMMON_DATA_API UIGS_InventoryObjectFramework : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    EIGS_ItemType ItemType;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bUseCustomName;
-    
     UIGS_InventoryObjectFramework();
 
     UFUNCTION(BlueprintCallable)
@@ -78,6 +72,12 @@ private:
 public:
     UFUNCTION(BlueprintCallable)
     FIGS_CommonItemData GetCommonDataBP();
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    EIGS_ItemType ItemType;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bUseCustomName;
     
 };
 

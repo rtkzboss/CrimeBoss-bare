@@ -8,10 +8,10 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputSceneComponent : public UHoudiniInputObject {
     GENERATED_BODY()
 public:
+    UHoudiniInputSceneComponent();
+
     UPROPERTY()
     FTransform ActorTransform;
     
-    UHoudiniInputSceneComponent();
-
 };
 

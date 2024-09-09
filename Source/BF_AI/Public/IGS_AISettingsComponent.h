@@ -14,6 +14,8 @@ UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class BF_AI_API UIGS_AISettingsComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AISettingsComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditDefaultsOnly)
     float MeleeActivationDistance;
     
@@ -45,8 +47,5 @@ protected:
     UPROPERTY()
     TSubclassOf<UIGS_SettingsID> m_ActiveSettingsID;
     
-public:
-    UIGS_AISettingsComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

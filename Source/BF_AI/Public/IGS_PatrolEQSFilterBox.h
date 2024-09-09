@@ -8,6 +8,13 @@ UCLASS()
 class BF_AI_API AIGS_PatrolEQSFilterBox : public AIGS_BoxSphere {
     GENERATED_BODY()
 public:
+    AIGS_PatrolEQSFilterBox(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void UpdateDebugSubsystemSettings();
+    
+public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool FiltersByTeamSide;
     
@@ -16,12 +23,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer EQSFilteringTags;
-    
-    AIGS_PatrolEQSFilterBox(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void UpdateDebugSubsystemSettings();
     
 };
 

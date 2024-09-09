@@ -35,140 +35,6 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMapTile : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UMETA_BaseMission* TurfWarObject;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool isHighlighted;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool isSelected;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool isIconSelected;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool isBossEliminationRewardsExist;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnToggleHighglightedDelegate OnToggleHighglighted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnToggleSelectedDelegate OnToggleSelected;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnToggleIconSelectedDelegate OnToggleIconSelected;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnToggleSelectedDelegate OnToggleTurfIconSelected;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnGangChangedDelegate OnGangChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnTypeChangedDelegate OnTypeChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnConquestStateChangedDelegate OnConquestStateChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnDisplayModeChangedDelegate OnDisplayModeChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnMissionsChangedDelegate OnMissionsChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnMissionAddedDelegate OnMissionAdded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnMissionRemovedDelegate OnMissionRemoved;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnDetectivesChangedDelegate OnDetectivesChanged;
-    
-private:
-    UPROPERTY()
-    FGameplayTag m_ID;
-    
-    UPROPERTY()
-    FText m_Name;
-    
-    UPROPERTY()
-    EMETA_Gang m_Gang;
-    
-    UPROPERTY()
-    TArray<FGameplayTag> m_Neighbours;
-    
-    UPROPERTY()
-    EMETA_Gang m_ConquestState;
-    
-    UPROPERTY()
-    EMETA_TileType m_Type;
-    
-    UPROPERTY()
-    EIGS_HubDistrict m_DistrictType;
-    
-    UPROPERTY()
-    EIGS_HubBackdropTypes m_BackdropType;
-    
-    UPROPERTY()
-    EMETA_TileSize m_TileSize;
-    
-    UPROPERTY()
-    TArray<UMETA_BaseMission*> m_Missions;
-    
-    UPROPERTY()
-    int32 m_MinAmountOfSoldiersForAttack;
-    
-    UPROPERTY()
-    int32 m_MinAmountOfSoldiersForDefence;
-    
-    UPROPERTY()
-    int32 m_CurrentStrength;
-    
-    UPROPERTY()
-    bool m_WeaknessLowerTier;
-    
-    UPROPERTY()
-    int32 m_CurrentWeakness;
-    
-    UPROPERTY()
-    int32 m_WeaknessExpireDays;
-    
-    UPROPERTY()
-    int32 m_CounterOfCapturesByPlayer;
-    
-    UPROPERTY()
-    EMETA_TileWealth m_Wealth;
-    
-    UPROPERTY()
-    float m_IncomeMultiplier;
-    
-    UPROPERTY()
-    int32 m_CountdownForAttackAfterLost;
-    
-    UPROPERTY()
-    int32 m_IncomeValue;
-    
-    UPROPERTY()
-    int32 m_OutIncomeValue;
-    
-    UPROPERTY()
-    FGameplayTag m_IncomeLootItem;
-    
-    UPROPERTY()
-    TArray<FMETA_TileRewardData> m_CaptureRewards;
-    
-    UPROPERTY()
-    TArray<FMETA_BossEliminationRewardData> m_BossEliminationRewardData;
-    
-    UPROPERTY()
-    TMap<TSubclassOf<UMETA_DetectiveID>, FMETA_DetectiveInfo> m_Detectives;
-    
-    UPROPERTY()
-    EMETA_MapDisplayMode m_DisplayMode;
-    
-public:
     UMapTile();
 
     UFUNCTION(BlueprintCallable)
@@ -338,6 +204,139 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddMission(UMETA_BaseMission* inMission);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UMETA_BaseMission* TurfWarObject;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool isHighlighted;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool isSelected;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool isIconSelected;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool isBossEliminationRewardsExist;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnToggleHighglightedDelegate OnToggleHighglighted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnToggleSelectedDelegate OnToggleSelected;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnToggleIconSelectedDelegate OnToggleIconSelected;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnToggleSelectedDelegate OnToggleTurfIconSelected;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnGangChangedDelegate OnGangChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnTypeChangedDelegate OnTypeChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnConquestStateChangedDelegate OnConquestStateChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnDisplayModeChangedDelegate OnDisplayModeChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnMissionsChangedDelegate OnMissionsChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnMissionAddedDelegate OnMissionAdded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnMissionRemovedDelegate OnMissionRemoved;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnDetectivesChangedDelegate OnDetectivesChanged;
+    
+private:
+    UPROPERTY()
+    FGameplayTag m_ID;
+    
+    UPROPERTY()
+    FText m_Name;
+    
+    UPROPERTY()
+    EMETA_Gang m_Gang;
+    
+    UPROPERTY()
+    TArray<FGameplayTag> m_Neighbours;
+    
+    UPROPERTY()
+    EMETA_Gang m_ConquestState;
+    
+    UPROPERTY()
+    EMETA_TileType m_Type;
+    
+    UPROPERTY()
+    EIGS_HubDistrict m_DistrictType;
+    
+    UPROPERTY()
+    EIGS_HubBackdropTypes m_BackdropType;
+    
+    UPROPERTY()
+    EMETA_TileSize m_TileSize;
+    
+    UPROPERTY()
+    TArray<UMETA_BaseMission*> m_Missions;
+    
+    UPROPERTY()
+    int32 m_MinAmountOfSoldiersForAttack;
+    
+    UPROPERTY()
+    int32 m_MinAmountOfSoldiersForDefence;
+    
+    UPROPERTY()
+    int32 m_CurrentStrength;
+    
+    UPROPERTY()
+    bool m_WeaknessLowerTier;
+    
+    UPROPERTY()
+    int32 m_CurrentWeakness;
+    
+    UPROPERTY()
+    int32 m_WeaknessExpireDays;
+    
+    UPROPERTY()
+    int32 m_CounterOfCapturesByPlayer;
+    
+    UPROPERTY()
+    EMETA_TileWealth m_Wealth;
+    
+    UPROPERTY()
+    float m_IncomeMultiplier;
+    
+    UPROPERTY()
+    int32 m_CountdownForAttackAfterLost;
+    
+    UPROPERTY()
+    int32 m_IncomeValue;
+    
+    UPROPERTY()
+    int32 m_OutIncomeValue;
+    
+    UPROPERTY()
+    FGameplayTag m_IncomeLootItem;
+    
+    UPROPERTY()
+    TArray<FMETA_TileRewardData> m_CaptureRewards;
+    
+    UPROPERTY()
+    TArray<FMETA_BossEliminationRewardData> m_BossEliminationRewardData;
+    
+    UPROPERTY()
+    TMap<TSubclassOf<UMETA_DetectiveID>, FMETA_DetectiveInfo> m_Detectives;
+    
+    UPROPERTY()
+    EMETA_MapDisplayMode m_DisplayMode;
     
 };
 

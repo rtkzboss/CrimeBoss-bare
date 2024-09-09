@@ -15,14 +15,6 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UMETA_ObjectiveDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    UDataTable* m_ObjectiveDatabase;
-    
-    UPROPERTY()
-    UDataTable* m_ObjectivePresetsDatabase;
-    
-public:
     UMETA_ObjectiveDatabase();
 
     UFUNCTION(BlueprintCallable)
@@ -39,6 +31,13 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_ObjectiveTableRow GetObjectiveDataBP(const UObject* inWCO, FGameplayTag inID, bool& outSucceeded);
+    
+private:
+    UPROPERTY()
+    UDataTable* m_ObjectiveDatabase;
+    
+    UPROPERTY()
+    UDataTable* m_ObjectivePresetsDatabase;
     
 };
 

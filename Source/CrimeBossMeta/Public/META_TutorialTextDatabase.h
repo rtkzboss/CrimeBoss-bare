@@ -13,14 +13,6 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_TutorialTextDatabase : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(Transient)
-    FGameplayTagContainer MetaMenuActiveTags;
-    
-    UPROPERTY(Instanced, Transient)
-    TArray<UMETA_TutorialWidgetBase*> TutorialWidgets;
-    
-public:
     UMETA_TutorialTextDatabase();
 
     UFUNCTION(BlueprintCallable)
@@ -46,6 +38,13 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddActiveTag(FGameplayTag inTag, bool inPersistent);
+    
+protected:
+    UPROPERTY(Transient)
+    FGameplayTagContainer MetaMenuActiveTags;
+    
+    UPROPERTY(Instanced, Transient)
+    TArray<UMETA_TutorialWidgetBase*> TutorialWidgets;
     
 };
 

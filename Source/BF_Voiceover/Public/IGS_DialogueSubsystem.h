@@ -18,20 +18,6 @@ UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_DialogueSubsystem : public UWorldSubsystem, public IIGS_LoadingInProgressInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_DialogueCharacterEvent OnCharacterReminderEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_DialogueEvent OnDialogueFinishedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_HudDebugEvent OnNewHudDebugLogEvent;
-    
-protected:
-    UPROPERTY()
-    TMap<FIGS_DialogueNodeKey, TScriptInterface<IIGS_DialogueAsyncActionInterface>> RegisteredDialogueNodesMap;
-    
-public:
     UIGS_DialogueSubsystem();
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -76,6 +62,20 @@ public:
 protected:
     UFUNCTION()
     void OnGameLoadingFinished();
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_DialogueCharacterEvent OnCharacterReminderEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_DialogueEvent OnDialogueFinishedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_HudDebugEvent OnNewHudDebugLogEvent;
+    
+protected:
+    UPROPERTY()
+    TMap<FIGS_DialogueNodeKey, TScriptInterface<IIGS_DialogueAsyncActionInterface>> RegisteredDialogueNodesMap;
     
 
     // Fix for true pure virtual functions not being implemented

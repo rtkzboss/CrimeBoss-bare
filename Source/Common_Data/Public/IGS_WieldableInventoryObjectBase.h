@@ -11,9 +11,6 @@ UCLASS(Abstract)
 class COMMON_DATA_API UIGS_WieldableInventoryObjectBase : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FGameplayTagContainer WieldableStateTagsContainer;
-    
     UIGS_WieldableInventoryObjectBase();
 
     UFUNCTION(BlueprintCallable)
@@ -42,6 +39,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     TSoftObjectPtr<UIGS_WeaponSkinData> GetBaseSkin();
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FGameplayTagContainer WieldableStateTagsContainer;
     
 };
 

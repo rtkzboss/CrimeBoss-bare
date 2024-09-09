@@ -19,35 +19,6 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_MediaManagerComponent : public UIGS_MediaManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    TArray<FMETA_CutsceneUIData> QueuedCutscenes;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnCutsceneStartedLatent OnCutsceneStartedLatent;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnCutsceneFinishedLatent OnCutsceneFinishedLatent;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TArray<FMETA_MovieUIData> QueuedMovies;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnMovieStartedLatent OnMovieStartedLatent;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnMovieFinishedLatent OnMovieFinishedLatent;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TArray<FMETA_DialogueUIData> QueuedDialogues;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TArray<FMETA_TextScreenUIData> QueuedTextScreens;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly)
-    UMETA_VoiceoverDialogueSettings* DialogueSettings;
-    
-public:
     UMETA_MediaManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -118,6 +89,34 @@ public:
     
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_CutsceneUIData> GetCutscenesAboutToExpire(bool& outResult);
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<FMETA_CutsceneUIData> QueuedCutscenes;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnCutsceneStartedLatent OnCutsceneStartedLatent;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnCutsceneFinishedLatent OnCutsceneFinishedLatent;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<FMETA_MovieUIData> QueuedMovies;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnMovieStartedLatent OnMovieStartedLatent;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnMovieFinishedLatent OnMovieFinishedLatent;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<FMETA_DialogueUIData> QueuedDialogues;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<FMETA_TextScreenUIData> QueuedTextScreens;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly)
+    UMETA_VoiceoverDialogueSettings* DialogueSettings;
     
 };
 

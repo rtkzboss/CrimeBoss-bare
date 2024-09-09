@@ -11,6 +11,8 @@ UCLASS(BlueprintType)
 class BF_AI_API UIGS_BTTask_ThrowThrowableAI : public UIGS_BTTask_ThrowBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_ThrowThrowableAI();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector Target;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY(EditAnywhere)
     FGameplayTag AfterFireCooldownTag;
     
-    UIGS_BTTask_ThrowThrowableAI();
-
 };
 

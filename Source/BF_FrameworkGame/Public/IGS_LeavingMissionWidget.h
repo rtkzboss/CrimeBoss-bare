@@ -9,9 +9,6 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_LeavingMissionWidget : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
-    UTextBlock* Title;
-    
     UIGS_LeavingMissionWidget();
 
     UFUNCTION(BlueprintCallable)
@@ -19,6 +16,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetDefaultText();
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
+    UTextBlock* Title;
     
 };
 

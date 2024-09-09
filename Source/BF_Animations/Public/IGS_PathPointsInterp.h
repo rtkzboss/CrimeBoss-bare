@@ -11,6 +11,8 @@ UCLASS()
 class BF_ANIMATIONS_API AIGS_PathPointsInterp : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_PathPointsInterp(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     FlyingCurveInterpolationMode CurveInterpolationMode;
     
@@ -45,8 +47,5 @@ protected:
     UPROPERTY(BlueprintReadOnly)
     TArray<FVector> m_Nodes;
     
-public:
-    AIGS_PathPointsInterp(const FObjectInitializer& ObjectInitializer);
-
 };
 

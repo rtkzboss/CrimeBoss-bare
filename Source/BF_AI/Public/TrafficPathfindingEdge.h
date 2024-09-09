@@ -9,13 +9,13 @@ UCLASS()
 class BF_AI_API UTrafficPathfindingEdge : public UObject {
     GENERATED_BODY()
 public:
+    UTrafficPathfindingEdge();
+
     UPROPERTY()
     UTrafficPathfindingNode* FromNode;
     
     UPROPERTY()
     UTrafficPathfindingNode* ToNode;
     
-    UTrafficPathfindingEdge();
-
 };
 

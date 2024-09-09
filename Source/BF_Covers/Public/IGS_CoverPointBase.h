@@ -9,6 +9,8 @@ UCLASS()
 class BF_COVERS_API AIGS_CoverPointBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_CoverPointBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsActive;
     
@@ -40,8 +42,5 @@ private:
     UPROPERTY(Instanced)
     UBillboardComponent* SpriteComponent;
     
-public:
-    AIGS_CoverPointBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

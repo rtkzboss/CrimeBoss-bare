@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_AICommandPlayMocapAnimation : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandPlayMocapAnimation();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAnimMontage* AnimationMontage;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StartPosition;
     
-    UIGS_AICommandPlayMocapAnimation();
-
 };
 

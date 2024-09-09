@@ -11,14 +11,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ScanLookAtTriggerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float ScreenPercentage;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bIsScanEnabled;
-    
-public:
     UIGS_ScanLookAtTriggerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -33,6 +25,12 @@ public:
 protected:
     UFUNCTION(Reliable, Server, WithValidation)
     void Server_Trigger(UIGS_LookAtTriggerComponent* inInteractiveComponent);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float ScreenPercentage;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bIsScanEnabled;
     
 };
 

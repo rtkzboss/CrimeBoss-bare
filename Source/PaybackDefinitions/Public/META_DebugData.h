@@ -8,23 +8,6 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_DebugData : public UDataAsset {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval HeistersAlwaysSurvive;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 ChanceBeKIAAfterSuccess;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 ChanceBeMIAAfterSuccess;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 ChanceBeKIAAfterFail;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 ChanceBeMIAAfterFail;
-    
-public:
     UMETA_DebugData();
 
     UFUNCTION(BlueprintPure)
@@ -41,6 +24,22 @@ public:
     
     UFUNCTION(BlueprintPure)
     int32 GetChanceBeKiaAfterFail() const;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval HeistersAlwaysSurvive;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 ChanceBeKIAAfterSuccess;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 ChanceBeMIAAfterSuccess;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 ChanceBeKIAAfterFail;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 ChanceBeMIAAfterFail;
     
 };
 

@@ -9,6 +9,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerBotOrderComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerBotOrderComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY()
     AIGS_GameCharacterFramework* CurrentBot;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY()
     bool bBotOrderInProgress;
     
-    UIGS_PlayerBotOrderComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -13,6 +13,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIThreatComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AIThreatComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditInstanceOnly)
     float DmgRequiredToMaxThreat;
@@ -47,8 +49,5 @@ protected:
     UPROPERTY(Instanced)
     UIGS_CharacterData* m_CharacterData;
     
-public:
-    UIGS_AIThreatComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

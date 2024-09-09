@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTTask_MoveToAlertingCharacter : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UBTTask_MoveToAlertingCharacter();
+
     UPROPERTY(EditAnywhere)
     float LOSStoppingDistance;
     
@@ -19,7 +21,5 @@ public:
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
     
-    UBTTask_MoveToAlertingCharacter();
-
 };
 

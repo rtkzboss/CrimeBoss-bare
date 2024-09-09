@@ -11,18 +11,17 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_DangerAreaVolume : public AIGS_BoxSphere, public IDangerAreaInterface {
     GENERATED_BODY()
 public:
+    AIGS_DangerAreaVolume(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetEnabled(bool inEnabled);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag DangerType;
     
     UPROPERTY(Instanced)
     UNavModifierComponent* NavModifier;
-    
-public:
-    AIGS_DangerAreaVolume(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetEnabled(bool inEnabled);
     
 
     // Fix for true pure virtual functions not being implemented

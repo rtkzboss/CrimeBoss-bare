@@ -30,6 +30,127 @@ UCLASS(Abstract)
 class BF_RIDEABLEVEHICLES_API AIGS_RideableVehicle_Base : public AIGS_RideableVehicleBaseFramework, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:
+    AIGS_RideableVehicle_Base(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void VehicleDestroy(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnVehicleExitedCosmetic();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnVehicleEnteredCosmetic();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnVehicleDriverExitedCosmetic();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnVehicleDriverEnteredCosmetic();
+    
+    UFUNCTION()
+    void OnUpdateThrottleTiming();
+    
+    UFUNCTION(Server, Unreliable)
+    void OnStopUsing_SERVER(int32 inSeatIndex);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void OnStopUsing_MULTICAST(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
+    
+    UFUNCTION(Reliable, Server)
+    void OnStartUsing_SERVER(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void OnStartUsing_MULTICAST(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
+    
+private:
+    UFUNCTION()
+    void OnRepRotation();
+    
+    UFUNCTION()
+    void OnRepLocation();
+    
+    UFUNCTION()
+    void OnRepLinearDrag();
+    
+    UFUNCTION()
+    void OnRepAngularDrag();
+    
+protected:
+    UFUNCTION()
+    void OnRep_RuntimeBagInfo();
+    
+    UFUNCTION()
+    void OnRep_PlayerSlots();
+    
+public:
+    UFUNCTION()
+    void OnRep_EngineDestroed();
+    
+protected:
+    UFUNCTION(Server, Unreliable)
+    void OnDetachBag_SERVER(int32 inBagIndex);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void OnDetachBag_MULTICAST(AIGS_LootBagPickup* inBag, int32 inBagIndex);
+    
+    UFUNCTION(Reliable, Server)
+    void OnAttachBag_SERVER(AIGS_LootBagPickup* inBag, int32 inBagIndex);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void OnAttachBag_MULTICAST(AIGS_LootBagPickup* inBag, int32 inBagIndex);
+    
+public:
+    UFUNCTION(BlueprintNativeEvent)
+    bool OfferPositionToDismount(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex, FTransform& OutPosition) const;
+    
+protected:
+    UFUNCTION(Reliable, Server)
+    void LootBagDestroyed_SERVER(int32 inIndex);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void LootBagDestroyed(AIGS_LootBagPickup* inBagPickup);
+    
+private:
+    UFUNCTION()
+    void InteractClient(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION()
+    void Interact(AIGS_GameCharacterFramework* inInstigator);
+    
+protected:
+    UFUNCTION(Server, Unreliable)
+    void Horn_SERVER(bool inStartPlaying);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Horn_MULTICAST(bool inStartPlaying);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    float GetMaxVelocity() const;
+    
+    UFUNCTION(BlueprintPure)
+    static float GetKmPerHAspect();
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void FakeBoatCrouch();
+    
+public:
+    UFUNCTION(Reliable, Server)
+    void EngineDestroy();
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    bool CheckIsEngineOn();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void CharacterSatInside(AIGS_GameCharacterFramework* inCharacter);
+    
+public:
+    UFUNCTION(BlueprintNativeEvent)
+    bool CanPickBag(AIGS_LootBagPickup* inBag, int32 inTargetSlot);
+    
     UPROPERTY(BlueprintAssignable)
     FPlayerEnterVehicleDelegate OnEnterVehicle;
     
@@ -156,129 +277,8 @@ private:
     APawn* m_Driver;
     
 public:
-    AIGS_RideableVehicle_Base(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void VehicleDestroy(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnVehicleExitedCosmetic();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnVehicleEnteredCosmetic();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnVehicleDriverExitedCosmetic();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnVehicleDriverEnteredCosmetic();
-    
-    UFUNCTION()
-    void OnUpdateThrottleTiming();
-    
-    UFUNCTION(Server, Unreliable)
-    void OnStopUsing_SERVER(int32 inSeatIndex);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void OnStopUsing_MULTICAST(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
-    
-    UFUNCTION(Reliable, Server)
-    void OnStartUsing_SERVER(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void OnStartUsing_MULTICAST(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex);
-    
-private:
-    UFUNCTION()
-    void OnRepRotation();
-    
-    UFUNCTION()
-    void OnRepLocation();
-    
-    UFUNCTION()
-    void OnRepLinearDrag();
-    
-    UFUNCTION()
-    void OnRepAngularDrag();
-    
-protected:
-    UFUNCTION()
-    void OnRep_RuntimeBagInfo();
-    
-    UFUNCTION()
-    void OnRep_PlayerSlots();
-    
-public:
-    UFUNCTION()
-    void OnRep_EngineDestroed();
-    
-protected:
-    UFUNCTION(Server, Unreliable)
-    void OnDetachBag_SERVER(int32 inBagIndex);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void OnDetachBag_MULTICAST(AIGS_LootBagPickup* inBag, int32 inBagIndex);
-    
-    UFUNCTION(Reliable, Server)
-    void OnAttachBag_SERVER(AIGS_LootBagPickup* inBag, int32 inBagIndex);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void OnAttachBag_MULTICAST(AIGS_LootBagPickup* inBag, int32 inBagIndex);
-    
-public:
-    UFUNCTION(BlueprintNativeEvent)
-    bool OfferPositionToDismount(AIGS_GameCharacterFramework* inCharacter, int32 inSeatIndex, FTransform& OutPosition) const;
-    
-protected:
-    UFUNCTION(Reliable, Server)
-    void LootBagDestroyed_SERVER(int32 inIndex);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void LootBagDestroyed(AIGS_LootBagPickup* inBagPickup);
-    
-private:
-    UFUNCTION()
-    void InteractClient(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION()
-    void Interact(AIGS_GameCharacterFramework* inInstigator);
-    
-protected:
-    UFUNCTION(Server, Unreliable)
-    void Horn_SERVER(bool inStartPlaying);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Horn_MULTICAST(bool inStartPlaying);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    float GetMaxVelocity() const;
-    
-    UFUNCTION(BlueprintPure)
-    static float GetKmPerHAspect();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void FakeBoatCrouch();
-    
-public:
-    UFUNCTION(Reliable, Server)
-    void EngineDestroy();
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    bool CheckIsEngineOn();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void CharacterSatInside(AIGS_GameCharacterFramework* inCharacter);
-    
-public:
-    UFUNCTION(BlueprintNativeEvent)
-    bool CanPickBag(AIGS_LootBagPickup* inBag, int32 inTargetSlot);
-    
 
     // Fix for true pure virtual functions not being implemented
 };

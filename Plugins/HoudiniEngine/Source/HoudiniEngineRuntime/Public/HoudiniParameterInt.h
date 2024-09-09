@@ -7,6 +7,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterInt : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterInt();
+
 protected:
     UPROPERTY()
     TArray<int32> Values;
@@ -44,8 +46,5 @@ protected:
     UPROPERTY()
     int32 UIMax;
     
-public:
-    UHoudiniParameterInt();
-
 };
 

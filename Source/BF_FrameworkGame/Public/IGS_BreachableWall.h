@@ -13,6 +13,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BreachableWall : public AActor, public IIGS_DoorBreachInterface {
     GENERATED_BODY()
 public:
+    AIGS_BreachableWall(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* WallRootComponent;
     
@@ -31,8 +33,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UBoxComponent* NavigationBlock;
     
-    AIGS_BreachableWall(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

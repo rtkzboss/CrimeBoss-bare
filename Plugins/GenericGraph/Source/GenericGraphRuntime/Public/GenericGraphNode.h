@@ -11,18 +11,6 @@ UCLASS(Blueprintable)
 class GENERICGRAPHRUNTIME_API UGenericGraphNode : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    UGenericGraph* Graph;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TArray<UGenericGraphNode*> ParentNodes;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TArray<UGenericGraphNode*> ChildrenNodes;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TMap<UGenericGraphNode*, UGenericGraphEdge*> Edges;
-    
     UGenericGraphNode();
 
     UFUNCTION(BlueprintCallable)
@@ -42,6 +30,18 @@ public:
     
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     FText GetDescription() const;
+    
+    UPROPERTY(BlueprintReadOnly)
+    UGenericGraph* Graph;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<UGenericGraphNode*> ParentNodes;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<UGenericGraphNode*> ChildrenNodes;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TMap<UGenericGraphNode*, UGenericGraphEdge*> Edges;
     
 };
 

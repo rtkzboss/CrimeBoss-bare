@@ -7,6 +7,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkHandlerComponent : public UIGS_TransitionHandlerBaseComponent {
     GENERATED_BODY()
 public:
+    UIGS_NavLinkHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     bool UseSlideForLadder;
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool CanUseDoors;
     
-public:
-    UIGS_NavLinkHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

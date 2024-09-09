@@ -7,13 +7,13 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_SystemMenuScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    bool IsClosingInProcess;
-    
     UIGS_SystemMenuScreen();
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void CloseSystemMenuScreen();
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    bool IsClosingInProcess;
     
 };
 

@@ -15,6 +15,8 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UMetaHUDSubwidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UMetaHUDSubwidget();
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_CrewManagerBaseComponent* CrewManager;
     
@@ -36,7 +38,5 @@ public:
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_DailyManagerBaseComponent* DailyManager;
     
-    UMetaHUDSubwidget();
-
 };
 

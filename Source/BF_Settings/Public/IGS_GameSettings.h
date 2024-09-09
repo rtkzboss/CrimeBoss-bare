@@ -12,6 +12,11 @@ UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_GameSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_GameSettings();
+
+    UFUNCTION(BlueprintPure)
+    static UIGS_GameSettings* Instance();
+    
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     FString Language;
     
@@ -78,12 +83,6 @@ public:
 private:
     UPROPERTY(Transient)
     TArray<FString> AvailableLocalizations;
-    
-public:
-    UIGS_GameSettings();
-
-    UFUNCTION(BlueprintPure)
-    static UIGS_GameSettings* Instance();
     
 };
 

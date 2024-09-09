@@ -8,6 +8,8 @@ UCLASS(BlueprintType)
 class BF_AI_API UIGS_BTTask_BotShout : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_BotShout();
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ShoutDistance;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY()
     FShoutScanData m_ShoutScanData;
     
-public:
-    UIGS_BTTask_BotShout();
-
 };
 

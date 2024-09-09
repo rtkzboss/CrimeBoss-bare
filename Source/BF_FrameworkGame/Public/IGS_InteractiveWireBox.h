@@ -13,7 +13,18 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_InteractiveWireBox : public AIGS_InteractiveWireBoxBase {
     GENERATED_BODY()
 public:
+    AIGS_InteractiveWireBox(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetWireLightState(int32 inWireIndex, bool inState);
+    
 protected:
+    UFUNCTION(NetMulticast, Reliable)
+    void Client_SetWireLight(int32 inWireIndex, bool inState);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Client_SetFailStatus();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FColor StatusFailColor;
     
@@ -30,19 +41,7 @@ protected:
     TArray<FIGS_WireBoxWireInfo> mR_WiresInfo;
     
 public:
-    AIGS_InteractiveWireBox(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetWireLightState(int32 inWireIndex, bool inState);
-    
-protected:
-    UFUNCTION(NetMulticast, Reliable)
-    void Client_SetWireLight(int32 inWireIndex, bool inState);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Client_SetFailStatus();
-    
 };
 

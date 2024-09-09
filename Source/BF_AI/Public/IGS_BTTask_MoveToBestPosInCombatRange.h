@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToBestPosInCombatRange : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_MoveToBestPosInCombatRange();
+
 protected:
     UPROPERTY(EditAnywhere)
     float RecalculateTimeMin;
@@ -27,8 +29,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SuspectedTargetPos;
     
-public:
-    UIGS_BTTask_MoveToBestPosInCombatRange();
-
 };
 

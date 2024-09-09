@@ -12,20 +12,6 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_EnvironmentBoxComponent : public UBoxComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
-    float EffectBlendStartDuration;
-    
-    UPROPERTY(EditAnywhere)
-    float EffectBlendStopDuration;
-    
-protected:
-    UPROPERTY(EditAnywhere)
-    EIGS_EnvironmentVolumeType VolumeType;
-    
-    UPROPERTY(EditAnywhere)
-    bool m_IsEnabled;
-    
-public:
     UIGS_EnvironmentBoxComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -41,6 +27,19 @@ private:
 public:
     UFUNCTION(BlueprintPure)
     bool GetEnabled() const;
+    
+    UPROPERTY(EditAnywhere)
+    float EffectBlendStartDuration;
+    
+    UPROPERTY(EditAnywhere)
+    float EffectBlendStopDuration;
+    
+protected:
+    UPROPERTY(EditAnywhere)
+    EIGS_EnvironmentVolumeType VolumeType;
+    
+    UPROPERTY(EditAnywhere)
+    bool m_IsEnabled;
     
 };
 

@@ -10,12 +10,11 @@ UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EQG_PanicPoints : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UIGS_EQG_PanicPoints();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
     
-public:
-    UIGS_EQG_PanicPoints();
-
 };
 

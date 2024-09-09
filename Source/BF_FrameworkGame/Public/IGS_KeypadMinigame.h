@@ -18,41 +18,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_KeypadMinigame : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnKeypadEnded OnKeypadEnded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnKeypadLeft OnKeypadLeft;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bEnteredAnyCombination;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bWrongCodeAddsStrike;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FString CurrentCode;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FString SolutionCode;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UAkComponent* AkComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ButtonPressAkAudioEvent;
-    
-    UPROPERTY()
-    AIGS_PlayerCharacter* m_Instigator;
-    
-    UPROPERTY()
-    AIGS_PlayerControllerRoot* m_InstigatorController;
-    
-    UPROPERTY(Instanced)
-    UInputComponent* m_InstigatorInputComponent;
-    
-public:
     AIGS_KeypadMinigame(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -124,6 +89,41 @@ protected:
     
     UFUNCTION(Client, Reliable)
     void Client_Escape();
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnKeypadEnded OnKeypadEnded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnKeypadLeft OnKeypadLeft;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bEnteredAnyCombination;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bWrongCodeAddsStrike;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FString CurrentCode;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FString SolutionCode;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UAkComponent* AkComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ButtonPressAkAudioEvent;
+    
+    UPROPERTY()
+    AIGS_PlayerCharacter* m_Instigator;
+    
+    UPROPERTY()
+    AIGS_PlayerControllerRoot* m_InstigatorController;
+    
+    UPROPERTY(Instanced)
+    UInputComponent* m_InstigatorInputComponent;
     
 };
 

@@ -10,18 +10,6 @@ UCLASS(NonTransient)
 class ADVANCEDSESSIONS_API UAdvancedFriendsGameInstance : public UIGS_UGCBaseGameInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bCallFriendInterfaceEventsOnPlayerControllers;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bCallIdentityInterfaceEventsOnPlayerControllers;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bCallVoiceInterfaceEventsOnPlayerControllers;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bEnableTalkingStatusDelegate;
-    
     UAdvancedFriendsGameInstance();
 
     UFUNCTION(BlueprintPure)
@@ -41,6 +29,18 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     void OnPlayerLoginChanged(int32 PlayerNum);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bCallFriendInterfaceEventsOnPlayerControllers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bCallIdentityInterfaceEventsOnPlayerControllers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bCallVoiceInterfaceEventsOnPlayerControllers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bEnableTalkingStatusDelegate;
     
 };
 

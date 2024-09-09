@@ -11,6 +11,8 @@ UCLASS(CollapseCategories)
 class BF_FRAMEWORKGAME_API UAnimNotify_Footstep : public UAnimNotify {
     GENERATED_BODY()
 public:
+    UAnimNotify_Footstep();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName BoneOrSocketName;
     
@@ -35,7 +37,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool DrawDebug;
     
-    UAnimNotify_Footstep();
-
 };
 

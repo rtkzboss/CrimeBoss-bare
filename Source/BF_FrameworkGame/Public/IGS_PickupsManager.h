@@ -17,6 +17,11 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PickupsManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PickupsManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static UIGS_PickupsManager* GetPickupsManager(UObject* inWCO);
+    
 protected:
     UPROPERTY()
     TArray<AIGS_PickupActorBase*> m_AllPickups;
@@ -41,12 +46,6 @@ protected:
     
     UPROPERTY()
     TArray<AIGS_StaticMeshInventoryItemPickup*> m_StaticMeshInventoryItemPickups;
-    
-public:
-    UIGS_PickupsManager(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static UIGS_PickupsManager* GetPickupsManager(UObject* inWCO);
     
 };
 

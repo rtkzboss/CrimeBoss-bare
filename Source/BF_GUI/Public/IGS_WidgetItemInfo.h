@@ -14,6 +14,8 @@ UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetItemInfo : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetItemInfo();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* ItemNameText;
     
@@ -60,8 +62,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText ItemDescription;
     
-public:
-    UIGS_WidgetItemInfo();
-
 };
 

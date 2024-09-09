@@ -11,14 +11,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WeaponSectionWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    EIGS_ItemType CurrentWieldableType;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_WieldableBase* ActiveWieldable;
-    
-public:
     UIGS_WeaponSectionWidget();
 
 protected:
@@ -39,6 +31,12 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void OnActiveWieldableChanged(EIGS_ItemType inType);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    EIGS_ItemType CurrentWieldableType;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_WieldableBase* ActiveWieldable;
     
 };
 

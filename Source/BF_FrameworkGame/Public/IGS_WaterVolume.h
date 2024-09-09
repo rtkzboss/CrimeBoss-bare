@@ -16,7 +16,15 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WaterVolume : public APhysicsVolume, public IInterface_PostProcessVolume {
     GENERATED_BODY()
 public:
+    AIGS_WaterVolume(const FObjectInitializer& ObjectInitializer);
+
 private:
+    UFUNCTION()
+    void OnTriggerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
+    
+    UFUNCTION()
+    void OnTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EWaterType::Type> WaterType;
     
@@ -28,16 +36,6 @@ private:
     
     UPROPERTY(Instanced, Transient)
     UAudioComponent* m_AudioComponent;
-    
-public:
-    AIGS_WaterVolume(const FObjectInitializer& ObjectInitializer);
-
-private:
-    UFUNCTION()
-    void OnTriggerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
-    UFUNCTION()
-    void OnTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
     
 
     // Fix for true pure virtual functions not being implemented

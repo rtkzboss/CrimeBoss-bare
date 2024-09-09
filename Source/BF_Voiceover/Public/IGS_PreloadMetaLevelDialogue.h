@@ -12,12 +12,6 @@ UCLASS()
 class BF_VOICEOVER_API UIGS_PreloadMetaLevelDialogue : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueDelegate PreloadFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueDelegate PreloadCanceled;
-    
     UIGS_PreloadMetaLevelDialogue();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -25,6 +19,12 @@ public:
     
     UFUNCTION()
     void FinishPreload();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueDelegate PreloadFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueDelegate PreloadCanceled;
     
 };
 

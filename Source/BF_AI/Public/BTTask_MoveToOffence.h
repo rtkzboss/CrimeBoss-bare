@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_MoveToOffence : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UBTTask_MoveToOffence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTTask_MoveToOffence();
-
 };
 

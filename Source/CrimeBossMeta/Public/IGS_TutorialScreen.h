@@ -9,9 +9,6 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_TutorialScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    FGameplayTag TutorialTag;
-    
     UIGS_TutorialScreen();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -19,6 +16,9 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     void SetTutorialData(const TArray<FIGS_TutorialPage>& Pages, bool inSlowDownGame);
+    
+    UPROPERTY(BlueprintReadOnly)
+    FGameplayTag TutorialTag;
     
 };
 

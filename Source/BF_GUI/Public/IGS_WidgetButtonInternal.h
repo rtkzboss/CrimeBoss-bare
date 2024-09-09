@@ -16,6 +16,29 @@ UCLASS()
 class BF_GUI_API UIGS_WidgetButtonInternal : public UContentWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetButtonInternal();
+
+    UFUNCTION(BlueprintCallable)
+    void SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetStyle(const FButtonStyle& InStyle);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetPressMethod(TEnumAsByte<EButtonPressMethod::Type> InPressMethod);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetColorAndOpacity(FLinearColor InColorAndOpacity);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetClickMethod(TEnumAsByte<EButtonClickMethod::Type> InClickMethod);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetBackgroundColor(FLinearColor InBackgroundColor);
+    
+    UFUNCTION(BlueprintPure)
+    bool IsPressed() const;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FButtonStyle WidgetStyle;
     
@@ -60,29 +83,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_OnButtonHoverEvent OnUnfocused;
-    
-    UIGS_WidgetButtonInternal();
-
-    UFUNCTION(BlueprintCallable)
-    void SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetStyle(const FButtonStyle& InStyle);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetPressMethod(TEnumAsByte<EButtonPressMethod::Type> InPressMethod);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetColorAndOpacity(FLinearColor InColorAndOpacity);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetClickMethod(TEnumAsByte<EButtonClickMethod::Type> InClickMethod);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetBackgroundColor(FLinearColor InBackgroundColor);
-    
-    UFUNCTION(BlueprintPure)
-    bool IsPressed() const;
     
 };
 

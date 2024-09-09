@@ -9,10 +9,10 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_FPSDifficultyDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_FPSDifficultyDataAsset();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<EIGS_FPSDifficulty, FIGS_FPSDifficultySettings> FPSDifficultySettings;
     
-    UIGS_FPSDifficultyDataAsset();
-
 };
 

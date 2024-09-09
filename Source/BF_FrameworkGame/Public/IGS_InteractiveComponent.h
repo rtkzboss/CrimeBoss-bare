@@ -26,6 +26,98 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractiveComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UIGS_InteractiveComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void Use(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void StopUse(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSuspicionTags(FGameplayTagContainer inSuspicionTags);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetNeededItem(TSubclassOf<UIGS_InventoryObjectFramework> inItem);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetNameToDisplay(FText InText);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetHoldable(bool inHoldable, float InTime);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetEnabled(bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetComponentsToOutline(const TArray<USceneComponent*>& inComponentsToOutline);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCanBeEnabled(bool inCanBeEnabled);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Server_UseReleased(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Server_Use(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Server_PostAuthClient(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Server_HoldStarted(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Server_HoldCanceled(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    bool Server_CanUse(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void RemoveSusTags(AIGS_GameCharacterFramework* inInstigator) const;
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnServerRollback(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION()
+    void OnRep_Enabled();
+    
+    UFUNCTION()
+    void OnRep_bIsBeingUsed();
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnPuzzleInteractionEnded(bool inResult, bool inStealthEnd);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_UseReleased(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_Use(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_Rollback(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_PostServer(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_HoldStarted(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_HoldCanceled(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    bool Client_CanUse(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    bool Client_CanUnlock(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void AI_Use(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void AddSusTags(AIGS_GameCharacterFramework* inInstigator) const;
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_InteractionStateChanged OnInteractionEnabledStateChanged;
     
@@ -178,99 +270,7 @@ private:
     UIGS_OutlineComponent* m_OutlineComponent;
     
 public:
-    UIGS_InteractiveComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void Use(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void StopUse(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetSuspicionTags(FGameplayTagContainer inSuspicionTags);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetNeededItem(TSubclassOf<UIGS_InventoryObjectFramework> inItem);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetNameToDisplay(FText InText);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetHoldable(bool inHoldable, float InTime);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetEnabled(bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetComponentsToOutline(const TArray<USceneComponent*>& inComponentsToOutline);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCanBeEnabled(bool inCanBeEnabled);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Server_UseReleased(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Server_Use(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Server_PostAuthClient(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Server_HoldStarted(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Server_HoldCanceled(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    bool Server_CanUse(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void RemoveSusTags(AIGS_GameCharacterFramework* inInstigator) const;
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnServerRollback(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION()
-    void OnRep_Enabled();
-    
-    UFUNCTION()
-    void OnRep_bIsBeingUsed();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnPuzzleInteractionEnded(bool inResult, bool inStealthEnd);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_UseReleased(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_Use(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_Rollback(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_PostServer(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_HoldStarted(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_HoldCanceled(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    bool Client_CanUse(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    bool Client_CanUnlock(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void AI_Use(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void AddSusTags(AIGS_GameCharacterFramework* inInstigator) const;
-    
 };
 

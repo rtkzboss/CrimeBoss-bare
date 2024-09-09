@@ -12,6 +12,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadSearch : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadSearch();
+
+    UFUNCTION()
+    void OnNotifyReceived(EIGS_AINotif inType, AIGS_GameCharacterFramework* inInstigator, AIGS_GameCharacterFramework* inTarget, FVector InPos, FVector inDir);
+    
 protected:
     UPROPERTY(VisibleAnywhere)
     FIGS_SubSquad SubSquadRight;
@@ -27,12 +32,6 @@ protected:
     
     UPROPERTY(VisibleAnywhere)
     bool bMovingToPlayer;
-    
-public:
-    UIGS_BTTask_SquadSearch();
-
-    UFUNCTION()
-    void OnNotifyReceived(EIGS_AINotif inType, AIGS_GameCharacterFramework* inInstigator, AIGS_GameCharacterFramework* inTarget, FVector InPos, FVector inDir);
     
 };
 

@@ -9,6 +9,14 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_VoiceoverDialogueSettings : public UDataAsset {
     GENERATED_BODY()
 public:
+    UMETA_VoiceoverDialogueSettings();
+
+    UFUNCTION(BlueprintPure)
+    FMETA_VODialoguesCommonTypeSettings GetTypeSettings(FGameplayTag inType);
+    
+    UFUNCTION(BlueprintPure)
+    float GetDelayAfterScreenSwitch();
+    
 protected:
     UPROPERTY(EditDefaultsOnly)
     float DelayAfterScreenSwitch;
@@ -21,15 +29,6 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, FMETA_VODialoguesCommonTypeSettings> CommonTypeSettings;
-    
-public:
-    UMETA_VoiceoverDialogueSettings();
-
-    UFUNCTION(BlueprintPure)
-    FMETA_VODialoguesCommonTypeSettings GetTypeSettings(FGameplayTag inType);
-    
-    UFUNCTION(BlueprintPure)
-    float GetDelayAfterScreenSwitch();
     
 };
 

@@ -9,6 +9,8 @@ UCLASS()
 class PREFABRICATORRUNTIME_API UPrefabricatorProperty : public UObject {
     GENERATED_BODY()
 public:
+    UPrefabricatorProperty();
+
     UPROPERTY()
     FString PropertyName;
     
@@ -24,7 +26,5 @@ public:
     UPROPERTY()
     FGuid CrossReferencePrefabActorId;
     
-    UPrefabricatorProperty();
-
 };
 

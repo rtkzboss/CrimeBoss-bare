@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_ANIMATIONS_API UIGS_AdvancedMovementAnimComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AdvancedMovementAnimComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     AIGS_WieldableBase* m_WieldableBase;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY()
     AIGS_PlayerFPVArmsFramework* m_ArmsActor;
     
-public:
-    UIGS_AdvancedMovementAnimComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_WeaponPickupSequence : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_WeaponPickupSequence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestPickupWeapon;
     
-public:
-    UIGS_BTService_WeaponPickupSequence();
-
 };
 

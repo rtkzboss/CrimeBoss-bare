@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToBag : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_MoveToBag();
+
 protected:
     UPROPERTY(EditAnywhere)
     float OptimalDistance;
     
-public:
-    UIGS_BTTask_MoveToBag();
-
 };
 

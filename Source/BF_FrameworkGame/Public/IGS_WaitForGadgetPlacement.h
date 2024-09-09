@@ -12,12 +12,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForGadgetPlacement : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnGadgetPlaced OnGadgetPlaced;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnGadgetPlaced OnGadgetFinished;
-    
     UIGS_WaitForGadgetPlacement();
 
     UFUNCTION(BlueprintCallable)
@@ -29,6 +23,13 @@ private:
     
     UFUNCTION()
     void OnActionReturnedInternal(AIGS_ItemPlacementBase* inPlacementActor, AIGS_GameCharacterFramework* inInstigator);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnGadgetPlaced OnGadgetPlaced;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnGadgetPlaced OnGadgetFinished;
     
 };
 

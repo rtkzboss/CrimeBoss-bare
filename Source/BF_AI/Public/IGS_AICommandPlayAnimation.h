@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_AICommandPlayAnimation : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandPlayAnimation();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag AnimationTag;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_InterestPointHolder LookAt;
     
-    UIGS_AICommandPlayAnimation();
-
 };
 

@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_Common_DataDevSettings_Characters : public UIGS_Common_DataDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_Common_DataDevSettings_Characters();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> CharacterDataTable;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> CharacterSkinDataTable;
     
-    UIGS_Common_DataDevSettings_Characters();
-
 };
 

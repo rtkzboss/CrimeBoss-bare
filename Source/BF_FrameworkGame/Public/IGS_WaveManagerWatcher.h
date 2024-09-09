@@ -10,6 +10,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WaveManagerWatcher : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_WaveManagerWatcher(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool StartOnAlarm;
@@ -68,8 +70,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float BreakLength;
     
-public:
-    AIGS_WaveManagerWatcher(const FObjectInitializer& ObjectInitializer);
-
 };
 

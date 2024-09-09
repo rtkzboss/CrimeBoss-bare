@@ -14,14 +14,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_SquadManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<AIGS_SquadFramework*> Squads;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UIGS_SquadClassesHolder* SquadClassesHolder;
-    
-public:
     UIGS_SquadManager();
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
@@ -32,6 +24,13 @@ public:
     
     UFUNCTION(BlueprintCallable)
     AIGS_SquadFramework* AddSquad(EIGS_TeamSideEnum inTeamSide, EIGS_UnitSpecialization inSpecialization);
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<AIGS_SquadFramework*> Squads;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UIGS_SquadClassesHolder* SquadClassesHolder;
     
 };
 

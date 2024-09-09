@@ -13,17 +13,6 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadBreachRemoveDoors : public UIGS_BTTask_SquadDoorBreachBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    AIGS_GameCharacterFramework* ContextActionCharacter;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UIGS_AICommand* ContextActionCommand;
-    
-    UPROPERTY()
-    UObject* BreachObject;
-    
-public:
     UIGS_BTTask_SquadBreachRemoveDoors();
 
 protected:
@@ -32,6 +21,15 @@ protected:
     
     UFUNCTION()
     static UIGS_AICommand* CommandToClearObstacle(AIGS_GameCharacterFramework* inAgent, AActor* BreachableObject, bool IsRight);
+    
+    UPROPERTY(EditDefaultsOnly)
+    AIGS_GameCharacterFramework* ContextActionCharacter;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UIGS_AICommand* ContextActionCommand;
+    
+    UPROPERTY()
+    UObject* BreachObject;
     
 };
 

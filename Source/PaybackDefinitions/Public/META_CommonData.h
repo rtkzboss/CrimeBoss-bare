@@ -39,6 +39,290 @@ UCLASS()
 class PAYBACKDEFINITIONS_API UMETA_CommonData : public UIGS_MenuCommonData_Base {
     GENERATED_BODY()
 public:
+    UMETA_CommonData();
+
+    UFUNCTION(BlueprintPure)
+    bool NeedRemoveUnfinishedMissions() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsMissionGangMission(const FGameplayTag inScenario) const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<EMETA_TradeVendor> GetVendorsForTrade(FGameplayTag inLootTag) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetTrendDataByLootTag(FGameplayTag inMainLootTag, FMETA_PawnShopTrendData& outTrendData, bool& outSuccess) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetTradeVendorCooldownAfterFailure() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_TradeRelationshipInfo GetTradeRelationshipInfo(EMETA_TradeRelationship inTradeRelationship, bool& bSuccess) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void GetTradeRelationshipData(TMap<EMETA_TradeRelationship, int32>& outBetterPriceChancesData, TMap<EMETA_TradeRelationship, int32>& outNoDealChancesData, TMap<EMETA_TradeRelationship, int32>& outVendorAttackChancesData);
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetTimeForCharactersMoodSwitchToNeutral() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetTileCapacityBySize(const EMETA_TileSize inTileSize);
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_StatisticsRootTags GetStatisticsRootTags() const;
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTagContainer GetStatisticsRootTagContainer() const;
+    
+    UFUNCTION(BlueprintPure)
+    EMETA_RespectLvl GetRespectLvlRelatedToTurfsAmount(int32 inTurfsUnderControl) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetRandomPoolSize() const;
+    
+    UFUNCTION(BlueprintCallable)
+    float GetRandomizedPercentOfSoldiersArrestedByDetectiveOnPlayersTile();
+    
+    UFUNCTION(BlueprintCallable)
+    int32 GetRandomizedAmountOfDaysDetectivesStaysOnTileAfterNeutralization();
+    
+    UFUNCTION(BlueprintPure)
+    TArray<EMETA_RandEventCategory> GetRandEventsCategoriesPriority() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_RandEventCategoryConfig GetRandEventCategoryConfig(EMETA_RandEventCategory inRandEventCategory);
+    
+    UFUNCTION(BlueprintCallable)
+    void GetPricesForLootByVendor(EMETA_TradeVendor inVendor, FGameplayTag inLootTag, int32 inAmountOfLoot, int32& outOriginPrice, int32& outIncreasePrice, int32& outMaxPrice);
+    
+    UFUNCTION(BlueprintPure)
+    float GetPriceBonus(EMETA_TradeVendor inTradeVendor, FGameplayTag inLootTag) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetPoliceInvestigationPerStartedBancruptcy() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetPoliceInvestigationPerKilledDetective() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetPoliceInvestigationPerKilledCivilian() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetPoliceInvestigationIncreaseForElapsedDay(EMETA_RespectLvl inCurrentRespect) const;
+    
+    UFUNCTION(BlueprintCallable)
+    int32 GetPoliceInvestigationGradeByMissionObjectivesResults(bool inMissionSuccess, bool inClenExecObjectiveRes, bool inExtraObjectiveRes);
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetPoliceInvestigationChangeForTurfCapture() const;
+    
+    UFUNCTION(BlueprintPure)
+    TMap<EMETA_PoliceInvestigationChangeForGraph, int32> GetPoliceInvestigationChangeForGraphAction() const;
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_CharacterID GetPlayersCharacterID() const;
+    
+    UFUNCTION(BlueprintPure)
+    TMap<FGameplayTag, FMETA_PerkInfo> GetPerkInfoData() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_PerkInfo GetPerkInfo(FGameplayTag inPerk, bool& bSuccess) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetMaxRevengePoolSize() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetMaxPoliceInvestigationValue() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetMaxAmountOfAvailableGoals() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetMaxAmountOfActiveGoals() const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<FGameplayTag> GetMainLootTagsForTrends() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_FloatInterval GetLootAmountPercentForAmbush() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_Interval GetInternalHeatRange();
+    
+    UFUNCTION(BlueprintCallable)
+    EMETA_IntelUnlockLevel GetIntelUnlockedLevelByIntelValue(int32 inIntelLevel);
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_IntelDataSetup GetIntelDataSetup() const;
+    
+    UFUNCTION(BlueprintPure)
+    TMap<EMETA_TradeVendor, EMETA_TradeRelationship> GetInitialTradeRelationship() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetInitialHeatValue() const;
+    
+    UFUNCTION(BlueprintPure)
+    EMETA_Heat GetInitialHeatState() const;
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTag GetID_SurvivalEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTag GetID_SelfReturnEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTag GetID_DeathEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetHowManyDaysGenericHeistersStayingInPoolForFuneral() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_HeatTurfWarData GetHeatTurfWarData();
+    
+    UFUNCTION(BlueprintPure)
+    EMETA_Heat GetHeatLevelWhenPoliceInvestigation100Percent() const;
+    
+    UFUNCTION(BlueprintPure)
+    TMap<EMETA_Heat, FMETA_HealLevelData> GetHeatLevelsData() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_HeatHeistsData GetHeatHeistsData();
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTagContainer GetGoodTraits() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_GangTradeInfo GetGangTradeInfo(EMETA_TradeVendor inTradeVendor, bool& bSuccess) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetDurationMoneyMakingOpportunities() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_DetectivesInvestigationConfig GetDetectivesInvestigationConfigForPoliceInvestigationPercent(const int32 inPoliceInvestigationPercent, TSet<int32> inForbiddenValues, int32& outSelectedValue);
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTag GetDetectiveObjectivePreset() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_DetectiveChancesToAppear GetDetectiveChancesToAppear();
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_Interval GetDaysIntervalAfterLoss_SurvivalEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_Interval GetDaysIntervalAfterLoss_SelfReturnEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_Interval GetDaysIntervalAfterLoss_DeathEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetDayOfBankruptcyWhenHeistersStartLeavePlayer() const;
+    
+    UFUNCTION(BlueprintCallable)
+    EIGS_AITiers GetCurrentSWATTier(int32 inInvestigation);
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetCrewCapacity(EMETA_RespectLvl inBossStatus) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetCooldownMoneyMakingOpportunities() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetCooldownForFuneralOfGenericHeisters() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetChanceToPickSecondaryGangFromNearestGangs() const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetChancesForWeaponsLoss_SelfReturnEvent(float& outChanceToLosePrimaryWeaponAfterReturn, float& outChanceToLoseSecondaryWeaponAfterReturn) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceOfUsingPriorityPool() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceOfCharacterCanBeSelectedForRevengePool() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForUnique_SurvivalEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForUnique_SelfReturnEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForUnique_DeathEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForUnique_ArrestEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForGeneric_SurvivalEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForGeneric_SelfReturnEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForGeneric_DeathEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetChanceForGeneric_ArrestEvent() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_CampaignUserDifficultyConfiguration GetCampaignDifficultyConfiguration(const EIGS_UserDifficulty inUserDifficulty) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetBossLoadout(UClass*& outPrimaryWeapon, UClass*& outSecondaryWeapon, UClass*& outEquipment) const;
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTagContainer GetBadTraits() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_Interval GetAmountOfUnseenItemsToBeAddedForPurchase() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_Interval GetAmountOfSuccessfulMissionsForNextUnlocks() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_Interval GetAmountOfSuccessfulMissionsForFirstUnlock() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetAmountOfMissionsCanBeCompletedByBossPerDay() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetAmountOfInitialTraits() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_Interval GetAmountMissionGeneratedEveryDay() const;
+    
+    UFUNCTION(BlueprintPure)
+    EMETA_AmbushType GetAmbushTypeByFPSMissionTag(FGameplayTag inMissionTag) const;
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTag GetAmbushTagByType(EMETA_AmbushType inType) const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_AmbushConfig GetAmbushConfig();
+    
+    UFUNCTION(BlueprintPure)
+    TSet<EMETA_Gang> FilterGangsWithGangMissions(const TArray<EMETA_Gang>& inAliveGangs) const;
+    
+    UFUNCTION(BlueprintPure)
+    bool CanUseRandEventsCategoriesPriority() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool CanLootItemBeTradedWithVendor(EMETA_TradeVendor inVendor, FGameplayTag inLootTag) const;
+    
+    UFUNCTION(BlueprintPure)
+    bool CanFPSMissionAffectPoliceInvestigation(EMETA_FPSMissionSubtype inSubtype) const;
+    
+    UFUNCTION(BlueprintPure)
+    bool CanFPSMissionAffectHeat(EMETA_FPSMissionSubtype inSubtype) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void CalculateTrendDistribution(FGameplayTagContainer& outPositiveTrends, FGameplayTagContainer& outNegativeTrends);
+    
+    UFUNCTION(BlueprintPure)
+    void CalculateNextTrendChangeDirection(bool& outPositive) const;
+    
 protected:
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, int32> RelationOfTurfsToRespect;
@@ -330,291 +614,6 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     FMETA_Interval AmountOfUnseenItemsToBeAddedForPurchase;
-    
-public:
-    UMETA_CommonData();
-
-    UFUNCTION(BlueprintPure)
-    bool NeedRemoveUnfinishedMissions() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsMissionGangMission(const FGameplayTag inScenario) const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<EMETA_TradeVendor> GetVendorsForTrade(FGameplayTag inLootTag) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetTrendDataByLootTag(FGameplayTag inMainLootTag, FMETA_PawnShopTrendData& outTrendData, bool& outSuccess) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetTradeVendorCooldownAfterFailure() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_TradeRelationshipInfo GetTradeRelationshipInfo(EMETA_TradeRelationship inTradeRelationship, bool& bSuccess) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void GetTradeRelationshipData(TMap<EMETA_TradeRelationship, int32>& outBetterPriceChancesData, TMap<EMETA_TradeRelationship, int32>& outNoDealChancesData, TMap<EMETA_TradeRelationship, int32>& outVendorAttackChancesData);
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetTimeForCharactersMoodSwitchToNeutral() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetTileCapacityBySize(const EMETA_TileSize inTileSize);
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_StatisticsRootTags GetStatisticsRootTags() const;
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTagContainer GetStatisticsRootTagContainer() const;
-    
-    UFUNCTION(BlueprintPure)
-    EMETA_RespectLvl GetRespectLvlRelatedToTurfsAmount(int32 inTurfsUnderControl) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetRandomPoolSize() const;
-    
-    UFUNCTION(BlueprintCallable)
-    float GetRandomizedPercentOfSoldiersArrestedByDetectiveOnPlayersTile();
-    
-    UFUNCTION(BlueprintCallable)
-    int32 GetRandomizedAmountOfDaysDetectivesStaysOnTileAfterNeutralization();
-    
-    UFUNCTION(BlueprintPure)
-    TArray<EMETA_RandEventCategory> GetRandEventsCategoriesPriority() const;
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_RandEventCategoryConfig GetRandEventCategoryConfig(EMETA_RandEventCategory inRandEventCategory);
-    
-    UFUNCTION(BlueprintCallable)
-    void GetPricesForLootByVendor(EMETA_TradeVendor inVendor, FGameplayTag inLootTag, int32 inAmountOfLoot, int32& outOriginPrice, int32& outIncreasePrice, int32& outMaxPrice);
-    
-    UFUNCTION(BlueprintPure)
-    float GetPriceBonus(EMETA_TradeVendor inTradeVendor, FGameplayTag inLootTag) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetPoliceInvestigationPerStartedBancruptcy() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetPoliceInvestigationPerKilledDetective() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetPoliceInvestigationPerKilledCivilian() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetPoliceInvestigationIncreaseForElapsedDay(EMETA_RespectLvl inCurrentRespect) const;
-    
-    UFUNCTION(BlueprintCallable)
-    int32 GetPoliceInvestigationGradeByMissionObjectivesResults(bool inMissionSuccess, bool inClenExecObjectiveRes, bool inExtraObjectiveRes);
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetPoliceInvestigationChangeForTurfCapture() const;
-    
-    UFUNCTION(BlueprintPure)
-    TMap<EMETA_PoliceInvestigationChangeForGraph, int32> GetPoliceInvestigationChangeForGraphAction() const;
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_CharacterID GetPlayersCharacterID() const;
-    
-    UFUNCTION(BlueprintPure)
-    TMap<FGameplayTag, FMETA_PerkInfo> GetPerkInfoData() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_PerkInfo GetPerkInfo(FGameplayTag inPerk, bool& bSuccess) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetMaxRevengePoolSize() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetMaxPoliceInvestigationValue() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetMaxAmountOfAvailableGoals() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetMaxAmountOfActiveGoals() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<FGameplayTag> GetMainLootTagsForTrends() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_FloatInterval GetLootAmountPercentForAmbush() const;
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_Interval GetInternalHeatRange();
-    
-    UFUNCTION(BlueprintCallable)
-    EMETA_IntelUnlockLevel GetIntelUnlockedLevelByIntelValue(int32 inIntelLevel);
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_IntelDataSetup GetIntelDataSetup() const;
-    
-    UFUNCTION(BlueprintPure)
-    TMap<EMETA_TradeVendor, EMETA_TradeRelationship> GetInitialTradeRelationship() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetInitialHeatValue() const;
-    
-    UFUNCTION(BlueprintPure)
-    EMETA_Heat GetInitialHeatState() const;
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTag GetID_SurvivalEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTag GetID_SelfReturnEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTag GetID_DeathEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetHowManyDaysGenericHeistersStayingInPoolForFuneral() const;
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_HeatTurfWarData GetHeatTurfWarData();
-    
-    UFUNCTION(BlueprintPure)
-    EMETA_Heat GetHeatLevelWhenPoliceInvestigation100Percent() const;
-    
-    UFUNCTION(BlueprintPure)
-    TMap<EMETA_Heat, FMETA_HealLevelData> GetHeatLevelsData() const;
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_HeatHeistsData GetHeatHeistsData();
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTagContainer GetGoodTraits() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_GangTradeInfo GetGangTradeInfo(EMETA_TradeVendor inTradeVendor, bool& bSuccess) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetDurationMoneyMakingOpportunities() const;
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_DetectivesInvestigationConfig GetDetectivesInvestigationConfigForPoliceInvestigationPercent(const int32 inPoliceInvestigationPercent, TSet<int32> inForbiddenValues, int32& outSelectedValue);
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTag GetDetectiveObjectivePreset() const;
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_DetectiveChancesToAppear GetDetectiveChancesToAppear();
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_Interval GetDaysIntervalAfterLoss_SurvivalEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_Interval GetDaysIntervalAfterLoss_SelfReturnEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_Interval GetDaysIntervalAfterLoss_DeathEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetDayOfBankruptcyWhenHeistersStartLeavePlayer() const;
-    
-    UFUNCTION(BlueprintCallable)
-    EIGS_AITiers GetCurrentSWATTier(int32 inInvestigation);
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetCrewCapacity(EMETA_RespectLvl inBossStatus) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetCooldownMoneyMakingOpportunities() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetCooldownForFuneralOfGenericHeisters() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetChanceToPickSecondaryGangFromNearestGangs() const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetChancesForWeaponsLoss_SelfReturnEvent(float& outChanceToLosePrimaryWeaponAfterReturn, float& outChanceToLoseSecondaryWeaponAfterReturn) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceOfUsingPriorityPool() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceOfCharacterCanBeSelectedForRevengePool() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForUnique_SurvivalEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForUnique_SelfReturnEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForUnique_DeathEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForUnique_ArrestEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForGeneric_SurvivalEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForGeneric_SelfReturnEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForGeneric_DeathEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetChanceForGeneric_ArrestEvent() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_CampaignUserDifficultyConfiguration GetCampaignDifficultyConfiguration(const EIGS_UserDifficulty inUserDifficulty) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetBossLoadout(UClass*& outPrimaryWeapon, UClass*& outSecondaryWeapon, UClass*& outEquipment) const;
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTagContainer GetBadTraits() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_Interval GetAmountOfUnseenItemsToBeAddedForPurchase() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_Interval GetAmountOfSuccessfulMissionsForNextUnlocks() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_Interval GetAmountOfSuccessfulMissionsForFirstUnlock() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetAmountOfMissionsCanBeCompletedByBossPerDay() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetAmountOfInitialTraits() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_Interval GetAmountMissionGeneratedEveryDay() const;
-    
-    UFUNCTION(BlueprintPure)
-    EMETA_AmbushType GetAmbushTypeByFPSMissionTag(FGameplayTag inMissionTag) const;
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTag GetAmbushTagByType(EMETA_AmbushType inType) const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_AmbushConfig GetAmbushConfig();
-    
-    UFUNCTION(BlueprintPure)
-    TSet<EMETA_Gang> FilterGangsWithGangMissions(const TArray<EMETA_Gang>& inAliveGangs) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool CanUseRandEventsCategoriesPriority() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool CanLootItemBeTradedWithVendor(EMETA_TradeVendor inVendor, FGameplayTag inLootTag) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool CanFPSMissionAffectPoliceInvestigation(EMETA_FPSMissionSubtype inSubtype) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool CanFPSMissionAffectHeat(EMETA_FPSMissionSubtype inSubtype) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void CalculateTrendDistribution(FGameplayTagContainer& outPositiveTrends, FGameplayTagContainer& outNegativeTrends);
-    
-    UFUNCTION(BlueprintPure)
-    void CalculateNextTrendChangeDirection(bool& outPositive) const;
     
 };
 

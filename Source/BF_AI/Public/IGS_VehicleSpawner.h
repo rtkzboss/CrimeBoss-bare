@@ -17,6 +17,29 @@ UCLASS()
 class BF_AI_API AIGS_VehicleSpawner : public AIGS_VehicleSpawnerFramework {
     GENERATED_BODY()
 public:
+    AIGS_VehicleSpawner(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    AIGS_VehicleBase* SpawnVehicleOnPath(TSoftClassPtr<AIGS_VehicleBase> invehicleToSpawn, TArray<UIGS_TrafficPathComponent*> InPath);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<AIGS_VehicleBase*> SpawnSpecific(TSubclassOf<UIGS_VehicleObject> inSpecificVehicle, int32 inVehicleCount, int32 minPassengers, int32 maxPassengers);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<AIGS_VehicleBase*> Spawn(EIGS_VehicleSpawnGroup inVehicleGroup, int32 inVehicleCount, int32 minPassengers, int32 maxPassengers);
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_VehicleBase*> GetSpawnedVehicles() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void Enable();
+    
+    UFUNCTION(BlueprintCallable)
+    void Disable();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void BPTick(float DeltaSeconds);
+    
     UPROPERTY(BlueprintAssignable)
     FSpawnerEvent OnAllDriveFinished;
     
@@ -44,30 +67,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly)
     bool bEnabled;
-    
-public:
-    AIGS_VehicleSpawner(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    AIGS_VehicleBase* SpawnVehicleOnPath(TSoftClassPtr<AIGS_VehicleBase> invehicleToSpawn, TArray<UIGS_TrafficPathComponent*> InPath);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<AIGS_VehicleBase*> SpawnSpecific(TSubclassOf<UIGS_VehicleObject> inSpecificVehicle, int32 inVehicleCount, int32 minPassengers, int32 maxPassengers);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<AIGS_VehicleBase*> Spawn(EIGS_VehicleSpawnGroup inVehicleGroup, int32 inVehicleCount, int32 minPassengers, int32 maxPassengers);
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_VehicleBase*> GetSpawnedVehicles() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void Enable();
-    
-    UFUNCTION(BlueprintCallable)
-    void Disable();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void BPTick(float DeltaSeconds);
     
 };
 

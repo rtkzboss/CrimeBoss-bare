@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_ClearCoverPoint : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_ClearCoverPoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverdKey;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float Distance;
     
-public:
-    UIGS_BTService_ClearCoverPoint();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_PoliceVehicle : public AIGS_VehicleCar {
     GENERATED_BODY()
 public:
+    AIGS_PoliceVehicle(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* PoliceSirenAkEvent;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkRtpc* PoliceSirenAkRtpc;
     
-public:
-    AIGS_PoliceVehicle(const FObjectInitializer& ObjectInitializer);
-
 };
 

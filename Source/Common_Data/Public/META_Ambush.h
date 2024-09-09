@@ -14,11 +14,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_Ambush : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    FMETA_AmbushMissionSave m_AmbushMissionSave;
-    
-public:
     UMETA_Ambush();
 
     UFUNCTION(BlueprintCallable)
@@ -44,6 +39,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FMETA_AmbushMissionRowInfo GetInfo() const;
+    
+private:
+    UPROPERTY()
+    FMETA_AmbushMissionSave m_AmbushMissionSave;
     
 };
 

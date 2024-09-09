@@ -14,15 +14,15 @@ UCLASS()
 class BF_AI_API AIGS_AIControllerPlayerBot : public AIGS_AIControllerGame, public IIGS_HeisterDataInterface, public IIGS_HeisterNumberInterface, public IIGS_CharacterIDInterface {
     GENERATED_BODY()
 public:
+    AIGS_AIControllerPlayerBot(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(Instanced)
     UIGS_PlayerBotControllerComponent* m_PlayerBotComponent;
     
-public:
-    AIGS_AIControllerPlayerBot(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
+public:
     UFUNCTION(BlueprintCallable)
     void SetHeisterNumber(int32 inHeisterNumber) override PURE_VIRTUAL(SetHeisterNumber,);
     

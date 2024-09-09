@@ -9,10 +9,10 @@ UCLASS()
 class BF_AI_API UIGS_AICommandUseObject : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandUseObject();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AActor* ObjectToUse;
     
-    UIGS_AICommandUseObject();
-
 };
 

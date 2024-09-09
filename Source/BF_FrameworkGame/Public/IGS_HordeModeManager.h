@@ -13,24 +13,7 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_HordeModeManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_HordeModeActiveSignature OnHordeModeActiveChanged;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_HordeModeValuesChangedSignature OnHordeModeValuesChanged;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_HordeModeTokenAddedSignature OnHordeModeTokenAdded;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HordeModeActive)
-    bool bIsHordeModeActive;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HordeModeValues)
-    FIGS_HordeModeValues HordeModeValues;
-    
     UIGS_HordeModeManager(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetHordeModeCounterValues(const UObject* inWCO, int32 inTotalValue, float inCurrentProgress);
@@ -49,5 +32,22 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void AddTokensToAllPlayers(const UObject* inWCO, int32 inTokensCount);
     
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_HordeModeActiveSignature OnHordeModeActiveChanged;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_HordeModeValuesChangedSignature OnHordeModeValuesChanged;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_HordeModeTokenAddedSignature OnHordeModeTokenAdded;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HordeModeActive)
+    bool bIsHordeModeActive;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HordeModeValues)
+    FIGS_HordeModeValues HordeModeValues;
+    
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

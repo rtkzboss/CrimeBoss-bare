@@ -10,9 +10,6 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_NotificationManagerComponent : public UIGS_NotificationManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    TArray<UMETA_BaseNotification*> NotificationQueue;
-    
     UMETA_NotificationManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -22,6 +19,9 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void AddNotification(UMETA_BaseNotification* inNotification);
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<UMETA_BaseNotification*> NotificationQueue;
     
 };
 

@@ -20,6 +20,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AISpawnerData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AISpawnerData();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UEnvQuery> GroupEnvironmentQuery;
     
@@ -74,7 +76,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_SpawnerNavFiltersHolder CommonNavFilters;
     
-    UIGS_AISpawnerData();
-
 };
 

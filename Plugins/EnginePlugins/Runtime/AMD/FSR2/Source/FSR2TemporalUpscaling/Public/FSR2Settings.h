@@ -12,6 +12,8 @@ UCLASS(DefaultConfig, Config=Engine)
 class FSR2TEMPORALUPSCALING_API UFSR2Settings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UFSR2Settings();
+
     UPROPERTY(Config, EditAnywhere)
     bool bEnabled;
     
@@ -93,7 +95,5 @@ public:
     UPROPERTY(Config, EditAnywhere)
     float ForceReactiveMaterialValue;
     
-    UFSR2Settings();
-
 };
 

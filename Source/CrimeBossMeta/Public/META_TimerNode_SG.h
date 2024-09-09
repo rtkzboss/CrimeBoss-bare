@@ -9,6 +9,14 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_TimerNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_TimerNode_SG();
+
+    UFUNCTION(BlueprintCallable)
+    void SetSaveData(FMETA_TimerNodeSaveData SaveData);
+    
+    UFUNCTION(BlueprintCallable)
+    void GetSaveData(FMETA_TimerNodeSaveData& SaveData);
+    
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 MinDaysValue;
     
@@ -23,14 +31,6 @@ public:
     
     UPROPERTY()
     int32 ResultValue;
-    
-    UMETA_TimerNode_SG();
-
-    UFUNCTION(BlueprintCallable)
-    void SetSaveData(FMETA_TimerNodeSaveData SaveData);
-    
-    UFUNCTION(BlueprintCallable)
-    void GetSaveData(FMETA_TimerNodeSaveData& SaveData);
     
 };
 

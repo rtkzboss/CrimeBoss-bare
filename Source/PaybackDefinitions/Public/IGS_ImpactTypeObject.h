@@ -10,6 +10,8 @@ UCLASS(Abstract)
 class PAYBACKDEFINITIONS_API UIGS_ImpactTypeObject : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_ImpactTypeObject();
+
     UPROPERTY(EditAnywhere)
     UAkSwitchValue* SwitchValue;
     
@@ -19,7 +21,5 @@ public:
     UPROPERTY(EditAnywhere)
     EIGS_WoundType WoundType;
     
-    UIGS_ImpactTypeObject();
-
 };
 

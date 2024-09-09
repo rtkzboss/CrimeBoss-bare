@@ -8,13 +8,13 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkJumpComponent : public UIGS_NavLinkComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_NavLinkJumpComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector BezierControlPoint;
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector BezierControlPointOffset;
     
-    UIGS_NavLinkJumpComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

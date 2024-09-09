@@ -30,6 +30,56 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIDirector : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_AIDirector();
+
+    UFUNCTION(BlueprintCallable)
+    void SetGlobalAggro(AActor* inActor, float InFloat, const AActor* inInstigator);
+    
+    UFUNCTION()
+    void RemoveGlobalAggroEntry(AActor* inActor);
+    
+    UFUNCTION(BlueprintCallable)
+    UIGS_WaveManager* GetWaveManager();
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_TrafficManager* GetTrafficManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_PressureManager* GetPressureManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_MountedWeaponManager* GetMountedWeaponManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetGlobalAggro(const AActor* inActor, const AActor* inInstigator) const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_DetectionManager* GetDetectionManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_DefendManager* GetDefendManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_ControlRoomBase* GetControlRoomForSquad(int32 inSquadID);
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_GuardControlRoomComponentBase* GetControlRoomComponentForSquad(int32 inSquadID);
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_AmbientLifeManager* GetAmbientLifeManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_AISpawner* GetAISpawner() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_AIPointManager* GetAIPointsManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_AIEventsDispatcher* GetAIEventsDispatcher() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_AIDifficultyManager* GetAIDifficultyManager() const;
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OnCharacterRegisteredDynamicSignature OnCharacterRegisteredEvent;
     
@@ -126,57 +176,6 @@ private:
     
     UPROPERTY(Transient)
     bool MatchStartedForAI;
-    
-public:
-    UIGS_AIDirector();
-
-    UFUNCTION(BlueprintCallable)
-    void SetGlobalAggro(AActor* inActor, float InFloat, const AActor* inInstigator);
-    
-    UFUNCTION()
-    void RemoveGlobalAggroEntry(AActor* inActor);
-    
-    UFUNCTION(BlueprintCallable)
-    UIGS_WaveManager* GetWaveManager();
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_TrafficManager* GetTrafficManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_PressureManager* GetPressureManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_MountedWeaponManager* GetMountedWeaponManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetGlobalAggro(const AActor* inActor, const AActor* inInstigator) const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_DetectionManager* GetDetectionManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_DefendManager* GetDefendManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_ControlRoomBase* GetControlRoomForSquad(int32 inSquadID);
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_GuardControlRoomComponentBase* GetControlRoomComponentForSquad(int32 inSquadID);
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_AmbientLifeManager* GetAmbientLifeManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_AISpawner* GetAISpawner() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_AIPointManager* GetAIPointsManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_AIEventsDispatcher* GetAIEventsDispatcher() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_AIDifficultyManager* GetAIDifficultyManager() const;
     
 };
 

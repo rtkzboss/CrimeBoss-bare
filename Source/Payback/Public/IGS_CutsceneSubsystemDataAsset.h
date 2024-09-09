@@ -12,6 +12,8 @@ UCLASS(BlueprintType)
 class PAYBACK_API UIGS_CutsceneSubsystemDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_CutsceneSubsystemDataAsset();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FIGS_CutsceneCharacterKey, TSoftClassPtr<AIGS_CharacterPaperDoll>> CharactersPaperdoll;
     
@@ -33,7 +35,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* CustomMusicStopAkEvent;
     
-    UIGS_CutsceneSubsystemDataAsset();
-
 };
 

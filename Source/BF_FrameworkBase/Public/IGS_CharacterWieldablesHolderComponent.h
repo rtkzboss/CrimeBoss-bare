@@ -25,83 +25,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_CharacterWieldablesHolderComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
-    bool bForceHideWeapon;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ActiveWieldableHolsterEventSignature OnActiveWieldableHolsterEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ActiveWieldableChangeEventSignature OnActiveWieldableBeginChange;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ActiveWieldableChangeEventSignature OnActiveWieldableChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PrimarySlotChangeFailedEventSignature OnPrimarySlotChangeFailed;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_WieldableAddedEventSignature OnWieldableAddedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_WieldableRemovedEventSignature OnWieldableRemovedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_WieldableChangedEventSignature OnWieldableChangedEvent;
-    
-    UPROPERTY()
-    bool CanBeUnholstered;
-    
-    UPROPERTY()
-    EIGS_WieldableSlot InitialSlot;
-    
-protected:
-    UPROPERTY(VisibleAnywhere)
-    AIGS_WieldableBase* CurrentWieldableActor;
-    
-    UPROPERTY(VisibleAnywhere)
-    EIGS_WieldableSlot CurrentSlotType;
-    
-    UPROPERTY(VisibleAnywhere)
-    EIGS_WieldableSlot LastSlotType;
-    
-    UPROPERTY(VisibleAnywhere)
-    bool bIsUnarmed;
-    
-    UPROPERTY(VisibleAnywhere)
-    EIGS_WieldableClass CurrentWieldableClass;
-    
-    UPROPERTY(VisibleAnywhere)
-    TArray<FIGS_WieldableSlot> WieldableSlots;
-    
-    UPROPERTY(VisibleAnywhere)
-    FIGS_WieldableExchange WieldableExchange;
-    
-    UPROPERTY(VisibleAnywhere)
-    TWeakObjectPtr<AIGS_GameCharacterFramework> Owner;
-    
-    UPROPERTY(VisibleAnywhere)
-    TWeakObjectPtr<AIGS_PlayerFPVArmsFramework> OwnerArmsActor;
-    
-    UPROPERTY(VisibleAnywhere)
-    bool bIsFirstPerson;
-    
-    UPROPERTY(VisibleAnywhere)
-    bool bIsLocallyControlled;
-    
-    UPROPERTY(EditDefaultsOnly)
-    bool bHasCustomSlotFiltering;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    int32 ReduceWeaponDamageForTeamSides;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<UGameplayEffect> ReducedWeaponDamageEffect;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FGameplayTagQuery AllowedWieldables;
-    
-public:
     UIGS_CharacterWieldablesHolderComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -208,6 +131,82 @@ public:
     
     UFUNCTION(BlueprintCallable)
     bool AddOrSwapWieldable(UIGS_WieldableInventoryObjectBase* inInventoryObject, bool inSelect);
+    
+    UPROPERTY(VisibleAnywhere)
+    bool bForceHideWeapon;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ActiveWieldableHolsterEventSignature OnActiveWieldableHolsterEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ActiveWieldableChangeEventSignature OnActiveWieldableBeginChange;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ActiveWieldableChangeEventSignature OnActiveWieldableChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PrimarySlotChangeFailedEventSignature OnPrimarySlotChangeFailed;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WieldableAddedEventSignature OnWieldableAddedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WieldableRemovedEventSignature OnWieldableRemovedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WieldableChangedEventSignature OnWieldableChangedEvent;
+    
+    UPROPERTY()
+    bool CanBeUnholstered;
+    
+    UPROPERTY()
+    EIGS_WieldableSlot InitialSlot;
+    
+protected:
+    UPROPERTY(VisibleAnywhere)
+    AIGS_WieldableBase* CurrentWieldableActor;
+    
+    UPROPERTY(VisibleAnywhere)
+    EIGS_WieldableSlot CurrentSlotType;
+    
+    UPROPERTY(VisibleAnywhere)
+    EIGS_WieldableSlot LastSlotType;
+    
+    UPROPERTY(VisibleAnywhere)
+    bool bIsUnarmed;
+    
+    UPROPERTY(VisibleAnywhere)
+    EIGS_WieldableClass CurrentWieldableClass;
+    
+    UPROPERTY(VisibleAnywhere)
+    TArray<FIGS_WieldableSlot> WieldableSlots;
+    
+    UPROPERTY(VisibleAnywhere)
+    FIGS_WieldableExchange WieldableExchange;
+    
+    UPROPERTY(VisibleAnywhere)
+    TWeakObjectPtr<AIGS_GameCharacterFramework> Owner;
+    
+    UPROPERTY(VisibleAnywhere)
+    TWeakObjectPtr<AIGS_PlayerFPVArmsFramework> OwnerArmsActor;
+    
+    UPROPERTY(VisibleAnywhere)
+    bool bIsFirstPerson;
+    
+    UPROPERTY(VisibleAnywhere)
+    bool bIsLocallyControlled;
+    
+    UPROPERTY(EditDefaultsOnly)
+    bool bHasCustomSlotFiltering;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    int32 ReduceWeaponDamageForTeamSides;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<UGameplayEffect> ReducedWeaponDamageEffect;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FGameplayTagQuery AllowedWieldables;
     
 };
 

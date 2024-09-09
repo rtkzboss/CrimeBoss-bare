@@ -25,6 +25,31 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_VehicleBoat : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:
+    AIGS_VehicleBoat(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintCallable)
+    void StartDrive_BP(TArray<UIGS_TrafficPathComponent*> InPath);
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetSocketMesh(UStaticMeshComponent* InMesh, FName inSocket) const;
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void SetCustomDestination(FVector InLocation, FRotator InRotation);
+    
+    UFUNCTION(BlueprintCallable)
+    void ParkBoat();
+    
+    UFUNCTION(BlueprintPure)
+    void GetBuoyancyWaterStatus(int32 Index, bool& outInWater);
+    
+    UFUNCTION(BlueprintPure)
+    void GetBuoyancyData(FBuoyancyData& outBuoyancyData);
+    
+    UFUNCTION(BlueprintCallable)
+    void ChangeBoatSpeed(float newSpeed);
+    
     UPROPERTY(BlueprintReadOnly)
     bool UseCustomDestination;
     
@@ -144,32 +169,7 @@ protected:
     FIGS_BuoyancySimulation m_BuoyancySim;
     
 public:
-    AIGS_VehicleBoat(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintCallable)
-    void StartDrive_BP(TArray<UIGS_TrafficPathComponent*> InPath);
-    
-public:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetSocketMesh(UStaticMeshComponent* InMesh, FName inSocket) const;
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void SetCustomDestination(FVector InLocation, FRotator InRotation);
-    
-    UFUNCTION(BlueprintCallable)
-    void ParkBoat();
-    
-    UFUNCTION(BlueprintPure)
-    void GetBuoyancyWaterStatus(int32 Index, bool& outInWater);
-    
-    UFUNCTION(BlueprintPure)
-    void GetBuoyancyData(FBuoyancyData& outBuoyancyData);
-    
-    UFUNCTION(BlueprintCallable)
-    void ChangeBoatSpeed(float newSpeed);
-    
 };
 

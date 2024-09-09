@@ -7,10 +7,10 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIDetectionComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AIDetectionComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool ShouldFacePlayerOnDetection;
     
-    UIGS_AIDetectionComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

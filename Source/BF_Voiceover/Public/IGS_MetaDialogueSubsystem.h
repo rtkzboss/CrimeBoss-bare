@@ -21,44 +21,6 @@ UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_MetaDialogueSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueEvent OnDatabaseLoadFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueEvent OnMetaDialogueLevelPreloaded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueResultEvent OnDialogueLineStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueResultEvent OnDialogueLineFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueEvent OnDialogueStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueEvent OnDialogueFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueVoiceEvent OnPlayVoiceExternally;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueEvent OnStopVoiceExternally;
-    
-protected:
-    UPROPERTY()
-    UIGS_MetaDialogueSubsystemDataAsset* Data;
-    
-    UPROPERTY(Instanced)
-    UIGS_SubtitleManager* SubtitleManager;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_AkActor* AkActor;
-    
-    UPROPERTY()
-    UAkAudioEvent* PlayMetaDialogueAkEvent;
-    
-public:
     UIGS_MetaDialogueSubsystem();
 
     UFUNCTION(BlueprintCallable)
@@ -108,6 +70,43 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void DEBUG_EnableTTSMedia(bool inState);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueEvent OnDatabaseLoadFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueEvent OnMetaDialogueLevelPreloaded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueResultEvent OnDialogueLineStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueResultEvent OnDialogueLineFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueEvent OnDialogueStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueEvent OnDialogueFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueVoiceEvent OnPlayVoiceExternally;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueEvent OnStopVoiceExternally;
+    
+protected:
+    UPROPERTY()
+    UIGS_MetaDialogueSubsystemDataAsset* Data;
+    
+    UPROPERTY(Instanced)
+    UIGS_SubtitleManager* SubtitleManager;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_AkActor* AkActor;
+    
+    UPROPERTY()
+    UAkAudioEvent* PlayMetaDialogueAkEvent;
     
 };
 

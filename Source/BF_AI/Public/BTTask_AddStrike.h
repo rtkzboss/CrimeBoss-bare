@@ -8,13 +8,13 @@ UCLASS()
 class BF_AI_API UBTTask_AddStrike : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_AddStrike();
+
     UPROPERTY(EditAnywhere)
     int32 StrikeCount;
     
     UPROPERTY(EditAnywhere)
     FGameplayTag BlameTag;
     
-    UBTTask_AddStrike();
-
 };
 

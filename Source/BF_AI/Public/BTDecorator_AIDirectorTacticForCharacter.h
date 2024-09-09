@@ -8,12 +8,11 @@ UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_AIDirectorTacticForCharacter : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_AIDirectorTacticForCharacter();
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_StormTacticType DesiredTactic;
     
-public:
-    UBTDecorator_AIDirectorTacticForCharacter();
-
 };
 

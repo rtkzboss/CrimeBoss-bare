@@ -26,6 +26,50 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_StashManagerComponent : public UIGS_StashManagerBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_StashManagerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    bool TryGetValidParentLootTag(FGameplayTag inLootTag, FGameplayTag& outMetaTag);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCashForPartner(EMETA_Partner Partner, int32 inCash);
+    
+    UFUNCTION(BlueprintCallable)
+    bool RemoveEquipmentFromStashByObject(UMETA_Equipment* inEquipment);
+    
+    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+    void GetWeaponsFromStashByID(TSubclassOf<UMETA_WeaponInventoryObject> inWeaponId, UMETA_Weapon*& outWeaponsData, int32& outAmount);
+    
+    UFUNCTION(BlueprintPure)
+    void GetWarehouseAttackLosses(int32& outRemovedMoney, TMap<FGameplayTag, int32>& outRemovedLoot) const;
+    
+    UFUNCTION(BlueprintCallable)
+    TMap<FGameplayTag, int32> GetSortedLoot(bool inAscSort);
+    
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    void GetPlayersArmyTier(EMETA_ArmyTier& ArmyTier) const;
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_PartnerInfo GetPartnerInfo(EMETA_Partner Partner, bool& bSuccess);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<FGameplayTag> GetParentLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<FGameplayTag> GetLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void ChangeLootByValue(FGameplayTag inLootTag, int32 InValue, bool inRawValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void ChangeCashForPartner(EMETA_Partner Partner, int32 ByValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddEquipmentToStashByObject(UMETA_Equipment* inEquipment);
+    
+    UFUNCTION(BlueprintCallable)
+    UMETA_Equipment* AddEquipmentToStashByID(TSubclassOf<UIGS_EquipmentInventoryObject> inEquipmentId);
+    
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMETA_PartnerInfoChanged OnPartnerInfoChanged;
     
@@ -74,51 +118,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite)
     TMap<FGameplayTag, int32> LootWarehouseattackWasRemoved;
-    
-public:
-    UMETA_StashManagerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    bool TryGetValidParentLootTag(FGameplayTag inLootTag, FGameplayTag& outMetaTag);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCashForPartner(EMETA_Partner Partner, int32 inCash);
-    
-    UFUNCTION(BlueprintCallable)
-    bool RemoveEquipmentFromStashByObject(UMETA_Equipment* inEquipment);
-    
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
-    void GetWeaponsFromStashByID(TSubclassOf<UMETA_WeaponInventoryObject> inWeaponId, UMETA_Weapon*& outWeaponsData, int32& outAmount);
-    
-    UFUNCTION(BlueprintPure)
-    void GetWarehouseAttackLosses(int32& outRemovedMoney, TMap<FGameplayTag, int32>& outRemovedLoot) const;
-    
-    UFUNCTION(BlueprintCallable)
-    TMap<FGameplayTag, int32> GetSortedLoot(bool inAscSort);
-    
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    void GetPlayersArmyTier(EMETA_ArmyTier& ArmyTier) const;
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_PartnerInfo GetPartnerInfo(EMETA_Partner Partner, bool& bSuccess);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<FGameplayTag> GetParentLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<FGameplayTag> GetLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void ChangeLootByValue(FGameplayTag inLootTag, int32 InValue, bool inRawValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void ChangeCashForPartner(EMETA_Partner Partner, int32 ByValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void AddEquipmentToStashByObject(UMETA_Equipment* inEquipment);
-    
-    UFUNCTION(BlueprintCallable)
-    UMETA_Equipment* AddEquipmentToStashByID(TSubclassOf<UIGS_EquipmentInventoryObject> inEquipmentId);
     
 };
 

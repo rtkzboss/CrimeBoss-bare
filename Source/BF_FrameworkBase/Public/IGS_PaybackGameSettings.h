@@ -10,13 +10,13 @@ UCLASS(DefaultConfig, Config=Game)
 class BF_FRAMEWORKBASE_API UIGS_PaybackGameSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_PaybackGameSettings();
+
     UPROPERTY(Config, EditAnywhere)
     TMap<EIGS_TeamSideEnum, FColor> TeamSideColors;
     
     UPROPERTY(Config, EditAnywhere)
     TMap<EIGS_TeamSideEnum, FIGS_TeamSideAffinitiesHolder> TeamSideAffinitiesMap;
     
-    UIGS_PaybackGameSettings();
-
 };
 

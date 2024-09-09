@@ -17,33 +17,6 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_JobsScreenCategoryWidget : public UIGS_WidgetWithInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced)
-    UHorizontalBox* CategoryContentBox;
-    
-    UPROPERTY(Instanced)
-    UTextBlock* CategoryNameText;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UIGS_JobsItemWidget> JobsItemWidgetClass;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_JobsCategorySelect OnJobsCategorySelect;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_JobsCategorySelectNoScrollNoFocus OnJobsCategorySelectNoScrollNoFocus;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_JobsCategoryHovered OnJobItemHovered;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_JobItemSelected OnJobItemSelected;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    TArray<UIGS_JobsItemWidget*> JobItemWidgets;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool isSelected;
-    
     UIGS_JobsScreenCategoryWidget();
 
     UFUNCTION(BlueprintCallable)
@@ -74,6 +47,33 @@ public:
     
     UFUNCTION(BlueprintPure)
     UIGS_JobsItemWidget* GetFirstJobWidget() const;
+    
+    UPROPERTY(Instanced)
+    UHorizontalBox* CategoryContentBox;
+    
+    UPROPERTY(Instanced)
+    UTextBlock* CategoryNameText;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UIGS_JobsItemWidget> JobsItemWidgetClass;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_JobsCategorySelect OnJobsCategorySelect;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_JobsCategorySelectNoScrollNoFocus OnJobsCategorySelectNoScrollNoFocus;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_JobsCategoryHovered OnJobItemHovered;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_JobItemSelected OnJobItemSelected;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    TArray<UIGS_JobsItemWidget*> JobItemWidgets;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool isSelected;
     
 };
 

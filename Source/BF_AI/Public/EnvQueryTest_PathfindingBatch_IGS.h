@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_PathfindingBatch_IGS : public UEnvQueryTest_Pathfinding {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_PathfindingBatch_IGS();
+
     UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
     FAIDataProviderFloatValue ScanRangeMultiplier;
     
-    UEnvQueryTest_PathfindingBatch_IGS();
-
 };
 

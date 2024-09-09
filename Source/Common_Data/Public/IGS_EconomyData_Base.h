@@ -51,6 +51,132 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_EconomyData_Base : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_EconomyData_Base();
+
+protected:
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    void UpdateWeaponsCachedData(const UObject* inWCO);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    void UpdateEquipmentCachedData(const UObject* inWCO);
+    
+public:
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    bool TryToGenerateSecondaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    bool TryToGenerateRandomEquipmentForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, FGameplayTag inEquippedEquipment, const TArray<FGameplayTag>& inUnlockedEquipment, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    bool TryToGeneratePrimaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    bool TryGetCommonPerkLimitForCharacter(UObject* inWCO, const FGameplayTag inCharacterTag, const EMETA_ItemQuality inQuality, const int32 inLevel, int32& outLimit);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static void SetCharacterPoolNames(const UObject* inWCO, UPARAM(Ref) TArray<FMETA_CharacterInfo>& inGeneratedPool);
+    
+protected:
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    void RefreshCommonData(const UObject* inWCO);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool IsMoneyMakingScenariosAdditionalWealthAndProbabilitiesContainData(FGameplayTag inFGameplayTag) const;
+    
+    UFUNCTION(BlueprintPure)
+    static bool IsItemUnlocked(TArray<FGameplayTag> inUnlockedPool, FGameplayTag inItemTag);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    TArray<FGameplayTag> GetWeaponTagsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    TArray<UMETA_Weapon*> GetWeaponsPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, UPARAM(Ref) TArray<FGameplayTag>& inUnseenUnlockedWeapons, UPARAM(Ref) TArray<UMETA_Weapon*>& inOldWeaponsPool, int32 inTargetAmountOfUnseenItemsForPurchase);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    TArray<TSubclassOf<UMETA_WeaponInventoryObject>> GetWeaponsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inAlreadySelectedWeapons, const TArray<FGameplayTag>& inUnlockedWeapons, bool inIgnoreUnlock);
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetWeaponEconomyDataByQuality(EMETA_ItemQuality inWeaponQuality, FMETA_WeaponEconomyData& outEconomyData, bool& bSuccess) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetUniqueCharacterMissionCut(EIGS_CharacterID inCharacterID) const;
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    bool GetSuitableWeaponsAfterHeisterUpgrade(const UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, int32 inHeisterLevel, const FMETA_HeisterEconomyData inEconomyData, TArray<FMETA_PerkData> inCurrentPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedEquipment, FCommonHeisterLoadout& outLoadout);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    bool GetSuitableEquipmentAfterHeisterUpgrade(const UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, EMETA_ItemQuality inHeisterQuality, const FMETA_HeisterEconomyData inEconomyData, TArray<FMETA_PerkData> inCurrentPerks, TSubclassOf<UIGS_EquipmentInventoryObject> inCurrentEquipments, const TArray<FGameplayTag>& inUnlockedEquipment, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment);
+    
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    int32 GetStartingPerkCountOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
+    
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    int32 GetStartingLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
+    
+    UFUNCTION(BlueprintPure)
+    float GetRewardMultiplierForDifficulty(EIGS_ScenarioDifficulty inDifficulty) const;
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    void GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, int32& outUpkeepCost, int32& outHireCost);
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios GetMoneyMakingScenariosAdditionalWealthAndProbabilitiesData(EMETA_RespectLvl RespectLevel, FGameplayTag inFGameplayTag) const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetMissionObjectiveMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetMissionMaxMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetMissionAverageMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
+    
+    UFUNCTION(BlueprintCallable)
+    TMap<TSubclassOf<UMETA_MissionID>, FMETA_MissionAdditionalMonetaryValue> GetMissionAdditionalWealthMissions();
+    
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    int32 GetMaxLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    TArray<FMETA_CharacterInfo> GetGenericHeistersPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, TSet<int32> inUniqueGenericIDs, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    FMETA_HeisterRandomizedData GetGenericHeisterRandomizedData(UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, EMETA_ItemQuality inHeisterQuality, int32 inHeisterLevel, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FMETA_PerkData>& inCurrentPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedEquipment, bool bIsPromotion, bool& bOutSuccess);
+    
+    UFUNCTION(BlueprintPure)
+    void GetGenericHeisterEconomyData(EIGS_CharacterID inGenericCharacterID, EMETA_ItemQuality inCharacterQuality, FMETA_HeisterEconomyData& outEconomyData, bool& bSuccess) const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> GetForbiddenPerksForGenericHeisters() const;
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    TArray<UMETA_Equipment*> GetEquipmentPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FGameplayTag>& inUnseenUnlockedEquipment, UPARAM(Ref) TArray<UMETA_Equipment*>& inOldEquipmentPool, int32 inTargetAmountOfUnseenItemsForPurchase);
+    
+    UFUNCTION(BlueprintPure)
+    void GetEquipmentEconomyDataByQuality(EMETA_ItemQuality inEquipmentQuality, FMETA_EquipmentPriceIntervalsPerQuality& outEconomyData, bool& bSuccess) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetDefaultProbabilitiesDataForCommonMissions() const;
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_MissionMonetaryValue GetCommonWealthOfMission(EMETA_RespectLvl inRespectLevel) const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetBuyCostModifierByWeaponClass(FGameplayTag inWeaponClassTag) const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration> GetAllMoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration() const;
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    FMETA_CharacterInfo GenerateGenericHeisterByPlayerRespect(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const int32 inUniqueGenericID, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants, bool& outSuccess);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    FMETA_CharacterInfo GenerateGenericHeisterByIdAndTier(UObject* inWCO, EIGS_CharacterID inGenericHeisterID, EMETA_ItemQuality inGenericHeisterTier, const int32 inUniqueGenericID, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants, bool& outSuccess);
+    
 protected:
     UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_CharacterID, FMETA_HeisterDataByTier> SetupHeisterDataPerGenericCharacterAndQuality;
@@ -225,133 +351,6 @@ protected:
     
     UPROPERTY(Transient)
     UIGS_MenuCommonData_Base* CommonData;
-    
-public:
-    UIGS_EconomyData_Base();
-
-protected:
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    void UpdateWeaponsCachedData(const UObject* inWCO);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    void UpdateEquipmentCachedData(const UObject* inWCO);
-    
-public:
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool TryToGenerateSecondaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool TryToGenerateRandomEquipmentForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, FGameplayTag inEquippedEquipment, const TArray<FGameplayTag>& inUnlockedEquipment, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool TryToGeneratePrimaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool TryGetCommonPerkLimitForCharacter(UObject* inWCO, const FGameplayTag inCharacterTag, const EMETA_ItemQuality inQuality, const int32 inLevel, int32& outLimit);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static void SetCharacterPoolNames(const UObject* inWCO, UPARAM(Ref) TArray<FMETA_CharacterInfo>& inGeneratedPool);
-    
-protected:
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    void RefreshCommonData(const UObject* inWCO);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool IsMoneyMakingScenariosAdditionalWealthAndProbabilitiesContainData(FGameplayTag inFGameplayTag) const;
-    
-    UFUNCTION(BlueprintPure)
-    static bool IsItemUnlocked(TArray<FGameplayTag> inUnlockedPool, FGameplayTag inItemTag);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    TArray<FGameplayTag> GetWeaponTagsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    TArray<UMETA_Weapon*> GetWeaponsPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, UPARAM(Ref) TArray<FGameplayTag>& inUnseenUnlockedWeapons, UPARAM(Ref) TArray<UMETA_Weapon*>& inOldWeaponsPool, int32 inTargetAmountOfUnseenItemsForPurchase);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    TArray<TSubclassOf<UMETA_WeaponInventoryObject>> GetWeaponsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inAlreadySelectedWeapons, const TArray<FGameplayTag>& inUnlockedWeapons, bool inIgnoreUnlock);
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetWeaponEconomyDataByQuality(EMETA_ItemQuality inWeaponQuality, FMETA_WeaponEconomyData& outEconomyData, bool& bSuccess) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetUniqueCharacterMissionCut(EIGS_CharacterID inCharacterID) const;
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool GetSuitableWeaponsAfterHeisterUpgrade(const UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, int32 inHeisterLevel, const FMETA_HeisterEconomyData inEconomyData, TArray<FMETA_PerkData> inCurrentPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedEquipment, FCommonHeisterLoadout& outLoadout);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool GetSuitableEquipmentAfterHeisterUpgrade(const UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, EMETA_ItemQuality inHeisterQuality, const FMETA_HeisterEconomyData inEconomyData, TArray<FMETA_PerkData> inCurrentPerks, TSubclassOf<UIGS_EquipmentInventoryObject> inCurrentEquipments, const TArray<FGameplayTag>& inUnlockedEquipment, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment);
-    
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
-    int32 GetStartingPerkCountOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
-    
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
-    int32 GetStartingLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
-    
-    UFUNCTION(BlueprintPure)
-    float GetRewardMultiplierForDifficulty(EIGS_ScenarioDifficulty inDifficulty) const;
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    void GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, int32& outUpkeepCost, int32& outHireCost);
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios GetMoneyMakingScenariosAdditionalWealthAndProbabilitiesData(EMETA_RespectLvl RespectLevel, FGameplayTag inFGameplayTag) const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetMissionObjectiveMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetMissionMaxMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetMissionAverageMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
-    
-    UFUNCTION(BlueprintCallable)
-    TMap<TSubclassOf<UMETA_MissionID>, FMETA_MissionAdditionalMonetaryValue> GetMissionAdditionalWealthMissions();
-    
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
-    int32 GetMaxLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    TArray<FMETA_CharacterInfo> GetGenericHeistersPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, TSet<int32> inUniqueGenericIDs, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    FMETA_HeisterRandomizedData GetGenericHeisterRandomizedData(UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, EMETA_ItemQuality inHeisterQuality, int32 inHeisterLevel, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FMETA_PerkData>& inCurrentPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedEquipment, bool bIsPromotion, bool& bOutSuccess);
-    
-    UFUNCTION(BlueprintPure)
-    void GetGenericHeisterEconomyData(EIGS_CharacterID inGenericCharacterID, EMETA_ItemQuality inCharacterQuality, FMETA_HeisterEconomyData& outEconomyData, bool& bSuccess) const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> GetForbiddenPerksForGenericHeisters() const;
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    TArray<UMETA_Equipment*> GetEquipmentPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FGameplayTag>& inUnseenUnlockedEquipment, UPARAM(Ref) TArray<UMETA_Equipment*>& inOldEquipmentPool, int32 inTargetAmountOfUnseenItemsForPurchase);
-    
-    UFUNCTION(BlueprintPure)
-    void GetEquipmentEconomyDataByQuality(EMETA_ItemQuality inEquipmentQuality, FMETA_EquipmentPriceIntervalsPerQuality& outEconomyData, bool& bSuccess) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetDefaultProbabilitiesDataForCommonMissions() const;
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_MissionMonetaryValue GetCommonWealthOfMission(EMETA_RespectLvl inRespectLevel) const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetBuyCostModifierByWeaponClass(FGameplayTag inWeaponClassTag) const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration> GetAllMoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration() const;
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    FMETA_CharacterInfo GenerateGenericHeisterByPlayerRespect(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const int32 inUniqueGenericID, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants, bool& outSuccess);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    FMETA_CharacterInfo GenerateGenericHeisterByIdAndTier(UObject* inWCO, EIGS_CharacterID inGenericHeisterID, EMETA_ItemQuality inGenericHeisterTier, const int32 inUniqueGenericID, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, UPARAM(Ref) TArray<FIGS_CharacterClasses>& inActiveGenericVariants, bool& outSuccess);
     
 };
 

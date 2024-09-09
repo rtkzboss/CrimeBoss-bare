@@ -10,10 +10,10 @@ UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_FollowCircle : public UEnvQueryGenerator_ProjectedPoints {
     GENERATED_BODY()
 public:
+    UEnvQueryGenerator_FollowCircle();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> GenerateAround;
     
-    UEnvQueryGenerator_FollowCircle();
-
 };
 

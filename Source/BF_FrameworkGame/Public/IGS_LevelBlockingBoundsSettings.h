@@ -12,6 +12,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_LevelBlockingBoundsSettings : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_LevelBlockingBoundsSettings();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UNavArea> NoHeisterAreaClass;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FPostProcessSettings PostProcessSettings;
     
-    UIGS_LevelBlockingBoundsSettings();
-
 };
 

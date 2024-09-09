@@ -24,59 +24,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GameStateGame : public AIGS_GameStateFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CopsArriveTimerFinished OnCopsArriveTimerFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CopsArriveTimerStarted OnCopsArriveTimerStarted;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HasEveryoneLoadedLevel)
-    bool R_HasEveryoneLoadedLevel;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_EveryoneHasLoadedLevel OnEveryoneHasLoadedLevelEvent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly, ReplicatedUsing=OnRep_StartedPlayingMatch)
-    bool R_StartedPlayingMatch;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PlayersSpawnedDelegate OnStartedPlayingMatchEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ForceHideEscapeWarning OnForceHideEscapeWarning;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool bHasEscapeVehicle;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    float DeathCamLastDeadTime;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    float FailsafeMissionEndTime;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    FString FinalPreset;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    TArray<FString> ObjectiveTile;
-    
-protected:
-    UPROPERTY(Instanced)
-    UIGS_GlobalInventory* GlobalInventory;
-    
-    UPROPERTY(Instanced)
-    UIGS_PlayerIntelManager* IntelManager;
-    
-    UPROPERTY(Instanced, VisibleAnywhere)
-    UIGS_PickupsManager* PickupsManager;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_CopsArriveTimer)
-    float CopsArriveTimerEnd;
-    
-public:
     AIGS_GameStateGame(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void SwitchStartupSource(EIGS_MissionStartupSource& outBranches);
@@ -156,5 +104,57 @@ public:
     UFUNCTION(BlueprintImplementableEvent)
     void FinishEndMission();
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CopsArriveTimerFinished OnCopsArriveTimerFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CopsArriveTimerStarted OnCopsArriveTimerStarted;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_HasEveryoneLoadedLevel)
+    bool R_HasEveryoneLoadedLevel;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_EveryoneHasLoadedLevel OnEveryoneHasLoadedLevelEvent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly, ReplicatedUsing=OnRep_StartedPlayingMatch)
+    bool R_StartedPlayingMatch;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PlayersSpawnedDelegate OnStartedPlayingMatchEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ForceHideEscapeWarning OnForceHideEscapeWarning;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool bHasEscapeVehicle;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    float DeathCamLastDeadTime;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    float FailsafeMissionEndTime;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    FString FinalPreset;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    TArray<FString> ObjectiveTile;
+    
+protected:
+    UPROPERTY(Instanced)
+    UIGS_GlobalInventory* GlobalInventory;
+    
+    UPROPERTY(Instanced)
+    UIGS_PlayerIntelManager* IntelManager;
+    
+    UPROPERTY(Instanced, VisibleAnywhere)
+    UIGS_PickupsManager* PickupsManager;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_CopsArriveTimer)
+    float CopsArriveTimerEnd;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

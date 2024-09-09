@@ -11,6 +11,11 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_PlotlineSelectionMapping : public UDataAsset {
     GENERATED_BODY()
 public:
+    UMETA_PlotlineSelectionMapping();
+
+    UFUNCTION(BlueprintPure)
+    TSoftObjectPtr<UMETA_PlotlineSelection> GetDefaultCampaignMode() const;
+    
 protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UMETA_PlotlineSelection> DefaultCampaignMode;
@@ -20,12 +25,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_CampaignModeMapping> CampaignModeMappings;
-    
-public:
-    UMETA_PlotlineSelectionMapping();
-
-    UFUNCTION(BlueprintPure)
-    TSoftObjectPtr<UMETA_PlotlineSelection> GetDefaultCampaignMode() const;
     
 };
 

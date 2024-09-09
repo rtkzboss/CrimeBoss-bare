@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UIGS_EventIntel : public UIGS_IntelBase {
     GENERATED_BODY()
 public:
+    UIGS_EventIntel();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_Event EventType;
     
-    UIGS_EventIntel();
-
 };
 

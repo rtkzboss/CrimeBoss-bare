@@ -13,6 +13,14 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MuzzleFlash : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_MuzzleFlash(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void StopMuzzleFlash();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void StartMuzzleFlash();
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* MuzzleFlashRootComponent;
     
@@ -58,15 +66,6 @@ public:
 protected:
     UPROPERTY(Instanced)
     UPointLightComponent* CurrentLight;
-    
-public:
-    AIGS_MuzzleFlash(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void StopMuzzleFlash();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void StartMuzzleFlash();
     
 };
 

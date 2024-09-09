@@ -16,6 +16,28 @@ class BF_GUI_API UIGS_ObjectiveWidget : public UIGS_HUDSubwidgetBase {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_ObjectiveEvent);
     
+    UIGS_ObjectiveWidget();
+
+protected:
+    UFUNCTION()
+    void OnTaskAdded(int32 inID, int32 inObjectiveID);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnObjectiveTextChanged();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnObjectiveStateChangedEvent();
+    
+    UFUNCTION()
+    void OnObjectiveStateChanged(int32 inID);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnObjectiveHideAndDestroy();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void InitializeSimpleObjective();
+    
+public:
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_ObjectiveEvent OnObjectivesShown;
     
@@ -46,28 +68,6 @@ protected:
     
     UPROPERTY(Instanced)
     UIGS_ObjectiveManager* m_ObjectiveManager;
-    
-public:
-    UIGS_ObjectiveWidget();
-
-protected:
-    UFUNCTION()
-    void OnTaskAdded(int32 inID, int32 inObjectiveID);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnObjectiveTextChanged();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnObjectiveStateChangedEvent();
-    
-    UFUNCTION()
-    void OnObjectiveStateChanged(int32 inID);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnObjectiveHideAndDestroy();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void InitializeSimpleObjective();
     
 };
 

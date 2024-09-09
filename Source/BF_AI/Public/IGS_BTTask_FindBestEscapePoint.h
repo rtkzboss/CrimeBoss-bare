@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_FindBestEscapePoint : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_FindBestEscapePoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
@@ -21,8 +23,5 @@ protected:
     UPROPERTY()
     TArray<AActor*> EsapePointsResult;
     
-public:
-    UIGS_BTTask_FindBestEscapePoint();
-
 };
 

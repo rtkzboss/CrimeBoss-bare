@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_HasSpecificAim : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_HasSpecificAim();
+
 protected:
     UPROPERTY(EditAnywhere)
     float AimRange;
     
-public:
-    UBTDecorator_HasSpecificAim();
-
 };
 

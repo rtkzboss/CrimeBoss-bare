@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class BF_ANIMATIONS_API UIGS_BreachingDatabase : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_BreachingDatabase();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<UAnimMontage*> BreachingL1Montages;
     
@@ -57,7 +59,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* ThrowingGrenadeR1;
     
-    UIGS_BreachingDatabase();
-
 };
 

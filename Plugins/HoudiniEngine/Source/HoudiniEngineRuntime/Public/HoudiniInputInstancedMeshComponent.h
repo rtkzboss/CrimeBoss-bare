@@ -8,10 +8,10 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputInstancedMeshComponent : public UHoudiniInputMeshComponent {
     GENERATED_BODY()
 public:
+    UHoudiniInputInstancedMeshComponent();
+
     UPROPERTY()
     TArray<FTransform> InstanceTransforms;
     
-    UHoudiniInputInstancedMeshComponent();
-
 };
 

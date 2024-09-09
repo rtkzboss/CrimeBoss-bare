@@ -17,6 +17,16 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerPingComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerPingComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(Reliable, Server)
+    void Server_Ping(EIGS_PingableType inType, FVector_NetQuantize InLocation, UIGS_PingableComponent* InComponent, AActor* inActor);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_Ping(UIGS_PingableComponent* InComponent, EIGS_PingableType inType, FVector_NetQuantize InLocation);
+    
+public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<AIGS_PingableWidgetActor> GenericPingWidgetActor;
     
@@ -54,16 +64,6 @@ protected:
 private:
     UPROPERTY()
     TMap<AActor*, TWeakObjectPtr<AIGS_SmartPingableWidgetActor>> m_UsedSmartPingWidgets;
-    
-public:
-    UIGS_PlayerPingComponent(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(Reliable, Server)
-    void Server_Ping(EIGS_PingableType inType, FVector_NetQuantize InLocation, UIGS_PingableComponent* InComponent, AActor* inActor);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_Ping(UIGS_PingableComponent* InComponent, EIGS_PingableType inType, FVector_NetQuantize InLocation);
     
 };
 

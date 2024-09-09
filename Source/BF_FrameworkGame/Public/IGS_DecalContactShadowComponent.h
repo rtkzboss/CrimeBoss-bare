@@ -12,6 +12,31 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DecalContactShadowComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UIGS_DecalContactShadowComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void UpdateShadowRotation();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetShadowVisible(bool inVisible);
+    
+    UFUNCTION(BlueprintCallable)
+    void InitShadowParameters(float InRadius, float inWidthScale);
+    
+protected:
+    UFUNCTION()
+    void InitDefaultDecalSettings();
+    
+public:
+    UFUNCTION()
+    void InitComponent();
+    
+    UFUNCTION(BlueprintCallable)
+    void InitAttachment(float inOffset);
+    
+    UFUNCTION(BlueprintCallable)
+    void ChangeCameraFadeMaterialParameter(bool Enabled);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UDecalComponent* LeftLegShadowDecalComponent;
@@ -45,32 +70,6 @@ protected:
     
     UPROPERTY()
     UMaterialInstanceDynamic* RightLegDecalMaterial;
-    
-public:
-    UIGS_DecalContactShadowComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void UpdateShadowRotation();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetShadowVisible(bool inVisible);
-    
-    UFUNCTION(BlueprintCallable)
-    void InitShadowParameters(float InRadius, float inWidthScale);
-    
-protected:
-    UFUNCTION()
-    void InitDefaultDecalSettings();
-    
-public:
-    UFUNCTION()
-    void InitComponent();
-    
-    UFUNCTION(BlueprintCallable)
-    void InitAttachment(float inOffset);
-    
-    UFUNCTION(BlueprintCallable)
-    void ChangeCameraFadeMaterialParameter(bool Enabled);
     
 };
 

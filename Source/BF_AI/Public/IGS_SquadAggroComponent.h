@@ -9,6 +9,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_SquadAggroComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SquadAggroComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     TMap<AActor*, int32> m_TmpMap;
@@ -25,8 +27,5 @@ protected:
     UPROPERTY()
     int32 TraceCount;
     
-public:
-    UIGS_SquadAggroComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

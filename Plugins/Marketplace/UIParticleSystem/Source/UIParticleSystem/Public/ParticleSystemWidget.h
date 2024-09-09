@@ -12,6 +12,17 @@ UCLASS()
 class UIPARTICLESYSTEM_API UParticleSystemWidget : public UWidget {
     GENERATED_BODY()
 public:
+    UParticleSystemWidget();
+
+    UFUNCTION(BlueprintCallable)
+    void SetReactivate(bool bActivateAndReset);
+    
+    UFUNCTION(BlueprintPure)
+    UParticleSystemComponent* GetParticleComponent() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ActivateParticles(bool bActive, bool bReset);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UParticleSystem* ParticleSystemTemplate;
     
@@ -27,18 +38,6 @@ private:
     
     UPROPERTY()
     AActor* WorldParticleActor;
-    
-public:
-    UParticleSystemWidget();
-
-    UFUNCTION(BlueprintCallable)
-    void SetReactivate(bool bActivateAndReset);
-    
-    UFUNCTION(BlueprintPure)
-    UParticleSystemComponent* GetParticleComponent() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ActivateParticles(bool bActive, bool bReset);
     
 };
 

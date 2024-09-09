@@ -12,6 +12,61 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetFocusableSpinBox : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetFocusableSpinBox();
+
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void UpdateText() const;
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetUseEnumMode(bool inUseEnumMode);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetStepSizeValue(int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMinValue(int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMaxValue(int32 InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetEnumNames(const TArray<FText>& inEnumNames);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCurrentValue(int32 InValue);
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void ScrollRight();
+    
+    UFUNCTION(BlueprintCallable)
+    void ScrollLeft();
+    
+private:
+    UFUNCTION(BlueprintCallable)
+    void ProcessSettingFontColor(FLinearColor InColor);
+    
+protected:
+    UFUNCTION()
+    void OnValueIncreased(int32 InValue);
+    
+    UFUNCTION()
+    void OnValueDecreased(int32 InValue);
+    
+    UFUNCTION()
+    void OnValueChanged(int32 InValue);
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnUpdateVisuals();
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnRefreshSpinBox();
+    
+public:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* SpinBoxName;
     
@@ -123,61 +178,6 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly)
     int32 HoveredCount;
-    
-public:
-    UIGS_WidgetFocusableSpinBox();
-
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void UpdateText() const;
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void SetUseEnumMode(bool inUseEnumMode);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetStepSizeValue(int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMinValue(int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMaxValue(int32 InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetEnumNames(const TArray<FText>& inEnumNames);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCurrentValue(int32 InValue);
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void ScrollRight();
-    
-    UFUNCTION(BlueprintCallable)
-    void ScrollLeft();
-    
-private:
-    UFUNCTION(BlueprintCallable)
-    void ProcessSettingFontColor(FLinearColor InColor);
-    
-protected:
-    UFUNCTION()
-    void OnValueIncreased(int32 InValue);
-    
-    UFUNCTION()
-    void OnValueDecreased(int32 InValue);
-    
-    UFUNCTION()
-    void OnValueChanged(int32 InValue);
-    
-public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnUpdateVisuals();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnRefreshSpinBox();
     
 };
 

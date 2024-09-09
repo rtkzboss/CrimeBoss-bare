@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_ReactionToOffenceMelee : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_ReactionToOffenceMelee();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FText DialogID;
     
-public:
-    UIGS_BTService_ReactionToOffenceMelee();
-
 };
 

@@ -7,10 +7,10 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputHoudiniAsset : public UHoudiniInputObject {
     GENERATED_BODY()
 public:
+    UHoudiniInputHoudiniAsset();
+
     UPROPERTY()
     int32 AssetOutputIndex;
     
-    UHoudiniInputHoudiniAsset();
-
 };
 

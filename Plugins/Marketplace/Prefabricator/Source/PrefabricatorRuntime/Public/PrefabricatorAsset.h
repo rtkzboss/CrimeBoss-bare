@@ -12,6 +12,8 @@ UCLASS()
 class PREFABRICATORRUNTIME_API UPrefabricatorAsset : public UPrefabricatorAssetInterface {
     GENERATED_BODY()
 public:
+    UPrefabricatorAsset();
+
     UPROPERTY()
     TArray<FPrefabricatorActorData> ActorData;
     
@@ -27,7 +29,5 @@ public:
     UPROPERTY()
     uint32 Version;
     
-    UPrefabricatorAsset();
-
 };
 

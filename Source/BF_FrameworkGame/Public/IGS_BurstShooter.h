@@ -9,6 +9,8 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BurstShooter : public UIGS_SemiAutoShooter {
     GENERATED_BODY()
 public:
+    UIGS_BurstShooter(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* Burst2ShotAudioEvent;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* Burst3ShotAudioEvent;
     
-public:
-    UIGS_BurstShooter(const FObjectInitializer& ObjectInitializer);
-
 };
 

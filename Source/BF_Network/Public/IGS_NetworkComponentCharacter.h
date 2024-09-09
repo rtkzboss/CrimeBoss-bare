@@ -56,109 +56,7 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentCharacter : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(VisibleAnywhere)
-    UIGS_PickupClassesData* PickupClasses;
-    
-    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_AimAtPoint)
-    FIGS_InterestPointHolder mR_AimAtPoint;
-    
-    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_LookAtPoint)
-    FIGS_InterestPointHolder mR_LookAtPoint;
-    
-    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterAiming)
-    FIGS_ReplicationCharacterAimingDataHolder mR_CharacterAiming;
-    
-    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_PlayingAnimations)
-    FIGS_ReplicationAnimationDataHolder mR_PlayingAnimation;
-    
-    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_LootBagInfo)
-    FIGS_BagInfo mR_LootBagInfo;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    TArray<FIGS_LootBagInfo> mR_FullLootBagInfos;
-    
-    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterState)
-    EIGS_CharacterState mR_CharacterState;
-    
-private:
-    UPROPERTY(ReplicatedUsing=OnRep_MovementSpeed)
-    EIGS_Speed mR_MovementSpeed;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_RequestLeadSide)
-    EIGS_LeanSide mR_RequestedLeanSide;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_LeaningDirection)
-    EIGS_CharacterLeaningDirectionEnum mR_LeaningDirection;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_IsMovingForced)
-    bool mR_IsMovingForced;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_IsMantling)
-    bool mR_IsMantling;
-    
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_ReplicatedAcceleration)
-    FIGS_ReplicatedAcceleration mR_ReplicatedAcceleration;
-    
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_ReplicatedLadder)
-    FIGS_ReplicatedLadder mR_ReplicatedLadder;
-    
-protected:
-    UPROPERTY(ReplicatedUsing=OnRep_IsVisibilityModOn)
-    bool mR_IsVisibilityModOn;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_IsRunningAttack)
-    bool mR_IsRunningAttack;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_ShooterType)
-    EIGS_WeaponAttackType mR_ShooterType;
-    
-private:
-    UPROPERTY(ReplicatedUsing=OnRep_AvailableWieldables)
-    TArray<FIGS_WieldableReplicatedData> mR_AvailableWieldables;
-    
-    UPROPERTY()
-    TArray<UIGS_InventoryObjectFramework*> m_OwningInventoryObjects;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_CurrentSlot)
-    EIGS_WieldableSlot mR_CurrentSlot;
-    
-public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_NetworkDialogueEvent OnVoiceStartedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_NetworkDialogueEvent OnVoiceStopedEvent;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkSwitchValue* OverrideCharacterAkSwitch;
-    
-    UPROPERTY()
-    UIGS_ComponentDialogueDataAsset* ComponentData;
-    
-    UPROPERTY()
-    UIGS_ComponentVoiceExpressionDataAsset* Data;
-    
-    UPROPERTY()
-    UIGS_ComponentDialogueDataAsset* DialogueData;
-    
-    UPROPERTY(EditAnywhere)
-    bool VoiceExpressionEnabled;
-    
-    UPROPERTY(EditAnywhere)
-    float NearDeathHealthPercentage;
-    
-    UPROPERTY()
-    UAkSwitchValue* SpeakerAkSwitch;
-    
-    UPROPERTY()
-    UAkSwitchValue* CharacterAkSwitch;
-    
-public:
     UIGS_NetworkComponentCharacter(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void StopVoice(const FIGS_PlayVariationData& inPlayVariationData);
@@ -462,5 +360,106 @@ protected:
     UFUNCTION(NetMulticast, Reliable)
     void All_OnPlayVoice(FIGS_PlayVariationData inPlayVariationData);
     
+    UPROPERTY(VisibleAnywhere)
+    UIGS_PickupClassesData* PickupClasses;
+    
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_AimAtPoint)
+    FIGS_InterestPointHolder mR_AimAtPoint;
+    
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_LookAtPoint)
+    FIGS_InterestPointHolder mR_LookAtPoint;
+    
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterAiming)
+    FIGS_ReplicationCharacterAimingDataHolder mR_CharacterAiming;
+    
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_PlayingAnimations)
+    FIGS_ReplicationAnimationDataHolder mR_PlayingAnimation;
+    
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_LootBagInfo)
+    FIGS_BagInfo mR_LootBagInfo;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
+    TArray<FIGS_LootBagInfo> mR_FullLootBagInfos;
+    
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterState)
+    EIGS_CharacterState mR_CharacterState;
+    
+private:
+    UPROPERTY(ReplicatedUsing=OnRep_MovementSpeed)
+    EIGS_Speed mR_MovementSpeed;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_RequestLeadSide)
+    EIGS_LeanSide mR_RequestedLeanSide;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_LeaningDirection)
+    EIGS_CharacterLeaningDirectionEnum mR_LeaningDirection;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_IsMovingForced)
+    bool mR_IsMovingForced;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_IsMantling)
+    bool mR_IsMantling;
+    
+    UPROPERTY(Transient, ReplicatedUsing=OnRep_ReplicatedAcceleration)
+    FIGS_ReplicatedAcceleration mR_ReplicatedAcceleration;
+    
+    UPROPERTY(Transient, ReplicatedUsing=OnRep_ReplicatedLadder)
+    FIGS_ReplicatedLadder mR_ReplicatedLadder;
+    
+protected:
+    UPROPERTY(ReplicatedUsing=OnRep_IsVisibilityModOn)
+    bool mR_IsVisibilityModOn;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_IsRunningAttack)
+    bool mR_IsRunningAttack;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_ShooterType)
+    EIGS_WeaponAttackType mR_ShooterType;
+    
+private:
+    UPROPERTY(ReplicatedUsing=OnRep_AvailableWieldables)
+    TArray<FIGS_WieldableReplicatedData> mR_AvailableWieldables;
+    
+    UPROPERTY()
+    TArray<UIGS_InventoryObjectFramework*> m_OwningInventoryObjects;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_CurrentSlot)
+    EIGS_WieldableSlot mR_CurrentSlot;
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_NetworkDialogueEvent OnVoiceStartedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_NetworkDialogueEvent OnVoiceStopedEvent;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkSwitchValue* OverrideCharacterAkSwitch;
+    
+    UPROPERTY()
+    UIGS_ComponentDialogueDataAsset* ComponentData;
+    
+    UPROPERTY()
+    UIGS_ComponentVoiceExpressionDataAsset* Data;
+    
+    UPROPERTY()
+    UIGS_ComponentDialogueDataAsset* DialogueData;
+    
+    UPROPERTY(EditAnywhere)
+    bool VoiceExpressionEnabled;
+    
+    UPROPERTY(EditAnywhere)
+    float NearDeathHealthPercentage;
+    
+    UPROPERTY()
+    UAkSwitchValue* SpeakerAkSwitch;
+    
+    UPROPERTY()
+    UAkSwitchValue* CharacterAkSwitch;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

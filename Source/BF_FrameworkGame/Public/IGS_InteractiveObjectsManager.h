@@ -11,12 +11,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_InteractiveObjectsManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    TArray<UIGS_InteractiveComponent*> InteractiveComponents;
-    
-    UPROPERTY()
-    bool bAlreadyReset;
-    
     UIGS_InteractiveObjectsManager();
 
     UFUNCTION()
@@ -27,6 +21,12 @@ public:
     
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_InteractiveObjectsManager* Instance(const UObject* inWorldContextObject);
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    TArray<UIGS_InteractiveComponent*> InteractiveComponents;
+    
+    UPROPERTY()
+    bool bAlreadyReset;
     
 };
 

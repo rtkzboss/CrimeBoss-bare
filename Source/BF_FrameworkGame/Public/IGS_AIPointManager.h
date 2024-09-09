@@ -13,6 +13,32 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AIPointManager : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_AIPointManager();
+
+    UFUNCTION(BlueprintCallable)
+    void UnregisterBotLimboJumpPoint(AIGS_WaypointFramework* inWaypoint);
+    
+    UFUNCTION(BlueprintCallable)
+    void UnregisterBotLimboIdlePoint(AIGS_WaypointFramework* inWaypoint);
+    
+    UFUNCTION(BlueprintCallable)
+    void RegisterBotLimboJumpPoint(AIGS_WaypointFramework* inWaypoint);
+    
+    UFUNCTION(BlueprintCallable)
+    void RegisterBotLimboIdlePoint(AIGS_WaypointFramework* inWaypoint);
+    
+    UFUNCTION(BlueprintPure)
+    TArray<UActorComponent*> GetThrowBagComponents() const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_ProgressGadgetBase*> GetDisruptibleGadgets() const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_WaypointFramework*> GetBotLimboJumpPoints() const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_WaypointFramework*> GetBotLimboIdlePoints() const;
+    
 protected:
     UPROPERTY()
     TArray<AIGS_WaypointFramework*> m_SniperPoints;
@@ -40,33 +66,6 @@ protected:
     
     UPROPERTY()
     TArray<AIGS_AIEnemyGroupSpawner*> m_WarzoneSpawnersCaptain;
-    
-public:
-    UIGS_AIPointManager();
-
-    UFUNCTION(BlueprintCallable)
-    void UnregisterBotLimboJumpPoint(AIGS_WaypointFramework* inWaypoint);
-    
-    UFUNCTION(BlueprintCallable)
-    void UnregisterBotLimboIdlePoint(AIGS_WaypointFramework* inWaypoint);
-    
-    UFUNCTION(BlueprintCallable)
-    void RegisterBotLimboJumpPoint(AIGS_WaypointFramework* inWaypoint);
-    
-    UFUNCTION(BlueprintCallable)
-    void RegisterBotLimboIdlePoint(AIGS_WaypointFramework* inWaypoint);
-    
-    UFUNCTION(BlueprintPure)
-    TArray<UActorComponent*> GetThrowBagComponents() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_ProgressGadgetBase*> GetDisruptibleGadgets() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_WaypointFramework*> GetBotLimboJumpPoints() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_WaypointFramework*> GetBotLimboIdlePoints() const;
     
 };
 

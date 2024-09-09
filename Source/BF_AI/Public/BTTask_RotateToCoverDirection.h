@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTTask_RotateToCoverDirection : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UBTTask_RotateToCoverDirection();
+
 protected:
     UPROPERTY(EditAnywhere)
     float AccaptedAngle;
     
-public:
-    UBTTask_RotateToCoverDirection();
-
 };
 

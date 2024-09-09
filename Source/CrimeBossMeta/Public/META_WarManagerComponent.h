@@ -22,59 +22,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_WarManagerComponent : public UIGS_WarManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FMETA_GangArmyTierChanged OnGangArmyTierChanged;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FMETA_GangWasAddedToAttitudeList OnGangWasAddedToAttitudeList;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite)
-    TMap<EMETA_Gang, FMETA_GangInfo> GangsInfo;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<EMETA_TradeVendor, EMETA_TradeRelationship> TradeRelationshipWithGangs;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<EMETA_Gang, float> ChanceCounterToAttackAdjacentTerritory;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<EMETA_TradeVendor, int32> TradeVendorsCooldown;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<FGameplayTag> TodaysLockedTilesForAI;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<int32, FMETA_TurfHistory> TurfHistory;
-    
-    UPROPERTY(BlueprintReadOnly)
-    TArray<FMETA_ConditionForArmyTierChanging> CompletedConditionsForArmyTierChanging;
-    
-    UPROPERTY(EditAnywhere)
-    int32 NeutralDaysThresholdFromAttack;
-    
-    UPROPERTY(EditAnywhere)
-    int32 UnfriendlyDaysThresholdFromAttack;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 TodayAttemptsToAttackTurf;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<EMETA_Gang, int32> GangAttacksCooldown;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<EMETA_Gang, int32> CounterForSpecialTier;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 CountOfDaysForMoreAttack;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 CurrentLastTileConfigIndex;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TMap<EMETA_Gang, FMETA_GangArmyTierChangeQueueData> GangsArmyTierChangeQueue;
-    
-public:
     UMETA_WarManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -232,6 +179,58 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddAIBossStrengthEffect(EMETA_Gang inGang, FMETA_EffectOnAIBossStrength inNewEffect);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FMETA_GangArmyTierChanged OnGangArmyTierChanged;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FMETA_GangWasAddedToAttitudeList OnGangWasAddedToAttitudeList;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite)
+    TMap<EMETA_Gang, FMETA_GangInfo> GangsInfo;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<EMETA_TradeVendor, EMETA_TradeRelationship> TradeRelationshipWithGangs;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<EMETA_Gang, float> ChanceCounterToAttackAdjacentTerritory;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<EMETA_TradeVendor, int32> TradeVendorsCooldown;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<FGameplayTag> TodaysLockedTilesForAI;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<int32, FMETA_TurfHistory> TurfHistory;
+    
+    UPROPERTY(BlueprintReadOnly)
+    TArray<FMETA_ConditionForArmyTierChanging> CompletedConditionsForArmyTierChanging;
+    
+    UPROPERTY(EditAnywhere)
+    int32 NeutralDaysThresholdFromAttack;
+    
+    UPROPERTY(EditAnywhere)
+    int32 UnfriendlyDaysThresholdFromAttack;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 TodayAttemptsToAttackTurf;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<EMETA_Gang, int32> GangAttacksCooldown;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<EMETA_Gang, int32> CounterForSpecialTier;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 CountOfDaysForMoreAttack;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 CurrentLastTileConfigIndex;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TMap<EMETA_Gang, FMETA_GangArmyTierChangeQueueData> GangsArmyTierChangeQueue;
     
 };
 

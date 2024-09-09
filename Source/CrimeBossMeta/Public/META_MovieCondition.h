@@ -9,6 +9,8 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_MovieCondition : public UMETA_MediaCondition {
     GENERATED_BODY()
 public:
+    UMETA_MovieCondition();
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UBinkMediaPlayer* Movie;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     bool bAlreadyPlayingMovie;
     
-public:
-    UMETA_MovieCondition();
-
 };
 

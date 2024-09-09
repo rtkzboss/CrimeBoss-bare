@@ -11,11 +11,6 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UIGS_SubControllerHuman : public UIGS_SubControllerCommon {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    FGameplayAbilitySpecHandle m_RunningAbilitySpecHandle;
-    
-public:
     UIGS_SubControllerHuman(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -25,6 +20,10 @@ protected:
 private:
     UFUNCTION(Reliable, Server)
     void MessageToServer_StopUsingVehicle();
+    
+protected:
+    UPROPERTY()
+    FGameplayAbilitySpecHandle m_RunningAbilitySpecHandle;
     
 };
 

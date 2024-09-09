@@ -17,6 +17,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_PaybackDefini
 class PAYBACKDEFINITIONS_API UIGS_PaybackDefinitionsDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_PaybackDefinitionsDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UPaybackCoreMapsData> CoreMapsDataAsset;
     
@@ -44,7 +46,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_GenericCharactersNames> GenericCharactersNamesDataAsset;
     
-    UIGS_PaybackDefinitionsDevSettings();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_AttackMelee : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_AttackMelee();
+
 protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_IntelligentGameCharacter* AIGameCharacter;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_MeleeWeaponBase* Weapon;
     
-public:
-    UIGS_BTTask_AttackMelee();
-
 };
 

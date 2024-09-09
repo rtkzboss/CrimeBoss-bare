@@ -11,11 +11,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_TransformSpring : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    float FrameRate;
-    
-public:
     UIGS_TransformSpring(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -23,6 +18,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddVelocity(const FVector& inVelocity);
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    float FrameRate;
     
 };
 

@@ -12,6 +12,11 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_BossLevelComponent : public UIGS_BossLevelBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_BossLevelComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    TArray<FMETA_PerkData> CalculateBossPerksByBossLevel(EIGS_CharacterID inBossID, FGameplayTag inBossTagID, int32 inBossLevel, UPARAM(Ref) TArray<FMETA_PerkData>& inCurrentPerks);
+    
 protected:
     UPROPERTY(BlueprintReadWrite)
     UMETA_BossLevelData* BossLevelData;
@@ -30,12 +35,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite)
     float PreviousPoints;
-    
-public:
-    UMETA_BossLevelComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    TArray<FMETA_PerkData> CalculateBossPerksByBossLevel(EIGS_CharacterID inBossID, FGameplayTag inBossTagID, int32 inBossLevel, UPARAM(Ref) TArray<FMETA_PerkData>& inCurrentPerks);
     
 };
 

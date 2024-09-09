@@ -8,6 +8,8 @@ UCLASS(DefaultToInstanced)
 class HOUDINIENGINERUNTIME_API UHoudiniParameter : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniParameter();
+
 protected:
     UPROPERTY()
     FString Name;
@@ -93,8 +95,5 @@ protected:
     UPROPERTY()
     bool bAutoUpdate;
     
-public:
-    UHoudiniParameter();
-
 };
 

@@ -16,6 +16,11 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_InteractiveIndicatorsCanvas : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_InteractiveIndicatorsCanvas();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void GetWidgetXY(FVector InLocation, FVector2D& outXY, float& outAngle);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_InteractionIndicatorSingleWidget> WidgetIconClass;
     
@@ -37,12 +42,6 @@ private:
     
     UPROPERTY(Export)
     TWeakObjectPtr<UIGS_UseComponent> m_OwningUseComponent;
-    
-public:
-    UIGS_InteractiveIndicatorsCanvas();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void GetWidgetXY(FVector InLocation, FVector2D& outXY, float& outAngle);
     
 };
 

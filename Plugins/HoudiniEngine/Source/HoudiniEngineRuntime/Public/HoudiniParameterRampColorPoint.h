@@ -13,6 +13,8 @@ UCLASS(DefaultToInstanced)
 class HOUDINIENGINERUNTIME_API UHoudiniParameterRampColorPoint : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniParameterRampColorPoint();
+
     UPROPERTY()
     float Position;
     
@@ -34,7 +36,5 @@ public:
     UPROPERTY(Instanced)
     UHoudiniParameterChoice* InterpolationParentParm;
     
-    UHoudiniParameterRampColorPoint();
-
 };
 

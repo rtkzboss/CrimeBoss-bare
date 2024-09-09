@@ -13,29 +13,6 @@ UCLASS(BlueprintType)
 class COMMON_SAVE_API UIGS_MetaTransferHandler : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TMap<FGameplayTag, int32> MissionData;
-    
-    UPROPERTY()
-    TMap<FGameplayTag, int32> MetaData;
-    
-    UPROPERTY(Transient)
-    FIGS_Meta2FPS_Data Meta2FPSData;
-    
-    UPROPERTY(Transient)
-    FIGS_FPS2Meta_Data FPS2MetaData;
-    
-    UPROPERTY(Transient)
-    FIGS_SharedMetaTransfer_Data SharedData;
-    
-    UPROPERTY(Transient)
-    FText ErrorText;
-    
-    UPROPERTY()
-    bool bCollectOnlySecuredLoot;
-    
-public:
     UIGS_MetaTransferHandler();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -118,6 +95,28 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ClearAll(const UObject* inWCO);
+    
+protected:
+    UPROPERTY()
+    TMap<FGameplayTag, int32> MissionData;
+    
+    UPROPERTY()
+    TMap<FGameplayTag, int32> MetaData;
+    
+    UPROPERTY(Transient)
+    FIGS_Meta2FPS_Data Meta2FPSData;
+    
+    UPROPERTY(Transient)
+    FIGS_FPS2Meta_Data FPS2MetaData;
+    
+    UPROPERTY(Transient)
+    FIGS_SharedMetaTransfer_Data SharedData;
+    
+    UPROPERTY(Transient)
+    FText ErrorText;
+    
+    UPROPERTY()
+    bool bCollectOnlySecuredLoot;
     
 };
 

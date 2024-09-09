@@ -13,6 +13,8 @@ UCLASS()
 class BF_AI_API UIGS_AIDesyncronizer : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_AIDesyncronizer();
+
 protected:
     UPROPERTY()
     TArray<FIGS_StrafeRecord> StrafeRecords;
@@ -32,8 +34,5 @@ protected:
     UPROPERTY()
     TArray<FIGS_InspectRecord> m_MovingInspectsRecords;
     
-public:
-    UIGS_AIDesyncronizer();
-
 };
 

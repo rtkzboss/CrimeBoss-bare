@@ -9,6 +9,11 @@ UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_SoundSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_SoundSettings();
+
+    UFUNCTION(BlueprintPure)
+    static UIGS_SoundSettings* Instance();
+    
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     float MasterVolumeValue;
     
@@ -50,11 +55,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     bool bVoiceChatEnabledValue;
-    
-    UIGS_SoundSettings();
-
-    UFUNCTION(BlueprintPure)
-    static UIGS_SoundSettings* Instance();
     
 };
 

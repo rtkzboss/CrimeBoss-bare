@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadScripted : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadScripted();
+
 protected:
     UPROPERTY(EditAnywhere)
     float DefendDistance;
     
-public:
-    UIGS_BTTask_SquadScripted();
-
 };
 

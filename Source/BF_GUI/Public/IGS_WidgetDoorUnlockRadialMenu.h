@@ -10,14 +10,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetDoorUnlockRadialMenu : public UIGS_WidgetRadialMenuBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    FGameplayTagContainer UnlockMethods;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<AIGS_IntelligentGameCharacter> OwningPlayerCharacter;
-    
-public:
     UIGS_WidgetDoorUnlockRadialMenu();
 
     UFUNCTION(BlueprintCallable)
@@ -25,6 +17,13 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ForceRefresh();
+    
+    UPROPERTY(BlueprintReadOnly)
+    FGameplayTagContainer UnlockMethods;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<AIGS_IntelligentGameCharacter> OwningPlayerCharacter;
     
 };
 

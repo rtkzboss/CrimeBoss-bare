@@ -9,6 +9,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkLadderComponent : public UIGS_NavLinkComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_NavLinkLadderComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* FromBottomAnimation;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* SlideAnimation;
     
-    UIGS_NavLinkLadderComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

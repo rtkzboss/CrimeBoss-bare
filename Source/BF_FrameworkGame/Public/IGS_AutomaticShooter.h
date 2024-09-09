@@ -9,6 +9,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AutomaticShooter : public UIGS_ShooterBase {
     GENERATED_BODY()
 public:
+    UIGS_AutomaticShooter(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* ShootStartAudioEvent;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* ShootStopAudioEvent;
     
-public:
-    UIGS_AutomaticShooter(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -11,6 +11,14 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Rappel : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:
+    AIGS_Rappel(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetEnabled(bool inEnabled) const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsEnabled() const;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector StartLocation;
     
@@ -31,14 +39,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool OnceUsed;
-    
-    AIGS_Rappel(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetEnabled(bool inEnabled) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsEnabled() const;
     
 };
 

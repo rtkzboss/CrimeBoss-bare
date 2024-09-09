@@ -14,39 +14,7 @@ UCLASS(Abstract)
 class CRIMEBOSSMETA_API AMETA_GameStateBase : public AIGS_GameStateMenuBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    AMETA_BaseGameMode* MetaGameMode;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_SubtitleManager* SubtitleManager;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UMETA_CommonData* CommonMetaData;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UMETA_EconomyData* EconomyMetaData;
-    
-protected:
-    UPROPERTY(ReplicatedUsing=OnRep_bInitialized)
-    bool bInitialized;
-    
-    UPROPERTY()
-    TArray<FMETA_Sequence> m_SequencesQueue;
-    
-    UPROPERTY(BlueprintReadOnly)
-    FGameplayTag CurrentSequenceTag;
-    
-private:
-    UPROPERTY()
-    int32 m_CurrentSequenceItemIndex;
-    
-    UPROPERTY()
-    FMETA_Sequence CurrentSequence;
-    
-public:
     AMETA_GameStateBase(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
     UFUNCTION(BlueprintCallable)
@@ -88,5 +56,38 @@ protected:
     UFUNCTION(BlueprintCallable)
     void AddSequence(UPARAM(Ref) FMETA_Sequence& InSequence);
     
+public:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    AMETA_BaseGameMode* MetaGameMode;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_SubtitleManager* SubtitleManager;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UMETA_CommonData* CommonMetaData;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UMETA_EconomyData* EconomyMetaData;
+    
+protected:
+    UPROPERTY(ReplicatedUsing=OnRep_bInitialized)
+    bool bInitialized;
+    
+    UPROPERTY()
+    TArray<FMETA_Sequence> m_SequencesQueue;
+    
+    UPROPERTY(BlueprintReadOnly)
+    FGameplayTag CurrentSequenceTag;
+    
+private:
+    UPROPERTY()
+    int32 m_CurrentSequenceItemIndex;
+    
+    UPROPERTY()
+    FMETA_Sequence CurrentSequence;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

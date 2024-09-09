@@ -10,10 +10,10 @@ UCLASS(Abstract)
 class BF_AI_API UEnvQueryTest_DistanceFromDestinationBase : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_DistanceFromDestinationBase();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Characters;
     
-    UEnvQueryTest_DistanceFromDestinationBase();
-
 };
 

@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_Inspect : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_Inspect();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UIGS_BTService_Inspect();
-
 };
 

@@ -14,17 +14,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ScriptableBehaviorComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FBoolParamChangedBP2 OnIsDefendingChangedBP2;
-    
-protected:
-    UPROPERTY()
-    TArray<AIGS_RoomBase*> EmptyRoomArray;
-    
-    UPROPERTY()
-    AIGS_AIControllerGame* m_Controller;
-    
-public:
     UIGS_ScriptableBehaviorComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -55,6 +44,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClearDefendPos();
+    
+    UPROPERTY(BlueprintAssignable)
+    FBoolParamChangedBP2 OnIsDefendingChangedBP2;
+    
+protected:
+    UPROPERTY()
+    TArray<AIGS_RoomBase*> EmptyRoomArray;
+    
+    UPROPERTY()
+    AIGS_AIControllerGame* m_Controller;
     
 };
 

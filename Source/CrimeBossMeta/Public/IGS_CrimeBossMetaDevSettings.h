@@ -9,13 +9,13 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_CrimeBossMeta
 class CRIMEBOSSMETA_API UIGS_CrimeBossMetaDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_CrimeBossMetaDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> PlotlineAssetsDataTable;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> RandEventsDataTable;
     
-    UIGS_CrimeBossMetaDevSettings();
-
 };
 

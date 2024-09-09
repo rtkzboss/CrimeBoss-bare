@@ -9,6 +9,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_AIWaypointsSe
 class BF_FRAMEWORKBASE_API UIGS_AIWaypointTexturesDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_AIWaypointTexturesDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UTexture2D> TargetSprite;
     
@@ -42,7 +44,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UTexture2D> FlagInfiniteSprite;
     
-    UIGS_AIWaypointTexturesDevSettings();
-
 };
 

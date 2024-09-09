@@ -8,6 +8,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_VehiclePathFollowerComponent : public UPFPathFollowerComponent {
     GENERATED_BODY()
 public:
+    UIGS_VehiclePathFollowerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval AvoidanceDistanceRange;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval AvoidanceStopCooldown;
     
-public:
-    UIGS_VehiclePathFollowerComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

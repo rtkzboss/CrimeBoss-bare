@@ -8,17 +8,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_LootNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    int32 LootValue;
-    
-    UPROPERTY()
-    FText LootCategory;
-    
-    UPROPERTY()
-    EMETA_LootPurpose LootPurpose;
-    
-public:
     UMETA_LootNotification();
 
     UFUNCTION(BlueprintCallable)
@@ -32,6 +21,16 @@ public:
     
     UFUNCTION(BlueprintPure)
     FText GetLootCategory() const;
+    
+private:
+    UPROPERTY()
+    int32 LootValue;
+    
+    UPROPERTY()
+    FText LootCategory;
+    
+    UPROPERTY()
+    EMETA_LootPurpose LootPurpose;
     
 };
 

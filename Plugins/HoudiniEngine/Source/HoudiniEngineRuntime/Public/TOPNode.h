@@ -13,6 +13,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UTOPNode : public UObject {
     GENERATED_BODY()
 public:
+    UTOPNode();
+
     UPROPERTY(NonTransactional, Transient)
     int32 NodeId;
     
@@ -72,8 +74,5 @@ private:
     UPROPERTY()
     FOutputActorOwner OutputActorOwner;
     
-public:
-    UTOPNode();
-
 };
 

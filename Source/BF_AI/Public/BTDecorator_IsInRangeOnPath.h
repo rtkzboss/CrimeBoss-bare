@@ -7,6 +7,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsInRangeOnPath : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsInRangeOnPath();
+
 protected:
     UPROPERTY(EditAnywhere)
     float MinDistance;
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float MaxDistance;
     
-public:
-    UBTDecorator_IsInRangeOnPath();
-
 };
 

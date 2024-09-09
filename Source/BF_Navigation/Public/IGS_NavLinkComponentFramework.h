@@ -9,15 +9,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NAVIGATION_API UIGS_NavLinkComponentFramework : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FOnMoveReachedLink OnMoveReachedLink;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnMoveReachedLink OnTransitionStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnMoveLeftLink OnMoveLeftLink;
-    
     UIGS_NavLinkComponentFramework(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -28,6 +19,15 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool HasMovingAgents() const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnMoveReachedLink OnMoveReachedLink;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnMoveReachedLink OnTransitionStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnMoveLeftLink OnMoveLeftLink;
     
 };
 

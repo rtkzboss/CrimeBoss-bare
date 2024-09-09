@@ -7,13 +7,13 @@ UCLASS()
 class PREFABRICATORRUNTIME_API APrefabDebugActor : public AActor {
     GENERATED_BODY()
 public:
+    APrefabDebugActor(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     AActor* Actor;
     
     UPROPERTY()
     TArray<uint8> ActorData;
     
-    APrefabDebugActor(const FObjectInitializer& ObjectInitializer);
-
 };
 

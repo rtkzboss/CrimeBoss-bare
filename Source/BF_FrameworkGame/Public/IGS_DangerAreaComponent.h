@@ -10,6 +10,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DangerAreaComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_DangerAreaComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DangerRadius;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSubclassOf<UIGS_DamageTypeBase>> DamageTypesToFear;
     
-public:
-    UIGS_DangerAreaComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

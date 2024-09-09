@@ -8,6 +8,8 @@ UCLASS(DefaultConfig, Config=Engine)
 class DLSS_API UDLSSSettings : public UObject {
     GENERATED_BODY()
 public:
+    UDLSSSettings();
+
     UPROPERTY(Config, EditAnywhere)
     bool bEnableDLSSD3D12;
     
@@ -62,7 +64,5 @@ public:
     UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
     EDLSSPreset DLSSUltraPerformancePreset;
     
-    UDLSSSettings();
-
 };
 

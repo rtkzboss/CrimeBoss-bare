@@ -9,10 +9,10 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_SquadClassesHolder : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_SquadClassesHolder();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_TeamSideEnum, FIGS_SquadClassDefinition> SquadClasses;
     
-    UIGS_SquadClassesHolder();
-
 };
 

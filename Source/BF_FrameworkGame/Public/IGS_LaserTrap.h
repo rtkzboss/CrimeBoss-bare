@@ -23,7 +23,36 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LaserTrap : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_LaserTrap(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetEnabled(bool inState, bool inIgnoreChargeTime);
+    
 protected:
+    UFUNCTION()
+    void SetBeamEnabledDelayed(bool inState);
+    
+    UFUNCTION()
+    void OnRep_RecalculateBeam() const;
+    
+    UFUNCTION()
+    void OnRep_OnSetEnabled() const;
+    
+    UFUNCTION()
+    void OnRep_OnSetBeamEnabled();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void OnPlayerDetected();
+    
+    UFUNCTION()
+    void OnLightTimelineUpdate(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnBeamEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnBeamBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* RootObject;
     
@@ -94,37 +123,7 @@ protected:
     FVector mR_EndBeamPoint;
     
 public:
-    AIGS_LaserTrap(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetEnabled(bool inState, bool inIgnoreChargeTime);
-    
-protected:
-    UFUNCTION()
-    void SetBeamEnabledDelayed(bool inState);
-    
-    UFUNCTION()
-    void OnRep_RecalculateBeam() const;
-    
-    UFUNCTION()
-    void OnRep_OnSetEnabled() const;
-    
-    UFUNCTION()
-    void OnRep_OnSetBeamEnabled();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void OnPlayerDetected();
-    
-    UFUNCTION()
-    void OnLightTimelineUpdate(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnBeamEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnBeamBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-    
 };
 

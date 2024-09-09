@@ -25,38 +25,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_WeatherSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UMaterialParameterCollection* WeatherMPC;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UMaterialParameterCollectionInstance* WeatherMPCInstance;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FIGS_WeatherConfig WeatherConfig;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FIGS_VisualStyleConfig VisualStyleConfig;
-    
-    UPROPERTY(Export, Transient)
-    TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_RainEmittingComponent>> m_RainEmittingActors;
-    
-    UPROPERTY(Export, Transient)
-    TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_WeatherTrackedBlendable>> m_WeatherTrackedBlendables;
-    
-    UPROPERTY(Export, Transient)
-    TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_PlayerEffectsComponent>> m_WeatherTrackedPlayerEffects;
-    
-    UPROPERTY(Transient)
-    TMap<TWeakObjectPtr<AActor>, FIGS_WaterVolumeActorTracker> m_WeatherTrackedActors;
-    
-    UPROPERTY(Transient)
-    TMap<TWeakObjectPtr<AActor>, FIGS_ActorEnvironmentTracker> m_LightingTrackedActors;
-    
-    UPROPERTY(Transient)
-    TArray<TWeakObjectPtr<AIGS_GameCharacterFramework>> m_RegisteredCharacters;
-    
-public:
     UIGS_WeatherSubsystem();
 
     UFUNCTION(BlueprintCallable)
@@ -93,6 +61,37 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void DisableWeather();
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UMaterialParameterCollection* WeatherMPC;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UMaterialParameterCollectionInstance* WeatherMPCInstance;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FIGS_WeatherConfig WeatherConfig;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FIGS_VisualStyleConfig VisualStyleConfig;
+    
+    UPROPERTY(Export, Transient)
+    TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_RainEmittingComponent>> m_RainEmittingActors;
+    
+    UPROPERTY(Export, Transient)
+    TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_WeatherTrackedBlendable>> m_WeatherTrackedBlendables;
+    
+    UPROPERTY(Export, Transient)
+    TMap<TWeakObjectPtr<AActor>, TWeakObjectPtr<UIGS_PlayerEffectsComponent>> m_WeatherTrackedPlayerEffects;
+    
+    UPROPERTY(Transient)
+    TMap<TWeakObjectPtr<AActor>, FIGS_WaterVolumeActorTracker> m_WeatherTrackedActors;
+    
+    UPROPERTY(Transient)
+    TMap<TWeakObjectPtr<AActor>, FIGS_ActorEnvironmentTracker> m_LightingTrackedActors;
+    
+    UPROPERTY(Transient)
+    TArray<TWeakObjectPtr<AIGS_GameCharacterFramework>> m_RegisteredCharacters;
     
 };
 

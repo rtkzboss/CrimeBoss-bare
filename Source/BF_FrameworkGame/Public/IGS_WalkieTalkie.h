@@ -13,6 +13,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WalkieTalkie : public AIGS_PickupActorBase {
     GENERATED_BODY()
 public:
+    AIGS_WalkieTalkie(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnWalkiePicked();
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_InteractiveComponent* InteractiveComponent;
     
@@ -31,12 +36,6 @@ public:
 protected:
     UPROPERTY(EditDefaultsOnly)
     FIGS_CommonItemData CommonData;
-    
-public:
-    AIGS_WalkieTalkie(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnWalkiePicked();
     
 };
 

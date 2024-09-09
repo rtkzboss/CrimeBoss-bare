@@ -10,6 +10,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SentryControllerPlayerBase : public AIGS_SentryControllerFramework {
     GENERATED_BODY()
 public:
+    AIGS_SentryControllerPlayerBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bUsePitch;
@@ -29,8 +31,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentPitch;
     
-public:
-    AIGS_SentryControllerPlayerBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

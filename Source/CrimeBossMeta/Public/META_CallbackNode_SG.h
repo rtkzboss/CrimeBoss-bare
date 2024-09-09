@@ -9,10 +9,10 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_CallbackNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_CallbackNode_SG();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_BaseCallback* CallbackObject;
     
-    UMETA_CallbackNode_SG();
-
 };
 

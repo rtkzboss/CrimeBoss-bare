@@ -19,6 +19,13 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_ANIMATIONS_API UIGS_UPlayerAnimationComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_UPlayerAnimationComponent(const FObjectInitializer& ObjectInitializer);
+
+private:
+    UFUNCTION()
+    void OnWeaponChange() const;
+    
+public:
     UPROPERTY(EditAnywhere)
     UClass* UnarmedArmsAnimClass;
     
@@ -130,13 +137,6 @@ public:
 protected:
     UPROPERTY(Transient)
     AIGS_WieldableBase* m_WieldableBase;
-    
-public:
-    UIGS_UPlayerAnimationComponent(const FObjectInitializer& ObjectInitializer);
-
-private:
-    UFUNCTION()
-    void OnWeaponChange() const;
     
 };
 

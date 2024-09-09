@@ -19,6 +19,38 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_CrewManagerComponent : public UIGS_CrewManagerBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_CrewManagerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetCharacterPlotlineCompleted(FGameplayTag inCharacter);
+    
+    UFUNCTION(BlueprintCallable)
+    void SaveCharacterMissionStatus(FGameplayTag inCharacter, TSubclassOf<UMETA_MissionID> inMissionID, EMETA_JobResult inResult);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetCharacterPlotlineProgressForCharacter(FGameplayTag inCharacter);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetActiveGenericVariants();
+    
+    UFUNCTION(BlueprintPure)
+    bool IsHeisterRemovedFromCampaign(EIGS_CharacterID inCharacterID) const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<EIGS_CharacterID> GetUniqueCharactersAvailableForGeneration(bool inIncludeCharacterMissions) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCharacterMissionProgressForCharacter(FGameplayTag inCharacter, bool& outFound, FIGS_CharacterMissionProgress& outMissionProgress) const;
+    
+    UFUNCTION(BlueprintCallable)
+    UMETA_Character* CreateUniqueCharacterByTagID(FGameplayTag inCharacterTagID, bool inIsTemporary, bool inForceIgnoreLock);
+    
+    UFUNCTION(BlueprintCallable)
+    UMETA_Character* CreateUniqueCharacterByID(EIGS_CharacterID inCharacterID, bool inIsTemporary, bool inForceIgnoreLock);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<UMETA_Character*> CalculateStartingHeistersBonus();
+    
 protected:
     UPROPERTY(BlueprintReadWrite)
     TArray<FMETA_PerkData> LastPromotePerks;
@@ -61,39 +93,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite)
     TArray<FIGS_CharacterClasses> ActiveGenericVariants;
-    
-public:
-    UMETA_CrewManagerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetCharacterPlotlineCompleted(FGameplayTag inCharacter);
-    
-    UFUNCTION(BlueprintCallable)
-    void SaveCharacterMissionStatus(FGameplayTag inCharacter, TSubclassOf<UMETA_MissionID> inMissionID, EMETA_JobResult inResult);
-    
-    UFUNCTION(BlueprintCallable)
-    void ResetCharacterPlotlineProgressForCharacter(FGameplayTag inCharacter);
-    
-    UFUNCTION(BlueprintCallable)
-    void ResetActiveGenericVariants();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsHeisterRemovedFromCampaign(EIGS_CharacterID inCharacterID) const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<EIGS_CharacterID> GetUniqueCharactersAvailableForGeneration(bool inIncludeCharacterMissions) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCharacterMissionProgressForCharacter(FGameplayTag inCharacter, bool& outFound, FIGS_CharacterMissionProgress& outMissionProgress) const;
-    
-    UFUNCTION(BlueprintCallable)
-    UMETA_Character* CreateUniqueCharacterByTagID(FGameplayTag inCharacterTagID, bool inIsTemporary, bool inForceIgnoreLock);
-    
-    UFUNCTION(BlueprintCallable)
-    UMETA_Character* CreateUniqueCharacterByID(EIGS_CharacterID inCharacterID, bool inIsTemporary, bool inForceIgnoreLock);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<UMETA_Character*> CalculateStartingHeistersBonus();
     
 };
 

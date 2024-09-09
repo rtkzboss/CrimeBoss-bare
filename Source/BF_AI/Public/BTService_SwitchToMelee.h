@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTService_SwitchToMelee : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_SwitchToMelee();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector UseMeleeKey;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float ExtraDistanceFromRangeToStopBash;
     
-public:
-    UBTService_SwitchToMelee();
-
 };
 

@@ -13,17 +13,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetTopNavbar : public UIGS_WidgetWithInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_TabSelectedEvent OnTabSelectedEvent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UHorizontalBox* TabsOnly;
-    
-private:
-    UPROPERTY(Instanced)
-    TArray<UIGS_TabButton*> m_Tabs;
-    
-public:
     UIGS_WidgetTopNavbar();
 
     UFUNCTION(BlueprintCallable)
@@ -40,6 +29,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void DeselectAllTabs();
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_TabSelectedEvent OnTabSelectedEvent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UHorizontalBox* TabsOnly;
+    
+private:
+    UPROPERTY(Instanced)
+    TArray<UIGS_TabButton*> m_Tabs;
     
 };
 

@@ -13,6 +13,11 @@ UCLASS()
 class BF_AI_API UIGS_ScriptingCommandMoveToWaypoint : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
+    UIGS_ScriptingCommandMoveToWaypoint();
+
+    UFUNCTION(BlueprintCallable)
+    static UIGS_ScriptingCommandMoveToWaypoint* ScriptingCommandMoveToWaypoint(AIGS_GameCharacterFramework* Character, int32 scope, AIGS_WaypointFramework* Waypoint, EIGS_Speed Speed, bool Crouch);
+    
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Approach;
     
@@ -21,11 +26,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Leave;
-    
-    UIGS_ScriptingCommandMoveToWaypoint();
-
-    UFUNCTION(BlueprintCallable)
-    static UIGS_ScriptingCommandMoveToWaypoint* ScriptingCommandMoveToWaypoint(AIGS_GameCharacterFramework* Character, int32 scope, AIGS_WaypointFramework* Waypoint, EIGS_Speed Speed, bool Crouch);
     
 };
 

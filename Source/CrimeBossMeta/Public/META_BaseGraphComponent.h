@@ -12,15 +12,6 @@ UCLASS(Abstract, Blueprintable, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseGraphComponent : public UObject, public IMETA_GraphComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    UGenericGraphNode* OwnerNode;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AMETA_BaseGameMode* GameMode;
-    
-    UPROPERTY(BlueprintReadWrite, Transient)
-    bool bAlreadyActivated;
-    
     UMETA_BaseGraphComponent();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -37,6 +28,15 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool DoesContainClass(UClass* inClass, bool inNeedCheckAsChild);
+    
+    UPROPERTY(BlueprintReadOnly)
+    UGenericGraphNode* OwnerNode;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    AMETA_BaseGameMode* GameMode;
+    
+    UPROPERTY(BlueprintReadWrite, Transient)
+    bool bAlreadyActivated;
     
 
     // Fix for true pure virtual functions not being implemented

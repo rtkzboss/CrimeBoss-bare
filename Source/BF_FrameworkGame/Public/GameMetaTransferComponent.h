@@ -11,17 +11,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UGameMetaTransferComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    int32 TotalLootSpawned;
-    
-protected:
-    UPROPERTY()
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> CollectedInventoryLoot;
-    
-    UPROPERTY()
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> CollectedCarryables;
-    
-public:
     UGameMetaTransferComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -32,6 +21,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void RegisterCarryableLoot(TSubclassOf<UIGS_InventoryObjectFramework> inCarryableItem);
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    int32 TotalLootSpawned;
+    
+protected:
+    UPROPERTY()
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> CollectedInventoryLoot;
+    
+    UPROPERTY()
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> CollectedCarryables;
     
 };
 

@@ -11,6 +11,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputBrush : public UHoudiniInputActor {
     GENERATED_BODY()
 public:
+    UHoudiniInputBrush();
+
 protected:
     UPROPERTY()
     TArray<FHoudiniBrushInfo> BrushesInfo;
@@ -24,8 +26,5 @@ protected:
     UPROPERTY()
     TEnumAsByte<EBrushType> CachedInputBrushType;
     
-public:
-    UHoudiniInputBrush();
-
 };
 

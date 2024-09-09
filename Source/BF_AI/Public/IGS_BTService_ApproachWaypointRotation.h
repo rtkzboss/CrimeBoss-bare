@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_ApproachWaypointRotation : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_ApproachWaypointRotation();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector WaypointKey;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutRotationKey;
     
-public:
-    UIGS_BTService_ApproachWaypointRotation();
-
 };
 

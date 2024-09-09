@@ -16,6 +16,22 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BleedingHandlerComponent : public UIGS_DownStateHandlerComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_BleedingHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
+    void Multicast_StartInjured(EIGS_BleedType BleedType, const FIGS_HitInfo& inHitInfo);
+    
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
+    void Multicast_StartBleeding(EIGS_BleedType BleedType, const FIGS_HitInfo& inHitInfo);
+    
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
+    void Multicast_Revive();
+    
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
+    void Multicast_Die(float inHealthChanged, float inShieldChanged, const FIGS_HitInfo& inHitInfo);
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FIGS_BleedTypeChangedEventSignature OnBleedTypeChanged;
     
@@ -99,22 +115,7 @@ protected:
     bool InvulnerableInDownstate;
     
 public:
-    UIGS_BleedingHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_StartInjured(EIGS_BleedType BleedType, const FIGS_HitInfo& inHitInfo);
-    
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_StartBleeding(EIGS_BleedType BleedType, const FIGS_HitInfo& inHitInfo);
-    
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_Revive();
-    
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_Die(float inHealthChanged, float inShieldChanged, const FIGS_HitInfo& inHitInfo);
-    
 };
 

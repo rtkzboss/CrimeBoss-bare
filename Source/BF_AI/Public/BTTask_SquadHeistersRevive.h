@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_SquadHeistersRevive : public UIGS_BTTask_SquadBase {
     GENERATED_BODY()
 public:
+    UBTTask_SquadHeistersRevive();
+
 protected:
     UPROPERTY()
     TArray<FIGS_ReviveRecord> m_RevivingRecord;
     
-public:
-    UBTTask_SquadHeistersRevive();
-
 };
 

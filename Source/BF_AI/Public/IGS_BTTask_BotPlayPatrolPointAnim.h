@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_BotPlayPatrolPointAnim : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_BotPlayPatrolPointAnim();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector PatrolPointKey;
     
-public:
-    UIGS_BTTask_BotPlayPatrolPointAnim();
-
 };
 

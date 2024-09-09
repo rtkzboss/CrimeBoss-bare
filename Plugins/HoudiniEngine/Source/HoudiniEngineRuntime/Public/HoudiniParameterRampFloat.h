@@ -10,6 +10,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterRampFloat : public UHoudiniParameterMultiParm {
     GENERATED_BODY()
 public:
+    UHoudiniParameterRampFloat();
+
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterRampFloatPoint*> Points;
     
@@ -34,7 +36,5 @@ public:
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterRampModificationEvent*> ModificationEvents;
     
-    UHoudiniParameterRampFloat();
-
 };
 

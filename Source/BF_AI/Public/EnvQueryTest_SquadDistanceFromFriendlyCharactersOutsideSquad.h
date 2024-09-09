@@ -10,10 +10,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_SquadDistanceFromFriendlyCharactersOutsideSquad : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_SquadDistanceFromFriendlyCharactersOutsideSquad();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> FriendlyActorsContext;
     
-    UEnvQueryTest_SquadDistanceFromFriendlyCharactersOutsideSquad();
-
 };
 

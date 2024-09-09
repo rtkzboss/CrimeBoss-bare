@@ -13,6 +13,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniPDGAssetLink : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniPDGAssetLink();
+
     UPROPERTY(DuplicateTransient, NonTransactional)
     FString AssetName;
     
@@ -64,7 +66,5 @@ public:
     UPROPERTY()
     FDirectoryPath BakeFolder;
     
-    UHoudiniPDGAssetLink();
-
 };
 

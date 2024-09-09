@@ -15,26 +15,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlantableExplosiveProjectile : public AIGS_GrenadeProjectileBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bIsShootable;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float PushIntoMeshDistance;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FRotator RotateMeshOnPlant;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_PlantData)
-    FIGS_PlantData mR_PlantData;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    USphereComponent* ShootCollisionSphere;
-    
-public:
     AIGS_PlantableExplosiveProjectile(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
     UFUNCTION(BlueprintImplementableEvent)
@@ -51,5 +32,23 @@ protected:
     UFUNCTION(BlueprintNativeEvent)
     bool CanStick(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inSweepResult);
     
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bIsShootable;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float PushIntoMeshDistance;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FRotator RotateMeshOnPlant;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_PlantData)
+    FIGS_PlantData mR_PlantData;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    USphereComponent* ShootCollisionSphere;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API UBTTask_ApplyGameplayEffect : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_ApplyGameplayEffect();
+
     UPROPERTY(EditAnywhere)
     EIGS_GameplayEffectTarget Target;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(EditAnywhere)
     TSubclassOf<UGameplayEffect> GameplayEffect;
     
-    UBTTask_ApplyGameplayEffect();
-
 };
 

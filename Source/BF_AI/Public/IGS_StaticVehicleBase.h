@@ -11,7 +11,15 @@ UCLASS()
 class BF_AI_API AIGS_StaticVehicleBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_StaticVehicleBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(Reliable, Server)
+    void Server_SetColor(FColor InColor);
+    
 protected:
+    UFUNCTION()
+    void OnRep_OnColorChanged() const;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UStaticMeshComponent* VehicleMesh;
     
@@ -25,16 +33,7 @@ protected:
     bool ClearCanAffectNavigationFlag;
     
 public:
-    AIGS_StaticVehicleBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(Reliable, Server)
-    void Server_SetColor(FColor InColor);
-    
-protected:
-    UFUNCTION()
-    void OnRep_OnColorChanged() const;
-    
 };
 

@@ -9,6 +9,14 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeaponRecoilComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WeaponRecoilComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void Reinit();
+    
+    UFUNCTION(BlueprintCallable)
+    void AddRecoil();
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_RecoilDefinition RecoilDefinition;
     
@@ -33,15 +41,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FRotator TargetRotationDelta;
-    
-public:
-    UIGS_WeaponRecoilComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void Reinit();
-    
-    UFUNCTION(BlueprintCallable)
-    void AddRecoil();
     
 };
 

@@ -14,7 +14,12 @@ UCLASS(Abstract)
 class BF_RENDERING_API AIGS_LensFlare : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_LensFlare(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void PostConstruction();
+    
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UMaterialBillboardComponent* LensFlareComponent;
     
@@ -395,13 +400,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture* AdditionalFlare;
-    
-public:
-    AIGS_LensFlare(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void PostConstruction();
     
 };
 

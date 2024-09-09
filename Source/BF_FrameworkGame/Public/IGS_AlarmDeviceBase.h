@@ -14,6 +14,16 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AlarmDeviceBase : public AActor, public IIGS_SmartObjectInterface {
     GENERATED_BODY()
 public:
+    AIGS_AlarmDeviceBase(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnDisarmed();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void Disarm(AIGS_GameCharacterFramework* inUsingCharacter);
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bDisarmed;
     
@@ -35,17 +45,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float UnlockAfterTime;
-    
-public:
-    AIGS_AlarmDeviceBase(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnDisarmed();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void Disarm(AIGS_GameCharacterFramework* inUsingCharacter);
     
 
     // Fix for true pure virtual functions not being implemented

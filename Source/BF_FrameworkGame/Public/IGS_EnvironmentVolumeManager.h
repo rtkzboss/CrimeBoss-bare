@@ -20,17 +20,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_EnvironmentVolumeManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Instanced)
-    TArray<UIGS_EnvironmentBoxComponent*> m_EnvironmentBoxComponents;
-    
-    UPROPERTY()
-    TMap<UBoxComponent*, TWeakObjectPtr<APostProcessVolume>> m_PostProcessVolumes;
-    
-    UPROPERTY()
-    TArray<AIGS_EnvironmentVolume*> m_EnvironmentVolumes;
-    
-public:
     UIGS_EnvironmentVolumeManager();
 
     UFUNCTION(BlueprintCallable)
@@ -60,6 +49,16 @@ protected:
 public:
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_EnvironmentVolumeManager* Instance(const UObject* inWorldContextObject);
+    
+private:
+    UPROPERTY(Instanced)
+    TArray<UIGS_EnvironmentBoxComponent*> m_EnvironmentBoxComponents;
+    
+    UPROPERTY()
+    TMap<UBoxComponent*, TWeakObjectPtr<APostProcessVolume>> m_PostProcessVolumes;
+    
+    UPROPERTY()
+    TArray<AIGS_EnvironmentVolume*> m_EnvironmentVolumes;
     
 };
 

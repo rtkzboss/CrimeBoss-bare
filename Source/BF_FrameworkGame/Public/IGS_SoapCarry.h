@@ -7,6 +7,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SoapCarry : public AIGS_CarryableBase {
     GENERATED_BODY()
 public:
+    AIGS_SoapCarry(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintNativeEvent)
+    void SlippingOff();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsSlipEnabled;
     
@@ -18,11 +23,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsCanThrow;
-    
-    AIGS_SoapCarry(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintNativeEvent)
-    void SlippingOff();
     
 };
 

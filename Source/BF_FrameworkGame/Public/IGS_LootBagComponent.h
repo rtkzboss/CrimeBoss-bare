@@ -18,44 +18,7 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootBagComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CurrentLootBagCountChangedEventSignature OnCurrentLootBagCountChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CurrentLootBagCountChangedClientOnlyEventSignature OnCurrentLootBagCountClientOnlyChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CurrentlyFilledBagItemAddedEventSignature OnCurrentlyFilledBagItemAddedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_EmptyBagCreatedEventSignature OnEmptyBagCreatedEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bCanTakeThrownLootBag;
-    
-    UPROPERTY()
-    TArray<FIGS_LootBagInfo> LootBagsInfo;
-    
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    bool bIsEnabled;
-    
-    UPROPERTY(EditAnywhere)
-    UAkAudioEvent* NewBagCreatedAkEvent;
-    
-    UPROPERTY(EditAnywhere)
-    TSubclassOf<UGameplayEffect> HasMaxBagsGameplayEffect;
-    
-    UPROPERTY()
-    int32 CurrentBagsCount;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated)
-    bool m_isTransferingBag;
-    
-public:
     UIGS_LootBagComponent(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
     UFUNCTION(Reliable, Server)
@@ -127,5 +90,42 @@ public:
     UFUNCTION(BlueprintPure)
     int32 BagsCount() const;
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CurrentLootBagCountChangedEventSignature OnCurrentLootBagCountChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CurrentLootBagCountChangedClientOnlyEventSignature OnCurrentLootBagCountClientOnlyChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CurrentlyFilledBagItemAddedEventSignature OnCurrentlyFilledBagItemAddedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_EmptyBagCreatedEventSignature OnEmptyBagCreatedEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bCanTakeThrownLootBag;
+    
+    UPROPERTY()
+    TArray<FIGS_LootBagInfo> LootBagsInfo;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    bool bIsEnabled;
+    
+    UPROPERTY(EditAnywhere)
+    UAkAudioEvent* NewBagCreatedAkEvent;
+    
+    UPROPERTY(EditAnywhere)
+    TSubclassOf<UGameplayEffect> HasMaxBagsGameplayEffect;
+    
+    UPROPERTY()
+    int32 CurrentBagsCount;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated)
+    bool m_isTransferingBag;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

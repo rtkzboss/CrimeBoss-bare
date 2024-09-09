@@ -10,14 +10,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_TaskNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    UMETA_BaseGoal* m_Goal;
-    
-    UPROPERTY()
-    UMETA_TaskCondition* m_Task;
-    
-public:
     UMETA_TaskNotification();
 
     UFUNCTION(BlueprintCallable)
@@ -28,6 +20,13 @@ public:
     
     UFUNCTION(BlueprintPure)
     UMETA_BaseGoal* GetGoal() const;
+    
+private:
+    UPROPERTY()
+    UMETA_BaseGoal* m_Goal;
+    
+    UPROPERTY()
+    UMETA_TaskCondition* m_Task;
     
 };
 

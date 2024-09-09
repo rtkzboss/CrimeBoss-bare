@@ -18,6 +18,50 @@ UCLASS()
 class BF_GUI_API UIGS_Slider : public UWidget {
     GENERATED_BODY()
 public:
+    UIGS_Slider();
+
+    UFUNCTION(BlueprintCallable)
+    void SetValue(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetStepSize(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSliderHandleColor(FLinearColor InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSliderBarColor(FLinearColor InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMinValue(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMaxValue(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocked(bool InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIndentHandle(bool InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void ScrollRight();
+    
+    UFUNCTION(BlueprintCallable)
+    void ScrollLeft();
+    
+    UFUNCTION(BlueprintPure)
+    float SanitizeValue(float InValue) const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetValue() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetNormalizedValue() const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool AnalogValueChange(const FGeometry& InGeometry, const FAnalogInputEvent& InAnalogEvent);
+    
     UPROPERTY(EditAnywhere)
     float Value;
     
@@ -95,50 +139,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FOnIGSSliderKeyDownEvent OnKeyDown;
-    
-    UIGS_Slider();
-
-    UFUNCTION(BlueprintCallable)
-    void SetValue(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetStepSize(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetSliderHandleColor(FLinearColor InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetSliderBarColor(FLinearColor InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMinValue(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMaxValue(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLocked(bool InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIndentHandle(bool InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void ScrollRight();
-    
-    UFUNCTION(BlueprintCallable)
-    void ScrollLeft();
-    
-    UFUNCTION(BlueprintPure)
-    float SanitizeValue(float InValue) const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetValue() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetNormalizedValue() const;
-    
-    UFUNCTION(BlueprintCallable)
-    bool AnalogValueChange(const FGeometry& InGeometry, const FAnalogInputEvent& InAnalogEvent);
     
 };
 

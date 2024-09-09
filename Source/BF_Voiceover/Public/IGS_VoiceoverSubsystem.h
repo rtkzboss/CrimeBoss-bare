@@ -15,6 +15,17 @@ UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_VoiceoverSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_VoiceoverSubsystem();
+
+    UFUNCTION(BlueprintCallable)
+    void SetSecondPlanner(FIGS_DialogueGroupCharacterHolder inCharacterHolder);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetGlobalCharacter(FIGS_DialogueGroupCharacterHolder inCharacterHolder);
+    
+    UFUNCTION(BlueprintPure)
+    uint8 GetGlobalCharacter(EIGS_DialogueSpeaker inSpeaker) const;
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_DialogueLineEvent OnDialogueLineVoiceStart;
     
@@ -30,18 +41,6 @@ protected:
     
     UPROPERTY()
     TMap<FIGS_VoiceoverControllerKey, UIGS_VoiceoverGroupController*> VoiceoverControllers;
-    
-public:
-    UIGS_VoiceoverSubsystem();
-
-    UFUNCTION(BlueprintCallable)
-    void SetSecondPlanner(FIGS_DialogueGroupCharacterHolder inCharacterHolder);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetGlobalCharacter(FIGS_DialogueGroupCharacterHolder inCharacterHolder);
-    
-    UFUNCTION(BlueprintPure)
-    uint8 GetGlobalCharacter(EIGS_DialogueSpeaker inSpeaker) const;
     
 };
 

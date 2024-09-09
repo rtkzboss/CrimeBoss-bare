@@ -13,12 +13,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UIGS_PlayMovieLatent : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnMovieStartedLatent OnMovieStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnMovieFinishedLatent OnMovieFinished;
-    
     UIGS_PlayMovieLatent();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
@@ -30,6 +24,13 @@ private:
     
     UFUNCTION()
     void MovieFinished_Internal();
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnMovieStartedLatent OnMovieStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnMovieFinishedLatent OnMovieFinished;
     
 };
 

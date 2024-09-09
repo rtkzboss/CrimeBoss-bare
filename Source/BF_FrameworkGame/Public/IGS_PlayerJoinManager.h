@@ -17,6 +17,32 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerJoinManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerJoinManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void OnRep_JoinedPlayers() const;
+    
+    UFUNCTION()
+    void OnRep_HasEveryoneLoadedLevel();
+    
+    UFUNCTION(BlueprintCallable)
+    FIGS_PlayerJoinInfo GetSlotByHeisterNumberBP(int32 inHeisterNumber);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static UIGS_PlayerJoinManager* GetPlayerJoinManager(UObject* inWCO);
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetNumberOfFreeSlots() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetJoinedHeistersCount();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    int32 GetHeisterNumberFromBot(AIGS_GameCharacterFramework* inBot);
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_GameCharacterFramework*> GetCurrentPlayers();
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_PlayerSlotChanged OnPlayerSlotChanged;
     
@@ -49,33 +75,7 @@ private:
     AIGS_GameCharacterFramework* m_OldBot;
     
 public:
-    UIGS_PlayerJoinManager(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void OnRep_JoinedPlayers() const;
-    
-    UFUNCTION()
-    void OnRep_HasEveryoneLoadedLevel();
-    
-    UFUNCTION(BlueprintCallable)
-    FIGS_PlayerJoinInfo GetSlotByHeisterNumberBP(int32 inHeisterNumber);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static UIGS_PlayerJoinManager* GetPlayerJoinManager(UObject* inWCO);
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetNumberOfFreeSlots() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetJoinedHeistersCount();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    int32 GetHeisterNumberFromBot(AIGS_GameCharacterFramework* inBot);
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_GameCharacterFramework*> GetCurrentPlayers();
-    
 };
 

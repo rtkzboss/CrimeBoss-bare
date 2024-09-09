@@ -8,13 +8,13 @@ UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetMouseInteractionPlane : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetMouseInteractionPlane();
+
     UPROPERTY(BlueprintAssignable)
     FOnHoverBorderHoverEvent OnHoverBorderHover;
     
     UPROPERTY(BlueprintAssignable)
     FOnHoverBorderHoverEvent OnHoverBorderUnhover;
     
-    UIGS_WidgetMouseInteractionPlane();
-
 };
 

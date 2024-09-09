@@ -24,6 +24,29 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_RoomBase : public AIGS_RoomFramework, public INavRelevantInterface {
     GENERATED_BODY()
 public:
+    AIGS_RoomBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void PlayerTriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+    
+    UFUNCTION()
+    void PlayerTriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+    
+    UFUNCTION(BlueprintCallable)
+    void InitializeRoom();
+    
+    UFUNCTION(BlueprintCallable)
+    void GiveAllRoomVertices(TArray<FVector>& outVertices);
+    
+    UFUNCTION(BlueprintCallable)
+    void GetPolys(FVector InLocation, FVector Extent);
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_RoomBase*> GetDistantRooms(const FVector inStartPos, float inMinDistance, float inMaxDistance, int32 inMinChokePoints, int32 inMaxChokePoints) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void AddEntrance(AActor* inActor);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_DynamicWallBase*> RoomWalls;
     
@@ -83,29 +106,6 @@ public:
     
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_NeighborData> NeighborData;
-    
-    AIGS_RoomBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION()
-    void PlayerTriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-    
-    UFUNCTION()
-    void PlayerTriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-    
-    UFUNCTION(BlueprintCallable)
-    void InitializeRoom();
-    
-    UFUNCTION(BlueprintCallable)
-    void GiveAllRoomVertices(TArray<FVector>& outVertices);
-    
-    UFUNCTION(BlueprintCallable)
-    void GetPolys(FVector InLocation, FVector Extent);
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_RoomBase*> GetDistantRooms(const FVector inStartPos, float inMinDistance, float inMaxDistance, int32 inMinChokePoints, int32 inMaxChokePoints) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void AddEntrance(AActor* inActor);
     
 
     // Fix for true pure virtual functions not being implemented

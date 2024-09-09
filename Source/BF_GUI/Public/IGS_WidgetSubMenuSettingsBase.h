@@ -8,9 +8,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetSubMenuSettingsBase : public UIGS_WidgetSubMenuBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_SettingsValueChangedEvent OnSettingsValueChanged;
-    
     UIGS_WidgetSubMenuSettingsBase();
 
     UFUNCTION(BlueprintCallable)
@@ -30,6 +27,9 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     void OnApply();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_SettingsValueChangedEvent OnSettingsValueChanged;
     
 };
 

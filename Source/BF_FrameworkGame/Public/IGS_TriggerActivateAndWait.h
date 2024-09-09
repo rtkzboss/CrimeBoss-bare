@@ -11,13 +11,13 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_TriggerActivateAndWait : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_TriggerEventOutputPin Triggered;
-    
     UIGS_TriggerActivateAndWait();
 
     UFUNCTION(BlueprintCallable)
     static UIGS_TriggerActivateAndWait* TriggerActivateAndWait(AIGS_Trigger* inTrigger, bool inResetCount);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_TriggerEventOutputPin Triggered;
     
 };
 

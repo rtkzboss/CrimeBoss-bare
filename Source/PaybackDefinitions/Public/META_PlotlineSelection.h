@@ -25,80 +25,6 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_PlotlineSelection : public UDataAsset {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTag CampaignModeTag;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<UMETA_BaseGoal> PrimaryGoal;
-    
-    UPROPERTY(EditDefaultsOnly)
-    EMETA_CampaignVictoryCondition CampaignVictoryCondition;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FName StatisticsRoot;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_CareerStartStuff CareerStartConfiguration;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTagContainer StartingUnlocks;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float InvestigationGrowth;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float FinalScoreMultiplier;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FMETA_Interval> PlotlineDaysArray;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval AnyNextPlotlineDays;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> StartedGraphs;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<TSoftObjectPtr<UMETA_BaseStoryGraphManager>> GraphsCanBeExecutedWhenGameFinished;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EIGS_CharacterID, FMETA_UniqueCharacterGraphInfo> CharacterStoryGraphs;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FIGS_PlotlineGraphData> PlotlineGraphs;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSoftObjectPtr<UMETA_BaseStoryGraphManager> CrewRandEventsGraph;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSoftObjectPtr<UMETA_BaseStoryGraphManager> SpecialCrewEventsGraph;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> EntitlementGraphs;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval InitialTerritoryAmount;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 InitialSoldiersAmount;
-    
-    UPROPERTY(EditDefaultsOnly)
-    EMETA_ArmyTier InitialArmyTier;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FGameplayTagContainer> PlayerTileGroups;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSet<EMETA_BonusType> IgnoredBossBonuses;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_EnemyTierLimitOnCampaignStart EnemyTierLimitOnCampaignStart;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_Gang, FMETA_GangInitialConfiguration> GangsInitialConfiguration;
-    
-public:
     UMETA_PlotlineSelection();
 
     UFUNCTION(BlueprintPure)
@@ -172,6 +98,79 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool CanGraphBeExecutedWhenGameFinished(const TSoftObjectPtr<UMETA_BaseStoryGraphManager>& inGraph) const;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTag CampaignModeTag;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSubclassOf<UMETA_BaseGoal> PrimaryGoal;
+    
+    UPROPERTY(EditDefaultsOnly)
+    EMETA_CampaignVictoryCondition CampaignVictoryCondition;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FName StatisticsRoot;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_CareerStartStuff CareerStartConfiguration;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTagContainer StartingUnlocks;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float InvestigationGrowth;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float FinalScoreMultiplier;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FMETA_Interval> PlotlineDaysArray;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval AnyNextPlotlineDays;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> StartedGraphs;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<TSoftObjectPtr<UMETA_BaseStoryGraphManager>> GraphsCanBeExecutedWhenGameFinished;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EIGS_CharacterID, FMETA_UniqueCharacterGraphInfo> CharacterStoryGraphs;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FIGS_PlotlineGraphData> PlotlineGraphs;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSoftObjectPtr<UMETA_BaseStoryGraphManager> CrewRandEventsGraph;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSoftObjectPtr<UMETA_BaseStoryGraphManager> SpecialCrewEventsGraph;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> EntitlementGraphs;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval InitialTerritoryAmount;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 InitialSoldiersAmount;
+    
+    UPROPERTY(EditDefaultsOnly)
+    EMETA_ArmyTier InitialArmyTier;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FGameplayTagContainer> PlayerTileGroups;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSet<EMETA_BonusType> IgnoredBossBonuses;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_EnemyTierLimitOnCampaignStart EnemyTierLimitOnCampaignStart;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_Gang, FMETA_GangInitialConfiguration> GangsInitialConfiguration;
     
 };
 

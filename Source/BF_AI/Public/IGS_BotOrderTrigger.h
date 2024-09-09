@@ -14,26 +14,6 @@ UCLASS()
 class BF_AI_API AIGS_BotOrderTrigger : public ATriggerBox {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText Text;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float InitialDelay;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float Cooldown;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<EIGS_CharacterID> IgnoredCharacters;
-    
-    UPROPERTY()
-    TArray<FIGS_BotOrderData> BotsInBox;
-    
-    UPROPERTY()
-    TArray<FIGS_BotOrderData> PlayersInBox;
-    
-public:
     AIGS_BotOrderTrigger(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -70,6 +50,25 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void Activate();
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FText Text;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float InitialDelay;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float Cooldown;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TArray<EIGS_CharacterID> IgnoredCharacters;
+    
+    UPROPERTY()
+    TArray<FIGS_BotOrderData> BotsInBox;
+    
+    UPROPERTY()
+    TArray<FIGS_BotOrderData> PlayersInBox;
     
 };
 

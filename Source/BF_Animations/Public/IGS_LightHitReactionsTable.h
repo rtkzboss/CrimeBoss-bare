@@ -8,6 +8,8 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_LightHitReactionsTable : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_LightHitReactionsTable();
+
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsVariant Standing;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY(EditAnywhere)
     float NextAllowedHitDuration;
     
-    UIGS_LightHitReactionsTable();
-
 };
 

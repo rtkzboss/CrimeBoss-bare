@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractionTileBase : public UChildActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_InteractionTileBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnTileSuccess OnTileSuccessEvent;
     
@@ -20,8 +22,5 @@ protected:
     UPROPERTY()
     AIGS_InteractionSubTileActor* m_SubTileActor;
     
-public:
-    UIGS_InteractionTileBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

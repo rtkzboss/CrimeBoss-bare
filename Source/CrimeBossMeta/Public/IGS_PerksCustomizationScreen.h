@@ -17,7 +17,21 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_PerksCustomizationScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
+    UIGS_PerksCustomizationScreen();
+
 protected:
+    UFUNCTION(BlueprintCallable)
+    void SetGrouppedPerks();
+    
+    UFUNCTION(BlueprintPure)
+    FIGS_PerkGroup GetPerkGroupByPerkTag(FGameplayTag inTag, UPARAM(Ref) TArray<FIGS_PerkGroup>& inPerkGroups) const;
+    
+    UFUNCTION(BlueprintPure)
+    UMETA_Perk* GetOwnedPerkMaxTier(UPARAM(Ref) FIGS_PerkGroup& InGroup) const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<FIGS_PerkGroup> GetGroupedPerks(TArray<UMETA_Perk*> inPerks) const;
+    
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_Quickplay_StashManagerComponent* MultiplayerStashManagerComponent;
     
@@ -44,22 +58,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_PerkGroup> GroupedPurchasablePerks;
-    
-public:
-    UIGS_PerksCustomizationScreen();
-
-protected:
-    UFUNCTION(BlueprintCallable)
-    void SetGrouppedPerks();
-    
-    UFUNCTION(BlueprintPure)
-    FIGS_PerkGroup GetPerkGroupByPerkTag(FGameplayTag inTag, UPARAM(Ref) TArray<FIGS_PerkGroup>& inPerkGroups) const;
-    
-    UFUNCTION(BlueprintPure)
-    UMETA_Perk* GetOwnedPerkMaxTier(UPARAM(Ref) FIGS_PerkGroup& InGroup) const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<FIGS_PerkGroup> GetGroupedPerks(TArray<UMETA_Perk*> inPerks) const;
     
 };
 

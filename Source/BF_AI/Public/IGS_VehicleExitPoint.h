@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API AIGS_VehicleExitPoint : public AIGS_VehicleExitPointFramework {
     GENERATED_BODY()
 public:
+    AIGS_VehicleExitPoint(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     uint32 VehicleGroups;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY(EditAnywhere)
     AIGS_TrafficSegment* PossiblePath;
     
-public:
-    AIGS_VehicleExitPoint(const FObjectInitializer& ObjectInitializer);
-
 };
 

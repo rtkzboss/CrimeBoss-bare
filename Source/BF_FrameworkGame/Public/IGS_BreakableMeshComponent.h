@@ -29,6 +29,56 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BreakableMeshComponent : public UStaticMeshComponent, public IIGS_ProjectileOverlappable {
     GENERATED_BODY()
 public:
+    UIGS_BreakableMeshComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void TriggerBreakEvents(AActor* inDmgCauser);
+    
+protected:
+    UFUNCTION()
+    void SwitchMaterial();
+    
+    UFUNCTION()
+    void SpawnParticlesImpact(FVector Location);
+    
+    UFUNCTION(BlueprintCallable)
+    void SpawnParticles();
+    
+    UFUNCTION(BlueprintCallable)
+    void PreBreak();
+    
+    UFUNCTION()
+    void OnTakeRadialDamage(AActor* inDamagedActor, float inDamage, const UDamageType* inDamageType, FVector inOrigin, FHitResult inHitInfo, AController* inInstigatedBy, AActor* inDamageCauser);
+    
+    UFUNCTION()
+    void OnTakePointDamage(AActor* inDamagedActor, float inDamage, AController* inInstigatedBy, FVector inHitLocation, UPrimitiveComponent* inHitComponent, FName InBoneName, FVector inShotFromDirection, const UDamageType* inDamageType, AActor* inDamageCauser);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnTakeDamage(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
+    
+    UFUNCTION()
+    void OnRep_IsBroken();
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool IsBroken() const;
+    
+protected:
+    UFUNCTION()
+    void HandleBreakableMeshState();
+    
+public:
+    UFUNCTION(BlueprintPure)
+    float GetHealth() const;
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void BreakComponent();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void Break(AActor* inDmgCauser, FVector inHitLocation);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_OverlapResponseType OverlappableType;
     
@@ -136,58 +186,8 @@ protected:
     TArray<UMaterialInstanceDynamic*> DynamicBreakMaterials;
     
 public:
-    UIGS_BreakableMeshComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void TriggerBreakEvents(AActor* inDmgCauser);
-    
-protected:
-    UFUNCTION()
-    void SwitchMaterial();
-    
-    UFUNCTION()
-    void SpawnParticlesImpact(FVector Location);
-    
-    UFUNCTION(BlueprintCallable)
-    void SpawnParticles();
-    
-    UFUNCTION(BlueprintCallable)
-    void PreBreak();
-    
-    UFUNCTION()
-    void OnTakeRadialDamage(AActor* inDamagedActor, float inDamage, const UDamageType* inDamageType, FVector inOrigin, FHitResult inHitInfo, AController* inInstigatedBy, AActor* inDamageCauser);
-    
-    UFUNCTION()
-    void OnTakePointDamage(AActor* inDamagedActor, float inDamage, AController* inInstigatedBy, FVector inHitLocation, UPrimitiveComponent* inHitComponent, FName InBoneName, FVector inShotFromDirection, const UDamageType* inDamageType, AActor* inDamageCauser);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnTakeDamage(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
-    
-    UFUNCTION()
-    void OnRep_IsBroken();
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool IsBroken() const;
-    
-protected:
-    UFUNCTION()
-    void HandleBreakableMeshState();
-    
-public:
-    UFUNCTION(BlueprintPure)
-    float GetHealth() const;
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void BreakComponent();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void Break(AActor* inDmgCauser, FVector inHitLocation);
-    
 
     // Fix for true pure virtual functions not being implemented
 };

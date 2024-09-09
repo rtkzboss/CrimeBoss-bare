@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_ThrowBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_ThrowBase();
+
     UPROPERTY(EditAnywhere)
     bool BeingShotInterrupts;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer EventFilter;
     
-    UIGS_BTTask_ThrowBase();
-
 };
 

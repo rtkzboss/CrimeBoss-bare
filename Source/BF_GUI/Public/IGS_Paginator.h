@@ -14,6 +14,46 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_Paginator : public UIGS_Widget {
     GENERATED_BODY()
 public:
+    UIGS_Paginator();
+
+    UFUNCTION(BlueprintCallable)
+    void StartAutopaging();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetArrowsVisibility(bool inVisible, bool inCollapse);
+    
+    UFUNCTION(BlueprintCallable)
+    void SelectPage(int32 NewIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetPaginator();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPostPageSelected(int32 NewIndex);
+    
+    UFUNCTION(BlueprintPure)
+    bool IsLastPageSelected() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsFirstPageSelected() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void InitCarousel(int32 newPageCount);
+    
+private:
+    UFUNCTION()
+    void HandleAutoPageSwitch();
+    
+public:
+    UFUNCTION(BlueprintPure)
+    int32 GetSelectedIndex() const;
+    
+    UFUNCTION(BlueprintPure)
+    UWidget* GetContentWidget() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ChangePage(int32 Direction);
+    
     UPROPERTY(BlueprintAssignable)
     FOnPageSelectionChangedEvent OnPageSelectionChanged;
     
@@ -73,46 +113,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, Instanced)
     UButton* RightArrow;
-    
-    UIGS_Paginator();
-
-    UFUNCTION(BlueprintCallable)
-    void StartAutopaging();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetArrowsVisibility(bool inVisible, bool inCollapse);
-    
-    UFUNCTION(BlueprintCallable)
-    void SelectPage(int32 NewIndex);
-    
-    UFUNCTION(BlueprintCallable)
-    void ResetPaginator();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPostPageSelected(int32 NewIndex);
-    
-    UFUNCTION(BlueprintPure)
-    bool IsLastPageSelected() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsFirstPageSelected() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void InitCarousel(int32 newPageCount);
-    
-private:
-    UFUNCTION()
-    void HandleAutoPageSwitch();
-    
-public:
-    UFUNCTION(BlueprintPure)
-    int32 GetSelectedIndex() const;
-    
-    UFUNCTION(BlueprintPure)
-    UWidget* GetContentWidget() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ChangePage(int32 Direction);
     
 };
 

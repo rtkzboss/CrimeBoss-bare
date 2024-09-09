@@ -8,10 +8,10 @@ UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_CoverDefendPoint : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UEnvQueryGenerator_CoverDefendPoint();
+
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue BoxHeight;
     
-    UEnvQueryGenerator_CoverDefendPoint();
-
 };
 

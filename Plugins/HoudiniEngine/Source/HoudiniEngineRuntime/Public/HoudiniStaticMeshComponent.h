@@ -10,17 +10,6 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniStaticMeshComponent : public UMeshComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditAnywhere)
-    UHoudiniStaticMesh* Mesh;
-    
-    UPROPERTY()
-    FBox LocalBounds;
-    
-    UPROPERTY(EditAnywhere)
-    bool bHoudiniIconVisible;
-    
-public:
     UHoudiniStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION()
@@ -37,6 +26,16 @@ public:
     
     UFUNCTION()
     UHoudiniStaticMesh* GetMesh();
+    
+protected:
+    UPROPERTY(EditAnywhere)
+    UHoudiniStaticMesh* Mesh;
+    
+    UPROPERTY()
+    FBox LocalBounds;
+    
+    UPROPERTY(EditAnywhere)
+    bool bHoudiniIconVisible;
     
 };
 

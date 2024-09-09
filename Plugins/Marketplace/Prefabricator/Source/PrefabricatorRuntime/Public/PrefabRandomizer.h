@@ -10,6 +10,11 @@ UCLASS()
 class PREFABRICATORRUNTIME_API APrefabRandomizer : public AActor {
     GENERATED_BODY()
 public:
+    APrefabRandomizer(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void Randomize(int32 InSeed);
+    
     UPROPERTY(EditAnywhere)
     bool bRandomizeOnBeginPlay;
     
@@ -27,11 +32,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<APrefabActor*> ActorsToRandomize;
-    
-    APrefabRandomizer(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void Randomize(int32 InSeed);
     
 };
 

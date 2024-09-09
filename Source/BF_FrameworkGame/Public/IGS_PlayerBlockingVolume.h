@@ -12,18 +12,17 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerBlockingVolume : public AVolume {
     GENERATED_BODY()
 public:
+    AIGS_PlayerBlockingVolume(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void OnComponentHit(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
+    
 private:
     UPROPERTY(EditInstanceOnly)
     uint8 bPushOut: 1;
     
     UPROPERTY(EditInstanceOnly)
     uint8 bPushOutForceAddUpImpulse: 1;
-    
-public:
-    AIGS_PlayerBlockingVolume(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION()
-    void OnComponentHit(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
     
 };
 

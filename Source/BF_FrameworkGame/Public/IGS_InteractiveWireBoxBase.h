@@ -9,11 +9,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_InteractiveWireBoxBase : public AActor {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    TArray<UStaticMeshComponent*> WireInteractiveMeshes;
-    
-public:
     AIGS_InteractiveWireBoxBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -31,6 +26,9 @@ protected:
     
     UFUNCTION(NetMulticast, Reliable)
     void Client_RemoveWire(int32 inWireIndex);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    TArray<UStaticMeshComponent*> WireInteractiveMeshes;
     
 };
 

@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_MinigunnerHandleFocusPoints : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_MinigunnerHandleFocusPoints();
+
 private:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MoveToLookAtPosition;
     
-public:
-    UIGS_BTService_MinigunnerHandleFocusPoints();
-
 };
 

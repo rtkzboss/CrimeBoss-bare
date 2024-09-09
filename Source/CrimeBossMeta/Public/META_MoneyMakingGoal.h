@@ -10,11 +10,6 @@ UCLASS(Abstract)
 class CRIMEBOSSMETA_API UMETA_MoneyMakingGoal : public UMETA_BaseGoal, public IMETA_TaskManagment {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    FMETA_MoneyMakingGoalData m_Goal;
-    
-public:
     UMETA_MoneyMakingGoal();
 
     UFUNCTION(BlueprintCallable)
@@ -25,6 +20,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     FGameplayTag GetLootType();
+    
+private:
+    UPROPERTY()
+    FMETA_MoneyMakingGoalData m_Goal;
     
 
     // Fix for true pure virtual functions not being implemented

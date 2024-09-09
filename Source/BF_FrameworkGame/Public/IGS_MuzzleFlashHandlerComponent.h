@@ -10,6 +10,11 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_MuzzleFlashHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_MuzzleFlashHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void MuzzleFlashDoEffect();
+    
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UNiagaraSystem> MuzzleFlashParticleFPV;
     
@@ -48,11 +53,6 @@ public:
     
     UPROPERTY(EditAnywhere)
     bool bResetBarrelSmokeOnReactivate;
-    
-    UIGS_MuzzleFlashHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void MuzzleFlashDoEffect();
     
 };
 

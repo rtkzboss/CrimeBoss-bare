@@ -18,50 +18,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LockpickMinigame : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnLockpickEnded OnLockpickEndedEvent;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FIGS_LockPickDifficultySetting LockpickSettings;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UAkComponent* AkComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ButtonPressAkAudioEvent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 CurrentPinCount;
-    
-    UPROPERTY(Instanced)
-    UInputComponent* m_InstigatorInputComponent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FVector2D AnalogMousePos;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float Angle;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<float> CorrectAngles;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bSlightlyClose;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bVeryClose;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bStaggered;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float CurrentRadius;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float ClampRadiusPercentage;
-    
-public:
     AIGS_LockpickMinigame(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -124,6 +80,50 @@ protected:
     
     UFUNCTION(Client, Reliable)
     void Client_Escape();
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnLockpickEnded OnLockpickEndedEvent;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FIGS_LockPickDifficultySetting LockpickSettings;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UAkComponent* AkComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ButtonPressAkAudioEvent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 CurrentPinCount;
+    
+    UPROPERTY(Instanced)
+    UInputComponent* m_InstigatorInputComponent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FVector2D AnalogMousePos;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float Angle;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<float> CorrectAngles;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bSlightlyClose;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bVeryClose;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bStaggered;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float CurrentRadius;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float ClampRadiusPercentage;
     
 };
 

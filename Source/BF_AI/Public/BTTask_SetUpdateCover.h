@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTTask_SetUpdateCover : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_SetUpdateCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector UpdateCoverKey;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool UpdateCover;
     
-public:
-    UBTTask_SetUpdateCover();
-
 };
 

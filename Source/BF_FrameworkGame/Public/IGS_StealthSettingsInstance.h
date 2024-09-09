@@ -10,9 +10,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_StealthSettingsInstance : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    UIGS_StealthSettings* StealthSettings;
-    
     UIGS_StealthSettingsInstance();
 
     UFUNCTION(BlueprintPure)
@@ -164,6 +161,9 @@ public:
     
     UFUNCTION(BlueprintPure)
     FRuntimeFloatCurve GetAngleDetectionSpeedCurve() const;
+    
+    UPROPERTY(BlueprintReadOnly)
+    UIGS_StealthSettings* StealthSettings;
     
 };
 

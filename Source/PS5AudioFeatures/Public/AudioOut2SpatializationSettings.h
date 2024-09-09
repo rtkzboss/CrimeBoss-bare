@@ -7,6 +7,8 @@ UCLASS(EditInlineNew)
 class UAudioOut2SpatializationSettings : public USoundfieldEncodingSettingsBase {
     GENERATED_BODY()
 public:
+    UAudioOut2SpatializationSettings();
+
     UPROPERTY(EditAnywhere)
     float Spread;
     
@@ -16,7 +18,5 @@ public:
     UPROPERTY(EditAnywhere)
     bool PassThrough;
     
-    UAudioOut2SpatializationSettings();
-
 };
 

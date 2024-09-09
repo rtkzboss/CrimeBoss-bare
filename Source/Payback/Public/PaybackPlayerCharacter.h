@@ -10,6 +10,8 @@ UCLASS()
 class PAYBACK_API APaybackPlayerCharacter : public AIGS_PlayerCharacter {
     GENERATED_BODY()
 public:
+    APaybackPlayerCharacter(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentCharacter* NetworkCharacter;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentAnimation* NetworkAnimation;
     
-public:
-    APaybackPlayerCharacter(const FObjectInitializer& ObjectInitializer);
-
 };
 

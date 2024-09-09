@@ -7,10 +7,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadBreachStackUp : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadBreachStackUp();
+
     UPROPERTY(EditAnywhere)
     bool IsInfinate;
     
-    UIGS_BTTask_SquadBreachStackUp();
-
 };
 

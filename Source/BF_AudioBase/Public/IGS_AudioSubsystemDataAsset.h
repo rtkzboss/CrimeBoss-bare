@@ -11,6 +11,8 @@ UCLASS()
 class UIGS_AudioSubsystemDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AudioSubsystemDataAsset();
+
     UPROPERTY(EditAnywhere)
     UAkAudioEvent* MuteSoundsAkEvent;
     
@@ -68,7 +70,5 @@ public:
     UPROPERTY(EditAnywhere)
     UAkStateValue* AudioMixSpeakers;
     
-    UIGS_AudioSubsystemDataAsset();
-
 };
 

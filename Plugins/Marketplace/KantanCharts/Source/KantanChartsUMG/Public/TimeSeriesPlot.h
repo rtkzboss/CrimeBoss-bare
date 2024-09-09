@@ -9,15 +9,14 @@ UCLASS()
 class KANTANCHARTSUMG_API UTimeSeriesPlot : public UKantanTimeSeriesPlotBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
-    UObject* DataSource;
-    
-public:
     UTimeSeriesPlot();
 
     UFUNCTION(BlueprintCallable)
     bool SetDatasource(UObject* InDatasource);
+    
+protected:
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UObject* DataSource;
     
 };
 

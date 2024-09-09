@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_FocusOnActor : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_FocusOnActor();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ActorKey;
     
-public:
-    UIGS_BTService_FocusOnActor();
-
 };
 

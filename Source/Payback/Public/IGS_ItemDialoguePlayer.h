@@ -13,6 +13,8 @@ UCLASS(Abstract)
 class PAYBACK_API AIGS_ItemDialoguePlayer : public AActor, public IIGS_DialogueInterface {
     GENERATED_BODY()
 public:
+    AIGS_ItemDialoguePlayer(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_DialogueGroupCharacterHolder DialogueCharacterHolder;
@@ -30,9 +32,6 @@ private:
     UPROPERTY(Instanced)
     UAkComponent* AkComponent;
     
-public:
-    AIGS_ItemDialoguePlayer(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

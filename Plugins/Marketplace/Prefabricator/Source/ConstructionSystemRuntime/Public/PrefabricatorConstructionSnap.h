@@ -9,12 +9,11 @@ UCLASS()
 class CONSTRUCTIONSYSTEMRUNTIME_API APrefabricatorConstructionSnap : public AActor {
     GENERATED_BODY()
 public:
+    APrefabricatorConstructionSnap(const FObjectInitializer& ObjectInitializer);
+
 private:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UPrefabricatorConstructionSnapComponent* ConstructionSnapComponent;
     
-public:
-    APrefabricatorConstructionSnap(const FObjectInitializer& ObjectInitializer);
-
 };
 

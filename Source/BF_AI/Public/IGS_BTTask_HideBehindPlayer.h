@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_HideBehindPlayer : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_HideBehindPlayer();
+
 protected:
     UPROPERTY(EditAnywhere)
     float RecalculateTimeMin;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
     
-public:
-    UIGS_BTTask_HideBehindPlayer();
-
 };
 

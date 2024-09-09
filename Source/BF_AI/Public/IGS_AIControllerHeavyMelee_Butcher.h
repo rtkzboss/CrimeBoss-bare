@@ -8,16 +8,16 @@ UCLASS()
 class BF_AI_API AIGS_AIControllerHeavyMelee_Butcher : public AIGS_AIControllerHeavyMelee_Base {
     GENERATED_BODY()
 public:
+    AIGS_AIControllerHeavyMelee_Butcher(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void NotifySawBroke();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag SawBrokenAnimation;
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bSawBroken;
-    
-    AIGS_AIControllerHeavyMelee_Butcher(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void NotifySawBroke();
     
 };
 

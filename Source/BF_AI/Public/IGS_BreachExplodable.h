@@ -12,7 +12,12 @@ UCLASS()
 class BF_AI_API AIGS_BreachExplodable : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_BreachExplodable(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnExploded();
+    
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ExplosionDelay;
     
@@ -24,13 +29,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkAudioEvent* ExplosionAkEvent;
-    
-public:
-    AIGS_BreachExplodable(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnExploded();
     
 };
 

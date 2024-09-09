@@ -11,6 +11,8 @@ UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_AlarmDevices : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryGenerator_AlarmDevices();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
@@ -18,8 +20,5 @@ private:
     UPROPERTY(EditDefaultsOnly)
     TSet<EIGS_AlarmDeviceType> PreferredAlarmDeviceTypes;
     
-public:
-    UIGS_EnvQueryGenerator_AlarmDevices();
-
 };
 

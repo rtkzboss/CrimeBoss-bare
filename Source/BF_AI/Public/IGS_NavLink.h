@@ -9,10 +9,10 @@ UCLASS()
 class BF_AI_API AIGS_NavLink : public AIGS_NavLinkBase {
     GENERATED_BODY()
 public:
+    AIGS_NavLink(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_NavLinkComponentBase* LinkComponent;
     
-    AIGS_NavLink(const FObjectInitializer& ObjectInitializer);
-
 };
 

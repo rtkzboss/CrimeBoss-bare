@@ -25,53 +25,6 @@ UCLASS()
 class BF_AI_API AIGS_AIControllerBase : public AIGS_AIControllerFramework {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EIGS_TeamSideEnum TeamSide;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AIPerceptionHandlerComponent* PerceptionHandlerComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AggroHandlerComponent* AggroHandlerComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AIMemoryComponent* MemoryComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AIThreatComponent* ThreatComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_InjuryComponentAI* InjuryComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AISettingsComponent* SettingsComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_ScriptableBehaviorComponent* ScriptableBehaviorComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AIDataComponent* AIDataComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_AIGeneralReactionsManager* GeneralReactionsManagerComponent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    AIGS_IntelligentGameCharacter* PossedPawn;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UIGS_WeaponInventoryObject* PrimaryWeapon;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UIGS_WeaponInventoryObject* SecondaryWeapon;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UIGS_MeleeWeaponInventoryObject* MeleeWeapon;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FVector> ImportantLocations;
-    
-public:
     AIGS_AIControllerBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -130,6 +83,52 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClearImportnatLocation(EIGS_ImportantLocationsPriorities prority);
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    EIGS_TeamSideEnum TeamSide;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AIPerceptionHandlerComponent* PerceptionHandlerComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AggroHandlerComponent* AggroHandlerComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AIMemoryComponent* MemoryComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AIThreatComponent* ThreatComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_InjuryComponentAI* InjuryComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AISettingsComponent* SettingsComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_ScriptableBehaviorComponent* ScriptableBehaviorComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AIDataComponent* AIDataComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_AIGeneralReactionsManager* GeneralReactionsManagerComponent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    AIGS_IntelligentGameCharacter* PossedPawn;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UIGS_WeaponInventoryObject* PrimaryWeapon;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UIGS_WeaponInventoryObject* SecondaryWeapon;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UIGS_MeleeWeaponInventoryObject* MeleeWeapon;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<FVector> ImportantLocations;
     
 };
 

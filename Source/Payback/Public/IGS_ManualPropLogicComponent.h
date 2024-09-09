@@ -7,10 +7,10 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UIGS_ManualPropLogicComponent : public UIGS_PropLogicComponent {
     GENERATED_BODY()
 public:
+    UIGS_ManualPropLogicComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     bool bGenerateAutomatically;
     
-    UIGS_ManualPropLogicComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

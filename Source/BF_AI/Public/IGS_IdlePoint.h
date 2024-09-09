@@ -8,6 +8,8 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_IdlePoint : public AIGS_PatrolPoint {
     GENERATED_BODY()
 public:
+    AIGS_IdlePoint(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MinTimeUntilBreaker;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag IdleAnimationTag;
     
-public:
-    AIGS_IdlePoint(const FObjectInitializer& ObjectInitializer);
-
 };
 

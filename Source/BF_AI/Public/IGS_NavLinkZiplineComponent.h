@@ -9,13 +9,13 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkZiplineComponent : public UIGS_NavLinkComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_NavLinkZiplineComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* InAnimation;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* OutAnimation;
     
-    UIGS_NavLinkZiplineComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

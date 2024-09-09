@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_AmbientInspect : public UBTTask_ReactToOffenceAmbient {
     GENERATED_BODY()
 public:
+    UBTTask_AmbientInspect();
+
 protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval Duration;
     
-public:
-    UBTTask_AmbientInspect();
-
 };
 

@@ -15,7 +15,21 @@ UCLASS(Abstract)
 class BF_AUDIO_API AIGS_MusicPlayer : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_MusicPlayer(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void StopMusic();
+    
+    UFUNCTION(BlueprintCallable)
+    void StartMusic();
+    
 protected:
+    UFUNCTION()
+    void OnSongDuration(EAkCallbackType CallbackType, UAkCallbackInfo* CallbackInfo);
+    
+    UFUNCTION()
+    void OnRep_PlayerDestroyed();
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UStaticMeshComponent* PlayerMesh;
     
@@ -53,22 +67,7 @@ protected:
     bool mR_bIsDestroyed;
     
 public:
-    AIGS_MusicPlayer(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void StopMusic();
-    
-    UFUNCTION(BlueprintCallable)
-    void StartMusic();
-    
-protected:
-    UFUNCTION()
-    void OnSongDuration(EAkCallbackType CallbackType, UAkCallbackInfo* CallbackInfo);
-    
-    UFUNCTION()
-    void OnRep_PlayerDestroyed();
-    
 };
 

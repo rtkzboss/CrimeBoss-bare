@@ -10,18 +10,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_HUDSubwidgetBase : public UIGS_WidgetWithInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
-    int32 bShowWidget;
-    
-    UPROPERTY(BlueprintReadWrite)
-    int32 bCurrentlyRelevant;
-    
-    UPROPERTY(EditAnywhere)
-    EIGS_HUDVisibilityMode VisibilityMode;
-    
-    UPROPERTY(EditAnywhere)
-    bool bHiddenOnStartup;
-    
     UIGS_HUDSubwidgetBase();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -59,6 +47,18 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ForceHideWidget(bool inHide);
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 bShowWidget;
+    
+    UPROPERTY(BlueprintReadWrite)
+    int32 bCurrentlyRelevant;
+    
+    UPROPERTY(EditAnywhere)
+    EIGS_HUDVisibilityMode VisibilityMode;
+    
+    UPROPERTY(EditAnywhere)
+    bool bHiddenOnStartup;
     
 };
 

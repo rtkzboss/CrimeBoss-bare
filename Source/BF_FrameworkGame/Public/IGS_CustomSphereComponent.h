@@ -7,6 +7,8 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CustomSphereComponent : public USphereComponent {
     GENERATED_BODY()
 public:
+    UIGS_CustomSphereComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 bVisibleTroughWalls: 1;
     
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
     float LineThickness;
     
-public:
-    UIGS_CustomSphereComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

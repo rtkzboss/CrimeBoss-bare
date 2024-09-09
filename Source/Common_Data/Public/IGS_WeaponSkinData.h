@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_WeaponSkinData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_WeaponSkinData();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FName, FIGS_WeaponSkinMaterial> SkinMaterialSlot;
     
-    UIGS_WeaponSkinData();
-
 };
 

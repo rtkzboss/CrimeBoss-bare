@@ -13,6 +13,8 @@ UCLASS()
 class UIGS_MusicSubsystemDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_MusicSubsystemDataAsset();
+
     UPROPERTY(EditAnywhere)
     UAkAudioEvent* MusicPauseAkEvent;
     
@@ -172,7 +174,5 @@ public:
     UPROPERTY(EditAnywhere)
     TMap<EIGS_LightingScenarioType, UAkStateValue*> LightingScenarioStateMap;
     
-    UIGS_MusicSubsystemDataAsset();
-
 };
 

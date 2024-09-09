@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_SentryTarget : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_SentryTarget();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestTarget;
     
-public:
-    UIGS_BTService_SentryTarget();
-
 };
 

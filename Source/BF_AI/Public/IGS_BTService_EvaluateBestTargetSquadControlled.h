@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateBestTargetSquadControlled : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateBestTargetSquadControlled();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestTarget;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SuspectedTargetLocation;
     
-public:
-    UIGS_BTService_EvaluateBestTargetSquadControlled();
-
 };
 

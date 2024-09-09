@@ -14,17 +14,6 @@ class CRIMEBOSSMETA_API UIGS_Quickplay_CrewManagerComponent : public UIGS_CrewMa
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_OnBossItemsChanged);
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnBossItemsChanged OnBossItemsChanged;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Character*> Characters;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UMETA_BossCharacter* BossCharacter;
-    
-public:
     UIGS_Quickplay_CrewManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -71,6 +60,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddCharacter(FGameplayTag inCharacterTag);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnBossItemsChanged OnBossItemsChanged;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Character*> Characters;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UMETA_BossCharacter* BossCharacter;
     
 };
 

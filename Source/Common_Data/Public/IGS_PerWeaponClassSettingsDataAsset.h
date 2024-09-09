@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_PerWeaponClassSettingsDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_PerWeaponClassSettingsDataAsset();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ClassTagSettingPair> PerClassWeaponSettings;
     
-    UIGS_PerWeaponClassSettingsDataAsset();
-
 };
 

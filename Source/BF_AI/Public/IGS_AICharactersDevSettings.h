@@ -9,6 +9,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_AISettings")
 class BF_AI_API UIGS_AICharactersDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_AICharactersDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> SwatDataTable;
     
@@ -39,7 +41,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> DetectiveDataTable;
     
-    UIGS_AICharactersDevSettings();
-
 };
 

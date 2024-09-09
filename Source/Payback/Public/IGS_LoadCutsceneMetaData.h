@@ -12,12 +12,6 @@ UCLASS()
 class PAYBACK_API UIGS_LoadCutsceneMetaData : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneDataDelegate Loaded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneDataDelegate Failed;
-    
     UIGS_LoadCutsceneMetaData();
 
 protected:
@@ -30,6 +24,12 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_LoadCutsceneMetaData* LoadCutsceneMetaData(UObject* inWCO, FText inCutsceneID);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneDataDelegate Loaded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneDataDelegate Failed;
     
 };
 

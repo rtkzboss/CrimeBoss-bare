@@ -13,6 +13,23 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_EquipmentContainer : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_EquipmentContainer(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetupInteraction();
+    
+    UFUNCTION()
+    void OnRep_bContainerEnabled();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnContainerEnabled();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnContainerDisabled();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void InitMesh();
+    
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_PickupInteractiveComponent* PickupInteraction;
     
@@ -34,24 +51,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FIGS_OnEquipmentPickedUp OnPickedUpEvent;
     
-    AIGS_EquipmentContainer(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetupInteraction();
-    
-    UFUNCTION()
-    void OnRep_bContainerEnabled();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnContainerEnabled();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnContainerDisabled();
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void InitMesh();
-    
 };
 

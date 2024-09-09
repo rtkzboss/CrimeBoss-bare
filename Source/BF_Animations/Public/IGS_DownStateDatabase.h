@@ -9,6 +9,8 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_DownStateDatabase : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_DownStateDatabase();
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* DownStateMontage;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(EditAnywhere)
     UAnimMontage* ReviveHelpPinnedStateMontage;
     
-    UIGS_DownStateDatabase();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetDragItem : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetDragItem();
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 ColumnSize;
@@ -26,8 +28,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced)
     USizeBox* ItemSizeBox;
     
-public:
-    UIGS_WidgetDragItem();
-
 };
 

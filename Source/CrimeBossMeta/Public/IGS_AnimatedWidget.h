@@ -11,17 +11,6 @@ class CRIMEBOSSMETA_API UIGS_AnimatedWidget : public UIGS_Widget {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_AnimationFinished);
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_AnimationFinished OnWidgetAnimationFinished;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly)
-    UObject* AnimationData;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool IsPlayingWidgetAnimation;
-    
-public:
     UIGS_AnimatedWidget();
 
     UFUNCTION(BlueprintCallable)
@@ -51,6 +40,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void FinishAnimation();
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_AnimationFinished OnWidgetAnimationFinished;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly)
+    UObject* AnimationData;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool IsPlayingWidgetAnimation;
     
 };
 

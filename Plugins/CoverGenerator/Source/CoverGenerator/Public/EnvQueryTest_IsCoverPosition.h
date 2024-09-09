@@ -13,6 +13,8 @@ UCLASS()
 class UEnvQueryTest_IsCoverPosition : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_IsCoverPosition();
+
     UPROPERTY(EditDefaultsOnly)
     FEnvTraceData TraceData;
     
@@ -28,7 +30,5 @@ public:
     UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
     FAIDataProviderBoolValue DebugData;
     
-    UEnvQueryTest_IsCoverPosition();
-
 };
 

@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTTask_CoverAttackIn : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_CoverAttackIn();
+
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_CoverAttackType CoverAttackType;
@@ -22,8 +24,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TagretLastSeenPosition;
     
-public:
-    UBTTask_CoverAttackIn();
-
 };
 

@@ -11,13 +11,13 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_EnvQueryTest_AISpawnGroupSideRough : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryTest_AISpawnGroupSideRough();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> SideOf;
     
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue SidesBitflag;
     
-    UIGS_EnvQueryTest_AISpawnGroupSideRough();
-
 };
 

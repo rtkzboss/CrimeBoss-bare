@@ -12,6 +12,44 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_OutlineComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_OutlineComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLocalCharacterOutline(const bool inEnabled, const bool inIsBackup);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIsSmartPinged(const bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetHeisterOutlineCategoryState(const AActor* inHeisterReference, const bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetComponentsToOutline(const TArray<USceneComponent*>& inComponentsToOutline);
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetOutline();
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveComponentToOutline(UActorComponent* inComponentToOutline);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveComponentsToOutline(const TArray<UActorComponent*>& inComponentsToOutline);
+    
+    UFUNCTION()
+    void OnRep_CurrentOutlineState();
+    
+    UFUNCTION(BlueprintCallable)
+    void AddComponentToOutline(UActorComponent* inComponentToOutline);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddComponentsToOutline(const TArray<UActorComponent*>& inComponentsToOutline);
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_CurrentOutlineState)
     EIGS_CameraOutlineState CurrentOutlineState;
     
@@ -77,45 +115,7 @@ private:
     uint8 bVanHighlighted: 1;
     
 public:
-    UIGS_OutlineComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLocalOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLocalCharacterOutline(const bool inEnabled, const bool inIsBackup);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIsSmartPinged(const bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetHeisterOutlineCategoryState(const AActor* inHeisterReference, const bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetComponentsToOutline(const TArray<USceneComponent*>& inComponentsToOutline);
-    
-    UFUNCTION(BlueprintCallable)
-    void ResetOutline();
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveComponentToOutline(UActorComponent* inComponentToOutline);
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveComponentsToOutline(const TArray<UActorComponent*>& inComponentsToOutline);
-    
-    UFUNCTION()
-    void OnRep_CurrentOutlineState();
-    
-    UFUNCTION(BlueprintCallable)
-    void AddComponentToOutline(UActorComponent* inComponentToOutline);
-    
-    UFUNCTION(BlueprintCallable)
-    void AddComponentsToOutline(const TArray<UActorComponent*>& inComponentsToOutline);
-    
 };
 

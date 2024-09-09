@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SniperHidden : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SniperHidden();
+
 protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval Cooldown;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float MaxThreatToFinish;
     
-public:
-    UIGS_BTTask_SniperHidden();
-
 };
 

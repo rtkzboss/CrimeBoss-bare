@@ -13,6 +13,11 @@ UCLASS(MinimalAPI)
 class UIGS_FindSessionByIdCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
+    UIGS_FindSessionByIdCallbackProxy();
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
+    static UIGS_FindSessionByIdCallbackProxy* FindSessionById(UObject* WorldContextObject, APlayerController* PlayerController, const FBlueprintSessionResult& SessionToCheck, bool bUseLAN);
+    
     UPROPERTY(BlueprintAssignable)
     FBlueprintFindSessionsResultDelegate OnSuccess;
     
@@ -22,12 +27,6 @@ public:
 private:
     UPROPERTY()
     UObject* WorldContextObject;
-    
-public:
-    UIGS_FindSessionByIdCallbackProxy();
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
-    static UIGS_FindSessionByIdCallbackProxy* FindSessionById(UObject* NewWorldContextObject, APlayerController* PlayerController, const FBlueprintSessionResult& SessionToCheck, bool bUseLAN);
     
 };
 

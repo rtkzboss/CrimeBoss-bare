@@ -11,6 +11,8 @@ UCLASS(BlueprintType)
 class UIGS_OffenceData : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_OffenceData();
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_OffenceReactionType OffenceReactionType;
     
@@ -35,7 +37,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText DialogueID;
     
-    UIGS_OffenceData();
-
 };
 

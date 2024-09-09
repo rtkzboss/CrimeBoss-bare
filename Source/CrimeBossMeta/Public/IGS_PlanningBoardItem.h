@@ -14,15 +14,6 @@ UCLASS()
 class CRIMEBOSSMETA_API AIGS_PlanningBoardItem : public AActor, public IVirtualCursorTarget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UStaticMeshComponent* StaticMeshComponent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FMETA_PlanningBoardItemRow itemData;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    EMETA_PlanningBoardItemStatus Status;
-    
     AIGS_PlanningBoardItem(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -42,6 +33,15 @@ public:
     
     UFUNCTION(BlueprintPure)
     TArray<FMETA_PlanningBoardItemConnectionData> GetConnections() const;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UStaticMeshComponent* StaticMeshComponent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FMETA_PlanningBoardItemRow itemData;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    EMETA_PlanningBoardItemStatus Status;
     
 
     // Fix for true pure virtual functions not being implemented

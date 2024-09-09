@@ -22,26 +22,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_GoalManagerComponent : public UIGS_GoalManagerBaseComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite)
-    TArray<UMETA_BaseGoal*> CurrentGoals;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<TSubclassOf<UMETA_BaseGoal>> GoalsPools;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<TSubclassOf<UMETA_BaseGoal>> BacklogGoalsPools;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<FMETA_FinishedGoal> FinishedGoals;
-    
-    UPROPERTY(BlueprintReadWrite)
-    TArray<FMETA_GoalsObjectIDCounter> GoalsRepeatCounters;
-    
-public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FMETA_TaskAddedOrRemoved OnTaskAddedOrRemoved;
-    
     UMETA_GoalManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -140,6 +120,25 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void AddFinishedGoalToPool(UMETA_BaseGoal* inGoal);
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<UMETA_BaseGoal*> CurrentGoals;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<TSubclassOf<UMETA_BaseGoal>> GoalsPools;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<TSubclassOf<UMETA_BaseGoal>> BacklogGoalsPools;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<FMETA_FinishedGoal> FinishedGoals;
+    
+    UPROPERTY(BlueprintReadWrite)
+    TArray<FMETA_GoalsObjectIDCounter> GoalsRepeatCounters;
+    
+public:
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FMETA_TaskAddedOrRemoved OnTaskAddedOrRemoved;
     
 };
 

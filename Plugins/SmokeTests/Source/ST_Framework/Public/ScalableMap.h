@@ -8,6 +8,8 @@ UCLASS()
 class ST_FRAMEWORK_API AScalableMap : public AActor {
     GENERATED_BODY()
 public:
+    AScalableMap(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TileWidth;
     
@@ -39,8 +41,5 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CurrentTile;
     
-public:
-    AScalableMap(const FObjectInitializer& ObjectInitializer);
-
 };
 

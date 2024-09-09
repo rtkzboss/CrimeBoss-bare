@@ -9,6 +9,8 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_VehicleCarTest : public AIGS_VehicleBase {
     GENERATED_BODY()
 public:
+    AIGS_VehicleCarTest(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<USceneComponent*> Wheels;
@@ -37,8 +39,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float followDistance;
     
-public:
-    AIGS_VehicleCarTest(const FObjectInitializer& ObjectInitializer);
-
 };
 

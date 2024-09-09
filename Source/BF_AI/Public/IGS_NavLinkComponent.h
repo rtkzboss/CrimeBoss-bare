@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkComponent : public UIGS_NavLinkComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_NavLinkComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_SmartLinkAnimVariant CommonAnimation;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* RightAnimationAsset;
     
-    UIGS_NavLinkComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

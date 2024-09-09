@@ -7,6 +7,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_FireOffsetToCenter : public UIGS_BTTask_FireBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_FireOffsetToCenter();
+
 private:
     UPROPERTY(EditAnywhere)
     float Distance;
@@ -17,8 +19,5 @@ private:
     UPROPERTY(EditAnywhere)
     float FireTime;
     
-public:
-    UIGS_BTTask_FireOffsetToCenter();
-
 };
 

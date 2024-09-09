@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_CopSolveDesiredWeapon : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_CopSolveDesiredWeapon();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MeleeTypeKey;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DesiredWeaponKey;
     
-public:
-    UIGS_BTService_CopSolveDesiredWeapon();
-
 };
 

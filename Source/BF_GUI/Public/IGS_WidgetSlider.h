@@ -11,12 +11,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetSlider : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    USlider* Slider;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_WidgetSliderBlueprintEventSignature OnValueChangedEvent;
-    
     UIGS_WidgetSlider();
 
     UFUNCTION(BlueprintCallable)
@@ -48,6 +42,13 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void ControllerDragEnd();
+    
+public:
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    USlider* Slider;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WidgetSliderBlueprintEventSignature OnValueChangedEvent;
     
 };
 

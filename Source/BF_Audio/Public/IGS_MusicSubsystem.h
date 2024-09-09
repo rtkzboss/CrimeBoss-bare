@@ -19,23 +19,6 @@ UCLASS(BlueprintType)
 class BF_AUDIO_API UIGS_MusicSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MusicPropertyChanged OnMusicSystemInitialized;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MusicPropertyChanged OnMusicPropertyChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MusicLevelTransition OnMusicGameStageChanged;
-    
-protected:
-    UPROPERTY(Instanced)
-    UIGS_PersistentMusicAkComponent* PersistentMusicAkComponent;
-    
-    UPROPERTY()
-    UIGS_MusicSubsystemDataAsset* Data;
-    
-public:
     UIGS_MusicSubsystem();
 
     UFUNCTION(BlueprintCallable)
@@ -75,6 +58,22 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void Debug_SetMusicPack(bool inPreviousPack);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MusicPropertyChanged OnMusicSystemInitialized;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MusicPropertyChanged OnMusicPropertyChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MusicLevelTransition OnMusicGameStageChanged;
+    
+protected:
+    UPROPERTY(Instanced)
+    UIGS_PersistentMusicAkComponent* PersistentMusicAkComponent;
+    
+    UPROPERTY()
+    UIGS_MusicSubsystemDataAsset* Data;
     
 };
 

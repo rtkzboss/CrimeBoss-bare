@@ -10,6 +10,11 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_SubMenuGameSettings : public UIGS_WidgetSubMenuSettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_SubMenuGameSettings();
+
+    UFUNCTION(BlueprintCallable)
+    void RefreshMenuBackgroundSpinBox();
+    
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* LanguagePickerSpinBox;
     
@@ -66,11 +71,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* FriendlyOutlineSpinBox;
-    
-    UIGS_SubMenuGameSettings();
-
-    UFUNCTION(BlueprintCallable)
-    void RefreshMenuBackgroundSpinBox();
     
 };
 

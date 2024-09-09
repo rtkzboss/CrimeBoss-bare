@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_ReactToOffenceAmbient : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_ReactToOffenceAmbient();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTTask_ReactToOffenceAmbient();
-
 };
 

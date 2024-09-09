@@ -12,20 +12,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_EnvironmentVolume : public AIGS_PostProcessVolumeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
-    float EffectBlendStartDuration;
-    
-    UPROPERTY(EditAnywhere)
-    float EffectBlendStopDuration;
-    
-protected:
-    UPROPERTY(EditAnywhere)
-    EIGS_EnvironmentVolumeType VolumeType;
-    
-    UPROPERTY(EditAnywhere)
-    bool m_IsEnabled;
-    
-public:
     AIGS_EnvironmentVolume(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -41,6 +27,19 @@ private:
 public:
     UFUNCTION(BlueprintPure)
     bool GetEnabled() const;
+    
+    UPROPERTY(EditAnywhere)
+    float EffectBlendStartDuration;
+    
+    UPROPERTY(EditAnywhere)
+    float EffectBlendStopDuration;
+    
+protected:
+    UPROPERTY(EditAnywhere)
+    EIGS_EnvironmentVolumeType VolumeType;
+    
+    UPROPERTY(EditAnywhere)
+    bool m_IsEnabled;
     
 };
 

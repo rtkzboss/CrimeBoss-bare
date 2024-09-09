@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_Loot : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_Loot();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootingCollection;
     
-public:
-    UIGS_BTTask_Loot();
-
 };
 

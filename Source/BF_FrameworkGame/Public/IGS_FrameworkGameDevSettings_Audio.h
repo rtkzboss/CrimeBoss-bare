@@ -11,6 +11,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings_Audio : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_FrameworkGameDevSettings_Audio();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> ShootStartAudioEvent;
     
@@ -71,7 +73,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> KeycardDrop;
     
-    UIGS_FrameworkGameDevSettings_Audio();
-
 };
 

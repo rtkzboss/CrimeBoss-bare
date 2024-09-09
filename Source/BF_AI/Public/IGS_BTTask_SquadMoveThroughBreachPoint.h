@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadMoveThroughBreachPoint : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadMoveThroughBreachPoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector StackPosBlackboardKey;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* StackPosQuery;
     
-public:
-    UIGS_BTTask_SquadMoveThroughBreachPoint();
-
 };
 

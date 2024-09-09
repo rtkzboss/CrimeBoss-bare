@@ -8,6 +8,8 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UIGS_EarnedMoneyAnimationData : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_EarnedMoneyAnimationData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 InitialValue;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_EarnedMoneyAnimationSequenceData> Sequences;
     
-    UIGS_EarnedMoneyAnimationData();
-
 };
 

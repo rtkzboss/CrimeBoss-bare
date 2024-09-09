@@ -10,13 +10,13 @@ UCLASS()
 class BF_AI_API UBTTask_MoveToCombatDefendPos : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UBTTask_MoveToCombatDefendPos();
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
     
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
     
-    UBTTask_MoveToCombatDefendPos();
-
 };
 

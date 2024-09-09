@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsSeriousOffence : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsSeriousOffence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTDecorator_IsSeriousOffence();
-
 };
 

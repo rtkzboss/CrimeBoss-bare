@@ -18,6 +18,34 @@ UCLASS(Abstract)
 class BF_RIDEABLEVEHICLES_API AIGS_Vessel_Base : public AIGS_RideableVehicle_Base {
     GENERATED_BODY()
 public:
+    AIGS_Vessel_Base(const FObjectInitializer& ObjectInitializer);
+
+private:
+    UFUNCTION(Server, Unreliable)
+    void SyncControls_SERVER(float inSteering, float inThrottle);
+    
+    UFUNCTION()
+    void SyncControls();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetExitTransform(TArray<FTransform> inNewPositions);
+    
+private:
+    UFUNCTION()
+    void PreventFlipUp() const;
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void OnEntryTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+public:
+    UFUNCTION()
+    void MoveRight(float inAxis);
+    
+    UFUNCTION()
+    void MoveForward(float inAxis);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FVector> PontoonLocations;
     
@@ -117,35 +145,7 @@ private:
     TArray<FTransform> m_PlayerExitPositions;
     
 public:
-    AIGS_Vessel_Base(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-private:
-    UFUNCTION(Server, Unreliable)
-    void SyncControls_SERVER(float inSteering, float inThrottle);
-    
-    UFUNCTION()
-    void SyncControls();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void SetExitTransform(TArray<FTransform> inNewPositions);
-    
-private:
-    UFUNCTION()
-    void PreventFlipUp() const;
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void OnEntryTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-public:
-    UFUNCTION()
-    void MoveRight(float inAxis);
-    
-    UFUNCTION()
-    void MoveForward(float inAxis);
-    
 };
 

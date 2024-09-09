@@ -7,11 +7,6 @@ UCLASS()
 class BF_GUI_API UIGSScrollBox : public UScrollBox {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(EditAnywhere)
-    float Speed;
-    
-public:
     UIGSScrollBox();
 
     UFUNCTION(BlueprintCallable)
@@ -22,6 +17,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ScrollBy(float Delta);
+    
+private:
+    UPROPERTY(EditAnywhere)
+    float Speed;
     
 };
 

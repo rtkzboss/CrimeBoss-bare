@@ -10,6 +10,40 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_ListViewItem : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_ListViewItem();
+
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandleReleased();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandlePressed();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandleHoldTick();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandleHoldStarted();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandleHoldFinished();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandleHoldCancelled();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandleDoubleClicked();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void HandleClicked();
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    UObject* GetItemData();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    bool GetIsSelected();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bHoldEnabled;
     
@@ -45,40 +79,6 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnListViewItemEvent OnItemFocused;
-    
-    UIGS_ListViewItem();
-
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandleReleased();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandlePressed();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandleHoldTick();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandleHoldStarted();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandleHoldFinished();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandleHoldCancelled();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandleDoubleClicked();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void HandleClicked();
-    
-public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    UObject* GetItemData();
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    bool GetIsSelected();
     
 };
 

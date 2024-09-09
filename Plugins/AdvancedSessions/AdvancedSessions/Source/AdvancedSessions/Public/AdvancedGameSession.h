@@ -8,10 +8,10 @@ UCLASS()
 class AAdvancedGameSession : public AGameSession {
     GENERATED_BODY()
 public:
+    AAdvancedGameSession(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(Transient)
     TMap<FUniqueNetIdRepl, FText> BanList;
     
-    AAdvancedGameSession(const FObjectInitializer& ObjectInitializer);
-
 };
 

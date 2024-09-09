@@ -9,6 +9,8 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_AvoidanceAnimationDatabase : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AvoidanceAnimationDatabase();
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* RollToStand;
     
@@ -33,7 +35,5 @@ public:
     UPROPERTY(EditAnywhere)
     UAnimMontage* SlideToCrouchPistol;
     
-    UIGS_AvoidanceAnimationDatabase();
-
 };
 

@@ -7,6 +7,8 @@ UCLASS()
 class BF_AI_API UBTTask_MoveToWithRepath : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:
+    UBTTask_MoveToWithRepath();
+
 protected:
     UPROPERTY(EditAnywhere)
     float RefreshTimeMin;
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float RefreshTimeMax;
     
-public:
-    UBTTask_MoveToWithRepath();
-
 };
 

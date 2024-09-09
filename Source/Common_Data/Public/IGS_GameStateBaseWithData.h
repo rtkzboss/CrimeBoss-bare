@@ -34,23 +34,7 @@ UCLASS()
 class COMMON_DATA_API AIGS_GameStateBaseWithData : public AGameStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GameStateDataReadyDelegate OnGameStateDataReady;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GameStateDataReadyDelegate OnMissionNameChanged;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool IsGameStateDataReady;
-    
-protected:
-    UPROPERTY(ReplicatedUsing=OnRep_GameStateData)
-    FIGS_GameStateData GameStateData;
-    
-public:
     AIGS_GameStateBaseWithData(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintPure)
     bool SupportsCleanExecution() const;
@@ -252,5 +236,21 @@ public:
     UFUNCTION(BlueprintPure)
     EIGS_AITiers GetAllyTier() const;
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GameStateDataReadyDelegate OnGameStateDataReady;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GameStateDataReadyDelegate OnMissionNameChanged;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool IsGameStateDataReady;
+    
+protected:
+    UPROPERTY(ReplicatedUsing=OnRep_GameStateData)
+    FIGS_GameStateData GameStateData;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

@@ -11,6 +11,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterRampColor : public UHoudiniParameterMultiParm {
     GENERATED_BODY()
 public:
+    UHoudiniParameterRampColor();
+
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterRampColorPoint*> Points;
     
@@ -35,7 +37,5 @@ public:
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterRampModificationEvent*> ModificationEvents;
     
-    UHoudiniParameterRampColor();
-
 };
 

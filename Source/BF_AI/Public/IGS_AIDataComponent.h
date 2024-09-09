@@ -12,6 +12,11 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIDataComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AIDataComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    FIGS_ShootingOverride GetShootingOverride() const;
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastEnemyHitTime;
     
@@ -54,12 +59,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_ShootingOverride m_ShootingOverride;
-    
-public:
-    UIGS_AIDataComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    FIGS_ShootingOverride GetShootingOverride() const;
     
 };
 

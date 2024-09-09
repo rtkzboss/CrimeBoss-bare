@@ -17,6 +17,48 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DownStateHandlerComponent : public UIGS_DownStateHandlerComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_DownStateHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnRep_DownStateCount();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_ReviveChange(APawn* inHealer, bool Inactive, bool inIsFinished);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_HealthStateChange(EIGS_HealthState inHealthState);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_DownStateCount(int32 inCount);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    int32 GetCurrentDownStatesCount() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetBaseDownStatesCount() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceSetDownStatesCount(int32 inCount);
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceDeath();
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceChangeState(EIGS_HealthState inState);
+    
+protected:
+    UFUNCTION(Client, Reliable)
+    void Client_ReviveChange(APawn* inHealer, bool Inactive, bool inIsFinished);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void CallOnCanSelfrevive();
+    
+    UFUNCTION(BlueprintCallable)
+    void CallGoToDownstateAnimationDone();
+    
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FScalableFloat DownStateHealthMax;
     
@@ -109,49 +151,7 @@ protected:
     int32 BaseDownStatesCount;
     
 public:
-    UIGS_DownStateHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnRep_DownStateCount();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_ReviveChange(APawn* inHealer, bool Inactive, bool inIsFinished);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_HealthStateChange(EIGS_HealthState inHealthState);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_DownStateCount(int32 inCount);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    int32 GetCurrentDownStatesCount() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetBaseDownStatesCount() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceSetDownStatesCount(int32 inCount);
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceDeath();
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceChangeState(EIGS_HealthState inState);
-    
-protected:
-    UFUNCTION(Client, Reliable)
-    void Client_ReviveChange(APawn* inHealer, bool Inactive, bool inIsFinished);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void CallOnCanSelfrevive();
-    
-    UFUNCTION(BlueprintCallable)
-    void CallGoToDownstateAnimationDone();
-    
 };
 

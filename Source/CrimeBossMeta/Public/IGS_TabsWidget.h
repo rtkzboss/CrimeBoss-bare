@@ -11,21 +11,6 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_TabsWidget : public UIGS_WidgetWithInput {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    bool InputEnabled;
-    
-    UPROPERTY(BlueprintReadOnly)
-    int32 SelectedIndex;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UHorizontalBox* TabsHorizontalBox;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    TArray<UUserWidget*> Tabs;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_OnTabSelectedEvent OnTabSelected;
-    
     UIGS_TabsWidget();
 
 protected:
@@ -54,6 +39,21 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void AddTab(UUserWidget* inTab);
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool InputEnabled;
+    
+    UPROPERTY(BlueprintReadOnly)
+    int32 SelectedIndex;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UHorizontalBox* TabsHorizontalBox;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    TArray<UUserWidget*> Tabs;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_OnTabSelectedEvent OnTabSelected;
     
 };
 

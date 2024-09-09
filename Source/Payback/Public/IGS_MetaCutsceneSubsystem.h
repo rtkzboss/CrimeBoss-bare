@@ -33,71 +33,6 @@ UCLASS(BlueprintType)
 class PAYBACK_API UIGS_MetaCutsceneSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneDelegate OnCutsceneDatabaseLoaded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneDelegate OnCutsceneLoadStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneDelegate OnCutsceneLoadFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneDelegate OnCutsceneUnloadFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneResultDelegate OnCutsceneStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneResultDelegate OnCutsceneStartedAfterDelay;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneDelegate OnCutsceneFinishedBeforeDelay;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneResultDelegate OnCutsceneFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneNodeStartedDelegate OnCutsceneNodeStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneNodeFinishedDelegate OnCutsceneNodeFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneNodeStartedDelegate OnCutsceneNodeEndDialogue;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneOptionsDelegate OnShowOptions;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneOptionSelectedDelegate OnOptionSelected;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneSkipDelegate OnSkipStateChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneNodeStartedDelegate OnSkipSequence;
-    
-protected:
-    UPROPERTY()
-    UIGS_CutsceneSubsystemDataAsset* Data;
-    
-    UPROPERTY()
-    UIGS_MetaCutsceneDataAsset* CutsceneData;
-    
-    UPROPERTY()
-    TArray<ULevelStreamingDynamic*> AdditionalLevels;
-    
-    UPROPERTY()
-    TArray<AActor*> AdditionalProps;
-    
-    UPROPERTY()
-    ULevelStreamingDynamic* EnviromentLevel;
-    
-    UPROPERTY()
-    ULevelStreamingDynamic* SetupLevel;
-    
-public:
     UIGS_MetaCutsceneSubsystem();
 
     UFUNCTION(BlueprintCallable)
@@ -254,6 +189,70 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AllowPoseSet(FGameplayTag inPoseSet);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneDelegate OnCutsceneDatabaseLoaded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneDelegate OnCutsceneLoadStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneDelegate OnCutsceneLoadFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneDelegate OnCutsceneUnloadFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneResultDelegate OnCutsceneStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneResultDelegate OnCutsceneStartedAfterDelay;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneDelegate OnCutsceneFinishedBeforeDelay;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneResultDelegate OnCutsceneFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneNodeStartedDelegate OnCutsceneNodeStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneNodeFinishedDelegate OnCutsceneNodeFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneNodeStartedDelegate OnCutsceneNodeEndDialogue;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneOptionsDelegate OnShowOptions;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneOptionSelectedDelegate OnOptionSelected;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneSkipDelegate OnSkipStateChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneNodeStartedDelegate OnSkipSequence;
+    
+protected:
+    UPROPERTY()
+    UIGS_CutsceneSubsystemDataAsset* Data;
+    
+    UPROPERTY()
+    UIGS_MetaCutsceneDataAsset* CutsceneData;
+    
+    UPROPERTY()
+    TArray<ULevelStreamingDynamic*> AdditionalLevels;
+    
+    UPROPERTY()
+    TArray<AActor*> AdditionalProps;
+    
+    UPROPERTY()
+    ULevelStreamingDynamic* EnviromentLevel;
+    
+    UPROPERTY()
+    ULevelStreamingDynamic* SetupLevel;
     
 };
 

@@ -9,6 +9,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class COMMON_UTILS_API UIGS_SignificanceComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UIGS_SignificanceComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintAssignable)
     FIGS_PostSignificanceDelegate OnPostSignificance;
     
@@ -25,8 +27,5 @@ protected:
     UPROPERTY(EditAnywhere)
     TMap<float, EIGS_SignificanceValue> SignificanceDistanceMap;
     
-public:
-    UIGS_SignificanceComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

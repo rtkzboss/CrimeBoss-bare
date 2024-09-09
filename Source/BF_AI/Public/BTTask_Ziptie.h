@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API UBTTask_Ziptie : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_Ziptie();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CivToZiptieKey;
@@ -25,8 +27,5 @@ protected:
     UPROPERTY(Instanced)
     UIGS_ZiptieComponent* ZiptieComponent;
     
-public:
-    UBTTask_Ziptie();
-
 };
 

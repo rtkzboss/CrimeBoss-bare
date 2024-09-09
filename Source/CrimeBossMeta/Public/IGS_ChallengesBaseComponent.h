@@ -15,29 +15,6 @@ UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_ChallengesBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ChallengeDataChanged OnChallengeDataChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ChallengesCompleted OnChallengesCompleted;
-    
-protected:
-    UPROPERTY()
-    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
-    
-    UPROPERTY()
-    UIGS_SaveManager* m_SaveManager;
-    
-    UPROPERTY()
-    TMap<FGameplayTag, int32> m_ChallengesInProgress;
-    
-    UPROPERTY()
-    TMap<FGameplayTag, int32> m_CompletedChallenges;
-    
-    UPROPERTY()
-    UIGS_ChallengesDatabase* m_ChallengesDatabase;
-    
-public:
     UIGS_ChallengesBaseComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -66,6 +43,28 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool CanChallengeBeProgressed(FGameplayTag inTag) const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ChallengeDataChanged OnChallengeDataChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ChallengesCompleted OnChallengesCompleted;
+    
+protected:
+    UPROPERTY()
+    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
+    
+    UPROPERTY()
+    UIGS_SaveManager* m_SaveManager;
+    
+    UPROPERTY()
+    TMap<FGameplayTag, int32> m_ChallengesInProgress;
+    
+    UPROPERTY()
+    TMap<FGameplayTag, int32> m_CompletedChallenges;
+    
+    UPROPERTY()
+    UIGS_ChallengesDatabase* m_ChallengesDatabase;
     
 };
 

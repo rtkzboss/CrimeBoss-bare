@@ -10,10 +10,10 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_EnvQueryTest_AISpawnGroupRoughDistance : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryTest_AISpawnGroupRoughDistance();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> DistanceTo;
     
-    UIGS_EnvQueryTest_AISpawnGroupRoughDistance();
-
 };
 

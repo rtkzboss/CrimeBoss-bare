@@ -35,6 +35,88 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WeaponBase : public AIGS_WieldableBase, public IIGS_BashInterface, public IIGS_ModMeshInterface {
     GENERATED_BODY()
 public:
+    AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void StopAttack();
+    
+    UFUNCTION(BlueprintCallable)
+    void StopAllAttacks();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetVisibilityMod(bool inVisible) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void SetNextShooter();
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void OnMagazineAmmoChanged(int32 inAmmoInMagazine, int32 inMagazineCapacity);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnInventoryAmmoChanged(int32 inAmmoCount);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    bool IsAttacking();
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_WeaponVisibilityHandler* GetWeaponVisibilityHandler() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_WeaponInventoryObject* GetWeaponInventoryObject() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_ReloaderBase* GetReloader() const;
+    
+    UFUNCTION(BlueprintCallable)
+    EIGS_WeaponAttackType GetCurrentShooterType();
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_ShooterBase* GetCurrentShooterObject() const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentShooterModifications(float& outBaseDamageMultiplier, float& outEffectiveRangeMultiplier, float& outMaxRangeMultiplier, float& outRPMMultiplier) const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetCurrentReloadTimeMultiplier() const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentRecoilModifications(float& outVerticalRecoilMultiplier, float& outHorizontalRecoilMultiplier) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetCurrentMagazineCapacity() const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentIdleSwayIntensity(float& outIdleSwayIntensity) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentAttributeMultipliers(float& outWeaponDamageAttrib, float& outHipFireSpreadAttrib, float& outAdsSpreadAttrib, float& outIdleSwayIntensityAttrib, float& outAdsSpeedAttrib, float& outReloadSpeedAttrib) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentAIStimuliMultipliers(float& outMuzzleFlashStimuliMultiplier, float& outShotSoundStimuliMultiplier) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentAimOffset(FVector& OutLocation, FVector& OutRotation) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentADSAndHolsterModifications(float& outHolsterTime, float& outADSInSpeedMult, float& outADSOutSpeedMult, float& outScopeInPercent, bool& outIsUsingScopeMod) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetCurrentAccuracyModifications(float& outHipFireSpreadMultiplier, float& outADSSpreadMultiplier, float& outSpreadIncreasePerShotMultiplier, float& outMovementSpreadMultiplier) const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool DetermineTortillaUsage(APawn* inPawn);
+    
+    UFUNCTION(BlueprintPure)
+    bool CanAttack() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void BeginAttack();
+    
+    UFUNCTION(BlueprintCallable)
+    void Bash();
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OnWeaponShootSignature OnWeaponShotBP;
     
@@ -158,89 +240,6 @@ protected:
     
     UPROPERTY()
     FIGS_VirtualSightInfo VirtualSightInfo;
-    
-public:
-    AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void StopAttack();
-    
-    UFUNCTION(BlueprintCallable)
-    void StopAllAttacks();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetVisibilityMod(bool inVisible) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void SetNextShooter();
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void OnMagazineAmmoChanged(int32 inAmmoInMagazine, int32 inMagazineCapacity);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnInventoryAmmoChanged(int32 inAmmoCount);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    bool IsAttacking();
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_WeaponVisibilityHandler* GetWeaponVisibilityHandler() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_WeaponInventoryObject* GetWeaponInventoryObject() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_ReloaderBase* GetReloader() const;
-    
-    UFUNCTION(BlueprintCallable)
-    EIGS_WeaponAttackType GetCurrentShooterType();
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_ShooterBase* GetCurrentShooterObject() const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentShooterModifications(float& outBaseDamageMultiplier, float& outEffectiveRangeMultiplier, float& outMaxRangeMultiplier, float& outRPMMultiplier) const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetCurrentReloadTimeMultiplier() const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentRecoilModifications(float& outVerticalRecoilMultiplier, float& outHorizontalRecoilMultiplier) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetCurrentMagazineCapacity() const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentIdleSwayIntensity(float& outIdleSwayIntensity) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentAttributeMultipliers(float& outWeaponDamageAttrib, float& outHipFireSpreadAttrib, float& outAdsSpreadAttrib, float& outIdleSwayIntensityAttrib, float& outAdsSpeedAttrib, float& outReloadSpeedAttrib) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentAIStimuliMultipliers(float& outMuzzleFlashStimuliMultiplier, float& outShotSoundStimuliMultiplier) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentAimOffset(FVector& OutLocation, FVector& OutRotation) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentADSAndHolsterModifications(float& outHolsterTime, float& outADSInSpeedMult, float& outADSOutSpeedMult, float& outScopeInPercent, bool& outIsUsingScopeMod) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetCurrentAccuracyModifications(float& outHipFireSpreadMultiplier, float& outADSSpreadMultiplier, float& outSpreadIncreasePerShotMultiplier, float& outMovementSpreadMultiplier) const;
-    
-    UFUNCTION(BlueprintCallable)
-    bool DetermineTortillaUsage(APawn* inPawn);
-    
-    UFUNCTION(BlueprintPure)
-    bool CanAttack() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void BeginAttack();
-    
-    UFUNCTION(BlueprintCallable)
-    void Bash();
     
 
     // Fix for true pure virtual functions not being implemented

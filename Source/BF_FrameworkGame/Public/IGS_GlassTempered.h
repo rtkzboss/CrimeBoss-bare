@@ -33,6 +33,51 @@ UCLASS(Abstract, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class BF_FRAMEWORKGAME_API UIGS_GlassTempered : public UStaticMeshComponent, public IIGS_ProjectileOverlappable, public IIGS_GlassInterface {
     GENERATED_BODY()
 public:
+    UIGS_GlassTempered(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void UpdateRenderTarget();
+    
+    UFUNCTION()
+    void Sync_GlassStatus();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCustomMeshes(UStaticMesh* inNewBaseMesh, UStaticMesh* inNewFracturedMesh);
+    
+    UFUNCTION()
+    void PrepRenderTarget();
+    
+protected:
+    UFUNCTION()
+    void OnTakeRadialDamage(AActor* inDamagedActor, float inDamage, const UDamageType* inDamageType, FVector inOrigin, FHitResult inHitInfo, AController* inInstigatedBy, AActor* inDamageCauser);
+    
+    UFUNCTION()
+    void OnTakePointDamage(AActor* inDamagedActor, float inDamage, AController* inInstigatedBy, FVector inHitLocation, UPrimitiveComponent* inHitComponent, FName InBoneName, FVector inShotFromDirection, const UDamageType* inDamageType, AActor* inDamageCauser);
+    
+public:
+    UFUNCTION()
+    void OnRep_GlassStatus();
+    
+protected:
+    UFUNCTION()
+    void OnComponentOverlap_Implementation(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inbFromSweep, const FHitResult& inSweepResult);
+    
+    UFUNCTION()
+    void OnComponentHit_Implementation(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
+    
+public:
+    UFUNCTION()
+    void FractureGlass(FVector inHitLocation, FVector2D inHitUV, float inHoleSize);
+    
+    UFUNCTION()
+    bool CanDoDamage(FVector inHitLocation);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    void BreakGlass(FVector_NetQuantize10 inHitLocation, FVector_NetQuantizeNormal inFXPushAxis, EIGS_DamageType inDamageType);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void ApplyDamageToGlass(FVector_NetQuantize10 inHitLocation, FVector_NetQuantize10 inDamageCauserLocation, EIGS_DamageType inDamageType, float inHoleSize);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_GlassPreset GlassPanelPreset;
@@ -138,53 +183,8 @@ private:
     bool m_bIdBrokenLocal;
     
 public:
-    UIGS_GlassTempered(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void UpdateRenderTarget();
-    
-    UFUNCTION()
-    void Sync_GlassStatus();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCustomMeshes(UStaticMesh* inNewBaseMesh, UStaticMesh* inNewFracturedMesh);
-    
-    UFUNCTION()
-    void PrepRenderTarget();
-    
-protected:
-    UFUNCTION()
-    void OnTakeRadialDamage(AActor* inDamagedActor, float inDamage, const UDamageType* inDamageType, FVector inOrigin, FHitResult inHitInfo, AController* inInstigatedBy, AActor* inDamageCauser);
-    
-    UFUNCTION()
-    void OnTakePointDamage(AActor* inDamagedActor, float inDamage, AController* inInstigatedBy, FVector inHitLocation, UPrimitiveComponent* inHitComponent, FName InBoneName, FVector inShotFromDirection, const UDamageType* inDamageType, AActor* inDamageCauser);
-    
-public:
-    UFUNCTION()
-    void OnRep_GlassStatus();
-    
-protected:
-    UFUNCTION()
-    void OnComponentOverlap_Implementation(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inbFromSweep, const FHitResult& inSweepResult);
-    
-    UFUNCTION()
-    void OnComponentHit_Implementation(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
-    
-public:
-    UFUNCTION()
-    void FractureGlass(FVector inHitLocation, FVector2D inHitUV, float inHoleSize);
-    
-    UFUNCTION()
-    bool CanDoDamage(FVector inHitLocation);
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void BreakGlass(FVector_NetQuantize10 inHitLocation, FVector_NetQuantizeNormal inFXPushAxis, EIGS_DamageType inDamageType);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void ApplyDamageToGlass(FVector_NetQuantize10 inHitLocation, FVector_NetQuantize10 inDamageCauserLocation, EIGS_DamageType inDamageType, float inHoleSize);
-    
 
     // Fix for true pure virtual functions not being implemented
 };

@@ -9,6 +9,11 @@ UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_MouseSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_MouseSettings();
+
+    UFUNCTION(BlueprintPure)
+    static UIGS_MouseSettings* Instance();
+    
     UPROPERTY(Config, EditAnywhere)
     float MouseSensitivity;
     
@@ -23,11 +28,6 @@ public:
     
     UPROPERTY(EditAnywhere)
     float MaxMouseSensitivity;
-    
-    UIGS_MouseSettings();
-
-    UFUNCTION(BlueprintPure)
-    static UIGS_MouseSettings* Instance();
     
 };
 

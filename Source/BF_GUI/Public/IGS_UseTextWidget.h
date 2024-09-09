@@ -15,11 +15,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_UseTextWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Instanced)
-    UIGS_InteractiveComponent* m_CurrentInteraction;
-    
-public:
     UIGS_UseTextWidget();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -59,6 +54,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     UIGS_InteractiveComponent* GetCurrentInteraction();
+    
+private:
+    UPROPERTY(Instanced)
+    UIGS_InteractiveComponent* m_CurrentInteraction;
     
 };
 

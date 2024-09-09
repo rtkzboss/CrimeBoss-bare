@@ -42,6 +42,14 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_BossPointChanged, float, PreviousPoints, float, CurrentPoints);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FIGS_BossLevelChanged, int32, PreviousLevel, int32, CurrentLevel, float, PreviousPoints, float, CurrentPoints);
     
+    UMETA_UIEventsManagerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    bool IsCompletedJobPending();
+    
+    UFUNCTION(BlueprintCallable)
+    FIGS_JobCompletedInfo GetAndClearPendingCompletedJob(bool& outResult);
+    
     UPROPERTY(BlueprintAssignable)
     FMETA_AIGangDefendedAttackFromAnotherAIGang OnAIGangDefendedAttackFromAnotherAIGang;
     
@@ -122,14 +130,6 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_BossPointChanged OnBossPointChanged;
-    
-    UMETA_UIEventsManagerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    bool IsCompletedJobPending();
-    
-    UFUNCTION(BlueprintCallable)
-    FIGS_JobCompletedInfo GetAndClearPendingCompletedJob(bool& outResult);
     
 };
 

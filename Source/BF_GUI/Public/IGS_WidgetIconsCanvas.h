@@ -16,6 +16,23 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetIconsCanvas : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_WidgetIconsCanvas();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetWidgetPosition(UIGS_WorldSpaceUserWidget* InWidget, FVector2D InLocation);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void GetWidgetXY(FVector InLocation, FVector2D& outXY, bool bOuterEdge, float& outAngle);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    bool GetShowOnlyOffScreen(EIGS_WorldWidgetType inType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    bool GetHasWidgetTypeOuterEdgeOverride(EIGS_WorldWidgetType inType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    bool GetHasWidgetTypeEdgeOverride(EIGS_WorldWidgetType inType);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_WorldSpaceUserWidget> WidgetIconClass;
     
@@ -44,24 +61,6 @@ private:
     
     UPROPERTY()
     UIGS_WorldWidgetDatabase* m_WidgetIconDatabase;
-    
-public:
-    UIGS_WidgetIconsCanvas();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetWidgetPosition(UIGS_WorldSpaceUserWidget* InWidget, FVector2D InLocation);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void GetWidgetXY(FVector InLocation, FVector2D& outXY, bool bOuterEdge, float& outAngle);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    bool GetShowOnlyOffScreen(EIGS_WorldWidgetType inType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    bool GetHasWidgetTypeOuterEdgeOverride(EIGS_WorldWidgetType inType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    bool GetHasWidgetTypeEdgeOverride(EIGS_WorldWidgetType inType);
     
 };
 

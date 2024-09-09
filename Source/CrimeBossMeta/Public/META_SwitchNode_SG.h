@@ -9,6 +9,8 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_SwitchNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_SwitchNode_SG();
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MinSwitchRange;
     
@@ -30,7 +32,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<int32, int32> Cases;
     
-    UMETA_SwitchNode_SG();
-
 };
 

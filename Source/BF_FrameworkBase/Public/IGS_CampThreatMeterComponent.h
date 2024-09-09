@@ -9,6 +9,14 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_CampThreatMeterComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_CampThreatMeterComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    bool IsCamping() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetCampLevel() const;
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OnCampingChangedEventSignature OnCampingChangedEvent;
     
@@ -50,14 +58,6 @@ public:
     
     UPROPERTY(EditAnywhere)
     FFloatInterval ThreatThresholds;
-    
-    UIGS_CampThreatMeterComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    bool IsCamping() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetCampLevel() const;
     
 };
 

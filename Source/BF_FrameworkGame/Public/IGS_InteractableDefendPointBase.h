@@ -15,42 +15,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_InteractableDefendPointBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    UIGS_InteractiveComponent* DefendInteraction;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    USceneComponent* RootComp;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UBoxComponent* LeaveTrigger;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float DefendTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bIsTimed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float ResetCountdown;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float DelayAfterAllPlayersOut;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_Pinged)
-    bool mR_bPinged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnDefendFinished OnDefendFinishedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnDefendFinished OnDefendStartedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnDefendStateChanged OnDefendStateChangedEvent;
-    
     AIGS_InteractableDefendPointBase(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void SetPinged(bool inPinged);
@@ -89,5 +54,40 @@ public:
     UFUNCTION(BlueprintPure)
     float GetDefendTimeElapsed();
     
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UIGS_InteractiveComponent* DefendInteraction;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    USceneComponent* RootComp;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UBoxComponent* LeaveTrigger;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float DefendTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bIsTimed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float ResetCountdown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float DelayAfterAllPlayersOut;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_Pinged)
+    bool mR_bPinged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnDefendFinished OnDefendFinishedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnDefendFinished OnDefendStartedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnDefendStateChanged OnDefendStateChangedEvent;
+    
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

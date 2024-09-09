@@ -9,6 +9,17 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_FancyText : public UIGS_Widget {
     GENERATED_BODY()
 public:
+    UIGS_FancyText();
+
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ToggleSelect(const bool isSelected);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetText(const FText& Text);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SetForceHidden(const bool inForceHidden);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UTextBlock* Cyan;
     
@@ -20,17 +31,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UTextBlock* TopLayer;
-    
-    UIGS_FancyText();
-
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void ToggleSelect(const bool isSelected);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetText(const FText& Text);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetForceHidden(const bool inForceHidden);
     
 };
 

@@ -11,6 +11,8 @@ UCLASS(CollapseCategories)
 class BF_ANIMATIONS_API UIGS_AnimNotify_PlayParticleEffectTortilla : public UAnimNotify {
     GENERATED_BODY()
 public:
+    UIGS_AnimNotify_PlayParticleEffectTortilla();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UParticleSystem* PSTemplate;
     
@@ -32,7 +34,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName SocketName;
     
-    UIGS_AnimNotify_PlayParticleEffectTortilla();
-
 };
 

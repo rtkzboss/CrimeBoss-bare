@@ -9,10 +9,10 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_LevelGenerato
 class BF_LEVELGENERATOR_API UIGS_LevelGeneratorDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_LevelGeneratorDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> HubPresetsDataTable;
     
-    UIGS_LevelGeneratorDevSettings();
-
 };
 

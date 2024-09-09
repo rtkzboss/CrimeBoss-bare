@@ -11,6 +11,8 @@ UCLASS(EditInlineNew)
 class UEnvQueryGenerator_CoverFMemory : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UEnvQueryGenerator_CoverFMemory();
+
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue SquareExtent;
     
@@ -20,7 +22,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> GenerateAround;
     
-    UEnvQueryGenerator_CoverFMemory();
-
 };
 

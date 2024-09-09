@@ -8,10 +8,10 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_DamageTypeMelee : public UIGS_DamageTypeBase {
     GENERATED_BODY()
 public:
+    UIGS_DamageTypeMelee();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EDamageMeleeType DamageMeleeType;
     
-    UIGS_DamageTypeMelee();
-
 };
 

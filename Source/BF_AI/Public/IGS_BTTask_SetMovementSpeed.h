@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SetMovementSpeed : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SetMovementSpeed();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MovementSpeedBlackBoardKey;
     
@@ -24,7 +26,5 @@ public:
     UPROPERTY(EditAnywhere)
     EIGS_Speed MovementSpeed;
     
-    UIGS_BTTask_SetMovementSpeed();
-
 };
 

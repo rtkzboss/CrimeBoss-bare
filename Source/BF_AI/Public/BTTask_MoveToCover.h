@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTTask_MoveToCover : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UBTTask_MoveToCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverBlackboardKey;
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector IsApproachMoveKey;
     
-public:
-    UBTTask_MoveToCover();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputActor : public UHoudiniInputObject {
     GENERATED_BODY()
 public:
+    UHoudiniInputActor();
+
 protected:
     UPROPERTY()
     TArray<UHoudiniInputSceneComponent*> ActorComponents;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY()
     int32 LastUpdateNumComponentsRemoved;
     
-public:
-    UHoudiniInputActor();
-
 };
 

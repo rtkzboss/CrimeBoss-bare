@@ -13,6 +13,8 @@ UCLASS()
 class BF_AI_API UTrafficPathfindingNode : public UObject {
     GENERATED_BODY()
 public:
+    UTrafficPathfindingNode();
+
 protected:
     UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesOut;
@@ -38,8 +40,5 @@ protected:
     UPROPERTY()
     TArray<AIGS_VehicleSpawnerFramework*> VehicleSpawners;
     
-public:
-    UTrafficPathfindingNode();
-
 };
 

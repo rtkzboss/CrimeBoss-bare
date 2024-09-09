@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsWieldingWeapon : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsWieldingWeapon();
+
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_SwitchWeaponTask_WeaponType WeaponType;
     
-public:
-    UBTDecorator_IsWieldingWeapon();
-
 };
 

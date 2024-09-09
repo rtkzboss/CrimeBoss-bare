@@ -7,6 +7,8 @@ UCLASS(DefaultConfig, Config=Game)
 class BF_INPUT_API UIGS_AnalogControllerSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_AnalogControllerSettings();
+
 private:
     UPROPERTY(Config, EditAnywhere)
     float BaseTurnRate;
@@ -44,8 +46,5 @@ private:
     UPROPERTY(Config, EditAnywhere)
     float BaseADSMultiplier;
     
-public:
-    UIGS_AnalogControllerSettings();
-
 };
 

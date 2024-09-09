@@ -12,6 +12,30 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LookAtTriggerComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UIGS_LookAtTriggerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetEnabled(bool inEnabled);
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void Server_Trigger(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    bool Server_CanTrigger(AIGS_GameCharacterFramework* inInstigator);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void ResetTrigger();
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void Client_Trigger(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    bool Client_CanTrigger(AIGS_GameCharacterFramework* inInstigator);
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FIGS_OnServerTriggerSignature OnServerTriggered;
     
@@ -44,30 +68,7 @@ protected:
     bool mR_bIsTriggered;
     
 public:
-    UIGS_LookAtTriggerComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetEnabled(bool inEnabled);
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void Server_Trigger(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    bool Server_CanTrigger(AIGS_GameCharacterFramework* inInstigator);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void ResetTrigger();
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void Client_Trigger(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    bool Client_CanTrigger(AIGS_GameCharacterFramework* inInstigator);
-    
 };
 

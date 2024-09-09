@@ -22,6 +22,37 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_DestructableVehicleComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UIGS_DestructableVehicleComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void UpdateShakeCar();
+    
+    UFUNCTION()
+    void UpdateFire() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void SetPrimitiveDataOnStaticMesh(UStaticMeshComponent* inStaticMesh);
+    
+    UFUNCTION()
+    void SelfDamage(float inDamage);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnTakeDamage(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
+    
+    UFUNCTION()
+    void OnRep_IsExploded(bool inIsExploded);
+    
+    UFUNCTION(NetMulticast, Reliable, WithValidation)
+    void Multicast_ExplodeVehicle();
+    
+    UFUNCTION(BlueprintCallable)
+    void ExplodeVehicle();
+    
+    UFUNCTION()
+    void ClearFire();
+    
+public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UIGS_DestructableVehicleSettings> Settings;
     
@@ -144,37 +175,7 @@ protected:
     UIGS_DestructableVehicleSettings* SettingsLoaded;
     
 public:
-    UIGS_DestructableVehicleComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void UpdateShakeCar();
-    
-    UFUNCTION()
-    void UpdateFire() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void SetPrimitiveDataOnStaticMesh(UStaticMeshComponent* inStaticMesh);
-    
-    UFUNCTION()
-    void SelfDamage(float inDamage);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnTakeDamage(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
-    
-    UFUNCTION()
-    void OnRep_IsExploded(bool inIsExploded);
-    
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_ExplodeVehicle();
-    
-    UFUNCTION(BlueprintCallable)
-    void ExplodeVehicle();
-    
-    UFUNCTION()
-    void ClearFire();
-    
 };
 

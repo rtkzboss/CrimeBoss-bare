@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_ZiptieSequence : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_ZiptieSequence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CivToZiptieKey;
     
-public:
-    UIGS_BTService_ZiptieSequence();
-
 };
 

@@ -10,10 +10,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_CoverDirectionDot : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_CoverDirectionDot();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Context;
     
-    UEnvQueryTest_CoverDirectionDot();
-
 };
 

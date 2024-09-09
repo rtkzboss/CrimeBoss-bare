@@ -8,13 +8,12 @@ UCLASS()
 class BF_AI_API UBTTask_PlayDialogue : public UBTTaskNode, public IIGS_DialogueAsyncActionInterface {
     GENERATED_BODY()
 public:
+    UBTTask_PlayDialogue();
+
 protected:
     UPROPERTY(EditAnywhere)
     FText DialogueID;
     
-public:
-    UBTTask_PlayDialogue();
-
 
     // Fix for true pure virtual functions not being implemented
 };

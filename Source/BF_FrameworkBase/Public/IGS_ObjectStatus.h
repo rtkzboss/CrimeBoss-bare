@@ -22,92 +22,7 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_ObjectStatus : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusHealthChangedEventSignature OnHealthChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusMaxHealthChangedEventSignature OnMaxHealthChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusHealthChangedEventSignature OnDeath;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusAccumulatedDamageEventSignature OnAccumulatedDamage;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusAccumulatedDamageEventSignature OnAccumulatedDeath;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusHealthResetEventSignature OnHealthReset;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusHealthResetEventSignature OnResurrection;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ObjectStatusHealthStateChangedEventSignature OnHealthStateChanged;
-    
-protected:
-    UPROPERTY()
-    bool bCurrentHealthWasReplicated;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Replicated)
-    float MaxHealth;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Replicated)
-    float MaxShield;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FIGS_EncryptedF32 CurrentHealth;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_ReplicatedCurrentHealth)
-    float mR_ReplicatedCurrentHealth;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FIGS_EncryptedF32 CurrentShield;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float HealthMultiplierAttribute;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsDead)
-    bool R_IsDead;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    bool Unkillable;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    bool ScriptInvulnerable;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    bool DifficultyInvulnerable;
-    
-    UPROPERTY(Replicated)
-    bool HealthDecayDisabled;
-    
-    UPROPERTY(Replicated)
-    bool InstantKillable;
-    
-    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_HealthState)
-    EIGS_HealthState HealthState;
-    
-    UPROPERTY(EditAnywhere, Replicated)
-    bool IsInjured;
-    
-    UPROPERTY(BlueprintReadWrite)
-    float AccumulateDamagePeriod;
-    
-    UPROPERTY(Replicated)
-    bool m_OverrideReportingOfDamageDealt;
-    
-    UPROPERTY(Replicated)
-    bool m_OverrideReportingOfDamageDealtValue;
-    
-    UPROPERTY(Replicated)
-    float mR_BaseMaxHealth;
-    
-public:
     UIGS_ObjectStatus(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void SetHealthDecayDisabled(bool inDisabled);
@@ -216,5 +131,90 @@ public:
     UFUNCTION(BlueprintPure)
     float GetBaseMaxHealth() const;
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusHealthChangedEventSignature OnHealthChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusMaxHealthChangedEventSignature OnMaxHealthChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusHealthChangedEventSignature OnDeath;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusAccumulatedDamageEventSignature OnAccumulatedDamage;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusAccumulatedDamageEventSignature OnAccumulatedDeath;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusHealthResetEventSignature OnHealthReset;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusHealthResetEventSignature OnResurrection;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusHealthStateChangedEventSignature OnHealthStateChanged;
+    
+protected:
+    UPROPERTY()
+    bool bCurrentHealthWasReplicated;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Replicated)
+    float MaxHealth;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Replicated)
+    float MaxShield;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FIGS_EncryptedF32 CurrentHealth;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_ReplicatedCurrentHealth)
+    float mR_ReplicatedCurrentHealth;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FIGS_EncryptedF32 CurrentShield;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float HealthMultiplierAttribute;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsDead)
+    bool R_IsDead;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
+    bool Unkillable;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
+    bool ScriptInvulnerable;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
+    bool DifficultyInvulnerable;
+    
+    UPROPERTY(Replicated)
+    bool HealthDecayDisabled;
+    
+    UPROPERTY(Replicated)
+    bool InstantKillable;
+    
+    UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_HealthState)
+    EIGS_HealthState HealthState;
+    
+    UPROPERTY(EditAnywhere, Replicated)
+    bool IsInjured;
+    
+    UPROPERTY(BlueprintReadWrite)
+    float AccumulateDamagePeriod;
+    
+    UPROPERTY(Replicated)
+    bool m_OverrideReportingOfDamageDealt;
+    
+    UPROPERTY(Replicated)
+    bool m_OverrideReportingOfDamageDealtValue;
+    
+    UPROPERTY(Replicated)
+    float mR_BaseMaxHealth;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

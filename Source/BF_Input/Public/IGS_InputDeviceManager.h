@@ -15,6 +15,17 @@ UCLASS(BlueprintType)
 class BF_INPUT_API UIGS_InputDeviceManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_InputDeviceManager();
+
+    UFUNCTION(BlueprintCallable)
+    void TriggerKeyBindUIUpdate();
+    
+    UFUNCTION(BlueprintCallable)
+    void RefreshCurrentInputDevice();
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_InputDevice GetCurrentInputDevice() const;
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OnInputDeviceChanged OnInputDeviceChanged;
     
@@ -47,17 +58,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_ControllerSpeakerConnectionChanged OnControllerHeadphonesConnectionChangedEvent;
-    
-    UIGS_InputDeviceManager();
-
-    UFUNCTION(BlueprintCallable)
-    void TriggerKeyBindUIUpdate();
-    
-    UFUNCTION(BlueprintCallable)
-    void RefreshCurrentInputDevice();
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_InputDevice GetCurrentInputDevice() const;
     
 };
 

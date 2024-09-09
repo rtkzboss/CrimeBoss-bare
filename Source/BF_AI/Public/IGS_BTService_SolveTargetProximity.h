@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_SolveTargetProximity : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_SolveTargetProximity();
+
 protected:
     UPROPERTY(EditAnywhere)
     bool DEBUG_Enabled;
     
-public:
-    UIGS_BTService_SolveTargetProximity();
-
 };
 

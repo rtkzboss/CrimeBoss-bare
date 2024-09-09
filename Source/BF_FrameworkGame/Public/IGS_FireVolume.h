@@ -12,6 +12,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_FireVolume : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_FireVolume(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<AIGS_FireVolume*> NeighborsFireVolumes;
@@ -41,8 +43,5 @@ private:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UNiagaraComponent* FireNiagaraComponent;
     
-public:
-    AIGS_FireVolume(const FObjectInitializer& ObjectInitializer);
-
 };
 

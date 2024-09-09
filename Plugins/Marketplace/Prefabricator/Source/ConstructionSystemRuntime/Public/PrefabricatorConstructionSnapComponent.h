@@ -10,6 +10,8 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CONSTRUCTIONSYSTEMRUNTIME_API UPrefabricatorConstructionSnapComponent : public UBoxComponent {
     GENERATED_BODY()
 public:
+    UPrefabricatorConstructionSnapComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     EPrefabricatorConstructionSnapType SnapType;
     
@@ -28,7 +30,5 @@ public:
     UPROPERTY(EditAnywhere)
     float MaxGroundPlacementSlope;
     
-    UPrefabricatorConstructionSnapComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -20,50 +20,6 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_WieldableBase : public AWieldableAbstract {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    TWeakObjectPtr<AIGS_GameCharacterFramework> OwnerPawn;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bHasCollision;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bIsUsingPrimaryAction;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bIsUsingSecondaryAction;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bIsAiming;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bIsHolstering;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bIsUnholstering;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 CurrentZoomLevel;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UMaterialParameterCollection* WieldableMPC;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UMaterialParameterCollectionInstance* WieldableMPCInstance;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_DynamicMaterialHandlerComponent* DynamicMaterialHandlerComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    USkeletalMeshComponentBudgeted* WieldableMesh;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FGameplayTagContainer GameplayTags;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UAkAudioEvent* StopInspectingAkEvent;
-    
-public:
     AIGS_WieldableBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -193,6 +149,49 @@ public:
     
     UFUNCTION(BlueprintCallable)
     int32 AmmoCount();
+    
+    UPROPERTY(BlueprintReadOnly)
+    TWeakObjectPtr<AIGS_GameCharacterFramework> OwnerPawn;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bHasCollision;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bIsUsingPrimaryAction;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bIsUsingSecondaryAction;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bIsAiming;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bIsHolstering;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bIsUnholstering;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 CurrentZoomLevel;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UMaterialParameterCollection* WieldableMPC;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UMaterialParameterCollectionInstance* WieldableMPCInstance;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_DynamicMaterialHandlerComponent* DynamicMaterialHandlerComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    USkeletalMeshComponentBudgeted* WieldableMesh;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FGameplayTagContainer GameplayTags;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UAkAudioEvent* StopInspectingAkEvent;
     
 };
 

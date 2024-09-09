@@ -14,6 +14,32 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_OverheatComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_OverheatComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetStaticMeshToApplyOverheat(UStaticMeshComponent* inStaticMesh, const int32 inIndex);
+    
+    UFUNCTION()
+    void OnRep_IsOverheated();
+    
+    UFUNCTION()
+    void OnRep_CurrentOverheat();
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void HandleOverheatStateChanged(bool inState);
+    
+    UFUNCTION(BlueprintPure)
+    bool GetIsOverheated() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetCurrentOverheatValue() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void BindToSimpleShooter(UIGS_SimpleHitScanShooter* inShooter);
+    
+    UFUNCTION(BlueprintCallable)
+    void BindToShooter(UIGS_ShooterBase* inShooter);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bAutoBindShooter;
     
@@ -46,33 +72,7 @@ protected:
     float mR_CurrentOverheat;
     
 public:
-    UIGS_OverheatComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetStaticMeshToApplyOverheat(UStaticMeshComponent* inStaticMesh, const int32 inIndex);
-    
-    UFUNCTION()
-    void OnRep_IsOverheated();
-    
-    UFUNCTION()
-    void OnRep_CurrentOverheat();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void HandleOverheatStateChanged(bool inState);
-    
-    UFUNCTION(BlueprintPure)
-    bool GetIsOverheated() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetCurrentOverheatValue() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void BindToSimpleShooter(UIGS_SimpleHitScanShooter* inShooter);
-    
-    UFUNCTION(BlueprintCallable)
-    void BindToShooter(UIGS_ShooterBase* inShooter);
-    
 };
 

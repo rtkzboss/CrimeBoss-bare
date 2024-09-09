@@ -10,6 +10,8 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_DownStateHandlerComponentBase : public UIGS_DownStateHandlerComponentFramework {
     GENERATED_BODY()
 public:
+    UIGS_DownStateHandlerComponentBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnReviveStartEvent OnReviveStartedEvent;
     
@@ -19,7 +21,5 @@ public:
     UPROPERTY(BlueprintAssignable)
     FIGS_OnRevivedEvent OnRevivedEvent;
     
-    UIGS_DownStateHandlerComponentBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

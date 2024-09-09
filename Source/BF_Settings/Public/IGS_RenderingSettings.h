@@ -12,6 +12,50 @@ UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_RenderingSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_RenderingSettings();
+
+    UFUNCTION(BlueprintPure)
+    static float VerticalFOVToActualHorizontalFOV(float inVerticalFOV, FVector2D inViewportSize);
+    
+    UFUNCTION(BlueprintCallable)
+    void UseLockpickRenderingSettings(bool inIsLockpicking);
+    
+    UFUNCTION(BlueprintCallable)
+    void UseBotWheelRenderingSettings(bool inIsPaused);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetQualityLevels_Auto(bool inRunBenchmark);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIsGamePausedInMenu(bool inIsPausedInMenu);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIsCurrentGameModeMenu(bool inIsMenu);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetFramerateUnlockedCinematic(bool inUnlocked);
+    
+    UFUNCTION(BlueprintPure)
+    static UIGS_RenderingSettings* Instance();
+    
+    UFUNCTION(BlueprintPure)
+    static float HorizontalFOV2VerticalFOV(float inHorizontalFOV);
+    
+    UFUNCTION(BlueprintPure)
+    static TArray<FIntPoint> GetSupportedScreenResolutions();
+    
+    UFUNCTION(BlueprintCallable)
+    bool GetIsSteamDeck();
+    
+    UFUNCTION(BlueprintCallable)
+    void EnableReducedTexturePoolSize();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void EnableMovieCVarSettings() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void DisableMovieCVarSettings() const;
+    
     UPROPERTY(Config, EditAnywhere)
     int32 FullscreenModeValue;
     
@@ -113,50 +157,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     UMaterialParameterCollection* m_ExtendedSettingsParameterCollection;
-    
-    UIGS_RenderingSettings();
-
-    UFUNCTION(BlueprintPure)
-    static float VerticalFOVToActualHorizontalFOV(float inVerticalFOV, FVector2D inViewportSize);
-    
-    UFUNCTION(BlueprintCallable)
-    void UseLockpickRenderingSettings(bool inIsLockpicking);
-    
-    UFUNCTION(BlueprintCallable)
-    void UseBotWheelRenderingSettings(bool inIsPaused);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetQualityLevels_Auto(bool inRunBenchmark);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIsGamePausedInMenu(bool inIsPausedInMenu);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIsCurrentGameModeMenu(bool inIsMenu);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetFramerateUnlockedCinematic(bool inUnlocked);
-    
-    UFUNCTION(BlueprintPure)
-    static UIGS_RenderingSettings* Instance();
-    
-    UFUNCTION(BlueprintPure)
-    static float HorizontalFOV2VerticalFOV(float inHorizontalFOV);
-    
-    UFUNCTION(BlueprintPure)
-    static TArray<FIntPoint> GetSupportedScreenResolutions();
-    
-    UFUNCTION(BlueprintCallable)
-    bool GetIsSteamDeck();
-    
-    UFUNCTION(BlueprintCallable)
-    void EnableReducedTexturePoolSize();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void EnableMovieCVarSettings() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void DisableMovieCVarSettings() const;
     
 };
 

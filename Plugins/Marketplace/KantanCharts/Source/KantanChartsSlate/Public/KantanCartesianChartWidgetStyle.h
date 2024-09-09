@@ -8,10 +8,10 @@ UCLASS(MinimalAPI)
 class UKantanCartesianChartWidgetStyle : public USlateWidgetStyleContainerBase {
     GENERATED_BODY()
 public:
+    UKantanCartesianChartWidgetStyle();
+
     UPROPERTY(EditAnywhere)
     FKantanCartesianChartStyle ChartStyle;
     
-    UKantanCartesianChartWidgetStyle();
-
 };
 

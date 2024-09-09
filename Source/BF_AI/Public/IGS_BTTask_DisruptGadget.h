@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_DisruptGadget : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_DisruptGadget();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DisruptingGadget;
     
-public:
-    UIGS_BTTask_DisruptGadget();
-
 };
 

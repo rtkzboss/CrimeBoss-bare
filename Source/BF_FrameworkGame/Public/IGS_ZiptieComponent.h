@@ -11,6 +11,13 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ZiptieComponent : public UIGS_AnimatedInteractiveComponentSimple {
     GENERATED_BODY()
 public:
+    UIGS_ZiptieComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnRep_IsZiptied() const;
+    
+public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsZiptied)
     bool IsZiptied;
     
@@ -23,13 +30,7 @@ public:
     UPROPERTY(BlueprintReadOnly)
     AIGS_GameCharacterFramework* CurrentInstigator;
     
-    UIGS_ZiptieComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnRep_IsZiptied() const;
-    
 };
 

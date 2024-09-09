@@ -18,6 +18,14 @@ UCLASS(BlueprintType)
 class BF_IMPACTS_API UIGS_ImpactManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_ImpactManager();
+
+    UFUNCTION(BlueprintCallable)
+    static void CreateSkinnedDecalImpact(USkinnedDecalSampler* inSampler, const FHitResult& inHitResult, EIGS_WoundType inWoundType);
+    
+    UFUNCTION(BlueprintCallable)
+    static void CreateBloodSpatterImpact(const AIGS_GameCharacterFramework* inHitCharacter, UIGS_ImpactManager* inImpactManager, FIGS_ImpactParameters inParameters, const FHitResult& inHitResult);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool DisableBloodImpacts;
     
@@ -30,15 +38,6 @@ protected:
     
     UPROPERTY()
     UIGS_ImpactManagerSettings* ImpactManagerSettings;
-    
-public:
-    UIGS_ImpactManager();
-
-    UFUNCTION(BlueprintCallable)
-    static void CreateSkinnedDecalImpact(USkinnedDecalSampler* inSampler, const FHitResult& inHitResult, EIGS_WoundType inWoundType);
-    
-    UFUNCTION(BlueprintCallable)
-    static void CreateBloodSpatterImpact(const AIGS_GameCharacterFramework* inHitCharacter, UIGS_ImpactManager* inImpactManager, FIGS_ImpactParameters inParameters, const FHitResult& inHitResult);
     
 };
 

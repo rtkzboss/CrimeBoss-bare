@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_TagCooldownRandom : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_TagCooldownRandom();
+
     UPROPERTY(EditAnywhere)
     FGameplayTag CooldownTag;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY(EditAnywhere)
     bool bActivatesCooldown;
     
-    UBTDecorator_TagCooldownRandom();
-
 };
 

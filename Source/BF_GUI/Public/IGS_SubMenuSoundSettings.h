@@ -10,6 +10,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_SubMenuSoundSettings : public UIGS_WidgetSubMenuSettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_SubMenuSoundSettings();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSlider* MasterVolumeSpinBox;
     
@@ -52,7 +54,5 @@ public:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* InputDeviceSpinBox;
     
-    UIGS_SubMenuSoundSettings();
-
 };
 

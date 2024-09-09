@@ -7,6 +7,8 @@ UCLASS(EditInlineNew)
 class HOUDINIENGINERUNTIME_API UHoudiniAsset : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniAsset();
+
     UPROPERTY()
     FString AssetFileName;
     
@@ -26,8 +28,5 @@ private:
     UPROPERTY()
     bool bAssetExpanded;
     
-public:
-    UHoudiniAsset();
-
 };
 

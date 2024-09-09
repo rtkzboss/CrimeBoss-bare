@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_HandleGeneralReaction : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_HandleGeneralReaction();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
     
-public:
-    UIGS_BTService_HandleGeneralReaction();
-
 };
 

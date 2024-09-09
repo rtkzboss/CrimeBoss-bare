@@ -12,12 +12,6 @@ UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_CompileShadersLatent : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CompileShadersProgressPin Update;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ComipleShadersFinishedPin Finished;
-    
     UIGS_CompileShadersLatent();
 
 private:
@@ -33,6 +27,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void Cancel();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CompileShadersProgressPin Update;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ComipleShadersFinishedPin Finished;
     
 };
 

@@ -8,7 +8,15 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SuppressionHandlerComponent : public UIGS_SphereOverlappableComponent {
     GENERATED_BODY()
 public:
+    UIGS_SuppressionHandlerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetCapsuleSize(float inCapsuleSize);
+    
 protected:
+    UFUNCTION()
+    void OnCharacterHit(float inDamage, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
+    
     UPROPERTY(EditDefaultsOnly)
     float TimeToWaitAfterSniperShake;
     
@@ -26,16 +34,6 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     float AggroCumulationTimeout;
-    
-public:
-    UIGS_SuppressionHandlerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetCapsuleSize(float inCapsuleSize);
-    
-protected:
-    UFUNCTION()
-    void OnCharacterHit(float inDamage, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
     
 };
 

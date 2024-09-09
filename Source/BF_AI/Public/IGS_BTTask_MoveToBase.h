@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_MoveToBase : public UIGS_BTTask_MoveToAsync {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_MoveToBase();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookPosKey;
@@ -25,8 +27,5 @@ protected:
     UPROPERTY(EditAnywhere)
     EIGS_CharacterVsHeistersCollisionStatus m_MovingCharacterVsHeistersCollisionStatus;
     
-public:
-    UIGS_BTTask_MoveToBase();
-
 };
 

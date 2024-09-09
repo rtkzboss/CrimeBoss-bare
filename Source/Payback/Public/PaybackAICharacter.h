@@ -16,6 +16,8 @@ UCLASS()
 class PAYBACK_API APaybackAICharacter : public AIGS_AIGameCharacter {
     GENERATED_BODY()
 public:
+    APaybackAICharacter(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintAssignable)
     FIGS_ComponentsPreInitialized OnComponentsPreInitialized;
@@ -47,8 +49,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_InteractionStealthKillComponent* InteractionStealthKill;
     
-public:
-    APaybackAICharacter(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -11,10 +11,10 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AmmoBoxDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AmmoBoxDataAsset();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSubclassOf<UIGS_AmmoInventoryObject>, FIGS_AmmoBoxData> AmmoData;
     
-    UIGS_AmmoBoxDataAsset();
-
 };
 

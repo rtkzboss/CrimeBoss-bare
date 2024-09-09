@@ -11,10 +11,10 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_HiddenGoalsData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UMETA_HiddenGoalsData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TMap<TSubclassOf<UMETA_HiddenGoalID>, UMETA_HiddenGoalObject*> HiddenGoals;
     
-    UMETA_HiddenGoalsData();
-
 };
 

@@ -13,15 +13,6 @@ UCLASS()
 class BF_GUI_API UIGS_MenuListView : public UListView {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnListViewItemHoverChanged OnListViewItemHoverChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnListViewIsFocusableChanged OnListViewIsFocusableChanged;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSubclassOf<UUserWidget> ItemWidgetTemplate;
-    
     UIGS_MenuListView();
 
     UFUNCTION(BlueprintCallable)
@@ -41,6 +32,15 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClickListItem(UObject* inItem);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnListViewItemHoverChanged OnListViewItemHoverChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnListViewIsFocusableChanged OnListViewIsFocusableChanged;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSubclassOf<UUserWidget> ItemWidgetTemplate;
     
 };
 

@@ -14,6 +14,40 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_EscapeVanVehicle : public AIGS_EscapeVehicle {
     GENERATED_BODY()
 public:
+    AIGS_EscapeVanVehicle(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnRep_IsRearDoorsOpened();
+    
+    UFUNCTION()
+    void OnRep_IsPassDoorOpened();
+    
+    UFUNCTION()
+    void OnRep_IsMiddleDoorOpened();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRearDoorInteraction(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnPassengerDoorInteraction(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnMiddleDoorInteraction(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_OnRearDoorInteraction(bool inIsOpened);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_OnPassengerDoorInteraction(bool inIsOpened);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_OnMiddleDoorInteraction(bool inIsOpened);
+    
+    UFUNCTION(BlueprintCallable)
+    void CloseDoors();
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FEscapeVanDoorStatusChanged OnDoorStatusChanged;
     
@@ -70,40 +104,7 @@ protected:
     UAkAudioEvent* SlidingDoorCloseAudio;
     
 public:
-    AIGS_EscapeVanVehicle(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnRep_IsRearDoorsOpened();
-    
-    UFUNCTION()
-    void OnRep_IsPassDoorOpened();
-    
-    UFUNCTION()
-    void OnRep_IsMiddleDoorOpened();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnRearDoorInteraction(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnPassengerDoorInteraction(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnMiddleDoorInteraction(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_OnRearDoorInteraction(bool inIsOpened);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_OnPassengerDoorInteraction(bool inIsOpened);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_OnMiddleDoorInteraction(bool inIsOpened);
-    
-    UFUNCTION(BlueprintCallable)
-    void CloseDoors();
-    
 };
 

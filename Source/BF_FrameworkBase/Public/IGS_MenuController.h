@@ -7,9 +7,6 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_MenuController : public APlayerController {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    bool bComesFromMission;
-    
     AIGS_MenuController(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -20,6 +17,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_ForceLeaveLobby();
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bComesFromMission;
     
 };
 

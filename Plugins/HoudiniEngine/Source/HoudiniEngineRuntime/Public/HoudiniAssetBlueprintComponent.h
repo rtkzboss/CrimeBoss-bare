@@ -9,6 +9,17 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniAssetBlueprintComponent : public UHoudiniAssetComponent {
     GENERATED_BODY()
 public:
+    UHoudiniAssetBlueprintComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetToggleValueAt(const FString& Name, bool Value, int32 Index);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetFloatParameter(const FString& Name, float Value, int32 Index);
+    
+    UFUNCTION(BlueprintCallable)
+    bool HasParameter(const FString& Name);
+    
 protected:
     UPROPERTY()
     bool FauxBPProperty;
@@ -33,18 +44,6 @@ protected:
     
     UPROPERTY()
     TMap<FGuid, FGuid> CachedInputNodes;
-    
-public:
-    UHoudiniAssetBlueprintComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetToggleValueAt(const FString& Name, bool Value, int32 Index);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetFloatParameter(const FString& Name, float Value, int32 Index);
-    
-    UFUNCTION(BlueprintCallable)
-    bool HasParameter(const FString& Name);
     
 };
 

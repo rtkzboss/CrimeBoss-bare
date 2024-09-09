@@ -9,14 +9,14 @@ UCLASS(BlueprintType)
 class BF_RENDERING_API UPostProcessBlendable : public UObject, public IBlendableInterface {
     GENERATED_BODY()
 public:
+    UPostProcessBlendable();
+
     UPROPERTY(EditAnywhere)
     FBlendablePostProcessSettings Settings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BlendWeight;
     
-    UPostProcessBlendable();
-
 
     // Fix for true pure virtual functions not being implemented
     virtual void OverrideBlendableSettings(class FSceneView& View, float Weight) const override {  }

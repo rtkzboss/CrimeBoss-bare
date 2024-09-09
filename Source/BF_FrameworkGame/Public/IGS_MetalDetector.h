@@ -13,7 +13,30 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MetalDetector : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_MetalDetector(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetEnabled(bool inState);
+    
 protected:
+    UFUNCTION()
+    void SetAlarmDisabledDelayed() const;
+    
+    UFUNCTION()
+    void OnRep_OnSetEnabled() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void InitProperties();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Client_OnDetected();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UAkComponent* AlarmAudioComponent;
     
@@ -42,31 +65,7 @@ protected:
     bool mR_bIsEnabled;
     
 public:
-    AIGS_MetalDetector(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetEnabled(bool inState);
-    
-protected:
-    UFUNCTION()
-    void SetAlarmDisabledDelayed() const;
-    
-    UFUNCTION()
-    void OnRep_OnSetEnabled() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void InitProperties();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Client_OnDetected();
-    
 };
 

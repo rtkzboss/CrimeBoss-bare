@@ -13,21 +13,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ScriptManagerBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<AIGS_ScriptActorBase*> ScriptActors;
-    
-    UPROPERTY(VisibleAnywhere)
-    int32 ScriptSeed;
-    
-    UPROPERTY()
-    FRandomStream RandomStream_DEPRECATED;
-    
-    UPROPERTY()
-    bool bFinished;
-    
-    UPROPERTY()
-    UIGS_RandomStreamHolder* m_RandomStreamHolder;
-    
     AIGS_ScriptManagerBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -53,6 +38,21 @@ public:
     
     UFUNCTION(BlueprintPure)
     void GetRandomStream(FRandomStream& outRandomStream);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<AIGS_ScriptActorBase*> ScriptActors;
+    
+    UPROPERTY(VisibleAnywhere)
+    int32 ScriptSeed;
+    
+    UPROPERTY()
+    FRandomStream RandomStream_DEPRECATED;
+    
+    UPROPERTY()
+    bool bFinished;
+    
+    UPROPERTY()
+    UIGS_RandomStreamHolder* m_RandomStreamHolder;
     
 };
 

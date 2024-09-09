@@ -14,6 +14,11 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetWeaponRadialSlice : public UIGS_WidgetRadialSliceBase {
     GENERATED_BODY()
 public:
+    UIGS_WidgetWeaponRadialSlice();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetImageInternal(const TSoftObjectPtr<UTexture2D>& inTexture);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor WieldedColor;
     
@@ -47,12 +52,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_ListInventory> OwningPlayerInventory;
-    
-public:
-    UIGS_WidgetWeaponRadialSlice();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetImageInternal(const TSoftObjectPtr<UTexture2D>& inTexture);
     
 };
 

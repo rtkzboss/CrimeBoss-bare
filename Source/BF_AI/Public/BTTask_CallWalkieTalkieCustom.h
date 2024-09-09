@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTTask_CallWalkieTalkieCustom : public UBTTask_CallWalkieTalkieBase {
     GENERATED_BODY()
 public:
+    UBTTask_CallWalkieTalkieCustom();
+
 protected:
     UPROPERTY(EditAnywhere)
     int32 StrikesToAdd;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FText DialogueID;
     
-public:
-    UBTTask_CallWalkieTalkieCustom();
-
 };
 

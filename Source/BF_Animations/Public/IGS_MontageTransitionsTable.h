@@ -9,10 +9,10 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_MontageTransitionsTable : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_MontageTransitionsTable();
+
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> MontageTransitions;
     
-    UIGS_MontageTransitionsTable();
-
 };
 

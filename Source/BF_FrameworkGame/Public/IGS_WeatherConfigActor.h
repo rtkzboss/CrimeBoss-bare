@@ -9,19 +9,17 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_WeatherConfigActor : public AActor {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditAnywhere)
-    FIGS_WeatherConfig WeatherConfig;
-    
-    UPROPERTY(EditAnywhere)
-    FIGS_VisualStyleConfig VisualStyleConfig;
-    
-public:
     AIGS_WeatherConfigActor(const FObjectInitializer& ObjectInitializer);
 
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void UpdateWeatherSystem() const;
+    
+    UPROPERTY(EditAnywhere)
+    FIGS_WeatherConfig WeatherConfig;
+    
+    UPROPERTY(EditAnywhere)
+    FIGS_VisualStyleConfig VisualStyleConfig;
     
 };
 

@@ -16,6 +16,52 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetFocusableSlider : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetFocusableSlider();
+
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void UpdateText() const;
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetStepSizeValue(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSpinBoxNameText(FText inSpinBoxNameText);
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void SetSliderStyle(FSliderStyle inNewStyle);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetMinValue(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMaxValue(float InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCurrentValue(float InValue);
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void ScrollRight();
+    
+    UFUNCTION(BlueprintCallable)
+    void ScrollLeft();
+    
+    UFUNCTION(BlueprintPure)
+    float SanitizeValue(float InValue) const;
+    
+private:
+    UFUNCTION(BlueprintCallable)
+    void ProcessSettingFontColor(FLinearColor InColor);
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void OnValueChanged(float InValue);
+    
+public:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* SliderName;
     
@@ -127,52 +173,6 @@ public:
 protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     USlider* ValueSlider;
-    
-public:
-    UIGS_WidgetFocusableSlider();
-
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void UpdateText() const;
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void SetStepSizeValue(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetSpinBoxNameText(FText inSpinBoxNameText);
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void SetSliderStyle(FSliderStyle inNewStyle);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void SetMinValue(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMaxValue(float InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCurrentValue(float InValue);
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void ScrollRight();
-    
-    UFUNCTION(BlueprintCallable)
-    void ScrollLeft();
-    
-    UFUNCTION(BlueprintPure)
-    float SanitizeValue(float InValue) const;
-    
-private:
-    UFUNCTION(BlueprintCallable)
-    void ProcessSettingFontColor(FLinearColor InColor);
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void OnValueChanged(float InValue);
     
 };
 

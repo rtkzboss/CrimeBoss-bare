@@ -7,12 +7,11 @@ UCLASS(Config=Game)
 class BF_AI_API UBTTask_RotatePerpendicularToBBEntry : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UBTTask_RotatePerpendicularToBBEntry();
+
 protected:
     UPROPERTY(Config, EditAnywhere)
     float Precision;
     
-public:
-    UBTTask_RotatePerpendicularToBBEntry();
-
 };
 

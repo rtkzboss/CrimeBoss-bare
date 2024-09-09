@@ -7,6 +7,8 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UPaybackCoreMapsData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UPaybackCoreMapsData();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName MainMenuMapName;
     
@@ -19,7 +21,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName GameEndLobbyMapName;
     
-    UPaybackCoreMapsData();
-
 };
 

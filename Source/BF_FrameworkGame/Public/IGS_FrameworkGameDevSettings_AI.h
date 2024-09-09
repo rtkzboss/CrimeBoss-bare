@@ -15,6 +15,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings_AI : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_FrameworkGameDevSettings_AI();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_AISpawnerData> AISpawnerData;
     
@@ -39,7 +41,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftClassPtr<UAISense> SightClass;
     
-    UIGS_FrameworkGameDevSettings_AI();
-
 };
 

@@ -10,6 +10,14 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetButtonSimple : public UCommonButtonBase {
     GENERATED_BODY()
 public:
+    UIGS_WidgetButtonSimple();
+
+    UFUNCTION(BlueprintCallable)
+    void SimulateClick();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSelected(bool inSelected);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_InputAction BoundInputAction;
     
@@ -21,14 +29,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_WidgetButtonEventBlueprintSignature OnClickedEvent;
-    
-    UIGS_WidgetButtonSimple();
-
-    UFUNCTION(BlueprintCallable)
-    void SimulateClick();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetSelected(bool inSelected);
     
 };
 

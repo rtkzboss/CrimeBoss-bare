@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_AICommandBreachStackUp : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandBreachStackUp();
+
     UPROPERTY(BlueprintReadOnly)
     FVector StackPos;
     
@@ -22,7 +24,5 @@ public:
     UPROPERTY(BlueprintReadOnly)
     bool Crouch;
     
-    UIGS_AICommandBreachStackUp();
-
 };
 

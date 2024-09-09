@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTTask_BreachDestroyDoors : public UBTTask_BreachDestroyPlaceExplosiveBase {
     GENERATED_BODY()
 public:
+    UBTTask_BreachDestroyDoors();
+
 protected:
     UPROPERTY()
     AIGS_AIControllerGame* m_Controller;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY()
     AIGS_GameCharacterBase* m_Character;
     
-public:
-    UBTTask_BreachDestroyDoors();
-
 };
 

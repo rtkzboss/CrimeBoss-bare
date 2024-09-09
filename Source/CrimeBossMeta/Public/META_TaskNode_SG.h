@@ -10,6 +10,8 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_TaskNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_TaskNode_SG();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FMETA_TaskSettings Success;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_TaskCondition* Task;
     
-    UMETA_TaskNode_SG();
-
 };
 

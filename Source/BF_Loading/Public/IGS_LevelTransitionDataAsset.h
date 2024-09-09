@@ -9,6 +9,8 @@ UCLASS()
 class BF_LOADING_API UIGS_LevelTransitionDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_LevelTransitionDataAsset();
+
     UPROPERTY(EditDefaultsOnly)
     float DelayTime;
     
@@ -27,7 +29,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     UAkStateValue* Mission_MetaMultiplayer;
     
-    UIGS_LevelTransitionDataAsset();
-
 };
 

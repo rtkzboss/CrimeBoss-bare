@@ -12,6 +12,37 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AimAssistComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AimAssistComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnTargetDestroyed(AActor* inDestroyedActor);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool IsZoneScalingEnabledForSoftLock() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsZoneScalingEnabledForSlowdown() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsZoneScalingEnabledForBulletBending() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsSoftLockEnabled() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsSlowdownEnabled() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsBulletBendingEnabled() const;
+    
+    UFUNCTION(BlueprintPure)
+    FTransform GetCurrentBulletBendingTransform() const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetControlMultipliers(float& outPitchMult, float& outYawMult) const;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bEnableSlowdown;
     
@@ -69,38 +100,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float InputDeviceChangedToGamepadDelay;
-    
-public:
-    UIGS_AimAssistComponent(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnTargetDestroyed(AActor* inDestroyedActor);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool IsZoneScalingEnabledForSoftLock() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsZoneScalingEnabledForSlowdown() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsZoneScalingEnabledForBulletBending() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsSoftLockEnabled() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsSlowdownEnabled() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsBulletBendingEnabled() const;
-    
-    UFUNCTION(BlueprintPure)
-    FTransform GetCurrentBulletBendingTransform() const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetControlMultipliers(float& outPitchMult, float& outYawMult) const;
     
 };
 

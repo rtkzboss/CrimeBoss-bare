@@ -14,6 +14,8 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UHoudiniAssetComponent_V1 : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
+    UHoudiniAssetComponent_V1(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     uint8 bGeneratedDoubleSidedGeometry: 1;
     
@@ -56,7 +58,5 @@ public:
     UPROPERTY()
     FText TempCookFolder;
     
-    UHoudiniAssetComponent_V1(const FObjectInitializer& ObjectInitializer);
-
 };
 

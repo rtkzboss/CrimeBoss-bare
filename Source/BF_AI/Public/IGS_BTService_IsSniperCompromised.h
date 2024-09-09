@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_IsSniperCompromised : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_IsSniperCompromised();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector IsCompromisedKey;
     
-public:
-    UIGS_BTService_IsSniperCompromised();
-
 };
 

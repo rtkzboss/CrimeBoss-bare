@@ -16,6 +16,8 @@ UCLASS(Deprecated, NotPlaceable)
 class BF_AI_API ADEPRECATED_IGS_AICharacterPlayerBot : public AIGS_AIGameCharacter, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:
+    ADEPRECATED_IGS_AICharacterPlayerBot(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerLoadoutComponent* PlayerLoadoutComponent;
@@ -35,11 +37,9 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentCharacter* NetworkCharacter;
     
-public:
-    ADEPRECATED_IGS_AICharacterPlayerBot(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
+public:
     UFUNCTION(BlueprintCallable)
     void SetHeisterNumber(int32 inHeisterNumber) override PURE_VIRTUAL(SetHeisterNumber,);
     

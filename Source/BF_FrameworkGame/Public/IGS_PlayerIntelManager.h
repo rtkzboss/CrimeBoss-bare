@@ -17,6 +17,19 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerIntelManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerIntelManager(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnWieldableChanged(EIGS_WieldableSlot inSlotType, AIGS_WieldableBase* inWieldableBase, UIGS_WieldableInventoryObjectBase* inInventoryObject);
+    
+public:
+    UFUNCTION()
+    void OnCharacterKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static UIGS_PlayerIntelManager* GetPlayerIntelManager(UObject* inWCO);
+    
     UPROPERTY(BlueprintAssignable)
     FBFOnIntelUpdated OnIntelUpdatedEvent;
     
@@ -51,19 +64,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float MoneyInInventory;
-    
-    UIGS_PlayerIntelManager(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnWieldableChanged(EIGS_WieldableSlot inSlotType, AIGS_WieldableBase* inWieldableBase, UIGS_WieldableInventoryObjectBase* inInventoryObject);
-    
-public:
-    UFUNCTION()
-    void OnCharacterKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static UIGS_PlayerIntelManager* GetPlayerIntelManager(UObject* inWCO);
     
 };
 

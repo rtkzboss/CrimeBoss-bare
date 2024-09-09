@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTDecorator_HasBotOrder : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_HasBotOrder();
+
     UPROPERTY(EditAnywhere)
     TSet<EIGS_BotCommandDefinition> ExcludedTypes;
     
-    UBTDecorator_HasBotOrder();
-
 };
 

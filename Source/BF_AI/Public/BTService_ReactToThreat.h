@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTService_ReactToThreat : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_ReactToThreat();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestCoverKey;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
     
-public:
-    UBTService_ReactToThreat();
-
 };
 

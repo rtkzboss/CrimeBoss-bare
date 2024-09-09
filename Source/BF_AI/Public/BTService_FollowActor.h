@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTService_FollowActor : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_FollowActor();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutFollowActorKey;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutFollowDistanceKey;
     
-public:
-    UBTService_FollowActor();
-
 };
 

@@ -16,26 +16,6 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_SquadBase : public AIGS_SquadFramework {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    UBehaviorTree* BehaviorTree;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UBehaviorTreeComponent* BehaviorTreeComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UBlackboardComponent* BlackboardComponent;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    EIGS_TeamSideEnum TeamSide;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<AIGS_GameCharacterFramework*> Characters;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FColor DebugColor;
-    
-public:
     AIGS_SquadBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -55,6 +35,25 @@ public:
     
     UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetCenterMember() const;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    UBehaviorTree* BehaviorTree;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UBehaviorTreeComponent* BehaviorTreeComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UBlackboardComponent* BlackboardComponent;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    EIGS_TeamSideEnum TeamSide;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<AIGS_GameCharacterFramework*> Characters;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FColor DebugColor;
     
 };
 

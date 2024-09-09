@@ -15,20 +15,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_Equipment : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsUnseenInShop;
-    
-private:
-    UPROPERTY()
-    int32 m_Price;
-    
-    UPROPERTY()
-    int32 m_AdditionalPercentageOfEquipmentPrice;
-    
-    UPROPERTY()
-    UMETA_Character* m_Character;
-    
-public:
     UMETA_Equipment();
 
     UFUNCTION(BlueprintCallable)
@@ -69,6 +55,19 @@ public:
     
     UFUNCTION(BlueprintPure)
     int32 GetBasePrice() const;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool IsUnseenInShop;
+    
+private:
+    UPROPERTY()
+    int32 m_Price;
+    
+    UPROPERTY()
+    int32 m_AdditionalPercentageOfEquipmentPrice;
+    
+    UPROPERTY()
+    UMETA_Character* m_Character;
     
 };
 

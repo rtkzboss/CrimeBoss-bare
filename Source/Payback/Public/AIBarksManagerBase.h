@@ -12,6 +12,11 @@ UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class PAYBACK_API UAIBarksManagerBase : public UActorComponent {
     GENERATED_BODY()
 public:
+    UAIBarksManagerBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void ReportStealthIdleDialogue(AIGS_GameCharacterFramework* inCharacterFramework, FText inDialogue);
+    
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float CombatTauntsCooldownPerChar;
@@ -45,12 +50,6 @@ protected:
     
     UPROPERTY(Instanced)
     UIGS_SuspicionManager* m_SuspicionManager;
-    
-public:
-    UAIBarksManagerBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void ReportStealthIdleDialogue(AIGS_GameCharacterFramework* inCharacterFramework, FText inDialogue);
     
 };
 

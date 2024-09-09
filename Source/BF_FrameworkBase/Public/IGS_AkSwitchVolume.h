@@ -9,6 +9,8 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_AkSwitchVolume : public AVolume {
     GENERATED_BODY()
 public:
+    AIGS_AkSwitchVolume(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkSwitchValue* FootstepAkSwitch;
@@ -16,8 +18,5 @@ protected:
     UPROPERTY()
     UAkSwitchValue* FootstepNoneAkSwitch;
     
-public:
-    AIGS_AkSwitchVolume(const FObjectInitializer& ObjectInitializer);
-
 };
 

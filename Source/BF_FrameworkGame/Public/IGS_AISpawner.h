@@ -14,6 +14,11 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AISpawner : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_AISpawner();
+
+    UFUNCTION(BlueprintCallable)
+    void SpawnUnitFromBlueprint(EIGS_TeamSideEnum inTeamSide, uint8 inUnitVariation, EIGS_UnitSpecialization inUnitSpecialization, FTransform InTransform, int32 inCount, EIGS_SpawnAnimType inSpawnAnim);
+    
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_AISpawnerData* AISpawnerData;
@@ -35,12 +40,6 @@ protected:
     
     UPROPERTY()
     TArray<UClass*> LoadedPawnClasses;
-    
-public:
-    UIGS_AISpawner();
-
-    UFUNCTION(BlueprintCallable)
-    void SpawnUnitFromBlueprint(EIGS_TeamSideEnum inTeamSide, uint8 inUnitVariation, EIGS_UnitSpecialization inUnitSpecialization, FTransform InTransform, int32 inCount, EIGS_SpawnAnimType inSpawnAnim);
     
 };
 

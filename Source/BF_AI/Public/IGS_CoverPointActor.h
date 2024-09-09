@@ -12,6 +12,11 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_CoverPointActor : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:
+    AIGS_CoverPointActor(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    UCoverPoint* GetCoverPoint() const;
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_CoverPointComponent* CoverPointComponent;
     
@@ -21,12 +26,6 @@ public:
 protected:
     UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<UIGS_AICommand> m_CurrentCommand;
-    
-public:
-    AIGS_CoverPointActor(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    UCoverPoint* GetCoverPoint() const;
     
 };
 

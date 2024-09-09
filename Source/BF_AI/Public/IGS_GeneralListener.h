@@ -13,6 +13,17 @@ UCLASS()
 class BF_AI_API AIGS_GeneralListener : public APawn, public IGenericTeamAgentInterface {
     GENERATED_BODY()
 public:
+    AIGS_GeneralListener(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetActive(bool Inactive);
+    
+    UFUNCTION(BlueprintPure)
+    bool IsActive() const;
+    
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    static AIGS_GeneralListener* GetGeneralListener(const UObject* inWCO);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FName> SupportedHearingTags;
     
@@ -25,18 +36,6 @@ public:
 protected:
     UPROPERTY()
     TArray<AIGS_GeneralListenerExclusionVolume*> ExclusionVolumes;
-    
-public:
-    AIGS_GeneralListener(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetActive(bool Inactive);
-    
-    UFUNCTION(BlueprintPure)
-    bool IsActive() const;
-    
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
-    static AIGS_GeneralListener* GetGeneralListener(const UObject* inWCO);
     
 
     // Fix for true pure virtual functions not being implemented

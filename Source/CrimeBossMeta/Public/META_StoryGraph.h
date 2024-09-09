@@ -13,9 +13,6 @@ UCLASS(Blueprintable)
 class CRIMEBOSSMETA_API UMETA_StoryGraph : public UMETA_BaseStoryGraph {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    EMETA_RandEventCategory Type;
-    
     UMETA_StoryGraph();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -29,6 +26,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void EndGraph(AMETA_BaseGameMode* inGameMode, EMETA_GoalStatus inResultResult);
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    EMETA_RandEventCategory Type;
     
 };
 

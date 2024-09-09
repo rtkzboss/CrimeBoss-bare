@@ -12,6 +12,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_LowHealthEffectDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_LowHealthEffectDataAsset();
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> LowHealthPostProcessInterface;
     
@@ -30,7 +32,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float AbsoluteLowHealthThreshold;
     
-    UIGS_LowHealthEffectDataAsset();
-
 };
 

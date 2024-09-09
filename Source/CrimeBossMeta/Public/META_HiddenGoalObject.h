@@ -13,6 +13,17 @@ UCLASS(Abstract, Blueprintable, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_HiddenGoalObject : public UObject {
     GENERATED_BODY()
 public:
+    UMETA_HiddenGoalObject();
+
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void Setup(AGameModeBase* inGameModeBase, TSubclassOf<UMETA_HiddenGoalID> inID, int32 inCurrentValue, bool inSuccess, bool inRewardReceived);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void GetTaskInfo(FText& Task);
+    
+    UFUNCTION(BlueprintCallable)
+    FMETA_HiddenGoalsSaveInfo GetSaveData();
+    
     UPROPERTY(BlueprintReadWrite)
     TSubclassOf<UMETA_HiddenGoalID> ID;
     
@@ -36,17 +47,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite)
     bool bRewardReceived;
-    
-    UMETA_HiddenGoalObject();
-
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void Setup(AGameModeBase* inGameModeBase, TSubclassOf<UMETA_HiddenGoalID> inID, int32 inCurrentValue, bool inSuccess, bool inRewardReceived);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void GetTaskInfo(FText& Task);
-    
-    UFUNCTION(BlueprintCallable)
-    FMETA_HiddenGoalsSaveInfo GetSaveData();
     
 };
 

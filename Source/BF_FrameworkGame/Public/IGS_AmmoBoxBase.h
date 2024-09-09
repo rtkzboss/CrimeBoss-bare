@@ -13,7 +13,15 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AmmoBoxBase : public AIGS_PickupActorBase, public IIGS_PoolableInterface {
     GENERATED_BODY()
 public:
+    AIGS_AmmoBoxBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetBox(EIGS_AmmoBoxItem inBoxID);
+    
 protected:
+    UFUNCTION()
+    void OnRep_BoxIDChanged();
+    
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* PickupSoundAkEvent;
     
@@ -30,17 +38,8 @@ protected:
     FIGS_CommonItemData CommonData;
     
 public:
-    AIGS_AmmoBoxBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetBox(EIGS_AmmoBoxItem inBoxID);
-    
-protected:
-    UFUNCTION()
-    void OnRep_BoxIDChanged();
-    
 
     // Fix for true pure virtual functions not being implemented
 };

@@ -16,33 +16,6 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SuspicionComponent : public UAIPerceptionStimuliSourceComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bDisablePerceptionOnOffenceReported;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float NoticedWantsReactionRearmDelay;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
-    uint8 bOverrideTeamSide: 1;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
-    EIGS_TeamSideEnum TeamSideOverride;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    TWeakObjectPtr<AIGS_GameCharacterFramework> m_OwningCharacter;
-    
-private:
-    UPROPERTY()
-    TScriptInterface<IGenericTeamAgentInterface> m_OwningActorTeamAgentInterface;
-    
-    UPROPERTY()
-    TScriptInterface<IIGS_GameplayTagAssetInterfaceCustom> m_OwningActorGameplayTagAssetInterfaceCustom;
-    
-    UPROPERTY(Transient)
-    TArray<AIGS_GameCharacterFramework*> IgnoredBy;
-    
-public:
     UIGS_SuspicionComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -74,6 +47,32 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void DisablePerception();
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bDisablePerceptionOnOffenceReported;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float NoticedWantsReactionRearmDelay;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
+    uint8 bOverrideTeamSide: 1;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
+    EIGS_TeamSideEnum TeamSideOverride;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    TWeakObjectPtr<AIGS_GameCharacterFramework> m_OwningCharacter;
+    
+private:
+    UPROPERTY()
+    TScriptInterface<IGenericTeamAgentInterface> m_OwningActorTeamAgentInterface;
+    
+    UPROPERTY()
+    TScriptInterface<IIGS_GameplayTagAssetInterfaceCustom> m_OwningActorGameplayTagAssetInterfaceCustom;
+    
+    UPROPERTY(Transient)
+    TArray<AIGS_GameCharacterFramework*> IgnoredBy;
     
 };
 

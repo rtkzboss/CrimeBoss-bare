@@ -22,6 +22,28 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeaponVisibilityHandler : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WeaponVisibilityHandler(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    bool ToggleMod();
+    
+    UFUNCTION(BlueprintCallable)
+    bool SetModVisible(bool inVisible);
+    
+    UFUNCTION(BlueprintCallable)
+    bool SetModActive(const EIGS_WeaponVisibilityType inType, const bool Inactive);
+    
+    UFUNCTION(BlueprintPure)
+    bool IsModActive() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool HasAnyModActive() const;
+    
+protected:
+    UFUNCTION(BlueprintPure)
+    FVector GetLaserDirection() const;
+    
+public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool MaxLaserDistanceFromAimPoint;
     
@@ -103,28 +125,6 @@ protected:
     
     UPROPERTY(EditAnywhere)
     bool bTraceForward;
-    
-public:
-    UIGS_WeaponVisibilityHandler(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    bool ToggleMod();
-    
-    UFUNCTION(BlueprintCallable)
-    bool SetModVisible(bool inVisible);
-    
-    UFUNCTION(BlueprintCallable)
-    bool SetModActive(const EIGS_WeaponVisibilityType inType, const bool Inactive);
-    
-    UFUNCTION(BlueprintPure)
-    bool IsModActive() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool HasAnyModActive() const;
-    
-protected:
-    UFUNCTION(BlueprintPure)
-    FVector GetLaserDirection() const;
     
 };
 

@@ -7,6 +7,8 @@ UCLASS()
 class UIGS_BTTask_MoveToAsync : public UBTTask_MoveTo {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_MoveToAsync();
+
     UPROPERTY(EditAnywhere)
     uint8 bUseHierarchicalPathfinding: 1;
     
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(EditAnywhere)
     uint8 bDontUsePathLengthLimiter: 1;
     
-public:
-    UIGS_BTTask_MoveToAsync();
-
 };
 

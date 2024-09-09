@@ -22,6 +22,44 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_UWeaponAniminstance : public UIGS_GameEventsAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_UWeaponAniminstance();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void UpdateReload(bool WantReload);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void UpdateAttack(bool WantAttack);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnWeaponInitialized();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSlideStarted_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSlideEnded_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnReloadInterrupt_Event(EIGS_ReloadInterruptReasonEnum inReason);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnMagCheckInterrupt_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnInspectInterrupt_Event();
+    
+    UFUNCTION(BlueprintPure)
+    bool Is_TPP_Animinstance();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void GrenadeThrow_Event(TPP_ActionSlotType InAction, bool inLow);
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_WeaponAttackType GetAttackType() const;
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void AnimNotify_OnReloadFromMontage();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsAmmoInMagazine;
     
@@ -70,45 +108,6 @@ protected:
     
     UPROPERTY(Transient)
     UIGS_PlayerAnimInstance* m_PlayerAnimInstance;
-    
-public:
-    UIGS_UWeaponAniminstance();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void UpdateReload(bool WantReload);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void UpdateAttack(bool WantAttack);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnWeaponInitialized();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSlideStarted_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSlideEnded_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnReloadInterrupt_Event(EIGS_ReloadInterruptReasonEnum inReason);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMagCheckInterrupt_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnInspectInterrupt_Event();
-    
-    UFUNCTION(BlueprintPure)
-    bool Is_TPP_Animinstance();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void GrenadeThrow_Event(TPP_ActionSlotType InAction, bool inLow);
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_WeaponAttackType GetAttackType() const;
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void AnimNotify_OnReloadFromMontage();
     
 };
 

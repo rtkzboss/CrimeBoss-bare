@@ -9,13 +9,13 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniHandleParameter : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniHandleParameter();
+
     UPROPERTY(Instanced)
     UHoudiniParameter* AssetParameter;
     
     UPROPERTY()
     int32 TupleIndex;
     
-    UHoudiniHandleParameter();
-
 };
 

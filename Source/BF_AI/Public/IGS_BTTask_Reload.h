@@ -9,12 +9,11 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_Reload : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_Reload();
+
 protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_WeaponBase* Weapon;
     
-public:
-    UIGS_BTTask_Reload();
-
 };
 

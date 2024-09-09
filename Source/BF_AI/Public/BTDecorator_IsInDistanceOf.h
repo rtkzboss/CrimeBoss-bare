@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsInDistanceOf : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsInDistanceOf();
+
 protected:
     UPROPERTY(EditAnywhere)
     bool bIsBlackBoardDistance;
@@ -21,8 +23,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetBlackboardKey;
     
-public:
-    UBTDecorator_IsInDistanceOf();
-
 };
 

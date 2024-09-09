@@ -12,15 +12,6 @@ UCLASS()
 class PREFABRICATORRUNTIME_API APrefabActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UPrefabComponent* PrefabComponent;
-    
-    UPROPERTY()
-    FGuid LastUpdateID;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    int32 Seed;
-    
     APrefabActor(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -37,6 +28,15 @@ public:
     
     UFUNCTION(BlueprintPure)
     UPrefabricatorAsset* GetPrefabAsset();
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPrefabComponent* PrefabComponent;
+    
+    UPROPERTY()
+    FGuid LastUpdateID;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    int32 Seed;
     
 };
 

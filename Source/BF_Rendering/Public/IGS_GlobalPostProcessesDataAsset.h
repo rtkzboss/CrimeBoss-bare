@@ -8,6 +8,8 @@ UCLASS(BlueprintType)
 class BF_RENDERING_API UIGS_GlobalPostProcessesDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_GlobalPostProcessesDataAsset();
+
     UPROPERTY(EditAnywhere, Transient)
     FString PasswordQuery;
     
@@ -17,7 +19,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FWeightedBlendable> VisorPostProcesses;
     
-    UIGS_GlobalPostProcessesDataAsset();
-
 };
 

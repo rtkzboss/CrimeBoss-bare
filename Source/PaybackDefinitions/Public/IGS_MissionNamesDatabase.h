@@ -10,6 +10,8 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UIGS_MissionNamesDatabase : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_MissionNamesDatabase();
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MetaMissionNames MetaMissionNames;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_ChainMissionNames ChainMissionNames;
     
-public:
-    UIGS_MissionNamesDatabase();
-
 };
 

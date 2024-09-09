@@ -10,7 +10,21 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_TaskWidgetBase : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_TaskWidgetBase();
+
 protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnTaskValuesChangedEvent();
+    
+    UFUNCTION()
+    void OnTaskValuesChanged(int32 inID);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnTaskStateChangedEvent(EIGS_ObjectiveState inState);
+    
+    UFUNCTION()
+    void OnTaskStateChanged(int32 inID, EIGS_ObjectiveState inState);
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText TaskName;
     
@@ -46,22 +60,6 @@ protected:
     
     UPROPERTY(Instanced)
     UIGS_ObjectiveManager* m_ObjectiveManager;
-    
-public:
-    UIGS_TaskWidgetBase();
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnTaskValuesChangedEvent();
-    
-    UFUNCTION()
-    void OnTaskValuesChanged(int32 inID);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnTaskStateChangedEvent(EIGS_ObjectiveState inState);
-    
-    UFUNCTION()
-    void OnTaskStateChanged(int32 inID, EIGS_ObjectiveState inState);
     
 };
 

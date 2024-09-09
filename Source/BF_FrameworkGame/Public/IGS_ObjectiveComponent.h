@@ -9,26 +9,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ObjectiveComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EIGS_ObjectiveComponentType ObjectiveComponentType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bTimerObjective;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Duration;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Value;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    EIGS_ObjectiveState TaskState;
-    
-private:
-    UPROPERTY()
-    int32 CurrentCount;
-    
-public:
     UIGS_ObjectiveComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -48,6 +28,25 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClearCount();
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    EIGS_ObjectiveComponentType ObjectiveComponentType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bTimerObjective;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float Duration;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float Value;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    EIGS_ObjectiveState TaskState;
+    
+private:
+    UPROPERTY()
+    int32 CurrentCount;
     
 };
 

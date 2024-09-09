@@ -10,12 +10,11 @@ UCLASS(Abstract, BlueprintType)
 class BF_AI_API UBTTask_BreachDestroyPlaceExplosiveBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_BreachDestroyPlaceExplosiveBase();
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<AIGS_BreachExplodable> m_Explodable;
     
-public:
-    UBTTask_BreachDestroyPlaceExplosiveBase();
-
 };
 

@@ -38,13 +38,13 @@ void UPFPathFollowerComponent::Stop() {
 void UPFPathFollowerComponent::StartImpl() {
 }
 
-void UPFPathFollowerComponent::Start(float NewStartDelay) {
+void UPFPathFollowerComponent::Start(float StartDelay) {
 }
 
 void UPFPathFollowerComponent::SetPathToFollow(USplineComponent* Spline) {
 }
 
-void UPFPathFollowerComponent::SetPathOwner(AActor* NewPathOwner) {
+void UPFPathFollowerComponent::SetPathOwner(AActor* PathOwner) {
 }
 
 void UPFPathFollowerComponent::SetMaxFollowerSpeed(float MaxSpeed) {

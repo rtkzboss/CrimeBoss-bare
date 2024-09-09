@@ -10,6 +10,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_PaybackSettin
 class PAYBACK_API UIGS_PaybackDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_PaybackDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> AssetsPreloaderDataAsset;
     
@@ -22,7 +24,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> CutsceneSubsystemDataAsset;
     
-    UIGS_PaybackDevSettings();
-
 };
 

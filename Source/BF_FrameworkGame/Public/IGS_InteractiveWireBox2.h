@@ -14,7 +14,18 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_InteractiveWireBox2 : public AIGS_InteractiveWireBoxBase {
     GENERATED_BODY()
 public:
+    AIGS_InteractiveWireBox2(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetLightsColors();
+    
 protected:
+    UFUNCTION(NetMulticast, Reliable)
+    void Client_SetLightFailColors(int32 inWireIndex);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Client_SetLightColors(int32 inWireIndex, int32 inFirstColorIndex, int32 inSecondColorIndex);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UTimelineComponent* LightsTimeline;
     
@@ -38,19 +49,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UIGS_InteractiveComponent*> WireInteractiveComponents;
-    
-public:
-    AIGS_InteractiveWireBox2(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetLightsColors();
-    
-protected:
-    UFUNCTION(NetMulticast, Reliable)
-    void Client_SetLightFailColors(int32 inWireIndex);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Client_SetLightColors(int32 inWireIndex, int32 inFirstColorIndex, int32 inSecondColorIndex);
     
 };
 

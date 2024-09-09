@@ -24,6 +24,47 @@ UCLASS()
 class PAYBACK_API APaybackHeavyCharacter : public APaybackAICharacter, public IIGS_HasWeakSpotInterface {
     GENERATED_BODY()
 public:
+    APaybackHeavyCharacter(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnWeakSpotCompromised(const UPrimitiveComponent* inWeakSpotComponent, const FIGS_HitInfo& inLastHitInfo);
+    
+    UFUNCTION()
+    void OnRep_RemainingMeshComps();
+    
+private:
+    UFUNCTION()
+    void OnInjuredEnd();
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnHeadWeakSpotEnabled();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_StartDoomTimer(FVector inImpactPoint, FVector inRotVec);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_OnShockChargeBegin();
+    
+private:
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_OnInjuredStart();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_OnInjuredEnd();
+    
+protected:
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_OnDoomTimerEnd();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_EnableHeadWeakSpot();
+    
+    UFUNCTION()
+    void HandleDeath(float inCurrentHealth, float inCurrentShield, float inHealthChanged, float inShieldChanged, const FIGS_HitInfo& inHitInfo);
+    
+public:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UCapsuleComponent* WeakSpotCapsule;
     
@@ -92,48 +133,8 @@ protected:
     TArray<int32> mR_ActiveMeshComps;
     
 public:
-    APaybackHeavyCharacter(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnWeakSpotCompromised(const UPrimitiveComponent* inWeakSpotComponent, const FIGS_HitInfo& inLastHitInfo);
-    
-    UFUNCTION()
-    void OnRep_RemainingMeshComps();
-    
-private:
-    UFUNCTION()
-    void OnInjuredEnd();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnHeadWeakSpotEnabled();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_StartDoomTimer(FVector inImpactPoint, FVector inRotVec);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_OnShockChargeBegin();
-    
-private:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_OnInjuredStart();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_OnInjuredEnd();
-    
-protected:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_OnDoomTimerEnd();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_EnableHeadWeakSpot();
-    
-    UFUNCTION()
-    void HandleDeath(float inCurrentHealth, float inCurrentShield, float inHealthChanged, float inShieldChanged, const FIGS_HitInfo& inHitInfo);
-    
 
     // Fix for true pure virtual functions not being implemented
 };

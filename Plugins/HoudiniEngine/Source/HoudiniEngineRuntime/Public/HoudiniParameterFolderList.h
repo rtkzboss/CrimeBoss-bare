@@ -9,6 +9,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterFolderList : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterFolderList();
+
     UPROPERTY()
     bool bIsTabMenu;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterFolder*> TabFolders;
     
-    UHoudiniParameterFolderList();
-
 };
 

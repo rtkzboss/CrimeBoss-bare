@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_SetAnimCommandLookAt : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_SetAnimCommandLookAt();
+
 private:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutLookPos;
     
-public:
-    UIGS_BTService_SetAnimCommandLookAt();
-
 };
 

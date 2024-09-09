@@ -8,6 +8,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_PressureManagerData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_PressureManagerData();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsEnabledForHeist;
     
@@ -89,7 +91,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FSpawnIntensitySetup> SpawnIntensityNegative;
     
-    UIGS_PressureManagerData();
-
 };
 

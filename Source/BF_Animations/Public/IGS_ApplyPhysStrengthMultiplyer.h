@@ -7,10 +7,10 @@ UCLASS(CollapseCategories, EditInlineNew)
 class BF_ANIMATIONS_API UIGS_ApplyPhysStrengthMultiplyer : public UAnimNotifyState {
     GENERATED_BODY()
 public:
+    UIGS_ApplyPhysStrengthMultiplyer();
+
     UPROPERTY(EditAnywhere)
     float PhysicsStrengthMultiplyer;
     
-    UIGS_ApplyPhysStrengthMultiplyer();
-
 };
 

@@ -7,12 +7,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetCountdownLabel : public UIGS_Widget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    int32 RemainingSeconds;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool AllowNegativeSeconds;
-    
     UIGS_WidgetCountdownLabel();
 
     UFUNCTION(BlueprintCallable)
@@ -27,6 +21,13 @@ public:
 private:
     UFUNCTION()
     void HandleCountdownTick();
+    
+public:
+    UPROPERTY(BlueprintReadOnly)
+    int32 RemainingSeconds;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool AllowNegativeSeconds;
     
 };
 

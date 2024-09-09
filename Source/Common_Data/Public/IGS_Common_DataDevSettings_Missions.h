@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_Common_DataDevSettings_Missions : public UIGS_Common_DataDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_Common_DataDevSettings_Missions();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> ChainMissionsDataTable;
     
@@ -27,7 +29,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MetaGenericAmbushMissionsDataTable;
     
-    UIGS_Common_DataDevSettings_Missions();
-
 };
 

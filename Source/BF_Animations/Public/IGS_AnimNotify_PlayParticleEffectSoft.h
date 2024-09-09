@@ -11,6 +11,8 @@ UCLASS(CollapseCategories)
 class BF_ANIMATIONS_API UIGS_AnimNotify_PlayParticleEffectSoft : public UAnimNotify {
     GENERATED_BODY()
 public:
+    UIGS_AnimNotify_PlayParticleEffectSoft();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UParticleSystem> PSTemplate;
     
@@ -29,7 +31,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName SocketName;
     
-    UIGS_AnimNotify_PlayParticleEffectSoft();
-
 };
 

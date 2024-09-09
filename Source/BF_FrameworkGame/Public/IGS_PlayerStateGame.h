@@ -18,39 +18,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerStateGame : public AIGS_PlayerStateFramework, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_IsLevelLoadedDelegate OnIsJustLevelLoaded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_IsLevelLoadedDelegate OnIsLevelLoaded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PlayerStatePlayerDataUpdateReceivedDelegate OnPlayerStateDataUpdateReceived;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsJustLevelLoaded)
-    bool IsJustLevelLoaded;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsLevelLoaded)
-    bool IsLevelLoaded;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_bIsReady)
-    bool bIsReady;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleInstanceOnly)
-    FIGS_PlayerStateData PlayerStateData;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated)
-    int32 HeisterNumber;
-    
-private:
-    UPROPERTY()
-    AController* m_OwningController;
-    
-public:
     AIGS_PlayerStateGame(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     bool ShouldUsePlayerStateLoadout();
@@ -115,6 +83,38 @@ public:
     UFUNCTION(BlueprintPure)
     FCommonHeisterData GetHeisterData() const;
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_IsLevelLoadedDelegate OnIsJustLevelLoaded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_IsLevelLoadedDelegate OnIsLevelLoaded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PlayerStatePlayerDataUpdateReceivedDelegate OnPlayerStateDataUpdateReceived;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsJustLevelLoaded)
+    bool IsJustLevelLoaded;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsLevelLoaded)
+    bool IsLevelLoaded;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_bIsReady)
+    bool bIsReady;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleInstanceOnly)
+    FIGS_PlayerStateData PlayerStateData;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated)
+    int32 HeisterNumber;
+    
+private:
+    UPROPERTY()
+    AController* m_OwningController;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 
     // Fix for true pure virtual functions not being implemented
 };

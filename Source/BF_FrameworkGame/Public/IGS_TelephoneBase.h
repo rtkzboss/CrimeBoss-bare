@@ -11,20 +11,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_TelephoneBase : public AIGS_AlarmDeviceBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bRinging;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bPublicTelephone;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AIGS_ControlRoomBase* ControlRoom;
-    
-protected:
-    UPROPERTY()
-    UIGS_StealthSettingsInstance* m_StealthSettingsInstance;
-    
-public:
     AIGS_TelephoneBase(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -43,6 +29,19 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AnswerCall(AIGS_GameCharacterFramework* inInstigator);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bRinging;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bPublicTelephone;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    AIGS_ControlRoomBase* ControlRoom;
+    
+protected:
+    UPROPERTY()
+    UIGS_StealthSettingsInstance* m_StealthSettingsInstance;
     
 };
 

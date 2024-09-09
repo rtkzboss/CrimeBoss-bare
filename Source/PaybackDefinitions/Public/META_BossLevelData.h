@@ -21,80 +21,6 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_BossLevelData : public UDataAsset {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerAsset;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerSuccessfulFPSMissionByBoss;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerSuccessfulFPSMission;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerSuccessfulBigHeist;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerSuccessfulTWAttackNeutral;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerSuccessfulTWAttackRival;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerSuccessfulTWDefence;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPer10000Score;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BossPointsPerWaveMaxPoints;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float BossPointsPerWaveMaxPercentAwardPerKill;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float BossPointsPerWaveMaxPercentAwardPerSecond;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_BossLevelReductionConfig BossLevelReductionConfig;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UCurveTable* BonusesTable;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_BossLevelCategory, FMETA_BonusTypesArray> CategoryBonuses;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_BonusType, TSubclassOf<UGameplayEffect>> ArmyHiddenPerksByBonusType;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_BonusType, TSubclassOf<UGameplayEffect>> BossHiddenPerksByBonusType;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_BonusType, TSubclassOf<UGameplayEffect>> CaptainHiddenPerksByBonusType;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<TSubclassOf<UGameplayEffect>> CaptainPerks;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<TSubclassOf<UGameplayEffect>> BossPerks;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FMETA_ExtraBossWeaponsData> PrimaryWeaponQuality;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FMETA_ExtraBossEquipmentData> BonusEquipmentQuality;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FMETA_AdditionalHeisters> StartingHeisters;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FMETA_StartingBossPerks> StartingBossPerks;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_BonusType, FMETA_BonusTypeData> BonusTypeData;
-    
-public:
     UMETA_BossLevelData();
 
     UFUNCTION(BlueprintPure)
@@ -180,6 +106,79 @@ public:
     
     UFUNCTION(BlueprintPure)
     TSubclassOf<UGameplayEffect> GetArmyHiddenPerkByBonusType(EMETA_BonusType inBonus) const;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerAsset;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerSuccessfulFPSMissionByBoss;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerSuccessfulFPSMission;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerSuccessfulBigHeist;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerSuccessfulTWAttackNeutral;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerSuccessfulTWAttackRival;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerSuccessfulTWDefence;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPer10000Score;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BossPointsPerWaveMaxPoints;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float BossPointsPerWaveMaxPercentAwardPerKill;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float BossPointsPerWaveMaxPercentAwardPerSecond;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_BossLevelReductionConfig BossLevelReductionConfig;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UCurveTable* BonusesTable;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_BossLevelCategory, FMETA_BonusTypesArray> CategoryBonuses;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_BonusType, TSubclassOf<UGameplayEffect>> ArmyHiddenPerksByBonusType;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_BonusType, TSubclassOf<UGameplayEffect>> BossHiddenPerksByBonusType;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_BonusType, TSubclassOf<UGameplayEffect>> CaptainHiddenPerksByBonusType;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<TSubclassOf<UGameplayEffect>> CaptainPerks;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<TSubclassOf<UGameplayEffect>> BossPerks;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FMETA_ExtraBossWeaponsData> PrimaryWeaponQuality;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FMETA_ExtraBossEquipmentData> BonusEquipmentQuality;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FMETA_AdditionalHeisters> StartingHeisters;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FMETA_StartingBossPerks> StartingBossPerks;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_BonusType, FMETA_BonusTypeData> BonusTypeData;
     
 };
 

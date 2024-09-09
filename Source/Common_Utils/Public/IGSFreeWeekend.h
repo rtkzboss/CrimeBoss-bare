@@ -7,6 +7,8 @@ UCLASS()
 class COMMON_UTILS_API UIGSFreeWeekend : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
+    UIGSFreeWeekend();
+
     UPROPERTY()
     bool IsFreeWeekend;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY()
     bool IsProcessingRequest;
     
-    UIGSFreeWeekend();
-
 };
 

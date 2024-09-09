@@ -9,10 +9,10 @@ UCLASS()
 class BF_AI_API UIGS_GeneralReactionData_Actor : public UIGS_GeneralReactionData_Base {
     GENERATED_BODY()
 public:
+    UIGS_GeneralReactionData_Actor();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TWeakObjectPtr<AActor> Actor;
     
-    UIGS_GeneralReactionData_Actor();
-
 };
 

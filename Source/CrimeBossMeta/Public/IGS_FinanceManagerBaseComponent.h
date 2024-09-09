@@ -11,20 +11,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_FinanceManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_FinancialManangerInitialized OnManagerInitialized;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_FinancialBalanceChanged OnBalanceChanged;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerDataDirty;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerInitialized;
-    
-public:
     UIGS_FinanceManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -113,6 +99,19 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ActivateLoan(FMETA_Loan inLoan);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_FinancialManangerInitialized OnManagerInitialized;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_FinancialBalanceChanged OnBalanceChanged;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerDataDirty;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerInitialized;
     
 };
 

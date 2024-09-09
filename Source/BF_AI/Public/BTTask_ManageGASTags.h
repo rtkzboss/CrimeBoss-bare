@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTTask_ManageGASTags : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_ManageGASTags();
+
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer RequiredTags;
     
@@ -20,7 +22,5 @@ public:
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer AddedTags;
     
-    UBTTask_ManageGASTags();
-
 };
 

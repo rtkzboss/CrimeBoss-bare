@@ -10,6 +10,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AISpawnGroupChooser : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_AISpawnGroupChooser(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SpawnGroup();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool AutomaticStart;
     
@@ -24,11 +29,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_AIEnemyGroupSpawner*> AISpawnGroups;
-    
-    AIGS_AISpawnGroupChooser(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SpawnGroup();
     
 };
 

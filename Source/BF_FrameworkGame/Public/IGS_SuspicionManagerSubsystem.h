@@ -9,12 +9,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_SuspicionManagerSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_SuspicionManagerSubsystem();
+
 protected:
     UPROPERTY(Instanced)
     UIGS_SuspicionManager* CachedSuspicionManager;
     
-public:
-    UIGS_SuspicionManagerSubsystem();
-
 };
 

@@ -8,6 +8,8 @@ UCLASS(DefaultConfig, Config=Prefabricator)
 class PREFABRICATORRUNTIME_API UPrefabricatorSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UPrefabricatorSettings();
+
     UPROPERTY(Config, EditAnywhere)
     EPrefabricatorPivotPosition PivotPosition;
     
@@ -26,7 +28,5 @@ public:
     UPROPERTY(Config, EditAnywhere)
     float DefaultThumbnailZoom;
     
-    UPrefabricatorSettings();
-
 };
 

@@ -25,6 +25,29 @@ class BF_FRAMEWORKGAME_API UIGS_DeflatableTireComponent : public UStaticMeshComp
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_TireDeflatedEvent);
     
+    UIGS_DeflatableTireComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void TireTakeDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection, const UDamageType* DamageType, AActor* DamageCauser);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetBreakable(bool Enabled);
+    
+    UFUNCTION()
+    void OnRep_TireDeflated();
+    
+    UFUNCTION()
+    void OnDeflateUpdate(float CurveValue);
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsBreakable();
+    
+    UFUNCTION()
+    void FinishDeflate();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void All_StartDeflate(FVector_NetQuantize HitLocation, FVector_NetQuantizeNormal FromDirection);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_TireDeflatedEvent OnTireDeflated;
     
@@ -84,30 +107,7 @@ private:
     TArray<FVector> AttachedComponentsEndLocations;
     
 public:
-    UIGS_DeflatableTireComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void TireTakeDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection, const UDamageType* DamageType, AActor* DamageCauser);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetBreakable(bool Enabled);
-    
-    UFUNCTION()
-    void OnRep_TireDeflated();
-    
-    UFUNCTION()
-    void OnDeflateUpdate(float CurveValue);
-    
-    UFUNCTION(BlueprintCallable)
-    bool IsBreakable();
-    
-    UFUNCTION()
-    void FinishDeflate();
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_StartDeflate(FVector_NetQuantize HitLocation, FVector_NetQuantizeNormal FromDirection);
-    
 };
 

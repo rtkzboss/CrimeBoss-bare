@@ -9,10 +9,10 @@ UCLASS()
 class PATHFOLLOW_API APFPathBase : public AActor {
     GENERATED_BODY()
 public:
+    APFPathBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UPFPathComponent* PathToFollow;
     
-    APFPathBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

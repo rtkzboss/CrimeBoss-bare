@@ -8,6 +8,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AIHeliSpawnComponent : public UIGS_AIPassengerSpawnComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_AIHeliSpawnComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     float FallingSpeed;
     
@@ -18,8 +20,5 @@ protected:
     UPROPERTY()
     TArray<FIGS_HeliSpawnInfo> m_HeliSpawnInfos;
     
-public:
-    UIGS_AIHeliSpawnComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

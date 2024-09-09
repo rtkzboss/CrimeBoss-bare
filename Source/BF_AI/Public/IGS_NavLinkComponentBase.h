@@ -20,6 +20,29 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkComponentBase : public UIGS_NavLinkComponentFramework, public INavLinkCustomInterface {
     GENERATED_BODY()
 public:
+    UIGS_NavLinkComponentBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetRightPoint(FVector rightPoint);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetNavigationRelevancy(bool inRelevant);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLeftPoint(FVector leftPoint);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetEnabledArea(TSubclassOf<UNavArea> inAreaClass);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetDisabledArea(TSubclassOf<UNavArea> inAreaClass);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCostMultiplier(float Multiplier);
+    
+    UFUNCTION(BlueprintCallable)
+    void FinalizeFirstUsage();
+    
     UPROPERTY(BlueprintAssignable)
     FOnFirstUseRequest OnFirstUsageRequest;
     
@@ -116,30 +139,6 @@ private:
     
     UPROPERTY()
     bool m_Initialized;
-    
-public:
-    UIGS_NavLinkComponentBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetRightPoint(FVector rightPoint);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetNavigationRelevancy(bool inRelevant);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLeftPoint(FVector leftPoint);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetEnabledArea(TSubclassOf<UNavArea> inAreaClass);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetDisabledArea(TSubclassOf<UNavArea> inAreaClass);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCostMultiplier(float Multiplier);
-    
-    UFUNCTION(BlueprintCallable)
-    void FinalizeFirstUsage();
     
 
     // Fix for true pure virtual functions not being implemented

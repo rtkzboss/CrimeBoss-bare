@@ -10,6 +10,11 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_MediaNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_MediaNode_SG();
+
+    UFUNCTION(BlueprintCallable)
+    int32 GetTargetNodeID(int32 inResult);
+    
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_MediaCondition* ExecutionBlueprint;
     
@@ -22,12 +27,6 @@ public:
 private:
     UPROPERTY()
     EMETA_MediaNodeType MediaNodeType;
-    
-public:
-    UMETA_MediaNode_SG();
-
-    UFUNCTION(BlueprintCallable)
-    int32 GetTargetNodeID(int32 inResult);
     
 };
 

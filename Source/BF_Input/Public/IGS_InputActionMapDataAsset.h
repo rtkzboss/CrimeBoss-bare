@@ -8,10 +8,10 @@ UCLASS()
 class BF_INPUT_API UIGS_InputActionMapDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_InputActionMapDataAsset();
+
     UPROPERTY(EditDefaultsOnly)
     TArray<FIGS_InputActionEntry> InputActions;
     
-    UIGS_InputActionMapDataAsset();
-
 };
 

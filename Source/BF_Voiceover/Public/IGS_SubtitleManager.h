@@ -15,18 +15,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_VOICEOVER_API UIGS_SubtitleManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FDialogueTestSubtitleInsertEvent OnDialogueTestSubtitleInsertEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FDialogueSubtitleInsertEvent OnDialogueSubtitleInsertEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FDialogueSubtitleRemoveEvent OnDialogueSubtitleClearEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FDialogueSubtitleEnabledEvent OnDialogueSubtitleEnabledEvent;
-    
     UIGS_SubtitleManager(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -43,6 +31,18 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ClearAndDisableAllSubtitles();
+    
+    UPROPERTY(BlueprintAssignable)
+    FDialogueTestSubtitleInsertEvent OnDialogueTestSubtitleInsertEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FDialogueSubtitleInsertEvent OnDialogueSubtitleInsertEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FDialogueSubtitleRemoveEvent OnDialogueSubtitleClearEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FDialogueSubtitleEnabledEvent OnDialogueSubtitleEnabledEvent;
     
 };
 

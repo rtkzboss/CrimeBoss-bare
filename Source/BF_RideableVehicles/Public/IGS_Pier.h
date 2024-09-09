@@ -18,6 +18,42 @@ UCLASS()
 class BF_RIDEABLEVEHICLES_API AIGS_Pier : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_Pier(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void VesselExited(AIGS_Vessel_Base* inVessel);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void VesselEntered(AIGS_Vessel_Base* inVessel);
+    
+protected:
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void StartDocking(const FTransform& inTargetTransform, const FTransform& inFromTransform, AIGS_Vessel_Base* inVessel);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void OnExitedVehicle(APawn* inVessel, int32 inSeatIndex);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void OnEnteredVehicle(APawn* inVessel, int32 inSeatIndex);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    FTransform FindBestTransformToDock(AActor* inActor) const;
+    
+    UFUNCTION()
+    void DockZoneEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
+    
+    UFUNCTION()
+    void DockZoneBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+protected:
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void DockVessel_MULTICAST(const FTransform& inTargetTransform, const FTransform& inFromTransform, AIGS_Vessel_Base* inVessel);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    FVector ClosestSafePointTo(const FVector& inTarget);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, Replicated, VisibleAnywhere)
     bool IsDocking;
@@ -60,43 +96,7 @@ private:
     UArrowComponent* LeftDockArrow;
     
 public:
-    AIGS_Pier(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void VesselExited(AIGS_Vessel_Base* inVessel);
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void VesselEntered(AIGS_Vessel_Base* inVessel);
-    
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void StartDocking(const FTransform& inTargetTransform, const FTransform& inFromTransform, AIGS_Vessel_Base* inVessel);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void OnExitedVehicle(APawn* inVessel, int32 inSeatIndex);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void OnEnteredVehicle(APawn* inVessel, int32 inSeatIndex);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    FTransform FindBestTransformToDock(AActor* inActor) const;
-    
-    UFUNCTION()
-    void DockZoneEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
-    UFUNCTION()
-    void DockZoneBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void DockVessel_MULTICAST(const FTransform& inTargetTransform, const FTransform& inFromTransform, AIGS_Vessel_Base* inVessel);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    FVector ClosestSafePointTo(const FVector& inTarget);
-    
 };
 

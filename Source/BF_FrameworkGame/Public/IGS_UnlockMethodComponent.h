@@ -12,6 +12,20 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_UnlockMethodComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
+    UIGS_UnlockMethodComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void InitUnlockMethodComponent(FGameplayTagContainer inMethods);
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTagContainer GetUnlockMethods();
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetUnlockMethodCount();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    bool GetCanBeUsed(FGameplayTag inMethod);
+    
     UPROPERTY(BlueprintAssignable)
     FBF_OnUnlockMethodChosen OnServerUnlockMethodChosenEvent;
     
@@ -26,20 +40,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     FGameplayTagContainer UnlockMethods;
-    
-    UIGS_UnlockMethodComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void InitUnlockMethodComponent(FGameplayTagContainer inMethods);
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTagContainer GetUnlockMethods();
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetUnlockMethodCount();
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    bool GetCanBeUsed(FGameplayTag inMethod);
     
 };
 

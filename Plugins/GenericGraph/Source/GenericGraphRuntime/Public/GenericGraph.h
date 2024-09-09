@@ -12,6 +12,17 @@ UCLASS(Abstract, BlueprintType)
 class GENERICGRAPHRUNTIME_API UGenericGraph : public UObject {
     GENERATED_BODY()
 public:
+    UGenericGraph();
+
+    UFUNCTION(BlueprintCallable)
+    void Print(bool ToConsole, bool ToScreen);
+    
+    UFUNCTION(BlueprintCallable)
+    void GetNodesByLevel(int32 Level, TArray<UGenericGraphNode*>& Nodes);
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetLevelNum() const;
+    
     UPROPERTY(BlueprintReadOnly)
     int32 END_GRAPH_VALUE;
     
@@ -35,17 +46,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     TMap<int32, UGenericGraphNode*> AllNodes;
-    
-    UGenericGraph();
-
-    UFUNCTION(BlueprintCallable)
-    void Print(bool ToConsole, bool ToScreen);
-    
-    UFUNCTION(BlueprintCallable)
-    void GetNodesByLevel(int32 Level, TArray<UGenericGraphNode*>& Nodes);
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetLevelNum() const;
     
 };
 

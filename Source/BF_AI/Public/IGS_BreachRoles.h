@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BreachRoles : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_BreachRoles();
+
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* Leader;
     
@@ -40,7 +42,5 @@ public:
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* StackPoint;
     
-    UIGS_BreachRoles();
-
 };
 

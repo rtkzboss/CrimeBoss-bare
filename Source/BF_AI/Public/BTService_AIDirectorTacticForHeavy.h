@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTService_AIDirectorTacticForHeavy : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_AIDirectorTacticForHeavy();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector WaveManagerTacticKey;
     
-    UBTService_AIDirectorTacticForHeavy();
-
 };
 

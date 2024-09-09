@@ -12,6 +12,11 @@ UCLASS()
 class BF_AI_API UIGS_ScriptingCommandEscape : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
+    UIGS_ScriptingCommandEscape();
+
+    UFUNCTION(BlueprintCallable)
+    static UIGS_ScriptingCommandEscape* ScriptingCommandEscape(AIGS_GameCharacterFramework* Character, int32 scope, EIGS_Speed Speed);
+    
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Approach;
     
@@ -20,11 +25,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Leave;
-    
-    UIGS_ScriptingCommandEscape();
-
-    UFUNCTION(BlueprintCallable)
-    static UIGS_ScriptingCommandEscape* ScriptingCommandEscape(AIGS_GameCharacterFramework* Character, int32 scope, EIGS_Speed Speed);
     
 };
 

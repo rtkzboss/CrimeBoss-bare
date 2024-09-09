@@ -7,10 +7,10 @@ UCLASS(CollapseCategories)
 class BF_ANIMATIONS_API UIGS_AnimNotify_ThrowGrenade : public UAnimNotify {
     GENERATED_BODY()
 public:
+    UIGS_AnimNotify_ThrowGrenade();
+
     UPROPERTY(EditAnywhere)
     bool Throw_Low;
     
-    UIGS_AnimNotify_ThrowGrenade();
-
 };
 

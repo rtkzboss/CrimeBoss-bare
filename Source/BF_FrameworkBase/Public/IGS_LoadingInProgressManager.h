@@ -8,10 +8,10 @@ UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_LoadingInProgressManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_LoadingInProgressManager();
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnLoadingFinishedDynamicSignature OnLoadingFinishedEvent;
     
-    UIGS_LoadingInProgressManager();
-
 };
 

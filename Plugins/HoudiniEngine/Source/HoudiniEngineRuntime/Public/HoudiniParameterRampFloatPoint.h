@@ -11,6 +11,8 @@ UCLASS(DefaultToInstanced)
 class HOUDINIENGINERUNTIME_API UHoudiniParameterRampFloatPoint : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniParameterRampFloatPoint();
+
     UPROPERTY()
     float Position;
     
@@ -32,7 +34,5 @@ public:
     UPROPERTY(Instanced)
     UHoudiniParameterChoice* InterpolationParentParm;
     
-    UHoudiniParameterRampFloatPoint();
-
 };
 

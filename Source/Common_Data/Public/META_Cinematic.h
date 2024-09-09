@@ -9,15 +9,14 @@ UCLASS()
 class COMMON_DATA_API UMETA_Cinematic : public UMETA_BaseMission {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    FMETA_BaseMissionSave m_CinematicMissionSave;
-    
-public:
     UMETA_Cinematic();
 
     UFUNCTION(BlueprintPure)
     FMETA_CinematicMissionRowInfo GetInfo() const;
+    
+private:
+    UPROPERTY()
+    FMETA_BaseMissionSave m_CinematicMissionSave;
     
 };
 

@@ -10,6 +10,8 @@ UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class BF_FRAMEWORKGAME_API UIGS_FootstepsBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_FootstepsBaseComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     bool bMakesNoise;
@@ -35,8 +37,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_ImpactTypeObject> ImpactID;
     
-public:
-    UIGS_FootstepsBaseComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

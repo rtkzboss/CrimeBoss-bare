@@ -19,6 +19,65 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LootCollectionBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_LootCollectionBase(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintCallable)
+    void TestLootPosition();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void SortLoot();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLootingCharacter(AIGS_GameCharacterFramework* inLootingCharacter);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLootHolder(AIGS_LootHolderBase* inLootHolder);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIsShineEnabled(bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIsInCase(bool inIsInCase);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetAILootingBehvaior(EIGS_AILootingBehavior inLootingBehavior);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveAllowedCharacter(AIGS_GameCharacterFramework* inCharacter);
+    
+    UFUNCTION(BlueprintCallable)
+    void RegisterLootComponent(UIGS_LootItemBaseComponent* inLootComponent);
+    
+    UFUNCTION()
+    void OnRep_LootItems();
+    
+private:
+    UFUNCTION()
+    void OnRep_bIsInCase();
+    
+public:
+    UFUNCTION()
+    void OnRep_bIsEmpty();
+    
+private:
+    UFUNCTION()
+    void OnNavigationBuildFinished(ANavigationData* inNavData);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void LootItemsChanged();
+    
+    UFUNCTION(BlueprintPure)
+    bool IsLootValidForAI(const bool inIgnoreOnlyUnlocked) const;
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_LootHolderBase* GetLootHolder() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void AddAllowedCharacter(AIGS_GameCharacterFramework* inCharacter);
+    
     UPROPERTY(BlueprintReadOnly)
     float CurrentValue;
     
@@ -88,66 +147,7 @@ private:
     bool m_bIsInCase;
     
 public:
-    AIGS_LootCollectionBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintCallable)
-    void TestLootPosition();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void SortLoot();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLootingCharacter(AIGS_GameCharacterFramework* inLootingCharacter);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLootHolder(AIGS_LootHolderBase* inLootHolder);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIsShineEnabled(bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIsInCase(bool inIsInCase);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetAILootingBehvaior(EIGS_AILootingBehavior inLootingBehavior);
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveAllowedCharacter(AIGS_GameCharacterFramework* inCharacter);
-    
-    UFUNCTION(BlueprintCallable)
-    void RegisterLootComponent(UIGS_LootItemBaseComponent* inLootComponent);
-    
-    UFUNCTION()
-    void OnRep_LootItems();
-    
-private:
-    UFUNCTION()
-    void OnRep_bIsInCase();
-    
-public:
-    UFUNCTION()
-    void OnRep_bIsEmpty();
-    
-private:
-    UFUNCTION()
-    void OnNavigationBuildFinished(ANavigationData* inNavData);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void LootItemsChanged();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsLootValidForAI(const bool inIgnoreOnlyUnlocked) const;
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_LootHolderBase* GetLootHolder() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void AddAllowedCharacter(AIGS_GameCharacterFramework* inCharacter);
-    
 };
 

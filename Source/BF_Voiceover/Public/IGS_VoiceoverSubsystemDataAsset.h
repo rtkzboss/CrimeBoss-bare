@@ -14,6 +14,8 @@ UCLASS(BlueprintType)
 class BF_VOICEOVER_API UIGS_VoiceoverSubsystemDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_VoiceoverSubsystemDataAsset();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FName> PreloadLevels;
     
@@ -44,7 +46,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_DialogueGroupCharacterHolder> DebugRestrictedCharacters;
     
-    UIGS_VoiceoverSubsystemDataAsset();
-
 };
 

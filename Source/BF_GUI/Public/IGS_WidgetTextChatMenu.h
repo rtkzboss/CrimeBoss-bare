@@ -12,17 +12,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetTextChatMenu : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<APlayerController> OwningPlayer;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_GUIController> GUIController;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UEditableTextBox* ChatInput;
-    
-public:
     UIGS_WidgetTextChatMenu();
 
 protected:
@@ -62,6 +51,15 @@ protected:
     
     UFUNCTION(BlueprintNativeEvent)
     void BindToMessages();
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TWeakObjectPtr<APlayerController> OwningPlayer;
+    
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_GUIController> GUIController;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UEditableTextBox* ChatInput;
     
 };
 

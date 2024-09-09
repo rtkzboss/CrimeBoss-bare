@@ -13,7 +13,15 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ItemDisplayBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_ItemDisplayBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION(BlueprintCallable)
+    void UpdateLoot();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnUpdateLoot();
+    
     UPROPERTY(BlueprintReadOnly, Instanced)
     USceneComponent* RootObject;
     
@@ -28,16 +36,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, Instanced)
     TArray<UChildActorComponent*> ItemPickups;
-    
-public:
-    AIGS_ItemDisplayBase(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(BlueprintCallable)
-    void UpdateLoot();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnUpdateLoot();
     
 };
 

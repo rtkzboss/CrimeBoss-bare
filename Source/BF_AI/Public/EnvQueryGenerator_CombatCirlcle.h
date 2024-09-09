@@ -12,6 +12,8 @@ UCLASS(BlueprintType, EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_CombatCirlcle : public UEnvQueryGenerator_ProjectedPoints {
     GENERATED_BODY()
 public:
+    UEnvQueryGenerator_CombatCirlcle();
+
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue Radius;
     
@@ -24,7 +26,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETraceTypeQuery> TraceChannel;
     
-    UEnvQueryGenerator_CombatCirlcle();
-
 };
 

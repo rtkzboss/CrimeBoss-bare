@@ -9,15 +9,14 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_SquadGuard : public AIGS_SquadGuardians {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    UIGS_GuardControlRoomComponent* GuardControlRoomComponent;
-    
-public:
     AIGS_SquadGuard(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
     UIGS_GuardControlRoomComponent* GetGuardControlRoomComponent() const;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UIGS_GuardControlRoomComponent* GuardControlRoomComponent;
     
 };
 

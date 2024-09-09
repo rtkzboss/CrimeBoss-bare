@@ -7,6 +7,8 @@ UCLASS(DefaultConfig, Config=Engine)
 class STREAMLINERHI_API UStreamlineSettings : public UObject {
     GENERATED_BODY()
 public:
+    UStreamlineSettings();
+
     UPROPERTY(Config, EditAnywhere)
     bool bEnableStreamlineD3D12;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
     int32 NVIDIANGXApplicationId;
     
-    UStreamlineSettings();
-
 };
 

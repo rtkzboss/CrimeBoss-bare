@@ -9,13 +9,13 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_CommonUtilsSe
 class COMMON_UTILS_API UIGS_CommonUtilsDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_CommonUtilsDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> EntitlementsDataTable;
     
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     FString FreeWeekend_URL;
     
-    UIGS_CommonUtilsDevSettings();
-
 };
 

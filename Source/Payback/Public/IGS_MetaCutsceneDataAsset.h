@@ -19,6 +19,14 @@ UCLASS(BlueprintType)
 class PAYBACK_API UIGS_MetaCutsceneDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_MetaCutsceneDataAsset();
+
+    UFUNCTION(BlueprintPure)
+    FGameplayTag GetEventIDTag() const;
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<FGameplayTag> GetAllChoicesTags();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText ID;
     
@@ -87,14 +95,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<FName, FIGS_MetaCutsceneNode> Nodes;
-    
-    UIGS_MetaCutsceneDataAsset();
-
-    UFUNCTION(BlueprintPure)
-    FGameplayTag GetEventIDTag() const;
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<FGameplayTag> GetAllChoicesTags();
     
 };
 

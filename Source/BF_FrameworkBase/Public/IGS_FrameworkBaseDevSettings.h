@@ -15,6 +15,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_FrameworkBase
 class BF_FRAMEWORKBASE_API UIGS_FrameworkBaseDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_FrameworkBaseDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkSwitchValue> FootstepNoneAkSwitch;
     
@@ -42,7 +44,5 @@ public:
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_ProgressionManagerData> ProgressionManagerData;
     
-    UIGS_FrameworkBaseDevSettings();
-
 };
 

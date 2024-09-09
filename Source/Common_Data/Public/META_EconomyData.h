@@ -48,175 +48,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_EconomyData : public UIGS_EconomyData_Base {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, FMETA_TradeSettings> TradeSettings;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTag HireArmyEventUnlockTag;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_ArmyTier, FMETA_ArmyTierConfiguration> ArmyTiersConfig;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_FloatInterval DefenceLostPenalty;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<EMETA_RespectLvl, float> TileRespectMultipliers;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 ChanceForTileIncomeToBeLoot;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 FrequencyOfIncomeValueRecompute;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_TileWealth, FMETA_FloatInterval> TurfIncomeMultipliers;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_TileReward, int32> TurfRewardChances;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_TileWealth, FMETA_TurfRewardsDistribution> TurfRewardsDistributionConfig;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval SoldiersPercentage;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_FloatInterval LootMultiplier;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_FloatInterval CashMultiplier;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_WeaponTurfReward WeaponReward;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_WeaponTurfReward WeaponRewardForRepeatedCapture;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float RewardValueReductionMultiplierForRepeatedCapture;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, float> DefaultPlanningCostMultiplierForWeakenMissions;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_TurfActionAfterSuccess, float> PlanningCostMultiplierPerWeakenAction;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_AIBossStrengthChangeIntensity, float> PlanningCostMultiplierPerWeaknessIntensity;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float PlanningCostMultiplierForLastTurfWeakening;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, FMETA_Loans> Loans;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 DaysForRehabilitationAfterBankruptValue;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BankruptValue;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<FString, FMETA_CategoryEconomyVariable> GraphEconomyCategories;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 NumberOfBuyableAssets;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_ItemQuality, FMETA_GenericCharacterConfiguration> GenericCharacterConfigurationPerQuality;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_ItemQuality, FMETA_UniqueCharacterConfiguration> UniqueCharacterConfigurationPerQuality;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<FGameplayTag, FMETA_UniqueCharacterConfiguration> UniqueCharacterConfigurationOverride;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_BossCharacterConfiguration BossCharacterConfiguration;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<int32, FMETA_LevelUpHeisterData> LevelUpGenericHeisterData;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<int32, FMETA_LevelUpHeisterData> LevelUpUniqueHeisterData;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<int32, FMETA_LevelUpHeisterData> LevelUpBossData;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> ForbiddenPerksForUpgrade;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTag WeaponEventUnlockTag;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, FMETA_BMEventWeaponData> BM_WeaponInfoPerBossRespect;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, FMETA_BMEventEquipmentData> BM_EquipmentInfoPerBossRespect;
-    
-private:
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_ItemQuality, float> WeaponSkinChancePerQuality;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FGameplayTag> ForbiddenWeaponSkins;
-    
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    int32 BM_LootEventCooldown;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BM_LootProposalsAmount;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 BM_LootEventSelectionExpiration;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_FloatInterval BM_LootEventMonetaryValueMultiplier;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 WarehouseAttackCooldown;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, FMETA_WarehouseWealthData> WarehouseWealthPerRespect;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_RespectLvl, FMETA_Interval> PercentageBeStolenFromStash;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 StartingChance;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 DailyChanceIncrease;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 MinAmountOfEachLootCanBeStolen;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EMETA_BossEliminationReward, int32> EliminationRewardChances;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_BossEliminationRewardsDistribution EliminationRewardsDistributionConfig;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_Interval SoldiersPercentageForElimination;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_FloatInterval LootMultiplierForElimination;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_FloatInterval CashMultiplierForElimination;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_WeaponEliminationReward WeaponRewardForElimination;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FMETA_HeisterEliminationReward HeisterRewardForElimination;
-    
-public:
     UMETA_EconomyData();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -500,6 +331,174 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void CalculateArmyCostForAttack(const UObject* inWCO, EMETA_ArmyTier inTier, int32 inSoldiersAmount, int32& outArmyCost);
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, FMETA_TradeSettings> TradeSettings;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTag HireArmyEventUnlockTag;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_ArmyTier, FMETA_ArmyTierConfiguration> ArmyTiersConfig;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_FloatInterval DefenceLostPenalty;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<EMETA_RespectLvl, float> TileRespectMultipliers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 ChanceForTileIncomeToBeLoot;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 FrequencyOfIncomeValueRecompute;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_TileWealth, FMETA_FloatInterval> TurfIncomeMultipliers;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_TileReward, int32> TurfRewardChances;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_TileWealth, FMETA_TurfRewardsDistribution> TurfRewardsDistributionConfig;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval SoldiersPercentage;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_FloatInterval LootMultiplier;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_FloatInterval CashMultiplier;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_WeaponTurfReward WeaponReward;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_WeaponTurfReward WeaponRewardForRepeatedCapture;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float RewardValueReductionMultiplierForRepeatedCapture;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, float> DefaultPlanningCostMultiplierForWeakenMissions;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_TurfActionAfterSuccess, float> PlanningCostMultiplierPerWeakenAction;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_AIBossStrengthChangeIntensity, float> PlanningCostMultiplierPerWeaknessIntensity;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float PlanningCostMultiplierForLastTurfWeakening;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, FMETA_Loans> Loans;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 DaysForRehabilitationAfterBankruptValue;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BankruptValue;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<FString, FMETA_CategoryEconomyVariable> GraphEconomyCategories;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 NumberOfBuyableAssets;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_ItemQuality, FMETA_GenericCharacterConfiguration> GenericCharacterConfigurationPerQuality;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_ItemQuality, FMETA_UniqueCharacterConfiguration> UniqueCharacterConfigurationPerQuality;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<FGameplayTag, FMETA_UniqueCharacterConfiguration> UniqueCharacterConfigurationOverride;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_BossCharacterConfiguration BossCharacterConfiguration;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<int32, FMETA_LevelUpHeisterData> LevelUpGenericHeisterData;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<int32, FMETA_LevelUpHeisterData> LevelUpUniqueHeisterData;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<int32, FMETA_LevelUpHeisterData> LevelUpBossData;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> ForbiddenPerksForUpgrade;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTag WeaponEventUnlockTag;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, FMETA_BMEventWeaponData> BM_WeaponInfoPerBossRespect;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, FMETA_BMEventEquipmentData> BM_EquipmentInfoPerBossRespect;
+    
+private:
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_ItemQuality, float> WeaponSkinChancePerQuality;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FGameplayTag> ForbiddenWeaponSkins;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    int32 BM_LootEventCooldown;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BM_LootProposalsAmount;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 BM_LootEventSelectionExpiration;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_FloatInterval BM_LootEventMonetaryValueMultiplier;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 WarehouseAttackCooldown;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, FMETA_WarehouseWealthData> WarehouseWealthPerRespect;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_RespectLvl, FMETA_Interval> PercentageBeStolenFromStash;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 StartingChance;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 DailyChanceIncrease;
+    
+    UPROPERTY(EditDefaultsOnly)
+    int32 MinAmountOfEachLootCanBeStolen;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EMETA_BossEliminationReward, int32> EliminationRewardChances;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_BossEliminationRewardsDistribution EliminationRewardsDistributionConfig;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_Interval SoldiersPercentageForElimination;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_FloatInterval LootMultiplierForElimination;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_FloatInterval CashMultiplierForElimination;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_WeaponEliminationReward WeaponRewardForElimination;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FMETA_HeisterEliminationReward HeisterRewardForElimination;
     
 };
 

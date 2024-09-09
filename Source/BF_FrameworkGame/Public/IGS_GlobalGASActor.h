@@ -18,6 +18,11 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_GlobalGASActor : public AActor, public IIGS_GameplayTagAssetInterfaceCustom, public IAbilitySystemInterface {
     GENERATED_BODY()
 public:
+    AIGS_GlobalGASActor(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static AIGS_GlobalGASActor* GetGlobalGASActor(UObject* inWCO);
+    
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_GlobalGASComponent* GlobalGASComponent;
@@ -28,14 +33,9 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_GetActorByGameplayTagComponent* GetActorByGameplayTagComponent;
     
-public:
-    AIGS_GlobalGASActor(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static AIGS_GlobalGASActor* GetGlobalGASActor(UObject* inWCO);
-    
 
     // Fix for true pure virtual functions not being implemented
+public:
     UFUNCTION(BlueprintCallable)
     bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override PURE_VIRTUAL(HasMatchingGameplayTag, return false;);
     

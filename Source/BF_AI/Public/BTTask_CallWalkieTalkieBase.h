@@ -7,12 +7,11 @@ UCLASS(Abstract)
 class BF_AI_API UBTTask_CallWalkieTalkieBase : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_CallWalkieTalkieBase();
+
 protected:
     UPROPERTY(EditAnywhere)
     float Duration;
     
-public:
-    UBTTask_CallWalkieTalkieBase();
-
 };
 

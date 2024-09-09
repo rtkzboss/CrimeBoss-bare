@@ -7,6 +7,8 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API URoomFinderQueryFilter : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
+    URoomFinderQueryFilter();
+
 protected:
     UPROPERTY(EditAnywhere)
     float CostMultiplier;
@@ -14,8 +16,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool IsActive;
     
-public:
-    URoomFinderQueryFilter();
-
 };
 

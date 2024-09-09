@@ -8,20 +8,7 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentMusic : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(ReplicatedUsing=OnRep_MusicMissionState)
-    EIGS_MusicMissionState mR_MusicMissionState;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_MusicPackIndex)
-    int32 mR_MusicPackIndex;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_MusicCustomPackName)
-    FName mR_MusicCustomPackName;
-    
-public:
     UIGS_NetworkComponentMusic(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
     UFUNCTION()
@@ -33,5 +20,17 @@ protected:
     UFUNCTION()
     void OnRep_MusicCustomPackName() const;
     
+    UPROPERTY(ReplicatedUsing=OnRep_MusicMissionState)
+    EIGS_MusicMissionState mR_MusicMissionState;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_MusicPackIndex)
+    int32 mR_MusicPackIndex;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_MusicCustomPackName)
+    FName mR_MusicCustomPackName;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

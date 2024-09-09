@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_NotifyRunningForAlarmDevice : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_NotifyRunningForAlarmDevice();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector AlarmDeviceToUse;
     
-public:
-    UBTDecorator_NotifyRunningForAlarmDevice();
-
 };
 

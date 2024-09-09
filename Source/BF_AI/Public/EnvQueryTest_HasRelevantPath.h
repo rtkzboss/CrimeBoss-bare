@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_HasRelevantPath : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_HasRelevantPath();
+
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue MaxCostCoef;
     
-    UEnvQueryTest_HasRelevantPath();
-
 };
 

@@ -12,6 +12,11 @@ UCLASS(BlueprintType)
 class BF_INPUT_API UIGS_InputDeviceMappingManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_InputDeviceMappingManager();
+
+    UFUNCTION(BlueprintCallable)
+    void GetInputActionSymbolBP(FKey inKey, EIGS_InputDevice inInputDevice, FName& outSymbol);
+    
     UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* PS5InputDeviceIconDataAsset;
     
@@ -26,11 +31,6 @@ public:
     
     UPROPERTY()
     UIGS_InputActionMapDataAsset* InputActionMapDataAsset;
-    
-    UIGS_InputDeviceMappingManager();
-
-    UFUNCTION(BlueprintCallable)
-    void GetInputActionSymbolBP(FKey inKey, EIGS_InputDevice inInputDevice, FName& outSymbol);
     
 };
 

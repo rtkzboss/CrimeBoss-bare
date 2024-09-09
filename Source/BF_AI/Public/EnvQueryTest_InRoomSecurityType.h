@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_InRoomSecurityType : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_InRoomSecurityType();
+
     UPROPERTY(EditAnywhere)
     TArray<EIGS_RoomSecurityType> DesiredSecurityTypes;
     
-    UEnvQueryTest_InRoomSecurityType();
-
 };
 

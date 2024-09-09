@@ -28,6 +28,8 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniAssetComponent : public UPrimitiveComponent, public IHoudiniAssetStateEvents {
     GENERATED_BODY()
 public:
+    UHoudiniAssetComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     UHoudiniAsset* HoudiniAsset;
     
@@ -203,9 +205,6 @@ protected:
     UPROPERTY(Transient)
     double LastTickTime;
     
-public:
-    UHoudiniAssetComponent(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

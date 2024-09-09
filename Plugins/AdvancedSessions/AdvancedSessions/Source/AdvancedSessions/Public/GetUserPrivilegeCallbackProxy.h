@@ -14,16 +14,16 @@ UCLASS(MinimalAPI)
 class UGetUserPrivilegeCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
+    UGetUserPrivilegeCallbackProxy();
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
+    static UGetUserPrivilegeCallbackProxy* GetUserPrivilege(UObject* WorldContextObject, const EBPUserPrivileges& PrivilegeToCheck, const FBPUniqueNetId& PlayerUniqueNetID);
+    
     UPROPERTY(BlueprintAssignable)
     FBlueprintGetUserPrivilegeDelegate OnSuccess;
     
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnFailure;
-    
-    UGetUserPrivilegeCallbackProxy();
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
-    static UGetUserPrivilegeCallbackProxy* GetUserPrivilege(UObject* WorldContextObject, const EBPUserPrivileges& PrivilegeToCheck, const FBPUniqueNetId& PlayerUniqueNetID);
     
 };
 

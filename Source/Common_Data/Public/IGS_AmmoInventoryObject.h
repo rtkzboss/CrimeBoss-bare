@@ -10,12 +10,6 @@ UCLASS(Abstract)
 class COMMON_DATA_API UIGS_AmmoInventoryObject : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_AmmoInventoryObjectAmmoChangedSignature OnAmmoChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_AmmoInventoryObjectAmmoChangedSignature OnAmmoDepleted;
-    
     UIGS_AmmoInventoryObject();
 
     UFUNCTION(BlueprintCallable)
@@ -41,6 +35,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     int32 AddAmmoForWeapon(int32 inCount, UIGS_WeaponInventoryObject* inWeapon);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_AmmoInventoryObjectAmmoChangedSignature OnAmmoChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_AmmoInventoryObjectAmmoChangedSignature OnAmmoDepleted;
     
 };
 

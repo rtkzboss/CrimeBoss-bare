@@ -14,7 +14,20 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeaponDynamicScopeHandler : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WeaponDynamicScopeHandler(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION()
+    void OnWeaponDestroyed(AActor* inDestroyed);
+    
+public:
+    UFUNCTION(BlueprintNativeEvent)
+    void OnAimChanged(bool inAim);
+    
+protected:
+    UFUNCTION()
+    void DisableAimPostprocess() const;
+    
     UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<AIGS_WeaponBase> OwningWeapon;
     
@@ -50,21 +63,6 @@ protected:
     
     UPROPERTY()
     UMaterialInstanceDynamic* DynamicSniperScopePostprocessVerticalMaterial;
-    
-public:
-    UIGS_WeaponDynamicScopeHandler(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnWeaponDestroyed(AActor* inDestroyed);
-    
-public:
-    UFUNCTION(BlueprintNativeEvent)
-    void OnAimChanged(bool inAim);
-    
-protected:
-    UFUNCTION()
-    void DisableAimPostprocess() const;
     
 };
 

@@ -9,6 +9,11 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_TrafficPathComponent : public UIGS_TrafficPathComponentFramework {
     GENERATED_BODY()
 public:
+    UIGS_TrafficPathComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    bool IsEnabled() const;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 VehicleGroups;
     
@@ -33,12 +38,6 @@ public:
 protected:
     UPROPERTY()
     TArray<UObject*> DisableRequests;
-    
-public:
-    UIGS_TrafficPathComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    bool IsEnabled() const;
     
 };
 

@@ -10,11 +10,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_FinanceManagerComponent : public UIGS_FinanceManagerBaseComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly)
-    int32 Balance;
-    
-public:
     UIGS_Quickplay_FinanceManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -31,6 +26,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddBalance(int32 InValue);
+    
+protected:
+    UPROPERTY(BlueprintReadOnly)
+    int32 Balance;
     
 };
 

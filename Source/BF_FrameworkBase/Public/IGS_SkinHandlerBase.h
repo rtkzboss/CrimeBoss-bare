@@ -11,6 +11,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_SkinHandlerBase : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SkinHandlerBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnSkinAppliedEvent OnSkinAppliedEvent;
     
@@ -30,8 +32,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bForcedTortilla;
     
-public:
-    UIGS_SkinHandlerBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

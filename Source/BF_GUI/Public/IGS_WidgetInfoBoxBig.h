@@ -14,6 +14,35 @@ UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetInfoBoxBig : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetInfoBoxBig();
+
+    UFUNCTION(BlueprintCallable)
+    void Setup(FText InName, FText inInfo, FText inType, FText inLeftSubType, FText inRightSubType);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetType(FText inType);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetRightSubType(FText inRightSubType);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetName(FText InName);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLeftSubType(FText inLeftSubType);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetInfo(FText inInfo);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetIconImage(TSoftObjectPtr<UTexture> inImageTexture);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetBigItemImage(TSoftObjectPtr<UTexture> inImageTexture);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void Refresh() const;
+    
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* NameText;
     
@@ -61,35 +90,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor HeaderColor;
-    
-    UIGS_WidgetInfoBoxBig();
-
-    UFUNCTION(BlueprintCallable)
-    void Setup(FText InName, FText inInfo, FText inType, FText inLeftSubType, FText inRightSubType);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetType(FText inType);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetRightSubType(FText inRightSubType);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetName(FText InName);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLeftSubType(FText inLeftSubType);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetInfo(FText inInfo);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetIconImage(TSoftObjectPtr<UTexture> inImageTexture);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetBigItemImage(TSoftObjectPtr<UTexture> inImageTexture);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void Refresh() const;
     
 };
 

@@ -12,6 +12,32 @@ UCLASS(BlueprintType)
 class BF_LOADING_API UIGS_LevelTransitionManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_LevelTransitionManager();
+
+    UFUNCTION(BlueprintCallable)
+    void StopAttemptLoadingLevel();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetLevelLoadTransitionState(EIGS_LevelTransitionType inState);
+    
+    UFUNCTION(BlueprintPure)
+    EIGS_LevelTransitionType GetLevelTransitionState() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool GetLevelLoadState() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetDelayTime() const;
+    
+    UFUNCTION(BlueprintCallable)
+    bool ClientTravel(FName inLevelName);
+    
+    UFUNCTION(BlueprintCallable)
+    bool AttemptServerTravel(FName inLevelName, const FString& inOptions);
+    
+    UFUNCTION(BlueprintCallable)
+    bool AttemptOpenLevel(FName inLevelName, bool inAbsolute, const FString& inOptions);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_LevelTransitionSignature OnLevelLoadAttemptSuccess;
     
@@ -39,33 +65,6 @@ protected:
     
     UPROPERTY()
     UIGS_LevelTransitionDataAsset* Data;
-    
-public:
-    UIGS_LevelTransitionManager();
-
-    UFUNCTION(BlueprintCallable)
-    void StopAttemptLoadingLevel();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetLevelLoadTransitionState(EIGS_LevelTransitionType inState);
-    
-    UFUNCTION(BlueprintPure)
-    EIGS_LevelTransitionType GetLevelTransitionState() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool GetLevelLoadState() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetDelayTime() const;
-    
-    UFUNCTION(BlueprintCallable)
-    bool ClientTravel(FName inLevelName);
-    
-    UFUNCTION(BlueprintCallable)
-    bool AttemptServerTravel(FName inLevelName, const FString& inOptions);
-    
-    UFUNCTION(BlueprintCallable)
-    bool AttemptOpenLevel(FName inLevelName, bool inAbsolute, const FString& inOptions);
     
 };
 

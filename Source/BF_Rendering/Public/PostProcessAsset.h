@@ -9,13 +9,13 @@ UCLASS(BlueprintType)
 class UPostProcessAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UPostProcessAsset();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMaterialInstance*> PostProcessMaterial;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
     
-    UPostProcessAsset();
-
 };
 

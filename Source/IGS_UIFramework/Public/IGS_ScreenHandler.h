@@ -22,26 +22,6 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_ScreenHandlerMulticastEvent);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_OnScreenOpenWithTag, FGameplayTag, screenTag);
     
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnScreenOpenWithTag OnScreenOpenWithTag;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnScreenOpenWithTag OnScreenSwitched;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ScreenHandlerMulticastEvent OnViewportResized;
-    
-protected:
-    UPROPERTY(Instanced)
-    TMap<FGameplayTag, UIGS_Screen*> m_RegisteredScreens;
-    
-    UPROPERTY(Instanced)
-    TArray<UIGS_Screen*> m_ScreensStack;
-    
-    UPROPERTY()
-    UIGS_InputDeviceManager* m_InputDeviceManager;
-    
-public:
     UIGS_ScreenHandler();
 
     UFUNCTION(BlueprintCallable)
@@ -107,6 +87,25 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool AreOnlyOverlaysOpen() const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnScreenOpenWithTag OnScreenOpenWithTag;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnScreenOpenWithTag OnScreenSwitched;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ScreenHandlerMulticastEvent OnViewportResized;
+    
+protected:
+    UPROPERTY(Instanced)
+    TMap<FGameplayTag, UIGS_Screen*> m_RegisteredScreens;
+    
+    UPROPERTY(Instanced)
+    TArray<UIGS_Screen*> m_ScreensStack;
+    
+    UPROPERTY()
+    UIGS_InputDeviceManager* m_InputDeviceManager;
     
 };
 

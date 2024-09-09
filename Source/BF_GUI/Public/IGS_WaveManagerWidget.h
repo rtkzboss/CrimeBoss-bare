@@ -10,11 +10,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WaveManagerWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_WaveManager> WaveManager;
-    
-public:
     UIGS_WaveManagerWidget();
 
 protected:
@@ -23,6 +18,9 @@ protected:
     
     UFUNCTION(BlueprintNativeEvent)
     void EnemyCountChanged();
+    
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_WaveManager> WaveManager;
     
 };
 

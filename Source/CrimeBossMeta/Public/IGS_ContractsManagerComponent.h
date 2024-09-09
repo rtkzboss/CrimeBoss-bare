@@ -16,21 +16,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_ContractsManagerComponent : public UIGS_ContractManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<TSubclassOf<UIGS_ContractID>, UMETA_BaseFPSMission*> ActiveContracts;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<TSubclassOf<UIGS_ContractID>> AvailableContracts;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnContractActivated OnActiveContractAdded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnActiveContractRemoved OnActiveContractRemoved;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnAvailableContractAdded OnAvailableContractAdded;
-    
     UIGS_ContractsManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -59,6 +44,21 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddActiveContract(TSubclassOf<UIGS_ContractID> inID);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<TSubclassOf<UIGS_ContractID>, UMETA_BaseFPSMission*> ActiveContracts;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<TSubclassOf<UIGS_ContractID>> AvailableContracts;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnContractActivated OnActiveContractAdded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnActiveContractRemoved OnActiveContractRemoved;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnAvailableContractAdded OnAvailableContractAdded;
     
 };
 

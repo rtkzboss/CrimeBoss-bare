@@ -13,6 +13,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_SpawnThrowableProjectile : public UAbilityTask {
     GENERATED_BODY()
 public:
+    UIGS_AbilityTask_SpawnThrowableProjectile();
+
+    UFUNCTION(BlueprintCallable)
+    static UIGS_AbilityTask_SpawnThrowableProjectile* CreateSpawnThrowableProjectileProxy(UGameplayAbility* inOwningAbility, FName inTaskInstanceName, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, bool inRequiresAuthority, bool inThrowLow, float inTimeHeldInHand);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_ThrowableSpawnedDelegate OnSpawned;
     
@@ -28,12 +33,6 @@ private:
     
     UPROPERTY()
     float TimeHeldInHand;
-    
-public:
-    UIGS_AbilityTask_SpawnThrowableProjectile();
-
-    UFUNCTION(BlueprintCallable)
-    static UIGS_AbilityTask_SpawnThrowableProjectile* CreateSpawnThrowableProjectileProxy(UGameplayAbility* inOwningAbility, FName inTaskInstanceName, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, bool inRequiresAuthority, bool inThrowLow, float inTimeHeldInHand);
     
 };
 

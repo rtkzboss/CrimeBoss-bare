@@ -9,12 +9,11 @@ UCLASS()
 class PAYBACK_API UIGS_PaybackVoiceoverSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_PaybackVoiceoverSubsystem();
+
 protected:
     UPROPERTY()
     AIGS_GlobalDialoguePlayer* GlobalDialoguePlayer;
     
-public:
-    UIGS_PaybackVoiceoverSubsystem();
-
 };
 

@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTService_GR_HandleBeingHeavyShocked : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_GR_HandleBeingHeavyShocked();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -21,8 +23,5 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     float HeavyReactionChance;
     
-public:
-    UBTService_GR_HandleBeingHeavyShocked();
-
 };
 

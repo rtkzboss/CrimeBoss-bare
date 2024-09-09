@@ -17,21 +17,7 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_RoomPointManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Replicated)
-    TArray<AIGS_RoomBase*> Rooms;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_RoomPolysGeneratedDelegate OnRoomPolysGeneratedEvent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bRoomPolysGathered;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated)
-    TArray<FIGS_RoomData> RoomsData;
-    
     UIGS_RoomPointManager();
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void RefreshBadRooms(const bool inHighlight);
@@ -54,5 +40,19 @@ public:
     UFUNCTION(BlueprintPure)
     TArray<AIGS_RoomBase*> GetAllRoomsInBox(FVector inOrigin, FVector InBoxExtent) const;
     
+    UPROPERTY(BlueprintReadOnly, Replicated)
+    TArray<AIGS_RoomBase*> Rooms;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_RoomPolysGeneratedDelegate OnRoomPolysGeneratedEvent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bRoomPolysGathered;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated)
+    TArray<FIGS_RoomData> RoomsData;
+    
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

@@ -19,6 +19,11 @@ UCLASS()
 class PAYBACKDEFINITIONS_API UMETA_QuickPlayData : public UIGS_MenuCommonData_Base {
     GENERATED_BODY()
 public:
+    UMETA_QuickPlayData();
+
+    UFUNCTION(BlueprintCallable)
+    void GetSpecialTierChance(const EIGS_UserDifficulty inUserDifficulty, const int32 inStormIntensity, bool& outHasOverride, float& outRatio);
+    
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<EIGS_UserDifficulty, FIGS_UserDifficulty> UserDifficulties;
     
@@ -150,11 +155,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, EditFixedSize)
     TArray<FGameplayTag> TutorialCharacters;
-    
-    UMETA_QuickPlayData();
-
-    UFUNCTION(BlueprintCallable)
-    void GetSpecialTierChance(const EIGS_UserDifficulty inUserDifficulty, const int32 inStormIntensity, bool& outHasOverride, float& outRatio);
     
 };
 

@@ -8,13 +8,13 @@ UCLASS()
 class BF_GUIBASE_API UIGS_RichTextBlockBase : public URichTextBlock {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EIGS_InputDevice PreviewInputDevice;
-    
     UIGS_RichTextBlockBase();
 
     UFUNCTION()
     void OnInputDeviceChanged(EIGS_InputDevice inInputDevice);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    EIGS_InputDevice PreviewInputDevice;
     
 };
 

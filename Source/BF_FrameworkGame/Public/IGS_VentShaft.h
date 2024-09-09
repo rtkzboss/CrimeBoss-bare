@@ -15,6 +15,25 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_VentShaft : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_VentShaft(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnTriggerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
+    
+    UFUNCTION()
+    void OnTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+    UFUNCTION()
+    void OnRep_IsOpened() const;
+    
+    UFUNCTION()
+    void OnCoverUsed(AIGS_GameCharacterFramework* inInstigator);
+    
+    UFUNCTION()
+    void OnBlockerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
+    
+public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
     
@@ -41,25 +60,7 @@ protected:
     bool IsOpened;
     
 public:
-    AIGS_VentShaft(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnTriggerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
-    UFUNCTION()
-    void OnTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-    UFUNCTION()
-    void OnRep_IsOpened() const;
-    
-    UFUNCTION()
-    void OnCoverUsed(AIGS_GameCharacterFramework* inInstigator);
-    
-    UFUNCTION()
-    void OnBlockerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
 };
 

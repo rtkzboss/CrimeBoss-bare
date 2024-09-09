@@ -12,32 +12,6 @@ UCLASS(Abstract, BlueprintType)
 class CRIMEBOSSMETA_API UMETA_BaseNotification : public UObject {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TSoftObjectPtr<UMETA_NotificationID> ID;
-    
-    UPROPERTY()
-    FText Title;
-    
-    UPROPERTY()
-    FText Description;
-    
-    UPROPERTY()
-    EMETA_NotificationEffect Effect;
-    
-    UPROPERTY()
-    TSoftObjectPtr<UTexture2D> Image;
-    
-    UPROPERTY()
-    EMETA_NotificationType Type;
-    
-    UPROPERTY()
-    TSoftObjectPtr<UMETA_NotificationID> AggregationNotificationID;
-    
-    UPROPERTY()
-    bool HideInIntro;
-    
-public:
     UMETA_BaseNotification();
 
     UFUNCTION(BlueprintCallable)
@@ -69,6 +43,31 @@ public:
     
     UFUNCTION()
     TSoftObjectPtr<UMETA_NotificationID> GetAggregateID() const;
+    
+protected:
+    UPROPERTY()
+    TSoftObjectPtr<UMETA_NotificationID> ID;
+    
+    UPROPERTY()
+    FText Title;
+    
+    UPROPERTY()
+    FText Description;
+    
+    UPROPERTY()
+    EMETA_NotificationEffect Effect;
+    
+    UPROPERTY()
+    TSoftObjectPtr<UTexture2D> Image;
+    
+    UPROPERTY()
+    EMETA_NotificationType Type;
+    
+    UPROPERTY()
+    TSoftObjectPtr<UMETA_NotificationID> AggregationNotificationID;
+    
+    UPROPERTY()
+    bool HideInIntro;
     
 };
 

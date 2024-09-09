@@ -7,6 +7,8 @@ UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_ThrowBagComponents : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryGenerator_ThrowBagComponents();
+
 private:
     UPROPERTY(EditAnywhere)
     float MaxDistance;
@@ -14,8 +16,5 @@ private:
     UPROPERTY(EditAnywhere)
     float MaxDistanceDefend;
     
-public:
-    UIGS_EnvQueryGenerator_ThrowBagComponents();
-
 };
 

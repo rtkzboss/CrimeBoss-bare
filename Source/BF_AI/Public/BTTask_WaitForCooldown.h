@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTTask_WaitForCooldown : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_WaitForCooldown();
+
     UPROPERTY(EditAnywhere)
     FGameplayTag CooldownTag;
     
-    UBTTask_WaitForCooldown();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_ImpactsSettin
 class BF_IMPACTS_API UIGS_ImpactDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_ImpactDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> ShotImpactsDataTable;
     
@@ -28,7 +30,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> ImpactManagerSettingsDataAsset;
     
-    UIGS_ImpactDevSettings();
-
 };
 

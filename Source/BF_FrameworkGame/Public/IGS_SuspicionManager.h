@@ -24,6 +24,49 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SuspicionManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_SuspicionManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    bool WouldStrikeCauseAlarm(int32 inStrikeCount) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ReportCivStartEscaping(AIGS_GameCharacterFramework* inCivilian);
+    
+    UFUNCTION(BlueprintCallable)
+    void ReportCivEscaped(AIGS_GameCharacterFramework* inCivilian);
+    
+protected:
+    UFUNCTION()
+    void OnRep_Strikes(int32 inLastStrikes);
+    
+    UFUNCTION()
+    void OnRep_Alarm();
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_OnStrikeAdded(int32 inNewStrikes, int32 inIncrease, const FGameplayTag inBlameTag);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_AddSuspicionInfoMessage(int32 inStrikesIncrease, const FText& inBlame);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void IsSuitableForHeist(const bool inIsSuitable);
+    
+    UFUNCTION(BlueprintPure)
+    bool IsStrikeAllowed() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsLastStrike() const;
+    
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    static UIGS_SuspicionManager* GetSuspicionManager(const UObject* inWCO);
+    
+    UFUNCTION(BlueprintCallable)
+    float GetHQSuspicion();
+    
+    UFUNCTION(BlueprintCallable)
+    void CanShowHeistHint(const bool inCanShow);
+    
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_Strikes)
     int32 CurrentStrikes;
     
@@ -90,50 +133,7 @@ private:
     FString MessageHQReportKey;
     
 public:
-    UIGS_SuspicionManager(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintPure)
-    bool WouldStrikeCauseAlarm(int32 inStrikeCount) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ReportCivStartEscaping(AIGS_GameCharacterFramework* inCivilian);
-    
-    UFUNCTION(BlueprintCallable)
-    void ReportCivEscaped(AIGS_GameCharacterFramework* inCivilian);
-    
-protected:
-    UFUNCTION()
-    void OnRep_Strikes(int32 inLastStrikes);
-    
-    UFUNCTION()
-    void OnRep_Alarm();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_OnStrikeAdded(int32 inNewStrikes, int32 inIncrease, const FGameplayTag inBlameTag);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_AddSuspicionInfoMessage(int32 inStrikesIncrease, const FText& inBlame);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void IsSuitableForHeist(const bool inIsSuitable);
-    
-    UFUNCTION(BlueprintPure)
-    bool IsStrikeAllowed() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsLastStrike() const;
-    
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
-    static UIGS_SuspicionManager* GetSuspicionManager(const UObject* inWCO);
-    
-    UFUNCTION(BlueprintCallable)
-    float GetHQSuspicion();
-    
-    UFUNCTION(BlueprintCallable)
-    void CanShowHeistHint(const bool inCanShow);
-    
 };
 

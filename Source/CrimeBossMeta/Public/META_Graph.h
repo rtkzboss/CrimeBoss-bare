@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UMETA_Graph : public UObject {
     GENERATED_BODY()
 public:
+    UMETA_Graph();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_GraphStruct Details;
     
-    UMETA_Graph();
-
 };
 

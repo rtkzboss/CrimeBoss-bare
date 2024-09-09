@@ -8,13 +8,13 @@ UCLASS(BlueprintType)
 class BF_AI_API UBTDecorator_IsPreviousGeneralReaction : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsPreviousGeneralReaction();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag PreviousGlobalReactionTag;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MaxTimeSince;
     
-    UBTDecorator_IsPreviousGeneralReaction();
-
 };
 

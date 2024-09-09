@@ -9,6 +9,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GameplayAbilityTargetActor_DropEquipment : public AGameplayAbilityTargetActor {
     GENERATED_BODY()
 public:
+    AIGS_GameplayAbilityTargetActor_DropEquipment(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector BoxDimensions;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTransform LocalSpawnTransform;
     
-    AIGS_GameplayAbilityTargetActor_DropEquipment(const FObjectInitializer& ObjectInitializer);
-
 };
 

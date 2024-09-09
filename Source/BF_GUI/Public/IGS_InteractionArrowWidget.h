@@ -11,6 +11,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_InteractionArrowWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_InteractionArrowWidget();
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_InteractiveComponent* CurrentInteractiveComponent;
     
-    UIGS_InteractionArrowWidget();
-
 };
 

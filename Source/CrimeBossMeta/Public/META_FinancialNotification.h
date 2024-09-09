@@ -7,11 +7,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_FinancialNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    int32 m_Money;
-    
-public:
     UMETA_FinancialNotification();
 
     UFUNCTION(BlueprintCallable)
@@ -19,6 +14,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     int32 GetMoney() const;
+    
+private:
+    UPROPERTY()
+    int32 m_Money;
     
 };
 

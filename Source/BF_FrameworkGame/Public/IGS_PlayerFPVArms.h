@@ -10,6 +10,11 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PlayerFPVArms : public AIGS_PlayerFPVArmsFramework, public IIGS_WieldAnyItemInterface {
     GENERATED_BODY()
 public:
+    AIGS_PlayerFPVArms(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintNativeEvent)
+    void SetArmsTickEnabled(bool Enabled);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bMoveArmsInCode;
     
@@ -27,11 +32,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     AActor* RightHandAttachedActor;
-    
-    AIGS_PlayerFPVArms(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintNativeEvent)
-    void SetArmsTickEnabled(bool Enabled);
     
 
     // Fix for true pure virtual functions not being implemented

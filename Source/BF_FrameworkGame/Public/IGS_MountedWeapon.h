@@ -28,6 +28,36 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_MountedWeapon : public AIGS_WeaponBase {
     GENERATED_BODY()
 public:
+    AIGS_MountedWeapon(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void UserChangedEvent(AIGS_GameCharacterFramework* inNewUser);
+    
+public:
+    UFUNCTION(Reliable, Server)
+    void StopUsing_SERVER(bool inIsOwnerAlive);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetDisallowLeave(bool inIsDisallowed);
+    
+protected:
+    UFUNCTION()
+    void RotateReloadProgress(float InProgress);
+    
+    UFUNCTION()
+    void OnOwnerDeathNative(float CurrentHealth, float CurrentShield, float HealthChange, float ShieldChange, const FIGS_HitInfo& HitInfo);
+    
+    UFUNCTION()
+    void OnCharacterHolsterFinishedEventNative(bool inIsHolstering);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool IsLeaveAllowed() const;
+    
+    UFUNCTION(BlueprintCallable)
+    FVector GetPawnPosition(AIGS_GameCharacterFramework* charToPosses);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool UseByAI;
     
@@ -132,37 +162,7 @@ protected:
     UIGS_AmmoInventoryObject* AmmoItemObject;
     
 public:
-    AIGS_MountedWeapon(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void UserChangedEvent(AIGS_GameCharacterFramework* inNewUser);
-    
-public:
-    UFUNCTION(Reliable, Server)
-    void StopUsing_SERVER(bool inIsOwnerAlive);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetDisallowLeave(bool inIsDisallowed);
-    
-protected:
-    UFUNCTION()
-    void RotateReloadProgress(float InProgress);
-    
-    UFUNCTION()
-    void OnOwnerDeathNative(float CurrentHealth, float CurrentShield, float HealthChange, float ShieldChange, const FIGS_HitInfo& HitInfo);
-    
-    UFUNCTION()
-    void OnCharacterHolsterFinishedEventNative(bool inIsHolstering);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool IsLeaveAllowed() const;
-    
-    UFUNCTION(BlueprintCallable)
-    FVector GetPawnPosition(AIGS_GameCharacterFramework* charToPosses);
-    
 };
 

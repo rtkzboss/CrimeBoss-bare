@@ -7,6 +7,8 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_WeaponClassSettingsDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_WeaponClassSettingsDataAsset();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float LineTraceEndRange;
     
@@ -22,7 +24,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float RecoilInterpSpeed;
     
-    UIGS_WeaponClassSettingsDataAsset();
-
 };
 

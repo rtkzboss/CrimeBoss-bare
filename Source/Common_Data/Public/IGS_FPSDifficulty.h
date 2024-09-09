@@ -9,12 +9,11 @@ UCLASS()
 class COMMON_DATA_API UIGS_FPSDifficulty : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_FPSDifficulty();
+
 private:
     UPROPERTY(Transient)
     UIGS_FPSDifficultyDataAsset* m_FPSDifficultyDA;
     
-public:
-    UIGS_FPSDifficulty();
-
 };
 

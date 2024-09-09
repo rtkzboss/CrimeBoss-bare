@@ -7,10 +7,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SetThreat : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SetThreat();
+
     UPROPERTY(EditAnywhere)
     float Value;
     
-    UIGS_BTTask_SetThreat();
-
 };
 

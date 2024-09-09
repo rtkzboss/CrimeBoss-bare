@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTService_ShoutAtSequence : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_ShoutAtSequence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharacterToShoutKey;
     
-public:
-    UIGS_BTService_ShoutAtSequence();
-
 };
 

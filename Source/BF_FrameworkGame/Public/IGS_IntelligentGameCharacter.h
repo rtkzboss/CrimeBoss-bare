@@ -35,6 +35,102 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_IntelligentGameCharacter : public AIGS_GameCharacterBase {
     GENERATED_BODY()
 public:
+    AIGS_IntelligentGameCharacter(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void ThrowAwayBag() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SpawnPocketBag(FTransform InTransform) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SpawnBag(FTransform InTransform) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void SelectPreviousOrNextWeaponSlot(bool inPrevious);
+    
+    UFUNCTION(BlueprintCallable)
+    void SelectPreviousOrNextWeaponInActiveSlot(bool inPrevious);
+    
+    UFUNCTION(BlueprintCallable)
+    void SaveHeadSnapshot();
+    
+    UFUNCTION(BlueprintCallable)
+    void OverrideHeadComponent(USkeletalMeshComponent* InComponent);
+    
+protected:
+    UFUNCTION()
+    void OnRep_AnimationSeed();
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnPostSignificance(const UIGS_SignificanceComponent* inObjectInfo, EIGS_SignificanceValue inSignificanceValue);
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void MagCheck() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsUsingMountedWeaponAndCanLeave() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsUsingMountedWeapon() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsReloading() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsMagChecking() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsInspecting() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsBashing() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void InterruptReload(EIGS_ReloadInterruptReasonEnum inReason, bool inIsImmediate, bool inIsForce) const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void InterruptMagCheck() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void InterruptInspecting() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void InspectWieldable() const;
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void HolsterWeapon() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_LootBagComponent* GetLootBagComponent() const;
+    
+    UFUNCTION(BlueprintPure)
+    USkeletalMeshComponent* GetHeadComp();
+    
+    UFUNCTION(BlueprintCallable)
+    UIGS_BleedingHandlerComponent* GetBleedingComponent();
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceDestroyZiptieComponent();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void DropBag() const;
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void DebugTick(float InDeltaTime);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool CanInterruptReload() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool CanInterruptMagCheck() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool CanInterruptInspecting() const;
+    
     UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
     AIGS_WieldableBase* CurrentWieldable;
     
@@ -142,103 +238,7 @@ protected:
     int32 mR_NextRandomAnimationSeed;
     
 public:
-    AIGS_IntelligentGameCharacter(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void ThrowAwayBag() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SpawnPocketBag(FTransform InTransform) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SpawnBag(FTransform InTransform) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void SelectPreviousOrNextWeaponSlot(bool inPrevious);
-    
-    UFUNCTION(BlueprintCallable)
-    void SelectPreviousOrNextWeaponInActiveSlot(bool inPrevious);
-    
-    UFUNCTION(BlueprintCallable)
-    void SaveHeadSnapshot();
-    
-    UFUNCTION(BlueprintCallable)
-    void OverrideHeadComponent(USkeletalMeshComponent* InComponent);
-    
-protected:
-    UFUNCTION()
-    void OnRep_AnimationSeed();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnPostSignificance(const UIGS_SignificanceComponent* inObjectInfo, EIGS_SignificanceValue inSignificanceValue);
-    
-public:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void MagCheck() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsUsingMountedWeaponAndCanLeave() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsUsingMountedWeapon() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsReloading() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsMagChecking() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsInspecting() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsBashing() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void InterruptReload(EIGS_ReloadInterruptReasonEnum inReason, bool inIsImmediate, bool inIsForce) const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void InterruptMagCheck() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void InterruptInspecting() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void InspectWieldable() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void HolsterWeapon() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_LootBagComponent* GetLootBagComponent() const;
-    
-    UFUNCTION(BlueprintPure)
-    USkeletalMeshComponent* GetHeadComp();
-    
-    UFUNCTION(BlueprintCallable)
-    UIGS_BleedingHandlerComponent* GetBleedingComponent();
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceDestroyZiptieComponent();
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void DropBag() const;
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void DebugTick(float InDeltaTime);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool CanInterruptReload() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool CanInterruptMagCheck() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool CanInterruptInspecting() const;
-    
 };
 

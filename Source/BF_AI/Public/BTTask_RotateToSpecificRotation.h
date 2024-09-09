@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTTask_RotateToSpecificRotation : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UBTTask_RotateToSpecificRotation();
+
 protected:
     UPROPERTY(EditAnywhere)
     float AcceptedAngle;
     
-public:
-    UBTTask_RotateToSpecificRotation();
-
 };
 

@@ -13,23 +13,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_ThrowBagDefinitionComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TArray<UIGS_ThrowBagSlot*> m_Slots;
-    
-    UPROPERTY()
-    TArray<AIGS_GameCharacterFramework*> m_CloseCharacters;
-    
-    UPROPERTY()
-    TArray<AIGS_GameCharacterFramework*> m_PlayerFollowCharacters;
-    
-    UPROPERTY()
-    TArray<FIGS_CharacterThrowRequest> m_TmpCharacterRequests;
-    
-    UPROPERTY()
-    bool m_IsThrowingAllowed;
-    
-public:
     UIGS_ThrowBagDefinitionComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -46,6 +29,22 @@ public:
     
     UFUNCTION(BlueprintCallable)
     UIGS_ThrowBagSlot* AddSlotFromSceneComponent(USceneComponent* inSceneComponent);
+    
+protected:
+    UPROPERTY()
+    TArray<UIGS_ThrowBagSlot*> m_Slots;
+    
+    UPROPERTY()
+    TArray<AIGS_GameCharacterFramework*> m_CloseCharacters;
+    
+    UPROPERTY()
+    TArray<AIGS_GameCharacterFramework*> m_PlayerFollowCharacters;
+    
+    UPROPERTY()
+    TArray<FIGS_CharacterThrowRequest> m_TmpCharacterRequests;
+    
+    UPROPERTY()
+    bool m_IsThrowingAllowed;
     
 };
 

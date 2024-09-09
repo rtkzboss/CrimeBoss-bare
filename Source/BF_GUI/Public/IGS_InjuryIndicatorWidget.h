@@ -11,6 +11,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_InjuryIndicatorWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_InjuryIndicatorWidget();
+
     UPROPERTY(BlueprintAssignable)
     FIGS_HealthChangedSignature OnHealthChangedEvent;
     
@@ -21,8 +23,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_PlayerControllerRoot> PlayerController;
     
-public:
-    UIGS_InjuryIndicatorWidget();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_NodesColorData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UMETA_NodesColorData();
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     FLinearColor STORY_ACTIVE_NODE_COLOR;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_GoalStatus, FLinearColor> END_NODE_COLOR_BY_RESULT;
     
-public:
-    UMETA_NodesColorData();
-
 };
 

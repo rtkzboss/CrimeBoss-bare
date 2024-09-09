@@ -11,13 +11,13 @@ UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_RemoverSpecialObjectives : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UEnvQueryGenerator_RemoverSpecialObjectives();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
     
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue Range;
     
-    UEnvQueryGenerator_RemoverSpecialObjectives();
-
 };
 

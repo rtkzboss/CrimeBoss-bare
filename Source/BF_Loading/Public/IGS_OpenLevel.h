@@ -11,15 +11,6 @@ UCLASS()
 class BF_LOADING_API UIGS_OpenLevel : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LevelTransitionSimpleSignature LevelLoadAttemptSuccess;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LevelTransitionSimpleSignature LevelLoadAttemptFailure;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LevelTransitionSimpleSignature LevelLoadStarted;
-    
     UIGS_OpenLevel();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -34,6 +25,16 @@ protected:
     
     UFUNCTION()
     void OnLevelLoadAttemptFailure(FName inLevelName, bool inIsServerTravel);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LevelTransitionSimpleSignature LevelLoadAttemptSuccess;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LevelTransitionSimpleSignature LevelLoadAttemptFailure;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LevelTransitionSimpleSignature LevelLoadStarted;
     
 };
 

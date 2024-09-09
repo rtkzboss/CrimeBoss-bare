@@ -9,10 +9,10 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_ActionsNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_ActionsNode_SG();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseAction*> Actions;
     
-    UMETA_ActionsNode_SG();
-
 };
 

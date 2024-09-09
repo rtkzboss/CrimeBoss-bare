@@ -10,6 +10,8 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_Common_DataDevSettings_Meta : public UIGS_Common_DataDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_Common_DataDevSettings_Meta();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MetaActionCardsDataTable;
     
@@ -70,7 +72,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> ChallengesDataTable;
     
-    UIGS_Common_DataDevSettings_Meta();
-
 };
 

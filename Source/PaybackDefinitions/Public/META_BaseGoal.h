@@ -18,17 +18,6 @@ UCLASS(Abstract, BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_BaseGoal : public UObject {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    EMETA_GoalType Type;
-    
-    UPROPERTY()
-    EMETA_GoalPriority Priority;
-    
-    UPROPERTY()
-    FGameplayTag EntitlementTag;
-    
-public:
     UMETA_BaseGoal();
 
     UFUNCTION(BlueprintCallable)
@@ -90,6 +79,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddMission(TSubclassOf<UMETA_MissionID> inMissionID);
+    
+protected:
+    UPROPERTY()
+    EMETA_GoalType Type;
+    
+    UPROPERTY()
+    EMETA_GoalPriority Priority;
+    
+    UPROPERTY()
+    FGameplayTag EntitlementTag;
     
 };
 

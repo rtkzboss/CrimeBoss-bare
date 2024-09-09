@@ -7,10 +7,10 @@ UCLASS()
 class FTILIVELINK_API UFTILiveLinkRemapAsset : public ULiveLinkRemapAsset {
     GENERATED_BODY()
 public:
+    UFTILiveLinkRemapAsset();
+
     UPROPERTY(EditAnywhere)
     TMap<FName, FName> AnimationNamesMap;
     
-    UFTILiveLinkRemapAsset();
-
 };
 

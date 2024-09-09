@@ -8,12 +8,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SmartPingableWidgetActor : public AIGS_PingableWidgetActor {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    float SmartPingHideTextTime;
-    
-    UPROPERTY()
-    float HoldPingHideTextTime;
-    
     AIGS_SmartPingableWidgetActor(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -27,6 +21,12 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     void OnHideText();
+    
+    UPROPERTY()
+    float SmartPingHideTextTime;
+    
+    UPROPERTY()
+    float HoldPingHideTextTime;
     
 };
 

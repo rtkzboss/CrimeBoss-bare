@@ -11,6 +11,8 @@ UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_GeneratorBuildConfiguration : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_GeneratorBuildConfiguration();
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FString> Filters;
     
@@ -29,7 +31,5 @@ public:
     UPROPERTY()
     TArray<FIGS_VariantDefinition> Cooked_Variants;
     
-    UIGS_GeneratorBuildConfiguration();
-
 };
 

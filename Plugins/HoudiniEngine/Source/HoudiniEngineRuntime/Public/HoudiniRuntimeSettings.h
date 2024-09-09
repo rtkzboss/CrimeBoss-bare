@@ -18,6 +18,8 @@ UCLASS(BlueprintType, DefaultConfig, Config=Engine)
 class HOUDINIENGINERUNTIME_API UHoudiniRuntimeSettings : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniRuntimeSettings();
+
     UPROPERTY(EditAnywhere, GlobalConfig)
     TEnumAsByte<EHoudiniRuntimeSettingsSessionType> SessionType;
     
@@ -237,7 +239,5 @@ public:
     UPROPERTY(EditAnywhere, GlobalConfig)
     FString AudioDsoSearchPath;
     
-    UHoudiniRuntimeSettings();
-
 };
 

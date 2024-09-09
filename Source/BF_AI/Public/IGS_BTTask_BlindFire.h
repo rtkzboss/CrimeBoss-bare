@@ -7,10 +7,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_BlindFire : public UIGS_BTTask_FireBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_BlindFire();
+
     UPROPERTY(EditDefaultsOnly)
     float Distance;
     
-    UIGS_BTTask_BlindFire();
-
 };
 

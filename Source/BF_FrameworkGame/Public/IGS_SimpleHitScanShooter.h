@@ -15,7 +15,15 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_SimpleHitScanShooter : public UIGS_SimpleShooter {
     GENERATED_BODY()
 public:
+    UIGS_SimpleHitScanShooter(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_HandleMiss(const FTransform& inShotTransform, const FHitResult& inFinalHit);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_HandleHitResults(const FTransform& inShotTransform, const TArray<FHitResult>& inPenetrations, const FHitResult& inFinalHit);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETraceTypeQuery> TraceChannel;
     
@@ -30,16 +38,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ImpactAILoudness;
-    
-public:
-    UIGS_SimpleHitScanShooter(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_HandleMiss(const FTransform& inShotTransform, const FHitResult& inFinalHit);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_HandleHitResults(const FTransform& inShotTransform, const TArray<FHitResult>& inPenetrations, const FHitResult& inFinalHit);
     
 };
 

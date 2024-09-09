@@ -33,68 +33,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_EventManagerComponent : public UIGS_EventManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FMETA_GraphVariableChange OnGraphVariableChange;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FMETA_OwnedAssetsChanged OnOwnedAssetsChanged;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, SaveGame)
-    TMap<FGameplayTag, FMETA_HeistersOnEvent> HeistersOnEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTagContainer ActivePlanningBoardsTags;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<FGameplayTag, EMETA_PlanningBoardItemStatus> PlanningBoardItemsStatuses;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EMETA_EventTime EventTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bPoolFrozen;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<FMETA_GraphNodeSave, FMETA_TimerNodeSaveData> TimerNodesSaveData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<FGameplayTag, int32> GraphVariables;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<FMETA_GraphNodeSave, FMETA_LoopBranchNodeSaveData> LoopBranchNodesSaveData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bDataLoaded;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus> FinishedGraphsResults;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<TSoftObjectPtr<UStoryGraphManager>, int32> PreparedPlotlines;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<TSoftObjectPtr<UStoryGraphManager>, TSoftObjectPtr<UStoryGraphManager>> ParentGraphs;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<FGameplayTag, int32> EconomyGraphVaribales;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bShouldCallEndDay;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bEndDayIsRunning;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool AreGraphsInProcessing;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool RequestForGraphsReprocess;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftObjectPtr<UMETA_BaseStoryGraphManager> LocalRemovedGraph;
-    
-public:
     UMETA_EventManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
@@ -203,6 +141,67 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool AddHeisterToEvent(FGameplayTag inEventTag, const FMETA_CharacterID inCharacterID, bool inUseInternalCheckForState);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FMETA_GraphVariableChange OnGraphVariableChange;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FMETA_OwnedAssetsChanged OnOwnedAssetsChanged;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, SaveGame)
+    TMap<FGameplayTag, FMETA_HeistersOnEvent> HeistersOnEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTagContainer ActivePlanningBoardsTags;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<FGameplayTag, EMETA_PlanningBoardItemStatus> PlanningBoardItemsStatuses;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    EMETA_EventTime EventTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bPoolFrozen;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<FMETA_GraphNodeSave, FMETA_TimerNodeSaveData> TimerNodesSaveData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<FGameplayTag, int32> GraphVariables;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<FMETA_GraphNodeSave, FMETA_LoopBranchNodeSaveData> LoopBranchNodesSaveData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bDataLoaded;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus> FinishedGraphsResults;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<TSoftObjectPtr<UStoryGraphManager>, int32> PreparedPlotlines;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<TSoftObjectPtr<UStoryGraphManager>, TSoftObjectPtr<UStoryGraphManager>> ParentGraphs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<FGameplayTag, int32> EconomyGraphVaribales;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bShouldCallEndDay;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bEndDayIsRunning;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool AreGraphsInProcessing;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool RequestForGraphsReprocess;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSoftObjectPtr<UMETA_BaseStoryGraphManager> LocalRemovedGraph;
     
 };
 

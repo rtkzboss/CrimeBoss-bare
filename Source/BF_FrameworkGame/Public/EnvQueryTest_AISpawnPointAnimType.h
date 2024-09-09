@@ -8,6 +8,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UEnvQueryTest_AISpawnPointAnimType : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_AISpawnPointAnimType();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue AnimType;
@@ -15,8 +17,5 @@ private:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue CheckAnimType;
     
-public:
-    UEnvQueryTest_AISpawnPointAnimType();
-
 };
 

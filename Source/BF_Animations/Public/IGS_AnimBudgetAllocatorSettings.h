@@ -8,6 +8,11 @@ UCLASS(BlueprintType)
 class BF_ANIMATIONS_API UIGS_AnimBudgetAllocatorSettings : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_AnimBudgetAllocatorSettings();
+
+    UFUNCTION(BlueprintCallable)
+    void SetParameters(const FAnimationBudgetAllocatorParameters& inParameters);
+    
     UPROPERTY(EditAnywhere)
     float MinimumSignificance;
     
@@ -16,11 +21,6 @@ public:
     
     UPROPERTY(EditAnywhere)
     float PauseAnimSignificanceThreshold;
-    
-    UIGS_AnimBudgetAllocatorSettings();
-
-    UFUNCTION(BlueprintCallable)
-    void SetParameters(const FAnimationBudgetAllocatorParameters& inParameters);
     
 };
 

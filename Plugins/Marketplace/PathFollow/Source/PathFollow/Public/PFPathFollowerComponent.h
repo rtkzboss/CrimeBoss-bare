@@ -30,6 +30,100 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PATHFOLLOW_API UPFPathFollowerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UPFPathFollowerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void UpdateAutoRotationPoints();
+    
+    UFUNCTION(BlueprintCallable)
+    void Stop();
+    
+private:
+    UFUNCTION()
+    void StartImpl();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void Start(float StartDelay);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetPathToFollow(USplineComponent* Spline);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetPathOwner(AActor* PathOwner);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMaxFollowerSpeed(float MaxSpeed);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCurrentDistance(float NewDistance);
+    
+    UFUNCTION(BlueprintCallable)
+    void Reverse(bool Reverse);
+    
+    UFUNCTION(BlueprintCallable)
+    void Pause();
+    
+    UFUNCTION(BlueprintNativeEvent)
+    FRotator ModifyFinalRotation(const FRotator& NewRotation);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    FVector ModifyFinalLocation(const FVector& NewLocation);
+    
+    UFUNCTION(BlueprintPure)
+    bool HasPath() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetSpeedAtSpeedPoint(int32 PointIndex) const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetSpeedAtDistance(float Distance) const;
+    
+    UFUNCTION(BlueprintPure)
+    FRotator GetRotationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const;
+    
+    UFUNCTION(BlueprintCallable)
+    UPFPathComponent* GetPathToFollow();
+    
+    UFUNCTION(BlueprintPure)
+    AActor* GetPathOwner() const;
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetMoveDirection() const;
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetLocationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const;
+    
+    UFUNCTION(BlueprintCallable)
+    FPFEventPoints GetEventPoints();
+    
+    UFUNCTION(BlueprintCallable)
+    UEventPointDelegateHolder* GetEventPointDelegateByName(const FName& Name);
+    
+    UFUNCTION(BlueprintCallable)
+    UEventPointDelegateHolder* GetEventPointDelegateByIndex(int32 Index);
+    
+    UFUNCTION(BlueprintCallable)
+    UEventPointDelegateHolder* GetEventPointDelegateAll();
+    
+    UFUNCTION(BlueprintCallable)
+    FEventPoint GetEventPointByName(const FName& Name);
+    
+    UFUNCTION(BlueprintCallable)
+    void FollowPath(float FollowStep);
+    
+    UFUNCTION(BlueprintCallable)
+    bool EventPointExistByName(const FName& Name);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    FRotator ComputeLookAtRotation(USceneComponent* TargetComponent, const FVector& FollowerLocation);
+    
+    UFUNCTION()
+    void ComputeAutoRotationPoints();
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearMaxFollowerSpeed();
+    
     UPROPERTY(BlueprintAssignable)
     FReachedEndSignature OnReachedEnd;
     
@@ -227,101 +321,6 @@ private:
     
     UPROPERTY()
     bool MaxFollowerSpeedSet;
-    
-public:
-    UPFPathFollowerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION()
-    void UpdateAutoRotationPoints();
-    
-    UFUNCTION(BlueprintCallable)
-    void Stop();
-    
-private:
-    UFUNCTION()
-    void StartImpl();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void Start(float NewStartDelay);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetPathToFollow(USplineComponent* Spline);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetPathOwner(AActor* NewPathOwner);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMaxFollowerSpeed(float MaxSpeed);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCurrentDistance(float NewDistance);
-    
-    UFUNCTION(BlueprintCallable)
-    void Reverse(bool Reverse);
-    
-    UFUNCTION(BlueprintCallable)
-    void Pause();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    FRotator ModifyFinalRotation(const FRotator& NewRotation);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    FVector ModifyFinalLocation(const FVector& NewLocation);
-    
-    UFUNCTION(BlueprintPure)
-    bool HasPath() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetSpeedAtSpeedPoint(int32 PointIndex) const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetSpeedAtDistance(float Distance) const;
-    
-    UFUNCTION(BlueprintPure)
-    FRotator GetRotationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const;
-    
-    UFUNCTION(BlueprintCallable)
-    UPFPathComponent* GetPathToFollow();
-    
-    UFUNCTION(BlueprintPure)
-    AActor* GetPathOwner() const;
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetMoveDirection() const;
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetLocationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const;
-    
-    UFUNCTION(BlueprintCallable)
-    FPFEventPoints GetEventPoints();
-    
-    UFUNCTION(BlueprintCallable)
-    UEventPointDelegateHolder* GetEventPointDelegateByName(const FName& Name);
-    
-    UFUNCTION(BlueprintCallable)
-    UEventPointDelegateHolder* GetEventPointDelegateByIndex(int32 Index);
-    
-    UFUNCTION(BlueprintCallable)
-    UEventPointDelegateHolder* GetEventPointDelegateAll();
-    
-    UFUNCTION(BlueprintCallable)
-    FEventPoint GetEventPointByName(const FName& Name);
-    
-    UFUNCTION(BlueprintCallable)
-    void FollowPath(float FollowStep);
-    
-    UFUNCTION(BlueprintCallable)
-    bool EventPointExistByName(const FName& Name);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    FRotator ComputeLookAtRotation(USceneComponent* TargetComponent, const FVector& FollowerLocation);
-    
-    UFUNCTION()
-    void ComputeAutoRotationPoints();
-    
-    UFUNCTION(BlueprintCallable)
-    void ClearMaxFollowerSpeed();
     
 };
 

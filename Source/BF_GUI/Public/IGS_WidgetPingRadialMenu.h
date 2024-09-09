@@ -14,6 +14,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetPingRadialMenu : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetPingRadialMenu();
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     TArray<UIGS_WidgetPingRadialSlice*> RadialMenuSlices;
@@ -63,8 +65,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector2D AnalogMousePos;
     
-public:
-    UIGS_WidgetPingRadialMenu();
-
 };
 

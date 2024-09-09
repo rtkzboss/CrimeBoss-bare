@@ -11,12 +11,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_WeakSpotComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_WeakSpotSignature OnWeakSpotCompromisedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_WeakSpotObjectStatusHealthChangedEventSignature OnWeakSpotHealthChangedEvent;
-    
     UIGS_WeakSpotComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -30,6 +24,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     bool AddWeakSpot(const UPrimitiveComponent* inWeakSpotReference, const float inHealth, const bool inEnableAutomatically, const float inAIDamageMultiplier);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WeakSpotSignature OnWeakSpotCompromisedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WeakSpotObjectStatusHealthChangedEventSignature OnWeakSpotHealthChangedEvent;
     
 };
 

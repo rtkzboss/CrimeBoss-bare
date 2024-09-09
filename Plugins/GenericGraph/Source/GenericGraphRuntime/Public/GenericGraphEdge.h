@@ -10,6 +10,11 @@ UCLASS(BlueprintType)
 class GENERICGRAPHRUNTIME_API UGenericGraphEdge : public UObject {
     GENERATED_BODY()
 public:
+    UGenericGraphEdge();
+
+    UFUNCTION(BlueprintPure)
+    UGenericGraph* GetGraph() const;
+    
     UPROPERTY(VisibleAnywhere)
     UGenericGraph* Graph;
     
@@ -18,11 +23,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* EndNode;
-    
-    UGenericGraphEdge();
-
-    UFUNCTION(BlueprintPure)
-    UGenericGraph* GetGraph() const;
     
 };
 

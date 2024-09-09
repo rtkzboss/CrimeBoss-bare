@@ -12,6 +12,14 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_AITransitionObjectBase : public AActor, public IIGS_BreachInterface {
     GENERATED_BODY()
 public:
+    AIGS_AITransitionObjectBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetupNavlink(UBoxComponent* helpersBox) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void SetNavlinkLinkEnabled(bool InValue);
+    
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_NavLinkComponentFramework* NavLink;
     
@@ -21,15 +29,6 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_GetActorByGameplayTagComponent* m_GetActorByGameplayTagComponent;
-    
-public:
-    AIGS_AITransitionObjectBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetupNavlink(UBoxComponent* helpersBox) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void SetNavlinkLinkEnabled(bool InValue);
     
 
     // Fix for true pure virtual functions not being implemented

@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTService_GR_TrackGrenade : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_GR_TrackGrenade();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float SafePeriod;
     
-public:
-    UBTService_GR_TrackGrenade();
-
 };
 

@@ -9,6 +9,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_AIWaypointsSe
 class BF_FRAMEWORKBASE_API UIGS_AIWaypointMaterialsDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_AIWaypointMaterialsDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> TeamFlagCivilianMat;
     
@@ -33,7 +35,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> TeamFlagBackupMat;
     
-    UIGS_AIWaypointMaterialsDevSettings();
-
 };
 

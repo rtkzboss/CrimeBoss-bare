@@ -11,6 +11,11 @@ UCLASS()
 class PAYBACK_API UIGS_PlayIdleChatterAsyncAction : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
+    UIGS_PlayIdleChatterAsyncAction();
+
+    UFUNCTION(BlueprintCallable)
+    static UIGS_PlayIdleChatterAsyncAction* PlayIdleChatterAsyncAction(TArray<AIGS_GameCharacterFramework*> inCharacters);
+    
     UPROPERTY(BlueprintAssignable)
     FIdleChatterOutputPin Succeed;
     
@@ -20,12 +25,6 @@ public:
 protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_Characters;
-    
-public:
-    UIGS_PlayIdleChatterAsyncAction();
-
-    UFUNCTION(BlueprintCallable)
-    static UIGS_PlayIdleChatterAsyncAction* PlayIdleChatterAsyncAction(TArray<AIGS_GameCharacterFramework*> inCharacters);
     
 };
 

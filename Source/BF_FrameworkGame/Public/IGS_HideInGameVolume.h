@@ -7,6 +7,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_HideInGameVolume : public AVolume {
     GENERATED_BODY()
 public:
+    AIGS_HideInGameVolume(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetObjectsHidden(bool inHidden);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDisableTick;
     
@@ -15,11 +20,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName RequiredTag;
-    
-    AIGS_HideInGameVolume(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetObjectsHidden(bool inHidden);
     
 };
 

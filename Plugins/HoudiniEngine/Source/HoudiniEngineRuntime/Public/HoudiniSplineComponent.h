@@ -13,6 +13,8 @@ UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class HOUDINIENGINERUNTIME_API UHoudiniSplineComponent : public USceneComponent, public IHoudiniEngineCopyPropertiesInterface {
     GENERATED_BODY()
 public:
+    UHoudiniSplineComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY()
     TArray<FTransform> CurvePoints;
     
@@ -74,9 +76,6 @@ private:
     UPROPERTY()
     FString PartName;
     
-public:
-    UHoudiniSplineComponent(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

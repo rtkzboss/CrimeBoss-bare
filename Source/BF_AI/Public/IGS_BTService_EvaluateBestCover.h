@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateBestCover : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateBestCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
@@ -26,8 +28,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float RefreshDelay;
     
-public:
-    UIGS_BTService_EvaluateBestCover();
-
 };
 

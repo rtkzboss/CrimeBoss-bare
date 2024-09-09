@@ -11,6 +11,8 @@ UCLASS()
 class BF_ANIMATIONS_API UPlayerDeathAnimationDatabase : public UDataAsset {
     GENERATED_BODY()
 public:
+    UPlayerDeathAnimationDatabase();
+
     UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet FrontInfo;
     
@@ -158,7 +160,5 @@ public:
     UPROPERTY(EditAnywhere)
     TArray<FName> SoundNotifyBones;
     
-    UPlayerDeathAnimationDatabase();
-
 };
 

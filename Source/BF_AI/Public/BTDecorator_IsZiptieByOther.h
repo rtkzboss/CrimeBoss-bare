@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsZiptieByOther : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsZiptieByOther();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CivToZiptieKey;
     
-public:
-    UBTDecorator_IsZiptieByOther();
-
 };
 

@@ -11,6 +11,11 @@ UCLASS(Abstract)
 class KANTANCHARTSUMG_API UKantanCategoryChart : public UKantanChart {
     GENERATED_BODY()
 public:
+    UKantanCategoryChart();
+
+    UFUNCTION(BlueprintCallable)
+    void AddCategoryStyleOverride(FName CategoryId, FLinearColor Color);
+    
     UPROPERTY(EditAnywhere)
     bool bAutoPerCategoryStyles;
     
@@ -19,11 +24,6 @@ public:
     
     UPROPERTY(EditAnywhere)
     TArray<FCategoryStyleManualMapping> ManualStyleMappings;
-    
-    UKantanCategoryChart();
-
-    UFUNCTION(BlueprintCallable)
-    void AddCategoryStyleOverride(FName CategoryId, FLinearColor Color);
     
 };
 

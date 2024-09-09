@@ -13,6 +13,8 @@ UCLASS(BlueprintType, DefaultConfig, Config=Game)
 class BF_INPUT_API UIGS_VirtualCursorSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_VirtualCursorSettings();
+
     UPROPERTY(Config, EditAnywhere)
     FRuntimeFloatCurve VirtualCursorAccelerationCurve;
     
@@ -76,7 +78,5 @@ public:
     UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
     bool bUseSoftwareCursor;
     
-    UIGS_VirtualCursorSettings();
-
 };
 

@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsFar : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsFar();
+
 protected:
     UPROPERTY(EditAnywhere)
     float Addon;
     
-public:
-    UBTDecorator_IsFar();
-
 };
 

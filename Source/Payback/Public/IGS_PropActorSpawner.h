@@ -10,14 +10,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropActorSpawner : public USceneComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FPropActorInfoStruct PropActorInfo;
-    
-    UPROPERTY()
-    AActor* m_SpawnedActor;
-    
-public:
     UIGS_PropActorSpawner(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -28,6 +20,13 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     bool Despawn() const;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FPropActorInfoStruct PropActorInfo;
+    
+    UPROPERTY()
+    AActor* m_SpawnedActor;
     
 };
 

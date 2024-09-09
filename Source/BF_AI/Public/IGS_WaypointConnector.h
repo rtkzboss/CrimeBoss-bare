@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API AIGS_WaypointConnector : public AIGS_WaypointFramework {
     GENERATED_BODY()
 public:
+    AIGS_WaypointConnector(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointBase* NextPoint;
     
@@ -24,8 +26,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_CustomBoxComponent* BoxComponent;
     
-public:
-    AIGS_WaypointConnector(const FObjectInitializer& ObjectInitializer);
-
 };
 

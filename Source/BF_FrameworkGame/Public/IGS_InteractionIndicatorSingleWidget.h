@@ -9,15 +9,6 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_InteractionIndicatorSingleWidget : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float FadeDistance;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bOnScreen;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float Angle;
-    
     UIGS_InteractionIndicatorSingleWidget();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -31,6 +22,15 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     void CanvasTick(UIGS_InteractiveComponent* inInteraction);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float FadeDistance;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bOnScreen;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float Angle;
     
 };
 

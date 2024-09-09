@@ -9,6 +9,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_GUI_API UIGS_HUDKantanDatasourceHolder : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_HUDKantanDatasourceHolder(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     UKantanSimpleCartesianDatasource* PressureGraphDataSource;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName PressureGraphExpectedId_Value;
     
-    UIGS_HUDKantanDatasourceHolder(const FObjectInitializer& ObjectInitializer);
-
 };
 

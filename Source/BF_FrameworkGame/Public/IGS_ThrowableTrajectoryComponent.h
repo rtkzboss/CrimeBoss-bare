@@ -11,9 +11,6 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ThrowableTrajectoryComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnChangeShowPredictionSignature OnChangeShowPrediction;
-    
     UIGS_ThrowableTrajectoryComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -21,6 +18,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CallOnChangeShowPrediction(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnChangeShowPredictionSignature OnChangeShowPrediction;
     
 };
 

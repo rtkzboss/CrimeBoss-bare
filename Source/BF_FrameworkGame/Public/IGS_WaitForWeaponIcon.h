@@ -15,14 +15,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForWeaponIcon : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_WeaponIconReadyOutputPin WhenWeaponIconReady;
-    
-private:
-    UPROPERTY()
-    TSubclassOf<UMETA_WeaponInventoryObject> m_WeaponObject;
-    
-public:
     UIGS_WaitForWeaponIcon();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
@@ -31,6 +23,14 @@ public:
 private:
     UFUNCTION()
     void ExecuteOnIconReady(TSoftObjectPtr<UTexture2D> inWeaponIcon);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WeaponIconReadyOutputPin WhenWeaponIconReady;
+    
+private:
+    UPROPERTY()
+    TSubclassOf<UMETA_WeaponInventoryObject> m_WeaponObject;
     
 };
 

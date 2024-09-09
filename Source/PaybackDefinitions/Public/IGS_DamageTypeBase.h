@@ -12,6 +12,8 @@ UCLASS()
 class PAYBACKDEFINITIONS_API UIGS_DamageTypeBase : public UDamageType {
     GENERATED_BODY()
 public:
+    UIGS_DamageTypeBase();
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_DamageType DamageType;
     
@@ -45,7 +47,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UGameplayEffect> GameplayEffectToApply;
     
-    UIGS_DamageTypeBase();
-
 };
 

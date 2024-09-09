@@ -8,16 +8,14 @@ UCLASS()
 class BF_AI_API AIGS_PoliceVehicleSpawner : public AIGS_VehicleSpawner {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bSpawnAfterAlarmed;
-    
-public:
     AIGS_PoliceVehicleSpawner(const FObjectInitializer& ObjectInitializer);
 
 protected:
     UFUNCTION()
     void OnAlarmed(EIGS_AlarmReason inReason);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bSpawnAfterAlarmed;
     
 };
 

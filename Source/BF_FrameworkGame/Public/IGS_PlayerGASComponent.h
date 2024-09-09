@@ -10,12 +10,11 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerGASComponent : public UIGS_GASComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_PlayerGASComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UGameplayEffect>> CharacterAttributeGEs;
     
-public:
-    UIGS_PlayerGASComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

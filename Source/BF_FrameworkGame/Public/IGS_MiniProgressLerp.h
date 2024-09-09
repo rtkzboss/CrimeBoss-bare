@@ -13,12 +13,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_MiniProgressLerp : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FMiniLerpOutputPin Update;
-    
-    UPROPERTY(BlueprintAssignable)
-    FMiniLerpOutputFinishPin Finished;
-    
     UIGS_MiniProgressLerp();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
@@ -40,6 +34,12 @@ private:
 public:
     UFUNCTION(BlueprintCallable)
     void Cancel();
+    
+    UPROPERTY(BlueprintAssignable)
+    FMiniLerpOutputPin Update;
+    
+    UPROPERTY(BlueprintAssignable)
+    FMiniLerpOutputFinishPin Finished;
     
 };
 

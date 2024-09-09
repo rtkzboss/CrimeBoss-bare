@@ -10,6 +10,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputObject : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniInputObject();
+
     UPROPERTY()
     TSoftObjectPtr<UObject> InputObject;
     
@@ -47,8 +49,5 @@ protected:
     UPROPERTY()
     bool bCanDeleteHoudiniNodes;
     
-public:
-    UHoudiniInputObject();
-
 };
 

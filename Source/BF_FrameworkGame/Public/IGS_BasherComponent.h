@@ -9,6 +9,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BasherComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_BasherComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_WeaponBashAttackDefinition BashAttackDefinition;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETraceTypeQuery> TraceChannel;
     
-public:
-    UIGS_BasherComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

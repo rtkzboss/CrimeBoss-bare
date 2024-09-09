@@ -10,10 +10,10 @@ UCLASS(EditInlineNew, Config=Game)
 class BF_AI_API UIGS_AISenseConfig_Danger : public UAISenseConfig {
     GENERATED_BODY()
 public:
+    UIGS_AISenseConfig_Danger();
+
     UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly, NoClear)
     TSubclassOf<UIGS_AISense_Danger> Implementation;
     
-    UIGS_AISenseConfig_Danger();
-
 };
 

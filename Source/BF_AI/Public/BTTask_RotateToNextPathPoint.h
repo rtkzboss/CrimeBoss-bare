@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTTask_RotateToNextPathPoint : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_RotateToNextPathPoint();
+
 protected:
     UPROPERTY(EditAnywhere)
     float AccaptedAngle;
     
-public:
-    UBTTask_RotateToNextPathPoint();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_GetOutOfAgent : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_GetOutOfAgent();
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
     
-public:
-    UIGS_BTTask_GetOutOfAgent();
-
 };
 

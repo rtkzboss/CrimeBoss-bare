@@ -8,13 +8,13 @@ UCLASS()
 class CUSTOMIZABLEOBJECT_API UMutableMaskOutCache : public UObject {
     GENERATED_BODY()
 public:
+    UMutableMaskOutCache();
+
     UPROPERTY()
     TMap<FString, FString> Materials;
     
     UPROPERTY()
     TMap<FString, FMaskOutTexture> Textures;
     
-    UMutableMaskOutCache();
-
 };
 

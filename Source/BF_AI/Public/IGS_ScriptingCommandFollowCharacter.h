@@ -13,9 +13,6 @@ UCLASS()
 class BF_AI_API UIGS_ScriptingCommandFollowCharacter : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FScriptingCommandOutputPin Finished;
-    
     UIGS_ScriptingCommandFollowCharacter();
 
     UFUNCTION(BlueprintCallable)
@@ -24,6 +21,10 @@ public:
 private:
     UFUNCTION()
     void OnFinished(AActor* inNewFollowActor);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FScriptingCommandOutputPin Finished;
     
 };
 

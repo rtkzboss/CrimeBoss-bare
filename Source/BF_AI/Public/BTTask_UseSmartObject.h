@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTTask_UseSmartObject : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_UseSmartObject();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SmartObjectBBKey;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY()
     AActor* SmartObject;
     
-public:
-    UBTTask_UseSmartObject();
-
 };
 

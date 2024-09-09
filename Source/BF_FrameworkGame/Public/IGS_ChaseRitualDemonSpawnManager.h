@@ -15,6 +15,44 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ChaseRitualDemonSpawnManager : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_ChaseRitualDemonSpawnManager(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void TryToSpawnDemon();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void StartLogic();
+    
+protected:
+    UFUNCTION()
+    void ResetPlayerInputDetection();
+    
+    UFUNCTION()
+    void OnSquadSpawnedEvent(TArray<AIGS_GameCharacterFramework*> inSquadMembers);
+    
+    UFUNCTION(BlueprintCallable)
+    void DemonVanished();
+    
+public:
+    UFUNCTION(BlueprintImplementableEvent)
+    void DemonVanish(AIGS_GameCharacterFramework* VanishingDemon);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void DemonSpawned(AIGS_GameCharacterFramework* SpawnedDemon);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void DemonLogicStarted();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void DemonLogicFinished();
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void DemonDied();
+    
+public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSoftClassPtr<AIGS_GameCharacterFramework>> DemonSpawnClasses;
     
@@ -76,44 +114,6 @@ private:
     
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     AIGS_GameCharacterFramework* PlayerCharacter;
-    
-public:
-    AIGS_ChaseRitualDemonSpawnManager(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void TryToSpawnDemon();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void StartLogic();
-    
-protected:
-    UFUNCTION()
-    void ResetPlayerInputDetection();
-    
-    UFUNCTION()
-    void OnSquadSpawnedEvent(TArray<AIGS_GameCharacterFramework*> inSquadMembers);
-    
-    UFUNCTION(BlueprintCallable)
-    void DemonVanished();
-    
-public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void DemonVanish(AIGS_GameCharacterFramework* VanishingDemon);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void DemonSpawned(AIGS_GameCharacterFramework* SpawnedDemon);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void DemonLogicStarted();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void DemonLogicFinished();
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void DemonDied();
     
 };
 

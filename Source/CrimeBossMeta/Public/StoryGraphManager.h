@@ -10,6 +10,11 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UStoryGraphManager : public UMETA_BaseStoryGraphManager {
     GENERATED_BODY()
 public:
+    UStoryGraphManager();
+
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    UMETA_StoryGraph* GetCurrentGraph(UObject* inWCO);
+    
 protected:
     UPROPERTY()
     TMap<FString, UMETA_StoryGraph*> GraphVersions;
@@ -25,12 +30,6 @@ protected:
     
     UPROPERTY()
     TArray<FString> DeprecatedVersions;
-    
-public:
-    UStoryGraphManager();
-
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
-    UMETA_StoryGraph* GetCurrentGraph(UObject* inWCO);
     
 };
 

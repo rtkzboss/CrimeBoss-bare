@@ -13,7 +13,15 @@ UCLASS()
 class BF_AI_API AIGS_VehicleGenerator : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_VehicleGenerator(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION()
+    void OnVehicleDriveFinished(AIGS_VehicleBase* inVehicle);
+    
+    UFUNCTION()
+    void OnAlarmed(EIGS_AlarmReason inReason);
+    
     UPROPERTY(EditDefaultsOnly)
     TArray<FColor> PossibleColors;
     
@@ -40,16 +48,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float CarMaxSpeedMinRangeValue;
-    
-public:
-    AIGS_VehicleGenerator(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnVehicleDriveFinished(AIGS_VehicleBase* inVehicle);
-    
-    UFUNCTION()
-    void OnAlarmed(EIGS_AlarmReason inReason);
     
 };
 

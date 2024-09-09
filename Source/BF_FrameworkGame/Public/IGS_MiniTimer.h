@@ -11,12 +11,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_MiniTimer : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FMiniTimerOutputPin Update;
-    
-    UPROPERTY(BlueprintAssignable)
-    FMiniTimerOutputPin Finished;
-    
     UIGS_MiniTimer();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
@@ -28,6 +22,13 @@ private:
     
     UFUNCTION()
     void ExecFinish();
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FMiniTimerOutputPin Update;
+    
+    UPROPERTY(BlueprintAssignable)
+    FMiniTimerOutputPin Finished;
     
 };
 

@@ -15,6 +15,17 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LockComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_LockComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetLockState(bool inLocked);
+    
+    UFUNCTION(BlueprintPure)
+    bool GetLockState() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void GetLockedStateForPlayer(AIGS_GameCharacterFramework* inInstigator, EIGS_PlayerLockState& outBranches);
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bLocked;
     
@@ -38,17 +49,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_OnLockStateChanged OnLockStateChanged;
-    
-    UIGS_LockComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetLockState(bool inLocked);
-    
-    UFUNCTION(BlueprintPure)
-    bool GetLockState() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void GetLockedStateForPlayer(AIGS_GameCharacterFramework* inInstigator, EIGS_PlayerLockState& outBranches);
     
 };
 

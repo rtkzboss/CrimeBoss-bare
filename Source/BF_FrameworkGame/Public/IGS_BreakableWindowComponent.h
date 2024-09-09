@@ -18,6 +18,20 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_BreakableWindowComponent : public UIGS_BreakableMeshComponent, public IIGS_GlassInterface {
     GENERATED_BODY()
 public:
+    UIGS_BreakableWindowComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void RefreshDecalData(int32 inDecalIndex, FVector inDecalLocation, FVector inDecalRotation);
+    
+    UFUNCTION()
+    void OnRep_SynchronizeDecals();
+    
+    UFUNCTION()
+    void OnComponentHit_Implementation(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
+    
+    UFUNCTION()
+    void OnComponentBroken_Implementation(AActor* inDmgCauser);
+    
     UPROPERTY(Replicated)
     TArray<FVector4> mR_DecalsLocation;
     
@@ -72,22 +86,8 @@ public:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USkinnedDecalSampler* SkinnedDecalSampler;
     
-    UIGS_BreakableWindowComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void RefreshDecalData(int32 inDecalIndex, FVector inDecalLocation, FVector inDecalRotation);
-    
-    UFUNCTION()
-    void OnRep_SynchronizeDecals();
-    
-    UFUNCTION()
-    void OnComponentHit_Implementation(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
-    
-    UFUNCTION()
-    void OnComponentBroken_Implementation(AActor* inDmgCauser);
-    
 
     // Fix for true pure virtual functions not being implemented
 };

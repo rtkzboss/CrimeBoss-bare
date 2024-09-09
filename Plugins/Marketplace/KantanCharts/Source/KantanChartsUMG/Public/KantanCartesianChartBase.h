@@ -19,33 +19,6 @@ UCLASS(Abstract)
 class KANTANCHARTSUMG_API UKantanCartesianChartBase : public UKantanChart {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FKantanCartesianChartStyle WidgetStyle;
-    
-    UPROPERTY(EditAnywhere)
-    FKantanCartesianPlotScale PlotScale;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EKantanDataPointSize DataPointSize;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FCartesianAxisConfig XAxisCfg;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FCartesianAxisConfig YAxisCfg;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FMargin AxisTitlePadding;
-    
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
-    UKantanSeriesStyleSet* SeriesStyleSet;
-    
-    UPROPERTY(EditAnywhere)
-    TArray<FSeriesStyleManualMapping> ManualStyleMappings;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
-    bool bAntiAlias;
-    
     UKantanCartesianChartBase();
 
     UFUNCTION(BlueprintCallable)
@@ -74,6 +47,33 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddSeriesStyleOverride(FName SeriesId, UKantanPointStyle* PointStyle, FLinearColor Color);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FKantanCartesianChartStyle WidgetStyle;
+    
+    UPROPERTY(EditAnywhere)
+    FKantanCartesianPlotScale PlotScale;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    EKantanDataPointSize DataPointSize;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FCartesianAxisConfig XAxisCfg;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FCartesianAxisConfig YAxisCfg;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FMargin AxisTitlePadding;
+    
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UKantanSeriesStyleSet* SeriesStyleSet;
+    
+    UPROPERTY(EditAnywhere)
+    TArray<FSeriesStyleManualMapping> ManualStyleMappings;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    bool bAntiAlias;
     
 };
 

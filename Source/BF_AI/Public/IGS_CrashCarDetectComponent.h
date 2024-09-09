@@ -16,6 +16,19 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_CrashCarDetectComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_CrashCarDetectComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnCrashDetectComponentBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inbFromSweep, const FHitResult& inSweepResult);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void CallOnStartCrashDelegate(FHitResult inHitResult);
+    
+    UFUNCTION(BlueprintCallable)
+    void CallOnEndCrashDelegate();
+    
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EIGS_CrashDetectType CrashDetectType;
     
@@ -34,20 +47,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UShapeComponent* CrashDetectCollision;
-    
-public:
-    UIGS_CrashCarDetectComponent(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnCrashDetectComponentBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inbFromSweep, const FHitResult& inSweepResult);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void CallOnStartCrashDelegate(FHitResult inHitResult);
-    
-    UFUNCTION(BlueprintCallable)
-    void CallOnEndCrashDelegate();
     
 };
 

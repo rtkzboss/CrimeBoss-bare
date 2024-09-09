@@ -11,6 +11,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_DetectorStatusWidgetManager : public UIGS_WorldSpaceWidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_DetectorStatusWidgetManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     AIGS_DetectorBase* DetectorPawn;
@@ -24,8 +26,5 @@ protected:
     UPROPERTY()
     AActor* Target;
     
-public:
-    UIGS_DetectorStatusWidgetManager(const FObjectInitializer& ObjectInitializer);
-
 };
 

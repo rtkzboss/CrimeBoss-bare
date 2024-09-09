@@ -11,15 +11,14 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_PingableManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FIGS_PingablePair> Pingables;
-    
-public:
     UIGS_PingableManager();
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_PingableManager* Instance(const UObject* inWorldContextObject);
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<FIGS_PingablePair> Pingables;
     
 };
 

@@ -7,17 +7,6 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UMETA_GenericCharactersNames : public UDataAsset {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FText> MaleFirstNames;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FText> FemaleFirstNames;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FText> Surnames;
-    
-public:
     UMETA_GenericCharactersNames();
 
     UFUNCTION(BlueprintCallable)
@@ -37,6 +26,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     TArray<FText> GetFemaleNames();
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FText> MaleFirstNames;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FText> FemaleFirstNames;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FText> Surnames;
     
 };
 

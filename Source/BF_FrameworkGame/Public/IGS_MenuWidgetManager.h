@@ -12,12 +12,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_MenuWidgetManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    TArray<UIGS_MenuScreenWidget*> MenuWidgets;
-    
-    UPROPERTY()
-    bool bAlreadyReset;
-    
     UIGS_MenuWidgetManager();
 
     UFUNCTION()
@@ -31,6 +25,12 @@ public:
     
     UFUNCTION(BlueprintCallable)
     UIGS_MenuScreenWidget* GetWidgetByTag(FGameplayTag inTag);
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    TArray<UIGS_MenuScreenWidget*> MenuWidgets;
+    
+    UPROPERTY()
+    bool bAlreadyReset;
     
 };
 

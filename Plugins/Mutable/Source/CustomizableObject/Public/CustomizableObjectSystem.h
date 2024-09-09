@@ -13,25 +13,6 @@ UCLASS(BlueprintType)
 class CUSTOMIZABLEOBJECT_API UCustomizableObjectSystem : public UObject {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    TArray<FPendingReleaseSkeletalMeshInfo> PendingReleaseSkeletalMesh;
-    
-public:
-    UPROPERTY()
-    UCustomizableObjectImageProviderArray* PreviewExternalImageProvider;
-    
-private:
-    UPROPERTY()
-    TArray<UTexture2D*> ProtectedCachedTextures;
-    
-    UPROPERTY(Transient)
-    UCustomizableInstanceLODManagementBase* DefaultInstanceLODManagement;
-    
-    UPROPERTY(Transient)
-    UCustomizableInstanceLODManagementBase* CurrentInstanceLODManagement;
-    
-public:
     UCustomizableObjectSystem();
 
     UFUNCTION(BlueprintCallable)
@@ -60,6 +41,24 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool AreEnginePatchesPresent() const;
+    
+private:
+    UPROPERTY()
+    TArray<FPendingReleaseSkeletalMeshInfo> PendingReleaseSkeletalMesh;
+    
+public:
+    UPROPERTY()
+    UCustomizableObjectImageProviderArray* PreviewExternalImageProvider;
+    
+private:
+    UPROPERTY()
+    TArray<UTexture2D*> ProtectedCachedTextures;
+    
+    UPROPERTY(Transient)
+    UCustomizableInstanceLODManagementBase* DefaultInstanceLODManagement;
+    
+    UPROPERTY(Transient)
+    UCustomizableInstanceLODManagementBase* CurrentInstanceLODManagement;
     
 };
 

@@ -9,11 +9,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_AssetNotification : public UMETA_BaseNotification {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    UMETA_PlotlineAsset* m_Asset;
-    
-public:
     UMETA_AssetNotification();
 
     UFUNCTION(BlueprintCallable)
@@ -21,6 +16,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     UMETA_PlotlineAsset* GetAsset() const;
+    
+private:
+    UPROPERTY()
+    UMETA_PlotlineAsset* m_Asset;
     
 };
 

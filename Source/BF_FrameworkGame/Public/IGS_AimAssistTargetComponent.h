@@ -11,6 +11,17 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_AimAssistTargetComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AimAssistTargetComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetupSockets(const TArray<FIGS_AimAssistSocketData>& inAimTargetSockets);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetAimAssistTargetActive(bool InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void Init(UMeshComponent* InMesh);
+    
 protected:
     UPROPERTY(Instanced)
     UMeshComponent* MeshComponent;
@@ -23,18 +34,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_AimAssistSocketData> AimTargetSockets;
-    
-public:
-    UIGS_AimAssistTargetComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetupSockets(const TArray<FIGS_AimAssistSocketData>& inAimTargetSockets);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetAimAssistTargetActive(bool InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void Init(UMeshComponent* InMesh);
     
 };
 

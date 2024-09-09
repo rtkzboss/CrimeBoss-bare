@@ -8,6 +8,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_TempWaveManagerData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_TempWaveManagerData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AssaultTime;
     
@@ -53,7 +55,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_WaveHolder> WaveHolders;
     
-    UIGS_TempWaveManagerData();
-
 };
 

@@ -12,6 +12,8 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_BreachPointsBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_BreachPointsBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PointsColor;
@@ -22,8 +24,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* BreachingPointsRootComponent;
     
-public:
-    AIGS_BreachPointsBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

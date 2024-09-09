@@ -10,6 +10,8 @@ UCLASS(Abstract, EditInlineNew)
 class BF_GUI_API UIGS_WidgetItemStat : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetItemStat();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* StatNameTextBlock;
     
@@ -26,8 +28,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText StatValue;
     
-public:
-    UIGS_WidgetItemStat();
-
 };
 

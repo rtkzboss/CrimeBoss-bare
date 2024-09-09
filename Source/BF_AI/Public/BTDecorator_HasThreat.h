@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_HasThreat : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_HasThreat();
+
 protected:
     UPROPERTY(EditAnywhere)
     float Value;
     
-public:
-    UBTDecorator_HasThreat();
-
 };
 

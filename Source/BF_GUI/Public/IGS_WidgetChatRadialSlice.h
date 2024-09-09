@@ -8,15 +8,14 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetChatRadialSlice : public UIGS_WidgetRadialSliceBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    FIGS_ChatWheelDataRow SliceData;
-    
-public:
     UIGS_WidgetChatRadialSlice();
 
     UFUNCTION(BlueprintPure)
     FIGS_ChatWheelDataRow GetData() const;
+    
+protected:
+    UPROPERTY()
+    FIGS_ChatWheelDataRow SliceData;
     
 };
 

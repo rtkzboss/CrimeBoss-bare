@@ -15,6 +15,11 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_InjuryComponentAI : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_InjuryComponentAI(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void RequestReaction(bool inIsHeavy, FVector inHitDirection);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HeavyReactionTresholdMin;
@@ -75,12 +80,6 @@ protected:
     
     UPROPERTY()
     TArray<UObject*> m_Locks;
-    
-public:
-    UIGS_InjuryComponentAI(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void RequestReaction(bool inIsHeavy, FVector inHitDirection);
     
 };
 

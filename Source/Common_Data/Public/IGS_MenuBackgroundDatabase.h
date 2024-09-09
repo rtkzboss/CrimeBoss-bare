@@ -14,17 +14,6 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_MenuBackgroundDatabase : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MenuBackgroundDataRefreshed OnMenuBackgroundDataRefreshed;
-    
-protected:
-    UPROPERTY()
-    UIGS_MenuBackgroundMusicStatesDataAsset* AkStatesDataAsset;
-    
-    UPROPERTY()
-    bool isDebugEnabled;
-    
-public:
     UIGS_MenuBackgroundDatabase();
 
     UFUNCTION(BlueprintPure)
@@ -47,6 +36,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void EnableDebugMode();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MenuBackgroundDataRefreshed OnMenuBackgroundDataRefreshed;
+    
+protected:
+    UPROPERTY()
+    UIGS_MenuBackgroundMusicStatesDataAsset* AkStatesDataAsset;
+    
+    UPROPERTY()
+    bool isDebugEnabled;
     
 };
 

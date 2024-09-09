@@ -11,16 +11,16 @@ UCLASS(MinimalAPI)
 class UStartSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
+    UStartSessionCallbackProxyAdvanced();
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
+    static UStartSessionCallbackProxyAdvanced* StartAdvancedSession(const UObject* WorldContextObject);
+    
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnSuccess;
     
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnFailure;
-    
-    UStartSessionCallbackProxyAdvanced();
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
-    static UStartSessionCallbackProxyAdvanced* StartAdvancedSession(const UObject* WorldContextObject);
     
 };
 

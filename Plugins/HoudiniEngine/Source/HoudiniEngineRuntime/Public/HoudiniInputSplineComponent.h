@@ -8,6 +8,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputSplineComponent : public UHoudiniInputSceneComponent {
     GENERATED_BODY()
 public:
+    UHoudiniInputSplineComponent();
+
     UPROPERTY()
     int32 NumberOfSplineControlPoints;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY()
     TArray<FTransform> SplineControlPoints;
     
-    UHoudiniInputSplineComponent();
-
 };
 

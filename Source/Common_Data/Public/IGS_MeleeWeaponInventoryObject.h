@@ -10,10 +10,10 @@ UCLASS(Abstract)
 class COMMON_DATA_API UIGS_MeleeWeaponInventoryObject : public UIGS_WieldableInventoryObjectBase {
     GENERATED_BODY()
 public:
+    UIGS_MeleeWeaponInventoryObject();
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TSubclassOf<UMETA_WeaponInventoryObject> WeaponDefinitionObject;
     
-    UIGS_MeleeWeaponInventoryObject();
-
 };
 

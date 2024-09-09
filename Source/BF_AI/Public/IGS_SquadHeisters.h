@@ -11,6 +11,8 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_SquadHeisters : public AIGS_SquadBase {
     GENERATED_BODY()
 public:
+    AIGS_SquadHeisters(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     AIGS_RoomBase* LastAreaOfOperationsRoom;
@@ -33,8 +35,5 @@ protected:
     UPROPERTY()
     TArray<AIGS_RoomBase*> m_AreaOfOperations;
     
-public:
-    AIGS_SquadHeisters(const FObjectInitializer& ObjectInitializer);
-
 };
 

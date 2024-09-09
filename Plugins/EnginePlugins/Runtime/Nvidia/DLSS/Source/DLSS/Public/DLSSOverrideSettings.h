@@ -8,6 +8,8 @@ UCLASS(ProjectUserConfig, Config=Engine)
 class DLSS_API UDLSSOverrideSettings : public UObject {
     GENERATED_BODY()
 public:
+    UDLSSOverrideSettings();
+
     UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride EnableDLSSInEditorViewportsOverride;
     
@@ -23,7 +25,5 @@ public:
     UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride ShowDLSSSDebugOnScreenMessages;
     
-    UDLSSOverrideSettings();
-
 };
 

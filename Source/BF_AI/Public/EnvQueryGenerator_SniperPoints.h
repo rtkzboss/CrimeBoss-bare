@@ -11,13 +11,13 @@ UCLASS(EditInlineNew)
 class BF_AI_API UEnvQueryGenerator_SniperPoints : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UEnvQueryGenerator_SniperPoints();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> IgnoreSniperPoints;
     
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderBoolValue OnlyCanVisit;
     
-    UEnvQueryGenerator_SniperPoints();
-
 };
 

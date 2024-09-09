@@ -8,10 +8,10 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_RandomBranchNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_RandomBranchNode_SG();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_RandomWayChance> WaysChances;
     
-    UMETA_RandomBranchNode_SG();
-
 };
 

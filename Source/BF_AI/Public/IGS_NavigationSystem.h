@@ -11,11 +11,6 @@ UCLASS(NonTransient)
 class BF_AI_API UIGS_NavigationSystem : public UNavigationSystemV1, public INavEdgeProviderInterface {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Transient)
-    TSet<AIGS_NavHintVolume*> m_NavHints;
-    
-public:
     UIGS_NavigationSystem();
 
 private:
@@ -27,6 +22,9 @@ private:
     
     UFUNCTION(BlueprintPure, meta=(WorldContext=WorldContextObject))
     static bool IsNavigationAutoUpdatePaused(const UObject* WorldContextObject);
+    
+    UPROPERTY(Transient)
+    TSet<AIGS_NavHintVolume*> m_NavHints;
     
 
     // Fix for true pure virtual functions not being implemented

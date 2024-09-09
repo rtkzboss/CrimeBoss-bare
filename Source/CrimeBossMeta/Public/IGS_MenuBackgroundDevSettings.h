@@ -9,10 +9,10 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_CrimeBossMeta
 class CRIMEBOSSMETA_API UIGS_MenuBackgroundDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_MenuBackgroundDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> BossBackgroundDataTable;
     
-    UIGS_MenuBackgroundDevSettings();
-
 };
 

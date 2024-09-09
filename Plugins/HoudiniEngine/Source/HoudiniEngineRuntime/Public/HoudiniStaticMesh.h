@@ -15,50 +15,6 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniStaticMesh : public UObject {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    bool bHasNormals;
-    
-    UPROPERTY()
-    bool bHasTangents;
-    
-    UPROPERTY()
-    bool bHasColors;
-    
-    UPROPERTY()
-    uint32 NumUVLayers;
-    
-    UPROPERTY()
-    bool bHasPerFaceMaterials;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<FVector> VertexPositions;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<FIntVector> TriangleIndices;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<FColor> VertexInstanceColors;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<FVector> VertexInstanceNormals;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<FVector> VertexInstanceUTangents;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<FVector> VertexInstanceVTangents;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<FVector2D> VertexInstanceUVs;
-    
-    UPROPERTY(SkipSerialization)
-    TArray<int32> MaterialIDsPerTriangle;
-    
-    UPROPERTY()
-    TArray<FStaticMaterial> StaticMaterials;
-    
-public:
     UHoudiniStaticMesh();
 
     UFUNCTION()
@@ -186,6 +142,49 @@ public:
     
     UFUNCTION()
     uint32 AddStaticMaterial(const FStaticMaterial& InStaticMaterial);
+    
+protected:
+    UPROPERTY()
+    bool bHasNormals;
+    
+    UPROPERTY()
+    bool bHasTangents;
+    
+    UPROPERTY()
+    bool bHasColors;
+    
+    UPROPERTY()
+    uint32 NumUVLayers;
+    
+    UPROPERTY()
+    bool bHasPerFaceMaterials;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<FVector> VertexPositions;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<FIntVector> TriangleIndices;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<FColor> VertexInstanceColors;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<FVector> VertexInstanceNormals;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<FVector> VertexInstanceUTangents;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<FVector> VertexInstanceVTangents;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<FVector2D> VertexInstanceUVs;
+    
+    UPROPERTY(SkipSerialization)
+    TArray<int32> MaterialIDsPerTriangle;
+    
+    UPROPERTY()
+    TArray<FStaticMaterial> StaticMaterials;
     
 };
 

@@ -11,13 +11,13 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_WaitForPlayerState : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FPlayerStateReadyOutputPin WhenPlayerStateReady;
-    
     UIGS_WaitForPlayerState();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_WaitForPlayerState* WaitForPlayerState(UObject* inWorldContextObject);
+    
+    UPROPERTY(BlueprintAssignable)
+    FPlayerStateReadyOutputPin WhenPlayerStateReady;
     
 };
 

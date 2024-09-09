@@ -8,10 +8,10 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_GetActorByGameplayTagComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_GetActorByGameplayTagComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTags;
     
-    UIGS_GetActorByGameplayTagComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

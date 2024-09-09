@@ -13,29 +13,6 @@ UCLASS(Abstract)
 class COMMON_DATA_API UIGS_WeaponInventoryObject : public UIGS_WieldableInventoryObjectBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    TSubclassOf<UMETA_WeaponInventoryObject> WeaponDefinitionObject;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<TSubclassOf<UIGS_ModInventoryObject>> WeaponMods;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TSoftObjectPtr<UIGS_WeaponSkinData> WeaponSkin;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TSoftObjectPtr<UIGS_WeaponSkinData> DefaultWeaponSkin;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool ShouldConsumeAmmo;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool IsExtraFireModeActive;
-    
-protected:
-    UPROPERTY(Transient)
-    UIGS_WeaponClassSettingsDataAsset* m_WeaponClassData;
-    
-public:
     UIGS_WeaponInventoryObject();
 
     UFUNCTION(BlueprintCallable)
@@ -67,6 +44,28 @@ public:
     
     UFUNCTION(BlueprintCallable)
     int32 AddAmmoToMagazine(int32 inCount);
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    TSubclassOf<UMETA_WeaponInventoryObject> WeaponDefinitionObject;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<TSubclassOf<UIGS_ModInventoryObject>> WeaponMods;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TSoftObjectPtr<UIGS_WeaponSkinData> WeaponSkin;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TSoftObjectPtr<UIGS_WeaponSkinData> DefaultWeaponSkin;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool ShouldConsumeAmmo;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool IsExtraFireModeActive;
+    
+protected:
+    UPROPERTY(Transient)
+    UIGS_WeaponClassSettingsDataAsset* m_WeaponClassData;
     
 };
 

@@ -13,14 +13,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UIGS_TryDisplayTutorial : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_TutorialResponse OnCompleted;
-    
-private:
-    UPROPERTY(Instanced)
-    UIGS_TutorialScreen* m_TutorialScreen;
-    
-public:
     UIGS_TryDisplayTutorial();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -29,6 +21,14 @@ public:
 private:
     UFUNCTION()
     void OnTutorialScreenClosed(const FGameplayTag& inTag);
+    
+public:
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_TutorialResponse OnCompleted;
+    
+private:
+    UPROPERTY(Instanced)
+    UIGS_TutorialScreen* m_TutorialScreen;
     
 };
 

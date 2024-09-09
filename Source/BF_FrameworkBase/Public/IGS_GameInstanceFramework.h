@@ -18,20 +18,6 @@ UCLASS(NonTransient)
 class BF_FRAMEWORKBASE_API UIGS_GameInstanceFramework : public UAdvancedFriendsGameInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
-    FPaybackFPS2MetaDataRequestedDynamicSignature OnFPS2MetaDataRequested;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnConnectionStatusChanged OnConnectionStatusChanged;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool bComesFromMission;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FGameplayTagContainer TurfWarMissionTags;
-    
-public:
     UIGS_GameInstanceFramework();
 
 protected:
@@ -104,6 +90,19 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void CreateLoadingFader(const UObject* inWCO);
+    
+    UPROPERTY(BlueprintReadWrite)
+    FPaybackFPS2MetaDataRequestedDynamicSignature OnFPS2MetaDataRequested;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnConnectionStatusChanged OnConnectionStatusChanged;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool bComesFromMission;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FGameplayTagContainer TurfWarMissionTags;
     
 };
 

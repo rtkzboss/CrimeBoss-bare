@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsCharacterState : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsCharacterState();
+
     UPROPERTY(EditAnywhere)
     bool bIsCharacterBlackboardBased;
     
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(EditAnywhere)
     EIGS_CharacterState DesiredCharacterState;
     
-public:
-    UBTDecorator_IsCharacterState();
-
 };
 

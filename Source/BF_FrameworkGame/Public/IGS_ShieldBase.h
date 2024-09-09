@@ -12,6 +12,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ShieldBase : public AActor, public IIGS_HasObjectStatusInterface {
     GENERATED_BODY()
 public:
+    AIGS_ShieldBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnDetachedEvent();
+    
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UStaticMeshComponent* ShieldMeshComponent;
     
@@ -20,11 +25,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_ObjectStatus* OptionalBreakableWindowObjectStatusComponent;
-    
-    AIGS_ShieldBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnDetachedEvent();
     
 
     // Fix for true pure virtual functions not being implemented

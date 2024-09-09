@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_ThrowThrowableAICommand : public UIGS_BTTask_ThrowBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_ThrowThrowableAICommand();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BlackboardKey;
     
-    UIGS_BTTask_ThrowThrowableAICommand();
-
 };
 

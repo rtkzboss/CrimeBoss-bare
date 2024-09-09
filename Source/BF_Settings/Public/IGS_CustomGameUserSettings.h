@@ -16,6 +16,11 @@ UCLASS()
 class BF_SETTINGS_API UIGS_CustomGameUserSettings : public UGameUserSettings {
     GENERATED_BODY()
 public:
+    UIGS_CustomGameUserSettings();
+
+    UFUNCTION(BlueprintPure)
+    static UIGS_CustomGameUserSettings* Instance();
+    
     UPROPERTY()
     UIGS_SoundSettings* SoundSettings;
     
@@ -36,11 +41,6 @@ public:
     
     UPROPERTY()
     UIGS_InputBindSettings* InputBindSettings;
-    
-    UIGS_CustomGameUserSettings();
-
-    UFUNCTION(BlueprintPure)
-    static UIGS_CustomGameUserSettings* Instance();
     
 };
 

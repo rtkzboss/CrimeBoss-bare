@@ -11,7 +11,12 @@ UCLASS()
 class BF_AUDIOBASE_API UIGS_AudioSubsystem : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_AudioSubsystem();
+
 private:
+    UFUNCTION()
+    void OnControllerHeadphonesConnectionChanged(bool inIsConnected);
+    
     UPROPERTY(Instanced)
     UIGS_PersistentAkComponent* PersistenAudioAkComponent;
     
@@ -20,13 +25,6 @@ private:
     
     UPROPERTY()
     UIGS_AudioSubsystemDataAsset* Data;
-    
-public:
-    UIGS_AudioSubsystem();
-
-private:
-    UFUNCTION()
-    void OnControllerHeadphonesConnectionChanged(bool inIsConnected);
     
 };
 

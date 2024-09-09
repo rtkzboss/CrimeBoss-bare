@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadNavLinksBreachIn : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_SquadNavLinksBreachIn();
+
 protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> BreachingMembers;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> WaitingForBreachMembers;
     
-public:
-    UIGS_BTTask_SquadNavLinksBreachIn();
-
 };
 

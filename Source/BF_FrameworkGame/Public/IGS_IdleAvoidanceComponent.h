@@ -8,7 +8,12 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_IdleAvoidanceComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_IdleAvoidanceComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION()
+    void OnRep_CharacterVsHeistersCollisionStatus();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float VelocityTreshold;
     
@@ -19,13 +24,7 @@ protected:
     EIGS_CharacterVsHeistersCollisionStatus m_CharacterVsHeistersCollisionStatus;
     
 public:
-    UIGS_IdleAvoidanceComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnRep_CharacterVsHeistersCollisionStatus();
-    
 };
 

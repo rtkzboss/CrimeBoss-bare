@@ -11,6 +11,20 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetRadialSliceBase : public UIGS_Widget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetRadialSliceBase();
+
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void SliceUnhover();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void SliceHover();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    bool SliceClicked();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnSliceInitialized();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor NormalColor;
     
@@ -26,21 +40,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_PlayerControllerRoot> OwningPlayer;
-    
-public:
-    UIGS_WidgetRadialSliceBase();
-
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void SliceUnhover();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void SliceHover();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    bool SliceClicked();
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnSliceInitialized();
     
 };
 

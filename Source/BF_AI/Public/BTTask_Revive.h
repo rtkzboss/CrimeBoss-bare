@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTTask_Revive : public UIGS_BTTask_MoveToBase {
     GENERATED_BODY()
 public:
+    UBTTask_Revive();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharToReviveKey;
@@ -26,8 +28,5 @@ protected:
     UPROPERTY()
     AIGS_GameCharacterFramework* CharacterToRevive;
     
-public:
-    UBTTask_Revive();
-
 };
 

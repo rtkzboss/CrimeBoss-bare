@@ -14,18 +14,6 @@ UCLASS()
 class BF_VOICEOVER_API UIGS_PlayMetaDialogue : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueLineDelegate DialogueLineStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueLineDelegate DialogueLineFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueDelegate DialogueFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaDialogueDelegate DialogueCanceled;
-    
     UIGS_PlayMetaDialogue();
 
     UFUNCTION()
@@ -39,6 +27,18 @@ public:
     
     UFUNCTION()
     void FinishDialogue();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueLineDelegate DialogueLineStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueLineDelegate DialogueLineFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueDelegate DialogueFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaDialogueDelegate DialogueCanceled;
     
 };
 

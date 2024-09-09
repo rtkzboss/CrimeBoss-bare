@@ -16,17 +16,6 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerMetaTransferComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TScriptInterface<IIGS_InventoryInterface> OwningCharacterInventoryInterface;
-    
-    UPROPERTY()
-    TScriptInterface<IIGS_HeisterNumberInterface> OwningCharacterHeisterNumberInterface;
-    
-    UPROPERTY()
-    bool bIsBotControlled;
-    
-public:
     UIGS_PlayerMetaTransferComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -35,6 +24,15 @@ protected:
     
     UFUNCTION()
     void HandlePlayerDownState(FIGS_HitInfo inHitInfo);
+    
+    UPROPERTY()
+    TScriptInterface<IIGS_InventoryInterface> OwningCharacterInventoryInterface;
+    
+    UPROPERTY()
+    TScriptInterface<IIGS_HeisterNumberInterface> OwningCharacterHeisterNumberInterface;
+    
+    UPROPERTY()
+    bool bIsBotControlled;
     
 };
 

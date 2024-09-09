@@ -24,11 +24,6 @@ UCLASS(Abstract)
 class COMMON_DATA_API UMETA_BaseFPSMission : public UMETA_BaseMission {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    bool m_StealthCompletionFlag;
-    
-public:
     UMETA_BaseFPSMission();
 
     UFUNCTION(BlueprintCallable)
@@ -201,6 +196,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ApplyIntelProgressToMission();
+    
+protected:
+    UPROPERTY()
+    bool m_StealthCompletionFlag;
     
 };
 

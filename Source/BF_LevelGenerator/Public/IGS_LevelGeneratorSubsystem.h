@@ -11,9 +11,6 @@ UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_LevelGeneratorSubsystem : public UTickableWorldSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    bool bIsBuildingFinished;
-    
     UIGS_LevelGeneratorSubsystem();
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
@@ -26,6 +23,9 @@ private:
 public:
     UFUNCTION(BlueprintPure)
     int32 GetDefaultSeed() const;
+    
+    UPROPERTY()
+    bool bIsBuildingFinished;
     
     virtual TStatId GetStatId() const override { return {}; }
 };

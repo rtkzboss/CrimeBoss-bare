@@ -8,13 +8,13 @@ UCLASS()
 class BF_AI_API UBTDecorator_HasAICommand : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_HasAICommand();
+
     UPROPERTY(EditAnywhere)
     EIGS_AICommandType commandType;
     
     UPROPERTY(EditAnywhere)
     bool RestartOnNewCommand;
     
-    UBTDecorator_HasAICommand();
-
 };
 

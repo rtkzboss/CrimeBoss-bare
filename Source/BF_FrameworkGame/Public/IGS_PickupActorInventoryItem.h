@@ -21,6 +21,54 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PickupActorInventoryItem : public AIGS_PickupActorBase {
     GENERATED_BODY()
 public:
+    AIGS_PickupActorInventoryItem(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void Setup(const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass);
+    
+protected:
+    UFUNCTION()
+    void OnRep_WeaponSkin();
+    
+    UFUNCTION()
+    void OnRep_UniversalData();
+    
+    UFUNCTION()
+    void OnRep_ItemMods();
+    
+    UFUNCTION()
+    void OnRep_ItemCount();
+    
+    UFUNCTION()
+    void OnRep_ItemClass();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPickupDamageEvent(float inDamage, const FHitResult& inHitInfo, AController* inEventInstigator, AActor* inDamageCauser);
+    
+public:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnMeshUpdated();
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    FIGS_ImpactHitParameter OnCustomizeHitImpactParam(FIGS_ImpactHitParameter InParams);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    FBoxSphereBounds GetMeshBounds();
+    
+    UFUNCTION(BlueprintCallable)
+    bool DoesItemHaveProperty(EIGS_ItemPropertyFlags inItemFlag);
+    
+    UFUNCTION(BlueprintCallable)
+    void ChangeSkin(TSoftObjectPtr<UIGS_WeaponSkinData> inNewSkin, TSoftObjectPtr<UIGS_WeaponSkinData> inNewSpecificSkin);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void ApplyUniversalData(FIGS_InventoryObjectUniversalData inUniversalData);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddMods(const TArray<TSubclassOf<UIGS_ModInventoryObject>>& inMods);
+    
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleDefaultsOnly)
     UIGS_PickupInteractiveComponent* InteractiveComponent;
     
@@ -69,55 +117,7 @@ private:
     bool m_bIsEquipment;
     
 public:
-    AIGS_PickupActorInventoryItem(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void Setup(const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass);
-    
-protected:
-    UFUNCTION()
-    void OnRep_WeaponSkin();
-    
-    UFUNCTION()
-    void OnRep_UniversalData();
-    
-    UFUNCTION()
-    void OnRep_ItemMods();
-    
-    UFUNCTION()
-    void OnRep_ItemCount();
-    
-    UFUNCTION()
-    void OnRep_ItemClass();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPickupDamageEvent(float inDamage, const FHitResult& inHitInfo, AController* inEventInstigator, AActor* inDamageCauser);
-    
-public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMeshUpdated();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    FIGS_ImpactHitParameter OnCustomizeHitImpactParam(FIGS_ImpactHitParameter InParams);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    FBoxSphereBounds GetMeshBounds();
-    
-    UFUNCTION(BlueprintCallable)
-    bool DoesItemHaveProperty(EIGS_ItemPropertyFlags inItemFlag);
-    
-    UFUNCTION(BlueprintCallable)
-    void ChangeSkin(TSoftObjectPtr<UIGS_WeaponSkinData> inNewSkin, TSoftObjectPtr<UIGS_WeaponSkinData> inNewSpecificSkin);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void ApplyUniversalData(FIGS_InventoryObjectUniversalData inUniversalData);
-    
-    UFUNCTION(BlueprintCallable)
-    void AddMods(const TArray<TSubclassOf<UIGS_ModInventoryObject>>& inMods);
-    
 };
 

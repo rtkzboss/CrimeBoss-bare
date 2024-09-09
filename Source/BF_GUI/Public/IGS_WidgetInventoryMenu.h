@@ -12,6 +12,11 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetInventoryMenu : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetInventoryMenu();
+
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetupInventoryContainer(UIGS_ListInventory* inOwningContainer) const;
+    
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_PlayerControllerRoot> OwningPlayer;
@@ -21,12 +26,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_WidgetMainInventory* InventoryWidget;
-    
-public:
-    UIGS_WidgetInventoryMenu();
-
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetupInventoryContainer(UIGS_ListInventory* inOwningContainer) const;
     
 };
 

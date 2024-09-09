@@ -13,6 +13,8 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_SquadSwat : public AIGS_SquadBase {
     GENERATED_BODY()
 public:
+    AIGS_SquadSwat(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_RoomPathfindingComponent* RoomPathfindingComponent;
@@ -29,8 +31,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_DefendPointBase* defendPoint;
     
-public:
-    AIGS_SquadSwat(const FObjectInitializer& ObjectInitializer);
-
 };
 

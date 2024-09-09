@@ -8,13 +8,13 @@ UCLASS()
 class BF_AI_API UIGS_BTDecorator_CanBeSubdued : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UIGS_BTDecorator_CanBeSubdued();
+
     UPROPERTY(EditAnywhere)
     bool bIsBlackboardBased;
     
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetKey;
     
-    UIGS_BTDecorator_CanBeSubdued();
-
 };
 

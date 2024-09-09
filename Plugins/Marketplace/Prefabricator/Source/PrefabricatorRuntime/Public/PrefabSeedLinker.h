@@ -10,13 +10,13 @@ UCLASS()
 class PREFABRICATORRUNTIME_API APrefabSeedLinker : public AActor {
     GENERATED_BODY()
 public:
+    APrefabSeedLinker(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<APrefabActor>> LinkedActors;
     
     UPROPERTY(Instanced)
     UPrefabSeedLinkerComponent* SeedLinkerComponent;
     
-    APrefabSeedLinker(const FObjectInitializer& ObjectInitializer);
-
 };
 

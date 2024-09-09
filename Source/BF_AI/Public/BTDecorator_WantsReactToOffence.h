@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_WantsReactToOffence : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_WantsReactToOffence();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTDecorator_WantsReactToOffence();
-
 };
 

@@ -21,6 +21,58 @@ UCLASS()
 class BF_AI_API AIGS_AIControllerGame : public AIGS_AIControllerBase {
     GENERATED_BODY()
 public:
+    AIGS_AIControllerGame(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetScriptingPostponed(bool InValue);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetCornerOffset(float Value);
+    
+    UFUNCTION(BlueprintCallable)
+    void ReportReload(bool inIsCombat, bool isEmptyMagazine);
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void RandomizedReladAmmoUsed();
+    
+    UFUNCTION()
+    void OnStartedPlayingMatch();
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    bool IsSOScopeValid();
+    
+    UFUNCTION(BlueprintPure)
+    bool IsScriptingPosponed() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetReloadRequireAmmoUsed() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_AISuspiciousnessComponentBase* GetOptionalAISuspiciousnessComponent() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_AIDetectionComponent* GetOptionalAIDetectionComponent() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_NavLinkHandlerComponent* GetNavlinkHandlerComponent() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetCornerOffsetMin() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetCornerOffsetMax() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetCombatRangePrefered() const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetAmmoUsedSinceLastReload() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceLeaveWaypoint();
+    
 protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bAvoidanceEnabled;
@@ -76,59 +128,6 @@ private:
     
     UPROPERTY()
     AIGS_NavHintGoal* m_NavHelperGoal;
-    
-public:
-    AIGS_AIControllerGame(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetScriptingPostponed(bool InValue);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCornerOffset(float Value);
-    
-    UFUNCTION(BlueprintCallable)
-    void ReportReload(bool inIsCombat, bool isEmptyMagazine);
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void RandomizedReladAmmoUsed();
-    
-    UFUNCTION()
-    void OnStartedPlayingMatch();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    bool IsSOScopeValid();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsScriptingPosponed() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetReloadRequireAmmoUsed() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_AISuspiciousnessComponentBase* GetOptionalAISuspiciousnessComponent() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_AIDetectionComponent* GetOptionalAIDetectionComponent() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_NavLinkHandlerComponent* GetNavlinkHandlerComponent() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetCornerOffsetMin() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetCornerOffsetMax() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetCombatRangePrefered() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetAmmoUsedSinceLastReload() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceLeaveWaypoint();
     
 };
 

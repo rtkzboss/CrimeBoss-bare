@@ -20,6 +20,19 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_DynamicWallBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_DynamicWallBase(const FObjectInitializer& ObjectInitializer);
+
+private:
+    UFUNCTION()
+    void OnGenerationFinished(ANavigationData* inNavData);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool IsBreachable() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyMaterials();
+    
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     EIGS_WallLength WallLength;
     
@@ -203,20 +216,6 @@ public:
 protected:
     UPROPERTY()
     TArray<ANavModifierVolume*> m_NavModifiers;
-    
-public:
-    AIGS_DynamicWallBase(const FObjectInitializer& ObjectInitializer);
-
-private:
-    UFUNCTION()
-    void OnGenerationFinished(ANavigationData* inNavData);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool IsBreachable() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ApplyMaterials();
     
 };
 

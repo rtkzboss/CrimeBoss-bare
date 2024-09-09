@@ -7,6 +7,13 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_InteractiveFollowComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
+    UIGS_InteractiveFollowComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnRep_IsFollowing();
+    
+public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsFollowing)
     bool IsFollowing;
     
@@ -22,13 +29,7 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool CanBeUseInAlarm;
     
-    UIGS_InteractiveFollowComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void OnRep_IsFollowing();
-    
 };
 

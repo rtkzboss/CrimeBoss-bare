@@ -9,9 +9,6 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_BaseCallback : public UMETA_BaseGraphComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bNeedForceExecuteAfterCallbackTrigger;
-    
     UMETA_BaseCallback();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -22,6 +19,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetAvailableConnections();
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bNeedForceExecuteAfterCallbackTrigger;
     
 };
 

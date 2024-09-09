@@ -11,6 +11,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_HolsterGun : public UAbilityTask {
     GENERATED_BODY()
 public:
+    UIGS_AbilityTask_HolsterGun();
+
+    UFUNCTION(BlueprintCallable)
+    static UIGS_AbilityTask_HolsterGun* CreateHolsterGunProxy(UGameplayAbility* inOwningAbility, FName inTaskInstanceName, bool inIsHolster, float InRate);
+    
     UPROPERTY(BlueprintAssignable)
     FMontageWaitSimpleDelegate OnCompleted;
     
@@ -20,12 +25,6 @@ private:
     
     UPROPERTY()
     float PlayRate;
-    
-public:
-    UIGS_AbilityTask_HolsterGun();
-
-    UFUNCTION(BlueprintCallable)
-    static UIGS_AbilityTask_HolsterGun* CreateHolsterGunProxy(UGameplayAbility* inOwningAbility, FName inTaskInstanceName, bool inIsHolster, float InRate);
     
 };
 

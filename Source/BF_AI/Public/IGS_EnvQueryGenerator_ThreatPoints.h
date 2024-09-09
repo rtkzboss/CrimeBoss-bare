@@ -10,12 +10,11 @@ UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_ThreatPoints : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryGenerator_ThreatPoints();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
     
-public:
-    UIGS_EnvQueryGenerator_ThreatPoints();
-
 };
 

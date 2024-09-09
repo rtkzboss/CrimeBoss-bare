@@ -11,7 +11,12 @@ UCLASS(Abstract)
 class BF_RENDERING_API AIGS_LensFlareBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_LensFlareBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void PostConstruction();
+    
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     USceneComponent* SceneComponent;
     
@@ -23,13 +28,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UMaterialInstanceDynamic* StreakMaterialDynamic;
-    
-public:
-    AIGS_LensFlareBase(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void PostConstruction();
     
 };
 

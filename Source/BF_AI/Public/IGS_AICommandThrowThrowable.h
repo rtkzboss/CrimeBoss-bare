@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_AICommandThrowThrowable : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandThrowThrowable();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Target;
     
@@ -25,7 +27,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsScripted;
     
-    UIGS_AICommandThrowThrowable();
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateThrowingComponents : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateThrowingComponents();
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplateAlways;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootCarryable;
     
-public:
-    UIGS_BTService_EvaluateThrowingComponents();
-
 };
 

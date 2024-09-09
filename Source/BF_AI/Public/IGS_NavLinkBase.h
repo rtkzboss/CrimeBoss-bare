@@ -14,6 +14,19 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_NavLinkBase : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:
+    AIGS_NavLinkBase(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnNavlinkTransitionStarted(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn, bool IsRight);
+    
+    UFUNCTION()
+    void OnNavlinkComponentReached(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn, bool IsRight);
+    
+    UFUNCTION()
+    void OnNavlinkComponentLeft(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn);
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FNavLinkReachedSignature OnNavlinkReached;
     
@@ -32,19 +45,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Right;
-    
-public:
-    AIGS_NavLinkBase(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnNavlinkTransitionStarted(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn, bool IsRight);
-    
-    UFUNCTION()
-    void OnNavlinkComponentReached(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn, bool IsRight);
-    
-    UFUNCTION()
-    void OnNavlinkComponentLeft(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn);
     
 };
 

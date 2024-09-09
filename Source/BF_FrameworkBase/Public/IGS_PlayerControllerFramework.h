@@ -15,9 +15,6 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_PlayerControllerFramework : public APlayerController, public IIGS_CharacterIDInterface, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    AIGS_GameCharacterFramework* CurrentPawn;
-    
     AIGS_PlayerControllerFramework(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -31,6 +28,9 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     UActorComponent* GetGUIController();
+    
+    UPROPERTY()
+    AIGS_GameCharacterFramework* CurrentPawn;
     
 
     // Fix for true pure virtual functions not being implemented

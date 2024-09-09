@@ -13,32 +13,6 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_ScriptPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool Enabled;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bHasDirection;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EIGS_ScriptPointExecuteOn ExecuteOn;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float DirectionLookAtPosDistance;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditInstanceOnly)
-    bool CanEverBeEnabled;
-    
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
-    AIGS_WaypointFramework* OptionalNextPoint;
-    
-    UPROPERTY(VisibleAnywhere)
-    AIGS_WaypointBase* OptionalNextPointCasted;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    TArray<AIGS_GameCharacterFramework*> VisitingCharacters;
-    
-public:
     AIGS_ScriptPoint(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -79,6 +53,31 @@ public:
     
     UFUNCTION(BlueprintNativeEvent)
     bool CanBeActivatedBy(AIGS_GameCharacterFramework* inActivator);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool Enabled;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bHasDirection;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    EIGS_ScriptPointExecuteOn ExecuteOn;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    float DirectionLookAtPosDistance;
+    
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditInstanceOnly)
+    bool CanEverBeEnabled;
+    
+    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    AIGS_WaypointFramework* OptionalNextPoint;
+    
+    UPROPERTY(VisibleAnywhere)
+    AIGS_WaypointBase* OptionalNextPointCasted;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    TArray<AIGS_GameCharacterFramework*> VisitingCharacters;
     
 };
 

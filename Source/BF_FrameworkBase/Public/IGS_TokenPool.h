@@ -10,11 +10,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_TokenPool : public UObject {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(Transient)
-    TArray<UIGS_ActionToken*> UsedTokens;
-    
-public:
     UIGS_TokenPool();
 
     UFUNCTION(BlueprintCallable)
@@ -28,6 +23,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     UIGS_ActionToken* AcquireToken(AIGS_GameCharacterFramework* Instigator, int32 Priority, int32 BoostPriority, float BoostDuration);
+    
+private:
+    UPROPERTY(Transient)
+    TArray<UIGS_ActionToken*> UsedTokens;
     
 };
 

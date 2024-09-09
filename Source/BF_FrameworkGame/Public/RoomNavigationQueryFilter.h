@@ -7,6 +7,8 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API URoomNavigationQueryFilter : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
+    URoomNavigationQueryFilter();
+
     UPROPERTY(EditAnywhere)
     int32 AllowedRoomSecurity;
     
@@ -26,8 +28,5 @@ protected:
     UPROPERTY()
     int32 AllowedBasicTypeBitMask;
     
-public:
-    URoomNavigationQueryFilter();
-
 };
 

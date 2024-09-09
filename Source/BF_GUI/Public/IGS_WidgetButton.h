@@ -16,6 +16,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetButton : public UIGS_WidgetButtonSimple {
     GENERATED_BODY()
 public:
+    UIGS_WidgetButton();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UImage* ButtonImage;
     
@@ -139,7 +141,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush DisabledStyleBrush;
     
-    UIGS_WidgetButton();
-
 };
 

@@ -13,14 +13,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AsyncTaskAbilityGranted : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnAbilityGranted OnAbilityGranted;
-    
-protected:
-    UPROPERTY(Instanced)
-    UAbilitySystemComponent* ASC;
-    
-public:
     UIGS_AsyncTaskAbilityGranted();
 
     UFUNCTION(BlueprintCallable)
@@ -31,6 +23,13 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void EndTask();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnAbilityGranted OnAbilityGranted;
+    
+protected:
+    UPROPERTY(Instanced)
+    UAbilitySystemComponent* ASC;
     
 };
 

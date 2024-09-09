@@ -7,10 +7,10 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterLabel : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterLabel();
+
     UPROPERTY()
     TArray<FString> LabelStrings;
     
-    UHoudiniParameterLabel();
-
 };
 

@@ -9,16 +9,16 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_TutorialWidgetBase : public UUserWidget {
     GENERATED_BODY()
 public:
+    UMETA_TutorialWidgetBase();
+
+    UFUNCTION(BlueprintNativeEvent)
+    void UpdateVisibility();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ScreenID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer MetaMenuTags;
-    
-    UMETA_TutorialWidgetBase();
-
-    UFUNCTION(BlueprintNativeEvent)
-    void UpdateVisibility();
     
 };
 

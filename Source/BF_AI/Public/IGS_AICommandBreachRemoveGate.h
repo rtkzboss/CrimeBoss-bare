@@ -8,13 +8,13 @@ UCLASS()
 class BF_AI_API UIGS_AICommandBreachRemoveGate : public UIGS_AICommandBreachRemoveObstacle {
     GENERATED_BODY()
 public:
+    UIGS_AICommandBreachRemoveGate();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Location;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector LookAtPosition;
     
-    UIGS_AICommandBreachRemoveGate();
-
 };
 

@@ -8,6 +8,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterFolder : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterFolder();
+
 private:
     UPROPERTY()
     EHoudiniFolderParameterType FolderType;
@@ -24,8 +26,5 @@ private:
     UPROPERTY()
     bool bIsContentShown;
     
-public:
-    UHoudiniParameterFolder();
-
 };
 

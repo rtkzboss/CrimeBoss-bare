@@ -8,13 +8,13 @@ UCLASS(BlueprintType)
 class CRIMEBOSSMETA_API UIGS_MissionResultAnimationData : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_MissionResultAnimationData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Rating;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ECommonMissionResult MissionResult;
     
-    UIGS_MissionResultAnimationData();
-
 };
 

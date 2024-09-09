@@ -16,6 +16,23 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_RopeComponent : public UMeshComponent {
     GENERATED_BODY()
 public:
+    UIGS_RopeComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetAttachEndToComponent(USceneComponent* Component, FName SocketName);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetAttachEndTo(AActor* Actor, FName ComponentProperty, FName SocketName);
+    
+    UFUNCTION(BlueprintPure)
+    void GetCableParticleLocations(TArray<FVector>& Locations) const;
+    
+    UFUNCTION(BlueprintPure)
+    USceneComponent* GetAttachedComponent() const;
+    
+    UFUNCTION(BlueprintPure)
+    AActor* GetAttachedActor() const;
+    
     UPROPERTY(EditAnywhere)
     FName PlayerAttachmentSocketName;
     
@@ -138,24 +155,7 @@ protected:
     bool mR_RollOffRope;
     
 public:
-    UIGS_RopeComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetAttachEndToComponent(USceneComponent* Component, FName SocketName);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetAttachEndTo(AActor* Actor, FName ComponentProperty, FName SocketName);
-    
-    UFUNCTION(BlueprintPure)
-    void GetCableParticleLocations(TArray<FVector>& Locations) const;
-    
-    UFUNCTION(BlueprintPure)
-    USceneComponent* GetAttachedComponent() const;
-    
-    UFUNCTION(BlueprintPure)
-    AActor* GetAttachedActor() const;
-    
 };
 

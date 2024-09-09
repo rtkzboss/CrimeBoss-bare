@@ -14,6 +14,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_FrameworkGameDevSettings_Utilities : public UIGS_FrameworkGameDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_FrameworkGameDevSettings_Utilities();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> UnderWaterClearMaterial;
     
@@ -38,7 +40,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMaterialParameterCollection> WeatherMPC;
     
-    UIGS_FrameworkGameDevSettings_Utilities();
-
 };
 

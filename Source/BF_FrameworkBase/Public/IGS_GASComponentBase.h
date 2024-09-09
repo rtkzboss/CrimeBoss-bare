@@ -19,17 +19,6 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_GASComponentBase : public UAbilitySystemComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    UIGS_GASDefaultAttributesDataAsset* DefaultAttributesDataAsset;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<TSubclassOf<UGameplayEffect>> DefaultGameplayEffects;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTagContainer ReplicatedGameplayEventTags;
-    
-public:
     UIGS_GASComponentBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -69,6 +58,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static FActiveGameplayEffectHandle ApplyEffectWithValue(UObject* inOwner, UAbilitySystemComponent* inAbilitySystemComponent, TSubclassOf<UGameplayEffect> inEffectClass, FGameplayTag inRuntimeValueTag, float inRuntimeValue);
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    UIGS_GASDefaultAttributesDataAsset* DefaultAttributesDataAsset;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TArray<TSubclassOf<UGameplayEffect>> DefaultGameplayEffects;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTagContainer ReplicatedGameplayEventTags;
     
 };
 

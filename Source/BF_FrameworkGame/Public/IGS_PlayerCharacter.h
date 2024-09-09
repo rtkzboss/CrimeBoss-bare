@@ -64,193 +64,7 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_PlayerCharacter : public AIGS_IntelligentGameCharacter, public IIGS_HeisterNumberInterface, public IIGS_HeisterDataInterface, public IIGS_SuspicionInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FOnPlayerUseStop OnPlayerUseStop;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_DeathCameraEndedSignature OnDeathCameraSkippable;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_DeathCameraEndedSignature OnDeathCameraEnded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnZiptyingEvent OnZiptyingEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_PlayerStateChangedSignature OnPlayerStateChangedEvent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_UseComponent* UseComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerPingComponent* PingComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_ReviveComponent* ReviveComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerSuspicionComponent* PlayerSuspicionComponent;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    USpringArmComponent* SpringArmComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerCommandComponent* PlayerCommandComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerWorldTracingComponent* PlayerWorldTracingComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_BasherComponent* UnarmedMeleeBasherComponent;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UIGS_EthnicityVoices* EthnicityVoices;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TSubclassOf<UIGS_MeleeWeaponInventoryObject> DefaultUnarmedMeleeItemClass;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TSubclassOf<UGameplayAbility> DefaultUnarmedMeleeAbility;
-    
-    UPROPERTY(VisibleAnywhere)
-    float DefaultAimingChangePercent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float VisibilityCrouchMultiplier;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    AActor* Child3PVCameraActor;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UIGS_ListInventory* PlayerInventory;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    float DeathCamUnskippableTime;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    float DeathCamMaximumTime;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    bool bIsSomeoneSpectating;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    bool bIsInDeathCam;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    bool bDeathCamSkippable;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    bool bIsInSpectatingCam;
-    
-    UPROPERTY(Replicated)
-    uint8 R_Yaw;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bCanSlide;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bCanUseUnarmedMelee;
-    
-    UPROPERTY(BlueprintReadOnly)
-    FVector LastTeleportableLocation;
-    
-    UPROPERTY()
-    bool m_IsPendingCarryable;
-    
-protected:
-    UPROPERTY()
-    int32 CachedLootBagCount;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerCameraComponent* Camera;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TSoftClassPtr<AIGS_PlayerFPVArms> DefaultArmsAsset;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    AIGS_PlayerFPVArms* m_ArmsActor;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PostProcessManagerComponent* PostProcessManagerComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerEffectsComponent* PlayerEffectsComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerSuppressionHandlerComponent* SuppressionHandlerComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerIgnoreCollisionComponent* PlayerIgnoreCollisionComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerLoadoutComponent* PlayerLoadoutComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_PlayerMetaTransferComponent* PlayerMetaTransferComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_CampThreatMeterComponent* CampThreatMeterComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_LootBagInteractiveComponent* LootBagInteractiveComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
-    UIGS_CarryableInteractiveComponent* CarryableInteractiveComponent;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_ThrowableTrajectoryComponent* ThrowableTrajectoryComponent;
-    
-public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TArray<FIGS_GameplayAbilityGrantDataHolder> DefaultGrantedAbilities;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName CarryableInteractionSocket;
-    
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    UAkAudioEvent* FallAkAudioEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkAudioEvent* FallDeathAkAudioEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkAudioEvent* ZiptieMountAkAudioEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkAudioEvent* ZiptieDismountAkAudioEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkAudioEvent* RappelMountAkAudioEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkAudioEvent* RappelDismountAkAudioEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkAudioEvent* RappelSlowDownAkAudioEvent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkStateValue* NotOutOfBoundsAkState;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkStateValue* OutOfBoundsAkState;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkSwitchValue* PersonPrespectiveFPPAkSwitch;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAkSwitchValue* PersonPrespectiveTPPAkSwitch;
-    
-    UPROPERTY(BlueprintReadOnly)
-    FText CharNameForDialogues;
-    
-    UPROPERTY()
-    TArray<AIGS_GameCharacterFramework*> TmpShoutCharacters;
-    
-public:
     AIGS_PlayerCharacter(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void Use(bool inIsHolding);
@@ -597,6 +411,192 @@ public:
     UFUNCTION(BlueprintCallable)
     void CallOnChangeShowPrediction(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass);
     
+    UPROPERTY(BlueprintAssignable)
+    FOnPlayerUseStop OnPlayerUseStop;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_DeathCameraEndedSignature OnDeathCameraSkippable;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_DeathCameraEndedSignature OnDeathCameraEnded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnZiptyingEvent OnZiptyingEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PlayerStateChangedSignature OnPlayerStateChangedEvent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_UseComponent* UseComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerPingComponent* PingComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_ReviveComponent* ReviveComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerSuspicionComponent* PlayerSuspicionComponent;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    USpringArmComponent* SpringArmComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerCommandComponent* PlayerCommandComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerWorldTracingComponent* PlayerWorldTracingComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_BasherComponent* UnarmedMeleeBasherComponent;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UIGS_EthnicityVoices* EthnicityVoices;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    TSubclassOf<UIGS_MeleeWeaponInventoryObject> DefaultUnarmedMeleeItemClass;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    TSubclassOf<UGameplayAbility> DefaultUnarmedMeleeAbility;
+    
+    UPROPERTY(VisibleAnywhere)
+    float DefaultAimingChangePercent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float VisibilityCrouchMultiplier;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    AActor* Child3PVCameraActor;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UIGS_ListInventory* PlayerInventory;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    float DeathCamUnskippableTime;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    float DeathCamMaximumTime;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    bool bIsSomeoneSpectating;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    bool bIsInDeathCam;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    bool bDeathCamSkippable;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    bool bIsInSpectatingCam;
+    
+    UPROPERTY(Replicated)
+    uint8 R_Yaw;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bCanSlide;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bCanUseUnarmedMelee;
+    
+    UPROPERTY(BlueprintReadOnly)
+    FVector LastTeleportableLocation;
+    
+    UPROPERTY()
+    bool m_IsPendingCarryable;
+    
+protected:
+    UPROPERTY()
+    int32 CachedLootBagCount;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerCameraComponent* Camera;
+    
+    UPROPERTY(EditDefaultsOnly)
+    TSoftClassPtr<AIGS_PlayerFPVArms> DefaultArmsAsset;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    AIGS_PlayerFPVArms* m_ArmsActor;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PostProcessManagerComponent* PostProcessManagerComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerEffectsComponent* PlayerEffectsComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerSuppressionHandlerComponent* SuppressionHandlerComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerIgnoreCollisionComponent* PlayerIgnoreCollisionComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerLoadoutComponent* PlayerLoadoutComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_PlayerMetaTransferComponent* PlayerMetaTransferComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_CampThreatMeterComponent* CampThreatMeterComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_LootBagInteractiveComponent* LootBagInteractiveComponent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
+    UIGS_CarryableInteractiveComponent* CarryableInteractiveComponent;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_ThrowableTrajectoryComponent* ThrowableTrajectoryComponent;
+    
+public:
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    TArray<FIGS_GameplayAbilityGrantDataHolder> DefaultGrantedAbilities;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FName CarryableInteractionSocket;
+    
+protected:
+    UPROPERTY(EditDefaultsOnly)
+    UAkAudioEvent* FallAkAudioEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkAudioEvent* FallDeathAkAudioEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkAudioEvent* ZiptieMountAkAudioEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkAudioEvent* ZiptieDismountAkAudioEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkAudioEvent* RappelMountAkAudioEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkAudioEvent* RappelDismountAkAudioEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkAudioEvent* RappelSlowDownAkAudioEvent;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkStateValue* NotOutOfBoundsAkState;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkStateValue* OutOfBoundsAkState;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkSwitchValue* PersonPrespectiveFPPAkSwitch;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UAkSwitchValue* PersonPrespectiveTPPAkSwitch;
+    
+    UPROPERTY(BlueprintReadOnly)
+    FText CharNameForDialogues;
+    
+    UPROPERTY()
+    TArray<AIGS_GameCharacterFramework*> TmpShoutCharacters;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)

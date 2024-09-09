@@ -8,15 +8,15 @@ UCLASS()
 class PAYBACK_API APaybackSniperCharacter : public APaybackAICharacter {
     GENERATED_BODY()
 public:
-    UPROPERTY(ReplicatedUsing=OnRep_WeaponVisibilityType)
-    EIGS_WeaponVisibilityType WeaponVisibilityType;
-    
     APaybackSniperCharacter(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION()
     void OnRep_WeaponVisibilityType() const;
     
+    UPROPERTY(ReplicatedUsing=OnRep_WeaponVisibilityType)
+    EIGS_WeaponVisibilityType WeaponVisibilityType;
+    
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

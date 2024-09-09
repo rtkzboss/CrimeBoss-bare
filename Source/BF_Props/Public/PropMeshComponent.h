@@ -11,6 +11,8 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_PROPS_API UPropMeshComponent : public UStaticMeshComponent, public IPropInfoInterface {
     GENERATED_BODY()
 public:
+    UPropMeshComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropInfoStruct mPropInfo;
     
@@ -20,8 +22,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool RenderMesh;
     
-    UPropMeshComponent(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

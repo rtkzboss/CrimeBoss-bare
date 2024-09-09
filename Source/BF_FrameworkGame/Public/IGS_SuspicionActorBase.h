@@ -21,6 +21,26 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_SuspicionActorBase : public AActor, public IGenericTeamAgentInterface, public IAISightTargetInterface, public IIGS_GameplayTagAssetInterfaceCustom, public IIGS_SuspicionInterface {
     GENERATED_BODY()
 public:
+    AIGS_SuspicionActorBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetTeamID(EIGS_TeamSideEnum inTeamID);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetSuspicionLifeTimeEnded();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSuspicionActorOffenceReportedEvent(AActor* inReporter);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSuspicionActorNoticedEvent(AActor* inNoticer);
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_SuspicionComponent* GetSuspicionComponent() const;
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_GameCharacterFramework* GetOwningCharacter() const;
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_SuspicionActorNoticedSignature OnSuspicionActorNoticed;
     
@@ -58,29 +78,9 @@ protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsValidForAmbient;
     
-public:
-    AIGS_SuspicionActorBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetTeamID(EIGS_TeamSideEnum inTeamID);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetSuspicionLifeTimeEnded();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSuspicionActorOffenceReportedEvent(AActor* inReporter);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSuspicionActorNoticedEvent(AActor* inNoticer);
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_SuspicionComponent* GetSuspicionComponent() const;
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_GameCharacterFramework* GetOwningCharacter() const;
-    
 
     // Fix for true pure virtual functions not being implemented
+public:
     UFUNCTION(BlueprintCallable)
     bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override PURE_VIRTUAL(HasMatchingGameplayTag, return false;);
     

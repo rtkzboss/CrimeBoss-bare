@@ -26,11 +26,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_Character : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    FMETA_CharacterInfo m_CharacterInfo;
-    
-public:
     UMETA_Character();
 
     UFUNCTION(BlueprintCallable)
@@ -263,6 +258,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddPerk(const FMETA_PerkData inPerk);
+    
+protected:
+    UPROPERTY()
+    FMETA_CharacterInfo m_CharacterInfo;
     
 };
 

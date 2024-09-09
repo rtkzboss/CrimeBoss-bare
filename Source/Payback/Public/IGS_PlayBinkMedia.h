@@ -17,33 +17,6 @@ UCLASS()
 class PAYBACK_API UIGS_PlayBinkMedia : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_BinkMediaEvent Finished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_BinkMediaEvent Started;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_BinkMediaEvent Stopped;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_BinkMediaEvent Failed;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_BinkMediaEvent Prepared;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_BinkMediaEvent SubtitleEvent;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_BinkMediaWidget* BinkMediaWidget;
-    
-private:
-    UPROPERTY()
-    UIGS_ScreenHandler* m_ScreenHandler;
-    
-public:
     UIGS_PlayBinkMedia();
 
     UFUNCTION(BlueprintCallable)
@@ -83,6 +56,32 @@ public:
     
     UFUNCTION(BlueprintCallable)
     FBinkSubtitleItem GetCurrentSubtitleItem();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_BinkMediaEvent Finished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_BinkMediaEvent Started;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_BinkMediaEvent Stopped;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_BinkMediaEvent Failed;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_BinkMediaEvent Prepared;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_BinkMediaEvent SubtitleEvent;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_BinkMediaWidget* BinkMediaWidget;
+    
+private:
+    UPROPERTY()
+    UIGS_ScreenHandler* m_ScreenHandler;
     
 };
 

@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_RollToCover : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_RollToCover();
+
 private:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DodgeDistanceKey;
     
-public:
-    UBTTask_RollToCover();
-
 };
 

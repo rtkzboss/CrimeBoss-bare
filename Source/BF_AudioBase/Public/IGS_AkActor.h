@@ -11,14 +11,6 @@ UCLASS()
 class BF_AUDIOBASE_API AIGS_AkActor : public AActor {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditAnywhere, Instanced)
-    UIGS_SignificanceComponent* SignificanceComponent;
-    
-    UPROPERTY(EditAnywhere, Instanced)
-    UAkComponent* AkComponent;
-    
-public:
     AIGS_AkActor(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -28,6 +20,13 @@ protected:
 public:
     UFUNCTION(BlueprintPure)
     UAkComponent* GetAkComponent() const;
+    
+protected:
+    UPROPERTY(EditAnywhere, Instanced)
+    UIGS_SignificanceComponent* SignificanceComponent;
+    
+    UPROPERTY(EditAnywhere, Instanced)
+    UAkComponent* AkComponent;
     
 };
 

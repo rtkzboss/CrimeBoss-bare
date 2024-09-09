@@ -10,6 +10,8 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_SmartObjectSimpleBase : public AActor, public IIGS_SmartObjectInterface {
     GENERATED_BODY()
 public:
+    AIGS_SmartObjectSimpleBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     bool bShouldPlayAnimation;
@@ -20,9 +22,6 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* RootComp;
     
-public:
-    AIGS_SmartObjectSimpleBase(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

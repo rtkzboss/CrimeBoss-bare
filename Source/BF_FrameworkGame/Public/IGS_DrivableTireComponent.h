@@ -21,6 +21,26 @@ class BF_FRAMEWORKGAME_API UIGS_DrivableTireComponent : public UStaticMeshCompon
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FIGS_TireDeflatedEvent);
     
+    UIGS_DrivableTireComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void TireTakeDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection, const UDamageType* DamageType, AActor* DamageCauser);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetTireAngle(float SpinAngle, float TurnAngle, bool InverseAngle);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetBreakable(bool Enabled);
+    
+    UFUNCTION()
+    void OnRep_TireDeflated();
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsBreakable();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void All_StartDeflate(bool inDropin);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_TireDeflatedEvent OnTireDeflated;
     
@@ -74,27 +94,7 @@ private:
     UNiagaraComponent* m_BlowoutParticleComponent;
     
 public:
-    UIGS_DrivableTireComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void TireTakeDamage(AActor* DamagedActor, float Damage, AController* InstigatedBy, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection, const UDamageType* DamageType, AActor* DamageCauser);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetTireAngle(float SpinAngle, float TurnAngle, bool InverseAngle);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetBreakable(bool Enabled);
-    
-    UFUNCTION()
-    void OnRep_TireDeflated();
-    
-    UFUNCTION(BlueprintCallable)
-    bool IsBreakable();
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void All_StartDeflate(bool inDropin);
-    
 };
 

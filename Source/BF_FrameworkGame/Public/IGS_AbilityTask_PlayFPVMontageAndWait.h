@@ -12,6 +12,20 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AbilityTask_PlayFPVMontageAndWait : public UAbilityTask {
     GENERATED_BODY()
 public:
+    UIGS_AbilityTask_PlayFPVMontageAndWait();
+
+    UFUNCTION()
+    void OnMontageInterrupted();
+    
+    UFUNCTION()
+    void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);
+    
+    UFUNCTION()
+    void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);
+    
+    UFUNCTION(BlueprintCallable)
+    static UIGS_AbilityTask_PlayFPVMontageAndWait* CreatePlayMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* MontageToPlay, float Rate, FName StartSection, bool bStopWhenAbilityEnds, float StartTimeSeconds);
+    
     UPROPERTY(BlueprintAssignable)
     FMontageWaitSimpleDelegate OnCompleted;
     
@@ -39,21 +53,6 @@ private:
     
     UPROPERTY()
     bool bStopWhenAbilityEnds;
-    
-public:
-    UIGS_AbilityTask_PlayFPVMontageAndWait();
-
-    UFUNCTION()
-    void OnMontageInterrupted();
-    
-    UFUNCTION()
-    void OnMontageEnded(UAnimMontage* Montage, bool bInterrupted);
-    
-    UFUNCTION()
-    void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);
-    
-    UFUNCTION(BlueprintCallable)
-    static UIGS_AbilityTask_PlayFPVMontageAndWait* CreatePlayMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* NewMontageToPlay, float NewRate, FName NewStartSection, bool NewBStopWhenAbilityEnds, float NewStartTimeSeconds);
     
 };
 

@@ -14,7 +14,15 @@ UCLASS()
 class BF_IMPACTS_API AIGS_ParticleImpact : public AIGS_ImpactBase, public INiagaraParticleCallbackHandler {
     GENERATED_BODY()
 public:
+    AIGS_ParticleImpact(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION()
+    void OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent);
+    
+    UFUNCTION()
+    void OnNiagaraSystemFinished(UNiagaraComponent* inNiagaraComponent);
+    
     UPROPERTY(Instanced, VisibleAnywhere)
     USceneComponent* SceneComponent;
     
@@ -26,16 +34,6 @@ protected:
     
     UPROPERTY()
     TSubclassOf<UIGS_ImpactTypeObject> ParticleDecalID;
-    
-public:
-    AIGS_ParticleImpact(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent);
-    
-    UFUNCTION()
-    void OnNiagaraSystemFinished(UNiagaraComponent* inNiagaraComponent);
     
 
     // Fix for true pure virtual functions not being implemented

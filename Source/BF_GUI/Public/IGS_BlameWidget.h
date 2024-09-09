@@ -9,11 +9,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_BlameWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
-    
-public:
     UIGS_BlameWidget();
 
 protected:
@@ -22,6 +17,9 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void OnAlarmTriggered(const FText& inBlame);
+    
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
     
 };
 

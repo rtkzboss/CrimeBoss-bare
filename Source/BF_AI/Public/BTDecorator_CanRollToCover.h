@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_CanRollToCover : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_CanRollToCover();
+
 private:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DodgeDistanceKey;
     
-public:
-    UBTDecorator_CanRollToCover();
-
 };
 

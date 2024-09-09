@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTService_GR_EvaluateBestPosForVehicleEvasion : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_GR_EvaluateBestPosForVehicleEvasion();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -27,8 +29,5 @@ protected:
     UPROPERTY(EditAnywhere)
     int32 MaxRayCasts;
     
-public:
-    UBTService_GR_EvaluateBestPosForVehicleEvasion();
-
 };
 

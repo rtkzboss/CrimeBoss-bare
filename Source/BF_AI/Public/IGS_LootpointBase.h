@@ -12,6 +12,8 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_LootpointBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_LootpointBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_LootHolderBase*> LootHolders;
     
@@ -25,8 +27,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USceneComponent* Root;
     
-public:
-    AIGS_LootpointBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluatePickupWeapons : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluatePickupWeapons();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestWeaponPickup;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* WeaponPickupEQS;
     
-public:
-    UIGS_BTService_EvaluatePickupWeapons();
-
 };
 

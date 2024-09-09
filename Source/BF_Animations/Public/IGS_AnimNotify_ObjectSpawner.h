@@ -12,6 +12,8 @@ UCLASS(CollapseCategories)
 class BF_ANIMATIONS_API UIGS_AnimNotify_ObjectSpawner : public UAnimNotify {
     GENERATED_BODY()
 public:
+    UIGS_AnimNotify_ObjectSpawner();
+
     UPROPERTY(EditAnywhere)
     TSoftClassPtr<AActor> ActorClass;
     
@@ -37,8 +39,5 @@ protected:
     UPROPERTY(Transient)
     TSubclassOf<AActor> ActorClassHard;
     
-public:
-    UIGS_AnimNotify_ObjectSpawner();
-
 };
 

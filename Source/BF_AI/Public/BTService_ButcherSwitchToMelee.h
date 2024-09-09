@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTService_ButcherSwitchToMelee : public UBTService_SwitchToMelee {
     GENERATED_BODY()
 public:
+    UBTService_ButcherSwitchToMelee();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetUnreachable;
@@ -29,8 +31,5 @@ protected:
     UPROPERTY()
     UIGS_WieldableInventoryObjectBase* SawWieldable;
     
-public:
-    UBTService_ButcherSwitchToMelee();
-
 };
 

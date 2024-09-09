@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_SwitchWeaponBB : public UBTTask_SwitchWeaponBase {
     GENERATED_BODY()
 public:
+    UBTTask_SwitchWeaponBB();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DesiredWeaponKey;
     
-public:
-    UBTTask_SwitchWeaponBB();
-
 };
 

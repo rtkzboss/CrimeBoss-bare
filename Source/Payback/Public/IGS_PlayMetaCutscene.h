@@ -15,15 +15,6 @@ UCLASS()
 class PAYBACK_API UIGS_PlayMetaCutscene : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneResultDelegate CutsceneStarted;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneResultDelegate CutsceneFinished;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaCutsceneResultDelegate CutsceneUnloaded;
-    
     UIGS_PlayMetaCutscene();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -44,6 +35,16 @@ protected:
     
     UFUNCTION()
     void LoadCutscene(FName inCutsceneID);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneResultDelegate CutsceneStarted;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneResultDelegate CutsceneFinished;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaCutsceneResultDelegate CutsceneUnloaded;
     
 };
 

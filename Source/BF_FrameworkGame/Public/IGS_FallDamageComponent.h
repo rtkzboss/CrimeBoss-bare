@@ -11,6 +11,20 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_FallDamageComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_FallDamageComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetFallDamageEnabled(bool inEnabled);
+    
+    UFUNCTION(BlueprintPure)
+    bool IsNextFallDamageIgnored() const;
+    
+    UFUNCTION(BlueprintPure)
+    bool IsFallDamageEnabled() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void IgnoreNextFall();
+    
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bAddMaxStepHeightToFellHeight;
@@ -35,21 +49,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSubclassOf<UIGS_DamageTypeFallDamage> FallDamageType;
-    
-public:
-    UIGS_FallDamageComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetFallDamageEnabled(bool inEnabled);
-    
-    UFUNCTION(BlueprintPure)
-    bool IsNextFallDamageIgnored() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsFallDamageEnabled() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void IgnoreNextFall();
     
 };
 

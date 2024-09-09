@@ -22,6 +22,44 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_RandEventManagerComponent : public UIGS_RandEventManagerBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_RandEventManagerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    bool ShouldStateChangeBeNoted(FMETA_HeisterStateChangeNote inNote) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveEventForMissingHeister(FMETA_CharacterID inCharacterID);
+    
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    TArray<EMETA_CharacterState> GetStatesWhichChangesShouldBeNotedInHistory() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void GetNoteAboutLastChangeToState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess);
+    
+    UFUNCTION(BlueprintCallable)
+    void GetNoteAboutLastChangeFromStateToState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inFromState, EMETA_CharacterState inToState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess);
+    
+    UFUNCTION(BlueprintCallable)
+    void GetNoteAboutLastChangeFromState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess);
+    
+    UFUNCTION(BlueprintPure)
+    FMETA_CharacterID GetMissingHeisterForMission(TSubclassOf<UMETA_MissionID> inMissionID) const;
+    
+    UFUNCTION(BlueprintPure)
+    FGameplayTag GetEventIdForMissingHeister(FMETA_CharacterID inCharacterID) const;
+    
+    UFUNCTION(BlueprintPure)
+    void GetEventDataForMissingHeister(FMETA_CharacterID inCharacterID, FMETA_MissingHeisterEventData& outData, bool& outSuccess) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void DecrementMissingHeistersEventsDaysTimer(TMap<FMETA_CharacterID, FMETA_MissingHeisterEventData>& outExpiredEvents);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddStatesChangesNote(FMETA_CharacterID inCharacterID, FMETA_HeisterStateChangeNote inNote);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddEventDataForMissingHeister(FMETA_CharacterID inCharacterID, FMETA_MissingHeisterEventData inData);
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FMETA_CharacterID, FMETA_HeisterStateChangeHistory> HeistersStateChangesHistory;
@@ -73,45 +111,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, bool> UnfulfilledEvents;
-    
-public:
-    UMETA_RandEventManagerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    bool ShouldStateChangeBeNoted(FMETA_HeisterStateChangeNote inNote) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveEventForMissingHeister(FMETA_CharacterID inCharacterID);
-    
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    TArray<EMETA_CharacterState> GetStatesWhichChangesShouldBeNotedInHistory() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void GetNoteAboutLastChangeToState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess);
-    
-    UFUNCTION(BlueprintCallable)
-    void GetNoteAboutLastChangeFromStateToState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inFromState, EMETA_CharacterState inToState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess);
-    
-    UFUNCTION(BlueprintCallable)
-    void GetNoteAboutLastChangeFromState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess);
-    
-    UFUNCTION(BlueprintPure)
-    FMETA_CharacterID GetMissingHeisterForMission(TSubclassOf<UMETA_MissionID> inMissionID) const;
-    
-    UFUNCTION(BlueprintPure)
-    FGameplayTag GetEventIdForMissingHeister(FMETA_CharacterID inCharacterID) const;
-    
-    UFUNCTION(BlueprintPure)
-    void GetEventDataForMissingHeister(FMETA_CharacterID inCharacterID, FMETA_MissingHeisterEventData& outData, bool& outSuccess) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void DecrementMissingHeistersEventsDaysTimer(TMap<FMETA_CharacterID, FMETA_MissingHeisterEventData>& outExpiredEvents);
-    
-    UFUNCTION(BlueprintCallable)
-    void AddStatesChangesNote(FMETA_CharacterID inCharacterID, FMETA_HeisterStateChangeNote inNote);
-    
-    UFUNCTION(BlueprintCallable)
-    void AddEventDataForMissingHeister(FMETA_CharacterID inCharacterID, FMETA_MissingHeisterEventData inData);
     
 };
 

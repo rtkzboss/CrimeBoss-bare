@@ -12,6 +12,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ZiptieItemDropComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_ZiptieItemDropComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<TSubclassOf<AIGS_PickupActorBase>> ItemsClassesToDrop;
     
@@ -22,8 +24,5 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTransform ItemSpawnPointTransform;
     
-public:
-    UIGS_ZiptieItemDropComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

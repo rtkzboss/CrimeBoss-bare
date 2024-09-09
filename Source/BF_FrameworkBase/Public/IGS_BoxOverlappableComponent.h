@@ -10,14 +10,14 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_BoxOverlappableComponent : public UBoxComponent, public IIGS_ProjectileOverlappable {
     GENERATED_BODY()
 public:
+    UIGS_BoxOverlappableComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnBoxProjectileOverlap OnProjectileOverlapEvent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_OverlapResponseType OverlappableType;
     
-    UIGS_BoxOverlappableComponent(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

@@ -15,6 +15,14 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetDoorUnlockRadialSlice : public UIGS_WidgetRadialSliceBase {
     GENERATED_BODY()
 public:
+    UIGS_WidgetDoorUnlockRadialSlice();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetUnlockMethod_Internal(FGameplayTag inMethod);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetImageInternal(const TSoftObjectPtr<UTexture2D>& inTexture);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor WieldedColor;
     
@@ -39,15 +47,6 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced)
     UImage* SliceImage;
-    
-public:
-    UIGS_WidgetDoorUnlockRadialSlice();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetUnlockMethod_Internal(FGameplayTag inMethod);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetImageInternal(const TSoftObjectPtr<UTexture2D>& inTexture);
     
 };
 

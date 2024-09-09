@@ -12,14 +12,6 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_PlotlineAsset : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    int32 m_Price;
-    
-    UPROPERTY()
-    float m_AdditionalPricePercent;
-    
-public:
     UMETA_PlotlineAsset();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -60,6 +52,13 @@ public:
     
     UFUNCTION(BlueprintPure)
     EMETA_PlotlineAssetAvailability GetAvailability() const;
+    
+private:
+    UPROPERTY()
+    int32 m_Price;
+    
+    UPROPERTY()
+    float m_AdditionalPricePercent;
     
 };
 

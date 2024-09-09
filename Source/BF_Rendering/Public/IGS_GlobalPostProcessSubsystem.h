@@ -14,17 +14,6 @@ UCLASS(BlueprintType)
 class BF_RENDERING_API UIGS_GlobalPostProcessSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    UIGS_GlobalPostProcessesDataAsset* m_GloballyAppliedPostProcesses;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TArray<FWeightedBlendable> m_VisualStylePostProcesses;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TArray<FWeightedBlendable> m_VisorPostProcesses;
-    
-public:
     UIGS_GlobalPostProcessSubsystem();
 
     UFUNCTION(BlueprintCallable)
@@ -35,6 +24,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ApplyPostProcessesToCamera(UCameraComponent* inCamera, TArray<EIGS_PostProcessType> inPostProcessesTypes);
+    
+protected:
+    UPROPERTY()
+    UIGS_GlobalPostProcessesDataAsset* m_GloballyAppliedPostProcesses;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    TArray<FWeightedBlendable> m_VisualStylePostProcesses;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    TArray<FWeightedBlendable> m_VisorPostProcesses;
     
 };
 

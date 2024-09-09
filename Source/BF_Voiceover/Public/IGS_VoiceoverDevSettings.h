@@ -12,6 +12,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_VoiceoverSett
 class BF_VOICEOVER_API UIGS_VoiceoverDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_VoiceoverDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> DialogueHeisterCharacterDataTable;
     
@@ -39,7 +41,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MetaCutsceneLevelDialoguesDataTable;
     
-    UIGS_VoiceoverDevSettings();
-
 };
 

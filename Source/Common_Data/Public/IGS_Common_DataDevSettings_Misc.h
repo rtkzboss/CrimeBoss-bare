@@ -12,6 +12,8 @@ UCLASS(BlueprintType)
 class COMMON_DATA_API UIGS_Common_DataDevSettings_Misc : public UIGS_Common_DataDevSettings_Base {
     GENERATED_BODY()
 public:
+    UIGS_Common_DataDevSettings_Misc();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> InvalidMaterialGray;
     
@@ -42,7 +44,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> FPSDifficultyDA;
     
-    UIGS_Common_DataDevSettings_Misc();
-
 };
 

@@ -11,6 +11,11 @@ UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootItemBaseComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 public:
+    UIGS_LootItemBaseComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    FIGS_LootItemsData GetLootItemData();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UIGS_LootItemInventoryObject> LootItem;
     
@@ -22,11 +27,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ItemWeight;
-    
-    UIGS_LootItemBaseComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    FIGS_LootItemsData GetLootItemData();
     
 };
 

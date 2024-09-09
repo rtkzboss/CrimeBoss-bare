@@ -7,6 +7,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterButtonStrip : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterButtonStrip();
+
     UPROPERTY()
     int32 Count;
     
@@ -16,7 +18,5 @@ public:
     UPROPERTY()
     TArray<int32> Values;
     
-    UHoudiniParameterButtonStrip();
-
 };
 

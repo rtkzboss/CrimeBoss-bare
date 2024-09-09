@@ -7,6 +7,8 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API UIGS_FightPathQueryFilter : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
+    UIGS_FightPathQueryFilter();
+
 protected:
     UPROPERTY(EditAnywhere)
     float CostMultiplier;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool IsActive;
     
-public:
-    UIGS_FightPathQueryFilter();
-
 };
 

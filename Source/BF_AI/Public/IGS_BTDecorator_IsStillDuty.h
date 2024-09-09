@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTDecorator_IsStillDuty : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UIGS_BTDecorator_IsStillDuty();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UIGS_BTDecorator_IsStillDuty();
-
 };
 

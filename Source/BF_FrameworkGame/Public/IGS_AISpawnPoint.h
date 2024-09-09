@@ -24,6 +24,17 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_AISpawnPoint : public ANavigationObjectBase {
     GENERATED_BODY()
 public:
+    AIGS_AISpawnPoint(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SpawnUnitParametrized(EIGS_TeamSideEnum inTeamSide, uint8 inUnitVariation, EIGS_UnitSpecialization inUnitSpecialization);
+    
+    UFUNCTION(BlueprintCallable)
+    void SpawnUnit();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSpawnTriggeredEvent(AIGS_GameCharacterBase* inUnit);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OnCharacterDeathSignature OnCharacterDeath;
     
@@ -116,17 +127,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_AIEnemyGroupSpawner> OwnerGroupSpawner;
-    
-    AIGS_AISpawnPoint(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SpawnUnitParametrized(EIGS_TeamSideEnum inTeamSide, uint8 inUnitVariation, EIGS_UnitSpecialization inUnitSpecialization);
-    
-    UFUNCTION(BlueprintCallable)
-    void SpawnUnit();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSpawnTriggeredEvent(AIGS_GameCharacterBase* inUnit);
     
 };
 

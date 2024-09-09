@@ -14,6 +14,32 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_HeatManagerComponent : public UIGS_HeatManagerBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_HeatManagerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void RemoveInvestigationEffect(const FGameplayTag inEffectTag);
+    
+    UFUNCTION(BlueprintCallable)
+    void RemoveHeatEffect(const FGameplayTag inEffectTag);
+    
+    UFUNCTION(BlueprintPure)
+    float GetInvestigationGrowthRate() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetHeatGrowthRate() const;
+    
+    UFUNCTION(BlueprintPure)
+    float CalculateInvestigationChangeWithModifiers(const float inInvestigationChange) const;
+    
+    UFUNCTION(BlueprintPure)
+    float CalculateHeatChangeWithModifiers(const float inHeatChange) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void AddInvestigationEffect(const FGameplayTag inEffectTag, const int32 inPercentModifier);
+    
+    UFUNCTION(BlueprintCallable)
+    void AddHeatEffect(const FGameplayTag inEffectTag, const int32 inPercentModifier);
+    
 protected:
     UPROPERTY(BlueprintReadWrite)
     TMap<EMETA_Gang, int32> GangsAttacksCounter;
@@ -53,33 +79,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite)
     TMap<FGameplayTag, int32> HeatEffects;
-    
-public:
-    UMETA_HeatManagerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void RemoveInvestigationEffect(const FGameplayTag inEffectTag);
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveHeatEffect(const FGameplayTag inEffectTag);
-    
-    UFUNCTION(BlueprintPure)
-    float GetInvestigationGrowthRate() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetHeatGrowthRate() const;
-    
-    UFUNCTION(BlueprintPure)
-    float CalculateInvestigationChangeWithModifiers(const float inInvestigationChange) const;
-    
-    UFUNCTION(BlueprintPure)
-    float CalculateHeatChangeWithModifiers(const float inHeatChange) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void AddInvestigationEffect(const FGameplayTag inEffectTag, const int32 inPercentModifier);
-    
-    UFUNCTION(BlueprintCallable)
-    void AddHeatEffect(const FGameplayTag inEffectTag, const int32 inPercentModifier);
     
 };
 

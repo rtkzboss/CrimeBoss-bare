@@ -10,6 +10,8 @@ UCLASS()
 class CUSTOMIZABLEOBJECTPOPULATION_API UCustomizableObjectPopulationClass : public UObject {
     GENERATED_BODY()
 public:
+    UCustomizableObjectPopulationClass();
+
     UPROPERTY(EditAnywhere)
     FString Name;
     
@@ -28,7 +30,5 @@ public:
     UPROPERTY()
     TArray<FString> Tags;
     
-    UCustomizableObjectPopulationClass();
-
 };
 

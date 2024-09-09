@@ -24,44 +24,6 @@ UCLASS(BlueprintType)
 class CUSTOMIZABLEOBJECT_API UCustomizableObjectInstance : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UCustomizableObject* CustomizableObject;
-    
-    UPROPERTY(Transient, VisibleAnywhere)
-    USkeletalMesh* SkeletalMesh;
-    
-    UPROPERTY(EditFixedSize, VisibleAnywhere)
-    TArray<FCustomizableObjectBoolParameterValue> BoolParameters;
-    
-    UPROPERTY(EditFixedSize, VisibleAnywhere)
-    TArray<FCustomizableObjectIntParameterValue> IntParameters;
-    
-    UPROPERTY(EditFixedSize, VisibleAnywhere)
-    TArray<FCustomizableObjectFloatParameterValue> FloatParameters;
-    
-    UPROPERTY(EditFixedSize, VisibleAnywhere)
-    TArray<FCustomizableObjectTextureParameterValue> TextureParameters;
-    
-    UPROPERTY(EditFixedSize, VisibleAnywhere)
-    TArray<FCustomizableObjectVectorParameterValue> VectorParameters;
-    
-    UPROPERTY(EditFixedSize, VisibleAnywhere)
-    TArray<FCustomizableObjectProjectorParameterValue> ProjectorParameters;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool bBuildParameterDecorations;
-    
-    UPROPERTY(BlueprintAssignable, Transient)
-    FObjectInstanceUpdatedDelegate UpdatedDelegate;
-    
-    UPROPERTY()
-    FString SkeletalMeshStatus;
-    
-private:
-    UPROPERTY(Transient)
-    UCustomizableInstancePrivateData* PrivateData;
-    
-public:
     UCustomizableObjectInstance();
 
     UFUNCTION(BlueprintCallable)
@@ -183,6 +145,43 @@ public:
     
     UFUNCTION(BlueprintCallable)
     int32 AddValueToFloatRange(const FString& ParamName);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UCustomizableObject* CustomizableObject;
+    
+    UPROPERTY(Transient, VisibleAnywhere)
+    USkeletalMesh* SkeletalMesh;
+    
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
+    TArray<FCustomizableObjectBoolParameterValue> BoolParameters;
+    
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
+    TArray<FCustomizableObjectIntParameterValue> IntParameters;
+    
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
+    TArray<FCustomizableObjectFloatParameterValue> FloatParameters;
+    
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
+    TArray<FCustomizableObjectTextureParameterValue> TextureParameters;
+    
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
+    TArray<FCustomizableObjectVectorParameterValue> VectorParameters;
+    
+    UPROPERTY(EditFixedSize, VisibleAnywhere)
+    TArray<FCustomizableObjectProjectorParameterValue> ProjectorParameters;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
+    bool bBuildParameterDecorations;
+    
+    UPROPERTY(BlueprintAssignable, Transient)
+    FObjectInstanceUpdatedDelegate UpdatedDelegate;
+    
+    UPROPERTY()
+    FString SkeletalMeshStatus;
+    
+private:
+    UPROPERTY(Transient)
+    UCustomizableInstancePrivateData* PrivateData;
     
 };
 

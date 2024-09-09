@@ -14,29 +14,7 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_GlobalInventory : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GlobalInventoryModifiedDynamicSignature OnInventoryModified;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GlobalItemChangedDynamicSignature OnItemAdded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GlobalItemChangedDynamicSignature OnItemRemoved;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_GlobalItemChangedDynamicSignature OnWTAdded;
-    
-protected:
-    UPROPERTY(ReplicatedUsing=OnRep_Slots)
-    TArray<FIGS_GlobalItemSlot> mR_Slots;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_WTSlot)
-    FIGS_GlobalItemSlot mR_WTSlot;
-    
-public:
     UIGS_GlobalInventory(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     bool RemoveItem(const TSubclassOf<UIGS_GlobalInventoryObject>& inItemClass, bool inRemoveAll);
@@ -79,5 +57,27 @@ public:
     UFUNCTION(BlueprintCallable)
     bool AddItem(const TSubclassOf<UIGS_GlobalInventoryObject>& inItemClassToAdd);
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GlobalInventoryModifiedDynamicSignature OnInventoryModified;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GlobalItemChangedDynamicSignature OnItemAdded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GlobalItemChangedDynamicSignature OnItemRemoved;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_GlobalItemChangedDynamicSignature OnWTAdded;
+    
+protected:
+    UPROPERTY(ReplicatedUsing=OnRep_Slots)
+    TArray<FIGS_GlobalItemSlot> mR_Slots;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_WTSlot)
+    FIGS_GlobalItemSlot mR_WTSlot;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

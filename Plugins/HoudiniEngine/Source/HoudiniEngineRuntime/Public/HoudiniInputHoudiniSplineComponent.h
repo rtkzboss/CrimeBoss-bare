@@ -11,6 +11,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniInputHoudiniSplineComponent : public UHoudiniInputObject {
     GENERATED_BODY()
 public:
+    UHoudiniInputHoudiniSplineComponent();
+
     UPROPERTY()
     EHoudiniCurveType CurveType;
     
@@ -24,8 +26,5 @@ protected:
     UPROPERTY(Instanced)
     UHoudiniSplineComponent* CachedComponent;
     
-public:
-    UHoudiniInputHoudiniSplineComponent();
-
 };
 

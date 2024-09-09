@@ -8,13 +8,13 @@ UCLASS()
 class BF_AI_API UIGS_AICommandWait : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandWait();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float WaitTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_InterestPointHolder LookAt;
     
-    UIGS_AICommandWait();
-
 };
 

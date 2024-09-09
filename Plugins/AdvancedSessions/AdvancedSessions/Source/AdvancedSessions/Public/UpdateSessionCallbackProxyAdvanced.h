@@ -12,16 +12,16 @@ UCLASS(MinimalAPI)
 class UUpdateSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
+    UUpdateSessionCallbackProxyAdvanced();
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
+    static UUpdateSessionCallbackProxyAdvanced* UpdateSession(UObject* WorldContextObject, const TArray<FSessionPropertyKeyPair>& ExtraSettings, int32 PublicConnections, int32 PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bAllowJoinViaPresence, bool bAllowJoinInProgress, bool bRefreshOnlineData, bool bIsDedicatedServer);
+    
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnSuccess;
     
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnFailure;
-    
-    UUpdateSessionCallbackProxyAdvanced();
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
-    static UUpdateSessionCallbackProxyAdvanced* UpdateSession(UObject* WorldContextObject, const TArray<FSessionPropertyKeyPair>& ExtraSettings, int32 PublicConnections, int32 PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bAllowJoinViaPresence, bool bAllowJoinInProgress, bool bRefreshOnlineData, bool bIsDedicatedServer);
     
 };
 

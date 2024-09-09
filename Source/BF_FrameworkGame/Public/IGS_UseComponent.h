@@ -19,6 +19,56 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_UseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_UseComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    bool Use(UIGS_InteractiveComponent* inInteractiveComponent, bool bIsHolding);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetInteractionEnabled(bool inState);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_UseReleased(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_Use(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_SetLastInteraction(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Reliable, Server)
+    void Server_PuzzleInteractionEnded(bool inResult, bool inStealthEnd);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_PostAuthClient(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_HoldSuccess(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_HoldStarted(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_HoldCanceled(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void Server_AuthUse(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION()
+    void OnMovementModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode);
+    
+    UFUNCTION(Client, Reliable, WithValidation)
+    void Client_Rollback(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Client, Reliable, WithValidation)
+    void Client_PostServerUseReleased(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(Client, Reliable, WithValidation)
+    void Client_AuthUse(UIGS_InteractiveComponent* inInteractiveComponent);
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearVisualParts();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_InteractiveComponent* PuzzleInteraction;
     
@@ -114,56 +164,6 @@ public:
     
     UPROPERTY(VisibleAnywhere)
     bool isCurrentlyInteracting;
-    
-    UIGS_UseComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    bool Use(UIGS_InteractiveComponent* inInteractiveComponent, bool bIsHolding);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetInteractionEnabled(bool inState);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_UseReleased(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_Use(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_SetLastInteraction(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Reliable, Server)
-    void Server_PuzzleInteractionEnded(bool inResult, bool inStealthEnd);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_PostAuthClient(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_HoldSuccess(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_HoldStarted(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_HoldCanceled(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_AuthUse(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION()
-    void OnMovementModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode);
-    
-    UFUNCTION(Client, Reliable, WithValidation)
-    void Client_Rollback(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Client, Reliable, WithValidation)
-    void Client_PostServerUseReleased(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(Client, Reliable, WithValidation)
-    void Client_AuthUse(UIGS_InteractiveComponent* inInteractiveComponent);
-    
-    UFUNCTION(BlueprintCallable)
-    void ClearVisualParts();
     
 };
 

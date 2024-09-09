@@ -14,41 +14,7 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WorldSpaceWidgetBase : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bForceHidden;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    bool bAutoActivateWidget;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_HeisterNumberChanged OnHeisterNumberChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_StatusProgressChangedEvent OnStatusProgressChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ProgressWidgetTypeChangedEvent OnWidgetSubtypeChangedEvent;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    AActor* WorldWidgetOwner;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, ReplicatedUsing=OnRep_WidgetType)
-    EIGS_WorldWidgetType WidgetType;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, ReplicatedUsing=OnRep_HeisterNumber)
-    uint8 HeisterNumber;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float Progress;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    EIGS_ProgressGadgetSubtype ProgressWidgetSubtype;
-    
-public:
     UIGS_WorldSpaceWidgetBase(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION()
     void SetWorldSpaceWidgetVisibility(bool InVisibility);
@@ -88,5 +54,39 @@ public:
     UFUNCTION()
     bool GetIsWidgetGroupVisible();
     
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bForceHidden;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    bool bAutoActivateWidget;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_HeisterNumberChanged OnHeisterNumberChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_StatusProgressChangedEvent OnStatusProgressChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ProgressWidgetTypeChangedEvent OnWidgetSubtypeChangedEvent;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    AActor* WorldWidgetOwner;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, ReplicatedUsing=OnRep_WidgetType)
+    EIGS_WorldWidgetType WidgetType;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, ReplicatedUsing=OnRep_HeisterNumber)
+    uint8 HeisterNumber;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float Progress;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    EIGS_ProgressGadgetSubtype ProgressWidgetSubtype;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

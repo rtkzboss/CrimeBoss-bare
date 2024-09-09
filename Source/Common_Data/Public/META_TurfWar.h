@@ -12,11 +12,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_TurfWar : public UMETA_BaseFPSMission {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    FMETA_TurfWarMissionSave m_TurfWarMissionSave;
-    
-public:
     UMETA_TurfWar();
 
     UFUNCTION(BlueprintCallable)
@@ -45,6 +40,10 @@ public:
     
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetDefenseLosePenaltyCost(const UObject* inWCO);
+    
+private:
+    UPROPERTY()
+    FMETA_TurfWarMissionSave m_TurfWarMissionSave;
     
 };
 

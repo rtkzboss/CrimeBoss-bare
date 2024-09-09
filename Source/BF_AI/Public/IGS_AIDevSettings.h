@@ -10,6 +10,8 @@ UCLASS(BlueprintType, DefaultConfig, Config="DeveloperSettings/Dev_AISettings")
 class BF_AI_API UIGS_AIDevSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_AIDevSettings();
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> VehicleGroupDataTable;
     
@@ -28,7 +30,5 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UTexture2D> VehicleDestinationAreaPointSprite_Disabled;
     
-    UIGS_AIDevSettings();
-
 };
 

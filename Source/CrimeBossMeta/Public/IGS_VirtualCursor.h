@@ -14,14 +14,6 @@ UCLASS()
 class CRIMEBOSSMETA_API AIGS_VirtualCursor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTag SupportedScreenGameplayTag;
-    
-private:
-    UPROPERTY(Instanced)
-    UStaticMeshComponent* m_ColliderComponent;
-    
-public:
     AIGS_VirtualCursor(const FObjectInitializer& ObjectInitializer);
 
 private:
@@ -33,6 +25,14 @@ private:
     
     UFUNCTION(BlueprintCallable)
     TScriptInterface<IVirtualCursorTarget> GetClosestOverlappedTarget();
+    
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTag SupportedScreenGameplayTag;
+    
+private:
+    UPROPERTY(Instanced)
+    UStaticMeshComponent* m_ColliderComponent;
     
 };
 

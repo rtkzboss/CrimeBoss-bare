@@ -9,12 +9,7 @@ UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class BF_FRAMEWORKBASE_API UIGS_DownStateHandlerComponentFramework : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Replicated)
-    bool UseDownState;
-    
     UIGS_DownStateHandlerComponentFramework(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void Revive(APawn* healer);
@@ -25,5 +20,10 @@ public:
     UFUNCTION(BlueprintPure)
     float GetDownStateLengthInSeconds() const;
     
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Replicated)
+    bool UseDownState;
+    
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

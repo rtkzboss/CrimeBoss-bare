@@ -9,13 +9,13 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_UnaryOperationNode_SG : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_UnaryOperationNode_SG();
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_UnaryOperation UnaryOperation;
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag GraphVariable;
     
-    UMETA_UnaryOperationNode_SG();
-
 };
 

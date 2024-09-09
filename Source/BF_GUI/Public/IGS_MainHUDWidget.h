@@ -11,36 +11,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_MainHUDWidget : public UIGS_HUDScreen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_PlayerCharacter* PlayerPawn;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UCanvasPanel* MainCanvas;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    TArray<UIGS_HUDSubwidgetBase*> WidgetInstances;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
-    TArray<UIGS_HUDSubwidgetBase*> StealthWidgets;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
-    TArray<UIGS_HUDSubwidgetBase*> SpectatorWidgets;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
-    TArray<UIGS_HUDSubwidgetBase*> BattleWidgets;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
-    TArray<UIGS_HUDSubwidgetBase*> HordeModeWidgets;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
-    TArray<UIGS_HUDSubwidgetBase*> EndMissionWidgets;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
-    TArray<UIGS_HUDSubwidgetBase*> InAbilityWidgets;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    TSet<UIGS_HUDSubwidgetBase*> AllWidgets;
-    
     UIGS_MainHUDWidget();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -105,6 +75,36 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddRelevancyToAllWidgets();
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_PlayerCharacter* PlayerPawn;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UCanvasPanel* MainCanvas;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    TArray<UIGS_HUDSubwidgetBase*> WidgetInstances;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    TArray<UIGS_HUDSubwidgetBase*> StealthWidgets;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    TArray<UIGS_HUDSubwidgetBase*> SpectatorWidgets;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    TArray<UIGS_HUDSubwidgetBase*> BattleWidgets;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    TArray<UIGS_HUDSubwidgetBase*> HordeModeWidgets;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    TArray<UIGS_HUDSubwidgetBase*> EndMissionWidgets;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    TArray<UIGS_HUDSubwidgetBase*> InAbilityWidgets;
+    
+    UPROPERTY(BlueprintReadOnly, Export)
+    TSet<UIGS_HUDSubwidgetBase*> AllWidgets;
     
 };
 

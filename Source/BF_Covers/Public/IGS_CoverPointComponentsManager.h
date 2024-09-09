@@ -10,17 +10,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_COVERS_API UIGS_CoverPointComponentsManager : public UActorComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditAnywhere)
-    bool AutomaticStart;
-    
-    UPROPERTY(EditAnywhere)
-    bool ShouldCheckMoving;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    TArray<UIGS_CoverPointComponent*> CoverPointComponents;
-    
-public:
     UIGS_CoverPointComponentsManager(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -34,6 +23,16 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ActivateCovers();
+    
+protected:
+    UPROPERTY(EditAnywhere)
+    bool AutomaticStart;
+    
+    UPROPERTY(EditAnywhere)
+    bool ShouldCheckMoving;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    TArray<UIGS_CoverPointComponent*> CoverPointComponents;
     
 };
 

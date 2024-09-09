@@ -12,18 +12,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_BossPointMovementManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    USplineComponent* SplineComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AIGS_PlayerCharacter* MovingPlayer;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UIGS_PlayerCharacterMovementComponent* MovementComp;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnSplineCompletedEvent OnSplineCompletedEvent;
-    
     AIGS_BossPointMovementManager(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -37,6 +25,18 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AbortMoving();
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    USplineComponent* SplineComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    AIGS_PlayerCharacter* MovingPlayer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UIGS_PlayerCharacterMovementComponent* MovementComp;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnSplineCompletedEvent OnSplineCompletedEvent;
     
 };
 

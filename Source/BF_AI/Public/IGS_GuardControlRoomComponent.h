@@ -13,6 +13,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_GuardControlRoomComponent : public UIGS_GuardControlRoomComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_GuardControlRoomComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* CloseGuardEQS;
@@ -32,8 +34,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Export)
     TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
     
-public:
-    UIGS_GuardControlRoomComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

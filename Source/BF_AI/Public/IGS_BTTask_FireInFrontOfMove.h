@@ -7,6 +7,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_FireInFrontOfMove : public UIGS_BTTask_FireBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_FireInFrontOfMove();
+
 private:
     UPROPERTY(EditAnywhere)
     float Distance;
@@ -14,8 +16,5 @@ private:
     UPROPERTY(EditAnywhere)
     float FireTime;
     
-public:
-    UIGS_BTTask_FireInFrontOfMove();
-
 };
 

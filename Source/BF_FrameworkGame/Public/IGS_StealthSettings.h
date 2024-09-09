@@ -14,6 +14,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_StealthSettings : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_StealthSettings();
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float DefaultDetectionUpTime;
@@ -186,8 +188,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float VisionCapsuleRadius;
     
-public:
-    UIGS_StealthSettings();
-
 };
 

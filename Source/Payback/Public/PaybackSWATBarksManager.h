@@ -12,18 +12,6 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UPaybackSWATBarksManager : public UAIBarksManagerBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<FText> TargetSeenTraceDialogues;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<FText> TargetNotSeenTraceDialogues;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<FText> TargetSeenDefendDialogues;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<FText> TargetNotSeenDefendDialogues;
-    
     UPaybackSWATBarksManager(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -119,6 +107,19 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void OnBreachClearObstacle(const AIGS_GameCharacterFramework* inInstigator);
+    
+public:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TArray<FText> TargetSeenTraceDialogues;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TArray<FText> TargetNotSeenTraceDialogues;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TArray<FText> TargetSeenDefendDialogues;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TArray<FText> TargetNotSeenDefendDialogues;
     
 };
 

@@ -13,6 +13,19 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetMainInventoryItem : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetMainInventoryItem();
+
+    UFUNCTION(BlueprintCallable)
+    void TemporaryOnClickItem();
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void SetupInventory(UIGS_ListInventory* inInventory);
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetItemWielded(bool inIsWielded) const;
+    
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<UIGS_InventoryObjectFramework> Item;
@@ -34,20 +47,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_ListInventory> OwningPlayerInventory;
-    
-public:
-    UIGS_WidgetMainInventoryItem();
-
-    UFUNCTION(BlueprintCallable)
-    void TemporaryOnClickItem();
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void SetupInventory(UIGS_ListInventory* inInventory);
-    
-public:
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetItemWielded(bool inIsWielded) const;
     
 };
 

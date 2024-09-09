@@ -9,10 +9,10 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterOperatorPath : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterOperatorPath();
+
     UPROPERTY()
     TWeakObjectPtr<UHoudiniInput> HoudiniInput;
     
-    UHoudiniParameterOperatorPath();
-
 };
 

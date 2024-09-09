@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_OpenLootHolder : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_OpenLootHolder();
+
     UPROPERTY(EditAnywhere)
     float DelayAfterInteracting;
     
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool WaitForBashHitsHandled;
     
-public:
-    UIGS_BTTask_OpenLootHolder();
-
 };
 

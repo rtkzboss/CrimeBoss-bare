@@ -13,6 +13,11 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LootCarryableSpawnerBase : public AIGS_SpawnerBase {
     GENERATED_BODY()
 public:
+    AIGS_LootCarryableSpawnerBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void LootCarryableSpawned(AIGS_StaticMeshInventoryItemPickup* inPickup);
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     USceneComponent* Scene;
     
@@ -27,11 +32,6 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FIGS_CarryableLootSpawnedSignature OnCarryableLootCollectionSpawned;
-    
-    AIGS_LootCarryableSpawnerBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void LootCarryableSpawned(AIGS_StaticMeshInventoryItemPickup* inPickup);
     
 };
 

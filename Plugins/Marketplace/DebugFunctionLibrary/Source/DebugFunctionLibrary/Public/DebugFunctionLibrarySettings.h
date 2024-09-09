@@ -9,6 +9,8 @@ UCLASS(BlueprintType, DefaultConfig, Config=Game)
 class DEBUGFUNCTIONLIBRARY_API UDebugFunctionLibrarySettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UDebugFunctionLibrarySettings();
+
     UPROPERTY(Config, EditAnywhere)
     bool bGlobalDebug;
     
@@ -108,7 +110,5 @@ public:
     UPROPERTY(Config, EditAnywhere)
     FLinearColor TertiaryColour;
     
-    UDebugFunctionLibrarySettings();
-
 };
 

@@ -8,6 +8,8 @@ UCLASS()
 class COMMON_SAVE_API UIGS_PaybackSaveGameBase : public USaveGame {
     GENERATED_BODY()
 public:
+    UIGS_PaybackSaveGameBase();
+
 protected:
     UPROPERTY(SaveGame)
     uint32 SaveFileVersion;
@@ -36,8 +38,5 @@ protected:
     UPROPERTY(SaveGame)
     bool bAppliedPatchSave;
     
-public:
-    UIGS_PaybackSaveGameBase();
-
 };
 

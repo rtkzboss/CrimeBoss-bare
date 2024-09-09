@@ -11,23 +11,6 @@ UCLASS(Abstract)
 class COMMON_DATA_API UMETA_BaseObject : public UMETA_ComparableItemData {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTag itemTag;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FGameplayTag EntitlementTag;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSoftObjectPtr<UTexture2D> Icon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 ItemCost;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float RelativeItemPrice;
-    
-public:
     UMETA_BaseObject();
 
     UFUNCTION(BlueprintCallable)
@@ -68,6 +51,22 @@ public:
     
     UFUNCTION(BlueprintPure)
     FGameplayTag GetEntitlementTagID() const;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTag itemTag;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FGameplayTag EntitlementTag;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSoftObjectPtr<UTexture2D> Icon;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 ItemCost;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float RelativeItemPrice;
     
 };
 

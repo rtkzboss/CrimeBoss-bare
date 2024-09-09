@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateLooting : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateLooting();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootingCollection;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* LootCarryablesQuery;
     
-public:
-    UIGS_BTService_EvaluateLooting();
-
 };
 

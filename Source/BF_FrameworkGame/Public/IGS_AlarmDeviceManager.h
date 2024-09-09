@@ -13,6 +13,11 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AlarmDeviceManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
+    UIGS_AlarmDeviceManager();
+
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
+    static UIGS_AlarmDeviceManager* Instance(const UObject* inWorldContextObject);
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_AlarmButtonBase*> AlarmButtons;
     
@@ -24,11 +29,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_WalkieTalkie*> WalkieTalkies;
-    
-    UIGS_AlarmDeviceManager();
-
-    UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
-    static UIGS_AlarmDeviceManager* Instance(const UObject* inWorldContextObject);
     
 };
 

@@ -9,6 +9,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_NavLinkRappelComponent : public UIGS_NavLinkComponentBase {
     GENERATED_BODY()
 public:
+    UIGS_NavLinkRappelComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* InAnimation;
     
@@ -18,7 +20,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* OutAnimation;
     
-    UIGS_NavLinkRappelComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

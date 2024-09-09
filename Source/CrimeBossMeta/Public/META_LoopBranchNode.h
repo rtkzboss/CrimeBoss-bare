@@ -8,6 +8,14 @@ UCLASS()
 class CRIMEBOSSMETA_API UMETA_LoopBranchNode : public UMETA_BaseNode_SG {
     GENERATED_BODY()
 public:
+    UMETA_LoopBranchNode();
+
+    UFUNCTION(BlueprintCallable)
+    void SetSaveData(FMETA_LoopBranchNodeSaveData SaveData);
+    
+    UFUNCTION(BlueprintCallable)
+    void GetSaveData(FMETA_LoopBranchNodeSaveData& SaveData);
+    
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 AmountOfActivations;
     
@@ -19,14 +27,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 ContinueNodeId;
-    
-    UMETA_LoopBranchNode();
-
-    UFUNCTION(BlueprintCallable)
-    void SetSaveData(FMETA_LoopBranchNodeSaveData SaveData);
-    
-    UFUNCTION(BlueprintCallable)
-    void GetSaveData(FMETA_LoopBranchNodeSaveData& SaveData);
     
 };
 

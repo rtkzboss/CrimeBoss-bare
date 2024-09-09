@@ -13,20 +13,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_NETWORK_API UIGS_NetworkComponentDialogue : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_NetworkDialogueEvent OnVoiceStartedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_NetworkDialogueEvent OnVoiceStopedEvent;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkSwitchValue* OverrideCharacterAkSwitch;
-    
-    UPROPERTY()
-    UIGS_ComponentDialogueDataAsset* ComponentData;
-    
-public:
     UIGS_NetworkComponentDialogue(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -53,6 +39,20 @@ protected:
     
     UFUNCTION(NetMulticast, Reliable)
     void All_OnPlayVoice(FIGS_PlayVariationData inPlayVariationData);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_NetworkDialogueEvent OnVoiceStartedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_NetworkDialogueEvent OnVoiceStopedEvent;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkSwitchValue* OverrideCharacterAkSwitch;
+    
+    UPROPERTY()
+    UIGS_ComponentDialogueDataAsset* ComponentData;
     
 };
 

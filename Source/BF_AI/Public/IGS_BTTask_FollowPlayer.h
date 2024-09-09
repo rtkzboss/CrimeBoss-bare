@@ -11,6 +11,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_FollowPlayer : public UBTTask_MoveToWithRepath {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_FollowPlayer();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SuspectedTargetPos;
@@ -27,8 +29,5 @@ protected:
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
     
-public:
-    UIGS_BTTask_FollowPlayer();
-
 };
 

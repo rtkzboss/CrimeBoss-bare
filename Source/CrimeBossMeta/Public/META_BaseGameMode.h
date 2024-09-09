@@ -34,24 +34,6 @@ UCLASS(Abstract, NonTransient)
 class CRIMEBOSSMETA_API AMETA_BaseGameMode : public AIGS_GameModeMenuBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    EMETA_MenuState MenuState;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UMETA_MainWidget* MainWidget;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnMetaMenuStateChanged OnMetaMenuStateChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnComponentsInitializedEvent OnComponentsInitializedEvent;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool bGamemodeComponentsInitialized;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UMETA_PlanningBoardManagerComponent* PlanningBoardManagerComponent;
-    
     AMETA_BaseGameMode(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -144,6 +126,24 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void CompleteCareerBase(EMETA_CareerCompletionReason CompletionReason, EMETA_Gang OptionalGang);
+    
+    UPROPERTY(BlueprintReadOnly)
+    EMETA_MenuState MenuState;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UMETA_MainWidget* MainWidget;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnMetaMenuStateChanged OnMetaMenuStateChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnComponentsInitializedEvent OnComponentsInitializedEvent;
+    
+    UPROPERTY(BlueprintReadOnly)
+    bool bGamemodeComponentsInitialized;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UMETA_PlanningBoardManagerComponent* PlanningBoardManagerComponent;
     
 };
 

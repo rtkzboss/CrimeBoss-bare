@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_BTService_EvaluateBestTarget : public UBTService {
     GENERATED_BODY()
 public:
+    UIGS_BTService_EvaluateBestTarget();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestTarget;
@@ -18,8 +20,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool TracePlayers;
     
-public:
-    UIGS_BTService_EvaluateBestTarget();
-
 };
 

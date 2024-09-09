@@ -10,6 +10,11 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CUSTOMIZABLEOBJECT_API UCustomizableSkeletalComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UCustomizableSkeletalComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void UpdateSkeletalMeshAsync(bool bNeverSkipUpdate);
+    
     UPROPERTY(Transient)
     float SkippedLastRenderTime;
     
@@ -18,11 +23,6 @@ public:
     
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
     FLightingChannels LightingChannels;
-    
-    UCustomizableSkeletalComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void UpdateSkeletalMeshAsync(bool bNeverSkipUpdate);
     
 };
 

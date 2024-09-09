@@ -32,6 +32,83 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_LootManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static float UpdateLootWeightMultiplier(UObject* inWCO);
+    
+    UFUNCTION()
+    TMap<FGameplayTag, float> SortLootByTag(TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inLoot);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetMissionBagsInWeight(int32 inRequiredBags);
+    
+    UFUNCTION()
+    void SendNewValueToHeisterData(AIGS_GameCharacterFramework* inOwningPawn, float inValueToAdd, bool inIsBonus) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ResetCollectedLoot();
+    
+    UFUNCTION(BlueprintCallable)
+    void RegisterLootItem(TSubclassOf<UIGS_LootItemInventoryObject> inLootItem);
+    
+    UFUNCTION(BlueprintCallable)
+    void RegisterLootCollection(AIGS_LootCollectionBase* inLootCollection);
+    
+    UFUNCTION(BlueprintCallable)
+    void RegisterLootCarryable(TSubclassOf<UIGS_CarryableInventoryObject> inCarryable);
+    
+    UFUNCTION()
+    void OnRep_SecuredLoot(float inOldSecuredLootValue);
+    
+    UFUNCTION()
+    void OnRep_SecuredBonusLoot(float inOldSecuredBonusLootValue);
+    
+    UFUNCTION()
+    void OnPocketLootWeightChanged();
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsObjectiveLootCollected();
+    
+    UFUNCTION(BlueprintCallable)
+    float GetValuePercentage(float InValue);
+    
+    UFUNCTION(BlueprintPure)
+    float GetThrowableItemSize(EIGS_LootSize inWeight) const;
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static UIGS_LootManager* GetLootManager(const UObject* inWCO);
+    
+    UFUNCTION()
+    float GetItemValueFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass);
+    
+    UFUNCTION()
+    FGameplayTag GetItemTypeFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass);
+    
+    UFUNCTION(BlueprintPure)
+    float GetItemSize(EIGS_ItemWeight inWeight) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceSetMissionBagsInWeight(int32 inRequiredBags);
+    
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static void DisableLootVoiceLines(UObject* inWCO, bool bDisable);
+    
+    UFUNCTION()
+    float CalculateSpecialLootItemValue(FGameplayTag inItemTag, float inItemWeight);
+    
+    UFUNCTION()
+    void CalculateNewLootValue(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObject, AIGS_GameCharacterFramework* OwningPawn);
+    
+    UFUNCTION()
+    void CalculateNewBonusLootValue(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObject, AIGS_GameCharacterFramework* OwningPawn);
+    
+    UFUNCTION()
+    float CalculateLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem, AIGS_GameCharacterFramework* OwningPawn);
+    
+    UFUNCTION()
+    float CalculateBonusLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OnHeisterItemAdded OnHeisterItemAdded;
     
@@ -142,84 +219,7 @@ private:
     bool bHasShownError;
     
 public:
-    UIGS_LootManager(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static float UpdateLootWeightMultiplier(UObject* inWCO);
-    
-    UFUNCTION()
-    TMap<FGameplayTag, float> SortLootByTag(TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inLoot);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetMissionBagsInWeight(int32 inRequiredBags);
-    
-    UFUNCTION()
-    void SendNewValueToHeisterData(AIGS_GameCharacterFramework* inOwningPawn, float inValueToAdd, bool inIsBonus) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ResetCollectedLoot();
-    
-    UFUNCTION(BlueprintCallable)
-    void RegisterLootItem(TSubclassOf<UIGS_LootItemInventoryObject> inLootItem);
-    
-    UFUNCTION(BlueprintCallable)
-    void RegisterLootCollection(AIGS_LootCollectionBase* inLootCollection);
-    
-    UFUNCTION(BlueprintCallable)
-    void RegisterLootCarryable(TSubclassOf<UIGS_CarryableInventoryObject> inCarryable);
-    
-    UFUNCTION()
-    void OnRep_SecuredLoot(float inOldSecuredLootValue);
-    
-    UFUNCTION()
-    void OnRep_SecuredBonusLoot(float inOldSecuredBonusLootValue);
-    
-    UFUNCTION()
-    void OnPocketLootWeightChanged();
-    
-    UFUNCTION(BlueprintCallable)
-    bool IsObjectiveLootCollected();
-    
-    UFUNCTION(BlueprintCallable)
-    float GetValuePercentage(float InValue);
-    
-    UFUNCTION(BlueprintPure)
-    float GetThrowableItemSize(EIGS_LootSize inWeight) const;
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static UIGS_LootManager* GetLootManager(const UObject* inWCO);
-    
-    UFUNCTION()
-    float GetItemValueFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass);
-    
-    UFUNCTION()
-    FGameplayTag GetItemTypeFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass);
-    
-    UFUNCTION(BlueprintPure)
-    float GetItemSize(EIGS_ItemWeight inWeight) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceSetMissionBagsInWeight(int32 inRequiredBags);
-    
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static void DisableLootVoiceLines(UObject* inWCO, bool bDisable);
-    
-    UFUNCTION()
-    float CalculateSpecialLootItemValue(FGameplayTag inItemTag, float inItemWeight);
-    
-    UFUNCTION()
-    void CalculateNewLootValue(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObject, AIGS_GameCharacterFramework* OwningPawn);
-    
-    UFUNCTION()
-    void CalculateNewBonusLootValue(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObject, AIGS_GameCharacterFramework* OwningPawn);
-    
-    UFUNCTION()
-    float CalculateLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem, AIGS_GameCharacterFramework* OwningPawn);
-    
-    UFUNCTION()
-    float CalculateBonusLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem);
-    
 };
 

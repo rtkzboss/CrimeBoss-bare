@@ -13,17 +13,6 @@ UCLASS(Abstract)
 class BF_FRAMEWORKGAME_API AIGS_ProjectileWithMovement : public AIGS_ProjectileBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UPrimitiveComponent* Collision;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
-    UProjectileMovementComponent* ProjectileMovement;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float ProjectileSpeed;
-    
-public:
     AIGS_ProjectileWithMovement(const FObjectInitializer& ObjectInitializer);
 
 private:
@@ -38,6 +27,16 @@ private:
     
     UFUNCTION()
     void OnComponentBeginOverlap(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inIsFromSweep, const FHitResult& inSweepResult);
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPrimitiveComponent* Collision;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UProjectileMovementComponent* ProjectileMovement;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float ProjectileSpeed;
     
 };
 

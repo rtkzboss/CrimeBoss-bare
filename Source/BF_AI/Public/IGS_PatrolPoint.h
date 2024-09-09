@@ -16,6 +16,17 @@ UCLASS(Abstract)
 class BF_AI_API AIGS_PatrolPoint : public AIGS_WaypointVisitable {
     GENERATED_BODY()
 public:
+    AIGS_PatrolPoint(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetVisitorManully(AIGS_GameCharacterFramework* inGameCharacter);
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_GameCharacterFramework* GetVisitor() const;
+    
+    UFUNCTION(BlueprintCallable)
+    EIGS_AIMontageSOVariant GetRandomAnimation();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MinWaitTime;
     
@@ -64,18 +75,6 @@ protected:
     
     UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<UIGS_AICommand> m_CurrentCommand;
-    
-public:
-    AIGS_PatrolPoint(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SetVisitorManully(AIGS_GameCharacterFramework* inGameCharacter);
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_GameCharacterFramework* GetVisitor() const;
-    
-    UFUNCTION(BlueprintCallable)
-    EIGS_AIMontageSOVariant GetRandomAnimation();
     
 };
 

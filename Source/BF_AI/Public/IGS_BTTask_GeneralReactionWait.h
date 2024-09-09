@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_GeneralReactionWait : public UBTTask_Wait {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_GeneralReactionWait();
+
     UPROPERTY(EditAnywhere)
     EIGS_GRWaitType Type;
     
-    UIGS_BTTask_GeneralReactionWait();
-
 };
 

@@ -18,41 +18,6 @@ UCLASS()
 class PAYBACK_API APaybackRobotCharacter : public APaybackAICharacter, public IIGS_HasWeakSpotInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly, Instanced)
-    UBoxComponent* WeakSpotCollision;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float WeakSpotHealth;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float WeakSpotAIDamageMultiplier;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float MaxHealthPercentageTaken;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float ForcedOverloadTime;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float OverloadOuterDamageRadius;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float OverloadInnerDamageRadius;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float OverloadEffectRadius;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float OverloadBaseDamage;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTag OverloadAnimationTag;
-    
-private:
-    UPROPERTY(Instanced)
-    UIGS_WeakSpotComponent* m_WeakSpotComponent;
-    
-public:
     APaybackRobotCharacter(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -114,6 +79,40 @@ private:
 public:
     UFUNCTION(BlueprintCallable)
     void EnableVfx(const bool inEnable);
+    
+    UPROPERTY(EditDefaultsOnly, Instanced)
+    UBoxComponent* WeakSpotCollision;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float WeakSpotHealth;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float WeakSpotAIDamageMultiplier;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float MaxHealthPercentageTaken;
+    
+    UPROPERTY(EditDefaultsOnly)
+    float ForcedOverloadTime;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float OverloadOuterDamageRadius;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float OverloadInnerDamageRadius;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float OverloadEffectRadius;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    float OverloadBaseDamage;
+    
+    UPROPERTY(EditDefaultsOnly)
+    FGameplayTag OverloadAnimationTag;
+    
+private:
+    UPROPERTY(Instanced)
+    UIGS_WeakSpotComponent* m_WeakSpotComponent;
     
 
     // Fix for true pure virtual functions not being implemented

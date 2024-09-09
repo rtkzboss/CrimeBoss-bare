@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_IsThreatIncreasing : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_IsThreatIncreasing();
+
 protected:
     UPROPERTY(EditAnywhere)
     float TimeInterval;
     
-public:
-    UBTDecorator_IsThreatIncreasing();
-
 };
 

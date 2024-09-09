@@ -13,14 +13,6 @@ UCLASS(BlueprintType)
 class BF_AI_API UIGS_WaypointManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(Transient)
-    TArray<AIGS_WaypointBase*> Waypoints;
-    
-    UPROPERTY(Transient)
-    TArray<AIGS_SmartObjectSimpleBase*> SimpleSmartObjects;
-    
-public:
     UIGS_WaypointManager();
 
     UFUNCTION(BlueprintPure)
@@ -43,6 +35,13 @@ public:
     
     UFUNCTION(BlueprintPure)
     TArray<AIGS_SmartObjectSimpleBase*> GetAllSimpleSmartObjectsInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent) const;
+    
+protected:
+    UPROPERTY(Transient)
+    TArray<AIGS_WaypointBase*> Waypoints;
+    
+    UPROPERTY(Transient)
+    TArray<AIGS_SmartObjectSimpleBase*> SimpleSmartObjects;
     
 };
 

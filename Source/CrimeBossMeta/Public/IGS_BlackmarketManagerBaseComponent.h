@@ -13,17 +13,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_BlackmarketManagerBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_BlackmarketManangerInitialized OnManagerInitialized;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerDataDirty;
-    
-    UPROPERTY(BlueprintReadWrite)
-    bool bIsManagerInitialized;
-    
-public:
     UIGS_BlackmarketManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
@@ -52,6 +41,16 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool BuyItem(FGameplayTag itemTag, FGameplayTag screenTag, FGameplayTag SkinTag);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_BlackmarketManangerInitialized OnManagerInitialized;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerDataDirty;
+    
+    UPROPERTY(BlueprintReadWrite)
+    bool bIsManagerInitialized;
     
 };
 

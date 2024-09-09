@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class COMMON_SAVE_API UMETA_DebugCareerSaveGame : public UIGS_PaybackSaveGameBase {
     GENERATED_BODY()
 public:
+    UMETA_DebugCareerSaveGame();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FMETA_SaveData_DebugCareer SaveData_DebugCareer;
     
-    UMETA_DebugCareerSaveGame();
-
 };
 

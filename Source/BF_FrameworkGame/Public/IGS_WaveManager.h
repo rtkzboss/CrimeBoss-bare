@@ -19,6 +19,25 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WaveManager : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WaveManager(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetUpWaveManagerWavesDirections(int32 inWavesDirections);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetUpWaveManagerSegment(int32 inStormTypes, int32 inMaxEnemyCount, float inStormLength, float inBreakLength, const TArray<FGameplayTagContainer>& inPointsGameplayTags, const TMap<EIGS_UnitSpecialization, int32>& inSpecialTypesMaxCount);
+    
+protected:
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static void SetStormIntensity(const UObject* inWCO, int32 inIntensity);
+    
+    UFUNCTION()
+    void OnRep_StormIntensity() const;
+    
+    UFUNCTION()
+    void OnRep_CurrentPhase() const;
+    
+public:
     UPROPERTY(BlueprintAssignable)
     FIGS_PhaseChangedSignature OnPhaseChanged;
     
@@ -124,25 +143,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Replicated, VisibleAnywhere)
     bool IsGangsterOnly;
     
-    UIGS_WaveManager(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetUpWaveManagerWavesDirections(int32 inWavesDirections);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetUpWaveManagerSegment(int32 inStormTypes, int32 inMaxEnemyCount, float inStormLength, float inBreakLength, const TArray<FGameplayTagContainer>& inPointsGameplayTags, const TMap<EIGS_UnitSpecialization, int32>& inSpecialTypesMaxCount);
-    
-protected:
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static void SetStormIntensity(const UObject* inWCO, int32 inIntensity);
-    
-    UFUNCTION()
-    void OnRep_StormIntensity() const;
-    
-    UFUNCTION()
-    void OnRep_CurrentPhase() const;
-    
 };
 

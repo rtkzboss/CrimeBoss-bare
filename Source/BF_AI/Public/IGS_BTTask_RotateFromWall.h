@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_RotateFromWall : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_RotateFromWall();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookPosKey;
     
-    UIGS_BTTask_RotateFromWall();
-
 };
 

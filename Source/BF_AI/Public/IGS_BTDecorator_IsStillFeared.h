@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_BTDecorator_IsStillFeared : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UIGS_BTDecorator_IsStillFeared();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval DesiredTimeWithoutFearZiptieAddon;
     
-public:
-    UIGS_BTDecorator_IsStillFeared();
-
 };
 

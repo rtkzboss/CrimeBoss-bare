@@ -11,6 +11,8 @@ UCLASS()
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemCursor : public UObject {
     GENERATED_BODY()
 public:
+    UConstructionSystemCursor();
+
 private:
     UPROPERTY(Transient)
     APrefabActor* CursorGhostActor;
@@ -30,8 +32,5 @@ private:
     UPROPERTY(Transient)
     int32 ActiveSnapComponentIndex;
     
-public:
-    UConstructionSystemCursor();
-
 };
 

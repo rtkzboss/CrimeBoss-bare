@@ -11,11 +11,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AimAssistTargetsManager : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(Instanced, Transient)
-    TArray<UIGS_AimAssistTargetComponent*> AimAssistTargets;
-    
-public:
     UIGS_AimAssistTargetsManager();
 
     UFUNCTION(BlueprintPure)
@@ -23,6 +18,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     TArray<UIGS_AimAssistTargetComponent*> GetAllAimAssistTargets() const;
+    
+protected:
+    UPROPERTY(Instanced, Transient)
+    TArray<UIGS_AimAssistTargetComponent*> AimAssistTargets;
     
 };
 

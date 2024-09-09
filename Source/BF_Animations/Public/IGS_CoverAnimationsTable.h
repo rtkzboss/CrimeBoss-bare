@@ -9,6 +9,8 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_CoverAnimationsTable : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_CoverAnimationsTable();
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* CombatPeekStand_L;
     
@@ -24,7 +26,5 @@ public:
     UPROPERTY(EditAnywhere)
     UAnimMontage* CombatPeekCrouch_Up;
     
-    UIGS_CoverAnimationsTable();
-
 };
 

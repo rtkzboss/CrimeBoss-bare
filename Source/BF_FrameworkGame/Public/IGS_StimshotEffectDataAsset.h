@@ -11,6 +11,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_StimshotEffectDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_StimshotEffectDataAsset();
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> CombatStimshotPostProcessInterface;
     
@@ -35,7 +37,5 @@ public:
     UPROPERTY(EditAnywhere)
     float EffectStartDuration;
     
-    UIGS_StimshotEffectDataAsset();
-
 };
 

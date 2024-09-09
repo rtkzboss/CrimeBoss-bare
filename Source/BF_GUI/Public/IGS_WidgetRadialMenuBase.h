@@ -17,6 +17,25 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetRadialMenuBase : public UIGS_Screen {
     GENERATED_BODY()
 public:
+    UIGS_WidgetRadialMenuBase();
+
+    UFUNCTION(BlueprintCallable)
+    void RequestSwitchToWheelType(EIGS_WheelMenuType inType);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSliceHovered(UIGS_WidgetRadialSliceBase* inSlice, int32 inIndex);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnClose();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void InitWheel();
+    
+protected:
+    UFUNCTION(BlueprintPure)
+    int32 GetItemCount();
+    
+public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_WheelMenuType WheelMenuType;
     
@@ -80,25 +99,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector2D AnalogMousePos;
-    
-public:
-    UIGS_WidgetRadialMenuBase();
-
-    UFUNCTION(BlueprintCallable)
-    void RequestSwitchToWheelType(EIGS_WheelMenuType inType);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSliceHovered(UIGS_WidgetRadialSliceBase* inSlice, int32 inIndex);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnClose();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void InitWheel();
-    
-protected:
-    UFUNCTION(BlueprintPure)
-    int32 GetItemCount();
     
 };
 

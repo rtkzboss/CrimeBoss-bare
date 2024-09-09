@@ -9,6 +9,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_UnlockManagerData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_UnlockManagerData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer ProgressResetCompensationAlwaysGranted;
     
@@ -30,7 +32,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_UnlockRewardRanges> RewardRanges;
     
-    UIGS_UnlockManagerData();
-
 };
 

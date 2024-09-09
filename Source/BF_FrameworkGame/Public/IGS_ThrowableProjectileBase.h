@@ -21,54 +21,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ThrowableProjectileBase : public AIGS_ThrowableProjectileFramework {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    UCapsuleComponent* CapsuleCollision;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    USkeletalMeshComponent* ThrowableMesh;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
-    UProjectileMovementComponent* ProjectileMovementComponent;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bDamageOnBounce;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Thrower)
-    TWeakObjectPtr<AIGS_GameCharacterFramework> mR_Thrower;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    FIGS_ThrowableData ThrowableData;
-    
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    float mR_TimeHeldInHand;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_Thrown)
-    FIGS_ThrowableThrownData mR_ThrownData;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_InventoryObjectClass)
-    TSubclassOf<UIGS_ThrowableInventoryObject> mR_ThrowableObjectClass;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_IsCollisionEnabled)
-    bool mR_IsCollisionEnabled;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    bool bMakeImpactNoise;
-    
-private:
-    UPROPERTY(Replicated)
-    bool mR_bStoppedMoving;
-    
-    UPROPERTY(Replicated)
-    bool mR_bHasHit;
-    
-    UPROPERTY(Replicated)
-    bool mR_bThrowedByAI;
-    
-public:
     AIGS_ThrowableProjectileBase(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 protected:
     UFUNCTION(BlueprintPure)
@@ -143,5 +96,51 @@ protected:
     UFUNCTION(BlueprintCallable)
     float ApplyThrowableDamage(const FHitResult& inHitResult, float inBaseDamage, AIGS_GameCharacterFramework* inDamageCauser, TSubclassOf<UDamageType> inDamageType);
     
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UCapsuleComponent* CapsuleCollision;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    USkeletalMeshComponent* ThrowableMesh;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UProjectileMovementComponent* ProjectileMovementComponent;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bDamageOnBounce;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Thrower)
+    TWeakObjectPtr<AIGS_GameCharacterFramework> mR_Thrower;
+    
+    UPROPERTY(BlueprintReadOnly, Transient)
+    FIGS_ThrowableData ThrowableData;
+    
+    UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
+    float mR_TimeHeldInHand;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_Thrown)
+    FIGS_ThrowableThrownData mR_ThrownData;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_InventoryObjectClass)
+    TSubclassOf<UIGS_ThrowableInventoryObject> mR_ThrowableObjectClass;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_IsCollisionEnabled)
+    bool mR_IsCollisionEnabled;
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    bool bMakeImpactNoise;
+    
+private:
+    UPROPERTY(Replicated)
+    bool mR_bStoppedMoving;
+    
+    UPROPERTY(Replicated)
+    bool mR_bHasHit;
+    
+    UPROPERTY(Replicated)
+    bool mR_bThrowedByAI;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

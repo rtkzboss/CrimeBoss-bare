@@ -9,13 +9,12 @@ UCLASS()
 class CRIMEBOSSMETA_API UUIEvents : public UTickableWorldSubsystem {
     GENERATED_BODY()
 public:
+    UUIEvents();
+
 private:
     UPROPERTY()
     TArray<UMETA_Character*> m_HiredHeisters;
     
-public:
-    UUIEvents();
-
     virtual TStatId GetStatId() const override { return {}; }
 };
 

@@ -11,9 +11,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_DynamicMaterialHandlerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_DynamicMaterialsRegeneratedOnActorEvent OnDynamicMaterialsRegeneratedOnActorEvent;
-    
     UIGS_DynamicMaterialHandlerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -21,6 +18,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CreateDynamicMaterials(bool inEnableSkinnedDecals);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_DynamicMaterialsRegeneratedOnActorEvent OnDynamicMaterialsRegeneratedOnActorEvent;
     
 };
 

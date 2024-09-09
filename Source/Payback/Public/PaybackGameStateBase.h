@@ -31,6 +31,79 @@ UCLASS()
 class PAYBACK_API APaybackGameStateBase : public AIGS_GameStateGame {
     GENERATED_BODY()
 public:
+    APaybackGameStateBase(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    int32 SetHeisterNumberForBotBP(AController* inBot, int32 inHeisterID);
+    
+public:
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static void SetFinalDialogue(UObject* inWCO, const FText inID, AActor* inCharacter);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void PostInit();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnServerTravel();
+    
+    UFUNCTION()
+    void OnRep_PlayersSpawned();
+    
+    UFUNCTION()
+    void OnRep_MatchState();
+    
+    UFUNCTION()
+    void OnRep_ElapsedTime();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPrepareRestart();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnPlayersSpawned();
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnMatchHasEnded();
+    
+public:
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_PrepareRestart();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multicast_OnServerTravel();
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void HandleEndMissionCountdownPreCompleted();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void HandleEndMissionCountdownCompleted();
+    
+public:
+    UFUNCTION(BlueprintPure)
+    UIGS_TextChatManager* GetTextChatManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_SuspicionManager* GetSuspicionManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_SubtitleManager* GetSubtitleManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_PropsManager* GetPropsManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_ObjectiveManager* GetObjectiveManager() const;
+    
+    UFUNCTION(BlueprintPure)
+    UIGS_LootBagsManager* GetLootBagsManager() const;
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    int32 GetHeisterNumberFromBotBP(AController* inBot);
+    
+public:
     UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly, ReplicatedUsing=OnRep_PlayersSpawned)
     bool R_PlayersSpawned;
     
@@ -111,79 +184,7 @@ public:
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_ElapsedTime)
     int32 ElapsedTime;
     
-    APaybackGameStateBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    int32 SetHeisterNumberForBotBP(AController* inBot, int32 inHeisterID);
-    
-public:
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static void SetFinalDialogue(UObject* inWCO, const FText inID, AActor* inCharacter);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void PostInit();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnServerTravel();
-    
-    UFUNCTION()
-    void OnRep_PlayersSpawned();
-    
-    UFUNCTION()
-    void OnRep_MatchState();
-    
-    UFUNCTION()
-    void OnRep_ElapsedTime();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPrepareRestart();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnPlayersSpawned();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMatchHasEnded();
-    
-public:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_PrepareRestart();
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multicast_OnServerTravel();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void HandleEndMissionCountdownPreCompleted();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void HandleEndMissionCountdownCompleted();
-    
-public:
-    UFUNCTION(BlueprintPure)
-    UIGS_TextChatManager* GetTextChatManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_SuspicionManager* GetSuspicionManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_SubtitleManager* GetSubtitleManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_PropsManager* GetPropsManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_ObjectiveManager* GetObjectiveManager() const;
-    
-    UFUNCTION(BlueprintPure)
-    UIGS_LootBagsManager* GetLootBagsManager() const;
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    int32 GetHeisterNumberFromBotBP(AController* inBot);
-    
 };
 

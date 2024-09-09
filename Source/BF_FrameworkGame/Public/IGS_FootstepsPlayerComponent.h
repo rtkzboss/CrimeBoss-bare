@@ -7,12 +7,11 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_FootstepsPlayerComponent : public UIGS_FootstepsEventBasedComponent {
     GENERATED_BODY()
 public:
+    UIGS_FootstepsPlayerComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(EditAnywhere)
     float TimerPeriod;
     
-public:
-    UIGS_FootstepsPlayerComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

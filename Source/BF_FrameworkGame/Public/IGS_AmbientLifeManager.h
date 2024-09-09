@@ -10,11 +10,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AmbientLifeManager : public UObject {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY()
-    TArray<AIGS_AIEnemyGroupSpawner*> m_SpawnGroups;
-    
-public:
     UIGS_AmbientLifeManager();
 
     UFUNCTION(BlueprintCallable)
@@ -25,6 +20,10 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void RegisterRemoverSpecialObjective(AIGS_WaypointFramework* inSpecialObjective);
+    
+protected:
+    UPROPERTY()
+    TArray<AIGS_AIEnemyGroupSpawner*> m_SpawnGroups;
     
 };
 

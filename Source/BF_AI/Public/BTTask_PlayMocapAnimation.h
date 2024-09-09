@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTTask_PlayMocapAnimation : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_PlayMocapAnimation();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector AnimationCommandKey;
     
-    UBTTask_PlayMocapAnimation();
-
 };
 

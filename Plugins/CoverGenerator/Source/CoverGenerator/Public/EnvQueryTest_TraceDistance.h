@@ -12,6 +12,8 @@ UCLASS()
 class UEnvQueryTest_TraceDistance : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_TraceDistance();
+
     UPROPERTY(EditDefaultsOnly)
     FEnvTraceData TraceData;
     
@@ -24,7 +26,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue VerticalOffset;
     
-    UEnvQueryTest_TraceDistance();
-
 };
 

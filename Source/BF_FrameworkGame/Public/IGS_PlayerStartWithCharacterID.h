@@ -8,10 +8,10 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_PlayerStartWithCharacterID : public APlayerStart {
     GENERATED_BODY()
 public:
+    AIGS_PlayerStartWithCharacterID(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_CharacterID CharacterID;
     
-    AIGS_PlayerStartWithCharacterID(const FObjectInitializer& ObjectInitializer);
-
 };
 

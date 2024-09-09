@@ -8,11 +8,6 @@ UCLASS()
 class BF_GUI_API UIGS_TileItemWeaponData : public UIGS_TileItemData {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY()
-    ETileComparisonUIData m_ComparisonUIData;
-    
-public:
     UIGS_TileItemWeaponData();
 
     UFUNCTION(BlueprintCallable)
@@ -20,6 +15,10 @@ public:
     
     UFUNCTION(BlueprintPure)
     ETileComparisonUIData GetComparisonData() const;
+    
+private:
+    UPROPERTY()
+    ETileComparisonUIData m_ComparisonUIData;
     
 };
 

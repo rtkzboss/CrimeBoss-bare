@@ -10,6 +10,8 @@ UCLASS(NotPlaceable, Transient)
 class BF_AI_API AIGS_NavHintGoal : public AActor, public INavAgentInterface {
     GENERATED_BODY()
 public:
+    AIGS_NavHintGoal(const FObjectInitializer& ObjectInitializer);
+
 private:
     UPROPERTY(Transient)
     AAIController* Querier;
@@ -17,9 +19,6 @@ private:
     UPROPERTY(Transient)
     AActor* GoalActor;
     
-public:
-    AIGS_NavHintGoal(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

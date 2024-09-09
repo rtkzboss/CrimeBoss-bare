@@ -25,7 +25,102 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Crane : public APawn, public IIGS_SubControllerMountableInterface {
     GENERATED_BODY()
 public:
+    AIGS_Crane(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void UseCrane(AIGS_GameCharacterFramework* inInstigator);
+    
 protected:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ToogleMagnetState();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_SetMagnetState(bool inState);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_RotateCrane(float inAxisValue);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_MoveMagnet(float inAxisValue);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_LiftMagnet(float inAxisValue);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ExitCraneControl();
+    
+    UFUNCTION()
+    void OnRep_MagnetHeadLocationChanged() const;
+    
+    UFUNCTION()
+    void OnRep_MagnetComponentLocationChanged() const;
+    
+    UFUNCTION()
+    void OnRep_CraneTopModuleRotationChanged() const;
+    
+    UFUNCTION()
+    void OnRep_CableInstancesCountChanged() const;
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnMagnetStateChanged(bool inState);
+    
+    UFUNCTION()
+    void OnMagnetBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+    UFUNCTION()
+    void OnCraneObjectsDetectorEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
+    
+    UFUNCTION()
+    void OnCraneObjectsDetectorBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnCraneObjectReleaseStateChanged(bool inState);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnCraneObjectReleased(UIGS_CraneObjectComponent* CraneObjectComponent);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnCraneObjectPicked(UIGS_CraneObjectComponent* CraneObjectComponent);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void InitComponents();
+    
+    UFUNCTION(Client, Reliable)
+    void Client_SetObjectOutlineState(AActor* inOutlineObject, EIGS_CameraOutlineState inState);
+    
+    UFUNCTION(Client, Reliable)
+    void Client_OnCraneObjectPickStatusChanged(UIGS_CraneObjectComponent* inCraneObject, bool inState);
+    
+    UFUNCTION(Client, Reliable)
+    void Client_OnCraneObjectDetectionStatusChanged(UIGS_CraneObjectComponent* inCraneObject, bool inState);
+    
+    UFUNCTION(Client, Reliable)
+    void Client_ExitCraneControl();
+    
+    UFUNCTION(Client, Reliable)
+    void Client_EnterCraneControl();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_RotateCraneStop();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_RotateCraneStart();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_OnMagnetStateChanged(bool inState);
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_MoveMagnetStop();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_MoveMagnetStart();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_LiftMagnetStop();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void All_LiftMagnetStart();
+    
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* RootObject;
     
@@ -126,104 +221,8 @@ protected:
     int32 mR_CableInstancesCount;
     
 public:
-    AIGS_Crane(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void UseCrane(AIGS_GameCharacterFramework* inInstigator);
-    
-protected:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_ToogleMagnetState();
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_SetMagnetState(bool inState);
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_RotateCrane(float inAxisValue);
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_MoveMagnet(float inAxisValue);
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_LiftMagnet(float inAxisValue);
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server)
-    void Server_ExitCraneControl();
-    
-    UFUNCTION()
-    void OnRep_MagnetHeadLocationChanged() const;
-    
-    UFUNCTION()
-    void OnRep_MagnetComponentLocationChanged() const;
-    
-    UFUNCTION()
-    void OnRep_CraneTopModuleRotationChanged() const;
-    
-    UFUNCTION()
-    void OnRep_CableInstancesCountChanged() const;
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMagnetStateChanged(bool inState);
-    
-    UFUNCTION()
-    void OnMagnetBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-    UFUNCTION()
-    void OnCraneObjectsDetectorEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
-    UFUNCTION()
-    void OnCraneObjectsDetectorBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnCraneObjectReleaseStateChanged(bool inState);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnCraneObjectReleased(UIGS_CraneObjectComponent* CraneObjectComponent);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnCraneObjectPicked(UIGS_CraneObjectComponent* CraneObjectComponent);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void InitComponents();
-    
-    UFUNCTION(Client, Reliable)
-    void Client_SetObjectOutlineState(AActor* inOutlineObject, EIGS_CameraOutlineState inState);
-    
-    UFUNCTION(Client, Reliable)
-    void Client_OnCraneObjectPickStatusChanged(UIGS_CraneObjectComponent* inCraneObject, bool inState);
-    
-    UFUNCTION(Client, Reliable)
-    void Client_OnCraneObjectDetectionStatusChanged(UIGS_CraneObjectComponent* inCraneObject, bool inState);
-    
-    UFUNCTION(Client, Reliable)
-    void Client_ExitCraneControl();
-    
-    UFUNCTION(Client, Reliable)
-    void Client_EnterCraneControl();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_RotateCraneStop();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_RotateCraneStart();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_OnMagnetStateChanged(bool inState);
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_MoveMagnetStop();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_MoveMagnetStart();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_LiftMagnetStop();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void All_LiftMagnetStart();
-    
 
     // Fix for true pure virtual functions not being implemented
 };

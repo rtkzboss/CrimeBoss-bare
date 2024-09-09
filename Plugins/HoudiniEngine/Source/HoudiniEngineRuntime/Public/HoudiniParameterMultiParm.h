@@ -8,6 +8,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterMultiParm : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterMultiParm();
+
     UPROPERTY()
     bool bIsShown;
     
@@ -38,7 +40,5 @@ public:
     UPROPERTY()
     int32 DefaultInstanceCount;
     
-    UHoudiniParameterMultiParm();
-
 };
 

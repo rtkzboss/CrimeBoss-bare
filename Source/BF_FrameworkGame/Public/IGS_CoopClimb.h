@@ -13,6 +13,13 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_CoopClimb : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_CoopClimb(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION()
+    void OnUsed(AIGS_GameCharacterFramework* inInstigator);
+    
+public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
     
@@ -31,13 +38,6 @@ public:
 protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UCapsuleComponent* CapsuleComponent;
-    
-public:
-    AIGS_CoopClimb(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION()
-    void OnUsed(AIGS_GameCharacterFramework* inInstigator);
     
 };
 

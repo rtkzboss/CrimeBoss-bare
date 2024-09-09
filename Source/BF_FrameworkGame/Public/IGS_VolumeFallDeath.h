@@ -7,15 +7,14 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_VolumeFallDeath : public AVolume {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
-    bool bIsActive;
-    
-public:
     AIGS_VolumeFallDeath(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
     void SetActive(bool Inactive);
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    bool bIsActive;
     
 };
 

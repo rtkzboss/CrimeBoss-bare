@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTDecorator_AICommandState : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_AICommandState();
+
     UPROPERTY(EditAnywhere)
     EIGS_AICommandState CommandState;
     
-    UBTDecorator_AICommandState();
-
 };
 

@@ -12,6 +12,19 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_LevelBlockingBounds : public AIGS_BoxSphere {
     GENERATED_BODY()
 public:
+    AIGS_LevelBlockingBounds(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetBlockerSize(float inBlockerSize);
+    
+    UFUNCTION()
+    void RefreshPostProcessSettings();
+    
+protected:
+    UFUNCTION()
+    void OnRep_BlockerSize();
+    
+public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_BlockerSize)
     float BlockerSize;
     
@@ -35,19 +48,7 @@ protected:
     bool DontRegisterToNavigation;
     
 public:
-    AIGS_LevelBlockingBounds(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetBlockerSize(float inBlockerSize);
-    
-    UFUNCTION()
-    void RefreshPostProcessSettings();
-    
-protected:
-    UFUNCTION()
-    void OnRep_BlockerSize();
-    
 };
 

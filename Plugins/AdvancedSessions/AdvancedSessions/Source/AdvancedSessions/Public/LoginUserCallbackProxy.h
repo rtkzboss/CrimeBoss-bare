@@ -12,16 +12,16 @@ UCLASS(MinimalAPI)
 class ULoginUserCallbackProxy : public UOnlineBlueprintCallProxyBase {
     GENERATED_BODY()
 public:
+    ULoginUserCallbackProxy();
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
+    static ULoginUserCallbackProxy* LoginUser(UObject* WorldContextObject, APlayerController* PlayerController, const FString& UserID, const FString& UserToken, const FString& AuthType);
+    
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnSuccess;
     
     UPROPERTY(BlueprintAssignable)
     FEmptyOnlineDelegate OnFailure;
-    
-    ULoginUserCallbackProxy();
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
-    static ULoginUserCallbackProxy* LoginUser(UObject* WorldContextObject, APlayerController* PlayerController, const FString& UserID, const FString& UserToken, const FString& AuthType);
     
 };
 

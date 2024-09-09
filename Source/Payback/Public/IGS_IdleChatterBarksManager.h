@@ -10,9 +10,6 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_IdleChatterBarksManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
-    TArray<UIGS_PlayIdleChatterAsyncAction*> m_ActivePlayRequests;
-    
     UIGS_IdleChatterBarksManager(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -23,6 +20,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void Canceled(UIGS_PlayIdleChatterAsyncAction* inPlayIdleChatterAsyncAction);
+    
+    UPROPERTY()
+    TArray<UIGS_PlayIdleChatterAsyncAction*> m_ActivePlayRequests;
     
 };
 

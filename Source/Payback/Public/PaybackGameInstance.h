@@ -10,14 +10,6 @@ UCLASS(NonTransient)
 class PAYBACK_API UPaybackGameInstance : public UIGS_GameInstanceFramework {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FIGS_LoginChangedAfterEASSignature OnLoginChangedAfterEAS;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    UPaybackCoreMapsData* CoreMapsData;
-    
-public:
     UPaybackGameInstance();
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -28,6 +20,13 @@ public:
     
     UFUNCTION(BlueprintPure)
     void GetUseEAS(bool& outUseEAS);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_LoginChangedAfterEASSignature OnLoginChangedAfterEAS;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPaybackCoreMapsData* CoreMapsData;
     
 };
 

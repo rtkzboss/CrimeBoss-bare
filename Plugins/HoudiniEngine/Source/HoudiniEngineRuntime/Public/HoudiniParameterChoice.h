@@ -7,6 +7,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterChoice : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterChoice();
+
 protected:
     UPROPERTY()
     int32 IntValue;
@@ -32,8 +34,5 @@ protected:
     UPROPERTY()
     TArray<int32> IntValuesArray;
     
-public:
-    UHoudiniParameterChoice();
-
 };
 

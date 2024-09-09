@@ -13,6 +13,17 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_VulnerableActor : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_VulnerableActor(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void ResetVulnerableComponent();
+    
+    UFUNCTION(BlueprintPure)
+    bool GetIsBroken();
+    
+    UFUNCTION(BlueprintCallable)
+    void ApplyVulnerableDamage(float inAmount);
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OnVulnerableBreak OnVulnerableBreakEvent;
     
@@ -36,17 +47,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MaxHealth;
-    
-    AIGS_VulnerableActor(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void ResetVulnerableComponent();
-    
-    UFUNCTION(BlueprintPure)
-    bool GetIsBroken();
-    
-    UFUNCTION(BlueprintCallable)
-    void ApplyVulnerableDamage(float inAmount);
     
 };
 

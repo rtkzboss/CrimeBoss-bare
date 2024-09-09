@@ -8,6 +8,8 @@ UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_GetCharactersForShoutAt : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryGenerator_GetCharactersForShoutAt();
+
     UPROPERTY(EditDefaultsOnly)
     TArray<EIGS_TeamSideEnum> TeamSides;
     
@@ -17,7 +19,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     float DistanceDetecting;
     
-    UIGS_EnvQueryGenerator_GetCharactersForShoutAt();
-
 };
 

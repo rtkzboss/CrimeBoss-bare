@@ -14,6 +14,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_PickupClassesData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_PickupClassesData();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<AIGS_PickupActorInventoryItem> DefaultPickupClass;
     
@@ -44,7 +46,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<TSubclassOf<UIGS_InventoryObjectFramework>, FIGS_PickupClassesCustomThrowingData> CustomThrowingData;
     
-    UIGS_PickupClassesData();
-
 };
 

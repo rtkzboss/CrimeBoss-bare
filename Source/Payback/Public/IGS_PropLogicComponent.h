@@ -12,17 +12,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UIGS_PropLogicComponent : public UIGS_PropLogicComponentBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditAnywhere)
-    FPropSpawnerBudgetStruct SpawningBudget;
-    
-    UPROPERTY()
-    AActor* m_Parent;
-    
-    UPROPERTY()
-    bool m_IsGenerated;
-    
-public:
     UIGS_PropLogicComponent(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -42,6 +31,15 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void DespawnActors();
+    
+    UPROPERTY(EditAnywhere)
+    FPropSpawnerBudgetStruct SpawningBudget;
+    
+    UPROPERTY()
+    AActor* m_Parent;
+    
+    UPROPERTY()
+    bool m_IsGenerated;
     
 };
 

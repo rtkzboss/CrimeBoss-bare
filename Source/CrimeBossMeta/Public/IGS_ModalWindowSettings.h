@@ -10,13 +10,13 @@ UCLASS(DefaultConfig, Config=Game)
 class CRIMEBOSSMETA_API UIGS_ModalWindowSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:
+    UIGS_ModalWindowSettings();
+
     UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_ModalScreen> DefaultBasicModalScreenClass;
     
     UPROPERTY(Config, EditAnywhere)
     TSubclassOf<UIGS_ModalScreen> DefaultAdvancedModalScreenClass;
     
-    UIGS_ModalWindowSettings();
-
 };
 

@@ -23,15 +23,6 @@ UCLASS(Abstract)
 class CRIMEBOSSMETA_API AIGS_GameStateMenuBase : public AIGS_GameStateBaseWithData, public IMETA_GameModeAdapter, public IMETA_ManagersExplorer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UIGS_EconomyData_Base* EconomyBaseData;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UIGS_MenuCommonData_Base* CommonBaseData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsPreloadEnabled;
-    
     AIGS_GameStateMenuBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -81,6 +72,15 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddHeisterData(FCommonHeisterData inHeister);
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UIGS_EconomyData_Base* EconomyBaseData;
+    
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UIGS_MenuCommonData_Base* CommonBaseData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool IsPreloadEnabled;
     
 
     // Fix for true pure virtual functions not being implemented

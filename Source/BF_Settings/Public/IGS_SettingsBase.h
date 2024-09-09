@@ -8,6 +8,8 @@ UCLASS(Abstract, Config=GameUserSettings)
 class BF_SETTINGS_API UIGS_SettingsBase : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_SettingsBase();
+
     UPROPERTY(BlueprintAssignable)
     FIGS_SettingsChangedEvent OnSettingsChanged;
     
@@ -15,8 +17,5 @@ protected:
     UPROPERTY(Config)
     bool bSettingsValid;
     
-public:
-    UIGS_SettingsBase();
-
 };
 

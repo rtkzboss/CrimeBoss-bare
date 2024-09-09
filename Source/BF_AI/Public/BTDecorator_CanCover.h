@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_CanCover : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UBTDecorator_CanCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestCoverKey;
     
-public:
-    UBTDecorator_CanCover();
-
 };
 

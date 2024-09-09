@@ -16,6 +16,35 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PingableComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PingableComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SetOutlineState(EIGS_CameraOutlineState inType, bool inEnabled);
+    
+    UFUNCTION(BlueprintCallable)
+    void PingIndefinitely(const UObject* inPingedBy);
+    
+    UFUNCTION(BlueprintCallable)
+    void PingCustomDuration(float inDuration, const UObject* inPingedBy);
+    
+    UFUNCTION(BlueprintCallable)
+    void Ping(const UObject* inPingedBy);
+    
+private:
+    UFUNCTION()
+    void OnRep_IsPingedChange();
+    
+protected:
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_PingSound();
+    
+public:
+    UFUNCTION()
+    EIGS_TeamSideEnum GetOwnerTeamSide() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void EndPing();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bUseRootForOutline;
     
@@ -58,36 +87,7 @@ private:
     UIGS_OutlineComponent* m_OutlineComponent;
     
 public:
-    UIGS_PingableComponent(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION(BlueprintCallable)
-    void SetOutlineState(EIGS_CameraOutlineState inType, bool inEnabled);
-    
-    UFUNCTION(BlueprintCallable)
-    void PingIndefinitely(const UObject* inPingedBy);
-    
-    UFUNCTION(BlueprintCallable)
-    void PingCustomDuration(float inDuration, const UObject* inPingedBy);
-    
-    UFUNCTION(BlueprintCallable)
-    void Ping(const UObject* inPingedBy);
-    
-private:
-    UFUNCTION()
-    void OnRep_IsPingedChange();
-    
-protected:
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_PingSound();
-    
-public:
-    UFUNCTION()
-    EIGS_TeamSideEnum GetOwnerTeamSide() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void EndPing();
-    
 };
 

@@ -23,89 +23,7 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_SecurityCameraViewer : public APawn, public IIGS_SubControllerMountableInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CameraViewerChangeCameraEvent OnActiveCameraChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CameraViewerCamerasDisabledEvent OnCamerasDisabled;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CameraViewerIsUsedChangedEvent OnIsUsedChanged;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AllCamerasDisabled)
-    bool mR_AllCamerasDisabled;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bAllowFreezing;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bTemporaryDisable;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float TemporaryDisableDuration;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AllowDisablingCameras)
-    bool mR_AllowDisablingCameras;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_PossedPawn)
-    AIGS_DetectorBase* PossedPawn;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bSetListenerOnPossessed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkStateValue* EnterAkState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkStateValue* ExitAkState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSubclassOf<AIGS_SentryControllerPlayerBase> SecurityCameraPlayerController;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    AIGS_SentryControllerPlayerBase* PlayerController;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UIGS_InteractiveComponent* InteractiveComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UStaticMeshComponent* MonitorMesh;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UAkComponent* AkAudioListener;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* EnterCameraAkEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ExitCameraAkEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ServoStartAkAudioEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ServoStopAkAudioEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ChangeCameraAkAudioEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkStateValue* AkStateMountNormal;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkStateValue* AkStateMountSecurityCamera;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkStateValue* AkStateMountSecurityCameraNoSignal;
-    
-    UPROPERTY()
-    AController* DefaultController;
-    
-public:
     AIGS_SecurityCameraViewer(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void UseCameraViewer(AIGS_GameCharacterFramework* inInstigator);
@@ -207,6 +125,88 @@ public:
     UFUNCTION(BlueprintCallable)
     void AllowDisablingCameras(bool InValue);
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CameraViewerChangeCameraEvent OnActiveCameraChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CameraViewerCamerasDisabledEvent OnCamerasDisabled;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CameraViewerIsUsedChangedEvent OnIsUsedChanged;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AllCamerasDisabled)
+    bool mR_AllCamerasDisabled;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bAllowFreezing;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bTemporaryDisable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float TemporaryDisableDuration;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AllowDisablingCameras)
+    bool mR_AllowDisablingCameras;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_PossedPawn)
+    AIGS_DetectorBase* PossedPawn;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bSetListenerOnPossessed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkStateValue* EnterAkState;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkStateValue* ExitAkState;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSubclassOf<AIGS_SentryControllerPlayerBase> SecurityCameraPlayerController;
+    
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    AIGS_SentryControllerPlayerBase* PlayerController;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UIGS_InteractiveComponent* InteractiveComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UStaticMeshComponent* MonitorMesh;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UAkComponent* AkAudioListener;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* EnterCameraAkEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ExitCameraAkEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ServoStartAkAudioEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ServoStopAkAudioEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ChangeCameraAkAudioEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkStateValue* AkStateMountNormal;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkStateValue* AkStateMountSecurityCamera;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkStateValue* AkStateMountSecurityCameraNoSignal;
+    
+    UPROPERTY()
+    AController* DefaultController;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 
     // Fix for true pure virtual functions not being implemented
 };

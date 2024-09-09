@@ -9,11 +9,11 @@ UCLASS()
 class BF_AI_API UBTTask_ReactToOffence : public UBTTaskNode, public IIGS_DialogueAsyncActionInterface {
     GENERATED_BODY()
 public:
+    UBTTask_ReactToOffence();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-    UBTTask_ReactToOffence();
-
 
     // Fix for true pure virtual functions not being implemented
 };

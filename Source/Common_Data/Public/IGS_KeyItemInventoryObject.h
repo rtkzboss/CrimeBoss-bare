@@ -8,6 +8,8 @@ UCLASS(Abstract)
 class COMMON_DATA_API UIGS_KeyItemInventoryObject : public UIGS_InventoryObjectFramework {
     GENERATED_BODY()
 public:
+    UIGS_KeyItemInventoryObject();
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_RoomType KeyRoomType;
     
@@ -17,7 +19,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText UniqueName;
     
-    UIGS_KeyItemInventoryObject();
-
 };
 

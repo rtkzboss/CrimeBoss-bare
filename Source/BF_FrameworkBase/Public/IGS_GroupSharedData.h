@@ -11,6 +11,11 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_GroupSharedData : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_GroupSharedData();
+
+    UFUNCTION(BlueprintPure)
+    UIGS_TokenPool* GetTokenPool() const;
+    
 private:
     UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_CharacterData> OwnerCharacterData;
@@ -20,12 +25,6 @@ private:
     
     UPROPERTY(Transient)
     UIGS_LocationsAroundTarget* LocationsAroundTarget;
-    
-public:
-    UIGS_GroupSharedData();
-
-    UFUNCTION(BlueprintPure)
-    UIGS_TokenPool* GetTokenPool() const;
     
 };
 

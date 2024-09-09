@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UBTService_LookAt : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_LookAt();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookAtBlackBoardKey;
     
@@ -20,7 +22,5 @@ public:
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     float LookAtStopMaxAngle;
     
-    UBTService_LookAt();
-
 };
 

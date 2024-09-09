@@ -7,6 +7,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterFloat : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterFloat();
+
 protected:
     UPROPERTY()
     TArray<float> Values;
@@ -50,8 +52,5 @@ protected:
     UPROPERTY()
     bool bIsChildOfRamp;
     
-public:
-    UHoudiniParameterFloat();
-
 };
 

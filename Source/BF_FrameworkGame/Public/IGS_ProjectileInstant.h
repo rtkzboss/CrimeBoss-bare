@@ -9,6 +9,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ProjectileInstant : public AIGS_ProjectileBase {
     GENERATED_BODY()
 public:
+    AIGS_ProjectileInstant(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     UNiagaraSystem* TracerEffectNiagara;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(EditAnywhere)
     float TracerEffectNiagaraChanceFPV;
     
-    AIGS_ProjectileInstant(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -16,26 +16,6 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UIGS_Quickplay_StashManagerComponent : public UIGS_StashManagerBaseComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Weapon*> PrimaryWeapons;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Weapon*> SecondaryWeapons;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_WeaponSkin*> WeaponSkins;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Equipment*> Equipment;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_Perk*> Perks;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<UMETA_CharacterSkin*> BossCharacterSkins;
-    
-public:
     UIGS_Quickplay_StashManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -100,6 +80,25 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddItem(FGameplayTag inItem);
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Weapon*> PrimaryWeapons;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Weapon*> SecondaryWeapons;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_WeaponSkin*> WeaponSkins;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Equipment*> Equipment;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Perk*> Perks;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_CharacterSkin*> BossCharacterSkins;
     
 };
 

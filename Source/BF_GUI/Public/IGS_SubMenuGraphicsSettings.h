@@ -10,6 +10,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_SubMenuGraphicsSettings : public UIGS_WidgetSubMenuSettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_SubMenuGraphicsSettings();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* DisplayModeSpinBox;
     
@@ -85,7 +87,5 @@ public:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* FPSLimitUnfocusedSpinBox;
     
-    UIGS_SubMenuGraphicsSettings();
-
 };
 

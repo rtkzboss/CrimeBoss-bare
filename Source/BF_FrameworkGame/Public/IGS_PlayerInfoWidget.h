@@ -9,20 +9,6 @@ UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnable
 class BF_FRAMEWORKGAME_API UIGS_PlayerInfoWidget : public UWidgetComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FText PlayerName;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 HeisterNumber;
-    
-    UPROPERTY()
-    FText DebugEditorName;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_IntelligentGameCharacter* CharacterOwner;
-    
-public:
     UIGS_PlayerInfoWidget(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -36,6 +22,19 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     int32 GetHeisterNumber();
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FText PlayerName;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 HeisterNumber;
+    
+    UPROPERTY()
+    FText DebugEditorName;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_IntelligentGameCharacter* CharacterOwner;
     
 };
 

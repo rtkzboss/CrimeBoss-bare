@@ -18,7 +18,44 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_GrenadeProjectileBase : public AIGS_ThrowableProjectileBase {
     GENERATED_BODY()
 public:
+    AIGS_GrenadeProjectileBase(const FObjectInitializer& ObjectInitializer);
+
 protected:
+    UFUNCTION()
+    void SetIndicatorIconWidget() const;
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void PlayEffect();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnStartExplosionTimer(float inTimeToExplode);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnExplosionSphereTrace(AActor* inActor) const;
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnExplosion();
+    
+    UFUNCTION(NetMulticast, Unreliable)
+    void Multicast_ExplodeEffect();
+    
+public:
+    UFUNCTION(BlueprintPure)
+    bool HasExploded() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetOuterEffectRadius() const;
+    
+    UFUNCTION(BlueprintCallable)
+    void Explode();
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void AffectPlayer(const AIGS_GameCharacterFramework* inPlayer) const;
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void AffectNPC(const AIGS_GameCharacterFramework* inNPC) const;
+    
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPointLightComponent* ExplosionLight;
     
@@ -65,45 +102,7 @@ protected:
     bool mR_bIsExploded;
     
 public:
-    AIGS_GrenadeProjectileBase(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-protected:
-    UFUNCTION()
-    void SetIndicatorIconWidget() const;
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void PlayEffect();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnStartExplosionTimer(float inTimeToExplode);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnExplosionSphereTrace(AActor* inActor) const;
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnExplosion();
-    
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_ExplodeEffect();
-    
-public:
-    UFUNCTION(BlueprintPure)
-    bool HasExploded() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetOuterEffectRadius() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void Explode();
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void AffectPlayer(const AIGS_GameCharacterFramework* inPlayer) const;
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void AffectNPC(const AIGS_GameCharacterFramework* inNPC) const;
-    
 };
 

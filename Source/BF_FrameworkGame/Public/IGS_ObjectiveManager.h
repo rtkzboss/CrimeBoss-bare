@@ -29,69 +29,7 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ObjectiveManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Tasks)
-    TArray<FIGS_MissionTask> Tasks;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Objectives)
-    TArray<FIGS_MissionObjective> Objectives;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_ActiveObjective)
-    FIGS_MissionObjective ActiveObjective;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_ShowCustomObjective)
-    bool bShowCustomObjective;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveProgressBar)
-    bool bShowCustomObjectiveProgressBar;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
-    FText CustomObjectiveText;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
-    int32 CurrentCustomObjectiveValue;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
-    int32 GoalCustomObjectiveValue;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CleanExecutionState)
-    EIGS_CleanExecutionState CleanExecutionState;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnCustomObjectiveEnabled OnCustomObjectiveStateChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnCustomObjectiveValuesChanged OnCustomObjectiveValuesChanged;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnCleanExecutionStateChanged OnCleanExecutionStateChanged;
-    
-    UPROPERTY()
-    FObjectiveAdded OnActiveObjectiveChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnActiveObjectiveChangedEvent OnActiveObjectiveChangedEventBP;
-    
-    UPROPERTY()
-    FObjectiveAdded OnObjectiveAddedEvent;
-    
-    UPROPERTY()
-    FObjectiveAdded OnObjectiveStateChangedEvent;
-    
-    UPROPERTY()
-    FTaskChanged OnTaskStateChangedEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ObjectiveFinishedAkEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* ObjectiveAddedAkEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated)
-    TArray<UIGS_ObjectiveComponent*> ObjectiveComponents;
-    
     UIGS_ObjectiveManager(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void UnpauseTimerForTask(UObject* inWCO, FIGS_MissionTask inTask);
@@ -231,5 +169,67 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void AddObjective(UObject* inWCO, FIGS_MissionObjective inObjectiveID);
     
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Tasks)
+    TArray<FIGS_MissionTask> Tasks;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_Objectives)
+    TArray<FIGS_MissionObjective> Objectives;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_ActiveObjective)
+    FIGS_MissionObjective ActiveObjective;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_ShowCustomObjective)
+    bool bShowCustomObjective;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveProgressBar)
+    bool bShowCustomObjectiveProgressBar;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
+    FText CustomObjectiveText;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
+    int32 CurrentCustomObjectiveValue;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CustomObjectiveValues)
+    int32 GoalCustomObjectiveValue;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_CleanExecutionState)
+    EIGS_CleanExecutionState CleanExecutionState;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnCustomObjectiveEnabled OnCustomObjectiveStateChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnCustomObjectiveValuesChanged OnCustomObjectiveValuesChanged;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnCleanExecutionStateChanged OnCleanExecutionStateChanged;
+    
+    UPROPERTY()
+    FObjectiveAdded OnActiveObjectiveChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnActiveObjectiveChangedEvent OnActiveObjectiveChangedEventBP;
+    
+    UPROPERTY()
+    FObjectiveAdded OnObjectiveAddedEvent;
+    
+    UPROPERTY()
+    FObjectiveAdded OnObjectiveStateChangedEvent;
+    
+    UPROPERTY()
+    FTaskChanged OnTaskStateChangedEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ObjectiveFinishedAkEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UAkAudioEvent* ObjectiveAddedAkEvent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Replicated)
+    TArray<UIGS_ObjectiveComponent*> ObjectiveComponents;
+    
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

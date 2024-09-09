@@ -8,10 +8,10 @@ UCLASS(BlueprintType)
 class COMMON_SAVE_API UIGS_PaybackSaveGameQuickplay : public UIGS_PaybackSaveGameBase {
     GENERATED_BODY()
 public:
+    UIGS_PaybackSaveGameQuickplay();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FIGS_SaveData_Quickplay SaveData_Quickplay;
     
-    UIGS_PaybackSaveGameQuickplay();
-
 };
 

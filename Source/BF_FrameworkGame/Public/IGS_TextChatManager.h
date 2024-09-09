@@ -13,18 +13,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_TextChatManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bChatOpen;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_TextMessageSentSignature OnTextMessageSentEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LocalTextMessageSentSignature OnLocalTextMessageSentEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_TextChatStateChanged OnTextChatStateChanged;
-    
     UIGS_TextChatManager(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(Reliable, Server, WithValidation)
@@ -50,6 +38,18 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void CloseChat();
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bChatOpen;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_TextMessageSentSignature OnTextMessageSentEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LocalTextMessageSentSignature OnLocalTextMessageSentEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_TextChatStateChanged OnTextChatStateChanged;
     
 };
 

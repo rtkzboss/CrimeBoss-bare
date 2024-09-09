@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_CallWalkieTalkie : public UBTTask_CallWalkieTalkieBase {
     GENERATED_BODY()
 public:
+    UBTTask_CallWalkieTalkie();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
     
-public:
-    UBTTask_CallWalkieTalkie();
-
 };
 

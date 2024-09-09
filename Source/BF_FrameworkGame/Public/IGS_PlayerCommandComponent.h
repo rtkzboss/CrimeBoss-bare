@@ -11,9 +11,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerCommandComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnCommandSentEvent OnCommandSentEventBP;
-    
     UIGS_PlayerCommandComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(Reliable, Server)
@@ -30,6 +27,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void HandleFollow(const AIGS_GameCharacterFramework* inOrderedCharacter) const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnCommandSentEvent OnCommandSentEventBP;
     
 };
 

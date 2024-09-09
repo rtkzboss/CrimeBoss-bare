@@ -15,6 +15,20 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AISuspiciousnessComponentBase : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AISuspiciousnessComponentBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    bool IsReacting();
+    
+    UFUNCTION(BlueprintPure)
+    bool IsAlerted() const;
+    
+    UFUNCTION(BlueprintCallable)
+    AIGS_GameCharacterFramework* GetAlertedByCharacter();
+    
+    UFUNCTION(BlueprintCallable)
+    void ClearOffence();
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_OffenceChangedEventSignature OnOffenceChangedEvent;
     
@@ -33,21 +47,6 @@ protected:
     
     UPROPERTY()
     UIGS_OffenceData* m_Offence;
-    
-public:
-    UIGS_AISuspiciousnessComponentBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    bool IsReacting();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsAlerted() const;
-    
-    UFUNCTION(BlueprintCallable)
-    AIGS_GameCharacterFramework* GetAlertedByCharacter();
-    
-    UFUNCTION(BlueprintCallable)
-    void ClearOffence();
     
 };
 

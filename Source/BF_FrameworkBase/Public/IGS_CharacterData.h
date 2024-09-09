@@ -36,6 +36,96 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_CharacterData : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_CharacterData(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION()
+    void UpdateIsCharging(bool inIsCharging);
+    
+protected:
+    UFUNCTION()
+    void OnRep_WalkieTalkieStatus();
+    
+    UFUNCTION()
+    void OnRep_StickyChanged();
+    
+public:
+    UFUNCTION()
+    void OnRep_SecurityLocation(EIGS_RoomSecurityType inOldTier);
+    
+protected:
+    UFUNCTION()
+    void OnRep_OnZiptieChanged();
+    
+    UFUNCTION()
+    void OnRep_OnRevivingChanged();
+    
+    UFUNCTION()
+    void OnRep_OnReportDetectionChanged();
+    
+    UFUNCTION()
+    void OnRep_OnLockPickingChanged();
+    
+    UFUNCTION()
+    void OnRep_OnInspectingChanged();
+    
+    UFUNCTION()
+    void OnRep_OnDetectionChanged();
+    
+    UFUNCTION()
+    void OnRep_IsPanicking();
+    
+    UFUNCTION()
+    void OnRep_IsOnGroundChanged();
+    
+    UFUNCTION()
+    void OnRep_GoingToGroundChanged();
+    
+    UFUNCTION()
+    void OnRep_EscapingChanged();
+    
+    UFUNCTION()
+    void OnRep_DetectionSecondPhase();
+    
+    UFUNCTION()
+    void OnRep_DetectingPlayers();
+    
+    UFUNCTION()
+    void OnComponentEndOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inOtherComponent, int32 ini);
+    
+    UFUNCTION()
+    void OnComponentBeginOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inOtherComponent, int32 ini, bool inArg, const FHitResult& inHitResult);
+    
+public:
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_SetSeatVariant(const EIGS_CarSeatVariant inSeatVariant);
+    
+    UFUNCTION(NetMulticast, Reliable)
+    void Multicast_SetCarType(const EIGS_CarType inCarType);
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsShoutHint();
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_GameCharacterFramework* GetSubduedBy() const;
+    
+    UFUNCTION(BlueprintCallable)
+    AActor* GetStealthTakedownActor();
+    
+    UFUNCTION(BlueprintCallable)
+    bool GetStealthKill();
+    
+    UFUNCTION(BlueprintCallable)
+    bool GetPlayerCanBreak();
+    
+    UFUNCTION(BlueprintPure)
+    FVector GetLastNavmeshLocation() const;
+    
+    UFUNCTION(BlueprintPure)
+    TArray<AIGS_GameCharacterFramework*> GetDetectingPlayers() const;
+    
+    UFUNCTION(BlueprintPure)
+    AIGS_GameCharacterFramework* GetCharacterOwner() const;
+    
     UPROPERTY(BlueprintAssignable)
     FIGS_IsTargetChangedSignature OnIsTargetChanged;
     
@@ -335,97 +425,7 @@ protected:
     bool mR_Inspecting;
     
 public:
-    UIGS_CharacterData(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-    UFUNCTION()
-    void UpdateIsCharging(bool inIsCharging);
-    
-protected:
-    UFUNCTION()
-    void OnRep_WalkieTalkieStatus();
-    
-    UFUNCTION()
-    void OnRep_StickyChanged();
-    
-public:
-    UFUNCTION()
-    void OnRep_SecurityLocation(EIGS_RoomSecurityType inOldTier);
-    
-protected:
-    UFUNCTION()
-    void OnRep_OnZiptieChanged();
-    
-    UFUNCTION()
-    void OnRep_OnRevivingChanged();
-    
-    UFUNCTION()
-    void OnRep_OnReportDetectionChanged();
-    
-    UFUNCTION()
-    void OnRep_OnLockPickingChanged();
-    
-    UFUNCTION()
-    void OnRep_OnInspectingChanged();
-    
-    UFUNCTION()
-    void OnRep_OnDetectionChanged();
-    
-    UFUNCTION()
-    void OnRep_IsPanicking();
-    
-    UFUNCTION()
-    void OnRep_IsOnGroundChanged();
-    
-    UFUNCTION()
-    void OnRep_GoingToGroundChanged();
-    
-    UFUNCTION()
-    void OnRep_EscapingChanged();
-    
-    UFUNCTION()
-    void OnRep_DetectionSecondPhase();
-    
-    UFUNCTION()
-    void OnRep_DetectingPlayers();
-    
-    UFUNCTION()
-    void OnComponentEndOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inOtherComponent, int32 ini);
-    
-    UFUNCTION()
-    void OnComponentBeginOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inOtherComponent, int32 ini, bool inArg, const FHitResult& inHitResult);
-    
-public:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_SetSeatVariant(const EIGS_CarSeatVariant inSeatVariant);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_SetCarType(const EIGS_CarType inCarType);
-    
-    UFUNCTION(BlueprintCallable)
-    bool IsShoutHint();
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_GameCharacterFramework* GetSubduedBy() const;
-    
-    UFUNCTION(BlueprintCallable)
-    AActor* GetStealthTakedownActor();
-    
-    UFUNCTION(BlueprintCallable)
-    bool GetStealthKill();
-    
-    UFUNCTION(BlueprintCallable)
-    bool GetPlayerCanBreak();
-    
-    UFUNCTION(BlueprintPure)
-    FVector GetLastNavmeshLocation() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<AIGS_GameCharacterFramework*> GetDetectingPlayers() const;
-    
-    UFUNCTION(BlueprintPure)
-    AIGS_GameCharacterFramework* GetCharacterOwner() const;
-    
 };
 

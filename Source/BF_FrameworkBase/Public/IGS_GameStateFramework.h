@@ -16,63 +16,7 @@ UCLASS()
 class BF_FRAMEWORKBASE_API AIGS_GameStateFramework : public AIGS_GameStateBaseWithData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnSecuredLootAdded OnSecuredLootAdded;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnSecuredLootAdded OnBonusLootChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnPocketLootChangedBP OnPocketLootChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnSecuredLootAdded OnBonusPocketLootChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnLootBagCountChanged OnLootBagCountChangedEvent;
-    
-protected:
-    UPROPERTY(Replicated)
-    bool mR_PlayersImmortality;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_PocketLootValue)
-    float PocketLootValue;
-    
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_BaggedLootValue)
-    float BaggedLootValue;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_SecuredLoot)
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> PocketLoot;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_BonusPocketLoot)
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> BonusPocketLoot;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_CarryablePocketLoot)
-    TArray<TSubclassOf<UIGS_CarryableInventoryObject>> CarryablePocketLoot;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_CarryablePickedUpLoot)
-    TArray<TSubclassOf<UIGS_CarryableInventoryObject>> CarryablePickedUpLoot;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_SecuredLoot)
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> SecuredLoot;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_BonusLoot)
-    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> BonusLoot;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_LootBagCount)
-    int32 LootBagCount;
-    
-    UPROPERTY(ReplicatedUsing=OnRep_SecuredLootBagCount)
-    int32 SecuredLootBagCount;
-    
-private:
-    UPROPERTY()
-    bool m_bIsEndMission;
-    
-public:
     AIGS_GameStateFramework(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     void SetIsEndMission(const bool inEndMission);
@@ -193,5 +137,61 @@ public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void AddBonusLoot(UObject* inWCO, TSubclassOf<UIGS_InventoryObjectFramework> inItemClass, AIGS_GameCharacterFramework* OwningPawn);
     
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnSecuredLootAdded OnSecuredLootAdded;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnSecuredLootAdded OnBonusLootChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnPocketLootChangedBP OnPocketLootChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnSecuredLootAdded OnBonusPocketLootChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnLootBagCountChanged OnLootBagCountChangedEvent;
+    
+protected:
+    UPROPERTY(Replicated)
+    bool mR_PlayersImmortality;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_PocketLootValue)
+    float PocketLootValue;
+    
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_BaggedLootValue)
+    float BaggedLootValue;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_SecuredLoot)
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> PocketLoot;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_BonusPocketLoot)
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> BonusPocketLoot;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_CarryablePocketLoot)
+    TArray<TSubclassOf<UIGS_CarryableInventoryObject>> CarryablePocketLoot;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_CarryablePickedUpLoot)
+    TArray<TSubclassOf<UIGS_CarryableInventoryObject>> CarryablePickedUpLoot;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_SecuredLoot)
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> SecuredLoot;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_BonusLoot)
+    TArray<TSubclassOf<UIGS_InventoryObjectFramework>> BonusLoot;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_LootBagCount)
+    int32 LootBagCount;
+    
+    UPROPERTY(ReplicatedUsing=OnRep_SecuredLootBagCount)
+    int32 SecuredLootBagCount;
+    
+private:
+    UPROPERTY()
+    bool m_bIsEndMission;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

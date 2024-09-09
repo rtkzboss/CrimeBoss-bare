@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTService_GR_EvadeGrenade : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_GR_EvadeGrenade();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
     
-public:
-    UBTService_GR_EvadeGrenade();
-
 };
 

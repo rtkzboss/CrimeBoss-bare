@@ -12,6 +12,8 @@ UCLASS()
 class UIGS_ComponentVoiceExpressionDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_ComponentVoiceExpressionDataAsset();
+
     UPROPERTY(EditAnywhere)
     UAkAudioEvent* PlayVoiceExpressionAkEvent;
     
@@ -36,7 +38,5 @@ public:
     UPROPERTY(EditAnywhere)
     TMap<EIGS_VoiceExpressionType, float> Cooldowns;
     
-    UIGS_ComponentVoiceExpressionDataAsset();
-
 };
 

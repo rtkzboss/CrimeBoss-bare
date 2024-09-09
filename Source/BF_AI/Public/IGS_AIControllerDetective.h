@@ -13,6 +13,11 @@ UCLASS()
 class BF_AI_API AIGS_AIControllerDetective : public AIGS_AIControllerGame {
     GENERATED_BODY()
 public:
+    AIGS_AIControllerDetective(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    TSubclassOf<UMETA_DetectiveID> GetDetectiveID() const;
+    
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentDownstateHealth;
     
@@ -40,12 +45,6 @@ private:
     
     UPROPERTY()
     AIGS_IntelligentGameCharacter* m_IntelligentOwner;
-    
-public:
-    AIGS_AIControllerDetective(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    TSubclassOf<UMETA_DetectiveID> GetDetectiveID() const;
     
 };
 

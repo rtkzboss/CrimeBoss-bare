@@ -11,6 +11,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKGAME_API UIGS_AimAssistConfigDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AimAssistConfigDataAsset();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float UpdateTargetsRate;
     
@@ -35,7 +37,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_BulletBendingConfig BulletBendingConfig;
     
-    UIGS_AimAssistConfigDataAsset();
-
 };
 

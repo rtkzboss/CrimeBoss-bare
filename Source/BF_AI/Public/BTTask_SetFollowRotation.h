@@ -8,10 +8,10 @@ UCLASS()
 class BF_AI_API UBTTask_SetFollowRotation : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_SetFollowRotation();
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookPosKey;
     
-    UBTTask_SetFollowRotation();
-
 };
 

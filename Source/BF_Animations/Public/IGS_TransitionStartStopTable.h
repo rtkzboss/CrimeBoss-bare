@@ -9,6 +9,8 @@ UCLASS()
 class BF_ANIMATIONS_API UIGS_TransitionStartStopTable : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_TransitionStartStopTable();
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* Front;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(EditAnywhere)
     UAnimMontage* Back;
     
-    UIGS_TransitionStartStopTable();
-
 };
 

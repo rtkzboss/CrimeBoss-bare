@@ -13,21 +13,6 @@ UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_LightingScenariosSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    EIGS_LightingScenarioType LightingScenario;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    bool bUseLightScenarios;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    bool bForceMovableSkylight;
-    
-private:
-    UPROPERTY()
-    ULevelStreamingDynamic* m_RootLevelScenarioStreaming;
-    
-public:
     UIGS_LightingScenariosSubsystem();
 
     UFUNCTION(BlueprintCallable)
@@ -55,6 +40,20 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void DeleteStaticLights();
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    EIGS_LightingScenarioType LightingScenario;
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    bool bUseLightScenarios;
+    
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    bool bForceMovableSkylight;
+    
+private:
+    UPROPERTY()
+    ULevelStreamingDynamic* m_RootLevelScenarioStreaming;
     
 };
 

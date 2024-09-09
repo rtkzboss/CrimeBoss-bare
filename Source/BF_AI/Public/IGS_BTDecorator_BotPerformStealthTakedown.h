@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTDecorator_BotPerformStealthTakedown : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UIGS_BTDecorator_BotPerformStealthTakedown();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharacterToShoutKey;
     
-public:
-    UIGS_BTDecorator_BotPerformStealthTakedown();
-
 };
 

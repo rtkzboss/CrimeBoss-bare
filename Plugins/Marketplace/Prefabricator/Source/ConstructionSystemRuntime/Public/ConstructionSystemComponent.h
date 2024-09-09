@@ -15,6 +15,35 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CONSTRUCTIONSYSTEMRUNTIME_API UConstructionSystemComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UConstructionSystemComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void ToggleConstructionSystem();
+    
+    UFUNCTION(BlueprintCallable)
+    void ShowBuildMenu();
+    
+    UFUNCTION(BlueprintCallable)
+    void SetActiveTool(EConstructionSystemToolType InToolType);
+    
+    UFUNCTION(BlueprintCallable)
+    void HideBuildMenu();
+    
+    UFUNCTION(BlueprintPure)
+    UConstructionSystemTool* GetTool(EConstructionSystemToolType InToolType);
+    
+    UFUNCTION(BlueprintPure)
+    EConstructionSystemToolType GetActiveToolType() const;
+    
+    UFUNCTION(BlueprintPure)
+    UConstructionSystemTool* GetActiveTool();
+    
+    UFUNCTION(BlueprintCallable)
+    void EnableConstructionSystem(EConstructionSystemToolType InToolType);
+    
+    UFUNCTION(BlueprintCallable)
+    void DisableConstructionSystem();
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInterface* CursorMaterial;
     
@@ -50,35 +79,6 @@ public:
     
     UPROPERTY(Transient)
     TMap<EConstructionSystemToolType, UConstructionSystemTool*> Tools;
-    
-    UConstructionSystemComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void ToggleConstructionSystem();
-    
-    UFUNCTION(BlueprintCallable)
-    void ShowBuildMenu();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetActiveTool(EConstructionSystemToolType InToolType);
-    
-    UFUNCTION(BlueprintCallable)
-    void HideBuildMenu();
-    
-    UFUNCTION(BlueprintPure)
-    UConstructionSystemTool* GetTool(EConstructionSystemToolType InToolType);
-    
-    UFUNCTION(BlueprintPure)
-    EConstructionSystemToolType GetActiveToolType() const;
-    
-    UFUNCTION(BlueprintPure)
-    UConstructionSystemTool* GetActiveTool();
-    
-    UFUNCTION(BlueprintCallable)
-    void EnableConstructionSystem(EConstructionSystemToolType InToolType);
-    
-    UFUNCTION(BlueprintCallable)
-    void DisableConstructionSystem();
     
 };
 

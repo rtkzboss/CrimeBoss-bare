@@ -16,6 +16,20 @@ UCLASS()
 class COMMON_DATA_API UIGS_Quickplay_EconomyData : public UIGS_EconomyData_Base {
     GENERATED_BODY()
 public:
+    UIGS_Quickplay_EconomyData();
+
+    UFUNCTION(BlueprintPure)
+    int32 GetStartingCash() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetRewardMultiplierForChainContract(TSubclassOf<UIGS_ChainContractID> inChainContractID) const;
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetCharacterLevelPerQuality(EMETA_ItemQuality inQuality);
+    
+    UFUNCTION(BlueprintPure)
+    int32 CalculateItemCostFromCategoryAndQuality(const EIGS_UnlockCategory inItemCategory, const EMETA_ItemQuality inItemQuality, const float inRelativePrice) const;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 StartingCash;
@@ -52,21 +66,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<FGameplayTag, int32> CharacterStartingPerksOverride;
-    
-public:
-    UIGS_Quickplay_EconomyData();
-
-    UFUNCTION(BlueprintPure)
-    int32 GetStartingCash() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetRewardMultiplierForChainContract(TSubclassOf<UIGS_ChainContractID> inChainContractID) const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetCharacterLevelPerQuality(EMETA_ItemQuality inQuality);
-    
-    UFUNCTION(BlueprintPure)
-    int32 CalculateItemCostFromCategoryAndQuality(const EIGS_UnlockCategory inItemCategory, const EMETA_ItemQuality inItemQuality, const float inRelativePrice) const;
     
 };
 

@@ -9,13 +9,13 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniLandscapeEditLayer : public UObject {
     GENERATED_BODY()
 public:
+    UHoudiniLandscapeEditLayer();
+
     UPROPERTY()
     TSoftObjectPtr<ALandscapeProxy> LandscapeSoftPtr;
     
     UPROPERTY()
     FString LayerName;
     
-    UHoudiniLandscapeEditLayer();
-
 };
 

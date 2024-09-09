@@ -10,6 +10,11 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_WeaponAccuracyComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_WeaponAccuracyComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintPure)
+    float GetCurrentSpreadConeHalfAngleInRadians() const;
+    
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CombinedHalfAngleInRadians;
@@ -37,12 +42,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag WeaponClassTag;
-    
-public:
-    UIGS_WeaponAccuracyComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintPure)
-    float GetCurrentSpreadConeHalfAngleInRadians() const;
     
 };
 

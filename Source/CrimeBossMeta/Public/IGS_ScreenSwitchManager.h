@@ -15,15 +15,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UIGS_ScreenSwitchManager : public UIGS_ScreenSwitchManagerBaseComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UMETA_UIEventsManagerComponent* UIComponent;
-    
-    UPROPERTY()
-    TScriptInterface<IMETA_GameModeAdapter> AdapterInterface;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTag CurrentTag;
-    
     UIGS_ScreenSwitchManager(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -52,6 +43,15 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void Confirm(UObject* inWCO);
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UMETA_UIEventsManagerComponent* UIComponent;
+    
+    UPROPERTY()
+    TScriptInterface<IMETA_GameModeAdapter> AdapterInterface;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTag CurrentTag;
     
 };
 

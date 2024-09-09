@@ -9,14 +9,15 @@ UCLASS()
 class BF_POOL_API AIGS_PooledParticle : public AIGS_PoolableBaseActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced, Transient, VisibleAnywhere)
-    UParticleSystemComponent* ParticleComponent;
-    
     AIGS_PooledParticle(const FObjectInitializer& ObjectInitializer);
 
 protected:
     UFUNCTION()
     void OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent);
+    
+public:
+    UPROPERTY(Instanced, Transient, VisibleAnywhere)
+    UParticleSystemComponent* ParticleComponent;
     
 };
 

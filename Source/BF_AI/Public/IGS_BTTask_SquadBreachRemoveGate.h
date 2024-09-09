@@ -14,17 +14,6 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadBreachRemoveGate : public UIGS_BTTask_SquadSwatBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    AIGS_GameCharacterFramework* ContextActionCharacter;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UIGS_AICommand* ContextActionCommand;
-    
-    UPROPERTY()
-    UObject* BreachObject;
-    
-public:
     UIGS_BTTask_SquadBreachRemoveGate();
 
 protected:
@@ -33,6 +22,15 @@ protected:
     
     UFUNCTION()
     static UIGS_AICommand* CommandToClearGate(AIGS_GameCharacterFramework* inAgent, AActor* BreachableObject, FVector Location, FVector LookAtPoint);
+    
+    UPROPERTY(EditDefaultsOnly)
+    AIGS_GameCharacterFramework* ContextActionCharacter;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UIGS_AICommand* ContextActionCommand;
+    
+    UPROPERTY()
+    UObject* BreachObject;
     
 };
 

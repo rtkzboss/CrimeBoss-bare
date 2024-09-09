@@ -9,12 +9,11 @@ UCLASS()
 class CUSTOMIZABLEOBJECTPOPULATION_API UCustomizableObjectPopulationGenerator : public UObject {
     GENERATED_BODY()
 public:
+    UCustomizableObjectPopulationGenerator();
+
 private:
     UPROPERTY()
     TArray<UCustomizableObject*> PopulationObjects;
     
-public:
-    UCustomizableObjectPopulationGenerator();
-
 };
 

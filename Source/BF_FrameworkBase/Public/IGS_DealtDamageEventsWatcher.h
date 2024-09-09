@@ -12,6 +12,8 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKBASE_API UIGS_DealtDamageEventsWatcher : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_DealtDamageEventsWatcher(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UPhysicalMaterial> HeadshotMaterial;
     
@@ -28,8 +30,5 @@ protected:
     UPROPERTY()
     AIGS_GameCharacterFramework* m_OwningCharacter;
     
-public:
-    UIGS_DealtDamageEventsWatcher(const FObjectInitializer& ObjectInitializer);
-
 };
 

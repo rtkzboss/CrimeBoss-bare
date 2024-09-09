@@ -13,12 +13,6 @@ UCLASS()
 class BF_AI_API UIGS_ScriptingCommandLayOnGround : public UIGS_ScriptingCommandAsyncBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FScriptingCommandOutputPin Succeed;
-    
-    UPROPERTY(BlueprintAssignable)
-    FScriptingCommandOutputPin Failed;
-    
     UIGS_ScriptingCommandLayOnGround();
 
     UFUNCTION(BlueprintCallable)
@@ -27,6 +21,13 @@ public:
 private:
     UFUNCTION()
     void OnCommandFinished(AIGS_AIControllerGame* inOwningContoller, UIGS_AICommand* inCommand, bool inFailed);
+    
+public:
+    UPROPERTY(BlueprintAssignable)
+    FScriptingCommandOutputPin Succeed;
+    
+    UPROPERTY(BlueprintAssignable)
+    FScriptingCommandOutputPin Failed;
     
 };
 

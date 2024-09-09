@@ -12,15 +12,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AsyncTaskEffectStackChanged : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-private:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnGameplayEffectStackChanged OnGameplayEffectStackChange;
-    
-protected:
-    UPROPERTY(Instanced)
-    UAbilitySystemComponent* ASC;
-    
-public:
     UIGS_AsyncTaskEffectStackChanged();
 
 private:
@@ -29,6 +20,13 @@ private:
     
     UFUNCTION(BlueprintCallable)
     void EndTask();
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnGameplayEffectStackChanged OnGameplayEffectStackChange;
+    
+protected:
+    UPROPERTY(Instanced)
+    UAbilitySystemComponent* ASC;
     
 };
 

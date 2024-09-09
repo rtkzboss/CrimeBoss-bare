@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UIGS_BTDecorator_HasThrowSlot : public UIGS_BTDecorator_Base {
     GENERATED_BODY()
 public:
+    UIGS_BTDecorator_HasThrowSlot();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotKey;
     
-public:
-    UIGS_BTDecorator_HasThrowSlot();
-
 };
 

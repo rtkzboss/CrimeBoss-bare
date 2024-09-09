@@ -14,6 +14,8 @@ UCLASS()
 class BF_AI_API AIGS_SentryControllerBase : public AIGS_SentryControllerFramework {
     GENERATED_BODY()
 public:
+    AIGS_SentryControllerBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 SquadID;
     
@@ -36,8 +38,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_BehaviorTreeGameComponent* BehaviorTreeGameComponent;
     
-public:
-    AIGS_SentryControllerBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

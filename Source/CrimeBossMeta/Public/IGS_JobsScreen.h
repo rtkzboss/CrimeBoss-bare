@@ -16,35 +16,6 @@ UCLASS(EditInlineNew)
 class CRIMEBOSSMETA_API UIGS_JobsScreen : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UHorizontalBox* JobsCategoriesContent;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGSScrollBox* IGSScrollBoxWidget;
-    
-    UPROPERTY(EditAnywhere)
-    float ScrollPaddingOnCategorySelect;
-    
-    UPROPERTY(EditAnywhere)
-    TSubclassOf<UIGS_JobsScreenCategoryWidget> CategoryWidgetClass;
-    
-    UPROPERTY(BlueprintReadOnly)
-    int32 SelectedCategoryIndex;
-    
-    UPROPERTY(EditAnywhere)
-    bool AllowEndlessScroll;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    TArray<UIGS_JobsScreenCategoryWidget*> CategoryWidgets;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_JobsScreenCategoryWidget* RecomendedCategoryWidget;
-    
-private:
-    UPROPERTY()
-    FIGS_MultiplayerJobCategoryRow RecomendedCategoryData;
-    
-public:
     UIGS_JobsScreen();
 
 private:
@@ -100,6 +71,34 @@ public:
     
     UFUNCTION(BlueprintPure)
     int32 GetCategoriesCount();
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UHorizontalBox* JobsCategoriesContent;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGSScrollBox* IGSScrollBoxWidget;
+    
+    UPROPERTY(EditAnywhere)
+    float ScrollPaddingOnCategorySelect;
+    
+    UPROPERTY(EditAnywhere)
+    TSubclassOf<UIGS_JobsScreenCategoryWidget> CategoryWidgetClass;
+    
+    UPROPERTY(BlueprintReadOnly)
+    int32 SelectedCategoryIndex;
+    
+    UPROPERTY(EditAnywhere)
+    bool AllowEndlessScroll;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    TArray<UIGS_JobsScreenCategoryWidget*> CategoryWidgets;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_JobsScreenCategoryWidget* RecomendedCategoryWidget;
+    
+private:
+    UPROPERTY()
+    FIGS_MultiplayerJobCategoryRow RecomendedCategoryData;
     
 };
 

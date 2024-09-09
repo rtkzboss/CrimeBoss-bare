@@ -14,15 +14,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UPaybackPlayerSwapper : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
-    TSubclassOf<AIGS_PlayerSwapActor> PlayerSwapActorTemplate;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 ActivePlayerIndex;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_OnPlayerSwapPreventedEventSignature OnPlayerSwapPreventedEvent;
-    
     UPaybackPlayerSwapper(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -34,6 +25,16 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void ForceSwapToPawn(AController* InPlayerController, APawn* inPawnToSwapTo);
+    
+public:
+    UPROPERTY(EditAnywhere)
+    TSubclassOf<AIGS_PlayerSwapActor> PlayerSwapActorTemplate;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 ActivePlayerIndex;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnPlayerSwapPreventedEventSignature OnPlayerSwapPreventedEvent;
     
 };
 

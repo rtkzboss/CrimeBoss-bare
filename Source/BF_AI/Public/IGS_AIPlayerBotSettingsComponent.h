@@ -12,13 +12,12 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_AIPlayerBotSettingsComponent : public UIGS_AISettingsComponent, public IIGS_WeaponSettingsInterface, public IIGS_CombatRangeSettingsInterface, public IIGS_CoverSettingsInterface, public IIGS_ReactionsSettingsInterface {
     GENERATED_BODY()
 public:
+    UIGS_AIPlayerBotSettingsComponent(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_PlayerBotTableRow CurrentSettings;
     
-public:
-    UIGS_AIPlayerBotSettingsComponent(const FObjectInitializer& ObjectInitializer);
-
 
     // Fix for true pure virtual functions not being implemented
 };

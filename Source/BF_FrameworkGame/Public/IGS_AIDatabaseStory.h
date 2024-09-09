@@ -28,6 +28,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_AIDatabaseStory : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_AIDatabaseStory();
+
     UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_GangsterVariationType, FIGS_AIGangsterSpecializationHolder> GangsterVariations;
     
@@ -64,7 +66,5 @@ public:
     UPROPERTY(EditDefaultsOnly)
     UIGS_AIDatabaseFPS* FPSDatabase;
     
-    UIGS_AIDatabaseStory();
-
 };
 

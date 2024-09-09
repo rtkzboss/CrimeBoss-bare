@@ -11,13 +11,13 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_CoverInSameArea : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_CoverInSameArea();
+
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> DesiredRoomPoint;
     
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue Depth;
     
-    UEnvQueryTest_CoverInSameArea();
-
 };
 

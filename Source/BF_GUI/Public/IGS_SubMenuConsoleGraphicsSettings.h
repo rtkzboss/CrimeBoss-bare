@@ -9,6 +9,8 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_SubMenuConsoleGraphicsSettings : public UIGS_WidgetSubMenuSettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_SubMenuConsoleGraphicsSettings();
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UIGS_WidgetFocusableSpinBox* FOVSpinBox;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FText> QualityModeConsoleVariables;
     
-    UIGS_SubMenuConsoleGraphicsSettings();
-
 };
 

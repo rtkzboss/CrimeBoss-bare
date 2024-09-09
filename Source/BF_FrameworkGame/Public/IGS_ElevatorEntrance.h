@@ -10,18 +10,6 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_ElevatorEntrance : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    AIGS_Elevator* Elevator;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 FloorIndex;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool OutOfOrder;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_FloorReached OnFloorReached;
-    
     AIGS_ElevatorEntrance(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -38,6 +26,18 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void CloseDoor();
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    AIGS_Elevator* Elevator;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 FloorIndex;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool OutOfOrder;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_FloorReached OnFloorReached;
     
 };
 

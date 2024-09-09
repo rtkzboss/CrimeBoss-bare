@@ -8,12 +8,11 @@ UCLASS()
 class BF_AI_API UBTTask_Panic : public UBTTask_ReactToOffenceAmbient {
     GENERATED_BODY()
 public:
+    UBTTask_Panic();
+
 protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval Duration;
     
-public:
-    UBTTask_Panic();
-
 };
 

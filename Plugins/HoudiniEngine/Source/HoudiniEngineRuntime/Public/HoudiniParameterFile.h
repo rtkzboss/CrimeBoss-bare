@@ -7,6 +7,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterFile : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterFile();
+
 protected:
     UPROPERTY()
     TArray<FString> Values;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY()
     bool bIsReadOnly;
     
-public:
-    UHoudiniParameterFile();
-
 };
 

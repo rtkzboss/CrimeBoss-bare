@@ -10,6 +10,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_PressureManager : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_PressureManager();
+
 private:
     UPROPERTY()
     UIGS_PressureManagerData* m_PressureManagerData;
@@ -17,8 +19,5 @@ private:
     UPROPERTY()
     TArray<FPressureRecord> m_Records;
     
-public:
-    UIGS_PressureManager();
-
 };
 

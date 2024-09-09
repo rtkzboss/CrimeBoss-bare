@@ -11,6 +11,22 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetInputKeyIcon : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetInputKeyIcon();
+
+    UFUNCTION(BlueprintCallable)
+    void SetInputActionToShow(EIGS_InputAction InAction);
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnInputKeyCharacterChanged(FName inInputKeyCharacter, bool inIsFallback);
+    
+    UFUNCTION()
+    void OnInputDeviceChanged(EIGS_InputDevice inDevice);
+    
+    UFUNCTION(BlueprintCallable)
+    void ForceChangeInputDevice(EIGS_InputDevice inDevice);
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bOverrideInputActionsByDevice;
     
@@ -32,22 +48,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_InputDevice PreviewInputDevice;
-    
-public:
-    UIGS_WidgetInputKeyIcon();
-
-    UFUNCTION(BlueprintCallable)
-    void SetInputActionToShow(EIGS_InputAction InAction);
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnInputKeyCharacterChanged(FName inInputKeyCharacter, bool inIsFallback);
-    
-    UFUNCTION()
-    void OnInputDeviceChanged(EIGS_InputDevice inDevice);
-    
-    UFUNCTION(BlueprintCallable)
-    void ForceChangeInputDevice(EIGS_InputDevice inDevice);
     
 };
 

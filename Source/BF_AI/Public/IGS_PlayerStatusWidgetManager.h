@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_AI_API UIGS_PlayerStatusWidgetManager : public UIGS_WorldSpaceWidgetBase {
     GENERATED_BODY()
 public:
+    UIGS_PlayerStatusWidgetManager(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY()
     AIGS_GameCharacterFramework* CharacterOwner;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY()
     AIGS_GameCharacterFramework* LocalPlayerCharacter;
     
-public:
-    UIGS_PlayerStatusWidgetManager(const FObjectInitializer& ObjectInitializer);
-
 };
 

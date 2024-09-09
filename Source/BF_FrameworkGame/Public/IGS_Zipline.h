@@ -11,6 +11,8 @@ UCLASS()
 class BF_FRAMEWORKGAME_API AIGS_Zipline : public AIGS_AITransitionObjectBase {
     GENERATED_BODY()
 public:
+    AIGS_Zipline(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
     
@@ -23,8 +25,6 @@ public:
     UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> User;
     
-    AIGS_Zipline(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };

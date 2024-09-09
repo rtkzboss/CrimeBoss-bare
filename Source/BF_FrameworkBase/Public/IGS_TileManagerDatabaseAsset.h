@@ -8,9 +8,6 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_TileManagerDatabaseAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<FString, FIGS_TileManagerDatabaseRow> TileData;
-    
     UIGS_TileManagerDatabaseAsset();
 
     UFUNCTION(BlueprintCallable)
@@ -18,6 +15,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddOrUpdate(const FString& inTileName, FIGS_TileManagerDatabaseRow inTileData);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<FString, FIGS_TileManagerDatabaseRow> TileData;
     
 };
 

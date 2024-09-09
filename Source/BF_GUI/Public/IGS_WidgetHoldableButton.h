@@ -19,38 +19,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetHoldableButton : public UIGS_WidgetButtonSimple {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float HoldTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 HoldTicksPerSecond;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FLinearColor ProgressColor;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FSlateColor TextColor;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnButtonClickedEvent OnHoldFinished;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UBorder* HoldBorder;
-    
-    UPROPERTY(BlueprintReadWrite)
-    UMaterialInstanceDynamic* ProgressMaterial;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UImage* Progress;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UTextBlock* ButtonText;
-    
-    UPROPERTY(BlueprintReadOnly, Instanced)
-    UIGS_WidgetInputKeyIcon* InputKeyIcon;
-    
-public:
     UIGS_WidgetHoldableButton();
 
 protected:
@@ -92,6 +60,38 @@ private:
     
     UFUNCTION()
     void HandleHoldFinished();
+    
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float HoldTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 HoldTicksPerSecond;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FLinearColor ProgressColor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FSlateColor TextColor;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnButtonClickedEvent OnHoldFinished;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UBorder* HoldBorder;
+    
+    UPROPERTY(BlueprintReadWrite)
+    UMaterialInstanceDynamic* ProgressMaterial;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UImage* Progress;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UTextBlock* ButtonText;
+    
+    UPROPERTY(BlueprintReadOnly, Instanced)
+    UIGS_WidgetInputKeyIcon* InputKeyIcon;
     
 };
 

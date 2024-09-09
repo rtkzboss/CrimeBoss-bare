@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API UBTTask_InCoverBleeding : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UBTTask_InCoverBleeding();
+
 protected:
     UPROPERTY(VisibleAnywhere)
     UCoverPoint* m_CoverPoint;
@@ -25,8 +27,5 @@ protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_CharacterData* m_CharacterData;
     
-public:
-    UBTTask_InCoverBleeding();
-
 };
 

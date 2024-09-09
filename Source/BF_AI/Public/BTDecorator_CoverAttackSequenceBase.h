@@ -8,12 +8,11 @@ UCLASS(Abstract)
 class BF_AI_API UBTDecorator_CoverAttackSequenceBase : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_CoverAttackSequenceBase();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector UpdateCoverKey;
     
-public:
-    UBTDecorator_CoverAttackSequenceBase();
-
 };
 

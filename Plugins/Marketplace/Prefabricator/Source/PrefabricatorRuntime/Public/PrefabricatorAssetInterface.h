@@ -10,13 +10,13 @@ UCLASS(Abstract)
 class PREFABRICATORRUNTIME_API UPrefabricatorAssetInterface : public UObject {
     GENERATED_BODY()
 public:
+    UPrefabricatorAssetInterface();
+
     UPROPERTY(EditAnywhere)
     TSubclassOf<UPrefabricatorEventListener> EventListener;
     
     UPROPERTY(EditAnywhere)
     bool bReplicates;
     
-    UPrefabricatorAssetInterface();
-
 };
 

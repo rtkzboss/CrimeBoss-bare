@@ -15,6 +15,26 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_TaskCondition : public UMETA_BaseGraphComponent, public IMETA_Task {
     GENERATED_BODY()
 public:
+    UMETA_TaskCondition();
+
+    UFUNCTION(BlueprintCallable)
+    void SetStativeInformation(AMETA_BaseGameMode* inGameMode, FMETA_TaskStativeInfo inTaskStativeInfo);
+    
+    UFUNCTION(BlueprintCallable)
+    void SetNeedValue(EMETA_NeedValueType inNeedValueType, int32 inNeedValue, FGameplayTag inNeedValueTag);
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void RefreshValues();
+    
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    int32 GetNeedValue();
+    
+    UFUNCTION(BlueprintCallable)
+    TSoftObjectPtr<UMETA_BaseStoryGraphManager> GetGraphSoftObjectCurrentNodeOwner();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void BindUnbindDelegates(bool inBind);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText TaskTitle;
     
@@ -38,26 +58,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite)
     EMETA_TaskStatus Status;
-    
-    UMETA_TaskCondition();
-
-    UFUNCTION(BlueprintCallable)
-    void SetStativeInformation(AMETA_BaseGameMode* inGameMode, FMETA_TaskStativeInfo inTaskStativeInfo);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetNeedValue(EMETA_NeedValueType inNeedValueType, int32 inNeedValue, FGameplayTag inNeedValueTag);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void RefreshValues();
-    
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    int32 GetNeedValue();
-    
-    UFUNCTION(BlueprintCallable)
-    TSoftObjectPtr<UMETA_BaseStoryGraphManager> GetGraphSoftObjectCurrentNodeOwner();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void BindUnbindDelegates(bool inBind);
     
 
     // Fix for true pure virtual functions not being implemented

@@ -11,17 +11,7 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_LootBagInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(ReplicatedUsing=OnRep_Items)
-    FIGS_LootBagItemHolder mR_ItemInfo;
-    
-    UPROPERTY()
-    TArray<FIGS_LootBagSingleItem> ItemsToAdd;
-    
-public:
     UIGS_LootBagInteractiveComponent(const FObjectInitializer& ObjectInitializer);
-
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     UFUNCTION(BlueprintCallable)
     bool PutItemToInventory(AIGS_GameCharacterFramework* inInstigator);
@@ -35,5 +25,15 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<FIGS_LootBagSingleItem> GetItems();
     
+protected:
+    UPROPERTY(ReplicatedUsing=OnRep_Items)
+    FIGS_LootBagItemHolder mR_ItemInfo;
+    
+    UPROPERTY()
+    TArray<FIGS_LootBagSingleItem> ItemsToAdd;
+    
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 };
 

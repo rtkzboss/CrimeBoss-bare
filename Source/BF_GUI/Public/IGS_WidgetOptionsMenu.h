@@ -15,33 +15,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetOptionsMenu : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_WidgetButtonSimple* GameSetButton;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_WidgetButtonSimple* GraphicsSetButton;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_WidgetButtonSimple* SoundSetButton;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_WidgetButtonSimple* ControlsSetButton;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_WidgetButtonSimple* ApplyButton;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_WidgetButtonSimple* RevertButton;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_WidgetButtonSimple* CloseButton;
-    
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UWidgetSwitcher* SettingsWidgetSwitcher;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_NotifyWantCloseEventSignature OnWantCloseEvent;
-    
     UIGS_WidgetOptionsMenu();
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
@@ -77,6 +50,34 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void ApplyButtonClickedEvent() const;
+    
+public:
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_WidgetButtonSimple* GameSetButton;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_WidgetButtonSimple* GraphicsSetButton;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_WidgetButtonSimple* SoundSetButton;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_WidgetButtonSimple* ControlsSetButton;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_WidgetButtonSimple* ApplyButton;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_WidgetButtonSimple* RevertButton;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_WidgetButtonSimple* CloseButton;
+    
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UWidgetSwitcher* SettingsWidgetSwitcher;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_NotifyWantCloseEventSignature OnWantCloseEvent;
     
 };
 

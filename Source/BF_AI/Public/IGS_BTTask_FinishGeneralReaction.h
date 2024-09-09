@@ -7,10 +7,10 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_FinishGeneralReaction : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_FinishGeneralReaction();
+
     UPROPERTY(EditAnywhere)
     bool bSuccess;
     
-    UIGS_BTTask_FinishGeneralReaction();
-
 };
 

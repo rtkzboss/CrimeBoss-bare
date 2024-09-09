@@ -16,6 +16,27 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PickupInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
+    UIGS_PickupInteractiveComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    bool UseInternal(AController* InPlayerController);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    void Setup(const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass, int32 inGlobalItemCount);
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    bool ServerUseInternal(AController* InPlayerController);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    bool ServerCanUseInternal(AController* InPlayerController);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    bool CanUseInternal(AController* InPlayerController);
+    
+public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bLocallyAlreadyUsed;
     
@@ -49,27 +70,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* DefaultPickupAkEvent;
-    
-public:
-    UIGS_PickupInteractiveComponent(const FObjectInitializer& ObjectInitializer);
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    bool UseInternal(AController* InPlayerController);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void Setup(const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass, int32 inGlobalItemCount);
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    bool ServerUseInternal(AController* InPlayerController);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    bool ServerCanUseInternal(AController* InPlayerController);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    bool CanUseInternal(AController* InPlayerController);
     
 };
 

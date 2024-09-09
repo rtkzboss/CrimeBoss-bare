@@ -19,44 +19,6 @@ UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerWorldTracingComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_AimGameCharacterChangedEvent OnAimGameCharacterChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_LeanChangedEvent OnLeanChangedEvent;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MantleTypeChangedEvent OnMantleTypeChangedEvent;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float TrackingDistance;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float DistanceToLean;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float LeanSphereCheckRadius;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float LeanSideCheckOffset;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float LeanUpCheckOffset;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float CapsuleZSizeAdd;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float CapsuleCheckZOffsetUp;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float MantleDownSweepOffsetMult;
-    
-    UPROPERTY()
-    FShoutScanData m_ShoutScanData;
-    
-public:
     UIGS_PlayerWorldTracingComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintPure)
@@ -100,6 +62,43 @@ public:
     
     UFUNCTION(BlueprintPure)
     bool CanLean() const;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_AimGameCharacterChangedEvent OnAimGameCharacterChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_LeanChangedEvent OnLeanChangedEvent;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MantleTypeChangedEvent OnMantleTypeChangedEvent;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float TrackingDistance;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float DistanceToLean;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float LeanSphereCheckRadius;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float LeanSideCheckOffset;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float LeanUpCheckOffset;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float CapsuleZSizeAdd;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float CapsuleCheckZOffsetUp;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float MantleDownSweepOffsetMult;
+    
+    UPROPERTY()
+    FShoutScanData m_ShoutScanData;
     
 };
 

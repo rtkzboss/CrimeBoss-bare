@@ -15,18 +15,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_HitMarkerWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_PlayerCharacter* PlayerPawn;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_PlayerControllerRoot* PlayerController;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_WeaponBase* CurrentWeapon;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    EIGS_HitMarkersSetting HitMarkersSetting;
-    
     UIGS_HitMarkerWidget();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -49,6 +37,18 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void BindToSimpleShooter(UIGS_SimpleHitScanShooter* inShooter);
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_PlayerCharacter* PlayerPawn;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_PlayerControllerRoot* PlayerController;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_WeaponBase* CurrentWeapon;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    EIGS_HitMarkersSetting HitMarkersSetting;
     
 };
 

@@ -9,6 +9,8 @@ UCLASS()
 class HOUDINIENGINERUNTIME_API UHoudiniParameterString : public UHoudiniParameter {
     GENERATED_BODY()
 public:
+    UHoudiniParameterString();
+
 protected:
     UPROPERTY()
     TArray<FString> Values;
@@ -22,8 +24,5 @@ protected:
     UPROPERTY()
     bool bIsAssetRef;
     
-public:
-    UHoudiniParameterString();
-
 };
 

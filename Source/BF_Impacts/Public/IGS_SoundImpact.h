@@ -10,6 +10,8 @@ UCLASS()
 class BF_IMPACTS_API AIGS_SoundImpact : public AIGS_ImpactBase {
     GENERATED_BODY()
 public:
+    AIGS_SoundImpact(const FObjectInitializer& ObjectInitializer);
+
 protected:
     UPROPERTY(Instanced, Transient)
     UAkComponent* AkComponent;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY(Transient)
     UAkAudioEvent* AkAudioEvent;
     
-public:
-    AIGS_SoundImpact(const FObjectInitializer& ObjectInitializer);
-
 };
 

@@ -22,38 +22,6 @@ UCLASS(BlueprintType, Config=Game)
 class COMMON_SAVE_API UIGS_SaveManager : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_AccountSaveDataRequestedDelegate OnAccountSaveDataRequested;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_QuickplaySaveDataRequestedDelegate OnQuickplaySaveDataRequested;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CareerSaveDataRequestedDelegate OnCareerSaveDataRequested;
-    
-    UPROPERTY(BlueprintAssignable)
-    FIGS_CareerDeletedDelegate OnCareerDeleted;
-    
-protected:
-    UPROPERTY(Config)
-    FString CareerSlotName;
-    
-    UPROPERTY(Transient)
-    UIGS_PaybackSaveGameAccount* CachedAccountSave;
-    
-    UPROPERTY(Transient)
-    UIGS_PaybackSaveGameQuickplay* CachedQuickplaySave;
-    
-    UPROPERTY(Transient)
-    UIGS_PaybackSaveGameCareer* CachedCareerSave;
-    
-    UPROPERTY(Transient)
-    UMETA_DebugCareerSaveGame* CachedCareerDebugSave;
-    
-    UPROPERTY(Transient)
-    UIGS_DebugWeaponCheatSelection* WeaponCheatSelectionDebugSave;
-    
-public:
     UIGS_SaveManager();
 
     UFUNCTION(BlueprintPure)
@@ -178,6 +146,37 @@ public:
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void AddPlotlineTagToDebugData(const UObject* inWCO, FGameplayTag inPlotlineTag, bool& bSuccess);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_AccountSaveDataRequestedDelegate OnAccountSaveDataRequested;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_QuickplaySaveDataRequestedDelegate OnQuickplaySaveDataRequested;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CareerSaveDataRequestedDelegate OnCareerSaveDataRequested;
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CareerDeletedDelegate OnCareerDeleted;
+    
+protected:
+    UPROPERTY(Config)
+    FString CareerSlotName;
+    
+    UPROPERTY(Transient)
+    UIGS_PaybackSaveGameAccount* CachedAccountSave;
+    
+    UPROPERTY(Transient)
+    UIGS_PaybackSaveGameQuickplay* CachedQuickplaySave;
+    
+    UPROPERTY(Transient)
+    UIGS_PaybackSaveGameCareer* CachedCareerSave;
+    
+    UPROPERTY(Transient)
+    UMETA_DebugCareerSaveGame* CachedCareerDebugSave;
+    
+    UPROPERTY(Transient)
+    UIGS_DebugWeaponCheatSelection* WeaponCheatSelectionDebugSave;
     
 };
 

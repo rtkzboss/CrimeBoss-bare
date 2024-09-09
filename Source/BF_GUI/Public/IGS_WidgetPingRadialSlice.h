@@ -13,6 +13,23 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetPingRadialSlice : public UUserWidget {
     GENERATED_BODY()
 public:
+    UIGS_WidgetPingRadialSlice();
+
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void SliceUnhover();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void SliceHover();
+    
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    bool SliceClicked();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetPlayerPicture(UTexture2D* inTexture);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnSliceClicked();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor NormalColor;
     
@@ -40,24 +57,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_PlayerCommandType PlayerCommandType;
-    
-public:
-    UIGS_WidgetPingRadialSlice();
-
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void SliceUnhover();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void SliceHover();
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    bool SliceClicked();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetPlayerPicture(UTexture2D* inTexture);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSliceClicked();
     
 };
 

@@ -12,6 +12,8 @@ UCLASS(BlueprintType)
 class BF_FRAMEWORKBASE_API UIGS_ProgressionManagerData : public UDataAsset {
     GENERATED_BODY()
 public:
+    UIGS_ProgressionManagerData();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 InitialLevel;
     
@@ -45,7 +47,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_UserDifficulty, float> UserDifficultyMultiplier;
     
-    UIGS_ProgressionManagerData();
-
 };
 

@@ -10,7 +10,15 @@ UCLASS(Abstract, EditInlineNew)
 class CRIMEBOSSMETA_API UMETA_CutsceneCondition : public UMETA_MediaCondition {
     GENERATED_BODY()
 public:
+    UMETA_CutsceneCondition();
+
+    UFUNCTION(BlueprintPure)
+    FText GetCutsceneID();
+    
 protected:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    TSoftObjectPtr<UDataAsset> GetCutsceneDataAsset();
+    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText CutsceneID;
     
@@ -32,16 +40,6 @@ protected:
 private:
     UPROPERTY()
     int32 ExpirationTimerEnabled;
-    
-public:
-    UMETA_CutsceneCondition();
-
-    UFUNCTION(BlueprintPure)
-    FText GetCutsceneID();
-    
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    TSoftObjectPtr<UDataAsset> GetCutsceneDataAsset();
     
 };
 

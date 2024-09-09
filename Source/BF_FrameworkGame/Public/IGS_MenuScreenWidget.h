@@ -11,9 +11,6 @@ UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_MenuScreenWidget : public UUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FGameplayTag screenTag;
-    
     UIGS_MenuScreenWidget();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -51,6 +48,9 @@ public:
     
     UFUNCTION(BlueprintImplementableEvent)
     void ConfirmInternal();
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FGameplayTag screenTag;
     
 };
 

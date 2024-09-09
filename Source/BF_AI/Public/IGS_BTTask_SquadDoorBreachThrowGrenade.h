@@ -12,14 +12,6 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_SquadDoorBreachThrowGrenade : public UIGS_BTTask_SquadDoorBreachBase {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(EditDefaultsOnly)
-    AIGS_GameCharacterFramework* ContextActionCharacter;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UIGS_AICommand* ContextActionCommand;
-    
-public:
     UIGS_BTTask_SquadDoorBreachThrowGrenade();
 
 protected:
@@ -28,6 +20,12 @@ protected:
     
     UFUNCTION()
     static UIGS_AICommand* CommandToThrowFlashbang(AIGS_GameCharacterFramework* inAgent, FVector position, bool IsRight);
+    
+    UPROPERTY(EditDefaultsOnly)
+    AIGS_GameCharacterFramework* ContextActionCharacter;
+    
+    UPROPERTY(EditDefaultsOnly)
+    UIGS_AICommand* ContextActionCommand;
     
 };
 

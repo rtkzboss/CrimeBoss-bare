@@ -12,6 +12,8 @@ UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EnvQueryGenerator_PatrolPoints : public UEnvQueryGenerator {
     GENERATED_BODY()
 public:
+    UIGS_EnvQueryGenerator_PatrolPoints();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
@@ -37,8 +39,5 @@ private:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderBoolValue FilterHeight;
     
-public:
-    UIGS_EnvQueryGenerator_PatrolPoints();
-
 };
 

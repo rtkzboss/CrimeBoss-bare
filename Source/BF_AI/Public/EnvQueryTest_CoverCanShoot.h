@@ -12,6 +12,8 @@ UCLASS()
 class BF_AI_API UEnvQueryTest_CoverCanShoot : public UEnvQueryTest {
     GENERATED_BODY()
 public:
+    UEnvQueryTest_CoverCanShoot();
+
 private:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderBoolValue UseStandingPose;
@@ -37,8 +39,5 @@ private:
     UPROPERTY(EditDefaultsOnly)
     bool bDrawDebugLines;
     
-public:
-    UEnvQueryTest_CoverCanShoot();
-
 };
 

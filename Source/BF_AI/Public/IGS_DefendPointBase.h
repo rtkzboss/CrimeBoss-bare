@@ -17,26 +17,6 @@ UCLASS()
 class BF_AI_API AIGS_DefendPointBase : public AIGS_WaypointVisitable, public IIGS_GameplayTagAssetInterfaceCustom {
     GENERATED_BODY()
 public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
-    UShapeComponent* DefendShape;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OverrideCapacity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool UseOnlyManualCovers;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EIGS_DefendPointRotationType RotationType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTagContainer GameplayTags;
-    
-    UPROPERTY()
-    TArray<UCoverPoint*> Covers;
-    
-public:
     AIGS_DefendPointBase(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -66,8 +46,28 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<AIGS_GameCharacterFramework*> GetAllArrivingCharacters();
     
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
+    UShapeComponent* DefendShape;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 OverrideCapacity;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool UseOnlyManualCovers;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    EIGS_DefendPointRotationType RotationType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTagContainer GameplayTags;
+    
+    UPROPERTY()
+    TArray<UCoverPoint*> Covers;
+    
 
     // Fix for true pure virtual functions not being implemented
+public:
     UFUNCTION(BlueprintCallable)
     bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override PURE_VIRTUAL(HasMatchingGameplayTag, return false;);
     

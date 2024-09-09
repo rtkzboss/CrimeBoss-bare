@@ -22,6 +22,29 @@ UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class BF_FRAMEWORKGAME_API UIGS_AIPassengerSpawnComponentBase : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_AIPassengerSpawnComponentBase(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void SpawnGroup(int32 inPassengersCount);
+    
+    UFUNCTION()
+    void SetCustomPassengersDefinition(const FIGS_NoSpawnPointDefinition& inCustomPassengers);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
+    void SetAIStateInCar(AIGS_GameCharacterFramework* inPassenger) const;
+    
+    UFUNCTION(BlueprintCallable)
+    void MakeSpecificPassengerGetOut(int32 inPassengerIndex, int32 inSeatIndex);
+    
+    UFUNCTION(BlueprintCallable)
+    void MakePassengersGetOut();
+    
+    UFUNCTION(BlueprintPure)
+    int32 GetRandomPassengerAmountInRange();
+    
+    UFUNCTION(BlueprintCallable)
+    void AddPassengerManually(AIGS_GameCharacterFramework* inPassenger, EIGS_CarSeatVariant inSeatVariant);
+    
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     EIGS_TeamSideEnum TeamSide;
     
@@ -66,29 +89,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly)
     int32 AmountOfPassengersToSpawn;
-    
-    UIGS_AIPassengerSpawnComponentBase(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void SpawnGroup(int32 inPassengersCount);
-    
-    UFUNCTION()
-    void SetCustomPassengersDefinition(const FIGS_NoSpawnPointDefinition& inCustomPassengers);
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    void SetAIStateInCar(AIGS_GameCharacterFramework* inPassenger) const;
-    
-    UFUNCTION(BlueprintCallable)
-    void MakeSpecificPassengerGetOut(int32 inPassengerIndex, int32 inSeatIndex);
-    
-    UFUNCTION(BlueprintCallable)
-    void MakePassengersGetOut();
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetRandomPassengerAmountInRange();
-    
-    UFUNCTION(BlueprintCallable)
-    void AddPassengerManually(AIGS_GameCharacterFramework* inPassenger, EIGS_CarSeatVariant inSeatVariant);
     
 };
 

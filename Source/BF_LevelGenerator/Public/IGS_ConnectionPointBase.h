@@ -10,6 +10,8 @@ UCLASS(Abstract)
 class BF_LEVELGENERATOR_API AIGS_ConnectionPointBase : public AActor {
     GENERATED_BODY()
 public:
+    AIGS_ConnectionPointBase(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<EIGS_ConnectionPointTag> PopulatorTags;
     
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USceneComponent* Root;
     
-public:
-    AIGS_ConnectionPointBase(const FObjectInitializer& ObjectInitializer);
-
 };
 

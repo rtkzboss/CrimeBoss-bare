@@ -12,6 +12,11 @@ UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIMEBOSSMETA_API UMETA_CityMapManagerComponent : public UIGS_CityMapManagerBaseComponent {
     GENERATED_BODY()
 public:
+    UMETA_CityMapManagerComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    void GetTileObject(const FGameplayTag inID, UMapTile*& outTileObject);
+    
 protected:
     UPROPERTY(BlueprintReadWrite)
     TMap<FGameplayTag, UMapTile*> TileObjects;
@@ -39,12 +44,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite)
     bool ForceMapEvents;
-    
-public:
-    UMETA_CityMapManagerComponent(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    void GetTileObject(const FGameplayTag inID, UMapTile*& outTileObject);
     
 };
 

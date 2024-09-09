@@ -7,12 +7,11 @@ UCLASS()
 class BF_AI_API UBTDecorator_WantsCover : public UBTDecorator {
     GENERATED_BODY()
 public:
+    UBTDecorator_WantsCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     float ThreathTreshold;
     
-public:
-    UBTDecorator_WantsCover();
-
 };
 

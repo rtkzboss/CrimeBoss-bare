@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UIGS_BTTask_Subdue : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UIGS_BTTask_Subdue();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharToSubdueKey;
@@ -17,8 +19,5 @@ protected:
     UPROPERTY()
     TWeakObjectPtr<AIGS_PlayerCharacter> Character;
     
-public:
-    UIGS_BTTask_Subdue();
-
 };
 

@@ -11,26 +11,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_WidgetBotRadialSlice : public UIGS_WidgetRadialSliceBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    AIGS_GameCharacterFramework* BotPawn;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bIsDefending;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FText BotName;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 SlotBind;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool bSwitchable;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FIGS_BotOrderAction> MyBotOrderActions;
-    
-public:
     UIGS_WidgetBotRadialSlice();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -50,6 +30,25 @@ public:
     
     UFUNCTION()
     void OnDefendChanged(bool inDefend);
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    AIGS_GameCharacterFramework* BotPawn;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bIsDefending;
+    
+protected:
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FText BotName;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    int32 SlotBind;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool bSwitchable;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    TArray<FIGS_BotOrderAction> MyBotOrderActions;
     
 };
 

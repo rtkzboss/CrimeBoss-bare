@@ -10,10 +10,10 @@ UCLASS(Abstract)
 class BF_AI_API UTacticalPathfindingNode : public UObject {
     GENERATED_BODY()
 public:
+    UTacticalPathfindingNode();
+
     UPROPERTY()
     TMap<UTacticalPathfindingNode*, FIGS_TacticalPathfindingEdge> Edges;
     
-    UTacticalPathfindingNode();
-
 };
 

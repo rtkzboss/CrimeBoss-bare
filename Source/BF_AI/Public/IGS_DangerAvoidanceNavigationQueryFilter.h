@@ -7,6 +7,8 @@ UCLASS(Abstract)
 class BF_AI_API UIGS_DangerAvoidanceNavigationQueryFilter : public UNavigationQueryFilter {
     GENERATED_BODY()
 public:
+    UIGS_DangerAvoidanceNavigationQueryFilter();
+
 protected:
     UPROPERTY(EditAnywhere)
     float RadiusMultiplier;
@@ -20,8 +22,5 @@ protected:
     UPROPERTY(EditAnywhere)
     bool IsActive;
     
-public:
-    UIGS_DangerAvoidanceNavigationQueryFilter();
-
 };
 

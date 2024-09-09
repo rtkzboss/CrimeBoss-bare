@@ -10,6 +10,8 @@ UCLASS()
 class BF_AI_API UBTService_GR_FleeFromArea : public UBTService {
     GENERATED_BODY()
 public:
+    UBTService_GR_FleeFromArea();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
@@ -23,8 +25,5 @@ protected:
     UPROPERTY(EditAnywhere)
     float EQSCooldown;
     
-public:
-    UBTService_GR_FleeFromArea();
-
 };
 

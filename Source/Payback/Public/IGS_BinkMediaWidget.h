@@ -12,9 +12,6 @@ UCLASS(Abstract, EditInlineNew)
 class PAYBACK_API UIGS_BinkMediaWidget : public UIGS_Screen {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintCallable)
-    FBinkWidgetEvent OnSkipButton;
-    
     UIGS_BinkMediaWidget();
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -40,6 +37,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnBinkMediaFinished();
+    
+    UPROPERTY(BlueprintCallable)
+    FBinkWidgetEvent OnSkipButton;
     
 };
 

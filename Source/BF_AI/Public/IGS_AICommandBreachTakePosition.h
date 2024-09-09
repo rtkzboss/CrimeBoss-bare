@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UIGS_AICommandBreachTakePosition : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandBreachTakePosition();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Position;
     
@@ -21,7 +23,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AIMontageBreachVariant MontageVariant;
     
-    UIGS_AICommandBreachTakePosition();
-
 };
 

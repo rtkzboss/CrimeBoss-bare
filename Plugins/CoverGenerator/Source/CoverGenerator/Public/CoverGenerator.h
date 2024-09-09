@@ -15,6 +15,31 @@ UCLASS(Transient)
 class COVERGENERATOR_API ACoverGenerator : public AActor {
     GENERATED_BODY()
 public:
+    ACoverGenerator(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintCallable)
+    void ReleaseCover(UCoverPoint* CoverPoint);
+    
+private:
+    UFUNCTION()
+    void OnNavigationGenerationFinished(ANavigationData* NavData);
+    
+public:
+    UFUNCTION(BlueprintCallable)
+    bool OccupyCover(UCoverPoint* CoverPoint, AController* Controller);
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsFreeCoverPoint(const UCoverPoint* CoverPoint);
+    
+    UFUNCTION(BlueprintCallable)
+    TArray<UCoverPoint*> GetCoverWithinBox(const FBox& BoxIn);
+    
+    UFUNCTION(BlueprintPure, meta=(WorldContext=WorldContextObject))
+    static ACoverGenerator* GetCoverGenerator(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable)
+    bool CoverExistWithinBox(const FBox& BoxIn);
+    
 protected:
     UPROPERTY(EditAnywhere)
     bool ForceRefresh;
@@ -116,32 +141,6 @@ private:
     
     UPROPERTY(Transient)
     TArray<AIGS_CoverZone*> m_CoverZones;
-    
-public:
-    ACoverGenerator(const FObjectInitializer& ObjectInitializer);
-
-    UFUNCTION(BlueprintCallable)
-    void ReleaseCover(UCoverPoint* CoverPoint);
-    
-private:
-    UFUNCTION()
-    void OnNavigationGenerationFinished(ANavigationData* NavData);
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    bool OccupyCover(UCoverPoint* CoverPoint, AController* Controller);
-    
-    UFUNCTION(BlueprintCallable)
-    bool IsFreeCoverPoint(const UCoverPoint* CoverPoint);
-    
-    UFUNCTION(BlueprintCallable)
-    TArray<UCoverPoint*> GetCoverWithinBox(const FBox& BoxIn);
-    
-    UFUNCTION(BlueprintPure, meta=(WorldContext=WorldContextObject))
-    static ACoverGenerator* GetCoverGenerator(const UObject* WorldContextObject);
-    
-    UFUNCTION(BlueprintCallable)
-    bool CoverExistWithinBox(const FBox& BoxIn);
     
 };
 

@@ -10,10 +10,10 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_CorpseInteractiveComponent : public UIGS_InteractiveComponent {
     GENERATED_BODY()
 public:
+    UIGS_CorpseInteractiveComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_CarryableInventoryObject> BodyBagCarryable;
     
-    UIGS_CorpseInteractiveComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

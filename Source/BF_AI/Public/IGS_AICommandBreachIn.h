@@ -8,6 +8,8 @@ UCLASS()
 class BF_AI_API UIGS_AICommandBreachIn : public UIGS_AICommand {
     GENERATED_BODY()
 public:
+    UIGS_AICommandBreachIn();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Position;
     
@@ -17,7 +19,5 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool Crouch;
     
-    UIGS_AICommandBreachIn();
-
 };
 

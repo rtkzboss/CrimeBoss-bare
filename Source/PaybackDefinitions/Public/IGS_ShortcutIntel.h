@@ -7,10 +7,10 @@ UCLASS(BlueprintType)
 class PAYBACKDEFINITIONS_API UIGS_ShortcutIntel : public UIGS_IntelBase {
     GENERATED_BODY()
 public:
+    UIGS_ShortcutIntel();
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bShortcutFound;
     
-    UIGS_ShortcutIntel();
-
 };
 

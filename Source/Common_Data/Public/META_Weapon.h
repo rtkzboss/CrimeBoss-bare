@@ -22,38 +22,6 @@ UCLASS()
 class COMMON_DATA_API UMETA_Weapon : public UMETA_BaseObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsUnseenInShop;
-    
-private:
-    UPROPERTY()
-    int32 m_Price;
-    
-    UPROPERTY()
-    int32 m_AdditionalPercentageOfWeaponPrice;
-    
-    UPROPERTY()
-    int32 m_AdditionalPercentageOfWeaponPriceFromMods;
-    
-    UPROPERTY()
-    UMETA_Character* m_Character;
-    
-    UPROPERTY()
-    int32 m_SuccessfulMissions;
-    
-    UPROPERTY()
-    TArray<TSubclassOf<UMETA_WeaponInventoryObject>> m_TargetWeaponsForUpgrade;
-    
-    UPROPERTY()
-    EMETA_ItemQuality m_TargetQualityToUpdateWeapon;
-    
-    UPROPERTY()
-    int32 m_DaysInShop;
-    
-    UPROPERTY()
-    FGameplayTag m_WeaponSkinTag;
-    
-public:
     UMETA_Weapon();
 
     UFUNCTION(BlueprintCallable)
@@ -172,6 +140,37 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddTargetWeaponForUpgrade(TSubclassOf<UMETA_WeaponInventoryObject> inNewTargerWeapon);
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool IsUnseenInShop;
+    
+private:
+    UPROPERTY()
+    int32 m_Price;
+    
+    UPROPERTY()
+    int32 m_AdditionalPercentageOfWeaponPrice;
+    
+    UPROPERTY()
+    int32 m_AdditionalPercentageOfWeaponPriceFromMods;
+    
+    UPROPERTY()
+    UMETA_Character* m_Character;
+    
+    UPROPERTY()
+    int32 m_SuccessfulMissions;
+    
+    UPROPERTY()
+    TArray<TSubclassOf<UMETA_WeaponInventoryObject>> m_TargetWeaponsForUpgrade;
+    
+    UPROPERTY()
+    EMETA_ItemQuality m_TargetQualityToUpdateWeapon;
+    
+    UPROPERTY()
+    int32 m_DaysInShop;
+    
+    UPROPERTY()
+    FGameplayTag m_WeaponSkinTag;
     
 };
 

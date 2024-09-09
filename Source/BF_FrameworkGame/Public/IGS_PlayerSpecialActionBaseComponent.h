@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_PlayerSpecialActionBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UIGS_PlayerSpecialActionBaseComponent(const FObjectInitializer& ObjectInitializer);
+
     UPROPERTY(EditAnywhere)
     TSoftClassPtr<AActor> AttachmentClass;
     
@@ -20,8 +22,5 @@ protected:
     UPROPERTY()
     AActor* m_SpecialObjectActor;
     
-public:
-    UIGS_PlayerSpecialActionBaseComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

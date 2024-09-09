@@ -16,6 +16,27 @@ UCLASS(Abstract, Blueprintable)
 class BF_DEBUG_API UIGS_DebugSubsystemBlueprint : public UObject {
     GENERATED_BODY()
 public:
+    UIGS_DebugSubsystemBlueprint();
+
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void SpawnUnits(EIGS_TeamSideEnum inTeamSide, EIGS_UnitSpecialization inUnitSpec, int32 inCount, FTransform InTransform);
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SpawnFearNumbers(float inFear, FVector inActorLocation, bool inIsDuty);
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void SpawnDamageNumbers(float inDamage, UPhysicalMaterial* inPhysicalMaterialHit, FVector inActorLocation);
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void SetSquandToAI(AActor* inAI, AActor* inSquad);
+    
+    UFUNCTION(BlueprintImplementableEvent, meta=(WorldContext=inWCO))
+    AActor* CreateSquad(UObject* inWCO, EIGS_TeamSideEnum inTeamSide);
+    
+public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftClassPtr<UIGS_DebugTogglesWidget> DebugMenuClass;
     
@@ -58,27 +79,6 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_DebugTogglesWidget* DebugMenu;
-    
-public:
-    UIGS_DebugSubsystemBlueprint();
-
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void SpawnUnits(EIGS_TeamSideEnum inTeamSide, EIGS_UnitSpecialization inUnitSpec, int32 inCount, FTransform InTransform);
-    
-public:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SpawnFearNumbers(float inFear, FVector inActorLocation, bool inIsDuty);
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SpawnDamageNumbers(float inDamage, UPhysicalMaterial* inPhysicalMaterialHit, FVector inActorLocation);
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetSquandToAI(AActor* inAI, AActor* inSquad);
-    
-    UFUNCTION(BlueprintImplementableEvent, meta=(WorldContext=inWCO))
-    AActor* CreateSquad(UObject* inWCO, EIGS_TeamSideEnum inTeamSide);
     
 };
 

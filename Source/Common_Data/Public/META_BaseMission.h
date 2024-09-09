@@ -25,44 +25,6 @@ class COMMON_DATA_API UMETA_BaseMission : public UObject {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_MetaMissionExpired, UMETA_BaseMission*, Mission);
     
-    UPROPERTY(BlueprintAssignable)
-    FIGS_MetaMissionExpired OnMetaMissionExpired;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FMETA_MissionOnTileInfo MissionOnTileInfo;
-    
-protected:
-    UPROPERTY()
-    EMETA_JobResult m_Result;
-    
-    UPROPERTY()
-    EMETA_JobResult m_AmbushResult;
-    
-    UPROPERTY()
-    EMETA_JobResult m_TotalResult;
-    
-    UPROPERTY()
-    FGameplayTag EntitlementTag;
-    
-    UPROPERTY()
-    bool bCanExpire;
-    
-    UPROPERTY()
-    float InitTime;
-    
-    UPROPERTY()
-    float EndTime;
-    
-    UPROPERTY()
-    bool bIsSelected;
-    
-    UPROPERTY()
-    EMETA_LobbyVisibilityType m_LobbyVisibilityType;
-    
-    UPROPERTY()
-    EIGS_UserDifficulty m_UserDifficulty;
-    
-public:
     UMETA_BaseMission();
 
     UFUNCTION(BlueprintCallable)
@@ -190,6 +152,43 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void AddParameter(const FGameplayTag inParameterTag, int32 inParameterValue);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_MetaMissionExpired OnMetaMissionExpired;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FMETA_MissionOnTileInfo MissionOnTileInfo;
+    
+protected:
+    UPROPERTY()
+    EMETA_JobResult m_Result;
+    
+    UPROPERTY()
+    EMETA_JobResult m_AmbushResult;
+    
+    UPROPERTY()
+    EMETA_JobResult m_TotalResult;
+    
+    UPROPERTY()
+    FGameplayTag EntitlementTag;
+    
+    UPROPERTY()
+    bool bCanExpire;
+    
+    UPROPERTY()
+    float InitTime;
+    
+    UPROPERTY()
+    float EndTime;
+    
+    UPROPERTY()
+    bool bIsSelected;
+    
+    UPROPERTY()
+    EMETA_LobbyVisibilityType m_LobbyVisibilityType;
+    
+    UPROPERTY()
+    EIGS_UserDifficulty m_UserDifficulty;
     
 };
 

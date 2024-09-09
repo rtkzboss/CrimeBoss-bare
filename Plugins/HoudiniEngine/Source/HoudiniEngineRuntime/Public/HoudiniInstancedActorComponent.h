@@ -10,6 +10,8 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class HOUDINIENGINERUNTIME_API UHoudiniInstancedActorComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UHoudiniInstancedActorComponent(const FObjectInitializer& ObjectInitializer);
+
 private:
     UPROPERTY(VisibleAnywhere)
     UObject* InstancedObject;
@@ -17,8 +19,5 @@ private:
     UPROPERTY(VisibleInstanceOnly)
     TArray<AActor*> InstancedActors;
     
-public:
-    UHoudiniInstancedActorComponent(const FObjectInitializer& ObjectInitializer);
-
 };
 

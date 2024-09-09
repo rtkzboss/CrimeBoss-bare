@@ -9,6 +9,8 @@ UCLASS()
 class BF_AI_API UBTTask_Strafe : public UBTTaskNode {
     GENERATED_BODY()
 public:
+    UBTTask_Strafe();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector IsDodgingKey;
@@ -19,8 +21,5 @@ protected:
     UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
     
-public:
-    UBTTask_Strafe();
-
 };
 

@@ -23,6 +23,30 @@ UCLASS(NonTransient)
 class BF_ANIMATIONS_API UIGS_CharacterAnimInstance : public UIGS_FootIKAnimInstance {
     GENERATED_BODY()
 public:
+    UIGS_CharacterAnimInstance();
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnDeathAnimationEnded_Event();
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnDeath(AIGS_IntelligentGameCharacter* inCharacter, UIGS_UPlayerAnimationComponent* InAnimationComponent, const FIGS_HitInfo& inHitInfo);
+    
+    UFUNCTION()
+    void OnComponentHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+    
+protected:
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnCharacterFell(float inFallHeight);
+    
+public:
+    UFUNCTION(BlueprintPure)
+    UIGS_HeadAnimInstance* GetHeadAnimInstance() const;
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void EnterRadialDamageRagdollState(const FIGS_HitInfo& inHitInfo, float inImpulse, bool inIsVelocityChange);
+    
+public:
     UPROPERTY(EditAnywhere)
     bool UseBlueprintDeathImplementation;
     
@@ -122,30 +146,6 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<UIGS_HeadAnimInstance> OptionalHeadAnimInstance;
-    
-public:
-    UIGS_CharacterAnimInstance();
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnDeathAnimationEnded_Event();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnDeath(AIGS_IntelligentGameCharacter* inCharacter, UIGS_UPlayerAnimationComponent* InAnimationComponent, const FIGS_HitInfo& inHitInfo);
-    
-    UFUNCTION()
-    void OnComponentHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnCharacterFell(float inFallHeight);
-    
-public:
-    UFUNCTION(BlueprintPure)
-    UIGS_HeadAnimInstance* GetHeadAnimInstance() const;
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void EnterRadialDamageRagdollState(const FIGS_HitInfo& inHitInfo, float inImpulse, bool inIsVelocityChange);
     
 };
 

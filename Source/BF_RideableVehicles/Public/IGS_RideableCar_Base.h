@@ -19,6 +19,47 @@ UCLASS(Abstract)
 class BF_RIDEABLEVEHICLES_API AIGS_RideableCar_Base : public AIGS_RideableVehicle_Base {
     GENERATED_BODY()
 public:
+    AIGS_RideableCar_Base(const FObjectInitializer& ObjectInitializer);
+
+private:
+    UFUNCTION(Server, Unreliable)
+    void SyncSteering_SERVER(float InValue);
+    
+    UFUNCTION()
+    void SyncSteering();
+    
+protected:
+    UFUNCTION(BlueprintNativeEvent)
+    void StartSmoothStop();
+    
+private:
+    UFUNCTION(Server, Unreliable)
+    void SetDriverCameraRotState_SERVER(bool inIsLookingAtRight);
+    
+    UFUNCTION(Reliable, Server)
+    void SendMove_SERVER(FRideableCarMove Move);
+    
+    UFUNCTION()
+    void OnRep_ServerMoveState();
+    
+protected:
+    UFUNCTION(BlueprintCallable)
+    void OnHitVehicle(UPrimitiveComponent* inHitComp, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
+    
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnGearChangedCosmetic(int32 InCurrentGear);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnEntryTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
+    
+    UFUNCTION(BlueprintNativeEvent)
+    void OnCollisionTriggerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
+    
+private:
+    UFUNCTION(BlueprintPure)
+    bool IsGrounded();
+    
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 SuspensionLength;
     
@@ -75,47 +116,7 @@ private:
     float m_SteeringTarget;
     
 public:
-    AIGS_RideableCar_Base(const FObjectInitializer& ObjectInitializer);
-
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-private:
-    UFUNCTION(Server, Unreliable)
-    void SyncSteering_SERVER(float InValue);
-    
-    UFUNCTION()
-    void SyncSteering();
-    
-protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void StartSmoothStop();
-    
-private:
-    UFUNCTION(Server, Unreliable)
-    void SetDriverCameraRotState_SERVER(bool inIsLookingAtRight);
-    
-    UFUNCTION(Reliable, Server)
-    void SendMove_SERVER(FRideableCarMove Move);
-    
-    UFUNCTION()
-    void OnRep_ServerMoveState();
-    
-protected:
-    UFUNCTION(BlueprintCallable)
-    void OnHitVehicle(UPrimitiveComponent* inHitComp, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnGearChangedCosmetic(int32 InCurrentGear);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnEntryTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void OnCollisionTriggerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
-private:
-    UFUNCTION(BlueprintPure)
-    bool IsGrounded();
-    
 };
 

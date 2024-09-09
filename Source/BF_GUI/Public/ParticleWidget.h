@@ -10,6 +10,8 @@ UCLASS()
 class BF_GUI_API UParticleWidget : public UWidget {
     GENERATED_BODY()
 public:
+    UParticleWidget();
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     USlateVectorArtData* TrailMeshAsset;
     
@@ -34,7 +36,5 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 MaxParticles;
     
-    UParticleWidget();
-
 };
 

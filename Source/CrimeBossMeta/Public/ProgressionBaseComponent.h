@@ -18,26 +18,6 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class CRIMEBOSSMETA_API UProgressionBaseComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
-    FIGS_ProcessMissionProgressionResult OnProcessMissionProgressionResult;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FIGS_ProgressionResult AccumulatedProgressionResult;
-    
-private:
-    UPROPERTY()
-    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
-    
-    UPROPERTY()
-    UIGS_SaveManager* m_SaveManager;
-    
-    UPROPERTY()
-    UIGS_ProgressionManager* m_ProgressionManager;
-    
-    UPROPERTY()
-    UIGS_UnlockManager* m_UnlockManager;
-    
-public:
     UProgressionBaseComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
@@ -117,6 +97,25 @@ protected:
 public:
     UFUNCTION(BlueprintCallable)
     void AddPendingPoints(float inPoints);
+    
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ProcessMissionProgressionResult OnProcessMissionProgressionResult;
+    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FIGS_ProgressionResult AccumulatedProgressionResult;
+    
+private:
+    UPROPERTY()
+    UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
+    
+    UPROPERTY()
+    UIGS_SaveManager* m_SaveManager;
+    
+    UPROPERTY()
+    UIGS_ProgressionManager* m_ProgressionManager;
+    
+    UPROPERTY()
+    UIGS_UnlockManager* m_UnlockManager;
     
 };
 

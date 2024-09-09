@@ -12,18 +12,6 @@ UCLASS(EditInlineNew)
 class BF_GUI_API UIGS_HealthSectionWidget : public UIGS_HUDSubwidgetBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
-    float CurrentHealth;
-    
-    UPROPERTY(BlueprintReadOnly)
-    float MaxHealth;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bLocalPlayer;
-    
-    UPROPERTY(BlueprintReadOnly)
-    AIGS_GameCharacterFramework* PawnToMonitor;
-    
     UIGS_HealthSectionWidget();
 
     UFUNCTION(BlueprintImplementableEvent)
@@ -62,6 +50,19 @@ protected:
     
     UFUNCTION()
     void LootBagCountChanged(int32 inCount, const TArray<EIGS_BagType>& inBagTypes);
+    
+public:
+    UPROPERTY(BlueprintReadOnly)
+    float CurrentHealth;
+    
+    UPROPERTY(BlueprintReadOnly)
+    float MaxHealth;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bLocalPlayer;
+    
+    UPROPERTY(BlueprintReadOnly)
+    AIGS_GameCharacterFramework* PawnToMonitor;
     
 };
 

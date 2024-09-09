@@ -8,18 +8,6 @@ UCLASS(Abstract)
 class KANTANCHARTSUMG_API UKantanChart : public UWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FMargin Margins;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText ChartTitle;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FMargin TitlePadding;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float UpdateTickRate;
-    
     UKantanChart();
 
     UFUNCTION(BlueprintCallable)
@@ -33,6 +21,18 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void SetChartTitle(const FText& InTitle);
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FMargin Margins;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FText ChartTitle;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FMargin TitlePadding;
+    
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float UpdateTickRate;
     
 };
 

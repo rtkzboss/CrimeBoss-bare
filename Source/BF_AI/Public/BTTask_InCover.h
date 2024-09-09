@@ -16,6 +16,8 @@ UCLASS()
 class BF_AI_API UBTTask_InCover : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
+    UBTTask_InCover();
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverForwardPointKey;
@@ -44,8 +46,5 @@ protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_GameCharacterMovementComponent* m_MovementComponent;
     
-public:
-    UBTTask_InCover();
-
 };
 

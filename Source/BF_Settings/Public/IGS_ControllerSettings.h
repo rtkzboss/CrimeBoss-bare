@@ -9,6 +9,17 @@ UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_ControllerSettings : public UIGS_SettingsBase {
     GENERATED_BODY()
 public:
+    UIGS_ControllerSettings();
+
+    UFUNCTION(BlueprintPure)
+    static UIGS_ControllerSettings* Instance();
+    
+    UFUNCTION(BlueprintPure)
+    float GetRightTriggerReleaseThreshold() const;
+    
+    UFUNCTION(BlueprintPure)
+    float GetRightTriggerPressThreshold() const;
+    
     UPROPERTY(Config, EditAnywhere)
     float ControllerSensitivity;
     
@@ -38,17 +49,6 @@ public:
     
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     bool bSwapPingWithDropItemControls;
-    
-    UIGS_ControllerSettings();
-
-    UFUNCTION(BlueprintPure)
-    static UIGS_ControllerSettings* Instance();
-    
-    UFUNCTION(BlueprintPure)
-    float GetRightTriggerReleaseThreshold() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetRightTriggerPressThreshold() const;
     
 };
 

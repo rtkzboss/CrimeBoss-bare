@@ -16,26 +16,6 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class PAYBACK_API UPaybackHeisterBarksManager : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText VoFinishMission;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AActor* VoFinishMissionCharacter;
-    
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float SilenceMinHeisterShootingTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float SilenceWithoutShooting;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OutnumberedEnemies;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float OutnumberedCoolDown;
-    
-public:
     UPaybackHeisterBarksManager(const FObjectInitializer& ObjectInitializer);
 
 protected:
@@ -137,6 +117,26 @@ protected:
     
     UFUNCTION(BlueprintImplementableEvent)
     void BotCommandFollow(const AIGS_GameCharacterFramework* inInstigator);
+    
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FText VoFinishMission;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    AActor* VoFinishMissionCharacter;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float SilenceMinHeisterShootingTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float SilenceWithoutShooting;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    int32 OutnumberedEnemies;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float OutnumberedCoolDown;
     
 };
 
