@@ -19,5 +19,5 @@ public:
     
     FMETA_CharacterID();
 };
-FORCEINLINE uint32 GetTypeHash(const FMETA_CharacterID) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FMETA_CharacterID&) { return 0; }
 

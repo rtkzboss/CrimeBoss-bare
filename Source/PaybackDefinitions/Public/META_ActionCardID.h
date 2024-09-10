@@ -17,5 +17,5 @@ public:
     
     FMETA_ActionCardID();
 };
-FORCEINLINE uint32 GetTypeHash(const FMETA_ActionCardID) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FMETA_ActionCardID&) { return 0; }
 

@@ -15,5 +15,5 @@ public:
     
     FIGS_DialogueGroupCharacterHolder();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueGroupCharacterHolder) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueGroupCharacterHolder&) { return 0; }
 

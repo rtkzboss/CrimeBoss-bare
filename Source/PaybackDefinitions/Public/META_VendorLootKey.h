@@ -16,5 +16,5 @@ public:
     
     FMETA_VendorLootKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FMETA_VendorLootKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FMETA_VendorLootKey&) { return 0; }
 

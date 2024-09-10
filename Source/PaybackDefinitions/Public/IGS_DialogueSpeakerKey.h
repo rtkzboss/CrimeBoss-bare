@@ -12,5 +12,5 @@ public:
     
     PAYBACKDEFINITIONS_API FIGS_DialogueSpeakerKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueSpeakerKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueSpeakerKey&) { return 0; }
 

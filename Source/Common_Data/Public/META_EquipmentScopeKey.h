@@ -18,5 +18,5 @@ public:
     
     FMETA_EquipmentScopeKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FMETA_EquipmentScopeKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FMETA_EquipmentScopeKey&) { return 0; }
 

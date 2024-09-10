@@ -8,5 +8,5 @@ struct BF_VOICEOVER_API FIGS_DialogueNodeKey {
 public:
     FIGS_DialogueNodeKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueNodeKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueNodeKey&) { return 0; }
 

@@ -16,5 +16,5 @@ public:
     
     FMETA_WeaponScopeKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FMETA_WeaponScopeKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FMETA_WeaponScopeKey&) { return 0; }
 

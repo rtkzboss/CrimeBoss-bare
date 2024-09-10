@@ -8,5 +8,5 @@ struct BF_VOICEOVER_API FIGS_VoiceoverControllerKey {
 public:
     FIGS_VoiceoverControllerKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_VoiceoverControllerKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_VoiceoverControllerKey&) { return 0; }
 

@@ -16,5 +16,5 @@ public:
     
     FMETA_GraphNodeSave();
 };
-FORCEINLINE uint32 GetTypeHash(const FMETA_GraphNodeSave) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FMETA_GraphNodeSave&) { return 0; }
 

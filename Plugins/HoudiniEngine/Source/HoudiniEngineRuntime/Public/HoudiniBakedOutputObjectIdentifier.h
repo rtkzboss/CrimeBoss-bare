@@ -14,5 +14,5 @@ public:
     
     FHoudiniBakedOutputObjectIdentifier();
 };
-FORCEINLINE uint32 GetTypeHash(const FHoudiniBakedOutputObjectIdentifier) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FHoudiniBakedOutputObjectIdentifier&) { return 0; }
 

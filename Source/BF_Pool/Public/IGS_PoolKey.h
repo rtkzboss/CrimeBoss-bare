@@ -15,5 +15,5 @@ public:
     
     FIGS_PoolKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_PoolKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_PoolKey&) { return 0; }
 

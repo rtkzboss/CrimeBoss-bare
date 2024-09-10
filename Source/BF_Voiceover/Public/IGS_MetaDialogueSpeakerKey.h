@@ -12,5 +12,5 @@ public:
     
     BF_VOICEOVER_API FIGS_MetaDialogueSpeakerKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_MetaDialogueSpeakerKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_MetaDialogueSpeakerKey&) { return 0; }
 

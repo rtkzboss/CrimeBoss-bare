@@ -29,5 +29,5 @@ public:
     
     FHoudiniOutputObjectIdentifier();
 };
-FORCEINLINE uint32 GetTypeHash(const FHoudiniOutputObjectIdentifier) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FHoudiniOutputObjectIdentifier&) { return 0; }
 

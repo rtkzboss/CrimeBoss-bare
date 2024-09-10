@@ -12,5 +12,5 @@ public:
     
     FIGS_CutsceneCharacterKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_CutsceneCharacterKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_CutsceneCharacterKey&) { return 0; }
 

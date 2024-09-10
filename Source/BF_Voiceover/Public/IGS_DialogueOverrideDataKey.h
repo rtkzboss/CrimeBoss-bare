@@ -14,5 +14,5 @@ public:
     
     FIGS_DialogueOverrideDataKey();
 };
-FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueOverrideDataKey) { return 0; }
+FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueOverrideDataKey&) { return 0; }
 
