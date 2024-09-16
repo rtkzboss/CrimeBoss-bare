@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeTierDef : public FIGS_AIBaseTierDef {
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeBaseDataModifiers Stats;
-    
+
     FIGS_AIEmployeeTierDef();
 };
-

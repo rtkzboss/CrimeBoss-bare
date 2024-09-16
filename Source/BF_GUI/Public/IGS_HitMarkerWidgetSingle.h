@@ -16,21 +16,20 @@ public:
 
     UFUNCTION(BlueprintPure)
     bool IsAiming() const;
-    
+
     UFUNCTION(BlueprintCallable)
     FVector2D GetSightScreenPosition();
-    
+
     UFUNCTION(BlueprintCallable)
     FVector2D GetSightOffsetFromScreenCenter();
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_WeaponBase* CurrentWeapon;
-    
-};
 
+};

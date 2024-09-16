@@ -10,7 +10,6 @@ class AIGS_PickupActorBase;
 class AIGS_PickupActorInventoryItem;
 class AIGS_StaticMeshInventoryItemPickup;
 class AIGS_WeaponPickupActor;
-class UIGS_PickupsManager;
 class UObject;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -21,31 +20,30 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PickupsManager* GetPickupsManager(UObject* inWCO);
-    
+
 protected:
     UPROPERTY()
     TArray<AIGS_PickupActorBase*> m_AllPickups;
-    
+
     UPROPERTY()
     TArray<AIGS_AmmoBoxBase*> m_AmmoBoxPickups;
-    
+
     UPROPERTY()
     TArray<AIGS_LootBagPickup*> m_LootBagPickups;
-    
+
     UPROPERTY()
     TArray<AIGS_PickupActorInventoryItem*> m_InventoryItemPickups;
-    
+
     UPROPERTY()
     TArray<AIGS_WeaponPickupActor*> m_WeaponPickups;
-    
+
     UPROPERTY()
     TArray<AIGS_CarryableItemPickup*> m_CarryableItemPickups;
-    
+
     UPROPERTY()
     TArray<AIGS_CarryableItemPickup*> m_CarryableLootItemPickups;
-    
+
     UPROPERTY()
     TArray<AIGS_StaticMeshInventoryItemPickup*> m_StaticMeshInventoryItemPickups;
-    
-};
 
+};

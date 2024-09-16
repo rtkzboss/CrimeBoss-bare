@@ -13,15 +13,14 @@ public:
 
     UFUNCTION(BlueprintPure)
     static FKeyEvent RemapKeyEvent_SystemToQwerty(const FKeyEvent& KeyEvent);
-    
+
     UFUNCTION(BlueprintPure)
     static FKeyEvent RemapKeyEvent_QwertyToSystem(const FKeyEvent& KeyEvent);
-    
+
     UFUNCTION(BlueprintPure)
     static FKey RemapKey_QwertyToSystem(FKey Key);
-    
+
     UFUNCTION(BlueprintPure)
     static FString GetKeyboardLayoutsChars();
-    
-};
 
+};

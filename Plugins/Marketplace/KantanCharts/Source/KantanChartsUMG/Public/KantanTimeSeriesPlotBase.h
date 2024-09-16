@@ -12,36 +12,35 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetUpperValueBound(FCartesianRangeBound InUpperBound);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetUpperTimeBound(FCartesianRangeBound InUpperBound);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetLowerValueBound(FCartesianRangeBound InLowerBound);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetLowerTimeBound(FCartesianRangeBound InLowerBound);
-    
+
     UPROPERTY(EditAnywhere)
     bool bUseFixedTimeRange;
-    
+
     UPROPERTY(EditAnywhere)
     float DisplayTimeRange;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FCartesianRangeBound LowerTimeBound;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FCartesianRangeBound UpperTimeBound;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FCartesianRangeBound LowerValueBound;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FCartesianRangeBound UpperValueBound;
-    
+
     UPROPERTY(EditAnywhere)
     bool bExtendValueRangeToZero;
-    
-};
 
+};

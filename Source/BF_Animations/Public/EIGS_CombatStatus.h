@@ -7,4 +7,3 @@ enum class EIGS_CombatStatus : uint8 {
     EIGS_Combat,
     EIGS_Stealth,
 };
-

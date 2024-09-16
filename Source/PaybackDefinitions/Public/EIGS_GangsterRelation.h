@@ -9,4 +9,3 @@ enum class EIGS_GangsterRelation : uint8 {
     Hate,
     Superhate,
 };
-

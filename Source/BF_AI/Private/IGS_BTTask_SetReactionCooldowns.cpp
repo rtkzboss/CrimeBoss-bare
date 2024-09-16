@@ -4,4 +4,3 @@ UIGS_BTTask_SetReactionCooldowns::UIGS_BTTask_SetReactionCooldowns() {
     (*this).NodeName = TEXT("Set Reaction Cooldowns");
 }
 
-

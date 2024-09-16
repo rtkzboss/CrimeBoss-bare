@@ -10,4 +10,3 @@ FActorInfoStruct::FActorInfoStruct() {
     (*this).RotationOffset.Yaw = 0.000000000e+00f;
     (*this).RotationOffset.Roll = 0.000000000e+00f;
 }
-

@@ -1,5 +1,4 @@
 #include "IGS_StashManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_StashManagerBaseComponent::UIGS_StashManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -23,22 +22,22 @@ bool UIGS_StashManagerBaseComponent::IsManagerInitialized() const {
 }
 
 TMap<FGameplayTag, int32> UIGS_StashManagerBaseComponent::GetTradeableLoot_Implementation() {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 void UIGS_StashManagerBaseComponent::GetTotalLootValue_Implementation(int32& outTotalValue, int32& outRawValue) {
 }
 
 TMap<TSubclassOf<UMETA_WeaponInventoryObject>, FMETA_WeaponAmountInfo> UIGS_StashManagerBaseComponent::GetStashWeapons_Implementation(bool inIsLobby) {
-    return TMap<TSubclassOf<UMETA_WeaponInventoryObject>, FMETA_WeaponAmountInfo>();
+    return {};
 }
 
 TArray<UMETA_Equipment*> UIGS_StashManagerBaseComponent::GetStashUnequippedEquipment_Implementation() const {
-    return TArray<UMETA_Equipment*>();
+    return {};
 }
 
 TArray<UMETA_Equipment*> UIGS_StashManagerBaseComponent::GetStashEquipment_Implementation() const {
-    return TArray<UMETA_Equipment*>();
+    return {};
 }
 
 EMETA_RespectLvl UIGS_StashManagerBaseComponent::GetRespectLvl_Implementation() {
@@ -68,7 +67,7 @@ void UIGS_StashManagerBaseComponent::GetLootValueByLootTag_Implementation(FGamep
 }
 
 TMap<FGameplayTag, int32> UIGS_StashManagerBaseComponent::GetLoot_Implementation() {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 FMETA_CharacterID UIGS_StashManagerBaseComponent::GetBossCharacterID() {
@@ -76,7 +75,7 @@ FMETA_CharacterID UIGS_StashManagerBaseComponent::GetBossCharacterID() {
 }
 
 TArray<EMETA_TradeVendor> UIGS_StashManagerBaseComponent::GetAvailableVendorsForTradeByValue_Implementation(FGameplayTag inLootTag, int32 inMonetaryValue) {
-    return TArray<EMETA_TradeVendor>();
+    return {};
 }
 
 int32 UIGS_StashManagerBaseComponent::GetActualPriceForSellingLoot_Implementation(FGameplayTag inLootTag, int32 inAmount) {
@@ -84,7 +83,7 @@ int32 UIGS_StashManagerBaseComponent::GetActualPriceForSellingLoot_Implementatio
 }
 
 TArray<FGameplayTag> UIGS_StashManagerBaseComponent::GetAccountPlotlineAssetsTags_Implementation() {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 void UIGS_StashManagerBaseComponent::FilterAvailableWeapons_Implementation(const TArray<FMETA_WeaponAmountInfo>& inWeaponArray, TArray<FMETA_WeaponAmountInfo>& outWeaponArray) {
@@ -96,5 +95,4 @@ bool UIGS_StashManagerBaseComponent::CanWeaponBeUpgraded_Implementation(UMETA_We
 
 void UIGS_StashManagerBaseComponent::AddWeaponsToStash_Implementation(TSubclassOf<UMETA_WeaponInventoryObject> inWeaponsId, int32 inAmount, bool inBetweenHeisterAndStash) {
 }
-
 

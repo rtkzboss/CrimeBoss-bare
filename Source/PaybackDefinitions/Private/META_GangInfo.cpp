@@ -5,9 +5,13 @@ FMETA_GangInfo::FMETA_GangInfo() {
     (*this).Priority = 0;
     (*this).BaseStrength = 0;
     (*this).StrengthChangeFromTerritory = 0;
-    (*this).EffectsOnAIBossStrength.Empty();
+    (*this).TopEnemies = {};
+    (*this).Friends = {};
+    (*this).Enemies = {};
+    (*this).LostTerritory = {};
+    (*this).EffectsOnAIBossStrength = {};
+    (*this).GangModifiers = {};
     (*this).Strategy = EMETA_GangStrategy::Normal;
     (*this).ArmyTier = EMETA_ArmyTier::Low;
-    (*this).ConditionsForAiArmyTierChange.Empty();
+    (*this).ConditionsForAiArmyTierChange = {};
 }
-

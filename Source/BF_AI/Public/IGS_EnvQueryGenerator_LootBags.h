@@ -10,4 +10,3 @@ public:
     UIGS_EnvQueryGenerator_LootBags();
 
 };
-

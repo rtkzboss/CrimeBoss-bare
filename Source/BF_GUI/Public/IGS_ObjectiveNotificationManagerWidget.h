@@ -15,23 +15,22 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnObjectiveStateChangedEvent(FIGS_MissionObjective inObjectiveStruct);
-    
+
     UFUNCTION()
     void OnObjectiveStateChanged(int32 inID);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnObjectiveAddedEvent(FIGS_MissionObjective inObjectiveStruct);
-    
+
     UFUNCTION()
     void OnObjectiveAdded(int32 inID);
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void BindToObjectiveManager();
-    
+
 private:
     UPROPERTY(Instanced)
     UIGS_ObjectiveManager* m_ObjectiveManager;
-    
-};
 
+};

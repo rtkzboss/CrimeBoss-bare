@@ -4,10 +4,9 @@ UIGS_AsyncTaskCooldownChanged::UIGS_AsyncTaskCooldownChanged() {
 }
 
 UIGS_AsyncTaskCooldownChanged* UIGS_AsyncTaskCooldownChanged::ListenForCooldownChange(UAbilitySystemComponent* inAbilitySystemComponent, FGameplayTagContainer inCooldownTags, bool inUseServerCooldown) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_AsyncTaskCooldownChanged::EndTask() {
 }
-
 

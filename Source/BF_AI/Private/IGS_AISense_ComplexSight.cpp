@@ -1,5 +1,4 @@
 #include "IGS_AISense_ComplexSight.h"
-#include "Perception/AIPerceptionTypes.h"
 
 UIGS_AISense_ComplexSight::UIGS_AISense_ComplexSight() {
     (*this).MaxTracesPerTick = 10;
@@ -10,5 +9,4 @@ UIGS_AISense_ComplexSight::UIGS_AISense_ComplexSight() {
     (*this).SightLimitQueryImportance = 1.000000000e+01f;
     (*this).bAutoRegisterAllPawnsAsSources = true;
 }
-
 

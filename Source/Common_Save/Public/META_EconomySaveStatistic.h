@@ -11,31 +11,30 @@ struct COMMON_SAVE_API FMETA_EconomySaveStatistic {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 BankruptcyCount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 SuccessfullyFinishedTrades;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<UMETA_Weapon*, int32> WeaponsBought;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 SpentMoney;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 EarnedMoney;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> EarnedLoot;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> SoldLoot;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LostMoneyAfterWarehouse;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> LostLootAfterWarehouse;
-    
+
     FMETA_EconomySaveStatistic();
 };
-

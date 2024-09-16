@@ -9,16 +9,15 @@ struct PREFABRICATORRUNTIME_API FPrefabricatorPropertyAssetMapping {
 public:
     UPROPERTY()
     FSoftObjectPath AssetReference;
-    
+
     UPROPERTY()
     FString AssetClassName;
-    
+
     UPROPERTY()
     FName AssetObjectPath;
-    
+
     UPROPERTY()
     bool bUseQuotes;
-    
+
     FPrefabricatorPropertyAssetMapping();
 };
-

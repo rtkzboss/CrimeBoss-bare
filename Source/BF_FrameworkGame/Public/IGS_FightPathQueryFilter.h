@@ -12,15 +12,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float CostMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float EnemyIdealRange2;
-    
+
     UPROPERTY(EditAnywhere)
     bool ComputeDistanceCost;
-    
+
     UPROPERTY(EditAnywhere)
     bool IsActive;
-    
-};
 
+};

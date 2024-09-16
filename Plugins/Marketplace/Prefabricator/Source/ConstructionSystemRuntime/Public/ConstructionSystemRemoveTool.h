@@ -14,14 +14,13 @@ public:
 protected:
     UFUNCTION()
     void HandleInput_RemoveAtCursor();
-    
+
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TraceDistance;
-    
+
 private:
     UPROPERTY(Transient)
     TWeakObjectPtr<APrefabActor> FocusedActor;
-    
-};
 
+};

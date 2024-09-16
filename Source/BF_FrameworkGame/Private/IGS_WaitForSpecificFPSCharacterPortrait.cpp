@@ -4,10 +4,9 @@ UIGS_WaitForSpecificFPSCharacterPortrait::UIGS_WaitForSpecificFPSCharacterPortra
 }
 
 UIGS_WaitForSpecificFPSCharacterPortrait* UIGS_WaitForSpecificFPSCharacterPortrait::WaitForCharacterPortrait(UObject* inWorldContextObject, AIGS_GameCharacterFramework* inCharacter) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_WaitForSpecificFPSCharacterPortrait::ExecuteOnCharacterPortraitReady(TSoftObjectPtr<UTexture2D> inCharacterPortrait) {
 }
-
 

@@ -4,6 +4,7 @@ FMutableParamUIMetadata::FMutableParamUIMetadata() {
     (*this).ObjectFriendlyName = TEXT("");
     (*this).UISectionName = TEXT("");
     (*this).UIOrder = 0;
-    (*this).UIThumbnail = nullptr;
+    (*this).UIThumbnail = FSoftObjectPath();
+    (*this).ExtraInformation = {};
+    (*this).ExtraAssets = {};
 }
-

@@ -13,22 +13,21 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetWireCut(int32 inWireIndex);
-    
+
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnSuccess();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnFail();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void InitProperties();
-    
+
     UFUNCTION(NetMulticast, Reliable)
     void Client_RemoveWire(int32 inWireIndex);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UStaticMeshComponent*> WireInteractiveMeshes;
-    
-};
 
+};

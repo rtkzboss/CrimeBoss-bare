@@ -5,4 +5,3 @@ URoomNavigationQueryFilter::URoomNavigationQueryFilter() {
     (*this).IsActive = true;
 }
 
-

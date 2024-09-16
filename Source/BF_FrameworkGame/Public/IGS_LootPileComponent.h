@@ -13,6 +13,5 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void AddItem(AActor* inActor);
-    
-};
 
+};

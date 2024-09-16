@@ -10,10 +10,9 @@ struct PAYBACKDEFINITIONS_API FMETA_AmbushConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_PoliceAmbushConfig PoliceChances;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_GangAmbushConfig GangsChances;
-    
+
     FMETA_AmbushConfig();
 };
-

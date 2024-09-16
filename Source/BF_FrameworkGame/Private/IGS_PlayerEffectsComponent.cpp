@@ -1,5 +1,4 @@
 #include "IGS_PlayerEffectsComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerEffectsComponent::UIGS_PlayerEffectsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).FlashEffectivityMultiplierAttribute = 1.000000000e+00f;
@@ -54,5 +53,4 @@ void UIGS_PlayerEffectsComponent::Multicast_PlayExplosionEffects_Implementation(
 
 void UIGS_PlayerEffectsComponent::ChangeCamera(UIGS_CameraComponentBase* inCamera, TArray<EIGS_PlayerEffect> inEffectsToRebind, bool inChangeCameraForAll) {
 }
-
 

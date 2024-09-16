@@ -8,4 +8,3 @@ struct FIGS_LightingScenarioLevelPair {
 public:
     BF_LEVELGENERATOR_API FIGS_LightingScenarioLevelPair();
 };
-

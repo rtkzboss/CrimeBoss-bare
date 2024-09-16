@@ -7,4 +7,3 @@ enum class EFSR2HistoryFormat : int32 {
     FloatRGBA,
     FloatR11G11B10,
 };
-

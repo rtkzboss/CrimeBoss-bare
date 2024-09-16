@@ -2,17 +2,22 @@
 
 FMETA_JobManagerSaveData::FMETA_JobManagerSaveData() {
     (*this).CurrentJob = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CurrentJobTileID, 0)) = NAME_None;
-    (*this).JobsOnMap.MoneyMakingMissions.Empty();
-    (*this).JobsOnMap.AmbushMissions.Empty();
-    (*this).JobsOnMap.StoryMissions.Empty();
-    (*this).JobsOnMap.TradeMissions.Empty();
-    (*this).JobsOnMap.TradeDealSellMissions.Empty();
-    (*this).JobsOnMap.CinematicMissions.Empty();
-    (*this).JobsOnMap.TurfWarMissions.Empty();
-    (*this).JobsOnMap.OtherMissions.Empty();
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CurrentJobTileID, 0)) = NAME_None;
+    (*this).JobsOnMap.MoneyMakingMissions = {};
+    (*this).JobsOnMap.AmbushMissions = {};
+    (*this).JobsOnMap.StoryMissions = {};
+    (*this).JobsOnMap.TradeMissions = {};
+    (*this).JobsOnMap.TradeDealSellMissions = {};
+    (*this).JobsOnMap.CinematicMissions = {};
+    (*this).JobsOnMap.TurfWarMissions = {};
+    (*this).JobsOnMap.OtherMissions = {};
+    (*this).JobParameters = {};
     (*this).JobsCompletedAmount = 0;
+    (*this).JobsSpawnDay = {};
     (*this).bWasPlayerTransferredToFPSSide = false;
+    (*this).FinishedMissions = {};
     (*this).bUsingTemporaryCrewAfterFPS = EMETA_UsingCrewInGraph::TemporaryCrew;
+    (*this).RecentlyPlayedPresetsPerScenario = {};
+    (*this).RecentlyPlayedJobData = {};
 }
-

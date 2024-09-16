@@ -1,6 +1,4 @@
 #include "IGS_PlayerStatus.h"
-#include "EIGS_HealthState.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerStatus::UIGS_PlayerStatus(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).HealthRegenDelay.Value = 5.000000000e+00f;
@@ -30,7 +28,7 @@ bool UIGS_PlayerStatus::IsRegenerationBlocked() {
 }
 
 float UIGS_PlayerStatus::GetCurrentMaxAutoregenHealth() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_PlayerStatus::ForceSetMaxHealth(float inMaxHealth) {
@@ -41,5 +39,4 @@ void UIGS_PlayerStatus::ForceSetMaxAutoregenHealth(float inAutoregenMaxHealth, b
 
 void UIGS_PlayerStatus::ForceSetHealth(float inHealth) {
 }
-
 

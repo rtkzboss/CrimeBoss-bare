@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FIGS_ScenarioModifier {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer Scenarios;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Modifier;
-    
+
     FIGS_ScenarioModifier();
 };
-

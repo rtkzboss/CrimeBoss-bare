@@ -5,4 +5,3 @@ UBTDecorator_RandomChance::UBTDecorator_RandomChance() {
     (*this).NodeName = TEXT("Random Chance");
 }
 
-

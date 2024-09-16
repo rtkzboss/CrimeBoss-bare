@@ -11,16 +11,15 @@ struct COMMON_DATA_API FMETA_MovieUIData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UBinkMediaPlayer* MediaPlayer;
-    
+
     UPROPERTY(BlueprintReadWrite)
     UMETA_BaseStoryGraphManager* GraphRef;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 OriginalID;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 NextNodeID;
-    
+
     FMETA_MovieUIData();
 };
-

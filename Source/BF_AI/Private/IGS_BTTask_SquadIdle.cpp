@@ -4,4 +4,3 @@ UIGS_BTTask_SquadIdle::UIGS_BTTask_SquadIdle() {
     (*this).NodeName = TEXT("Squad Idle");
 }
 
-

@@ -1,11 +1,11 @@
 #include "IGS_EquipmentData.h"
 #include "GameplayTagContainer.h"
-#include "EMETA_ItemQuality.h"
 #include "EIGS_ItemType.h"
 
 FIGS_EquipmentData::FIGS_EquipmentData() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
-    (*this).Throwable = nullptr;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    (*this).Throwable = FSoftObjectPath();
     (*this).Description = FText::FromString(TEXT("None"));
     (*this).bAllowedForGeneration = false;
     (*this).PriceModifier = 1.000000000e+00f;
@@ -19,13 +19,15 @@ FIGS_EquipmentData::FIGS_EquipmentData() {
     (*this).InitChargesGameplayEffect = FSoftObjectPath(TEXT("/Game/00_Main/GameplayAbilitySystem/Abilities/ChargesEffects/GE_InitAbilityCharges.GE_InitAbilityCharges_C"), TEXT(""));
     (*this).AddChargesGameplayEffect = FSoftObjectPath(TEXT("/Game/00_Main/GameplayAbilitySystem/Abilities/ChargesEffects/GE_AddAbilityCharges.GE_AddAbilityCharges_C"), TEXT(""));
     (*this).InventoryIconStringGlyph = TEXT("");
+    (*this).InventoryIconOverrideFontObject = nullptr;
     (*this).UnlockProperties.IsUnlockable = false;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)).Empty();
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
-    (*this).UnlockProperties.UnlockCoverImage = nullptr;
+    (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();
     (*this).ItemType = EIGS_ItemType::Item_Equipment;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ItemOffence, 0)) = TEXT("Offence.Actor.Item.Equipment");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ItemOffence, 0)) = TEXT("Offence.Actor.Item.Equipment");
 }
-

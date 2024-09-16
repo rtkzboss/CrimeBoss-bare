@@ -16,7 +16,7 @@ FIGS_MultiplayerJobCategoryRow UIGS_MultiplayerJobsDatabase::GetMultiplayerJobCa
 }
 
 TArray<FIGS_MultiplayerJobCategoryItemRow> UIGS_MultiplayerJobsDatabase::GetJobsInCategory(UObject* inWCO, FGameplayTag inCategoryTag) {
-    return TArray<FIGS_MultiplayerJobCategoryItemRow>();
+    return {};
 }
 
 FIGS_MultiplayerJobCategoryItemRow UIGS_MultiplayerJobsDatabase::GetItemRow(UObject* inWCO, const FGameplayTag inItemRowID) {
@@ -24,7 +24,6 @@ FIGS_MultiplayerJobCategoryItemRow UIGS_MultiplayerJobsDatabase::GetItemRow(UObj
 }
 
 TArray<FIGS_MultiplayerJobCategoryRow> UIGS_MultiplayerJobsDatabase::GetAllCategories(UObject* inWCO) {
-    return TArray<FIGS_MultiplayerJobCategoryRow>();
+    return {};
 }
-
 

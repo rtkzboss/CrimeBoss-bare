@@ -10,7 +10,6 @@ struct PAYBACKDEFINITIONS_API FMETA_TurfHistory {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Gang, FMETA_GangTurfHistory> GangTurfHistory;
-    
+
     FMETA_TurfHistory();
 };
-

@@ -8,10 +8,9 @@ struct BF_FRAMEWORKGAME_API FIGS_OrTaskInfo {
 public:
     UPROPERTY()
     int32 TaskA_ID;
-    
+
     UPROPERTY()
     int32 TaskB_ID;
-    
+
     FIGS_OrTaskInfo();
 };
-

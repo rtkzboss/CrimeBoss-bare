@@ -6,4 +6,3 @@ UBTTask_ApplyGameplayEffect::UBTTask_ApplyGameplayEffect() {
     (*this).NodeName = TEXT("Apply GameplayEffect");
 }
 
-

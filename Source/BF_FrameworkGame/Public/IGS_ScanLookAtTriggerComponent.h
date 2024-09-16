@@ -15,22 +15,21 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetScanEnabled(bool inState);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetIgnoreComponents(TArray<UPrimitiveComponent*> inIgnoreActorComponents);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetIgnoreActors(TArray<AActor*> inIgnoreActors);
-    
+
 protected:
     UFUNCTION(Reliable, Server, WithValidation)
     void Server_Trigger(UIGS_LookAtTriggerComponent* inInteractiveComponent);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ScreenPercentage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsScanEnabled;
-    
-};
 
+};

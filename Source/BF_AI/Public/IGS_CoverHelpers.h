@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetAllCoverInShape(const UObject* inWCO, UShapeComponent* Shape, TArray<UCoverPoint*>& outCovers, bool inOnlyManual);
-    
-};
 
+};

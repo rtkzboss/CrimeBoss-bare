@@ -8,7 +8,6 @@ struct COMMON_SAVE_API FIGS_NewsInfoRelatedSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FString, bool> PatchNotesVersionsSeen;
-    
+
     FIGS_NewsInfoRelatedSaveData();
 };
-

@@ -15,4 +15,3 @@ FMETA_HiddenGoalsSaveInfo UMETA_HiddenGoalObject::GetSaveData() {
     return FMETA_HiddenGoalsSaveInfo{};
 }
 
-

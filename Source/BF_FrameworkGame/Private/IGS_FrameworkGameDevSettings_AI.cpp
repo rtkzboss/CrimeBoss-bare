@@ -11,4 +11,3 @@ UIGS_FrameworkGameDevSettings_AI::UIGS_FrameworkGameDevSettings_AI() {
     (*this).SightClass = FSoftObjectPath(TEXT("/Script/AIModule.AISense_Sight"), TEXT(""));
 }
 
-

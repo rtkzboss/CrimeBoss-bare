@@ -5,7 +5,6 @@
 #include "IGS_ScreenWithSubscreens.generated.h"
 
 class UCommonActivatableWidgetSwitcher;
-class UIGS_ScreenWithSubscreens;
 
 UCLASS(EditInlineNew)
 class BF_FRAMEWORKGAME_API UIGS_ScreenWithSubscreens : public UIGS_Screen {
@@ -15,16 +14,15 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void RequestSubscreenChange(FGameplayTag inTag);
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UCommonActivatableWidgetSwitcher* WidgetSwitcher;
-    
+
 protected:
     UPROPERTY(Instanced)
     TArray<UIGS_Screen*> m_ScreensInSwitcher;
-    
+
     UPROPERTY(Instanced)
     UIGS_ScreenWithSubscreens* m_ActiveScreenWithSubscreens;
-    
-};
 
+};

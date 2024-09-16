@@ -8,10 +8,9 @@ struct FIGS_EyeHeightHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TargetEyeHeight;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float InterpSpeed;
-    
+
     BF_FRAMEWORKGAME_API FIGS_EyeHeightHolder();
 };
-

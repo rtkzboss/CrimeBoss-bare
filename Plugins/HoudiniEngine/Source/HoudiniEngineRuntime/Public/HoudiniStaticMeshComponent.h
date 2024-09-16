@@ -14,28 +14,27 @@ public:
 
     UFUNCTION()
     void SetMesh(UHoudiniStaticMesh* InMesh);
-    
+
     UFUNCTION()
     void SetHoudiniIconVisible(bool bInHoudiniIconVisible);
-    
+
     UFUNCTION()
     void NotifyMeshUpdated();
-    
+
     UFUNCTION()
     bool IsHoudiniIconVisible() const;
-    
+
     UFUNCTION()
     UHoudiniStaticMesh* GetMesh();
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     UHoudiniStaticMesh* Mesh;
-    
+
     UPROPERTY()
     FBox LocalBounds;
-    
+
     UPROPERTY(EditAnywhere)
     bool bHoudiniIconVisible;
-    
-};
 
+};

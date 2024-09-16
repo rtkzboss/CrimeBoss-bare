@@ -1,6 +1,4 @@
 #include "IGS_PlanningBoard.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_PlanningBoard::AIGS_PlanningBoard(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -13,7 +11,6 @@ FGameplayTag AIGS_PlanningBoard::GetPlanningBoardID() const {
 }
 
 UMETA_BaseMission* AIGS_PlanningBoard::GetMissionFromMapByPriority(TArray<FMETA_PlanningBoardMission> planningBoardItemMissions, TArray<UMETA_BaseMission*>& missionsOnMap) const {
-    return NULL;
+    return nullptr;
 }
-
 

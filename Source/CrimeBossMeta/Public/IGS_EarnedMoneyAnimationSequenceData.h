@@ -8,10 +8,9 @@ struct FIGS_EarnedMoneyAnimationSequenceData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Value;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
-    
+
     CRIMEBOSSMETA_API FIGS_EarnedMoneyAnimationSequenceData();
 };
-

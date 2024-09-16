@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> MusicSubsystemDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> AudioSubsystemDataAsset;
-    
-};
 
+};

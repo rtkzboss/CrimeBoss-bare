@@ -15,16 +15,15 @@ public:
 
     UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UMETA_PlotlineSelection> GetDefaultCampaignMode() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UMETA_PlotlineSelection> DefaultCampaignMode;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<FGameplayTag, TSoftObjectPtr<UMETA_PlotlineSelection>> CampaignModesMapping;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_CampaignModeMapping> CampaignModeMappings;
-    
-};
 
+};

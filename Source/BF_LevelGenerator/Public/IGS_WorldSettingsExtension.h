@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     FIGS_BuiltDataWorldSetting LightingBuildSettings;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_LightingScenarioWorldSettings LightingScenarioWorldSettings;
-    
-};
 
+};

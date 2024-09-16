@@ -16,4 +16,3 @@ FIGS_CharacterMaskTableRow UIGS_CharacterMaskDatabase::GetDataByIndexBP(int32 in
     return FIGS_CharacterMaskTableRow{};
 }
 
-

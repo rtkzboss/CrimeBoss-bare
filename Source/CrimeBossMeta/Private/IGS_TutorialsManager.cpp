@@ -30,7 +30,7 @@ bool UIGS_TutorialsManager::IsAnyTutorialOpened() const {
 }
 
 UIGS_TutorialsManager* UIGS_TutorialsManager::GetTutorialsManager(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_TutorialsManager::GetTutorialsEnabled() const {
@@ -38,7 +38,7 @@ bool UIGS_TutorialsManager::GetTutorialsEnabled() const {
 }
 
 TArray<UIGS_Screen*> UIGS_TutorialsManager::GetPendingTutorials() const {
-    return TArray<UIGS_Screen*>();
+    return {};
 }
 
 bool UIGS_TutorialsManager::CanOpenTutorialScreen(const UIGS_ScreenHandler* inScreenHandler) const {
@@ -47,5 +47,4 @@ bool UIGS_TutorialsManager::CanOpenTutorialScreen(const UIGS_ScreenHandler* inSc
 
 void UIGS_TutorialsManager::AddPendingTutorialScreen(UIGS_Screen* inScreen) {
 }
-
 

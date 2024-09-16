@@ -26,4 +26,3 @@ UIGS_PressureManagerData::UIGS_PressureManagerData() {
     (*this).HistoryInterval = 3.000000000e+01f;
 }
 
-

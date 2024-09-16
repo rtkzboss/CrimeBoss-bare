@@ -4,4 +4,3 @@ UIGS_BTService_SwatSolveMode::UIGS_BTService_SwatSolveMode() {
     (*this).NodeName = TEXT("Swat Solve Mode");
 }
 
-

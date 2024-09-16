@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<UTexture2D*> Textures;
-    
-};
 
+};

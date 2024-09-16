@@ -8,13 +8,12 @@ struct FIGS_ReplicationCharacterAimingDataHolder {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsAiming;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float AimInSpeedMult;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float AimOutSpeedMult;
-    
+
     BF_NETWORK_API FIGS_ReplicationCharacterAimingDataHolder();
 };
-

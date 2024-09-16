@@ -1,11 +1,10 @@
 #include "IGS_PooledParticleNiagara.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "NiagaraComponent.h"
 
 AIGS_PooledParticleNiagara::AIGS_PooledParticleNiagara(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
-    (*this).RootComponent = (USceneComponent*)NiagaraComponent;
+    auto gen = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
+    (*this).NiagaraComponent = gen;
+    (*this).RootComponent = gen;
 }
 
 void AIGS_PooledParticleNiagara::SetTemplate(UNiagaraSystem* inNewTemplate) const {
@@ -13,5 +12,4 @@ void AIGS_PooledParticleNiagara::SetTemplate(UNiagaraSystem* inNewTemplate) cons
 
 void AIGS_PooledParticleNiagara::OnNiagaraSystemFinished(UNiagaraComponent* FinishedComponent) {
 }
-
 

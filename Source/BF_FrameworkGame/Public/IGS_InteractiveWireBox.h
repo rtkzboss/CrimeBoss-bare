@@ -17,31 +17,30 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetWireLightState(int32 inWireIndex, bool inState);
-    
+
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void Client_SetWireLight(int32 inWireIndex, bool inState);
-    
+
     UFUNCTION(NetMulticast, Reliable)
     void Client_SetFailStatus();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FColor StatusFailColor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UTimelineComponent* LightsTimeline;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<USpotLightComponent*> WireLights;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UStaticMesh*> WireCutMeshes;
-    
+
     UPROPERTY(Replicated)
     TArray<FIGS_WireBoxWireInfo> mR_WiresInfo;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

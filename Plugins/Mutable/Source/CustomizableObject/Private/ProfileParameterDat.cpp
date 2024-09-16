@@ -2,11 +2,10 @@
 
 FProfileParameterDat::FProfileParameterDat() {
     (*this).ProfileName = TEXT("");
-    (*this).BoolParameters.Empty();
-    (*this).IntParameters.Empty();
-    (*this).FloatParameters.Empty();
-    (*this).TextureParameters.Empty();
-    (*this).VectorParameters.Empty();
-    (*this).ProjectorParameters.Empty();
+    (*this).BoolParameters = {};
+    (*this).IntParameters = {};
+    (*this).FloatParameters = {};
+    (*this).TextureParameters = {};
+    (*this).VectorParameters = {};
+    (*this).ProjectorParameters = {};
 }
-

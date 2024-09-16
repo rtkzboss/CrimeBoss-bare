@@ -1,16 +1,16 @@
 #include "IGS_GameStateGame.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "IGS_GlobalInventory.h"
 #include "IGS_PlayerIntelManager.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
 AIGS_GameStateGame::AIGS_GameStateGame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UIGS_GlobalInventory>(TEXT("GlobalInventory"));
+    auto gen2 = CreateDefaultSubobject<UIGS_PlayerIntelManager>(TEXT("IntelManager"));
     (*this).DeathCamLastDeadTime = 5.000000000e+00f;
     (*this).FailsafeMissionEndTime = 1.000000000e+01f;
-    (*this).GlobalInventory = CreateDefaultSubobject<UIGS_GlobalInventory>(TEXT("GlobalInventory"));
-    (*this).IntelManager = CreateDefaultSubobject<UIGS_PlayerIntelManager>(TEXT("IntelManager"));
+    (*this).GlobalInventory = gen;
+    (*this).IntelManager = gen2;
     (*this).CopsArriveTimerEnd = -1.000000000e+00f;
 }
 
@@ -61,7 +61,7 @@ void AIGS_GameStateGame::OnRep_CopsArriveTimer() {
 
 
 UIGS_PickupsManager* AIGS_GameStateGame::GetPickupsManager() const {
-    return NULL;
+    return nullptr;
 }
 
 
@@ -70,17 +70,16 @@ bool AIGS_GameStateGame::GetIsTurfWar() {
 }
 
 UIGS_GlobalInventory* AIGS_GameStateGame::GetGlobalInventory() const {
-    return NULL;
+    return nullptr;
 }
 
 
 
 void AIGS_GameStateGame::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_GameStateGame, R_HasEveryoneLoadedLevel);
     DOREPLIFETIME(AIGS_GameStateGame, R_StartedPlayingMatch);
     DOREPLIFETIME(AIGS_GameStateGame, CopsArriveTimerEnd);
 }
-
 

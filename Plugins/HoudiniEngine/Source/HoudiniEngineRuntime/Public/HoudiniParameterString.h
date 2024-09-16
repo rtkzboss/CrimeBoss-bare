@@ -14,15 +14,14 @@ public:
 protected:
     UPROPERTY()
     TArray<FString> Values;
-    
+
     UPROPERTY()
     TArray<FString> DefaultValues;
-    
+
     UPROPERTY()
     TArray<UObject*> ChosenAssets;
-    
+
     UPROPERTY()
     bool bIsAssetRef;
-    
-};
 
+};

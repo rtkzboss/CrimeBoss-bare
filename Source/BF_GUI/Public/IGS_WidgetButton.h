@@ -20,126 +20,125 @@ public:
 
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UImage* ButtonImage;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UTextBlock* ButtonText;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetDecorationBorder* ButtonBorder;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UImage* ButtonFlag;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     USizeBox* ButtonFlagSizeBox;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Text;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETextJustify::Type> Justification;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateFontInfo Font;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor NormalFontColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor HoveredFontColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PressedFontColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor SelectedFontColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor DisabledFontColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bDisableAutomaticTextColorHandling;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush ImageBrush;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor NormalImageTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor HoveredImageTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PressedImageTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor SelectedImageTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor DisabledImageTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bDisableAutomaticImageColorHandling;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float BorderWidth;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor NormalBorderTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor HoveredBorderTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PressedBorderTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor SelectedBorderTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor DisabledBorderTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bDisableAutomaticBorderColorHandling;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush FlagBrush;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool FlagVisible;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FlagSize;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool SimulatedButton;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool HasImage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool HasText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool HasBorder;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool CanHaveFlag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush NormalStyleBrush;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush HoveredStyleBrush;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush PressedStyleBrush;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush SelectedStyleBrush;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush DisabledStyleBrush;
-    
-};
 
+};

@@ -1,21 +1,129 @@
 #include "IGS_NetworkComponentCharacter.h"
-#include "ComponentInstanceDataCache.h"
+#include "EIGS_ItemType.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_NetworkComponentCharacter::UIGS_NetworkComponentCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).mR_ShooterType = EIGS_WeaponAttackType::AT_UNKNOWN;
-    auto& gen0 = (*this).mR_AvailableWieldables;
-    gen0.Empty();
-    gen0.AddDefaulted(6);
-    auto& gen1 = (*this).m_OwningInventoryObjects;
-    gen1.Empty();
-    gen1.AddDefaulted(6);
+    FIGS_WieldableReplicatedData gen;
+    gen.UniqueId = 0;
+    gen.TableIndex = -1;
+    gen.Slot = EIGS_WieldableSlot::S_MIN;
+    gen.ItemType = EIGS_ItemType::Item_UNKNOWN;
+    gen.WeaponSkin = FSoftObjectPath();
+    gen.WeaponDefinition = nullptr;
+    gen.DefaultWeaponSkin = FSoftObjectPath();
+    gen.Mods = {};
+    gen.UniversalData.bUseDefaultValues = true;
+    gen.UniversalData.bUseCustomName = false;
+    gen.UniversalData.UniversalBool_1 = false;
+    gen.UniversalData.UniversalBool_2 = false;
+    gen.UniversalData.UniversalBool_3 = false;
+    gen.UniversalData.UniversalInt_1 = 0;
+    gen.UniversalData.UniversalInt_2 = 0;
+    gen.UniversalData.UniversalInt_3 = 0;
+    gen.UniversalData.UniversalInt_4 = 0;
+    gen.UniversalData.UniversalInt_5 = 0;
+    gen.UniversalData.UniversalFloat_1 = 0.000000000e+00f;
+    gen.UniversalData.UniversalFloat_2 = 0.000000000e+00f;
+    gen.UniversalData.UniversalText_1 = FText::GetEmpty();
+    FIGS_WieldableReplicatedData gen2;
+    gen2.UniqueId = 0;
+    gen2.TableIndex = -1;
+    gen2.Slot = EIGS_WieldableSlot::S_SecondaryWeapon;
+    gen2.ItemType = EIGS_ItemType::Item_UNKNOWN;
+    gen2.WeaponSkin = FSoftObjectPath();
+    gen2.WeaponDefinition = nullptr;
+    gen2.DefaultWeaponSkin = FSoftObjectPath();
+    gen2.Mods = {};
+    gen2.UniversalData.bUseDefaultValues = true;
+    gen2.UniversalData.bUseCustomName = false;
+    gen2.UniversalData.UniversalBool_1 = false;
+    gen2.UniversalData.UniversalBool_2 = false;
+    gen2.UniversalData.UniversalBool_3 = false;
+    gen2.UniversalData.UniversalInt_1 = 0;
+    gen2.UniversalData.UniversalInt_2 = 0;
+    gen2.UniversalData.UniversalInt_3 = 0;
+    gen2.UniversalData.UniversalInt_4 = 0;
+    gen2.UniversalData.UniversalInt_5 = 0;
+    gen2.UniversalData.UniversalFloat_1 = 0.000000000e+00f;
+    gen2.UniversalData.UniversalFloat_2 = 0.000000000e+00f;
+    gen2.UniversalData.UniversalText_1 = FText::GetEmpty();
+    FIGS_WieldableReplicatedData gen3;
+    gen3.UniqueId = 0;
+    gen3.TableIndex = -1;
+    gen3.Slot = EIGS_WieldableSlot::S_NORMAL_INDEX;
+    gen3.ItemType = EIGS_ItemType::Item_UNKNOWN;
+    gen3.WeaponSkin = FSoftObjectPath();
+    gen3.WeaponDefinition = nullptr;
+    gen3.DefaultWeaponSkin = FSoftObjectPath();
+    gen3.Mods = {};
+    gen3.UniversalData.bUseDefaultValues = true;
+    gen3.UniversalData.bUseCustomName = false;
+    gen3.UniversalData.UniversalBool_1 = false;
+    gen3.UniversalData.UniversalBool_2 = false;
+    gen3.UniversalData.UniversalBool_3 = false;
+    gen3.UniversalData.UniversalInt_1 = 0;
+    gen3.UniversalData.UniversalInt_2 = 0;
+    gen3.UniversalData.UniversalInt_3 = 0;
+    gen3.UniversalData.UniversalInt_4 = 0;
+    gen3.UniversalData.UniversalInt_5 = 0;
+    gen3.UniversalData.UniversalFloat_1 = 0.000000000e+00f;
+    gen3.UniversalData.UniversalFloat_2 = 0.000000000e+00f;
+    gen3.UniversalData.UniversalText_1 = FText::GetEmpty();
+    FIGS_WieldableReplicatedData gen4;
+    gen4.UniqueId = 0;
+    gen4.TableIndex = -1;
+    gen4.Slot = EIGS_WieldableSlot::S_CarryableSlot;
+    gen4.ItemType = EIGS_ItemType::Item_UNKNOWN;
+    gen4.WeaponSkin = FSoftObjectPath();
+    gen4.WeaponDefinition = nullptr;
+    gen4.DefaultWeaponSkin = FSoftObjectPath();
+    gen4.Mods = {};
+    gen4.UniversalData.bUseDefaultValues = true;
+    gen4.UniversalData.bUseCustomName = false;
+    gen4.UniversalData.UniversalBool_1 = false;
+    gen4.UniversalData.UniversalBool_2 = false;
+    gen4.UniversalData.UniversalBool_3 = false;
+    gen4.UniversalData.UniversalInt_1 = 0;
+    gen4.UniversalData.UniversalInt_2 = 0;
+    gen4.UniversalData.UniversalInt_3 = 0;
+    gen4.UniversalData.UniversalInt_4 = 0;
+    gen4.UniversalData.UniversalInt_5 = 0;
+    gen4.UniversalData.UniversalFloat_1 = 0.000000000e+00f;
+    gen4.UniversalData.UniversalFloat_2 = 0.000000000e+00f;
+    gen4.UniversalData.UniversalText_1 = FText::GetEmpty();
+    FIGS_WieldableReplicatedData gen5;
+    gen5.UniqueId = 0;
+    gen5.TableIndex = -1;
+    gen5.Slot = EIGS_WieldableSlot::S_ExtraSpecialSlot;
+    gen5.ItemType = EIGS_ItemType::Item_UNKNOWN;
+    gen5.WeaponSkin = FSoftObjectPath();
+    gen5.WeaponDefinition = nullptr;
+    gen5.DefaultWeaponSkin = FSoftObjectPath();
+    gen5.Mods = {};
+    gen5.UniversalData.bUseDefaultValues = true;
+    gen5.UniversalData.bUseCustomName = false;
+    gen5.UniversalData.UniversalBool_1 = false;
+    gen5.UniversalData.UniversalBool_2 = false;
+    gen5.UniversalData.UniversalBool_3 = false;
+    gen5.UniversalData.UniversalInt_1 = 0;
+    gen5.UniversalData.UniversalInt_2 = 0;
+    gen5.UniversalData.UniversalInt_3 = 0;
+    gen5.UniversalData.UniversalInt_4 = 0;
+    gen5.UniversalData.UniversalInt_5 = 0;
+    gen5.UniversalData.UniversalFloat_1 = 0.000000000e+00f;
+    gen5.UniversalData.UniversalFloat_2 = 0.000000000e+00f;
+    gen5.UniversalData.UniversalText_1 = FText::GetEmpty();
+    (*this).mR_AvailableWieldables = {MoveTemp(gen), MoveTemp(gen2), FIGS_WieldableReplicatedData{}, MoveTemp(gen3), MoveTemp(gen4), MoveTemp(gen5)};
+    (*this).m_OwningInventoryObjects = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
     (*this).mR_CurrentSlot = EIGS_WieldableSlot::S_Unarmed;
     (*this).VoiceExpressionEnabled = true;
     (*this).NearDeathHealthPercentage = 4.000000060e-01f;
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
+    auto gen6 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen6)->SetPropertyValue(&(*gen6->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_NetworkComponentCharacter::StopVoice(const FIGS_PlayVariationData& inPlayVariationData) {
@@ -386,7 +494,7 @@ bool UIGS_NetworkComponentCharacter::IsPlayingVoice(int32 inGroupID, const FIGS_
 }
 
 float UIGS_NetworkComponentCharacter::GetVoiceProgress(int32 inGroupID) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FIGS_InventoryObjectUniversalData UIGS_NetworkComponentCharacter::GetUniversalDataByItemID(int32 inID) {
@@ -394,7 +502,7 @@ FIGS_InventoryObjectUniversalData UIGS_NetworkComponentCharacter::GetUniversalDa
 }
 
 float UIGS_NetworkComponentCharacter::GetPlayerBaggedLootWeight() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_NetworkComponentCharacter::All_ResetVoiceSFX_Implementation(uint16 inGroupID) {
@@ -408,7 +516,7 @@ void UIGS_NetworkComponentCharacter::All_OnPlayVoice_Implementation(FIGS_PlayVar
 
 void UIGS_NetworkComponentCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_AimAtPoint);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_LookAtPoint);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_CharacterAiming);
@@ -429,5 +537,4 @@ void UIGS_NetworkComponentCharacter::GetLifetimeReplicatedProps(TArray<FLifetime
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_AvailableWieldables);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_CurrentSlot);
 }
-
 

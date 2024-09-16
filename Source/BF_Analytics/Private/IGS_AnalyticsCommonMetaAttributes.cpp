@@ -13,4 +13,3 @@ FIGS_AnalyticsCommonMetaAttributes::FIGS_AnalyticsCommonMetaAttributes() {
     (*this).CampaignMode = TEXT("");
     (*this).UserDifficulty = TEXT("");
 }
-

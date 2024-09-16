@@ -39,4 +39,3 @@ void UAdvancedIdentityLibrary::GetLoginStatus(const FBPUniqueNetId& UniqueNetId,
 void UAdvancedIdentityLibrary::GetAllUserAccounts(TArray<FBPUserOnlineAccount>& AccountInfos, EBlueprintResultSwitch& Result) {
 }
 
-

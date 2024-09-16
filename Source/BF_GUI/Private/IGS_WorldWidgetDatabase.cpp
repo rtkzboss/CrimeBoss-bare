@@ -5,7 +5,7 @@ UIGS_WorldWidgetDatabase::UIGS_WorldWidgetDatabase() {
 }
 
 TSubclassOf<UUserWidget> UIGS_WorldWidgetDatabase::GetWorldWidgetIcon(UObject* inWCO, EIGS_WorldWidgetType inWorldWidgetType) {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_WorldWidgetData UIGS_WorldWidgetDatabase::GetWidgetIconData(UObject* inWCO, EIGS_WorldWidgetType inWorldWidgetType) {
@@ -19,5 +19,4 @@ bool UIGS_WorldWidgetDatabase::GetProgressVisibilityForWidgetType(UObject* inWCO
 FIGS_WorldWidgetData UIGS_WorldWidgetDatabase::GetDataFromWieldableClass(EIGS_WorldWidgetType inID) {
     return FIGS_WorldWidgetData{};
 }
-
 

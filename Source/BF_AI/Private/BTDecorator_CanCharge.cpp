@@ -7,4 +7,3 @@ UBTDecorator_CanCharge::UBTDecorator_CanCharge() {
     (*this).NodeName = TEXT("Can Charge");
 }
 
-

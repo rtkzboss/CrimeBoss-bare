@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_AnimatedInteractiveComponentBase.h"
-#include "IGS_PlayObjectAnimationDelegateDelegate.h"
+#include "IGS_PlayObjectAnimationDelegate.h"
 #include "IGS_AnimatedInteractiveComponentSimple.generated.h"
 
 class UAnimMontage;
@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_PlayObjectAnimationDelegate OnPlayObjectAnimation;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UAnimMontage> ObjectMontageToPlay;
-    
-};
 
+};

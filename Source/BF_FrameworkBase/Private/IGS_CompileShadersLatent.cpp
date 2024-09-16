@@ -10,10 +10,9 @@ void UIGS_CompileShadersLatent::ExecFinish() {
 }
 
 UIGS_CompileShadersLatent* UIGS_CompileShadersLatent::CompileShadersLatent(UObject* inWCO, float inUpdateFrequence) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_CompileShadersLatent::Cancel() {
 }
-
 

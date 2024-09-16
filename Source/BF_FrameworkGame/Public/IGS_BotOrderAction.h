@@ -15,28 +15,27 @@ struct FIGS_BotOrderAction {
 public:
     UPROPERTY(BlueprintReadOnly)
     EIGS_BotCommandDefinition Type;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> Instigator;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> Bot;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UObject> Object;
-    
+
     UPROPERTY(BlueprintReadOnly)
     FVector Location;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool PathExists;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TArray<FIGS_BotOrderPointOfInterest> AdditionalPoi;
-    
+
     UPROPERTY(BlueprintReadOnly)
     EIGS_BotOrderActionSource Source;
-    
+
     BF_FRAMEWORKGAME_API FIGS_BotOrderAction();
 };
-

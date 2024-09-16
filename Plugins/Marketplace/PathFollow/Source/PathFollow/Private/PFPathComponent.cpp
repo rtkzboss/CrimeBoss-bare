@@ -1,8 +1,5 @@
 #include "PFPathComponent.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
-#include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
+#include "UObject/NoExportTypes.h"
 
 UPFPathComponent::UPFPathComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).DrawerConfig.bDrawIfNotSelected = true;
@@ -10,13 +7,23 @@ UPFPathComponent::UPFPathComponent(const FObjectInitializer& ObjectInitializer) 
     (*this).DrawerConfig.PathColor.B = 255;
     (*this).DrawerConfig.PathColor.A = 255;
     (*this).DrawerConfig.Thickness = 5.000000000e+00f;
-    auto& gen0 = (*this)._speedCurve._speedCurve.Points;
-    gen0.Empty();
-    gen0.AddDefaulted(2);
+    FInterpCurvePointFloat gen;
+    gen.InVal = 0.000000000e+00f;
+    gen.OutVal = 1.000000000e+00f;
+    gen.ArriveTangent = 0.000000000e+00f;
+    gen.LeaveTangent = 0.000000000e+00f;
+    gen.InterpMode = CIM_Linear;
+    FInterpCurvePointFloat gen2;
+    gen2.InVal = 1.000000000e+02f;
+    gen2.OutVal = 1.000000000e+00f;
+    gen2.ArriveTangent = 0.000000000e+00f;
+    gen2.LeaveTangent = 0.000000000e+00f;
+    gen2.InterpMode = CIM_Linear;
+    (*this)._speedCurve._speedCurve.Points = {MoveTemp(gen), MoveTemp(gen2)};
 }
 
 float UPFPathComponent::GetTimeForPath() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FVector UPFPathComponent::GetLocationAtSplinePointMirrored(int32 PointIdx, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const {
@@ -30,5 +37,4 @@ FVector UPFPathComponent::GetLocationAtSplineInputKeyMirrored(float Key, TEnumAs
 FVector UPFPathComponent::GetLocationAtDistanceAlongSplineMirrored(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const {
     return FVector{};
 }
-
 

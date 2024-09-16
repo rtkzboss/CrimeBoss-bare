@@ -3,4 +3,3 @@
 FIGS_Achievement::FIGS_Achievement() {
     (*this).CurrentValue = 0;
 }
-

@@ -12,4 +12,3 @@ enum class EIGS_DebugBoneAxisTypes : uint8 {
     XZ,
     XYZ,
 };
-

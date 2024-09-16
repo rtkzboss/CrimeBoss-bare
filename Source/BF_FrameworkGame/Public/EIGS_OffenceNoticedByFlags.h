@@ -10,4 +10,3 @@ enum class EIGS_OffenceNoticedByFlags : uint8 {
     Notices_Civilians,
     Notices_Gangsters,
 };
-

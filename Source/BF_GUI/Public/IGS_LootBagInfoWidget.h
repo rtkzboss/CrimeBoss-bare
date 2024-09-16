@@ -15,13 +15,12 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void UnregisterGameCharacterEvents(AIGS_PlayerCharacter* inGameCharacter);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void RegisterGameCharacterEvents(AIGS_PlayerCharacter* inGameCharacter);
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_LootBagComponent* LootBagComponent;
-    
-};
 
+};

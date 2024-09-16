@@ -5,4 +5,3 @@ UEnvQueryGenerator_GetDefendPointsFromAIDirector::UEnvQueryGenerator_GetDefendPo
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

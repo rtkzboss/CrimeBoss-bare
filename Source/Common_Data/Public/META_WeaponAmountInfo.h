@@ -10,7 +10,6 @@ struct COMMON_DATA_API FMETA_WeaponAmountInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMETA_Weapon*> WeaponObjects;
-    
+
     FMETA_WeaponAmountInfo();
 };
-

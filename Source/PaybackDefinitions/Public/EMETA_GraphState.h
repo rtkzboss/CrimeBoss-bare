@@ -9,4 +9,3 @@ enum class EMETA_GraphState : uint8 {
     EndedWithSuccess,
     EndedWithFail,
 };
-

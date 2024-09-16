@@ -15,28 +15,27 @@ struct BF_ANIMATIONS_API FIGS_FirstPersonAnimationDatabaseBase : public FTableRo
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* EquipMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* UnequipMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* EquipWeaponMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* UnequipWeaponMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_ArmsLocomotion Locomotion;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_FirstPersonAdditiveAnimations Additive;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_FirstPersonSpecialAnimations SpecialAnimations;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_LinkedGraphDefinition> LinkedGraphs;
-    
+
     FIGS_FirstPersonAnimationDatabaseBase();
 };
-

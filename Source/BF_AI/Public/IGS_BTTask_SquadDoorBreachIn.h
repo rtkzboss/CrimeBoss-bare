@@ -14,6 +14,5 @@ public:
 protected:
     UFUNCTION()
     static bool IsCommandActive(UIGS_AICommand* AICommand);
-    
-};
 
+};

@@ -8,4 +8,3 @@ enum class EBPLoginStatus : uint8 {
     UsingLocalProfile,
     LoggedIn,
 };
-

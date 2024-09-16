@@ -10,4 +10,3 @@ public:
     UIGS_PersistentAkComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -1,5 +1,4 @@
 #include "IGS_CharacterData.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_CharacterData::UIGS_CharacterData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -20,6 +19,8 @@ UIGS_CharacterData::UIGS_CharacterData(const FObjectInitializer& ObjectInitializ
     (*this).bCanAbortAnimation = true;
     (*this).AlarmDeviceType = EIGS_AlarmDeviceType::AD_Unknown;
     (*this).mR_ReportDetection = true;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_CharacterData::UpdateIsCharging(bool inIsCharging) {
@@ -87,11 +88,11 @@ bool UIGS_CharacterData::IsShoutHint() {
 }
 
 AIGS_GameCharacterFramework* UIGS_CharacterData::GetSubduedBy() const {
-    return NULL;
+    return nullptr;
 }
 
 AActor* UIGS_CharacterData::GetStealthTakedownActor() {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_CharacterData::GetStealthKill() {
@@ -107,16 +108,16 @@ FVector UIGS_CharacterData::GetLastNavmeshLocation() const {
 }
 
 TArray<AIGS_GameCharacterFramework*> UIGS_CharacterData::GetDetectingPlayers() const {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 AIGS_GameCharacterFramework* UIGS_CharacterData::GetCharacterOwner() const {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_CharacterData::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_CharacterData, VisibleTarget);
     DOREPLIFETIME(UIGS_CharacterData, CurrentSecurityLocation);
     DOREPLIFETIME(UIGS_CharacterData, mR_HasReactionEnabledByScript);
@@ -149,5 +150,4 @@ void UIGS_CharacterData::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(UIGS_CharacterData, mR_LockPicking);
     DOREPLIFETIME(UIGS_CharacterData, mR_Inspecting);
 }
-
 

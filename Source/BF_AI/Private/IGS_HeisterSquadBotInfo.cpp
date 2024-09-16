@@ -2,4 +2,3 @@
 
 FIGS_HeisterSquadBotInfo::FIGS_HeisterSquadBotInfo() {
 }
-

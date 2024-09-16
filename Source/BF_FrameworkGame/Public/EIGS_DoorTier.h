@@ -8,4 +8,3 @@ enum class EIGS_DoorTier : uint8 {
     DT_Tier2,
     DT_Custom,
 };
-

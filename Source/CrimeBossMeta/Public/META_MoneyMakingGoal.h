@@ -14,18 +14,17 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetMonetaryValue(int32 inMonetaryValue);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetMonetaryValue();
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetLootType();
-    
+
 private:
     UPROPERTY()
     FMETA_MoneyMakingGoalData m_Goal;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

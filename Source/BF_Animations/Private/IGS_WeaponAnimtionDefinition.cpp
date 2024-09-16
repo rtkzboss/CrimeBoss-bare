@@ -12,4 +12,3 @@ FIGS_WeaponAnimtionDefinition::FIGS_WeaponAnimtionDefinition() {
     (*this).LadderShooting = nullptr;
     (*this).LadderShooterChange = nullptr;
 }
-

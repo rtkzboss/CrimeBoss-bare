@@ -2,10 +2,9 @@
 #include "CoreMinimal.h"
 #include "GenericTeamAgentInterface.h"
 #include "GameFramework/Pawn.h"
-#include "IGS_GeneralListenerHeardEventDelegate.h"
+#include "IGS_GeneralListenerHeardEvent.h"
 #include "IGS_GeneralListener.generated.h"
 
-class AIGS_GeneralListener;
 class AIGS_GeneralListenerExclusionVolume;
 class UObject;
 
@@ -17,27 +16,26 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetActive(bool Inactive);
-    
+
     UFUNCTION(BlueprintPure)
     bool IsActive() const;
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static AIGS_GeneralListener* GetGeneralListener(const UObject* inWCO);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FName> SupportedHearingTags;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bStartsActive;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_GeneralListenerHeardEvent OnHeardEvent;
-    
+
 protected:
     UPROPERTY()
     TArray<AIGS_GeneralListenerExclusionVolume*> ExclusionVolumes;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

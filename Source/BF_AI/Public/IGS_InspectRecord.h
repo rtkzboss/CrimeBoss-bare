@@ -11,10 +11,9 @@ struct BF_AI_API FIGS_InspectRecord {
 public:
     UPROPERTY()
     AIGS_GameCharacterFramework* Character;
-    
+
     UPROPERTY()
     FVector Position;
-    
+
     FIGS_InspectRecord();
 };
-

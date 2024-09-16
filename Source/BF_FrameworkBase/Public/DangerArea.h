@@ -8,4 +8,3 @@ struct BF_FRAMEWORKBASE_API FDangerArea {
 public:
     FDangerArea();
 };
-

@@ -1,5 +1,4 @@
 #include "IGS_ObjectStatus.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_ObjectStatus::UIGS_ObjectStatus(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -7,6 +6,8 @@ UIGS_ObjectStatus::UIGS_ObjectStatus(const FObjectInitializer& ObjectInitializer
     (*this).HealthMultiplierAttribute = 1.000000000e+00f;
     (*this).AccumulateDamagePeriod = 2.999999933e-02f;
     (*this).mR_BaseMaxHealth = -1.000000000e+00f;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_ObjectStatus::SetHealthDecayDisabled(bool inDisabled) {
@@ -102,27 +103,27 @@ bool UIGS_ObjectStatus::HasRecentlyDied() const {
 }
 
 float UIGS_ObjectStatus::GetRelativeShield() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetRelativeHealth() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetMaxShield() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetMaxHealth() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetLastShieldDelta() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetLastHealthDelta() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EIGS_HealthState UIGS_ObjectStatus::GetHealthState() const {
@@ -134,32 +135,32 @@ bool UIGS_ObjectStatus::GetHealthDecayDisabled() {
 }
 
 float UIGS_ObjectStatus::GetCurrentShield() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetCurrentHealthWithAccumulatedDamage() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetCurrentHealthNormalized() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetCurrentHealth() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetBaseReviveHealth() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ObjectStatus::GetBaseMaxHealth() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_ObjectStatus::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_ObjectStatus, MaxHealth);
     DOREPLIFETIME(UIGS_ObjectStatus, MaxShield);
     DOREPLIFETIME(UIGS_ObjectStatus, mR_ReplicatedCurrentHealth);
@@ -175,5 +176,4 @@ void UIGS_ObjectStatus::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(UIGS_ObjectStatus, m_OverrideReportingOfDamageDealtValue);
     DOREPLIFETIME(UIGS_ObjectStatus, mR_BaseMaxHealth);
 }
-
 

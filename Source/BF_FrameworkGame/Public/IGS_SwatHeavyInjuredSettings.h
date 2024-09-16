@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_SwatHeavyInjuredSettings {
 public:
     UPROPERTY(EditAnywhere)
     float HealthToInjured;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval InjuredTime;
-    
+
     FIGS_SwatHeavyInjuredSettings();
 };
-

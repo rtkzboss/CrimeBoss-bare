@@ -4,4 +4,3 @@ FIGS_ZiptieRecord::FIGS_ZiptieRecord() {
     (*this).Instigator = nullptr;
     (*this).Character = nullptr;
 }
-

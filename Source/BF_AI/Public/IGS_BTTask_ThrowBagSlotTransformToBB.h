@@ -12,12 +12,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotPositionKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotLookAtPositionKey;
-    
-};
 
+};

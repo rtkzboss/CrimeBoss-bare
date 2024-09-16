@@ -10,4 +10,3 @@ enum class EMETA_TileReward : uint8 {
     Soldiers,
     Weapon,
 };
-

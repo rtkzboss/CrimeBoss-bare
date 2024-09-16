@@ -10,10 +10,9 @@ struct COMMON_DATA_API FIGS_ChainAction {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_CharacterID CharacterID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_CharacterState CharacterState;
-    
+
     FIGS_ChainAction();
 };
-

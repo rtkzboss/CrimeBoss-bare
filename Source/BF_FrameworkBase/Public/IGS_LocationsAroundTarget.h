@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_CharacterData> OwnerCharacterData;
-    
-};
 
+};

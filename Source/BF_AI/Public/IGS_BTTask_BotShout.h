@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ShoutDistance;
-    
+
     UPROPERTY()
     FShoutScanData m_ShoutScanData;
-    
-};
 
+};

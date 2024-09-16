@@ -9,34 +9,33 @@ struct BF_COVERS_API FIGS_CoverPointDataHolder {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName Name;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector Location;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector DirectionToWall;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bLeftCoverStanding;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bRightCoverStanding;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bLeftCoverCrouched;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bRightCoverCrouched;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bFrontCoverCrouched;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bUpCoverCrouched;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bCrouchedCover;
-    
+
     FIGS_CoverPointDataHolder();
 };
-

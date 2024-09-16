@@ -13,6 +13,5 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetPoint;
-    
-};
 
+};

@@ -8,4 +8,3 @@ enum class EIGS_WallLength : uint8 {
     Wall_2m,
     Wall_4m,
 };
-

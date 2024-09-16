@@ -11,4 +11,3 @@ enum class EIGS_BleedType : uint8 {
     BT_Injured,
     BT_Died,
 };
-

@@ -11,4 +11,3 @@ FRideableCarState::FRideableCarState() {
     (*this).LastMove.DeltaTime = 0.000000000e+00f;
     (*this).LastMove.Time = 0.000000000e+00f;
 }
-

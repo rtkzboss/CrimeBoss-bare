@@ -75,35 +75,35 @@ bool UHoudiniStaticMesh::HasColors() const {
 }
 
 TArray<FVector> UHoudiniStaticMesh::GetVertexPositions() const {
-    return TArray<FVector>();
+    return {};
 }
 
 TArray<FVector> UHoudiniStaticMesh::GetVertexInstanceVTangents() const {
-    return TArray<FVector>();
+    return {};
 }
 
 TArray<FVector2D> UHoudiniStaticMesh::GetVertexInstanceUVs() const {
-    return TArray<FVector2D>();
+    return {};
 }
 
 TArray<FVector> UHoudiniStaticMesh::GetVertexInstanceUTangents() const {
-    return TArray<FVector>();
+    return {};
 }
 
 TArray<FVector> UHoudiniStaticMesh::GetVertexInstanceNormals() const {
-    return TArray<FVector>();
+    return {};
 }
 
 TArray<FColor> UHoudiniStaticMesh::GetVertexInstanceColors() const {
-    return TArray<FColor>();
+    return {};
 }
 
 TArray<FIntVector> UHoudiniStaticMesh::GetTriangleIndices() const {
-    return TArray<FIntVector>();
+    return {};
 }
 
 TArray<FStaticMaterial> UHoudiniStaticMesh::GetStaticMaterials() const {
-    return TArray<FStaticMaterial>();
+    return {};
 }
 
 uint32 UHoudiniStaticMesh::GetNumVertices() const {
@@ -131,11 +131,11 @@ int32 UHoudiniStaticMesh::GetMaterialIndex(FName InMaterialSlotName) const {
 }
 
 TArray<int32> UHoudiniStaticMesh::GetMaterialIDsPerTriangle() const {
-    return TArray<int32>();
+    return {};
 }
 
 UMaterialInterface* UHoudiniStaticMesh::GetMaterial(int32 InMaterialIndex) {
-    return NULL;
+    return nullptr;
 }
 
 void UHoudiniStaticMesh::CalculateTangents(bool bInComputeWeightedNormals) {
@@ -151,5 +151,4 @@ FBox UHoudiniStaticMesh::CalcBounds() const {
 uint32 UHoudiniStaticMesh::AddStaticMaterial(const FStaticMaterial& InStaticMaterial) {
     return 0;
 }
-
 

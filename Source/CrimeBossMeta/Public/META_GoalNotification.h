@@ -13,13 +13,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetGoal(UMETA_BaseGoal* inGoal);
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_BaseGoal* GetGoal() const;
-    
+
 private:
     UPROPERTY()
     UMETA_BaseGoal* m_Goal;
-    
-};
 
+};

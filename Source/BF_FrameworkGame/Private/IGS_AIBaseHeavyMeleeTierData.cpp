@@ -10,4 +10,3 @@ FIGS_AIBaseHeavyMeleeTierData::FIGS_AIBaseHeavyMeleeTierData() {
     (*this).ChargeSteeringMinWidth = 5.000000000e+01f;
     (*this).ChargeSteeringMaxDistance = 1.500000000e+03f;
 }
-

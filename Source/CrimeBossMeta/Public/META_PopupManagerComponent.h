@@ -14,6 +14,5 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite)
     UIGS_TutorialsManager* TutorialsManager;
-    
-};
 
+};

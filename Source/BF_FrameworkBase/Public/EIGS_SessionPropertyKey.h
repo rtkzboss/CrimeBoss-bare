@@ -19,4 +19,3 @@ enum class EIGS_SessionPropertyKey : uint8 {
     LobbyType,
     Ping,
 };
-

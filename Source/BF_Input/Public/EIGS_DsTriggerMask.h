@@ -9,4 +9,3 @@ enum class EIGS_DsTriggerMask : uint8 {
     Right,
     Both,
 };
-

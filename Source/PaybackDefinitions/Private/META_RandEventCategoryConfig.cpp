@@ -7,4 +7,3 @@ FMETA_RandEventCategoryConfig::FMETA_RandEventCategoryConfig() {
     (*this).CooldownInDays.Min = 0;
     (*this).CooldownInDays.Max = 0;
 }
-

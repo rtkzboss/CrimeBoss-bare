@@ -14,19 +14,18 @@ struct CRIMEBOSSMETA_API FEndGameCutscenesDefinitionRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText CutsceneID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UBinkMediaPlayer* Movie;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<EMETA_CareerCompletionReason> EndReason;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag AssetTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_Gang Gang;
-    
+
     FEndGameCutscenesDefinitionRow();
 };
-

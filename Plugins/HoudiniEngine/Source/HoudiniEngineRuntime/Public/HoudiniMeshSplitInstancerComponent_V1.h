@@ -10,4 +10,3 @@ public:
     UHoudiniMeshSplitInstancerComponent_V1(const FObjectInitializer& ObjectInitializer);
 
 };
-

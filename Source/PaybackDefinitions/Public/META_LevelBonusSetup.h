@@ -10,10 +10,9 @@ struct PAYBACKDEFINITIONS_API FMETA_LevelBonusSetup {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_BonusType BonusType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_BonusSetup> Bonuses;
-    
+
     FMETA_LevelBonusSetup();
 };
-

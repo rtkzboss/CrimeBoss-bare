@@ -9,4 +9,3 @@ enum class EBuildConfigurationExecPin : uint8 {
     Test,
     Shipping,
 };
-

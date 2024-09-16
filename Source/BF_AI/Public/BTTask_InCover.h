@@ -21,30 +21,29 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverForwardPointKey;
-    
+
     UPROPERTY(EditAnywhere)
     float RotationDelay;
-    
+
     UPROPERTY(VisibleAnywhere)
     UCoverPoint* m_CoverPoint;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_AIControllerGame* m_Controller;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_IntelligentGameCharacter* m_Character;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_AIMemoryComponent* m_Memory;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_AIThreatComponent* m_Threath;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_CharacterData* m_CharacterData;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_GameCharacterMovementComponent* m_MovementComponent;
-    
-};
 
+};

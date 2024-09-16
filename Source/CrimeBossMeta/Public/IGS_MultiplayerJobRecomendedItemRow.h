@@ -11,10 +11,9 @@ struct FIGS_MultiplayerJobRecomendedItemRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMETA_Interval LevelRange;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_RecomendedItemDefinition> JobCategoryItemPools;
-    
+
     CRIMEBOSSMETA_API FIGS_MultiplayerJobRecomendedItemRow();
 };
-

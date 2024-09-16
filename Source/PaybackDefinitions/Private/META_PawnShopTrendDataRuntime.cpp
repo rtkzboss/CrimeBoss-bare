@@ -6,4 +6,3 @@ FMETA_PawnShopTrendDataRuntime::FMETA_PawnShopTrendDataRuntime() {
     (*this).CurrentTrendCooldown = 0;
     (*this).CurrentPriceChange = 0;
 }
-

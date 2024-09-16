@@ -14,18 +14,17 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetGraphVariableValue(FGameplayTag inVarName, bool& outSuccess);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TMap<FGameplayTag, int32> GetGraphVariables();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void GetGraphEconomyVariableByTag(FGameplayTag inVariableTag, int32& OutValue, bool& outSuccess);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void DEBUG_StartPlotline(const TSoftObjectPtr<UStoryGraphManager>& inPlotline, FGameplayTag inGameplayTag, bool& outSuccess);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TArray<TSoftObjectPtr<UStoryGraphManager>> DEBUG_GetPlotlines();
-    
-};
 
+};

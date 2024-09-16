@@ -4,4 +4,3 @@ UBTDecorator_HasActiveSOCommand::UBTDecorator_HasActiveSOCommand() {
     (*this).commandType = EIGS_AICommandType::AICT_Unknown;
 }
 
-

@@ -10,4 +10,3 @@ public:
     UIGS_SafePointComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

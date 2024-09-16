@@ -8,16 +8,15 @@ struct COMMON_DATA_API FMissionStats {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Kills;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Accuracy;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RevivesLeft;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CollectedMoney;
-    
+
     FMissionStats();
 };
-

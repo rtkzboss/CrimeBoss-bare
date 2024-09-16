@@ -10,4 +10,3 @@ public:
     AIGS_HumanNavMesh(const FObjectInitializer& ObjectInitializer);
 
 };
-

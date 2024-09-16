@@ -9,13 +9,12 @@ struct COVERGENERATOR_API FIGS_CoverPose {
 public:
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_ListWrapper> ShootRanges;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_ListWrapper> LeftSideStepShootRanges;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_ListWrapper> RightSideStepShootRanges;
-    
+
     FIGS_CoverPose();
 };
-

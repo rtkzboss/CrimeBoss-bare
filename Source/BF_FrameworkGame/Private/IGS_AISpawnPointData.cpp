@@ -3,4 +3,3 @@
 UIGS_AISpawnPointData::UIGS_AISpawnPointData() {
 }
 
-

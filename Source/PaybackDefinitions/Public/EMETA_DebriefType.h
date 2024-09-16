@@ -9,4 +9,3 @@ enum class EMETA_DebriefType : uint8 {
     TurfWar,
     DontShow,
 };
-

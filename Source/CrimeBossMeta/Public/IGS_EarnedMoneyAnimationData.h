@@ -12,18 +12,17 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 InitialValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 FinalValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsMoney;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText TextFormat;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_EarnedMoneyAnimationSequenceData> Sequences;
-    
-};
 
+};

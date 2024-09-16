@@ -7,4 +7,3 @@ FHoudiniCurveOutputProperties::FHoudiniCurveOutputProperties() {
     (*this).CurveType = EHoudiniCurveType::Invalid;
     (*this).CurveMethod = EHoudiniCurveMethod::Invalid;
 }
-

@@ -1,7 +1,4 @@
 #include "META_BaseFPSMission.h"
-#include "EIGS_UserDifficulty.h"
-#include "EMETA_JobResult.h"
-#include "EMETA_LobbyVisibilityType.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_BaseFPSMission::UMETA_BaseFPSMission() {
@@ -130,7 +127,7 @@ EMETA_FPSMissionSubtype UMETA_BaseFPSMission::GetMissionSubtype() const {
 }
 
 float UMETA_BaseFPSMission::GetMissionRewardMultiplierFromIntel() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_BaseFPSMission::GetMissionOutCome() const {
@@ -142,7 +139,7 @@ int32 UMETA_BaseFPSMission::GetMissionObjectiveMonetaryValue() const {
 }
 
 float UMETA_BaseFPSMission::GetMissionMonetaryValueMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UMETA_BaseFPSMission::GetMissionMonetaryRewards(int32& out1stStarReward, int32& out2ndStarReward, int32& out3rdStarReward, int32& outLootMonetaryValue) {
@@ -177,7 +174,7 @@ FMETA_FPSMissionInfo UMETA_BaseFPSMission::GetFPSMissionInfo() {
 }
 
 TSubclassOf<UIGS_BaseMissionObject> UMETA_BaseFPSMission::GetFPSMissionID() {
-    return NULL;
+    return nullptr;
 }
 
 int32 UMETA_BaseFPSMission::GetFencingExpenses() const {
@@ -189,7 +186,7 @@ EIGS_ScenarioDifficulty UMETA_BaseFPSMission::GetDifficulty() const {
 }
 
 TMap<FGameplayTag, int32> UMETA_BaseFPSMission::GetBonusLoot() const {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 EIGS_HeistersBackupVariationType UMETA_BaseFPSMission::GetAllyVariation() const {
@@ -203,10 +200,9 @@ void UMETA_BaseFPSMission::ChangeAmountOfSoldiersWereSentByValue(int32 ByValue) 
 }
 
 float UMETA_BaseFPSMission::CalculateCombinedMissionRewardMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UMETA_BaseFPSMission::ApplyIntelProgressToMission() {
 }
-
 

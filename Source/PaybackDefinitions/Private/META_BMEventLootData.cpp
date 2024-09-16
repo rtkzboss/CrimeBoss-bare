@@ -4,4 +4,3 @@ FMETA_BMEventLootData::FMETA_BMEventLootData() {
     (*this).MinLootValue = 0;
     (*this).MissionID = nullptr;
 }
-

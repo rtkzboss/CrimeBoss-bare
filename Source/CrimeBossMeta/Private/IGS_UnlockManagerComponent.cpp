@@ -1,5 +1,4 @@
 #include "IGS_UnlockManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_UnlockManagerComponent::UIGS_UnlockManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).PrimaryComponentTick.bCanEverTick = true;
@@ -28,16 +27,16 @@ bool UIGS_UnlockManagerComponent::HasPendingRewards() const {
 
 
 TArray<FIGS_UnlockedCharacterSaveData> UIGS_UnlockManagerComponent::GetUnlockedUniqueCharacters() {
-    return TArray<FIGS_UnlockedCharacterSaveData>();
+    return {};
 }
 
 TArray<FGameplayTag> UIGS_UnlockManagerComponent::GetUnlockedContractTags() {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 
 TArray<FGameplayTag> UIGS_UnlockManagerComponent::GetPendingRewards() {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 int32 UIGS_UnlockManagerComponent::GetAccountVariableValue(FGameplayTag inTagUnlock) {
@@ -46,5 +45,4 @@ int32 UIGS_UnlockManagerComponent::GetAccountVariableValue(FGameplayTag inTagUnl
 
 void UIGS_UnlockManagerComponent::ConsumePendingReward(FGameplayTag inRewardID) {
 }
-
 

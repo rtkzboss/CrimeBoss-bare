@@ -5,4 +5,3 @@ FIGS_ReplicationCharacterAimingDataHolder::FIGS_ReplicationCharacterAimingDataHo
     (*this).AimInSpeedMult = -1.000000000e+00f;
     (*this).AimOutSpeedMult = -1.000000000e+00f;
 }
-

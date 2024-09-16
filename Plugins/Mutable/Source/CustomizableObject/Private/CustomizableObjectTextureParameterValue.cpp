@@ -5,4 +5,3 @@ FCustomizableObjectTextureParameterValue::FCustomizableObjectTextureParameterVal
     (*this).ParameterValue = 0;
     (*this).Uid = TEXT("");
 }
-

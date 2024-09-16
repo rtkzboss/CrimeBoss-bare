@@ -2,4 +2,3 @@
 
 FIGS_AICivilianShieldTierData::FIGS_AICivilianShieldTierData() {
 }
-

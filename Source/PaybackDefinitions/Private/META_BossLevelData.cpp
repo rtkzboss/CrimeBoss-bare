@@ -5,15 +5,15 @@ UMETA_BossLevelData::UMETA_BossLevelData() {
 }
 
 TArray<FMETA_AdditionalHeisters> UMETA_BossLevelData::GetStartingHeisters() const {
-    return TArray<FMETA_AdditionalHeisters>();
+    return {};
 }
 
 TArray<FMETA_StartingBossPerks> UMETA_BossLevelData::GetStartingBossPerks() const {
-    return TArray<FMETA_StartingBossPerks>();
+    return {};
 }
 
 TArray<FMETA_ExtraBossWeaponsData> UMETA_BossLevelData::GetPrimaryWeaponQuality() const {
-    return TArray<FMETA_ExtraBossWeaponsData>();
+    return {};
 }
 
 FName UMETA_BossLevelData::GetCurveTableRowName(EMETA_BonusType inBonusType) const {
@@ -21,19 +21,19 @@ FName UMETA_BossLevelData::GetCurveTableRowName(EMETA_BonusType inBonusType) con
 }
 
 TMap<EMETA_BossLevelCategory, FMETA_BonusTypesArray> UMETA_BossLevelData::GetCategoryBonuses() const {
-    return TMap<EMETA_BossLevelCategory, FMETA_BonusTypesArray>();
+    return {};
 }
 
 TArray<TSubclassOf<UGameplayEffect>> UMETA_BossLevelData::GetCaptainPerks() const {
-    return TArray<TSubclassOf<UGameplayEffect>>();
+    return {};
 }
 
 TArray<EMETA_BonusType> UMETA_BossLevelData::GetCaptainPerkBonuses() const {
-    return TArray<EMETA_BonusType>();
+    return {};
 }
 
 TSubclassOf<UGameplayEffect> UMETA_BossLevelData::GetCaptainHiddenPerkByBonusType(EMETA_BonusType inBonus) const {
-    return NULL;
+    return nullptr;
 }
 
 int32 UMETA_BossLevelData::GetBossPointsPerWaveDefenseSecondsSurvived(const int32 InSeconds) const {
@@ -77,11 +77,11 @@ int32 UMETA_BossLevelData::GetBossPointMaxRewardPerWaveDefense() const {
 }
 
 TArray<TSubclassOf<UGameplayEffect>> UMETA_BossLevelData::GetBossPerks() const {
-    return TArray<TSubclassOf<UGameplayEffect>>();
+    return {};
 }
 
 TArray<EMETA_BonusType> UMETA_BossLevelData::GetBossPerkBonuses() const {
-    return TArray<EMETA_BonusType>();
+    return {};
 }
 
 FMETA_BossLevelReductionConfig UMETA_BossLevelData::GetBossLevelReductionConfig() const {
@@ -89,7 +89,7 @@ FMETA_BossLevelReductionConfig UMETA_BossLevelData::GetBossLevelReductionConfig(
 }
 
 TSubclassOf<UGameplayEffect> UMETA_BossLevelData::GetBossHiddenPerkByBonusType(EMETA_BonusType inBonus) const {
-    return NULL;
+    return nullptr;
 }
 
 EMETA_BonusUsage UMETA_BossLevelData::GetBonusUsage(EMETA_BonusType inBonusType) const {
@@ -101,19 +101,18 @@ bool UMETA_BossLevelData::GetBonusMaxLevel(EMETA_BonusType inBonusType, int32& o
 }
 
 UCurveTable* UMETA_BossLevelData::GetBonusesTable() const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<FMETA_ExtraBossEquipmentData> UMETA_BossLevelData::GetBonusEquipmentQuality() const {
-    return TArray<FMETA_ExtraBossEquipmentData>();
+    return {};
 }
 
 TArray<EMETA_BonusType> UMETA_BossLevelData::GetArmyPerkBonuses() const {
-    return TArray<EMETA_BonusType>();
+    return {};
 }
 
 TSubclassOf<UGameplayEffect> UMETA_BossLevelData::GetArmyHiddenPerkByBonusType(EMETA_BonusType inBonus) const {
-    return NULL;
+    return nullptr;
 }
-
 

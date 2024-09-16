@@ -8,7 +8,6 @@ struct COMMON_SAVE_API FMETA_LoopBranchNodeSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CurrentAmountOfActivation;
-    
+
     FMETA_LoopBranchNodeSaveData();
 };
-

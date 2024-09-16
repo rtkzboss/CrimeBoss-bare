@@ -4,7 +4,6 @@ UIGS_PlayHeisterDialogue::UIGS_PlayHeisterDialogue() {
 }
 
 UIGS_PlayHeisterDialogue* UIGS_PlayHeisterDialogue::PlayHeisterDialogue(UObject* inWCO, FText DialogueID) {
-    return NULL;
+    return nullptr;
 }
-
 

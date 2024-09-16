@@ -17,4 +17,3 @@ UIGS_Common_DataDevSettings_Weapons::UIGS_Common_DataDevSettings_Weapons() {
     (*this).WeaponLowResTortilla = FSoftObjectPath(TEXT("/Game/00_Main/MaterialLibrary/Weapons/MI_Weapons_lowres_Tortilla.MI_Weapons_lowres_Tortilla"), TEXT(""));
 }
 
-

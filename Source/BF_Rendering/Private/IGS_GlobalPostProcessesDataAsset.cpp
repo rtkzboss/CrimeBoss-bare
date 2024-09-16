@@ -3,4 +3,3 @@
 UIGS_GlobalPostProcessesDataAsset::UIGS_GlobalPostProcessesDataAsset() {
 }
 
-

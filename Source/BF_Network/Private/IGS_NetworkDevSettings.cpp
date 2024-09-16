@@ -5,4 +5,3 @@ UIGS_NetworkDevSettings::UIGS_NetworkDevSettings() {
     (*this).VoiceExpressionComponentDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Audio/VoiceExpressions/DA_ComponentVoiceExpression.DA_ComponentVoiceExpression"), TEXT(""));
 }
 
-

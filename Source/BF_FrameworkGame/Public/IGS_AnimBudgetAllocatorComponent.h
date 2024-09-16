@@ -14,13 +14,12 @@ public:
 
     UPROPERTY(EditAnywhere)
     float SignificanceUpdateInterval;
-    
+
 protected:
     UPROPERTY()
     TMap<USkeletalMeshComponentBudgeted*, FIGS_Mesh_BudgetAllocator_Settings> m_ChildMeshesDefaultSettings;
-    
+
     UPROPERTY()
     TMap<USkeletalMeshComponentBudgeted*, FIGS_Mesh_BudgetAllocator_Settings> m_ChildMeshesOptimizedSettings;
-    
-};
 
+};

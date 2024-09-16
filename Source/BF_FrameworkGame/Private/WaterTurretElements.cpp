@@ -3,6 +3,5 @@
 FWaterTurretElements::FWaterTurretElements() {
     (*this).Turret = nullptr;
     (*this).Hose = nullptr;
-    (*this).HoseMeshes.Empty();
+    (*this).HoseMeshes = {};
 }
-

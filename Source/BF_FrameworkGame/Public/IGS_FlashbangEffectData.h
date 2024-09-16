@@ -16,46 +16,45 @@ struct BF_FRAMEWORKGAME_API FIGS_FlashbangEffectData : public FIGS_PlayerEffectD
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSoftObjectPtr<UObject>> EffectPostProcesses;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UCurveFloat> WeightTimeCurve;
-    
+
     UPROPERTY(EditAnywhere)
     float EffectDuration;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> EffectAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkRtpc> FlashbangEffectAkRtpc;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> StunnedElectricStartAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> StunnedElectricStopAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> StunnedStartAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> StunnedStopAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     FVector2D ExplosionAroundPlayerPowerTrigger;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> StunnedEffect;
-    
+
     UPROPERTY(EditAnywhere)
     float StunnedEffectDuration;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> StunnedElectricEffect;
-    
+
     UPROPERTY(EditAnywhere)
     float StunnedElectricEffectDuration;
-    
+
     FIGS_FlashbangEffectData();
 };
-

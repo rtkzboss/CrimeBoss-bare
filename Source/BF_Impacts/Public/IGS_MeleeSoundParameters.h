@@ -10,10 +10,9 @@ struct BF_IMPACTS_API FIGS_MeleeSoundParameters {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseThis;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<UAkSwitchValue> WeaponNameAkSwitch;
-    
+
     FIGS_MeleeSoundParameters();
 };
-

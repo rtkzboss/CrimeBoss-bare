@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBaseSniperTierData {
 public:
     UPROPERTY(EditAnywhere)
     float HitChance;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval HiddenTimeInterval;
-    
+
     UPROPERTY(EditAnywhere)
     float CompromisedRange;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_WeaponVisibilityType WeaponVisibilityType;
-    
+
     FIGS_AIBaseSniperTierData();
 };
-

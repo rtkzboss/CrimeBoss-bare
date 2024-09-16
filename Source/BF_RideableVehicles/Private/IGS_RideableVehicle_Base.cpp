@@ -2,36 +2,42 @@
 #include "AkComponent.h"
 #include "IGS_ObjectStatus.h"
 #include "IGS_InteractiveComponent.h"
+#include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
 #include "Camera/CameraComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_RideableVehicle_Base::AIGS_RideableVehicle_Base(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("Object Status"));
+    auto gen2 = CreateDefaultSubobject<UAkComponent>(TEXT("AkComponent"));
+    auto gen3 = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("Interactive"));
+    auto gen4 = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+    auto gen5 = CreateDefaultSubobject<UBoxComponent>(TEXT("Entry Trigger"));
+    auto gen6 = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
     (*this).MaxKilometersPerHour = 3.000000000e+01f;
     (*this).RotationNormalizationFactor = 1.225000000e+01f;
     (*this).CanInteract = true;
     (*this).LocationSyncLerpForce = 1.000000015e-01f;
     (*this).RotationSyncLerpForce = 1.000000015e-01f;
-    (*this).ObjectStatus = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("Object Status"));
+    (*this).ObjectStatus = gen;
     (*this).EngineOffOnHealthPercent = 3.000000119e-01f;
-    (*this).AkComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkComponent"));
-    (*this).InteractiveComponent = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("Interactive"));
-    (*this).FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-    (*this).EntryTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("Entry Trigger"));
+    (*this).AkComponent = gen2;
+    (*this).InteractiveComponent = gen3;
+    (*this).FirstPersonCameraComponent = gen4;
+    (*this).EntryTrigger = gen5;
     (*this).BaseMass = 1.000000000e+03f;
     (*this).BagWeight = 5.000000000e+01f;
     (*this).BagInteractionDistance = 4.000000000e+02f;
-    (*this).Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
+    (*this).Mesh = gen6;
     (*this).bAlwaysRelevant = true;
-    (*this).RootComponent = (USceneComponent*)Mesh;
-    (*this).AkComponent->SetupAttachment((*this).RootComponent);
-    (*this).EntryTrigger->SetupAttachment((*this).RootComponent);
-    (*this).FirstPersonCameraComponent->SetupAttachment((*this).RootComponent);
-    (*this).InteractiveComponent->SetupAttachment((*this).RootComponent);
+    auto gen7 = AActor::StaticClass()->FindPropertyByName("bReplicateMovement");
+    CastField<FBoolProperty>(gen7)->SetPropertyValue(&(*gen7->ContainerPtrToValuePtr<uint8>(&(*this), 0)), false);
+    (*this).RootComponent = gen6;
+    if (gen2) gen2->SetupAttachment(gen6);
+    if (gen3) gen3->SetupAttachment(gen6);
+    if (gen4) gen4->SetupAttachment(gen6);
+    if (gen5) gen5->SetupAttachment(gen6);
 }
 
 void AIGS_RideableVehicle_Base::VehicleDestroy(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo) {
@@ -112,11 +118,11 @@ void AIGS_RideableVehicle_Base::Horn_MULTICAST_Implementation(bool inStartPlayin
 }
 
 float AIGS_RideableVehicle_Base::GetMaxVelocity() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_RideableVehicle_Base::GetKmPerHAspect() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 
@@ -134,7 +140,7 @@ bool AIGS_RideableVehicle_Base::CanPickBag_Implementation(AIGS_LootBagPickup* in
 
 void AIGS_RideableVehicle_Base::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_RideableVehicle_Base, PlayerSlots);
     DOREPLIFETIME(AIGS_RideableVehicle_Base, RuntimeBagInfo);
     DOREPLIFETIME(AIGS_RideableVehicle_Base, CanInteract);
@@ -144,5 +150,4 @@ void AIGS_RideableVehicle_Base::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(AIGS_RideableVehicle_Base, mR_linearDrag);
     DOREPLIFETIME(AIGS_RideableVehicle_Base, mR_angularDrag);
 }
-
 

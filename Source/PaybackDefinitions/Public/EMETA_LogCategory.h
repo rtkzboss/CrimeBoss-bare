@@ -46,4 +46,3 @@ enum class EMETA_LogCategory : uint8 {
     WeakenMissions,
     Difficulty,
 };
-

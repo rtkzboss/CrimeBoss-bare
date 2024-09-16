@@ -11,15 +11,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetPriority(int32 Priority);
-    
+
     UFUNCTION(BlueprintCallable)
     void ReturnTokenToPool();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsValid() const;
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetPriority() const;
-    
-};
 
+};

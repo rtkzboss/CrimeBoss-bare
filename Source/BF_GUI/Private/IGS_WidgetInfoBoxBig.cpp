@@ -1,8 +1,4 @@
 #include "IGS_WidgetInfoBoxBig.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetInfoBoxBig::UIGS_WidgetInfoBoxBig() : Super(FObjectInitializer::Get()) {
     (*this).Name = FText::FromString(TEXT("UNKNOWN"));
@@ -42,5 +38,4 @@ void UIGS_WidgetInfoBoxBig::SetBigItemImage(TSoftObjectPtr<UTexture> inImageText
 
 void UIGS_WidgetInfoBoxBig::Refresh() const {
 }
-
 

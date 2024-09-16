@@ -12,4 +12,3 @@ FPropSpawnerBudgetStruct::FPropSpawnerBudgetStruct() {
     (*this).MaxSpawnsPerSameProp = 0;
     (*this).MaxRerollsIfRedundant = 3;
 }
-

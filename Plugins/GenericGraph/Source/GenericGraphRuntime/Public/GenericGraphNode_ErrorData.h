@@ -11,13 +11,12 @@ struct FGenericGraphNode_ErrorData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_MessageType MessageType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString Message;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UGenericGraphNode* Node;
-    
+
     GENERICGRAPHRUNTIME_API FGenericGraphNode_ErrorData();
 };
-

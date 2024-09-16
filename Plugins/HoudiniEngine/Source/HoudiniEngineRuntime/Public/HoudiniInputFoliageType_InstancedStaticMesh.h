@@ -10,4 +10,3 @@ public:
     UHoudiniInputFoliageType_InstancedStaticMesh();
 
 };
-

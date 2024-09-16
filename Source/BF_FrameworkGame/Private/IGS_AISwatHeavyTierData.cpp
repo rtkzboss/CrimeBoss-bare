@@ -17,4 +17,3 @@ FIGS_AISwatHeavyTierData::FIGS_AISwatHeavyTierData() {
     (*this).Injured.InjuredTime.Min = 6.000000000e+00f;
     (*this).Injured.InjuredTime.Max = 7.500000000e+00f;
 }
-

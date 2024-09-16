@@ -8,4 +8,3 @@ enum class EIGS_DialogueDiscard : uint8 {
     LessPriority,
     EqualPriority,
 };
-

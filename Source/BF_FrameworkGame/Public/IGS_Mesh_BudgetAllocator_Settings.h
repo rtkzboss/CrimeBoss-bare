@@ -8,4 +8,3 @@ struct FIGS_Mesh_BudgetAllocator_Settings {
 public:
     BF_FRAMEWORKGAME_API FIGS_Mesh_BudgetAllocator_Settings();
 };
-

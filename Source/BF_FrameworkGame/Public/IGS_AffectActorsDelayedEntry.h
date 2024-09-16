@@ -10,10 +10,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AffectActorsDelayedEntry {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AActor* Actor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Delay;
-    
+
     FIGS_AffectActorsDelayedEntry();
 };
-

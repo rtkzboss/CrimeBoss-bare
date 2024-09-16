@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_HeistersOnEvent {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_CharacterID> HeistersOnEvent;
-    
+
     FMETA_HeistersOnEvent();
 };
-

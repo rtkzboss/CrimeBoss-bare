@@ -15,46 +15,45 @@ struct COMMON_SAVE_API FMETA_WarManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EMETA_Gang, FMETA_GangInfo> GangsInfo;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EMETA_Gang, float> ChanceCounterToAttackAdjacentTerritory;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 AttemptsToCaptureTileCounter;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EMETA_TradeVendor, EMETA_TradeRelationship> TradeRelationshipWithGangs;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EMETA_Gang, int32> GangAttacksCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EMETA_Gang, int32> CounterForSpecialTier;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EMETA_TradeVendor, int32> TradeVendorsCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FGameplayTag> TodaysLockedTilesForAI;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<int32, FMETA_TurfHistory> TurfHistory;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 DaysWithMoreAttack;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 AILastTileConfigIndex;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bIsAllTileCaptured;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bIsAllGangsEradicated;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EMETA_Gang, FMETA_GangArmyTierChangeQueueData> GangChangeArmyTierQueue;
-    
+
     FMETA_WarManagerSaveData();
 };
-

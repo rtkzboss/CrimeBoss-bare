@@ -5,4 +5,3 @@ FIGS_SwatHeavyWeakSpotSettings::FIGS_SwatHeavyWeakSpotSettings() {
     (*this).DoomTimer.Min = 5.000000000e+00f;
     (*this).DoomTimer.Max = 1.000000000e+01f;
 }
-

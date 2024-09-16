@@ -25,24 +25,26 @@ FIGS_PlayerJoinInfo::FIGS_PlayerJoinInfo() {
     (*this).CachedCharID = EIGS_CharacterID::Char_Unknown;
     (*this).UniqueId = -1;
     (*this).CachedGenericID = -1;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.TagID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.TagID, 0)) = NAME_None;
     (*this).CachedHeisterData.CharacterID = EIGS_CharacterID::Char_Unknown;
     (*this).CachedHeisterData.UniqGenericId = -1;
     (*this).CachedHeisterData.GenericVariantID = -1;
-    (*this).CachedHeisterData.CharacterName = FText::FromString(TEXT(""));
+    (*this).CachedHeisterData.CharacterName = FText::GetEmpty();
     (*this).CachedHeisterData.bIsMaxLeveled = false;
     (*this).CachedHeisterData.HeisterNumber = -1;
     (*this).CachedHeisterData.PlayerId = -1;
     (*this).CachedHeisterData.ProgressionLevel = 1;
-    (*TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes")->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).CachedHeisterData.UniquePlayerId, 0)).Empty();
+    auto gen2 = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
+    (*gen2->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).CachedHeisterData.UniquePlayerId, 0)) = {};
     (*this).CachedHeisterData.Loadout.PrimaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
     (*this).CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
-    (*this).CachedHeisterData.Loadout.Equipment.Empty();
-    (*this).CachedHeisterData.Loadout.Perks.Empty();
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).CachedHeisterData.Loadout.Equipment = {};
+    (*this).CachedHeisterData.Loadout.Perks = {};
     (*this).CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.Loadout.CharacterSkinID, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CachedHeisterData.Loadout.CharacterSkinID, 0)) = NAME_None;
     (*this).CachedHeisterData.Experience = 0;
     (*this).CachedHeisterData.Injuries = 0;
     (*this).CachedHeisterData.CharacterState = EMETA_CharacterState::None;
@@ -58,6 +60,5 @@ FIGS_PlayerJoinInfo::FIGS_PlayerJoinInfo() {
     (*this).CachedHeisterData.PlayerRespect = EMETA_RespectLvl::Low;
     (*this).CachedHeisterData.MutableVariationIndex = -1;
     (*this).CachedHeisterData.MissionCutPercentWithModifiers = 0;
-    (*this).CachedHeisterData.CachedPlayerName = FText::FromString(TEXT(""));
+    (*this).CachedHeisterData.CachedPlayerName = FText::GetEmpty();
 }
-

@@ -2,4 +2,3 @@
 
 FIGS_FOVOverrideInterpolation::FIGS_FOVOverrideInterpolation() {
 }
-

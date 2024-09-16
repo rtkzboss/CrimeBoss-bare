@@ -4,4 +4,3 @@ UBTDecorator_HideBehindPlayer::UBTDecorator_HideBehindPlayer() {
     (*this).NodeName = TEXT("Hide Behind Player");
 }
 
-

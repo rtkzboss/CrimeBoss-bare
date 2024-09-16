@@ -10,4 +10,3 @@ public:
     AIGS_SimpleActor(const FObjectInitializer& ObjectInitializer);
 
 };
-

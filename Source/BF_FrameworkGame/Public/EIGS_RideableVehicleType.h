@@ -8,4 +8,3 @@ enum class EIGS_RideableVehicleType : uint8 {
     QuadBike,
     None,
 };
-

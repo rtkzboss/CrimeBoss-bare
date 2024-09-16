@@ -3,4 +3,3 @@
 UIGS_BTDecorator_Base::UIGS_BTDecorator_Base() {
 }
 
-

@@ -11,4 +11,3 @@ void UIGS_AICommand::Finish() {
 void UIGS_AICommand::Fail() {
 }
 
-

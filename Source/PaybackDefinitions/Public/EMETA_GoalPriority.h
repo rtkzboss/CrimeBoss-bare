@@ -9,4 +9,3 @@ enum class EMETA_GoalPriority : uint8 {
     High,
     VeryHigh,
 };
-

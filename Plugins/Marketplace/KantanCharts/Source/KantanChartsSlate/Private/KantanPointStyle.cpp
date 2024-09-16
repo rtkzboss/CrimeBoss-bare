@@ -3,4 +3,3 @@
 UKantanPointStyle::UKantanPointStyle() {
 }
 
-

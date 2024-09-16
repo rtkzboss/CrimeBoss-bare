@@ -1,5 +1,4 @@
 #include "IGS_PlayerCommandComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerCommandComponent::UIGS_PlayerCommandComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -18,5 +17,4 @@ void UIGS_PlayerCommandComponent::HandleHoldPosition(const AIGS_GameCharacterFra
 
 void UIGS_PlayerCommandComponent::HandleFollow(const AIGS_GameCharacterFramework* inOrderedCharacter) const {
 }
-
 

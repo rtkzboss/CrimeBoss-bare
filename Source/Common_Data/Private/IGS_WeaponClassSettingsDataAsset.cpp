@@ -7,4 +7,3 @@ UIGS_WeaponClassSettingsDataAsset::UIGS_WeaponClassSettingsDataAsset() {
     (*this).IdleRecoilDecayMult = 1.000000000e+01f;
 }
 
-

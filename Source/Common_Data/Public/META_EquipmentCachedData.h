@@ -1,9 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "IGS_EquipmentInventoryObject.h"
 #include "Templates/SubclassOf.h"
 #include "META_EquipmentCachedData.generated.h"
-
-class UIGS_EquipmentInventoryObject;
 
 USTRUCT(BlueprintType)
 struct COMMON_DATA_API FMETA_EquipmentCachedData {
@@ -11,7 +10,6 @@ struct COMMON_DATA_API FMETA_EquipmentCachedData {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<UIGS_EquipmentInventoryObject> EquipmentItem;
-    
+
     FMETA_EquipmentCachedData();
 };
-

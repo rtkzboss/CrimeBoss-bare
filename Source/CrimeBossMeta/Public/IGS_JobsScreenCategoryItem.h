@@ -11,16 +11,15 @@ struct FIGS_JobsScreenCategoryItem {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> ButtonImage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ButtonName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ButtonDescription;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer MissionScenarios;
-    
+
     CRIMEBOSSMETA_API FIGS_JobsScreenCategoryItem();
 };
-

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "IGS_OnZiptyingStartedSignatureDelegate.h"
+#include "IGS_OnZiptyingStartedSignature.h"
 #include "IGS_WeaponAnimationComponent.generated.h"
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_OnZiptyingStartedSignature OnZiptyingStarted;
-    
-};
 
+};

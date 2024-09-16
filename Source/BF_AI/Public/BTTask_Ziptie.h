@@ -17,15 +17,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CivToZiptieKey;
-    
+
     UPROPERTY()
     AIGS_PlayerCharacter* Character;
-    
+
     UPROPERTY()
     AIGS_GameCharacterFramework* CivToZiptie;
-    
+
     UPROPERTY(Instanced)
     UIGS_ZiptieComponent* ZiptieComponent;
-    
-};
 
+};

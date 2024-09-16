@@ -1,8 +1,4 @@
 #include "IGS_WidgetGridContainerSlot.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetGridContainerSlot::UIGS_WidgetGridContainerSlot() : Super(FObjectInitializer::Get()) {
     (*this).NormalColor.R = 5.000000000e-01f;
@@ -39,5 +35,4 @@ void UIGS_WidgetGridContainerSlot::SetIsOccupied(bool inOccupied) {
 bool UIGS_WidgetGridContainerSlot::GetIsOccupied() const {
     return false;
 }
-
 

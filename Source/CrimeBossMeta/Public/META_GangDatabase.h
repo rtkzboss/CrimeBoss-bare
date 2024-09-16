@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_GangTableRow GetGangData(UObject* inWCO, const EMETA_Gang inGang, bool& outSucceeded);
-    
-};
 
+};

@@ -1,13 +1,10 @@
 #include "IGS_PlayerCharacter.h"
+#include "SkeletalMeshComponentBudgeted.h"
 #include "IGS_CampThreatMeterComponent.h"
 #include "IGS_PostProcessManagerComponent.h"
-#include "GameFramework/Character.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
+#include "Components/CapsuleComponent.h"
 #include "Engine/EngineTypes.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "EIGS_CharacterID.h"
-#include "EIGS_UnitSpecialization.h"
 #include "IGS_BasherComponent.h"
 #include "IGS_CarryableInteractiveComponent.h"
 #include "IGS_DownStateHandlerComponent.h"
@@ -35,47 +32,70 @@
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-AIGS_PlayerCharacter::AIGS_PlayerCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UIGS_FootstepsPlayerComponent>(TEXT("FootstepEventBaseComponent")).SetDefaultSubobjectClass<UIGS_PlayerStatus>(TEXT("Object Status")).SetDefaultSubobjectClass<UIGS_PlayerDamageHandlerComponent>(TEXT("DamageHandlerComponent2")).SetDefaultSubobjectClass<UIGS_PlayerGASComponent>(TEXT("GASComponent")).SetDefaultSubobjectClass<UIGS_GASAttributeSetPlayer>(TEXT("GASAttributeSet")).SetDefaultSubobjectClass<UIGS_PlayerCharacterMovementComponent>(TEXT("CharMoveComp"))) {
-    (*this).UseComponent = CreateDefaultSubobject<UIGS_UseComponent>(TEXT("Use Component"));
-    (*this).PingComponent = CreateDefaultSubobject<UIGS_PlayerPingComponent>(TEXT("Ping Component"));
-    (*this).ReviveComponent = CreateDefaultSubobject<UIGS_ReviveComponent>(TEXT("Revive Component"));
-    (*this).PlayerSuspicionComponent = CreateDefaultSubobject<UIGS_PlayerSuspicionComponent>(TEXT("Player Suspicion Component"));
-    (*this).SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComponent"));
-    (*this).PlayerCommandComponent = CreateDefaultSubobject<UIGS_PlayerCommandComponent>(TEXT("PlayerCommandComponent"));
-    (*this).PlayerWorldTracingComponent = CreateDefaultSubobject<UIGS_PlayerWorldTracingComponent>(TEXT("AimPoint Updater Component"));
-    (*this).UnarmedMeleeBasherComponent = CreateDefaultSubobject<UIGS_BasherComponent>(TEXT("Unarmed Melee Basher Component"));
+AIGS_PlayerCharacter::AIGS_PlayerCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UIGS_PlayerCharacterMovementComponent>(TEXT("CharMoveComp")).SetDefaultSubobjectClass<UIGS_PlayerStatus>(TEXT("Object Status")).SetDefaultSubobjectClass<UIGS_PlayerDamageHandlerComponent>(TEXT("DamageHandlerComponent2")).SetDefaultSubobjectClass<UIGS_PlayerGASComponent>(TEXT("GASComponent")).SetDefaultSubobjectClass<UIGS_GASAttributeSetPlayer>(TEXT("GASAttributeSet")).SetDefaultSubobjectClass<UIGS_FootstepsPlayerComponent>(TEXT("FootstepEventBaseComponent"))) {
+    auto gen = CreateDefaultSubobject<UIGS_UseComponent>(TEXT("Use Component"));
+    auto gen2 = CreateDefaultSubobject<UIGS_PlayerPingComponent>(TEXT("Ping Component"));
+    auto gen3 = CreateDefaultSubobject<UIGS_ReviveComponent>(TEXT("Revive Component"));
+    auto gen4 = CreateDefaultSubobject<UIGS_PlayerSuspicionComponent>(TEXT("Player Suspicion Component"));
+    auto gen5 = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComponent"));
+    auto gen6 = CreateDefaultSubobject<UIGS_PlayerCommandComponent>(TEXT("PlayerCommandComponent"));
+    auto gen7 = CreateDefaultSubobject<UIGS_PlayerWorldTracingComponent>(TEXT("AimPoint Updater Component"));
+    auto gen8 = CreateDefaultSubobject<UIGS_BasherComponent>(TEXT("Unarmed Melee Basher Component"));
+    auto gen9 = CreateDefaultSubobject<UIGS_ListInventory>(TEXT("Player Character List Inventory"));
+    auto gen10 = CreateDefaultSubobject<UIGS_PlayerCameraComponent>(TEXT("Camera"));
+    auto gen11 = CreateDefaultSubobject<UIGS_PostProcessManagerComponent>(TEXT("PostProcessManagerComponent"));
+    auto gen12 = CreateDefaultSubobject<UIGS_PlayerEffectsComponent>(TEXT("PlayerEffectsComponent"));
+    auto gen13 = CreateDefaultSubobject<UIGS_PlayerSuppressionHandlerComponent>(TEXT("SuppressionHandlerCapsuleComponent"));
+    auto gen14 = CreateDefaultSubobject<UIGS_PlayerIgnoreCollisionComponent>(TEXT("PlayerWithPlayerCollisionHandlerComponent"));
+    auto gen15 = CreateDefaultSubobject<UIGS_PlayerLoadoutComponent>(TEXT("PlayerLoadoutComponent"));
+    auto gen16 = CreateDefaultSubobject<UIGS_PlayerMetaTransferComponent>(TEXT("PlayerMetaTransferComponent"));
+    auto gen17 = CreateDefaultSubobject<UIGS_CampThreatMeterComponent>(TEXT("CampThreatMeterComponent"));
+    auto gen18 = CreateDefaultSubobject<UIGS_LootBagInteractiveComponent>(TEXT("LootBagInteractiveComponent"));
+    auto gen19 = CreateDefaultSubobject<UIGS_CarryableInteractiveComponent>(TEXT("CarryableInteractiveComponent"));
+    auto gen20 = CreateDefaultSubobject<UIGS_LootBagComponent>(TEXT("LootBagComponent"));
+    auto gen21 = CreateDefaultSubobject<UIGS_DownStateHandlerComponent>(TEXT("DownStateHandlerComponent"));
+    (*this).UseComponent = gen;
+    (*this).PingComponent = gen2;
+    (*this).ReviveComponent = gen3;
+    (*this).PlayerSuspicionComponent = gen4;
+    (*this).SpringArmComponent = gen5;
+    (*this).PlayerCommandComponent = gen6;
+    (*this).PlayerWorldTracingComponent = gen7;
+    (*this).UnarmedMeleeBasherComponent = gen8;
     (*this).DefaultAimingChangePercent = 8.000000119e-01f;
     (*this).VisibilityCrouchMultiplier = 5.000000000e-01f;
-    (*this).PlayerInventory = CreateDefaultSubobject<UIGS_ListInventory>(TEXT("Player Character List Inventory"));
+    (*this).PlayerInventory = gen9;
     (*this).DeathCamUnskippableTime = 1.000000000e+00f;
     (*this).DeathCamMaximumTime = 1.500000000e+01f;
     (*this).bCanSlide = true;
     (*this).bCanUseUnarmedMelee = true;
-    (*this).Camera = CreateDefaultSubobject<UIGS_PlayerCameraComponent>(TEXT("Camera"));
+    (*this).Camera = gen10;
     (*this).DefaultArmsAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Player/Arms/BP_Arms_Fallback.BP_Arms_Fallback_C"), TEXT(""));
-    (*this).PostProcessManagerComponent = CreateDefaultSubobject<UIGS_PostProcessManagerComponent>(TEXT("PostProcessManagerComponent"));
-    (*this).PlayerEffectsComponent = CreateDefaultSubobject<UIGS_PlayerEffectsComponent>(TEXT("PlayerEffectsComponent"));
-    (*this).SuppressionHandlerComponent = CreateDefaultSubobject<UIGS_PlayerSuppressionHandlerComponent>(TEXT("SuppressionHandlerCapsuleComponent"));
-    (*this).PlayerIgnoreCollisionComponent = CreateDefaultSubobject<UIGS_PlayerIgnoreCollisionComponent>(TEXT("PlayerWithPlayerCollisionHandlerComponent"));
-    (*this).PlayerLoadoutComponent = CreateDefaultSubobject<UIGS_PlayerLoadoutComponent>(TEXT("PlayerLoadoutComponent"));
-    (*this).PlayerMetaTransferComponent = CreateDefaultSubobject<UIGS_PlayerMetaTransferComponent>(TEXT("PlayerMetaTransferComponent"));
-    (*this).CampThreatMeterComponent = CreateDefaultSubobject<UIGS_CampThreatMeterComponent>(TEXT("CampThreatMeterComponent"));
-    (*this).LootBagInteractiveComponent = CreateDefaultSubobject<UIGS_LootBagInteractiveComponent>(TEXT("LootBagInteractiveComponent"));
-    (*this).CarryableInteractiveComponent = CreateDefaultSubobject<UIGS_CarryableInteractiveComponent>(TEXT("CarryableInteractiveComponent"));
+    (*this).PostProcessManagerComponent = gen11;
+    (*this).PlayerEffectsComponent = gen12;
+    (*this).SuppressionHandlerComponent = gen13;
+    (*this).PlayerIgnoreCollisionComponent = gen14;
+    (*this).PlayerLoadoutComponent = gen15;
+    (*this).PlayerMetaTransferComponent = gen16;
+    (*this).CampThreatMeterComponent = gen17;
+    (*this).LootBagInteractiveComponent = gen18;
+    (*this).CarryableInteractiveComponent = gen19;
     (*this).bIsValidForAimAssist = false;
-    (*this).LootBagComponent = CreateDefaultSubobject<UIGS_LootBagComponent>(TEXT("LootBagComponent"));
+    (*this).LootBagComponent = gen20;
     (*this).bRegisterOnBeginPlay = false;
-    (*this).DownStateHandlerComponent = CreateDefaultSubobject<UIGS_DownStateHandlerComponent>(TEXT("DownStateHandlerComponent"));
+    (*this).DownStateHandlerComponent = gen21;
     (*this).SquadID = 238028913;
     (*this).CrouchedEyeHeight = 4.800000000e+01f;
     (*this).AutoPossessAI = EAutoPossessAI::Disabled;
     (*this).AIControllerClass = nullptr;
-    (*this).Camera->SetupAttachment((*this).RootComponent);
-    (*this).CarryableInteractiveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
-    (*this).LootBagInteractiveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
-    (*this).ReviveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
-    (*this).SpringArmComponent->SetupAttachment((*this).RootComponent);
-    (*this).SuppressionHandlerComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
+    auto gen22 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("CharacterMesh0")));
+    if (gen3) gen3->SetupAttachment(gen22);
+    auto gen23 = Cast<UCapsuleComponent>(GetDefaultSubobjectByName(TEXT("CollisionCylinder")));
+    if (gen5) gen5->SetupAttachment(gen23);
+    if (gen10) gen10->SetupAttachment(gen23);
+    if (gen13) gen13->SetupAttachment(gen22);
+    if (gen18) gen18->SetupAttachment(gen22);
+    if (gen19) gen19->SetupAttachment(gen22);
 }
 
 void AIGS_PlayerCharacter::Use(bool inIsHolding) {
@@ -353,7 +373,7 @@ EIGS_DialogueHeisterCharacter AIGS_PlayerCharacter::GetVoiceAccordingToEthnicity
 }
 
 AIGS_RideableVehicleBaseFramework* AIGS_PlayerCharacter::GetUsedVehicle() const {
-    return NULL;
+    return nullptr;
 }
 
 bool AIGS_PlayerCharacter::GetShowPlayerOutline() {
@@ -361,15 +381,15 @@ bool AIGS_PlayerCharacter::GetShowPlayerOutline() {
 }
 
 UIGS_PlayerCommandComponent* AIGS_PlayerCharacter::GetPlayerCommandComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_PlayerCharacterMovementComponent* AIGS_PlayerCharacter::GetPlayerCharacterMovementComponent() {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_PlayerCameraComponent* AIGS_PlayerCharacter::GetPlayerCamera() const {
-    return NULL;
+    return nullptr;
 }
 
 bool AIGS_PlayerCharacter::GetIsAimingAtFriendly() const {
@@ -393,15 +413,15 @@ EIGS_TeamSideEnum AIGS_PlayerCharacter::GetAimAtTeam() const {
 }
 
 AIGS_GameCharacterFramework* AIGS_PlayerCharacter::GetAimAtCharacter() const {
-    return NULL;
+    return nullptr;
 }
 
 AActor* AIGS_PlayerCharacter::GetAimAtActor() const {
-    return NULL;
+    return nullptr;
 }
 
 float AIGS_PlayerCharacter::GetAbilityRechargeMult() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 AIGS_PlayerCharacter::GetAbility1ChargeCount() const {
@@ -456,8 +476,7 @@ void AIGS_PlayerCharacter::CallOnChangeShowPrediction(bool inShow, TSubclassOf<U
 
 void AIGS_PlayerCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_PlayerCharacter, R_Yaw);
 }
-
 

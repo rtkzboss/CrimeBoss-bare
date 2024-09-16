@@ -15,6 +15,5 @@ class CRIMEBOSSMETA_API IMETA_Condition : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ExecuteCondition(AMETA_BaseGameMode* inGameMode);
-    
-};
 
+};

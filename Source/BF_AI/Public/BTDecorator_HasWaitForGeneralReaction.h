@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_GRWaitType Type;
-    
-};
 
+};

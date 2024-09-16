@@ -13,21 +13,20 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestEvadePosKey;
-    
+
     UPROPERTY(EditAnywhere)
     float EvadePulse;
-    
+
     UPROPERTY(EditAnywhere)
     float MinEvadeDistance;
-    
+
     UPROPERTY(EditAnywhere)
     float RayCastDegreesStep;
-    
+
     UPROPERTY(EditAnywhere)
     int32 MaxRayCasts;
-    
-};
 
+};

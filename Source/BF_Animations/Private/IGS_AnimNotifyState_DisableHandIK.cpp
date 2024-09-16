@@ -5,4 +5,3 @@ UIGS_AnimNotifyState_DisableHandIK::UIGS_AnimNotifyState_DisableHandIK() {
     (*this).RightHandIKdisabled = true;
 }
 
-

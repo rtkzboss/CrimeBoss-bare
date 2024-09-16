@@ -8,4 +8,3 @@ enum class FIGS_PlayerThrowGrenadeStatesInfo : uint8 {
     EIGS_TPP_Throw_Finished,
     EIGS_TPP_Throw_Canceled,
 };
-

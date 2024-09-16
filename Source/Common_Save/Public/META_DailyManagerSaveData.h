@@ -8,7 +8,6 @@ struct COMMON_SAVE_API FMETA_DailyManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 CurrentDay;
-    
+
     FMETA_DailyManagerSaveData();
 };
-

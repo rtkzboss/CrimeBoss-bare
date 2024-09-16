@@ -2,4 +2,3 @@
 
 FIGS_AIGangsterBaseDataModifiers::FIGS_AIGangsterBaseDataModifiers() {
 }
-

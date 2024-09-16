@@ -1,6 +1,4 @@
 #include "IGS_DoorBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_DoorBase::AIGS_DoorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -57,9 +55,8 @@ void AIGS_DoorBase::CallDoorOpened(AIGS_GameCharacterFramework* inInstigator) {
 
 void AIGS_DoorBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_DoorBase, bDoorDirection);
     DOREPLIFETIME(AIGS_DoorBase, m_bHardLock);
 }
-
 

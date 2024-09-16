@@ -8,4 +8,3 @@ enum class EIGS_HUDVisibilityMode : uint8 {
     HUD_RelevantOnly,
     HUD_AlwaysVisible,
 };
-

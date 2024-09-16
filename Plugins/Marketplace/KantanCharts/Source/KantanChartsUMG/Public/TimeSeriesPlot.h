@@ -13,10 +13,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool SetDatasource(UObject* InDatasource);
-    
+
 protected:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
     UObject* DataSource;
-    
-};
 
+};

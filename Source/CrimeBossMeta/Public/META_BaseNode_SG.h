@@ -15,20 +15,19 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ResetNodeToDefault();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 ExecuteNode(AMETA_BaseGameMode* inGameMode);
-    
+
     UPROPERTY(BlueprintReadOnly)
     int32 ID;
-    
+
     UPROPERTY(BlueprintReadOnly)
     EMETA_NodeType Type;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bShouldBeResetted;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

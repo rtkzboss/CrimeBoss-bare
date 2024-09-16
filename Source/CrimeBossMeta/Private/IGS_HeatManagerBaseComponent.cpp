@@ -1,5 +1,4 @@
 #include "IGS_HeatManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_HeatManagerBaseComponent::UIGS_HeatManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -29,10 +28,9 @@ EMETA_Gang UIGS_HeatManagerBaseComponent::GetCurrentSheriffTargetGang_Implementa
 }
 
 TMap<TSubclassOf<UMETA_DetectiveID>, FMETA_DetectiveInfo> UIGS_HeatManagerBaseComponent::GetActiveDetectives_Implementation() {
-    return TMap<TSubclassOf<UMETA_DetectiveID>, FMETA_DetectiveInfo>();
+    return {};
 }
 
 void UIGS_HeatManagerBaseComponent::ChangeHeatValue_Implementation(float inByValue) {
 }
-
 

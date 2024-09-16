@@ -9,10 +9,9 @@ struct BF_FRAMEWORKBASE_API FIGS_SpringParameters {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector Stiffness;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector Damping;
-    
+
     FIGS_SpringParameters();
 };
-

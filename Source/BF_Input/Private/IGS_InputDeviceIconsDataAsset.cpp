@@ -3,4 +3,3 @@
 UIGS_InputDeviceIconsDataAsset::UIGS_InputDeviceIconsDataAsset() {
 }
 
-

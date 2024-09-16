@@ -2,4 +2,3 @@
 
 FUIGS_LevelTestDataStruct::FUIGS_LevelTestDataStruct() {
 }
-

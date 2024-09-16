@@ -6,4 +6,3 @@ UIGS_TactitalPathfinding::UIGS_TactitalPathfinding() {
 void UIGS_TactitalPathfinding::OnPopulationFinished() {
 }
 
-

@@ -9,4 +9,3 @@ FMutableModelImageProperties::FMutableModelImageProperties() {
     (*this).AddressX = TA_Clamp;
     (*this).AddressY = TA_Clamp;
 }
-

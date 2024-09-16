@@ -1,6 +1,4 @@
 #include "GenericGraph.h"
-#include "GenericGraphEdge.h"
-#include "GenericGraphNode.h"
 
 UGenericGraph::UGenericGraph() {
     (*this).END_GRAPH_VALUE = -2;
@@ -18,5 +16,4 @@ void UGenericGraph::GetNodesByLevel(int32 Level, TArray<UGenericGraphNode*>& Nod
 int32 UGenericGraph::GetLevelNum() const {
     return 0;
 }
-
 

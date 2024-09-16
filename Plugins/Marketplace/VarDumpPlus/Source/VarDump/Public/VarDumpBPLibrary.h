@@ -11,6 +11,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void VarDumpFunction(UClass* Input, const FString& CallerName, bool isUpdate);
-    
-};
 
+};

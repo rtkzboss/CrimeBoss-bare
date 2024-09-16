@@ -36,4 +36,3 @@ FMETA_PerkParameters::FMETA_PerkParameters() {
     (*this).MultiplierCostUpgrade = 1.000000000e+00f;
     (*this).AdditionalAmountOfMissionToUpgrade = 0;
 }
-

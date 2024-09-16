@@ -13,31 +13,30 @@ struct COMMON_DATA_API FIGS_NewsInfoDefinition : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag itemTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag EntitlementTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Title;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UBinkMediaPlayer* BinkAlpha;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UBinkMediaPlayer* BinkRGB;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UObject> RGBVideo;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UObject> VideoMask;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool ShowInMenu;
-    
+
     FIGS_NewsInfoDefinition();
 };
-

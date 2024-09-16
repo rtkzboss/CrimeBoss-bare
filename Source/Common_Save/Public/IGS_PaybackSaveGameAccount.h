@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FIGS_SaveData_Account SaveData_Account;
-    
-};
 
+};

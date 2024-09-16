@@ -5,7 +5,7 @@ public class BF_Loading : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "AkAudio",
             "BF_GUIBase",

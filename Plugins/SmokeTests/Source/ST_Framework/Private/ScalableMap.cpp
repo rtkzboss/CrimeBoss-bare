@@ -1,6 +1,4 @@
 #include "ScalableMap.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AScalableMap::AScalableMap(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).TileWidth = 1.000000000e+01f;
@@ -13,5 +11,4 @@ AScalableMap::AScalableMap(const FObjectInitializer& ObjectInitializer) : Super(
     (*this).Filename = TEXT("Demo_Map_Tile");
     (*this).UseSeperateFilePathsForEachResolution = true;
 }
-
 

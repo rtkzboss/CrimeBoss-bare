@@ -3,6 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Engine/EngineTypes.h"
 #include "GameplayTagContainer.h"
+#include "IGS_ImpactTypeObject.h"
 #include "Chaos/ChaosEngineInterface.h"
 #include "EIGS_ImpactTable.h"
 #include "EIGS_ImpactType.h"
@@ -12,7 +13,6 @@
 #include "IGS_ImpactFunctionLibrary.generated.h"
 
 class AActor;
-class UIGS_ImpactTypeObject;
 class UObject;
 class UPrimitiveComponent;
 
@@ -24,15 +24,14 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateImpactDecal(const UObject* inWCO, FHitResult inHitResult, TEnumAsByte<EPhysicalSurface> inSurfaceType, TSubclassOf<UIGS_ImpactTypeObject> inImpactID, FGameplayTag inGameplayTag);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateImpact(const UObject* inWCO, EIGS_ImpactTable inImpactTable, TEnumAsByte<EPhysicalSurface> inPhysicalSurface, EIGS_ImpactType inImpactType, const FIGS_ImpactParameters& inParameters);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateHitImpact(const UObject* inWCO, const AActor* InstigatorActor, const UPrimitiveComponent* InstigatorComponent, const UPrimitiveComponent* TargetComponent, const FHitResult& Hit, const FIGS_ImpactHitParameter& Param);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic, meta=(WorldContext=inWCO))
     static void CreateAllImpacts(const UObject* inWCO, EIGS_ImpactTable inImpactTable, TEnumAsByte<EPhysicalSurface> inPhysicalSurface, const FIGS_ImpactParameters& inParameters);
-    
-};
 
+};

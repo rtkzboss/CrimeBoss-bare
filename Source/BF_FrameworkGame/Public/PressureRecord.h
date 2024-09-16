@@ -8,4 +8,3 @@ struct FPressureRecord {
 public:
     BF_FRAMEWORKGAME_API FPressureRecord();
 };
-

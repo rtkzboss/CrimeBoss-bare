@@ -13,24 +13,23 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer ProgressResetCompensationAlwaysGranted;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer ProgressResetCompensationAlwaysGrantedAndBought;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer ProgressResetCompensationLevelUp;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer ProgressResetCompensationLevelUpAndBought;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer DefaultUnlockedItems;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer DefaultUnlockedAndBoughtItemsMP;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_UnlockRewardRanges> RewardRanges;
-    
-};
 
+};

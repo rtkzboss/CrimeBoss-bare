@@ -10,4 +10,3 @@ enum class EIGS_MenuInputState : uint8 {
     Input_MAX UMETA(Hidden),
     Input_UNKNOWN = 255,
 };
-

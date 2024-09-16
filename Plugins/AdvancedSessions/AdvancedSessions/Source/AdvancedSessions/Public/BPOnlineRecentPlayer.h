@@ -9,7 +9,6 @@ struct FBPOnlineRecentPlayer : public FBPOnlineUser {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString LastSeen;
-    
+
     ADVANCEDSESSIONS_API FBPOnlineRecentPlayer();
 };
-

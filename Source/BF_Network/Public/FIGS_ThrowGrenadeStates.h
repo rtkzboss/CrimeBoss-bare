@@ -8,4 +8,3 @@ enum class FIGS_ThrowGrenadeStates : uint8 {
     TH_ThrowEnd,
     TH_ThrowCancel,
 };
-

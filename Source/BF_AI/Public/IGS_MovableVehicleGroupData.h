@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_MovableVehicleGroupData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsDefault;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_VehicleBase> Vehicle;
-    
+
     FIGS_MovableVehicleGroupData();
 };
-

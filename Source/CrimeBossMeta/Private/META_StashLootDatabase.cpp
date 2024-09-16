@@ -7,4 +7,3 @@ FStashLootDefinitionRow UMETA_StashLootDatabase::GetLootData(UObject* inWCO, con
     return FStashLootDefinitionRow{};
 }
 
-

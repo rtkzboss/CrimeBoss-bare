@@ -1,5 +1,4 @@
 #include "PFPathFollowerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UPFPathFollowerComponent::UPFPathFollowerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).SpeedDuration = 5.000000000e+01f;
@@ -72,11 +71,11 @@ bool UPFPathFollowerComponent::HasPath() const {
 }
 
 float UPFPathFollowerComponent::GetSpeedAtSpeedPoint(int32 PointIndex) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UPFPathFollowerComponent::GetSpeedAtDistance(float Distance) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FRotator UPFPathFollowerComponent::GetRotationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const {
@@ -84,11 +83,11 @@ FRotator UPFPathFollowerComponent::GetRotationAtDistance(float Distance, TEnumAs
 }
 
 UPFPathComponent* UPFPathFollowerComponent::GetPathToFollow() {
-    return NULL;
+    return nullptr;
 }
 
 AActor* UPFPathFollowerComponent::GetPathOwner() const {
-    return NULL;
+    return nullptr;
 }
 
 FVector UPFPathFollowerComponent::GetMoveDirection() const {
@@ -104,15 +103,15 @@ FPFEventPoints UPFPathFollowerComponent::GetEventPoints() {
 }
 
 UEventPointDelegateHolder* UPFPathFollowerComponent::GetEventPointDelegateByName(const FName& Name) {
-    return NULL;
+    return nullptr;
 }
 
 UEventPointDelegateHolder* UPFPathFollowerComponent::GetEventPointDelegateByIndex(int32 Index) {
-    return NULL;
+    return nullptr;
 }
 
 UEventPointDelegateHolder* UPFPathFollowerComponent::GetEventPointDelegateAll() {
-    return NULL;
+    return nullptr;
 }
 
 FEventPoint UPFPathFollowerComponent::GetEventPointByName(const FName& Name) {
@@ -135,5 +134,4 @@ void UPFPathFollowerComponent::ComputeAutoRotationPoints() {
 
 void UPFPathFollowerComponent::ClearMaxFollowerSpeed() {
 }
-
 

@@ -12,6 +12,5 @@ public:
 
     UFUNCTION(BlueprintPure)
     FIGS_WeaponSkinTableRow GetWeaponSkinData();
-    
-};
 
+};

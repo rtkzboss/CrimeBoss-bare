@@ -14,25 +14,24 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetCoverPointComponents(const TArray<UIGS_CoverPointComponent*>& inComponents);
-    
+
     UFUNCTION()
     void OnNavigationBuildFinished(ANavigationData* inNavData);
-    
+
     UFUNCTION(BlueprintCallable)
     void DeactivateCovers();
-    
+
     UFUNCTION(BlueprintCallable)
     void ActivateCovers();
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     bool AutomaticStart;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShouldCheckMoving;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     TArray<UIGS_CoverPointComponent*> CoverPointComponents;
-    
-};
 
+};

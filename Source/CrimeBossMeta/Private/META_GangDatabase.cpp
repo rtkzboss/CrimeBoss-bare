@@ -7,4 +7,3 @@ FMETA_GangTableRow UMETA_GangDatabase::GetGangData(UObject* inWCO, const EMETA_G
     return FMETA_GangTableRow{};
 }
 
-

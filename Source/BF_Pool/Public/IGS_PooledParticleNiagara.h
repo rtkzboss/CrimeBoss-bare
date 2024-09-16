@@ -14,14 +14,13 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SetTemplate(UNiagaraSystem* inNewTemplate) const;
-    
+
 protected:
     UFUNCTION()
     void OnNiagaraSystemFinished(UNiagaraComponent* FinishedComponent);
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, Instanced, Transient, VisibleAnywhere)
     UNiagaraComponent* NiagaraComponent;
-    
-};
 
+};

@@ -4,4 +4,3 @@ FMeshSpawnerIndexPairStruct::FMeshSpawnerIndexPairStruct() {
     (*this).PropMeshSpawner = nullptr;
     (*this).Index = 0;
 }
-

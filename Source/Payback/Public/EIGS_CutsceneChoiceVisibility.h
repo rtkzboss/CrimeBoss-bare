@@ -8,4 +8,3 @@ enum class EIGS_CutsceneChoiceVisibility : uint8 {
     Disabled,
     Hidden,
 };
-

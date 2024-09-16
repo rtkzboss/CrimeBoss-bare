@@ -5,4 +5,3 @@ FMETA_BossCharacterConfiguration::FMETA_BossCharacterConfiguration() {
     (*this).LevelRange.Max = 4;
     (*this).MissionBonusReward = 0.000000000e+00f;
 }
-

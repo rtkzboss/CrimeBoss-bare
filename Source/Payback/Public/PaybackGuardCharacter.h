@@ -10,4 +10,3 @@ public:
     APaybackGuardCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

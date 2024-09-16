@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_MetaCutsceneProp.generated.h"
-
-class AActor;
 
 USTRUCT(BlueprintType)
 struct PAYBACK_API FIGS_MetaCutsceneProp {
@@ -12,10 +11,9 @@ struct PAYBACK_API FIGS_MetaCutsceneProp {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSubclassOf<AActor> Actor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FTransform Transform;
-    
+
     FIGS_MetaCutsceneProp();
 };
-

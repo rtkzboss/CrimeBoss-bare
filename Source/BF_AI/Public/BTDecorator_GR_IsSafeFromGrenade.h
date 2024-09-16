@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval CheckInterval;
-    
+
     UPROPERTY(EditAnywhere)
     float ExplosionRangeMultiplier;
-    
-};
 
+};

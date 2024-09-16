@@ -6,4 +6,3 @@ UHoudiniParameterChoice::UHoudiniParameterChoice() {
     (*this).ParmType = EHoudiniParameterType::IntChoice;
 }
 
-

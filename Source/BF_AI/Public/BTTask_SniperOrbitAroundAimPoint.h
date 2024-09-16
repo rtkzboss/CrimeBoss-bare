@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SnipePointKey;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_AimType AimType;
-    
-};
 
+};

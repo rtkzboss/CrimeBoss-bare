@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FIGS_ChainMissionNames {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> Chain;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> Other;
-    
+
     FIGS_ChainMissionNames();
 };
-

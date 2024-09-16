@@ -9,4 +9,3 @@ enum class EIGS_WaveManagerDefinition : uint8 {
     ControlStart,
     AssaultEndingSoon,
 };
-

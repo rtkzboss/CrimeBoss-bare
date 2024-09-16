@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FName, FIGS_WeaponSkinMaterial> SkinMaterialSlot;
-    
-};
 
+};

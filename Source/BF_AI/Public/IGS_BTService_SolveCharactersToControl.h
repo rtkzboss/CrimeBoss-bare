@@ -15,18 +15,17 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* ShoutAtQueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* ZiptieQueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharacterToZiptieKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharacterToShoutAt;
-    
+
     UPROPERTY(EditAnywhere)
     float RefreshDelay;
-    
-};
 
+};

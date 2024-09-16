@@ -2,4 +2,3 @@
 
 FDisableCollisionCharacter::FDisableCollisionCharacter() {
 }
-

@@ -11,8 +11,7 @@ public:
 private:
     UPROPERTY(NonTransactional)
     AActor* OutputActor;
-    
+
 public:
     FOutputActorOwner();
 };
-

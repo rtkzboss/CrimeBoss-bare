@@ -7,7 +7,7 @@ void UIGS_WarzoneHelpers::WarzoneInitialSpawn(UObject* inWCO, TArray<AIGS_AIEnem
 }
 
 TArray<AIGS_GameCharacterFramework*> UIGS_WarzoneHelpers::GetWarzoneAttackGroupAddon(AIGS_GameCharacterFramework* inLeader, TArray<AIGS_GameCharacterFramework*> inCurrGroup, float inDistance, int32 inCount) {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 int32 UIGS_WarzoneHelpers::CallWarzoneReinforcment(UObject* inWCO, int32 inCount, bool inAllies) {
@@ -17,5 +17,4 @@ int32 UIGS_WarzoneHelpers::CallWarzoneReinforcment(UObject* inWCO, int32 inCount
 int32 UIGS_WarzoneHelpers::CallWarzoneCaptain(UObject* inWCO, int32 inCount) {
     return 0;
 }
-
 

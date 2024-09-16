@@ -9,10 +9,9 @@ struct FIGS_TriggerDialogueData {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_DialogueGroup Group;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName DialogueID;
-    
+
     BF_VOICEOVER_API FIGS_TriggerDialogueData();
 };
-

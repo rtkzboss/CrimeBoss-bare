@@ -10,4 +10,3 @@ enum class EIGS_QuickMissionType : uint8 {
     ChainContract,
     ShuffleContract,
 };
-

@@ -23,4 +23,3 @@ UIGS_FrameworkGameDevSettings_Audio::UIGS_FrameworkGameDevSettings_Audio() {
     (*this).KeycardDrop = FSoftObjectPath(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_SFX/WU_SFX_Interactables/Keycard/AKE_Keycard_Drop.AKE_Keycard_Drop"), TEXT(""));
 }
 
-

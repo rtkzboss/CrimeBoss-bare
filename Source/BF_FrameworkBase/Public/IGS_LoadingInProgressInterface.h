@@ -12,4 +12,3 @@ class IIGS_LoadingInProgressInterface : public IInterface {
     GENERATED_BODY()
 public:
 };
-

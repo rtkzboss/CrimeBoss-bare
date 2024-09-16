@@ -3,4 +3,3 @@
 UBTTask_BreachDestroyPlaceExplosiveBase::UBTTask_BreachDestroyPlaceExplosiveBase() {
 }
 
-

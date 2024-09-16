@@ -11,6 +11,5 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(WorldContext=inWCO))
     bool EvaluateCondition(const UObject* inWCO);
-    
-};
 
+};

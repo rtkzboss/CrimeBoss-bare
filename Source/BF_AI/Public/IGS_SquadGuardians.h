@@ -10,4 +10,3 @@ public:
     AIGS_SquadGuardians(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -8,16 +8,15 @@ struct FCustomizableObjectFloatParameterValue {
 public:
     UPROPERTY(VisibleAnywhere)
     FString ParameterName;
-    
+
     UPROPERTY(VisibleAnywhere)
     float ParameterValue;
-    
+
     UPROPERTY(VisibleAnywhere)
     FString Uid;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<float> ParameterRangeValues;
-    
+
     CUSTOMIZABLEOBJECT_API FCustomizableObjectFloatParameterValue();
 };
-

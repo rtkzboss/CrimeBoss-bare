@@ -14,18 +14,17 @@ public:
 protected:
     UPROPERTY(Instanced)
     TArray<UActorComponent*> PropCanSpawnList;
-    
+
     UPROPERTY(Instanced)
     TArray<UActorComponent*> PropToSpawnList;
-    
+
     UPROPERTY(Instanced)
     TArray<UActorComponent*> PropBlockedList;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FName> BlockedTags;
-    
+
     UPROPERTY(Instanced)
     TMap<FName, UActorComponent*> ComponentMap;
-    
-};
 
+};

@@ -10,4 +10,3 @@ public:
     AIGS_ControlRoomPhysical(const FObjectInitializer& ObjectInitializer);
 
 };
-

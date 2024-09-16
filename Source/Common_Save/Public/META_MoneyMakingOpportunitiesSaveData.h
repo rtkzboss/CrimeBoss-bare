@@ -8,13 +8,12 @@ struct COMMON_SAVE_API FMETA_MoneyMakingOpportunitiesSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bStarted;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 StartDay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 FinishDay;
-    
+
     FMETA_MoneyMakingOpportunitiesSaveData();
 };
-

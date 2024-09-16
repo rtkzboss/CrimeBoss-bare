@@ -10,10 +10,9 @@ struct FIGS_ReactionAnimData {
 public:
     UPROPERTY(EditAnywhere)
     UAnimMontage* Anim;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* OptionalOutAnim;
-    
+
     BF_ANIMATIONS_API FIGS_ReactionAnimData();
 };
-

@@ -5,4 +5,3 @@ UIGS_Common_SaveDevSettings::UIGS_Common_SaveDevSettings() {
     (*this).DeveloperSaveFilesLimit = 2;
 }
 
-

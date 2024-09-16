@@ -2,4 +2,3 @@
 
 FStealthIdleDialogueReport::FStealthIdleDialogueReport() {
 }
-

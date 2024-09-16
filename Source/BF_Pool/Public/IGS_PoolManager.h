@@ -18,32 +18,31 @@ public:
 protected:
     UFUNCTION()
     void StopTimers();
-    
+
     UFUNCTION()
     void StartTimers();
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     AActor* AcquireItemWithTagAndObject(UClass* inItemClass, FGameplayTagContainer inTagContainer, UObject* inCompareItem);
-    
+
     UFUNCTION(BlueprintCallable)
     AActor* AcquireItemWithTag(UClass* inItemClass, FGameplayTagContainer inTagContainer);
-    
+
     UFUNCTION(BlueprintCallable)
     AActor* AcquireItem(UClass* inItemClass);
-    
+
     UFUNCTION(BlueprintCallable)
     AActor* AcquireAndActivateItemWithTagAndObject(UClass* inItemClass, FGameplayTagContainer inTagContainer, UObject* inCompareItem);
-    
+
     UFUNCTION(BlueprintCallable)
     AActor* AcquireAndActivateItemWithTag(UClass* inItemClass, FGameplayTagContainer inTagContainer);
-    
+
     UFUNCTION(BlueprintCallable)
     AActor* AcquireAndActivateItem(UClass* inItemClass);
-    
+
 protected:
     UPROPERTY()
     TMap<FIGS_PoolKey, FIGS_Pool> PoolMap;
-    
-};
 
+};

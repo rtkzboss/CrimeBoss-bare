@@ -16,21 +16,20 @@ public:
 private:
     UPROPERTY(Transient)
     APrefabActor* CursorGhostActor;
-    
+
     UPROPERTY(Transient)
     int32 CursorSeed;
-    
+
     UPROPERTY(Transient)
     UMaterialInterface* CursorMaterial;
-    
+
     UPROPERTY(Transient)
     UMaterialInterface* CursorInvalidMaterial;
-    
+
     UPROPERTY(Instanced, Transient)
     TArray<UPrefabricatorConstructionSnapComponent*> SnapComponents;
-    
+
     UPROPERTY(Transient)
     int32 ActiveSnapComponentIndex;
-    
-};
 
+};

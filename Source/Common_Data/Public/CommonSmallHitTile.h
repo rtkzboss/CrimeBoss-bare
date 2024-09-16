@@ -8,10 +8,9 @@ struct COMMON_DATA_API FCommonSmallHitTile {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bSpecificTiles;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<uint8> SpecifiedTiles;
-    
+
     FCommonSmallHitTile();
 };
-

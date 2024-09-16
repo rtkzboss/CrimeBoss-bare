@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_LastCitySetupConfigurationSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LastPlayerTileGroupIndex;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGameplayTag> LastPlayerInitialTileGroup;
-    
+
     FMETA_LastCitySetupConfigurationSaveData();
 };
-

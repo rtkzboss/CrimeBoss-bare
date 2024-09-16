@@ -3,4 +3,3 @@
 FIGS_StimshotEffectData::FIGS_StimshotEffectData() {
     (*this).StimshotEffectDataAsset = nullptr;
 }
-

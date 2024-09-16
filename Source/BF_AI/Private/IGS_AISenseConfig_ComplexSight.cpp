@@ -1,5 +1,4 @@
 #include "IGS_AISenseConfig_ComplexSight.h"
-#include "IGS_AISense_ComplexSight.h"
 
 UIGS_AISenseConfig_ComplexSight::UIGS_AISenseConfig_ComplexSight() {
     (*this).Implementation = UIGS_AISense_ComplexSight::StaticClass();
@@ -22,5 +21,4 @@ UIGS_AISenseConfig_ComplexSight::UIGS_AISenseConfig_ComplexSight() {
     (*this).DebugColor.B = 0;
     (*this).DebugColor.R = 0;
 }
-
 

@@ -5,4 +5,3 @@ FIGS_WireBoxWireInfo::FIGS_WireBoxWireInfo() {
     (*this).bIsWireRemoved = false;
     (*this).bSuccessRemove = false;
 }
-

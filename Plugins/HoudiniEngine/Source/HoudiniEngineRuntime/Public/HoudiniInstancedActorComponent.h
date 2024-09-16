@@ -15,9 +15,8 @@ public:
 private:
     UPROPERTY(VisibleAnywhere)
     UObject* InstancedObject;
-    
+
     UPROPERTY(VisibleInstanceOnly)
     TArray<AActor*> InstancedActors;
-    
-};
 
+};

@@ -10,10 +10,9 @@ struct FIGS_TPP_Attack_MontageHolder {
 public:
     UPROPERTY()
     UAnimMontage* ActiveAttackMontage;
-    
+
     UPROPERTY()
     UAnimMontage* ActiveWeaponAttackMontage;
-    
+
     BF_ANIMATIONS_API FIGS_TPP_Attack_MontageHolder();
 };
-

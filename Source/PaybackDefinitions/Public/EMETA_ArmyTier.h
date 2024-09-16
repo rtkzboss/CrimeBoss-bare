@@ -10,4 +10,3 @@ enum class EMETA_ArmyTier : uint8 {
     Elite,
     Special,
 };
-

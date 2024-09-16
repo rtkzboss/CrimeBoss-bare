@@ -2,4 +2,3 @@
 
 FIGS_WaitingAgentData::FIGS_WaitingAgentData() {
 }
-

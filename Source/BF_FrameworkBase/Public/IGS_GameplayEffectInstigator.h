@@ -8,4 +8,3 @@ struct BF_FRAMEWORKBASE_API FIGS_GameplayEffectInstigator {
 public:
     FIGS_GameplayEffectInstigator();
 };
-

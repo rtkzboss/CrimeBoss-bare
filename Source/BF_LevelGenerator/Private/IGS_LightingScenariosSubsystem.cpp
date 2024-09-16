@@ -14,7 +14,7 @@ void UIGS_LightingScenariosSubsystem::RepropagateLightingScenarioChangesOnStatic
 }
 
 UIGS_LightingScenariosSubsystem* UIGS_LightingScenariosSubsystem::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_LightingScenariosSubsystem::GetUseLightScenarios() const {
@@ -22,7 +22,7 @@ bool UIGS_LightingScenariosSubsystem::GetUseLightScenarios() const {
 }
 
 TArray<FIGS_LightingScenarioLevelPair> UIGS_LightingScenariosSubsystem::GetLoadedLightingScenarios() {
-    return TArray<FIGS_LightingScenarioLevelPair>();
+    return {};
 }
 
 EIGS_LightingScenarioType UIGS_LightingScenariosSubsystem::GetCurrentLightingScenarioType() const {
@@ -31,5 +31,4 @@ EIGS_LightingScenarioType UIGS_LightingScenariosSubsystem::GetCurrentLightingSce
 
 void UIGS_LightingScenariosSubsystem::DeleteStaticLights() {
 }
-
 

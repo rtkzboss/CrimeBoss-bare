@@ -21,4 +21,3 @@ void UIGS_AIEventsDispatcher::SendAIEventNotificationForSquad(const UObject* inW
 void UIGS_AIEventsDispatcher::SendAIEventNotification(const UObject* inWCO, EIGS_AIEventNotificationType inType, const FIGS_CharacterEventNotificationData& inNotificationData) {
 }
 
-

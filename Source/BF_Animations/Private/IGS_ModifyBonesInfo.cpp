@@ -9,4 +9,3 @@ FIGS_ModifyBonesInfo::FIGS_ModifyBonesInfo() {
     (*this).RotationSpace = BCS_WorldSpace;
     (*this).ScaleSpace = BCS_WorldSpace;
 }
-

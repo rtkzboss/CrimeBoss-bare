@@ -8,19 +8,18 @@ struct FRideableCarMove {
 public:
     UPROPERTY(EditAnywhere)
     float Throttle;
-    
+
     UPROPERTY(EditAnywhere)
     float SteeringThrow;
-    
+
     UPROPERTY(EditAnywhere)
     bool Brake;
-    
+
     UPROPERTY(EditAnywhere)
     float DeltaTime;
-    
+
     UPROPERTY(EditAnywhere)
     float Time;
-    
+
     BF_RIDEABLEVEHICLES_API FRideableCarMove();
 };
-

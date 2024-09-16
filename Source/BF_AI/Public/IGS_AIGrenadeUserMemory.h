@@ -8,4 +8,3 @@ struct FIGS_AIGrenadeUserMemory {
 public:
     BF_AI_API FIGS_AIGrenadeUserMemory();
 };
-

@@ -11,4 +11,3 @@ UHoudiniParameter::UHoudiniParameter() {
     (*this).bAutoUpdate = true;
 }
 
-

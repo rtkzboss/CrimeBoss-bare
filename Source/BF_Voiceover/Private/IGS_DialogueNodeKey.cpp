@@ -2,4 +2,3 @@
 
 FIGS_DialogueNodeKey::FIGS_DialogueNodeKey() {
 }
-

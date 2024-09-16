@@ -13,6 +13,5 @@ public:
 
     UPROPERTY()
     AIGS_GrenadeProjectileBase* Grenade;
-    
-};
 
+};

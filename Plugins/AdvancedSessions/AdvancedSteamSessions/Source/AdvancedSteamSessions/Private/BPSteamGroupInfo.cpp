@@ -7,4 +7,3 @@ FBPSteamGroupInfo::FBPSteamGroupInfo() {
     (*this).numInGame = 0;
     (*this).numChatting = 0;
 }
-

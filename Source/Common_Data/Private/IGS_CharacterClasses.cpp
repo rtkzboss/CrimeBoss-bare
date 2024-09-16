@@ -3,15 +3,14 @@
 FIGS_CharacterClasses::FIGS_CharacterClasses() {
     (*this).bIsMale = true;
     (*this).bIsMutable = false;
-    (*this).MutableProfile = nullptr;
-    (*this).PlayerPawnClass = nullptr;
-    (*this).BotPawnClass = nullptr;
-    (*this).PaperDollClass = nullptr;
-    (*this).FPVArmsClass = nullptr;
-    (*this).CharacterIcon = nullptr;
-    (*this).MetaCharacterIcon = nullptr;
-    (*this).VariantName = FText::FromString(TEXT(""));
-    (*this).VariantDescription = FText::FromString(TEXT(""));
+    (*this).MutableProfile = FSoftObjectPath();
+    (*this).PlayerPawnClass = FSoftObjectPath();
+    (*this).BotPawnClass = FSoftObjectPath();
+    (*this).PaperDollClass = FSoftObjectPath();
+    (*this).FPVArmsClass = FSoftObjectPath();
+    (*this).CharacterIcon = FSoftObjectPath();
+    (*this).MetaCharacterIcon = FSoftObjectPath();
+    (*this).VariantName = FText::GetEmpty();
+    (*this).VariantDescription = FText::GetEmpty();
     (*this).DialogueID = EIGS_DialogueHeisterCharacter::None;
 }
-

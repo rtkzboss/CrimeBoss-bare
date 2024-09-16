@@ -12,12 +12,11 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* PoolObjectClass;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer PoolTagContainer;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString PoolName;
-    
-};
 
+};

@@ -16,4 +16,3 @@ enum class EIGS_ModType : uint8 {
     Mod_DynamicSight,
     Mod_INVALID,
 };
-

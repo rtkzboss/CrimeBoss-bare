@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSoftClassPtr<AIGS_GameCharacterFramework>> Characters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bSpawnUnique;
-    
-};
 
+};

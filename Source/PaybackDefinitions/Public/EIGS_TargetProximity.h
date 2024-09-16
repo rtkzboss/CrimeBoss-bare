@@ -9,4 +9,3 @@ enum class EIGS_TargetProximity : uint8 {
     Mid,
     Far,
 };
-

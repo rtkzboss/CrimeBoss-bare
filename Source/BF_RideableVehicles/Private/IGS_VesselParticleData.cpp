@@ -7,4 +7,3 @@ FIGS_VesselParticleData::FIGS_VesselParticleData() {
     (*this).PontoonLocation.Y = 0.000000000e+00f;
     (*this).PontoonLocation.Z = 0.000000000e+00f;
 }
-

@@ -3,4 +3,3 @@
 UIGS_SlideTransition::UIGS_SlideTransition() {
 }
 
-

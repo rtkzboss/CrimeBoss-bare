@@ -8,4 +8,3 @@ enum class EScreenInputPass : uint8 {
     PassNotHandled,
     PassEverything,
 };
-

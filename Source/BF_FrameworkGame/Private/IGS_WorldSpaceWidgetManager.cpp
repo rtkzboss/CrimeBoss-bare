@@ -1,5 +1,4 @@
 #include "IGS_WorldSpaceWidgetManager.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_WorldSpaceWidgetManager::UIGS_WorldSpaceWidgetManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).ObjectiveWidgetsScreenEdgeVisibility = true;
@@ -28,7 +27,7 @@ void UIGS_WorldSpaceWidgetManager::SetWorldSpaceWidgetTypeVisibility(EIGS_WorldW
 }
 
 UIGS_WorldSpaceWidgetManager* UIGS_WorldSpaceWidgetManager::GetWorldWidgetManager(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_WorldSpaceWidgetManager::GetWidgetGroupVisibility(EIGS_WorldWidgetType inType) {
@@ -38,5 +37,4 @@ bool UIGS_WorldSpaceWidgetManager::GetWidgetGroupVisibility(EIGS_WorldWidgetType
 bool UIGS_WorldSpaceWidgetManager::GetWidgetGroupScreenEdgeVisibility(EIGS_WorldWidgetType inType) {
     return false;
 }
-
 

@@ -8,4 +8,3 @@ enum class EBlueprintAsyncResultSwitch : uint8 {
     AsyncLoading,
     OnFailure,
 };
-

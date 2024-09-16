@@ -17,29 +17,28 @@ public:
 protected:
     UFUNCTION(BlueprintPure)
     TArray<UIGS_PropMeshSpawner*> GetPropMeshSpawners() const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<UIGS_PropActorSpawner*> GetPropActorSpawners() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     bool GetIsGenerated() const;
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void Generate(int32 inPropsSeed);
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void DespawnActors();
-    
+
     UPROPERTY(EditAnywhere)
     FPropSpawnerBudgetStruct SpawningBudget;
-    
+
     UPROPERTY()
     AActor* m_Parent;
-    
+
     UPROPERTY()
     bool m_IsGenerated;
-    
-};
 
+};

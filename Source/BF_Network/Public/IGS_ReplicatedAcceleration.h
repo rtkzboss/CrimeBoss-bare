@@ -8,13 +8,12 @@ struct FIGS_ReplicatedAcceleration {
 public:
     UPROPERTY()
     uint8 AccelXYRadians;
-    
+
     UPROPERTY()
     uint8 AccelXYMagnitude;
-    
+
     UPROPERTY()
     int8 AccelZ;
-    
+
     BF_NETWORK_API FIGS_ReplicatedAcceleration();
 };
-

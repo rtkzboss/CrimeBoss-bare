@@ -1,5 +1,4 @@
 #include "IGS_LootBagComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_LootBagComponent::UIGS_LootBagComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -45,7 +44,7 @@ bool UIGS_LootBagComponent::HasMaxBags() const {
 }
 
 float UIGS_LootBagComponent::GetPlayerLootWeight() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UIGS_LootBagComponent::GetMaxBagsAmount() const {
@@ -53,7 +52,7 @@ int32 UIGS_LootBagComponent::GetMaxBagsAmount() const {
 }
 
 TArray<FIGS_LootBagSingleItem> UIGS_LootBagComponent::GetItemsAndRemoveCurrentlyBeingFilledBag() {
-    return TArray<FIGS_LootBagSingleItem>();
+    return {};
 }
 
 bool UIGS_LootBagComponent::GetCurrentlyBeingFilledBagBP(FIGS_LootBagInfo& OutInfo) {
@@ -61,11 +60,11 @@ bool UIGS_LootBagComponent::GetCurrentlyBeingFilledBagBP(FIGS_LootBagInfo& OutIn
 }
 
 TArray<EIGS_BagType> UIGS_LootBagComponent::GetBagTypes() const {
-    return TArray<EIGS_BagType>();
+    return {};
 }
 
 TArray<FIGS_LootBagInfo> UIGS_LootBagComponent::GetBagsInfo() const {
-    return TArray<FIGS_LootBagInfo>();
+    return {};
 }
 
 bool UIGS_LootBagComponent::ForceRemoveLastFilledBag() {
@@ -80,7 +79,7 @@ void UIGS_LootBagComponent::ClearPocketLootAndAddToSecuredLoot() {
 }
 
 float UIGS_LootBagComponent::BagsPercentage() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UIGS_LootBagComponent::BagsCount() const {
@@ -89,8 +88,7 @@ int32 UIGS_LootBagComponent::BagsCount() const {
 
 void UIGS_LootBagComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_LootBagComponent, m_isTransferingBag);
 }
-
 

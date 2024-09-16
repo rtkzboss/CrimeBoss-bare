@@ -10,4 +10,3 @@ enum class EIGS_VoiceExpressionType : uint8 {
     Die,
     InstantDeath,
 };
-

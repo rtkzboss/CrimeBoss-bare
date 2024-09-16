@@ -13,6 +13,5 @@ public:
 
     UPROPERTY()
     TWeakObjectPtr<UHoudiniInput> HoudiniInput;
-    
-};
 
+};

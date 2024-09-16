@@ -14,4 +14,3 @@ enum class EIGS_AdvancedMovementEvent : uint8 {
     AME_LeaveRappelFinished,
     AME_LeaveCoopClimbHelpMode,
 };
-

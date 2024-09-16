@@ -10,4 +10,3 @@ public:
     APaybackCopCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

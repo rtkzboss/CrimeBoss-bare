@@ -10,16 +10,15 @@ struct FDeathAnimations {
 public:
     UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeathFront;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeathBack;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeathLeft;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<TSoftObjectPtr<UAnimSequence>> DeatRight;
-    
+
     BF_ANIMATIONS_API FDeathAnimations();
 };
-

@@ -12,4 +12,3 @@ class IRollbackable : public IInterface {
     GENERATED_BODY()
 public:
 };
-

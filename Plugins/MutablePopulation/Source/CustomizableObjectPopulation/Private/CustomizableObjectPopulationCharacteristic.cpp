@@ -2,6 +2,5 @@
 
 FCustomizableObjectPopulationCharacteristic::FCustomizableObjectPopulationCharacteristic() {
     (*this).ParameterName = TEXT("");
-    (*this).Constraints.Empty();
+    (*this).Constraints = {};
 }
-

@@ -5,4 +5,3 @@ FMETA_TaskInfoSave::FMETA_TaskInfoSave() {
     (*this).CurrentValue = 0;
     (*this).Status = EMETA_TaskStatus::None;
 }
-

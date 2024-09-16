@@ -11,12 +11,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     float Spread;
-    
+
     UPROPERTY(EditAnywhere)
     int32 Priority;
-    
+
     UPROPERTY(EditAnywhere)
     bool PassThrough;
-    
-};
 
+};

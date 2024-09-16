@@ -5,4 +5,3 @@ FGeneratedTexture::FGeneratedTexture() {
     (*this).Name = TEXT("");
     (*this).Texture = nullptr;
 }
-

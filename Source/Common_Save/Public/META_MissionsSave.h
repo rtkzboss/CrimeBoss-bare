@@ -7,10 +7,9 @@
 #include "META_TradeDealSellMissionSave.h"
 #include "META_TradeMissionSave.h"
 #include "META_TurfWarMissionSave.h"
+#include "META_MissionID.h"
 #include "Templates/SubclassOf.h"
 #include "META_MissionsSave.generated.h"
-
-class UMETA_MissionID;
 
 USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FMETA_MissionsSave {
@@ -18,28 +17,27 @@ struct COMMON_SAVE_API FMETA_MissionsSave {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_MoneyMakingMissionSave> MoneyMakingMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_AmbushMissionSave> AmbushMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_StoryMissionSave> StoryMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_TradeMissionSave> TradeMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_TradeDealSellMissionSave> TradeDealSellMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_BaseMissionSave> CinematicMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_TurfWarMissionSave> TurfWarMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UMETA_MissionID>> OtherMissions;
-    
+
     FMETA_MissionsSave();
 };
-

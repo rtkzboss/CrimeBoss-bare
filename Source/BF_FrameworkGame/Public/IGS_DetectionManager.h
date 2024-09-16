@@ -14,6 +14,5 @@ public:
 protected:
     UPROPERTY()
     TArray<AActor*> Detectors;
-    
-};
 
+};

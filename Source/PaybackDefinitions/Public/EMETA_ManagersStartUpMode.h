@@ -8,4 +8,3 @@ enum class EMETA_ManagersStartUpMode : uint8 {
     InitFromDebugData,
     InitAsUsual,
 };
-

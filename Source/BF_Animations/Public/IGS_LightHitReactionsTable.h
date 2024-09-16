@@ -12,18 +12,17 @@ public:
 
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsVariant Standing;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsVariant Crouching;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsVariant DownState;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsVariant LyingOnGround;
-    
+
     UPROPERTY(EditAnywhere)
     float NextAllowedHitDuration;
-    
-};
 
+};

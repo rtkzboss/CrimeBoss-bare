@@ -2,4 +2,3 @@
 
 FIGS_EncryptedI32::FIGS_EncryptedI32() {
 }
-

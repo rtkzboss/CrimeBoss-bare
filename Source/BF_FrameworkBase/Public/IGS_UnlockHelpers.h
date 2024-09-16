@@ -16,21 +16,20 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void PrintUnlockStats(UObject* inWCO, const FIGS_UnlockStats& inOutUnlockStats, int32 inSimulationsCount);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_UnlockItemInfo> GetAllWeaponSkinsFromFamilyTag(UObject* inWCO, const FGameplayTag& inTag, const TArray<FIGS_UnlockItemInfo>& inUnlockItems);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FIGS_UnlockItemInfo> GetAllWeaponsFromFamilyTag(UObject* inWCO, const FGameplayTag& inTag, const TArray<FIGS_UnlockItemInfo>& inUnlockItems);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FGameplayTag> GetAllSubItemsFromItemTagID(UObject* inWCO, const FGameplayTag& inTagID);
-    
+
     UFUNCTION(BlueprintCallable)
     static TArray<FIGS_UnlockItemInfo> GetAllBaseWeaponsOfFamilyFromWeapons(const TArray<FIGS_UnlockItemInfo>& inUnlockItems);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void AddUnlockStats(UObject* inWCO, UPARAM(Ref) FIGS_UnlockStats& inOutUnlockStats, const FIGS_UnlockItemInfo& inUnlockItemInfo, int32 inLevel);
-    
-};
 
+};

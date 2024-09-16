@@ -5,5 +5,6 @@ FIGS_BotOrderDatabaseData::FIGS_BotOrderDatabaseData() {
     (*this).PathMustExist = true;
     (*this).Stacks = false;
     (*this).CancelOnObject = true;
+    (*this).CannotBeInterruptedBy = {};
+    (*this).AllowedSources = {};
 }
-

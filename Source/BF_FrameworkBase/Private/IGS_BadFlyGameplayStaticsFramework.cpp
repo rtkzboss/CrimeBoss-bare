@@ -50,7 +50,7 @@ void UIGS_BadFlyGameplayStaticsFramework::RestoreRevertibleCommandVariables() {
 }
 
 UTexture2D* UIGS_BadFlyGameplayStaticsFramework::RenderTargetCreateStaticTexture2DEditorOnlyToSameFile(UTextureRenderTarget2D* RenderTarget, const FString& Name, const FString& InPath, TEnumAsByte<TextureCompressionSettings> CompressionSettings, TEnumAsByte<TextureMipGenSettings> MipSettings) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_BadFlyGameplayStaticsFramework::RemainingCompilingShaders() {
@@ -104,11 +104,11 @@ void UIGS_BadFlyGameplayStaticsFramework::GetSessionPropertyInt64(const TArray<F
 }
 
 AActor* UIGS_BadFlyGameplayStaticsFramework::GetRandomActorWithGameplayTagAndRandomStream(UObject* inWCO, FGameplayTag inGameplayTag, UIGS_RandomStreamHolder* inRandomStreamHolder) {
-    return NULL;
+    return nullptr;
 }
 
 AActor* UIGS_BadFlyGameplayStaticsFramework::GetRandomActorWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag) {
-    return NULL;
+    return nullptr;
 }
 
 FString UIGS_BadFlyGameplayStaticsFramework::GetProjectVersion() {
@@ -131,11 +131,11 @@ bool UIGS_BadFlyGameplayStaticsFramework::GetIsJapaneseSku() {
 }
 
 EIGS_AIHitReactionVariant UIGS_BadFlyGameplayStaticsFramework::GetHitReactionVariant(FVector inHitDir, AIGS_GameCharacterFramework* inGameCharacter) {
-    return EIGS_AIHitReactionVariant::SO_Unknown;
+    return EIGS_AIHitReactionVariant::Front;
 }
 
 AActor* UIGS_BadFlyGameplayStaticsFramework::GetFirstActorWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag) {
-    return NULL;
+    return nullptr;
 }
 
 FVector UIGS_BadFlyGameplayStaticsFramework::GetCurrentInterestPointLocation(FIGS_InterestPointHolder inInterestPoint) {
@@ -143,7 +143,7 @@ FVector UIGS_BadFlyGameplayStaticsFramework::GetCurrentInterestPointLocation(FIG
 }
 
 TArray<AActor*> UIGS_BadFlyGameplayStaticsFramework::GetAllActorsWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag) {
-    return TArray<AActor*>();
+    return {};
 }
 
 FVector UIGS_BadFlyGameplayStaticsFramework::GetActorBoundsCenter(const AActor* inActor) {
@@ -168,5 +168,4 @@ FIGS_InterestPointHolder UIGS_BadFlyGameplayStaticsFramework::CreateEmptyInteres
 
 void UIGS_BadFlyGameplayStaticsFramework::ClearSessionResultData(FBlueprintSessionResult& SessionResult) {
 }
-
 

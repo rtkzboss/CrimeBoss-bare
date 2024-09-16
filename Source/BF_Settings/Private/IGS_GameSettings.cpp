@@ -3,7 +3,6 @@
 UIGS_GameSettings::UIGS_GameSettings() {
     (*this).Language = TEXT("en-US");
     (*this).bSubtitlesEnabledValue = true;
-    (*this).bShowPing = true;
     (*this).bUseAltDollarDragon = true;
     (*this).bHalloweenMode = true;
     (*this).MenuBackgroundIndex = -1;
@@ -20,7 +19,6 @@ UIGS_GameSettings::UIGS_GameSettings() {
 }
 
 UIGS_GameSettings* UIGS_GameSettings::Instance() {
-    return NULL;
+    return nullptr;
 }
-
 

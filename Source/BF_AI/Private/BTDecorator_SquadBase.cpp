@@ -3,4 +3,3 @@
 UBTDecorator_SquadBase::UBTDecorator_SquadBase() {
 }
 
-

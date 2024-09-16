@@ -17,4 +17,3 @@ enum class EStimuliType : uint8 {
     DamageFromHidden,
     Unknown = 255,
 };
-

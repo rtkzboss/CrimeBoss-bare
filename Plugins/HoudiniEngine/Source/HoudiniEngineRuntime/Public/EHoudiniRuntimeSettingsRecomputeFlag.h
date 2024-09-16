@@ -8,4 +8,3 @@ enum EHoudiniRuntimeSettingsRecomputeFlag {
     HRSRF_OnlyIfMissing,
     HRSRF_Never,
 };
-

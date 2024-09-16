@@ -10,16 +10,15 @@ struct PAYBACKDEFINITIONS_API FMETA_CampaignStatistic {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DaysPlayed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_CareerStatus CampaignStatus;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_CareerCompletionReason CareerCompletionReason;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ScoreForCampaign;
-    
+
     FMETA_CampaignStatistic();
 };
-

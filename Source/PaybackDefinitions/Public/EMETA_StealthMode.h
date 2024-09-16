@@ -8,4 +8,3 @@ enum class EMETA_StealthMode : uint8 {
     Supported,
     Required,
 };
-

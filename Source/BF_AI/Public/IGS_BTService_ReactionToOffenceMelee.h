@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FText DialogID;
-    
-};
 
+};

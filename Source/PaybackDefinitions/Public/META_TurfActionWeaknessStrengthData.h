@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FMETA_TurfActionWeaknessStrengthData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LowChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MediumChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 HighChance;
-    
+
     FMETA_TurfActionWeaknessStrengthData();
 };
-

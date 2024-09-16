@@ -9,10 +9,9 @@ struct COMMON_DATA_API FIGS_PatchNotesDefinition : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString GameVersion;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Text;
-    
+
     FIGS_PatchNotesDefinition();
 };
-

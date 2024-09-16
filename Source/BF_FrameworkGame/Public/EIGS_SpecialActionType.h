@@ -14,4 +14,3 @@ enum class EIGS_SpecialActionType : uint8 {
     SAT_LootBagPickup,
     SAT_Subdue,
 };
-

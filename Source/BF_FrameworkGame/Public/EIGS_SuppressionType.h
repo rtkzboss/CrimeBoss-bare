@@ -8,4 +8,3 @@ enum class EIGS_SuppressionType : uint8 {
     EST_Sniper,
     EST_None = 255,
 };
-

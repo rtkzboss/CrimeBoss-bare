@@ -9,4 +9,3 @@ enum class ECurveColor : uint8 {
     BLUE,
     ALPHA,
 };
-

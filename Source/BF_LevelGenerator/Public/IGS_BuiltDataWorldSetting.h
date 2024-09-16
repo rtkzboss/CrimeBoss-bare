@@ -8,10 +8,9 @@ struct BF_LEVELGENERATOR_API FIGS_BuiltDataWorldSetting {
 public:
     UPROPERTY(EditAnywhere)
     bool bUsesRotatedData;
-    
+
     UPROPERTY(EditAnywhere)
     bool bUsedWithGenerator;
-    
+
     FIGS_BuiltDataWorldSetting();
 };
-

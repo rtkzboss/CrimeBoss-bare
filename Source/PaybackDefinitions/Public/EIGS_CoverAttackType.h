@@ -8,4 +8,3 @@ enum class EIGS_CoverAttackType : uint8 {
     CAT_Lean = 0,
     CAT_Peek,
 };
-

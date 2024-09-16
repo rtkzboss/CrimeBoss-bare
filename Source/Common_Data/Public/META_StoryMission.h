@@ -17,28 +17,27 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetWeaknessStrength(EMETA_AIBossStrengthChangeIntensity inNewStrength);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetTurfActionAfterSuccess(EMETA_TurfActionAfterSuccess inNewTurfAction);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetDataFromSave(const UObject* inWCO, const FMETA_StoryMissionSave& inStoryMissionSave);
-    
+
     UFUNCTION(BlueprintCallable)
     EMETA_AIBossStrengthChangeIntensity GetWeaknessStrength();
-    
+
     UFUNCTION(BlueprintCallable)
     EMETA_TurfActionAfterSuccess GetTurfActionAfterSuccess();
-    
+
     UFUNCTION(BlueprintCallable)
     FMETA_StoryMissionSave GetSaveData();
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_FPSMissionRowInfo GetInfo() const;
-    
+
 private:
     UPROPERTY()
     FMETA_StoryMissionSave m_StoryMissionSave;
-    
-};
 
+};

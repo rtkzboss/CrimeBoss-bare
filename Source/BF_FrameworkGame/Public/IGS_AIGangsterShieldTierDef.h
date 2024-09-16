@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterShieldTierDef : public FIGS_AIGangste
 public:
     FIGS_AIGangsterShieldTierDef();
 };
-

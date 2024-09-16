@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "Components/BoxComponent.h"
 #include "EIGS_OverlapResponseType.h"
-#include "IGS_OnBoxProjectileOverlapDelegate.h"
+#include "IGS_OnBoxProjectileOverlap.h"
 #include "IGS_ProjectileOverlappable.h"
 #include "IGS_BoxOverlappableComponent.generated.h"
 
@@ -14,11 +14,10 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_OnBoxProjectileOverlap OnProjectileOverlapEvent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_OverlapResponseType OverlappableType;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

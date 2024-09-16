@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void AddCategoryStyleOverride(FName CategoryId, FLinearColor Color);
-    
+
     UPROPERTY(EditAnywhere)
     bool bAutoPerCategoryStyles;
-    
+
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     UKantanCategoryStyleSet* CategoryStyleSet;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FCategoryStyleManualMapping> ManualStyleMappings;
-    
-};
 
+};

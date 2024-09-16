@@ -7,4 +7,3 @@ enum class ECartesianScalingType : uint8 {
     FixedScale,
     FixedRange,
 };
-

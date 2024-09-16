@@ -10,4 +10,3 @@ enum class EFSR2QualityMode : int32 {
     Performance,
     UltraPerformance,
 };
-

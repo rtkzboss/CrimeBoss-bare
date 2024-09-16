@@ -1,8 +1,10 @@
 #include "META_CommonData.h"
 
 UMETA_CommonData::UMETA_CommonData() {
+    (*this).RelationOfTurfsToRespect = {};
     (*this).PlayersCharacter = EIGS_CharacterID::Char_Boss_Start;
     (*this).AmountOfMissionsCanBeCompletedByBossPerDay = 1;
+    (*this).CrewCapacity = {};
     (*this).DayOfBunkruptcyWhenHeistersStartLeavePlayer = 3;
     (*this).TimeForCharactersMoodSwitchToNeutral = 5;
     (*this).ChanceForNoTraits = 6.000000238e-01f;
@@ -50,7 +52,7 @@ bool UMETA_CommonData::IsMissionGangMission(const FGameplayTag inScenario) const
 }
 
 TArray<EMETA_TradeVendor> UMETA_CommonData::GetVendorsForTrade(FGameplayTag inLootTag) const {
-    return TArray<EMETA_TradeVendor>();
+    return {};
 }
 
 void UMETA_CommonData::GetTrendDataByLootTag(FGameplayTag inMainLootTag, FMETA_PawnShopTrendData& outTrendData, bool& outSuccess) const {
@@ -92,7 +94,7 @@ int32 UMETA_CommonData::GetRandomPoolSize() const {
 }
 
 float UMETA_CommonData::GetRandomizedPercentOfSoldiersArrestedByDetectiveOnPlayersTile() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_CommonData::GetRandomizedAmountOfDaysDetectivesStaysOnTileAfterNeutralization() {
@@ -100,7 +102,7 @@ int32 UMETA_CommonData::GetRandomizedAmountOfDaysDetectivesStaysOnTileAfterNeutr
 }
 
 TArray<EMETA_RandEventCategory> UMETA_CommonData::GetRandEventsCategoriesPriority() const {
-    return TArray<EMETA_RandEventCategory>();
+    return {};
 }
 
 FMETA_RandEventCategoryConfig UMETA_CommonData::GetRandEventCategoryConfig(EMETA_RandEventCategory inRandEventCategory) {
@@ -111,7 +113,7 @@ void UMETA_CommonData::GetPricesForLootByVendor(EMETA_TradeVendor inVendor, FGam
 }
 
 float UMETA_CommonData::GetPriceBonus(EMETA_TradeVendor inTradeVendor, FGameplayTag inLootTag) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_CommonData::GetPoliceInvestigationPerStartedBancruptcy() const {
@@ -139,15 +141,15 @@ int32 UMETA_CommonData::GetPoliceInvestigationChangeForTurfCapture() const {
 }
 
 TMap<EMETA_PoliceInvestigationChangeForGraph, int32> UMETA_CommonData::GetPoliceInvestigationChangeForGraphAction() const {
-    return TMap<EMETA_PoliceInvestigationChangeForGraph, int32>();
+    return {};
 }
 
 EIGS_CharacterID UMETA_CommonData::GetPlayersCharacterID() const {
-    return EIGS_CharacterID::Char_Unknown;
+    return EIGS_CharacterID::Char_Gen_Start;
 }
 
 TMap<FGameplayTag, FMETA_PerkInfo> UMETA_CommonData::GetPerkInfoData() const {
-    return TMap<FGameplayTag, FMETA_PerkInfo>();
+    return {};
 }
 
 FMETA_PerkInfo UMETA_CommonData::GetPerkInfo(FGameplayTag inPerk, bool& bSuccess) const {
@@ -171,7 +173,7 @@ int32 UMETA_CommonData::GetMaxAmountOfActiveGoals() const {
 }
 
 TArray<FGameplayTag> UMETA_CommonData::GetMainLootTagsForTrends() const {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 FMETA_FloatInterval UMETA_CommonData::GetLootAmountPercentForAmbush() const {
@@ -191,7 +193,7 @@ FMETA_IntelDataSetup UMETA_CommonData::GetIntelDataSetup() const {
 }
 
 TMap<EMETA_TradeVendor, EMETA_TradeRelationship> UMETA_CommonData::GetInitialTradeRelationship() const {
-    return TMap<EMETA_TradeVendor, EMETA_TradeRelationship>();
+    return {};
 }
 
 int32 UMETA_CommonData::GetInitialHeatValue() const {
@@ -227,7 +229,7 @@ EMETA_Heat UMETA_CommonData::GetHeatLevelWhenPoliceInvestigation100Percent() con
 }
 
 TMap<EMETA_Heat, FMETA_HealLevelData> UMETA_CommonData::GetHeatLevelsData() const {
-    return TMap<EMETA_Heat, FMETA_HealLevelData>();
+    return {};
 }
 
 FMETA_HeatHeistsData UMETA_CommonData::GetHeatHeistsData() {
@@ -291,7 +293,7 @@ int32 UMETA_CommonData::GetCooldownForFuneralOfGenericHeisters() const {
 }
 
 float UMETA_CommonData::GetChanceToPickSecondaryGangFromNearestGangs() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UMETA_CommonData::GetChancesForWeaponsLoss_SelfReturnEvent(float& outChanceToLosePrimaryWeaponAfterReturn, float& outChanceToLoseSecondaryWeaponAfterReturn) const {
@@ -385,7 +387,7 @@ FMETA_AmbushConfig UMETA_CommonData::GetAmbushConfig() {
 }
 
 TSet<EMETA_Gang> UMETA_CommonData::FilterGangsWithGangMissions(const TArray<EMETA_Gang>& inAliveGangs) const {
-    return TSet<EMETA_Gang>();
+    return {};
 }
 
 bool UMETA_CommonData::CanUseRandEventsCategoriesPriority() const {
@@ -409,5 +411,4 @@ void UMETA_CommonData::CalculateTrendDistribution(FGameplayTagContainer& outPosi
 
 void UMETA_CommonData::CalculateNextTrendChangeDirection(bool& outPositive) const {
 }
-
 

@@ -4,4 +4,3 @@ UIGS_BTTask_SquadSwatBase::UIGS_BTTask_SquadSwatBase() {
     (*this).NodeName = TEXT("Squad Fight");
 }
 
-

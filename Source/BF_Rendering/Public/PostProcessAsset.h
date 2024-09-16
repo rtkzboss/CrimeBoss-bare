@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMaterialInstance*> PostProcessMaterial;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
-    
-};
 
+};

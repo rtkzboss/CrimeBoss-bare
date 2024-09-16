@@ -4,4 +4,3 @@ UBTDecorator_KnowHiddenPos::UBTDecorator_KnowHiddenPos() {
     (*this).NodeName = TEXT("Know hidden pos");
 }
 
-

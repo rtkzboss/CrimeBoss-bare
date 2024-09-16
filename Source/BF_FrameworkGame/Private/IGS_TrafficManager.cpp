@@ -22,11 +22,10 @@ void UIGS_TrafficManager::RegisterDestination(AIGS_VehicleDestinationPointFramew
 }
 
 TArray<AIGS_VehicleDestinationPointFramework*> UIGS_TrafficManager::GetAllDestinationPointsInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent) {
-    return TArray<AIGS_VehicleDestinationPointFramework*>();
+    return {};
 }
 
 TArray<AIGS_VehicleDestinationAreaFramework*> UIGS_TrafficManager::GetAllDestinationAreasInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent) {
-    return TArray<AIGS_VehicleDestinationAreaFramework*>();
+    return {};
 }
-
 

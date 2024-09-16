@@ -1,6 +1,4 @@
 #include "IGS_GameStateFramework.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
@@ -50,11 +48,11 @@ void AIGS_GameStateFramework::OnRep_BaggedLootValue(float inOldValue) {
 }
 
 float AIGS_GameStateFramework::GetSecuredLootWeight() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_GameStateFramework::GetSecuredLootValue() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 AIGS_GameStateFramework::GetSecuredLootBagsCount() {
@@ -62,19 +60,19 @@ int32 AIGS_GameStateFramework::GetSecuredLootBagsCount() {
 }
 
 TArray<TSubclassOf<UIGS_InventoryObjectFramework>> AIGS_GameStateFramework::GetSecuredLoot() const {
-    return TArray<TSubclassOf<UIGS_InventoryObjectFramework>>();
+    return {};
 }
 
 float AIGS_GameStateFramework::GetPocketLootWeight() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_GameStateFramework::GetPocketLootValue() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TArray<TSubclassOf<UIGS_InventoryObjectFramework>> AIGS_GameStateFramework::GetPocketLoot() const {
-    return TArray<TSubclassOf<UIGS_InventoryObjectFramework>>();
+    return {};
 }
 
 bool AIGS_GameStateFramework::GetIsEndMission() const {
@@ -82,31 +80,31 @@ bool AIGS_GameStateFramework::GetIsEndMission() const {
 }
 
 float AIGS_GameStateFramework::GetCarryablePocketLootWeight() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TArray<TSubclassOf<UIGS_CarryableInventoryObject>> AIGS_GameStateFramework::GetCarryablePocketLoot() const {
-    return TArray<TSubclassOf<UIGS_CarryableInventoryObject>>();
+    return {};
 }
 
 float AIGS_GameStateFramework::GetCarryablePickedUpLootWeight() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TArray<TSubclassOf<UIGS_CarryableInventoryObject>> AIGS_GameStateFramework::GetCarryablePickedUpLoot() const {
-    return TArray<TSubclassOf<UIGS_CarryableInventoryObject>>();
+    return {};
 }
 
 TArray<TSubclassOf<UIGS_InventoryObjectFramework>> AIGS_GameStateFramework::GetBonusPocketLoot() const {
-    return TArray<TSubclassOf<UIGS_InventoryObjectFramework>>();
+    return {};
 }
 
 TArray<TSubclassOf<UIGS_InventoryObjectFramework>> AIGS_GameStateFramework::GetBonusLoot() const {
-    return TArray<TSubclassOf<UIGS_InventoryObjectFramework>>();
+    return {};
 }
 
 float AIGS_GameStateFramework::GetAllLootCollectedValue() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void AIGS_GameStateFramework::CountPocketLootAsSecuredLoot(UObject* inWCO) {
@@ -142,7 +140,7 @@ void AIGS_GameStateFramework::AddBonusLoot(UObject* inWCO, TSubclassOf<UIGS_Inve
 
 void AIGS_GameStateFramework::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_GameStateFramework, mR_PlayersImmortality);
     DOREPLIFETIME(AIGS_GameStateFramework, PocketLootValue);
     DOREPLIFETIME(AIGS_GameStateFramework, BaggedLootValue);
@@ -155,5 +153,4 @@ void AIGS_GameStateFramework::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(AIGS_GameStateFramework, LootBagCount);
     DOREPLIFETIME(AIGS_GameStateFramework, SecuredLootBagCount);
 }
-
 

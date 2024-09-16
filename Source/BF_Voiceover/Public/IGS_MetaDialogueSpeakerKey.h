@@ -9,8 +9,8 @@ struct FIGS_MetaDialogueSpeakerKey {
 public:
     UPROPERTY(EditAnywhere)
     EIGS_MetaDialogueSpeaker Speaker;
-    
+
     BF_VOICEOVER_API FIGS_MetaDialogueSpeakerKey();
 };
 FORCEINLINE uint32 GetTypeHash(const FIGS_MetaDialogueSpeakerKey&) { return 0; }
-
+FORCEINLINE bool operator==(const FIGS_MetaDialogueSpeakerKey&, const FIGS_MetaDialogueSpeakerKey&) { return true; }

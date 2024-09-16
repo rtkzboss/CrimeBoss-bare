@@ -13,6 +13,5 @@ public:
 
     UFUNCTION(BlueprintNativeEvent)
     void PostSpawn(APrefabActor* Prefab);
-    
-};
 
+};

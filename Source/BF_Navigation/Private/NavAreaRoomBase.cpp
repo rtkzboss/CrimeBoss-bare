@@ -6,4 +6,3 @@ UNavAreaRoomBase::UNavAreaRoomBase() {
     (*this).DrawColor.R = 0;
 }
 
-

@@ -9,4 +9,3 @@ enum class EIGS_BoneAxis : uint8 {
     BA_Y,
     BA_Z,
 };
-

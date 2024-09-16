@@ -24,4 +24,3 @@ void UIGS_AINavigationHelpersLibrary::AffectNavigation(UStaticMeshComponent* com
 void UIGS_AINavigationHelpersLibrary::AddRoomConnection(AIGS_RoomBase* roomOne, AIGS_RoomBase* roomTwo) {
 }
 
-

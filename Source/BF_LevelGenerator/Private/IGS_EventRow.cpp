@@ -6,4 +6,3 @@ FIGS_EventRow::FIGS_EventRow() {
     (*this).EventSubLevel.VariantIndex = 0;
     (*this).ScriptActorTag = NAME_None;
 }
-

@@ -7,4 +7,3 @@ enum class EIGS_HandsetRespondVariants : uint8 {
     EIGS_Started,
     EIGS_Stopped,
 };
-

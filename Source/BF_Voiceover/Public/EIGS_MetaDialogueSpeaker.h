@@ -70,4 +70,3 @@ enum class EIGS_MetaDialogueSpeaker : uint8 {
     Empty = 254,
     Custom,
 };
-

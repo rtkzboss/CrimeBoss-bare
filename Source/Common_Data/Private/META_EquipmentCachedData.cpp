@@ -3,4 +3,3 @@
 FMETA_EquipmentCachedData::FMETA_EquipmentCachedData() {
     (*this).EquipmentItem = nullptr;
 }
-

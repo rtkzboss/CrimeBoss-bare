@@ -8,4 +8,3 @@ enum class EPrefabricatorConstructionSnapType : uint8 {
     Wall,
     Object,
 };
-

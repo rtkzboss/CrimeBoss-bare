@@ -2,4 +2,3 @@
 
 FIGS_TPP_Holster_MontageHolder::FIGS_TPP_Holster_MontageHolder() {
 }
-

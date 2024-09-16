@@ -15,12 +15,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplateDefendPoint;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestCoverKey;
-    
-};
 
+};

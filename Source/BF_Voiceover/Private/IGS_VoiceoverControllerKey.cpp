@@ -2,4 +2,3 @@
 
 FIGS_VoiceoverControllerKey::FIGS_VoiceoverControllerKey() {
 }
-

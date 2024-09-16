@@ -1,8 +1,4 @@
 #include "IGS_WidgetFocusableSlider.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetFocusableSlider::UIGS_WidgetFocusableSlider() : Super(FObjectInitializer::Get()) {
     (*this).SpinBoxNameText = FText::FromString(TEXT("##SPINBOX_NAME##"));
@@ -117,7 +113,7 @@ void UIGS_WidgetFocusableSlider::ScrollLeft() {
 }
 
 float UIGS_WidgetFocusableSlider::SanitizeValue(float InValue) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_WidgetFocusableSlider::ProcessSettingFontColor(FLinearColor InColor) {
@@ -125,5 +121,4 @@ void UIGS_WidgetFocusableSlider::ProcessSettingFontColor(FLinearColor InColor) {
 
 void UIGS_WidgetFocusableSlider::OnValueChanged(float InValue) {
 }
-
 

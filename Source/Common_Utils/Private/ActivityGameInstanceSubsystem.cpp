@@ -26,4 +26,3 @@ bool UActivityGameInstanceSubsystem::GetIsActivityRequested() const {
 void UActivityGameInstanceSubsystem::EndLocalActivity(EActivityTask Task, bool bSuccess) {
 }
 
-

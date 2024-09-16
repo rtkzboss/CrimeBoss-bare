@@ -12,15 +12,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float RadiusMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float CostMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float HeuristicScale;
-    
+
     UPROPERTY(EditAnywhere)
     bool IsActive;
-    
-};
 
+};

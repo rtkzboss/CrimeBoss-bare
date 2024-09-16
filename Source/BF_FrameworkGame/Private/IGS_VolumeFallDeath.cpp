@@ -1,6 +1,4 @@
 #include "IGS_VolumeFallDeath.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_VolumeFallDeath::AIGS_VolumeFallDeath(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bIsActive = true;
@@ -13,5 +11,4 @@ AIGS_VolumeFallDeath::AIGS_VolumeFallDeath(const FObjectInitializer& ObjectIniti
 
 void AIGS_VolumeFallDeath::SetActive(bool Inactive) {
 }
-
 

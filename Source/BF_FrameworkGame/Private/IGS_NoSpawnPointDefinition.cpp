@@ -1,7 +1,6 @@
 #include "IGS_NoSpawnPointDefinition.h"
 
 FIGS_NoSpawnPointDefinition::FIGS_NoSpawnPointDefinition() {
-    (*this).PassengerSpawnDefinitions.Empty();
+    (*this).PassengerSpawnDefinitions = {};
     (*this).bIsFilled = false;
 }
-

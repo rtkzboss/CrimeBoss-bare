@@ -8,4 +8,3 @@ enum class EPFEventFireMode : uint8 {
     Reverse,
     Always,
 };
-

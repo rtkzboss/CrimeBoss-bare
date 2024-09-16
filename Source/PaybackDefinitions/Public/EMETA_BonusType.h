@@ -27,4 +27,3 @@ enum class EMETA_BonusType : uint8 {
     CaptainRevives,
     BakerEquipment,
 };
-

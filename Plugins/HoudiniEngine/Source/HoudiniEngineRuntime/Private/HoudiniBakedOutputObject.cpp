@@ -6,7 +6,7 @@ FHoudiniBakedOutputObject::FHoudiniBakedOutputObject() {
     (*this).ActorBakeName = NAME_None;
     (*this).BakedObject = TEXT("");
     (*this).BakedComponent = TEXT("");
-    (*this).InstancedActors.Empty();
-    (*this).InstancedComponents.Empty();
+    (*this).InstancedActors = {};
+    (*this).InstancedComponents = {};
+    (*this).LandscapeLayers = {};
 }
-

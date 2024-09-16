@@ -9,4 +9,3 @@ struct COMMON_DATA_API FCommonMissionDataStory : public FCommonMissionDataBase {
 public:
     FCommonMissionDataStory();
 };
-

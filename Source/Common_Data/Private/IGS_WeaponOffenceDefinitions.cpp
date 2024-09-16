@@ -5,4 +5,3 @@ FIGS_WeaponOffenceDefinitions::FIGS_WeaponOffenceDefinitions() {
     (*this).ImpactLoudness = 3.000000119e-01f;
     (*this).FireOffenceDelay = 2.000000000e+00f;
 }
-

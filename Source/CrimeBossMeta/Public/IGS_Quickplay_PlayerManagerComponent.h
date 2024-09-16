@@ -10,4 +10,3 @@ public:
     UIGS_Quickplay_PlayerManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

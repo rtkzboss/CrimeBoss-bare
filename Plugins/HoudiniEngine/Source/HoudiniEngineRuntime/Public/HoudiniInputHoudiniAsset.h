@@ -11,6 +11,5 @@ public:
 
     UPROPERTY()
     int32 AssetOutputIndex;
-    
-};
 
+};

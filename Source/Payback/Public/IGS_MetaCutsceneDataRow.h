@@ -11,10 +11,9 @@ struct PAYBACK_API FIGS_MetaCutsceneDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UIGS_MetaCutsceneDataAsset> CutsceneData;
-    
+
     FIGS_MetaCutsceneDataRow();
 };
-

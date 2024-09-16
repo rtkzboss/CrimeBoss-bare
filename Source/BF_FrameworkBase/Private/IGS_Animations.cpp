@@ -21,4 +21,3 @@ void UIGS_Animations::PlayAnimMontageOnMesh(const USkeletalMeshComponent* MeshCo
 void UIGS_Animations::PlayAnimMontage(const ACharacter* Character, UAnimMontage* AnimMontage, float& OutLength, float& OutDuration, float InPlayRate, FName StartSectionName, float inStartPosition) {
 }
 
-

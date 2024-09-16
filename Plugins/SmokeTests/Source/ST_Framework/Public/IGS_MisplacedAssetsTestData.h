@@ -15,24 +15,23 @@ public:
 
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UWorld> Level;
-    
+
     UPROPERTY(EditAnywhere)
     int32 Seed;
-    
+
     UPROPERTY(EditAnywhere)
     FString OptionString;
-    
+
     UPROPERTY(EditAnywhere)
     EExclusionPresetType ExclusionPresetType;
-    
+
     UPROPERTY(EditAnywhere)
     EInclusionPresetType InclusionPresetType;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FName> ExcludedCollections;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FName> IncludedCollections;
-    
-};
 
+};

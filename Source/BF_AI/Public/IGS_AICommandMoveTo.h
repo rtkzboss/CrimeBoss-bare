@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Position;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector LookAtPoint;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StoppingDistance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_Speed MovementSpeed;
-    
-};
 
+};

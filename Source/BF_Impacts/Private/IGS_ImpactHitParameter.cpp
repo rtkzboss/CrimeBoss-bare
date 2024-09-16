@@ -6,4 +6,3 @@ FIGS_ImpactHitParameter::FIGS_ImpactHitParameter() {
     (*this).Cooldown = 0.000000000e+00f;
     (*this).UseDefaultMaterial = false;
 }
-

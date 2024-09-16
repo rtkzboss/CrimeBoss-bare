@@ -7,4 +7,3 @@ FIGS_BotOrderPointOfInterest::FIGS_BotOrderPointOfInterest() {
     (*this).Location.Z = 3.402823466e+38f;
     (*this).PathExists = false;
 }
-

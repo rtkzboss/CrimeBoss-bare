@@ -1,5 +1,4 @@
 #include "IGS_GUIController.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_GUIController::UIGS_GUIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -91,5 +90,4 @@ void UIGS_GUIController::CloseAnyMenu() {
 bool UIGS_GUIController::CanWheelMenuBeOpen_Implementation(EIGS_WheelMenuType inType) const {
     return false;
 }
-
 

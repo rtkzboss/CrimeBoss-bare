@@ -9,4 +9,3 @@ UEnvQueryGenerator_CoverFMemory::UEnvQueryGenerator_CoverFMemory() {
     (*this).ItemType = UEnvQueryItemType_Cover::StaticClass();
 }
 
-

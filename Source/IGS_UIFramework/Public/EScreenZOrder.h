@@ -12,4 +12,3 @@ enum class EScreenZOrder : uint8 {
     Critical = 200,
     None = 255,
 };
-

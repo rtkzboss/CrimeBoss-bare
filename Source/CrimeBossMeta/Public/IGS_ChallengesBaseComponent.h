@@ -2,9 +2,8 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
-#include "IGS_ChallengeDataChangedDelegate.h"
-#include "IGS_ChallengesCompletedDelegate.h"
+#include "IGS_ChallengeDataChanged.h"
+#include "IGS_ChallengesCompleted.h"
 #include "IGS_ChallengesBaseComponent.generated.h"
 
 class UIGS_ChallengesDatabase;
@@ -19,52 +18,51 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void TryResolveCompletedChallenges(bool inNotify);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetChallengeInProgressValue(FGameplayTag inTag, int32 InValue, bool inNotify);
-    
+
     UFUNCTION(BlueprintCallable)
     void ResetChallenges();
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetRequiredCompletedChallenges(FGameplayTag inTag) const;
-    
+
     UFUNCTION(BlueprintPure)
     TMap<FGameplayTag, int32> GetCompletedChallenges() const;
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetCompletedChallengeCount(FGameplayTag inTag, bool inExactMatch) const;
-    
+
     UFUNCTION(BlueprintPure)
     TMap<FGameplayTag, int32> GetChallengesInProgress() const;
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetChallengeInProgressValue(FGameplayTag inTag, bool inExactMatch) const;
-    
+
     UFUNCTION(BlueprintPure)
     bool CanChallengeBeProgressed(FGameplayTag inTag) const;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_ChallengeDataChanged OnChallengeDataChanged;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_ChallengesCompleted OnChallengesCompleted;
-    
+
 protected:
     UPROPERTY()
     UIGS_PaybackSaveGameAccount* m_SaveGameAccount;
-    
+
     UPROPERTY()
     UIGS_SaveManager* m_SaveManager;
-    
+
     UPROPERTY()
     TMap<FGameplayTag, int32> m_ChallengesInProgress;
-    
+
     UPROPERTY()
     TMap<FGameplayTag, int32> m_CompletedChallenges;
-    
+
     UPROPERTY()
     UIGS_ChallengesDatabase* m_ChallengesDatabase;
-    
-};
 
+};

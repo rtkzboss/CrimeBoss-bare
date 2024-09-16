@@ -17,21 +17,20 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FGameplayTag AfterFireCooldownTag;
-    
+
     UPROPERTY(VisibleAnywhere)
     AActor* Target;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_IntelligentGameCharacter* AIGameCharacter;
-    
+
     UPROPERTY(VisibleAnywhere)
     int32 DesiredWeaponShootAmmo;
-    
+
     UPROPERTY(VisibleAnywhere)
     int32 CurrWeaponShootAmmo;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_WeaponBase* Weapon;
-    
-};
 
+};

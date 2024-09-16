@@ -9,4 +9,3 @@ FDrawerData::FDrawerData() {
     (*this).PathColor.A = 255;
     (*this).Thickness = 5.000000000e+00f;
 }
-

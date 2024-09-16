@@ -10,4 +10,3 @@ FIGS_WeaponAccuracyInfoHolder::FIGS_WeaponAccuracyInfoHolder() {
     (*this).bIsCrouching = false;
     (*this).bIsJumping = false;
 }
-

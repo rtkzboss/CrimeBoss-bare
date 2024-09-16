@@ -15,19 +15,18 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetOutlineState(EIGS_CameraOutlineState inState);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetComponentsForOutline(const TArray<UPrimitiveComponent*>& inComponents);
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USceneComponent* MagnetPinPoint;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USceneComponent* PlacePinPoint;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UPrimitiveComponent* SweepComponent;
-    
-};
 
+};

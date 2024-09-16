@@ -9,4 +9,3 @@ enum class EIGS_SO_StopType : uint8 {
     SO_BreakAnim,
     SO_Immediate,
 };
-

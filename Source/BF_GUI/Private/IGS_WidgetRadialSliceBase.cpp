@@ -1,8 +1,4 @@
 #include "IGS_WidgetRadialSliceBase.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetRadialSliceBase::UIGS_WidgetRadialSliceBase() {
     (*this).NormalColor.R = 5.000000000e-01f;
@@ -24,6 +20,5 @@ void UIGS_WidgetRadialSliceBase::SliceHover_Implementation() {
 bool UIGS_WidgetRadialSliceBase::SliceClicked_Implementation() {
     return false;
 }
-
 
 

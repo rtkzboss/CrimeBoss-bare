@@ -15,6 +15,5 @@ class IIGS_PingableInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UIGS_PingableComponent* GetPingableComponent();
-    
-};
 
+};

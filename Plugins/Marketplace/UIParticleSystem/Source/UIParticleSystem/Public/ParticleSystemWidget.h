@@ -16,28 +16,27 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetReactivate(bool bActivateAndReset);
-    
+
     UFUNCTION(BlueprintPure)
     UParticleSystemComponent* GetParticleComponent() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void ActivateParticles(bool bActive, bool bReset);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UParticleSystem* ParticleSystemTemplate;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bAutoActivate;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bReactivate;
-    
+
 private:
     UPROPERTY(Instanced)
     UUIParticleComponent* WorldParticleComponent;
-    
+
     UPROPERTY()
     AActor* WorldParticleActor;
-    
-};
 
+};

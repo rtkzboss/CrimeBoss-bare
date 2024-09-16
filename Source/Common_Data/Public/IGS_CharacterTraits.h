@@ -9,13 +9,12 @@ struct FIGS_CharacterTraits {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 MaxHealth;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ReviveCount;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagQuery AllowedWieldables;
-    
+
     COMMON_DATA_API FIGS_CharacterTraits();
 };
-

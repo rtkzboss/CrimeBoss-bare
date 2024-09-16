@@ -9,4 +9,3 @@ enum class EIGS_ChainDifficulty : uint8 {
     Medium,
     Hard,
 };
-

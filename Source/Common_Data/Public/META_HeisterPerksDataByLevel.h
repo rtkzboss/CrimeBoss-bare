@@ -9,7 +9,6 @@ struct COMMON_DATA_API FMETA_HeisterPerksDataByLevel {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<int32, FMETA_HeisterPerksEconomyData> Data;
-    
+
     FMETA_HeisterPerksDataByLevel();
 };
-

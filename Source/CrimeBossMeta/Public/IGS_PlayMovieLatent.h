@@ -2,11 +2,10 @@
 #include "CoreMinimal.h"
 #include "META_MovieUIData.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "IGS_OnMovieFinishedLatentDelegate.h"
-#include "IGS_OnMovieStartedLatentDelegate.h"
+#include "IGS_OnMovieFinishedLatent.h"
+#include "IGS_OnMovieStartedLatent.h"
 #include "IGS_PlayMovieLatent.generated.h"
 
-class UIGS_PlayMovieLatent;
 class UObject;
 
 UCLASS()
@@ -17,20 +16,19 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static UIGS_PlayMovieLatent* PlayMovieLatent(UObject* WorldContextObject, FMETA_MovieUIData inMovieData);
-    
+
 private:
     UFUNCTION()
     void MovieStarted_Internal();
-    
+
     UFUNCTION()
     void MovieFinished_Internal();
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FIGS_OnMovieStartedLatent OnMovieStarted;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnMovieFinishedLatent OnMovieFinished;
-    
-};
 
+};

@@ -4,4 +4,3 @@ UIGS_LevelPlayerSpawnManager::UIGS_LevelPlayerSpawnManager() {
     (*this).IsSpawnEnabled = true;
 }
 
-

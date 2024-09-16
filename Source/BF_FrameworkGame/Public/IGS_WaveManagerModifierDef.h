@@ -8,7 +8,6 @@ struct BF_FRAMEWORKGAME_API FIGS_WaveManagerModifierDef {
 public:
     UPROPERTY(EditDefaultsOnly)
     int32 MaxSpawnedEnemiesAddition;
-    
+
     FIGS_WaveManagerModifierDef();
 };
-

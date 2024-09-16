@@ -38,4 +38,3 @@ FIGS_HubGroupTileSetup::FIGS_HubGroupTileSetup() {
     (*this).TileFlag = EIGS_HubScenarioFlag::Empty;
     (*this).IsPlayableArea = true;
 }
-

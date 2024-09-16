@@ -8,4 +8,3 @@ enum class EIGS_LadderNavLinkState : uint8 {
     Running,
     Out,
 };
-

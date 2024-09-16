@@ -2,4 +2,3 @@
 
 FIGS_ThirdPersonWeaponAnimations::FIGS_ThirdPersonWeaponAnimations() {
 }
-

@@ -14,7 +14,6 @@ public:
 private:
     UPROPERTY()
     TArray<UMETA_Character*> m_HiredHeisters;
-    
+
     virtual TStatId GetStatId() const override { return {}; }
 };
-

@@ -10,4 +10,3 @@ enum class EIGS_CoverPreset : uint8 {
     AICS_Cautious,
     AICS_Unknown = 255,
 };
-

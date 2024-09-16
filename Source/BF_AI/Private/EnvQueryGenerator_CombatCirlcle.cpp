@@ -7,4 +7,3 @@ UEnvQueryGenerator_CombatCirlcle::UEnvQueryGenerator_CombatCirlcle() {
     (*this).GenerateAround = UEnvQueryContext_Querier::StaticClass();
 }
 
-

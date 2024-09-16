@@ -8,4 +8,3 @@ struct FIGS_PlayerMeleeTargetResult {
 public:
     BF_FRAMEWORKGAME_API FIGS_PlayerMeleeTargetResult();
 };
-

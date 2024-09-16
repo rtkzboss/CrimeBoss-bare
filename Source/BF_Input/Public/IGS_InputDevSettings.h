@@ -15,21 +15,20 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputActionMapDataAsset> InputActionMap;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputDeviceIconsDataAsset> InputActionIconMapPS5;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputDeviceIconsDataAsset> InputActionIconMapXBSX;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputDeviceIconsDataAsset> InputActionIconMapSteamDeck;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputDeviceIconsDataAsset> InputActionIconMapPC;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_InputActionDefaultKeysDataAsset> InputActionDefaultKeys;
-    
-};
 
+};

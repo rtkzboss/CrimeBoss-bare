@@ -5,4 +5,3 @@ UIGS_EQG_PanicPoints::UIGS_EQG_PanicPoints() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

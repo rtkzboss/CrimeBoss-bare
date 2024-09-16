@@ -10,13 +10,12 @@ struct COMMON_SAVE_API FMETA_CityMapManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, FMETA_TileSaveData> TilesSaveData;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, int32> BaseStrengthOfTiles;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 LastDayOfTilesIncomeRefresh;
-    
+
     FMETA_CityMapManagerSaveData();
 };
-

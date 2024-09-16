@@ -8,4 +8,3 @@ enum class EIGS_MeleeTargetType : uint8 {
     MeleeTargetType_StealthKill,
     MeleeTargetType_Break,
 };
-

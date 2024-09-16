@@ -24,4 +24,3 @@ EIGS_WeaponAttackType UIGS_UWeaponAniminstance::GetAttackType() const {
 void UIGS_UWeaponAniminstance::AnimNotify_OnReloadFromMontage_Implementation() {
 }
 
-

@@ -7,4 +7,3 @@ UBTDecorator_TagCooldownRandom::UBTDecorator_TagCooldownRandom() {
     (*this).NodeName = TEXT("Tag Cooldown Random");
 }
 
-

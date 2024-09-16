@@ -1,16 +1,15 @@
 #include "IGS_GlassRegular.h"
 #include "IGS_BoxOverlappableComponent.h"
+#include "Components/ActorComponent.h"
 #include "PhysicsEngine/BodyInstance.h"
 #include "Components/BoxComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Engine/EngineTypes.h"
-#include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
-#include "Components/SkinnedMeshComponent.h"
-#include "Chaos/ChaosEngineInterface.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_GlassRegular::UIGS_GlassRegular(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UBoxComponent>(TEXT("RamTrigger"));
+    auto gen2 = CreateDefaultSubobject<UIGS_BoxOverlappableComponent>(TEXT("DummyCollision"));
     (*this).GlassPanelPreset = EIGS_GlassRegularPreset::Panel_200X135;
     (*this).ScaleUniform = 1.000000000e+00f;
     (*this).ScaleY = 1.000000000e+00f;
@@ -23,19 +22,24 @@ UIGS_GlassRegular::UIGS_GlassRegular(const FObjectInitializer& ObjectInitializer
     (*this).BreakIntensity = 1.000000015e-01f;
     (*this).BulletBreakRadius = 1.000000000e+01f;
     (*this).BulletBreakHeight = 1.000000000e+01f;
-    (*this).m_RamTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("RamTrigger"));
+    (*this).m_RamTrigger = gen;
     (*this).m_PresetScale = 1.000000000e+00f;
-    (*this).m_DummyCollision = CreateDefaultSubobject<UIGS_BoxOverlappableComponent>(TEXT("DummyCollision"));
+    (*this).m_DummyCollision = gen2;
     (*this).PhysicsTransformUpdateMode = EPhysicsTransformUpdateMode::ComponentTransformIsKinematic;
     (*this).bUpdateOverlapsOnAnimationFinalize = false;
     (*this).bNoSkeletonUpdate = true;
     (*this).bEnableUpdateRateOptimizations = true;
     (*this).CastShadow = false;
-    (*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("ObjectType")->ContainerPtrToValuePtr<TEnumAsByte<ECollisionChannel>>(&(*this).BodyInstance, 0)) = ECC_PhysicsBody;
-    (*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionEnabled")->ContainerPtrToValuePtr<TEnumAsByte<ECollisionEnabled::Type>>(&(*this).BodyInstance, 0)) = ECollisionEnabled::QueryAndPhysics;
-    (*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName")->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("BreakableGlassPhysicsOnly");
+    auto gen3 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("ObjectType");
+    (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ECollisionChannel>>(&(*this).BodyInstance, 0)) = ECC_PhysicsBody;
+    auto gen4 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionEnabled");
+    (*gen4->ContainerPtrToValuePtr<TEnumAsByte<ECollisionEnabled::Type>>(&(*this).BodyInstance, 0)) = ECollisionEnabled::QueryAndPhysics;
+    auto gen5 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName");
+    (*gen5->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("BreakableGlassPhysicsOnly");
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
     (*this).PrimaryComponentTick.TickInterval = 1.999999955e-02f;
+    auto gen6 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen6)->SetPropertyValue(&(*gen6->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
     (*this).bAutoActivate = false;
 }
 
@@ -94,8 +98,7 @@ void UIGS_GlassRegular::ApplyDamageToGlass_Implementation(FVector_NetQuantize in
 
 void UIGS_GlassRegular::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_GlassRegular, mR_GlassState);
 }
-
 

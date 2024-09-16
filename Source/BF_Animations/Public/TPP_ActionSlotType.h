@@ -8,4 +8,3 @@ enum class TPP_ActionSlotType : uint8 {
     EBF_TPP_Throw_Finished,
     EBF_TPP_Throw_Canceled,
 };
-

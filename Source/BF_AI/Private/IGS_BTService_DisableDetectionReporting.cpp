@@ -4,4 +4,3 @@ UIGS_BTService_DisableDetectionReporting::UIGS_BTService_DisableDetectionReporti
     (*this).NodeName = TEXT("Disable Detection Reporting");
 }
 
-

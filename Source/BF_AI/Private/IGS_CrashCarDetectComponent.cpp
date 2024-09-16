@@ -1,5 +1,4 @@
 #include "IGS_CrashCarDetectComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_CrashCarDetectComponent::UIGS_CrashCarDetectComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -12,5 +11,4 @@ void UIGS_CrashCarDetectComponent::CallOnStartCrashDelegate(FHitResult inHitResu
 
 void UIGS_CrashCarDetectComponent::CallOnEndCrashDelegate() {
 }
-
 

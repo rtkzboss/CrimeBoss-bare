@@ -10,4 +10,3 @@ public:
     UIGS_Quickplay_NotificationManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

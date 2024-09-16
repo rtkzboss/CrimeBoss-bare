@@ -6,4 +6,3 @@ FIGS_SaveData_Version::FIGS_SaveData_Version() {
     (*this).RevisionSaved = TEXT("");
     (*this).SnapshotRevision = TEXT("");
 }
-

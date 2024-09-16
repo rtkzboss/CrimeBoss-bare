@@ -9,13 +9,12 @@ struct BF_FRAMEWORKGAME_API FIGS_NoiseOffenceTableRow : public FIGS_SuspicionDat
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName NoiseEventTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bAddsDetection;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DetectionAddedMult;
-    
+
     FIGS_NoiseOffenceTableRow();
 };
-

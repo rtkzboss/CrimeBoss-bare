@@ -3,4 +3,3 @@
 FIGS_WeaponSkinMaterial::FIGS_WeaponSkinMaterial() {
     (*this).TortillaMaterial = nullptr;
 }
-

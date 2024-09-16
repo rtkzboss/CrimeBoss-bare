@@ -5,4 +5,3 @@ UIGS_CoverPathQueryFilter::UIGS_CoverPathQueryFilter() {
     (*this).IsActive = true;
 }
 
-

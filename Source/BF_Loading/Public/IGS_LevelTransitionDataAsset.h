@@ -13,21 +13,20 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     float DelayTime;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkStateValue* Starter_MainMenu;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkStateValue* MainMenu_MetaMultiplayer;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkStateValue* MetaMultiplayer_MainMenu;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkStateValue* MetaMultiplayer_Mission;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkStateValue* Mission_MetaMultiplayer;
-    
-};
 
+};

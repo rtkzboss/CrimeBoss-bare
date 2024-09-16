@@ -7,22 +7,21 @@ void UIGS_UnlockHelpers::PrintUnlockStats(UObject* inWCO, const FIGS_UnlockStats
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockHelpers::GetAllWeaponSkinsFromFamilyTag(UObject* inWCO, const FGameplayTag& inTag, const TArray<FIGS_UnlockItemInfo>& inUnlockItems) {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockHelpers::GetAllWeaponsFromFamilyTag(UObject* inWCO, const FGameplayTag& inTag, const TArray<FIGS_UnlockItemInfo>& inUnlockItems) {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FGameplayTag> UIGS_UnlockHelpers::GetAllSubItemsFromItemTagID(UObject* inWCO, const FGameplayTag& inTagID) {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockHelpers::GetAllBaseWeaponsOfFamilyFromWeapons(const TArray<FIGS_UnlockItemInfo>& inUnlockItems) {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 void UIGS_UnlockHelpers::AddUnlockStats(UObject* inWCO, FIGS_UnlockStats& inOutUnlockStats, const FIGS_UnlockItemInfo& inUnlockItemInfo, int32 inLevel) {
 }
-
 

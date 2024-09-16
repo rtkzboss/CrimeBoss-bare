@@ -10,4 +10,3 @@ public:
     UIGS_PropLogicComponentBase(const FObjectInitializer& ObjectInitializer);
 
 };
-

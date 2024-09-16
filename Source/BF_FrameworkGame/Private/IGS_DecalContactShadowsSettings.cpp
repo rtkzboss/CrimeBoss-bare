@@ -5,4 +5,3 @@ FIGS_DecalContactShadowsSettings::FIGS_DecalContactShadowsSettings() {
     (*this).WidthScale = 4.345000088e-01f;
     (*this).Offset = -2.500000000e+00f;
 }
-

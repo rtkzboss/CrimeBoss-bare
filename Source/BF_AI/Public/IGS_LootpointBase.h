@@ -16,16 +16,15 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_LootHolderBase*> LootHolders;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_LootCollectionBase*> LootColletions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_LootCollectionSpawnerBase*> LootSpawners;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USceneComponent* Root;
-    
-};
 
+};

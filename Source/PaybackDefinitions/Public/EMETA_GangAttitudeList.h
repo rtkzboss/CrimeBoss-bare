@@ -8,4 +8,3 @@ enum class EMETA_GangAttitudeList : uint8 {
     Enemies,
     Friends,
 };
-

@@ -5,7 +5,6 @@
 #include "IGS_AbilityAsync_Lerp.generated.h"
 
 class AActor;
-class UIGS_AbilityAsync_Lerp;
 
 UCLASS()
 class BF_FRAMEWORKBASE_API UIGS_AbilityAsync_Lerp : public UAbilityAsync {
@@ -15,6 +14,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static UIGS_AbilityAsync_Lerp* LerpToLocation(AActor* TargetActor, FIGS_InterestPointHolder InPos, FIGS_InterestPointHolder inLookAtPos, float inSpeed, float inMinDistance, float inLookSpeed);
-    
-};
 
+};

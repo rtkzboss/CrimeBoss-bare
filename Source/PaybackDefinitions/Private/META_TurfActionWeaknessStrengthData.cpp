@@ -5,4 +5,3 @@ FMETA_TurfActionWeaknessStrengthData::FMETA_TurfActionWeaknessStrengthData() {
     (*this).MediumChance = 0;
     (*this).HighChance = 0;
 }
-

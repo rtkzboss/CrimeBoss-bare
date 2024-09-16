@@ -34,7 +34,7 @@ void UAdvancedSteamFriendsLibrary::GetSteamFriendGamePlayed(const FBPUniqueNetId
 }
 
 UTexture2D* UAdvancedSteamFriendsLibrary::GetSteamFriendAvatar(const FBPUniqueNetId UniqueNetId, EBlueprintAsyncResultSwitch& Result, SteamAvatarSize AvatarSize) {
-    return NULL;
+    return nullptr;
 }
 
 FBPUniqueNetId UAdvancedSteamFriendsLibrary::GetLocalSteamIDFromSteam() {
@@ -52,5 +52,4 @@ bool UAdvancedSteamFriendsLibrary::FilterText(const FString& TextToFilter, EBPTe
 FBPUniqueNetId UAdvancedSteamFriendsLibrary::CreateSteamIDFromString(const FString& SteamID64) {
     return FBPUniqueNetId{};
 }
-
 

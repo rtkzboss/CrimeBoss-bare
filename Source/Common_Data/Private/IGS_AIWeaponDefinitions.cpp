@@ -20,4 +20,3 @@ FIGS_AIWeaponDefinitions::FIGS_AIWeaponDefinitions() {
     (*this).AIBash.MaxRange = 1.000000000e+02f;
     (*this).AIBash.TraceRadius = 3.000000000e+01f;
 }
-

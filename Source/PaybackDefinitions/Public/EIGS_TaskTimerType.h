@@ -8,4 +8,3 @@ enum class EIGS_TaskTimerType : uint8 {
     Timer,
     TimeTrial,
 };
-

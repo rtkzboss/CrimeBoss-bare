@@ -1,5 +1,4 @@
 #include "IGS_InjuryComponentAI.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_InjuryComponentAI::UIGS_InjuryComponentAI(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).HeavyReactionTresholdMin = 6.999999881e-01f;
@@ -17,5 +16,4 @@ UIGS_InjuryComponentAI::UIGS_InjuryComponentAI(const FObjectInitializer& ObjectI
 
 void UIGS_InjuryComponentAI::RequestReaction(bool inIsHeavy, FVector inHitDirection) {
 }
-
 

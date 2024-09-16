@@ -13,30 +13,29 @@ public:
 
     UPROPERTY(EditAnywhere)
     FGameplayTag AnimationTypeTag;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MontageTypeBlackBoardKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector AnimationCommandKey;
-    
+
     UPROPERTY(EditAnywhere)
     bool bIsBlackboardBased;
-    
+
     UPROPERTY(EditAnywhere)
     bool bIsAnimationCommand;
-    
+
     UPROPERTY(EditAnywhere)
     bool bHasPlayTime;
-    
+
     UPROPERTY(EditAnywhere)
     bool bCanBeAborted;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector PlayTimeBlackBoardKey;
-    
+
     UPROPERTY(EditAnywhere)
     float PlayTime;
-    
-};
 
+};

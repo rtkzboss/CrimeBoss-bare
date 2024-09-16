@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_AdditionalHeister {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsUnique;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 Quality;
-    
+
     FMETA_AdditionalHeister();
 };
-

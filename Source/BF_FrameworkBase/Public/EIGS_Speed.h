@@ -8,4 +8,3 @@ enum class EIGS_Speed : uint8 {
     MS_Run,
     MS_Sprint,
 };
-

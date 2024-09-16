@@ -20,4 +20,3 @@ FIGS_PerksTableRow UIGS_PerksDatabase::GetDataByIndexBP(int32 inIndex, bool& out
     return FIGS_PerksTableRow{};
 }
 
-

@@ -14,27 +14,26 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     bool bKnockbackFromLocation;
-    
+
     UPROPERTY(EditAnywhere)
     bool bKnockbackFromActor;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector Actor;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector Location;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag Forward;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag Backward;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag Left;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag Right;
-    
-};
 
+};

@@ -9,10 +9,9 @@ struct FIGS_NetTransform {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector_NetQuantize Location;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector_NetQuantize Rotation;
-    
+
     BF_NETWORK_API FIGS_NetTransform();
 };
-

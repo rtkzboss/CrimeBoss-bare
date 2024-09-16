@@ -8,4 +8,3 @@ enum class EIGS_PoolNetMode : uint8 {
     OnlyServer,
     OnlyClient,
 };
-

@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_VODialoguesCommonTypeSettings {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Priority;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Chance;
-    
+
     FMETA_VODialoguesCommonTypeSettings();
 };
-

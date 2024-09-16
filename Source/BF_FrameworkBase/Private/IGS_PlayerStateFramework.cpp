@@ -1,6 +1,4 @@
 #include "IGS_PlayerStateFramework.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_PlayerStateFramework::AIGS_PlayerStateFramework(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -29,5 +27,4 @@ EMETA_RespectLvl AIGS_PlayerStateFramework::GetRespect() const {
 int32 AIGS_PlayerStateFramework::GetProgressionLevel() const {
     return 0;
 }
-
 

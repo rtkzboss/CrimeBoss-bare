@@ -1,5 +1,4 @@
 #include "META_StashManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_StashManagerComponent::UMETA_StashManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -22,7 +21,7 @@ void UMETA_StashManagerComponent::GetWarehouseAttackLosses(int32& outRemovedMone
 }
 
 TMap<FGameplayTag, int32> UMETA_StashManagerComponent::GetSortedLoot(bool inAscSort) {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 void UMETA_StashManagerComponent::GetPlayersArmyTier_Implementation(EMETA_ArmyTier& ArmyTier) const {
@@ -33,11 +32,11 @@ FMETA_PartnerInfo UMETA_StashManagerComponent::GetPartnerInfo(EMETA_Partner Part
 }
 
 TArray<FGameplayTag> UMETA_StashManagerComponent::GetParentLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue) {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 TArray<FGameplayTag> UMETA_StashManagerComponent::GetLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue) {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 void UMETA_StashManagerComponent::ChangeLootByValue(FGameplayTag inLootTag, int32 InValue, bool inRawValue) {
@@ -50,7 +49,6 @@ void UMETA_StashManagerComponent::AddEquipmentToStashByObject(UMETA_Equipment* i
 }
 
 UMETA_Equipment* UMETA_StashManagerComponent::AddEquipmentToStashByID(TSubclassOf<UIGS_EquipmentInventoryObject> inEquipmentId) {
-    return NULL;
+    return nullptr;
 }
-
 

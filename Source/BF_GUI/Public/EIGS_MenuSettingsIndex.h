@@ -11,4 +11,3 @@ enum class EIGS_MenuSettingsIndex : uint8 {
     MS_SoundSet,
     MS_VoiceSet,
 };
-

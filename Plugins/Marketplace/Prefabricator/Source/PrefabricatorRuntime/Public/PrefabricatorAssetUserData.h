@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<APrefabActor> PrefabActor;
-    
+
     UPROPERTY(VisibleAnywhere)
     FGuid ItemId;
-    
-};
 
+};

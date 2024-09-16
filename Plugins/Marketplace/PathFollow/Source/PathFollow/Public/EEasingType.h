@@ -18,4 +18,3 @@ enum class EEasingType : uint8 {
     SinOut,
     SinInOut,
 };
-

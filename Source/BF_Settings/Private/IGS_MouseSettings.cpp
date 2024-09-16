@@ -9,7 +9,6 @@ UIGS_MouseSettings::UIGS_MouseSettings() {
 }
 
 UIGS_MouseSettings* UIGS_MouseSettings::Instance() {
-    return NULL;
+    return nullptr;
 }
-
 

@@ -14,6 +14,5 @@ public:
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static int32 GetCompletedCampaignCount(UObject* inWCO, EIGS_UserDifficulty inDifficulty);
-    
-};
 
+};

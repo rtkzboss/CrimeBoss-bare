@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_ComponentDialogueDataAsset> DialogueComponentDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_ComponentVoiceExpressionDataAsset> VoiceExpressionComponentDataAsset;
-    
-};
 
+};

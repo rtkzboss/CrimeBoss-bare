@@ -3,4 +3,3 @@
 UIGS_MediumHeistMissionObject::UIGS_MediumHeistMissionObject() {
 }
 
-

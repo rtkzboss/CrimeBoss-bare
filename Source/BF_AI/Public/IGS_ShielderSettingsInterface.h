@@ -13,6 +13,5 @@ class BF_AI_API IIGS_ShielderSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetShielderWeakSpotHealth();
-    
-};
 
+};

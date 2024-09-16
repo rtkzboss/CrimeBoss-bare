@@ -12,13 +12,12 @@ struct FMETA_CampaignModeMatchingData {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UMETA_PlotlineSelection> CampaignMode;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_CampaignModeCondition> Conditions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ConditionExprOperator ExpressionOperator;
-    
+
     PAYBACKDEFINITIONS_API FMETA_CampaignModeMatchingData();
 };
-

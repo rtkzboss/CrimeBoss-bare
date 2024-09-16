@@ -11,4 +11,3 @@ FKantanCartesianPlotScale::FKantanCartesianPlotScale() {
     (*this).RangeY.Min = -1.000000000e+02f;
     (*this).RangeY.Max = 1.000000000e+02f;
 }
-

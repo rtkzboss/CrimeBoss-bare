@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector BezierControlPoint;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector BezierControlPointOffset;
-    
-};
 
+};

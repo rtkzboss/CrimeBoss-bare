@@ -10,4 +10,3 @@ UHoudiniPDGAssetLink::UHoudiniPDGAssetLink() {
     (*this).BakeFolder.Path = TEXT("/Game/HoudiniEngine/Bake");
 }
 
-

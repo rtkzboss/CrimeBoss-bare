@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeBaseDataModifiers : public FIGS_AIUni
 public:
     FIGS_AIEmployeeBaseDataModifiers();
 };
-

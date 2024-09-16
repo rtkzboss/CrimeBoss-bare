@@ -9,7 +9,6 @@ struct PAYBACK_API FIGS_MetaCutscenePoseSet {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_MetaCutsceneCharacterPoseData> PoseSets;
-    
+
     FIGS_MetaCutscenePoseSet();
 };
-

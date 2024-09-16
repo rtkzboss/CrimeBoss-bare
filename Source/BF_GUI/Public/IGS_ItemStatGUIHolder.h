@@ -8,10 +8,9 @@ struct FIGS_ItemStatGUIHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText StatName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText StatValue;
-    
+
     BF_GUI_API FIGS_ItemStatGUIHolder();
 };
-

@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeTiersDef : public FIGS_AIBaseTiersDef
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Tier1;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Tier2;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Tier3;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeSpecializationHolder Special;
-    
+
     FIGS_AIEmployeeTiersDef();
 };
-

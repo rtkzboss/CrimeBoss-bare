@@ -15,15 +15,14 @@ public:
 protected:
     UFUNCTION()
     void OnOverlapEnd(AActor* inOverlappedActor, AActor* inOtherActor);
-    
+
     UFUNCTION()
     void OnOverlapBegin(AActor* inOverlappedActor, AActor* inOtherActor);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_AkEnvironmentSpace AkEnviroSpace;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool CopyTransmissionLossToSurfaces;
-    
-};
 
+};

@@ -10,10 +10,9 @@ struct FBrokenStage {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float HealthPercentage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UStaticMesh* Mesh;
-    
+
     BF_FRAMEWORKGAME_API FBrokenStage();
 };
-

@@ -19,24 +19,23 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_CrewManagerBaseComponent* CrewManager;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_BlackmarketManagerBaseComponent* BlackmarketManager;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_FinanceManagerBaseComponent* FinanceManager;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_GoalManagerBaseComponent* GoalsManager;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_JobManagerBaseComponent* JobsManager;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_StashManagerBaseComponent* StashManager;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_DailyManagerBaseComponent* DailyManager;
-    
-};
 
+};

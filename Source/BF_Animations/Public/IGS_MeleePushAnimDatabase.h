@@ -12,10 +12,9 @@ struct FIGS_MeleePushAnimDatabase : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> AnimVariations;
-    
+
     BF_ANIMATIONS_API FIGS_MeleePushAnimDatabase();
 };
-

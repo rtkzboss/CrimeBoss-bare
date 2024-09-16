@@ -4,4 +4,3 @@ UIGS_PaybackSaveGameQuickplay::UIGS_PaybackSaveGameQuickplay() {
     (*this).SaveDataSlotName = TEXT("QuickplaySlot");
 }
 
-

@@ -1,5 +1,4 @@
 #include "IGS_AimAssistComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AimAssistComponent::UIGS_AimAssistComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bEnableSlowdown = true;
@@ -40,10 +39,9 @@ bool UIGS_AimAssistComponent::IsBulletBendingEnabled() const {
 }
 
 FTransform UIGS_AimAssistComponent::GetCurrentBulletBendingTransform() const {
-    return FTransform{};
+    return FTransform(FQuat(0.000000000e+00,0.000000000e+00,0.000000000e+00,1.000000000e+00), FVector(0.000000000e+00,0.000000000e+00,0.000000000e+00), FVector(1.000000000e+00,1.000000000e+00,1.000000000e+00));
 }
 
 void UIGS_AimAssistComponent::GetControlMultipliers(float& outPitchMult, float& outYawMult) const {
 }
-
 

@@ -11,4 +11,3 @@ enum class EBPOnlinePresenceState : uint8 {
     DoNotDisturb,
     Chat,
 };
-

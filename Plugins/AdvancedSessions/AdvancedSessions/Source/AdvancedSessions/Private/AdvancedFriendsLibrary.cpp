@@ -21,4 +21,3 @@ void UAdvancedFriendsLibrary::GetStoredFriendsList(APlayerController* PlayerCont
 void UAdvancedFriendsLibrary::GetFriend(APlayerController* PlayerController, const FBPUniqueNetId FriendUniqueNetId, FBPFriendInfo& Friend) {
 }
 
-

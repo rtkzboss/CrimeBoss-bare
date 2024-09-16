@@ -10,4 +10,3 @@ FIGS_ThrowableThrownData::FIGS_ThrowableThrownData() {
     (*this).RandomThrowRotation.Roll = 0.000000000e+00f;
     (*this).bWasThrown = false;
 }
-

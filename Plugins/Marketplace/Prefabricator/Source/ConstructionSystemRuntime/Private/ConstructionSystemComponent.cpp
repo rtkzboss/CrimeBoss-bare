@@ -1,5 +1,4 @@
 #include "ConstructionSystemComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UConstructionSystemComponent::UConstructionSystemComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).TraceStartDistance = 1.000000000e+03f;
@@ -22,7 +21,7 @@ void UConstructionSystemComponent::HideBuildMenu() {
 }
 
 UConstructionSystemTool* UConstructionSystemComponent::GetTool(EConstructionSystemToolType InToolType) {
-    return NULL;
+    return nullptr;
 }
 
 EConstructionSystemToolType UConstructionSystemComponent::GetActiveToolType() const {
@@ -30,7 +29,7 @@ EConstructionSystemToolType UConstructionSystemComponent::GetActiveToolType() co
 }
 
 UConstructionSystemTool* UConstructionSystemComponent::GetActiveTool() {
-    return NULL;
+    return nullptr;
 }
 
 void UConstructionSystemComponent::EnableConstructionSystem(EConstructionSystemToolType InToolType) {
@@ -38,5 +37,4 @@ void UConstructionSystemComponent::EnableConstructionSystem(EConstructionSystemT
 
 void UConstructionSystemComponent::DisableConstructionSystem() {
 }
-
 

@@ -24,4 +24,3 @@ enum class EIGS_ItemType : uint8 {
     Item_MAX UMETA(Hidden),
     Item_UNKNOWN = 255,
 };
-

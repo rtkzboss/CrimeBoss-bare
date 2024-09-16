@@ -2,4 +2,3 @@
 
 FIGS_AISwatBaseDataModifiers::FIGS_AISwatBaseDataModifiers() {
 }
-

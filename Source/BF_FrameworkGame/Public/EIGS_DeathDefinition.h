@@ -10,4 +10,3 @@ enum class EIGS_DeathDefinition : uint8 {
     ThirdHeisterDown,
     LastHeisterDown,
 };
-

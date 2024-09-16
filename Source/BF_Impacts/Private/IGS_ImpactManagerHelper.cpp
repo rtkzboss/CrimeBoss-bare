@@ -3,4 +3,3 @@
 UIGS_ImpactManagerHelper::UIGS_ImpactManagerHelper() {
 }
 
-

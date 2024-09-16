@@ -2,8 +2,8 @@
 #include "Materials/MaterialParameterCollection.h"
 
 UIGS_WeatherSubsystem::UIGS_WeatherSubsystem() {
-    static ConstructorHelpers::FObjectFinder<UMaterialParameterCollection> gen0(TEXT("/Game/00_Main/MaterialLibrary/Enviro/Weather/MPC_Weather.MPC_Weather"));
-    (*this).WeatherMPC = gen0.Object;
+    static ConstructorHelpers::FObjectFinder<UMaterialParameterCollection> gen(TEXT("/Game/00_Main/MaterialLibrary/Enviro/Weather/MPC_Weather.MPC_Weather"));
+    (*this).WeatherMPC = gen.Object;
 }
 
 void UIGS_WeatherSubsystem::UpdateWeather() {
@@ -38,5 +38,4 @@ void UIGS_WeatherSubsystem::EnableWeather() {
 
 void UIGS_WeatherSubsystem::DisableWeather() {
 }
-
 

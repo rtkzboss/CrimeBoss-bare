@@ -11,4 +11,3 @@ enum class EMETA_RandEventCategory : uint8 {
     EnemyGang,
     Economy,
 };
-

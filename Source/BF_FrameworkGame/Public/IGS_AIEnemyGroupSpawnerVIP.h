@@ -10,4 +10,3 @@ public:
     AIGS_AIEnemyGroupSpawnerVIP(const FObjectInitializer& ObjectInitializer);
 
 };
-

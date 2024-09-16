@@ -10,4 +10,3 @@ public:
     AUIParticleActor(const FObjectInitializer& ObjectInitializer);
 
 };
-

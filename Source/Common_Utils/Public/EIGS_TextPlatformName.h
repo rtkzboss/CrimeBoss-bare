@@ -11,4 +11,3 @@ enum class EIGS_TextPlatformName : uint8 {
     Other,
     Count,
 };
-

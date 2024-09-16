@@ -10,11 +10,10 @@ void UIGS_MenuWidgetManager::RegisterWidget(UIGS_MenuScreenWidget* InWidget) {
 }
 
 UIGS_MenuWidgetManager* UIGS_MenuWidgetManager::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_MenuScreenWidget* UIGS_MenuWidgetManager::GetWidgetByTag(FGameplayTag inTag) {
-    return NULL;
+    return nullptr;
 }
-
 

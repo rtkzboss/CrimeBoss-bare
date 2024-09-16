@@ -7,4 +7,3 @@ enum class EMETA_MessageType : uint8 {
     Error,
     Warning,
 };
-

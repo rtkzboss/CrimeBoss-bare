@@ -8,13 +8,12 @@ struct FConstraintRanges {
 public:
     UPROPERTY(EditAnywhere)
     float MinimumValue;
-    
+
     UPROPERTY(EditAnywhere)
     float MaximumValue;
-    
+
     UPROPERTY(EditAnywhere)
     int32 RangeWeight;
-    
+
     CUSTOMIZABLEOBJECTPOPULATION_API FConstraintRanges();
 };
-

@@ -10,4 +10,3 @@ public:
     AIGS_Cargo(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -16,4 +16,3 @@ FIGS_ClassTableRow UIGS_ClassDatabase::GetClassData(const UObject* inWCO, const 
     return FIGS_ClassTableRow{};
 }
 
-

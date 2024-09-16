@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_ChallengeTableRow GetChallenge(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
-    
-};
 
+};

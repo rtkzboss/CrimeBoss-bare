@@ -11,4 +11,3 @@ enum class UStreamlineFeatureRequirementsFlags : uint8 {
     VSyncOffRequired = 8,
     HardwareSchedulingRequired = 16,
 };
-

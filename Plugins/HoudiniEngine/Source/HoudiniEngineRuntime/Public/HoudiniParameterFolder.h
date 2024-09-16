@@ -13,18 +13,17 @@ public:
 private:
     UPROPERTY()
     EHoudiniFolderParameterType FolderType;
-    
+
     UPROPERTY()
     bool bExpanded;
-    
+
     UPROPERTY()
     bool bChosen;
-    
+
     UPROPERTY()
     int32 ChildCounter;
-    
+
     UPROPERTY()
     bool bIsContentShown;
-    
-};
 
+};

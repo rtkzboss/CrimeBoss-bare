@@ -1,15 +1,11 @@
 #include "META_BossCharacter.h"
 #include "EIGS_CharacterID.h"
-#include "EMETA_CharacterMood.h"
 #include "EMETA_CharacterState.h"
-#include "EMETA_ItemQuality.h"
 
 UMETA_BossCharacter::UMETA_BossCharacter() {
     (*this).m_CharacterInfo.ID = EIGS_CharacterID::Char_Boss_End;
     (*this).m_CharacterInfo.Data.State = EMETA_CharacterState::Available;
-    auto& gen0 = (*this).m_CharacterInfo.Data.Perks;
-    gen0.Empty();
-    gen0.AddDefaulted(4);
+    (*this).m_CharacterInfo.Data.Perks = {FMETA_PerkData{}, FMETA_PerkData{}, FMETA_PerkData{}, FMETA_PerkData{}};
 }
 
 void UMETA_BossCharacter::SetPerkInSlot(int32 inSlot, FGameplayTag inTagID) {
@@ -37,5 +33,4 @@ FGameplayTag UMETA_BossCharacter::GetEquippedPrimaryWeaponID() const {
 FGameplayTag UMETA_BossCharacter::GetCharacterSkinTag() const {
     return FGameplayTag{};
 }
-
 

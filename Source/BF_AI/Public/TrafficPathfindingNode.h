@@ -18,27 +18,26 @@ public:
 protected:
     UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesOut;
-    
+
     UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesIn;
-    
+
     UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesOutReversed;
-    
+
     UPROPERTY()
     TArray<UTrafficPathfindingEdge*> EdgesInReversed;
-    
+
     UPROPERTY(Instanced)
     UIGS_TrafficPathComponent* Segment;
-    
+
     UPROPERTY()
     TArray<AIGS_VehicleDestinationPointFramework*> DestinationPoints;
-    
+
     UPROPERTY()
     TArray<AIGS_VehicleExitPointFramework*> ExitPoints;
-    
+
     UPROPERTY()
     TArray<AIGS_VehicleSpawnerFramework*> VehicleSpawners;
-    
-};
 
+};

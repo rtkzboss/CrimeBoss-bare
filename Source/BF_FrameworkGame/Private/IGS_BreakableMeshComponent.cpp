@@ -1,8 +1,6 @@
 #include "IGS_BreakableMeshComponent.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
+#include "Components/ActorComponent.h"
 #include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_BreakableMeshComponent::UIGS_BreakableMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -14,6 +12,10 @@ UIGS_BreakableMeshComponent::UIGS_BreakableMeshComponent(const FObjectInitialize
     (*this).bCanTakeExplosiveDamage = true;
     (*this).CollisionProfileOnBreak = TEXT("PhysicsActor");
     (*this).PushImpulseStrength = 1.000000000e+02f;
+    auto gen = UPrimitiveComponent::StaticClass()->FindPropertyByName("bGenerateOverlapEvents");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), false);
+    auto gen2 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen2)->SetPropertyValue(&(*gen2->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_BreakableMeshComponent::TriggerBreakEvents(AActor* inDmgCauser) {
@@ -51,7 +53,7 @@ void UIGS_BreakableMeshComponent::HandleBreakableMeshState() {
 }
 
 float UIGS_BreakableMeshComponent::GetHealth() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_BreakableMeshComponent::BreakComponent() {
@@ -62,8 +64,7 @@ void UIGS_BreakableMeshComponent::Break(AActor* inDmgCauser, FVector inHitLocati
 
 void UIGS_BreakableMeshComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_BreakableMeshComponent, mR_IsBroken);
 }
-
 

@@ -7,4 +7,3 @@ FGateExplosiveInfo UIGS_GateBreachAdapter::GetExplosivePoint(AActor* Actor, AIGS
     return FGateExplosiveInfo{};
 }
 
-

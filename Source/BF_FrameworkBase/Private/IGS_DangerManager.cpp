@@ -3,4 +3,3 @@
 UIGS_DangerManager::UIGS_DangerManager() {
 }
 
-

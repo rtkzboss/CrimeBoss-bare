@@ -13,15 +13,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Success(AIGS_GameCharacterFramework* inInstigator);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnShownEvent();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnHiddenEvent();
-    
+
     UFUNCTION(BlueprintCallable)
     void Activate(AIGS_GameCharacterFramework* inInstigator);
-    
-};
 
+};

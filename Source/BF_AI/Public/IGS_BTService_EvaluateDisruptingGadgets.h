@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestGadget;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
-};
 
+};

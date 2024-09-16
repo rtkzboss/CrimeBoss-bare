@@ -10,4 +10,3 @@ public:
     AIGS_WaypointFramework(const FObjectInitializer& ObjectInitializer);
 
 };
-

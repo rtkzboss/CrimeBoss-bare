@@ -13,9 +13,8 @@ class PAYBACKDEFINITIONS_API IIGS_HeisterNumberInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable)
     virtual void SetHeisterNumber(int32 inHeisterNumber) PURE_VIRTUAL(SetHeisterNumber,);
-    
+
     UFUNCTION(BlueprintCallable)
     virtual int32 GetHeisterNumber() const PURE_VIRTUAL(GetHeisterNumber, return 0;);
-    
-};
 
+};

@@ -10,4 +10,3 @@ public:
     AIGS_SquadSniper(const FObjectInitializer& ObjectInitializer);
 
 };
-

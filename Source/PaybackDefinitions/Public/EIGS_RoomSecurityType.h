@@ -10,4 +10,3 @@ enum class EIGS_RoomSecurityType : uint8 {
     Security,
     Civilian,
 };
-

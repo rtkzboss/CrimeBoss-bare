@@ -12,4 +12,3 @@ enum class EIGS_AINotif : uint8 {
     AIN_SquadFightFinished,
     AIN_SearchPointCleared,
 };
-

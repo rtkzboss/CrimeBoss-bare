@@ -10,10 +10,9 @@ struct COMMON_SAVE_API FMETA_ActiveCampaignConfiguration {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTag CampaignMode;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     EIGS_UserDifficulty Difficulty;
-    
+
     FMETA_ActiveCampaignConfiguration();
 };
-

@@ -4,14 +4,13 @@ UIGS_AsyncTaskAbilityGranted::UIGS_AsyncTaskAbilityGranted() {
 }
 
 UIGS_AsyncTaskAbilityGranted* UIGS_AsyncTaskAbilityGranted::ListenForAbilityWithTagGranted(UAbilitySystemComponent* inAbilitySystemComponent, FGameplayTag inAbilityTagFilter) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_AsyncTaskAbilityGranted* UIGS_AsyncTaskAbilityGranted::ListenForAbilityOfClassGranted(UAbilitySystemComponent* inAbilitySystemComponent, TSoftClassPtr<UGameplayAbility> inAbilityClassFilter) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_AsyncTaskAbilityGranted::EndTask() {
 }
-
 

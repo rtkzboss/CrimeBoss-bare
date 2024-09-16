@@ -1,9 +1,4 @@
 #include "IGS_GenericButton.h"
-#include "Input/CommonInputMode.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_GenericButton::UIGS_GenericButton() {
     (*this).HoldTime = 1.000000000e+00f;
@@ -46,5 +41,4 @@ void UIGS_GenericButton::HandleHoldTick() {
 
 void UIGS_GenericButton::HandleHoldFinished() {
 }
-
 

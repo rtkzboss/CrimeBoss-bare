@@ -1,5 +1,4 @@
 #include "IGS_Quickplay_BlackMarketManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_Quickplay_BlackMarketManagerComponent::UIGS_Quickplay_BlackMarketManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -7,7 +6,7 @@ UIGS_Quickplay_BlackMarketManagerComponent::UIGS_Quickplay_BlackMarketManagerCom
 
 
 UMETA_Perk* UIGS_Quickplay_BlackMarketManagerComponent::UpgradePerk(UMETA_Perk* inPerk, FGameplayTag inScreenTag) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_Quickplay_BlackMarketManagerComponent::RemoveItem(FGameplayTag inItemTag) {
@@ -23,31 +22,31 @@ bool UIGS_Quickplay_BlackMarketManagerComponent::HasPerkInPool(FGameplayTag inPe
 }
 
 TArray<UMETA_WeaponSkin*> UIGS_Quickplay_BlackMarketManagerComponent::GetWeaponSkinsMarketPool() const {
-    return TArray<UMETA_WeaponSkin*>();
+    return {};
 }
 
 TArray<UMETA_WeaponSkin*> UIGS_Quickplay_BlackMarketManagerComponent::GetWeaponSkinsForWeapon(FGameplayTag inItemTag) const {
-    return TArray<UMETA_WeaponSkin*>();
+    return {};
 }
 
 UMETA_WeaponSkin* UIGS_Quickplay_BlackMarketManagerComponent::GetWeaponSkinByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_Perk*> UIGS_Quickplay_BlackMarketManagerComponent::GetPerksMarketPool() const {
-    return TArray<UMETA_Perk*>();
+    return {};
 }
 
 UMETA_Perk* UIGS_Quickplay_BlackMarketManagerComponent::GetPerkByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_CharacterSkin*> UIGS_Quickplay_BlackMarketManagerComponent::GetBossCharacterSkinsMarketPool() const {
-    return TArray<UMETA_CharacterSkin*>();
+    return {};
 }
 
 UMETA_CharacterSkin* UIGS_Quickplay_BlackMarketManagerComponent::GetBossCharacterSkinByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 
@@ -58,5 +57,4 @@ void UIGS_Quickplay_BlackMarketManagerComponent::AddItemToPool(FGameplayTag inIt
 
 void UIGS_Quickplay_BlackMarketManagerComponent::AddItemsToPool(FGameplayTagContainer inItemTags) {
 }
-
 

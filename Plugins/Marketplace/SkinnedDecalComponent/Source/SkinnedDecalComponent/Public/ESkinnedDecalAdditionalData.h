@@ -8,4 +8,3 @@ enum ESkinnedDecalAdditionalData {
     SpawnTime,
     DecalBoneID,
 };
-

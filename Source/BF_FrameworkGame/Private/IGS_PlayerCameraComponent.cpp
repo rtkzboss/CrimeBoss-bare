@@ -1,5 +1,6 @@
 #include "IGS_PlayerCameraComponent.h"
-#include "ComponentInstanceDataCache.h"
+#include "Components/ActorComponent.h"
+#include "Engine/EngineBaseTypes.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_PlayerCameraComponent::UIGS_PlayerCameraComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -11,6 +12,8 @@ UIGS_PlayerCameraComponent::UIGS_PlayerCameraComponent(const FObjectInitializer&
     (*this).CameraBoneAttachment = TEXT("camera_root");
     (*this).PrimaryComponentTick.TickGroup = TG_PrePhysics;
     (*this).PrimaryComponentTick.bCanEverTick = true;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_PlayerCameraComponent::StopCameraShake(const FGameplayTag inCameraShakeTag) {
@@ -34,8 +37,7 @@ EIGS_EyeHeightTargetType UIGS_PlayerCameraComponent::GetEyeHeightTarget(AIGS_Pla
 
 void UIGS_PlayerCameraComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_PlayerCameraComponent, ActiveCameraShakes);
 }
-
 

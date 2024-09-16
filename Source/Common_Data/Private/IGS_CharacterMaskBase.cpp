@@ -3,4 +3,3 @@
 UIGS_CharacterMaskBase::UIGS_CharacterMaskBase() {
 }
 
-

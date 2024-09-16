@@ -10,22 +10,21 @@ struct COMMON_DATA_API FIGS_ChatWheelDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText FPSChatText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText IconChar;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText StealthVOID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText CombatVOID;
-    
+
     FIGS_ChatWheelDataRow();
 };
-

@@ -13,15 +13,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Setup(int32 InSeed);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetInitialSeed() const;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     TArray<UIGS_PropLogicComponentBase*> PropLogicComponentArray;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bInitialized;
-    
-};
 
+};

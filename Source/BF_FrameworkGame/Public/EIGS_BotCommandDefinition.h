@@ -23,4 +23,3 @@ enum class EIGS_BotCommandDefinition : uint8 {
     Revive,
     Guard,
 };
-

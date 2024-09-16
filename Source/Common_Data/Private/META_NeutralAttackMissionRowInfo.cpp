@@ -1,9 +1,8 @@
 #include "META_NeutralAttackMissionRowInfo.h"
 
 FMETA_NeutralAttackMissionRowInfo::FMETA_NeutralAttackMissionRowInfo() {
-    (*this).Name = FText::FromString(TEXT(""));
-    (*this).Description = FText::FromString(TEXT(""));
-    (*this).Picture = nullptr;
-    (*this).MapIconOverride = nullptr;
+    (*this).Name = FText::GetEmpty();
+    (*this).Description = FText::GetEmpty();
+    (*this).Picture = FSoftObjectPath();
+    (*this).MapIconOverride = FSoftObjectPath();
 }
-

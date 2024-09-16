@@ -2,13 +2,13 @@
 
 FIGS_MissionObjective::FIGS_MissionObjective() {
     (*this).ID = -1;
-    (*this).TaskIDs.Empty();
+    (*this).TaskIDs = {};
     (*this).ObjectiveState = EIGS_ObjectiveState::Active;
-    (*this).ObjectiveName = FText::FromString(TEXT(""));
+    (*this).ObjectiveName = FText::GetEmpty();
     (*this).bInitialized = false;
     (*this).bArchived = false;
     (*this).bSimpleObjective = false;
     (*this).bSimpleObjectiveWatchWhenInactive = false;
     (*this).bFinishWhenInactive = false;
+    (*this).OutputDelegate = {};
 }
-

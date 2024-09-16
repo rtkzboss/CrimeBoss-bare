@@ -10,4 +10,3 @@ enum class EIGS_BotOrderResult : uint8 {
     NoBots,
     BotsBusy,
 };
-

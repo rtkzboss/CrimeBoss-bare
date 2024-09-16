@@ -9,10 +9,9 @@ struct COMMON_SAVE_API FIGS_PreviousSessionSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FString SessionId;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGuid MissionID;
-    
+
     FIGS_PreviousSessionSaveData();
 };
-

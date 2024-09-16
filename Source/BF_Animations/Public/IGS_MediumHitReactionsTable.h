@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<FIGS_MediumHitReactionTable> HitReactionDataStand;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_MediumHitReactionTable> HitReactionDataCrouch;
-    
-};
 
+};

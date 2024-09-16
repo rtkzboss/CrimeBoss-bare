@@ -7,4 +7,3 @@ UIGS_KeyItemInventoryObject::UIGS_KeyItemInventoryObject() {
     (*this).bUseCustomName = true;
 }
 
-

@@ -10,10 +10,9 @@ struct BF_NETWORK_API FIGS_ClientVariationData {
 public:
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UAnimMontage> VoiceFacialAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly)
     float VoiceProgress;
-    
+
     FIGS_ClientVariationData();
 };
-

@@ -11,16 +11,15 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void ScrollPageUp();
-    
+
     UFUNCTION(BlueprintCallable)
     void ScrollPageDown();
-    
+
     UFUNCTION(BlueprintCallable)
     void ScrollBy(float Delta);
-    
+
 private:
     UPROPERTY(EditAnywhere)
     float Speed;
-    
-};
 
+};

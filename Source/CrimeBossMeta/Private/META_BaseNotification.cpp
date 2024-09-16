@@ -1,9 +1,9 @@
 #include "META_BaseNotification.h"
 
 UMETA_BaseNotification::UMETA_BaseNotification() {
-    (*this).ID = nullptr;
-    (*this).Image = nullptr;
-    (*this).AggregationNotificationID = nullptr;
+    (*this).ID = FSoftObjectPath();
+    (*this).Image = FSoftObjectPath();
+    (*this).AggregationNotificationID = FSoftObjectPath();
 }
 
 void UMETA_BaseNotification::SetInfo(TSoftObjectPtr<UMETA_NotificationID> inID, EMETA_NotificationType inType, FText InTitle, FText inDescription, EMETA_NotificationEffect inEffect, TSoftObjectPtr<UTexture2D> inImage, TSoftObjectPtr<UMETA_NotificationID> inAggregationID, bool inHideInIntro) {
@@ -21,11 +21,11 @@ FText UMETA_BaseNotification::GetTitle() const {
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_BaseNotification::GetImage() const {
-    return NULL;
+    return {};
 }
 
 TSoftObjectPtr<UMETA_NotificationID> UMETA_BaseNotification::GetId() const {
-    return NULL;
+    return {};
 }
 
 bool UMETA_BaseNotification::GetHideInIntro() const {
@@ -41,7 +41,6 @@ FText UMETA_BaseNotification::GetDescription() const {
 }
 
 TSoftObjectPtr<UMETA_NotificationID> UMETA_BaseNotification::GetAggregateID() const {
-    return NULL;
+    return {};
 }
-
 

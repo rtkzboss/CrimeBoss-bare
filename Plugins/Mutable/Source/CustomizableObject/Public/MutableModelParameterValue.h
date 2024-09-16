@@ -8,10 +8,9 @@ struct FMutableModelParameterValue {
 public:
     UPROPERTY()
     FString Name;
-    
+
     UPROPERTY()
     int32 Value;
-    
+
     CUSTOMIZABLEOBJECT_API FMutableModelParameterValue();
 };
-

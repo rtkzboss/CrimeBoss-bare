@@ -1,12 +1,4 @@
 #include "IGS_DebriefScreen.h"
-#include "EScreenInputMode.h"
-#include "EScreenInputPass.h"
-#include "EScreenModifier.h"
-#include "EScreenZOrder.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_DebriefScreen::UIGS_DebriefScreen() {
 }
@@ -42,5 +34,4 @@ FIGS_DebriefBonus UIGS_DebriefScreen::GetDebriefBonusByTag(FGameplayTag inTag, b
 
 void UIGS_DebriefScreen::AddAnimation(UIGS_AnimatedWidget* inAnimatedWidget, UObject* inPayloadData) {
 }
-
 

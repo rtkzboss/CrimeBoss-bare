@@ -100,11 +100,10 @@ int32 UIGS_WwiseFunctionLibrary::PostAkEvent(UAkGameObject* AkGameObject, const 
 }
 
 float UIGS_WwiseFunctionLibrary::GetRTPCValueActor(AActor* Actor, const FString& Name) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_WwiseFunctionLibrary::GetRTPCValue(UAkComponent* AkComponent, const FString& Name) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

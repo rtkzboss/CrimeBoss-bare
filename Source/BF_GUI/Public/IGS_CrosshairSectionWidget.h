@@ -21,50 +21,49 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RefreshCrosshairType();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnWeaponAccuracyChangedEvent(const FIGS_WeaponAccuracyInfoHolder& inAccuracy);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnShowCrosshairSettingChangedEvent(EIGS_ShowCrosshairSetting inShowCrosshairSetting);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnShooterChangedEvent(EIGS_WeaponAttackType inShooter);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnReloadingChangedEvent(bool inIsReloading);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnMovementSpeedChangedEvent(EIGS_Speed inNewSpeed);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnGameplayTagsChangedEvent();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnAimingChangedEvent(bool inIsAiming);
-    
+
     UFUNCTION(BlueprintPure)
     bool IsAimingAtFriendly() const;
-    
+
     UFUNCTION(BlueprintPure)
     bool IsAimingAtEnemy() const;
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_PlayerCharacterMovementComponent* PlayerMovementComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_CharacterWieldablesHolderComponent* PlayerWieldableHolder;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_WieldableBase* ActiveWieldableActor;
-    
+
     UPROPERTY(BlueprintReadOnly)
     UIGS_WieldableInventoryObjectBase* ActiveWieldableObject;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_ShowCrosshairSetting ShowCrosshairSetting;
-    
-};
 
+};

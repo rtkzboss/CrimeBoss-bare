@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "CommonMissionDataBase.h"
+#include "IGS_BaseMissionObject.h"
 #include "Templates/SubclassOf.h"
 #include "CommonMissionsDatabase.generated.h"
 
-class UIGS_BaseMissionObject;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -16,6 +16,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FCommonMissionDataBase GetBaseMissionDataBP(const UObject* inWCO, const TSubclassOf<UIGS_BaseMissionObject>& inClass, bool& outSucceeded);
-    
-};
 
+};

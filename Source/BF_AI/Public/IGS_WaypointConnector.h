@@ -15,16 +15,15 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointBase* NextPoint;
-    
+
     UPROPERTY(Transient, VisibleInstanceOnly)
     TArray<AIGS_WaypointBase*> BackPointers;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* Root;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_CustomBoxComponent* BoxComponent;
-    
-};
 
+};

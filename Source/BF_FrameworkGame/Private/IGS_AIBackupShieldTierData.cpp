@@ -2,4 +2,3 @@
 
 FIGS_AIBackupShieldTierData::FIGS_AIBackupShieldTierData() {
 }
-

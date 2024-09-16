@@ -14,4 +14,3 @@ enum class EIGS_WeaponSubtype : uint8 {
     HandCannon,
     Pistol,
 };
-

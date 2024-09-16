@@ -8,13 +8,12 @@ struct PAYBACK_API FBinkSubtitleItem {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FText Character;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FText Text;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float Time;
-    
+
     FBinkSubtitleItem();
 };
-

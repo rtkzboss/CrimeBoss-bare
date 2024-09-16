@@ -9,4 +9,3 @@ struct FMETA_PerkSaveData : public FMETA_ItemSaveDataBase {
 public:
     PAYBACKDEFINITIONS_API FMETA_PerkSaveData();
 };
-

@@ -2,7 +2,8 @@
 #include "IGS_PersistentMusicAkComponent.h"
 
 UIGS_MusicSubsystem::UIGS_MusicSubsystem() {
-    (*this).PersistentMusicAkComponent = CreateDefaultSubobject<UIGS_PersistentMusicAkComponent>(TEXT("PersistentMusicAkComp"));
+    auto gen = CreateDefaultSubobject<UIGS_PersistentMusicAkComponent>(TEXT("PersistentMusicAkComp"));
+    (*this).PersistentMusicAkComponent = gen;
 }
 
 void UIGS_MusicSubsystem::SetStoryMissionMusicState(EIGS_MusicStoryMissionState inState) {
@@ -33,7 +34,7 @@ void UIGS_MusicSubsystem::OnSongDuration(EAkCallbackType CallbackType, UAkCallba
 }
 
 UIGS_PersistentMusicAkComponent* UIGS_MusicSubsystem::GetPersistentMusicAkComponent() {
-    return NULL;
+    return nullptr;
 }
 
 FString UIGS_MusicSubsystem::GetCurrerntMusicPack() const {
@@ -42,5 +43,4 @@ FString UIGS_MusicSubsystem::GetCurrerntMusicPack() const {
 
 void UIGS_MusicSubsystem::Debug_SetMusicPack(bool inPreviousPack) {
 }
-
 

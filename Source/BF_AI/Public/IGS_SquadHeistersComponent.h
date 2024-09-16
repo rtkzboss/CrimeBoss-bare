@@ -10,4 +10,3 @@ public:
     UIGS_SquadHeistersComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

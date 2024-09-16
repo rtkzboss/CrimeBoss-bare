@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval DesiredTimeWithoutFear;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval DesiredTimeWithoutFearZiptieAddon;
-    
-};
 
+};

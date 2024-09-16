@@ -13,6 +13,5 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_StormTacticType DesiredTactic;
-    
-};
 
+};

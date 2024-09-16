@@ -14,18 +14,17 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Target;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UIGS_ThrowableInventoryObject> Throwable;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ThrowableCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GlobalCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsScripted;
-    
-};
 
+};

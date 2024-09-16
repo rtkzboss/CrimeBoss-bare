@@ -27,4 +27,3 @@ void UIGS_WieldableHelpers::DropWieldedItemOfClass(AIGS_GameCharacterFramework* 
 void UIGS_WieldableHelpers::DropWieldedItem(AIGS_GameCharacterFramework* inWielder, EIGS_WieldingHand inWieldingHand) {
 }
 
-

@@ -8,4 +8,3 @@ FMETA_RandEventGangCondition::FMETA_RandEventGangCondition() {
     (*this).LostOwnTerritoriesByOtherGang = -1;
     (*this).LostOwnTerritoriesByPlayer = -1;
 }
-

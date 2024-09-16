@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatTiersDef : public FIGS_AIBaseTiersDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatSpecializationHolder Tier1;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatSpecializationHolder Tier2;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatSpecializationHolder Tier3;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatSpecializationHolder Special;
-    
+
     FIGS_AISwatTiersDef();
 };
-

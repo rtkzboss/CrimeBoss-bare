@@ -8,4 +8,3 @@ enum class EIGS_PressurePhase : uint8 {
     PP_Control = 0,
     PP_Action,
 };
-

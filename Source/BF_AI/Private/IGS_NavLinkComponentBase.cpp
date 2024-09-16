@@ -1,9 +1,5 @@
 #include "IGS_NavLinkComponentBase.h"
 #include "NavAreaRoomBase.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
-#include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
 #include "NavAreas/NavArea_Null.h"
 #include "Templates/SubclassOf.h"
 
@@ -44,5 +40,4 @@ void UIGS_NavLinkComponentBase::SetCostMultiplier(float Multiplier) {
 
 void UIGS_NavLinkComponentBase::FinalizeFirstUsage() {
 }
-
 

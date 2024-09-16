@@ -1,18 +1,19 @@
 #include "IGS_LootManager.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_LootManager::UIGS_LootManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).LootWeightMultiplier = 1.000000000e+00f;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 float UIGS_LootManager::UpdateLootWeightMultiplier(UObject* inWCO) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TMap<FGameplayTag, float> UIGS_LootManager::SortLootByTag(TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inLoot) {
-    return TMap<FGameplayTag, float>();
+    return {};
 }
 
 void UIGS_LootManager::SetMissionBagsInWeight(int32 inRequiredBags) {
@@ -47,19 +48,19 @@ bool UIGS_LootManager::IsObjectiveLootCollected() {
 }
 
 float UIGS_LootManager::GetValuePercentage(float InValue) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_LootManager::GetThrowableItemSize(EIGS_LootSize inWeight) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UIGS_LootManager* UIGS_LootManager::GetLootManager(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 float UIGS_LootManager::GetItemValueFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FGameplayTag UIGS_LootManager::GetItemTypeFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass) {
@@ -67,7 +68,7 @@ FGameplayTag UIGS_LootManager::GetItemTypeFromClass(TSubclassOf<UIGS_LootItemInv
 }
 
 float UIGS_LootManager::GetItemSize(EIGS_ItemWeight inWeight) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_LootManager::ForceSetMissionBagsInWeight(int32 inRequiredBags) {
@@ -77,7 +78,7 @@ void UIGS_LootManager::DisableLootVoiceLines(UObject* inWCO, bool bDisable) {
 }
 
 float UIGS_LootManager::CalculateSpecialLootItemValue(FGameplayTag inItemTag, float inItemWeight) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_LootManager::CalculateNewLootValue(TSubclassOf<UIGS_InventoryObjectFramework> inInventoryObject, AIGS_GameCharacterFramework* OwningPawn) {
@@ -87,21 +88,20 @@ void UIGS_LootManager::CalculateNewBonusLootValue(TSubclassOf<UIGS_InventoryObje
 }
 
 float UIGS_LootManager::CalculateLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem, AIGS_GameCharacterFramework* OwningPawn) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_LootManager::CalculateBonusLootItemValue(float inWeight, FGameplayTag inItemTag, bool inbNewItem) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_LootManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_LootManager, TotalObjectiveValueSpawned);
     DOREPLIFETIME(UIGS_LootManager, NeededObjectiveWeight);
     DOREPLIFETIME(UIGS_LootManager, SecuredLootValue);
     DOREPLIFETIME(UIGS_LootManager, SecuredBonusLootValue);
     DOREPLIFETIME(UIGS_LootManager, LootWeightMultiplier);
 }
-
 

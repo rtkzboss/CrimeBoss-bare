@@ -10,4 +10,3 @@ enum class EIGS_DamageEventType : uint8 {
     Healing,
     AutoHealing,
 };
-

@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_BonusTypeData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName CurveTableRow;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_BonusUsage BonusUsage;
-    
+
     FMETA_BonusTypeData();
 };
-

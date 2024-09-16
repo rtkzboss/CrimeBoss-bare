@@ -1,9 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "META_BaseGoal.h"
 #include "Templates/SubclassOf.h"
 #include "META_GoalsObjectID.generated.h"
-
-class UMETA_BaseGoal;
 
 USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_GoalsObjectID {
@@ -11,7 +10,6 @@ struct PAYBACKDEFINITIONS_API FMETA_GoalsObjectID {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UMETA_BaseGoal>> Goals;
-    
+
     FMETA_GoalsObjectID();
 };
-

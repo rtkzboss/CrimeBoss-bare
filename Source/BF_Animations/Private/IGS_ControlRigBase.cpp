@@ -3,4 +3,3 @@
 UIGS_ControlRigBase::UIGS_ControlRigBase() {
 }
 
-

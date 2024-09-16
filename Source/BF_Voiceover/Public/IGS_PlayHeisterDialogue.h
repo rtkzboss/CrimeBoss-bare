@@ -3,7 +3,6 @@
 #include "IGS_PlayDialogueNodeBase.h"
 #include "IGS_PlayHeisterDialogue.generated.h"
 
-class UIGS_PlayHeisterDialogue;
 class UObject;
 
 UCLASS()
@@ -14,6 +13,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PlayHeisterDialogue* PlayHeisterDialogue(UObject* inWCO, FText DialogueID);
-    
-};
 
+};

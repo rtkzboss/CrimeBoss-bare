@@ -9,16 +9,15 @@ struct FCustomizableObjectProjectorParameterValue {
 public:
     UPROPERTY(VisibleAnywhere)
     FString ParameterName;
-    
+
     UPROPERTY(VisibleAnywhere)
     FCustomizableObjectProjector Value;
-    
+
     UPROPERTY(VisibleAnywhere)
     FString Uid;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<FCustomizableObjectProjector> RangeValues;
-    
+
     CUSTOMIZABLEOBJECT_API FCustomizableObjectProjectorParameterValue();
 };
-

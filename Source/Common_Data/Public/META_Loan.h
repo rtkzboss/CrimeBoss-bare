@@ -8,19 +8,18 @@ struct COMMON_DATA_API FMETA_Loan {
 public:
     UPROPERTY(BlueprintReadWrite)
     int32 ActivatedDay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BorrowedCash;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DailyRepaymentInPercentsFromBorrowedCash;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DaysToRepay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CooldownToNextOffer;
-    
+
     FMETA_Loan();
 };
-

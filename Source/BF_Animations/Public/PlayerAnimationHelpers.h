@@ -14,6 +14,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void GetCurrentAimOffset(UAnimInstance* inAnimInstance, FVector& OutLocation, FVector& OutRotation);
-    
-};
 
+};

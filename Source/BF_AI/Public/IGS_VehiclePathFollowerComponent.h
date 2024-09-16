@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval AvoidanceDistanceRange;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval AvoidanceStopCooldown;
-    
-};
 
+};

@@ -9,4 +9,3 @@ enum class EIGS_RopeType : uint8 {
     RT_Helicopter,
     RT_PlayerRapelling,
 };
-

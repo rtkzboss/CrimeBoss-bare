@@ -11,12 +11,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void ToggleToFPV();
-    
+
     UFUNCTION(BlueprintCallable)
     void ToggleTo3PV();
-    
+
     UFUNCTION(BlueprintCallable)
     void RenderingSettingsChanged();
-    
-};
 
+};

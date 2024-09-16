@@ -1,12 +1,12 @@
 #include "META_StatisticsManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_StatisticsManagerComponent::UMETA_StatisticsManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).killed_civilians_tag, 0)) = TEXT("MissionData.Common.Dead.Civilians");
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).killed_gangsters_tag, 0)) = TEXT("MissionData.Common.Dead.Gangsters");
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).killed_police_tag, 0)) = TEXT("MissionData.Common.Dead.Police");
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).killed_swat_tag, 0)) = TEXT("MissionData.Common.Dead.Swats");
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_civilians_tag, 0)) = TEXT("MissionData.Common.Dead.Civilians");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_gangsters_tag, 0)) = TEXT("MissionData.Common.Dead.Gangsters");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_police_tag, 0)) = TEXT("MissionData.Common.Dead.Police");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_swat_tag, 0)) = TEXT("MissionData.Common.Dead.Swats");
 }
 
 bool UMETA_StatisticsManagerComponent::TryModifyGlobalStatistic(const FGameplayTag inStatistic, const float InValue, float& outNewValue, const bool inExpand, const EMETA_StatisticModificationType inMode) {
@@ -34,7 +34,7 @@ FMETA_StatisticsRootTags UMETA_StatisticsManagerComponent::GetStatisticsRootTags
 }
 
 TMap<int32, FMETA_StatisticNoteSaveData> UMETA_StatisticsManagerComponent::GetStatisticForSave() {
-    return TMap<int32, FMETA_StatisticNoteSaveData>();
+    return {};
 }
 
 FMETA_StatisticNoteSaveData UMETA_StatisticsManagerComponent::GetStatisticForInteraval(int32 inStartDay, int32 inEndDay) const {
@@ -46,7 +46,7 @@ FMETA_StatisticNoteSaveData UMETA_StatisticsManagerComponent::GetStatisticByDay(
 }
 
 float UMETA_StatisticsManagerComponent::GetGlobalStatistic(const FGameplayTag inStatistic, const bool inExpand) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FMETA_StatisticNoteSaveData UMETA_StatisticsManagerComponent::GetFullStatistic() const {
@@ -54,7 +54,7 @@ FMETA_StatisticNoteSaveData UMETA_StatisticsManagerComponent::GetFullStatistic()
 }
 
 float UMETA_StatisticsManagerComponent::GetFinalScoreMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UMETA_StatisticsManagerComponent::AddWeaponBoughtToStatistic(UMETA_Weapon* inWeapon) {
@@ -123,5 +123,4 @@ void UMETA_StatisticsManagerComponent::AddBankruptcyDataToStatistic(bool inBankr
 
 void UMETA_StatisticsManagerComponent::AddAssetToStatistic(FGameplayTag InAsset, EMETA_PlotlineAssetAvailability inAvailability) {
 }
-
 

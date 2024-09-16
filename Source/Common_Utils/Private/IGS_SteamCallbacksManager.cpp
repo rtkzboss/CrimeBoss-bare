@@ -3,4 +3,3 @@
 UIGS_SteamCallbacksManager::UIGS_SteamCallbacksManager() {
 }
 
-

@@ -12,14 +12,13 @@ void UMETA_StoryGraph::ResetGraph_Implementation() {
 }
 
 UStoryGraphManager* UMETA_StoryGraph::GetOwningManager() {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_BaseNode_SG* UMETA_StoryGraph::GetNode(const int32 NodeId) {
-    return NULL;
+    return nullptr;
 }
 
 void UMETA_StoryGraph::EndGraph(AMETA_BaseGameMode* inGameMode, EMETA_GoalStatus inResultResult) {
 }
-
 

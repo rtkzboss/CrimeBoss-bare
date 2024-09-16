@@ -8,4 +8,3 @@ FMETA_TaskInfo::FMETA_TaskInfo() {
     (*this).Status = EMETA_TaskStatus::None;
     (*this).bOptional = false;
 }
-

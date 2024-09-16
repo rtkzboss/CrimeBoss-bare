@@ -1,6 +1,4 @@
 #include "IGS_DamageTypeElemental.h"
-#include "EIGS_DamageStrengthType.h"
-#include "EIGS_DamageType.h"
 
 UIGS_DamageTypeElemental::UIGS_DamageTypeElemental() {
     (*this).bShouldBeAffectedByDamageLimiter = true;
@@ -8,5 +6,4 @@ UIGS_DamageTypeElemental::UIGS_DamageTypeElemental() {
     (*this).DestructibleImpulse = 0.000000000e+00f;
     (*this).DestructibleDamageSpreadScale = 0.000000000e+00f;
 }
-
 

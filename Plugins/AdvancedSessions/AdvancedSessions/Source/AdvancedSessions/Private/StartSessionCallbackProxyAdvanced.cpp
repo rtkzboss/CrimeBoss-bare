@@ -4,7 +4,6 @@ UStartSessionCallbackProxyAdvanced::UStartSessionCallbackProxyAdvanced() {
 }
 
 UStartSessionCallbackProxyAdvanced* UStartSessionCallbackProxyAdvanced::StartAdvancedSession(const UObject* WorldContextObject) {
-    return NULL;
+    return nullptr;
 }
-
 

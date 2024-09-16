@@ -1,17 +1,16 @@
 #include "IGS_DownStateEffectDataAsset.h"
 
 UIGS_DownStateEffectDataAsset::UIGS_DownStateEffectDataAsset() {
-    (*this).DownedEffectPostProcessInterface = nullptr;
-    (*this).DyingEffectPostProcessInterface = nullptr;
-    (*this).ReviveEffectPostProcessInterface = nullptr;
-    (*this).DownedEffectWeightCurve = nullptr;
-    (*this).DyingEffectWeightCurve = nullptr;
-    (*this).ReviveEffectWeightCurve = nullptr;
-    (*this).EffectBakerDownedAkAudioEvent = nullptr;
-    (*this).EffectStartAkAudioEvent = nullptr;
-    (*this).EffectStopAkAudioEvent = nullptr;
-    (*this).EffectAkRtpc = nullptr;
+    (*this).DownedEffectPostProcessInterface = FSoftObjectPath();
+    (*this).DyingEffectPostProcessInterface = FSoftObjectPath();
+    (*this).ReviveEffectPostProcessInterface = FSoftObjectPath();
+    (*this).DownedEffectWeightCurve = FSoftObjectPath();
+    (*this).DyingEffectWeightCurve = FSoftObjectPath();
+    (*this).ReviveEffectWeightCurve = FSoftObjectPath();
+    (*this).EffectBakerDownedAkAudioEvent = FSoftObjectPath();
+    (*this).EffectStartAkAudioEvent = FSoftObjectPath();
+    (*this).EffectStopAkAudioEvent = FSoftObjectPath();
+    (*this).EffectAkRtpc = FSoftObjectPath();
     (*this).ReviveEffectDuration = 4.000000000e+00f;
 }
-
 

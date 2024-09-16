@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintPure)
     AIGS_CharacterPaperDoll* GetOwningPaperDoll() const;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bLookAtAnim;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MetaCutsceneCharacterPose CurrentCharacterPose;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FPoseSnapshot HeadSnapshot;
-    
-};
 
+};

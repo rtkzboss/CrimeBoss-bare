@@ -5,4 +5,3 @@ FMETA_EconomyGraphVariableModeData::FMETA_EconomyGraphVariableModeData() {
     (*this).AbsoluteValue = 0;
     (*this).Multiplier = 0.000000000e+00f;
 }
-

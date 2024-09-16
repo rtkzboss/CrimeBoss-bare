@@ -12,21 +12,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetProgress(float InProgress);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetActionData(EIGS_BotCommandDefinition inCommandDefinition, int32 playerNumber);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnSetProgress(float InProgress);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnHideText();
-    
+
     UPROPERTY()
     float SmartPingHideTextTime;
-    
+
     UPROPERTY()
     float HoldPingHideTextTime;
-    
-};
 
+};

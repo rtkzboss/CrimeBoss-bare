@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverBlackboardKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector IsApproachMoveKey;
-    
-};
 
+};

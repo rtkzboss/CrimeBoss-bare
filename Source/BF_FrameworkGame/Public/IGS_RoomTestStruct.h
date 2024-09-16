@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_RoomTestStruct {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector RoomCenter;
-    
+
     FIGS_RoomTestStruct();
 };
-

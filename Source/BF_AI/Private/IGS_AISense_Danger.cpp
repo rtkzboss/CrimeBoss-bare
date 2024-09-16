@@ -1,5 +1,4 @@
 #include "IGS_AISense_Danger.h"
-#include "Perception/AIPerceptionTypes.h"
 
 UIGS_AISense_Danger::UIGS_AISense_Danger() {
 }
@@ -12,5 +11,4 @@ void UIGS_AISense_Danger::ReportDangerAreaWithTag(UObject* WorldContextObject, A
 
 void UIGS_AISense_Danger::ReportDangerArea(UObject* WorldContextObject, AActor* DangerActor, float Radius, float Duration) {
 }
-
 

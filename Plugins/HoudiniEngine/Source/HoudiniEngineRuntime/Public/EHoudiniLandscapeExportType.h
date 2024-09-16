@@ -8,4 +8,3 @@ enum class EHoudiniLandscapeExportType : uint8 {
     Mesh,
     Points,
 };
-

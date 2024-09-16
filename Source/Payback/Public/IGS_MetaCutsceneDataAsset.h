@@ -23,78 +23,77 @@ public:
 
     UFUNCTION(BlueprintPure)
     FGameplayTag GetEventIDTag() const;
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FGameplayTag> GetAllChoicesTags();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_Partner Partner;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<TSoftObjectPtr<UWorld>> AdditionalLevels;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FIGS_MetaCutsceneProp> AdditionalSpawnProps;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UWorld> CutsceneLevel;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UWorld> SetupLevel;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkStateValue* EnvironmentAkState;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkAudioEvent* MusicSongAkEvent;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float PlayDelay;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float PoseAnimationStartTime;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool MuteBackgroundMusic;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool MuteSounds;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool HideLevel;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool IsSkippable;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaCutsceneNodeAction ForceChoiceResult;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool CustomSlotPairing;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag EventID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<EIGS_MetaDialogueCharacterSlot, EIGS_MetaDialogueCharacterSlot> SlotPairing;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_MetaCutsceneSlotSetup DialogueCharacterSlots;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_MetaCutsceneSlotSetup CutsceneCharacterSlots;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_MetaCutsceneOverrideData OverrideData;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_MetaCutsceneNode FirstNode;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<FName, FIGS_MetaCutsceneNode> Nodes;
-    
-};
 
+};

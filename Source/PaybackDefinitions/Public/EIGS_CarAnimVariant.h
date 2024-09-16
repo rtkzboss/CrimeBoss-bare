@@ -9,4 +9,3 @@ enum class EIGS_CarAnimVariant : uint8 {
     C_GetIn,
     C_GetOut,
 };
-

@@ -10,4 +10,3 @@ enum class EIGS_ProgressGadgetSubtype : uint8 {
     Type_Computer,
     Type_DefendPoint,
 };
-

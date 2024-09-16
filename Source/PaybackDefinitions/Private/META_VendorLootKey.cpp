@@ -2,6 +2,6 @@
 
 FMETA_VendorLootKey::FMETA_VendorLootKey() {
     (*this).Vendor = EMETA_TradeVendor::UNDEFINED;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loot, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loot, 0)) = NAME_None;
 }
-

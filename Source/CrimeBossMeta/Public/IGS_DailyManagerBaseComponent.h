@@ -11,17 +11,16 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateDay();
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void StartNewDay();
-    
+
 public:
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     int32 GetCurrentDay() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void EndDay();
-    
-};
 
+};

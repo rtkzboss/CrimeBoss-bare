@@ -41,12 +41,11 @@ FIGS_AIDetectiveDef::FIGS_AIDetectiveDef() {
     (*this).SpecStats.RevivesToRetreat = 3;
     (*this).SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).SpecStats.MaxHealthForCover = 1.000000000e+00f;
-    (*this).Character.Controller = nullptr;
-    (*this).Character.Pawns.Empty();
+    (*this).Character.Controller = FSoftObjectPath();
+    (*this).Character.Pawns = {};
     (*this).Loadout.PrimaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.MeleeWeapon = nullptr;
-    (*this).ThrowablePool.Empty();
+    (*this).ThrowablePool = {};
     (*this).Variation = EIGS_CopsVariationType::US_Detective;
 }
-

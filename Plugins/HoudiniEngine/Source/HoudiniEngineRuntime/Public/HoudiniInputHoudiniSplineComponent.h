@@ -15,16 +15,15 @@ public:
 
     UPROPERTY()
     EHoudiniCurveType CurveType;
-    
+
     UPROPERTY()
     EHoudiniCurveMethod CurveMethod;
-    
+
     UPROPERTY()
     bool Reversed;
-    
+
 protected:
     UPROPERTY(Instanced)
     UHoudiniSplineComponent* CachedComponent;
-    
-};
 
+};

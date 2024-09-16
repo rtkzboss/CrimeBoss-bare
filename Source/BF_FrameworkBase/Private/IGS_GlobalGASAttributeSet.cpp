@@ -12,9 +12,8 @@ void UIGS_GlobalGASAttributeSet::OnRep_EnemyAIDamage(const FGameplayAttributeDat
 
 void UIGS_GlobalGASAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_GlobalGASAttributeSet, EnemyAIDamage);
     DOREPLIFETIME(UIGS_GlobalGASAttributeSet, EnemyAIReceiveDamage);
 }
-
 

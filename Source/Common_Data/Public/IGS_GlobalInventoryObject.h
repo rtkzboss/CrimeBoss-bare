@@ -11,6 +11,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     int32 GetMaxCount();
-    
-};
 
+};

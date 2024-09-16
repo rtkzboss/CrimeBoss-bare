@@ -8,7 +8,6 @@ FName URMAFoliageToolsFunctionLibrary::GetVersion() {
 }
 
 AInstancedFoliageActor* URMAFoliageToolsFunctionLibrary::GetInstancedFoliageActor() {
-    return NULL;
+    return nullptr;
 }
-
 

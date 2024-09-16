@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EIGS_InfoMessageType.h"
+#include "IGS_GlobalInventoryObject.h"
 #include "IGS_HUDSubwidgetBase.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_InfoMessageManagerWidget.generated.h"
 
-class UIGS_GlobalInventoryObject;
 class UIGS_InfoMessagesManager;
 class UIGS_InventoryObjectFramework;
 class UIGS_ListInventory;
@@ -20,21 +20,20 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void AddItemMessage(UIGS_InventoryObjectFramework* inItem);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void AddInfoMessage(const FText& InText, EIGS_InfoMessageType inMessageType, float inDuration, int32 inHeisterNumber);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void AddGlobalItemMessage(TSubclassOf<UIGS_GlobalInventoryObject> inClass);
-    
+
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<UIGS_InfoMessagesManager> InfoMessagesManager;
-    
+
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_ListInventory> PlayerInventory;
-    
-};
 
+};

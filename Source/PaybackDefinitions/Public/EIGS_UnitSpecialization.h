@@ -20,4 +20,3 @@ enum class EIGS_UnitSpecialization : uint8 {
     US_Captain,
     US_Unknown = 255,
 };
-

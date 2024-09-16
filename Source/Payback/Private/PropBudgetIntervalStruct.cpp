@@ -4,4 +4,3 @@ FPropBudgetIntervalStruct::FPropBudgetIntervalStruct() {
     (*this).Min = 0;
     (*this).Max = 1;
 }
-

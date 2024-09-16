@@ -12,10 +12,9 @@ struct BF_FRAMEWORKGAME_API FIGS_GeneralReactionSpecHolder {
 public:
     UPROPERTY(EditAnywhere)
     TMap<EIGS_GRWaitType, FIGS_GeneralReactionsDef> ReactionOverrides;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<EIGS_UnitSpecialization, FIGS_GeneralReactionsDefsHolder> SpecOverrides;
-    
+
     FIGS_GeneralReactionSpecHolder();
 };
-

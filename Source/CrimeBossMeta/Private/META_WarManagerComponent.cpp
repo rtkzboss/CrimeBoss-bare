@@ -1,7 +1,7 @@
 #include "META_WarManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UMETA_WarManagerComponent::UMETA_WarManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    (*this).TradeRelationshipWithGangs = {};
     (*this).NeutralDaysThresholdFromAttack = 10;
     (*this).UnfriendlyDaysThresholdFromAttack = 3;
     (*this).PrimaryComponentTick.bCanEverTick = true;
@@ -83,7 +83,7 @@ FMETA_TurfHistory UMETA_WarManagerComponent::GetTurfHistoryOfAmountOfPreviousDay
 }
 
 TMap<EMETA_TradeVendor, EMETA_TradeRelationship> UMETA_WarManagerComponent::GetTradeRelationshipInfo() const {
-    return TMap<EMETA_TradeVendor, EMETA_TradeRelationship>();
+    return {};
 }
 
 EMETA_TradeRelationship UMETA_WarManagerComponent::GetTradeRelationshipForGang(EMETA_TradeVendor inTradeVendor) const {
@@ -95,7 +95,7 @@ EMETA_BossGangRelationship UMETA_WarManagerComponent::GetRelationshipToBossInDay
 }
 
 TMap<FGameplayTag, int32> UMETA_WarManagerComponent::GetLostTiles(EMETA_Gang inGang) {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 EMETA_GangStrategy UMETA_WarManagerComponent::GetGangStrategy(EMETA_Gang inGang) const {
@@ -119,7 +119,7 @@ EMETA_ArmyTier UMETA_WarManagerComponent::GetGangArmyTier_Implementation(EMETA_G
 }
 
 float UMETA_WarManagerComponent::GetChanceToAttackAnyAdjacentTerritory(EMETA_Gang inGang) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_WarManagerComponent::GetBaseAIBossStrength(EMETA_Gang inGang) const {
@@ -127,7 +127,7 @@ int32 UMETA_WarManagerComponent::GetBaseAIBossStrength(EMETA_Gang inGang) const 
 }
 
 TArray<FMETA_EffectOnAIBossStrength> UMETA_WarManagerComponent::GetAIBossStrengthEffects(EMETA_Gang inGang) {
-    return TArray<FMETA_EffectOnAIBossStrength>();
+    return {};
 }
 
 int32 UMETA_WarManagerComponent::GetAIBossStrengthChangeFromTerritory(EMETA_Gang inGang) const {
@@ -178,5 +178,4 @@ void UMETA_WarManagerComponent::AddArmyTierChangingConditionAsCompleted(EMETA_Ga
 
 void UMETA_WarManagerComponent::AddAIBossStrengthEffect(EMETA_Gang inGang, FMETA_EffectOnAIBossStrength inNewEffect) {
 }
-
 

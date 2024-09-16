@@ -9,13 +9,12 @@ struct PAYBACKDEFINITIONS_API FMETA_HeisterStateChangeNote {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_CharacterState PrevState;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_CharacterState NewState;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ChangeDay;
-    
+
     FMETA_HeisterStateChangeNote();
 };
-

@@ -9,10 +9,9 @@ struct FMETA_EquipmentQualityChance {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality EquipmentQuality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Chance;
-    
+
     PAYBACKDEFINITIONS_API FMETA_EquipmentQualityChance();
 };
-

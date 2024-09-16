@@ -41,4 +41,3 @@ FIGS_SuspicionComponentHolder::FIGS_SuspicionComponentHolder() {
     (*this).SenseHolder.WasDamageTaken = false;
     (*this).SenseHolder.StrongStimulusReceived = false;
 }
-

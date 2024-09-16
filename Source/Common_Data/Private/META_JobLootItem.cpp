@@ -6,4 +6,3 @@ FMETA_JobLootItem::FMETA_JobLootItem() {
     (*this).MaxCount = 0;
     (*this).ResultCount = 0;
 }
-

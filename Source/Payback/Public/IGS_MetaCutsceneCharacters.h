@@ -9,19 +9,18 @@ struct PAYBACK_API FIGS_MetaCutsceneCharacters {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MetaCutsceneCharacterSetup Heister1Character;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MetaCutsceneCharacterSetup Heister2Character;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MetaCutsceneCharacterSetup Heister3Character;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MetaCutsceneCharacterSetup Heister4Character;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MetaCutsceneCharacterSetup VendorCharacter;
-    
+
     FIGS_MetaCutsceneCharacters();
 };
-

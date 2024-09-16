@@ -9,13 +9,12 @@ struct COMMON_DATA_API FMETA_HireArmyEventConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval SoldierHireAmountPerHireEvent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldBeClampedByArmyCapacity;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ClampedMinimumArmy;
-    
+
     FMETA_HireArmyEventConfig();
 };
-

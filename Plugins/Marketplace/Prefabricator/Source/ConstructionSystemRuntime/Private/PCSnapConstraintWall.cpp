@@ -6,4 +6,3 @@ FPCSnapConstraintWall::FPCSnapConstraintWall() {
     (*this).AttachLeft = true;
     (*this).AttachRight = true;
 }
-

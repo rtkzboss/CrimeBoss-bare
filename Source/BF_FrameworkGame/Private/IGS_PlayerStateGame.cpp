@@ -1,6 +1,4 @@
 #include "IGS_PlayerStateGame.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_PlayerStateGame::AIGS_PlayerStateGame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -89,12 +87,11 @@ FCommonHeisterData AIGS_PlayerStateGame::GetHeisterData() const {
 
 void AIGS_PlayerStateGame::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_PlayerStateGame, IsJustLevelLoaded);
     DOREPLIFETIME(AIGS_PlayerStateGame, IsLevelLoaded);
     DOREPLIFETIME(AIGS_PlayerStateGame, bIsReady);
     DOREPLIFETIME(AIGS_PlayerStateGame, PlayerStateData);
     DOREPLIFETIME(AIGS_PlayerStateGame, HeisterNumber);
 }
-
 

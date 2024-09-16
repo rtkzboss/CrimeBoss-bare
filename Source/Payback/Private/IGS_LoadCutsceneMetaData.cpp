@@ -10,7 +10,6 @@ void UIGS_LoadCutsceneMetaData::OnAssetLoaded(FSoftObjectPath inAssetPath) {
 }
 
 UIGS_LoadCutsceneMetaData* UIGS_LoadCutsceneMetaData::LoadCutsceneMetaData(UObject* inWCO, FText inCutsceneID) {
-    return NULL;
+    return nullptr;
 }
-
 

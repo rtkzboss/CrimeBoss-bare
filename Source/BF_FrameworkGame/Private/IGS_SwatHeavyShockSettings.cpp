@@ -11,4 +11,3 @@ FIGS_SwatHeavyShockSettings::FIGS_SwatHeavyShockSettings() {
     (*this).Duration.Min = 3.750000000e+00f;
     (*this).Duration.Max = 4.250000000e+00f;
 }
-

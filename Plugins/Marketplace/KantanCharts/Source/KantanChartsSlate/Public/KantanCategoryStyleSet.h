@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<FKantanCategoryStyle> Styles;
-    
-};
 
+};

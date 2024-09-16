@@ -1,5 +1,4 @@
 #include "IGS_Quickplay_FinanceManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_Quickplay_FinanceManagerComponent::UIGS_Quickplay_FinanceManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -20,5 +19,4 @@ void UIGS_Quickplay_FinanceManagerComponent::CalculateMissionRewardWithMultiplie
 
 void UIGS_Quickplay_FinanceManagerComponent::AddBalance(int32 InValue) {
 }
-
 

@@ -12,27 +12,26 @@ public:
 protected:
     UPROPERTY()
     int32 IntValue;
-    
+
     UPROPERTY()
     int32 DefaultIntValue;
-    
+
     UPROPERTY()
     FString StringValue;
-    
+
     UPROPERTY()
     FString DefaultStringValue;
-    
+
     UPROPERTY()
     TArray<FString> StringChoiceValues;
-    
+
     UPROPERTY()
     TArray<FString> StringChoiceLabels;
-    
+
     UPROPERTY()
     bool bIsChildOfRamp;
-    
+
     UPROPERTY()
     TArray<int32> IntValuesArray;
-    
-};
 
+};

@@ -9,7 +9,6 @@ struct FGeneratedMaterial {
 public:
     UPROPERTY(VisibleAnywhere)
     TArray<FGeneratedTexture> Textures;
-    
+
     CUSTOMIZABLEOBJECT_API FGeneratedMaterial();
 };
-

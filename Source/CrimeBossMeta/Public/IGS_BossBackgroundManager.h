@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "BackgroundChangeFinishedDelegate.h"
+#include "BackgroundChangeFinished.h"
 #include "IGS_BossBackgroundManager.generated.h"
 
 class UDataTable;
@@ -15,51 +15,50 @@ public:
 private:
     UFUNCTION()
     void UnloadIncorrectLevel(FName inLevelToUnload);
-    
+
     UFUNCTION()
     void LoadCorrectLevel(FName inLevelToLoad);
-    
+
     UFUNCTION()
     void LevelHandlingFinished();
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     bool IsBackgroundChangeInProgress();
-    
+
     UFUNCTION(BlueprintCallable)
     bool IsAnyBackgroundLoaded();
-    
+
 private:
     UFUNCTION()
     void IncorrectLevelUnloaded();
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void HandleBackgroundSublevel(FName inLevelToLoad);
-    
+
     UFUNCTION(BlueprintCallable)
     FName GetNameForLevel(int32 inLevel);
-    
+
 private:
     UFUNCTION()
     TArray<FName> GetLoadedBackgroundLevelNames() const;
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FBackgroundChangeFinished OnBackgroundChangeFinished;
-    
+
 private:
     UPROPERTY()
     UDataTable* m_DataTable;
-    
+
     UPROPERTY()
     bool m_BackgroundChangeInProgress;
-    
+
     UPROPERTY()
     FName m_CurrentLevelToLoad;
-    
+
     UPROPERTY()
     FName m_WaitingLevelToLoad;
-    
-};
 
+};

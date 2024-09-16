@@ -3,4 +3,3 @@
 FOutputActorOwner::FOutputActorOwner() {
     (*this).OutputActor = nullptr;
 }
-

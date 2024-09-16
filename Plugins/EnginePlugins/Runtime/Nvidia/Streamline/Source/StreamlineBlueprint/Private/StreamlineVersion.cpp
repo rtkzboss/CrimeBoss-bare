@@ -5,4 +5,3 @@ FStreamlineVersion::FStreamlineVersion() {
     (*this).Minor = 0;
     (*this).Build = 0;
 }
-

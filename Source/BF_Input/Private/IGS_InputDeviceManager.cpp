@@ -12,7 +12,6 @@ void UIGS_InputDeviceManager::RefreshCurrentInputDevice() {
 }
 
 EIGS_InputDevice UIGS_InputDeviceManager::GetCurrentInputDevice() const {
-    return EIGS_InputDevice::ID_UNKNOWN;
+    return EIGS_InputDevice::ID_KeyboardAndMouse;
 }
-
 

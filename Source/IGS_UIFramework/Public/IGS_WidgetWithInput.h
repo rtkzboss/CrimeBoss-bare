@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool OnMenuInputReleased(EIGS_InputAction InAction);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool OnMenuInputPressed(EIGS_InputAction InAction);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnInputDeviceChanged(EIGS_InputDevice newDevice);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool OnAnalogInput(EIGS_InputThumbstickType Type, const FVector2D& Value);
-    
-};
 
+};

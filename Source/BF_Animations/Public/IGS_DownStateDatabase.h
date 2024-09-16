@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(EditAnywhere)
     UAnimMontage* DownStateMontage;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* DownMovableToPinned;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* ReviveHelpMovableStateMontage;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* ReviveHelpPinnedStateMontage;
-    
-};
 
+};

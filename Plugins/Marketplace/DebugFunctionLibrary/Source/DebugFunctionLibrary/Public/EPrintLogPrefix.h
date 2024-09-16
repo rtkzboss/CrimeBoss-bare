@@ -9,4 +9,3 @@ enum class EPrintLogPrefix : int32 {
     Function,
     None,
 };
-

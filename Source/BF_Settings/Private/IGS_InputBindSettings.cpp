@@ -3,10 +3,10 @@
 #include "IGS_InputActionMapDataAsset.h"
 
 UIGS_InputBindSettings::UIGS_InputBindSettings() {
-    static ConstructorHelpers::FObjectFinder<UIGS_InputActionMapDataAsset> gen0(TEXT("/Game/00_Main/Input/InputTables/DA_InputActionMap.DA_InputActionMap"));
-    (*this).InputActionMapDataAsset = gen0.Object;
-    static ConstructorHelpers::FObjectFinder<UIGS_InputActionDefaultKeysDataAsset> gen1(TEXT("/Game/00_Main/Input/InputTables/DA_DefaultInputKeys.DA_DefaultInputKeys"));
-    (*this).InputActionDefaultKeysAsset = gen1.Object;
+    static ConstructorHelpers::FObjectFinder<UIGS_InputActionMapDataAsset> gen(TEXT("/Game/00_Main/Input/InputTables/DA_InputActionMap.DA_InputActionMap"));
+    (*this).InputActionMapDataAsset = gen.Object;
+    static ConstructorHelpers::FObjectFinder<UIGS_InputActionDefaultKeysDataAsset> gen2(TEXT("/Game/00_Main/Input/InputTables/DA_DefaultInputKeys.DA_DefaultInputKeys"));
+    (*this).InputActionDefaultKeysAsset = gen2.Object;
     (*this).bSettingsValid = true;
 }
 
@@ -26,7 +26,7 @@ void UIGS_InputBindSettings::ResetGamepadBindings() {
 }
 
 UIGS_InputBindSettings* UIGS_InputBindSettings::Instance() {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_InputBindSettings::FailsafeFillEmptyBindings() {
@@ -37,5 +37,4 @@ void UIGS_InputBindSettings::CacheBindings() {
 
 void UIGS_InputBindSettings::ApplySettings(bool inSave) {
 }
-
 

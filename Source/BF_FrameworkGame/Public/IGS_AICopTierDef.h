@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AICopTierDef : public FIGS_AIBaseTierDef {
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AICopBaseDataModifiers Stats;
-    
+
     FIGS_AICopTierDef();
 };
-

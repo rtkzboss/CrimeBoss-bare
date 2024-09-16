@@ -1,8 +1,9 @@
 #include "IGS_ObjectiveManager.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_ObjectiveManager::UIGS_ObjectiveManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_ObjectiveManager::UnpauseTimerForTask(UObject* inWCO, FIGS_MissionTask inTask) {
@@ -94,7 +95,7 @@ FIGS_MissionTask UIGS_ObjectiveManager::GetTaskCopyByID(UObject* inWCO, int32 in
 }
 
 UIGS_ObjectiveManager* UIGS_ObjectiveManager::GetObjectiveManager(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_MissionObjective UIGS_ObjectiveManager::GetObjectiveCopyByID(UObject* inWCO, int32 inID, bool& outSuccess) {
@@ -106,7 +107,7 @@ EIGS_ObjectiveState UIGS_ObjectiveManager::GetObjectiveComponentState(UIGS_Objec
 }
 
 UIGS_ObjectiveComponent* UIGS_ObjectiveManager::GetObjectiveComponent(EIGS_ObjectiveComponentType inType) {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_MissionObjective UIGS_ObjectiveManager::GetActiveObjective(UObject* inWCO) {
@@ -151,7 +152,7 @@ void UIGS_ObjectiveManager::AddObjective(UObject* inWCO, FIGS_MissionObjective i
 
 void UIGS_ObjectiveManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_ObjectiveManager, Tasks);
     DOREPLIFETIME(UIGS_ObjectiveManager, Objectives);
     DOREPLIFETIME(UIGS_ObjectiveManager, ActiveObjective);
@@ -163,5 +164,4 @@ void UIGS_ObjectiveManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(UIGS_ObjectiveManager, CleanExecutionState);
     DOREPLIFETIME(UIGS_ObjectiveManager, ObjectiveComponents);
 }
-
 

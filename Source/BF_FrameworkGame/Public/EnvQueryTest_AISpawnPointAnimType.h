@@ -13,9 +13,8 @@ public:
 private:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue AnimType;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue CheckAnimType;
-    
-};
 
+};

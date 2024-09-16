@@ -7,4 +7,3 @@ enum class EMETA_ConditionExprOperator : uint8 {
     And,
     Or,
 };
-

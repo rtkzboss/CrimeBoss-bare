@@ -11,4 +11,3 @@ enum class EOnlineComparisonOpRedux : uint8 {
     LessThan,
     LessThanEquals,
 };
-

@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly)
     int32 LODLevel;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool DeathAnimationEnded;
-    
-};
 
+};

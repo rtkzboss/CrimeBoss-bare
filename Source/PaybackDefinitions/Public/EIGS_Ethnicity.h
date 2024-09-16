@@ -10,4 +10,3 @@ enum class EIGS_Ethnicity : uint8 {
     Latinx,
     Unknown = 255,
 };
-

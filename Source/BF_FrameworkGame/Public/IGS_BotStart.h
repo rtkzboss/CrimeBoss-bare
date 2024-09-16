@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/NavigationObjectBase.h"
-#include "IGS_OnCharacterSpawnedSignatureDelegate.h"
+#include "IGS_OnCharacterSpawnedSignature.h"
 #include "IGS_BotStart.generated.h"
 
 UCLASS()
@@ -12,12 +12,11 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_OnCharacterSpawnedSignature OnCharacterSpawned;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool Compulsory;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName BotStartTag;
-    
-};
 
+};

@@ -1,8 +1,4 @@
 #include "IGS_GameCharacterMovementComponent.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
-#include "GameFramework/MovementComponent.h"
-#include "GameplayEffect.h"
 
 UIGS_GameCharacterMovementComponent::UIGS_GameCharacterMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).SlopeAngleMax = 3.000000000e+01f;
@@ -16,8 +12,8 @@ UIGS_GameCharacterMovementComponent::UIGS_GameCharacterMovementComponent(const F
     (*this).StopSlideSpeed = 2.800000000e+02f;
     (*this).SlideLookTurnMultiplier = 3.000000119e-01f;
     (*this).SlideLowerBodyMultiplier = 3.000000119e-01f;
-    static ConstructorHelpers::FClassFinder<UGameplayEffect> gen0(TEXT("/Game/00_Main/GameplayAbilitySystem/Effects/GE_MoveSpeedMultiplier.GE_MoveSpeedMultiplier_C"));
-    (*this).MoveSpeedMultiplierGE = gen0.Class;
+    static ConstructorHelpers::FClassFinder<UGameplayEffect> gen(TEXT("/Game/00_Main/GameplayAbilitySystem/Effects/GE_MoveSpeedMultiplier.GE_MoveSpeedMultiplier_C"));
+    (*this).MoveSpeedMultiplierGE = gen.Class;
     (*this).CalmWalkSpeed = 1.000000000e+02f;
     (*this).CalmRunSpeed = 2.800000000e+02f;
     (*this).CalmSprintSpeed = 4.900000000e+02f;
@@ -142,11 +138,11 @@ bool UIGS_GameCharacterMovementComponent::IsInVentShaft() const {
 }
 
 float UIGS_GameCharacterMovementComponent::GetWalkSpeed() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_GameCharacterMovementComponent::GetSprintSpeed() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UIGS_GameCharacterMovementComponent::GetShouldRotateView() const {
@@ -154,7 +150,7 @@ bool UIGS_GameCharacterMovementComponent::GetShouldRotateView() const {
 }
 
 float UIGS_GameCharacterMovementComponent::GetMovementSpeedMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EIGS_Speed UIGS_GameCharacterMovementComponent::GetMovementSpeed() const {
@@ -170,7 +166,7 @@ FVector UIGS_GameCharacterMovementComponent::GetLastGroundedLocation() const {
 }
 
 float UIGS_GameCharacterMovementComponent::GetFullRunSpeed() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FVector UIGS_GameCharacterMovementComponent::GetAdvancedMoveInteractionLocation() const {
@@ -187,5 +183,4 @@ bool UIGS_GameCharacterMovementComponent::CanMoveOnLadder() const {
 
 void UIGS_GameCharacterMovementComponent::AddMovementSpeedMultiplier(UObject* Owner, float Multiplier) {
 }
-
 

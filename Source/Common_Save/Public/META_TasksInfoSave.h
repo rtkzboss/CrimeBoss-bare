@@ -9,7 +9,6 @@ struct COMMON_SAVE_API FMETA_TasksInfoSave {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_TaskInfoSave> Tasks;
-    
+
     FMETA_TasksInfoSave();
 };
-

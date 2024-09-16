@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupDefaultTierData : public FIGS_AIBaseDef
 public:
     FIGS_AIBackupDefaultTierData();
 };
-

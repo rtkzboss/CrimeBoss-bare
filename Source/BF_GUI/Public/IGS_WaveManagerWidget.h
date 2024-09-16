@@ -15,12 +15,11 @@ public:
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void PhaseChanged(EIGS_PressurePhase inPressurePhase);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void EnemyCountChanged();
-    
+
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_WaveManager> WaveManager;
-    
-};
 
+};

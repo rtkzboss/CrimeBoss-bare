@@ -8,10 +8,9 @@ struct FIGS_RopeMaterialSettings {
 public:
     UPROPERTY(EditAnywhere)
     FName ParNameTilingU;
-    
+
     UPROPERTY(EditAnywhere)
     float MaterialTilingU;
-    
+
     BF_FRAMEWORKGAME_API FIGS_RopeMaterialSettings();
 };
-

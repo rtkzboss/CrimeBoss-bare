@@ -13,16 +13,15 @@ struct FIGS_UnlockRewardRanges {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FInt32Range LevelRange;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_UnlockCategory, FIGS_UnlockRewardMaxAmount> RewardCategoryMap;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer AvailableItems;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_UnlockRewardForcedPool> ForcedPool;
-    
+
     BF_FRAMEWORKBASE_API FIGS_UnlockRewardRanges();
 };
-

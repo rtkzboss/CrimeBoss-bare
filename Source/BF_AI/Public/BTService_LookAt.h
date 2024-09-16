@@ -12,15 +12,14 @@ public:
 
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookAtBlackBoardKey;
-    
+
     UPROPERTY(EditAnywhere)
     bool bRotateIfBehind;
-    
+
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     float LookAtStartMaxAngle;
-    
+
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     float LookAtStopMaxAngle;
-    
-};
 
+};

@@ -8,4 +8,3 @@ FPowerIKGroundCollision::FPowerIKGroundCollision() {
     (*this).EnableWallCollision = false;
     (*this).WallOffset = 2.000000000e+01f;
 }
-

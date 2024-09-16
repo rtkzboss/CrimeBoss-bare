@@ -10,10 +10,9 @@ struct FClassWeightPair {
 public:
     UPROPERTY(EditAnywhere)
     UCustomizableObjectPopulationClass* Class;
-    
+
     UPROPERTY(EditAnywhere)
     int32 ClassWeight;
-    
+
     CUSTOMIZABLEOBJECTPOPULATION_API FClassWeightPair();
 };
-

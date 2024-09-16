@@ -9,4 +9,3 @@ enum class EIGS_MusicMissionSource : uint8 {
     Multiplayer,
     All,
 };
-

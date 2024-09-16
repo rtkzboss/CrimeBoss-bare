@@ -1,5 +1,4 @@
 #include "IGS_AIDataComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AIDataComponent::UIGS_AIDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).LastEnemyHitTime = -3.402823466e+38f;
@@ -14,5 +13,4 @@ UIGS_AIDataComponent::UIGS_AIDataComponent(const FObjectInitializer& ObjectIniti
 FIGS_ShootingOverride UIGS_AIDataComponent::GetShootingOverride() const {
     return FIGS_ShootingOverride{};
 }
-
 

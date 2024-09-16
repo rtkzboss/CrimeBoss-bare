@@ -13,9 +13,8 @@ public:
 
     UFUNCTION()
     void UnregisterInteractiveComponent(UIGS_LookAtTriggerComponent* InComponent);
-    
+
     UFUNCTION()
     void RegisterInteractiveComponent(UIGS_LookAtTriggerComponent* InComponent);
-    
-};
 
+};

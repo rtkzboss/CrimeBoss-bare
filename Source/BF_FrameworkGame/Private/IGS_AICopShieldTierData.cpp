@@ -2,4 +2,3 @@
 
 FIGS_AICopShieldTierData::FIGS_AICopShieldTierData() {
 }
-

@@ -1,8 +1,9 @@
 #include "IGS_PlayerJoinManager.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_PlayerJoinManager::UIGS_PlayerJoinManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_PlayerJoinManager::OnRep_JoinedPlayers() const {
@@ -16,7 +17,7 @@ FIGS_PlayerJoinInfo UIGS_PlayerJoinManager::GetSlotByHeisterNumberBP(int32 inHei
 }
 
 UIGS_PlayerJoinManager* UIGS_PlayerJoinManager::GetPlayerJoinManager(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_PlayerJoinManager::GetNumberOfFreeSlots() const {
@@ -29,14 +30,13 @@ int32 UIGS_PlayerJoinManager::GetJoinedHeistersCount() {
 
 
 TArray<AIGS_GameCharacterFramework*> UIGS_PlayerJoinManager::GetCurrentPlayers() {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 void UIGS_PlayerJoinManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_PlayerJoinManager, R_JoinedPlayers);
     DOREPLIFETIME(UIGS_PlayerJoinManager, HasEveryoneLoadedLevel);
 }
-
 

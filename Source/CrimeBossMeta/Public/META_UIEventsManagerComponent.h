@@ -41,95 +41,94 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FIGS_GatherIntelCompleted, UMETA_BaseMission*, MissionID);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FIGS_BossPointChanged, float, PreviousPoints, float, CurrentPoints);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FIGS_BossLevelChanged, int32, PreviousLevel, int32, CurrentLevel, float, PreviousPoints, float, CurrentPoints);
-    
+
     UMETA_UIEventsManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
     bool IsCompletedJobPending();
-    
+
     UFUNCTION(BlueprintCallable)
     FIGS_JobCompletedInfo GetAndClearPendingCompletedJob(bool& outResult);
-    
+
     UPROPERTY(BlueprintAssignable)
     FMETA_AIGangDefendedAttackFromAnotherAIGang OnAIGangDefendedAttackFromAnotherAIGang;
-    
+
     UPROPERTY(BlueprintAssignable)
     FMETA_LoanIsAbleToBeActivatedDueToBankruption OnLoanIsAbleToBeActivatedDueToBankruption;
-    
+
     UPROPERTY(BlueprintAssignable)
     FMETA_LoanHasBeenFullyRepaid OnLoanHasBeenFullyRepaid;
-    
+
     UPROPERTY(BlueprintAssignable)
     FMETA_PlayerBrokeFriendshipAndBecameTopEnemyForAllGangs OnPlayerBrokeFriendshipAndBecameTopEnemyForAllGangs;
-    
+
     UPROPERTY(BlueprintAssignable)
     FMETA_GangHaveIsolatedTilesAndAutomaticallyCapturedThem OnGangHaveIsolatedTilesAndAutomaticallyCapturedThem;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnHeisterDeserted OnHeisterDeserted;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_UnpaidHeisterLeftCrew OnUnpaidHeisterLeftCrew;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_UniqueHeisterLvlChanged OnUniqueHeisterLvlChanged;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnPlayerReachedBankruptState OnPlayerReachedBankruptState;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnPlayerRehabilitatedFromBankruptState OnPlayerRehabilitatedFromBankruptState;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnMissionObjectiveForCompletionInNDaysFailed OnMissionObjectiveForCompletionInNDaysFailed;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnSwitchToScreenEvent OnSwitchToScreenEvent;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnUnlockFeatureEvent OnUnlockFeatureEvent;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnJobForcedEvent OnJobForcedEvent;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnReadyRandEventChanged OnReadyRandEventChanged;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnActiveRandEventChanged OnActiveRandEventChanged;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_SurvivalMissionForMissingCrewSpawned OnSurvivalMissionForMissingCrewSpawned;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_MissingHeisterReturnedToCrew OnMissingHeisterReturnedToCrew;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_MissingHeisterDead OnMissingHeisterDead;
-    
+
     UPROPERTY(BlueprintReadOnly)
     FIGS_JobCompletedInfo PendingCompletedJob;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool PendingCareerCompleted;
-    
+
     UPROPERTY(BlueprintReadOnly)
     EMETA_CareerCompletionReason PendingCareerCompletedReason;
-    
+
     UPROPERTY(BlueprintReadOnly)
     EMETA_Gang PendingCareerCompletedGang;
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_IntelLevelChanged OnIntelLevelChanged;
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_GatherIntelCompleted OnGatherIntelCompleted;
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_BossLevelChanged OnBossLevelChanged;
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_BossPointChanged OnBossPointChanged;
-    
-};
 
+};

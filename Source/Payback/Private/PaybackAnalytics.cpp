@@ -12,4 +12,3 @@ void UPaybackAnalytics::LobbyStarted(UObject* inWCO, const FString& lobbySource)
 void UPaybackAnalytics::LobbyFinished(UObject* inWCO, const FString& resultText) {
 }
 
-

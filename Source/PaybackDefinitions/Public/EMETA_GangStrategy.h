@@ -10,4 +10,3 @@ enum class EMETA_GangStrategy : uint8 {
     Retaliator,
     Rage,
 };
-

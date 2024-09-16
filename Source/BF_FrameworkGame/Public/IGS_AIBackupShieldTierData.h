@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupShieldTierData : public FIGS_AIBaseShie
 public:
     FIGS_AIBackupShieldTierData();
 };
-

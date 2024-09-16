@@ -10,10 +10,9 @@ struct COMMON_SAVE_API FIGS_CharacterMissionProgress {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, EMETA_JobResult> MissionsStatuses;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool Completed;
-    
+
     FIGS_CharacterMissionProgress();
 };
-

@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY()
     AIGS_IntelligentGameCharacter* CharacterOwner;
-    
+
     UPROPERTY(Instanced)
     UIGS_CharacterData* CharacterData;
-    
-};
 
+};

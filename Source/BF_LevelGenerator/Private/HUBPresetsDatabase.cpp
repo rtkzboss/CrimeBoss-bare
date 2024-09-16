@@ -8,7 +8,6 @@ FIGS_HubGeneratorPresetRow UHUBPresetsDatabase::GetHUBPresetsDataBP(const UObjec
 }
 
 TArray<FIGS_HubGeneratorPresetRow> UHUBPresetsDatabase::GetAllHUBPresetsDataBP(const UObject* inWCO) {
-    return TArray<FIGS_HubGeneratorPresetRow>();
+    return {};
 }
-
 

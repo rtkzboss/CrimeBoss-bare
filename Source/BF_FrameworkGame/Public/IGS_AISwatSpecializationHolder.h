@@ -14,19 +14,18 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatSpecializationHolder : public FIGS_AIBase
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatDefaultTierDef Default;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatSniperTierDef Sniper;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatShieldTierDef Shield;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatHeavyTierDef Heavy;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatHeavyScoutTierDef HeavyScout;
-    
+
     FIGS_AISwatSpecializationHolder();
 };
-

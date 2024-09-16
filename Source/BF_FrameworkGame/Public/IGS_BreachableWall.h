@@ -17,23 +17,22 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* WallRootComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UChildActorComponent* FrontBreachingPoints;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UChildActorComponent* BackBreachingPoints;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AIGS_RoomBase* OwningRoom;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsBreached;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UBoxComponent* NavigationBlock;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

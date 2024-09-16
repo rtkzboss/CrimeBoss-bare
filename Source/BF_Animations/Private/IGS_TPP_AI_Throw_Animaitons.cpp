@@ -8,4 +8,3 @@ FIGS_TPP_AI_Throw_Animaitons::FIGS_TPP_AI_Throw_Animaitons() {
     (*this).ThrowGrenadeCrouchUp02 = nullptr;
     (*this).ThrowGrenadeCrouchDown = nullptr;
 }
-

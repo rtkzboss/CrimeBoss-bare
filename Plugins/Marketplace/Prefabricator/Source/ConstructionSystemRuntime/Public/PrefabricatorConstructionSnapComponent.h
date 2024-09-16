@@ -14,21 +14,20 @@ public:
 
     UPROPERTY(EditAnywhere)
     EPrefabricatorConstructionSnapType SnapType;
-    
+
     UPROPERTY(EditAnywhere)
     FPCSnapConstraintFloor FloorConstraint;
-    
+
     UPROPERTY(EditAnywhere)
     FPCSnapConstraintWall WallConstraint;
-    
+
     UPROPERTY(EditAnywhere)
     bool bAlignToGroundSlope;
-    
+
     UPROPERTY(EditAnywhere)
     bool bUseMaxGroundSlopeConstraint;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxGroundPlacementSlope;
-    
-};
 
+};

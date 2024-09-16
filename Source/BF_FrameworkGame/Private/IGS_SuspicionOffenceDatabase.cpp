@@ -3,4 +3,3 @@
 UIGS_SuspicionOffenceDatabase::UIGS_SuspicionOffenceDatabase() {
 }
 
-

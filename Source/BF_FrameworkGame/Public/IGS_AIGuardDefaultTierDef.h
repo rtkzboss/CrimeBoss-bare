@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGuardDefaultTierDef : public FIGS_AIGuardTier
 public:
     FIGS_AIGuardDefaultTierDef();
 };
-

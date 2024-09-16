@@ -10,7 +10,6 @@ struct CRIMEBOSSMETA_API FWeaponUIStatsRanges : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector2D Range;
-    
+
     FWeaponUIStatsRanges();
 };
-

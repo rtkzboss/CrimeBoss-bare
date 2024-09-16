@@ -3,4 +3,3 @@
 UIGS_GeneralReactionData_Actor::UIGS_GeneralReactionData_Actor() {
 }
 
-

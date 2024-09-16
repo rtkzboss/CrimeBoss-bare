@@ -11,6 +11,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool ShouldFacePlayerOnDetection;
-    
-};
 
+};

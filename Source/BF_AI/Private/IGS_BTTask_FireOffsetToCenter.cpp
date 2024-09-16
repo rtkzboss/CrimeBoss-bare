@@ -7,4 +7,3 @@ UIGS_BTTask_FireOffsetToCenter::UIGS_BTTask_FireOffsetToCenter() {
     (*this).NodeName = TEXT("Fire Offset");
 }
 
-

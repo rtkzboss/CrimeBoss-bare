@@ -16,14 +16,13 @@ public:
 protected:
     UFUNCTION()
     void OnMoveModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode);
-    
+
 private:
     UFUNCTION(Reliable, Server)
     void MessageToServer_StopUsingVehicle();
-    
+
 protected:
     UPROPERTY()
     FGameplayAbilitySpecHandle m_RunningAbilitySpecHandle;
-    
-};
 
+};

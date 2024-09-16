@@ -13,9 +13,8 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     float InterpolationSpeed;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_CharacterVsHeistersCollisionStatus MovingCharacterVsHeistersCollisionStatus;
-    
-};
 
+};

@@ -11,19 +11,18 @@ struct FMutableModelParameterProperties {
 public:
     UPROPERTY()
     FString Name;
-    
+
     UPROPERTY()
     EMutableParameterType Type;
-    
+
     UPROPERTY()
     int32 ImageDescriptionCount;
-    
+
     UPROPERTY()
     TArray<FMutableModelParameterValue> PossibleValues;
-    
+
     UPROPERTY()
     FMutableParamUIMetadata ParamUIMetadata;
-    
+
     CUSTOMIZABLEOBJECT_API FMutableModelParameterProperties();
 };
-

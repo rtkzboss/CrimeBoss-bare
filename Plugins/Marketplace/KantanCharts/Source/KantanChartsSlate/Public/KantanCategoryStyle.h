@@ -9,10 +9,9 @@ struct FKantanCategoryStyle {
 public:
     UPROPERTY(EditAnywhere)
     FName CategoryStyleId;
-    
+
     UPROPERTY(EditAnywhere)
     FLinearColor Color;
-    
+
     KANTANCHARTSSLATE_API FKantanCategoryStyle();
 };
-

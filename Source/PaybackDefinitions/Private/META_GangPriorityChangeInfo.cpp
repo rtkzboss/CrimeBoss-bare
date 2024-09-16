@@ -7,4 +7,3 @@ FMETA_GangPriorityChangeInfo::FMETA_GangPriorityChangeInfo() {
     (*this).ChangeWhenPlayerDefendsTile = 10;
     (*this).ChangeWhenNewDay = -15;
 }
-

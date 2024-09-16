@@ -2,4 +2,3 @@
 
 FIGS_AIBackupHeavyTierData::FIGS_AIBackupHeavyTierData() {
 }
-

@@ -15,15 +15,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootingCollection;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootCarryable;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* LootCollectionsQuery;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* LootCarryablesQuery;
-    
-};
 
+};

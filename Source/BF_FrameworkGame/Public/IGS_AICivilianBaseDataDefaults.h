@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AICivilianBaseDataDefaults : public FIGS_AIUnit
 public:
     FIGS_AICivilianBaseDataDefaults();
 };
-

@@ -12,6 +12,5 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnAddErrorMessage(const FText& inErrorMessage);
-    
-};
 
+};

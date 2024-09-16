@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void WarzoneInitialSpawn(UObject* inWCO, TArray<AIGS_AIEnemyGroupSpawner*> inFriendlySpawners, int32 inFriendliesCount, TArray<AIGS_AIEnemyGroupSpawner*> inEnemySpawners, int32 inEnemyCounts, float spawnRectLenghtAllies, float spawnRectWidthAllies, float playerLenghtRatio, float spawnRectLenghtEnemies, float spawnRectWidthEnemies, float rectDistancesMin, float rectDistancesMax);
-    
+
     UFUNCTION(BlueprintCallable)
     static TArray<AIGS_GameCharacterFramework*> GetWarzoneAttackGroupAddon(AIGS_GameCharacterFramework* inLeader, TArray<AIGS_GameCharacterFramework*> inCurrGroup, float inDistance, int32 inCount);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static int32 CallWarzoneReinforcment(UObject* inWCO, int32 inCount, bool inAllies);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static int32 CallWarzoneCaptain(UObject* inWCO, int32 inCount);
-    
-};
 
+};

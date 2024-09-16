@@ -10,4 +10,3 @@ public:
     UIGS_RollbackComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

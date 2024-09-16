@@ -12,27 +12,26 @@ public:
 
     UFUNCTION(Server, Unreliable, WithValidation)
     void MessageToServer_PlayerLightMeleeChainAttackVariantChange(int32 inChainIdx);
-    
+
     UFUNCTION(Reliable, Server, WithValidation)
     void MessageToServer_PlayerInteractionRespondChangeReliable(EIGS_InteractionAnimationTypes inVariant);
-    
+
     UFUNCTION(Server, Unreliable, WithValidation)
     void MessageToServer_PlayerInteractionRespondChange(EIGS_InteractionAnimationTypes inVariant);
-    
+
     UFUNCTION(Server, Unreliable, WithValidation)
     void MessageToServer_PlayerHeavyMeleeChainAttackVariantChange(int32 inChainIdx);
-    
+
     UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_PlayerLightMeleeChainAttackVariantChange(int32 inChainIdx);
-    
+
     UFUNCTION(NetMulticast, Reliable)
     void MessageToAll_PlayerInteractionRespondChangeReliable(EIGS_InteractionAnimationTypes inVariants);
-    
+
     UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_PlayerInteractionRespondChange(EIGS_InteractionAnimationTypes inVariants);
-    
+
     UFUNCTION(NetMulticast, Unreliable)
     void MessageToAll_PlayerHeavyMeleeChainAttackVariantChange(int32 inChainIdx);
-    
-};
 
+};

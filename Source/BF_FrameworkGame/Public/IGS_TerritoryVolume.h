@@ -19,51 +19,50 @@ public:
 private:
     UFUNCTION()
     void OnTerritoryVolumeEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
+
     UFUNCTION()
     void OnTerritoryVolumeBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void HandleCoolDown();
-    
+
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum OwnersTeamSide;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Cooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool CoolDownOnlyForPlayer;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool CoolDownReturnsToNeutral;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ApplyRestrictionTagsAutomatically;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IgnoreTrigger;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldRecomputeOnEmpty;
-    
+
 protected:
     UPROPERTY(VisibleAnywhere)
     TArray<TWeakObjectPtr<AIGS_AIEnemyGroupSpawner>> m_GroupSpawners;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<TWeakObjectPtr<AIGS_RoomBase>> m_Rooms;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 HeistersCount;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 EnemiesCount;
-    
-};
 
+};

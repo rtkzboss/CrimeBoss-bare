@@ -5,4 +5,3 @@ UBTDecorator_HasSpecificAim::UBTDecorator_HasSpecificAim() {
     (*this).NodeName = TEXT("Has Specific Aim");
 }
 
-

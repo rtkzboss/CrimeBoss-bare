@@ -10,7 +10,6 @@ struct FIGS_PerkGroup {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<int32, UMETA_Perk*> Perks;
-    
+
     CRIMEBOSSMETA_API FIGS_PerkGroup();
 };
-

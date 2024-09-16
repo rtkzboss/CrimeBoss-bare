@@ -5,4 +5,3 @@ FIGS_LockPickDifficultySetting::FIGS_LockPickDifficultySetting() {
     (*this).DecreaseAngleMultiplier = 8.999999762e-01f;
     (*this).PinCount = 2;
 }
-

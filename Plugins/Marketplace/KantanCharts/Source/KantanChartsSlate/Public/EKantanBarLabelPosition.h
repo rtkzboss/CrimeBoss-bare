@@ -8,4 +8,3 @@ enum class EKantanBarLabelPosition : uint8 {
     Standard,
     Overlaid,
 };
-

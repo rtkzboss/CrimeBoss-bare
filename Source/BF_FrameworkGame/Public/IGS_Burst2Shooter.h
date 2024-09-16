@@ -10,4 +10,3 @@ public:
     UIGS_Burst2Shooter(const FObjectInitializer& ObjectInitializer);
 
 };
-

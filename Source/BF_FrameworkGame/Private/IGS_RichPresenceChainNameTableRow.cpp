@@ -2,6 +2,5 @@
 
 FIGS_RichPresenceChainNameTableRow::FIGS_RichPresenceChainNameTableRow() {
     (*this).ID = nullptr;
-    (*this).Name = FText::FromString(TEXT(""));
+    (*this).Name = FText::GetEmpty();
 }
-

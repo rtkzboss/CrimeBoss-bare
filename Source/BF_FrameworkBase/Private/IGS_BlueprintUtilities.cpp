@@ -7,7 +7,7 @@ void UIGS_BlueprintUtilities::WaitForStreamingFinished(const UObject* WorldConte
 }
 
 TArray<EIGS_TeamSideEnum> UIGS_BlueprintUtilities::TeamSidesMaskToArray(int32 inValidTeamSides) {
-    return TArray<EIGS_TeamSideEnum>();
+    return {};
 }
 
 void UIGS_BlueprintUtilities::SetPlayerInputForInteraction(bool inEnabled, APlayerController* InController) {
@@ -39,11 +39,11 @@ void UIGS_BlueprintUtilities::GetUniqueNetID(APlayerController* PlayerController
 }
 
 APlayerController* UIGS_BlueprintUtilities::GetLocalPlayerControllerForWorld(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 APlayerController* UIGS_BlueprintUtilities::GetLocalPlayerController(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 FColor UIGS_BlueprintUtilities::GetColorForTeamSide(EIGS_TeamSideEnum inTeamSide) {
@@ -55,5 +55,4 @@ void UIGS_BlueprintUtilities::GetBuildConfiguration(EBuildConfigurationExecPin& 
 
 void UIGS_BlueprintUtilities::Array_Shuffle_RandomStream(const TArray<int32>& TargetArray, const FRandomStream& inRandomStream) {
 }
-
 

@@ -1,7 +1,8 @@
 #include "IGS_TextChatManager.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_TextChatManager::UIGS_TextChatManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_TextChatManager::Server_SendTextChatMessageTextOnly_Implementation(const FText& inMessage) {
@@ -29,10 +30,9 @@ void UIGS_TextChatManager::Multicast_SendTextChatMessage_Implementation(const FT
 }
 
 UIGS_TextChatManager* UIGS_TextChatManager::GetTextChatManager(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_TextChatManager::CloseChat() {
 }
-
 

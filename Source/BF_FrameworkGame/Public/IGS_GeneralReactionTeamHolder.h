@@ -12,10 +12,9 @@ struct BF_FRAMEWORKGAME_API FIGS_GeneralReactionTeamHolder {
 public:
     UPROPERTY(EditAnywhere, EditFixedSize)
     TMap<EIGS_GRWaitType, FIGS_GeneralReactionsDef> Defaults;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<EIGS_TeamSideEnum, FIGS_GeneralReactionSpecHolder> TeamOverrides;
-    
+
     FIGS_GeneralReactionTeamHolder();
 };
-

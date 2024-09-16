@@ -10,7 +10,6 @@ struct HOUDINIENGINERUNTIME_API FHoudiniGenericAttributeChangedProperty {
 public:
     UPROPERTY()
     UObject* Object;
-    
+
     FHoudiniGenericAttributeChangedProperty();
 };
-

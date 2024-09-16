@@ -3,4 +3,3 @@
 FMETA_PartnerInfo::FMETA_PartnerInfo() {
     (*this).Cash = 0;
 }
-

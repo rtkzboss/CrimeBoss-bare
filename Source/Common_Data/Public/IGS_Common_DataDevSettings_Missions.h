@@ -13,21 +13,20 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> ChainMissionsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MissionsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> QuickMissionsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MetaMissionsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MetaTurfWarMissionsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MetaGenericAmbushMissionsDataTable;
-    
-};
 
+};

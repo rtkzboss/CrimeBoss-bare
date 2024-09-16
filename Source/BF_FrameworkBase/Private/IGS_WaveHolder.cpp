@@ -5,4 +5,3 @@ FIGS_WaveHolder::FIGS_WaveHolder() {
     (*this).Amount = 0;
     (*this).Random = 0;
 }
-

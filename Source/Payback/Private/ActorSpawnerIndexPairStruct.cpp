@@ -4,4 +4,3 @@ FActorSpawnerIndexPairStruct::FActorSpawnerIndexPairStruct() {
     (*this).PropActorSpawner = nullptr;
     (*this).Index = 0;
 }
-

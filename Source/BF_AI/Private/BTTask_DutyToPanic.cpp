@@ -4,4 +4,3 @@ UBTTask_DutyToPanic::UBTTask_DutyToPanic() {
     (*this).NodeName = TEXT("Duty To Panic");
 }
 
-

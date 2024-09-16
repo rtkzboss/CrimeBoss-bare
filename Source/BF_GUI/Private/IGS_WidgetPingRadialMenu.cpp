@@ -1,8 +1,4 @@
 #include "IGS_WidgetPingRadialMenu.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetPingRadialMenu::UIGS_WidgetPingRadialMenu() : Super(FObjectInitializer::Get()) {
     (*this).MaxItemCount = 12;
@@ -14,5 +10,4 @@ UIGS_WidgetPingRadialMenu::UIGS_WidgetPingRadialMenu() : Super(FObjectInitialize
     (*this).SliceSlotSize.X = 1.280000000e+02f;
     (*this).SliceSlotSize.Y = 1.280000000e+02f;
 }
-
 

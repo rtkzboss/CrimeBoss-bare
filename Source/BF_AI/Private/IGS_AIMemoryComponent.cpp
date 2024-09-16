@@ -1,5 +1,4 @@
 #include "IGS_AIMemoryComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AIMemoryComponent::UIGS_AIMemoryComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -8,15 +7,15 @@ void UIGS_AIMemoryComponent::SetCurrentTarget(AActor* inNewTarget) {
 }
 
 AActor* UIGS_AIMemoryComponent::GetCurrentTarget() const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<AActor*> UIGS_AIMemoryComponent::GetAllSensedEnemies() {
-    return TArray<AActor*>();
+    return {};
 }
 
 TArray<AActor*> UIGS_AIMemoryComponent::GetAllDmgDealers() {
-    return TArray<AActor*>();
+    return {};
 }
 
 FIGS_SuspicionComponentHolder UIGS_AIMemoryComponent::BPGetSuspicionComponentByOwner(const AActor* inSuspicionComponentActor) {
@@ -30,5 +29,4 @@ FIGS_SuspicionComponentHolder UIGS_AIMemoryComponent::BPGetSuspicionComponent(co
 FIGS_EnemyHolder UIGS_AIMemoryComponent::BPGetEnemyHolder(const AActor* inEnemyActor) {
     return FIGS_EnemyHolder{};
 }
-
 

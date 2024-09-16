@@ -2,4 +2,3 @@
 
 FIGS_MontageInstanceHolder::FIGS_MontageInstanceHolder() {
 }
-

@@ -1,7 +1,8 @@
 #include "IGS_PlayerChatWheelComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerChatWheelComponent::UIGS_PlayerChatWheelComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_PlayerChatWheelComponent::ShowSpamPreventionMessage() {
@@ -15,5 +16,4 @@ bool UIGS_PlayerChatWheelComponent::Server_HandleChatWheelReaction_Validate(FGam
 
 void UIGS_PlayerChatWheelComponent::HandleChatWheelReaction(FGameplayTag inTag) {
 }
-
 

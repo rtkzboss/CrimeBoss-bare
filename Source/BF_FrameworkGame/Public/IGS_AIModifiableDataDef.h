@@ -8,10 +8,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIModifiableDataDef {
 public:
     UPROPERTY(EditAnywhere)
     float Multiplier;
-    
+
     UPROPERTY(EditAnywhere)
     bool bOverloadValue;
-    
+
     FIGS_AIModifiableDataDef();
 };
-

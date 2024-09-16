@@ -12,16 +12,15 @@ public:
 
     UFUNCTION()
     void OnRep_Spawned();
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropMeshInfoStruct PropMeshInfo;
-    
+
     UPROPERTY(ReplicatedUsing=OnRep_Spawned)
     int16 mR_SpawnedIndex;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

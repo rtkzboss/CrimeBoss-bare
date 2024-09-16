@@ -10,4 +10,3 @@ enum class EIGS_ScopeType : uint8 {
     Scope_MAX UMETA(Hidden),
     Scope_INVALID = 255,
 };
-

@@ -11,4 +11,3 @@ enum class EIGS_AnimationTaskFinishedReason : uint8 {
     Reason_Damage,
     Reason_Aborted,
 };
-

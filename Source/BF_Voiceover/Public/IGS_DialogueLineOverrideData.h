@@ -8,13 +8,12 @@ struct BF_VOICEOVER_API FIGS_DialogueLineOverrideData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DelayMin;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DelayMax;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ReadyToSaveToDatabase;
-    
+
     FIGS_DialogueLineOverrideData();
 };
-

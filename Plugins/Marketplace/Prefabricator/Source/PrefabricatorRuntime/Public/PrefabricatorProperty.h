@@ -13,18 +13,17 @@ public:
 
     UPROPERTY()
     FString PropertyName;
-    
+
     UPROPERTY()
     FString ExportedValue;
-    
+
     UPROPERTY()
     TArray<FPrefabricatorPropertyAssetMapping> AssetSoftReferenceMappings;
-    
+
     UPROPERTY()
     bool bIsCrossReferencedActor;
-    
+
     UPROPERTY()
     FGuid CrossReferencePrefabActorId;
-    
-};
 
+};

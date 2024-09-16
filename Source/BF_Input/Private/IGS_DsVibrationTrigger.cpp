@@ -5,4 +5,3 @@ FIGS_DsVibrationTrigger::FIGS_DsVibrationTrigger() {
     (*this).Frequency = 0;
     (*this).Amplitude = 0;
 }
-

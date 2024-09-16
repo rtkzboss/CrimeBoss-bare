@@ -10,10 +10,9 @@ struct FMETA_SequenceItem {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag Tag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_MenuState RequiredMenuState;
-    
+
     CRIMEBOSSMETA_API FMETA_SequenceItem();
 };
-

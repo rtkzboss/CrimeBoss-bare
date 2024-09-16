@@ -12,9 +12,8 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void StartActivity(EActivityTask Task);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void EndActivity(EActivityTask Task, bool Success);
-    
-};
 
+};

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EIGS_DirectionalCueType.h"
-#include "IGS_OnBulletMissCameraShakeSignatureDelegate.h"
-#include "IGS_OnDirectionalPlayerCueSignatureDelegate.h"
+#include "IGS_OnBulletMissCameraShakeSignature.h"
+#include "IGS_OnDirectionalPlayerCueSignature.h"
 #include "IGS_SuppressionHandlerComponent.h"
 #include "IGS_PlayerSuppressionHandlerComponent.generated.h"
 
@@ -19,32 +19,31 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void PlayWhizSound() const;
-    
+
     UFUNCTION(Client, Unreliable)
     void PlayDirectionalPlayerCue_Client(const AIGS_GameCharacterBase* inSourceCharacter, const EIGS_DirectionalCueType inType) const;
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FIGS_OnBulletMissCameraShakeSignature OnBulletMissCameraShake;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnDirectionalPlayerCueSignature OnPlayDirectionalPlayerCueEvent;
-    
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* DirectionalBulletWhizAkAudioEvent;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* DirectionalMeleeCueAkAudioEvent;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* BulletWhizAkAudioEvent;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* SniperSonicCrackAkEvent;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkRtpc* SniperSonicCrackRtpc;
-    
-};
 
+};

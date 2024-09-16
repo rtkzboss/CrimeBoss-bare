@@ -4,4 +4,3 @@ UIGS_BTDecorator_IsSecondPhaseOfDetection::UIGS_BTDecorator_IsSecondPhaseOfDetec
     (*this).NodeName = TEXT("Is Second Phase Of Detection");
 }
 
-

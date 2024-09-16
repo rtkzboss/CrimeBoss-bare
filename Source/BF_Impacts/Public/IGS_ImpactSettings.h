@@ -8,10 +8,9 @@ struct BF_IMPACTS_API FIGS_ImpactSettings {
 public:
     UPROPERTY(EditAnywhere)
     float DistanceSpawn;
-    
+
     UPROPERTY(EditAnywhere)
     bool bOverrideFallbackSettings;
-    
+
     FIGS_ImpactSettings();
 };
-

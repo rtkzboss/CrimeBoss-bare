@@ -14,12 +14,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     float LOSStoppingDistance;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
-    
-};
 
+};

@@ -8,6 +8,6 @@ FIGS_AISwatSniperTierDef::FIGS_AISwatSniperTierDef() {
     (*this).SpecStats.HiddenTimeInterval.Max = 5.000000000e+00f;
     (*this).SpecStats.CompromisedRange = 5.000000000e+02f;
     (*this).SpecStats.WeaponVisibilityType = EIGS_WeaponVisibilityType::VT_Laser;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Specialization, 0)) = TEXT("AI.Specialization.Sniper");
 }
-

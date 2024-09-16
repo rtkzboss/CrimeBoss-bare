@@ -4,4 +4,3 @@ UIGS_BTService_PreparingEscape::UIGS_BTService_PreparingEscape() {
     (*this).NodeName = TEXT("Preparing Escape");
 }
 
-

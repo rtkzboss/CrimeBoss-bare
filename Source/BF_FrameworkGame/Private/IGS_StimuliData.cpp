@@ -2,4 +2,3 @@
 
 FIGS_StimuliData::FIGS_StimuliData() {
 }
-

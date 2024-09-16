@@ -9,4 +9,3 @@ struct FMETA_CharacterSkinSaveData : public FMETA_ItemSaveDataBase {
 public:
     PAYBACKDEFINITIONS_API FMETA_CharacterSkinSaveData();
 };
-

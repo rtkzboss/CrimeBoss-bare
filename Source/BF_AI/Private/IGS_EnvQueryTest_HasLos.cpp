@@ -1,5 +1,5 @@
 #include "IGS_EnvQueryTest_HasLos.h"
-#include "EnvironmentQuery/EnvQueryTest.h"
+#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "EnvironmentQuery/Contexts/EnvQueryContext_Querier.h"
 
 UIGS_EnvQueryTest_HasLos::UIGS_EnvQueryTest_HasLos() {
@@ -14,6 +14,7 @@ UIGS_EnvQueryTest_HasLos::UIGS_EnvQueryTest_HasLos() {
     (*this).Context = UEnvQueryContext_Querier::StaticClass();
     (*this).FilterType = EEnvTestFilterType::Match;
     (*this).ScoringEquation = EEnvTestScoreEquation::Constant;
+    auto gen = UEnvQueryTest::StaticClass()->FindPropertyByName("bWorkOnFloatValues");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), false);
 }
-
 

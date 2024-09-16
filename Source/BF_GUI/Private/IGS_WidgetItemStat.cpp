@@ -1,8 +1,4 @@
 #include "IGS_WidgetItemStat.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetItemStat::UIGS_WidgetItemStat() : Super(FObjectInitializer::Get()) {
     (*this).TextColor.R = 6.000000238e-01f;
@@ -12,5 +8,4 @@ UIGS_WidgetItemStat::UIGS_WidgetItemStat() : Super(FObjectInitializer::Get()) {
     (*this).StatName = FText::FromString(TEXT("UNKNOWN_STAT"));
     (*this).StatValue = FText::FromString(TEXT("UNKNOWN_VALUE"));
 }
-
 

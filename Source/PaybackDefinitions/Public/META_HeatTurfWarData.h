@@ -8,25 +8,24 @@ struct PAYBACKDEFINITIONS_API FMETA_HeatTurfWarData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CapturingNeutralTurf;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 FailedTurfAttackOrDefend;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CapturingFirstTurfInTheSameDay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CapturingSecondTurfInTheSameDay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CapturingThirdTurfInTheSameDay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CapturinFourthTurfInTheSameDay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CapturingFifthAndMoreTurfInTheSameDay;
-    
+
     FMETA_HeatTurfWarData();
 };
-

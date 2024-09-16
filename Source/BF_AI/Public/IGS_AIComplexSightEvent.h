@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_AIComplexSightEvent {
 public:
     UPROPERTY()
     AActor* SeenActor;
-    
+
     UPROPERTY()
     AActor* Observer;
-    
+
     FIGS_AIComplexSightEvent();
 };
-

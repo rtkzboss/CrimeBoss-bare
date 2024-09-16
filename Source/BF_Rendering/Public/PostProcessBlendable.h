@@ -13,12 +13,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     FBlendablePostProcessSettings Settings;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BlendWeight;
-    
+
 
     // Fix for true pure virtual functions not being implemented
     virtual void OverrideBlendableSettings(class FSceneView& View, float Weight) const override {  }
 };
-

@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_Event EventType;
-    
-};
 
+};

@@ -5,4 +5,3 @@ FMETA_TradeRelationshipInfo::FMETA_TradeRelationshipInfo() {
     (*this).NoDealChance.Chance = 0;
     (*this).VendorAttackChance.Chance = 0;
 }
-

@@ -1,9 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "META_BaseGoal.h"
 #include "Templates/SubclassOf.h"
 #include "META_GoalsObjectIDCounter.generated.h"
-
-class UMETA_BaseGoal;
 
 USTRUCT(BlueprintType)
 struct PAYBACKDEFINITIONS_API FMETA_GoalsObjectIDCounter {
@@ -11,10 +10,9 @@ struct PAYBACKDEFINITIONS_API FMETA_GoalsObjectIDCounter {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UMETA_BaseGoal> GoalID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Counter;
-    
+
     FMETA_GoalsObjectIDCounter();
 };
-

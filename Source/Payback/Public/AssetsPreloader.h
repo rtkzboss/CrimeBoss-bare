@@ -14,12 +14,11 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldPreload;
-    
+
 protected:
     UPROPERTY(Transient)
     UIGS_VoiceoverSubsystemDataAsset* VODatabase;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

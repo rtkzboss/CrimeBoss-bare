@@ -10,4 +10,3 @@ enum class EMETA_Partner : uint8 {
     Captain,
     Agent,
 };
-

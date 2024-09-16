@@ -1,5 +1,4 @@
 #include "META_StoryGoal.h"
-#include "EMETA_GoalPriority.h"
 #include "EMETA_GoalType.h"
 
 UMETA_StoryGoal::UMETA_StoryGoal() {
@@ -7,7 +6,6 @@ UMETA_StoryGoal::UMETA_StoryGoal() {
 }
 
 TSoftObjectPtr<UStoryGraphManager> UMETA_StoryGoal::GetGraph() {
-    return NULL;
+    return {};
 }
-
 

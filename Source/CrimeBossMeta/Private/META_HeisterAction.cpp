@@ -6,4 +6,3 @@ UMETA_HeisterAction::UMETA_HeisterAction() {
     (*this).MaxAmountOfSortedHeisters = 1;
 }
 
-

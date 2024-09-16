@@ -5,7 +5,7 @@ public class BF_Pool : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "Core",
             "CoreUObject",
@@ -13,6 +13,7 @@ public class BF_Pool : ModuleRules {
             "Engine",
             "GameplayTags",
             "Niagara",
+            "PhysicsCore",
         });
     }
 }

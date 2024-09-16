@@ -4,4 +4,3 @@ UBTTask_SetInitialDefendPos::UBTTask_SetInitialDefendPos() {
     (*this).NodeName = TEXT("Set Initial Defend Pos");
 }
 
-

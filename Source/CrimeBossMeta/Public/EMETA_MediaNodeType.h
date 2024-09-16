@@ -9,4 +9,3 @@ enum class EMETA_MediaNodeType : uint8 {
     Movie,
     TextScreen,
 };
-

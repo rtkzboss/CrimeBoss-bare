@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_Ethnicity, FIGS_EthnicityVoiceArray> MaleMap;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_Ethnicity, FIGS_EthnicityVoiceArray> FemaleMap;
-    
-};
 
+};

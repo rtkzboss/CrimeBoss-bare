@@ -10,4 +10,3 @@ enum class EIGS_WaveDirectionType : uint8 {
     WDT_South,
     WDT_West,
 };
-

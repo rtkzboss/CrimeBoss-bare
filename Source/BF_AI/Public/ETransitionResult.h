@@ -8,4 +8,3 @@ enum ETransitionResult {
     TR_Success,
     TR_Failed,
 };
-

@@ -16,15 +16,14 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void SetupInventory(UIGS_ListInventory* inInventory);
-    
+
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_ListInventory> OwningPlayerInventory;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_IntelligentGameCharacter> OwningPlayerCharacter;
-    
+
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_CharacterWieldablesHolderComponent> WieldableHolder;
-    
-};
 
+};

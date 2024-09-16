@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "IGS_OnSlotReachedDelegate.h"
+#include "IGS_OnSlotReached.h"
 #include "IGS_ThrowBagSlot.generated.h"
 
 class AIGS_GameCharacterFramework;
@@ -16,15 +16,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void ReportSlotReached(AIGS_GameCharacterFramework* inCharacter);
-    
+
     UPROPERTY(Instanced)
     USkeletalMeshComponent* SkeletalMeshComponent;
-    
+
     UPROPERTY(Instanced)
     USceneComponent* SceneComponent;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnSlotReached OnSlotReached;
-    
-};
 
+};

@@ -9,4 +9,3 @@ FIGS_WieldableExchange::FIGS_WieldableExchange() {
     (*this).bShouldStartExchange = false;
     (*this).bShouldSkipAnimation = false;
 }
-

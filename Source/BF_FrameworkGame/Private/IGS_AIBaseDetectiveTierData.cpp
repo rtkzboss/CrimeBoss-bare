@@ -8,4 +8,3 @@ FIGS_AIBaseDetectiveTierData::FIGS_AIBaseDetectiveTierData() {
     (*this).MaxHealthForReaction = 1.000000000e+00f;
     (*this).MaxHealthForCover = 1.000000000e+00f;
 }
-

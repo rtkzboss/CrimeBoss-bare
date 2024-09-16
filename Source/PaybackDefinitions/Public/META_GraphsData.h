@@ -19,58 +19,57 @@ public:
 
     UFUNCTION(BlueprintCallable)
     TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> GetStartedGraphs(const TArray<EIGS_CharacterID>& inAvailableUniqueCharacters);
-    
+
     UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> GetSpecialCrewEventsGraph() const;
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_Interval GetSecondPlotlineDays() const;
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FIGS_PlotlineGraphData> GetPlotlineGraphs();
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_Interval GetFirstPlotlineDays() const;
-    
+
     UFUNCTION(BlueprintPure)
     TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> GetEntitlementsGraph() const;
-    
+
     UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> GetCrewRandEventsGraph() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void GetCharacterGraphInfo(EIGS_CharacterID inCharacterID, bool& outFind, FMETA_UniqueCharacterGraphInfo& outGraphInfo);
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_Interval GetAnyNextPlotlineDays() const;
-    
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     FMETA_Interval FirstPlotlineDays;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FMETA_Interval SecondPlotlineDays;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FMETA_Interval AnyNextPlotlineDays;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> StartedGraphs;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_CharacterID, FMETA_UniqueCharacterGraphInfo> CharacterStoryGraphs;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TArray<FIGS_PlotlineGraphData> PlotlineGraphs;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> CrewRandEventsGraph;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> SpecialCrewEventsGraph;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> EntitlementGraphs;
-    
-};
 
+};

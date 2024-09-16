@@ -5,13 +5,14 @@ public class ConstructionSystemRuntime : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "Core",
             "CoreUObject",
             "Engine",
             "PhysicsCore",
             "PrefabricatorRuntime",
+            "SlateCore",
             "UMG",
         });
     }

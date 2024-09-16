@@ -5,4 +5,3 @@ FIGS_PickupSpawn::FIGS_PickupSpawn() {
     (*this).ItemPickup = nullptr;
     (*this).ObjectiveType = EIGS_ObjectiveComponentType::Default;
 }
-

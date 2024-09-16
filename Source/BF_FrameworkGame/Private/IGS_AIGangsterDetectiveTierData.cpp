@@ -2,4 +2,3 @@
 
 FIGS_AIGangsterDetectiveTierData::FIGS_AIGangsterDetectiveTierData() {
 }
-

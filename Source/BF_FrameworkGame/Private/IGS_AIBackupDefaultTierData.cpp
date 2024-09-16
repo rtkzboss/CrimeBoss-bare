@@ -2,4 +2,3 @@
 
 FIGS_AIBackupDefaultTierData::FIGS_AIBackupDefaultTierData() {
 }
-

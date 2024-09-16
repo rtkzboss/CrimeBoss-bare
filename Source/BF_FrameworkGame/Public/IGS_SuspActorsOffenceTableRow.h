@@ -10,28 +10,27 @@ struct BF_FRAMEWORKGAME_API FIGS_SuspActorsOffenceTableRow : public FIGS_Suspici
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagQuery OffenceQuery;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DetectionSpeedMult;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool AmbientReactionValidOnlyInRestrictedArea;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool RotateToOffenceOwnerPos;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EventInitialDelay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EventLifetime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EventNoticedLifetime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool EternalEvent;
-    
+
     FIGS_SuspActorsOffenceTableRow();
 };
-

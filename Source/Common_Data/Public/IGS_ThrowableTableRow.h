@@ -2,10 +2,9 @@
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
 #include "IGS_ThrowableData.h"
+#include "IGS_ThrowableInventoryObject.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_ThrowableTableRow.generated.h"
-
-class UIGS_ThrowableInventoryObject;
 
 USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_ThrowableTableRow : public FTableRowBase {
@@ -13,10 +12,9 @@ struct COMMON_DATA_API FIGS_ThrowableTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_ThrowableInventoryObject> ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_ThrowableData Data;
-    
+
     FIGS_ThrowableTableRow();
 };
-

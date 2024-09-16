@@ -12,9 +12,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ChargeDuration;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DischargeAfter;
-    
-};
 
+};

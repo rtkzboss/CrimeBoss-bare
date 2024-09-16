@@ -9,4 +9,3 @@ enum class EMETA_TutorialBubbleDirection : uint8 {
     BottomLeft,
     BottomRight,
 };
-

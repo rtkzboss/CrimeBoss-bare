@@ -14,22 +14,21 @@ public:
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     UMETA_StoryGraph* GetCurrentGraph(UObject* inWCO);
-    
+
 protected:
     UPROPERTY()
     TMap<FString, UMETA_StoryGraph*> GraphVersions;
-    
+
     UPROPERTY()
     TArray<FString> SavedVersions;
-    
+
     UPROPERTY(Transient)
     UMETA_StoryGraph* CurrentGraph;
-    
+
     UPROPERTY(Transient)
     FString CurrentGraphVersion;
-    
+
     UPROPERTY()
     TArray<FString> DeprecatedVersions;
-    
-};
 
+};

@@ -476,7 +476,7 @@ bool UIGS_DebugSubsystem::IsToggledOn_AIBarksDebug() const {
 }
 
 UIGS_DebugSubsystem* UIGS_DebugSubsystem::Instance(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_DebugSubsystem::GetPacketLoss() const {
@@ -496,10 +496,9 @@ int32 UIGS_DebugSubsystem::GetPacketJitter() const {
 }
 
 UIGS_DebugSubsystemBlueprint* UIGS_DebugSubsystem::GetBPDebugSubsystem() const {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_DebugSubsystem::ApplySettings() {
 }
-
 

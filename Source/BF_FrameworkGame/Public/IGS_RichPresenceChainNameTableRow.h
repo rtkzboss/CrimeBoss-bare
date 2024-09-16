@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "IGS_ChainContractID.h"
 #include "Engine/DataTable.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_RichPresenceChainNameTableRow.generated.h"
-
-class UIGS_ChainContractID;
 
 USTRUCT(BlueprintType)
 struct FIGS_RichPresenceChainNameTableRow : public FTableRowBase {
@@ -12,10 +11,9 @@ struct FIGS_RichPresenceChainNameTableRow : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     TSubclassOf<UIGS_ChainContractID> ID;
-    
+
     UPROPERTY(EditAnywhere)
     FText Name;
-    
+
     BF_FRAMEWORKGAME_API FIGS_RichPresenceChainNameTableRow();
 };
-

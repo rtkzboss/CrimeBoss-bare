@@ -1,8 +1,4 @@
 #include "KantanTimeSeriesPlotBase.h"
-#include "EKantanDataPointSize.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
 
 UKantanTimeSeriesPlotBase::UKantanTimeSeriesPlotBase() {
     (*this).bUseFixedTimeRange = true;
@@ -21,5 +17,4 @@ void UKantanTimeSeriesPlotBase::SetLowerValueBound(FCartesianRangeBound InLowerB
 
 void UKantanTimeSeriesPlotBase::SetLowerTimeBound(FCartesianRangeBound InLowerBound) {
 }
-
 

@@ -2,7 +2,8 @@
 
 FMETA_PreviousMissionData::FMETA_PreviousMissionData() {
     (*this).MissionResult = EMETA_JobResult::Success;
-    (*this).Loot.Empty();
+    (*this).Loot = {};
+    (*this).CollectedLoot = {};
     (*this).MoneyCollected = 0;
     (*this).CivilCasualties = 0;
     (*this).PoliceCasualties = 0;
@@ -15,4 +16,3 @@ FMETA_PreviousMissionData::FMETA_PreviousMissionData() {
     (*this).BagsCollected = 0;
     (*this).LightingScenarioType = EIGS_LightingScenarioType::Morning;
 }
-

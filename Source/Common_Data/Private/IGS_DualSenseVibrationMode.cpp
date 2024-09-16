@@ -6,4 +6,3 @@ FIGS_DualSenseVibrationMode::FIGS_DualSenseVibrationMode() {
     (*this).Frequency = 0;
     (*this).Amplitude = 0;
 }
-

@@ -8,4 +8,3 @@ enum class EMETA_ObjectiveState : uint8 {
     Success,
     Failed,
 };
-

@@ -20,7 +20,7 @@ FIGS_WeaponSkinStruct UIGS_WeaponSkinDatabase::GetWeaponSkinStructData(UObject* 
 }
 
 UIGS_WeaponSkinDatabase* UIGS_WeaponSkinDatabase::GetWeaponSkinDatabaseInstance(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 FGameplayTag UIGS_WeaponSkinDatabase::GetSkinTagFromDefaultSkin(UObject* inWCO, TSoftObjectPtr<UIGS_WeaponSkinData> inDefaultSkin) {
@@ -28,15 +28,14 @@ FGameplayTag UIGS_WeaponSkinDatabase::GetSkinTagFromDefaultSkin(UObject* inWCO, 
 }
 
 TSoftObjectPtr<UIGS_WeaponSkinData> UIGS_WeaponSkinDatabase::GetDefaultSkinMaterialSlotFromTag(UObject* inWCO, FGameplayTag inWeaponSkinTag) {
-    return NULL;
+    return {};
 }
 
 TSoftObjectPtr<UIGS_WeaponSkinData> UIGS_WeaponSkinDatabase::GetDefaultSkinFromTag(UObject* inWCO, FGameplayTag inSkinTag) {
-    return NULL;
+    return {};
 }
 
 FIGS_WeaponSkinTableRow UIGS_WeaponSkinDatabase::GetDataWeaponSkin(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded, bool inSearchMaterialSlots) {
     return FIGS_WeaponSkinTableRow{};
 }
-
 

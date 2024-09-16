@@ -14,19 +14,18 @@ public:
 
     UPROPERTY()
     TArray<UHoudiniHandleParameter*> XformParms;
-    
+
     UPROPERTY()
     UHoudiniHandleParameter* RSTParm;
-    
+
     UPROPERTY()
     UHoudiniHandleParameter* RotOrderParm;
-    
+
 private:
     UPROPERTY()
     EHoudiniHandleType HandleType;
-    
+
     UPROPERTY()
     FString HandleName;
-    
-};
 
+};

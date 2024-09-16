@@ -3,4 +3,3 @@
 UIGS_EnvQueryContext_ValidCoversInDefend::UIGS_EnvQueryContext_ValidCoversInDefend() {
 }
 
-

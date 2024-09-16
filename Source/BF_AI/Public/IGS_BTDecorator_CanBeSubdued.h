@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     bool bIsBlackboardBased;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetKey;
-    
-};
 
+};

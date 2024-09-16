@@ -10,4 +10,3 @@ public:
     AIGS_CarryableItemPickup(const FObjectInitializer& ObjectInitializer);
 
 };
-

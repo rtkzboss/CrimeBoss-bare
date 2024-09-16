@@ -14,10 +14,9 @@ public:
 protected:
     UFUNCTION()
     void OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent);
-    
+
 public:
     UPROPERTY(Instanced, Transient, VisibleAnywhere)
     UParticleSystemComponent* ParticleComponent;
-    
-};
 
+};

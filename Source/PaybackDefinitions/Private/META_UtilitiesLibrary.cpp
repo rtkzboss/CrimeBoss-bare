@@ -16,7 +16,7 @@ int64 UMETA_UtilitiesLibrary::RandomInteger64InRange(const FMETA_Int64Interval I
 }
 
 float UMETA_UtilitiesLibrary::RandomFloatInRange(const FMETA_FloatInterval InRange) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UMETA_UtilitiesLibrary::IsUniqueCharacter(EIGS_CharacterID ID) {
@@ -56,7 +56,7 @@ FGameplayTag UMETA_UtilitiesLibrary::GetRandomizedLootItemAvailableOnMeta() {
 }
 
 TArray<EMETA_ItemQuality> UMETA_UtilitiesLibrary::GetQualitiesFromBitmask(int32 inBitmask) {
-    return TArray<EMETA_ItemQuality>();
+    return {};
 }
 
 int32 UMETA_UtilitiesLibrary::GetNumberOfDigits(const int32 inNumber) {
@@ -68,19 +68,19 @@ bool UMETA_UtilitiesLibrary::GetLootLevel(FGameplayTag inLootTag, int32& Level, 
 }
 
 TArray<FGameplayTag> UMETA_UtilitiesLibrary::GetAllLootItemsAvailableOnMeta() {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 TArray<FGameplayTag> UMETA_UtilitiesLibrary::GetAllChildTagsIncludingNested(FGameplayTag ParentTag) {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 TArray<FGameplayTag> UMETA_UtilitiesLibrary::GetAllChildTag(FGameplayTag ParentTag) {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 TArray<EMETA_IntelUnlockLevel> UMETA_UtilitiesLibrary::GetAllAvailableIntelUnlockLevelByUpperLevel(EMETA_IntelUnlockLevel inUpperLevel) {
-    return TArray<EMETA_IntelUnlockLevel>();
+    return {};
 }
 
 EMETA_Gang UMETA_UtilitiesLibrary::ConvertVendorToGang(EMETA_TradeVendor inVendor) {
@@ -92,11 +92,11 @@ EMETA_TradeVendor UMETA_UtilitiesLibrary::ConvertGangToVendor(EMETA_Gang inGang)
 }
 
 EIGS_WeaponSubtype UMETA_UtilitiesLibrary::ConvertClassTagToWeaponSubtype(FGameplayTag inClassTag) {
-    return EIGS_WeaponSubtype::None;
+    return EIGS_WeaponSubtype::AssaultRifle;
 }
 
 EIGS_InventorySlot UMETA_UtilitiesLibrary::ConvertClassTagToEnumSlot(FGameplayTag inClassTag) {
-    return EIGS_InventorySlot::INVALID;
+    return EIGS_InventorySlot::Primary;
 }
 
 bool UMETA_UtilitiesLibrary::CompareInt(int32 InValue, int32 inCompareWith, EMETA_ConditionOperator inOperator) {
@@ -116,11 +116,11 @@ int64 UMETA_UtilitiesLibrary::ClampInteger64WithinRange(const int64 InValue, con
 }
 
 float UMETA_UtilitiesLibrary::ClampFloatWithinRange(const float InValue, const FMETA_FloatInterval InRange) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TArray<FGameplayTag> UMETA_UtilitiesLibrary::CalculateParentLootTagsForArray(TArray<FGameplayTag> inGameplayTagArray) {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 int32 UMETA_UtilitiesLibrary::CalculateIndexForArrayOfChances(TArray<int32> inChances) {
@@ -134,5 +134,4 @@ bool UMETA_UtilitiesLibrary::AreGraphCharactersIDsEqual(const FMETA_CharacterID&
 bool UMETA_UtilitiesLibrary::AreConditionsForArmyTierChangingEqual(const FMETA_ConditionForArmyTierChanging& inFirst, const FMETA_ConditionForArmyTierChanging& inSecond) {
     return false;
 }
-
 

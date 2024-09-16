@@ -12,9 +12,8 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     float StepLength;
-    
+
     UPROPERTY(EditAnywhere)
     float CrouchStepLength;
-    
-};
 
+};

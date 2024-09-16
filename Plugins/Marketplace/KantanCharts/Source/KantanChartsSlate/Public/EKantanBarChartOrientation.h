@@ -7,4 +7,3 @@ enum class EKantanBarChartOrientation : uint8 {
     Vertical,
     Horizontal,
 };
-

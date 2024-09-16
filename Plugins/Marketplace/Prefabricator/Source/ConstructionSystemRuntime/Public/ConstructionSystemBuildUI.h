@@ -16,9 +16,8 @@ class IConstructionSystemBuildUI : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetUIAsset(UConstructionSystemUIAsset* UIAsset);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetConstructionSystem(UConstructionSystemComponent* ConstructionSystem);
-    
-};
 
+};

@@ -8,7 +8,6 @@ struct PAYBACKDEFINITIONS_API FMETA_PartnerInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Cash;
-    
+
     FMETA_PartnerInfo();
 };
-

@@ -7,4 +7,3 @@ enum class EIGS_AreaOfOperationPriorities : uint8 {
     BT_Squad,
     BT_Defending,
 };
-

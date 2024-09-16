@@ -1,8 +1,4 @@
 #include "IGS_MenuScreenWidget.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_MenuScreenWidget::UIGS_MenuScreenWidget() : Super(FObjectInitializer::Get()) {
 }
@@ -35,6 +31,5 @@ bool UIGS_MenuScreenWidget::GoBackInternal_Implementation() {
 bool UIGS_MenuScreenWidget::GoBack_Implementation() {
     return false;
 }
-
 
 

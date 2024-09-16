@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "IGS_ImpactTypeObject.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_ImpactManagerPreload.generated.h"
 
 class UIGS_ImpactManagerSettings;
-class UIGS_ImpactTypeObject;
 
 UCLASS()
 class BF_IMPACTS_API UIGS_ImpactManagerPreload : public UGameInstanceSubsystem {
@@ -16,9 +16,8 @@ public:
 protected:
     UPROPERTY()
     TArray<TSubclassOf<UIGS_ImpactTypeObject>> LoadedIDs;
-    
+
     UPROPERTY()
     UIGS_ImpactManagerSettings* ImpactManagerSettings;
-    
-};
 
+};

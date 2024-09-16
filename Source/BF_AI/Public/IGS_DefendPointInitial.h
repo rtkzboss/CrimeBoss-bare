@@ -14,10 +14,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     bool IsInAssignCharArea(FVector Pos) const;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UShapeComponent* AssignCharShape;
-    
-};
 
+};

@@ -12,4 +12,3 @@ UIGS_FrameworkBaseDevSettings::UIGS_FrameworkBaseDevSettings() {
     (*this).ProgressionManagerData = FSoftObjectPath(TEXT("/Game/00_Main/Core/MainMenu/Data/DA_ProgressionManagerData.DA_ProgressionManagerData"), TEXT(""));
 }
 
-

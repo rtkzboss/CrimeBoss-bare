@@ -3,4 +3,3 @@
 FGenericGraphNode_SearchData::FGenericGraphNode_SearchData() {
     (*this).Node = nullptr;
 }
-

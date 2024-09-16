@@ -13,12 +13,11 @@ public:
 
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     UKantanSimpleCartesianDatasource* PressureGraphDataSource;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName PressureGraphCatId_Value;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName PressureGraphExpectedId_Value;
-    
-};
 
+};

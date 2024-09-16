@@ -14,4 +14,3 @@ enum class EMETA_ItemQuality : uint8 {
     MaxGenerate = Legendary,
     Reserved,
 };
-

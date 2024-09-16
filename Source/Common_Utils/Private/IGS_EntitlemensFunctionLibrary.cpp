@@ -10,4 +10,3 @@ bool UIGS_EntitlemensFunctionLibrary::IsUserEntitledTo(const UObject* inWCO, FGa
 void UIGS_EntitlemensFunctionLibrary::GetEntitlementOwnedSavedDiff(const UObject* inWCO, const TArray<FGameplayTag> inOwnedEntitlements, const TArray<FGameplayTag> inSavedEntitlements, bool& outAnyMissingInSave, bool& outAnyMissingCurrent) {
 }
 
-

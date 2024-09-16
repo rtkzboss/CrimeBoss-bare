@@ -8,4 +8,3 @@ enum class EMETA_PoliceInvestigationChangeForGraph : uint8 {
     Normal,
     High,
 };
-

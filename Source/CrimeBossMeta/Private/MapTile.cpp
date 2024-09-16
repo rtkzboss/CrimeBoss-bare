@@ -100,7 +100,7 @@ EMETA_TileSize UMapTile::GetTileSize() const {
 }
 
 TArray<FGameplayTag> UMapTile::GetNeighbours() const {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 FText UMapTile::GetName() {
@@ -108,11 +108,11 @@ FText UMapTile::GetName() {
 }
 
 TArray<UMETA_BaseMission*> UMapTile::GetMissions() const {
-    return TArray<UMETA_BaseMission*>();
+    return {};
 }
 
 TArray<TSubclassOf<UMETA_MissionID>> UMapTile::GetMissionClasses() const {
-    return TArray<TSubclassOf<UMETA_MissionID>>();
+    return {};
 }
 
 int32 UMapTile::GetMinAmountOfSoldiersForDefence() const {
@@ -135,7 +135,7 @@ EMETA_Gang UMapTile::GetGang() const {
 }
 
 EIGS_HubDistrict UMapTile::GetDistrictType() const {
-    return EIGS_HubDistrict::INVALID;
+    return EIGS_HubDistrict::Downtown;
 }
 
 EMETA_MapDisplayMode UMapTile::GetDisplayMode() const {
@@ -143,7 +143,7 @@ EMETA_MapDisplayMode UMapTile::GetDisplayMode() const {
 }
 
 TMap<TSubclassOf<UMETA_DetectiveID>, FMETA_DetectiveInfo> UMapTile::GetDetectives() {
-    return TMap<TSubclassOf<UMETA_DetectiveID>, FMETA_DetectiveInfo>();
+    return {};
 }
 
 int32 UMapTile::GetCurrentWeakness() const {
@@ -167,15 +167,15 @@ EMETA_Gang UMapTile::GetConquestState() const {
 }
 
 TArray<FMETA_TileRewardData> UMapTile::GetCalculatedCaptureRewards(const UObject* inWCO) {
-    return TArray<FMETA_TileRewardData>();
+    return {};
 }
 
 TArray<FMETA_BossEliminationRewardData> UMapTile::GetCalculatedBossEliminationRewards(const UObject* inWCO) {
-    return TArray<FMETA_BossEliminationRewardData>();
+    return {};
 }
 
 TArray<FMETA_BossEliminationRewardData> UMapTile::GetBossEliminationRewardData() const {
-    return TArray<FMETA_BossEliminationRewardData>();
+    return {};
 }
 
 EIGS_HubBackdropTypes UMapTile::GetBackdropType() const {
@@ -196,5 +196,4 @@ void UMapTile::ClearBossEleminationRewards() {
 
 void UMapTile::AddMission(UMETA_BaseMission* inMission) {
 }
-
 

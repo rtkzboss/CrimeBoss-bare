@@ -10,16 +10,15 @@ struct FShoutScanData {
 public:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> WillBeShoutChars;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> CanNotShoutChars;
-    
+
     UPROPERTY()
     bool HasImposibleToShoutCharacters;
-    
+
     UPROPERTY()
     bool HasCharacterForHint;
-    
+
     BF_FRAMEWORKBASE_API FShoutScanData();
 };
-

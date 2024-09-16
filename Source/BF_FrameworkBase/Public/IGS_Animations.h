@@ -15,21 +15,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void StopAnimMontageOnMesh(const USkeletalMeshComponent* MeshComponent, UAnimMontage* AnimMontage);
-    
+
     UFUNCTION(BlueprintCallable)
     static void StopAnimMontage(const ACharacter* Character, UAnimMontage* AnimMontage);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetAnimMontageSectionOnMesh(const USkeletalMeshComponent* MeshComponent, FName SectionNameToChange, FName NextSection, UAnimMontage* AnimMontage);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetAnimMontageSection(const ACharacter* Character, FName SectionNameToChange, FName NextSection, UAnimMontage* AnimMontage);
-    
+
     UFUNCTION(BlueprintCallable)
     static void PlayAnimMontageOnMesh(const USkeletalMeshComponent* MeshComponent, UAnimMontage* AnimMontage, float& OutLength, float& OutDuration, float InPlayRate, FName StartSectionName, float inStartPosition);
-    
+
     UFUNCTION(BlueprintCallable)
     static void PlayAnimMontage(const ACharacter* Character, UAnimMontage* AnimMontage, float& OutLength, float& OutDuration, float InPlayRate, FName StartSectionName, float inStartPosition);
-    
-};
 
+};

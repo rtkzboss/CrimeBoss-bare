@@ -3,4 +3,3 @@
 UAudioOut2SoundfieldEndpointSettings::UAudioOut2SoundfieldEndpointSettings() {
 }
 
-

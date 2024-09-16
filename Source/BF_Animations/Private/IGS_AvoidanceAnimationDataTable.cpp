@@ -3,4 +3,3 @@
 UIGS_AvoidanceAnimationDataTable::UIGS_AvoidanceAnimationDataTable() {
 }
 
-

@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerArtillery_Grenadier(const FObjectInitializer& ObjectInitializer);
 
 };
-

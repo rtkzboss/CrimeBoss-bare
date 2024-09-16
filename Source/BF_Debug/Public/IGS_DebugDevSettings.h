@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftClassPtr<UIGS_DebugSubsystemBlueprint> DamageSubsystemBlueprint;
-    
-};
 
+};

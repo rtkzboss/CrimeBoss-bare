@@ -1,14 +1,14 @@
 #include "IGS_RoomBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 
 AIGS_RoomBase::AIGS_RoomBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Tag, 0)) = TEXT("Room.Area.Unknown");
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
+    auto gen2 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen2->ContainerPtrToValuePtr<FName>(&(*this).Tag, 0)) = TEXT("Room.Area.Unknown");
     (*this).OwnerTeamSide = EIGS_TeamSideEnum::TS_Unknown;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).PrimaryActorTick.bStartWithTickEnabled = false;
-    (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
+    (*this).RootComponent = gen;
 }
 
 void AIGS_RoomBase::PlayerTriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) {
@@ -27,10 +27,9 @@ void AIGS_RoomBase::GetPolys(FVector InLocation, FVector Extent) {
 }
 
 TArray<AIGS_RoomBase*> AIGS_RoomBase::GetDistantRooms(const FVector inStartPos, float inMinDistance, float inMaxDistance, int32 inMinChokePoints, int32 inMaxChokePoints) const {
-    return TArray<AIGS_RoomBase*>();
+    return {};
 }
 
 void AIGS_RoomBase::AddEntrance(AActor* inActor) {
 }
-
 

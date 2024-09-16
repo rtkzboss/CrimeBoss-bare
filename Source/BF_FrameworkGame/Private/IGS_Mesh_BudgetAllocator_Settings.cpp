@@ -2,4 +2,3 @@
 
 FIGS_Mesh_BudgetAllocator_Settings::FIGS_Mesh_BudgetAllocator_Settings() {
 }
-

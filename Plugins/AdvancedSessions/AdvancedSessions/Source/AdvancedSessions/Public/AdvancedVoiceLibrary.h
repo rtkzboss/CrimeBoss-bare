@@ -12,51 +12,50 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static bool UnRegisterRemoteTalker(const FBPUniqueNetId& UniqueNetId);
-    
+
     UFUNCTION(BlueprintCallable)
     static void UnRegisterLocalTalker(uint8 LocalPlayerNum);
-    
+
     UFUNCTION(BlueprintCallable)
     static void UnRegisterAllLocalTalkers();
-    
+
     UFUNCTION(BlueprintCallable)
     static bool UnMuteRemoteTalker(uint8 LocalUserNum, const FBPUniqueNetId& UniqueNetId, bool bIsSystemWide);
-    
+
     UFUNCTION(BlueprintCallable)
     static void StopNetworkedVoice(uint8 LocalPlayerNum);
-    
+
     UFUNCTION(BlueprintCallable)
     static void StartNetworkedVoice(uint8 LocalPlayerNum);
-    
+
     UFUNCTION(BlueprintCallable)
     static void RemoveAllRemoteTalkers();
-    
+
     UFUNCTION(BlueprintCallable)
     static bool RegisterRemoteTalker(const FBPUniqueNetId& UniqueNetId);
-    
+
     UFUNCTION(BlueprintCallable)
     static bool RegisterLocalTalker(uint8 LocalPlayerNum);
-    
+
     UFUNCTION(BlueprintCallable)
     static void RegisterAllLocalTalkers();
-    
+
     UFUNCTION(BlueprintCallable)
     static bool MuteRemoteTalker(uint8 LocalUserNum, const FBPUniqueNetId& UniqueNetId, bool bIsSystemWide);
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsRemotePlayerTalking(const FBPUniqueNetId& UniqueNetId);
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsPlayerMuted(uint8 LocalUserNumChecking, const FBPUniqueNetId& UniqueNetId);
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsLocalPlayerTalking(uint8 LocalPlayerNum);
-    
+
     UFUNCTION(BlueprintPure)
     static void IsHeadsetPresent(bool& bHasHeadset, uint8 LocalPlayerNum);
-    
+
     UFUNCTION(BlueprintPure)
     static void GetNumLocalTalkers(int32& NumLocalTalkers);
-    
-};
 
+};

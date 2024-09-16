@@ -16,4 +16,3 @@ FBPSteamWorkshopItemDetails::FBPSteamWorkshopItemDetails() {
     (*this).bTagsTruncated = false;
     (*this).CreatorSteamID = TEXT("");
 }
-

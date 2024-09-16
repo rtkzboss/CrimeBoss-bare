@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AICopShieldTierData : public FIGS_AIBaseShieldT
 public:
     FIGS_AICopShieldTierData();
 };
-

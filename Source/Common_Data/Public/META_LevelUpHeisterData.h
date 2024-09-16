@@ -9,16 +9,15 @@ struct COMMON_DATA_API FMETA_LevelUpHeisterData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NumberOfPlayedMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FloatInterval LevelUpCostMultiplier;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NumberOfPerksAddedWithPromote;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NumberOfEquipmentUnlockedWithPromote;
-    
+
     FMETA_LevelUpHeisterData();
 };
-

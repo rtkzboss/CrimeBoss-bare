@@ -13,13 +13,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetAsset(UMETA_PlotlineAsset* InAsset);
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_PlotlineAsset* GetAsset() const;
-    
+
 private:
     UPROPERTY()
     UMETA_PlotlineAsset* m_Asset;
-    
-};
 
+};

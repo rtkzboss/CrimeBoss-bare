@@ -1,6 +1,7 @@
 #include "CustomizableObjectInstance.h"
 
 UCustomizableObjectInstance::UCustomizableObjectInstance() {
+    (*this).PrivateData = nullptr;
 }
 
 void UCustomizableObjectInstance::UpdateSkeletalMeshAsync(bool bIgnoreCloseDist, bool bForceHighPriority) {
@@ -78,11 +79,11 @@ FVector UCustomizableObjectInstance::GetProjectorDirection(const FString& ParamN
 }
 
 float UCustomizableObjectInstance::GetProjectorAngle(const FString& ParamName, int32 RangeIndex) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UTexture2D* UCustomizableObjectInstance::GetParameterDescription(const FString& ParamName, int32 DescIndex) {
-    return NULL;
+    return nullptr;
 }
 
 FString UCustomizableObjectInstance::GetIntParameterSelectedOption(const FString& ParamName, int32 RangeIndex) const {
@@ -90,7 +91,7 @@ FString UCustomizableObjectInstance::GetIntParameterSelectedOption(const FString
 }
 
 float UCustomizableObjectInstance::GetFloatParameterSelectedOption(const FString& FloatParamName, int32 RangeIndex) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FIGS_CustomizationArchive UCustomizableObjectInstance::GetCustomizationArchive() {
@@ -134,11 +135,11 @@ int32 UCustomizableObjectInstance::CurrentParamRange(const FString& ParamName) c
 }
 
 UCustomizableObjectInstance* UCustomizableObjectInstance::CloneStatic(UObject* Outer) {
-    return NULL;
+    return nullptr;
 }
 
 UCustomizableObjectInstance* UCustomizableObjectInstance::Clone() {
-    return NULL;
+    return nullptr;
 }
 
 int32 UCustomizableObjectInstance::AddValueToProjectorRange(const FString& ParamName) {
@@ -152,5 +153,4 @@ int32 UCustomizableObjectInstance::AddValueToIntRange(const FString& ParamName) 
 int32 UCustomizableObjectInstance::AddValueToFloatRange(const FString& ParamName) {
     return 0;
 }
-
 

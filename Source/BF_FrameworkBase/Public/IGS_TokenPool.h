@@ -14,19 +14,18 @@ public:
 
     UFUNCTION(BlueprintCallable)
     UIGS_ActionToken* TryToStealToken(AIGS_GameCharacterFramework* Instigator, int32 Priority, int32 BoostPriority, float BoostDuration);
-    
+
     UFUNCTION(BlueprintCallable)
     void ReturnToken(UIGS_ActionToken* Token);
-    
+
     UFUNCTION(BlueprintCallable)
     bool IsTokenAvailable();
-    
+
     UFUNCTION(BlueprintCallable)
     UIGS_ActionToken* AcquireToken(AIGS_GameCharacterFramework* Instigator, int32 Priority, int32 BoostPriority, float BoostDuration);
-    
+
 private:
     UPROPERTY(Transient)
     TArray<UIGS_ActionToken*> UsedTokens;
-    
-};
 
+};

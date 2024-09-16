@@ -9,16 +9,15 @@ struct PATHFOLLOW_API FDrawerData {
 public:
     UPROPERTY(EditAnywhere)
     bool bDrawIfNotSelected;
-    
+
     UPROPERTY(EditAnywhere)
     bool bDrawIfSelected;
-    
+
     UPROPERTY(EditAnywhere)
     FColor PathColor;
-    
+
     UPROPERTY(EditAnywhere)
     float Thickness;
-    
+
     FDrawerData();
 };
-

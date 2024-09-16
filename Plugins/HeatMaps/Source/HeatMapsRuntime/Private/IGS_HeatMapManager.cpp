@@ -3,4 +3,3 @@
 UIGS_HeatMapManager::UIGS_HeatMapManager() {
 }
 
-

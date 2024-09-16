@@ -8,4 +8,3 @@ struct FIGS_ActiveMontageHolder {
 public:
     BF_ANIMATIONS_API FIGS_ActiveMontageHolder();
 };
-

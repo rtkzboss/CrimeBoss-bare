@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupBaseDataModifiers : public FIGS_AIUnitB
 public:
     FIGS_AIBackupBaseDataModifiers();
 };
-

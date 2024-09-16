@@ -8,4 +8,3 @@ UIGS_DamageTypeBase::UIGS_DamageTypeBase() {
     (*this).GameplayEffectDuration = -1.000000000e+00f;
 }
 
-

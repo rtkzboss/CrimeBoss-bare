@@ -2,7 +2,6 @@
 
 FMETA_HeisterSpecialData::FMETA_HeisterSpecialData() {
     (*this).Name = TEXT("");
-    (*this).Surname = FText::FromString(TEXT(""));
+    (*this).Surname = FText::GetEmpty();
     (*this).HeisterQuality = EMETA_ItemQuality::None;
 }
-

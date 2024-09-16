@@ -18,12 +18,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static AIGS_GameCharacterFramework* ResolveGameCharacterFromSkeletalMesh(USkeletalMeshComponent* inSkeletalMeshComponent);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_PersistentAkComponent* GetPersistentAkComponent(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable)
     static EIGS_AkEnvironmentSpace GetAkEnviroment(AActor* inActor);
-    
-};
 
+};

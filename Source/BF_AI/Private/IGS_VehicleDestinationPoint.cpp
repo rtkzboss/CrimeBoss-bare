@@ -1,12 +1,11 @@
 #include "IGS_VehicleDestinationPoint.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "Templates/SubclassOf.h"
 
 AIGS_VehicleDestinationPoint::AIGS_VehicleDestinationPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
     (*this).IsActive = true;
-    (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    (*this).RootComponent = gen;
 }
 
 void AIGS_VehicleDestinationPoint::TriggerSpecificPassengersCarArrival(EIGS_VehicleSpawnGroup vehicleGroup, FIGS_NoSpawnPointDefinition inCustomPassengers, AIGS_VehicleBase*& outSpawnedCar) {
@@ -32,5 +31,4 @@ void AIGS_VehicleDestinationPoint::CleanPossibleVehicleLocationsDebug() {
 
 void AIGS_VehicleDestinationPoint::CheckRequestedCar(EIGS_VehicleSplineGroup inSplineGroup, EIGS_VehicleSpawnGroup inVehicleGroup, TSoftClassPtr<AIGS_VehicleBase> invehicleToSpawn, FIGS_NoSpawnPointDefinition inCustomPassengersDefinition, AIGS_VehicleBase*& outSpawnedCar, int32 minPassengers, int32 maxPassengers) {
 }
-
 

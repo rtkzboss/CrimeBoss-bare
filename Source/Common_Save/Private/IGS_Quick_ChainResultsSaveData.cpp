@@ -5,4 +5,3 @@ FIGS_Quick_ChainResultsSaveData::FIGS_Quick_ChainResultsSaveData() {
     (*this).HighScore = 0;
     (*this).Completed = false;
 }
-

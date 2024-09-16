@@ -2,4 +2,3 @@
 
 FMETA_TradeMissionSave::FMETA_TradeMissionSave() {
 }
-

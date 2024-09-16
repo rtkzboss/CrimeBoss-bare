@@ -8,4 +8,3 @@ enum class EIGS_DialogueSuspicionState : uint8 {
     OnlyStealth,
     OnlyCombat,
 };
-

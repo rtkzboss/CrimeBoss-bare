@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_ZonesScalingConfig {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FRuntimeFloatCurve ZonesScalingCurve;
-    
+
     FIGS_ZonesScalingConfig();
 };
-

@@ -7,4 +7,3 @@ UIGS_EnvQueryGenerator_ThrowBagComponents::UIGS_EnvQueryGenerator_ThrowBagCompon
     (*this).ItemType = UIGS_EnvQueryItemType_ThrowBagComponent::StaticClass();
 }
 
-

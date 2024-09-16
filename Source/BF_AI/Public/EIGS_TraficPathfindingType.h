@@ -10,4 +10,3 @@ enum class EIGS_TraficPathfindingType : uint8 {
     ToDestination,
     ToClosestDestination,
 };
-

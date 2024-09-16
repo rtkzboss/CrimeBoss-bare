@@ -16,21 +16,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool IsAttacking();
-    
+
     UFUNCTION(BlueprintPure)
     bool CanAttack() const;
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_WeaponAttackType PrimaryShooter;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BasherComponent* Basher;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SkinHandlerBase* SkinHandler;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

@@ -14,18 +14,17 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector LookPosKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector AcceptableRadiusKey;
-    
+
     UPROPERTY(EditAnywhere)
     bool CanSprint;
-    
+
     UPROPERTY(EditAnywhere)
     bool CanEndInDanger;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_CharacterVsHeistersCollisionStatus m_MovingCharacterVsHeistersCollisionStatus;
-    
-};
 
+};

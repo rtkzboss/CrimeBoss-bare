@@ -6,4 +6,3 @@ FIGS_AimAnimationInfo::FIGS_AimAnimationInfo() {
     (*this).AimOutSpeedMult = 1.000000000e+00f;
     (*this).IsAiming = false;
 }
-

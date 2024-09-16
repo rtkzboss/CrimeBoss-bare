@@ -12,4 +12,3 @@ enum class EMETA_ObjectiveReward : uint8 {
     ArmyRecruits,
     MAX,
 };
-

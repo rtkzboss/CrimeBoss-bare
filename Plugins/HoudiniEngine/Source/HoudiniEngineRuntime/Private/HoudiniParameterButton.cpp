@@ -5,4 +5,3 @@ UHoudiniParameterButton::UHoudiniParameterButton() {
     (*this).ParmType = EHoudiniParameterType::Button;
 }
 
-

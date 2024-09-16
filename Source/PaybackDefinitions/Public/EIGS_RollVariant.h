@@ -13,4 +13,3 @@ enum class EIGS_RollVariant : uint8 {
     ROLL_ToStand_Long,
     ROLL_ToCrouch_Long,
 };
-

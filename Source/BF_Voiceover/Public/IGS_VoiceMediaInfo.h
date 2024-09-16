@@ -10,13 +10,12 @@ struct FIGS_VoiceMediaInfo {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkExternalMediaAsset* VoiceAkExternalMediaAsset;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString VoiceMediaName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float VoiceFilenameLength;
-    
+
     BF_VOICEOVER_API FIGS_VoiceMediaInfo();
 };
-

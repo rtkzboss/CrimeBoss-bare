@@ -10,10 +10,9 @@ struct FIGS_HUBScenarioData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_HubScenarioType ScenarioType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_BuildConfigurationTileable ScenarioDA;
-    
+
     BF_LEVELGENERATOR_API FIGS_HUBScenarioData();
 };
-

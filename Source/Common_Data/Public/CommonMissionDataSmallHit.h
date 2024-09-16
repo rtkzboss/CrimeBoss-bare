@@ -9,4 +9,3 @@ struct COMMON_DATA_API FCommonMissionDataSmallHit : public FCommonMissionDataBas
 public:
     FCommonMissionDataSmallHit();
 };
-

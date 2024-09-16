@@ -1,5 +1,4 @@
 #include "IGS_ContractsManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_ContractsManagerComponent::UIGS_ContractsManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -24,5 +23,4 @@ void UIGS_ContractsManagerComponent::AddAvailableContract(TSubclassOf<UIGS_Contr
 
 void UIGS_ContractsManagerComponent::AddActiveContract(TSubclassOf<UIGS_ContractID> inID) {
 }
-
 

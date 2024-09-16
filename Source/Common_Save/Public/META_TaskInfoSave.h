@@ -9,13 +9,12 @@ struct COMMON_SAVE_API FMETA_TaskInfoSave {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CurrentValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_TaskStatus Status;
-    
+
     FMETA_TaskInfoSave();
 };
-

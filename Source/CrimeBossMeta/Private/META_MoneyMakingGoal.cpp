@@ -1,5 +1,4 @@
 #include "META_MoneyMakingGoal.h"
-#include "EMETA_GoalPriority.h"
 #include "EMETA_GoalType.h"
 
 UMETA_MoneyMakingGoal::UMETA_MoneyMakingGoal() {
@@ -16,5 +15,4 @@ int32 UMETA_MoneyMakingGoal::GetMonetaryValue() {
 FGameplayTag UMETA_MoneyMakingGoal::GetLootType() {
     return FGameplayTag{};
 }
-
 

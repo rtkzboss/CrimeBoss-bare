@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(Config, EditAnywhere)
     TMap<EIGS_TeamSideEnum, FColor> TeamSideColors;
-    
+
     UPROPERTY(Config, EditAnywhere)
     TMap<EIGS_TeamSideEnum, FIGS_TeamSideAffinitiesHolder> TeamSideAffinitiesMap;
-    
-};
 
+};

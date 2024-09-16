@@ -17,13 +17,12 @@ public:
 
     UFUNCTION()
     void OnNotifyReceived(EIGS_AINotif Type, AIGS_GameCharacterFramework* Instigator, AIGS_GameCharacterFramework* Target, FVector Pos, FVector dir);
-    
+
 protected:
     UFUNCTION()
     static bool IsCommandActive(UIGS_AICommand* AICommand);
-    
+
     UFUNCTION()
     static UIGS_AICommand* CommandToTakePosition(AIGS_GameCharacterFramework* agent, FVector InPos, FVector inMoveLookPos, FVector inFinalLookPos, EIGS_AIMontageBreachVariant MontageVariant);
-    
-};
 
+};

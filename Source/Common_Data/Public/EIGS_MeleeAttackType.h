@@ -17,4 +17,3 @@ enum class EIGS_MeleeAttackType : uint8 {
     MAT_Light08,
     MAT_Light09,
 };
-

@@ -16,22 +16,21 @@ public:
 
     UFUNCTION()
     void OnNotifyReceived(EIGS_AINotif inType, AIGS_GameCharacterFramework* inInstigator, AIGS_GameCharacterFramework* inTarget, FVector InPos, FVector inDir);
-    
+
 protected:
     UPROPERTY(VisibleAnywhere)
     FIGS_SubSquad SubSquadRight;
-    
+
     UPROPERTY(VisibleAnywhere)
     FIGS_SubSquad SubSquadLeft;
-    
+
     UPROPERTY(EditAnywhere)
     bool bDrawDebug;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxDistance;
-    
+
     UPROPERTY(VisibleAnywhere)
     bool bMovingToPlayer;
-    
-};
 
+};

@@ -9,4 +9,3 @@ UHoudiniParameterColor::UHoudiniParameterColor() {
     (*this).ParmType = EHoudiniParameterType::Color;
 }
 
-

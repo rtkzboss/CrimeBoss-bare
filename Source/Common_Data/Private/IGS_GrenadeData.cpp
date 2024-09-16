@@ -23,4 +23,3 @@ FIGS_GrenadeData::FIGS_GrenadeData() {
     (*this).DamageTypeClass = nullptr;
     (*this).ShotImpactType = nullptr;
 }
-

@@ -8,13 +8,12 @@ struct FIGS_ReplicatedLadder {
 public:
     UPROPERTY()
     uint8 LadderInputAxis;
-    
+
     UPROPERTY()
     uint8 LadderInputIsUp: 1;
-    
+
     UPROPERTY()
     float LadderPosition;
-    
+
     BF_FRAMEWORKGAME_API FIGS_ReplicatedLadder();
 };
-

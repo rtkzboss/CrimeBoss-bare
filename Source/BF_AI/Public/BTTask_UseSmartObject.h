@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SmartObjectBBKey;
-    
+
     UPROPERTY()
     AActor* SmartObject;
-    
-};
 
+};

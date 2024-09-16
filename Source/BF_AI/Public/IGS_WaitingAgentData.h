@@ -8,4 +8,3 @@ struct FIGS_WaitingAgentData {
 public:
     BF_AI_API FIGS_WaitingAgentData();
 };
-

@@ -1,5 +1,5 @@
 #include "IGS_WeaponVisibilityHandler.h"
-#include "ComponentInstanceDataCache.h"
+#include "Engine/EngineBaseTypes.h"
 
 UIGS_WeaponVisibilityHandler::UIGS_WeaponVisibilityHandler(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).m_LaserParticleSpawnPointName = TEXT("socket_laser_origin");
@@ -37,5 +37,4 @@ bool UIGS_WeaponVisibilityHandler::HasAnyModActive() const {
 FVector UIGS_WeaponVisibilityHandler::GetLaserDirection() const {
     return FVector{};
 }
-
 

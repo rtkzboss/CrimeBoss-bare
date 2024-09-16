@@ -9,10 +9,9 @@ struct COMMON_DATA_API FMETA_AllowedHeistersInBM_Config {
 public:
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_ItemQuality, int32> HeisterQualityPercent;
-    
+
     UPROPERTY(EditDefaultsOnly)
     int32 Amount;
-    
+
     FMETA_AllowedHeistersInBM_Config();
 };
-

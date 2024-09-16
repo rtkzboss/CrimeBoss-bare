@@ -11,4 +11,3 @@ enum class EMETA_StatisticModificationType : uint8 {
     Maximum,
     Average,
 };
-

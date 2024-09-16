@@ -12,11 +12,10 @@ public:
 private:
     UPROPERTY(Instanced, Transient)
     UIGS_ReloaderBase* m_ReloadBase;
-    
+
     UPROPERTY(Transient)
     AIGS_WeaponBase* m_WeaponBase;
-    
+
 public:
     FIGS_PlayerAnimationReloader();
 };
-

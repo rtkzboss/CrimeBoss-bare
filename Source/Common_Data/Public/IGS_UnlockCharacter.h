@@ -9,10 +9,9 @@ struct COMMON_DATA_API FIGS_UnlockCharacter {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_CharacterID CharacterID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bMaxLevel;
-    
+
     FIGS_UnlockCharacter();
 };
-

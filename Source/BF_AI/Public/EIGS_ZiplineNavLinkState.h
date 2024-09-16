@@ -8,4 +8,3 @@ enum class EIGS_ZiplineNavLinkState : uint8 {
     Running,
     Out,
 };
-

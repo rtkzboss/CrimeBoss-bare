@@ -12,13 +12,12 @@ struct BF_IMPACTS_API FIGS_ImpactTableRow : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     UPhysicalMaterial* PhysicalMaterial;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_ImpactItem FallBackItem;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_ImpactItem> ImpactItem;
-    
+
     FIGS_ImpactTableRow();
 };
-

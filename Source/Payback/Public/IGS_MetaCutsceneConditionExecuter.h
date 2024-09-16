@@ -13,6 +13,5 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     bool ExecuteCondition(AGameModeBase* inGameMode, UObject* inMetaCondition);
-    
-};
 
+};

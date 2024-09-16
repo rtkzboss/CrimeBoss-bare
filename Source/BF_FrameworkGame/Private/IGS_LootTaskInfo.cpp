@@ -3,4 +3,3 @@
 FIGS_LootTaskInfo::FIGS_LootTaskInfo() {
     (*this).bPocketTask = false;
 }
-

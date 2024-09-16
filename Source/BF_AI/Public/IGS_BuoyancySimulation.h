@@ -8,4 +8,3 @@ struct FIGS_BuoyancySimulation {
 public:
     BF_AI_API FIGS_BuoyancySimulation();
 };
-

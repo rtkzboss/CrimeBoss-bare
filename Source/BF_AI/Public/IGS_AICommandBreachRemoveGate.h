@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Location;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector LookAtPosition;
-    
-};
 
+};

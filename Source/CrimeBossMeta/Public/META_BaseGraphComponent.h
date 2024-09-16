@@ -16,29 +16,28 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void StartSetUp(AMETA_BaseGameMode* inGameMode, UGenericGraphNode* inOwnerNode);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ResetToDefault(bool inForceReset);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsComponentValid(UGenericGraphNode* inNodeEditor, TArray<FGenericGraphNode_ErrorData>& outErrorsData);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FText GetInfo();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool DoesContainClass(UClass* inClass, bool inNeedCheckAsChild);
-    
+
     UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* OwnerNode;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AMETA_BaseGameMode* GameMode;
-    
+
     UPROPERTY(BlueprintReadWrite, Transient)
     bool bAlreadyActivated;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

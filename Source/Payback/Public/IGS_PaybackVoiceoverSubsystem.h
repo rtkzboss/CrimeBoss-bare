@@ -14,6 +14,5 @@ public:
 protected:
     UPROPERTY()
     AIGS_GlobalDialoguePlayer* GlobalDialoguePlayer;
-    
-};
 
+};

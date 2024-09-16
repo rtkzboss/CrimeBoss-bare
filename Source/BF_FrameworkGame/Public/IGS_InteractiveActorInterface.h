@@ -15,6 +15,5 @@ class BF_FRAMEWORKGAME_API IIGS_InteractiveActorInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RegisterToInteraction(UIGS_InteractionListener* inListener);
-    
-};
 
+};

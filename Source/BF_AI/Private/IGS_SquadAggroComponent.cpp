@@ -1,5 +1,4 @@
 #include "IGS_SquadAggroComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_SquadAggroComponent::UIGS_SquadAggroComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).FightSecondsAfterTargetLost = 3.000000000e+01f;
@@ -7,5 +6,4 @@ UIGS_SquadAggroComponent::UIGS_SquadAggroComponent(const FObjectInitializer& Obj
     (*this).TraceCount = 10;
     (*this).PrimaryComponentTick.bCanEverTick = true;
 }
-
 

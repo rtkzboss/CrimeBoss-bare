@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatSniperTierData : public FIGS_AIBaseSniper
 public:
     FIGS_AISwatSniperTierData();
 };
-

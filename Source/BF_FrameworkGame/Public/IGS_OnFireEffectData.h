@@ -13,19 +13,18 @@ struct BF_FRAMEWORKGAME_API FIGS_OnFireEffectData : public FIGS_PlayerEffectData
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSoftObjectPtr<UObject>> EffectPostProcesses;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UCurveFloat> WeightTimeCurve;
-    
+
     UPROPERTY(EditAnywhere)
     float EffectDuration;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> EffectStartAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> EffectEndAkAudioEvent;
-    
+
     FIGS_OnFireEffectData();
 };
-

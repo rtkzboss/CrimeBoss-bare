@@ -8,13 +8,12 @@ struct COMMON_SAVE_API FIGS_Quick_ChainResultsSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 HighestStarRating;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 HighScore;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool Completed;
-    
+
     FIGS_Quick_ChainResultsSaveData();
 };
-

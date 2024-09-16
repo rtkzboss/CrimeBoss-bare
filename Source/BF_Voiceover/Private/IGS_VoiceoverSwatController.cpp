@@ -3,4 +3,3 @@
 UIGS_VoiceoverSwatController::UIGS_VoiceoverSwatController() {
 }
 
-

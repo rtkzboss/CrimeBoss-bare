@@ -3,4 +3,3 @@
 UIGS_GeneratorBuildConfiguration::UIGS_GeneratorBuildConfiguration() {
 }
 
-

@@ -5,8 +5,8 @@ FTOPWorkResultObject::FTOPWorkResultObject() {
     (*this).FilePath = TEXT("");
     (*this).State = EPDGWorkResultState::None;
     (*this).WorkItemResultInfoIndex = -1;
-    (*this).ResultOutputs.Empty();
+    (*this).ResultOutputs = {};
     (*this).bAutoBakedSinceLastLoad = false;
-    (*TBaseStructure<FOutputActorOwner>::Get()->FindPropertyByName("OutputActor")->ContainerPtrToValuePtr<AActor*>(&(*this).OutputActorOwner, 0)) = nullptr;
+    auto gen = TBaseStructure<FOutputActorOwner>::Get()->FindPropertyByName("OutputActor");
+    (*gen->ContainerPtrToValuePtr<AActor*>(&(*this).OutputActorOwner, 0)) = nullptr;
 }
-

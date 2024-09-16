@@ -28,11 +28,11 @@ int32 UMETA_EconomyData::GetWeaponsPoolRefreshStartPrice(EMETA_RespectLvl inResp
 }
 
 float UMETA_EconomyData::GetWeaponsPoolRefreshMultiplier() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetWeaponSkinChancePerQuality(const EMETA_ItemQuality inWeaponQuality) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FMETA_WeaponEliminationReward UMETA_EconomyData::GetWeaponRewardForElimination() const {
@@ -52,15 +52,15 @@ FGameplayTag UMETA_EconomyData::GetWeaponEventUnlockTag() const {
 }
 
 float UMETA_EconomyData::GetWeaponCoefficientPriceForHeister() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetWeakenMissionPlanningCostMultiplier(EMETA_TurfActionAfterSuccess inTurfAction, EMETA_RespectLvl inRespect, EMETA_AIBossStrengthChangeIntensity inIntensity, bool inIsLastTurf) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TMap<EMETA_RespectLvl, FMETA_WarehouseWealthData> UMETA_EconomyData::GetWarehouseWealthPerRespect() const {
-    return TMap<EMETA_RespectLvl, FMETA_WarehouseWealthData>();
+    return {};
 }
 
 int32 UMETA_EconomyData::GetWarehouseAttackCooldown() const {
@@ -76,7 +76,7 @@ FMETA_TurfRewardsDistribution UMETA_EconomyData::GetTurfRewardsDistributionConfi
 }
 
 TMap<EMETA_TileReward, int32> UMETA_EconomyData::GetTurfRewardChances() {
-    return TMap<EMETA_TileReward, int32>();
+    return {};
 }
 
 FMETA_FloatInterval UMETA_EconomyData::GetTurfIncomeMultiplier(EMETA_TileWealth inTileWealth) const {
@@ -88,11 +88,11 @@ bool UMETA_EconomyData::GetTradeSettingsByRespectLvl(EMETA_RespectLvl inRespectL
 }
 
 TMap<EMETA_RespectLvl, float> UMETA_EconomyData::GetTileRespectMultiplier() const {
-    return TMap<EMETA_RespectLvl, float>();
+    return {};
 }
 
 float UMETA_EconomyData::GetStoryMissionRewardMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetStartingChance() const {
@@ -108,7 +108,7 @@ FMETA_Interval UMETA_EconomyData::GetSoldiersPercentageForElimination() const {
 }
 
 float UMETA_EconomyData::GetRewardValueReductionMultiplierForRepeatedCapture() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EMETA_ItemQuality UMETA_EconomyData::GetRandomizedQualityAccordingToPlayerRespect(const UObject* inWCO) {
@@ -116,15 +116,15 @@ EMETA_ItemQuality UMETA_EconomyData::GetRandomizedQualityAccordingToPlayerRespec
 }
 
 float UMETA_EconomyData::GetPriceMultiplierForFirstHeistersGeneration() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TMap<EMETA_RespectLvl, FMETA_Interval> UMETA_EconomyData::GetPercentageBeStolenFromStash() const {
-    return TMap<EMETA_RespectLvl, FMETA_Interval>();
+    return {};
 }
 
 float UMETA_EconomyData::GetNumberOfHPSegmentsForAutomaticRecovery() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetNumberOfBuyableAssets() const {
@@ -136,23 +136,23 @@ int32 UMETA_EconomyData::GetNassaraConversionCost(int32 inCountOfStars, EMETA_Re
 }
 
 float UMETA_EconomyData::GetMultiplierOfExpensesForMissionsWithoutIntel(EMETA_RespectLvl inRespectLvl) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetMultiplierOfExpensesForMissionsWithIntel(EMETA_RespectLvl inRespectLvl) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetMultiplierOfExpensesForBigHeist(EMETA_RespectLvl inRespectLvl) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetMultiplierForHealing() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetMissionBonusRewardForBoss() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetMinAmountOfEachLootCanBeStolen() const {
@@ -184,7 +184,7 @@ FGameplayTag UMETA_EconomyData::GetHireArmyEventUnlockTag() const {
 }
 
 float UMETA_EconomyData::GetHeisterUpkeepMultiplierByEquipmentQuality(EMETA_ItemQuality inEquipmentQuality) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetHeistersPoolRefreshStartPrice(EMETA_RespectLvl inRespectLvl) {
@@ -192,7 +192,7 @@ int32 UMETA_EconomyData::GetHeistersPoolRefreshStartPrice(EMETA_RespectLvl inRes
 }
 
 float UMETA_EconomyData::GetHeistersPoolRefreshMultipier() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetHeistersAmountOverrideInFirstGeneration() const {
@@ -212,11 +212,11 @@ int32 UMETA_EconomyData::GetHeisterMarketAvailableInDays() const {
 }
 
 float UMETA_EconomyData::GetHealCostMultiplierForUniqueCharacter() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetHealCostMultiplierByHeisterTier(int32 inHeisterLevel) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetHealCostByRespectLevel(EMETA_RespectLvl inRespectLvl) const {
@@ -227,7 +227,7 @@ void UMETA_EconomyData::GetGraphEconomyVariableByTag(FGameplayTag inVariableTag,
 }
 
 TArray<FMETA_CharacterInfo> UMETA_EconomyData::GetGenericHeistersPoolForBlackmarketWithOneFree(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, TArray<FIGS_CharacterClasses>& inActiveGenericVariants) {
-    return TArray<FMETA_CharacterInfo>();
+    return {};
 }
 
 bool UMETA_EconomyData::GetGenericCharacterConfiguration(EMETA_ItemQuality inQuality, FMETA_GenericCharacterConfiguration& outConfig) const {
@@ -239,15 +239,15 @@ int32 UMETA_EconomyData::GetFrequencyOfIncomeValueRecompute() const {
 }
 
 TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> UMETA_EconomyData::GetForbiddenPerksForUpgrade() const {
-    return TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>>();
+    return {};
 }
 
 TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> UMETA_EconomyData::GetForbiddenPerksForFirstHeristerGeneraion() const {
-    return TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>>();
+    return {};
 }
 
 float UMETA_EconomyData::GetEquipmentCoefficientPriceForHeister() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetDurationOfHealing() const {
@@ -267,7 +267,7 @@ int32 UMETA_EconomyData::GetDailyChanceIncrease() const {
 }
 
 float UMETA_EconomyData::GetCostModifierForInstantHealing() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_EconomyData::GetChanceForTileIncomeToBeLoot() const {
@@ -291,7 +291,7 @@ FMETA_BossEliminationRewardsDistribution UMETA_EconomyData::GetBossEliminationRe
 }
 
 TMap<EMETA_BossEliminationReward, int32> UMETA_EconomyData::GetBossEliminationRewardChances() const {
-    return TMap<EMETA_BossEliminationReward, int32>();
+    return {};
 }
 
 FMETA_BossCharacterConfiguration UMETA_EconomyData::GetBossCharacterConfiguration() const {
@@ -327,7 +327,7 @@ int32 UMETA_EconomyData::GetBankruptValue() const {
 }
 
 TArray<FMETA_Loan> UMETA_EconomyData::GetAvailableLoansByRespect(EMETA_RespectLvl inRespectLvl) {
-    return TArray<FMETA_Loan>();
+    return {};
 }
 
 void UMETA_EconomyData::GetArmyTierData(EMETA_ArmyTier inTier, FMETA_ArmyTierConfiguration& OutInfo) const {
@@ -342,7 +342,7 @@ int32 UMETA_EconomyData::GetAmountOfPromotionEquipmentsForUniqueCharacters() con
 }
 
 TArray<EIGS_CharacterID> UMETA_EconomyData::GetAllSuitableGenericCharacterIdsByCharacterQuality(EMETA_ItemQuality inCharacterQuality) const {
-    return TArray<EIGS_CharacterID>();
+    return {};
 }
 
 FMETA_AllowedWeaponsInfo UMETA_EconomyData::GetAllowedWeaponsByRespect(const EMETA_RespectLvl inRespect) {
@@ -350,7 +350,7 @@ FMETA_AllowedWeaponsInfo UMETA_EconomyData::GetAllowedWeaponsByRespect(const EME
 }
 
 TArray<EMETA_ItemQuality> UMETA_EconomyData::GetAllowedHeistersForRespectLvl(EMETA_RespectLvl inCurrentRespectLvl) const {
-    return TArray<EMETA_ItemQuality>();
+    return {};
 }
 
 int32 UMETA_EconomyData::GetAllowedHeistersAmountForRespectLvl(EMETA_RespectLvl inCurrentRespectLvl) const {
@@ -376,5 +376,4 @@ void UMETA_EconomyData::CalculateArmyCostForDefense(const UObject* inWCO, EMETA_
 
 void UMETA_EconomyData::CalculateArmyCostForAttack(const UObject* inWCO, EMETA_ArmyTier inTier, int32 inSoldiersAmount, int32& outArmyCost) {
 }
-
 

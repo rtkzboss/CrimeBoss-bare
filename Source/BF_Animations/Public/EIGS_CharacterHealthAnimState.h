@@ -7,4 +7,3 @@ enum class EIGS_CharacterHealthAnimState : uint8 {
     EBF_Alive,
     EBF_Dead,
 };
-

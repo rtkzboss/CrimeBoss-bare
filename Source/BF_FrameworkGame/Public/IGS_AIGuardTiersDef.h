@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGuardTiersDef : public FIGS_AIBaseTiersDef {
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AIGuardSpecializationHolder Tier1;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIGuardSpecializationHolder Tier2;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIGuardSpecializationHolder Tier3;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIGuardSpecializationHolder Special;
-    
+
     FIGS_AIGuardTiersDef();
 };
-

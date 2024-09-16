@@ -13,6 +13,5 @@ class IIGS_HighlightableWidget : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetIsHighlighted(bool inHighlighted);
-    
-};
 
+};

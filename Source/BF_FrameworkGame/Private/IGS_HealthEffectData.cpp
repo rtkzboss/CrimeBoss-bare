@@ -3,4 +3,3 @@
 FIGS_HealthEffectData::FIGS_HealthEffectData() {
     (*this).LowHealthEffectDataAsset = nullptr;
 }
-

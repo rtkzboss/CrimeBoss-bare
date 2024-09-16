@@ -11,13 +11,12 @@ struct COMMON_SAVE_API FMETA_GraphStructSave {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UObject> Graph;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_GraphStatus Status;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<int32> CurrentNodeIds;
-    
+
     FMETA_GraphStructSave();
 };
-

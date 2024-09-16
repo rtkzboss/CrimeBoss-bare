@@ -1,7 +1,4 @@
 #include "IGS_DefendPointBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_ScenarioDifficulty.h"
 
 AIGS_DefendPointBase::AIGS_DefendPointBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).OverrideCapacity = -1;
@@ -22,27 +19,26 @@ FVector AIGS_DefendPointBase::GetDefendLookAtPosition(FVector querrierPos) const
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_DefendPointBase::GetDefendingCharacters(EIGS_TeamSideEnum inTeamSide) {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_DefendPointBase::GetCharactersInside(EIGS_TeamSideEnum inTeamSide) {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_DefendPointBase::GetArrivingCharacters(EIGS_TeamSideEnum inTeamSide) {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_DefendPointBase::GetAllDefendingCharacters() {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_DefendPointBase::GetAllCharactersInside() {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_DefendPointBase::GetAllArrivingCharacters() {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
-
 

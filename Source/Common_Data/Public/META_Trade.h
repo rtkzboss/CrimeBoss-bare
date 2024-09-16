@@ -14,19 +14,18 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetDataFromSave(const FMETA_TradeMissionSave& inTradeMissionSave);
-    
+
     UFUNCTION(BlueprintPure)
     TArray<FMETA_TradeExpense> GetTradeExpenses() const;
-    
+
     UFUNCTION(BlueprintCallable)
     FMETA_TradeMissionSave GetSaveData();
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_TradeMissionRowInfo GetInfo() const;
-    
+
 private:
     UPROPERTY()
     FMETA_TradeMissionSave m_TradeMissionSave;
-    
-};
 
+};

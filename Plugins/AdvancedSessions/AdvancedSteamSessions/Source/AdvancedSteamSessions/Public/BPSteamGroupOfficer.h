@@ -9,10 +9,9 @@ struct FBPSteamGroupOfficer {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FBPUniqueNetId OfficerUniqueNetID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsOwner;
-    
+
     ADVANCEDSTEAMSESSIONS_API FBPSteamGroupOfficer();
 };
-

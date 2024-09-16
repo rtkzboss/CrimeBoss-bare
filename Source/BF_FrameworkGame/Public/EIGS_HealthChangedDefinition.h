@@ -8,4 +8,3 @@ enum class EIGS_HealthChangedDefinition : uint8 {
     Normal = 0,
     Accumulated,
 };
-

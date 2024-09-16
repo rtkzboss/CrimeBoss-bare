@@ -2,4 +2,3 @@
 
 FIGS_AIGangsterDefaultTierDef::FIGS_AIGangsterDefaultTierDef() {
 }
-

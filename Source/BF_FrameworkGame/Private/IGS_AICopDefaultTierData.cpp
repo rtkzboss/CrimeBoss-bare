@@ -2,4 +2,3 @@
 
 FIGS_AICopDefaultTierData::FIGS_AICopDefaultTierData() {
 }
-

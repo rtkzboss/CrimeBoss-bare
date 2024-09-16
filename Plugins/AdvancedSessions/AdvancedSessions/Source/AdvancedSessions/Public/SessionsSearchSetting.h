@@ -8,4 +8,3 @@ struct FSessionsSearchSetting {
 public:
     ADVANCEDSESSIONS_API FSessionsSearchSetting();
 };
-

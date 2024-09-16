@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_HubGroupTileSetup> Tiles;
-    
-};
 
+};

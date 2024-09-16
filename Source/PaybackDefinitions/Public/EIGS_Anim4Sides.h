@@ -9,4 +9,3 @@ enum class EIGS_Anim4Sides : uint8 {
     Side_Left,
     Side_Right,
 };
-

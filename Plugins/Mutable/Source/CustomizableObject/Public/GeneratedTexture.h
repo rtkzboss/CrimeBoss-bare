@@ -10,13 +10,12 @@ struct FGeneratedTexture {
 public:
     UPROPERTY(EditAnywhere)
     int32 ID;
-    
+
     UPROPERTY(EditAnywhere)
     FString Name;
-    
+
     UPROPERTY(EditAnywhere)
     UTexture2D* Texture;
-    
+
     CUSTOMIZABLEOBJECT_API FGeneratedTexture();
 };
-

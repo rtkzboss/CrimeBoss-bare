@@ -13,8 +13,7 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FText DialogueID;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

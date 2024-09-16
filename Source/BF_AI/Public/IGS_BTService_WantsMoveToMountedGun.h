@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestMountedGunKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MountedGunKey;
-    
-};
 
+};

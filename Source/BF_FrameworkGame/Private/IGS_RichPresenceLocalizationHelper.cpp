@@ -12,4 +12,3 @@ FText UIGS_RichPresenceLocalizationHelper::GetChainName(const UObject* WCO, TSub
     return FText::GetEmpty();
 }
 
-

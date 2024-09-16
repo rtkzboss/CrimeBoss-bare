@@ -11,10 +11,9 @@ struct BF_VOICEOVER_API FIGS_MetaCutsceneLevelDialoguesRow : public FTableRowBas
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UDataTable> DialoguesDatabase;
-    
+
     FIGS_MetaCutsceneLevelDialoguesRow();
 };
-

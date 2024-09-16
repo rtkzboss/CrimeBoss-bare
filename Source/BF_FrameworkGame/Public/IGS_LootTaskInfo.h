@@ -8,7 +8,6 @@ struct BF_FRAMEWORKGAME_API FIGS_LootTaskInfo {
 public:
     UPROPERTY()
     bool bPocketTask;
-    
+
     FIGS_LootTaskInfo();
 };
-

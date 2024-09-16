@@ -12,45 +12,44 @@ public:
 protected:
     UPROPERTY()
     TArray<float> Values;
-    
+
     UPROPERTY()
     TArray<float> DefaultValues;
-    
+
     UPROPERTY()
     FString Unit;
-    
+
     UPROPERTY()
     bool bNoSwap;
-    
+
     UPROPERTY()
     bool bHasMin;
-    
+
     UPROPERTY()
     bool bHasMax;
-    
+
     UPROPERTY()
     bool bHasUIMin;
-    
+
     UPROPERTY()
     bool bHasUIMax;
-    
+
     UPROPERTY()
     bool bIsLogarithmic;
-    
+
     UPROPERTY()
     float Min;
-    
+
     UPROPERTY()
     float Max;
-    
+
     UPROPERTY()
     float UIMin;
-    
+
     UPROPERTY()
     float UIMax;
-    
+
     UPROPERTY()
     bool bIsChildOfRamp;
-    
-};
 
+};

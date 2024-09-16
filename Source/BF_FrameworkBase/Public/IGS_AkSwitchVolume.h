@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkSwitchValue* FootstepAkSwitch;
-    
+
     UPROPERTY()
     UAkSwitchValue* FootstepNoneAkSwitch;
-    
-};
 
+};

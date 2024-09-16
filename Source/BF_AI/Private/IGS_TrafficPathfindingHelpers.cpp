@@ -3,4 +3,3 @@
 UIGS_TrafficPathfindingHelpers::UIGS_TrafficPathfindingHelpers() {
 }
 
-

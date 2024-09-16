@@ -15,10 +15,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     TArray<AIGS_GameCharacterFramework*> Collect(EIGS_TeamSideEnum TeamSide) const;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UShapeComponent* Shape;
-    
-};
 
+};

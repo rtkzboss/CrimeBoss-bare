@@ -5,4 +5,3 @@ FIGS_ReplicatedAcceleration::FIGS_ReplicatedAcceleration() {
     (*this).AccelXYMagnitude = 0;
     (*this).AccelZ = 0;
 }
-

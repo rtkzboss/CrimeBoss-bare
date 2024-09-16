@@ -10,4 +10,3 @@ public:
     APaperDollAbstract(const FObjectInitializer& ObjectInitializer);
 
 };
-

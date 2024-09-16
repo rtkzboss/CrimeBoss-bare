@@ -4,4 +4,3 @@ UBTService_SquadIsBreaching::UBTService_SquadIsBreaching() {
     (*this).NodeName = TEXT("Squad Is Breaching");
 }
 
-

@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_LootBagInfo {
 public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<UIGS_InventoryObjectFramework*> Items;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<int32> ItemIDs;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float CurrentCapacity;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool IsOverfilled;
-    
+
     FIGS_LootBagInfo();
 };
-

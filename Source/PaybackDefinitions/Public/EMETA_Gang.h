@@ -12,4 +12,3 @@ enum class EMETA_Gang : uint8 {
     Cagnali,
     GANG_MAX UMETA(Hidden),
 };
-

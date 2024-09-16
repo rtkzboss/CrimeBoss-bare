@@ -4,4 +4,3 @@ FIGS_TrafficDirectionState::FIGS_TrafficDirectionState() {
     (*this).IsLocked = false;
     (*this).Reversed = false;
 }
-

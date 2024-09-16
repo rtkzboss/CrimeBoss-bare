@@ -10,10 +10,9 @@ struct COMMON_SAVE_API FMETA_PlanningBoardManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTag ActivePlanningBoardTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, EMETA_PlanningBoardItemStatus> PlanningBoardItemsStatuses;
-    
+
     FMETA_PlanningBoardManagerSaveData();
 };
-

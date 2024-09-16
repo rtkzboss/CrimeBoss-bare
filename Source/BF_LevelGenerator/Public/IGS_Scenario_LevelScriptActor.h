@@ -10,4 +10,3 @@ public:
     AIGS_Scenario_LevelScriptActor(const FObjectInitializer& ObjectInitializer);
 
 };
-

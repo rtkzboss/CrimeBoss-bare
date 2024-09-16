@@ -6,4 +6,3 @@ FCompilationOptions::FCompilationOptions() {
     (*this).bUseParallelCompilation = true;
     (*this).bUseDiskCompilation = false;
 }
-

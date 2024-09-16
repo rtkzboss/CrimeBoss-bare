@@ -3,4 +3,3 @@
 FIGS_AssetCollectionTableRow::FIGS_AssetCollectionTableRow() {
     (*this).CollectionName = NAME_None;
 }
-

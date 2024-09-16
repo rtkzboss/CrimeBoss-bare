@@ -4,4 +4,3 @@ UIGS_BTTask_Reload::UIGS_BTTask_Reload() {
     (*this).NodeName = TEXT("Reload");
 }
 
-

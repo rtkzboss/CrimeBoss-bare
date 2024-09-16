@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
-#include "IGS_TabEventDelegate.h"
+#include "IGS_TabEvent.h"
 #include "IGS_WidgetButtonSimple.h"
 #include "IGS_TabButton.generated.h"
 
@@ -15,24 +15,23 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetIconText(const FText& InText);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetCategoryTitleText(const FText& InText);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer ScreenTags;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UIGS_FancyText* Icon;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UIGS_FancyText* CategoryTitle;
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_TabEvent OnTabClicked;
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_TabEvent OnTabFocused;
-    
-};
 
+};

@@ -3,4 +3,3 @@
 UIGS_LoadingInProgressManager::UIGS_LoadingInProgressManager() {
 }
 
-

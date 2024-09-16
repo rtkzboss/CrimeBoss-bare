@@ -7,4 +7,3 @@ FMETA_BossLevelReductionConfig::FMETA_BossLevelReductionConfig() {
     (*this).MinReduction = 0.000000000e+00f;
     (*this).ReductionCurve = nullptr;
 }
-

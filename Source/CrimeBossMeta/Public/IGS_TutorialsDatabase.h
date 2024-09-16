@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_TutorialTableRow GetTutorialData(UObject* inWCO, const FGameplayTag inTutorialID, bool& outSucceeded);
-    
-};
 
+};

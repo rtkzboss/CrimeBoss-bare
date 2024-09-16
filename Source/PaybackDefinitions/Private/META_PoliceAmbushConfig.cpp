@@ -14,4 +14,3 @@ FMETA_PoliceAmbushConfig::FMETA_PoliceAmbushConfig() {
     (*this).HeatHigh = 8;
     (*this).HeatVeryHigh = 12;
 }
-

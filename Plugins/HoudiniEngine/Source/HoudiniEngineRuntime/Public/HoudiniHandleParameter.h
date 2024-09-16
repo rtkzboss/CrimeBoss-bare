@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(Instanced)
     UHoudiniParameter* AssetParameter;
-    
+
     UPROPERTY()
     int32 TupleIndex;
-    
-};
 
+};

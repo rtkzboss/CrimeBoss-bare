@@ -9,4 +9,3 @@ enum class EIGS_HitReactionBodyParts : uint8 {
     D_Head,
     D_None,
 };
-

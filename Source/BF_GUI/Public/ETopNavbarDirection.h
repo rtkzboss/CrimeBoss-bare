@@ -7,4 +7,3 @@ enum class ETopNavbarDirection : uint8 {
     Next,
     Previous,
 };
-

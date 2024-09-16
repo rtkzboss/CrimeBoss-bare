@@ -97,4 +97,3 @@ void UIGS_ScriptingCommandsLibrary::ScriptingCommandClearShootOverride(AIGS_Game
 void UIGS_ScriptingCommandsLibrary::ScriptingCommandCancelScriptedBehavior(AIGS_GameCharacterFramework* Instigator) {
 }
 
-

@@ -10,4 +10,3 @@ public:
     UMETA_BaseStoryGraphManager();
 
 };
-

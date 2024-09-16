@@ -5,4 +5,3 @@ FMETA_HiddenGoalsSaveInfo::FMETA_HiddenGoalsSaveInfo() {
     (*this).bSuccess = false;
     (*this).bRewardReceived = false;
 }
-

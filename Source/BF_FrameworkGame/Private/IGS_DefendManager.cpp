@@ -15,4 +15,3 @@ void UIGS_DefendManager::RegisterDefendPointInitial(AIGS_WaypointFramework* inDe
 void UIGS_DefendManager::RegisterDefendPoint(AIGS_WaypointFramework* inDefendPoint) {
 }
 
-

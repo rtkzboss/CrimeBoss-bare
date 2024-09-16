@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "SpecificCharacterPortraitReadyOutputPinDelegate.h"
+#include "SpecificCharacterPortraitReadyOutputPin.h"
 #include "IGS_WaitForSpecificCharacterPortrait.generated.h"
 
-class UIGS_WaitForSpecificCharacterPortrait;
 class UMETA_Character;
 class UObject;
 class UTexture2D;
@@ -17,14 +16,13 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_WaitForSpecificCharacterPortrait* WaitForCharacterPortrait(UObject* inWorldContextObject, UMETA_Character* inCharacter);
-    
+
 private:
     UFUNCTION()
     void ExecuteOnCharacterPortraitReady(TSoftObjectPtr<UTexture2D> inCharacterPortrait);
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FSpecificCharacterPortraitReadyOutputPin WhenCharacterPortraitReady;
-    
-};
 
+};

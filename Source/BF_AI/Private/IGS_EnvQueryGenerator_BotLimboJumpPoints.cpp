@@ -5,4 +5,3 @@ UIGS_EnvQueryGenerator_BotLimboJumpPoints::UIGS_EnvQueryGenerator_BotLimboJumpPo
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

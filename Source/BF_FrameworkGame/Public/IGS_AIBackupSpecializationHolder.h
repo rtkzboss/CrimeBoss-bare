@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupSpecializationHolder : public FIGS_AIBa
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupDefaultTierDef Default;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupHeavyTierDef Heavy;
-    
+
     FIGS_AIBackupSpecializationHolder();
 };
-

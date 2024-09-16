@@ -17,27 +17,26 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void TextScreenShoudBeShown(FMETA_TextScreenUIData TextScreenData);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void MovieShouldBePlayed(FMETA_MovieUIData MovieData);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void HandleMediaForScreen(FGameplayTag inScreenTag);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void HandleMediaForPartner(EMETA_Partner inPartner);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ForceStopBinkMovie();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void DialogueTypeShouldBePlayed(FGameplayTag inTypeTag, FGameplayTag inScreenTag);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void DialogueShouldBePlayed(FMETA_DialogueUIData DialogueData);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void CutsceneShouldBePlayed(FMETA_CutsceneUIData CutsceneData);
-    
-};
 
+};

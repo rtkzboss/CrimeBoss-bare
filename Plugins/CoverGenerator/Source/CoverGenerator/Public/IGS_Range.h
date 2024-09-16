@@ -8,10 +8,9 @@ struct COVERGENERATOR_API FIGS_Range {
 public:
     UPROPERTY(VisibleAnywhere)
     float AngleStart;
-    
+
     UPROPERTY(VisibleAnywhere)
     float AngleEnd;
-    
+
     FIGS_Range();
 };
-

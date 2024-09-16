@@ -13,4 +13,3 @@ enum class EHoudiniInputType : uint8 {
     Skeletal,
     GeometryCollection,
 };
-

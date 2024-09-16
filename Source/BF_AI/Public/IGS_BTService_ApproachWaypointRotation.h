@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector WaypointKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ApproachNotifiedKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutRotationKey;
-    
-};
 
+};

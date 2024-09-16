@@ -2,4 +2,3 @@
 
 FIGS_AIGrenadeUserMemory::FIGS_AIGrenadeUserMemory() {
 }
-

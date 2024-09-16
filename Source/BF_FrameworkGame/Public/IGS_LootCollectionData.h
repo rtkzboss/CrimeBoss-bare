@@ -11,13 +11,12 @@ struct BF_FRAMEWORKGAME_API FIGS_LootCollectionData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag PlacementType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag LootCategory;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<AIGS_LootCollectionBase> LootCollection;
-    
+
     FIGS_LootCollectionData();
 };
-

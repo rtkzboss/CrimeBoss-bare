@@ -41,15 +41,14 @@ int32 UMETA_Equipment::GetPrice() const {
 }
 
 TSubclassOf<UIGS_EquipmentInventoryObject> UMETA_Equipment::GetId() const {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_Character* UMETA_Equipment::GetCharacter() const {
-    return NULL;
+    return nullptr;
 }
 
 int32 UMETA_Equipment::GetBasePrice() const {
     return 0;
 }
-
 

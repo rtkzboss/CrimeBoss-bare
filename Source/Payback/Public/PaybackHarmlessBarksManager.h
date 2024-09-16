@@ -15,15 +15,14 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void EscapingStart(const AIGS_GameCharacterFramework* inInstigator);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void EscapingEnd(const AIGS_GameCharacterFramework* inInstigator);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void DetectionStart(const AIGS_GameCharacterFramework* inInstigator, const AActor* inDetectingCharacter);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void DetectionEnd(const AIGS_GameCharacterFramework* inInstigator, const AActor* inDetectingCharacter);
-    
-};
 
+};

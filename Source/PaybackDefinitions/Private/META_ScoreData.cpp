@@ -111,4 +111,3 @@ int32 UMETA_ScoreData::GetMaxScore() const {
     return 0;
 }
 
-

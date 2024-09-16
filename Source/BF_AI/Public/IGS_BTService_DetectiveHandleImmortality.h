@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ReviveChargesKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DetectiveInitKey;
-    
-};
 
+};

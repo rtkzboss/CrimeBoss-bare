@@ -10,4 +10,3 @@ public:
     AIGS_NavMeshBase(const FObjectInitializer& ObjectInitializer);
 
 };
-

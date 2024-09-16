@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_HeisterStateChangeHistory {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_HeisterStateChangeNote> StateChanges;
-    
+
     FMETA_HeisterStateChangeHistory();
 };
-

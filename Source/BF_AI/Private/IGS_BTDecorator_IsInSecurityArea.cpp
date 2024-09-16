@@ -4,4 +4,3 @@ UIGS_BTDecorator_IsInSecurityArea::UIGS_BTDecorator_IsInSecurityArea() {
     (*this).NodeName = TEXT("Is In Security Area");
 }
 
-

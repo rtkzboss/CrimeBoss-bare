@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Retreat(EIGS_TeamSideEnum inTeamSideToAdvance, int32 inScope, EIGS_Speed inSpeed, bool inCrouch);
-    
+
     UFUNCTION(BlueprintCallable)
     void Advance(EIGS_TeamSideEnum inTeamSideToAdvance, int32 inScope, EIGS_Speed inSpeed, bool inCrouch);
-    
+
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointBase* AdvancePoint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     AIGS_WaypointBase* RetreatPoint;
-    
-};
 
+};

@@ -11,10 +11,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 bVisibleTroughWalls: 1;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
     float LineThickness;
-    
-};
 
+};

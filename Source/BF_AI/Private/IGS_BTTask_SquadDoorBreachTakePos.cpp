@@ -1,9 +1,7 @@
 #include "IGS_BTTask_SquadDoorBreachTakePos.h"
 
 UIGS_BTTask_SquadDoorBreachTakePos::UIGS_BTTask_SquadDoorBreachTakePos() {
-    auto& gen0 = (*this).BreachRolesKey.AllowedTypes;
-    gen0.Empty();
-    gen0.AddDefaulted(1);
+    (*this).BreachRolesKey.AllowedTypes = {nullptr};
     (*this).NodeName = TEXT("Squad Breach Take Pos");
 }
 
@@ -15,7 +13,6 @@ bool UIGS_BTTask_SquadDoorBreachTakePos::IsCommandActive(UIGS_AICommand* AIComma
 }
 
 UIGS_AICommand* UIGS_BTTask_SquadDoorBreachTakePos::CommandToTakePosition(AIGS_GameCharacterFramework* agent, FVector InPos, FVector inMoveLookPos, FVector inFinalLookPos, EIGS_AIMontageBreachVariant MontageVariant) {
-    return NULL;
+    return nullptr;
 }
-
 

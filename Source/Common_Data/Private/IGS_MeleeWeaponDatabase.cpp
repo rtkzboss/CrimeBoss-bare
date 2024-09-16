@@ -16,4 +16,3 @@ FIGS_MeleeWeaponTableRow UIGS_MeleeWeaponDatabase::GetDataByIndexBP(int32 inInde
     return FIGS_MeleeWeaponTableRow{};
 }
 
-

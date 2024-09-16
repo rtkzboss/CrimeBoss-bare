@@ -8,4 +8,3 @@ enum class EIGS_ObjectiveState : uint8 {
     Completed,
     Failed,
 };
-

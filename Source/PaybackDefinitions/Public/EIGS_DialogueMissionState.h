@@ -9,4 +9,3 @@ enum class EIGS_DialogueMissionState : uint8 {
     Control,
     Assault,
 };
-

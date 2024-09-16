@@ -8,4 +8,3 @@ struct FPathPointInsaneSpawnData {
 public:
     BF_AI_API FPathPointInsaneSpawnData();
 };
-

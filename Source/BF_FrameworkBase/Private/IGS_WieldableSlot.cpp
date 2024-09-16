@@ -7,4 +7,3 @@ FIGS_WieldableSlot::FIGS_WieldableSlot() {
     (*this).IsLoading = false;
     (*this).IsPendingRemoval = false;
 }
-

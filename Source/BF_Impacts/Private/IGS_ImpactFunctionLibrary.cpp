@@ -16,4 +16,3 @@ void UIGS_ImpactFunctionLibrary::CreateHitImpact(const UObject* inWCO, const AAc
 void UIGS_ImpactFunctionLibrary::CreateAllImpacts(const UObject* inWCO, EIGS_ImpactTable inImpactTable, TEnumAsByte<EPhysicalSurface> inPhysicalSurface, const FIGS_ImpactParameters& inParameters) {
 }
 
-

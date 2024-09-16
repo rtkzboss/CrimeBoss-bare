@@ -12,22 +12,21 @@ struct FIGS_AILoadoutHolder {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIWeaponPoolDef WeaponPool;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_AILoadoutData> WeaponProbability;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 NoThrowableChance;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_AIThrowableWeaponDef> ThrowablePool;
-    
+
     UPROPERTY()
     FGameplayTag EmptyWeaponTag;
-    
+
     UPROPERTY()
     int32 ShowNoThrowableBool;
-    
+
     BF_FRAMEWORKGAME_API FIGS_AILoadoutHolder();
 };
-

@@ -10,13 +10,12 @@ struct COMMON_DATA_API FIGS_WeaponPanelDataStruct {
 public:
     UPROPERTY(BlueprintReadWrite)
     FText SkinName;
-    
+
     UPROPERTY(BlueprintReadWrite)
     TArray<FIGS_WeaponModeUIData> Modes;
-    
+
     UPROPERTY(BlueprintReadWrite)
     TArray<FIGS_WeaponStatUIData> Stats;
-    
+
     FIGS_WeaponPanelDataStruct();
 };
-

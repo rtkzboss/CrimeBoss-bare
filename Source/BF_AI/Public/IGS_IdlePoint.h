@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MinTimeUntilBreaker;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MaxTimeUntilBreaker;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag IdleAnimationTag;
-    
-};
 
+};

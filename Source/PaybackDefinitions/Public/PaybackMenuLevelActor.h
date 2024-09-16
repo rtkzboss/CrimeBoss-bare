@@ -10,4 +10,3 @@ public:
     APaybackMenuLevelActor(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -17,6 +17,6 @@ FIGS_AISwatHeavyTierDef::FIGS_AISwatHeavyTierDef() {
     (*this).SpecStats.Injured.HealthToInjured = 2.500000000e+03f;
     (*this).SpecStats.Injured.InjuredTime.Min = 6.000000000e+00f;
     (*this).SpecStats.Injured.InjuredTime.Max = 7.500000000e+00f;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
 }
-

@@ -15,30 +15,29 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestEvadePosKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SafeDistanceKey;
-    
+
     UPROPERTY(EditAnywhere)
     float SafeDistance;
-    
+
     UPROPERTY(EditAnywhere)
     bool SafeDistanceFromBB;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     float EQSCooldown;
-    
+
     UPROPERTY(EditAnywhere)
     float InnerRangeMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float OuterRangeMultiplier;
-    
-};
 
+};

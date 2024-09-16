@@ -10,4 +10,3 @@ public:
     AIGS_SquadEmployee(const FObjectInitializer& ObjectInitializer);
 
 };
-

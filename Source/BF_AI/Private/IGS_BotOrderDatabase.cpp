@@ -7,4 +7,3 @@ FIGS_BotOrderDatabaseUIData UIGS_BotOrderDatabase::GetUIData(EIGS_BotCommandDefi
     return FIGS_BotOrderDatabaseUIData{};
 }
 
-

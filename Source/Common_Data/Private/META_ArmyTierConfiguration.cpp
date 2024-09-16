@@ -15,4 +15,3 @@ FMETA_ArmyTierConfiguration::FMETA_ArmyTierConfiguration() {
     (*this).HireEventDelay.Max = 0;
     (*this).HireEventDurationTime = 0;
 }
-

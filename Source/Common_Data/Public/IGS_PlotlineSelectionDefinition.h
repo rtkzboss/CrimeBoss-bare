@@ -13,34 +13,33 @@ struct COMMON_DATA_API FIGS_PlotlineSelectionDefinition : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag itemTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> BackgroundImage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag UnlockCriteriaTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag EntitlementTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText LockedMessage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_PlotlineSelectionStarItem> StarItems;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsPlotline;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsDebugOnly;
-    
+
     FIGS_PlotlineSelectionDefinition();
 };
-

@@ -16,15 +16,14 @@ public:
 private:
     UFUNCTION()
     void OnControllerHeadphonesConnectionChanged(bool inIsConnected);
-    
+
     UPROPERTY(Instanced)
     UIGS_PersistentAkComponent* PersistenAudioAkComponent;
-    
+
     UPROPERTY(Instanced)
     UIGS_AkVoiceInputComponent* VoiceInputComponent;
-    
+
     UPROPERTY()
     UIGS_AudioSubsystemDataAsset* Data;
-    
-};
 
+};

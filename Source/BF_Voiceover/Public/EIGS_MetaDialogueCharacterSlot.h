@@ -10,4 +10,3 @@ enum class EIGS_MetaDialogueCharacterSlot : uint8 {
     SlotC,
     SlotD,
 };
-

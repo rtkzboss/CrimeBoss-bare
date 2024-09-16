@@ -1,15 +1,14 @@
 #include "IGS_LootBagPickup.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "EIGS_TeamSideEnum.h"
 
 AIGS_LootBagPickup::AIGS_LootBagPickup(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<USkeletalMeshComponent>(TEXT("RootComp"))) {
     (*this).PlacedInLevelItemType = EIGS_ItemType::Item_UNKNOWN;
-    (*this).SkeletalMesh = (USkeletalMeshComponent*)RootComponent;
+    auto gen = Cast<USkeletalMeshComponent>(GetDefaultSubobjectByName(TEXT("RootComp")));
+    (*this).SkeletalMesh = gen;
     (*this).IsPickableByAI = true;
-    (*this).PickupMeshComp = (UPrimitiveComponent*)RootComponent;
-    (*this).SceneRoot = (USceneComponent*)RootComponent;
+    (*this).PickupMeshComp = gen;
+    (*this).SceneRoot = gen;
+    (*this).RootComponent = gen;
 }
 
 
@@ -27,9 +26,8 @@ EIGS_ItemType AIGS_LootBagPickup::GetItemType() const {
 }
 
 TArray<FIGS_LootBagSingleItem> AIGS_LootBagPickup::GetItems() {
-    return TArray<FIGS_LootBagSingleItem>();
+    return {};
 }
-
 
 
 

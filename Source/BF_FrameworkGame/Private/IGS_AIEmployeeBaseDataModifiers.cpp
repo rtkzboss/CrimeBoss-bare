@@ -2,4 +2,3 @@
 
 FIGS_AIEmployeeBaseDataModifiers::FIGS_AIEmployeeBaseDataModifiers() {
 }
-

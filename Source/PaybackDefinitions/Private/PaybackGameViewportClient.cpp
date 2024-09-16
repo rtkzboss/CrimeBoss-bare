@@ -3,4 +3,3 @@
 UPaybackGameViewportClient::UPaybackGameViewportClient() {
 }
 
-

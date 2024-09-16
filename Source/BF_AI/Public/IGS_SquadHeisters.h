@@ -16,24 +16,23 @@ public:
 protected:
     UPROPERTY()
     AIGS_RoomBase* LastAreaOfOperationsRoom;
-    
+
     UPROPERTY()
     float NextSpreadUpdateTime;
-    
+
     UPROPERTY()
     TArray<FIGS_HeisterSquadBotInfo> BotsInfo;
-    
+
     UPROPERTY()
     TArray<AIGS_RoomBase*> EmptyRoomArray;
-    
+
     UPROPERTY(Instanced)
     UIGS_SquadHeistersEventWatchComponent* SquadHeistersEventWatchComponent;
-    
+
     UPROPERTY()
     TArray<AIGS_RoomBase*> m_PossibleAreaOfOperations;
-    
+
     UPROPERTY()
     TArray<AIGS_RoomBase*> m_AreaOfOperations;
-    
-};
 
+};

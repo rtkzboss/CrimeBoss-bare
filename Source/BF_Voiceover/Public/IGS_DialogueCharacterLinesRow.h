@@ -12,10 +12,9 @@ struct BF_VOICEOVER_API FIGS_DialogueCharacterLinesRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_DialogueGroupCharacterHolder ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UDataTable> CharacterDataTable;
-    
+
     FIGS_DialogueCharacterLinesRow();
 };
-

@@ -14,7 +14,7 @@ void UIGS_ScreenHandler::RegisterScreen(UIGS_Screen* inScreen) {
 }
 
 UIGS_Screen* UIGS_ScreenHandler::OpenScreenByClass(const TSubclassOf<UIGS_Screen> inClass, EScreenZOrder zOrderOverride) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_ScreenHandler::OnWidgetInputReleased(EIGS_InputAction InAction) {
@@ -33,7 +33,7 @@ void UIGS_ScreenHandler::OnAnalogInputRequested(EIGS_InputThumbstickType Type, F
 }
 
 TArray<EIGS_InputAction> UIGS_ScreenHandler::KeyEventToInputActions(const FKeyEvent& InKeyEvent) const {
-    return TArray<EIGS_InputAction>();
+    return {};
 }
 
 bool UIGS_ScreenHandler::IsScreenWithTagOpen(FGameplayTag inTag, bool includeOverlay) const {
@@ -64,15 +64,14 @@ FGameplayTag UIGS_ScreenHandler::GetTopScreenTag(bool includeOverlay) const {
 }
 
 UIGS_Screen* UIGS_ScreenHandler::GetTopScreen(bool includeOverlay) const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_Screen* UIGS_ScreenHandler::GetOpenedScreenByTag(FGameplayTag inTag) const {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_ScreenHandler::AreOnlyOverlaysOpen() const {
     return false;
 }
-
 

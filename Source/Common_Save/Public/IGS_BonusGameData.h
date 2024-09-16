@@ -9,7 +9,6 @@ struct FIGS_BonusGameData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FDateTime LastClaimedDailyMultiplayerDateTime;
-    
+
     COMMON_SAVE_API FIGS_BonusGameData();
 };
-

@@ -1,6 +1,4 @@
 #include "IGS_PayloadBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_PayloadBase::AIGS_PayloadBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -45,10 +43,9 @@ void AIGS_PayloadBase::FinishPayload() {
 
 void AIGS_PayloadBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_PayloadBase, mR_bIsEnabled);
     DOREPLIFETIME(AIGS_PayloadBase, mR_bIsActive);
     DOREPLIFETIME(AIGS_PayloadBase, mR_bIsFinished);
 }
-
 

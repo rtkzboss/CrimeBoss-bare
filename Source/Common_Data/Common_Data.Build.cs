@@ -5,7 +5,7 @@ public class Common_Data : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "AkAudio",
             "BF_Pool",
@@ -14,6 +14,7 @@ public class Common_Data : ModuleRules {
             "CoreUObject",
             "CustomizableObject",
             "CustomizableObjectPopulation",
+            "DataRegistry",
             "DeveloperSettings",
             "Engine",
             "GameplayAbilities",

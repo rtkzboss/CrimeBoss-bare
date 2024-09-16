@@ -19,75 +19,74 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void StartSequence(FGameplayTag inSequenceTag);
-    
+
 public:
     UFUNCTION(BlueprintNativeEvent)
     void ServerInitialize_Internal();
-    
+
     UFUNCTION(Reliable, Server)
     void Server_Initialize();
-    
+
 protected:
     UFUNCTION()
     void OnRep_bInitialized();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsSequenceInProgress() const;
-    
+
 public:
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void IsCareerCompleted(bool& outCareerCompleted);
-    
+
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void ExecuteSequenceItem(FGameplayTag inTag);
-    
+
     UFUNCTION(BlueprintCallable)
     void ExecuteNextSequenceItem();
-    
+
 public:
     UFUNCTION(BlueprintNativeEvent)
     void ClientInitialize_Internal();
-    
+
     UFUNCTION(Client, Reliable)
     void Client_Initialize();
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void AddSequence(UPARAM(Ref) FMETA_Sequence& InSequence);
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AMETA_BaseGameMode* MetaGameMode;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SubtitleManager* SubtitleManager;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UMETA_CommonData* CommonMetaData;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UMETA_EconomyData* EconomyMetaData;
-    
+
 protected:
     UPROPERTY(ReplicatedUsing=OnRep_bInitialized)
     bool bInitialized;
-    
+
     UPROPERTY()
     TArray<FMETA_Sequence> m_SequencesQueue;
-    
+
     UPROPERTY(BlueprintReadOnly)
     FGameplayTag CurrentSequenceTag;
-    
+
 private:
     UPROPERTY()
     int32 m_CurrentSequenceItemIndex;
-    
+
     UPROPERTY()
     FMETA_Sequence CurrentSequence;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

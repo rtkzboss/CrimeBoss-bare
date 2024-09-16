@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatDefaultTierData : public FIGS_AIBaseDefau
 public:
     FIGS_AISwatDefaultTierData();
 };
-

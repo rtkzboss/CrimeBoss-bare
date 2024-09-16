@@ -9,10 +9,9 @@ struct FIGS_RecomendedItemDefinition {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 AmountToBeSelected;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer JobCategoryPool;
-    
+
     CRIMEBOSSMETA_API FIGS_RecomendedItemDefinition();
 };
-

@@ -29,4 +29,3 @@ enum class EIGS_AICommandType : uint8 {
     AICT_BeingRevived,
     AICT_ThrowThrowable,
 };
-

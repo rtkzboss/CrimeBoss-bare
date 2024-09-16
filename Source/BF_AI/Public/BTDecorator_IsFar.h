@@ -12,6 +12,5 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float Addon;
-    
-};
 
+};

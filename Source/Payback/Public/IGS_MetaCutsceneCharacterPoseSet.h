@@ -10,7 +10,6 @@ struct PAYBACK_API FIGS_MetaCutsceneCharacterPoseSet {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_MetaDialogueCharacterSlot, FGameplayTagContainer> CharacterPoses;
-    
+
     FIGS_MetaCutsceneCharacterPoseSet();
 };
-

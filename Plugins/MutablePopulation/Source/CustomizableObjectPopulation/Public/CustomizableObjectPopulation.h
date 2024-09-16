@@ -15,19 +15,18 @@ public:
 
     UFUNCTION(BlueprintPure)
     void RegeneratePopulation(int32 Seed, TArray<UCustomizableObjectInstance*>& OutInstances, int32 NumInstancesToGenerate) const;
-    
+
     UFUNCTION(BlueprintPure)
     int32 GeneratePopulation(TArray<UCustomizableObjectInstance*>& OutInstances, int32 NumInstancesToGenerate) const;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString Name;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FClassWeightPair> ClassWeights;
-    
+
 private:
     UPROPERTY()
     UCustomizableObjectPopulationGenerator* Generator;
-    
-};
 
+};

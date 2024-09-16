@@ -9,4 +9,3 @@ enum class EIGS_WallShape : uint8 {
     Wall_90,
     Wall_Shaft,
 };
-

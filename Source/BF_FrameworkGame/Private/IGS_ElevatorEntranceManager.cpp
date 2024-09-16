@@ -9,4 +9,3 @@ void UIGS_ElevatorEntranceManager::UnregisterElevatorCable(AIGS_Rope* inElevator
 void UIGS_ElevatorEntranceManager::RegisterElevatorCable(AIGS_Rope* inElevatorCable) {
 }
 
-

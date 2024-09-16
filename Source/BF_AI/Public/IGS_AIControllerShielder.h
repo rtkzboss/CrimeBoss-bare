@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerShielder(const FObjectInitializer& ObjectInitializer);
 
 };
-

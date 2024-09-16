@@ -15,14 +15,13 @@ public:
 protected:
     UPROPERTY(EditDefaultsOnly)
     bool bShouldPlayAnimation;
-    
+
     UPROPERTY(EditAnywhere)
     bool bCanPlayerBumpInto;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* RootComp;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

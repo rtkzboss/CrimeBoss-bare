@@ -7,4 +7,3 @@ FPowerIKBodyInertia::FPowerIKBodyInertia() {
     (*this).SpringStrength = 1.000000000e+02f;
     (*this).SpringDamping = 2.000000030e-01f;
 }
-

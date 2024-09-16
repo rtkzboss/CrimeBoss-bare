@@ -5,4 +5,3 @@ UIGS_CrimeBossMetaDevSettings::UIGS_CrimeBossMetaDevSettings() {
     (*this).RandEventsDataTable = FSoftObjectPath(TEXT("/Game/CrimeBossMeta/Resources/RandomEvents/DT_RandEventsDatabase.DT_RandEventsDatabase"), TEXT(""));
 }
 
-

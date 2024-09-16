@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<FIGS_HeavyHitReactionData> HitReactionDataStand;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_HeavyHitReactionData> HitReactionDataCrouch;
-    
-};
 
+};

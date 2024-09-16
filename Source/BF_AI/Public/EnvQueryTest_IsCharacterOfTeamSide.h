@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     EIGS_TeamSideEnum TeamSide;
-    
-};
 
+};

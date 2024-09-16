@@ -10,19 +10,18 @@ struct PAYBACKDEFINITIONS_API FMETA_GangAmbushConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Gang, FMETA_Chance> DefaultForGangAmbush;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NoGangsterKilledInMission;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MissionWasDoneInStealth;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 BossInTopEnemyList;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 BossIsInGangsEnemyList;
-    
+
     FMETA_GangAmbushConfig();
 };
-

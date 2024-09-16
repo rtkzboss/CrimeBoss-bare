@@ -5,11 +5,11 @@ UChainMissionsDatabase::UChainMissionsDatabase() {
 }
 
 TArray<TSubclassOf<UMETA_MissionID>> UChainMissionsDatabase::GetMoneyMakingChainMissionIDsWithLootTypeByUnlockRespect(const UObject* inWCO, FGameplayTag inLootType, EMETA_RespectLvl inUnlockRespect) {
-    return TArray<TSubclassOf<UMETA_MissionID>>();
+    return {};
 }
 
 TArray<TSubclassOf<UMETA_MissionID>> UChainMissionsDatabase::GetFpsMissionsIdsWithSubType(EMETA_FPSMissionSubtype inFPSMissionSubtype) {
-    return TArray<TSubclassOf<UMETA_MissionID>>();
+    return {};
 }
 
 FMETA_FPSMissionInfo UChainMissionsDatabase::GetFPSMissionInfoBP(TSubclassOf<UMETA_MissionID> inMissionID, bool& outSucceeded) {
@@ -17,11 +17,10 @@ FMETA_FPSMissionInfo UChainMissionsDatabase::GetFPSMissionInfoBP(TSubclassOf<UME
 }
 
 UMETA_BaseMission* UChainMissionsDatabase::GetChainMissionObject(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inMissionID) {
-    return NULL;
+    return nullptr;
 }
 
 FMETA_MissionDatabase UChainMissionsDatabase::GetChainMissionDataBP(const UObject* inWCO, TSubclassOf<UMETA_MissionID> inClass, bool& outSucceeded) {
     return FMETA_MissionDatabase{};
 }
-
 

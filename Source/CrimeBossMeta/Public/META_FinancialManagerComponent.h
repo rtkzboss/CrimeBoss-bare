@@ -14,39 +14,38 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite)
     FMETA_Loan CurrentLoan;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 CooldownToNextOffer;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 Balance;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FMETA_Interval BalanceCap;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 DayWhenPlayerReachedBankruptState;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 HiredCrewSpending;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 MarketSpending;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 MissionIncome;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 TradeIncome;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 OtherIncome;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 OtherSpending;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 InitialBalance;
-    
-};
 
+};

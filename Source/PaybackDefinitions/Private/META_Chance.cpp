@@ -3,4 +3,3 @@
 FMETA_Chance::FMETA_Chance() {
     (*this).Chance = 0;
 }
-

@@ -26,4 +26,3 @@ FIGS_HitInfo::FIGS_HitInfo() {
     (*this).InstigatorTeamSide = EIGS_TeamSideEnum::TS_Unknown;
     (*this).bIsHeadshot = false;
 }
-

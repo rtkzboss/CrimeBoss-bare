@@ -6,4 +6,3 @@ FPrefabricatorPropertyAssetMapping::FPrefabricatorPropertyAssetMapping() {
     (*this).AssetObjectPath = NAME_None;
     (*this).bUseQuotes = false;
 }
-

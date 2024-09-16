@@ -12,18 +12,17 @@ public:
 
     UPROPERTY()
     int32 NumberOfSplineControlPoints;
-    
+
     UPROPERTY()
     float SplineLength;
-    
+
     UPROPERTY()
     float SplineResolution;
-    
+
     UPROPERTY()
     bool SplineClosed;
-    
+
     UPROPERTY()
     TArray<FTransform> SplineControlPoints;
-    
-};
 
+};

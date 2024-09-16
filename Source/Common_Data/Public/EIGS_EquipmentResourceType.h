@@ -8,4 +8,3 @@ enum class EIGS_EquipmentResourceType : uint8 {
     ERT_Cooldown,
     ERT_Custom = 100,
 };
-

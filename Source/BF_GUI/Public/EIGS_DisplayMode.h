@@ -10,4 +10,3 @@ enum class EIGS_DisplayMode : uint8 {
     DM_Windowed,
     DM_MAX UMETA(Hidden),
 };
-

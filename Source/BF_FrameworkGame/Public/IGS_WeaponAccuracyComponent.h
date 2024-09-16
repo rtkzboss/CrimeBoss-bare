@@ -14,34 +14,33 @@ public:
 
     UFUNCTION(BlueprintPure)
     float GetCurrentSpreadConeHalfAngleInRadians() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CombinedHalfAngleInRadians;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float SpreadHalfAngleInRadians;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float MovementMultiplier;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsAiming;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsVR;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsDrawingDebug;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_WeaponAccuracyDefinition AccuracyDefinition;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_AIWeaponDefinitions AIDefinition;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag WeaponClassTag;
-    
-};
 
+};

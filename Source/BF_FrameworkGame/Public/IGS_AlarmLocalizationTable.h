@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     TMap<EIGS_AlarmReason, FText> Entry;
-    
-};
 
+};

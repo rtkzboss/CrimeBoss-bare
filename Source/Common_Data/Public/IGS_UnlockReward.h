@@ -15,28 +15,27 @@ struct COMMON_DATA_API FIGS_UnlockReward : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_RewardType Type;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Image;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText UnlockTip;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_UnlockCharacter CharacterData;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_UnlockMissionContract MissionContractData;
-    
+
     FIGS_UnlockReward();
 };
-

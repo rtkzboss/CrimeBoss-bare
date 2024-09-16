@@ -15,34 +15,33 @@ public:
 
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* StatNameTextBlock;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* StatValueTextBlock;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UProgressBar* StatProgressBar;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor ProgressBarBackground;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor ProgressBarForeground;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor TextColor;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText StatName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StatValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StatMinValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StatMaxValue;
-    
-};
 
+};

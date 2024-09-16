@@ -77,7 +77,7 @@ bool UIGS_AIControllerHelpersLibrary::IsCoverStillValid(UCoverPoint* cover, AIGS
 }
 
 EIGS_SwitchWeaponTask_WeaponType UIGS_AIControllerHelpersLibrary::GetWeaponType(AController* Controller) {
-    return EIGS_SwitchWeaponTask_WeaponType::WT_Unknown;
+    return EIGS_SwitchWeaponTask_WeaponType::WT_Primary;
 }
 
 EIGS_Speed UIGS_AIControllerHelpersLibrary::GetWaypointSpeed(AIGS_AIControllerGame* Controller) {
@@ -85,7 +85,7 @@ EIGS_Speed UIGS_AIControllerHelpersLibrary::GetWaypointSpeed(AIGS_AIControllerGa
 }
 
 float UIGS_AIControllerHelpersLibrary::GetRollToCoverDistance(AIGS_AIControllerGame* InController) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FVector UIGS_AIControllerHelpersLibrary::GetNextPathPoint(AAIController* Controller) {
@@ -93,7 +93,7 @@ FVector UIGS_AIControllerHelpersLibrary::GetNextPathPoint(AAIController* Control
 }
 
 TArray<AIGS_MonsterCloset*> UIGS_AIControllerHelpersLibrary::GetMonsterClosetsInBox(UObject* inWCO, FVector inOrigin, FVector InBoxExtent) {
-    return TArray<AIGS_MonsterCloset*>();
+    return {};
 }
 
 FVector UIGS_AIControllerHelpersLibrary::GetLastPosOnNavmesh(AActor* inActor) {
@@ -101,7 +101,7 @@ FVector UIGS_AIControllerHelpersLibrary::GetLastPosOnNavmesh(AActor* inActor) {
 }
 
 float UIGS_AIControllerHelpersLibrary::GetDistanceToNextPathPoint(AAIController* Controller) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FVector UIGS_AIControllerHelpersLibrary::GetCoverAgainstPoint(AIGS_GameCharacterFramework* Character, bool& outIsDefend) {
@@ -121,5 +121,4 @@ bool UIGS_AIControllerHelpersLibrary::CanShootAtHiddenPos(AAIController* InContr
 bool UIGS_AIControllerHelpersLibrary::CalculatePlayerOverlap(AIGS_AIControllerPlayerBot* playerBot) {
     return false;
 }
-
 

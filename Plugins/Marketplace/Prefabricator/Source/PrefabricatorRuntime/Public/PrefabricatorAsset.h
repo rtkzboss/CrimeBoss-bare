@@ -16,18 +16,17 @@ public:
 
     UPROPERTY()
     TArray<FPrefabricatorActorData> ActorData;
-    
+
     UPROPERTY()
     TEnumAsByte<EComponentMobility::Type> PrefabMobility;
-    
+
     UPROPERTY()
     FGuid LastUpdateID;
-    
+
     UPROPERTY()
     UThumbnailInfo* ThumbnailInfo;
-    
+
     UPROPERTY()
     uint32 Version;
-    
-};
 
+};

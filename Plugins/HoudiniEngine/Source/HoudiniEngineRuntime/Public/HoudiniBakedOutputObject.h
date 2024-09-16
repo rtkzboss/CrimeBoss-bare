@@ -8,28 +8,27 @@ struct HOUDINIENGINERUNTIME_API FHoudiniBakedOutputObject {
 public:
     UPROPERTY()
     FString Actor;
-    
+
     UPROPERTY()
     FString Blueprint;
-    
+
     UPROPERTY()
     FName ActorBakeName;
-    
+
     UPROPERTY()
     FString BakedObject;
-    
+
     UPROPERTY()
     FString BakedComponent;
-    
+
     UPROPERTY()
     TArray<FString> InstancedActors;
-    
+
     UPROPERTY()
     TArray<FString> InstancedComponents;
-    
+
     UPROPERTY()
     TMap<FName, FString> LandscapeLayers;
-    
+
     FHoudiniBakedOutputObject();
 };
-

@@ -11,4 +11,3 @@ enum class EIGS_Cursor : uint8 {
     VirtualHover,
     MAX,
 };
-

@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FIGS_PlayerStateSave {
 public:
     UPROPERTY()
     int32 MoneyAmount;
-    
+
     UPROPERTY()
     TArray<FSoftObjectPath> Items;
-    
+
     FIGS_PlayerStateSave();
 };
-

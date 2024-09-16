@@ -8,4 +8,3 @@ FCustomizableObjectVectorParameterValue::FCustomizableObjectVectorParameterValue
     (*this).ParameterValue.A = 0.000000000e+00f;
     (*this).Uid = TEXT("");
 }
-

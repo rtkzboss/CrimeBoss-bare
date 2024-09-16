@@ -14,6 +14,5 @@ class BF_AI_API IIGS_ThrowableWeaponSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TArray<FIGS_AIThrowableWeaponDef> GetThrowableWeaponSettings();
-    
-};
 
+};

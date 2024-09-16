@@ -7,4 +7,3 @@ enum class EMETA_UnaryOperation : uint8 {
     Increment,
     Decrement,
 };
-

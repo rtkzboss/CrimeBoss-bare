@@ -8,11 +8,11 @@ struct HOUDINIENGINERUNTIME_API FHoudiniBakedOutputObjectIdentifier {
 public:
     UPROPERTY()
     int32 PartId;
-    
+
     UPROPERTY()
     FString SplitIdentifier;
-    
+
     FHoudiniBakedOutputObjectIdentifier();
 };
 FORCEINLINE uint32 GetTypeHash(const FHoudiniBakedOutputObjectIdentifier&) { return 0; }
-
+FORCEINLINE bool operator==(const FHoudiniBakedOutputObjectIdentifier&, const FHoudiniBakedOutputObjectIdentifier&) { return true; }

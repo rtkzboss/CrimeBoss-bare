@@ -10,4 +10,3 @@ public:
     APaybackBackupHeisterCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

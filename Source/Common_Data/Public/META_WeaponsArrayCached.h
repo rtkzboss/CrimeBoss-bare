@@ -9,7 +9,6 @@ struct COMMON_DATA_API FMETA_WeaponsArrayCached {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_WeaponCachedData> Weapons;
-    
+
     FMETA_WeaponsArrayCached();
 };
-

@@ -17,21 +17,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UpdatePlayerHeisterData(APlayerState* inPlayerState, const FCommonHeisterData& inHeisterData);
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void IsConfirmed(bool& IsConfirmed);
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     EIGS_StorePlatform GetStorePlatform() const;
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetPlayerState(AIGS_PlayerStateGame*& PlayerState);
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetOccupation(EIGS_MenuSlotOccupation& Occupation);
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     void GetHeisterData(FCommonHeisterData& HeisterData);
-    
-};
 
+};

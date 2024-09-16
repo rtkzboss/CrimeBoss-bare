@@ -9,13 +9,12 @@ struct BF_LEVELGENERATOR_API FIGS_ConnectionPointData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Name;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Location;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Rotation;
-    
+
     FIGS_ConnectionPointData();
 };
-

@@ -8,7 +8,6 @@ struct FIGS_RestrictedTagsHolder {
 public:
     UPROPERTY(EditAnywhere)
     TArray<FName> RestrictedTags;
-    
+
     BF_FRAMEWORKBASE_API FIGS_RestrictedTagsHolder();
 };
-

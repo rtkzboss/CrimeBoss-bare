@@ -2,4 +2,3 @@
 
 FIGS_TargetProximityInfo::FIGS_TargetProximityInfo() {
 }
-

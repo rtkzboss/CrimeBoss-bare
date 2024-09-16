@@ -11,15 +11,14 @@ public:
 
     UPROPERTY(EditAnywhere)
     float RandomAngle;
-    
+
     UPROPERTY(EditAnywhere)
     float ForceRotationByAngle;
-    
+
     UPROPERTY(EditAnywhere)
     bool PredictActorLocation;
-    
+
     UPROPERTY(EditAnywhere)
     float PredictionTimePerMeter;
-    
-};
 
+};

@@ -14,12 +14,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     UAkSwitchValue* SwitchValue;
-    
+
     UPROPERTY(EditAnywhere)
     bool bShouldSpawnBloodImpacts;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_WoundType WoundType;
-    
-};
 
+};

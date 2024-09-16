@@ -5,4 +5,3 @@ UKiBLIISettings::UKiBLIISettings() {
     (*this).bEnableInEditor = true;
 }
 
-

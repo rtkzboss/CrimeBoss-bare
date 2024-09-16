@@ -1,7 +1,4 @@
 #include "ParticleWidget.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
 
 UParticleWidget::UParticleWidget() {
     (*this).DirectionRange.Y = 3.600000000e+02f;
@@ -13,5 +10,4 @@ UParticleWidget::UParticleWidget() {
     (*this).ParticleEndSizeRange.Y = 5.000000000e+00f;
     (*this).MaxParticles = 128;
 }
-
 

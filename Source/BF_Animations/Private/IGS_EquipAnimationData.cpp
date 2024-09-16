@@ -2,4 +2,3 @@
 
 FIGS_EquipAnimationData::FIGS_EquipAnimationData() {
 }
-

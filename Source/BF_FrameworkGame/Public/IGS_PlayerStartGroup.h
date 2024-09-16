@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsActive;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsRandom;
-    
-};
 
+};

@@ -5,10 +5,11 @@ public class BF_AI : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "AIModule",
             "AkAudio",
+            "AnimationBudgetAllocator",
             "BF_Covers",
             "BF_FrameworkBase",
             "BF_FrameworkGame",
@@ -20,10 +21,12 @@ public class BF_AI : ModuleRules {
             "Core",
             "CoreUObject",
             "CoverGenerator",
+            "DataRegistry",
             "DeveloperSettings",
             "Engine",
             "GameplayAbilities",
             "GameplayTags",
+            "GameplayTasks",
             "NavigationSystem",
             "Niagara",
             "PathFollow",

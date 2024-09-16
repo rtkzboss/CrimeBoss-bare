@@ -9,4 +9,3 @@ enum class EHoudiniProxyRefineResult : uint8 {
     Success,
     Skipped,
 };
-

@@ -10,10 +10,9 @@ struct FCustomizedMaterialTexture2D {
 public:
     UPROPERTY(VisibleAnywhere)
     FName Name;
-    
+
     UPROPERTY(EditAnywhere)
     UTexture2D* Texture;
-    
+
     CUSTOMIZABLEOBJECT_API FCustomizedMaterialTexture2D();
 };
-

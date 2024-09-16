@@ -18,21 +18,20 @@ public:
 protected:
     UPROPERTY()
     TArray<FIGS_StrafeRecord> StrafeRecords;
-    
+
     UPROPERTY()
     TArray<FIGS_MoveRecord> MoveToRecords;
-    
+
     UPROPERTY()
     TArray<FIGS_ZiptieRecord> ZiptieRecords;
-    
+
     UPROPERTY()
     TArray<FIGS_ShoutAtRecord> ShoutAtRecords;
-    
+
     UPROPERTY()
     TArray<FIGS_StickyTargetInfo> m_StickyTargets;
-    
+
     UPROPERTY()
     TArray<FIGS_InspectRecord> m_MovingInspectsRecords;
-    
-};
 
+};

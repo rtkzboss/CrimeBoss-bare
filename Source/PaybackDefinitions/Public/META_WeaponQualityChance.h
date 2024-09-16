@@ -9,10 +9,9 @@ struct FMETA_WeaponQualityChance {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality WeaponQuality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Chance;
-    
+
     PAYBACKDEFINITIONS_API FMETA_WeaponQualityChance();
 };
-

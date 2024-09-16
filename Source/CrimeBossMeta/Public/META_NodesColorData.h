@@ -15,15 +15,14 @@ public:
 protected:
     UPROPERTY(EditDefaultsOnly)
     FLinearColor STORY_ACTIVE_NODE_COLOR;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_NodeType, FLinearColor> STORY_NODES_COLORS;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_NodeType, FLinearColor> STORY_NODES_BODY_COLORS;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_GoalStatus, FLinearColor> END_NODE_COLOR_BY_RESULT;
-    
-};
 
+};

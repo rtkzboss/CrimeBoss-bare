@@ -4,4 +4,3 @@ UBTDecorator_IsDefending::UBTDecorator_IsDefending() {
     (*this).NodeName = TEXT("Is defending");
 }
 
-

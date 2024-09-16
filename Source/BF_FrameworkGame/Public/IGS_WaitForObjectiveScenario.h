@@ -1,11 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "ObjectiveScenarioReadyOutputPinDelegate.h"
+#include "ObjectiveScenarioReadyOutputPin.h"
 #include "IGS_WaitForObjectiveScenario.generated.h"
 
 class AIGS_ObjectiveScenarioBase;
-class UIGS_WaitForObjectiveScenario;
 class UObject;
 
 UCLASS()
@@ -16,14 +15,13 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_WaitForObjectiveScenario* WaitForObjectiveScenario(UObject* inWorldContextObject);
-    
+
 private:
     UFUNCTION()
     void ExecuteOnObjectiveScenarioReady(AIGS_ObjectiveScenarioBase* inObjScenario) const;
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FObjectiveScenarioReadyOutputPin WhenObjectiveScenarioReady;
-    
-};
 
+};

@@ -3,4 +3,3 @@
 FMETA_ItemQualityBitmask::FMETA_ItemQualityBitmask() {
     (*this).Quality = 0;
 }
-

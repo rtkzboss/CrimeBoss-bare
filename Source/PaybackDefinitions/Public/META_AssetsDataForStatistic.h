@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_AssetsDataForStatistic {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGameplayTag> AssetsTags;
-    
+
     FMETA_AssetsDataForStatistic();
 };
-

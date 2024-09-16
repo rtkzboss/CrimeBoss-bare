@@ -10,13 +10,12 @@ struct BF_VOICEOVER_API FIGS_MetaDialogueTranscript {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_MetaDialogueCharacterSlot SpeakerSlot;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName LineID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_MetaDialogueCharacterSlot, EIGS_MetaCutsceneCharacterPose> CharactersPose;
-    
+
     FIGS_MetaDialogueTranscript();
 };
-

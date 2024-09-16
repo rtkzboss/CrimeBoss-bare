@@ -7,4 +7,3 @@ FIGS_AnimTypeVariant4SidesHolder::FIGS_AnimTypeVariant4SidesHolder() {
     (*this).LeftMontageVariant = 0;
     (*this).RightMontageVariant = 0;
 }
-

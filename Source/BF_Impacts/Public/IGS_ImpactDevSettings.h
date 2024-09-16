@@ -14,21 +14,20 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> ShotImpactsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> FootstepImpactsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MeleeImpactsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> DestroyImpactsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> HitImpactsDataTable;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataAsset> ImpactManagerSettingsDataAsset;
-    
-};
 
+};

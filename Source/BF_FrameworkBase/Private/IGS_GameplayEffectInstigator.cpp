@@ -2,4 +2,3 @@
 
 FIGS_GameplayEffectInstigator::FIGS_GameplayEffectInstigator() {
 }
-

@@ -8,19 +8,18 @@ struct PAYBACKDEFINITIONS_API FIGS_MetaMissionNames {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> Story;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> MoneyMaking;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> TurfWar;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> Character;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> Other;
-    
+
     FIGS_MetaMissionNames();
 };
-

@@ -12,22 +12,21 @@ struct CRIMEBOSSMETA_API FMETA_PlanningBoardItemConnectionData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ToItemGameplayTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName FromSocketName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> FromConnectionStaticMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ToSocketName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> ToConnectionStaticMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor ThreadColor;
-    
+
     FMETA_PlanningBoardItemConnectionData();
 };
-

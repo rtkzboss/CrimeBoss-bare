@@ -15,18 +15,17 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 ColumnSize;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 rowSize;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Magnification;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UImage* ItemImage;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     USizeBox* ItemSizeBox;
-    
-};
 
+};

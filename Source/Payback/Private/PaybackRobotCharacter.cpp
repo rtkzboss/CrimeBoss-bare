@@ -1,16 +1,12 @@
 #include "PaybackRobotCharacter.h"
+#include "SkeletalMeshComponentBudgeted.h"
 #include "IGS_WeakSpotComponent.h"
 #include "Components/BoxComponent.h"
-#include "GameFramework/Character.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_CharacterID.h"
-#include "EIGS_TeamSideEnum.h"
-#include "EIGS_UnitSpecialization.h"
 
 APaybackRobotCharacter::APaybackRobotCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).WeakSpotCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("WeakSpotCollisionComponent"));
+    auto gen = CreateDefaultSubobject<UBoxComponent>(TEXT("WeakSpotCollisionComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_WeakSpotComponent>(TEXT("WeakSpot Component"));
+    (*this).WeakSpotCollision = gen;
     (*this).WeakSpotHealth = 5.000000000e+01f;
     (*this).WeakSpotAIDamageMultiplier = 2.000000030e-01f;
     (*this).MaxHealthPercentageTaken = 5.000000000e-01f;
@@ -18,9 +14,11 @@ APaybackRobotCharacter::APaybackRobotCharacter(const FObjectInitializer& ObjectI
     (*this).OverloadInnerDamageRadius = 2.000000000e+02f;
     (*this).OverloadEffectRadius = 1.500000000e+03f;
     (*this).OverloadBaseDamage = 5.000000000e+02f;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).OverloadAnimationTag, 0)) = TEXT("Anim.Combat.Robot.Overload");
-    (*this).m_WeakSpotComponent = CreateDefaultSubobject<UIGS_WeakSpotComponent>(TEXT("WeakSpot Component"));
-    (*this).WeakSpotCollision->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
+    auto gen3 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).OverloadAnimationTag, 0)) = TEXT("Anim.Combat.Robot.Overload");
+    (*this).m_WeakSpotComponent = gen2;
+    auto gen4 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("CharacterMesh0")));
+    if (gen) gen->SetupAttachment(gen4);
 }
 
 void APaybackRobotCharacter::StartOverloadSequenceDelayed(AController* inInstigator, const float inDelay) {
@@ -64,5 +62,4 @@ void APaybackRobotCharacter::Multicast_Overload_Implementation(AController* inIn
 
 void APaybackRobotCharacter::EnableVfx(const bool inEnable) {
 }
-
 

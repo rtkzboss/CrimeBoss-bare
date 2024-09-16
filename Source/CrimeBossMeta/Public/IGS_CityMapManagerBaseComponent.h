@@ -16,33 +16,32 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SelectMission(UMETA_BaseMission* inMission);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsCurrentBossTeritoryUnderAttack();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     EMETA_TurfMissionDifficulty GetTurfMissionDifficulty(int32 inAiSoldiersAmount);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void GetTileWithMission(const UMETA_BaseMission* inMission, FGameplayTag& outTileID);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetTileStrength(FGameplayTag inTileID);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetPlayersTurfCount();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetGangsTurfCount(EMETA_Gang inGang);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetAiBossStrength(EMETA_Gang inBossGang);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetAiArmyStrengthOnTileForGang(FGameplayTag inTileID, EMETA_Gang inBossGang);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void GetAiArmySizeOnTileForGang(FGameplayTag inTileID, EMETA_Gang inBossGang, int32& outAiArmySize, int32& outAiSoldiersSpawnedAtOnce, int32& outPlayersSoldiersSpawnedAtOnce);
-    
-};
 
+};

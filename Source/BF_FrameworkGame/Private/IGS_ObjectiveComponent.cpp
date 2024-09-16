@@ -1,5 +1,4 @@
 #include "IGS_ObjectiveComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_ObjectiveComponent::UIGS_ObjectiveComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -22,5 +21,4 @@ void UIGS_ObjectiveComponent::DecreaseCount() {
 
 void UIGS_ObjectiveComponent::ClearCount() {
 }
-
 

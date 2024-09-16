@@ -13,18 +13,17 @@ class BF_AI_API IIGS_MinigunnerSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetWeakSpotExplosionDamage();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetSpreadDuration();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetMinTimeTillOverheat();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetMaxTimeTillOverheat();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetInitialSpreadMultiplier();
-    
-};
 
+};

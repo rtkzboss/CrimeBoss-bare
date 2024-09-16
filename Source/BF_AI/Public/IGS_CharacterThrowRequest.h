@@ -8,4 +8,3 @@ struct FIGS_CharacterThrowRequest {
 public:
     BF_AI_API FIGS_CharacterThrowRequest();
 };
-

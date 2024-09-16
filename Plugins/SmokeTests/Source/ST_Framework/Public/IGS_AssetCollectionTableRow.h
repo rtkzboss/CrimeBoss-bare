@@ -9,7 +9,6 @@ struct ST_FRAMEWORK_API FIGS_AssetCollectionTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName CollectionName;
-    
+
     FIGS_AssetCollectionTableRow();
 };
-

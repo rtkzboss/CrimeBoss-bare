@@ -8,4 +8,3 @@ struct BF_SETTINGS_API FIGS_CachedInputBinding {
 public:
     FIGS_CachedInputBinding();
 };
-

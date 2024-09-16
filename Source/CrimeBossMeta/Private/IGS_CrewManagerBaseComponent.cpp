@@ -1,5 +1,4 @@
 #include "IGS_CrewManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_CrewManagerBaseComponent::UIGS_CrewManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -49,7 +48,7 @@ int32 UIGS_CrewManagerBaseComponent::GetLevelUpCost_Implementation(UMETA_Charact
 }
 
 UMETA_Character* UIGS_CrewManagerBaseComponent::GetHeisterByID_Implementation(EIGS_CharacterID ID, int32 UniqGenericId) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_CrewManagerBaseComponent::GetHealingHeisterCostByRest_Implementation(UMETA_Character* Character) {
@@ -61,14 +60,13 @@ int32 UIGS_CrewManagerBaseComponent::GetHealingHeisterCostByDoctor_Implementatio
 }
 
 UMETA_Character* UIGS_CrewManagerBaseComponent::GetCharacterByTag_Implementation(FGameplayTag inCharacterTag) {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_Character*> UIGS_CrewManagerBaseComponent::GetAllHeisters_Implementation(bool inIsLobby) {
-    return TArray<UMETA_Character*>();
+    return {};
 }
 
 void UIGS_CrewManagerBaseComponent::FireCharacter_Implementation(UMETA_Character* Character) {
 }
-
 

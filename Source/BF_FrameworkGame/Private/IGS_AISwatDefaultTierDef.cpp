@@ -2,4 +2,3 @@
 
 FIGS_AISwatDefaultTierDef::FIGS_AISwatDefaultTierDef() {
 }
-

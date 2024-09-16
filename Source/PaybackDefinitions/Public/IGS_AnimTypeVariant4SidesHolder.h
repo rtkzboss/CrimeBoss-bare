@@ -9,19 +9,18 @@ struct PAYBACKDEFINITIONS_API FIGS_AnimTypeVariant4SidesHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AIMontageType MontageType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 FrontMontageVariant;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 BackMontageVariant;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 LeftMontageVariant;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 RightMontageVariant;
-    
+
     FIGS_AnimTypeVariant4SidesHolder();
 };
-

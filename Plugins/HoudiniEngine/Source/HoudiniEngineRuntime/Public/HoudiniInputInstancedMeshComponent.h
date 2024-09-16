@@ -12,6 +12,5 @@ public:
 
     UPROPERTY()
     TArray<FTransform> InstanceTransforms;
-    
-};
 
+};

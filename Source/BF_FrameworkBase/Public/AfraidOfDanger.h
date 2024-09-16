@@ -11,13 +11,12 @@ struct FAfraidOfDanger {
 public:
     UPROPERTY()
     TWeakObjectPtr<AActor> Actor;
-    
+
     UPROPERTY()
     FGenericTeamId GenericTeamId;
-    
+
     UPROPERTY()
     uint32 DamageTypeFlags;
-    
+
     BF_FRAMEWORKBASE_API FAfraidOfDanger();
 };
-

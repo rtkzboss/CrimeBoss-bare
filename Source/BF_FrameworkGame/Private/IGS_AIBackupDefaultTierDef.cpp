@@ -2,4 +2,3 @@
 
 FIGS_AIBackupDefaultTierDef::FIGS_AIBackupDefaultTierDef() {
 }
-

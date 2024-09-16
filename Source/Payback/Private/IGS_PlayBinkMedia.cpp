@@ -16,7 +16,7 @@ void UIGS_PlayBinkMedia::PlayMedia() {
 }
 
 UIGS_PlayBinkMedia* UIGS_PlayBinkMedia::PlayBinkMedia(UObject* inWCO, UBinkMediaPlayer* inBinkMediaPlayer, bool inAutoStart, bool inAddToScreenHandler) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_PlayBinkMedia::OnWidgetSkipTriggered() {
@@ -29,7 +29,7 @@ void UIGS_PlayBinkMedia::OnLevelLoadStarted(FName inLevelName, bool inIsServerTr
 }
 
 UBinkMediaTexture* UIGS_PlayBinkMedia::GetMediaTexture() {
-    return NULL;
+    return nullptr;
 }
 
 FTimespan UIGS_PlayBinkMedia::GetElapsedTime() {
@@ -43,5 +43,4 @@ FTimespan UIGS_PlayBinkMedia::GetDuration() {
 FBinkSubtitleItem UIGS_PlayBinkMedia::GetCurrentSubtitleItem() {
     return FBinkSubtitleItem{};
 }
-
 

@@ -1,5 +1,4 @@
 #include "IGS_CityMapManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_CityMapManagerBaseComponent::UIGS_CityMapManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -40,5 +39,4 @@ int32 UIGS_CityMapManagerBaseComponent::GetAiArmyStrengthOnTileForGang_Implement
 
 void UIGS_CityMapManagerBaseComponent::GetAiArmySizeOnTileForGang_Implementation(FGameplayTag inTileID, EMETA_Gang inBossGang, int32& outAiArmySize, int32& outAiSoldiersSpawnedAtOnce, int32& outPlayersSoldiersSpawnedAtOnce) {
 }
-
 

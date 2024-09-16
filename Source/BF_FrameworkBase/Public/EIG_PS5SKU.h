@@ -9,4 +9,3 @@ enum class EIG_PS5SKU : uint8 {
     SIEJ,
     SIEJAAsia,
 };
-

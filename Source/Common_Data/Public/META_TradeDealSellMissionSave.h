@@ -10,13 +10,12 @@ struct COMMON_DATA_API FMETA_TradeDealSellMissionSave : public FMETA_BaseMission
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag LootTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LootAmount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Price;
-    
+
     FMETA_TradeDealSellMissionSave();
 };
-

@@ -8,4 +8,3 @@ enum class EIGS_PlayerLockState : uint8 {
     LockedHasKey,
     LockedNoKey,
 };
-

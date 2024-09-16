@@ -1,7 +1,5 @@
 #include "IGS_AIControllerBase.h"
 #include "Perception/AIPerceptionComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "IGS_AIDataComponent.h"
 #include "IGS_AIGeneralReactionsManager.h"
 #include "IGS_AIMemoryComponent.h"
@@ -10,14 +8,21 @@
 #include "IGS_ScriptableBehaviorComponent.h"
 
 AIGS_AIControllerBase::AIGS_AIControllerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UIGS_AIPerceptionHandlerComponent>(TEXT("AIPerceptionHandlerComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_AIMemoryComponent>(TEXT("AIMemoryComponent"));
+    auto gen3 = CreateDefaultSubobject<UIGS_InjuryComponentAI>(TEXT("AIInjuryComponenet"));
+    auto gen4 = CreateDefaultSubobject<UIGS_ScriptableBehaviorComponent>(TEXT("Scriptable Behavior"));
+    auto gen5 = CreateDefaultSubobject<UIGS_AIDataComponent>(TEXT("AIDataComponent"));
+    auto gen6 = CreateDefaultSubobject<UIGS_AIGeneralReactionsManager>(TEXT("AIReactionManagerComponent"));
+    auto gen7 = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerceptionComponent"));
     (*this).TeamSide = EIGS_TeamSideEnum::TS_Unknown;
-    (*this).PerceptionHandlerComponent = CreateDefaultSubobject<UIGS_AIPerceptionHandlerComponent>(TEXT("AIPerceptionHandlerComponent"));
-    (*this).MemoryComponent = CreateDefaultSubobject<UIGS_AIMemoryComponent>(TEXT("AIMemoryComponent"));
-    (*this).InjuryComponent = CreateDefaultSubobject<UIGS_InjuryComponentAI>(TEXT("AIInjuryComponenet"));
-    (*this).ScriptableBehaviorComponent = CreateDefaultSubobject<UIGS_ScriptableBehaviorComponent>(TEXT("Scriptable Behavior"));
-    (*this).AIDataComponent = CreateDefaultSubobject<UIGS_AIDataComponent>(TEXT("AIDataComponent"));
-    (*this).GeneralReactionsManagerComponent = CreateDefaultSubobject<UIGS_AIGeneralReactionsManager>(TEXT("AIReactionManagerComponent"));
-    (*this).PerceptionComponent = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerceptionComponent"));
+    (*this).PerceptionHandlerComponent = gen;
+    (*this).MemoryComponent = gen2;
+    (*this).InjuryComponent = gen3;
+    (*this).ScriptableBehaviorComponent = gen4;
+    (*this).AIDataComponent = gen5;
+    (*this).GeneralReactionsManagerComponent = gen6;
+    (*this).PerceptionComponent = gen7;
 }
 
 void AIGS_AIControllerBase::SetSOScope(uint8 scope) {
@@ -56,7 +61,7 @@ uint8 AIGS_AIControllerBase::GetSOScope() {
 }
 
 UIGS_AICommand* AIGS_AIControllerBase::GetSOCommand() const {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_InterestPointHolder AIGS_AIControllerBase::GetLookAtPoint() const {
@@ -80,10 +85,9 @@ FIGS_InterestPointHolder AIGS_AIControllerBase::GetAimAtPoint() const {
 }
 
 UIGS_AICommand* AIGS_AIControllerBase::GetAICommand() const {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_AIControllerBase::ClearImportnatLocation(EIGS_ImportantLocationsPriorities prority) {
 }
-
 

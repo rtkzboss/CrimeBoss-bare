@@ -12,16 +12,15 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void LevelGenerationFinished() const;
-    
+
 private:
     UPROPERTY(EditAnywhere)
     bool bRegenerateRoomNavmesh;
-    
+
     UPROPERTY(EditAnywhere)
     bool bUpdateLevelGenerator_Default;
-    
+
     UPROPERTY(EditAnywhere)
     bool bUpdateLevelGenerator_OnPlayBegin;
-    
-};
 
+};

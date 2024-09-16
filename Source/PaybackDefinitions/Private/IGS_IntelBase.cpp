@@ -3,4 +3,3 @@
 UIGS_IntelBase::UIGS_IntelBase() {
 }
 
-

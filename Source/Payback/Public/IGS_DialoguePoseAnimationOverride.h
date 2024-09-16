@@ -11,7 +11,6 @@ struct PAYBACK_API FIGS_DialoguePoseAnimationOverride {
 public:
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     TMap<EIGS_MetaDialogueCharacterSlot, UAnimMontage*> PoseAnimations;
-    
+
     FIGS_DialoguePoseAnimationOverride();
 };
-

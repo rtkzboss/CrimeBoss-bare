@@ -7,7 +7,6 @@
 
 class IMETA_GameModeAdapter;
 class UMETA_GameModeAdapter;
-class UIGS_ScreenSwitchManager;
 class UMETA_UIEventsManagerComponent;
 class UObject;
 
@@ -19,39 +18,38 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void TriggerAdditionalAction(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetConfirmButtonVisibility(bool inVisible);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetBackButtonVisibility(bool inVisible);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetAdditionalButtonVisibility(bool inVisible);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetAdditionalButtonType(EIGS_MetaAdditionalButtonType inType);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void RequestSwitchToScreen(UObject* inWCO, FGameplayTag inTag);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_ScreenSwitchManager* Instance(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GoBack(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void Confirm(UObject* inWCO);
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UMETA_UIEventsManagerComponent* UIComponent;
-    
+
     UPROPERTY()
     TScriptInterface<IMETA_GameModeAdapter> AdapterInterface;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag CurrentTag;
-    
-};
 
+};

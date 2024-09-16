@@ -9,4 +9,3 @@ enum class EBPTextFilteringContext : uint8 {
     FContext_Chat,
     FContext_Name,
 };
-

@@ -8,4 +8,3 @@ enum class EIGS_InputThumbstickType : uint8 {
     IA_LeftThumbstick = 0,
     IA_RightThumbstick,
 };
-

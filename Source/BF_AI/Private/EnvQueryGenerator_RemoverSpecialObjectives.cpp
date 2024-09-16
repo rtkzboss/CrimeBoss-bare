@@ -6,4 +6,3 @@ UEnvQueryGenerator_RemoverSpecialObjectives::UEnvQueryGenerator_RemoverSpecialOb
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

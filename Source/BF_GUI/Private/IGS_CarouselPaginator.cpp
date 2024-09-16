@@ -1,8 +1,4 @@
 #include "IGS_CarouselPaginator.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_CarouselPaginator::UIGS_CarouselPaginator() : Super(FObjectInitializer::Get()) {
     (*this).AutoSwithcingRate = 5.000000000e+00f;
@@ -31,5 +27,4 @@ void UIGS_CarouselPaginator::HandleAutoPageSwitch() {
 
 void UIGS_CarouselPaginator::ChangePage(int32 Direction) {
 }
-
 

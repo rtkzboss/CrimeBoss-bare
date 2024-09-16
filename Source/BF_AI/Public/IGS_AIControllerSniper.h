@@ -13,6 +13,5 @@ public:
 private:
     UFUNCTION()
     void OnHealthChanged(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo) const;
-    
-};
 
+};

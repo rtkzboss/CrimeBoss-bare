@@ -14,18 +14,17 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetIsShineEnabled(bool inEnabled);
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UStaticMeshComponent* PickupStaticMeshComp;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UStaticMesh> DefaultMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsShineEnabled;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bTakeMeshFromDatabase;
-    
-};
 
+};

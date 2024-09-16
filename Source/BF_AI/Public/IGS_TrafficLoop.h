@@ -9,10 +9,9 @@ struct BF_AI_API FIGS_TrafficLoop {
 public:
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_TrafficLoopSegment> Segments;
-    
+
     UPROPERTY(VisibleAnywhere)
     float Lenght;
-    
+
     FIGS_TrafficLoop();
 };
-

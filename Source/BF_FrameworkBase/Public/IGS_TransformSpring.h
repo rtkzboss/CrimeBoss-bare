@@ -15,13 +15,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetTarget(USceneComponent* inTargetComponent, TEnumAsByte<ESpringTypeEnum::Type> inSpringType);
-    
+
     UFUNCTION(BlueprintCallable)
     void AddVelocity(const FVector& inVelocity);
-    
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     float FrameRate;
-    
-};
 
+};

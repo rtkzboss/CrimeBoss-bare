@@ -8,4 +8,3 @@ FPCSnapConstraintFloor::FPCSnapConstraintFloor() {
     (*this).AttachZ = true;
     (*this).AttachZNegative = true;
 }
-

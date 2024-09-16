@@ -10,4 +10,3 @@ public:
     UPaybackHeistersEventsWatcher(const FObjectInitializer& ObjectInitializer);
 
 };
-

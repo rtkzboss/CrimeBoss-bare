@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
-#include "AttributeSet.h"
 #include "IGS_GlobalGASAttributeSet.generated.h"
 
 UCLASS(Abstract, BlueprintType)
@@ -13,18 +12,17 @@ public:
 protected:
     UFUNCTION()
     void OnRep_EnemyAIReceiveDamage(const FGameplayAttributeData& inOldValue);
-    
+
     UFUNCTION()
     void OnRep_EnemyAIDamage(const FGameplayAttributeData& inOldValue);
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_EnemyAIDamage)
     FGameplayAttributeData EnemyAIDamage;
-    
+
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_EnemyAIDamage)
     FGameplayAttributeData EnemyAIReceiveDamage;
-    
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

@@ -8,4 +8,3 @@ struct HOUDINIENGINERUNTIME_API FHoudiniGeoInfo {
 public:
     FHoudiniGeoInfo();
 };
-

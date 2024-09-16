@@ -5,4 +5,3 @@ FIGS_SubwidgetHolder::FIGS_SubwidgetHolder() {
     (*this).SubwidgetInstance = nullptr;
     (*this).SubwidgetName = NAME_None;
 }
-

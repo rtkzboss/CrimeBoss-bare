@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_AnimatedInteractiveComponentSimple.h"
-#include "IGS_RopeEventsSignatureDelegate.h"
+#include "IGS_RopeEventsSignature.h"
 #include "IGS_RappelInteractiveComponent.generated.h"
 
 class AIGS_GameCharacterFramework;
@@ -15,9 +15,8 @@ public:
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void Multicast_Use(AIGS_GameCharacterFramework* inInstigator);
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_RopeEventsSignature OnRopeDisabledSignature;
-    
-};
 
+};

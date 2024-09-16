@@ -12,10 +12,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeTeamDef : public FIGS_AIBaseTeamDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<EIGS_EmployeesVariationType, FIGS_AIEmployeeTierDef> Variations;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIEmployeeBaseDataDefaults DefaultStats;
-    
+
     FIGS_AIEmployeeTeamDef();
 };
-

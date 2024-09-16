@@ -12,9 +12,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float CostMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     bool IsActive;
-    
-};
 
+};

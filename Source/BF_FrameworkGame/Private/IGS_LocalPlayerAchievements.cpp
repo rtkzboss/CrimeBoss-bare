@@ -10,4 +10,3 @@ bool UIGS_LocalPlayerAchievements::IsInitialized() const {
 void UIGS_LocalPlayerAchievements::GetAchievementData(const FGameplayTag& AchievementID, bool& outFound, FIGS_Achievement& outAchievementData) {
 }
 
-

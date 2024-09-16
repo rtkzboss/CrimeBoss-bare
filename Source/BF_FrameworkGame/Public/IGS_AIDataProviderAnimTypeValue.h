@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIDataProviderAnimTypeValue : public FAIDataPro
 public:
     UPROPERTY(EditAnywhere)
     EIGS_SpawnAnimType DefaultValue;
-    
+
     FIGS_AIDataProviderAnimTypeValue();
 };
-

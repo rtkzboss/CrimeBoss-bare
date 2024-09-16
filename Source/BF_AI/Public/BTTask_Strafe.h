@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector IsDodgingKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DodgeDistanceKey;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
-    
-};
 
+};

@@ -12,10 +12,9 @@ struct BF_VOICEOVER_API FIGS_MetaDialogueCharacterLinesRow : public FTableRowBas
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MetaDialogueCharacter ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UDataTable> CharacterDataTable;
-    
+
     FIGS_MetaDialogueCharacterLinesRow();
 };
-

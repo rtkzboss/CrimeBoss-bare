@@ -10,4 +10,3 @@ public:
     UIGS_AIInitialSpawnDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

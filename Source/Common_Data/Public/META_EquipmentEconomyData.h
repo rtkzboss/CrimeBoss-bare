@@ -1,9 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "IGS_EquipmentInventoryObject.h"
 #include "Templates/SubclassOf.h"
 #include "META_EquipmentEconomyData.generated.h"
-
-class UIGS_EquipmentInventoryObject;
 
 USTRUCT()
 struct COMMON_DATA_API FMETA_EquipmentEconomyData {
@@ -11,7 +10,6 @@ struct COMMON_DATA_API FMETA_EquipmentEconomyData {
 public:
     UPROPERTY()
     TMap<TSubclassOf<UIGS_EquipmentInventoryObject>, int32> EquipmentCost;
-    
+
     FMETA_EquipmentEconomyData();
 };
-

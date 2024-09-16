@@ -8,6 +8,6 @@ FIGS_GeneratorVariantData::FIGS_GeneratorVariantData() {
     (*this).Position.X = 0.000000000e+00f;
     (*this).Position.Y = 0.000000000e+00f;
     (*this).Position.Z = 0.000000000e+00f;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).GameplayTag, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).GameplayTag, 0)) = NAME_None;
 }
-

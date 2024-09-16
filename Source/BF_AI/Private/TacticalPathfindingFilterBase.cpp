@@ -3,4 +3,3 @@
 UTacticalPathfindingFilterBase::UTacticalPathfindingFilterBase() {
 }
 
-

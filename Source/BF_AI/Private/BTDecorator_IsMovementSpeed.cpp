@@ -5,4 +5,3 @@ UBTDecorator_IsMovementSpeed::UBTDecorator_IsMovementSpeed() {
     (*this).NodeName = TEXT("Is Movement Speed");
 }
 
-

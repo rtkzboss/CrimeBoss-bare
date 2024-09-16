@@ -12,4 +12,3 @@ void UConstructionSystemSaveSystem::LoadConstructionSystemLevel(const UObject* W
 void UConstructionSystemSaveSystem::HandleConstructionSystemLevelLoad(const UObject* WorldContextObject) {
 }
 
-

@@ -10,4 +10,3 @@ enum class EHoudiniGeoType : uint8 {
     Input,
     Curve,
 };
-

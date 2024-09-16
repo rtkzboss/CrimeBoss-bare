@@ -10,4 +10,3 @@ enum class EIGS_BreachableState : uint8 {
     Closed,
     Static,
 };
-

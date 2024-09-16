@@ -1,5 +1,4 @@
 #include "IGS_DailyManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_DailyManagerBaseComponent::UIGS_DailyManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -16,5 +15,4 @@ int32 UIGS_DailyManagerBaseComponent::GetCurrentDay_Implementation() const {
 
 void UIGS_DailyManagerBaseComponent::EndDay_Implementation() {
 }
-
 

@@ -9,4 +9,3 @@ enum class EIGS_SpawnDefinition : uint8 {
     Building,
     Vehicle,
 };
-

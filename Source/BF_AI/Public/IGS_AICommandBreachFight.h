@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool FromRight;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector ToWallPoint;
-    
-};
 
+};

@@ -23,4 +23,3 @@ enum class EMETA_NodeType : uint8 {
     LoopBranch,
     Switch,
 };
-

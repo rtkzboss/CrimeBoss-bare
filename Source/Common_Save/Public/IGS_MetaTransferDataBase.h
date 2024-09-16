@@ -8,7 +8,6 @@ struct COMMON_SAVE_API FIGS_MetaTransferDataBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsFilled;
-    
+
     FIGS_MetaTransferDataBase();
 };
-

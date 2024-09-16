@@ -8,4 +8,3 @@ enum class EIGS_MantleType : uint8 {
     MantleType_Stand,
     MantleType_Crouch,
 };
-

@@ -15,6 +15,5 @@ public:
 
     UFUNCTION()
     static AIGS_BreachPointsBase* GetBreachPoints(AActor* Actor, AIGS_RoomBase* priorRoom);
-    
-};
 
+};

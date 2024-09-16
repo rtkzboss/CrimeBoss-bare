@@ -9,4 +9,3 @@ enum class EIGS_ImportantLocationsPriorities : uint8 {
     BT_Defending,
     BT_Breaching,
 };
-

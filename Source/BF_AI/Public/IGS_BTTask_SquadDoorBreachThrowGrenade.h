@@ -17,15 +17,14 @@ public:
 protected:
     UFUNCTION()
     static bool HasFlashbangExploded(UIGS_AICommandBreachThrowFlashbang* Command);
-    
+
     UFUNCTION()
     static UIGS_AICommand* CommandToThrowFlashbang(AIGS_GameCharacterFramework* inAgent, FVector position, bool IsRight);
-    
+
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* ContextActionCharacter;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* ContextActionCommand;
-    
-};
 
+};

@@ -8,4 +8,3 @@ enum class EIGS_SpecialDeathNotifyState : uint8 {
     SD_Started,
     SD_Stopped,
 };
-

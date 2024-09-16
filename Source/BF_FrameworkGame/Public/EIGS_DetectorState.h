@@ -10,4 +10,3 @@ enum class EIGS_DetectorState : uint8 {
     Disabled,
     Destroyed,
 };
-

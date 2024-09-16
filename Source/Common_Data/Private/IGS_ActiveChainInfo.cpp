@@ -4,4 +4,3 @@ FIGS_ActiveChainInfo::FIGS_ActiveChainInfo() {
     (*this).ActiveMissionIndex = 0;
     (*this).ActiveChainContractID = nullptr;
 }
-

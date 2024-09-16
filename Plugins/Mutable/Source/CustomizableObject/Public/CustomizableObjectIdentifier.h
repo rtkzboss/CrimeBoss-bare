@@ -9,14 +9,13 @@ public:
 private:
     UPROPERTY()
     FString CustomizableObjectGroupName;
-    
+
     UPROPERTY()
     FString CustomizableObjectName;
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FString Guid;
-    
+
     FCustomizableObjectIdentifier();
 };
-

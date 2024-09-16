@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "IGS_SettingsChangedEventDelegate.h"
+#include "IGS_SettingsChangedEvent.h"
 #include "IGS_SettingsBase.generated.h"
 
 UCLASS(Abstract, Config=GameUserSettings)
@@ -12,10 +12,9 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_SettingsChangedEvent OnSettingsChanged;
-    
+
 protected:
     UPROPERTY(Config)
     bool bSettingsValid;
-    
-};
 
+};

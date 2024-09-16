@@ -13,8 +13,7 @@ public:
 
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

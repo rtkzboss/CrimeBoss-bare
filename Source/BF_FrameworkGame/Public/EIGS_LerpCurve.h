@@ -10,4 +10,3 @@ enum class EIGS_LerpCurve : uint8 {
     LerpCurve_EaseInBack,
     LerpCurve_EaseOutBack,
 };
-

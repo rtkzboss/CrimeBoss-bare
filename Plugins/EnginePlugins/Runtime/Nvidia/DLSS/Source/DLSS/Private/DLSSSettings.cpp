@@ -10,4 +10,3 @@ UDLSSSettings::UDLSSSettings() {
     (*this).bAllowOTAUpdate = true;
 }
 
-

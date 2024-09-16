@@ -12,13 +12,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetConsideredHeister(FMETA_CharacterID inHeisterID);
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_CharacterID GetConsideredHeister();
-    
+
 private:
     UPROPERTY(Transient)
     FMETA_CharacterID ConsideredHeisterID;
-    
-};
 
+};

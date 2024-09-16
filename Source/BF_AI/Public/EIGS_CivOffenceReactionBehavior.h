@@ -10,4 +10,3 @@ enum class EIGS_CivOffenceReactionBehavior : uint8 {
     Duty,
     Panic,
 };
-

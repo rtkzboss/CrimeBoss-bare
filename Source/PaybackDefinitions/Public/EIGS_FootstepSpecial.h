@@ -8,4 +8,3 @@ enum class EIGS_FootstepSpecial : uint8 {
     WaterPuddle,
     Foliage,
 };
-

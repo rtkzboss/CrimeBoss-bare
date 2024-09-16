@@ -10,4 +10,3 @@ ETileComparisonUIData UIGS_TileItemWeaponData::GetComparisonData() const {
     return ETileComparisonUIData::None;
 }
 
-

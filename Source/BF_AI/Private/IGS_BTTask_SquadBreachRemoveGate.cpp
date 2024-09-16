@@ -9,7 +9,6 @@ bool UIGS_BTTask_SquadBreachRemoveGate::IsObstacleCleared(UIGS_AICommandBreachRe
 }
 
 UIGS_AICommand* UIGS_BTTask_SquadBreachRemoveGate::CommandToClearGate(AIGS_GameCharacterFramework* inAgent, AActor* BreachableObject, FVector Location, FVector LookAtPoint) {
-    return NULL;
+    return nullptr;
 }
-
 

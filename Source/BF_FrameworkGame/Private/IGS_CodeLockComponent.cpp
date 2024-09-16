@@ -1,11 +1,12 @@
 #include "IGS_CodeLockComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_CodeLockComponent::UIGS_CodeLockComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).MinCylinderValue = 1;
     (*this).MaxCylinderValue = 7;
     (*this).R_IsLocked = true;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_CodeLockComponent::SetInstigator(AIGS_GameCharacterFramework* inInstigator) {
@@ -48,10 +49,9 @@ void UIGS_CodeLockComponent::Client_SetCylinderValue_Implementation(int32 InValu
 
 void UIGS_CodeLockComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_CodeLockComponent, R_Cylinders);
     DOREPLIFETIME(UIGS_CodeLockComponent, R_IsLocked);
     DOREPLIFETIME(UIGS_CodeLockComponent, R_bIsOccupied);
 }
-
 

@@ -21,4 +21,3 @@ FCustomizableObjectMeshToMeshVertData::FCustomizableObjectMeshToMeshVertData() {
     (*this).SourceAssetIndex = 0;
     (*this).SourceAssetLodIndex = 0;
 }
-

@@ -1,7 +1,7 @@
 #include "CustomizableObject.h"
 
 UCustomizableObject::UCustomizableObject() {
-    (*this).MaskOutCache = nullptr;
+    (*this).MaskOutCache = FSoftObjectPath();
 }
 
 void UCustomizableObject::UnloadMaskOutCache() {
@@ -75,7 +75,6 @@ int32 UCustomizableObject::FindParameter(const FString& Name) const {
 }
 
 UCustomizableObjectInstance* UCustomizableObject::CreateInstance() {
-    return NULL;
+    return nullptr;
 }
-
 

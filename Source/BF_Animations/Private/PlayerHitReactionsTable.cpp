@@ -3,4 +3,3 @@
 UPlayerHitReactionsTable::UPlayerHitReactionsTable() {
 }
 
-

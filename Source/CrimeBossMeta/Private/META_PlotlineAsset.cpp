@@ -30,7 +30,7 @@ FText UMETA_PlotlineAsset::GetName() const {
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_PlotlineAsset::GetImage() const {
-    return NULL;
+    return {};
 }
 
 FGameplayTag UMETA_PlotlineAsset::GetId() const {
@@ -46,11 +46,10 @@ bool UMETA_PlotlineAsset::GetCanBeLost() const {
 }
 
 float UMETA_PlotlineAsset::GetBossPointsMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EMETA_PlotlineAssetAvailability UMETA_PlotlineAsset::GetAvailability() const {
     return EMETA_PlotlineAssetAvailability::INVALID;
 }
-
 

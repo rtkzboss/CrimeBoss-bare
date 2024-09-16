@@ -3,4 +3,3 @@
 FMETA_LoopBranchNodeSaveData::FMETA_LoopBranchNodeSaveData() {
     (*this).CurrentAmountOfActivation = 0;
 }
-

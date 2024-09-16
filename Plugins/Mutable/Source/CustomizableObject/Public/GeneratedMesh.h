@@ -10,10 +10,9 @@ struct FGeneratedMesh {
 public:
     UPROPERTY(EditAnywhere)
     int32 ID;
-    
+
     UPROPERTY(EditAnywhere)
     UStaticMesh* Mesh;
-    
+
     CUSTOMIZABLEOBJECT_API FGeneratedMesh();
 };
-

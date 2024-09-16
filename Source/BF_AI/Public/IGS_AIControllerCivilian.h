@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerCivilian(const FObjectInitializer& ObjectInitializer);
 
 };
-

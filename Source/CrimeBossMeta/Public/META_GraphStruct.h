@@ -11,13 +11,12 @@ struct CRIMEBOSSMETA_API FMETA_GraphStruct {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UStoryGraphManager* GraphManager;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_GraphStatus Status;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<int32> CurrentNodeIds;
-    
+
     FMETA_GraphStruct();
 };
-

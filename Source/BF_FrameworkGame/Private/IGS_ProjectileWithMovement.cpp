@@ -1,10 +1,9 @@
 #include "IGS_ProjectileWithMovement.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 
 AIGS_ProjectileWithMovement::AIGS_ProjectileWithMovement(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
+    auto gen = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
+    (*this).ProjectileMovement = gen;
     (*this).ProjectileSpeed = 1.500000000e+03f;
     (*this).PrimaryActorTick.bCanEverTick = true;
 }
@@ -20,5 +19,4 @@ void AIGS_ProjectileWithMovement::OnComponentHit(UPrimitiveComponent* inHitCompo
 
 void AIGS_ProjectileWithMovement::OnComponentBeginOverlap(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inIsFromSweep, const FHitResult& inSweepResult) {
 }
-
 

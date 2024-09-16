@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_NavLinkComponentBase* LinkComponent;
-    
-};
 
+};

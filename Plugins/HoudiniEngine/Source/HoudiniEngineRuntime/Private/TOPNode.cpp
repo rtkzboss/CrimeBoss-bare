@@ -4,4 +4,3 @@ UTOPNode::UTOPNode() {
     (*this).NodeId = -1;
 }
 
-

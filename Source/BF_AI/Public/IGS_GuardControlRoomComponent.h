@@ -18,21 +18,20 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* CloseGuardEQS;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* AnyGuardEQS;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_SquadBase> OwningSquad;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_ControlRoom> ConnectedControlRoom;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UIGS_AIDirector> AIDirector;
-    
+
     UPROPERTY(BlueprintReadOnly, Export)
     TWeakObjectPtr<UIGS_SuspicionManager> SuspicionManager;
-    
-};
 
+};

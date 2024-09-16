@@ -2,10 +2,9 @@
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
 #include "GameplayTagContainer.h"
+#include "IGS_MenuBackgroundConditionBase.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_MenuBackgroundTableRow.generated.h"
-
-class UIGS_MenuBackgroundConditionBase;
 
 USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_MenuBackgroundTableRow : public FTableRowBase {
@@ -13,16 +12,15 @@ struct COMMON_DATA_API FIGS_MenuBackgroundTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Priority;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UIGS_MenuBackgroundConditionBase> Condition;
-    
+
     FIGS_MenuBackgroundTableRow();
 };
-

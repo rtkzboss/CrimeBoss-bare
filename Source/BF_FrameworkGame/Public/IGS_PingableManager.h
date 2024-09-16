@@ -4,7 +4,6 @@
 #include "IGS_PingablePair.h"
 #include "IGS_PingableManager.generated.h"
 
-class UIGS_PingableManager;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -15,10 +14,9 @@ public:
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_PingableManager* Instance(const UObject* inWorldContextObject);
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_PingablePair> Pingables;
-    
-};
 
+};

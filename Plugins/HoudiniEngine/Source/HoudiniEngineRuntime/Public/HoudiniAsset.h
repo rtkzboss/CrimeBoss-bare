@@ -11,22 +11,21 @@ public:
 
     UPROPERTY()
     FString AssetFileName;
-    
+
 private:
     UPROPERTY()
     TArray<uint8> AssetBytes;
-    
+
     UPROPERTY()
     uint32 AssetBytesCount;
-    
+
     UPROPERTY()
     bool bAssetLimitedCommercial;
-    
+
     UPROPERTY()
     bool bAssetNonCommercial;
-    
+
     UPROPERTY()
     bool bAssetExpanded;
-    
-};
 
+};

@@ -7,4 +7,3 @@ FIGS_FootstepSoundParameters::FIGS_FootstepSoundParameters() {
     (*this).FootstepAkSwitch = nullptr;
     (*this).ShoeAkSwitch = nullptr;
 }
-

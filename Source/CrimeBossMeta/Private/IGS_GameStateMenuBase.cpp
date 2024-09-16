@@ -1,6 +1,4 @@
 #include "IGS_GameStateMenuBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_GameStateMenuBase::AIGS_GameStateMenuBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -38,7 +36,7 @@ void AIGS_GameStateMenuBase::GetLocalMenuSlot(AIGS_MenuSlotBase*& outMenuSlot, b
 }
 
 UMETA_LevelActorsManagerComponent* AIGS_GameStateMenuBase::GetLevelActorsManagerComponent_Implementation() {
-    return NULL;
+    return nullptr;
 }
 
 
@@ -47,5 +45,4 @@ void AIGS_GameStateMenuBase::ClearHeisterData() {
 
 void AIGS_GameStateMenuBase::AddHeisterData(FCommonHeisterData inHeister) {
 }
-
 

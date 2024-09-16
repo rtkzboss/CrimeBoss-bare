@@ -9,10 +9,9 @@ struct COMMON_DATA_API FMETA_LootBagConfiguration {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer Missions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 TotalLootbagCount;
-    
+
     FMETA_LootBagConfiguration();
 };
-

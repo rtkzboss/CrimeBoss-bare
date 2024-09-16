@@ -1,24 +1,25 @@
 #include "IGS_DetectorBase.h"
 #include "IGS_ObjectStatus.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Engine/EngineTypes.h"
 #include "DetectorRotation.h"
 #include "IGS_DamageHandlerComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_DetectorBase::AIGS_DetectorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UDetectorRotation>(TEXT("DetectorRotation"));
+    auto gen2 = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("ObjectStatus"));
+    auto gen3 = CreateDefaultSubobject<UIGS_DamageHandlerComponent>(TEXT("DamageHandlerComponent"));
     (*this).SquadID = 118999881;
     (*this).bDisableOnAlarm = true;
     (*this).BeforeReenablingEventTime = 1.000000000e+00f;
     (*this).BeforeReenablingSoundTime = 7.000000000e+00f;
     (*this).TeamSide = EIGS_TeamSideEnum::TS_Security;
-    (*this).DetectorRotation = CreateDefaultSubobject<UDetectorRotation>(TEXT("DetectorRotation"));
+    (*this).DetectorRotation = gen;
     (*this).ShouldMoveWhenNoTarget = true;
     (*this).TimeToLoseTarget.X = 1.000000000e+00f;
     (*this).TimeToLoseTarget.Y = 2.000000000e+00f;
-    (*this).ObjectStatus = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("ObjectStatus"));
-    (*this).DamageHandlerComponent = CreateDefaultSubobject<UIGS_DamageHandlerComponent>(TEXT("DamageHandlerComponent"));
+    (*this).ObjectStatus = gen2;
+    (*this).DamageHandlerComponent = gen3;
     (*this).TotalHorizontalRotationAngleDegrees = 1.200000000e+02f;
     (*this).FullRotationSpeed = 5.000000000e+01f;
     (*this).FollowRotationSpeed = 5.000000000e+01f;
@@ -113,12 +114,11 @@ void AIGS_DetectorBase::DestroyDetector(AActor* inInstigator) {
 
 void AIGS_DetectorBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_DetectorBase, mR_DetectingPlayers);
     DOREPLIFETIME(AIGS_DetectorBase, DetectorState);
     DOREPLIFETIME(AIGS_DetectorBase, mR_TargetDetection);
     DOREPLIFETIME(AIGS_DetectorBase, mR_WalkieTalkieStatus);
     DOREPLIFETIME(AIGS_DetectorBase, mR_Target);
 }
-
 

@@ -8,4 +8,3 @@ enum class EIGS_MeleeType : uint8 {
     Melee,
     Bash,
 };
-

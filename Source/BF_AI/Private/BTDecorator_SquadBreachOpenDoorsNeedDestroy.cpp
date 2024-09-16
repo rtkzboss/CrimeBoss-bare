@@ -4,4 +4,3 @@ UBTDecorator_SquadBreachOpenDoorsNeedDestroy::UBTDecorator_SquadBreachOpenDoorsN
     (*this).NodeName = TEXT("Squad Breach Open Doors Need Destroy");
 }
 
-

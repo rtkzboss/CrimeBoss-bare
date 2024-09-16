@@ -6,4 +6,3 @@ UMETA_EndNode_SG::UMETA_EndNode_SG() {
     (*this).Type = EMETA_NodeType::End;
 }
 
-

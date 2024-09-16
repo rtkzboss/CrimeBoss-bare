@@ -10,4 +10,3 @@ FMETA_PawnShopTrendData::FMETA_PawnShopTrendData() {
     (*this).MaximumChangeForPositiveTrend = 0;
     (*this).MaximumChangeForNegativeTrend = 0;
 }
-

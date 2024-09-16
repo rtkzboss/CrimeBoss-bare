@@ -8,4 +8,3 @@ enum class EIGS_FlyBySide : uint8 {
     EST_Right,
     EST_None = 255,
 };
-

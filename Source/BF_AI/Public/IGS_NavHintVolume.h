@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     TArray<AIGS_Splitter*> ExclusiveEntrances;
-    
-};
 
+};

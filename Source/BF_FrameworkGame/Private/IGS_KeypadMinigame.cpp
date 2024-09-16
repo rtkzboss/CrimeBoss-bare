@@ -1,11 +1,11 @@
 #include "IGS_KeypadMinigame.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 
 AIGS_KeypadMinigame::AIGS_KeypadMinigame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).SolutionCode = TEXT("0451");
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
 }
 
 void AIGS_KeypadMinigame::WinKeypad() {
@@ -54,5 +54,4 @@ void AIGS_KeypadMinigame::EnterDigit(int32 inDigit) {
 
 void AIGS_KeypadMinigame::Client_Escape_Implementation() {
 }
-
 

@@ -14,15 +14,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Succeed(UIGS_PlayIdleChatterAsyncAction* inPlayIdleChatterAsyncAction);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void PlayIdleChatter(const UIGS_PlayIdleChatterAsyncAction* inPlayIdleChatterAsyncAction, const TArray<AIGS_GameCharacterFramework*>& inCharacters);
-    
+
     UFUNCTION(BlueprintCallable)
     void Canceled(UIGS_PlayIdleChatterAsyncAction* inPlayIdleChatterAsyncAction);
-    
+
     UPROPERTY()
     TArray<UIGS_PlayIdleChatterAsyncAction*> m_ActivePlayRequests;
-    
-};
 
+};

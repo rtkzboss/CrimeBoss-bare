@@ -8,4 +8,3 @@ enum class EMETA_DayStartEventReason : uint8 {
     NewCampaign,
     CampaignLoad,
 };
-

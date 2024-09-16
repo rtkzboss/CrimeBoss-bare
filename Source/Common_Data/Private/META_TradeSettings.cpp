@@ -7,4 +7,3 @@ FMETA_TradeSettings::FMETA_TradeSettings() {
     (*this).BaseInvestigationValueAfterExceededPawnShopLimit = 0;
     (*this).MaxInvestigationValueAfterExceededPawnShopLimit = 0;
 }
-

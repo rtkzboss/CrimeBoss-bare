@@ -1,8 +1,4 @@
 #include "IGS_WidgetSpinBox.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetSpinBox::UIGS_WidgetSpinBox() : Super(FObjectInitializer::Get()) {
     (*this).SpinBoxNameText = FText::FromString(TEXT("##SPINBOX_NAME##"));
@@ -115,5 +111,4 @@ void UIGS_WidgetSpinBox::OnOnValueChanged(int32 InValue) {
 
 void UIGS_WidgetSpinBox::OnLeftArrowClicked() {
 }
-
 

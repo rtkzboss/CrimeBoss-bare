@@ -15,30 +15,29 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SetEnabled(bool inEnabled) const;
-    
+
     UFUNCTION(BlueprintPure)
     bool IsEnabled() const;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector StartLocation;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector EndLocation;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_RappelInteractiveComponent* RappelTopInteractiveComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> User;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldRotateView;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool OneTimeUse;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool OnceUsed;
-    
-};
 
+};

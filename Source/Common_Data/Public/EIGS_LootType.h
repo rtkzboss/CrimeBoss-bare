@@ -17,4 +17,3 @@ enum class EIGS_LootType : uint8 {
     Crate,
     Art,
 };
-

@@ -12,12 +12,11 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ScreenText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText SecondaryText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Duration;
-    
-};
 
+};

@@ -16,12 +16,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector EscapePointKey;
-    
+
     UPROPERTY()
     TArray<AActor*> EsapePointsResult;
-    
-};
 
+};

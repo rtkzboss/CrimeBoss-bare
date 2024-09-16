@@ -8,4 +8,3 @@ enum class EHoudiniXformType : uint8 {
     IntoThisObject,
     Auto,
 };
-

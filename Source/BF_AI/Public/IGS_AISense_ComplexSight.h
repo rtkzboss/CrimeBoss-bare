@@ -12,21 +12,20 @@ public:
 protected:
     UPROPERTY(Config, EditDefaultsOnly)
     int32 MaxTracesPerTick;
-    
+
     UPROPERTY(Config, EditDefaultsOnly)
     int32 MinQueriesPerTimeSliceCheck;
-    
+
     UPROPERTY(Config, EditDefaultsOnly)
     double MaxTimeSlicePerTick;
-    
+
     UPROPERTY(Config, EditDefaultsOnly)
     float HighImportanceQueryDistanceThreshold;
-    
+
     UPROPERTY(Config, EditDefaultsOnly)
     float MaxQueryImportance;
-    
+
     UPROPERTY(Config, EditDefaultsOnly)
     float SightLimitQueryImportance;
-    
-};
 
+};

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_AIGameCharacter.h"
-#include "IGS_ComponentsPreInitializedDelegate.h"
+#include "IGS_ComponentsPreInitialized.h"
 #include "PaybackAICharacter.generated.h"
 
 class UCapsuleComponent;
@@ -21,33 +21,32 @@ public:
 protected:
     UPROPERTY(BlueprintAssignable)
     FIGS_ComponentsPreInitialized OnComponentsPreInitialized;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentCharacter* NetworkCharacter;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UPaybackAICharactersEventsWatcher* AICharactersEventsWatcher;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_BleedingHandlerComponent* BleedingComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_AIWorldTracingComponent* AIWorldTracingComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UCapsuleComponent* AimAssistCapsule;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USphereComponent* ShootableHelmetCollision;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool StartWithWeapon;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ShootableHelmetBoneName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_InteractionStealthKillComponent* InteractionStealthKill;
-    
-};
 
+};

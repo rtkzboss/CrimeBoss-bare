@@ -11,9 +11,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetThrowCount(int32 inNewCount);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetThrowCount();
-    
-};
 
+};

@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestTarget;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SuspectedTargetLocation;
-    
+
     UPROPERTY(EditAnywhere)
     bool TracePlayers;
-    
-};
 
+};

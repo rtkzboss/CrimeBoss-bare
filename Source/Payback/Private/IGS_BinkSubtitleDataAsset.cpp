@@ -3,4 +3,3 @@
 UIGS_BinkSubtitleDataAsset::UIGS_BinkSubtitleDataAsset() {
 }
 
-

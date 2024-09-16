@@ -2,8 +2,8 @@
 #include "IGS_LevelBlockingBoundsSettings.h"
 
 UIGS_OutOfBoundsManager::UIGS_OutOfBoundsManager() {
-    static ConstructorHelpers::FObjectFinder<UIGS_LevelBlockingBoundsSettings> gen0(TEXT("/Game/00_Main/Blueprints/Gameplay/Colliders/LevelBounds/DA_LevelBlockingBoundsSettings.DA_LevelBlockingBoundsSettings"));
-    (*this).Settings = gen0.Object;
+    static ConstructorHelpers::FObjectFinder<UIGS_LevelBlockingBoundsSettings> gen(TEXT("/Game/00_Main/Blueprints/Gameplay/Colliders/LevelBounds/DA_LevelBlockingBoundsSettings.DA_LevelBlockingBoundsSettings"));
+    (*this).Settings = gen.Object;
 }
 
 void UIGS_OutOfBoundsManager::ResetOutOfBoundsCounter(AIGS_PlayerCharacter* inCharacter) {
@@ -17,14 +17,13 @@ bool UIGS_OutOfBoundsManager::IsOutOfBounds(const AIGS_PlayerCharacter* inCharac
 }
 
 TArray<AIGS_LevelBlockingBounds*> UIGS_OutOfBoundsManager::GetAllLevelBlockingBoundsInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent) const {
-    return TArray<AIGS_LevelBlockingBounds*>();
+    return {};
 }
 
 TArray<AIGS_LevelBlockingBounds*> UIGS_OutOfBoundsManager::GetAllLevelBlockingBounds() const {
-    return TArray<AIGS_LevelBlockingBounds*>();
+    return {};
 }
 
 void UIGS_OutOfBoundsManager::EnteredOutOfBoundsArea(AIGS_PlayerCharacter* inCharacter) {
 }
-
 

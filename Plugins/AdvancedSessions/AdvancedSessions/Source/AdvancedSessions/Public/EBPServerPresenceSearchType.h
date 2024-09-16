@@ -8,4 +8,3 @@ enum class EBPServerPresenceSearchType : uint8 {
     ClientServersOnly,
     DedicatedServersOnly,
 };
-

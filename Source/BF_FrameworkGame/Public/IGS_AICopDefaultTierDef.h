@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AICopDefaultTierDef : public FIGS_AICopTierDef 
 public:
     FIGS_AICopDefaultTierDef();
 };
-

@@ -14,12 +14,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static bool SetMovementSpeed(AIGS_GameCharacterFramework* inCharacter, EIGS_Speed speedType);
-    
+
     UFUNCTION(BlueprintCallable)
     static EIGS_Speed GetMovementSpeed(AIGS_GameCharacterFramework* inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     static FString GetActiveNodeName(AIGS_GameCharacterFramework* inCharacter);
-    
-};
 
+};

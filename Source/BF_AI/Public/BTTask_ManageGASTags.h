@@ -12,15 +12,14 @@ public:
 
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer RequiredTags;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer IgnoredTags;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer RemovedTags;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer AddedTags;
-    
-};
 
+};

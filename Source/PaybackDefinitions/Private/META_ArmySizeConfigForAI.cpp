@@ -10,4 +10,3 @@ FMETA_ArmySizeConfigForAI::FMETA_ArmySizeConfigForAI() {
     (*this).PlayersDefense_MaxConcurrentlySpawnedAISoldiers = 0;
     (*this).PlayersDefense_MaxConcurrentlySpawnedPlayerSoldiers = 0;
 }
-

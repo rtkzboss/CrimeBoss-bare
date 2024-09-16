@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     int32 StrikeCount;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag BlameTag;
-    
-};
 
+};

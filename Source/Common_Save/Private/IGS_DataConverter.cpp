@@ -8,7 +8,7 @@ FMETA_MissionsSave UIGS_DataConverter::ConvertQuickplayMissionsToSave(TArray<UME
 }
 
 TArray<UMETA_BaseMission*> UIGS_DataConverter::ConvertQuickplayMissionsFromSave(const UObject* inWCO, FMETA_MissionsSave& inMissions) {
-    return TArray<UMETA_BaseMission*>();
+    return {};
 }
 
 FMETA_MissionsSave UIGS_DataConverter::ConvertChainMissionsToSave(TArray<UMETA_BaseMission*> inMissions) {
@@ -16,7 +16,6 @@ FMETA_MissionsSave UIGS_DataConverter::ConvertChainMissionsToSave(TArray<UMETA_B
 }
 
 TArray<UMETA_BaseMission*> UIGS_DataConverter::ConvertChainMissionsFromSave(const UObject* inWCO, FMETA_MissionsSave& inMissions) {
-    return TArray<UMETA_BaseMission*>();
+    return {};
 }
-
 

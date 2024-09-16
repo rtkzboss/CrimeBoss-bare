@@ -10,4 +10,3 @@ public:
     AIGS_ControlRoomVirtual(const FObjectInitializer& ObjectInitializer);
 
 };
-

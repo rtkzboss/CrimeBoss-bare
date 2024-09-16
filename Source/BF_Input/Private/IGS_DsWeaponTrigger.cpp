@@ -5,4 +5,3 @@ FIGS_DsWeaponTrigger::FIGS_DsWeaponTrigger() {
     (*this).EndPosition = 7;
     (*this).Strength = 0;
 }
-

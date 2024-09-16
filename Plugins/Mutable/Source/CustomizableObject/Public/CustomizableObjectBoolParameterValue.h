@@ -8,13 +8,12 @@ struct FCustomizableObjectBoolParameterValue {
 public:
     UPROPERTY(VisibleAnywhere)
     FString ParameterName;
-    
+
     UPROPERTY(VisibleAnywhere)
     bool ParameterValue;
-    
+
     UPROPERTY(VisibleAnywhere)
     FString Uid;
-    
+
     CUSTOMIZABLEOBJECT_API FCustomizableObjectBoolParameterValue();
 };
-

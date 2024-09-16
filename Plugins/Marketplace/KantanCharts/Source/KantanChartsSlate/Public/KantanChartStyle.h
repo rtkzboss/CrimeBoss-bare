@@ -12,28 +12,27 @@ struct KANTANCHARTSSLATE_API FKantanChartStyle : public FSlateWidgetStyle {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSlateBrush Background;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor ChartLineColor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ChartLineThickness;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSlateFontInfo BaseFont;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 TitleFontSize;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AxisDescriptionFontSize;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AxisValueFontSize;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor FontColor;
-    
+
     FKantanChartStyle();
 };
-

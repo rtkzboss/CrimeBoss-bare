@@ -2,11 +2,11 @@
 
 FIGS_MetaDialogueVariationData::FIGS_MetaDialogueVariationData() {
     (*this).VariantID = -1;
-    (*this).CharacterName = FText::FromString(TEXT(""));
+    (*this).CharacterName = FText::GetEmpty();
     (*this).DelayMin = 0.000000000e+00f;
     (*this).DelayMax = 0.000000000e+00f;
-    (*this).SubtitleKey = FText::FromString(TEXT(""));
-    (*this).SubtitleKeyEng = FText::FromString(TEXT(""));
+    (*this).SubtitleKey = FText::GetEmpty();
+    (*this).SubtitleKeyEng = FText::GetEmpty();
     (*this).FacialAnimation = nullptr;
     (*this).VoiceAkExternalMediaAsset = nullptr;
     (*this).CensoredVoiceAkExternalMediaAsset = nullptr;
@@ -14,4 +14,3 @@ FIGS_MetaDialogueVariationData::FIGS_MetaDialogueVariationData() {
     (*this).VoiceFilenameLength = 5.000000000e-01f;
     (*this).IsTTS = false;
 }
-

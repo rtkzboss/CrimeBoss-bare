@@ -11,12 +11,11 @@ struct PATHFOLLOW_API FPFPathRoller {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FInterpCurveVector _rollAnglesCurve;
-    
+
 private:
     UPROPERTY()
     TArray<UObject*> _curves;
-    
+
 public:
     FPFPathRoller();
 };
-

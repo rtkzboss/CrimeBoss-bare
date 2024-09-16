@@ -1,5 +1,4 @@
 #include "META_BlackmarketManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_BlackmarketManagerComponent::UMETA_BlackmarketManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -41,7 +40,7 @@ int32 UMETA_BlackmarketManagerComponent::GetWeaponsPoolRefreshPrice_Implementati
 }
 
 TArray<UMETA_Weapon*> UMETA_BlackmarketManagerComponent::GetWeaponsPoolForBMWeaponEvent() const {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
 
 FGameplayTag UMETA_BlackmarketManagerComponent::GetWeaponEventUnlockTag() const {
@@ -49,11 +48,11 @@ FGameplayTag UMETA_BlackmarketManagerComponent::GetWeaponEventUnlockTag() const 
 }
 
 TArray<UMETA_Character*> UMETA_BlackmarketManagerComponent::GetUniqueHeistersPoolForBlackmarket(EMETA_RespectLvl inCurrentBossStatus, int32 inTargetAmountOfUnseenItemsForPurchase) {
-    return TArray<UMETA_Character*>();
+    return {};
 }
 
 TArray<UMETA_PlotlineAsset*> UMETA_BlackmarketManagerComponent::GetPlotlineAssetsPool() const {
-    return TArray<UMETA_PlotlineAsset*>();
+    return {};
 }
 
 int32 UMETA_BlackmarketManagerComponent::GetNextUniqueGenericID() {
@@ -61,11 +60,11 @@ int32 UMETA_BlackmarketManagerComponent::GetNextUniqueGenericID() {
 }
 
 TSet<int32> UMETA_BlackmarketManagerComponent::GetManyUniqueGenericIDs(int32 inAmount) {
-    return TSet<int32>();
+    return {};
 }
 
 TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> UMETA_BlackmarketManagerComponent::GetLockedEquipmentIDsForCurrentBMEquipmentEvent_Implementation() const {
-    return TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>();
+    return {};
 }
 
 FGameplayTag UMETA_BlackmarketManagerComponent::GetHireArmyEventUnlockTag() const {
@@ -81,7 +80,7 @@ int32 UMETA_BlackmarketManagerComponent::GetHeistersPoolRefreshPrice_Implementat
 }
 
 TArray<UMETA_Equipment*> UMETA_BlackmarketManagerComponent::GetEquipmentPoolForBMEquipmentEvent() const {
-    return TArray<UMETA_Equipment*>();
+    return {};
 }
 
 int32 UMETA_BlackmarketManagerComponent::GetCostOfSoldierForHire(EMETA_RespectLvl inRespect) const {
@@ -97,7 +96,7 @@ bool UMETA_BlackmarketManagerComponent::GetBPEventEquipmentInfoByCurrentBossResp
 }
 
 TMap<FMETA_VendorLootKey, FMETA_BMEventLootData> UMETA_BlackmarketManagerComponent::GetBMEventLootDataForVendors() const {
-    return TMap<FMETA_VendorLootKey, FMETA_BMEventLootData>();
+    return {};
 }
 
 int32 UMETA_BlackmarketManagerComponent::GetAmountOfSoldiersCanBeBought_Implementation() {
@@ -137,5 +136,4 @@ void UMETA_BlackmarketManagerComponent::BuySoldiers_Implementation(int32 inAmoun
 
 void UMETA_BlackmarketManagerComponent::ActivateLootEventByVendor_Implementation(FMETA_VendorLootKey inVendorLootKey) {
 }
-
 

@@ -3,4 +3,3 @@
 UIGS_GASDefaultAttributesDataAsset::UIGS_GASDefaultAttributesDataAsset() {
 }
 
-

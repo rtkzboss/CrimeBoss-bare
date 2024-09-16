@@ -9,13 +9,12 @@ struct PAYBACKDEFINITIONS_API FMETA_MissionObjectiveConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_ObjectiveConfig Config;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText DescriptionOverride;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bOverrideReward;
-    
+
     FMETA_MissionObjectiveConfig();
 };
-

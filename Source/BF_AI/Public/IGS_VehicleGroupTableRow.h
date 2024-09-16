@@ -11,10 +11,9 @@ struct BF_AI_API FIGS_VehicleGroupTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_VehicleGroup ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_VehicleGroupData Data;
-    
+
     FIGS_VehicleGroupTableRow();
 };
-

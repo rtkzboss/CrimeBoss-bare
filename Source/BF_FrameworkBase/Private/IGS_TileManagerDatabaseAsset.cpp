@@ -10,4 +10,3 @@ bool UIGS_TileManagerDatabaseAsset::HasTileData(const FString& inTileName) {
 void UIGS_TileManagerDatabaseAsset::AddOrUpdate(const FString& inTileName, FIGS_TileManagerDatabaseRow inTileData) {
 }
 
-

@@ -10,4 +10,3 @@ public:
     UIGS_PanicPointComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -10,10 +10,9 @@ struct FMeshSpawnerIndexPairStruct {
 public:
     UPROPERTY(Instanced)
     UIGS_PropMeshSpawner* PropMeshSpawner;
-    
+
     UPROPERTY()
     int32 Index;
-    
+
     PAYBACK_API FMeshSpawnerIndexPairStruct();
 };
-

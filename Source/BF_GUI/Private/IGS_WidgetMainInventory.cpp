@@ -1,8 +1,4 @@
 #include "IGS_WidgetMainInventory.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetMainInventory::UIGS_WidgetMainInventory() : Super(FObjectInitializer::Get()) {
 }
@@ -23,7 +19,6 @@ void UIGS_WidgetMainInventory::InitItem(FIGS_ListItemHolder inHolder) {
 }
 
 UIGS_ListInventory* UIGS_WidgetMainInventory::GetOwningContainer() const {
-    return NULL;
+    return nullptr;
 }
-
 

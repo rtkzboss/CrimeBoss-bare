@@ -9,10 +9,9 @@ struct FPopulationClassParameter {
 public:
     UPROPERTY(EditAnywhere)
     TArray<FString> Tags;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FString, FPopulationClassParameterOptions> ParameterOptions;
-    
+
     CUSTOMIZABLEOBJECTPOPULATION_API FPopulationClassParameter();
 };
-

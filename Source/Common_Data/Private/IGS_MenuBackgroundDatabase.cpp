@@ -4,7 +4,7 @@ UIGS_MenuBackgroundDatabase::UIGS_MenuBackgroundDatabase() {
 }
 
 TArray<FText> UIGS_MenuBackgroundDatabase::GetSelectableMenuBackgroundsNames() const {
-    return TArray<FText>();
+    return {};
 }
 
 int32 UIGS_MenuBackgroundDatabase::GetIndex(FGameplayTag inID) const {
@@ -20,14 +20,13 @@ FIGS_MenuBackgroundTableRow UIGS_MenuBackgroundDatabase::GetDataByIndexBP(int32 
 }
 
 TArray<FIGS_MenuBackgroundTableRow> UIGS_MenuBackgroundDatabase::GetDatabaseTableBP() const {
-    return TArray<FIGS_MenuBackgroundTableRow>();
+    return {};
 }
 
 UAkStateValue* UIGS_MenuBackgroundDatabase::GetAkStateForTag(FGameplayTag inID) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_MenuBackgroundDatabase::EnableDebugMode() {
 }
-
 

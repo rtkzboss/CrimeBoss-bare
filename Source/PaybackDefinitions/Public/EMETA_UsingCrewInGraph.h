@@ -9,4 +9,3 @@ enum class EMETA_UsingCrewInGraph : uint8 {
     KeepCrew,
     KeepCrewAndIgnoreLosses,
 };
-

@@ -3,4 +3,3 @@
 UBTDecorator_HasSwatSquadMode::UBTDecorator_HasSwatSquadMode() {
 }
 
-

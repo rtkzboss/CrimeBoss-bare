@@ -5,7 +5,6 @@ FMETA_BMEventWeaponData::FMETA_BMEventWeaponData() {
     (*this).MinAvailableCash = 0;
     (*this).NumberOfWeaponsPerEvent = 1;
     (*this).ExpirationTime = 0;
-    (*this).WeaponClassesChances.Empty();
-    (*this).WeaponQualitiesChances.Empty();
+    (*this).WeaponClassesChances = {};
+    (*this).WeaponQualitiesChances = {};
 }
-

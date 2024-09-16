@@ -15,33 +15,32 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetSeriesPadding(const FMargin& InPadding);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetMargins(const FMargin& InMargins);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetFontSize(int32 InFontSize);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetChart(UKantanCartesianChartBase* InChart);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetBackground(const FSlateBrush& InBrush);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMargin Margins;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMargin SeriesPadding;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateBrush Background;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 FontSize;
-    
+
     UPROPERTY(BlueprintReadOnly, Export)
     TWeakObjectPtr<UKantanCartesianChartBase> Chart;
-    
-};
 
+};

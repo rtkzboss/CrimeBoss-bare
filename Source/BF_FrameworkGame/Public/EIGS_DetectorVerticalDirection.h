@@ -7,4 +7,3 @@ enum class EIGS_DetectorVerticalDirection : uint8 {
     Down,
     Up,
 };
-

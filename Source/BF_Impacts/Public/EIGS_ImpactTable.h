@@ -11,4 +11,3 @@ enum class EIGS_ImpactTable : uint8 {
     Destroy,
     Hit,
 };
-

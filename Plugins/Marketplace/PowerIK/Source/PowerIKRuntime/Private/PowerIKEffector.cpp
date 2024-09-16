@@ -1,4 +1,5 @@
 #include "PowerIKEffector.h"
+#include "EPoleVectorModeEnum.h"
 
 FPowerIKEffector::FPowerIKEffector() {
     (*this).BoneName = NAME_None;
@@ -37,4 +38,3 @@ FPowerIKEffector::FPowerIKEffector() {
     (*this).AffectsCenterOfGravity = false;
     (*this).Alpha = 1.000000000e+00f;
 }
-

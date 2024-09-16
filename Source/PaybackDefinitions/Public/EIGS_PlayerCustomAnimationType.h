@@ -17,4 +17,3 @@ enum class EIGS_PlayerCustomAnimationType : uint8 {
     PCA_FenceUnhinge,
     PCA_TakeWeapon,
 };
-

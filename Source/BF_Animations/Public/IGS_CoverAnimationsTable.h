@@ -13,18 +13,17 @@ public:
 
     UPROPERTY(EditAnywhere)
     UAnimMontage* CombatPeekStand_L;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* CombatPeekStand_R;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* CombatPeekCrouch_L;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* CombatPeekCrouch_R;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* CombatPeekCrouch_Up;
-    
-};
 
+};

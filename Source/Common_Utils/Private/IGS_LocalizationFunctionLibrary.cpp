@@ -27,4 +27,3 @@ FText UIGS_LocalizationFunctionLibrary::ConvertTextToInvariant(const FText& Text
     return FText::GetEmpty();
 }
 
-

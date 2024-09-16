@@ -5,4 +5,3 @@ UHoudiniParameterInt::UHoudiniParameterInt() {
     (*this).ParmType = EHoudiniParameterType::Int;
 }
 
-

@@ -10,4 +10,3 @@ enum class EIGS_OverlapResponseType : uint8 {
     ORT_PenetrationNoReduction,
     ORT_Block,
 };
-

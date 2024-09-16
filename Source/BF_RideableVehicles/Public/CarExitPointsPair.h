@@ -8,10 +8,9 @@ struct FCarExitPointsPair {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Left;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Right;
-    
+
     BF_RIDEABLEVEHICLES_API FCarExitPointsPair();
 };
-

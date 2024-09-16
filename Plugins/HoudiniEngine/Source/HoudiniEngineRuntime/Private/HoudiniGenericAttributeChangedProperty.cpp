@@ -3,4 +3,3 @@
 FHoudiniGenericAttributeChangedProperty::FHoudiniGenericAttributeChangedProperty() {
     (*this).Object = nullptr;
 }
-

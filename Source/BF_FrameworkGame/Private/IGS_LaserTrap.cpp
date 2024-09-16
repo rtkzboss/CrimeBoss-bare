@@ -2,8 +2,6 @@
 #include "AkComponent.h"
 #include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/PointLightComponent.h"
 #include "Components/SceneComponent.h"
@@ -12,28 +10,37 @@
 #include "Net/UnrealNetwork.h"
 
 AIGS_LaserTrap::AIGS_LaserTrap(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).RootObject = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    (*this).BeamOrigin = CreateDefaultSubobject<USceneComponent>(TEXT("BeamOrigin"));
-    (*this).BeamDetectionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BeamDetection"));
-    (*this).BeamDirectionArrow = CreateDefaultSubobject<UArrowComponent>(TEXT("BeamDirection"));
-    (*this).BeamEmitter = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("BeamEmitter"));
-    (*this).LaserMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LaserMesh"));
-    (*this).StatusLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("StatusLight"));
-    (*this).AkAudioComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
-    (*this).LightTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("LightTimeline"));
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    auto gen2 = CreateDefaultSubobject<USceneComponent>(TEXT("BeamOrigin"));
+    auto gen3 = CreateDefaultSubobject<UBoxComponent>(TEXT("BeamDetection"));
+    auto gen4 = CreateDefaultSubobject<UArrowComponent>(TEXT("BeamDirection"));
+    auto gen5 = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("BeamEmitter"));
+    auto gen6 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LaserMesh"));
+    auto gen7 = CreateDefaultSubobject<UPointLightComponent>(TEXT("StatusLight"));
+    auto gen8 = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
+    auto gen9 = CreateDefaultSubobject<UTimelineComponent>(TEXT("LightTimeline"));
+    (*this).RootObject = gen;
+    (*this).BeamOrigin = gen2;
+    (*this).BeamDetectionBox = gen3;
+    (*this).BeamDirectionArrow = gen4;
+    (*this).BeamEmitter = gen5;
+    (*this).LaserMesh = gen6;
+    (*this).StatusLight = gen7;
+    (*this).AkAudioComponent = gen8;
+    (*this).LightTimeline = gen9;
     (*this).StartTime = 2.000000030e-01f;
     (*this).ChargeTime = 3.000000119e-01f;
     (*this).EnableFromStart = true;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).PrimaryActorTick.TickInterval = 5.000000000e-01f;
-    (*this).RootComponent = (USceneComponent*)RootObject;
-    (*this).AkAudioComponent->SetupAttachment((*this).RootObject);
-    (*this).BeamDetectionBox->SetupAttachment((*this).BeamOrigin);
-    (*this).BeamDirectionArrow->SetupAttachment((*this).RootObject);
-    (*this).BeamEmitter->SetupAttachment((*this).RootObject);
-    (*this).BeamOrigin->SetupAttachment((*this).RootObject);
-    (*this).LaserMesh->SetupAttachment((*this).RootObject);
-    (*this).StatusLight->SetupAttachment((*this).RootObject);
+    (*this).RootComponent = gen;
+    if (gen2) gen2->SetupAttachment(gen);
+    if (gen3) gen3->SetupAttachment(gen2);
+    if (gen4) gen4->SetupAttachment(gen);
+    if (gen5) gen5->SetupAttachment(gen);
+    if (gen6) gen6->SetupAttachment(gen);
+    if (gen7) gen7->SetupAttachment(gen);
+    if (gen8) gen8->SetupAttachment(gen);
 }
 
 void AIGS_LaserTrap::SetEnabled(bool inState, bool inIgnoreChargeTime) {
@@ -65,10 +72,9 @@ void AIGS_LaserTrap::OnBeamBeginOverlap(UPrimitiveComponent* OverlappedComponent
 
 void AIGS_LaserTrap::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_LaserTrap, mR_bIsEnabled);
     DOREPLIFETIME(AIGS_LaserTrap, mR_bIsBeamEnabled);
     DOREPLIFETIME(AIGS_LaserTrap, mR_EndBeamPoint);
 }
-
 

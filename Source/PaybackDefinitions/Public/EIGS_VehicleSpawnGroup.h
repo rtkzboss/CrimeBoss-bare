@@ -34,4 +34,3 @@ enum class EIGS_VehicleSpawnGroup : uint8 {
     KhanGangVan,
     CagnaliHelicopter,
 };
-

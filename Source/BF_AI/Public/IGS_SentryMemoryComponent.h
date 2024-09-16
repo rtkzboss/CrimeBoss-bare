@@ -14,16 +14,15 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetCurrentTarget(AActor* inNewTarget);
-    
+
     UFUNCTION(BlueprintPure)
     AActor* GetCurrentTarget() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_SentryEnemyHolder> Enemies;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AActor> m_CurrentTarget;
-    
-};
 
+};

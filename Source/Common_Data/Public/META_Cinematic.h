@@ -13,10 +13,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     FMETA_CinematicMissionRowInfo GetInfo() const;
-    
+
 private:
     UPROPERTY()
     FMETA_BaseMissionSave m_CinematicMissionSave;
-    
-};
 
+};

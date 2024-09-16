@@ -18,21 +18,20 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_DialogueGroupCharacterHolder DialogueCharacterHolder;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsFPP;
-    
+
 private:
     UPROPERTY(EditAnywhere, Instanced)
     UIGS_NetworkComponentDialogue* NetworkDialogue;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UAkSwitchValue* FPPAkSwitch;
-    
+
     UPROPERTY(Instanced)
     UAkComponent* AkComponent;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

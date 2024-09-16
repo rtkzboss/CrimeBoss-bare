@@ -11,10 +11,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetNewVisibility(bool Hidden);
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsEnabled;
-    
-};
 
+};

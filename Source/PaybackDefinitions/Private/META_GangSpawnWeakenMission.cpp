@@ -4,4 +4,3 @@ FMETA_GangSpawnWeakenMission::FMETA_GangSpawnWeakenMission() {
     (*this).MissionCount = 0;
     (*this).ThresholdPriority = 0;
 }
-

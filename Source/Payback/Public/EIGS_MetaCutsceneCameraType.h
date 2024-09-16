@@ -7,4 +7,3 @@ enum class EIGS_MetaCutsceneCameraType : uint8 {
     Cowboy,
     CloseUp,
 };
-

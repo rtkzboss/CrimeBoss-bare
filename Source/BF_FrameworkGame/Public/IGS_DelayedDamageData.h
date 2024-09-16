@@ -9,16 +9,15 @@ struct BF_FRAMEWORKGAME_API FIGS_DelayedDamageData {
 public:
     UPROPERTY()
     float HealthChanged;
-    
+
     UPROPERTY()
     float ShieldChanged;
-    
+
     UPROPERTY()
     FIGS_HitInfo HitInfo;
-    
+
     UPROPERTY()
     float ApplicationTime;
-    
+
     FIGS_DelayedDamageData();
 };
-

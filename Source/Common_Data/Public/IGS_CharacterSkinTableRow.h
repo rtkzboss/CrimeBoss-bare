@@ -13,16 +13,15 @@ struct COMMON_DATA_API FIGS_CharacterSkinTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_CharacterClasses CharacterClasses;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_ItemQuality Quality;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_UnlockProperties UnlockProperties;
-    
+
     FIGS_CharacterSkinTableRow();
 };
-

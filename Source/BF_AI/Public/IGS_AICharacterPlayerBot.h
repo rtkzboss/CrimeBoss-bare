@@ -21,30 +21,29 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerLoadoutComponent* PlayerLoadoutComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_ListInventory* BotInventory;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PlayerMetaTransferComponent* PlayerMetaTransferComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_SuppressionHandlerComponent* BotSuppressionHandlerComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_LootBagInteractiveComponent* LootBagInteractiveComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentCharacter* NetworkCharacter;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 public:
     UFUNCTION(BlueprintCallable)
     void SetHeisterNumber(int32 inHeisterNumber) override PURE_VIRTUAL(SetHeisterNumber,);
-    
+
     UFUNCTION(BlueprintCallable)
     int32 GetHeisterNumber() const override PURE_VIRTUAL(GetHeisterNumber, return 0;);
-    
-};
 
+};

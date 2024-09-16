@@ -1,5 +1,4 @@
 #include "IGS_ScriptableBehaviorComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_ScriptableBehaviorComponent::UIGS_ScriptableBehaviorComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).PrimaryComponentTick.bCanEverTick = true;
@@ -20,7 +19,7 @@ bool UIGS_ScriptableBehaviorComponent::GetIsDefending() const {
 }
 
 TArray<UCoverPoint*> UIGS_ScriptableBehaviorComponent::GetDefendValidCoverPoints() {
-    return TArray<UCoverPoint*>();
+    return {};
 }
 
 FVector UIGS_ScriptableBehaviorComponent::GetDefendPos() {
@@ -32,10 +31,9 @@ FVector UIGS_ScriptableBehaviorComponent::GetDefendLookAt(FVector querrierLocati
 }
 
 TArray<UCoverPoint*> UIGS_ScriptableBehaviorComponent::GetDefendCoverPoints() {
-    return TArray<UCoverPoint*>();
+    return {};
 }
 
 void UIGS_ScriptableBehaviorComponent::ClearDefendPos() {
 }
-
 

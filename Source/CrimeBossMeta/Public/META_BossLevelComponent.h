@@ -16,25 +16,24 @@ public:
 
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_PerkData> CalculateBossPerksByBossLevel(EIGS_CharacterID inBossID, FGameplayTag inBossTagID, int32 inBossLevel, UPARAM(Ref) TArray<FMETA_PerkData>& inCurrentPerks);
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite)
     UMETA_BossLevelData* BossLevelData;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 AmountOfPrimaryWeaponsIssued;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 AmountOfAdditionalEquipmentIssued;
-    
+
     UPROPERTY(BlueprintReadWrite)
     float LocalBossPointAfterAsset;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 PreviousLevel;
-    
+
     UPROPERTY(BlueprintReadWrite)
     float PreviousPoints;
-    
-};
 
+};

@@ -11,9 +11,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Initialize();
-    
+
     UPROPERTY(EditDefaultsOnly)
     bool bDisableCollisionWithBackupHeisters;
-    
-};
 
+};

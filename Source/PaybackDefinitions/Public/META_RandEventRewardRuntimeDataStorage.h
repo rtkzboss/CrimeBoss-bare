@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_RandEventRewardRuntimeDataStorage {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_RandEventRewardRuntimeData> Rewards;
-    
+
     FMETA_RandEventRewardRuntimeDataStorage();
 };
-

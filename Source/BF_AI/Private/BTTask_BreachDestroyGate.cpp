@@ -3,4 +3,3 @@
 UBTTask_BreachDestroyGate::UBTTask_BreachDestroyGate() {
 }
 
-

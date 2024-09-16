@@ -11,4 +11,3 @@ enum class EIGS_EnvironmentVolumeType : uint8 {
     Custom = 10,
     None = 255,
 };
-

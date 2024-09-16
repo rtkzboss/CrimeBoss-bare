@@ -12,13 +12,12 @@ struct FMETA_LoadingTipCondition {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer Scenarios;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     TArray<UMETA_BaseCondition*> Conditions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_ConditionExprOperator Operator;
-    
+
     CRIMEBOSSMETA_API FMETA_LoadingTipCondition();
 };
-

@@ -9,16 +9,15 @@ struct FIGS_DamageData {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float Health;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float Shield;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float Damage;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_HitInfo HitInfo;
-    
+
     BF_FRAMEWORKBASE_API FIGS_DamageData();
 };
-

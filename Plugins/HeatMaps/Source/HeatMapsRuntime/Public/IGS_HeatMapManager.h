@@ -11,4 +11,3 @@ public:
 
     virtual TStatId GetStatId() const override { return {}; }
 };
-

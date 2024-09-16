@@ -13,4 +13,3 @@ enum class EIGS_UnlockMagazineType : uint8 {
     Perks,
     PostCampaign,
 };
-

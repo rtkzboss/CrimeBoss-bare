@@ -12,6 +12,5 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float LastBreachAllowedTime;
-    
-};
 
+};

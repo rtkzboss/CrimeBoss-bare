@@ -10,13 +10,12 @@ struct PAYBACKDEFINITIONS_API FMETA_ActionCardGoal {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardTheme Theme;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardStrength MinStrength;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardStrength MaxStrength;
-    
+
     FMETA_ActionCardGoal();
 };
-

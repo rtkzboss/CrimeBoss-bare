@@ -12,15 +12,14 @@ UIGS_ControllerSettings::UIGS_ControllerSettings() {
 }
 
 UIGS_ControllerSettings* UIGS_ControllerSettings::Instance() {
-    return NULL;
+    return nullptr;
 }
 
 float UIGS_ControllerSettings::GetRightTriggerReleaseThreshold() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ControllerSettings::GetRightTriggerPressThreshold() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

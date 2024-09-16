@@ -2,10 +2,9 @@
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "BPUniqueNetId.h"
-#include "BlueprintGetRecentPlayersDelegateDelegate.h"
+#include "BlueprintGetRecentPlayersDelegate.h"
 #include "GetRecentPlayersCallbackProxy.generated.h"
 
-class UGetRecentPlayersCallbackProxy;
 class UObject;
 
 UCLASS(MinimalAPI)
@@ -16,12 +15,11 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static UGetRecentPlayersCallbackProxy* GetAndStoreRecentPlayersList(UObject* WorldContextObject, const FBPUniqueNetId& UniqueNetId);
-    
+
     UPROPERTY(BlueprintAssignable)
     FBlueprintGetRecentPlayersDelegate OnSuccess;
-    
+
     UPROPERTY(BlueprintAssignable)
     FBlueprintGetRecentPlayersDelegate OnFailure;
-    
-};
 
+};

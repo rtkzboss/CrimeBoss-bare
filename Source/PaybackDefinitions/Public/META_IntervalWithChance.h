@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FMETA_IntervalWithChance {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Min;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Max;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float IncreasingChanceInsideRange;
-    
+
     FMETA_IntervalWithChance();
 };
-

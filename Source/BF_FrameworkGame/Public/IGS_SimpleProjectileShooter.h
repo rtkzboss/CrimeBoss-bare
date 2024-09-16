@@ -10,4 +10,3 @@ public:
     UIGS_SimpleProjectileShooter(const FObjectInitializer& ObjectInitializer);
 
 };
-

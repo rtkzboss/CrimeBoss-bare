@@ -24,4 +24,3 @@ void UAdvancedExternalUILibrary::ShowAccountUpgradeUI(const FBPUniqueNetId Playe
 void UAdvancedExternalUILibrary::CloseWebURLUI() {
 }
 
-

@@ -22,4 +22,3 @@ enum class EIGS_GlassPreset : uint8 {
     Panel_250X150,
     Panel_100X250,
 };
-

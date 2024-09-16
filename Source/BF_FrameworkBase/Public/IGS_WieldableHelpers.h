@@ -15,24 +15,23 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static bool WieldAnyItemCustomSocket(AIGS_GameCharacterFramework* inWielder, AActor* inActorToWield, EIGS_WieldingHand inWieldingHand, FName inSocket, bool inForce);
-    
+
     UFUNCTION(BlueprintCallable)
     static bool WieldAnyItem(AIGS_GameCharacterFramework* inWielder, AActor* inActorToWield, EIGS_WieldingHand inWieldingHand, bool inForce);
-    
+
     UFUNCTION(BlueprintCallable)
     static void RemoveWieldedItemOfClass(AIGS_GameCharacterFramework* inWielder, TSoftClassPtr<AActor> inClassToRemove, bool inBothHands);
-    
+
     UFUNCTION(BlueprintCallable)
     static void RemoveWieldedItem(AIGS_GameCharacterFramework* inWielder, EIGS_WieldingHand inWieldingHand);
-    
+
     UFUNCTION(BlueprintCallable)
     static EIGS_WieldingHand GetFreeHand(AIGS_GameCharacterFramework* inWielder, EIGS_WieldingHand inPreferredHand);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DropWieldedItemOfClass(AIGS_GameCharacterFramework* inWielder, TSoftClassPtr<AActor> inClassToRemove, bool inBothHands);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DropWieldedItem(AIGS_GameCharacterFramework* inWielder, EIGS_WieldingHand inWieldingHand);
-    
-};
 
+};

@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_PlayerCountBotDamageReceivedModifierPerDifficul
 public:
     UPROPERTY(EditDefaultsOnly, EditFixedSize)
     TMap<EIGS_FPSDifficulty, FIGS_PlayerCountBotDamageReceivedModifierDef> Difficulties;
-    
+
     FIGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef();
 };
-

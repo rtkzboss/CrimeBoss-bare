@@ -10,4 +10,3 @@ enum class EIGS_AIHitReactionVariant : uint8 {
     Back,
     Right,
 };
-

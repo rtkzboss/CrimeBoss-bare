@@ -3,4 +3,3 @@
 UIGS_AdvancedMovementData::UIGS_AdvancedMovementData() {
 }
 
-

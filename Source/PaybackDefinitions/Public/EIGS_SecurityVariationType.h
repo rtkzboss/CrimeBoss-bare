@@ -17,4 +17,3 @@ enum class EIGS_SecurityVariationType : uint8 {
     US_STO_Prison,
     US_Unknown = 255,
 };
-

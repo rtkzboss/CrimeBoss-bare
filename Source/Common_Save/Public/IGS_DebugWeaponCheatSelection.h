@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FIGS_WeaponCheatSelection_DebugData SaveData_WeaponCheatSelection;
-    
-};
 
+};

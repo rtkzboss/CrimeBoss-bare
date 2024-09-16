@@ -17,4 +17,3 @@ enum class EIGS_WieldableSlot : uint8 {
     S_MountedWieldable,
     S_UNKNOWN = 255,
 };
-

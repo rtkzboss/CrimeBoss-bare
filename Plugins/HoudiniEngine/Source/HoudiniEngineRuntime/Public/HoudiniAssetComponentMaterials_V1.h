@@ -10,4 +10,3 @@ public:
     UHoudiniAssetComponentMaterials_V1();
 
 };
-

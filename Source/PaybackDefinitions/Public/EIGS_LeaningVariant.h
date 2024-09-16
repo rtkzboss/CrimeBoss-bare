@@ -13,4 +13,3 @@ enum class EIGS_LeaningVariant : uint8 {
     AIM_Right_Out,
     AIM_Up_Out,
 };
-

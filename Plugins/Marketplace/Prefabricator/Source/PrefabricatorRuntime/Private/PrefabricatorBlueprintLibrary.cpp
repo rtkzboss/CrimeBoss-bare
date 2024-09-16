@@ -7,7 +7,7 @@ void UPrefabricatorBlueprintLibrary::UnlinkPrefab(APrefabActor* PrefabActor) {
 }
 
 APrefabActor* UPrefabricatorBlueprintLibrary::SpawnPrefab(const UObject* WorldContextObject, UPrefabricatorAssetInterface* Prefab, const FTransform& Transform, int32 Seed) {
-    return NULL;
+    return nullptr;
 }
 
 void UPrefabricatorBlueprintLibrary::SetPrefabAsset(APrefabActor* PrefabActor, UPrefabricatorAssetInterface* Prefab, bool bReloadPrefab) {
@@ -20,7 +20,6 @@ void UPrefabricatorBlueprintLibrary::GetAllAttachedActors(AActor* Prefab, TArray
 }
 
 APrefabActor* UPrefabricatorBlueprintLibrary::FindTopMostPrefabActor(AActor* inActor) {
-    return NULL;
+    return nullptr;
 }
-
 

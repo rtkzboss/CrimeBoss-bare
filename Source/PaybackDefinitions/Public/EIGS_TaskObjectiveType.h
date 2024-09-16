@@ -10,4 +10,3 @@ enum class EIGS_TaskObjectiveType : uint8 {
     Value,
     OrTask,
 };
-

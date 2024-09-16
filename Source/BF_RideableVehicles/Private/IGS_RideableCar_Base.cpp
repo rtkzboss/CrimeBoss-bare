@@ -1,20 +1,21 @@
 #include "IGS_RideableCar_Base.h"
 #include "Components/BoxComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "WheeledVehicleMovementComponent4W.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_RideableCar_Base::AIGS_RideableCar_Base(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision Trigger"));
+    auto gen2 = CreateDefaultSubobject<UWheeledVehicleMovementComponent4W>(TEXT("Wheeled Vehicle Movement"));
     (*this).SuspensionLength = 252;
     (*this).WheelRadius = 5.000000000e+01f;
     (*this).BrakeForceMultiplier = 1.999999955e-02f;
     (*this).CollisionSoundMultiplier = 1.399999976e+00f;
-    (*this).CollisionTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision Trigger"));
-    (*this).VehicleMovement = CreateDefaultSubobject<UWheeledVehicleMovementComponent4W>(TEXT("Wheeled Vehicle Movement"));
+    (*this).CollisionTrigger = gen;
+    (*this).VehicleMovement = gen2;
     (*this).ExitSpeedLimit = 1.000000000e+01f;
-    (*this).CollisionTrigger->SetupAttachment((*this).RootComponent);
+    auto gen3 = Cast<USkeletalMeshComponent>(GetDefaultSubobjectByName(TEXT("Mesh")));
+    if (gen) gen->SetupAttachment(gen3);
 }
 
 void AIGS_RideableCar_Base::SyncSteering_SERVER_Implementation(float InValue) {
@@ -51,9 +52,8 @@ bool AIGS_RideableCar_Base::IsGrounded() {
 
 void AIGS_RideableCar_Base::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_RideableCar_Base, ServerState);
     DOREPLIFETIME(AIGS_RideableCar_Base, m_SteeringTarget);
 }
-
 

@@ -3,4 +3,3 @@
 UIGS_AnimNotifyState_CanNotAbortAnim::UIGS_AnimNotifyState_CanNotAbortAnim() {
 }
 
-

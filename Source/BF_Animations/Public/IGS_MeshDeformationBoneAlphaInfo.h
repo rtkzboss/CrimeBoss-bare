@@ -8,13 +8,12 @@ struct FIGS_MeshDeformationBoneAlphaInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<float> RotationAlphas;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<float> LocationAlphas;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<float> ScaleAlphas;
-    
+
     BF_ANIMATIONS_API FIGS_MeshDeformationBoneAlphaInfo();
 };
-

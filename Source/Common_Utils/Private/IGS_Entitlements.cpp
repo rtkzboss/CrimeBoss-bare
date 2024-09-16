@@ -26,14 +26,14 @@ bool UIGS_Entitlements::IsEntitlementDLC(FGameplayTag inEntitlement) const {
 }
 
 TArray<FGameplayTag> UIGS_Entitlements::GetOwnedEntitlements() {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 void UIGS_Entitlements::GetEntitlementTitle(UObject* inWCO, const FGameplayTag inEntitlement, FText& OutText) {
 }
 
 TArray<FGameplayTag> UIGS_Entitlements::GetAllEntitlements() {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 void UIGS_Entitlements::Connect() {
@@ -41,5 +41,4 @@ void UIGS_Entitlements::Connect() {
 
 void UIGS_Entitlements::AddDebugEntitlement(FGameplayTag inEntitlement) {
 }
-
 

@@ -10,4 +10,3 @@ FIGS_TPP_TransitionsAnimationsDefinition::FIGS_TPP_TransitionsAnimationsDefiniti
     (*this).TransitionToIdleL_Crouch = nullptr;
     (*this).TransitionToIdleR_Crouch = nullptr;
 }
-

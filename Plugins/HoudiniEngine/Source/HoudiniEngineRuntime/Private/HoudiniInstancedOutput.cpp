@@ -1,14 +1,13 @@
 #include "HoudiniInstancedOutput.h"
 
 FHoudiniInstancedOutput::FHoudiniInstancedOutput() {
-    (*this).OriginalObject = nullptr;
+    (*this).OriginalObject = FSoftObjectPath();
     (*this).OriginalObjectIndex = -1;
-    (*this).OriginalTransforms.Empty();
-    (*this).VariationObjects.Empty();
-    (*this).VariationTransformOffsets.Empty();
-    (*this).TransformVariationIndices.Empty();
-    (*this).OriginalInstanceIndices.Empty();
+    (*this).OriginalTransforms = {};
+    (*this).VariationObjects = {};
+    (*this).VariationTransformOffsets = {};
+    (*this).TransformVariationIndices = {};
+    (*this).OriginalInstanceIndices = {};
     (*this).bChanged = false;
     (*this).bStale = false;
 }
-

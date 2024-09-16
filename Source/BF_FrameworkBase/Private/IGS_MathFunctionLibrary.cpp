@@ -16,7 +16,7 @@ bool UIGS_MathFunctionLibrary::SphereBoxIntersection(FVector inSphereOrigin, flo
 }
 
 float UIGS_MathFunctionLibrary::SignedDistancePlanePoint(FVector inPlaneNormal, FVector inPlanePoint, FVector inPoint) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FVector UIGS_MathFunctionLibrary::SetVectorLength(FVector InValue, float InSize) {
@@ -65,7 +65,7 @@ int32 UIGS_MathFunctionLibrary::NegateInt(int32 InValue) {
 }
 
 float UIGS_MathFunctionLibrary::NegateFloat(float InValue) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UIGS_MathFunctionLibrary::LineToLineIntersection(FVector& outIntersectionPoint, FVector inLinePoint1, FVector inLineDir1, FVector inLinePoint2, FVector inLineDir2) {
@@ -113,7 +113,7 @@ FVector UIGS_MathFunctionLibrary::GetVelocityAtPoint(UPrimitiveComponent* inTarg
 }
 
 float UIGS_MathFunctionLibrary::ConvertPhysicsLinearVelocity(FVector inVelocity, EIGS_SpeedUnit inSpeedUnit) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UIGS_MathFunctionLibrary::ClosestPointsOnTwoLines(FVector& outClosestPointLine1, FVector& outClosestPointLine2, FVector inLinePoint1, FVector inLineVec1, FVector inLinePoint2, FVector inLineVec2) {
@@ -140,7 +140,6 @@ int32 UIGS_MathFunctionLibrary::AddInt32Safe(const int32 inA, const int32 inB, c
 }
 
 float UIGS_MathFunctionLibrary::AddFloatSafe(const float inA, const float inB, const float inMax) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

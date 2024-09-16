@@ -10,4 +10,3 @@ public:
     UIGS_ContractManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

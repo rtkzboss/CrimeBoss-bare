@@ -4,4 +4,3 @@ UBTDecorator_HasTarget::UBTDecorator_HasTarget() {
     (*this).NodeName = TEXT("Has Target");
 }
 
-

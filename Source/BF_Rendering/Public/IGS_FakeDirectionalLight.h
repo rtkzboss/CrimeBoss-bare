@@ -10,4 +10,3 @@ public:
     UIGS_FakeDirectionalLight(const FObjectInitializer& ObjectInitializer);
 
 };
-

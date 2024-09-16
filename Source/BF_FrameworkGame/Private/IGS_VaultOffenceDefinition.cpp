@@ -2,4 +2,3 @@
 
 FIGS_VaultOffenceDefinition::FIGS_VaultOffenceDefinition() {
 }
-

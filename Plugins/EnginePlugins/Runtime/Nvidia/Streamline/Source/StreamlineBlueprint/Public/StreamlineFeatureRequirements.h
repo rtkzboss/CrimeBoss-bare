@@ -11,22 +11,21 @@ struct FStreamlineFeatureRequirements {
 public:
     UPROPERTY(BlueprintReadWrite)
     UStreamlineFeatureSupport Support;
-    
+
     UPROPERTY(BlueprintReadWrite)
     UStreamlineFeatureRequirementsFlags Requirements;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion RequiredOperatingSystemVersion;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion DetectedOperatingSystemVersion;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion RequiredDriverVersion;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FStreamlineVersion DetectedDriverVersion;
-    
+
     STREAMLINEBLUEPRINT_API FStreamlineFeatureRequirements();
 };
-

@@ -11,9 +11,8 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void StartActivity();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool CanActivityStart();
-    
-};
 
+};

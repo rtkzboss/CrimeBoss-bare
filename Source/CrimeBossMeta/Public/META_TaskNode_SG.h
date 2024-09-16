@@ -14,18 +14,17 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FMETA_TaskSettings Success;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FMETA_TaskSettings Fail;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bOverrideTaskExecution;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 OverrideNodeID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_TaskCondition* Task;
-    
-};
 
+};

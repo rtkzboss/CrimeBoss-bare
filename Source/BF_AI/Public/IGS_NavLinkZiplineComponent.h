@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* InAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* OutAnimation;
-    
-};
 
+};

@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_IdleChatterEventNotificationData {
 public:
     UPROPERTY()
     UObject* AsyncRequest;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> Characters;
-    
+
     FIGS_IdleChatterEventNotificationData();
 };
-

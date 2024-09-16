@@ -10,4 +10,3 @@ enum class EPFRollInterpType : uint8 {
     Cubic,
     CubicClamped,
 };
-

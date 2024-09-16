@@ -5,4 +5,3 @@ UIGS_BTService_SolveTargetProximity::UIGS_BTService_SolveTargetProximity() {
     (*this).NodeName = TEXT("Solve Target Proximity");
 }
 
-

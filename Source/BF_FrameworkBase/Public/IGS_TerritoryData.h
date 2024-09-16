@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(EditAnywhere)
     TMap<FName, FIGS_RestrictedTagsHolder> RestrictedTagsHolders;
-    
-};
 
+};

@@ -10,4 +10,3 @@ public:
     UIGS_AISuspiciousnessComponentCivEmployee(const FObjectInitializer& ObjectInitializer);
 
 };
-

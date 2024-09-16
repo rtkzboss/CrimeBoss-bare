@@ -12,9 +12,8 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnPrepareToThrow();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnPrepareToPlant();
-    
-};
 
+};

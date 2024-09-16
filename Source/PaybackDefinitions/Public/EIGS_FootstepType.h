@@ -12,4 +12,3 @@ enum class EIGS_FootstepType : uint8 {
     Sprint,
     Crouch,
 };
-

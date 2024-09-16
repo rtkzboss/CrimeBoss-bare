@@ -8,4 +8,3 @@ enum class UStreamlineReflexMode : uint8 {
     Enabled,
     EnabledPlusBoost = 3,
 };
-

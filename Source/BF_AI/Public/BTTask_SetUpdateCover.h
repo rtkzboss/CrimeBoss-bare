@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector UpdateCoverKey;
-    
+
     UPROPERTY(EditAnywhere)
     bool UpdateCover;
-    
-};
 
+};

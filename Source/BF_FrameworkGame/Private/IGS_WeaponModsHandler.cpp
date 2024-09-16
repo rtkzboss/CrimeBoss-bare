@@ -1,5 +1,4 @@
 #include "IGS_WeaponModsHandler.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_WeaponModsHandler::UIGS_WeaponModsHandler(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -9,14 +8,14 @@ bool UIGS_WeaponModsHandler::HasWeaponModOfType(EIGS_ModType inType) const {
 }
 
 UIGS_ModInventoryObject* UIGS_WeaponModsHandler::GetWeaponModOfType(EIGS_ModType inType) const {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_WeaponModsHandler::GetCurrentShooterModifications(float& outBaseDamageMultiplier, float& outEffectiveRangeMultiplier, float& outMaxRangeMultiplier, float& outRPMMultiplier) const {
 }
 
 float UIGS_WeaponModsHandler::GetCurrentReloadTimeMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_WeaponModsHandler::GetCurrentRecoilModifications(float& outVerticalRecoilMultiplier, float& outHorizontalRecoilMultiplier) const {
@@ -40,5 +39,4 @@ void UIGS_WeaponModsHandler::GetCurrentADSAndHolsterModifications(float& outHols
 
 void UIGS_WeaponModsHandler::GetCurrentAccuracyModifications(float& outHipFireSpreadMultiplier, float& outADSSpreadMultiplier, float& outSpreadIncreasePerShotMultiplier, float& outMovementSpreadMultiplier) const {
 }
-
 

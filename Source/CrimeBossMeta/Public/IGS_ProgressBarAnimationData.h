@@ -11,21 +11,20 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText PreviousText;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText FinalText;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CurrentProgress;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FinalProgress;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Value;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
-    
-};
 
+};

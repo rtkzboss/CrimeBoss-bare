@@ -2,4 +2,3 @@
 
 FIGS_AIEmployeeDefaultTierData::FIGS_AIEmployeeDefaultTierData() {
 }
-

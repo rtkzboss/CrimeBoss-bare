@@ -2,10 +2,10 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "Engine/TriggerBase.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_BreachPointsBase.generated.h"
 
-class ATriggerBase;
 class USceneComponent;
 
 UCLASS(Abstract)
@@ -17,12 +17,11 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor PointsColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<ATriggerBase> NavModifier;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* BreachingPointsRootComponent;
-    
-};
 
+};

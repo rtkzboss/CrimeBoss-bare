@@ -8,10 +8,9 @@ struct COMMON_DATA_API FMETA_BossEliminationRewardsDistribution {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercantageOfEliminationWithTwoRewards;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercantageOfEliminationWithThreeRewards;
-    
+
     FMETA_BossEliminationRewardsDistribution();
 };
-

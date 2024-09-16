@@ -15,9 +15,8 @@ public:
 private:
     UPROPERTY()
     UIGS_PressureManagerData* m_PressureManagerData;
-    
+
     UPROPERTY()
     TArray<FPressureRecord> m_Records;
-    
-};
 
+};

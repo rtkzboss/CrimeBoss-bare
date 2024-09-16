@@ -11,16 +11,15 @@ struct CRIMEBOSSMETA_API FIGS_TutorialPage {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Title;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Text;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Image;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UBinkMediaPlayer* Video;
-    
+
     FIGS_TutorialPage();
 };
-

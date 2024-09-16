@@ -1,9 +1,19 @@
 #include "IGS_VirtualCursorSettings.h"
+#include "Curves/RealCurve.h"
+#include "Curves/RichCurve.h"
 
 UIGS_VirtualCursorSettings::UIGS_VirtualCursorSettings() {
-    auto& gen0 = (*this).VirtualCursorAccelerationCurve.EditorCurveData.Keys;
-    gen0.Empty();
-    gen0.AddDefaulted(2);
+    FRichCurveKey gen;
+    gen.InterpMode = RCIM_Linear;
+    gen.TangentMode = RCTM_Auto;
+    gen.TangentWeightMode = RCTWM_WeightedNone;
+    gen.Time = 1.000000000e+00f;
+    gen.Value = 1.000000000e+00f;
+    gen.ArriveTangent = 0.000000000e+00f;
+    gen.ArriveTangentWeight = 0.000000000e+00f;
+    gen.LeaveTangent = 0.000000000e+00f;
+    gen.LeaveTangentWeight = 0.000000000e+00f;
+    (*this).VirtualCursorAccelerationCurve.EditorCurveData.Keys = {FRichCurveKey{}, MoveTemp(gen)};
     (*this).VirtualCursorAccelerationCurve.EditorCurveData.DefaultValue = 3.402823466e+38f;
     (*this).VirtualCursorAccelerationCurve.EditorCurveData.PreInfinityExtrap = RCCE_Constant;
     (*this).VirtualCursorAccelerationCurve.EditorCurveData.PostInfinityExtrap = RCCE_Constant;
@@ -22,5 +32,4 @@ UIGS_VirtualCursorSettings::UIGS_VirtualCursorSettings() {
     (*this).VirtualHardwareCursorHotspot.X = 5.000000000e-01f;
     (*this).VirtualHardwareCursorHotspot.Y = 5.000000000e-01f;
 }
-
 

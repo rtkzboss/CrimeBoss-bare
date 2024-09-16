@@ -5,4 +5,3 @@ UIGS_ThrowableInventoryObject::UIGS_ThrowableInventoryObject() {
     (*this).ItemType = EIGS_ItemType::Item_Throwable;
 }
 
-

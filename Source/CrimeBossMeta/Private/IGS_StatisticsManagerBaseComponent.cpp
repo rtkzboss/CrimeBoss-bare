@@ -1,5 +1,4 @@
 #include "IGS_StatisticsManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_StatisticsManagerBaseComponent::UIGS_StatisticsManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -12,5 +11,4 @@ void UIGS_StatisticsManagerBaseComponent::ProvideStatisticForAnIntervalOfDay_Imp
 
 void UIGS_StatisticsManagerBaseComponent::ProvideAllStatisticForCampaign_Implementation(FMETA_StatisticNoteSaveData& outStatistic) {
 }
-
 

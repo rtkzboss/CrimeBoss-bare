@@ -12,21 +12,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetSaveData(FMETA_LoopBranchNodeSaveData SaveData);
-    
+
     UFUNCTION(BlueprintCallable)
     void GetSaveData(FMETA_LoopBranchNodeSaveData& SaveData);
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 AmountOfActivations;
-    
+
     UPROPERTY()
     int32 CurrentAmountOfActivation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 LimitExceededNodeId;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 ContinueNodeId;
-    
-};
 
+};

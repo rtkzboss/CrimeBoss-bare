@@ -15,4 +15,3 @@ enum class EMETA_CharacterState : uint8 {
     Buried,
     Healing,
 };
-

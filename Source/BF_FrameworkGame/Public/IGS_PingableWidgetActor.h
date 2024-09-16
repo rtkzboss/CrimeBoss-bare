@@ -14,20 +14,19 @@ public:
 protected:
     UFUNCTION(NetMulticast, Unreliable)
     void Multicast_ShowPingWidget(float inPingDuration);
-    
+
 public:
     UFUNCTION(NetMulticast, Unreliable)
     void Multicast_Release();
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float PingDuration;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float NetworkDormantTimer;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_WorldSpaceWidgetBase* PingWidget;
-    
-};
 
+};

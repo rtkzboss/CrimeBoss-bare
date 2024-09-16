@@ -16,18 +16,17 @@ public:
 protected:
     UFUNCTION()
     void OnPopulationFinished();
-    
+
     UPROPERTY()
     TArray<UTacticalPathfindingNode*> m_Nodes;
-    
+
     UPROPERTY()
     TArray<UTacticalPathfindingNodeRoom*> m_RoomNodes;
-    
+
     UPROPERTY()
     TArray<UTacticalPathfindingNode*> m_TmpPath;
-    
+
     UPROPERTY()
     TMap<uint8, UTacticalPathfindingFilterBase*> m_FiltersCache;
-    
-};
 
+};

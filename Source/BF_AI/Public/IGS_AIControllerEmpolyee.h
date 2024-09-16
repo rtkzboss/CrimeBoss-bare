@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerEmpolyee(const FObjectInitializer& ObjectInitializer);
 
 };
-

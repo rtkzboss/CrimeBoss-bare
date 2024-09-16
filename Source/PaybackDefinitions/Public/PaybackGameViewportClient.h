@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CommonGameViewportClient.h"
-#include "BF_FocusSignatureDelegate.h"
+#include "BF_FocusSignature.h"
 #include "PaybackGameViewportClient.generated.h"
 
 UCLASS(NonTransient)
@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FBF_FocusSignature OnLostFocus;
-    
+
     UPROPERTY(BlueprintAssignable)
     FBF_FocusSignature OnFocusReceived;
-    
-};
 
+};

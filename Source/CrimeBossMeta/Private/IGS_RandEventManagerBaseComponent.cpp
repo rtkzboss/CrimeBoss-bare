@@ -1,5 +1,4 @@
 #include "IGS_RandEventManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_RandEventManagerBaseComponent::UIGS_RandEventManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -23,5 +22,4 @@ int32 UIGS_RandEventManagerBaseComponent::GetEventPrice_Implementation(FGameplay
 FGameplayTag UIGS_RandEventManagerBaseComponent::GetActiveEventOfPartner_Implementation(EMETA_Partner inPartner) {
     return FGameplayTag{};
 }
-
 

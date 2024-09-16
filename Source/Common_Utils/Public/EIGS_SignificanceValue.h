@@ -10,4 +10,3 @@ enum class EIGS_SignificanceValue : uint8 {
     High,
     Epic,
 };
-

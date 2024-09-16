@@ -14,19 +14,18 @@ public:
 
     UFUNCTION(BlueprintPure)
     AActor* GetRecommendedTarget() const;
-    
+
     UFUNCTION(BlueprintPure)
     FIGS_EnemyHolder BPGetRecommendedTargetHolder() const;
-    
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     float AggroUpdateTick;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float AggroSwitchedCooldownTime;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float GlobalAggroChangeDivisor;
-    
-};
 
+};

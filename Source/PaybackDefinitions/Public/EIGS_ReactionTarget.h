@@ -9,4 +9,3 @@ enum class EIGS_ReactionTarget : uint8 {
     Target_Offender,
     Target_Special,
 };
-

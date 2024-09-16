@@ -1,12 +1,11 @@
 #include "IGS_HUDKantanDatasourceHolder.h"
-#include "ComponentInstanceDataCache.h"
 #include "KantanSimpleCartesianDatasource.h"
 
 UIGS_HUDKantanDatasourceHolder::UIGS_HUDKantanDatasourceHolder(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).PressureGraphDataSource = CreateDefaultSubobject<UKantanSimpleCartesianDatasource>(TEXT("PressureGraphDataSource"));
+    auto gen = CreateDefaultSubobject<UKantanSimpleCartesianDatasource>(TEXT("PressureGraphDataSource"));
+    (*this).PressureGraphDataSource = gen;
     (*this).PressureGraphCatId_Value = TEXT("KantanSimpleSeries__0");
     (*this).PressureGraphExpectedId_Value = TEXT("KantanSimpleSeries__1");
     (*this).PrimaryComponentTick.bCanEverTick = true;
 }
-
 

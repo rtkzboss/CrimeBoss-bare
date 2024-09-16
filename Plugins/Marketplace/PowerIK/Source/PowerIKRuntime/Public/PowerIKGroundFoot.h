@@ -9,19 +9,18 @@ struct POWERIKRUNTIME_API FPowerIKGroundFoot {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PullWeight;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool NormalizePulling;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector PositivePullFactor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector NegativePullFactor;
-    
+
     FPowerIKGroundFoot();
 };
-

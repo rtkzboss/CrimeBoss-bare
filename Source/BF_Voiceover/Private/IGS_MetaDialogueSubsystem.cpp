@@ -48,7 +48,7 @@ FIGS_MetaDialogueSpeakerVoiceLengthData UIGS_MetaDialogueSubsystem::GetCurrentDi
 }
 
 UAnimMontage* UIGS_MetaDialogueSubsystem::GetCurrentCharacterFacialAnimation() {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_MetaDialogueSubsystem::GetBlockState(FString& OutReason) {
@@ -57,5 +57,4 @@ bool UIGS_MetaDialogueSubsystem::GetBlockState(FString& OutReason) {
 
 void UIGS_MetaDialogueSubsystem::DEBUG_EnableTTSMedia(bool inState) {
 }
-
 

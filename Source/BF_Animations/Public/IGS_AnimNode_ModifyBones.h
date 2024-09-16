@@ -11,10 +11,9 @@ struct BF_ANIMATIONS_API FIGS_AnimNode_ModifyBones : public FAnimNode_SkeletalCo
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ModifyBonesInfo> BonesToModify;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FTransform> BoneTransforms;
-    
+
     FIGS_AnimNode_ModifyBones();
 };
-

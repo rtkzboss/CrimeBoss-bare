@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AIGS_GameCharacterFramework* CharacterToRevive;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsReviving;
-    
-};
 
+};

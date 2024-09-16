@@ -6,4 +6,3 @@ FIGS_DialogueCharacterCooldownData::FIGS_DialogueCharacterCooldownData() {
     (*this).ControlCooldown = EIGS_DialogueCharacterCooldown::Medium;
     (*this).AssaultCooldown = EIGS_DialogueCharacterCooldown::Short;
 }
-

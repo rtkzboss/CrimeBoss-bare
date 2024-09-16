@@ -10,4 +10,3 @@ public:
     UIGS_WaypointRenderingComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

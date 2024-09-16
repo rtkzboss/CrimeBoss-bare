@@ -8,19 +8,18 @@ struct COMMON_DATA_API FMETA_TradeSettings {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MinMonetaryTradeValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MaxMonetaryTradeValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 DailyLimitMonetaryTradeValueForPawnShop;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 BaseInvestigationValueAfterExceededPawnShopLimit;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MaxInvestigationValueAfterExceededPawnShopLimit;
-    
+
     FMETA_TradeSettings();
 };
-

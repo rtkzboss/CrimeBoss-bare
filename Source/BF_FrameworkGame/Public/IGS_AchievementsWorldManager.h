@@ -14,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static bool UpdateAchievement(UObject* WCO, FGameplayTag AchievementID, int32 Increment);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static bool UnlockAchievement(UObject* WCO, FGameplayTag AchievementID);
-    
-};
 
+};

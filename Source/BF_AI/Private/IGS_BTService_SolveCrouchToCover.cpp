@@ -5,4 +5,3 @@ UIGS_BTService_SolveCrouchToCover::UIGS_BTService_SolveCrouchToCover() {
     (*this).NodeName = TEXT("Clear Cover Point");
 }
 
-

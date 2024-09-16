@@ -14,11 +14,10 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ExecuteCondition(AMETA_BaseGameMode* inGameMode);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool InvertResult;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

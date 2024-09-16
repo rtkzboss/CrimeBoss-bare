@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FIGS_AIAmmoWeaponDef Weapon;
-    
-};
 
+};

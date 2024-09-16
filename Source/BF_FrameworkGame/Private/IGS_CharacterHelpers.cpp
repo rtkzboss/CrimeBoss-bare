@@ -15,4 +15,3 @@ FString UIGS_CharacterHelpers::GetActiveNodeName(AIGS_GameCharacterFramework* in
     return TEXT("");
 }
 
-

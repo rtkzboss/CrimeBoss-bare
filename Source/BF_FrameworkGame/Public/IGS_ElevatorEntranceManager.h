@@ -13,9 +13,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UnregisterElevatorCable(AIGS_Rope* inElevatorCable);
-    
+
     UFUNCTION(BlueprintCallable)
     void RegisterElevatorCable(AIGS_Rope* inElevatorCable);
-    
-};
 
+};

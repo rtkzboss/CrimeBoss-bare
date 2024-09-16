@@ -12,13 +12,12 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatHeavyTierData : public FIGS_AIBaseHeavyTi
 public:
     UPROPERTY(EditAnywhere)
     FIGS_SwatHeavyShockSettings Shock;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_SwatHeavyWeakSpotSettings WeakSpot;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_SwatHeavyInjuredSettings Injured;
-    
+
     FIGS_AISwatHeavyTierData();
 };
-

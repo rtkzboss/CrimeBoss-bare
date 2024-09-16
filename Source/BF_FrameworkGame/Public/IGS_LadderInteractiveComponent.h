@@ -14,13 +14,12 @@ public:
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void Multicast_Use(AIGS_GameCharacterFramework* inInstigator, bool inIsUnarmed);
-    
+
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsLadderTopEnd;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsRope;
-    
-};
 
+};

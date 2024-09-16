@@ -10,4 +10,3 @@ public:
     AIGS_SnipePoint(const FObjectInitializer& ObjectInitializer);
 
 };
-

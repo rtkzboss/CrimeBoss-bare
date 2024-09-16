@@ -8,4 +8,3 @@ enum class ESessionSettingSearchResult : uint8 {
     NotFound,
     WrongType,
 };
-

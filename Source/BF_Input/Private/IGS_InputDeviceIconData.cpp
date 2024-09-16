@@ -3,4 +3,3 @@
 FIGS_InputDeviceIconData::FIGS_InputDeviceIconData() {
     (*this).ButtonSymbol = NAME_None;
 }
-

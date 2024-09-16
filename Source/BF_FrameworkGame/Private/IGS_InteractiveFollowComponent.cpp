@@ -1,5 +1,4 @@
 #include "IGS_InteractiveFollowComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_InteractiveFollowComponent::UIGS_InteractiveFollowComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -14,8 +13,7 @@ void UIGS_InteractiveFollowComponent::OnRep_IsFollowing() {
 
 void UIGS_InteractiveFollowComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_InteractiveFollowComponent, IsFollowing);
 }
-
 

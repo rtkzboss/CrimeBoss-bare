@@ -5,4 +5,3 @@ FIGS_AILoadout::FIGS_AILoadout() {
     (*this).SecondaryWeapon = nullptr;
     (*this).MeleeWeapon = nullptr;
 }
-

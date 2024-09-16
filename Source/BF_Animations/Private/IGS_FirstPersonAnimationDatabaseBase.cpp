@@ -25,6 +25,5 @@ FIGS_FirstPersonAnimationDatabaseBase::FIGS_FirstPersonAnimationDatabaseBase() {
     (*this).SpecialAnimations.TakeWeaponMontage = nullptr;
     (*this).SpecialAnimations.SpecialTakeWeaponMontage = nullptr;
     (*this).SpecialAnimations.WeaponInteractonMontage = nullptr;
-    (*this).LinkedGraphs.Empty();
+    (*this).LinkedGraphs = {};
 }
-

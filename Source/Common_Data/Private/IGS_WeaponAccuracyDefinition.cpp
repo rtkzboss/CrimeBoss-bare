@@ -12,4 +12,3 @@ FIGS_WeaponAccuracyDefinition::FIGS_WeaponAccuracyDefinition() {
     (*this).Multipliers.MovementMult = 1.200000048e+00f;
     (*this).Multipliers.JumpMult = 1.500000000e+00f;
 }
-

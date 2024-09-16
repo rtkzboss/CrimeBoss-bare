@@ -12,25 +12,24 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetLootInfo(const FText& inLootCategory, const EMETA_LootPurpose inLootPurpose, const int32 inLootValue);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetLootValue() const;
-    
+
     UFUNCTION(BlueprintPure)
     EMETA_LootPurpose GetLootPurpose() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetLootCategory() const;
-    
+
 private:
     UPROPERTY()
     int32 LootValue;
-    
+
     UPROPERTY()
     FText LootCategory;
-    
+
     UPROPERTY()
     EMETA_LootPurpose LootPurpose;
-    
-};
 
+};

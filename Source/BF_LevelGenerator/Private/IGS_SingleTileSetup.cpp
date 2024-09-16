@@ -10,4 +10,3 @@ FIGS_SingleTileSetup::FIGS_SingleTileSetup() {
     (*this).ForcedTile.DataTable = nullptr;
     (*this).ForcedTile.RowName = NAME_None;
 }
-

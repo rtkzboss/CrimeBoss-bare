@@ -5,4 +5,3 @@ FIGS_EventMission::FIGS_EventMission() {
     (*this).Event.DataTable = nullptr;
     (*this).Event.RowName = NAME_None;
 }
-

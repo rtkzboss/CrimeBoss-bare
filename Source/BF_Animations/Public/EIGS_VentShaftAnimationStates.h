@@ -8,4 +8,3 @@ enum class EIGS_VentShaftAnimationStates : uint8 {
     VS_VentShaftEnter,
     VS_VentShaftExit,
 };
-

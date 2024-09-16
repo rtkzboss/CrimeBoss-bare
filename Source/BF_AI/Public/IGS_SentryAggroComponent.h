@@ -13,22 +13,21 @@ public:
 
     UFUNCTION(BlueprintPure)
     AActor* GetRecommendedTarget() const;
-    
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     float AggroUpdateTick;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float AggroSwitchedCooldownTime;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float MinAggroRangeMultiplier;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float MaxAggroRangeMultiplier;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float GlobalAggroChangeDivisor;
-    
-};
 
+};

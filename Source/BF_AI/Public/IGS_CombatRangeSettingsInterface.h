@@ -13,15 +13,14 @@ class BF_AI_API IIGS_CombatRangeSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetCombatRangeMinRawValue();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetCombatRangeMin();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetCombatRangeMaxRawValue();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetCombatRangeMax();
-    
-};
 
+};

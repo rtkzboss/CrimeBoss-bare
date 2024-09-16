@@ -4,4 +4,3 @@ UIGS_BTTask_SquadMoveNearDisruptingGadget::UIGS_BTTask_SquadMoveNearDisruptingGa
     (*this).NodeName = TEXT("Squad Move Near Disrupting Gadget");
 }
 
-

@@ -13,4 +13,3 @@ enum class EIGS_MostPrioHintType : uint8 {
     BeingRevived,
     Break,
 };
-

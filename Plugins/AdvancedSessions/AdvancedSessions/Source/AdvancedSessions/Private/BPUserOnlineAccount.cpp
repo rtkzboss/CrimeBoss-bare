@@ -2,4 +2,3 @@
 
 FBPUserOnlineAccount::FBPUserOnlineAccount() {
 }
-

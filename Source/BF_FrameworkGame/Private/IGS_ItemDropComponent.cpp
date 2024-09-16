@@ -1,5 +1,4 @@
 #include "IGS_ItemDropComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_ItemDropComponent::UIGS_ItemDropComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -19,5 +18,4 @@ void UIGS_ItemDropComponent::AddItemToDropUponDeath(TSubclassOf<UIGS_InventoryOb
 
 void UIGS_ItemDropComponent::AddItemToDropForCharacter(AIGS_GameCharacterFramework* inCharacter, TSubclassOf<UIGS_InventoryObjectFramework> inClass, FIGS_ItemDropped inDelegateHandle) {
 }
-
 

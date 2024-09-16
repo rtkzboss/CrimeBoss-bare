@@ -16,9 +16,8 @@ public:
 
     UFUNCTION()
     static FExitPoints GetExitPoints(AActor* Actor, AIGS_RoomBase* priorRoom);
-    
+
     UFUNCTION()
     static FEntryPoints GetEnterPoints(AActor* Actor, AIGS_RoomBase* priorRoom);
-    
-};
 
+};

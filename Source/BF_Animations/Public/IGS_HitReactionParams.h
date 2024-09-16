@@ -8,7 +8,6 @@ struct FIGS_HitReactionParams {
 public:
     UPROPERTY(EditAnywhere)
     float AnimationHitReactionDuration;
-    
+
     BF_ANIMATIONS_API FIGS_HitReactionParams();
 };
-

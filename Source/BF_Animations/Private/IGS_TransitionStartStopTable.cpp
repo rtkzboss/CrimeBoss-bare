@@ -3,4 +3,3 @@
 UIGS_TransitionStartStopTable::UIGS_TransitionStartStopTable() {
 }
 
-

@@ -8,4 +8,3 @@ enum class EIGS_WheelMenuType : uint8 {
     Bots,
     Chat,
 };
-

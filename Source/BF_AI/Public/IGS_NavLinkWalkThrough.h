@@ -10,4 +10,3 @@ public:
     AIGS_NavLinkWalkThrough(const FObjectInitializer& ObjectInitializer);
 
 };
-

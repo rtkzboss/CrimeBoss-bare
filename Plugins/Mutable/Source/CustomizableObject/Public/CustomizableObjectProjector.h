@@ -10,22 +10,21 @@ struct CUSTOMIZABLEOBJECT_API FCustomizableObjectProjector {
 public:
     UPROPERTY(EditAnywhere)
     FVector Position;
-    
+
     UPROPERTY(EditAnywhere)
     FVector Direction;
-    
+
     UPROPERTY(EditAnywhere)
     FVector Up;
-    
+
     UPROPERTY(EditAnywhere)
     FVector Scale;
-    
+
     UPROPERTY(EditAnywhere)
     ECustomizableObjectProjectorType ProjectionType;
-    
+
     UPROPERTY(EditAnywhere)
     float Angle;
-    
+
     FCustomizableObjectProjector();
 };
-

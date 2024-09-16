@@ -1,12 +1,9 @@
 #include "IGS_PickupActorInventoryItem.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_TeamSideEnum.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
-AIGS_PickupActorInventoryItem::AIGS_PickupActorInventoryItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).R_WeaponSkin = nullptr;
+AIGS_PickupActorInventoryItem::AIGS_PickupActorInventoryItem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.DoNotCreateDefaultSubobject(TEXT("RootComp"))) {
+    (*this).R_WeaponSkin = FSoftObjectPath();
     (*this).R_GlobalItemCount = 1;
     (*this).R_EquipmentCount = 1;
 }
@@ -51,7 +48,7 @@ void AIGS_PickupActorInventoryItem::AddMods(const TArray<TSubclassOf<UIGS_ModInv
 
 void AIGS_PickupActorInventoryItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_PickupActorInventoryItem, R_WeaponSkin);
     DOREPLIFETIME(AIGS_PickupActorInventoryItem, R_ItemClassToAdd);
     DOREPLIFETIME(AIGS_PickupActorInventoryItem, R_ItemModsToAdd);
@@ -61,5 +58,4 @@ void AIGS_PickupActorInventoryItem::GetLifetimeReplicatedProps(TArray<FLifetimeP
     DOREPLIFETIME(AIGS_PickupActorInventoryItem, R_UniversalData);
     DOREPLIFETIME(AIGS_PickupActorInventoryItem, mR_bWasDropped);
 }
-
 

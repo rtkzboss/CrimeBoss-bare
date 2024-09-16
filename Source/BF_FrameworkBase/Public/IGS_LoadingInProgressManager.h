@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/WorldSubsystem.h"
-#include "IGS_OnLoadingFinishedDynamicSignatureDelegate.h"
+#include "IGS_OnLoadingFinishedDynamicSignature.h"
 #include "IGS_LoadingInProgressManager.generated.h"
 
 UCLASS()
@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_OnLoadingFinishedDynamicSignature OnLoadingFinishedEvent;
-    
-};
 
+};

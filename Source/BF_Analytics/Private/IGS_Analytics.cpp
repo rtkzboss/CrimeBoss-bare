@@ -102,4 +102,3 @@ void UIGS_Analytics::BossCardPicked(const FString& inCardID, const FIGS_Analytic
 void UIGS_Analytics::AssetBought(const FString& inAssetID, int32 inPrice, const FIGS_AnalyticsCommonMetaAttributes& inMetaAttributes) {
 }
 
-

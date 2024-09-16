@@ -13,9 +13,8 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void Throw_Event(const UAnimMontage* outMontage);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void Drop_Event(const UAnimMontage* outMontage);
-    
-};
 
+};

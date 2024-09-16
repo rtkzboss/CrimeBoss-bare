@@ -1,8 +1,8 @@
 #include "CartesianAxisConfig.h"
 
 FCartesianAxisConfig::FCartesianAxisConfig() {
-    (*this).Title = FText::FromString(TEXT(""));
-    (*this).Unit = FText::FromString(TEXT(""));
+    (*this).Title = FText::GetEmpty();
+    (*this).Unit = FText::GetEmpty();
     (*this).MarkerSpacing = 1.000000000e+00f;
     (*this).MaxValueDigits = 5;
     (*this).LeftBottomAxis.bEnabled = false;
@@ -18,4 +18,3 @@ FCartesianAxisConfig::FCartesianAxisConfig() {
     (*this).FloatingAxis.bShowMarkers = true;
     (*this).FloatingAxis.bShowLabels = true;
 }
-

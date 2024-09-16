@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_StartupWeaponDefinition {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* WeaponID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Amount;
-    
+
     FMETA_StartupWeaponDefinition();
 };
-

@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_CoverAttackType CoverAttackType;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TagretLastSeenPosition;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverForwardPoint;
-    
-};
 
+};

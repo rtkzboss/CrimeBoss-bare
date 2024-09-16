@@ -19,4 +19,3 @@ FIGS_TPP_ModAnimationDefinition::FIGS_TPP_ModAnimationDefinition() {
     (*this).WeaponReloadTacticalFight = nullptr;
     (*this).HasGripMod = false;
 }
-

@@ -8,4 +8,3 @@ enum class EIGS_StormTacticType : uint8 {
     STT_Retreat,
     STT_Push,
 };
-

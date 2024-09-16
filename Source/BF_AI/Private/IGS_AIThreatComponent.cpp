@@ -1,5 +1,4 @@
 #include "IGS_AIThreatComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AIThreatComponent::UIGS_AIThreatComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).DmgRequiredToMaxThreat = 2.000000030e-01f;
@@ -10,5 +9,4 @@ UIGS_AIThreatComponent::UIGS_AIThreatComponent(const FObjectInitializer& ObjectI
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.TickInterval = 5.000000000e-01f;
 }
-
 

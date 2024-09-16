@@ -12,6 +12,5 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     int32 AmmoPerStep;
-    
-};
 
+};

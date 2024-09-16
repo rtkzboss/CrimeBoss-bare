@@ -3,4 +3,3 @@
 UIGS_StoryMissionObject::UIGS_StoryMissionObject() {
 }
 
-

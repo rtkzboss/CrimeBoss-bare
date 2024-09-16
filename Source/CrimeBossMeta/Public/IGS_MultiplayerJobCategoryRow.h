@@ -12,13 +12,12 @@ struct FIGS_MultiplayerJobCategoryRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* CategoryItemsDataTable;
-    
+
     CRIMEBOSSMETA_API FIGS_MultiplayerJobCategoryRow();
 };
-

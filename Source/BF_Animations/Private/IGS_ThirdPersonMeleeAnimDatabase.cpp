@@ -1,7 +1,7 @@
 #include "IGS_ThirdPersonMeleeAnimDatabase.h"
 
 FIGS_ThirdPersonMeleeAnimDatabase::FIGS_ThirdPersonMeleeAnimDatabase() {
-    (*this).ID = nullptr;
+    (*this).ID = FSoftObjectPath();
     (*this).WeaponGripStand = nullptr;
     (*this).WeaponGripCrouch = nullptr;
     (*this).WeaponGripRun = nullptr;
@@ -48,10 +48,10 @@ FIGS_ThirdPersonMeleeAnimDatabase::FIGS_ThirdPersonMeleeAnimDatabase() {
     (*this).LeanRightCrouch = nullptr;
     (*this).LeanCrouchUp = nullptr;
     (*this).MeleePush = nullptr;
-    (*this).Attack_Light_Chain.Empty();
-    (*this).Attack_Heavy_Chain.Empty();
-    (*this).Attack_Light_Chain_Crouch.Empty();
-    (*this).Attack_Heavy_Chain_Crouch.Empty();
+    (*this).Attack_Light_Chain = {};
+    (*this).Attack_Heavy_Chain = {};
+    (*this).Attack_Light_Chain_Crouch = {};
+    (*this).Attack_Heavy_Chain_Crouch = {};
     (*this).SlidingAnimations.Weapon_Slide_Aim_Offset = nullptr;
     (*this).SlidingAnimations.Slide_In = nullptr;
     (*this).SlidingAnimations.Slide_Loop = nullptr;
@@ -60,6 +60,7 @@ FIGS_ThirdPersonMeleeAnimDatabase::FIGS_ThirdPersonMeleeAnimDatabase() {
     (*this).SlidingAnimations.Slide_Out_Idle = nullptr;
     (*this).SlidingAnimations.Slide_Out_Crouch_Walk = nullptr;
     (*this).LightHitReactions = nullptr;
+    (*this).SpecialActions = {};
     (*this).SpecialAnimations.WalkieTalkieEquipMontage = nullptr;
     (*this).SpecialAnimations.HandsetEquipMontage = nullptr;
     (*this).SpecialAnimations.OpenDoorInteractionMontage = nullptr;
@@ -76,4 +77,3 @@ FIGS_ThirdPersonMeleeAnimDatabase::FIGS_ThirdPersonMeleeAnimDatabase() {
     (*this).LeftHandIKAlpha = 0.000000000e+00f;
     (*this).RightHandIKAlpha = 0.000000000e+00f;
 }
-

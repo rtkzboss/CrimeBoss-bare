@@ -1,5 +1,4 @@
 #include "META_GoalManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_GoalManagerComponent::UMETA_GoalManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -39,11 +38,11 @@ void UMETA_GoalManagerComponent::GetFinishedGoalsFromPool(TArray<FMETA_FinishedG
 }
 
 TArray<UMETA_BaseGoal*> UMETA_GoalManagerComponent::GetCurrentGoals() const {
-    return TArray<UMETA_BaseGoal*>();
+    return {};
 }
 
 UMETA_BaseGoal* UMETA_GoalManagerComponent::GetCurrentGoalByID(TSubclassOf<UMETA_BaseGoal> inGoalID) {
-    return NULL;
+    return nullptr;
 }
 
 void UMETA_GoalManagerComponent::GetCurrentGoalByGraph(TSoftObjectPtr<UStoryGraphManager> inGraph, UMETA_BaseGoal*& outGoal) {
@@ -61,14 +60,14 @@ FMETA_FinishedGoal UMETA_GoalManagerComponent::ConvertGoalObjectToFinishedGoal(U
 }
 
 UMETA_BaseGoal* UMETA_GoalManagerComponent::ConvertGoalFromSave(const UObject* inWCO, FMETA_GoalSave& inGoal) {
-    return NULL;
+    return nullptr;
 }
 
 void UMETA_GoalManagerComponent::ConvertCurrentGoalsToSave(TArray<FMETA_GoalSave>& outStoryGoalsSave, TArray<FMETA_MoneyMakingGoalSave>& outMoneyMakingGoalsSave) {
 }
 
 TArray<UMETA_BaseGoal*> UMETA_GoalManagerComponent::ConvertCurrentGoalsFromSave(const UObject* inWCO, TArray<FMETA_GoalSave> inCurrentGoals, TArray<FMETA_MoneyMakingGoalSave> inMoneyMakingGoals) {
-    return TArray<UMETA_BaseGoal*>();
+    return {};
 }
 
 void UMETA_GoalManagerComponent::ChangeRepeatGoalCounterByValue(TSubclassOf<UMETA_BaseGoal> inGoalID, int32 Value) {
@@ -94,5 +93,4 @@ void UMETA_GoalManagerComponent::AddGoalTaskByGraph(TSoftObjectPtr<UStoryGraphMa
 
 void UMETA_GoalManagerComponent::AddFinishedGoalToPool(UMETA_BaseGoal* inGoal) {
 }
-
 

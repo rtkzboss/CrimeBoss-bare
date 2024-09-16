@@ -7,4 +7,3 @@ enum class EIGS_FacialEmotionIdles : uint8 {
     FEI_Default,
     FEI_Talking,
 };
-

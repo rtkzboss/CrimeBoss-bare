@@ -1,5 +1,4 @@
 #include "IGS_AISettingsComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AISettingsComponent::UIGS_AISettingsComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).MeleeActivationDistance = 2.000000000e+02f;
@@ -10,5 +9,4 @@ UIGS_AISettingsComponent::UIGS_AISettingsComponent(const FObjectInitializer& Obj
     (*this).MeleeCooldown.Min = 4.000000060e-01f;
     (*this).MeleeCooldown.Max = 7.500000000e-01f;
 }
-
 

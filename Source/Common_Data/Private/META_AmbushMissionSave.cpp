@@ -4,9 +4,12 @@
 
 FMETA_AmbushMissionSave::FMETA_AmbushMissionSave() {
     (*this).InstigatorMissionID = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).InstigatorMissionTileID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).InstigatorMissionTileID, 0)) = NAME_None;
+    (*this).Parameters = {};
     (*this).PreviousFPSMissionData.MissionResult = EMETA_JobResult::Success;
-    (*this).PreviousFPSMissionData.Loot.Empty();
+    (*this).PreviousFPSMissionData.Loot = {};
+    (*this).PreviousFPSMissionData.CollectedLoot = {};
     (*this).PreviousFPSMissionData.MoneyCollected = 0;
     (*this).PreviousFPSMissionData.CivilCasualties = 0;
     (*this).PreviousFPSMissionData.PoliceCasualties = 0;
@@ -19,4 +22,3 @@ FMETA_AmbushMissionSave::FMETA_AmbushMissionSave() {
     (*this).PreviousFPSMissionData.BagsCollected = 0;
     (*this).PreviousFPSMissionData.LightingScenarioType = EIGS_LightingScenarioType::Morning;
 }
-

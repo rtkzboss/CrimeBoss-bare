@@ -10,4 +10,3 @@ public:
     UIGS_HeisterBackupObjectStatus(const FObjectInitializer& ObjectInitializer);
 
 };
-

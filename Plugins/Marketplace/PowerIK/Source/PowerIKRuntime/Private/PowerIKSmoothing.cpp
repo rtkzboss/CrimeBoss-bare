@@ -8,4 +8,3 @@ FPowerIKSmoothing::FPowerIKSmoothing() {
     (*this).MaxDegreesSpeed = 9.000000000e+01f;
     (*this).MaxDegreesDistance = 1.350000000e+02f;
 }
-

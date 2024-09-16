@@ -14,21 +14,20 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SafeRangeKey;
-    
+
     UPROPERTY(EditAnywhere)
     float SafeDistance;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval CheckInterval;
-    
+
     UPROPERTY(EditAnywhere)
     bool SafeDistanceFromBB;
-    
+
     UPROPERTY(EditAnywhere)
     bool SafeWhenHidden;
-    
-};
 
+};

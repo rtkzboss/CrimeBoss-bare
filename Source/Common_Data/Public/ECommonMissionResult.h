@@ -10,4 +10,3 @@ enum class ECommonMissionResult : uint8 {
     Res_Success,
     Res_Escaped,
 };
-

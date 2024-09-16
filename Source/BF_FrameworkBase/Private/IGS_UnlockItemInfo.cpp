@@ -1,17 +1,19 @@
 #include "IGS_UnlockItemInfo.h"
 
 FIGS_UnlockItemInfo::FIGS_UnlockItemInfo() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
     (*this).UnlockCategory = EIGS_UnlockCategory::UC_Unknown;
     (*this).Quality = EMETA_ItemQuality::MinGenerate;
-    (*this).Name = FText::FromString(TEXT(""));
-    (*this).Description = FText::FromString(TEXT(""));
-    (*this).Image = nullptr;
-    (*this).UnlockCoverImage = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).RequiredEntitlementID, 0)) = NAME_None;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).RequiredTags, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).RequiredTags, 0)).Empty();
+    (*this).Name = FText::GetEmpty();
+    (*this).Description = FText::GetEmpty();
+    (*this).Image = FSoftObjectPath();
+    (*this).UnlockCoverImage = FSoftObjectPath();
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).RequiredEntitlementID, 0)) = NAME_None;
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).RequiredTags, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).RequiredTags, 0)) = {};
     (*this).RequiredValue = 0.000000000e+00f;
     (*this).ShowIfNotOwned = true;
 }
-

@@ -1,7 +1,4 @@
 #include "META_TurfWar.h"
-#include "EIGS_UserDifficulty.h"
-#include "EMETA_JobResult.h"
-#include "EMETA_LobbyVisibilityType.h"
 
 UMETA_TurfWar::UMETA_TurfWar() {
 }
@@ -37,5 +34,4 @@ EMETA_Gang UMETA_TurfWar::GetEnemyGang() {
 int32 UMETA_TurfWar::GetDefenseLosePenaltyCost(const UObject* inWCO) {
     return 0;
 }
-
 

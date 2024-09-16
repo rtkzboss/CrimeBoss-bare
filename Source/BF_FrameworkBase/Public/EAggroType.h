@@ -10,4 +10,3 @@ enum class EAggroType : uint8 {
     AT_Taunt,
     AT_MAX_INDEX,
 };
-

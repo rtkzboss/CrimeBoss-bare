@@ -71,4 +71,3 @@ enum class EIGS_CharacterID : uint8 {
     Char_Boss_End = Char_Boss_Player,
     Char_Boss_Limit = 254,
 };
-

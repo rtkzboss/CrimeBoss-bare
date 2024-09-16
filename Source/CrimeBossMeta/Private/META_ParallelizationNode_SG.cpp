@@ -5,4 +5,3 @@ UMETA_ParallelizationNode_SG::UMETA_ParallelizationNode_SG() {
     (*this).Type = EMETA_NodeType::ParallelizationNode;
 }
 
-

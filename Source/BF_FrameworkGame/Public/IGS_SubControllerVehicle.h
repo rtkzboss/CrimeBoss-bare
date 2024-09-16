@@ -10,4 +10,3 @@ public:
     UIGS_SubControllerVehicle(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -1,5 +1,4 @@
 #include "META_RandEventManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_RandEventManagerComponent::UMETA_RandEventManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -13,7 +12,7 @@ void UMETA_RandEventManagerComponent::RemoveEventForMissingHeister(FMETA_Charact
 }
 
 TArray<EMETA_CharacterState> UMETA_RandEventManagerComponent::GetStatesWhichChangesShouldBeNotedInHistory_Implementation() const {
-    return TArray<EMETA_CharacterState>();
+    return {};
 }
 
 void UMETA_RandEventManagerComponent::GetNoteAboutLastChangeToState(FMETA_CharacterID inCharacterID, EMETA_CharacterState inState, FMETA_HeisterStateChangeNote& outNote, bool& outSuccess) {
@@ -44,5 +43,4 @@ void UMETA_RandEventManagerComponent::AddStatesChangesNote(FMETA_CharacterID inC
 
 void UMETA_RandEventManagerComponent::AddEventDataForMissingHeister(FMETA_CharacterID inCharacterID, FMETA_MissingHeisterEventData inData) {
 }
-
 

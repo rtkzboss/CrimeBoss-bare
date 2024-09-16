@@ -13,9 +13,8 @@ public:
 
     UPROPERTY()
     TSoftObjectPtr<UStaticMesh> StaticMesh;
-    
+
     UPROPERTY()
     TArray<FString> MeshComponentsMaterials;
-    
-};
 
+};

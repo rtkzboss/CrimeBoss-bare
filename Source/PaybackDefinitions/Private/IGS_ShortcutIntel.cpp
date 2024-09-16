@@ -4,4 +4,3 @@ UIGS_ShortcutIntel::UIGS_ShortcutIntel() {
     (*this).bShortcutFound = true;
 }
 
-

@@ -8,4 +8,3 @@ enum class EIGS_CharacterState : uint8 {
     Alerted,
     Combat,
 };
-

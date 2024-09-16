@@ -13,4 +13,3 @@ void UIGS_DangerManagerLibrary::RegisterCharacterToDangerSystem(AIGS_GameCharact
 void UIGS_DangerManagerLibrary::CreateTemporaryDangerArea(UObject* WCO, const FVector& Location, float DangerRadius, const TSubclassOf<UIGS_DamageTypeBase>& DamageType, float Duration) {
 }
 
-

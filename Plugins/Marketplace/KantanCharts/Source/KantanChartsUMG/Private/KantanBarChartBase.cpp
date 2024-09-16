@@ -1,8 +1,6 @@
 #include "KantanBarChartBase.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
+#include "Styling/SlateBrush.h"
 #include "Styling/SlateColor.h"
-#include "Components/SlateWrapperTypes.h"
 
 UKantanBarChartBase::UKantanBarChartBase() {
     (*this).WidgetStyle.BarOpacity = 1.000000000e+00f;
@@ -10,7 +8,8 @@ UKantanBarChartBase::UKantanBarChartBase() {
     (*this).WidgetStyle.BarOutlineThickness = 1.000000000e+00f;
     (*this).WidgetStyle.Background.ImageSize.X = 3.200000000e+01f;
     (*this).WidgetStyle.Background.ImageSize.Y = 3.200000000e+01f;
-    (*TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor")->ContainerPtrToValuePtr<FLinearColor>(&(*this).WidgetStyle.Background.TintColor, 0)).A = 3.000000119e-01f;
+    auto gen = TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor");
+    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).WidgetStyle.Background.TintColor, 0)).A = 3.000000119e-01f;
     (*this).WidgetStyle.Background.DrawAs = ESlateBrushDrawType::Image;
     (*this).WidgetStyle.ChartLineColor.R = 1.000000000e+00f;
     (*this).WidgetStyle.ChartLineColor.G = 1.000000000e+00f;
@@ -49,5 +48,4 @@ void UKantanBarChartBase::SetExtentsDisplay(EKantanBarValueExtents InExtents) {
 
 void UKantanBarChartBase::SetBarToGapRatio(float InRatio) {
 }
-
 

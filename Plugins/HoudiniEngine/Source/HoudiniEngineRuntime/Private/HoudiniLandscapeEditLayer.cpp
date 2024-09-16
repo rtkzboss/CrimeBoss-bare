@@ -1,7 +1,6 @@
 #include "HoudiniLandscapeEditLayer.h"
 
 UHoudiniLandscapeEditLayer::UHoudiniLandscapeEditLayer() {
-    (*this).LandscapeSoftPtr = nullptr;
+    (*this).LandscapeSoftPtr = FSoftObjectPath();
 }
-
 

@@ -14,16 +14,15 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseCondition*> Conditions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseAction*> TrueActions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseAction*> FalseActions;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 NextNode;
-    
-};
 
+};

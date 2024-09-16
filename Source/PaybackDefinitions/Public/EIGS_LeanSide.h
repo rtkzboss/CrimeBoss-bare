@@ -11,4 +11,3 @@ enum class EIGS_LeanSide : uint8 {
     LeanSide_Up,
     LeanSide_Down,
 };
-

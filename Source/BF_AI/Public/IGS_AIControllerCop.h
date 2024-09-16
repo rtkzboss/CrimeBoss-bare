@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerCop(const FObjectInitializer& ObjectInitializer);
 
 };
-

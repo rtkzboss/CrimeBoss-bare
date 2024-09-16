@@ -2,4 +2,3 @@
 
 FIGS_GroupPlayInfo::FIGS_GroupPlayInfo() {
 }
-

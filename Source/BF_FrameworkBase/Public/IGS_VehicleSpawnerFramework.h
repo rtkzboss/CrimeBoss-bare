@@ -10,4 +10,3 @@ public:
     AIGS_VehicleSpawnerFramework(const FObjectInitializer& ObjectInitializer);
 
 };
-

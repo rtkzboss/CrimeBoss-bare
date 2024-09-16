@@ -15,24 +15,23 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo MainTextFont;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo SecondaryTextFont;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FTextBlockStyle LoadingTipTextBlockStyle;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FTextBlockStyle LoadingTipDecoratorTextBlockStyle;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TArray<TSoftClassPtr<UIGS_RichTextBlockDecoratorBase>> LoadingTipTextDecorators;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo LoadingTextFont;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FSlateFontInfo LoadingIconFont;
-    
-};
 
+};

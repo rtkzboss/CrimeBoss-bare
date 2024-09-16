@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void SetupDummyWeaponMods(UMeshComponent* inWeaponMesh, UIGS_WeaponInventoryObject* inWeaponObject, UIGS_WeaponSkinData* inSkinData, bool inIsShadow);
-    
-};
 
+};

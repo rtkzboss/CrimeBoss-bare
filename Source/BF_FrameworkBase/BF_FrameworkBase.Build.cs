@@ -5,7 +5,7 @@ public class BF_FrameworkBase : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "AIModule",
             "AdvancedSessions",
@@ -17,12 +17,15 @@ public class BF_FrameworkBase : ModuleRules {
             "Common_Utils",
             "Core",
             "CoreUObject",
+            "CrimeBossUGC",
             "DataRegistry",
             "DeveloperSettings",
             "Engine",
             "GameplayAbilities",
             "GameplayTags",
+            "GameplayTasks",
             "HeatMapsRuntime",
+            "InputCore",
             "Landscape",
             "NavigationSystem",
             "OnlineSubsystemUtils",
@@ -31,6 +34,10 @@ public class BF_FrameworkBase : ModuleRules {
             "PhysicsCore",
             "SkinnedDecalComponent",
             "UMG",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "OnlineSubsystem",
         });
     }
 }

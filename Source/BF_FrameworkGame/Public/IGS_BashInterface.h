@@ -16,12 +16,11 @@ class BF_FRAMEWORKGAME_API IIGS_BashInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SetupBasher(AIGS_GameCharacterFramework* inOwner);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsBashing() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UIGS_BasherComponent* GetBasher() const;
-    
-};
 
+};

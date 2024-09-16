@@ -9,4 +9,3 @@ enum class EIGS_TransitionState : uint8 {
     Interpolating,
     Running,
 };
-

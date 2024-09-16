@@ -10,13 +10,12 @@ struct COMMON_SAVE_API FIGS_Quick_ChainPlayerCharacters {
 public:
     UPROPERTY(BlueprintReadWrite, SaveGame)
     int32 PlayerId;
-    
+
     UPROPERTY(BlueprintReadWrite, SaveGame)
     FUniqueNetIdRepl UniquePlayerId;
-    
+
     UPROPERTY(BlueprintReadWrite, SaveGame)
     TArray<FCommonHeisterData> Heisters;
-    
+
     FIGS_Quick_ChainPlayerCharacters();
 };
-

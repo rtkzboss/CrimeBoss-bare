@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     float PickupDelay;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestPickupActor;
-    
-};
 
+};

@@ -8,10 +8,9 @@ struct CRIMEBOSSMETA_API FIGS_UnlockPanelUIData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Title;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Text;
-    
+
     FIGS_UnlockPanelUIData();
 };
-

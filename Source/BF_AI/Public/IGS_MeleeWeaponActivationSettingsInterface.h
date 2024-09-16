@@ -13,9 +13,8 @@ class BF_AI_API IIGS_MeleeWeaponActivationSettingsInterface : public IInterface 
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetMeleeCooldown();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetMeleeActivationDistance();
-    
-};
 
+};

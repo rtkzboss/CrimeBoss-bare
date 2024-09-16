@@ -14,4 +14,3 @@ enum class EIGS_WindGeneralDirectionsType : uint8 {
     WorldDir_W,
     WorldDir_NW,
 };
-

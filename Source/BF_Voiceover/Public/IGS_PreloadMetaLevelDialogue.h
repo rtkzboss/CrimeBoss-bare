@@ -2,10 +2,9 @@
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "EIGS_MetaDialogueCharacter.h"
-#include "IGS_MetaDialogueDelegateDelegate.h"
+#include "IGS_MetaDialogueDelegate.h"
 #include "IGS_PreloadMetaLevelDialogue.generated.h"
 
-class UIGS_PreloadMetaLevelDialogue;
 class UObject;
 
 UCLASS()
@@ -16,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PreloadMetaLevelDialogue* PreloadMetaLevelDialogues(UObject* inWCO, FText DialogueID, UPARAM(Ref) TArray<EIGS_MetaDialogueCharacter>& inCharacters);
-    
+
     UFUNCTION()
     void FinishPreload();
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueDelegate PreloadFinished;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_MetaDialogueDelegate PreloadCanceled;
-    
-};
 
+};

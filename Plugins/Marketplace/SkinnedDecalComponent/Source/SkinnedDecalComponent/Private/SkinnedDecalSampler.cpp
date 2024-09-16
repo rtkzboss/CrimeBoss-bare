@@ -1,5 +1,4 @@
 #include "SkinnedDecalSampler.h"
-#include "ComponentInstanceDataCache.h"
 #include "Materials/Material.h"
 
 USkinnedDecalSampler::USkinnedDecalSampler(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -10,8 +9,8 @@ USkinnedDecalSampler::USkinnedDecalSampler(const FObjectInitializer& ObjectIniti
     (*this).MaxDecals = 100;
     (*this).MinDecalDistance = 1.000000000e+01f;
     (*this).TranslucentBlend = true;
-    static ConstructorHelpers::FObjectFinder<UMaterial> gen0(TEXT("/SkinnedDecalComponent/SkinnedDecalTranslucentBlendMat.SkinnedDecalTranslucentBlendMat"));
-    (*this).TranslucentBlendMaterial = gen0.Object;
+    static ConstructorHelpers::FObjectFinder<UMaterial> gen(TEXT("/SkinnedDecalComponent/SkinnedDecalTranslucentBlendMat.SkinnedDecalTranslucentBlendMat"));
+    (*this).TranslucentBlendMaterial = gen.Object;
 }
 
 void USkinnedDecalSampler::UpdateInstance(USkinnedDecalInstance* Instance) {
@@ -37,7 +36,7 @@ void USkinnedDecalSampler::RemoveDecal(const int32 Index) {
 }
 
 UTextureRenderTarget2D* USkinnedDecalSampler::GetDataTarget() {
-    return NULL;
+    return nullptr;
 }
 
 void USkinnedDecalSampler::CloneDecals(USkinnedDecalSampler* Source) {
@@ -48,5 +47,4 @@ void USkinnedDecalSampler::ClearAllDecals() {
 
 void USkinnedDecalSampler::AutoSetup() {
 }
-
 

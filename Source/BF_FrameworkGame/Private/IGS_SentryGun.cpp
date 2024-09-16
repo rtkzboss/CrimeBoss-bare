@@ -1,11 +1,4 @@
 #include "IGS_SentryGun.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_TeamSideEnum.h"
-#include "EIGS_WalkieTalkieStatus.h"
-#include "EIGS_DetectorState.h"
-#include "EIGS_RotationType.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_SentryGun::AIGS_SentryGun(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -29,8 +22,7 @@ void AIGS_SentryGun::Multicast_CosmeticShootStarted_Implementation() {
 
 void AIGS_SentryGun::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_SentryGun, bIsInvulnerable);
 }
-
 

@@ -9,13 +9,12 @@ struct COMMON_SAVE_API FIGS_UnlockedCharacterSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     EIGS_CharacterID CharacterID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bCharacterMaxLeveled;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     uint8 bCharacterQuestlineCompleted: 1;
-    
+
     FIGS_UnlockedCharacterSaveData();
 };
-

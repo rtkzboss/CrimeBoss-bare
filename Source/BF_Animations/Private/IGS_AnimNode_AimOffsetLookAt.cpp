@@ -1,5 +1,4 @@
 #include "IGS_AnimNode_AimOffsetLookAt.h"
-#include "Animation/AnimationAsset.h"
 
 FIGS_AnimNode_AimOffsetLookAt::FIGS_AnimNode_AimOffsetLookAt() {
     (*this).BasePose.LinkID = -1;
@@ -14,4 +13,3 @@ FIGS_AnimNode_AimOffsetLookAt::FIGS_AnimNode_AimOffsetLookAt() {
     (*this).SocketAxis.Z = 0.000000000e+00f;
     (*this).Alpha = 1.000000000e+00f;
 }
-

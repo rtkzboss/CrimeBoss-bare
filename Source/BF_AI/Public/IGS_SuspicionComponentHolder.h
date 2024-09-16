@@ -12,13 +12,12 @@ struct FIGS_SuspicionComponentHolder {
 public:
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_SuspicionComponent> SuspicionComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AActor> SuspicionComponentActor;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_SenseHolder SenseHolder;
-    
+
     BF_AI_API FIGS_SuspicionComponentHolder();
 };
-

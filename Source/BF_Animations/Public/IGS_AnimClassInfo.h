@@ -10,13 +10,12 @@ struct FIGS_AnimClassInfo {
 public:
     UPROPERTY(EditAnywhere)
     TSoftClassPtr<AIGS_WieldableBase> ID;
-    
+
     UPROPERTY(EditAnywhere)
     UClass* ArmsAnimClass;
-    
+
     UPROPERTY(EditAnywhere)
     UClass* CharacterAnimClass;
-    
+
     BF_ANIMATIONS_API FIGS_AnimClassInfo();
 };
-

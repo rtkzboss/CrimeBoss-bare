@@ -10,4 +10,3 @@ public:
     UIGS_PlayerBotControllerComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -95,4 +95,3 @@ void UIGS_MetaTransferHandler::ClearFPSData(const UObject* inWCO) {
 void UIGS_MetaTransferHandler::ClearAll(const UObject* inWCO) {
 }
 
-

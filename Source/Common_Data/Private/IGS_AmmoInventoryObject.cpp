@@ -22,7 +22,7 @@ int32 UIGS_AmmoInventoryObject::GetPreciseAmmoValue(UIGS_WeaponInventoryObject* 
 }
 
 float UIGS_AmmoInventoryObject::GetAmmoPercent() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UIGS_AmmoInventoryObject::GetAmmoCountInterpolated(int32 inWeaponMaxAmmoCount) const {
@@ -35,5 +35,4 @@ void UIGS_AmmoInventoryObject::AddAmmoPercent(float inAmmoPercent) {
 int32 UIGS_AmmoInventoryObject::AddAmmoForWeapon(int32 inCount, UIGS_WeaponInventoryObject* inWeapon) {
     return 0;
 }
-
 

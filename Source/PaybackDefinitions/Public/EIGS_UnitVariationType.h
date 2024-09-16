@@ -8,4 +8,3 @@ enum class EIGS_UnitVariationType : uint8 {
     US_FPSMaxIndex = 128,
     US_Unknown = 255,
 };
-

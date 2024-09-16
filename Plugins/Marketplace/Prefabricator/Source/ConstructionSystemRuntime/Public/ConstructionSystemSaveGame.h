@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(VisibleAnywhere)
     FString SaveSlotName;
-    
+
     UPROPERTY(VisibleAnywhere)
     uint32 UserIndex;
-    
+
     UPROPERTY(VisibleAnywhere)
     FConstructionSystemSavePlayerInfo PlayerInfo;
-    
+
     UPROPERTY()
     TArray<FConstructionSystemSaveConstructedItem> ConstructedItems;
-    
-};
 
+};

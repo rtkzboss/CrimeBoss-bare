@@ -9,4 +9,3 @@ enum class EBaseScreenModifier : uint8 {
     Bottom,
     Whole = 4,
 };
-

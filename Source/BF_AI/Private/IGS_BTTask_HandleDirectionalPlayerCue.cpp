@@ -5,4 +5,3 @@ UIGS_BTTask_HandleDirectionalPlayerCue::UIGS_BTTask_HandleDirectionalPlayerCue()
     (*this).NodeName = TEXT("Handle Directional Player Cue");
 }
 
-

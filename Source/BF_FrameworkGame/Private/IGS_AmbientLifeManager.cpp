@@ -12,4 +12,3 @@ void UIGS_AmbientLifeManager::SpawnOne() {
 void UIGS_AmbientLifeManager::RegisterRemoverSpecialObjective(AIGS_WaypointFramework* inSpecialObjective) {
 }
 
-

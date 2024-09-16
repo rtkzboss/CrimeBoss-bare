@@ -11,19 +11,18 @@ struct FIGS_SpecialObjectiveAnimsTableRow : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_SpecialObjectiveAnimData> AnimVariations;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_SpecialObjectiveAnimData> FemaleAnimVariations;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_SpecialObjectiveAnimData> FemaleWithHeelsAnimVariations;
-    
+
     UPROPERTY(EditAnywhere)
     bool Looped;
-    
+
     BF_ANIMATIONS_API FIGS_SpecialObjectiveAnimsTableRow();
 };
-

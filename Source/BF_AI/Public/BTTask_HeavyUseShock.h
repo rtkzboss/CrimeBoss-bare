@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY()
     AActor* m_Target;
-    
-};
 
+};

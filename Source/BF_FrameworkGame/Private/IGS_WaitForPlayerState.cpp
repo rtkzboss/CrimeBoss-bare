@@ -4,7 +4,6 @@ UIGS_WaitForPlayerState::UIGS_WaitForPlayerState() {
 }
 
 UIGS_WaitForPlayerState* UIGS_WaitForPlayerState::WaitForPlayerState(UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
-
 

@@ -6,4 +6,3 @@ FIGS_TPP_Carryable_Animations::FIGS_TPP_Carryable_Animations() {
     (*this).CarryableItemObjectThrow = nullptr;
     (*this).CarryableItemObjectThrowLow = nullptr;
 }
-

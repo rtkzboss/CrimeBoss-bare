@@ -10,10 +10,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIMeleeDef : public FIGS_AIWeaponDef {
 public:
     UPROPERTY(EditAnywhere)
     float ActivationRange;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval Cooldown;
-    
+
     FIGS_AIMeleeDef();
 };
-

@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AICopHeavyTierData : public FIGS_AIBaseHeavyTie
 public:
     FIGS_AICopHeavyTierData();
 };
-

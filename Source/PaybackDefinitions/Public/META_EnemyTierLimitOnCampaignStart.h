@@ -10,10 +10,9 @@ struct FMETA_EnemyTierLimitOnCampaignStart {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ArmyTier MaxArmyTier;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval DayRange;
-    
+
     PAYBACKDEFINITIONS_API FMETA_EnemyTierLimitOnCampaignStart();
 };
-

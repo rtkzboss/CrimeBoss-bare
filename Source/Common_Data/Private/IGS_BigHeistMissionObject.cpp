@@ -3,4 +3,3 @@
 UIGS_BigHeistMissionObject::UIGS_BigHeistMissionObject() {
 }
 
-

@@ -15,15 +15,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector EvadePosKey;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     float EQSCooldown;
-    
-};
 
+};

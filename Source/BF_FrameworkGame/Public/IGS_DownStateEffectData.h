@@ -11,7 +11,6 @@ struct BF_FRAMEWORKGAME_API FIGS_DownStateEffectData : public FIGS_PlayerEffectD
 public:
     UPROPERTY(EditAnywhere)
     UIGS_DownStateEffectDataAsset* DownStateEffectDataAsset;
-    
+
     FIGS_DownStateEffectData();
 };
-

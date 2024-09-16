@@ -7,4 +7,3 @@ enum class EValidNotValidExecPin : uint8 {
     Valid,
     NotValid,
 };
-

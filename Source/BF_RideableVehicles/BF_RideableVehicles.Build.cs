@@ -5,14 +5,16 @@ public class BF_RideableVehicles : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "AkAudio",
             "BF_FrameworkBase",
             "BF_FrameworkGame",
+            "Common_Utils",
             "Core",
             "CoreUObject",
             "Engine",
+            "GameplayTags",
             "PhysXVehicles",
             "PhysicsCore",
             "SlateCore",

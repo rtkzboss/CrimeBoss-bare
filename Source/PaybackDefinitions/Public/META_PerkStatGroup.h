@@ -10,14 +10,14 @@ struct FMETA_PerkStatGroup {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString GroupName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSet<FGameplayAttribute> PerkAttributes;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_PerkStatGroupUsage Type;
-    
+
     PAYBACKDEFINITIONS_API FMETA_PerkStatGroup();
 };
 FORCEINLINE uint32 GetTypeHash(const FMETA_PerkStatGroup&) { return 0; }
-
+FORCEINLINE bool operator==(const FMETA_PerkStatGroup&, const FMETA_PerkStatGroup&) { return true; }

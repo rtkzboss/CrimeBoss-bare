@@ -12,12 +12,13 @@
 #include "EMETA_StealthMode.h"
 
 FMETA_RivalAttackMissionRowInfo::FMETA_RivalAttackMissionRowInfo() {
-    (*this).Name = FText::FromString(TEXT(""));
-    (*this).Description = FText::FromString(TEXT(""));
-    (*this).Picture = nullptr;
-    (*this).MapIconOverride = nullptr;
+    (*this).Name = FText::GetEmpty();
+    (*this).Description = FText::GetEmpty();
+    (*this).Picture = FSoftObjectPath();
+    (*this).MapIconOverride = FSoftObjectPath();
     (*this).FPSMissionInfo.FPSMissionID = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).FPSMissionInfo.Scenario, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).FPSMissionInfo.Scenario, 0)) = NAME_None;
     (*this).FPSMissionInfo.LightingScenario = EIGS_LightingScenarioType::Morning;
     (*this).FPSMissionInfo.BackdropType = EIGS_HubBackdropTypes::AllRandom;
     (*this).FPSMissionInfo.TileEnviroment = EIGS_TileEnviroment::None;
@@ -37,12 +38,14 @@ FMETA_RivalAttackMissionRowInfo::FMETA_RivalAttackMissionRowInfo() {
     (*this).FPSMissionInfo.bForceHeat = false;
     (*this).FPSMissionInfo.bMinimalHeatOnly = false;
     (*this).FPSMissionInfo.Heat = EMETA_Heat::Medium;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).FPSMissionInfo.SupportedLoot, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).FPSMissionInfo.SupportedLoot, 0)).Empty();
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).FPSMissionInfo.SupportedLoot, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).FPSMissionInfo.SupportedLoot, 0)) = {};
     (*this).FPSMissionInfo.TotalLootbagCount = -1;
     (*this).FPSMissionInfo.ForcedDetectivesCount = 0;
+    (*this).FPSMissionInfo.Parameters = {};
     (*this).FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).FPSMissionInfo.bDownedCharctersSurvive = false;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).UnlockTag, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).UnlockTag, 0)) = NAME_None;
 }
-

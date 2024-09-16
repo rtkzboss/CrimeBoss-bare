@@ -7,4 +7,3 @@ UIGS_DangerAvoidanceNavigationQueryFilter::UIGS_DangerAvoidanceNavigationQueryFi
     (*this).IsActive = true;
 }
 
-

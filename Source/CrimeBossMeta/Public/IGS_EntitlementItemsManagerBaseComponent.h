@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "IGS_EntitlementItemsManangerInitializedDelegate.h"
+#include "IGS_EntitlementItemsManangerInitialized.h"
 #include "IGS_EntitlementItemsManagerBaseComponent.generated.h"
 
 UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -12,19 +12,18 @@ public:
 
     UFUNCTION(BlueprintPure)
     bool IsManagerInitialized() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void GrantItems();
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_EntitlementItemsManangerInitialized OnManagerInitialized;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite)
     bool bIsManagerDataDirty;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bIsManagerInitialized;
-    
-};
 
+};

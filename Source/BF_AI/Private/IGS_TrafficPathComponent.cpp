@@ -1,8 +1,4 @@
 #include "IGS_TrafficPathComponent.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
-#include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
 
 UIGS_TrafficPathComponent::UIGS_TrafficPathComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).ShowCustomColors = true;
@@ -12,5 +8,4 @@ UIGS_TrafficPathComponent::UIGS_TrafficPathComponent(const FObjectInitializer& O
 bool UIGS_TrafficPathComponent::IsEnabled() const {
     return false;
 }
-
 

@@ -10,4 +10,3 @@ public:
     UIGS_SpawnPointRenderingComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

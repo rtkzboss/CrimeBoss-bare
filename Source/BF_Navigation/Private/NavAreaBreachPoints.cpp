@@ -7,4 +7,3 @@ UNavAreaBreachPoints::UNavAreaBreachPoints() {
     (*this).DrawColor.R = 243;
 }
 
-

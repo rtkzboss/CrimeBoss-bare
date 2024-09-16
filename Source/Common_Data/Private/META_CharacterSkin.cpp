@@ -7,4 +7,3 @@ FIGS_CharacterSkinTableRow UMETA_CharacterSkin::GetCharacterSkinData() {
     return FIGS_CharacterSkinTableRow{};
 }
 
-

@@ -19,11 +19,10 @@ FIGS_CharacterSkinTableRow UIGS_CharacterSkinDatabase::GetDataByIndexBP(int32 in
 }
 
 UIGS_CharacterSkinDatabase* UIGS_CharacterSkinDatabase::GetCharacterSkinDatabaseInstance(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 TSoftClassPtr<APaperDollAbstract> UIGS_CharacterSkinDatabase::GetCharacterPaperDoll(UObject* inWCO, FGameplayTag inID) {
-    return NULL;
+    return {};
 }
-
 

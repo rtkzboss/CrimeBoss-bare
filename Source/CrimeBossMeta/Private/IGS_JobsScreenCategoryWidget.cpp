@@ -1,8 +1,4 @@
 #include "IGS_JobsScreenCategoryWidget.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_JobsScreenCategoryWidget::UIGS_JobsScreenCategoryWidget() {
 }
@@ -26,7 +22,6 @@ void UIGS_JobsScreenCategoryWidget::InitCategory(const FIGS_MultiplayerJobCatego
 }
 
 UIGS_JobsItemWidget* UIGS_JobsScreenCategoryWidget::GetFirstJobWidget() const {
-    return NULL;
+    return nullptr;
 }
-
 

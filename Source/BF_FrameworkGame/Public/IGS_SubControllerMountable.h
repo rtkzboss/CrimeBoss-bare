@@ -15,6 +15,5 @@ public:
 protected:
     UPROPERTY()
     TScriptInterface<IIGS_SubControllerMountableInterface> m_Mountable;
-    
-};
 
+};

@@ -15,17 +15,16 @@ public:
 
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector EndLocation;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_ZiplineInteractiveComponent* ZiplineInteractiveComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> User;
-    
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

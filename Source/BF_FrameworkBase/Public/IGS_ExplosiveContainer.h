@@ -10,4 +10,3 @@ public:
     AIGS_ExplosiveContainer(const FObjectInitializer& ObjectInitializer);
 
 };
-

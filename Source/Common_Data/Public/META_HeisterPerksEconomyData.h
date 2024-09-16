@@ -11,25 +11,24 @@ struct COMMON_DATA_API FMETA_HeisterPerksEconomyData {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FMETA_Interval AmountOfPerks;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FMETA_Interval PowerfulPerks;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 MaxNegativePerks;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 MaxNegativePerksForPromotion;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 MinPerksForPromotion;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 PerkClasses;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<EIGS_PerkClass, EMETA_PerksPreference> Preference;
-    
+
     FMETA_HeisterPerksEconomyData();
 };
-

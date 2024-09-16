@@ -1,5 +1,4 @@
 #include "PaybackPlayerSwapper.h"
-#include "ComponentInstanceDataCache.h"
 
 UPaybackPlayerSwapper::UPaybackPlayerSwapper(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -9,10 +8,9 @@ int32 UPaybackPlayerSwapper::GetNextViableBotNumber(UObject* inWCO, int32 inCurr
 }
 
 AController* UPaybackPlayerSwapper::GetAliveBotByNumber(int32 inNumber, bool& outSuccess) {
-    return NULL;
+    return nullptr;
 }
 
 void UPaybackPlayerSwapper::ForceSwapToPawn(AController* InPlayerController, APawn* inPawnToSwapTo) {
 }
-
 

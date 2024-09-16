@@ -8,10 +8,9 @@ struct FMETA_TaskSettings {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 NodeId;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bShouldBeRemovedFromTaskListAfterExecution;
-    
+
     CRIMEBOSSMETA_API FMETA_TaskSettings();
 };
-

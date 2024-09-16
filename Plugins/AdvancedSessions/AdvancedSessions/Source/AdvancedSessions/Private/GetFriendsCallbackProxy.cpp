@@ -4,7 +4,6 @@ UGetFriendsCallbackProxy::UGetFriendsCallbackProxy() {
 }
 
 UGetFriendsCallbackProxy* UGetFriendsCallbackProxy::GetAndStoreFriendsList(UObject* WorldContextObject, APlayerController* PlayerController) {
-    return NULL;
+    return nullptr;
 }
-
 

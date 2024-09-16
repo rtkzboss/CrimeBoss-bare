@@ -25,7 +25,6 @@ void UIGS_EnvironmentVolumeManager::OnEnvironmentVolumeBeginOverlap(UActorCompon
 }
 
 UIGS_EnvironmentVolumeManager* UIGS_EnvironmentVolumeManager::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
-
 

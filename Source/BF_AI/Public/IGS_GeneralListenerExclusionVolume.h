@@ -10,4 +10,3 @@ public:
     AIGS_GeneralListenerExclusionVolume(const FObjectInitializer& ObjectInitializer);
 
 };
-

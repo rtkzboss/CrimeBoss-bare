@@ -9,13 +9,12 @@ struct KANTANCHARTSSLATE_API FKantanBarChartStyle : public FKantanChartStyle {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BarOpacity;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BarOutlineOpacity;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BarOutlineThickness;
-    
+
     FKantanBarChartStyle();
 };
-

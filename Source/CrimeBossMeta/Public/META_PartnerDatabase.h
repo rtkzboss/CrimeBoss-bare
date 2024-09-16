@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_PartnerTableRow GetPartnerData(UObject* inWCO, const EMETA_Partner inPartner, bool& outSucceeded);
-    
-};
 
+};

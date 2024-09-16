@@ -10,13 +10,12 @@ struct FIGS_ShootingOverride {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool Active;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_InterestPointHolder Target;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_ShootingOverrideType ShootingType;
-    
+
     BF_AI_API FIGS_ShootingOverride();
 };
-

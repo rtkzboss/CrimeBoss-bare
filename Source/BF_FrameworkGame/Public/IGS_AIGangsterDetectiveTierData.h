@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterDetectiveTierData : public FIGS_AIBas
 public:
     FIGS_AIGangsterDetectiveTierData();
 };
-

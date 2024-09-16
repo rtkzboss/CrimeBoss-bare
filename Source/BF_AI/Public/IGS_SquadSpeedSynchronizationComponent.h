@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(VisibleAnywhere)
     TMap<AIGS_GameCharacterFramework*, float> NextSpeedChange;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<float> TmpDistanceToDestination;
-    
-};
 
+};

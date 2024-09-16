@@ -5,4 +5,3 @@ UIGS_BTTask_BotShout::UIGS_BTTask_BotShout() {
     (*this).NodeName = TEXT("Bot Shout");
 }
 
-

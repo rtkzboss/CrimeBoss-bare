@@ -10,4 +10,3 @@ enum class EMETA_GoalPurpose : uint8 {
     Benefit,
     Asset,
 };
-

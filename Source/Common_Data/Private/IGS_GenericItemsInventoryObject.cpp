@@ -11,4 +11,3 @@ int32 UIGS_GenericItemsInventoryObject::GetItemWeightValue(EIGS_ItemWeight inWei
     return 0;
 }
 
-

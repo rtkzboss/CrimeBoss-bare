@@ -10,22 +10,21 @@ struct COMMON_DATA_API FIGS_WeaponAccuracyDefinition {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector2D HipFireSpread;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector2D ADSSpread;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SpreadFallTime;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SpreadPerShot;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ADSIdleSway;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAccuracyDefinitionMultipliers Multipliers;
-    
+
     FIGS_WeaponAccuracyDefinition();
 };
-

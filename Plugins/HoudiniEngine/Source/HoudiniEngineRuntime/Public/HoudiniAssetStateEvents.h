@@ -12,4 +12,3 @@ class HOUDINIENGINERUNTIME_API IHoudiniAssetStateEvents : public IInterface {
     GENERATED_BODY()
 public:
 };
-

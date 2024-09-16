@@ -6,4 +6,3 @@ UENUM(BlueprintType)
 enum class EIGS_TrafficFilterType : uint8 {
     None,
 };
-

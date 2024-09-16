@@ -12,18 +12,17 @@ public:
 
     UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride EnableDLSSInEditorViewportsOverride;
-    
+
     UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride EnableScreenpercentageManipulationInDLSSEditorViewportsOverride;
-    
+
     UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride EnableDLSSInPlayInEditorViewportsOverride;
-    
+
     UPROPERTY(Config, EditAnywhere)
     bool bShowDLSSIncompatiblePluginsToolsWarnings;
-    
+
     UPROPERTY(Config, EditAnywhere)
     EDLSSSettingOverride ShowDLSSSDebugOnScreenMessages;
-    
-};
 
+};

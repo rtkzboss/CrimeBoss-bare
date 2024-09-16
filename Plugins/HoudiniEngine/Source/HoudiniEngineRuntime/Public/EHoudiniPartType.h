@@ -10,4 +10,3 @@ enum class EHoudiniPartType : uint8 {
     Curve,
     Volume,
 };
-

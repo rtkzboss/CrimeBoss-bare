@@ -20,11 +20,10 @@ bool UIGS_Vectors::GetTargetPositionBasedOnVelocity(AActor* TargetActor, const F
 }
 
 float UIGS_Vectors::GetAngleBetweenVectorsRad(const FVector& Vector1, const FVector& Vector2) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_Vectors::GetAngleBetweenVectorsDeg(const FVector& Vector1, const FVector& Vector2) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

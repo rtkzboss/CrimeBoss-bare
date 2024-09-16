@@ -8,4 +8,3 @@ enum class EMETA_EventTime : uint8 {
     DayMiddle,
     DayEnd,
 };
-

@@ -13,4 +13,3 @@ enum class EIGS_LocationOrScaleBoneAxis : uint8 {
     BA_YZ,
     BA_XYZ,
 };
-

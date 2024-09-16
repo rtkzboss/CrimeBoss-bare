@@ -4,4 +4,3 @@ UBTTask_CallWalkieTalkieAlertedByOtherChar::UBTTask_CallWalkieTalkieAlertedByOth
     (*this).NodeName = TEXT("Call Walkie Talkie Alerted By Other Char");
 }
 
-

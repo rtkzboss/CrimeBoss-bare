@@ -12,4 +12,3 @@ class IIGS_WieldAnyItemInterface : public IInterface {
     GENERATED_BODY()
 public:
 };
-

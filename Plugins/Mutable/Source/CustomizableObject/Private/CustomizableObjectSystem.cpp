@@ -27,7 +27,7 @@ int32 UCustomizableObjectSystem::GetNumInstances() const {
 }
 
 UCustomizableObjectSystem* UCustomizableObjectSystem::GetInstance() {
-    return NULL;
+    return nullptr;
 }
 
 int32 UCustomizableObjectSystem::GetAverageBuildTime() const {
@@ -37,5 +37,4 @@ int32 UCustomizableObjectSystem::GetAverageBuildTime() const {
 bool UCustomizableObjectSystem::AreEnginePatchesPresent() const {
     return false;
 }
-
 

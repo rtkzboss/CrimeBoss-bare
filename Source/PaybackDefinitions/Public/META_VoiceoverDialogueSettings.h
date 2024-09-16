@@ -13,22 +13,21 @@ public:
 
     UFUNCTION(BlueprintPure)
     FMETA_VODialoguesCommonTypeSettings GetTypeSettings(FGameplayTag inType);
-    
+
     UFUNCTION(BlueprintPure)
     float GetDelayAfterScreenSwitch();
-    
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     float DelayAfterScreenSwitch;
-    
+
     UPROPERTY(EditDefaultsOnly)
     int32 DefaultTypePriority;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float DefaultTypeChance;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, FMETA_VODialoguesCommonTypeSettings> CommonTypeSettings;
-    
-};
 
+};

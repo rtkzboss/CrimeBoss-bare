@@ -5,4 +5,3 @@ UHoudiniParameterString::UHoudiniParameterString() {
     (*this).ParmType = EHoudiniParameterType::String;
 }
 
-

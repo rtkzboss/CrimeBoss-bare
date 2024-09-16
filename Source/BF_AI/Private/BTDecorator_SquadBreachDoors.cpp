@@ -4,4 +4,3 @@ UBTDecorator_SquadBreachDoors::UBTDecorator_SquadBreachDoors() {
     (*this).NodeName = TEXT("Is Breachable Door");
 }
 
-

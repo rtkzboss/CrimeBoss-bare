@@ -15,41 +15,40 @@ public:
 
     UFUNCTION()
     void UpdateRotationPointByDelta(float inHorizontalDeltaRotation, float inVerticalDeltaRotation);
-    
+
     UFUNCTION()
     void OnRep_LookAtTarget(FIGS_InterestPointHolder inPreviousLookAtTarget);
-    
+
     UFUNCTION()
     bool IsCloseToFollowedPoint(float inDesiredHorzintalAngle, float inDesiredVerticalAngle) const;
-    
+
     UFUNCTION()
     void FullRotation(FVector inTarget, float inDeltaSeconds);
-    
+
     UPROPERTY(Instanced)
     USceneComponent* RotationPoint;
-    
+
     UPROPERTY(ReplicatedUsing=OnRep_LookAtTarget)
     FIGS_InterestPointHolder LookAtTarget;
-    
+
     UPROPERTY()
     float FullRotationSpeed;
-    
+
     UPROPERTY()
     float FollowRotationSpeed;
-    
+
     UPROPERTY()
     float PatrollingRotationSpeed;
-    
+
     UPROPERTY()
     float ControlledRotationSpeed;
-    
+
     UPROPERTY()
     float TotalHorizontalRotationAngleDegrees;
-    
+
     UPROPERTY()
     float TotalVerticalRotationAngleDegrees;
-    
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

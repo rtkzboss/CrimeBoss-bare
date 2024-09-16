@@ -10,7 +10,6 @@ struct BF_POOL_API FIGS_Pool {
 public:
     UPROPERTY()
     TArray<AActor*> Items;
-    
+
     FIGS_Pool();
 };
-

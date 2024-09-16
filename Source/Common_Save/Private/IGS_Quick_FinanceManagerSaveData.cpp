@@ -4,4 +4,3 @@ FIGS_Quick_FinanceManagerSaveData::FIGS_Quick_FinanceManagerSaveData() {
     (*this).bInited = false;
     (*this).Balance = 0;
 }
-

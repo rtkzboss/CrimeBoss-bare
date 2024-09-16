@@ -12,19 +12,18 @@ struct BF_ANIMATIONS_API FIGS_FirstPersonThrowablesAnimDatabase : public FIGS_Fi
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_ThrowableBase> ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* Throw_Up;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* Throw_Down;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* Throw_UpWeapon;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* Throw_DownWeapon;
-    
+
     FIGS_FirstPersonThrowablesAnimDatabase();
 };
-

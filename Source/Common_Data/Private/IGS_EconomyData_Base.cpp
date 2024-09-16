@@ -51,15 +51,15 @@ bool UIGS_EconomyData_Base::IsItemUnlocked(TArray<FGameplayTag> inUnlockedPool, 
 }
 
 TArray<FGameplayTag> UIGS_EconomyData_Base::GetWeaponTagsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality) {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 TArray<UMETA_Weapon*> UIGS_EconomyData_Base::GetWeaponsPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, TArray<FGameplayTag>& inUnseenUnlockedWeapons, TArray<UMETA_Weapon*>& inOldWeaponsPool, int32 inTargetAmountOfUnseenItemsForPurchase) {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
 
 TArray<TSubclassOf<UMETA_WeaponInventoryObject>> UIGS_EconomyData_Base::GetWeaponsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inAlreadySelectedWeapons, const TArray<FGameplayTag>& inUnlockedWeapons, bool inIgnoreUnlock) {
-    return TArray<TSubclassOf<UMETA_WeaponInventoryObject>>();
+    return {};
 }
 
 int32 UIGS_EconomyData_Base::GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality) const {
@@ -90,7 +90,7 @@ int32 UIGS_EconomyData_Base::GetStartingLevelOfCharacter(UObject* inWCO, const F
 }
 
 float UIGS_EconomyData_Base::GetRewardMultiplierForDifficulty(EIGS_ScenarioDifficulty inDifficulty) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_EconomyData_Base::GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, int32& outUpkeepCost, int32& outHireCost) {
@@ -101,7 +101,7 @@ FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios UIGS_EconomyData_Base::GetM
 }
 
 float UIGS_EconomyData_Base::GetMissionObjectiveMonetaryValue(EMETA_RespectLvl inRespectLvl) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UIGS_EconomyData_Base::GetMissionMaxMonetaryValue(EMETA_RespectLvl inRespectLvl) const {
@@ -113,7 +113,7 @@ int32 UIGS_EconomyData_Base::GetMissionAverageMonetaryValue(EMETA_RespectLvl inR
 }
 
 TMap<TSubclassOf<UMETA_MissionID>, FMETA_MissionAdditionalMonetaryValue> UIGS_EconomyData_Base::GetMissionAdditionalWealthMissions() {
-    return TMap<TSubclassOf<UMETA_MissionID>, FMETA_MissionAdditionalMonetaryValue>();
+    return {};
 }
 
 int32 UIGS_EconomyData_Base::GetMaxLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality) {
@@ -121,7 +121,7 @@ int32 UIGS_EconomyData_Base::GetMaxLevelOfCharacter(UObject* inWCO, const FGamep
 }
 
 TArray<FMETA_CharacterInfo> UIGS_EconomyData_Base::GetGenericHeistersPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, TSet<int32> inUniqueGenericIDs, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, TArray<FIGS_CharacterClasses>& inActiveGenericVariants) {
-    return TArray<FMETA_CharacterInfo>();
+    return {};
 }
 
 FMETA_HeisterRandomizedData UIGS_EconomyData_Base::GetGenericHeisterRandomizedData(UObject* inWCO, const FIGS_CharacterTableRow& inGenericTableRow, EMETA_ItemQuality inHeisterQuality, int32 inHeisterLevel, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FMETA_PerkData>& inCurrentPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedEquipment, bool bIsPromotion, bool& bOutSuccess) {
@@ -132,11 +132,11 @@ void UIGS_EconomyData_Base::GetGenericHeisterEconomyData(EIGS_CharacterID inGene
 }
 
 TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> UIGS_EconomyData_Base::GetForbiddenPerksForGenericHeisters() const {
-    return TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>>();
+    return {};
 }
 
 TArray<UMETA_Equipment*> UIGS_EconomyData_Base::GetEquipmentPoolForBlackmarket(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const TArray<FGameplayTag>& inUnlockedEquipment, TArray<FGameplayTag>& inUnseenUnlockedEquipment, TArray<UMETA_Equipment*>& inOldEquipmentPool, int32 inTargetAmountOfUnseenItemsForPurchase) {
-    return TArray<UMETA_Equipment*>();
+    return {};
 }
 
 void UIGS_EconomyData_Base::GetEquipmentEconomyDataByQuality(EMETA_ItemQuality inEquipmentQuality, FMETA_EquipmentPriceIntervalsPerQuality& outEconomyData, bool& bSuccess) const {
@@ -151,11 +151,11 @@ FMETA_MissionMonetaryValue UIGS_EconomyData_Base::GetCommonWealthOfMission(EMETA
 }
 
 float UIGS_EconomyData_Base::GetBuyCostModifierByWeaponClass(FGameplayTag inWeaponClassTag) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TArray<FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration> UIGS_EconomyData_Base::GetAllMoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration() const {
-    return TArray<FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration>();
+    return {};
 }
 
 FMETA_CharacterInfo UIGS_EconomyData_Base::GenerateGenericHeisterByPlayerRespect(UObject* inWCO, EMETA_RespectLvl inCurrentBossStatus, const int32 inUniqueGenericID, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, TArray<FIGS_CharacterClasses>& inActiveGenericVariants, bool& outSuccess) {
@@ -165,5 +165,4 @@ FMETA_CharacterInfo UIGS_EconomyData_Base::GenerateGenericHeisterByPlayerRespect
 FMETA_CharacterInfo UIGS_EconomyData_Base::GenerateGenericHeisterByIdAndTier(UObject* inWCO, EIGS_CharacterID inGenericHeisterID, EMETA_ItemQuality inGenericHeisterTier, const int32 inUniqueGenericID, bool inCanLevelUp, TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>> inForbiddenPerks, const TArray<FGameplayTag>& inUnlockedWeapons, const TArray<FGameplayTag>& inUnlockedWeaponSkins, const TArray<FGameplayTag>& inUnlockedEquipment, TArray<FIGS_CharacterClasses>& inActiveGenericVariants, bool& outSuccess) {
     return FMETA_CharacterInfo{};
 }
-
 

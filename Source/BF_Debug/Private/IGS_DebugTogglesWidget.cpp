@@ -1,8 +1,4 @@
 #include "IGS_DebugTogglesWidget.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_DebugTogglesWidget::UIGS_DebugTogglesWidget() : Super(FObjectInitializer::Get()) {
 }
@@ -685,5 +681,4 @@ void UIGS_DebugTogglesWidget::Exec_ThrowFrag() const {
 
 void UIGS_DebugTogglesWidget::Exec_ThrowFlash() const {
 }
-
 

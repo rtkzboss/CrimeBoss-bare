@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerHeavy_Minigunner(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -14,12 +14,11 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void UpdateWeatherSystem() const;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_WeatherConfig WeatherConfig;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_VisualStyleConfig VisualStyleConfig;
-    
-};
 
+};

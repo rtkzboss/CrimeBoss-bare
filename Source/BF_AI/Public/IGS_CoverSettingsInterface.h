@@ -14,18 +14,17 @@ class BF_AI_API IIGS_CoverSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float NormalizedHealthMaxForCover();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool GetUseCoverInCombatRange();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool GetUseAntiBunkering();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetCoverStickiness();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     EIGS_CoverPreset GetCoverPreset();
-    
-};
 
+};

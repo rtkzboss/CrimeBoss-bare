@@ -54,4 +54,3 @@ FIGS_ExtraFireModeDefinition::FIGS_ExtraFireModeDefinition() {
     (*this).AdaptiveTriggers.VibrationMode.Frequency = 0;
     (*this).AdaptiveTriggers.VibrationMode.Amplitude = 0;
 }
-

@@ -15,10 +15,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool RequestReaction(FGameplayTag inReactionTag, AActor* inActor);
-    
+
 private:
     UPROPERTY()
     UIGS_GeneralReactionData_Base* m_CurrentDataObject;
-    
-};
 
+};

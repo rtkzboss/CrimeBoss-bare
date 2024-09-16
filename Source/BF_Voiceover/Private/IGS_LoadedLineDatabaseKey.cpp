@@ -2,4 +2,3 @@
 
 FIGS_LoadedLineDatabaseKey::FIGS_LoadedLineDatabaseKey() {
 }
-

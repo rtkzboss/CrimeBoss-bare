@@ -12,7 +12,7 @@ FIGS_WeaponTableRow UIGS_WeaponDatabase::GetWeaponDataByTag(UObject* inWCO, FGam
 }
 
 UIGS_WeaponDatabase* UIGS_WeaponDatabase::GetWeaponDatabaseInstance(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_WeaponTableRow UIGS_WeaponDatabase::GetWeaponData(UObject* inWCO, const TSubclassOf<UIGS_WeaponInventoryObject>& inClass, bool& outSucceeded) {
@@ -22,5 +22,4 @@ FIGS_WeaponTableRow UIGS_WeaponDatabase::GetWeaponData(UObject* inWCO, const TSu
 FIGS_WeaponTableRow UIGS_WeaponDatabase::GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const {
     return FIGS_WeaponTableRow{};
 }
-
 

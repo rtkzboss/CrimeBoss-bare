@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerHeavy_Base(const FObjectInitializer& ObjectInitializer);
 
 };
-

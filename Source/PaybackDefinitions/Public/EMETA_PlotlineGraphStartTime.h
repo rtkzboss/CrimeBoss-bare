@@ -9,4 +9,3 @@ enum class EMETA_PlotlineGraphStartTime : uint8 {
     Late,
     Never,
 };
-

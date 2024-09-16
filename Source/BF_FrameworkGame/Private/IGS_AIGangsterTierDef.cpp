@@ -34,4 +34,3 @@ FIGS_AIGangsterTierDef::FIGS_AIGangsterTierDef() {
     (*this).Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Stats.ReactionIntensity.bOverloadValue = false;
 }
-

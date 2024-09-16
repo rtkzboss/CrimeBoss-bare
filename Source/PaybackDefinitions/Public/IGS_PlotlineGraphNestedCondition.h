@@ -11,10 +11,9 @@ struct FIGS_PlotlineGraphNestedCondition {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UObject*> Conditions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ConditionExprOperator InnerConditionOperator;
-    
+
     PAYBACKDEFINITIONS_API FIGS_PlotlineGraphNestedCondition();
 };
-

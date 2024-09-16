@@ -8,4 +8,3 @@ enum class ETileComparisonUIData : uint8 {
     Better,
     Worse,
 };
-

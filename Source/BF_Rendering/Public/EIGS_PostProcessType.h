@@ -8,4 +8,3 @@ enum class EIGS_PostProcessType : uint8 {
     GPP_DirtMask,
     GPP_None = 0,
 };
-

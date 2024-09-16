@@ -5,10 +5,12 @@ FParameterUIData::FParameterUIData() {
     (*this).ParamUIMetadata.ObjectFriendlyName = TEXT("");
     (*this).ParamUIMetadata.UISectionName = TEXT("");
     (*this).ParamUIMetadata.UIOrder = 0;
-    (*this).ParamUIMetadata.UIThumbnail = nullptr;
+    (*this).ParamUIMetadata.UIThumbnail = FSoftObjectPath();
+    (*this).ParamUIMetadata.ExtraInformation = {};
+    (*this).ParamUIMetadata.ExtraAssets = {};
     (*this).Type = EMutableParameterType::None;
-    (*this).ArrayIntegerParameterOption.Empty();
+    (*this).ArrayIntegerParameterOption = {};
     (*this).IntegerParameterGroupType = ECustomizableObjectGroupType::COGT_ONE_OR_NONE;
     (*this).bDontCompressRuntimeTextures = false;
+    (*this).ForcedParameterValues = {};
 }
-

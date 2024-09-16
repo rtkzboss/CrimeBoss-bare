@@ -36,7 +36,7 @@ UMETA_TurfWarData::UMETA_TurfWarData() {
 }
 
 float UMETA_TurfWarData::RandomizeSoldiersCasualtiesInPercentsAfterNeutralAttack() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_TurfWarData::GetWeaknessChangeIntensity(EMETA_AIBossStrengthChangeIntensity inIntensity) const {
@@ -132,7 +132,7 @@ int32 UMETA_TurfWarData::GetStrengthChangeIfTileConnected() const {
 }
 
 TArray<FGameplayTagContainer> UMETA_TurfWarData::GetPlayersInitialTileGroups() const {
-    return TArray<FGameplayTagContainer>();
+    return {};
 }
 
 int32 UMETA_TurfWarData::GetPlayersInitialSoldiersAmount() const {
@@ -160,7 +160,7 @@ FMETA_PlayerEndAgonyConfig UMETA_TurfWarData::GetPlayerEndAgonyConfig() const {
 }
 
 float UMETA_TurfWarData::GetNumberOfEnemySoldiersMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UMETA_TurfWarData::GetMinAmountOfSoldiersForAttackAndDefence(EMETA_RespectLvl inRespectLvl, int32& outMinForAttack, int32& outMinForDefence) const {
@@ -221,27 +221,27 @@ int32 UMETA_TurfWarData::GetCountdownForAttackAfterLostTile() const {
 }
 
 TArray<FMETA_ConditionForArmyTierChanging> UMETA_TurfWarData::GetConditionsForArmyTierChanging() {
-    return TArray<FMETA_ConditionForArmyTierChanging>();
+    return {};
 }
 
 float UMETA_TurfWarData::GetChanceToAttackNeutralTerritoryByAI() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_TurfWarData::GetChanceToAttackInRetaliatorTactic() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_TurfWarData::GetChanceToAttackAdjacentTerritoryToTheGangFromEnemiesList() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_TurfWarData::GetChanceIncreaseToAttackAnyAdjacentTerritoryByAI() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_TurfWarData::GetBaseChanceToAttackAnyAdjacentTerritoryByAI() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_TurfWarData::GetAttemptsToCaptureTerritory() const {
@@ -249,7 +249,7 @@ int32 UMETA_TurfWarData::GetAttemptsToCaptureTerritory() const {
 }
 
 TArray<EMETA_Gang> UMETA_TurfWarData::GetArrayOfGangsWhichCanAttackAnyTile() {
-    return TArray<EMETA_Gang>();
+    return {};
 }
 
 FMETA_ArmySizeConfigForAI UMETA_TurfWarData::GetArmySizeLimitsByPlayerRespect(EMETA_RespectLvl inRespectLvl) const {
@@ -265,7 +265,7 @@ int32 UMETA_TurfWarData::GetAmountOfAttackskForMoreAttacksDays() const {
 }
 
 TArray<EMETA_GangStrategy> UMETA_TurfWarData::GetAIStrategiesThatAttackMore() {
-    return TArray<EMETA_GangStrategy>();
+    return {};
 }
 
 FMETA_Interval UMETA_TurfWarData::GetAIArmySizeForPlayersAttackOnLastTile(int32 inIndex) const {
@@ -279,5 +279,4 @@ bool UMETA_TurfWarData::CheckPossibilityToAttackTilesAroundDetective() const {
 bool UMETA_TurfWarData::CanPlayerLoseAllSentSoldiersAfterFailedDefence() const {
     return false;
 }
-
 

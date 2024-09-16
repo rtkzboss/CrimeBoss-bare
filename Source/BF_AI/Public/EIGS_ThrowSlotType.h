@@ -8,4 +8,3 @@ enum class EIGS_ThrowSlotType : uint8 {
     Socket,
     SceneComponent,
 };
-

@@ -23,7 +23,7 @@ void UIGS_PaybackGameplayStatics::StartEndMission(UObject* inWCO, ECommonMission
 }
 
 TArray<FBlueprintSessionResult> UIGS_PaybackGameplayStatics::SortSessionsByParameter(const UObject* inWCO, TArray<FBlueprintSessionResult> inSessions, bool inAscending, EIGS_SessionPropertyKey inKey) {
-    return TArray<FBlueprintSessionResult>();
+    return {};
 }
 
 void UIGS_PaybackGameplayStatics::SetPlayerImmortality(UObject* inWCO, bool inImmortal) {
@@ -68,14 +68,14 @@ bool UIGS_PaybackGameplayStatics::IsAccountVariableUnlocked(UObject* inWCO, FGam
 }
 
 TArray<FIGS_UnlockedCharacterSaveData> UIGS_PaybackGameplayStatics::GetUnlockedCharactersAccountWide(UObject* inWCO) {
-    return TArray<FIGS_UnlockedCharacterSaveData>();
+    return {};
 }
 
 void UIGS_PaybackGameplayStatics::GetUniqueIdFromPlayerState(APlayerState* inPlayerState, FUniqueNetIdRepl& inUnqiueNetId) {
 }
 
 TArray<FIGS_WeaponSkinTableRow> UIGS_PaybackGameplayStatics::GetSkinsCompatibleWithWeapon(UObject* inWCO, TSubclassOf<UIGS_InventoryObjectFramework> inWeapon) {
-    return TArray<FIGS_WeaponSkinTableRow>();
+    return {};
 }
 
 void UIGS_PaybackGameplayStatics::GetPlayerLoadoutFromAILoadoutHolder(const UObject* inWCO, const FIGS_AILoadoutHolder& inLoadoutHolder, TSubclassOf<UMETA_WeaponInventoryObject>& outPrimary, TSubclassOf<UMETA_WeaponInventoryObject>& outSecondary, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment, bool inIsStory) {
@@ -89,19 +89,19 @@ FString UIGS_PaybackGameplayStatics::GetPlayerIdFromUniqueNetId(const FUniqueNet
 }
 
 UPaybackGameViewportClient* UIGS_PaybackGameplayStatics::GetPaybackViewport(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_GameStateGame* UIGS_PaybackGameplayStatics::GetGameStateGame(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 APaybackGameModeBase* UIGS_PaybackGameplayStatics::GetGameModeBase(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 TSubclassOf<UIGS_EquipmentInventoryObject> UIGS_PaybackGameplayStatics::GetEquipmentFromAILoadoutHolder(const UObject* inWCO, const FIGS_AILoadoutHolder& inLoadoutHolder) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_PaybackGameplayStatics::GetCampaignBossLevel(UObject* inWCO) {
@@ -109,11 +109,11 @@ int32 UIGS_PaybackGameplayStatics::GetCampaignBossLevel(UObject* inWCO) {
 }
 
 float UIGS_PaybackGameplayStatics::GetBaggedLootWeightFromAllHeisters(UObject* inWCO) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TArray<TSubclassOf<UIGS_InventoryObjectFramework>> UIGS_PaybackGameplayStatics::GetAllLootFromPlayer(AIGS_PlayerCharacter* inPlayerCharacter) {
-    return TArray<TSubclassOf<UIGS_InventoryObjectFramework>>();
+    return {};
 }
 
 void UIGS_PaybackGameplayStatics::GetAlarmLocalizedText(UIGS_AlarmLocalizationTable* inTable, EIGS_AlarmReason inReason, FText& OutText) {
@@ -152,5 +152,4 @@ void UIGS_PaybackGameplayStatics::AddWeaponDefinitionToPlayer(AIGS_PlayerCharact
 
 void UIGS_PaybackGameplayStatics::AddMeleeWeaponToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UIGS_MeleeWeaponInventoryObject> inWeapon, bool inSelect, TSubclassOf<UMETA_WeaponInventoryObject> inOptionalDefinitionObject, bool inThrowAwayOldWeapon) {
 }
-
 

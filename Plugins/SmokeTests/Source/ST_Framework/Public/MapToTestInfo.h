@@ -9,10 +9,9 @@ struct ST_FRAMEWORK_API FMapToTestInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FFilePath FilePath;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsDisabled;
-    
+
     FMapToTestInfo();
 };
-

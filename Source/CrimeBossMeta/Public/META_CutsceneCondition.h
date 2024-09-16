@@ -14,32 +14,31 @@ public:
 
     UFUNCTION(BlueprintPure)
     FText GetCutsceneID();
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     TSoftObjectPtr<UDataAsset> GetCutsceneDataAsset();
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText CutsceneID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText DebugText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ScreenAfterEnd;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool ShouldBeDelayed;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ExpireTimerDays;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSoftObjectPtr<UDataAsset> CutsceneDataAsset;
-    
+
 private:
     UPROPERTY()
     int32 ExpirationTimerEnabled;
-    
-};
 
+};

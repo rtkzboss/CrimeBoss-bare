@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_HittingCharacters;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_FiringCharacters;
-    
-};
 
+};

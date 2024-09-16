@@ -2,4 +2,3 @@
 
 FIGS_WeatherParameters::FIGS_WeatherParameters() {
 }
-

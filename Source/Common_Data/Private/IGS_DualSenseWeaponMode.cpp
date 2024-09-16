@@ -6,4 +6,3 @@ FIGS_DualSenseWeaponMode::FIGS_DualSenseWeaponMode() {
     (*this).EndPosition = 2;
     (*this).Strength = 0;
 }
-

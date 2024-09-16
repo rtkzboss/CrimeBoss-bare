@@ -9,7 +9,6 @@ struct COMMON_SAVE_API FMETA_StatisticsManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<int32, FMETA_StatisticNoteSaveData> Statistic;
-    
+
     FMETA_StatisticsManagerSaveData();
 };
-

@@ -39,4 +39,3 @@ enum class EIGS_TileEnviroment : uint8 {
     CarDealer,
     ElectronicStore,
 };
-

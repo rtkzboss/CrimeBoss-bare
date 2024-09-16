@@ -9,22 +9,21 @@ struct PAYBACKDEFINITIONS_API FMETA_DefenceResultCalculatingConfigForAI {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 BaseChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DefenceChancePerMissingTurf;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ChanceTweakingPerArmyTierDifference;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ChanceTweakingIfItIsLastTileOfGang;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_GangStrategy, int32> InfluenceByDefenderCurrentStrategy;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_GangStrategy, int32> InfluenceByAttackerCurrentStrategy;
-    
+
     FMETA_DefenceResultCalculatingConfigForAI();
 };
-

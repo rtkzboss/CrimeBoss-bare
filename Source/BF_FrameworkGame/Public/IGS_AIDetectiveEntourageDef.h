@@ -10,10 +10,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIDetectiveEntourageDef {
 public:
     UPROPERTY(EditDefaultsOnly)
     FIGS_TeamUnitVariationHolder TeamUnitVariationHolder;
-    
+
     UPROPERTY(EditDefaultsOnly)
     EIGS_UnitSpecialization Specialization;
-    
+
     FIGS_AIDetectiveEntourageDef();
 };
-

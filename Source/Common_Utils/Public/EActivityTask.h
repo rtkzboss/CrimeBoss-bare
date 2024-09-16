@@ -37,4 +37,3 @@ enum class EActivityTask : uint8 {
     MiltonRey,
     Unknown,
 };
-

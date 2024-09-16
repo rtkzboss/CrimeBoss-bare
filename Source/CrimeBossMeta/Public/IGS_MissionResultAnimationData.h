@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Rating;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ECommonMissionResult MissionResult;
-    
-};
 
+};

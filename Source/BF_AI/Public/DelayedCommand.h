@@ -11,10 +11,9 @@ struct FDelayedCommand {
 public:
     UPROPERTY()
     FTimerHandle Timer;
-    
+
     UPROPERTY()
     UIGS_AICommand* AICommand;
-    
+
     BF_AI_API FDelayedCommand();
 };
-

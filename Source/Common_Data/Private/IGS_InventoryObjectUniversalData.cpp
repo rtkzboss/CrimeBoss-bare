@@ -13,6 +13,5 @@ FIGS_InventoryObjectUniversalData::FIGS_InventoryObjectUniversalData() {
     (*this).UniversalInt_5 = 0;
     (*this).UniversalFloat_1 = 0.000000000e+00f;
     (*this).UniversalFloat_2 = 0.000000000e+00f;
-    (*this).UniversalText_1 = FText::FromString(TEXT(""));
+    (*this).UniversalText_1 = FText::GetEmpty();
 }
-

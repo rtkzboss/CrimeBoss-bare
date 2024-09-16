@@ -4,4 +4,3 @@ UBTTask_CallWalkieTalkieCustom::UBTTask_CallWalkieTalkieCustom() {
     (*this).NodeName = TEXT("Call Walkie Talkie Custom");
 }
 
-

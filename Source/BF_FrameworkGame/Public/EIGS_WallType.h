@@ -10,4 +10,3 @@ enum class EIGS_WallType : uint8 {
     Wall_Elevator,
     Wall_Shaft,
 };
-

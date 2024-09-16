@@ -10,28 +10,27 @@ struct BF_ANIMATIONS_API FIGS_FirstPersonSpecialAnimations {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* WalkieTalkieEquipMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* HandsetEquipMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* OpenDoorInteractionMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CloseDoorInteractionMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* PickupInteractionMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* TakeWeaponMontage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* SpecialTakeWeaponMontage;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* WeaponInteractonMontage;
-    
+
     FIGS_FirstPersonSpecialAnimations();
 };
-

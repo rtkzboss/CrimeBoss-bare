@@ -18,6 +18,5 @@ FCustomizableObjectProjectorParameterValue::FCustomizableObjectProjectorParamete
     (*this).Value.ProjectionType = ECustomizableObjectProjectorType::Planar;
     (*this).Value.Angle = 6.283185482e+00f;
     (*this).Uid = TEXT("");
-    (*this).RangeValues.Empty();
+    (*this).RangeValues = {};
 }
-

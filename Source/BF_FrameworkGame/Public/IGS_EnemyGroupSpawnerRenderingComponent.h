@@ -10,4 +10,3 @@ public:
     UIGS_EnemyGroupSpawnerRenderingComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

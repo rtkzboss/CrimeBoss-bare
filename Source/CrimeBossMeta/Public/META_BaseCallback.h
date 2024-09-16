@@ -13,15 +13,14 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateNextNodes(const TArray<UGenericGraphNode*>& inChildrenNodes, int32 inOldConnectionsCount);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TMap<FString, int32> GetResultPaths();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetAvailableConnections();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bNeedForceExecuteAfterCallbackTrigger;
-    
-};
 
+};

@@ -9,4 +9,3 @@ enum class EDamageMeleeType : uint8 {
     MetalBlunt = 11,
     MetalSharp,
 };
-

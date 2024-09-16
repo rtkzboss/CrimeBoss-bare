@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
 #include "IGS_AnimTypeVariantHolder.h"
 #include "IGS_SmartObjectInterface.h"
@@ -19,34 +18,33 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnDisarmed();
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void Disarm(AIGS_GameCharacterFramework* inUsingCharacter);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bDisarmed;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVector AIMovetoPosition;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FRotator AnimationRotationOffset;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AnimTypeVariantHolder AnimationToPlay;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UIGS_AIDirector> AIDirector;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 SquadID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float UnlockAfterTime;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

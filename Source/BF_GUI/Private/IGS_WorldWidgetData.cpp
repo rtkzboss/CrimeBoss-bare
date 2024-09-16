@@ -19,4 +19,3 @@ FIGS_WorldWidgetData::FIGS_WorldWidgetData() {
     (*this).bShowArrow = true;
     (*this).bHideWhenOccluded = false;
 }
-

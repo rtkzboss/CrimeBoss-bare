@@ -10,16 +10,15 @@ struct CRIMEBOSSMETA_API FStashLootDefinitionRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText PayButtonText;
-    
+
     FStashLootDefinitionRow();
 };
-

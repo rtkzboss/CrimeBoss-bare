@@ -18,4 +18,3 @@ EMETA_Gang UMETA_TurfInfoMapEvent::GetNewGang() {
     return EMETA_Gang::None;
 }
 
-

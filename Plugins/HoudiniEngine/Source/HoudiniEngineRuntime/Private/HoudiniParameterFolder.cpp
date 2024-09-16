@@ -6,4 +6,3 @@ UHoudiniParameterFolder::UHoudiniParameterFolder() {
     (*this).ParmType = EHoudiniParameterType::Folder;
 }
 
-

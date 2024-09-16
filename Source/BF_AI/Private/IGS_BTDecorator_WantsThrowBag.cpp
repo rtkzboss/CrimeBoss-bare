@@ -4,4 +4,3 @@ UIGS_BTDecorator_WantsThrowBag::UIGS_BTDecorator_WantsThrowBag() {
     (*this).NodeName = TEXT("Wants Throw Bag");
 }
 
-

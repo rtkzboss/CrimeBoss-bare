@@ -8,7 +8,6 @@ struct BF_LEVELGENERATOR_API FIGS_VariantDefinition {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName Name;
-    
+
     FIGS_VariantDefinition();
 };
-

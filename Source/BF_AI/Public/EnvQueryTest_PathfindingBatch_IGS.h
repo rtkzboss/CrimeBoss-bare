@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
     FAIDataProviderFloatValue ScanRangeMultiplier;
-    
-};
 
+};

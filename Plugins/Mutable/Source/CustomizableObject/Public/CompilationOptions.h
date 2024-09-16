@@ -8,16 +8,15 @@ struct FCompilationOptions {
 public:
     UPROPERTY()
     bool bTextureCompression;
-    
+
     UPROPERTY()
     int32 OptimizationLevel;
-    
+
     UPROPERTY()
     bool bUseParallelCompilation;
-    
+
     UPROPERTY()
     bool bUseDiskCompilation;
-    
+
     CUSTOMIZABLEOBJECT_API FCompilationOptions();
 };
-

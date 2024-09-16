@@ -1,17 +1,15 @@
 #include "HoudiniSplineComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UHoudiniSplineComponent::UHoudiniSplineComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto& gen0 = (*this).CurvePoints;
-    gen0.Empty();
-    gen0.AddDefaulted(2);
-    auto& gen1 = (*this).DisplayPoints;
-    gen1.Empty();
-    gen1.AddDefaulted(2);
+    (*this).CurvePoints = {FTransform(FQuat(0.000000000e+00,0.000000000e+00,0.000000000e+00,1.000000000e+00), FVector(0.000000000e+00,0.000000000e+00,0.000000000e+00), FVector(1.000000000e+00,1.000000000e+00,1.000000000e+00)), FTransform(FQuat(0.000000000e+00,0.000000000e+00,0.000000000e+00,1.000000000e+00), FVector(2.000000000e+02,0.000000000e+00,0.000000000e+00), FVector(1.000000000e+00,1.000000000e+00,1.000000000e+00))};
+    FVector gen;
+    gen.X = 2.000000000e+02f;
+    gen.Y = 0.000000000e+00f;
+    gen.Z = 0.000000000e+00f;
+    (*this).DisplayPoints = {FVector{}, MoveTemp(gen)};
     (*this).CurveOrder = 2;
     (*this).bIsHoudiniSplineVisible = true;
     (*this).bCookOnCurveChanged = true;
     (*this).NodeId = -1;
 }
-
 

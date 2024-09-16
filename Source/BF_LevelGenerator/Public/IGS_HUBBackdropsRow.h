@@ -14,22 +14,21 @@ struct FIGS_HUBBackdropsRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsActive;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_HubRotation RotationType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_HubBackdropTypes BackdropType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_HubDistrict DistrictType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_BuildConfigurationTileable DA_Art;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_HUBLevelWithTag> Scenarios;
-    
+
     BF_LEVELGENERATOR_API FIGS_HUBBackdropsRow();
 };
-

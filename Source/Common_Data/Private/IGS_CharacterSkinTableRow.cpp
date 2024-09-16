@@ -3,25 +3,27 @@
 #include "EIGS_DialogueHeisterCharacter.h"
 
 FIGS_CharacterSkinTableRow::FIGS_CharacterSkinTableRow() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
     (*this).CharacterClasses.bIsMale = true;
     (*this).CharacterClasses.bIsMutable = false;
-    (*this).CharacterClasses.MutableProfile = nullptr;
-    (*this).CharacterClasses.PlayerPawnClass = nullptr;
-    (*this).CharacterClasses.BotPawnClass = nullptr;
-    (*this).CharacterClasses.PaperDollClass = nullptr;
-    (*this).CharacterClasses.FPVArmsClass = nullptr;
-    (*this).CharacterClasses.CharacterIcon = nullptr;
-    (*this).CharacterClasses.MetaCharacterIcon = nullptr;
-    (*this).CharacterClasses.VariantName = FText::FromString(TEXT(""));
-    (*this).CharacterClasses.VariantDescription = FText::FromString(TEXT(""));
+    (*this).CharacterClasses.MutableProfile = FSoftObjectPath();
+    (*this).CharacterClasses.PlayerPawnClass = FSoftObjectPath();
+    (*this).CharacterClasses.BotPawnClass = FSoftObjectPath();
+    (*this).CharacterClasses.PaperDollClass = FSoftObjectPath();
+    (*this).CharacterClasses.FPVArmsClass = FSoftObjectPath();
+    (*this).CharacterClasses.CharacterIcon = FSoftObjectPath();
+    (*this).CharacterClasses.MetaCharacterIcon = FSoftObjectPath();
+    (*this).CharacterClasses.VariantName = FText::GetEmpty();
+    (*this).CharacterClasses.VariantDescription = FText::GetEmpty();
     (*this).CharacterClasses.DialogueID = EIGS_DialogueHeisterCharacter::None;
     (*this).Quality = EMETA_ItemQuality::MinGenerate;
     (*this).UnlockProperties.IsUnlockable = false;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)).Empty();
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
-    (*this).UnlockProperties.UnlockCoverImage = nullptr;
+    (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();
 }
-

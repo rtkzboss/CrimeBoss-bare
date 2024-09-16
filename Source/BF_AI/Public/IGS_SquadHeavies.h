@@ -10,4 +10,3 @@ public:
     AIGS_SquadHeavies(const FObjectInitializer& ObjectInitializer);
 
 };
-

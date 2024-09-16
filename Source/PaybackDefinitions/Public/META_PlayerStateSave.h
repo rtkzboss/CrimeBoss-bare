@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_PlayerStateSave {
 public:
     UPROPERTY()
     int32 MoneyAmount;
-    
+
     UPROPERTY()
     TArray<FSoftObjectPath> Items;
-    
+
     FMETA_PlayerStateSave();
 };
-

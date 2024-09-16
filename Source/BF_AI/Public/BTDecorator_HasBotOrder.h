@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(EditAnywhere)
     TSet<EIGS_BotCommandDefinition> ExcludedTypes;
-    
-};
 
+};

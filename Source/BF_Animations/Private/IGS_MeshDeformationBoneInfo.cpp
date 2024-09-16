@@ -14,4 +14,3 @@ FIGS_MeshDeformationBoneInfo::FIGS_MeshDeformationBoneInfo() {
     (*this).TargetBoneScaleAxis = EIGS_LocationOrScaleBoneAxis::BA_None;
     (*this).TargetBoneDebugScaleAlpha = 1.000000000e+00f;
 }
-

@@ -1,8 +1,4 @@
 #include "IGS_Paginator.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_Paginator::UIGS_Paginator() {
     (*this).AutoSwithcingRate = 5.000000000e+00f;
@@ -42,10 +38,9 @@ int32 UIGS_Paginator::GetSelectedIndex() const {
 }
 
 UWidget* UIGS_Paginator::GetContentWidget() const {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_Paginator::ChangePage(int32 Direction) {
 }
-
 

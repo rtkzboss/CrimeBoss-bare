@@ -4,10 +4,9 @@ UAdvancedSteamWorkshopLibrary::UAdvancedSteamWorkshopLibrary() {
 }
 
 TArray<FBPSteamWorkshopID> UAdvancedSteamWorkshopLibrary::GetSubscribedWorkshopItems(int32& NumberOfItems) {
-    return TArray<FBPSteamWorkshopID>();
+    return {};
 }
 
 void UAdvancedSteamWorkshopLibrary::GetNumSubscribedWorkshopItems(int32& NumberOfItems) {
 }
-
 

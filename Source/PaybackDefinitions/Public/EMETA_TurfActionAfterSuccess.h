@@ -9,4 +9,3 @@ enum class EMETA_TurfActionAfterSuccess : uint8 {
     CaptureTurf,
     StrengthChange,
 };
-

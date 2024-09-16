@@ -3,4 +3,3 @@
 FIGS_MetaTransferDataBase::FIGS_MetaTransferDataBase() {
     (*this).bIsFilled = false;
 }
-

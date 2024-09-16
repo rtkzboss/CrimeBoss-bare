@@ -3,4 +3,3 @@
 UEnvQueryItemType_Cover::UEnvQueryItemType_Cover() {
 }
 
-

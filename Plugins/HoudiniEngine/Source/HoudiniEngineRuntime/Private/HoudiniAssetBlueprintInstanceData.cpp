@@ -1,5 +1,4 @@
 #include "HoudiniAssetBlueprintInstanceData.h"
-#include "ComponentInstanceDataCache.h"
 
 FHoudiniAssetBlueprintInstanceData::FHoudiniAssetBlueprintInstanceData() {
     (*this).HoudiniAsset = nullptr;
@@ -25,6 +24,6 @@ FHoudiniAssetBlueprintInstanceData::FHoudiniAssetBlueprintInstanceData() {
     (*this).HapiGUID.D = 0;
     (*this).bRegisteredComponentTemplate = false;
     (*this).SourceName = TEXT("");
-    (*this).Inputs.Empty();
+    (*this).Outputs = {};
+    (*this).Inputs = {};
 }
-

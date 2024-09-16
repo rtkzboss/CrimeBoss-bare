@@ -8,10 +8,9 @@ struct COMMON_DATA_API FIGS_VisibilityModData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsFlashlight;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsLaser;
-    
+
     FIGS_VisibilityModData();
 };
-

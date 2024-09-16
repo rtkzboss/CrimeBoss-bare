@@ -10,4 +10,3 @@ public:
     AIGS_SkyDome(const FObjectInitializer& ObjectInitializer);
 
 };
-

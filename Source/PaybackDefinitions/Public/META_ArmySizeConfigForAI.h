@@ -9,22 +9,21 @@ struct PAYBACKDEFINITIONS_API FMETA_ArmySizeConfigForAI {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval AI_ArmySizeForPlayersAttack;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval AI_ArmySizeForPlayersDefense;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PlayersAttack_MaxConcurrentlySpawnedAISoldiers;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PlayersAttack_MaxConcurrentlySpawnedPlayerSoldiers;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PlayersDefense_MaxConcurrentlySpawnedAISoldiers;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PlayersDefense_MaxConcurrentlySpawnedPlayerSoldiers;
-    
+
     FMETA_ArmySizeConfigForAI();
 };
-

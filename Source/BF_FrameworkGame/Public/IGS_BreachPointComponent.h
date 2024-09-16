@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_AIMontageBreachVariant BreachMontageVariant;
-    
-};
 
+};

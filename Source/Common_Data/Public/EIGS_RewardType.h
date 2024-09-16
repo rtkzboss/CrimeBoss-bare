@@ -9,4 +9,3 @@ enum class EIGS_RewardType : uint8 {
     MissionContract,
     ChainContract,
 };
-

@@ -7,4 +7,3 @@ enum class EIGS_MeleeWeaponType : uint8 {
     MAT_Blunt,
     MAT_Sharp,
 };
-

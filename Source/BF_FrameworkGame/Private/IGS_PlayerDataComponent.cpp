@@ -1,5 +1,4 @@
 #include "IGS_PlayerDataComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerDataComponent::UIGS_PlayerDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).LastEnemyHitTime = -3.402823466e+38f;
@@ -9,5 +8,4 @@ UIGS_PlayerDataComponent::UIGS_PlayerDataComponent(const FObjectInitializer& Obj
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
     (*this).PrimaryComponentTick.TickInterval = 2.000000030e-01f;
 }
-
 

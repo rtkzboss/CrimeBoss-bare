@@ -9,13 +9,12 @@ struct BF_FRAMEWORKBASE_API FIGS_ScenarioRewardMultiplier {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString ItemName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer MissionScenarios;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RewardMultiplier;
-    
+
     FIGS_ScenarioRewardMultiplier();
 };
-

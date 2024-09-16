@@ -7,19 +7,19 @@ void UIGS_SuspicionHelpersLibrary::TriggerBotLimbo(const UObject* inWCO, bool in
 }
 
 AIGS_SuspicionEventActor* UIGS_SuspicionHelpersLibrary::SpawnSuspicionEventActorAttachedToComp(const UObject* inWCO, USceneComponent* inAttachTo, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy, FName InBoneName) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_SuspicionEventActor* UIGS_SuspicionHelpersLibrary::SpawnSuspicionEventActorAttached(const UObject* inWCO, AActor* inAttachTo, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_SuspicionEventActor* UIGS_SuspicionHelpersLibrary::SpawnSuspicionEventActorAdvanced(const UObject* inWCO, const FTransform& InTransform, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_SuspicionEventActor* UIGS_SuspicionHelpersLibrary::SpawnSuspicionEventActor(const UObject* inWCO, const FTransform& InTransform, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy) {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_SuspicionHelpersLibrary::ShouldDetectSusComp(UIGS_SuspicionComponent* inSusComp, AActor* inDetector) {
@@ -34,11 +34,10 @@ void UIGS_SuspicionHelpersLibrary::MakeExplosionNoiseAndEvent(const AActor* inSo
 }
 
 float UIGS_SuspicionHelpersLibrary::GetOffenceBasedDetectionMultiplier(UIGS_PlayerSuspicionComponent* inOffender, AActor* inDetector) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_SuspicionHelpersLibrary::GetAttributeBasedDetectionMultiplier(AIGS_GameCharacterFramework* inOffender) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

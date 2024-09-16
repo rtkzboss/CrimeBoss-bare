@@ -54,7 +54,7 @@ bool UIGS_TileItemData::GetIsChallenge() const {
 }
 
 TSoftObjectPtr<UTexture2D> UIGS_TileItemData::GetImage() const {
-    return NULL;
+    return {};
 }
 
 FGameplayTag UIGS_TileItemData::GetId() const {
@@ -96,5 +96,4 @@ FIGS_UITileQualityColors UIGS_TileItemData::GetColorSetForThisItem() const {
 EIGS_UnlockCategory UIGS_TileItemData::GetCategory() const {
     return EIGS_UnlockCategory::UC_Weapons;
 }
-
 

@@ -14,18 +14,17 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<UMaterialInterface*> Materials;
-    
+
     UPROPERTY(EditAnywhere)
     FVector DecalSize;
-    
+
     UPROPERTY(EditAnywhere)
     float GlowTime;
-    
+
     UPROPERTY(EditAnywhere)
     float HoldTime;
-    
+
     UPROPERTY(EditAnywhere)
     float FadeTime;
-    
-};
 
+};

@@ -8,4 +8,3 @@ struct FIGS_MontageInstanceHolder {
 public:
     BF_ANIMATIONS_API FIGS_MontageInstanceHolder();
 };
-

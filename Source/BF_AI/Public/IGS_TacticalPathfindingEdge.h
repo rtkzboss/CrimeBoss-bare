@@ -10,7 +10,6 @@ struct BF_AI_API FIGS_TacticalPathfindingEdge {
 public:
     UPROPERTY()
     TArray<UTacticalPathfindingNode*> TresspasingNodes;
-    
+
     FIGS_TacticalPathfindingEdge();
 };
-

@@ -7,7 +7,6 @@
 
 class AIGS_SquadFramework;
 class UIGS_SquadClassesHolder;
-class UIGS_SquadManager;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -18,19 +17,18 @@ public:
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_SquadManager* Instance(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable)
     AIGS_SquadFramework* GetSquadFromID(int32 inSquadID);
-    
+
     UFUNCTION(BlueprintCallable)
     AIGS_SquadFramework* AddSquad(EIGS_TeamSideEnum inTeamSide, EIGS_UnitSpecialization inSpecialization);
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_SquadFramework*> Squads;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_SquadClassesHolder* SquadClassesHolder;
-    
-};
 
+};

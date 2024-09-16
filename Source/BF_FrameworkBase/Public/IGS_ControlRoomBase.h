@@ -13,6 +13,5 @@ public:
 
     UFUNCTION(BlueprintPure)
     UIGS_GuardControlRoomComponentBase* GetGuardSquadControlRoomComponent() const;
-    
-};
 
+};

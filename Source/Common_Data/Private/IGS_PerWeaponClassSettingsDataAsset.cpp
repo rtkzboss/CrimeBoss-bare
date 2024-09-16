@@ -3,4 +3,3 @@
 UIGS_PerWeaponClassSettingsDataAsset::UIGS_PerWeaponClassSettingsDataAsset() {
 }
 
-

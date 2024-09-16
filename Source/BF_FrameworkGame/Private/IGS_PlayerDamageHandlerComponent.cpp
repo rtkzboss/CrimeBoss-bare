@@ -1,5 +1,4 @@
 #include "IGS_PlayerDamageHandlerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerDamageHandlerComponent::UIGS_PlayerDamageHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bActivateDamageLimiterOnFirstHit.Value = 1.000000000e+00f;
@@ -13,5 +12,4 @@ UIGS_PlayerDamageHandlerComponent::UIGS_PlayerDamageHandlerComponent(const FObje
     (*this).ApplyPlayerFriendlyFire = true;
     (*this).FriendlyFireMinHealth = 5.000000000e+01f;
 }
-
 

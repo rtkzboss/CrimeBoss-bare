@@ -8,7 +8,7 @@ FPredictProjectilePathPointData UIGS_Physics::PredictTargetLocation(const AActor
 }
 
 float UIGS_Physics::GetGravityZ(const UObject* WCO) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FVector UIGS_Physics::GetBallisticVelocity(const UObject* WCO, const FVector& PositionStart, const FVector& PositionEnd, float Speed) {
@@ -20,7 +20,6 @@ FVector UIGS_Physics::GetBallisticPositionInTime(const UObject* WCO, const FVect
 }
 
 float UIGS_Physics::GetBallisticDuration(const FVector& PositionStart, const FVector& PositionEnd, float Speed) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

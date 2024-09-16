@@ -1,5 +1,4 @@
 #include "IGS_Quickplay_StashManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_Quickplay_StashManagerComponent::UIGS_Quickplay_StashManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -22,59 +21,59 @@ bool UIGS_Quickplay_StashManagerComponent::IsItemOwned(FGameplayTag inItemTag) c
 }
 
 TArray<UMETA_WeaponSkin*> UIGS_Quickplay_StashManagerComponent::GetWeaponSkinsForWeapon(FGameplayTag inItemTag) const {
-    return TArray<UMETA_WeaponSkin*>();
+    return {};
 }
 
 TArray<UMETA_WeaponSkin*> UIGS_Quickplay_StashManagerComponent::GetWeaponSkins() const {
-    return TArray<UMETA_WeaponSkin*>();
+    return {};
 }
 
 UMETA_WeaponSkin* UIGS_Quickplay_StashManagerComponent::GetWeaponSkinByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_Weapon*> UIGS_Quickplay_StashManagerComponent::GetWeapons() const {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
 
 UMETA_Weapon* UIGS_Quickplay_StashManagerComponent::GetWeaponByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_Weapon*> UIGS_Quickplay_StashManagerComponent::GetSecondaryWeapons() const {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
 
 TArray<UMETA_Weapon*> UIGS_Quickplay_StashManagerComponent::GetPrimaryWeapons() const {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
 
 TArray<UMETA_Perk*> UIGS_Quickplay_StashManagerComponent::GetPerks() const {
-    return TArray<UMETA_Perk*>();
+    return {};
 }
 
 UMETA_Perk* UIGS_Quickplay_StashManagerComponent::GetPerkByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_BaseObject* UIGS_Quickplay_StashManagerComponent::GetItemByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_Equipment* UIGS_Quickplay_StashManagerComponent::GetEquipmentByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_Equipment*> UIGS_Quickplay_StashManagerComponent::GetEquipment() const {
-    return TArray<UMETA_Equipment*>();
+    return {};
 }
 
 TArray<UMETA_CharacterSkin*> UIGS_Quickplay_StashManagerComponent::GetBossCharacterSkins() const {
-    return TArray<UMETA_CharacterSkin*>();
+    return {};
 }
 
 UMETA_CharacterSkin* UIGS_Quickplay_StashManagerComponent::GetBossCharacterSkinByTag(FGameplayTag inItemTag) const {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_Quickplay_StashManagerComponent::AddItems(FGameplayTagContainer inItemTags) {
@@ -82,5 +81,4 @@ void UIGS_Quickplay_StashManagerComponent::AddItems(FGameplayTagContainer inItem
 
 void UIGS_Quickplay_StashManagerComponent::AddItem(FGameplayTag inItem) {
 }
-
 

@@ -11,15 +11,14 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName MainMenuMapName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName MetaGameMapName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName GamePreparationLobbyMapName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName GameEndLobbyMapName;
-    
-};
 
+};

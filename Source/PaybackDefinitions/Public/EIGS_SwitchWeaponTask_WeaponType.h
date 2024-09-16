@@ -13,4 +13,3 @@ enum class EIGS_SwitchWeaponTask_WeaponType : uint8 {
     WT_MountedGun,
     WT_MAX UMETA(Hidden),
 };
-

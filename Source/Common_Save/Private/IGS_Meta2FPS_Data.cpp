@@ -1,9 +1,10 @@
 #include "IGS_Meta2FPS_Data.h"
 
 FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).MissionTag, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionTag, 0)) = NAME_None;
     (*this).MapName = TEXT("");
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).MissionScenario, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionScenario, 0)) = NAME_None;
     (*this).TileEnvironment = EIGS_TileEnviroment::None;
     (*this).HubDistrict = EIGS_HubDistrict::Downtown;
     (*this).HubVariant = EIGS_HubBackdropTypes::AllRandom;
@@ -13,19 +14,21 @@ FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).Heat = EMETA_Heat::Medium;
     (*this).WantedBadges = 0;
     (*this).IntelLevel = -1;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).BonusObjectiveID, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).BonusObjectiveID, 0)) = NAME_None;
     (*this).SupportsCleanExecution = false;
     (*this).StartMusic = EIGS_MusicMissionState::None;
     (*this).StartupSource = EIGS_MissionStartupSource::INVALID;
     (*this).MissionSubtype = TEXT("");
     (*this).QPModeSource = EIGS_QPModeSource::INVALID;
-    (*this).MissionName = FText::FromString(TEXT(""));
+    (*this).MissionName = FText::GetEmpty();
     (*this).ObjectiveValue = 0;
     (*this).TotalMissionValue = 0;
     (*this).TotalLootbagCount = -1;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)).Empty();
-    (*this).SpecialLoot.Loot.Empty();
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)) = {};
+    (*this).SpecialLoot.Loot = {};
     (*this).SpecialLoot.Money = 0;
     (*this).SpecialLoot.bIsFilled = false;
     (*this).Respect = EMETA_RespectLvl::Connected;
@@ -40,11 +43,10 @@ FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).AllyVariation = EIGS_HeistersBackupVariationType::US_None;
     (*this).AllyTier = EIGS_AITiers::AT_Tier2;
     (*this).ExpectedPlayerCount = -1;
-    (*this).MetaBonuses.ArmyPerkData.Empty();
+    (*this).MetaBonuses.ArmyPerkData = {};
     (*this).ObjectivePercentage = 50;
     (*this).NeedObjectiveCompletion = false;
     (*this).bDownedCharctersSurvive = false;
     (*this).CiviliansAmountOverride = -1;
     (*this).bIsDebug = false;
 }
-

@@ -11,13 +11,12 @@ struct BF_FRAMEWORKGAME_API FIGS_FallingEffectData : public FIGS_PlayerEffectDat
 public:
     UPROPERTY(EditDefaultsOnly)
     TSoftObjectPtr<UMaterialInterface> FadeOutScreenPostProcessMaterial;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float DurationToFadeOut;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float MaxEffectPlayDuration;
-    
+
     FIGS_FallingEffectData();
 };
-

@@ -15,4 +15,3 @@ enum class EIGS_ReloadInterruptReasonEnum : uint8 {
     MAX,
     UNKNOWN = 255,
 };
-

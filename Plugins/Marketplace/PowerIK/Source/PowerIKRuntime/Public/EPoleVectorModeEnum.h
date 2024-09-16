@@ -9,4 +9,3 @@ enum EPoleVectorModeEnum {
     PV_Bone,
     PV_AngleOffset,
 };
-

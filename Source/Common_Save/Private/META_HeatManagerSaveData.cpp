@@ -6,7 +6,11 @@ FMETA_HeatManagerSaveData::FMETA_HeatManagerSaveData() {
     (*this).HeatValue = 0.000000000e+00f;
     (*this).PoliceInvestigationValue = 0.000000000e+00f;
     (*this).SheriffTargetGang = EMETA_Gang::None;
-    (*this).DetectivesPool.Empty();
-    (*this).DeadDetectives.Empty();
+    (*this).GangsAttacksCounter = {};
+    (*this).DetectivesPool = {};
+    (*this).ActiveDetectives = {};
+    (*this).UsedInvestigationValuesForDetectives = {};
+    (*this).DeadDetectives = {};
+    (*this).InvestigationEffects = {};
+    (*this).HeatEffects = {};
 }
-

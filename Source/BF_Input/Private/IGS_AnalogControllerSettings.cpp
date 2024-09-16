@@ -15,4 +15,3 @@ UIGS_AnalogControllerSettings::UIGS_AnalogControllerSettings() {
     (*this).BaseADSMultiplier = 3.000000119e-01f;
 }
 
-

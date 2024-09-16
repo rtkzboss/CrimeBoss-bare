@@ -12,9 +12,8 @@ public:
 
     UFUNCTION()
     void OnInputDeviceChanged(EIGS_InputDevice inInputDevice);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_InputDevice PreviewInputDevice;
-    
-};
 
+};

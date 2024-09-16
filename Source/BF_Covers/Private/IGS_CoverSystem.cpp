@@ -16,4 +16,3 @@ bool UIGS_CoverSystem::OccupyCover(UCoverPoint* inCoverPoint, AController* InCon
     return false;
 }
 
-

@@ -17,25 +17,24 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void UseOrCreateAssetsPreloader(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_AssetsPreloaderTableRow GetDataPreloader(UObject* inWCO, const FGameplayTag& inID, bool& outSucceeded);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void DestroyAssetsPreloader(UObject* inWCO);
-    
+
     UPROPERTY()
     TArray<UClass*> LoadedClasses;
-    
+
     UPROPERTY()
     TArray<UObject*> LoadedObjects;
-    
+
 protected:
     UPROPERTY()
     AAssetsPreloader* m_AssetsPreloader;
-    
+
     UPROPERTY()
     UIGS_AssetsPreloaderData* m_AssetsPreloaderData;
-    
-};
 
+};

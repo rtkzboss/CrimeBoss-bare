@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintPure)
     AActor* GetRandomActorWithGameplayTagAndRandomStream(const FGameplayTag& inGameplayTag, UIGS_RandomStreamHolder* inRandomStreamHolder) const;
-    
+
     UFUNCTION(BlueprintPure)
     AActor* GetRandomActorWithGameplayTag(const FGameplayTag& inGameplayTag) const;
-    
+
     UFUNCTION(BlueprintPure)
     AActor* GetFirstActorWithGameplayTag(const FGameplayTag& inGameplayTag) const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<AActor*> GetAllActorsWithGameplayTag(const FGameplayTag& inGameplayTag) const;
-    
-};
 
+};

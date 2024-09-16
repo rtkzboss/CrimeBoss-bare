@@ -48,7 +48,7 @@ bool UIGS_UnlockManager::HasSomePendingItemsByInventorySlot(EIGS_InventorySlot i
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetUnlockItemInfos(const TArray<FGameplayTag>& inTagIDs) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 FIGS_UnlockItemInfo UIGS_UnlockManager::GetUnlockItemInfo(FGameplayTag inTagID, bool inMustBeUnlockable) const {
@@ -56,7 +56,7 @@ FIGS_UnlockItemInfo UIGS_UnlockManager::GetUnlockItemInfo(FGameplayTag inTagID, 
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetForcedUnlockRewards(const TArray<FIGS_UnlockItemInfo>& inUnlockItemInfos, const int32 inLevel) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 FGameplayTagContainer UIGS_UnlockManager::GetChallengeTags(FGameplayTag inTagID) const {
@@ -64,47 +64,47 @@ FGameplayTagContainer UIGS_UnlockManager::GetChallengeTags(FGameplayTag inTagID)
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllUnlockedItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllUnlockedItems() const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllUnlockableItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllUnlockableItems() const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllPendingUnlockedItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllPendingUnlockedItems() const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllLockedItemsByCategory(EIGS_UnlockCategory inUnlockCategory, bool inGetOnlyOwnable) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllLockedItems(bool inGetOnlyOwnable) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllEntitledItemsByEntitlementID(FGameplayTag inTagID) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllEntitledItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllEntitledItems() const {
-    return TArray<FIGS_UnlockItemInfo>();
+    return {};
 }
 
 void UIGS_UnlockManager::ForceUnlockAll() {
@@ -133,5 +133,4 @@ void UIGS_UnlockManager::EnsureNotSameCategory(const TArray<FIGS_UnlockItemInfo>
 
 void UIGS_UnlockManager::AddRandomRewards(TArray<FIGS_UnlockItemInfo>& inOutLockedItems, TArray<FIGS_UnlockItemInfo>& inOutResultItems, const int32 inMaxRewardsCount) {
 }
-
 

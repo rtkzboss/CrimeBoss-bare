@@ -8,10 +8,9 @@ struct FIGS_DsFeedback {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Position;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Strength;
-    
+
     BF_INPUT_API FIGS_DsFeedback();
 };
-

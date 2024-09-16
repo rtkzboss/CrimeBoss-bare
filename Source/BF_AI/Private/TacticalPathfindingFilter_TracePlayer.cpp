@@ -3,4 +3,3 @@
 UTacticalPathfindingFilter_TracePlayer::UTacticalPathfindingFilter_TracePlayer() {
 }
 
-

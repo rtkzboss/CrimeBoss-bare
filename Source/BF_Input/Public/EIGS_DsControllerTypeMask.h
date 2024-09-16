@@ -8,4 +8,3 @@ enum class EIGS_DsControllerTypeMask : uint8 {
     ExternalInputDevices,
     BothControllerTypes,
 };
-

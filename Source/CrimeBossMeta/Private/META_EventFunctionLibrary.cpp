@@ -5,7 +5,7 @@ UMETA_EventFunctionLibrary::UMETA_EventFunctionLibrary() {
 }
 
 UTexture2D* UMETA_EventFunctionLibrary::WidgetToTexture(const UUserWidget* InWidget, const FVector2D& inDrawSize, TEnumAsByte<EPixelFormat> inFormat) {
-    return NULL;
+    return nullptr;
 }
 
 void UMETA_EventFunctionLibrary::ToStartedGraphs(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus>& outStartedGraphs, const TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GraphStatus>& StartedGraphs) {
@@ -63,11 +63,11 @@ void UMETA_EventFunctionLibrary::GetMetaObjectType(UMETA_BaseObject* inObject, E
 }
 
 TSoftObjectPtr<UStoryGraphManager> UMETA_EventFunctionLibrary::FromStringToStoryGraphManager(const FString& inSoftPath) {
-    return NULL;
+    return {};
 }
 
 TSoftObjectPtr<UMETA_BaseStoryGraphManager> UMETA_EventFunctionLibrary::FromStoryToMeta(const TSoftObjectPtr<UStoryGraphManager> inMetaGraphManager) {
-    return NULL;
+    return {};
 }
 
 void UMETA_EventFunctionLibrary::FromStartedGraphs(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus>& StartedGraphs, TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GraphStatus>& outStartedGraphs) {
@@ -92,10 +92,9 @@ void UMETA_EventFunctionLibrary::FromPlotlineGraphs(const TMap<TSoftObjectPtr<UM
 }
 
 TSoftObjectPtr<UStoryGraphManager> UMETA_EventFunctionLibrary::FromMetaToStory(const TSoftObjectPtr<UMETA_BaseStoryGraphManager> inMetaGraphManager) {
-    return NULL;
+    return {};
 }
 
 void UMETA_EventFunctionLibrary::FromGraphsTasks(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FMETA_TasksInfoSave>& GraphsTasks, TMap<TSoftObjectPtr<UStoryGraphManager>, FMETA_TasksInfoSave>& outGraphsTasks) {
 }
-
 

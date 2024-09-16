@@ -11,16 +11,15 @@ struct COMMON_DATA_API FMETA_TurfWarMissionSave : public FMETA_BaseMissionSave {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag WarTile;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_Gang EnemyGang;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PlayersSoldiersAmount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DefenceLostPenaltyMultiplier;
-    
+
     FMETA_TurfWarMissionSave();
 };
-

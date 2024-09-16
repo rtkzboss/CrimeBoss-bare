@@ -10,4 +10,3 @@ public:
     AIGS_AIVisionBlockingVolume(const FObjectInitializer& ObjectInitializer);
 
 };
-

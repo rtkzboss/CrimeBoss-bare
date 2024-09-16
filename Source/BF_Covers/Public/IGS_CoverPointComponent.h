@@ -13,15 +13,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void DeactivateCoverPoint(bool inForceDeactivate);
-    
+
     UFUNCTION(BlueprintCallable)
     bool ActivateCoverPoint(bool inForceActivate);
-    
+
     UPROPERTY(EditAnywhere)
     bool ForceDeactivate;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UCoverPoint* CoverPoint;
-    
-};
 
+};

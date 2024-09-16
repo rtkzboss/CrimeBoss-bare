@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_MusicScenarioPacksTableRow GetMusicData(UObject* inWCO, const FGameplayTag inMusicID, bool& outSucceeded);
-    
-};
 
+};

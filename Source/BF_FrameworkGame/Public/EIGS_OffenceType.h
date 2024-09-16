@@ -10,4 +10,3 @@ enum class EIGS_OffenceType : uint8 {
     Offence_SuspActors,
     Offence_Special,
 };
-

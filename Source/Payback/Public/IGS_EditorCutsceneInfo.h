@@ -9,7 +9,6 @@ struct PAYBACK_API FIGS_EditorCutsceneInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_EditorDialogueInfo> Dialogues;
-    
+
     FIGS_EditorCutsceneInfo();
 };
-

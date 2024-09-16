@@ -9,4 +9,3 @@ UIGS_Common_DataDevSettings_Missions::UIGS_Common_DataDevSettings_Missions() {
     (*this).MetaGenericAmbushMissionsDataTable = FSoftObjectPath(TEXT("/Game/CrimeBossMeta/Resources/MetaMissions/DT_meta_generic_AmbushMissions.DT_meta_generic_AmbushMissions"), TEXT(""));
 }
 
-

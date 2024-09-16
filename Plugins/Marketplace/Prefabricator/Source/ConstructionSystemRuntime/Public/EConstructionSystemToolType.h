@@ -7,4 +7,3 @@ enum class EConstructionSystemToolType : uint8 {
     BuildTool,
     RemoveTool,
 };
-

@@ -11,16 +11,15 @@ struct BF_AI_API FIGS_AIDangerEvent {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Radius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Location;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AActor* DangerActor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Tag;
-    
+
     FIGS_AIDangerEvent();
 };
-

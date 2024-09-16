@@ -17,42 +17,41 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetManagerFinished();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     bool OnWarzonePlayerSwapRequested(AController* inInstigatorController);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnManagerReady(int32 inReplicatedSeed);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnCharacterRegistered(AIGS_GameCharacterFramework* inCharacter);
-    
+
     UFUNCTION(BlueprintPure)
     TArray<AIGS_ScriptActorBase*> GetScriptsActorsWithTag(FName inTag) const;
-    
+
     UFUNCTION(BlueprintPure)
     UIGS_RandomStreamHolder* GetRandomStreamHolder();
-    
+
     UFUNCTION(BlueprintPure)
     FRandomStream GetRandomStream_TEMP();
-    
+
     UFUNCTION(BlueprintPure)
     void GetRandomStream(FRandomStream& outRandomStream);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_ScriptActorBase*> ScriptActors;
-    
+
     UPROPERTY(VisibleAnywhere)
     int32 ScriptSeed;
-    
+
     UPROPERTY()
     FRandomStream RandomStream_DEPRECATED;
-    
+
     UPROPERTY()
     bool bFinished;
-    
+
     UPROPERTY()
     UIGS_RandomStreamHolder* m_RandomStreamHolder;
-    
-};
 
+};

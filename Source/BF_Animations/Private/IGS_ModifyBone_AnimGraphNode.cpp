@@ -1,5 +1,4 @@
 #include "IGS_ModifyBone_AnimGraphNode.h"
-#include "Animation/InputScaleBias.h"
 
 FIGS_ModifyBone_AnimGraphNode::FIGS_ModifyBone_AnimGraphNode() {
     (*this).BoneToModify.BoneName = NAME_None;
@@ -22,4 +21,3 @@ FIGS_ModifyBone_AnimGraphNode::FIGS_ModifyBone_AnimGraphNode() {
     (*this).RotationSpace = BCS_WorldSpace;
     (*this).ScaleSpace = BCS_WorldSpace;
 }
-

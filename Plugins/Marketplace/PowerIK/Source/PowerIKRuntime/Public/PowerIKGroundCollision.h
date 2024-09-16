@@ -9,22 +9,21 @@ struct POWERIKRUNTIME_API FPowerIKGroundCollision {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<ECollisionChannel> CollisionChannel;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool TraceComplex;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RayCastUp;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RayCastDown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool EnableWallCollision;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float WallOffset;
-    
+
     FPowerIKGroundCollision();
 };
-

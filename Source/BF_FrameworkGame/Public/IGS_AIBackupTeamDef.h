@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupTeamDef : public FIGS_AIBaseTeamDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupTiersDef Tiers;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupBaseDataDefaults DefaultStats;
-    
+
     FIGS_AIBackupTeamDef();
 };
-

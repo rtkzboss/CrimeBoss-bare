@@ -11,4 +11,3 @@ enum class EIGS_WoundType : uint8 {
     EWT_BluntLarge,
     EWT_Stab,
 };
-

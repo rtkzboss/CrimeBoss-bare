@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
-#include "BoolParamChangedBP2Delegate.h"
+#include "BoolParamChangedBP2.h"
 #include "IGS_ScriptableBehaviorComponent.generated.h"
 
 class AIGS_AIControllerGame;
@@ -18,42 +18,41 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetDefendPositionBP(FVector InPosition, float inDistance);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetDefendPoint(AIGS_DefendPointBase* defendPoint);
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void SetDefending(bool NewValue);
-    
+
 public:
     UFUNCTION(BlueprintPure)
     bool GetIsDefending() const;
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<UCoverPoint*> GetDefendValidCoverPoints();
-    
+
     UFUNCTION(BlueprintCallable)
     FVector GetDefendPos();
-    
+
     UFUNCTION(BlueprintPure)
     FVector GetDefendLookAt(FVector querrierLocation) const;
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<UCoverPoint*> GetDefendCoverPoints();
-    
+
     UFUNCTION(BlueprintCallable)
     void ClearDefendPos();
-    
+
     UPROPERTY(BlueprintAssignable)
     FBoolParamChangedBP2 OnIsDefendingChangedBP2;
-    
+
 protected:
     UPROPERTY()
     TArray<AIGS_RoomBase*> EmptyRoomArray;
-    
+
     UPROPERTY()
     AIGS_AIControllerGame* m_Controller;
-    
-};
 
+};

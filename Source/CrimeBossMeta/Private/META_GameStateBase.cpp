@@ -1,11 +1,10 @@
 #include "META_GameStateBase.h"
 #include "IGS_SubtitleManager.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AMETA_GameStateBase::AMETA_GameStateBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SubtitleManager = CreateDefaultSubobject<UIGS_SubtitleManager>(TEXT("Subtitle Manager"));
+    auto gen = CreateDefaultSubobject<UIGS_SubtitleManager>(TEXT("Subtitle Manager"));
+    (*this).SubtitleManager = gen;
 }
 
 void AMETA_GameStateBase::StartSequence(FGameplayTag inSequenceTag) {
@@ -40,8 +39,7 @@ void AMETA_GameStateBase::AddSequence(FMETA_Sequence& InSequence) {
 
 void AMETA_GameStateBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AMETA_GameStateBase, bInitialized);
 }
-
 

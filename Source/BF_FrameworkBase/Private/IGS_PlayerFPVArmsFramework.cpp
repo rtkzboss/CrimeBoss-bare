@@ -1,26 +1,25 @@
 #include "IGS_PlayerFPVArmsFramework.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Materials/MaterialParameterCollection.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 
 AIGS_PlayerFPVArmsFramework::AIGS_PlayerFPVArmsFramework(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    static ConstructorHelpers::FObjectFinder<UMaterialParameterCollection> gen0(TEXT("/Game/00_Main/MaterialLibrary/Common/MPC_GlobalsCharactersWeapons.MPC_GlobalsCharactersWeapons"));
-    (*this).WieldableMPC = gen0.Object;
-    (*this).ArmsSkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ArmsSkeletalMesh"));
-    (*this).ArmsRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("ArmsRoot"));
+    auto gen = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ArmsSkeletalMesh"));
+    auto gen2 = CreateDefaultSubobject<USceneComponent>(TEXT("ArmsRoot"));
+    static ConstructorHelpers::FObjectFinder<UMaterialParameterCollection> gen3(TEXT("/Game/00_Main/MaterialLibrary/Common/MPC_GlobalsCharactersWeapons.MPC_GlobalsCharactersWeapons"));
+    (*this).WieldableMPC = gen3.Object;
+    (*this).ArmsSkeletalMesh = gen;
+    (*this).ArmsRootComponent = gen2;
     (*this).PrimaryActorTick.bCanEverTick = true;
-    (*this).RootComponent = (USceneComponent*)ArmsRootComponent;
-    (*this).ArmsSkeletalMesh->SetupAttachment((*this).RootComponent);
+    (*this).RootComponent = gen2;
+    if (gen) gen->SetupAttachment(gen2);
 }
 
 AIGS_GameCharacterFramework* AIGS_PlayerFPVArmsFramework::GetOwningPlayerCharacter() const {
-    return NULL;
+    return nullptr;
 }
 
 USkeletalMeshComponent* AIGS_PlayerFPVArmsFramework::GetArmsSkeletalMesh() const {
-    return NULL;
+    return nullptr;
 }
-
 

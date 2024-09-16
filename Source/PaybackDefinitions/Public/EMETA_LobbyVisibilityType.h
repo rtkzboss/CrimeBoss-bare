@@ -8,4 +8,3 @@ enum class EMETA_LobbyVisibilityType : uint8 {
     Public,
     Private,
 };
-

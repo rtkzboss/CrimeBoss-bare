@@ -8,4 +8,3 @@ FEventPoint::FEventPoint() {
     (*this).FireCount = -1;
     (*this).Index = -1;
 }
-

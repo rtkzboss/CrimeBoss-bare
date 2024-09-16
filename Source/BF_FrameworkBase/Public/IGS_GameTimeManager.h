@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY()
     TArray<UIGS_TimeLineHolder*> m_Timelines;
-    
-};
 
+};

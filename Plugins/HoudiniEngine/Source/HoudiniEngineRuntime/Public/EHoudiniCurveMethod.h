@@ -9,4 +9,3 @@ enum class EHoudiniCurveMethod : int8 {
     Breakpoints,
     Freehand,
 };
-

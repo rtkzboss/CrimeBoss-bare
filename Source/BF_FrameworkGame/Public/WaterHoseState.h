@@ -8,4 +8,3 @@ enum class WaterHoseState : int32 {
     Highlighted,
     Visible,
 };
-

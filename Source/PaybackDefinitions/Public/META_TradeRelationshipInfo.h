@@ -9,13 +9,12 @@ struct PAYBACKDEFINITIONS_API FMETA_TradeRelationshipInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Chance BetterPriceChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Chance NoDealChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Chance VendorAttackChance;
-    
+
     FMETA_TradeRelationshipInfo();
 };
-

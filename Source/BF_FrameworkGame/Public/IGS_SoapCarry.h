@@ -11,18 +11,17 @@ public:
 
     UFUNCTION(BlueprintNativeEvent)
     void SlippingOff();
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bIsSlipEnabled;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float TimeToSlipOff;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float RandomRangeForTimer;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsCanThrow;
-    
-};
 
+};

@@ -11,4 +11,3 @@ enum class EIGS_WieldableAnimType : uint8 {
     EIGS_Unarmed,
     EIGS_Undefined,
 };
-

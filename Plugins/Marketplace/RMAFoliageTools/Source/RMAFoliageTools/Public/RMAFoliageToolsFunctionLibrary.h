@@ -13,9 +13,8 @@ public:
 
     UFUNCTION(BlueprintPure)
     static FName GetVersion();
-    
+
     UFUNCTION(BlueprintPure)
     static AInstancedFoliageActor* GetInstancedFoliageActor();
-    
-};
 
+};

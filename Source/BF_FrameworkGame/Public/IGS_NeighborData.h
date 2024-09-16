@@ -12,13 +12,12 @@ struct BF_FRAMEWORKGAME_API FIGS_NeighborData {
 public:
     UPROPERTY(VisibleAnywhere)
     AActor* Entrance;
-    
+
     UPROPERTY(VisibleAnywhere)
     FVector EntrancePoint;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_RoomBase* NeighborRoom;
-    
+
     FIGS_NeighborData();
 };
-

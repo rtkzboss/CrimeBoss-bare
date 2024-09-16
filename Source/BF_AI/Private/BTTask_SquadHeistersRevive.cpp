@@ -4,4 +4,3 @@ UBTTask_SquadHeistersRevive::UBTTask_SquadHeistersRevive() {
     (*this).NodeName = TEXT("Squad Heisters Revive");
 }
 
-

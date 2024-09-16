@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_UIArmyTierCoefficientConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ArmyTiercoefficientBigger;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ArmyTiercoefficientLower;
-    
+
     FMETA_UIArmyTierCoefficientConfig();
 };
-

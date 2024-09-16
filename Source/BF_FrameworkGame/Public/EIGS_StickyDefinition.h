@@ -11,4 +11,3 @@ enum class EIGS_StickyDefinition : uint8 {
     EndWithLOS,
     EndWithoutLOS,
 };
-

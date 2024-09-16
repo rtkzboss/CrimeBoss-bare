@@ -2,17 +2,20 @@
 #include "GameplayTagContainer.h"
 
 FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).RootTagID, 0)) = NAME_None;
-    (*this).SkinName = FText::FromString(TEXT(""));
-    (*this).SkinImage = nullptr;
-    (*this).ID = nullptr;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).RootTagID, 0)) = NAME_None;
+    (*this).SkinName = FText::GetEmpty();
+    (*this).SkinImage = FSoftObjectPath();
+    (*this).ID = FSoftObjectPath();
     (*this).SkinQuality = EMETA_ItemQuality::None;
     (*this).UnlockProperties.IsUnlockable = false;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)).Empty();
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
-    (*this).UnlockProperties.UnlockCoverImage = nullptr;
+    (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();
     (*this).MaterialParameters.Albedo_Tint.R = 1.000000000e+00f;
     (*this).MaterialParameters.Albedo_Tint.G = 1.000000000e+00f;
     (*this).MaterialParameters.Albedo_Tint.B = 1.000000000e+00f;
@@ -66,5 +69,5 @@ FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
     (*this).MaterialParameters.Mask_Offset = 0.000000000e+00f;
     (*this).MaterialParameters.Normal_BlendIntensity = 1.000000000e+00f;
     (*this).MaterialParameters.Roughness_Opacity = 1.000000000e+00f;
+    (*this).SkinMaterialSlot = {};
 }
-

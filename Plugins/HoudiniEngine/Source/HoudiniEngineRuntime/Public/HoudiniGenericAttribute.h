@@ -10,28 +10,27 @@ struct HOUDINIENGINERUNTIME_API FHoudiniGenericAttribute {
 public:
     UPROPERTY()
     FString AttributeName;
-    
+
     UPROPERTY()
     EAttribStorageType AttributeType;
-    
+
     UPROPERTY()
     EAttribOwner AttributeOwner;
-    
+
     UPROPERTY()
     int32 AttributeCount;
-    
+
     UPROPERTY()
     int32 AttributeTupleSize;
-    
+
     UPROPERTY()
     TArray<double> DoubleValues;
-    
+
     UPROPERTY()
     TArray<int64> IntValues;
-    
+
     UPROPERTY()
     TArray<FString> StringValues;
-    
+
     FHoudiniGenericAttribute();
 };
-

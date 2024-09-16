@@ -4,7 +4,7 @@ UMETA_GenericCharactersNames::UMETA_GenericCharactersNames() {
 }
 
 TArray<FText> UMETA_GenericCharactersNames::GetSurnames() {
-    return TArray<FText>();
+    return {};
 }
 
 FText UMETA_GenericCharactersNames::GetRandomSurname() {
@@ -20,11 +20,10 @@ FText UMETA_GenericCharactersNames::GetRandomFemaleFirstName() {
 }
 
 TArray<FText> UMETA_GenericCharactersNames::GetMaleNames() {
-    return TArray<FText>();
+    return {};
 }
 
 TArray<FText> UMETA_GenericCharactersNames::GetFemaleNames() {
-    return TArray<FText>();
+    return {};
 }
-
 

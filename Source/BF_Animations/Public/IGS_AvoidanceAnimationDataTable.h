@@ -13,12 +13,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<FIGS_RollAnimTable> RollAnimations;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_DodgeAnimTable> DodgeAnimations;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_DodgeAnimTable> DodgeAnimationsCrouching;
-    
-};
 
+};

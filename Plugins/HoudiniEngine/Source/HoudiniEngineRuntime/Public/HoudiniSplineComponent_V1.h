@@ -10,4 +10,3 @@ public:
     UHoudiniSplineComponent_V1(const FObjectInitializer& ObjectInitializer);
 
 };
-

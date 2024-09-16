@@ -15,33 +15,32 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool WasAlreadyEquipped();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsSecondary();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsPrimary();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsMelee();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsExplosive();
-    
+
     UFUNCTION(BlueprintCallable)
     FIGS_WieldableBaseData GetWieldableDataBP();
-    
+
     UFUNCTION(BlueprintCallable)
     TSoftObjectPtr<UIGS_WeaponSkinData> GetCurrentSpecificSkin();
-    
+
     UFUNCTION(BlueprintCallable)
     TSoftObjectPtr<UIGS_WeaponSkinData> GetCurrentDefaultSkin();
-    
+
     UFUNCTION(BlueprintCallable)
     TSoftObjectPtr<UIGS_WeaponSkinData> GetBaseSkin();
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTagContainer WieldableStateTagsContainer;
-    
-};
 
+};

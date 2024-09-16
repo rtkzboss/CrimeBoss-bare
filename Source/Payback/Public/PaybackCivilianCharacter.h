@@ -10,4 +10,3 @@ public:
     APaybackCivilianCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

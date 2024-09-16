@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "ClassLoadedPinDelegate.h"
+#include "ClassLoadedPin.h"
 #include "IGS_AsyncLoadClassHighPrio.generated.h"
 
-class UIGS_AsyncLoadClassHighPrio;
 class UObject;
 
 UCLASS()
@@ -15,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_AsyncLoadClassHighPrio* AsyncLoadClassHighPrio(UObject* inWorldContextObject, TSoftClassPtr<UObject> inClass);
-    
+
     UPROPERTY(BlueprintAssignable)
     FClassLoadedPin ClassLoaded;
-    
-};
 
+};

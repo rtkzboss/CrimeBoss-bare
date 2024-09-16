@@ -9,4 +9,3 @@ enum class EIGS_DamageLimiterType : uint8 {
     DLT_DPSThreshold,
     DLT_LowHealth,
 };
-

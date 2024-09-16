@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "EIGS_PlayerCommandType.h"
-#include "IGS_OnCommandSentEventDelegate.h"
+#include "IGS_OnCommandSentEvent.h"
 #include "IGS_PlayerCommandComponent.generated.h"
 
 class AIGS_GameCharacterFramework;
@@ -15,21 +15,20 @@ public:
 
     UFUNCTION(Reliable, Server)
     void Server_HandleResponseDialogue(AIGS_GameCharacterFramework* inInstigator, EIGS_PlayerCommandType inType, const FString& inPlayerName);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void OnCommand(const EIGS_PlayerCommandType inType) const;
-    
+
     UFUNCTION(BlueprintCallable)
     void HandleResponseDialogue(AIGS_GameCharacterFramework* inInstigator, EIGS_PlayerCommandType inType);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void HandleHoldPosition(const AIGS_GameCharacterFramework* inOrderedCharacter) const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void HandleFollow(const AIGS_GameCharacterFramework* inOrderedCharacter) const;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnCommandSentEvent OnCommandSentEventBP;
-    
-};
 
+};

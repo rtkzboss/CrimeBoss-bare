@@ -1,6 +1,4 @@
 #include "IGS_ChokeVolume.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "IGS_NavArea_Choke.h"
 
 AIGS_ChokeVolume::AIGS_ChokeVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -16,5 +14,4 @@ void AIGS_ChokeVolume::OnComponentEndOverlap(UPrimitiveComponent* inPrimitiveCom
 
 void AIGS_ChokeVolume::OnComponentBeginOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inPrimitiveComponent1, int32 ini, bool inArg, const FHitResult& inHitResult) {
 }
-
 

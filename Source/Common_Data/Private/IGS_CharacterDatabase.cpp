@@ -35,7 +35,7 @@ FIGS_CharacterTableRow UIGS_CharacterDatabase::GetDataByIndexBP(int32 inIndex, b
 }
 
 TSoftClassPtr<APaperDollAbstract> UIGS_CharacterDatabase::GetCharacterPaperDoll(UObject* inWCO, EIGS_CharacterID inID, int32 inGenericID, bool inIsMaxLeveled, FGameplayTag inCharacterSkinID) {
-    return NULL;
+    return {};
 }
 
 int32 UIGS_CharacterDatabase::GetCharacterGenericIDFromEntitlements(UObject* inWCO, EIGS_CharacterID inID, int32 inOriginalGenericID) {
@@ -43,7 +43,6 @@ int32 UIGS_CharacterDatabase::GetCharacterGenericIDFromEntitlements(UObject* inW
 }
 
 UIGS_CharacterDatabase* UIGS_CharacterDatabase::GetCharacterDatabaseInstance(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
-
 

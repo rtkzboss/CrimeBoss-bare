@@ -8,4 +8,3 @@ FIGS_ArmsLeaningAnimationOneFrameParams::FIGS_ArmsLeaningAnimationOneFrameParams
     (*this).StartCrouching = false;
     (*this).StopCrouching = false;
 }
-

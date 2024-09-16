@@ -2,4 +2,3 @@
 
 FMETA_CharacterSkinSaveData::FMETA_CharacterSkinSaveData() {
 }
-

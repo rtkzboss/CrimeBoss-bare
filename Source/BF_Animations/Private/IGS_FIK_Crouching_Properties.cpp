@@ -9,4 +9,3 @@ FIGS_FIK_Crouching_Properties::FIGS_FIK_Crouching_Properties() {
     (*this).MaxRootBoneOffsetWhileNotMoving = 1.000000000e+00f;
     (*this).MaxRootDistanceRange = 3.000000000e+01f;
 }
-

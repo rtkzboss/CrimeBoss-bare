@@ -1,8 +1,4 @@
 #include "IGS_Screen.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_Screen::UIGS_Screen() {
     (*this).ScreenInputMode = EScreenInputMode::UIOnly;
@@ -37,5 +33,4 @@ void UIGS_Screen::Close() {
 
 void UIGS_Screen::AddScreenToViewport() {
 }
-
 

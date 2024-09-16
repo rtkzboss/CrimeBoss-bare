@@ -13,15 +13,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BlackboardKey;
-    
+
     UPROPERTY(EditAnywhere)
     float CoolDownTime;
-    
+
     UPROPERTY(EditAnywhere)
     float MinDistanceToCharge;
-    
+
     UPROPERTY(EditAnywhere)
     float ExtraChargeDistanceBehindPlayer;
-    
-};
 
+};

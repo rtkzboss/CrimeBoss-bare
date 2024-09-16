@@ -14,4 +14,3 @@ UIGS_AIWaypointTexturesDevSettings::UIGS_AIWaypointTexturesDevSettings() {
     (*this).FlagInfiniteSprite = FSoftObjectPath(TEXT("/Game/00_Main/UI/EditorIcons/T_GUI_Flag_Infinite.T_GUI_Flag_Infinite"), TEXT(""));
 }
 
-

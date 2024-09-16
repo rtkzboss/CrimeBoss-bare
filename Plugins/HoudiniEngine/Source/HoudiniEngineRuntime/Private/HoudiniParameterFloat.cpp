@@ -9,4 +9,3 @@ UHoudiniParameterFloat::UHoudiniParameterFloat() {
     (*this).ParmType = EHoudiniParameterType::Float;
 }
 
-

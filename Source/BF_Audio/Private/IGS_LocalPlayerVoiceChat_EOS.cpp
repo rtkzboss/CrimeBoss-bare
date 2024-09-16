@@ -3,4 +3,3 @@
 UIGS_LocalPlayerVoiceChat_EOS::UIGS_LocalPlayerVoiceChat_EOS() {
 }
 
-

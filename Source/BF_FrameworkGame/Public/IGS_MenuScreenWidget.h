@@ -15,42 +15,41 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RequestSubscreenChange(FGameplayTag inTag);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RefreshFocus();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnSwitchedTo();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnSwitchedFrom();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnMenuInput(EIGS_InputAction InAction);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnMainScreenSwitch(FGameplayTag inEntireScreenTag);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnExit();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnControllerFocus();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnAnalogInput(EIGS_InputThumbstickType Type, FVector2D Value);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     bool GoBackInternal();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     bool GoBack();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void ConfirmInternal();
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag screenTag;
-    
-};
 
+};

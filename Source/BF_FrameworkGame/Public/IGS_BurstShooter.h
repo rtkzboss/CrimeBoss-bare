@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* Burst2ShotAudioEvent;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* Burst3ShotAudioEvent;
-    
-};
 
+};

@@ -4,4 +4,3 @@ UIGS_ImpactTypeObject::UIGS_ImpactTypeObject() {
     (*this).bShouldSpawnBloodImpacts = true;
 }
 
-

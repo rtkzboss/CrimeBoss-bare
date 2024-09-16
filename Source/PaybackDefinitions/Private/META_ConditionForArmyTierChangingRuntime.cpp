@@ -7,4 +7,3 @@ FMETA_ConditionForArmyTierChangingRuntime::FMETA_ConditionForArmyTierChangingRun
     (*this).ArmyTierAction = EMETA_UnaryOperation::Increment;
     (*this).OwnerGang = EMETA_Gang::None;
 }
-

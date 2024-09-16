@@ -1,12 +1,12 @@
 #include "IGS_LensFlare.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/MaterialBillboardComponent.h"
 #include "Components/SphereComponent.h"
 
 AIGS_LensFlare::AIGS_LensFlare(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).LensFlareComponent = CreateDefaultSubobject<UMaterialBillboardComponent>(TEXT("LensFlareComponent"));
-    (*this).SourceBounds = CreateDefaultSubobject<USphereComponent>(TEXT("SourceBoundsComponent"));
+    auto gen = CreateDefaultSubobject<UMaterialBillboardComponent>(TEXT("LensFlareComponent"));
+    auto gen2 = CreateDefaultSubobject<USphereComponent>(TEXT("SourceBoundsComponent"));
+    (*this).LensFlareComponent = gen;
+    (*this).SourceBounds = gen2;
     (*this).FPS = 6.000000000e+01f;
     (*this).Luminosity = 1.000000000e+00f;
     (*this).GlobalBrightness = 1.000000000e+00f;
@@ -154,8 +154,7 @@ AIGS_LensFlare::AIGS_LensFlare(const FObjectInitializer& ObjectInitializer) : Su
     (*this).PrimaryActorTick.bTickEvenWhenPaused = true;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).PrimaryActorTick.TickInterval = 1.666666754e-02f;
-    (*this).RootComponent = (USceneComponent*)LensFlareComponent;
+    (*this).RootComponent = gen;
 }
-
 
 

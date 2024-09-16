@@ -12,34 +12,33 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TileWidth;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector2D Grid;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RenderTargetGamma;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool Active;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DelayTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString SaveImagesFilePath;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString Filename;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseSeperateFilePathsForEachResolution;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool RenderFromResolutionDownToMinimumResolution;
-    
+
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CurrentTile;
-    
-};
 
+};

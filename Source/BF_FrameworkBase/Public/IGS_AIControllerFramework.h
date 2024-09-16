@@ -14,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool RequestGeneralReaction(FGameplayTag inReactionTag, AActor* inActor);
-    
+
     UFUNCTION(BlueprintCallable)
     void EnableAI(bool InValue);
-    
-};
 
+};

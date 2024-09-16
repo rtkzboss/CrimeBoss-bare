@@ -10,10 +10,9 @@ struct COMMON_DATA_API FIGS_ChainMissionStep {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ChainMissionEntry> PossibleMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ChainAction> PostMissionActions;
-    
+
     FIGS_ChainMissionStep();
 };
-

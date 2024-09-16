@@ -8,4 +8,3 @@ enum class EIGS_SentryRotationType : uint8 {
     Point,
     Actor,
 };
-

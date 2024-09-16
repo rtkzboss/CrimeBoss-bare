@@ -11,4 +11,3 @@ FIGS_PerksTableRow UMETA_Perk::GetPerkData() {
     return FIGS_PerksTableRow{};
 }
 
-

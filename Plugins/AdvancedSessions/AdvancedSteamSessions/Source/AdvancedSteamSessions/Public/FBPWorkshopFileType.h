@@ -21,4 +21,3 @@ enum class FBPWorkshopFileType : uint8 {
     k_EWorkshopFileTypeSteamVideo,
     k_EWorkshopFileTypeMax,
 };
-

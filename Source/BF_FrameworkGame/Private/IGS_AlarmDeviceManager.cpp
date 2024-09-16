@@ -4,7 +4,6 @@ UIGS_AlarmDeviceManager::UIGS_AlarmDeviceManager() {
 }
 
 UIGS_AlarmDeviceManager* UIGS_AlarmDeviceManager::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
-
 

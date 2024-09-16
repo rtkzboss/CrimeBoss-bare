@@ -21,4 +21,3 @@ UIGS_NavArea_Choke::UIGS_NavArea_Choke() {
     (*this).SupportedAgents.bSupportsAgent15 = false;
 }
 
-

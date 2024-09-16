@@ -12,12 +12,11 @@ public:
 
     UPROPERTY(EditAnywhere, Transient)
     FString PasswordQuery;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FWeightedBlendable> VisualStylePostProcesses;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FWeightedBlendable> VisorPostProcesses;
-    
-};
 
+};

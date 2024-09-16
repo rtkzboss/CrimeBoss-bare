@@ -9,16 +9,15 @@ struct PAYBACK_API FIGS_MetaCutsceneSlotSetup {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotASpeaker;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotBSpeaker;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotCSpeaker;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_MetaDialogueSpeaker SlotDSpeaker;
-    
+
     FIGS_MetaCutsceneSlotSetup();
 };
-

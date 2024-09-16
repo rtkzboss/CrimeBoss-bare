@@ -1,6 +1,4 @@
 #include "IGS_HideInGameVolume.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_HideInGameVolume::AIGS_HideInGameVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).BrushColor.B = 169;
@@ -15,5 +13,4 @@ AIGS_HideInGameVolume::AIGS_HideInGameVolume(const FObjectInitializer& ObjectIni
 
 void AIGS_HideInGameVolume::SetObjectsHidden(bool inHidden) {
 }
-
 

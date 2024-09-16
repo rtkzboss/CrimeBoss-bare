@@ -18,7 +18,7 @@ bool UIGS_LevelTransitionManager::GetLevelLoadState() const {
 }
 
 float UIGS_LevelTransitionManager::GetDelayTime() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UIGS_LevelTransitionManager::ClientTravel(FName inLevelName) {
@@ -32,5 +32,4 @@ bool UIGS_LevelTransitionManager::AttemptServerTravel(FName inLevelName, const F
 bool UIGS_LevelTransitionManager::AttemptOpenLevel(FName inLevelName, bool inAbsolute, const FString& inOptions) {
     return false;
 }
-
 

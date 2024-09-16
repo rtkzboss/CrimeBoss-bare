@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "EIGS_AIMontageSOVariant.h"
-#include "IGS_AICommandFinishedDelegateDelegate.h"
+#include "IGS_AICommandFinishedDelegate.h"
 #include "IGS_WaypointHelpers.generated.h"
 
 class AActor;
@@ -24,30 +24,29 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void GoToWaypoint(AIGS_GameCharacterFramework* inAICharacter, AIGS_WaypointBase* inWaypoint, bool allowedInLimbo, bool allowedInAlarm);
-    
+
     UFUNCTION(BlueprintCallable)
     static AIGS_WaypointBase* GetRememberedWaypoint(AIGS_GameCharacterFramework* inAICharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     static AIGS_WaypointBase* GetRandomVisitableWaypoint(AIGS_GameCharacterFramework* inCharacter, TArray<AIGS_WaypointBase*> inWaypoints);
-    
+
     UFUNCTION(BlueprintCallable)
     static TArray<AIGS_WaypointBase*> GetAllVisitableWaypoints(AIGS_GameCharacterFramework* inCharacter, TArray<AIGS_WaypointBase*> inWaypoints);
-    
+
     UFUNCTION(BlueprintCallable)
     static UIGS_AICommandWait* CommandWaitForTime(AIGS_GameCharacterFramework* inAICharacter, FIGS_AICommandFinishedDelegate inFinishDelegate, float InTime, bool allowedInLimbo, bool allowedInAlarm);
-    
+
     UFUNCTION(BlueprintCallable)
     static UIGS_AICommandUseObject* CommandUseObject(AIGS_GameCharacterFramework* inAICharacter, FIGS_AICommandFinishedDelegate inFinishDelegate, AActor* inUsableObject, bool allowedInLimbo, bool allowedInAlarm);
-    
+
     UFUNCTION(BlueprintCallable)
     static UIGS_AICommandPlayAnimation* CommandPlayAnimation(AIGS_GameCharacterFramework* inAICharacter, FIGS_AICommandFinishedDelegate inFinishDelegate, EIGS_AIMontageSOVariant InAnimation, float InTime, bool allowedInLimbo, bool allowedInAlarm);
-    
+
     UFUNCTION(BlueprintCallable)
     static UIGS_AICommandMoveToWaypoint* CommandMoveToWaypoint(AIGS_GameCharacterFramework* inAICharacter, FIGS_AICommandFinishedDelegate inFinishDelegate, AIGS_WaypointBase* inWaypoint, bool allowedInLimbo, bool allowedInAlarm);
-    
+
     UFUNCTION(BlueprintCallable)
     static UIGS_AICommandMoveTo* CommandMoveTo(AIGS_GameCharacterFramework* inAICharacter, FIGS_AICommandFinishedDelegate inFinishDelegate, FVector inPositon, FVector inLookAtPos, bool inUseLookAtPos, EIGS_Speed inMovementSpeed, float inStoppingDistance, bool allowedInLimbo, bool allowedInAlarm);
-    
-};
 
+};

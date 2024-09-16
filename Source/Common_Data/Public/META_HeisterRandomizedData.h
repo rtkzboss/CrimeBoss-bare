@@ -11,22 +11,21 @@ struct COMMON_DATA_API FMETA_HeisterRandomizedData {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 FinalCost;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 FinalUpkeep;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MissionCut;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FGameplayTagContainer Traits;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FMETA_PerkData> Perks;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FCommonHeisterLoadout Loadout;
-    
+
     FMETA_HeisterRandomizedData();
 };
-

@@ -14,4 +14,3 @@ enum class EPopulationConstraintType : uint8 {
     CURVE,
     CURVE_COLOR,
 };
-

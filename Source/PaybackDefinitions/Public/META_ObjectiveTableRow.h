@@ -11,13 +11,12 @@ struct PAYBACKDEFINITIONS_API FMETA_ObjectiveTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool CampaignOnly;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_ObjectiveConfig Config;
-    
+
     FMETA_ObjectiveTableRow();
 };
-

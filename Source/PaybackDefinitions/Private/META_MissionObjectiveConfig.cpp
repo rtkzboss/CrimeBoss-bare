@@ -6,8 +6,8 @@
 #include "EMETA_ObjectiveType.h"
 
 FMETA_MissionObjectiveConfig::FMETA_MissionObjectiveConfig() {
-    (*this).Config.ShorDescription = FText::FromString(TEXT(""));
-    (*this).Config.Description = FText::FromString(TEXT(""));
+    (*this).Config.ShorDescription = FText::GetEmpty();
+    (*this).Config.Description = FText::GetEmpty();
     (*this).Config.ObjectiveType = EMETA_ObjectiveType::None;
     (*this).Config.Amount = -1;
     (*this).Config.RevivesAmount = 0;
@@ -27,12 +27,12 @@ FMETA_MissionObjectiveConfig::FMETA_MissionObjectiveConfig() {
     (*this).Config.SWATKills = 0;
     (*this).Config.GeneralAmountOfKills = 0;
     (*this).Config.KillsAmountOperator = EMETA_ConditionOperator::GreaterOrEqual;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Config.OutputParamTag, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Config.OutputParamTag, 0)) = NAME_None;
     (*this).Config.OutputParamValue = 0;
     (*this).Config.OutputParamOperator = EMETA_ConditionOperator::GreaterOrEqual;
     (*this).Config.DaysToComplete = 1;
     (*this).Config.ShowInFPS = true;
-    (*this).DescriptionOverride = FText::FromString(TEXT(""));
+    (*this).DescriptionOverride = FText::GetEmpty();
     (*this).bOverrideReward = false;
 }
-

@@ -35,7 +35,7 @@ void UIGS_GameScreenHandler::InitializeMenuScreen(TSubclassOf<UIGS_SystemMenuScr
 }
 
 UIGS_BaseMenuWidget* UIGS_GameScreenHandler::InitializeBaseScreen(TSubclassOf<UIGS_BaseMenuWidget> inBaseScreenClass) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_GameScreenHandler::GoBackOnTopScreen() {
@@ -46,10 +46,9 @@ int32 UIGS_GameScreenHandler::GetScreensStackCount() const {
 }
 
 UIGS_BaseMenuWidget* UIGS_GameScreenHandler::GetBaseScreen() const {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_GameScreenHandler::CloseSystemMenuScreen() {
 }
-
 

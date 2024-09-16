@@ -9,4 +9,3 @@ enum class EIGS_DialogueBlacklistOption : uint8 {
     OnlyLevel,
     All,
 };
-

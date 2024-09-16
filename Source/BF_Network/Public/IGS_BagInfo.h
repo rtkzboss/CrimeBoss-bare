@@ -9,10 +9,9 @@ struct BF_NETWORK_API FIGS_BagInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 BagCount;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<EIGS_BagType> BagTypes;
-    
+
     FIGS_BagInfo();
 };
-

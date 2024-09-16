@@ -4,4 +4,3 @@ UBTTask_SquadHeistersFight::UBTTask_SquadHeistersFight() {
     (*this).NodeName = TEXT("Squad Heisters Fight");
 }
 
-

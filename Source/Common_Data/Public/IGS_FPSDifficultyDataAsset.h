@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<EIGS_FPSDifficulty, FIGS_FPSDifficultySettings> FPSDifficultySettings;
-    
-};
 
+};

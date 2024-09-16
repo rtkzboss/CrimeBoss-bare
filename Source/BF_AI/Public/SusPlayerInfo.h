@@ -8,4 +8,3 @@ struct FSusPlayerInfo {
 public:
     BF_AI_API FSusPlayerInfo();
 };
-

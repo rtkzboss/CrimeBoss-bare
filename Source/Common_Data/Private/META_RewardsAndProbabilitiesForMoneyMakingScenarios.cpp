@@ -5,4 +5,3 @@ FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios::FMETA_RewardsAndProbabilit
     (*this).ProbabilityWeight = 10;
     (*this).LimitOnMap = -1;
 }
-

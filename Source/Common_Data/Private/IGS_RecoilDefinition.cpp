@@ -8,4 +8,3 @@ FIGS_RecoilDefinition::FIGS_RecoilDefinition() {
     (*this).RecoilPitchReturnRatio = 1.000000000e+00f;
     (*this).VerticalRecoilDecay = 5.000000000e-01f;
 }
-

@@ -12,4 +12,3 @@ FIGS_WeaponAttackDefinition::FIGS_WeaponAttackDefinition() {
     (*this).ProjectilesPerShot = 1;
     (*this).ShooterTypes = 0;
 }
-

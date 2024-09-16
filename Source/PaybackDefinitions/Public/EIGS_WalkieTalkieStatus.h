@@ -9,4 +9,3 @@ enum class EIGS_WalkieTalkieStatus : uint8 {
     WalkieTalkie_Strike,
     WalkieTalkie_Alarm,
 };
-

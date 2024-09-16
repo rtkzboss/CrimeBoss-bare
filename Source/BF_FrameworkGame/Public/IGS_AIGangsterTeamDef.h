@@ -12,13 +12,12 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterTeamDef : public FIGS_AIBaseTeamDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterTiersDef Tiers;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterBaseDataDefaults DefaultStats;
-    
+
     UPROPERTY()
     EIGS_GangsterVariationType Variation;
-    
+
     FIGS_AIGangsterTeamDef();
 };
-

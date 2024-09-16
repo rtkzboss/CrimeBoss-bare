@@ -11,10 +11,9 @@ struct PAYBACK_API FIGS_MetaCutsceneCharacterSetup {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MetaDialogueCharacter DialogueCharacter;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<AIGS_CharacterPaperDoll> CustomCharacter;
-    
+
     FIGS_MetaCutsceneCharacterSetup();
 };
-

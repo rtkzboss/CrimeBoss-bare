@@ -55,4 +55,3 @@ FFTIAnimationFrameData::FFTIAnimationFrameData() {
     (*this).HeadRot.Z = 0.000000000e+00f;
     (*this).HeadRot.W = 0.000000000e+00f;
 }
-

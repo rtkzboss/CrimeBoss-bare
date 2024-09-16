@@ -16,27 +16,26 @@ public:
 
     UPROPERTY(Config, EditAnywhere)
     TArray<EIGS_InputAction> AllowedMenuInputActions;
-    
+
     UPROPERTY(Config, EditAnywhere)
     float LeftThumbstickMenuThreshold;
-    
+
     UPROPERTY(Config, EditAnywhere)
     TMap<EMETA_ItemQuality, FIGS_UITileQualityColors> UITileQualityColors;
-    
+
     UPROPERTY(Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> ChatWheelDataTable;
-    
+
     UPROPERTY(Config, EditAnywhere)
     int32 ChatWheelActionLimit;
-    
+
     UPROPERTY(Config, EditAnywhere)
     float ChatWheelActionLimitTime;
-    
+
     UPROPERTY(Config, EditAnywhere)
     float ChatWheelCooldownTime;
-    
+
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     float IconVisibilityDuration;
-    
-};
 
+};

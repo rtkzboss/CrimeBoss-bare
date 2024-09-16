@@ -13,17 +13,16 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Revive(APawn* healer);
-    
+
     UFUNCTION(BlueprintPure)
     float GetReviveTime(APawn* healer);
-    
+
     UFUNCTION(BlueprintPure)
     float GetDownStateLengthInSeconds() const;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Replicated)
     bool UseDownState;
-    
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

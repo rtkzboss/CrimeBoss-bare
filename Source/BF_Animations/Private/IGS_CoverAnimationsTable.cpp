@@ -3,4 +3,3 @@
 UIGS_CoverAnimationsTable::UIGS_CoverAnimationsTable() {
 }
 
-

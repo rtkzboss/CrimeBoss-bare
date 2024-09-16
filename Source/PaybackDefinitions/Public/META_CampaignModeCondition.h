@@ -10,13 +10,12 @@ struct FMETA_CampaignModeCondition {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ConditionalTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ConditionOperator Operator;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Value;
-    
+
     PAYBACKDEFINITIONS_API FMETA_CampaignModeCondition();
 };
-

@@ -10,4 +10,3 @@ FString UMETA_PerkStatsData::GetDefaultRichTextStyleTag() const {
 void UMETA_PerkStatsData::GetCombinedStatGroupsFromAttributes(const TMap<FGameplayAttribute, float>& inAttributes, bool& outSuccess, TMap<FMETA_PerkStatGroup, int32>& outStatGroups) const {
 }
 
-

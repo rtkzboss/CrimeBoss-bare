@@ -2,4 +2,3 @@
 
 FIGS_SystemEventNotificationData::FIGS_SystemEventNotificationData() {
 }
-

@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_UnitSpecialization UnitSpecialization;
-    
-};
 
+};

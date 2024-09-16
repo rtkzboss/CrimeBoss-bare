@@ -2,13 +2,11 @@
 
 FIGS_ScopeModData::FIGS_ScopeModData() {
     (*this).IsDynamicScope = false;
-    (*this).DynamicScopeMesh = nullptr;
-    (*this).ReticleMaterial = nullptr;
-    (*this).ReticleTortillaMaterial = nullptr;
+    (*this).DynamicScopeMesh = FSoftObjectPath();
+    (*this).ReticleMaterial = FSoftObjectPath();
+    (*this).ReticleTortillaMaterial = FSoftObjectPath();
     (*this).ScopeType = EIGS_ScopeType::Scope_Normal;
-    auto& gen0 = (*this).ScopeZoom;
-    gen0.Empty();
-    gen0.AddDefaulted(1);
+    (*this).ScopeZoom = {1.250000000e+00f};
     (*this).WeaponTortillaOffset.X = 0.000000000e+00f;
     (*this).WeaponTortillaOffset.Y = 0.000000000e+00f;
     (*this).WeaponTortillaOffset.Z = 0.000000000e+00f;
@@ -24,4 +22,3 @@ FIGS_ScopeModData::FIGS_ScopeModData() {
     (*this).AttachOffsetVector.Z = 0.000000000e+00f;
     (*this).ScopeInPercent = 8.000000119e-01f;
 }
-

@@ -35,16 +35,16 @@ FIGS_AIEmployeeSpecializationHolder::FIGS_AIEmployeeSpecializationHolder() {
     (*this).Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Default.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Default.Enabled = true;
-    (*this).Default.Character.Controller = nullptr;
-    (*this).Default.Character.Pawns.Empty();
-    (*this).Default.Loadout.WeaponPool.PrimaryWeapons.Empty();
-    (*this).Default.Loadout.WeaponPool.SecondaryWeapons.Empty();
-    (*this).Default.Loadout.WeaponPool.MeleeWeapons.Empty();
-    (*this).Default.Loadout.WeaponProbability.Empty();
+    (*this).Default.Character.Controller = FSoftObjectPath();
+    (*this).Default.Character.Pawns = {};
+    (*this).Default.Loadout.WeaponPool.PrimaryWeapons = {};
+    (*this).Default.Loadout.WeaponPool.SecondaryWeapons = {};
+    (*this).Default.Loadout.WeaponPool.MeleeWeapons = {};
+    (*this).Default.Loadout.WeaponProbability = {};
     (*this).Default.Loadout.NoThrowableChance = 0;
-    (*this).Default.Loadout.ThrowablePool.Empty();
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Default.Loadout.ThrowablePool = {};
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
     (*this).Default.Loadout.ShowNoThrowableBool = 0;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
 }
-

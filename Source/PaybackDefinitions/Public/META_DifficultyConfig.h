@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_DifficultyConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_ScenarioDifficulty, int32> Config;
-    
+
     FMETA_DifficultyConfig();
 };
-

@@ -11,4 +11,3 @@ enum class EIGS_TPP_ReloadStates : uint8 {
     Reload_Interrupted_By_Shooting,
     Reload_Interrupted_By_Equipping,
 };
-

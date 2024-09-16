@@ -10,7 +10,6 @@ struct COMMON_DATA_API FIGS_KeyItemsData : public FIGS_CommonItemData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_RoomSecurityType KeySecurity;
-    
+
     FIGS_KeyItemsData();
 };
-

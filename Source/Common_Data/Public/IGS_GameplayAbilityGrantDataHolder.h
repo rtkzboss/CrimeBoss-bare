@@ -10,7 +10,6 @@ struct COMMON_DATA_API FIGS_GameplayAbilityGrantDataHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UGameplayAbility> Ability;
-    
+
     FIGS_GameplayAbilityGrantDataHolder();
 };
-

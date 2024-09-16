@@ -1,5 +1,4 @@
 #include "META_LevelActorsManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UMETA_LevelActorsManagerComponent::UMETA_LevelActorsManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -17,22 +16,21 @@ bool UMETA_LevelActorsManagerComponent::Register_Implementation(FGameplayTag inT
 }
 
 UObject* UMETA_LevelActorsManagerComponent::GetRandom(FGameplayTag inTag) {
-    return NULL;
+    return nullptr;
 }
 
 UObject* UMETA_LevelActorsManagerComponent::GetFirst(FGameplayTag inTag) {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UObject*> UMETA_LevelActorsManagerComponent::GetAllWithChildren(FGameplayTag inTag) {
-    return TArray<UObject*>();
+    return {};
 }
 
 TArray<UObject*> UMETA_LevelActorsManagerComponent::GetAll(FGameplayTag inTag) {
-    return TArray<UObject*>();
+    return {};
 }
 
 void UMETA_LevelActorsManagerComponent::Clear() {
 }
-
 

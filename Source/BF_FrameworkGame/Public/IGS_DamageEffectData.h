@@ -12,22 +12,21 @@ struct FIGS_DamageEffectData : public FIGS_PlayerEffectData {
 public:
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UMaterialInstance> EffectPostProcess;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TSoftObjectPtr<UAkAudioEvent> HitAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     float HitPowerMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float EffectDuration;
-    
+
     UPROPERTY(EditAnywhere)
     float MinimalEffectDamage;
-    
+
     UPROPERTY(EditAnywhere)
     float MaximumEffectDamage;
-    
+
     BF_FRAMEWORKGAME_API FIGS_DamageEffectData();
 };
-

@@ -19,4 +19,3 @@ enum class EIGS_ReactionVariant : uint8 {
     React_InspectCamera,
     React_ReportInWithGun,
 };
-

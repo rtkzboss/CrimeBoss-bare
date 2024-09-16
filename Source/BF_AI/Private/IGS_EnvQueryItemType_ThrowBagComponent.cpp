@@ -3,4 +3,3 @@
 UIGS_EnvQueryItemType_ThrowBagComponent::UIGS_EnvQueryItemType_ThrowBagComponent() {
 }
 
-

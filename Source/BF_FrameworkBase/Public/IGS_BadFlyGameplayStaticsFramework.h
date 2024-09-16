@@ -39,144 +39,143 @@ public:
 
     UFUNCTION(BlueprintPure)
     static bool WasComponentRecentlyRenderedOnScreen(const UPrimitiveComponent* inPrimitiveComponent, float inTolerance);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void UpdateLevelTransitionState(UObject* inWCO, EIGS_LevelTransitionType inState);
-    
+
     UFUNCTION(BlueprintCallable)
     static void TogglePSOBatching(bool InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SwitchSKU(EIG_PS5SKU& outSKU);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetVolumetricFogCommandVariables(const FString& inEnabled, const FString& inDepthDistributionScale, const FString& inGridPixelSize, const FString& inGridSizeZ, const FString& inHistoryMissSupersampleCount, const FString& inHistoryWeight, const FString& inInjectShadowedLightsSeparately, const FString& inInverseSquaredLightDistanceBiasScale, const FString& inJitter, const FString& inLightFunctionSupersampleScale, const FString& inTemporalReprojection, const FString& inVoxelizationShowOnlyPassIndex);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetTranslucencyCommandVariables(const FString& inTranslucencyLightingVolumeDim, const FString& inTranslucencyLightingVolumeInnerDistance, const FString& inTranslucencyLightingVolumeOuterDistance, const FString& inTranslucencyVolumeBlur);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetStartWithTickEnabled(UActorComponent* InComponent, bool InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetPSOBatchingToBackgroundMode();
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetNotWorldShadows(UPrimitiveComponent* InComponent, bool inSelfShadowOnly);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetIsPlayerSpawnEnabled(UObject* inWCO, bool InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetIsAccountLinkedInConfig(bool inIsAccountLinked);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetCustomDepthStencilOnLandscape(ALandscape* inLandscape, ERendererStencilMask inStencilMask, int32 InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetCommandVariableRevertible(const FString& inVariable, const FString& InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetCastDynamicShadowsEnabled(ULightComponentBase* inLight, bool InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     static void RestoreRevertibleCommandVariables();
-    
+
     UFUNCTION(BlueprintCallable)
     static UTexture2D* RenderTargetCreateStaticTexture2DEditorOnlyToSameFile(UTextureRenderTarget2D* RenderTarget, const FString& Name, const FString& InPath, TEnumAsByte<TextureCompressionSettings> CompressionSettings, TEnumAsByte<TextureMipGenSettings> MipSettings);
-    
+
     UFUNCTION(BlueprintPure)
     static int32 RemainingCompilingShaders();
-    
+
     UFUNCTION(BlueprintCallable)
     static void PrintExtraSessionSettings(FBlueprintSessionResult SessionResult);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void OpenSteamKeyboard(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void MakeTouchEventForAI(UObject* inWCO, AActor* inTouchReceiver, AActor* inOtherActor, const FVector& inEventLocation);
-    
+
     UFUNCTION(BlueprintPure)
     static FSessionsSearchSetting MakeStringSessionSearchProperty(const EIGS_SessionPropertyKey Key, const FString& Value, EOnlineComparisonOpRedux ComparisonOp);
-    
+
     UFUNCTION(BlueprintPure)
     static FSessionPropertyKeyPair MakeStringSessionProperty(const EIGS_SessionPropertyKey Key, const FString& Value);
-    
+
     UFUNCTION(BlueprintCallable)
     static void MakeNoiseForAI(FVector inNoiseLocation, float inLoudness, AActor* inInstigator, float inMaxRange, FName inTag);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsProcessingSessionInvite(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsPlayerOwnerOfSession(const FBPUniqueNetId& PlayerToCheck, const FBlueprintSessionResult& Result);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsNetDriverReady(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsMultiplayerSessionInValidState(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool IsMultiplayerSessionCreationInProgress(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable)
     static void GetStringSessionProperty(const TArray<FSessionPropertyKeyPair>& ExtraSettings, const EIGS_SessionPropertyKey Key, ESessionSettingSearchResult& SearchResult, FString& SettingValue);
-    
+
     UFUNCTION(BlueprintCallable)
     static void GetSessionPropertyInt64(const TArray<FSessionPropertyKeyPair>& ExtraSettings, FName SettingName, ESessionSettingSearchResult& SearchResult, int64& SettingValue);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AActor* GetRandomActorWithGameplayTagAndRandomStream(UObject* inWCO, FGameplayTag inGameplayTag, UIGS_RandomStreamHolder* inRandomStreamHolder);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AActor* GetRandomActorWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag);
-    
+
     UFUNCTION(BlueprintPure)
     static FString GetProjectVersion();
-    
+
     UFUNCTION(BlueprintPure)
     static FString GetOnlyRevisionNumber();
-    
+
     UFUNCTION(BlueprintCallable)
     static void GetNicknames(APlayerController* InPlayerController, FString& outPlatformNickname, FString& outNickname);
-    
+
     UFUNCTION(BlueprintPure)
     static int32 GetMaxPlayers(const FBlueprintSessionResult& Result);
-    
+
     UFUNCTION(BlueprintCallable)
     static bool GetIsJapaneseSku();
-    
+
     UFUNCTION(BlueprintCallable)
     static EIGS_AIHitReactionVariant GetHitReactionVariant(FVector inHitDir, AIGS_GameCharacterFramework* inGameCharacter);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AActor* GetFirstActorWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag);
-    
+
     UFUNCTION(BlueprintPure)
     static FVector GetCurrentInterestPointLocation(FIGS_InterestPointHolder inInterestPoint);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<AActor*> GetAllActorsWithGameplayTag(UObject* inWCO, FGameplayTag inGameplayTag);
-    
+
     UFUNCTION(BlueprintPure)
     static FVector GetActorBoundsCenter(const AActor* inActor);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static bool DoesMultiplayerSessionExist(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintPure)
     static FIGS_InterestPointHolder CreateInterestPointFromLocation(FVector InLocation);
-    
+
     UFUNCTION(BlueprintPure)
     static FIGS_InterestPointHolder CreateInterestPointFromActor(AActor* inActor, FVector inOffset);
-    
+
     UFUNCTION(BlueprintPure)
     static FIGS_InterestPointHolder CreateEmptyInterestPoint();
-    
+
     UFUNCTION(BlueprintCallable)
     static void ClearSessionResultData(UPARAM(Ref) FBlueprintSessionResult& SessionResult);
-    
-};
 
+};

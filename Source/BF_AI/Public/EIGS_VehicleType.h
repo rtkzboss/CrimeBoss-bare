@@ -9,4 +9,3 @@ enum class EIGS_VehicleType : uint8 {
     SwatVan,
     PoliceCar,
 };
-

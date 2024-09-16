@@ -5,4 +5,3 @@ FMETA_MoneyMakingOpportunitiesSaveData::FMETA_MoneyMakingOpportunitiesSaveData()
     (*this).StartDay = 0;
     (*this).FinishDay = 0;
 }
-

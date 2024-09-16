@@ -8,10 +8,9 @@ struct FIGS_FaceExpressionInfo {
 public:
     UPROPERTY(EditAnywhere)
     float HitDuration;
-    
+
     UPROPERTY(EditAnywhere)
     float AttackDuration;
-    
+
     BF_ANIMATIONS_API FIGS_FaceExpressionInfo();
 };
-

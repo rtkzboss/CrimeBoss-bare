@@ -11,4 +11,3 @@ enum class EIGS_UIWeaponModes : uint8 {
     Silencer = 8,
     Sniper = 16,
 };
-

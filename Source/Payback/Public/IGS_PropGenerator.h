@@ -14,13 +14,12 @@ public:
 
     UFUNCTION(BlueprintPure)
     UIGS_PropLogicComponent* GetLogicComponent() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     USceneComponent* Root;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_PropLogicComponent* m_PropLogicComponent;
-    
-};
 
+};

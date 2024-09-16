@@ -1,5 +1,4 @@
 #include "AIBarksManagerBase.h"
-#include "ComponentInstanceDataCache.h"
 
 UAIBarksManagerBase::UAIBarksManagerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).CombatTauntsCooldownPerChar = 1.500000000e+01f;
@@ -15,5 +14,4 @@ UAIBarksManagerBase::UAIBarksManagerBase(const FObjectInitializer& ObjectInitial
 
 void UAIBarksManagerBase::ReportStealthIdleDialogue(AIGS_GameCharacterFramework* inCharacterFramework, FText inDialogue) {
 }
-
 

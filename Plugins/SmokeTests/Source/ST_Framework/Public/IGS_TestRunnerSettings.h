@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
     TArray<FMapToTestInfo> PriorityMapsToTest;
-    
-};
 
+};

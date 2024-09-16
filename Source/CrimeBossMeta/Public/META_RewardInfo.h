@@ -9,10 +9,9 @@ struct FMETA_RewardInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Title;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ActionCardTheme Theme;
-    
+
     CRIMEBOSSMETA_API FMETA_RewardInfo();
 };
-

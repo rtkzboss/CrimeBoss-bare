@@ -1,5 +1,4 @@
 #include "IGS_BossBackgroundManager.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_BossBackgroundManager::UIGS_BossBackgroundManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -32,7 +31,6 @@ FName UIGS_BossBackgroundManager::GetNameForLevel(int32 inLevel) {
 }
 
 TArray<FName> UIGS_BossBackgroundManager::GetLoadedBackgroundLevelNames() const {
-    return TArray<FName>();
+    return {};
 }
-
 

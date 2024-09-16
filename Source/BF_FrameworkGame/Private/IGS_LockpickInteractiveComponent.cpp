@@ -1,5 +1,4 @@
 #include "IGS_LockpickInteractiveComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_LockpickInteractiveComponent::UIGS_LockpickInteractiveComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -10,5 +9,4 @@ void UIGS_LockpickInteractiveComponent::ReportLockPickEnded(AIGS_GameCharacterFr
 FIGS_LockPickDifficultySetting UIGS_LockpickInteractiveComponent::GetLockPickDifficultySettings_Implementation() {
     return FIGS_LockPickDifficultySetting{};
 }
-
 

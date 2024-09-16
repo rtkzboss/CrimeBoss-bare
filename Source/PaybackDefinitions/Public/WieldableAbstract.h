@@ -10,4 +10,3 @@ public:
     AWieldableAbstract(const FObjectInitializer& ObjectInitializer);
 
 };
-

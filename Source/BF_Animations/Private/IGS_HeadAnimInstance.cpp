@@ -15,7 +15,7 @@ bool UIGS_HeadAnimInstance::IsBot() const {
 }
 
 UIGS_PlayerAnimInstance* UIGS_HeadAnimInstance::GetOwningPlayerAnimInstance() {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_HeadAnimInstance::GetLOD_Index() const {
@@ -24,5 +24,4 @@ int32 UIGS_HeadAnimInstance::GetLOD_Index() const {
 
 void UIGS_HeadAnimInstance::FindEyesLookAt(const FVector& inFromLocation, FVector2D& OutEyesOffset) const {
 }
-
 

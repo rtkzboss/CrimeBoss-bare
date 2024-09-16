@@ -1,8 +1,4 @@
 #include "IGS_WidgetFocusableSpinBox.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetFocusableSpinBox::UIGS_WidgetFocusableSpinBox() : Super(FObjectInitializer::Get()) {
     (*this).SpinBoxNameText = FText::FromString(TEXT("##SPINBOX_NAME##"));
@@ -126,7 +122,6 @@ void UIGS_WidgetFocusableSpinBox::OnValueDecreased(int32 InValue) {
 
 void UIGS_WidgetFocusableSpinBox::OnValueChanged(int32 InValue) {
 }
-
 
 
 

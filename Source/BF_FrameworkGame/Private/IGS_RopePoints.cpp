@@ -11,4 +11,3 @@ FIGS_RopePoints::FIGS_RopePoints() {
     (*this).EndParticleCollisionIndicies = 15;
     (*this).CollisionDistanceFromTheGround = 1.000000000e+02f;
 }
-

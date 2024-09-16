@@ -21,15 +21,15 @@ void UIGS_RoomHelpers::HighlightBadPolys(const UObject* inWorldContextObject, TA
 }
 
 TArray<AActor*> UIGS_RoomHelpers::GetTransitionPointsFromRoom(AIGS_RoomBase* Room) {
-    return TArray<AActor*>();
+    return {};
 }
 
 TArray<AActor*> UIGS_RoomHelpers::GetTransitionPointsBetweenRooms(AIGS_RoomBase* inLeftRoom, AIGS_RoomBase* inRightRoom) {
-    return TArray<AActor*>();
+    return {};
 }
 
 TArray<EIGS_RoomType> UIGS_RoomHelpers::GetRoomTypesFromBitflagInt(int32 inBitFlag) {
-    return TArray<EIGS_RoomType>();
+    return {};
 }
 
 int32 UIGS_RoomHelpers::GetRoomIndex(const UObject* inWorldContextObject, AIGS_RoomBase* inRoom) {
@@ -41,11 +41,11 @@ int32 UIGS_RoomHelpers::GetRoomCount(const UObject* inWorldContextObject) {
 }
 
 AIGS_RoomBase* UIGS_RoomHelpers::GetRoomByLocation(const UObject* inWorldContextObject, FVector inInLocation, FVector inExtent) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_RoomBase* UIGS_RoomHelpers::GetRoomByIndex(const UObject* inWorldContextObject, int32 inIndex) {
-    return NULL;
+    return nullptr;
 }
 
 FText UIGS_RoomHelpers::GetLockNameFromRoom(AIGS_RoomBase* inRoom) {
@@ -61,7 +61,7 @@ int32 UIGS_RoomHelpers::GetIntFromRoomTypes(TArray<EIGS_RoomType> inRoomTypes) {
 }
 
 AIGS_DoorsBreachPoints* UIGS_RoomHelpers::GetBreachingPoints(FVector inQueryLocation, AIGS_DoorBase* inDoor) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_RoomHelpers::GetBadRoomsOffline(const UObject* inWorldContextObject, TArray<FIGS_RoomTestStruct>& inGroupsWithoutRoom, TArray<FIGS_RoomTestStruct>& inGroupsWithMultipleRooms) {
@@ -71,7 +71,7 @@ void UIGS_RoomHelpers::GetBadRooms(const UObject* inWorldContextObject, TArray<F
 }
 
 TArray<AIGS_RoomBase*> UIGS_RoomHelpers::FindRoom(const UObject* inWorldContextObject, EIGS_RoomSecurityType inSecurity, EIGS_RoomType inType, EIGS_SecurityTier inOuterTier) {
-    return TArray<AIGS_RoomBase*>();
+    return {};
 }
 
 FVector UIGS_RoomHelpers::FindCenterPolygonOfRoom(const TArray<FVector>& Room) {
@@ -80,5 +80,4 @@ FVector UIGS_RoomHelpers::FindCenterPolygonOfRoom(const TArray<FVector>& Room) {
 
 void UIGS_RoomHelpers::DebugHighlightRoomPolys(AIGS_RoomBase* inRoom) {
 }
-
 

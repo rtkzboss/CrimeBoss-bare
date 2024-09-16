@@ -3,4 +3,3 @@
 FIGS_AIBaseTeamDef::FIGS_AIBaseTeamDef() {
     (*this).TeamSide = EIGS_TeamSideEnum::TS_Unknown;
 }
-

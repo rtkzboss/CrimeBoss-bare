@@ -8,4 +8,3 @@ enum class EIGS_Test_TEMP : uint8 {
     TMP_Test0 = 0,
     TMP_Test1,
 };
-

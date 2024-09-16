@@ -9,4 +9,3 @@ enum class SteamAvatarSize : uint8 {
     SteamAvatar_Medium,
     SteamAvatar_Large,
 };
-

@@ -10,4 +10,3 @@ enum class EIGS_AmmoChangeDefinition : uint8 {
     HalfAmmo,
     FullAmmo,
 };
-

@@ -9,4 +9,3 @@ enum class EIGS_ThreatLevel : uint8 {
     Threat_Suspicious,
     Threat_Dangerous,
 };
-

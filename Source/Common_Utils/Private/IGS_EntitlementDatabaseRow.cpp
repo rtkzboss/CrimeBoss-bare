@@ -1,8 +1,9 @@
 #include "IGS_EntitlementDatabaseRow.h"
 
 FIGS_EntitlementDatabaseRow::FIGS_EntitlementDatabaseRow() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
-    (*this).Title = FText::FromString(TEXT(""));
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).Title = FText::GetEmpty();
     (*this).RequiresCampaignRestart = false;
     (*this).Steam_AppId = 0;
     (*this).Steam_URL = TEXT("");
@@ -19,4 +20,3 @@ FIGS_EntitlementDatabaseRow::FIGS_EntitlementDatabaseRow() {
     (*this).XBOX_OfferId = TEXT("");
     (*this).IsDLC = false;
 }
-

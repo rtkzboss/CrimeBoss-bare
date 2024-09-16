@@ -5,4 +5,3 @@ UIGS_EnvQueryGenerator_Pickups::UIGS_EnvQueryGenerator_Pickups() {
     (*this).ItemType = UIGS_EnvQueryItemType_PickupActorBase::StaticClass();
 }
 
-

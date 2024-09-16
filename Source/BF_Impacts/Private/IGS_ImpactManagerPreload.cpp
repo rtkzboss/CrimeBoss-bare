@@ -3,4 +3,3 @@
 UIGS_ImpactManagerPreload::UIGS_ImpactManagerPreload() {
 }
 
-

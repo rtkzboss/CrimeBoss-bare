@@ -5,15 +5,15 @@ UMETA_RandEventsDatabase::UMETA_RandEventsDatabase() {
 }
 
 TArray<FMETA_RandEventTableRow> UMETA_RandEventsDatabase::GetSuitableEvents(const UObject* inWCO, EMETA_RandEventCategory inEventsCategory, EMETA_RespectLvl inRespectLvl, EMETA_Heat inCurrentHeat, int32 inCurrentBalance, FGameplayTagContainer inStorylineAssets, bool inCheckChance) {
-    return TArray<FMETA_RandEventTableRow>();
+    return {};
 }
 
 TArray<FMETA_RandEventReward> UMETA_RandEventsDatabase::GetEventRewards(FGameplayTag inEventID) {
-    return TArray<FMETA_RandEventReward>();
+    return {};
 }
 
 TSubclassOf<UMETA_MissionID> UMETA_RandEventsDatabase::GetEventMission(FGameplayTag inEventID) {
-    return NULL;
+    return nullptr;
 }
 
 FMETA_RandEventTableRow UMETA_RandEventsDatabase::GetEventInfo(FGameplayTag inEventID, bool& outSuccess) {
@@ -30,5 +30,4 @@ int32 UMETA_RandEventsDatabase::GetEventCost(FGameplayTag inEventID, EMETA_Respe
 EMETA_RandEventCategory UMETA_RandEventsDatabase::GetEventCategory(FGameplayTag inEventID) {
     return EMETA_RandEventCategory::None;
 }
-
 

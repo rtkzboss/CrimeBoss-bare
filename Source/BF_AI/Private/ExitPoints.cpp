@@ -7,4 +7,3 @@ FExitPoints::FExitPoints() {
     (*this).RightFar = nullptr;
     (*this).StackPos = nullptr;
 }
-

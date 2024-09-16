@@ -42,4 +42,3 @@ enum class EIGS_AIEventNotificationType : uint8 {
     Shout,
     PlayerDirectionalCue,
 };
-

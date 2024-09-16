@@ -1,4 +1,5 @@
 #include "IGS_TempWaveManagerData.h"
+#include "EIGS_TeamSideEnum.h"
 
 UIGS_TempWaveManagerData::UIGS_TempWaveManagerData() {
     (*this).AssaultTime = 1.800000000e+02f;
@@ -15,9 +16,10 @@ UIGS_TempWaveManagerData::UIGS_TempWaveManagerData() {
     (*this).TotalLimit = 8;
     (*this).TotalLimitThreshold = 5.000000000e-01f;
     (*this).LargeGroup = 10;
-    auto& gen0 = (*this).WaveHolders;
-    gen0.Empty();
-    gen0.AddDefaulted(1);
+    FIGS_WaveHolder gen;
+    gen.TeamSide = EIGS_TeamSideEnum::TS_SWAT;
+    gen.Amount = 1;
+    gen.Random = 0;
+    (*this).WaveHolders = {MoveTemp(gen)};
 }
-
 

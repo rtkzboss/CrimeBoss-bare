@@ -1,21 +1,20 @@
 #include "IGS_Crane.h"
 #include "AkComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_Crane::AIGS_Crane(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).RootObject = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    (*this).AkAudioComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    auto gen2 = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
+    (*this).RootObject = gen;
+    (*this).AkAudioComponent = gen2;
     (*this).CableMeshHeight = 1.000000000e+02f;
     (*this).MoveSpeed = 2.000000000e+02f;
     (*this).LiftSpeed = 6.000000000e+02f;
     (*this).RotationSpeed = 5.000000000e+00f;
     (*this).mR_CableInstancesCount = 1;
-    (*this).RootComponent = (USceneComponent*)RootObject;
-    (*this).AkAudioComponent->SetupAttachment((*this).RootObject);
+    (*this).RootComponent = gen;
+    if (gen2) gen2->SetupAttachment(gen);
 }
 
 void AIGS_Crane::UseCrane(AIGS_GameCharacterFramework* inInstigator) {
@@ -103,11 +102,10 @@ void AIGS_Crane::All_LiftMagnetStart_Implementation() {
 
 void AIGS_Crane::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_Crane, mR_CraneTopModuleRotator);
     DOREPLIFETIME(AIGS_Crane, mR_MagnetComponentLocation);
     DOREPLIFETIME(AIGS_Crane, mR_MagnetHeadLocation);
     DOREPLIFETIME(AIGS_Crane, mR_CableInstancesCount);
 }
-
 

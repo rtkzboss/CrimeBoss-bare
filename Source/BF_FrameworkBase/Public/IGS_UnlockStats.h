@@ -12,10 +12,9 @@ struct FIGS_UnlockStats {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, FIGS_UnlockStatsLevels> ItemStats;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_UnlockCategory, FIGS_UnlockStatsQualities> CategoryStats;
-    
+
     BF_FRAMEWORKBASE_API FIGS_UnlockStats();
 };
-

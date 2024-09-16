@@ -10,4 +10,3 @@ enum class EIGS_ImpactType : uint8 {
     Decal,
     ImpactMax = Decal,
 };
-

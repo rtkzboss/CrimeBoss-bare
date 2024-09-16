@@ -11,6 +11,5 @@ public:
 
     UPROPERTY()
     TArray<UHoudiniInputObject*> BlueprintStaticMeshes;
-    
-};
 
+};

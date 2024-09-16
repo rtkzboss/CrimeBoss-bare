@@ -5,4 +5,3 @@ FIGS_EnemyTierPerRespect::FIGS_EnemyTierPerRespect() {
     (*this).Tier2 = 0;
     (*this).Tier3 = 0;
 }
-

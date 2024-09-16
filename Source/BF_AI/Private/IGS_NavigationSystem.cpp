@@ -1,6 +1,4 @@
 #include "IGS_NavigationSystem.h"
-#include "AI/Navigation/NavigationTypes.h"
-#include "AI/NavigationSystemBase.h"
 
 UIGS_NavigationSystem::UIGS_NavigationSystem() {
 }
@@ -14,5 +12,4 @@ void UIGS_NavigationSystem::PauseNavigationAutoUpdate(const UObject* WorldContex
 bool UIGS_NavigationSystem::IsNavigationAutoUpdatePaused(const UObject* WorldContextObject) {
     return false;
 }
-
 

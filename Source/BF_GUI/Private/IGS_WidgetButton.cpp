@@ -1,10 +1,4 @@
 #include "IGS_WidgetButton.h"
-#include "EIGS_InputAction.h"
-#include "Input/CommonInputMode.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetButton::UIGS_WidgetButton() {
     (*this).NormalFontColor.R = 8.000000119e-01f;
@@ -70,5 +64,4 @@ UIGS_WidgetButton::UIGS_WidgetButton() {
     (*this).DisabledBorderTint.A = 1.000000000e+00f;
     (*this).FlagSize = 8.000000000e+00f;
 }
-
 

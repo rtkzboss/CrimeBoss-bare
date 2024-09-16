@@ -12,22 +12,21 @@ struct COMMON_DATA_API FMETA_RivalAttackMissionRowInfo {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Picture;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> MapIconOverride;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FPSMissionInfo FPSMissionInfo;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag UnlockTag;
-    
+
     FMETA_RivalAttackMissionRowInfo();
 };
-

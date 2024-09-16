@@ -12,9 +12,8 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnDetectionFullEvent();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnDetectionChangedEvent(float InValue);
-    
-};
 
+};

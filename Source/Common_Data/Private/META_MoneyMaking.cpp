@@ -1,7 +1,4 @@
 #include "META_MoneyMaking.h"
-#include "EIGS_UserDifficulty.h"
-#include "EMETA_JobResult.h"
-#include "EMETA_LobbyVisibilityType.h"
 
 UMETA_MoneyMaking::UMETA_MoneyMaking() {
 }
@@ -16,5 +13,4 @@ FMETA_MoneyMakingMissionSave UMETA_MoneyMaking::GetSaveData() {
 FMETA_FPSMissionRowInfo UMETA_MoneyMaking::GetInfo() const {
     return FMETA_FPSMissionRowInfo{};
 }
-
 

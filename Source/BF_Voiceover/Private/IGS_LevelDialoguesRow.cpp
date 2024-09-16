@@ -2,6 +2,5 @@
 
 FIGS_LevelDialoguesRow::FIGS_LevelDialoguesRow() {
     (*this).ID = NAME_None;
-    (*this).DialoguesDatabase = nullptr;
+    (*this).DialoguesDatabase = FSoftObjectPath();
 }
-

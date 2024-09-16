@@ -8,7 +8,6 @@ struct BF_LEVELGENERATOR_API FIGS_UsedNumbersHolder {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<bool> SelectedNumbers;
-    
+
     FIGS_UsedNumbersHolder();
 };
-

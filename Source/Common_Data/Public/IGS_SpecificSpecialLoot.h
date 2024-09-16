@@ -9,10 +9,9 @@ struct FIGS_SpecificSpecialLoot {
 public:
     UPROPERTY(BlueprintReadWrite)
     FGameplayTag LootType;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 Value;
-    
+
     COMMON_DATA_API FIGS_SpecificSpecialLoot();
 };
-

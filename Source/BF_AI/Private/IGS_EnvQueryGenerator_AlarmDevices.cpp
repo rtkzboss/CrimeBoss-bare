@@ -5,4 +5,3 @@ UIGS_EnvQueryGenerator_AlarmDevices::UIGS_EnvQueryGenerator_AlarmDevices() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

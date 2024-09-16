@@ -1,6 +1,4 @@
 #include "IGS_MetalDetector.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_MetalDetector::AIGS_MetalDetector(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -31,8 +29,7 @@ void AIGS_MetalDetector::Client_OnDetected_Implementation() {
 
 void AIGS_MetalDetector::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_MetalDetector, mR_bIsEnabled);
 }
-
 

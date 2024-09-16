@@ -19,4 +19,3 @@ enum class EIGS_EyeHeightTargetType : uint8 {
     EHT_MountedWeapon,
     EHT_Sliding,
 };
-

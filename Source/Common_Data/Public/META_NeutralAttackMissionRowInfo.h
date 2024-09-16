@@ -10,16 +10,15 @@ struct COMMON_DATA_API FMETA_NeutralAttackMissionRowInfo {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Picture;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> MapIconOverride;
-    
+
     FMETA_NeutralAttackMissionRowInfo();
 };
-

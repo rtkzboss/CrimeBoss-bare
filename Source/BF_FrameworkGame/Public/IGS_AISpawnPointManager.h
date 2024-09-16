@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintPure)
     TArray<AIGS_AISpawnPoint*> GetAllSpawnPointsInBox(FVector inOrigin, FVector InBoxExtent) const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<AIGS_AISpawnPoint*> GetAllSpawnPoints() const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<AIGS_AIEnemyGroupSpawner*> GetAllSpawnGroupsInBox(FVector inOrigin, FVector InBoxExtent) const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<AIGS_AIEnemyGroupSpawner*> GetAllSpawnGroups() const;
-    
-};
 
+};

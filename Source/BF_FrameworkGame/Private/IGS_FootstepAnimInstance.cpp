@@ -3,4 +3,3 @@
 UIGS_FootstepAnimInstance::UIGS_FootstepAnimInstance() {
 }
 
-

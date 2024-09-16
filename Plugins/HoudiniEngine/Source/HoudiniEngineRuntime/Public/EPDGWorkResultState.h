@@ -13,4 +13,3 @@ enum class EPDGWorkResultState : uint8 {
     Deleted,
     NotLoaded,
 };
-

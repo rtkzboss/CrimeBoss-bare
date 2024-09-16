@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     UTexture2D* DataPointTexture;
-    
+
     UPROPERTY(EditAnywhere)
     FIntPoint PointSizeTextureOffsets[3];
-    
-};
 
+};

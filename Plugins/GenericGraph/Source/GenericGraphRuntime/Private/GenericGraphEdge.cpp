@@ -4,7 +4,6 @@ UGenericGraphEdge::UGenericGraphEdge() {
 }
 
 UGenericGraph* UGenericGraphEdge::GetGraph() const {
-    return NULL;
+    return nullptr;
 }
-
 

@@ -9,10 +9,9 @@ struct FMutableBuiltData {
 public:
     UPROPERTY()
     FGuid CompilationId;
-    
+
     UPROPERTY()
     int32 SupportedVersion;
-    
+
     CUSTOMIZABLEOBJECT_API FMutableBuiltData();
 };
-

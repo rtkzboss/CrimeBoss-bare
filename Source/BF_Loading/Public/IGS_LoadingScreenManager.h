@@ -3,7 +3,6 @@
 #include "EIGS_InputDevice.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
 #include "IGS_LoadingScreenManager.generated.h"
 
 class UIGS_LoadingScreenDataAsset;
@@ -19,48 +18,47 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenSetupType(UObject* inWCO, FGameplayTag inTag);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenSecondaryText(UObject* inWCO, FText InText);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenMainText(UObject* inWCO, FText InText);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetLoadingScreenBackgroundTexture(UObject* inWCO, TSoftObjectPtr<UTexture> inBackgroundTexture);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetDebugState(UObject* inWCO, bool inState);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SetAdditionalLoadingScreenTips(UObject* inWCO, FGameplayTagContainer inTagContainer);
-    
+
 protected:
     UFUNCTION()
     void OnInputDeviceChanged(EIGS_InputDevice inInputDevice);
-    
+
 public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsLoadingScreenSetupTypeSet(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool GetDebugState(UObject* inWCO, bool inState);
-    
+
 protected:
     UPROPERTY()
     UIGS_LoadingScreenDataAsset* Data;
-    
+
     UPROPERTY()
     UTexture* BackgroundTexture;
-    
+
     UPROPERTY()
     UTexture* ThrobberBrush;
-    
+
     UPROPERTY()
     TSoftObjectPtr<UTexture> CustomBackgroundTexture;
-    
+
     UPROPERTY()
     TArray<UIGS_RichTextBlockDecoratorBase*> m_LoadingTipsDecoratorOwner;
-    
-};
 
+};

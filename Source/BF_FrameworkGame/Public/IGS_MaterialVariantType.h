@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_MaterialVariantType {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<UMaterialInstance*> MaterialVariant;
-    
+
     FIGS_MaterialVariantType();
 };
-

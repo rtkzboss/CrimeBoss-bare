@@ -10,7 +10,6 @@ void UIGS_InteractiveObjectsManager::RegisterInteractiveComponent(UIGS_Interacti
 }
 
 UIGS_InteractiveObjectsManager* UIGS_InteractiveObjectsManager::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
-
 

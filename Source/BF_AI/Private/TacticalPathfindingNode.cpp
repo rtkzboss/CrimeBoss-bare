@@ -3,4 +3,3 @@
 UTacticalPathfindingNode::UTacticalPathfindingNode() {
 }
 
-

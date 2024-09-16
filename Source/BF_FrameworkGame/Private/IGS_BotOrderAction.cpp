@@ -9,7 +9,6 @@ FIGS_BotOrderAction::FIGS_BotOrderAction() {
     (*this).Location.Y = 3.402823466e+38f;
     (*this).Location.Z = 3.402823466e+38f;
     (*this).PathExists = false;
-    (*this).AdditionalPoi.Empty();
+    (*this).AdditionalPoi = {};
     (*this).Source = EIGS_BotOrderActionSource::Custom;
 }
-

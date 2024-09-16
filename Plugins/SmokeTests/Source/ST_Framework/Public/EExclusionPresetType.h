@@ -8,4 +8,3 @@ enum class EExclusionPresetType : uint8 {
     CharacterMissions,
     All,
 };
-

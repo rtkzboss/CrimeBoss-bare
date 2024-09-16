@@ -8,7 +8,6 @@ struct PAYBACKDEFINITIONS_API FMETA_Chance {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Chance;
-    
+
     FMETA_Chance();
 };
-

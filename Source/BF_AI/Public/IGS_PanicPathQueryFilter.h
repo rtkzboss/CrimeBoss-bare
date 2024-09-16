@@ -12,18 +12,17 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float InnerRadiusMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float OuterRadiusMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float DangerAreaCost;
-    
+
     UPROPERTY(EditAnywhere)
     float HeuristicScale;
-    
+
     UPROPERTY(EditAnywhere)
     bool IsActive;
-    
-};
 
+};

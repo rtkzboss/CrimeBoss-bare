@@ -15,6 +15,5 @@ public:
 private:
     UFUNCTION()
     void OnWieldableAdded(UIGS_WieldableInventoryObjectBase* inObject, EIGS_WieldableSlot inSlot);
-    
-};
 
+};

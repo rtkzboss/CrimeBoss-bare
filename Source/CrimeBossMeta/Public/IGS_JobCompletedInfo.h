@@ -12,13 +12,12 @@ struct FIGS_JobCompletedInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UMETA_BaseMission* MetaMissionID;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_FPS2Meta_Data MetaData;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_SharedMetaTransfer_Data SharedData;
-    
+
     CRIMEBOSSMETA_API FIGS_JobCompletedInfo();
 };
-

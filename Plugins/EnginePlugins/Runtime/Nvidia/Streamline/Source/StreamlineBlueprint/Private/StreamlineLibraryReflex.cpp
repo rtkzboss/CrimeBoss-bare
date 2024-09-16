@@ -15,7 +15,7 @@ bool UStreamlineLibraryReflex::IsReflexSupported() {
 }
 
 float UStreamlineLibraryReflex::GetRenderLatencyInMs() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UStreamlineReflexMode UStreamlineLibraryReflex::GetReflexMode() {
@@ -23,15 +23,14 @@ UStreamlineReflexMode UStreamlineLibraryReflex::GetReflexMode() {
 }
 
 float UStreamlineLibraryReflex::GetGameToRenderLatencyInMs() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UStreamlineLibraryReflex::GetGameLatencyInMs() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UStreamlineReflexMode UStreamlineLibraryReflex::GetDefaultReflexMode() {
     return UStreamlineReflexMode::Disabled;
 }
-
 

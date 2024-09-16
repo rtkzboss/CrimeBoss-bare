@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AimAssistSocketData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName SocketName;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     FVector Offset;
-    
+
     FIGS_AimAssistSocketData();
 };
-

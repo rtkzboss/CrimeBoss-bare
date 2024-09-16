@@ -10,4 +10,3 @@ public:
     UPaybackAICharactersEventsWatcher(const FObjectInitializer& ObjectInitializer);
 
 };
-

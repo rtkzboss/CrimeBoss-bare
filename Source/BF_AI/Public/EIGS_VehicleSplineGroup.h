@@ -12,4 +12,3 @@ enum class EIGS_VehicleSplineGroup : uint8 {
     HelicopterFriendly,
     HelicopterEnemy,
 };
-

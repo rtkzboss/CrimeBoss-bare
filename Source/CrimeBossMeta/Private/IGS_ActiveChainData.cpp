@@ -5,23 +5,23 @@ FIGS_ActiveChainData::FIGS_ActiveChainData() {
     (*this).Difficulty = EIGS_ChainDifficulty::Unknown;
     (*this).ActiveChainInfo.ActiveMissionIndex = 0;
     (*this).ActiveChainInfo.ActiveChainContractID = nullptr;
-    (*this).ActiveChainMissionSteps.Empty();
-    (*this).ActiveChainMissions.Empty();
+    (*this).ActiveChainMissionSteps = {};
+    (*this).ActiveChainMissions = {};
     (*this).CurrentMission = nullptr;
-    (*this).ActiveChainResults.MissionName = FText::FromString(TEXT(""));
+    (*this).ActiveChainResults.MissionName = FText::GetEmpty();
     (*this).ActiveChainResults.ChainContractID = nullptr;
     (*this).ActiveChainResults.StarRating = 0;
     (*this).ActiveChainResults.Score = 0;
     (*this).ActiveChainResults.MoneyRewardTotal = 0;
     (*this).ActiveChainResults.RespectRewardAfterLastMission = 0;
-    (*this).ActiveChainResults.WeaponsReward.Empty();
-    (*this).ActiveChainResults.WeaponTagsReward.Empty();
-    (*this).ActiveChainResults.QuickMissionResults.Empty();
-    (*this).ActiveChainResults.PlayerHeisters.Empty();
-    (*this).ActiveChainResults.RemainingHeisters.Empty();
+    (*this).ActiveChainResults.WeaponsReward = {};
+    (*this).ActiveChainResults.WeaponTagsReward = {};
+    (*this).ActiveChainResults.QuickMissionResults = {};
+    (*this).ActiveChainResults.PlayerHeisters = {};
+    (*this).ActiveChainResults.RemainingHeisters = {};
     (*this).ActiveChainResults.Completed = false;
-    (*this).ChainCrew.Empty();
-    (*this).ChainCrewInfo.Empty();
+    (*this).ChainCrew = {};
+    (*this).ChainCrewInfo = {};
+    (*this).MissionData = {};
     (*this).ChainMoney = 0;
 }
-

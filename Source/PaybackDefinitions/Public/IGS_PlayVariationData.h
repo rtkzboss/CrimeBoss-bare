@@ -9,40 +9,39 @@ struct PAYBACKDEFINITIONS_API FIGS_PlayVariationData {
 public:
     UPROPERTY()
     uint16 GroupID;
-    
+
     UPROPERTY()
     FName LineID;
-    
+
     UPROPERTY()
     FIGS_DialogueGroupCharacterHolder Character;
-    
+
     UPROPERTY()
     float VoiceProgress;
-    
+
     UPROPERTY()
     float VoiceLength;
-    
+
     UPROPERTY()
     uint8 VariationID;
-    
+
     UPROPERTY()
     int8 VoiceMediaID;
-    
+
     UPROPERTY()
     bool IsTTSVoice;
-    
+
     UPROPERTY()
     bool PlayExtraStart;
-    
+
     UPROPERTY()
     bool PlayExtraFinish;
-    
+
     UPROPERTY()
     bool IsImportant;
-    
+
     UPROPERTY()
     bool ShouldReplicate;
-    
+
     FIGS_PlayVariationData();
 };
-

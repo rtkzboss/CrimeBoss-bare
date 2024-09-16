@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverdKey;
-    
+
     UPROPERTY(EditAnywhere)
     float Distance;
-    
-};
 
+};

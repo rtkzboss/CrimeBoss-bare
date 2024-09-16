@@ -1,5 +1,4 @@
 #include "AnimNode_PowerIK_Walk.h"
-#include "Animation/InputScaleBias.h"
 
 FAnimNode_PowerIK_Walk::FAnimNode_PowerIK_Walk() {
     (*this).CharacterRoot = TEXT("pelvis");
@@ -9,7 +8,7 @@ FAnimNode_PowerIK_Walk::FAnimNode_PowerIK_Walk() {
     (*this).BodyInertia.UseSpring = false;
     (*this).BodyInertia.SpringStrength = 1.000000000e+02f;
     (*this).BodyInertia.SpringDamping = 2.000000030e-01f;
-    (*this).Limbs.Empty();
+    (*this).Limbs = {};
     (*this).StepMaxReachDistance = 2.000000000e+02f;
     (*this).StepDurationMultiplier = 1.000000000e+00f;
     (*this).StepHeightMultiplier = 1.000000000e+00f;
@@ -19,9 +18,9 @@ FAnimNode_PowerIK_Walk::FAnimNode_PowerIK_Walk() {
     (*this).PrintTeleportWarning = false;
     (*this).CollisionChannel = ECC_WorldStatic;
     (*this).TraceComplex = true;
-    (*this).BendDirections.Empty();
-    (*this).ExcludedBones.Empty();
-    (*this).JointLimits.Empty();
+    (*this).BendDirections = {};
+    (*this).ExcludedBones = {};
+    (*this).JointLimits = {};
     (*this).MaxSquashIterations = 6;
     (*this).MaxStretchIterations = 6;
     (*this).MaxFinalIterations = 3;
@@ -29,4 +28,3 @@ FAnimNode_PowerIK_Walk::FAnimNode_PowerIK_Walk() {
     (*this).SolverAlpha = 1.000000000e+00f;
     (*this).DebugDrawSize = 2.000000000e+01f;
 }
-

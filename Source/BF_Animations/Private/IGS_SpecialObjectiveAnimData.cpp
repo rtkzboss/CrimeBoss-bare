@@ -6,4 +6,3 @@ FIGS_SpecialObjectiveAnimData::FIGS_SpecialObjectiveAnimData() {
     (*this).BreakAnim = nullptr;
     (*this).BreakAnimationSpeed = 1.000000000e+00f;
 }
-

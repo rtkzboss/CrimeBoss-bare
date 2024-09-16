@@ -4,7 +4,7 @@ UIGS_PlayMovieLatent::UIGS_PlayMovieLatent() {
 }
 
 UIGS_PlayMovieLatent* UIGS_PlayMovieLatent::PlayMovieLatent(UObject* WorldContextObject, FMETA_MovieUIData inMovieData) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_PlayMovieLatent::MovieStarted_Internal() {
@@ -12,5 +12,4 @@ void UIGS_PlayMovieLatent::MovieStarted_Internal() {
 
 void UIGS_PlayMovieLatent::MovieFinished_Internal() {
 }
-
 

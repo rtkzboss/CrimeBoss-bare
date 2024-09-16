@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AmmoBoxSpawnArray {
 public:
     UPROPERTY(EditAnywhere)
     TArray<FIGS_AmmoBoxSpawnItem> Items;
-    
+
     FIGS_AmmoBoxSpawnArray();
 };
-

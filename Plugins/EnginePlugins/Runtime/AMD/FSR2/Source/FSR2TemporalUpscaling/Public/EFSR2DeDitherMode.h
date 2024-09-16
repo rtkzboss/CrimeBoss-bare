@@ -8,4 +8,3 @@ enum class EFSR2DeDitherMode : int32 {
     Full,
     HairOnly,
 };
-

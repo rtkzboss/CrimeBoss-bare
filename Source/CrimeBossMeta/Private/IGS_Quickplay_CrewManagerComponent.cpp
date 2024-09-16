@@ -1,5 +1,4 @@
 #include "IGS_Quickplay_CrewManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_Quickplay_CrewManagerComponent::UIGS_Quickplay_CrewManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -28,23 +27,23 @@ bool UIGS_Quickplay_CrewManagerComponent::HasBossItemEquipped(FGameplayTag inIte
 }
 
 TArray<UMETA_Character*> UIGS_Quickplay_CrewManagerComponent::GetCharactersAndBoss() {
-    return TArray<UMETA_Character*>();
+    return {};
 }
 
 TArray<UMETA_Character*> UIGS_Quickplay_CrewManagerComponent::GetCharacters() {
-    return TArray<UMETA_Character*>();
+    return {};
 }
 
 UMETA_Character* UIGS_Quickplay_CrewManagerComponent::GetCharacter(FGameplayTag inCharacterTag) {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_BossCharacter* UIGS_Quickplay_CrewManagerComponent::GetBossCharacter() const {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_Character* UIGS_Quickplay_CrewManagerComponent::CreateCharacter(FGameplayTag inCharacterTag) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_Quickplay_CrewManagerComponent::ChooseBossRandomWeapons() {
@@ -55,5 +54,4 @@ void UIGS_Quickplay_CrewManagerComponent::AddCharacters(FGameplayTagContainer in
 
 void UIGS_Quickplay_CrewManagerComponent::AddCharacter(FGameplayTag inCharacterTag) {
 }
-
 

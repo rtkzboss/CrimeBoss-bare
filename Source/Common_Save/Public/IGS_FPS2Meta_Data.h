@@ -11,49 +11,48 @@ struct COMMON_SAVE_API FIGS_FPS2Meta_Data : public FIGS_MetaTransferDataBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ECommonMissionResult MissionResult;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> CollectedObjectiveLoot;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> CollectedBonusLoot;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MoneyCollected;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CivilCasualties;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PoliceCasualties;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 SwatCasualties;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 GangsterCasualties;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 EnemiesRemaining;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 BackupHeistersCasualties;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAlarmTriggered;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCleanExecution;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 WantedBadges;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LootBagsCollected;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GameplayTime;
-    
+
     FIGS_FPS2Meta_Data();
 };
-

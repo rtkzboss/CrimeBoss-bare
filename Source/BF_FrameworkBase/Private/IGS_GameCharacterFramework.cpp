@@ -1,8 +1,5 @@
 #include "IGS_GameCharacterFramework.h"
 #include "SkeletalMeshComponentBudgeted.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
 #include "SkinnedDecalSampler.h"
 #include "IGS_CharacterData.h"
 #include "IGS_DamageHandlerComponentFramework.h"
@@ -16,21 +13,28 @@
 #include "Templates/SubclassOf.h"
 
 AIGS_GameCharacterFramework::AIGS_GameCharacterFramework(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<USkeletalMeshComponentBudgeted>(TEXT("CharacterMesh0")).SetDefaultSubobjectClass<UIGS_GameCharacterMovementComponent>(TEXT("CharMoveComp"))) {
+    auto gen = CreateDefaultSubobject<UIGS_CharacterData>(TEXT("Character Data"));
+    auto gen2 = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("Object Status"));
+    auto gen3 = CreateDefaultSubobject<UIGS_DamageHandlerComponentFramework>(TEXT("DamageHandlerComponent2"));
+    auto gen4 = CreateDefaultSubobject<UIGS_DealtDamageEventsWatcher>(TEXT("DealtDamageEventsWatcher"));
+    auto gen5 = CreateDefaultSubobject<UIGS_OutlineComponent>(TEXT("Outline Component"));
+    auto gen6 = CreateDefaultSubobject<UIGS_GASComponentBase>(TEXT("GASComponent"));
+    auto gen7 = CreateDefaultSubobject<USkinnedDecalSampler>(TEXT("kinned Decal Sampler"));
+    auto gen8 = CreateDefaultSubobject<UIGS_GASAttributeSetBase>(TEXT("GASAttributeSet"));
     (*this).bSpawnedForFirstTime = true;
-    (*this).CharacterData = CreateDefaultSubobject<UIGS_CharacterData>(TEXT("Character Data"));
-    (*this).ObjectStatus = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("Object Status"));
-    (*this).DamageHandlerComponent2 = CreateDefaultSubobject<UIGS_DamageHandlerComponentFramework>(TEXT("DamageHandlerComponent2"));
-    (*this).DealtDamageEventsWatcher = CreateDefaultSubobject<UIGS_DealtDamageEventsWatcher>(TEXT("DealtDamageEventsWatcher"));
-    (*this).OutlineComponent = CreateDefaultSubobject<UIGS_OutlineComponent>(TEXT("Outline Component"));
-    (*this).GASComponent = CreateDefaultSubobject<UIGS_GASComponentBase>(TEXT("GASComponent"));
-    (*this).SkinnedDecalSampler = CreateDefaultSubobject<USkinnedDecalSampler>(TEXT("kinned Decal Sampler"));
-    (*this).GASAttributeSet = CreateDefaultSubobject<UIGS_GASAttributeSetBase>(TEXT("GASAttributeSet"));
+    (*this).CharacterData = gen;
+    (*this).ObjectStatus = gen2;
+    (*this).DamageHandlerComponent2 = gen3;
+    (*this).DealtDamageEventsWatcher = gen4;
+    (*this).OutlineComponent = gen5;
+    (*this).GASComponent = gen6;
+    (*this).SkinnedDecalSampler = gen7;
+    (*this).GASAttributeSet = gen8;
     (*this).SquadID = -1;
     (*this).LastSquadID = -1;
     (*this).bCanAttack = true;
     (*this).CharacterIDEnum = EIGS_CharacterID::Char_Unknown;
     (*this).GenericCharacterID = -1;
-    (*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0))->SetupAttachment((*this).RootComponent);
 }
 
 bool AIGS_GameCharacterFramework::WantsAim() const {
@@ -169,11 +173,11 @@ EIGS_TeamSideEnum AIGS_GameCharacterFramework::GetTeamSideId() const {
 }
 
 AIGS_SquadFramework* AIGS_GameCharacterFramework::GetSquad() const {
-    return NULL;
+    return nullptr;
 }
 
 USkinnedDecalSampler* AIGS_GameCharacterFramework::GetSkinnedDecalSampler() const {
-    return NULL;
+    return nullptr;
 }
 
 int32 AIGS_GameCharacterFramework::GetMaxBagCount() const {
@@ -181,7 +185,7 @@ int32 AIGS_GameCharacterFramework::GetMaxBagCount() const {
 }
 
 TSubclassOf<UIGS_CharacterMaskBase> AIGS_GameCharacterFramework::GetMaskID_Implementation() const {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_InterestPointHolder AIGS_GameCharacterFramework::GetLookAtPoint() const {
@@ -205,7 +209,7 @@ FVector AIGS_GameCharacterFramework::GetHeadBoneLocation() {
 }
 
 UIGS_GameCharacterMovementComponent* AIGS_GameCharacterFramework::GetGameCharacterMovementComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 FVector AIGS_GameCharacterFramework::GetFeetLocation() const {
@@ -245,7 +249,7 @@ int32 AIGS_GameCharacterFramework::GetCurrentBagCount() const {
 }
 
 float AIGS_GameCharacterFramework::GetCurrentAim() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FVector AIGS_GameCharacterFramework::GetChestOffset() const {
@@ -257,15 +261,15 @@ FVector AIGS_GameCharacterFramework::GetChestBoneLocation() {
 }
 
 UIGS_CharacterWieldablesHolderComponent* AIGS_GameCharacterFramework::GetCharacterWieldableHolder() const {
-    return NULL;
+    return nullptr;
 }
 
 float AIGS_GameCharacterFramework::GetCharacterWieldableFPVModelScaleMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_GameCharacterFramework::GetCharacterWieldable3PVModelScaleMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool AIGS_GameCharacterFramework::GetCharacterCanAttack() {
@@ -285,11 +289,11 @@ bool AIGS_GameCharacterFramework::GetCanBeUnholstered() const {
 }
 
 float AIGS_GameCharacterFramework::GetBagsPercentage() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UAkComponent* AIGS_GameCharacterFramework::GetAkAudioComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 FVector AIGS_GameCharacterFramework::GetAimAtPosition() const {
@@ -348,10 +352,9 @@ void AIGS_GameCharacterFramework::AddGameplayTag(FGameplayTag inTagToAdd, bool i
 
 void AIGS_GameCharacterFramework::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_GameCharacterFramework, mR_IsMovementDisabled);
     DOREPLIFETIME(AIGS_GameCharacterFramework, CharacterIDEnum);
     DOREPLIFETIME(AIGS_GameCharacterFramework, GenericCharacterID);
 }
-
 

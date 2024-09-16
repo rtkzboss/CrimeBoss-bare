@@ -2,4 +2,3 @@
 
 FIGS_AIGuardBaseDataModifiers::FIGS_AIGuardBaseDataModifiers() {
 }
-

@@ -6,4 +6,3 @@ FCartesianAxisInstanceConfig::FCartesianAxisInstanceConfig() {
     (*this).bShowMarkers = true;
     (*this).bShowLabels = true;
 }
-

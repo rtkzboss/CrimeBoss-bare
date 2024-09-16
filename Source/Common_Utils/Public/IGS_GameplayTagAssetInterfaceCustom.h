@@ -12,4 +12,3 @@ class IIGS_GameplayTagAssetInterfaceCustom : public IGameplayTagAssetInterface {
     GENERATED_BODY()
 public:
 };
-

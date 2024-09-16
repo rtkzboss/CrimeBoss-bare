@@ -13,4 +13,3 @@ FIGS_SentryEnemyHolder::FIGS_SentryEnemyHolder() {
     (*this).Detecting = false;
     (*this).Spotted = false;
 }
-

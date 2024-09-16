@@ -3,4 +3,3 @@
 UKantanCartesianChartWidgetStyle::UKantanCartesianChartWidgetStyle() {
 }
 
-

@@ -12,6 +12,5 @@ public:
 protected:
     UPROPERTY(Config, EditAnywhere)
     float Precision;
-    
-};
 
+};

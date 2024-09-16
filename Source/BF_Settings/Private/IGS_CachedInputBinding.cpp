@@ -2,4 +2,3 @@
 
 FIGS_CachedInputBinding::FIGS_CachedInputBinding() {
 }
-

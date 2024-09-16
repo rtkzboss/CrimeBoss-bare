@@ -11,4 +11,3 @@ enum class EIGS_SlotHighlight : uint8 {
     SH_MAX UMETA(Hidden),
     SH_UNKNOWN = 255,
 };
-

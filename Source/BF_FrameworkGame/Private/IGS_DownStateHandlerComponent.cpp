@@ -1,5 +1,5 @@
 #include "IGS_DownStateHandlerComponent.h"
-#include "ComponentInstanceDataCache.h"
+#include "Components/ActorComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_DownStateHandlerComponent::UIGS_DownStateHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -15,6 +15,8 @@ UIGS_DownStateHandlerComponent::UIGS_DownStateHandlerComponent(const FObjectInit
     (*this).DownStateMovementSpeedMultiplier.Value = 5.000000000e-01f;
     (*this).CurrentDownStatesCount = 3;
     (*this).BaseDownStatesCount = 3;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_DownStateHandlerComponent::OnRep_DownStateCount() {
@@ -57,9 +59,8 @@ void UIGS_DownStateHandlerComponent::CallGoToDownstateAnimationDone() {
 
 void UIGS_DownStateHandlerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_DownStateHandlerComponent, CurrentDownStatesCount);
     DOREPLIFETIME(UIGS_DownStateHandlerComponent, BaseDownStatesCount);
 }
-
 

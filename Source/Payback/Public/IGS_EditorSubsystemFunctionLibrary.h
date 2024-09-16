@@ -12,9 +12,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static bool UseCustomMission();
-    
+
     UFUNCTION(BlueprintCallable)
     static FCustomMissionData GetCustomMission();
-    
-};
 
+};

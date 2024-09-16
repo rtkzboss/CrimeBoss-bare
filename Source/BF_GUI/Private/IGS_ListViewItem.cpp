@@ -1,8 +1,4 @@
 #include "IGS_ListViewItem.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_ListViewItem::UIGS_ListViewItem() : Super(FObjectInitializer::Get()) {
     (*this).bHoldEnabled = true;
@@ -34,7 +30,6 @@ void UIGS_ListViewItem::HandleDoubleClicked_Implementation() {
 
 void UIGS_ListViewItem::HandleClicked_Implementation() {
 }
-
 
 
 

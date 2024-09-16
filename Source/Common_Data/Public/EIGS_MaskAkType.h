@@ -9,4 +9,3 @@ enum class EIGS_MaskAkType : uint8 {
     Hockey,
     Gas,
 };
-

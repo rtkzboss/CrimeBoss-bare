@@ -3,4 +3,3 @@
 UIGS_AnimNotify_ThrowGrenade::UIGS_AnimNotify_ThrowGrenade() {
 }
 
-

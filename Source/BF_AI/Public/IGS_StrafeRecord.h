@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_StrafeRecord {
 public:
     UPROPERTY()
     AActor* Target;
-    
+
     UPROPERTY(VisibleAnywhere)
     float Time;
-    
+
     FIGS_StrafeRecord();
 };
-

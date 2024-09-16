@@ -3,7 +3,7 @@
 FIGS_VisorEffectData::FIGS_VisorEffectData() {
     (*this).CameraShakeIntensityBloodSplatter = 2.000000030e-01f;
     (*this).CameraShakeIntensityIncrementBloodSplatter = 1.000000015e-01f;
-    (*this).DrillSparksNiagaraSystem = nullptr;
+    (*this).DrillSparksNiagaraSystem = FSoftObjectPath();
     (*this).DrillSparksUpdateInterval = 5.000000075e-02f;
     (*this).DrillSparksScale.X = 5.000000000e-01f;
     (*this).DrillSparksScale.Y = 5.000000000e-01f;
@@ -22,22 +22,21 @@ FIGS_VisorEffectData::FIGS_VisorEffectData() {
     (*this).StandardCurvesDuration = 1.000000000e+00f;
     (*this).VisorSmudgeFxDuration = 1.000000000e+01f;
     (*this).VisorSplatterFxDuration = 6.000000000e+00f;
-    (*this).ExplosionSmudgeEffectsPostProcessMaterial = nullptr;
-    (*this).BloodSplatterPostProcessMaterial = nullptr;
+    (*this).ExplosionSmudgeEffectsPostProcessMaterial = FSoftObjectPath();
+    (*this).BloodSplatterPostProcessMaterial = FSoftObjectPath();
     (*this).ChanceToSpawnBloodSplatter = 1.000000000e+00f;
-    (*this).BloodSplatterWeightCurve = nullptr;
-    (*this).ExplosionSmudgeWeightCurve = nullptr;
-    (*this).ExplosionSmudgeDistanceFalloff = nullptr;
+    (*this).BloodSplatterWeightCurve = FSoftObjectPath();
+    (*this).ExplosionSmudgeWeightCurve = FSoftObjectPath();
+    (*this).ExplosionSmudgeDistanceFalloff = FSoftObjectPath();
     (*this).SmudgesOverlapDistanceMultiplier = 1.000000000e+00f;
     (*this).ShakeOverlapDistanceMultiplier = 1.000000000e+00f;
     (*this).ShakeMuffledOverlapDistanceMultiplier = 1.000000000e+00f;
     (*this).ShakeIntensity = 1.000000000e+00f;
     (*this).MuffledExplosionShakeMultiplier = 2.000000030e-01f;
-    (*this).ExplosionShakeDistanceIntensity = nullptr;
+    (*this).ExplosionShakeDistanceIntensity = FSoftObjectPath();
     (*this).BloodSplatterDistance = 2.000000000e+02f;
     (*this).DeadBodySplatterWaitSeconds = 5.000000000e-01f;
     (*this).DeadBodySplatterChancePercent = 5.000000000e-01f;
     (*this).TimeToWaitAfterBloodSplatterShake = 4.000000060e-01f;
     (*this).TimeToWaitAfterExplosionShake = 0.000000000e+00f;
 }
-

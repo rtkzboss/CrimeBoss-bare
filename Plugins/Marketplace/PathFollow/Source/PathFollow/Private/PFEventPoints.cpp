@@ -1,8 +1,7 @@
 #include "PFEventPoints.h"
 
 FPFEventPoints::FPFEventPoints() {
-    (*this).Points.Empty();
+    (*this).Points = {};
     (*this).AllEventHolder = nullptr;
-    (*this).Holders.Empty();
+    (*this).Holders = {};
 }
-

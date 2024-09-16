@@ -11,7 +11,6 @@ struct CRIMEBOSSMETA_API FMETA_PlotlineAssetMaterialStructure {
 public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TMap<UStaticMeshComponent*, FMETA_PlotlineAssetMaterialSlots> MaterialStructure;
-    
+
     FMETA_PlotlineAssetMaterialStructure();
 };
-

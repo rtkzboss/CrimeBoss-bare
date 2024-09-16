@@ -4,4 +4,3 @@ UBTTask_SwitchWeaponBase::UBTTask_SwitchWeaponBase() {
     (*this).NodeName = TEXT("Switch Weapon Base");
 }
 
-

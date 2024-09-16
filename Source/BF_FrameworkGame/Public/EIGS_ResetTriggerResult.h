@@ -9,4 +9,3 @@ enum class EIGS_ResetTriggerResult : uint8 {
     SuccessBag,
     NoResult,
 };
-

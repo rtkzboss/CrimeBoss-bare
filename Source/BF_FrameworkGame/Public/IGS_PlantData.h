@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_PlantData {
 public:
     UPROPERTY()
     bool IsPlanted;
-    
+
     UPROPERTY()
     FRotator PlantRotation;
-    
+
     FIGS_PlantData();
 };
-

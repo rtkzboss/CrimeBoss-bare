@@ -11,4 +11,3 @@ UIGS_AIWaypointMaterialsDevSettings::UIGS_AIWaypointMaterialsDevSettings() {
     (*this).TeamFlagBackupMat = FSoftObjectPath(TEXT("/Game/00_Main/UI/EditorIcons/Materials/MI_GUI_Flag_TeamSide_Backup.MI_GUI_Flag_TeamSide_Backup"), TEXT(""));
 }
 
-

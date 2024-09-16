@@ -8,4 +8,3 @@ FIGS_SpringParameters::FIGS_SpringParameters() {
     (*this).Damping.Y = 7.500000000e-01f;
     (*this).Damping.Z = 7.500000000e-01f;
 }
-

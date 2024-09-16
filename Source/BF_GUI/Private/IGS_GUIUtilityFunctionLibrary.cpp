@@ -11,7 +11,7 @@ void UIGS_GUIUtilityFunctionLibrary::SetMouseCursorToWidget(UCanvasPanelSlot* in
 }
 
 TSubclassOf<UUserWidget> UIGS_GUIUtilityFunctionLibrary::GetWidgetForWorldWidgetType(UObject* inWCO, EIGS_WorldWidgetType inType) {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_GUIUtilityFunctionLibrary::GetInputActionKeySymbolForCurrentInputDevice(UObject* inWCO, EIGS_InputAction InAction, FName& OutText) {
@@ -25,5 +25,4 @@ bool UIGS_GUIUtilityFunctionLibrary::GetInputActionKeySymbol(UObject* inWCO, EIG
 bool UIGS_GUIUtilityFunctionLibrary::GetAlternativeInputActionKeySymbol(UObject* inWCO, EIGS_InputAction InAction, FName& OutText, EIGS_InputDevice inInputDevice) {
     return false;
 }
-
 

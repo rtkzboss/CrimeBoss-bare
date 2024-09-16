@@ -38,4 +38,3 @@ enum class EIGS_GangsterVariationType : uint8 {
     US_STO_ExplosiveWG,
     US_Unknown = 255,
 };
-

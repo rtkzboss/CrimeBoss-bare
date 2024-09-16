@@ -10,13 +10,12 @@ struct BF_FRAMEWORKGAME_API FIGS_PlayerStateData {
 public:
     UPROPERTY(BlueprintReadOnly)
     FCommonHeisterData HeisterDataHolder;
-    
+
     UPROPERTY(BlueprintReadOnly)
     EIGS_StorePlatform StorePlatform;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 HordeModeTokens;
-    
+
     FIGS_PlayerStateData();
 };
-

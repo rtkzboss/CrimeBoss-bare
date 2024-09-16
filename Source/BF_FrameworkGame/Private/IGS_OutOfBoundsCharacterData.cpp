@@ -2,4 +2,3 @@
 
 FIGS_OutOfBoundsCharacterData::FIGS_OutOfBoundsCharacterData() {
 }
-

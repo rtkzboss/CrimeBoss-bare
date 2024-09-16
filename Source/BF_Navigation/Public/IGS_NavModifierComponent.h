@@ -10,4 +10,3 @@ public:
     UIGS_NavModifierComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

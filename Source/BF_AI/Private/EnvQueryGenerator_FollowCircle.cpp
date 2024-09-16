@@ -5,4 +5,3 @@ UEnvQueryGenerator_FollowCircle::UEnvQueryGenerator_FollowCircle() {
     (*this).GenerateAround = UEnvQueryContext_Querier::StaticClass();
 }
 
-

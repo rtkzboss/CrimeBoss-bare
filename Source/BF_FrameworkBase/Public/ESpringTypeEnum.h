@@ -12,4 +12,3 @@ namespace ESpringTypeEnum {
         ST_RotationAdditive,
     };
 }
-

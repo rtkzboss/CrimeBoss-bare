@@ -5,4 +5,3 @@ FMETA_EffectOnAIBossStrength::FMETA_EffectOnAIBossStrength() {
     (*this).RemainingDays = 0;
     (*this).RemainingAttacksOrDefences = 0;
 }
-

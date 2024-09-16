@@ -10,16 +10,15 @@ struct FMETA_RandomWayChance {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 NodeId;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float Chance;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_AdditionalConditionChance> Conditions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ConditionExprOperator ConditionOperator;
-    
+
     CRIMEBOSSMETA_API FMETA_RandomWayChance();
 };
-

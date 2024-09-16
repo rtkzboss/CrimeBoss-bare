@@ -1,17 +1,18 @@
 #include "IGS_ParticleImpact.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/SceneComponent.h"
 #include "NiagaraComponent.h"
 
 AIGS_ParticleImpact::AIGS_ParticleImpact(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    (*this).ParticleComponent = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("ParticleSystemComponent"));
-    (*this).NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
-    (*this).RootComponent = (USceneComponent*)SceneComponent;
-    (*this).NiagaraComponent->SetupAttachment((*this).SceneComponent);
-    (*this).ParticleComponent->SetupAttachment((*this).SceneComponent);
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    auto gen2 = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("ParticleSystemComponent"));
+    auto gen3 = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
+    (*this).SceneComponent = gen;
+    (*this).ParticleComponent = gen2;
+    (*this).NiagaraComponent = gen3;
+    (*this).RootComponent = gen;
+    if (gen2) gen2->SetupAttachment(gen);
+    if (gen3) gen3->SetupAttachment(gen);
 }
 
 void AIGS_ParticleImpact::OnParticleSystemFinished(UParticleSystemComponent* inParticleComponent) {
@@ -19,5 +20,4 @@ void AIGS_ParticleImpact::OnParticleSystemFinished(UParticleSystemComponent* inP
 
 void AIGS_ParticleImpact::OnNiagaraSystemFinished(UNiagaraComponent* inNiagaraComponent) {
 }
-
 

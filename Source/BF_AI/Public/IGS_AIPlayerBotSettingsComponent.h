@@ -17,8 +17,7 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_PlayerBotTableRow CurrentSettings;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

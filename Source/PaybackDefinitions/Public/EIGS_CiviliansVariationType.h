@@ -46,4 +46,3 @@ enum class EIGS_CiviliansVariationType : uint8 {
     US_STO_PrisonTwl,
     US_Unknown = 255,
 };
-

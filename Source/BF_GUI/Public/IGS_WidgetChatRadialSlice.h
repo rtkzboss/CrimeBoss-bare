@@ -12,10 +12,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     FIGS_ChatWheelDataRow GetData() const;
-    
+
 protected:
     UPROPERTY()
     FIGS_ChatWheelDataRow SliceData;
-    
-};
 
+};

@@ -13,34 +13,33 @@ struct FIGS_MeshDeformationBoneInfo {
 public:
     UPROPERTY(EditAnywhere)
     FBoneReference TargetBone;
-    
+
     UPROPERTY(EditAnywhere)
     FBoneReference SourceBone;
-    
+
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EBoneAxis> TargetBoneRotationAxis;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_BoneAxis SourceBoneRotationAxis;
-    
+
     UPROPERTY(EditAnywhere)
     FRotator TargetRotationOffset;
-    
+
     UPROPERTY(EditAnywhere)
     float TargetBoneDebugRotationAlpha;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_LocationOrScaleBoneAxis TargetBoneLocationAxis;
-    
+
     UPROPERTY(EditAnywhere)
     float TargetBoneDebugLocationAlpha;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_LocationOrScaleBoneAxis TargetBoneScaleAxis;
-    
+
     UPROPERTY(EditAnywhere)
     float TargetBoneDebugScaleAlpha;
-    
+
     BF_ANIMATIONS_API FIGS_MeshDeformationBoneInfo();
 };
-

@@ -12,13 +12,12 @@ struct FMETA_UniqueCharacterGraphInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> Graph;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag UnlockTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMETA_UniqueCharacterLoadoutFromGraph LoadoutOverride;
-    
+
     PAYBACKDEFINITIONS_API FMETA_UniqueCharacterGraphInfo();
 };
-

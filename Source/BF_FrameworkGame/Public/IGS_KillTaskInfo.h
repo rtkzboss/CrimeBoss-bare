@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_KillTaskInfo {
 public:
     UPROPERTY()
     EIGS_TeamSideEnum TrackedTeamSide;
-    
+
     FIGS_KillTaskInfo();
 };
-

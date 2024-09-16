@@ -13,15 +13,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Init(FGameplayTag inTileTag, EMETA_Gang inNewGang, EMETA_Gang inPrevGang);
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetTileTag();
-    
+
     UFUNCTION(BlueprintPure)
     EMETA_Gang GetPrevGang();
-    
+
     UFUNCTION(BlueprintPure)
     EMETA_Gang GetNewGang();
-    
-};
 
+};

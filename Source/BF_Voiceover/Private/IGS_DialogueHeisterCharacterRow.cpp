@@ -9,4 +9,3 @@ FIGS_DialogueHeisterCharacterRow::FIGS_DialogueHeisterCharacterRow() {
     (*this).CooldownData.ControlCooldown = EIGS_DialogueCharacterCooldown::Medium;
     (*this).CooldownData.AssaultCooldown = EIGS_DialogueCharacterCooldown::Short;
 }
-

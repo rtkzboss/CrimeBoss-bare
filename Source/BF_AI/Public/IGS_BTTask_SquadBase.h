@@ -17,12 +17,11 @@ public:
 protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_SquadBase* Squad;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<UIGS_AICommand*> Commands;
-    
+
     UPROPERTY()
     TMap<TWeakObjectPtr<AIGS_GameCharacterFramework>, FDelayedCommand> DelayedCommands;
-    
-};
 
+};

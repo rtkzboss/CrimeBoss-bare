@@ -7,4 +7,3 @@ bool UMETA_BaseCondition::ExecuteCondition_Implementation(AMETA_BaseGameMode* in
     return false;
 }
 
-

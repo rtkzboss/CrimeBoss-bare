@@ -11,13 +11,12 @@ struct CONSTRUCTIONSYSTEMRUNTIME_API FConstructionSystemUICategory {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText DisplayName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UTexture2D* Icon;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FConstructionSystemUIPrefabEntry> PrefabEntries;
-    
+
     FConstructionSystemUICategory();
 };
-

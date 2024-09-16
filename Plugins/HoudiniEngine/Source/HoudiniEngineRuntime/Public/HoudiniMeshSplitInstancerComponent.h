@@ -16,12 +16,11 @@ public:
 private:
     UPROPERTY(Instanced, VisibleInstanceOnly)
     TArray<UStaticMeshComponent*> Instances;
-    
+
     UPROPERTY(VisibleInstanceOnly)
     TArray<UMaterialInterface*> OverrideMaterials;
-    
+
     UPROPERTY(VisibleAnywhere)
     UStaticMesh* InstancedMesh;
-    
-};
 
+};

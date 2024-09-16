@@ -8,4 +8,3 @@ struct BF_FRAMEWORKGAME_API FIGS_TrafficDirectionLocks {
 public:
     FIGS_TrafficDirectionLocks();
 };
-

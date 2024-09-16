@@ -8,4 +8,3 @@ UIGS_AnimBudgetAllocatorSettings::UIGS_AnimBudgetAllocatorSettings() {
 void UIGS_AnimBudgetAllocatorSettings::SetParameters(const FAnimationBudgetAllocatorParameters& inParameters) {
 }
 
-

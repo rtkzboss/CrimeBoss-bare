@@ -9,7 +9,6 @@ struct COMMON_DATA_API FMETA_Loans {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_Loan> Loans;
-    
+
     FMETA_Loans();
 };
-

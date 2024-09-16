@@ -8,10 +8,9 @@ struct BF_FRAMEWORKGAME_API FIGS_ThrowableCooldownModifierDef {
 public:
     UPROPERTY(EditDefaultsOnly)
     float GlobalCooldownMultiplier;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float ThrowableCooldownMultiplier;
-    
+
     FIGS_ThrowableCooldownModifierDef();
 };
-

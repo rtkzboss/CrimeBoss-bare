@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UStaticMeshComponent* StaticMeshComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UAkGeometryComponent* AkGeometry;
-    
-};
 
+};

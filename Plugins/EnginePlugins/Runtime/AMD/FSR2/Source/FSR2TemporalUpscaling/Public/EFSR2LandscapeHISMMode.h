@@ -8,4 +8,3 @@ enum class EFSR2LandscapeHISMMode : int32 {
     AllStatic,
     StaticWPO,
 };
-

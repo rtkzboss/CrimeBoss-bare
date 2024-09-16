@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerEngineer_Mechanic(const FObjectInitializer& ObjectInitializer);
 
 };
-

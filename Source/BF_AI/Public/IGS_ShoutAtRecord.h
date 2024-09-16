@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_ShoutAtRecord {
 public:
     UPROPERTY()
     AIGS_GameCharacterFramework* Instigator;
-    
+
     UPROPERTY()
     AIGS_GameCharacterFramework* Character;
-    
+
     FIGS_ShoutAtRecord();
 };
-

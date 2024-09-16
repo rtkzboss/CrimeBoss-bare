@@ -6,8 +6,8 @@ UMETA_PlotlineSelection::UMETA_PlotlineSelection() {
     (*this).FinalScoreMultiplier = 1.000000000e+00f;
     (*this).AnyNextPlotlineDays.Min = 2;
     (*this).AnyNextPlotlineDays.Max = 4;
-    (*this).CrewRandEventsGraph = nullptr;
-    (*this).SpecialCrewEventsGraph = nullptr;
+    (*this).CrewRandEventsGraph = FSoftObjectPath();
+    (*this).SpecialCrewEventsGraph = FSoftObjectPath();
 }
 
 bool UMETA_PlotlineSelection::IsBossBonusIgnored(EMETA_BonusType inBonusType) const {
@@ -15,15 +15,15 @@ bool UMETA_PlotlineSelection::IsBossBonusIgnored(EMETA_BonusType inBonusType) co
 }
 
 TArray<FGameplayTag> UMETA_PlotlineSelection::GetStartingUnlocks() const {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> UMETA_PlotlineSelection::GetStartedGraphs(const TArray<EIGS_CharacterID>& inAvailableUniqueCharacters) {
-    return TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus>();
+    return {};
 }
 
 TSoftObjectPtr<UMETA_BaseStoryGraphManager> UMETA_PlotlineSelection::GetSpecialCrewEventsGraph() const {
-    return NULL;
+    return {};
 }
 
 int32 UMETA_PlotlineSelection::GetRandomizedValidTileGroup() const {
@@ -35,23 +35,23 @@ int32 UMETA_PlotlineSelection::GetRandomizedPlayersInitialTerritory() const {
 }
 
 TSubclassOf<UMETA_BaseGoal> UMETA_PlotlineSelection::GetPrimaryGoalID() const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<FIGS_PlotlineGraphData> UMETA_PlotlineSelection::GetPlotlineGraphs() {
-    return TArray<FIGS_PlotlineGraphData>();
+    return {};
 }
 
 TArray<FMETA_Interval> UMETA_PlotlineSelection::GetPlotlineDaysArray() const {
-    return TArray<FMETA_Interval>();
+    return {};
 }
 
 TArray<FGameplayTagContainer> UMETA_PlotlineSelection::GetPlayerTileGroups() const {
-    return TArray<FGameplayTagContainer>();
+    return {};
 }
 
 float UMETA_PlotlineSelection::GetInvestigationGrowthMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_PlotlineSelection::GetInitialSoldiersAmount() const {
@@ -67,11 +67,11 @@ FMETA_GangInitialConfiguration UMETA_PlotlineSelection::GetGangInitialConfig(EME
 }
 
 float UMETA_PlotlineSelection::GetFinalScoreMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> UMETA_PlotlineSelection::GetEntitlementsGraph() const {
-    return TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag>();
+    return {};
 }
 
 FMETA_EnemyTierLimitOnCampaignStart UMETA_PlotlineSelection::GetEnemyTierLimitOnCampaignStart() const {
@@ -79,7 +79,7 @@ FMETA_EnemyTierLimitOnCampaignStart UMETA_PlotlineSelection::GetEnemyTierLimitOn
 }
 
 TSoftObjectPtr<UMETA_BaseStoryGraphManager> UMETA_PlotlineSelection::GetCrewRandEventsGraph() const {
-    return NULL;
+    return {};
 }
 
 void UMETA_PlotlineSelection::GetCharacterGraphInfo(EIGS_CharacterID inCharacterID, bool& outFind, FMETA_UniqueCharacterGraphInfo& outGraphInfo) {
@@ -104,5 +104,4 @@ FMETA_Interval UMETA_PlotlineSelection::GetAnyNextPlotlineDays() const {
 bool UMETA_PlotlineSelection::CanGraphBeExecutedWhenGameFinished(const TSoftObjectPtr<UMETA_BaseStoryGraphManager>& inGraph) const {
     return false;
 }
-
 

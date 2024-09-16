@@ -6,8 +6,7 @@ FHoudiniGenericAttribute::FHoudiniGenericAttribute() {
     (*this).AttributeOwner = EAttribOwner::Invalid;
     (*this).AttributeCount = -1;
     (*this).AttributeTupleSize = -1;
-    (*this).DoubleValues.Empty();
-    (*this).IntValues.Empty();
-    (*this).StringValues.Empty();
+    (*this).DoubleValues = {};
+    (*this).IntValues = {};
+    (*this).StringValues = {};
 }
-

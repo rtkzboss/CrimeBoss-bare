@@ -15,15 +15,14 @@ public:
 
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
-    
+
     UPROPERTY(BlueprintReadOnly)
     float ArrowRotation;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_InteractiveComponent* CurrentInteractiveComponent;
-    
-};
 
+};

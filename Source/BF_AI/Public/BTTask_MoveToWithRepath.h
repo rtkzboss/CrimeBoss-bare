@@ -12,9 +12,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float RefreshTimeMin;
-    
+
     UPROPERTY(EditAnywhere)
     float RefreshTimeMax;
-    
-};
 
+};

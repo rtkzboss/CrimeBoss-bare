@@ -8,16 +8,15 @@ struct COMMON_DATA_API FIGS_DualSenseVibrationMode {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool OverrideEnabled;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Position;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Frequency;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Amplitude;
-    
+
     FIGS_DualSenseVibrationMode();
 };
-

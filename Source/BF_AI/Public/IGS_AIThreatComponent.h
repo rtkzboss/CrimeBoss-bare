@@ -18,36 +18,35 @@ public:
 protected:
     UPROPERTY(EditInstanceOnly)
     float DmgRequiredToMaxThreat;
-    
+
     UPROPERTY(EditInstanceOnly)
     float ThreathFromFriendsDeath;
-    
+
     UPROPERTY(EditInstanceOnly)
     float ShotNearThreatAddonThreat;
-    
+
     UPROPERTY(EditInstanceOnly)
     float ShotNearDistance;
-    
+
     UPROPERTY(EditInstanceOnly)
     float FullDropTime;
-    
+
     UPROPERTY(VisibleAnywhere)
     float ThreatLevel;
-    
+
     UPROPERTY()
     AIGS_AIControllerGame* m_AIController;
-    
+
     UPROPERTY(Instanced)
     UIGS_AIMemoryComponent* m_AIMemory;
-    
+
     UPROPERTY()
     AIGS_GameCharacterFramework* m_PossessedPawn;
-    
+
     UPROPERTY(Instanced)
     UIGS_ObjectStatus* m_ObjectStatus;
-    
+
     UPROPERTY(Instanced)
     UIGS_CharacterData* m_CharacterData;
-    
-};
 
+};

@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_CharactersTeamSidesHolder {
 public:
     UPROPERTY(Transient)
     TArray<AIGS_GameCharacterFramework*> Characters;
-    
+
     FIGS_CharactersTeamSidesHolder();
 };
-

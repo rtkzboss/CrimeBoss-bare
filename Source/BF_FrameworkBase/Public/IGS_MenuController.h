@@ -11,15 +11,14 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void ClientWasKickedEvent(const FText& KickReason);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void ClientForcedToLeaveLobbyEvent();
-    
+
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_ForceLeaveLobby();
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool bComesFromMission;
-    
-};
 
+};

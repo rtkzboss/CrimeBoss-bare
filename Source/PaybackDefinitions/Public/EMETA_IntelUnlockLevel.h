@@ -10,4 +10,3 @@ enum class EMETA_IntelUnlockLevel : uint8 {
     DifficultyReduction,
     IncreasedRewardForMaxMoneratyValue,
 };
-

@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatTierDef : public FIGS_AIBaseTierDef {
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AISwatBaseDataModifiers Stats;
-    
+
     FIGS_AISwatTierDef();
 };
-

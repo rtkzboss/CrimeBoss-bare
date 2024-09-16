@@ -15,8 +15,7 @@ public:
 private:
     UPROPERTY(Instanced)
     UIGS_WeakSpotComponent* m_WeakSpotComponent;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

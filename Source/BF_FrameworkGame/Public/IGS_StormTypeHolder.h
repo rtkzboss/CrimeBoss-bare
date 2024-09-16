@@ -10,7 +10,6 @@ struct FIGS_StormTypeHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_ScenarioDifficulty, FIGS_StormHolder> StormHolders;
-    
+
     BF_FRAMEWORKGAME_API FIGS_StormTypeHolder();
 };
-

@@ -8,4 +8,3 @@ struct FIGS_TPP_Holster_MontageHolder {
 public:
     BF_ANIMATIONS_API FIGS_TPP_Holster_MontageHolder();
 };
-

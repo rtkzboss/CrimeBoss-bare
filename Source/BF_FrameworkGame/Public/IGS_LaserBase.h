@@ -14,29 +14,28 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void OnLaserDisabled();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnLaserDestroyed();
-    
+
 private:
     UFUNCTION()
     void OnLaserDeath(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void DisableLaser(AIGS_GameCharacterFramework* inInstigator);
-    
+
     UPROPERTY(EditDefaultsOnly)
     bool Indestructible;
-    
+
     UPROPERTY(EditDefaultsOnly)
     bool DestroyingReportsToHQ;
-    
+
     UPROPERTY(EditDefaultsOnly)
     bool DestroyingIsSuspicious;
-    
+
     UPROPERTY(EditDefaultsOnly)
     bool DisablingIsSuspicious;
-    
-};
 
+};

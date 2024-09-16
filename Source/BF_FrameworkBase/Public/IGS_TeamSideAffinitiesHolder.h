@@ -9,10 +9,9 @@ struct FIGS_TeamSideAffinitiesHolder {
 public:
     UPROPERTY(EditAnywhere)
     TArray<EIGS_TeamSideEnum> EnemySides;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<EIGS_TeamSideEnum> FriendlySides;
-    
+
     BF_FRAMEWORKBASE_API FIGS_TeamSideAffinitiesHolder();
 };
-

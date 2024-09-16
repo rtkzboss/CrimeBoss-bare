@@ -16,4 +16,3 @@ enum class EIGS_InteractionAnimationTypes : uint8 {
     EIGS_LootCollectionEnd,
     EIGS_Undefined,
 };
-

@@ -7,4 +7,3 @@ enum class FlyingCurveInterpolationMode : uint8 {
     Mode_Bezier,
     Mode_Catmull,
 };
-

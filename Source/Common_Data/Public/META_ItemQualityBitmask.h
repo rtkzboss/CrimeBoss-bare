@@ -8,7 +8,6 @@ struct COMMON_DATA_API FMETA_ItemQualityBitmask {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 Quality;
-    
+
     FMETA_ItemQualityBitmask();
 };
-

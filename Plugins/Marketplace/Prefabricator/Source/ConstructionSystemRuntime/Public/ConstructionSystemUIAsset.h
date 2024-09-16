@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText MenuTitle;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FConstructionSystemUICategory> Categories;
-    
-};
 
+};

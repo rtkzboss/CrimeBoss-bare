@@ -11,4 +11,3 @@ enum class EIGS_HubBackdropTypes : uint8 {
     Ocean1Side_Beach,
     Ocean2Side_Harbor,
 };
-

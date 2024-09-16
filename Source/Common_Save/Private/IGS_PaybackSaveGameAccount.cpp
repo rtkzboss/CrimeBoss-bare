@@ -4,4 +4,3 @@ UIGS_PaybackSaveGameAccount::UIGS_PaybackSaveGameAccount() {
     (*this).SaveDataSlotName = TEXT("AccountSlot");
 }
 
-

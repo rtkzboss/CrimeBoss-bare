@@ -2,7 +2,6 @@
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTTaskNode.h"
 #include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
 #include "IGS_BTTask_ThrowBase.generated.h"
 
 UCLASS()
@@ -13,12 +12,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     bool BeingShotInterrupts;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag ThrowNotifyTag;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTagContainer EventFilter;
-    
-};
 
+};

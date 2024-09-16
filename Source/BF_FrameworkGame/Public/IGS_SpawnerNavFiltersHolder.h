@@ -10,10 +10,9 @@ struct FIGS_SpawnerNavFiltersHolder {
 public:
     UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UNavigationQueryFilter> DefaultNavFilter;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UNavigationQueryFilter> NoDangerNavFilter;
-    
+
     BF_FRAMEWORKGAME_API FIGS_SpawnerNavFiltersHolder();
 };
-

@@ -1,6 +1,4 @@
 #include "IGS_TerritoryVolume.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_TerritoryVolume::AIGS_TerritoryVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).TeamSide = EIGS_TeamSideEnum::TS_SWAT;
@@ -21,5 +19,4 @@ void AIGS_TerritoryVolume::OnTerritoryVolumeBeginOverlap(UPrimitiveComponent* in
 
 void AIGS_TerritoryVolume::HandleCoolDown() {
 }
-
 

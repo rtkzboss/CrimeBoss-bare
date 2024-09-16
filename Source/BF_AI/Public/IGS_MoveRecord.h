@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_MoveRecord {
 public:
     UPROPERTY()
     AIGS_SquadFramework* Squad;
-    
+
     UPROPERTY(VisibleAnywhere)
     float NextAllowMoveTime;
-    
+
     FIGS_MoveRecord();
 };
-

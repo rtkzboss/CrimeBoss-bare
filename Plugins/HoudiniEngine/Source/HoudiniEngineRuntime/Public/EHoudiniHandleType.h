@@ -8,4 +8,3 @@ enum class EHoudiniHandleType : uint8 {
     Bounder,
     Unsupported,
 };
-

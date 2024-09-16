@@ -8,4 +8,3 @@ enum class EHoudiniStaticMeshMethod : uint8 {
     FMeshDescription,
     UHoudiniStaticMesh,
 };
-

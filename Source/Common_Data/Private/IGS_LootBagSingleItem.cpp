@@ -14,6 +14,5 @@ FIGS_LootBagSingleItem::FIGS_LootBagSingleItem() {
     (*this).UniversalData.UniversalInt_5 = 0;
     (*this).UniversalData.UniversalFloat_1 = 0.000000000e+00f;
     (*this).UniversalData.UniversalFloat_2 = 0.000000000e+00f;
-    (*this).UniversalData.UniversalText_1 = FText::FromString(TEXT(""));
+    (*this).UniversalData.UniversalText_1 = FText::GetEmpty();
 }
-

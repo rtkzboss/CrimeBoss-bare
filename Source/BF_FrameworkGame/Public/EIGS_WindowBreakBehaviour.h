@@ -8,4 +8,3 @@ enum class EIGS_WindowBreakBehaviour : uint8 {
     Unbreakable,
     Impenetrable,
 };
-

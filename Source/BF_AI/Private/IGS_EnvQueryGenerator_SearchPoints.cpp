@@ -8,4 +8,3 @@ UIGS_EnvQueryGenerator_SearchPoints::UIGS_EnvQueryGenerator_SearchPoints() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

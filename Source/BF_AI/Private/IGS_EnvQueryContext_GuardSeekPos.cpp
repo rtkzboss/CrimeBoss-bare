@@ -3,4 +3,3 @@
 UIGS_EnvQueryContext_GuardSeekPos::UIGS_EnvQueryContext_GuardSeekPos() {
 }
 
-

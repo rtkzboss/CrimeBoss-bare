@@ -12,6 +12,5 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     bool DEBUG_Enabled;
-    
-};
 
+};

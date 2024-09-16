@@ -16,15 +16,14 @@ public:
 protected:
     UPROPERTY()
     AIGS_DetectorBase* DetectorPawn;
-    
+
     UPROPERTY()
     bool IsDetecting;
-    
+
     UPROPERTY()
     EIGS_WalkieTalkieStatus WalkieTalkieStatus;
-    
+
     UPROPERTY()
     AActor* Target;
-    
-};
 
+};

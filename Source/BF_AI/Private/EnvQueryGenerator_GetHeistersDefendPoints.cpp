@@ -5,4 +5,3 @@ UEnvQueryGenerator_GetHeistersDefendPoints::UEnvQueryGenerator_GetHeistersDefend
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

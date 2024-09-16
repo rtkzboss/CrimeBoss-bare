@@ -11,4 +11,3 @@ enum class EIGS_VisionShapeTypes : uint8 {
     VS_PeripheralBox,
     VS_SixthSenseCircle,
 };
-

@@ -9,4 +9,3 @@ FIGS_BodyInfo::FIGS_BodyInfo() {
     (*this).Fatness = 0.000000000e+00f;
     (*this).Ethnicity = EIGS_Ethnicity::Unknown;
 }
-

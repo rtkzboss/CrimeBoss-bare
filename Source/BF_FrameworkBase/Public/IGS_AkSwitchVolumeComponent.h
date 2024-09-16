@@ -16,16 +16,15 @@ public:
 
     UFUNCTION()
     void NotifyActorEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
+
     UFUNCTION()
     void NotifyActorBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkSwitchValue* FootstepAkSwitch;
-    
+
     UPROPERTY()
     UAkSwitchValue* FootstepNoneAkSwitch;
-    
-};
 
+};

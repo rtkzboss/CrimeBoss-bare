@@ -9,4 +9,3 @@ enum class EIGS_PerkModeUsage : uint8 {
     Multiplayer,
     Boss = 4,
 };
-

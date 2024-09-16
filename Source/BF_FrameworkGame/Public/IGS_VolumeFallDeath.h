@@ -11,10 +11,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetActive(bool Inactive);
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
     bool bIsActive;
-    
-};
 
+};

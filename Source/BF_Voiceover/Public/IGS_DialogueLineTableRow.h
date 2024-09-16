@@ -10,13 +10,12 @@ struct BF_VOICEOVER_API FIGS_DialogueLineTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsDisabled;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_DialogueVariationData> Variations;
-    
+
     FIGS_DialogueLineTableRow();
 };
-

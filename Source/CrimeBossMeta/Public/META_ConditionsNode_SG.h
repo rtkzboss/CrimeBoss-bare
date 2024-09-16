@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseCondition*> Conditions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ConditionExprOperator ConditionOperator;
-    
-};
 
+};

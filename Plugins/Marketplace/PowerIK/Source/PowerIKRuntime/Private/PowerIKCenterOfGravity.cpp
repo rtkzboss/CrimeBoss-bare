@@ -6,4 +6,3 @@ FPowerIKCenterOfGravity::FPowerIKCenterOfGravity() {
     (*this).VertAmount = 3.000000119e-01f;
     (*this).PullBodyAmount = 4.000000060e-01f;
 }
-

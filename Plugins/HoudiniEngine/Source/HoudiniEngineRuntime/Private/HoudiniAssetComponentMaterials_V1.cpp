@@ -3,4 +3,3 @@
 UHoudiniAssetComponentMaterials_V1::UHoudiniAssetComponentMaterials_V1() {
 }
 
-

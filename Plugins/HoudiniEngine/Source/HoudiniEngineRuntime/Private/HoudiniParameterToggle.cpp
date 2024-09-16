@@ -5,4 +5,3 @@ UHoudiniParameterToggle::UHoudiniParameterToggle() {
     (*this).ParmType = EHoudiniParameterType::Toggle;
 }
 
-

@@ -12,10 +12,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AICopTeamDef : public FIGS_AIBaseTeamDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<EIGS_CopsVariationType, FIGS_AICopTierDef> Variations;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICopBaseDataDefaults DefaultStats;
-    
+
     FIGS_AICopTeamDef();
 };
-

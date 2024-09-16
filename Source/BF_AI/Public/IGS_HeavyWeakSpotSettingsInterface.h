@@ -13,15 +13,14 @@ class BF_AI_API IIGS_HeavyWeakSpotSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetHeavyWeakSpotHealth();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetHeavyWeakSpotDoomTimer();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetHeavyInjuredTime();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetHeavyHealthToInjured();
-    
-};
 
+};

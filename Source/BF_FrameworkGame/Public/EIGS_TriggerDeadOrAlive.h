@@ -8,4 +8,3 @@ enum class EIGS_TriggerDeadOrAlive : uint8 {
     DOA_Dead,
     DOA_Both,
 };
-

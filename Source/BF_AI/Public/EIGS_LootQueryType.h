@@ -8,4 +8,3 @@ enum class EIGS_LootQueryType : uint8 {
     Collection,
     Carryable,
 };
-

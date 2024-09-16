@@ -13,34 +13,33 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Reinit();
-    
+
     UFUNCTION(BlueprintCallable)
     void AddRecoil();
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_RecoilDefinition RecoilDefinition;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentRecoilPitchBank;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float TotalRecoilPitchBank;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CompensatePitchBank;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastPitch;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastYaw;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentDownSpeed;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FRotator TargetRotationDelta;
-    
-};
 
+};

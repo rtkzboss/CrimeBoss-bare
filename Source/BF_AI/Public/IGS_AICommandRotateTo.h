@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_InterestPointHolder LookAt;
-    
-};
 
+};

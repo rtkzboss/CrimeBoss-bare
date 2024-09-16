@@ -4,4 +4,3 @@ UIGS_BTTask_SquadNavLinksBreachIn::UIGS_BTTask_SquadNavLinksBreachIn() {
     (*this).NodeName = TEXT("Squad Breach In Nav Link");
 }
 
-

@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_WeaponGenerationRestriction {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer WaponFilter;
-    
+
     FMETA_WeaponGenerationRestriction();
 };
-

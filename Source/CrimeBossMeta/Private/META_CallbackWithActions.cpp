@@ -4,4 +4,3 @@ UMETA_CallbackWithActions::UMETA_CallbackWithActions() {
     (*this).NextNode = -1;
 }
 
-

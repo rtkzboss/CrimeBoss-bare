@@ -14,15 +14,14 @@ class IKantanCartesianDatasourceInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FText GetSeriesName(int32 SeriesIdx) const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FName GetSeriesId(int32 CatIdx) const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TArray<FKantanCartesianDatapoint> GetSeriesDatapoints(int32 SeriesIdx) const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetNumSeries() const;
-    
-};
 
+};

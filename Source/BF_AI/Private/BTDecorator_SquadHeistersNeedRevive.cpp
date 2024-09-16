@@ -4,4 +4,3 @@ UBTDecorator_SquadHeistersNeedRevive::UBTDecorator_SquadHeistersNeedRevive() {
     (*this).NodeName = TEXT("Need revive");
 }
 
-

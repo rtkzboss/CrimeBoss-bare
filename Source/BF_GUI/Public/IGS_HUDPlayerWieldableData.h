@@ -11,13 +11,12 @@ struct BF_GUI_API FIGS_HUDPlayerWieldableData {
 public:
     UPROPERTY(BlueprintReadOnly)
     TSoftClassPtr<AIGS_WieldableBase> WieldableID;
-    
+
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_WieldableBase> WieldableInstance;
-    
+
     UPROPERTY(BlueprintReadOnly)
     EIGS_WieldableSlot Slot;
-    
+
     FIGS_HUDPlayerWieldableData();
 };
-

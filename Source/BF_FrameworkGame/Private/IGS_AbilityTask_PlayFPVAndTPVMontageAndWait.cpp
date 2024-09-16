@@ -1,5 +1,4 @@
 #include "IGS_AbilityTask_PlayFPVAndTPVMontageAndWait.h"
-#include "GameplayTask.h"
 
 UIGS_AbilityTask_PlayFPVAndTPVMontageAndWait::UIGS_AbilityTask_PlayFPVAndTPVMontageAndWait() {
     (*this).Rate = 1.000000000e+00f;
@@ -16,7 +15,6 @@ void UIGS_AbilityTask_PlayFPVAndTPVMontageAndWait::OnMontageBlendingOut(UAnimMon
 }
 
 UIGS_AbilityTask_PlayFPVAndTPVMontageAndWait* UIGS_AbilityTask_PlayFPVAndTPVMontageAndWait::CreatePlayFPVAndTPVMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* FPVMontageToPlay, UAnimMontage* TPVMontageToPlay, float Rate, FName StartSection, bool bStopWhenAbilityEnds, float StartTimeSeconds) {
-    return NULL;
+    return nullptr;
 }
-
 

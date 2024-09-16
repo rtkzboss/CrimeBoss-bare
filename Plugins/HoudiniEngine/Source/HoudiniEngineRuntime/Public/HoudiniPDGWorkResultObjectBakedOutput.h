@@ -9,7 +9,6 @@ struct HOUDINIENGINERUNTIME_API FHoudiniPDGWorkResultObjectBakedOutput {
 public:
     UPROPERTY()
     TArray<FHoudiniBakedOutput> BakedOutputs;
-    
+
     FHoudiniPDGWorkResultObjectBakedOutput();
 };
-

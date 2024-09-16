@@ -5,12 +5,13 @@ public class BF_Rendering : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "Core",
             "CoreUObject",
             "DeveloperSettings",
             "Engine",
+            "PhysicsCore",
         });
     }
 }

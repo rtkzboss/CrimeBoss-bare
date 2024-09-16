@@ -15,19 +15,18 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetPostProcessWeight(const TScriptInterface<IBlendableInterface>& PostProcess, float inWeight);
-    
+
     UFUNCTION(BlueprintCallable)
     void RemovePostProcessDirect(const TScriptInterface<IBlendableInterface>& PostProcess);
-    
+
     UFUNCTION(BlueprintCallable)
     void RemovePostProcess(const TScriptInterface<IBlendableInterface>& PostProcess);
-    
+
     UFUNCTION(BlueprintCallable)
     void ActivatePostProcess(const TScriptInterface<IBlendableInterface>& PostProcess, float Weight, float Duration, float Speed);
-    
+
 private:
     UPROPERTY(Instanced, VisibleAnywhere)
     UCameraComponent* Camera;
-    
-};
 
+};

@@ -17,49 +17,48 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OpenChat();
-    
+
 public:
     UFUNCTION(BlueprintNativeEvent)
     void OnTextCommited(const FText& Text, TEnumAsByte<ETextCommit::Type> CommitMethod);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnTextChatStateChangedEvent(bool inOpen);
-    
+
 protected:
     UFUNCTION()
     void OnTextChatStateChanged(bool inOpen);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnTextChatSetup();
-    
+
     UFUNCTION(BlueprintCallable)
     void HideVirtualKeyboard();
-    
+
     UFUNCTION(BlueprintCallable)
     void ForceCloseChat();
-    
+
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void FocusChat() const;
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void FocusAndShowVirtualKeyboard();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void CloseChat();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void BindToMessages();
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<APlayerController> OwningPlayer;
-    
+
     UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
     TWeakObjectPtr<UIGS_GUIController> GUIController;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UEditableTextBox* ChatInput;
-    
-};
 
+};

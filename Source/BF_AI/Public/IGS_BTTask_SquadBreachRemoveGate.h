@@ -19,18 +19,17 @@ public:
 protected:
     UFUNCTION()
     static bool IsObstacleCleared(UIGS_AICommandBreachRemoveObstacle* Command);
-    
+
     UFUNCTION()
     static UIGS_AICommand* CommandToClearGate(AIGS_GameCharacterFramework* inAgent, AActor* BreachableObject, FVector Location, FVector LookAtPoint);
-    
+
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* ContextActionCharacter;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* ContextActionCommand;
-    
+
     UPROPERTY()
     UObject* BreachObject;
-    
-};
 
+};

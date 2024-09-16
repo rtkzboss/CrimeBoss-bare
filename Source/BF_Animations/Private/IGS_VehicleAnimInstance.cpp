@@ -3,4 +3,3 @@
 UIGS_VehicleAnimInstance::UIGS_VehicleAnimInstance() {
 }
 
-

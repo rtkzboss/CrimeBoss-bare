@@ -13,40 +13,39 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetTaskState(EIGS_ObjectiveState inState, bool inForceMissionTaskStateChange);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetCount(int32 inCount);
-    
+
     UFUNCTION(BlueprintCallable)
     void IncreaseCount();
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetCurrentCount() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void DecreaseCount();
-    
+
     UFUNCTION(BlueprintCallable)
     void ClearCount();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_ObjectiveComponentType ObjectiveComponentType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bTimerObjective;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Value;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_ObjectiveState TaskState;
-    
+
 private:
     UPROPERTY()
     int32 CurrentCount;
-    
-};
 
+};

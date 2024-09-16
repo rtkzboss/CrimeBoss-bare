@@ -3,4 +3,3 @@
 UHoudiniAssetInstanceInputField::UHoudiniAssetInstanceInputField() {
 }
 
-

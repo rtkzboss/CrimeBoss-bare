@@ -12,4 +12,3 @@ class BF_FRAMEWORKGAME_API IIGS_ModMeshInterface : public IInterface {
     GENERATED_BODY()
 public:
 };
-

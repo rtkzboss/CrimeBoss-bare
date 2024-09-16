@@ -11,4 +11,3 @@ enum class EHoudiniFolderParameterType : uint8 {
     Radio,
     Other,
 };
-

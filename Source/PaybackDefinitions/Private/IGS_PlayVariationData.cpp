@@ -16,4 +16,3 @@ FIGS_PlayVariationData::FIGS_PlayVariationData() {
     (*this).IsImportant = true;
     (*this).ShouldReplicate = true;
 }
-

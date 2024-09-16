@@ -14,13 +14,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetData(UMapTile* inTile, const EMETA_Gang inGang);
-    
+
     UFUNCTION(BlueprintPure)
     UMapTile* GetTile() const;
-    
+
 private:
     UPROPERTY()
     UMapTile* m_Tile;
-    
-};
 
+};

@@ -13,31 +13,30 @@ public:
 
     UFUNCTION(BlueprintPure)
     bool IsEnabled() const;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 VehicleGroups;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsOverride;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsBidirectional;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsEdge;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool ForbiddenArea;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool ShowCustomColors;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Weight;
-    
+
 protected:
     UPROPERTY()
     TArray<UObject*> DisableRequests;
-    
-};
 
+};

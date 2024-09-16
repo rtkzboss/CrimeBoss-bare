@@ -3,39 +3,38 @@
 #include "AkRtpc.h"
 #include "AkSwitchValue.h"
 #include "Engine/CurveTable.h"
-#include "ComponentInstanceDataCache.h"
 #include "GameFramework/ForceFeedbackEffect.h"
 
 UIGS_ShooterBase::UIGS_ShooterBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bShootFromCamera = true;
-    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen0(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponFire_Single.AKE_WeaponFire_Single"));
-    (*this).SingleShotAudioEvent = gen0.Object;
-    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen1(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponFire_Empty.AKE_WeaponFire_Empty"));
-    (*this).EmptyShotAudioEvent = gen1.Object;
-    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen2(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponAim_Hip.AKE_WeaponAim_Hip"));
-    (*this).HipAimAkEvent = gen2.Object;
-    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen3(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponAim_Sights.AKE_WeaponAim_Sights"));
-    (*this).SightsAimAkEvent = gen3.Object;
-    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen4(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponState/SwitchGrp_WeaponState-Switch_Normal.SwitchGrp_WeaponState-Switch_Normal"));
-    (*this).NormalStateAkSwitch = gen4.Object;
-    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen5(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponState/SwitchGrp_WeaponState-Switch_Suppressed.SwitchGrp_WeaponState-Switch_Suppressed"));
-    (*this).SuppressedStateAkSwitch = gen5.Object;
-    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen6(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponFireMode/SwitchGrp_WeaponFireMode-Switch_Normal.SwitchGrp_WeaponFireMode-Switch_Normal"));
-    (*this).NormalFireModeStateAkSwitch = gen6.Object;
-    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen7(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponFireMode/SwitchGrp_WeaponFireMode-Switch_Extra.SwitchGrp_WeaponFireMode-Switch_Extra"));
-    (*this).ExtraFireModeStateAkSwitch = gen7.Object;
-    static ConstructorHelpers::FObjectFinder<UAkRtpc> gen8(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Game_Parameters/Default_Work_Unit/WU_Weapons/RTPC_WeaponFireRate.RTPC_WeaponFireRate"));
-    (*this).FireRateAkRtpc = gen8.Object;
-    static ConstructorHelpers::FObjectFinder<UAkRtpc> gen9(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Game_Parameters/Default_Work_Unit/WU_Weapons/RTPC_WeaponRoundsLeft.RTPC_WeaponRoundsLeft"));
-    (*this).RoundsLeftAkRtpc = gen9.Object;
-    static ConstructorHelpers::FObjectFinder<UAkRtpc> gen10(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Game_Parameters/Default_Work_Unit/WU_Weapons/RTPC_WeaponAimDownSight.RTPC_WeaponAimDownSight"));
-    (*this).AdsAkRtpc = gen10.Object;
-    static ConstructorHelpers::FObjectFinder<UForceFeedbackEffect> gen11(TEXT("/Game/00_Main/Weapons/_Common/FFE_WeaponBase.FFE_WeaponBase"));
-    (*this).ForceFeedbackEffect = gen11.Object;
+    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponFire_Single.AKE_WeaponFire_Single"));
+    (*this).SingleShotAudioEvent = gen.Object;
+    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen2(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponFire_Empty.AKE_WeaponFire_Empty"));
+    (*this).EmptyShotAudioEvent = gen2.Object;
+    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen3(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponAim_Hip.AKE_WeaponAim_Hip"));
+    (*this).HipAimAkEvent = gen3.Object;
+    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen4(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_WeaponAim_Sights.AKE_WeaponAim_Sights"));
+    (*this).SightsAimAkEvent = gen4.Object;
+    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen5(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponState/SwitchGrp_WeaponState-Switch_Normal.SwitchGrp_WeaponState-Switch_Normal"));
+    (*this).NormalStateAkSwitch = gen5.Object;
+    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen6(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponState/SwitchGrp_WeaponState-Switch_Suppressed.SwitchGrp_WeaponState-Switch_Suppressed"));
+    (*this).SuppressedStateAkSwitch = gen6.Object;
+    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen7(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponFireMode/SwitchGrp_WeaponFireMode-Switch_Normal.SwitchGrp_WeaponFireMode-Switch_Normal"));
+    (*this).NormalFireModeStateAkSwitch = gen7.Object;
+    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen8(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Weapons/SwitchGrp_WeaponFireMode/SwitchGrp_WeaponFireMode-Switch_Extra.SwitchGrp_WeaponFireMode-Switch_Extra"));
+    (*this).ExtraFireModeStateAkSwitch = gen8.Object;
+    static ConstructorHelpers::FObjectFinder<UAkRtpc> gen9(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Game_Parameters/Default_Work_Unit/WU_Weapons/RTPC_WeaponFireRate.RTPC_WeaponFireRate"));
+    (*this).FireRateAkRtpc = gen9.Object;
+    static ConstructorHelpers::FObjectFinder<UAkRtpc> gen10(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Game_Parameters/Default_Work_Unit/WU_Weapons/RTPC_WeaponRoundsLeft.RTPC_WeaponRoundsLeft"));
+    (*this).RoundsLeftAkRtpc = gen10.Object;
+    static ConstructorHelpers::FObjectFinder<UAkRtpc> gen11(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Game_Parameters/Default_Work_Unit/WU_Weapons/RTPC_WeaponAimDownSight.RTPC_WeaponAimDownSight"));
+    (*this).AdsAkRtpc = gen11.Object;
+    static ConstructorHelpers::FObjectFinder<UForceFeedbackEffect> gen12(TEXT("/Game/00_Main/Weapons/_Common/FFE_WeaponBase.FFE_WeaponBase"));
+    (*this).ForceFeedbackEffect = gen12.Object;
     (*this).ForceFeedbackName = TEXT("Shooting");
     (*this).ShotgunHorizontalSpreadMultiplier.Value = 1.000000000e+00f;
-    static ConstructorHelpers::FObjectFinder<UCurveTable> gen12(TEXT("/Game/00_Main/Core/Characters/CT_PlayerSettings.CT_PlayerSettings"));
-    (*this).ShotgunHorizontalSpreadMultiplier.Curve.CurveTable = gen12.Object;
+    static ConstructorHelpers::FObjectFinder<UCurveTable> gen13(TEXT("/Game/00_Main/Core/Characters/CT_PlayerSettings.CT_PlayerSettings"));
+    (*this).ShotgunHorizontalSpreadMultiplier.Curve.CurveTable = gen13.Object;
     (*this).ShotgunHorizontalSpreadMultiplier.Curve.RowName = TEXT("Player.Weapons.Shotgun.HorizontalSpreadMult");
 }
 
@@ -122,5 +121,4 @@ void UIGS_ShooterBase::OnProjectileActivated_Implementation(AIGS_ProjectileBase*
 
 void UIGS_ShooterBase::OnProjectileAcquired_Implementation(AIGS_ProjectileBase* inProjectile) {
 }
-
 

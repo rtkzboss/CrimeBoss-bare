@@ -3,4 +3,3 @@
 UIGS_LocalPlayerRichPresence::UIGS_LocalPlayerRichPresence() {
 }
 
-

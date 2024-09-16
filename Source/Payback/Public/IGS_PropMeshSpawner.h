@@ -13,10 +13,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Despawn();
-    
+
 protected:
     UPROPERTY()
     UStaticMesh* m_SpawnedMesh;
-    
-};
 
+};

@@ -10,4 +10,3 @@ enum class EIGS_MetaCutsceneCharacterPose : uint8 {
     Idle,
     Custom = 255,
 };
-

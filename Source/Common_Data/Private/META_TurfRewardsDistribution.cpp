@@ -6,4 +6,3 @@ FMETA_TurfRewardsDistribution::FMETA_TurfRewardsDistribution() {
     (*this).PercantageOfTilesWithThreeRewards = 0;
     (*this).RewardsAmountForRepeatedCapture = 0;
 }
-

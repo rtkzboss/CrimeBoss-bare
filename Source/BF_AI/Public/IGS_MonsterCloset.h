@@ -16,25 +16,24 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<AIGS_AIEnemyGroupSpawner*> AIEnemyGroupSpawners;
-    
+
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<AIGS_ScriptPoint*> CharacterRemovers;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UBoxComponent* helpersBox;
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     float MaxDistanceToPlayableArea;
-    
+
     UPROPERTY(VisibleAnywhere)
     float DistanceToPlayableArea;
-    
+
     UPROPERTY(VisibleAnywhere)
     FVector ApproxPlayableAreaEntry;
-    
+
     UPROPERTY(EditAnywhere)
     bool CheckValidityInRuntime;
-    
-};
 
+};

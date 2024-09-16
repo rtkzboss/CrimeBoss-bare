@@ -14,6 +14,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void GetMantleDataFromTargetingData(FGameplayAbilityTargetDataHandle inHandle, FVector& outMantleLocation, EIGS_MantleType& outMantleType);
-    
-};
 
+};

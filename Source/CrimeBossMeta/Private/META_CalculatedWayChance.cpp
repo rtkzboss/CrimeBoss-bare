@@ -5,4 +5,3 @@ FMETA_CalculatedWayChance::FMETA_CalculatedWayChance() {
     (*this).LeftValue = 0;
     (*this).RightValue = 0;
 }
-

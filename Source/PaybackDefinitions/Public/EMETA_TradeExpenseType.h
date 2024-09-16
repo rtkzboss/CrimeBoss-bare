@@ -9,4 +9,3 @@ enum class EMETA_TradeExpenseType : uint8 {
     Loot,
     Soldiers,
 };
-

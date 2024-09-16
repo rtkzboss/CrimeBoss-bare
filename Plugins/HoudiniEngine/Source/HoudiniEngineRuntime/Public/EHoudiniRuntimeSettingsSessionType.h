@@ -9,4 +9,3 @@ enum EHoudiniRuntimeSettingsSessionType {
     HRSST_NamedPipe,
     HRSST_None,
 };
-

@@ -18,37 +18,36 @@ struct CRIMEBOSSMETA_API FIGS_ActiveChainData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_ChainType ChainType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_ChainDifficulty Difficulty;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_ActiveChainInfo ActiveChainInfo;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_ChainMissionEntry> ActiveChainMissionSteps;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMETA_BaseFPSMission*> ActiveChainMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMETA_BaseFPSMission* CurrentMission;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_Quick_ChainResult ActiveChainResults;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMETA_Character*> ChainCrew;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_CharacterInfo> ChainCrewInfo;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> MissionData;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ChainMoney;
-    
+
     FIGS_ActiveChainData();
 };
-

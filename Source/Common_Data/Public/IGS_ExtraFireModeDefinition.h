@@ -15,25 +15,24 @@ struct COMMON_DATA_API FIGS_ExtraFireModeDefinition {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAttackDefinition Attack;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAccuracyDefinition Accuracy;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_RecoilDefinition Recoil;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAmmoDefinition Ammo;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAnimationDefinitions Animations;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponOffenceDefinitions Offences;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAdaptiveTriggerDefinitions AdaptiveTriggers;
-    
+
     FIGS_ExtraFireModeDefinition();
 };
-

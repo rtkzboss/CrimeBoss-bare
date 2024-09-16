@@ -10,7 +10,6 @@ struct FGateExplosiveInfo {
 public:
     UPROPERTY(Instanced)
     UIGS_BreachPointComponent* ExplosivePoint;
-    
+
     BF_AI_API FGateExplosiveInfo();
 };
-

@@ -11,4 +11,3 @@ enum class EIGS_WindScenarioType : uint8 {
     Wind_Storm,
     Wind_Hurricane,
 };
-

@@ -7,4 +7,3 @@ enum class EMETA_VariablesScope : uint8 {
     Any,
     SpecificByTag,
 };
-

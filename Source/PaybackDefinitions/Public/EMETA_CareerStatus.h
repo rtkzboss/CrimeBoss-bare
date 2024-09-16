@@ -8,4 +8,3 @@ enum class EMETA_CareerStatus : uint8 {
     Finished,
     Ongoing,
 };
-

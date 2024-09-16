@@ -2,4 +2,3 @@
 
 FPathPointInsaneSpawnData::FPathPointInsaneSpawnData() {
 }
-

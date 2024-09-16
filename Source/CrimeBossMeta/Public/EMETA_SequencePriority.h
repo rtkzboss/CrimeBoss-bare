@@ -8,4 +8,3 @@ enum class EMETA_SequencePriority : uint8 {
     High,
     Critical,
 };
-

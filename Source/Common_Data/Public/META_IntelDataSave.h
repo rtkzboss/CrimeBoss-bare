@@ -9,16 +9,15 @@ struct COMMON_DATA_API FMETA_IntelDataSave {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AmountOfSoldeirsWereSentToIntel;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 RequiredSoldiersForFullRevealIntel;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_RespectLvl RespectValueOnMissionSpawn;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float IntelRewardMultiplier;
-    
+
     FMETA_IntelDataSave();
 };
-

@@ -7,7 +7,7 @@ void UIGS_PlayMetaDialogue::StartDialogueLine(FName inLineID, EIGS_MetaDialogueC
 }
 
 UIGS_PlayMetaDialogue* UIGS_PlayMetaDialogue::PlayMetaDialogue(UObject* inWCO, FText DialogueID, TMap<EIGS_MetaDialogueCharacterSlot, EIGS_MetaDialogueCharacter>& inCharacters) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_PlayMetaDialogue::FinishDialogueLine(FName inLineID, EIGS_MetaDialogueCharacterSlot inSlot, int32 inLineOrderID, int32 inLinesCount, float inLineLength) {
@@ -15,5 +15,4 @@ void UIGS_PlayMetaDialogue::FinishDialogueLine(FName inLineID, EIGS_MetaDialogue
 
 void UIGS_PlayMetaDialogue::FinishDialogue() {
 }
-
 

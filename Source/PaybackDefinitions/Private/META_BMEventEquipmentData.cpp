@@ -5,6 +5,5 @@ FMETA_BMEventEquipmentData::FMETA_BMEventEquipmentData() {
     (*this).MinAvailableCash = 0;
     (*this).NumberOfEquipmentPerEvent = 1;
     (*this).ExpirationTime = 0;
-    (*this).EquipmentQualitiesChances.Empty();
+    (*this).EquipmentQualitiesChances = {};
 }
-

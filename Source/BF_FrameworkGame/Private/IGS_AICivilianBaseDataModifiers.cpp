@@ -2,4 +2,3 @@
 
 FIGS_AICivilianBaseDataModifiers::FIGS_AICivilianBaseDataModifiers() {
 }
-

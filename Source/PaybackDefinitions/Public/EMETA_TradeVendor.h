@@ -12,4 +12,3 @@ enum class EMETA_TradeVendor : uint8 {
     PawnShop,
     Last,
 };
-

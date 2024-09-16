@@ -10,7 +10,6 @@ struct FIGS_LevelActorsContainer {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<UObject*> Objects;
-    
+
     CRIMEBOSSMETA_API FIGS_LevelActorsContainer();
 };
-

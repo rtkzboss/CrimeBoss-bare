@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<AIGS_WaypointBase> Waypoint;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ApproachDistance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ExactPosition;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsApproachMove;
-    
-};
 
+};

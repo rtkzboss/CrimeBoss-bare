@@ -15,24 +15,23 @@ public:
 
     UPROPERTY()
     float Position;
-    
+
     UPROPERTY()
     float Value;
-    
+
     UPROPERTY()
     EHoudiniRampInterpolationType Interpolation;
-    
+
     UPROPERTY()
     int32 InstanceIndex;
-    
+
     UPROPERTY(Instanced)
     UHoudiniParameterFloat* PositionParentParm;
-    
+
     UPROPERTY(Instanced)
     UHoudiniParameterFloat* ValueParentParm;
-    
+
     UPROPERTY(Instanced)
     UHoudiniParameterChoice* InterpolationParentParm;
-    
-};
 
+};

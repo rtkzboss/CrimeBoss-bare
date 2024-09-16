@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Subsystems/WorldSubsystem.h"
 #include "IGS_AimAssistTargetsManager.generated.h"
 
@@ -15,13 +14,12 @@ public:
 
     UFUNCTION(BlueprintPure)
     TArray<UIGS_AimAssistTargetComponent*> GetAllAimAssistTargetsInBoxWithTransform(const FTransform& inBoxWorldTransform, FVector InBoxExtent) const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<UIGS_AimAssistTargetComponent*> GetAllAimAssistTargets() const;
-    
+
 protected:
     UPROPERTY(Instanced, Transient)
     TArray<UIGS_AimAssistTargetComponent*> AimAssistTargets;
-    
-};
 
+};

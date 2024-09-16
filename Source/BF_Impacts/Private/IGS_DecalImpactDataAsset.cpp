@@ -9,4 +9,3 @@ UIGS_DecalImpactDataAsset::UIGS_DecalImpactDataAsset() {
     (*this).FadeTime = 2.000000000e+00f;
 }
 
-

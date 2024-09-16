@@ -2,4 +2,3 @@
 
 FIGS_AICopHeavyTierData::FIGS_AICopHeavyTierData() {
 }
-

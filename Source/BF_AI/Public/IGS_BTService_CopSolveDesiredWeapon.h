@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MeleeTypeKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DesiredWeaponKey;
-    
-};
 
+};

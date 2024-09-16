@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerBooster_Base(const FObjectInitializer& ObjectInitializer);
 
 };
-

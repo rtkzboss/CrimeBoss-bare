@@ -5,7 +5,7 @@ public class CrimeBossMeta : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "BF_FrameworkBase",
             "BF_FrameworkGame",
@@ -24,6 +24,7 @@ public class CrimeBossMeta : ModuleRules {
             "GenericGraphRuntime",
             "IGS_UIFramework",
             "PaybackDefinitions",
+            "PhysicsCore",
             "SlateCore",
             "UMG",
         });

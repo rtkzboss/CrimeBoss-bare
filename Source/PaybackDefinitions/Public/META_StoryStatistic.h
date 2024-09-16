@@ -10,7 +10,6 @@ struct PAYBACKDEFINITIONS_API FMETA_StoryStatistic {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSoftObjectPtr<UMETA_BaseStoryGraphManager>> PlotlinesFinished;
-    
+
     FMETA_StoryStatistic();
 };
-

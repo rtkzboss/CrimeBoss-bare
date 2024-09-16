@@ -3,4 +3,3 @@
 UIGS_AnimNotifyState_MocapEvent::UIGS_AnimNotifyState_MocapEvent() {
 }
 
-

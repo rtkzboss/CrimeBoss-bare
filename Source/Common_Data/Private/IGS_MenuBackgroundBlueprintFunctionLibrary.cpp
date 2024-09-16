@@ -7,4 +7,3 @@ bool UIGS_MenuBackgroundBlueprintFunctionLibrary::IsTodayBetweenDates(int32 dayF
     return false;
 }
 
-

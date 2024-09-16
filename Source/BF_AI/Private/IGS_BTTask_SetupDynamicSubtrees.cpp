@@ -4,4 +4,3 @@ UIGS_BTTask_SetupDynamicSubtrees::UIGS_BTTask_SetupDynamicSubtrees() {
     (*this).NodeName = TEXT("Setup Dynamic Subtrees");
 }
 
-

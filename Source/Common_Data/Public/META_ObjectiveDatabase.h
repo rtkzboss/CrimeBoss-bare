@@ -19,25 +19,24 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetObjectiveByID(FGameplayTag inObjectiveID, FMETA_ObjectiveRewardData inObjectiveReward, UMETA_BaseFPSMission* inMission);
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_ObjectivePresetTableRow> GetPresetsDatabaseTable();
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_ObjectivePresetTableRow GetPresetDataBP(const UObject* inWCO, FGameplayTag inID, bool& outSucceeded);
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_ObjectiveTableRow> GetObjectivesDatabaseTable();
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_ObjectiveTableRow GetObjectiveDataBP(const UObject* inWCO, FGameplayTag inID, bool& outSucceeded);
-    
+
 private:
     UPROPERTY()
     UDataTable* m_ObjectiveDatabase;
-    
+
     UPROPERTY()
     UDataTable* m_ObjectivePresetsDatabase;
-    
-};
 
+};

@@ -8,16 +8,15 @@ struct FIGS_AimAnimationInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentAim;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float AimInSpeedMult;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float AimOutSpeedMult;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsAiming;
-    
+
     BF_ANIMATIONS_API FIGS_AimAnimationInfo();
 };
-

@@ -55,4 +55,3 @@ FIGS_WeaponSkinMaterialParameters::FIGS_WeaponSkinMaterialParameters() {
     (*this).Normal_BlendIntensity = 1.000000000e+00f;
     (*this).Roughness_Opacity = 1.000000000e+00f;
 }
-

@@ -14,16 +14,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AmmoBoxDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AmmoBoxItem ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_AmmoBoxDataAsset* AmmoProbabilities;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInstance* BoxMaterial;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector BoxScale;
-    
+
     FIGS_AmmoBoxDataRow();
 };
-

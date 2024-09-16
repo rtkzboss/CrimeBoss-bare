@@ -1,22 +1,22 @@
 #include "IGS_TileItemDataStruct.h"
 
 FIGS_TileItemDataStruct::FIGS_TileItemDataStruct() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ItemId, 0)) = NAME_None;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
-    (*this).Image = nullptr;
-    (*this).Name = FText::FromString(TEXT(""));
-    (*this).Description = FText::FromString(TEXT(""));
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ItemId, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
+    (*this).Image = FSoftObjectPath();
+    (*this).Name = FText::GetEmpty();
+    (*this).Description = FText::GetEmpty();
     (*this).Price = 0;
     (*this).IsNew = false;
     (*this).IsChallenge = false;
     (*this).HasCustomAction = false;
-    (*this).CustomActionText = FText::FromString(TEXT(""));
+    (*this).CustomActionText = FText::GetEmpty();
     (*this).IsEquiped = false;
-    (*this).CustomEquipedText = FText::FromString(TEXT(""));
+    (*this).CustomEquipedText = FText::GetEmpty();
     (*this).IsTaken = false;
-    (*this).CustomTakenText = FText::FromString(TEXT(""));
+    (*this).CustomTakenText = FText::GetEmpty();
     (*this).Rarity = EMETA_ItemQuality::None;
     (*this).State = EIGS_TileItemState::Locked;
     (*this).Category = EIGS_UnlockCategory::UC_Weapons;
 }
-

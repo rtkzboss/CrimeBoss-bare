@@ -10,4 +10,3 @@ enum class EIGS_InteractionWarningType : uint8 {
     BossDowned,
     AnyHeisterDowned,
 };
-

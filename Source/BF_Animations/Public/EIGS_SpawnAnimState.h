@@ -7,4 +7,3 @@ enum class EIGS_SpawnAnimState : uint8 {
     EBF_AliveAfterSpawn,
     EBF_CanBeDeathDuringSpawn,
 };
-

@@ -11,4 +11,3 @@ bool UIGS_SquadHelpers::CanEnterNextRoom(AIGS_SquadSwat* inSquad) {
     return false;
 }
 
-

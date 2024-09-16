@@ -13,9 +13,8 @@ class BF_AI_API IIGS_ReactionsSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float NormalizedHealthMaxForReaction();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetReactionsAlpha();
-    
-};
 
+};

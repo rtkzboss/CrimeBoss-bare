@@ -25,57 +25,56 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetUserFriendlyActionNames(UObject* inWCO, FName inActionName, TArray<FText>& outTexts);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetInputActionString(UObject* inWCO, EIGS_InputAction InAction, FName& OutText);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<EIGS_InputAction> GetInputActionsFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FText> GetInputActionNamesFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static EIGS_InputAction GetInputActionFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_InputActionEntry GetInputActionEntry(UObject* inWCO, EIGS_InputAction InAction);
-    
+
     UFUNCTION(BlueprintCallable)
     static FKey GetFKeyByActionName(FName inActionName, bool bGamepadKey, bool inAlternativeKey);
-    
+
     UFUNCTION(BlueprintCallable)
     static TArray<FName> GetActionNamesByFKey(FKey inKey, bool bGamepadKey);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetLightColor(const APlayerController* inPc, const FColor& InColor);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetDualSenseTriggerWeapon(const APlayerController* inPc, const EIGS_DsTriggerMask inTriggerMask, const FIGS_DsWeaponTrigger& inData);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetDualSenseTriggerVibration2(const APlayerController* inPc, const EIGS_DsTriggerMask inTriggerMask, FIGS_DsVibrationTrigger2& inData);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetDualSenseTriggerVibration(const APlayerController* inPc, const EIGS_DsTriggerMask inTriggerMask, const FIGS_DsVibrationTrigger& inData);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetDualSenseTriggerOff(const APlayerController* inPc, const EIGS_DsTriggerMask inTriggerMask);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetDualSenseTriggerFeedback3(const APlayerController* inPc, const EIGS_DsTriggerMask inTriggerMask, const FIGS_DsFeedback3& inData);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetDualSenseTriggerFeedback2(const APlayerController* inPc, const EIGS_DsTriggerMask inTriggerMask, FIGS_DsFeedback2& inData);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsSetDualSenseTriggerFeedback(const APlayerController* inPc, const EIGS_DsTriggerMask inTriggerMask, const FIGS_DsFeedback& inData);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsResetLightColor(const APlayerController* inPc);
-    
+
     UFUNCTION(BlueprintCallable)
     static void DsDualSenseRestoreLastTriggerStates();
-    
-};
 
+};

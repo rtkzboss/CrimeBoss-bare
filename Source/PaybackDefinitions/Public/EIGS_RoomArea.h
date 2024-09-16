@@ -9,4 +9,3 @@ enum class EIGS_RoomArea : uint8 {
     NonPlayable,
     Playable,
 };
-

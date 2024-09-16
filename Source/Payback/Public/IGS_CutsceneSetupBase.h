@@ -14,12 +14,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void RefreshProperties();
-    
+
     UFUNCTION(BlueprintCallable)
     void InitializedSequencePlayer(ALevelSequenceActor* inLevelSequenceActor);
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleInstanceOnly)
     TMap<FName, FIGS_DialogueCameraOverride> DialoguesCameraOverdrive;
-    
-};
 
+};

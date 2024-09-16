@@ -15,9 +15,8 @@ class BF_FRAMEWORKBASE_API IIGS_ProjectileOverlappable : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnProjectileOverlap(const FHitResult& inHitResult);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     EIGS_OverlapResponseType GetOverlapResponseType();
-    
-};
 
+};

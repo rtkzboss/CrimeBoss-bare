@@ -9,7 +9,6 @@ struct FKantanCartesianDatapoint {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector2D Coords;
-    
+
     KANTANCHARTSDATASOURCE_API FKantanCartesianDatapoint();
 };
-

@@ -18,33 +18,32 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FName> PreloadLevels;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_DialogueGroupCharacterHolder> PreloadCharacters;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_DialogueLevelName> LevelNames;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FName> BlacklistLevel;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FIGS_DialogueOverrideDataKey, FIGS_DialogueOverrideData> OverrideDialogueData;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FIGS_DialogueOverrideDataKey, FIGS_DialogueLineOverrideData> OverrideLineData;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FIGS_DialogueSpeakerKey, FLinearColor> SpeakerSubtitleColors;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<int32, FLinearColor> HeisterSpeakerSubtitleColors;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FName, FText> CharacterNames;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_DialogueGroupCharacterHolder> DebugRestrictedCharacters;
-    
-};
 
+};

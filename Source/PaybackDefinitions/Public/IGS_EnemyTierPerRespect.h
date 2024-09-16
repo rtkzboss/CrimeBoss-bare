@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FIGS_EnemyTierPerRespect {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Tier1;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Tier2;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Tier3;
-    
+
     FIGS_EnemyTierPerRespect();
 };
-

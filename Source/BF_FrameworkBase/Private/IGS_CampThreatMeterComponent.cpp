@@ -1,5 +1,4 @@
 #include "IGS_CampThreatMeterComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_CampThreatMeterComponent::UIGS_CampThreatMeterComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).TickInterval = 1.000000000e+00f;
@@ -21,7 +20,6 @@ bool UIGS_CampThreatMeterComponent::IsCamping() const {
 }
 
 float UIGS_CampThreatMeterComponent::GetCampLevel() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

@@ -14,6 +14,5 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void CombatTaunt(const AIGS_GameCharacterFramework* inInstigator, bool hasVisibleTarget);
-    
-};
 
+};

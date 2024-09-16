@@ -10,10 +10,9 @@ FCustomizableObjectPopulationConstraint::FCustomizableObjectPopulationConstraint
     (*this).DiscreteColor.G = 0.000000000e+00f;
     (*this).DiscreteColor.B = 0.000000000e+00f;
     (*this).DiscreteColor.A = 0.000000000e+00f;
-    (*this).WhiteList.Empty();
-    (*this).Blacklist.Empty();
-    (*this).Ranges.Empty();
+    (*this).WhiteList = {};
+    (*this).Blacklist = {};
+    (*this).Ranges = {};
     (*this).Curve = nullptr;
     (*this).CurveColor = ECurveColor::RED;
 }
-

@@ -8,4 +8,3 @@ enum class EIGS_LootBagDefinition : uint8 {
     PickedUp = 0,
     CatchInAir,
 };
-

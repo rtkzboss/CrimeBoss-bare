@@ -5,4 +5,3 @@ FMETA_WeakenMissionTurfActionGenData::FMETA_WeakenMissionTurfActionGenData() {
     (*this).NeutralizeChance = 0;
     (*this).CaptureChance = 0;
 }
-

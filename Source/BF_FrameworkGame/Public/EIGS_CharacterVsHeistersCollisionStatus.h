@@ -9,4 +9,3 @@ enum class EIGS_CharacterVsHeistersCollisionStatus : uint8 {
     PlayersIgnoringCharacters,
     IgnoringEachOther,
 };
-

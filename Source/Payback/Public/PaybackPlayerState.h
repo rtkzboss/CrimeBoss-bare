@@ -10,4 +10,3 @@ public:
     APaybackPlayerState(const FObjectInitializer& ObjectInitializer);
 
 };
-

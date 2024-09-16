@@ -8,4 +8,3 @@ struct FBPSteamWorkshopID {
 public:
     ADVANCEDSTEAMSESSIONS_API FBPSteamWorkshopID();
 };
-

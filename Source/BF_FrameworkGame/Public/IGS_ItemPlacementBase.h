@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "IGS_OnGadgetPlacedDelegate.h"
+#include "IGS_OnGadgetPlaced.h"
 #include "IGS_ItemPlacementBase.generated.h"
 
 UCLASS()
@@ -12,12 +12,11 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void EnablePlacement(bool inEnable);
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnGadgetPlaced OnGadgetPlaced;
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnGadgetPlaced OnGadgetFinished;
-    
-};
 
+};

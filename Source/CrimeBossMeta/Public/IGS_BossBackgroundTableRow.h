@@ -9,10 +9,9 @@ struct CRIMEBOSSMETA_API FIGS_BossBackgroundTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName SubLevelName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ActiveFromTreshold;
-    
+
     FIGS_BossBackgroundTableRow();
 };
-

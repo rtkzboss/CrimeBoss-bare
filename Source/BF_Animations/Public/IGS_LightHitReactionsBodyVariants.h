@@ -10,13 +10,12 @@ struct FIGS_LightHitReactionsBodyVariants {
 public:
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> UpperBody;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> LowerBody;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> head;
-    
+
     BF_ANIMATIONS_API FIGS_LightHitReactionsBodyVariants();
 };
-

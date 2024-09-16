@@ -3,4 +3,3 @@
 UBTTask_BreachThrowFlashbang::UBTTask_BreachThrowFlashbang() {
 }
 
-

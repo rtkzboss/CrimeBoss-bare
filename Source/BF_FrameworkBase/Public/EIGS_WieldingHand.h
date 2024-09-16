@@ -10,4 +10,3 @@ enum class EIGS_WieldingHand : uint8 {
     BothHands,
     NoHand,
 };
-

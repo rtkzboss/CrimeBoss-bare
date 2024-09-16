@@ -14,12 +14,11 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void ReportMissionFinishedToAnalytics(UObject* inWCO, ECommonMissionResult Result);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void LobbyStarted(UObject* inWCO, const FString& lobbySource);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void LobbyFinished(UObject* inWCO, const FString& resultText);
-    
-};
 
+};

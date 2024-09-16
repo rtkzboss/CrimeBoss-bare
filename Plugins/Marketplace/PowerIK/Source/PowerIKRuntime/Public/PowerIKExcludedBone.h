@@ -8,7 +8,6 @@ struct POWERIKRUNTIME_API FPowerIKExcludedBone {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
-    
+
     FPowerIKExcludedBone();
 };
-

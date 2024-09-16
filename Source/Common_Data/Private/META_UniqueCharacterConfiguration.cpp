@@ -5,4 +5,3 @@ FMETA_UniqueCharacterConfiguration::FMETA_UniqueCharacterConfiguration() {
     (*this).LevelRange.Max = 4;
     (*this).StartingPerkCount = 0;
 }
-

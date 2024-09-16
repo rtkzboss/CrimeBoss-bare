@@ -11,13 +11,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetMoney(int32 inMoney, bool inShowAbsolute);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetMoney() const;
-    
+
 private:
     UPROPERTY()
     int32 m_Money;
-    
-};
 
+};

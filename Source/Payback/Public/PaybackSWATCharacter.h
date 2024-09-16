@@ -10,4 +10,3 @@ public:
     APaybackSWATCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -1,5 +1,4 @@
 #include "IGS_ComplexPathFollowingComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_ComplexPathFollowingComponent::UIGS_ComplexPathFollowingComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -12,5 +11,4 @@ bool UIGS_ComplexPathFollowingComponent::ProjectPointToNavigation(const FVector&
 
 void UIGS_ComplexPathFollowingComponent::ForceStopTransition() {
 }
-
 

@@ -21,25 +21,24 @@ public:
 private:
     UFUNCTION()
     void OnTriggerEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
+
     UFUNCTION()
     void OnTriggerBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
+
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EWaterType::Type> WaterType;
-    
+
     UPROPERTY(EditAnywhere)
     USoundBase* UnderWaterLoop;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     FPostProcessSettings Settings;
-    
+
     UPROPERTY(Instanced, Transient)
     UAudioComponent* m_AudioComponent;
-    
+
 
     // Fix for true pure virtual functions not being implemented
     virtual bool EncompassesPoint(FVector Point, float SphereRadius/*=0.f*/, float* OutDistanceToPoint) override { return false; }
     virtual FPostProcessVolumeProperties GetProperties() const override { return {}; }
 };
-

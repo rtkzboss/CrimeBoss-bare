@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UIGS_SearchPointComponent*> PointsToSearch;
-    
-};
 
+};

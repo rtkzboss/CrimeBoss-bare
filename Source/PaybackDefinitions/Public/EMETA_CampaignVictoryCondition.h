@@ -7,4 +7,3 @@ enum class EMETA_CampaignVictoryCondition : uint8 {
     Default,
     Plotline,
 };
-

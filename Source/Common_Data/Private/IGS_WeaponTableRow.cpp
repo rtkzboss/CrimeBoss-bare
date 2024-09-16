@@ -7,7 +7,8 @@
 #include "EIGS_WieldableClass.h"
 
 FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
     (*this).ID = nullptr;
     (*this).ClassDataOverride = nullptr;
     (*this).Attack.ProjectileClass = nullptr;
@@ -68,43 +69,45 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).AdaptiveTriggers.VibrationMode.Position = 0;
     (*this).AdaptiveTriggers.VibrationMode.Frequency = 0;
     (*this).AdaptiveTriggers.VibrationMode.Amplitude = 0;
-    (*this).WieldableData.WieldableClass = nullptr;
+    (*this).WieldableData.WieldableClass = FSoftObjectPath();
     (*this).WieldableData.WieldableTortillaBaseFOV = 4.500000000e+01f;
     (*this).WieldableData.WieldableTortillaAimFOV = 4.500000000e+01f;
     (*this).WieldableData.HolsterTimeInSeconds = 5.000000000e-01f;
     (*this).WieldableData.WieldingMovementSpeedMultiplier = 1.000000000e+00f;
     (*this).WieldableData.Class = EIGS_WieldableClass::C_Generic;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.ClassTag, 0)) = TEXT("Item.Wieldable");
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.WieldingOffence, 0)) = TEXT("Offence.Player.Wielding.Weapon");
-    (*this).WieldableData.DefaultSkin = nullptr;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.ClassTag, 0)) = TEXT("Item.Wieldable");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.WieldingOffence, 0)) = TEXT("Offence.Player.Wielding.Weapon");
+    (*this).WieldableData.DefaultSkin = FSoftObjectPath();
     (*this).WieldableData.ItemType = EIGS_ItemType::Item_Weapon;
     (*this).WieldableData.Name = FText::FromString(TEXT("None"));
     (*this).WieldableData.bShouldMove = true;
-    (*this).WieldableData.Image = nullptr;
-    (*this).WieldableData.PickupMesh = nullptr;
-    (*this).WieldableData.PickupMeshSkeletal = nullptr;
-    (*this).WieldableData.ItemPickUpAudioEvent = nullptr;
-    (*this).WieldableData.ItemThrowAudioEvent = nullptr;
+    (*this).WieldableData.Image = FSoftObjectPath();
+    (*this).WieldableData.PickupMesh = FSoftObjectPath();
+    (*this).WieldableData.PickupMeshSkeletal = FSoftObjectPath();
+    (*this).WieldableData.ItemPickUpAudioEvent = FSoftObjectPath();
+    (*this).WieldableData.ItemThrowAudioEvent = FSoftObjectPath();
     (*this).WieldableData.HitImpactID = nullptr;
     (*this).WieldableData.HitImpactMass = 1.000000000e+00f;
     (*this).WieldableData.Quality = EMETA_ItemQuality::MinGenerate;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.ItemOffence, 0)) = TEXT("Offence.Actor.Item.Weapon");
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).WieldableData.GrantedTags, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).WieldableData.GrantedTags, 0)).Empty();
-    (*this).WieldableData.GrantedAbilities.Empty();
-    (*this).WieldableData.AppliedEffects.Empty();
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.ItemOffence, 0)) = TEXT("Offence.Actor.Item.Weapon");
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).WieldableData.GrantedTags, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).WieldableData.GrantedTags, 0)) = {};
+    (*this).WieldableData.GrantedAbilities = {};
+    (*this).WieldableData.AppliedEffects = {};
     (*this).WieldableData.ItemPropertyFlags = 1;
     (*this).WieldableData.MonetaryValue = 0;
     (*this).WieldableData.ModelScaleFPV = 1.000000000e+00f;
     (*this).WieldableData.ModelScale3PV = 1.000000000e+00f;
-    (*this).WieldableData.AdditionalPreloadClasses.Empty();
-    (*this).WieldableData.AdditionalPreloadObjects.Empty();
-    (*this).DefaultModData.DefaultMagazineMesh = nullptr;
-    (*this).DefaultModData.DefaultStockMesh = nullptr;
-    (*this).DefaultModData.DefaultSightMesh = nullptr;
-    (*this).DefaultModData.DefaultDynamicSightMesh = nullptr;
-    (*this).DefaultModData.DefaultBarrelMesh = nullptr;
-    (*this).DefaultModData.DefaultVisibilityMesh = nullptr;
+    (*this).WieldableData.AdditionalPreloadClasses = {};
+    (*this).WieldableData.AdditionalPreloadObjects = {};
+    (*this).DefaultModData.DefaultMagazineMesh = FSoftObjectPath();
+    (*this).DefaultModData.DefaultStockMesh = FSoftObjectPath();
+    (*this).DefaultModData.DefaultSightMesh = FSoftObjectPath();
+    (*this).DefaultModData.DefaultDynamicSightMesh = FSoftObjectPath();
+    (*this).DefaultModData.DefaultBarrelMesh = FSoftObjectPath();
+    (*this).DefaultModData.DefaultVisibilityMesh = FSoftObjectPath();
     (*this).DefaultModData.DefaultZoomMagnification = 1.500000000e+00f;
     (*this).AIData.HeisterDamage = 1.000000000e+02f;
     (*this).AIData.EnemyDamage = 5.000000000e+01f;
@@ -175,6 +178,5 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).ExtraFireModeData.AdaptiveTriggers.VibrationMode.Position = 0;
     (*this).ExtraFireModeData.AdaptiveTriggers.VibrationMode.Frequency = 0;
     (*this).ExtraFireModeData.AdaptiveTriggers.VibrationMode.Amplitude = 0;
-    (*this).WeaponNameAkSwitch = nullptr;
+    (*this).WeaponNameAkSwitch = FSoftObjectPath();
 }
-

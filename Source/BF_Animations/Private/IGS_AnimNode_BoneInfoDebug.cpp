@@ -2,11 +2,10 @@
 
 FIGS_AnimNode_BoneInfoDebug::FIGS_AnimNode_BoneInfoDebug() {
     (*this).InputPose.LinkID = -1;
-    (*this).Bones.Empty();
+    (*this).Bones = {};
     (*this).DebugBoneAxisType = EIGS_DebugBoneAxisTypes::XYZ;
     (*this).DisplayBoneInfo = false;
     (*this).DisplayTransformSpace = EIGS_DebugBoneTextTransformSpaceFormat::WorldSpace;
     (*this).ArrowSize = 2.000000000e+01f;
     (*this).ArrowThickness = 2.500000000e-01f;
 }
-

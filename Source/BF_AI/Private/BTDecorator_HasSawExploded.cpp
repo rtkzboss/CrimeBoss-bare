@@ -4,4 +4,3 @@ UBTDecorator_HasSawExploded::UBTDecorator_HasSawExploded() {
     (*this).NodeName = TEXT("Has Saw Exploded");
 }
 
-

@@ -25,4 +25,3 @@ FIGS_FPSDifficultySettings::FIGS_FPSDifficultySettings() {
     (*this).PinnedDownTimeMultiplier = 1.000000000e+00f;
     (*this).MaxHPMultiplier = 1.000000000e+00f;
 }
-

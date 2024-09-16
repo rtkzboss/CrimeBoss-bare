@@ -4,4 +4,3 @@ FBPOnlineUser::FBPOnlineUser() {
     (*this).DisplayName = TEXT("");
     (*this).RealName = TEXT("");
 }
-

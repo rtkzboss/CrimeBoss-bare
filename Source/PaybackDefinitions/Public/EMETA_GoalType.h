@@ -10,4 +10,3 @@ enum class EMETA_GoalType : uint8 {
     MoneyMaking,
     Primary,
 };
-

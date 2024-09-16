@@ -5,4 +5,3 @@ UIGS_BTTask_SquadScripted::UIGS_BTTask_SquadScripted() {
     (*this).NodeName = TEXT("Squad Scripted");
 }
 
-

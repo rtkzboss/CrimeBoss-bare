@@ -8,7 +8,6 @@ struct FFParameterOptionsTags {
 public:
     UPROPERTY(EditAnywhere)
     TArray<FString> Tags;
-    
+
     CUSTOMIZABLEOBJECT_API FFParameterOptionsTags();
 };
-

@@ -5,4 +5,3 @@ FIGS_ReplicatedLadder::FIGS_ReplicatedLadder() {
     (*this).LadderInputIsUp = false;
     (*this).LadderPosition = -1.000000000e+00f;
 }
-

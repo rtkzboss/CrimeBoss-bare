@@ -1,15 +1,16 @@
 #include "IGS_WaveManager.h"
-#include "ComponentInstanceDataCache.h"
 #include "IGS_WaveManagerData.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_WaveManager::UIGS_WaveManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    static ConstructorHelpers::FObjectFinder<UIGS_WaveManagerData> gen0(TEXT("/Game/00_Main/Core/GameModes/DA_WaveManagerData.DA_WaveManagerData"));
-    (*this).WaveManagerData = gen0.Object;
+    static ConstructorHelpers::FObjectFinder<UIGS_WaveManagerData> gen(TEXT("/Game/00_Main/Core/GameModes/DA_WaveManagerData.DA_WaveManagerData"));
+    (*this).WaveManagerData = gen.Object;
     (*this).CurrentPhase = EIGS_PressurePhase::PP_Unknown;
     (*this).InitControlCheckTime = -1.000000000e+00f;
     (*this).LastTeamSideEnum = EIGS_TeamSideEnum::TS_Unknown;
     (*this).PrimaryComponentTick.bCanEverTick = true;
+    auto gen2 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen2)->SetPropertyValue(&(*gen2->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_WaveManager::SetUpWaveManagerWavesDirections(int32 inWavesDirections) {
@@ -29,10 +30,9 @@ void UIGS_WaveManager::OnRep_CurrentPhase() const {
 
 void UIGS_WaveManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_WaveManager, CurrentPhase);
     DOREPLIFETIME(UIGS_WaveManager, StormIntensity);
     DOREPLIFETIME(UIGS_WaveManager, IsGangsterOnly);
 }
-
 

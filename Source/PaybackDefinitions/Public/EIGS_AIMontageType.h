@@ -22,4 +22,3 @@ enum class EIGS_AIMontageType : uint8 {
     AIM_Car,
     AIM_MAX_INDEX,
 };
-

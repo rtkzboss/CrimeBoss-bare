@@ -3,4 +3,3 @@
 FIGS_WaveManagerModifierDef::FIGS_WaveManagerModifierDef() {
     (*this).MaxSpawnedEnemiesAddition = 0;
 }
-

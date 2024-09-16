@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
 #include "EIGS_SignificanceValue.h"
-#include "IGS_PostSignificanceDelegateDelegate.h"
+#include "IGS_PostSignificanceDelegate.h"
 #include "IGS_SignificanceComponent.generated.h"
 
 UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -13,19 +13,18 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_PostSignificanceDelegate OnPostSignificance;
-    
+
 protected:
     UPROPERTY(VisibleAnywhere)
     EIGS_SignificanceValue CurrentSignificanceValue;
-    
+
     UPROPERTY(EditAnywhere)
     bool bIsEnabled;
-    
+
     UPROPERTY(EditAnywhere)
     bool bEventOnlyOnChanged;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<float, EIGS_SignificanceValue> SignificanceDistanceMap;
-    
-};
 
+};

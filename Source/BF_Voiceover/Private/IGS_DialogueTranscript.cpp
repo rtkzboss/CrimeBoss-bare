@@ -5,4 +5,3 @@ FIGS_DialogueTranscript::FIGS_DialogueTranscript() {
     (*this).LineID = NAME_None;
     (*this).IsDisabled = false;
 }
-

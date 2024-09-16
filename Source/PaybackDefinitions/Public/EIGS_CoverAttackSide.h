@@ -10,4 +10,3 @@ enum class EIGS_CoverAttackSide : uint8 {
     CAS_Right,
     CAS_Up,
 };
-

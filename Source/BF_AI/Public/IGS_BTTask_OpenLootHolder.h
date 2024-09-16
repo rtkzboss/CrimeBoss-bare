@@ -12,13 +12,12 @@ public:
 
     UPROPERTY(EditAnywhere)
     float DelayAfterInteracting;
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootingCollection;
-    
+
     UPROPERTY(EditAnywhere)
     bool WaitForBashHitsHandled;
-    
-};
 
+};

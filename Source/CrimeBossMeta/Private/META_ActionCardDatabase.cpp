@@ -12,15 +12,14 @@ FMETA_ActionCardTableRow UMETA_ActionCardDatabase::GetDataByIndexBP(int32 inInde
 }
 
 TArray<FMETA_ActionCardTableRow> UMETA_ActionCardDatabase::GetDatabaseTableBP() {
-    return TArray<FMETA_ActionCardTableRow>();
+    return {};
 }
 
 TArray<TSoftClassPtr<UMETA_BaseActionCard>> UMETA_ActionCardDatabase::GetDatabaseIDs() {
-    return TArray<TSoftClassPtr<UMETA_BaseActionCard>>();
+    return {};
 }
 
 FMETA_ActionCardTableRow UMETA_ActionCardDatabase::GetDataActionCard(UObject* inWCO, TSoftClassPtr<UMETA_BaseActionCard> inClass, bool& outSucceeded) {
     return FMETA_ActionCardTableRow{};
 }
-
 

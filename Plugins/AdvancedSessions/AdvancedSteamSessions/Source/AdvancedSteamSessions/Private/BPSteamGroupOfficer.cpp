@@ -3,4 +3,3 @@
 FBPSteamGroupOfficer::FBPSteamGroupOfficer() {
     (*this).bIsOwner = false;
 }
-

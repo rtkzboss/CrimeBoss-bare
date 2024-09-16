@@ -9,4 +9,4 @@ public:
     FIGS_VoiceoverControllerKey();
 };
 FORCEINLINE uint32 GetTypeHash(const FIGS_VoiceoverControllerKey&) { return 0; }
-
+FORCEINLINE bool operator==(const FIGS_VoiceoverControllerKey&, const FIGS_VoiceoverControllerKey&) { return true; }

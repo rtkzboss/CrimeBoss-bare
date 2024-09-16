@@ -39,4 +39,3 @@ FIGS_SenseHolder::FIGS_SenseHolder() {
     (*this).WasDamageTaken = false;
     (*this).StrongStimulusReceived = false;
 }
-

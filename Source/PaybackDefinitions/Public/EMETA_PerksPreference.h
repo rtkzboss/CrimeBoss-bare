@@ -8,4 +8,3 @@ enum class EMETA_PerksPreference : uint8 {
     OnlyPositive,
     OnlyNegative,
 };
-

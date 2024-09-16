@@ -10,7 +10,6 @@ struct FGenericGraphNode_SearchData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UGenericGraphNode* Node;
-    
+
     GENERICGRAPHRUNTIME_API FGenericGraphNode_SearchData();
 };
-

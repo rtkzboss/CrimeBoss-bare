@@ -8,11 +8,10 @@ void UMETA_BaseCallback::UpdateNextNodes_Implementation(const TArray<UGenericGra
 }
 
 TMap<FString, int32> UMETA_BaseCallback::GetResultPaths_Implementation() {
-    return TMap<FString, int32>();
+    return {};
 }
 
 int32 UMETA_BaseCallback::GetAvailableConnections_Implementation() {
     return 0;
 }
-
 

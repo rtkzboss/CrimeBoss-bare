@@ -8,4 +8,3 @@ enum class EIGS_AchievementsReleaseType : uint8 {
     MajorUpdate,
     MinorUpdate,
 };
-

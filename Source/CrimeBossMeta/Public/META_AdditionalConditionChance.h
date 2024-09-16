@@ -10,10 +10,9 @@ struct FMETA_AdditionalConditionChance {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_BaseCondition* Condition;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float Chance;
-    
+
     CRIMEBOSSMETA_API FMETA_AdditionalConditionChance();
 };
-

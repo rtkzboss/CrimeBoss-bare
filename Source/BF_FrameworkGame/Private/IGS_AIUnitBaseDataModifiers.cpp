@@ -34,4 +34,3 @@ FIGS_AIUnitBaseDataModifiers::FIGS_AIUnitBaseDataModifiers() {
     (*this).ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).ReactionIntensity.bOverloadValue = false;
 }
-

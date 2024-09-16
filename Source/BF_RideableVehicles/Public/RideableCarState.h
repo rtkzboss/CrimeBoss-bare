@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "RideableCarMove.h"
 #include "RideableCarState.generated.h"
 
@@ -11,13 +10,12 @@ struct FRideableCarState {
 public:
     UPROPERTY()
     FTransform Tranform;
-    
+
     UPROPERTY()
     FVector Velocity;
-    
+
     UPROPERTY()
     FRideableCarMove LastMove;
-    
+
     BF_RIDEABLEVEHICLES_API FRideableCarState();
 };
-

@@ -7,4 +7,3 @@ bool UMETA_ComparableItemData::Compare_Implementation(UMETA_ComparableItemData* 
     return false;
 }
 
-

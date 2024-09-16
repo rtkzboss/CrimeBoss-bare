@@ -10,16 +10,15 @@ struct FMETA_PlayerInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_RespectLvl RespectLvl;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Army;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AvailableArmy;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ArmyTier ArmyTier;
-    
+
     CRIMEBOSSMETA_API FMETA_PlayerInfo();
 };
-

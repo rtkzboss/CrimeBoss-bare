@@ -7,4 +7,3 @@ UEnvQueryGenerator_AISpawnGroups::UEnvQueryGenerator_AISpawnGroups() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

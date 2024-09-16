@@ -1,6 +1,4 @@
 #include "IGS_AIBlockingVolume.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_AIBlockingVolume::AIGS_AIBlockingVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).BrushColor.G = 255;
@@ -9,5 +7,4 @@ AIGS_AIBlockingVolume::AIGS_AIBlockingVolume(const FObjectInitializer& ObjectIni
     (*this).bColored = true;
     (*this).bSolidWhenSelected = true;
 }
-
 

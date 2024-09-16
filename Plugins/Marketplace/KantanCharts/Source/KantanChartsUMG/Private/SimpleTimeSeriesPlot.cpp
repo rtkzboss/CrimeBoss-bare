@@ -1,8 +1,4 @@
 #include "SimpleTimeSeriesPlot.h"
-#include "EKantanDataPointSize.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
 
 USimpleTimeSeriesPlot::USimpleTimeSeriesPlot() {
 }
@@ -24,5 +20,4 @@ void USimpleTimeSeriesPlot::BP_AddDatapointNow(FName SeriesId, float Value, bool
 
 void USimpleTimeSeriesPlot::BP_AddDatapoint(FName SeriesId, const FVector2D& Point, bool& bSuccess) {
 }
-
 

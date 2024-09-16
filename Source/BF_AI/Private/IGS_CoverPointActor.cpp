@@ -1,21 +1,19 @@
 #include "IGS_CoverPointActor.h"
 #include "IGS_CoverPointComponent.h"
 #include "IGS_CoverPointComponentsManager.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
-#include "EIGS_ScenarioDifficulty.h"
-#include "EIGS_TeamSideEnum.h"
 
 AIGS_CoverPointActor::AIGS_CoverPointActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).CoverPointComponent = CreateDefaultSubobject<UIGS_CoverPointComponent>(TEXT("CoverPointComponent"));
-    (*this).CoverPointComponentsManager = CreateDefaultSubobject<UIGS_CoverPointComponentsManager>(TEXT("CoverPointComponentsManager"));
-    (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
-    (*this).CoverPointComponent->SetupAttachment((*this).RootComponent);
+    auto gen = CreateDefaultSubobject<UIGS_CoverPointComponent>(TEXT("CoverPointComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_CoverPointComponentsManager>(TEXT("CoverPointComponentsManager"));
+    auto gen3 = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
+    (*this).CoverPointComponent = gen;
+    (*this).CoverPointComponentsManager = gen2;
+    (*this).RootComponent = gen3;
+    if (gen) gen->SetupAttachment(gen3);
 }
 
 UCoverPoint* AIGS_CoverPointActor::GetCoverPoint() const {
-    return NULL;
+    return nullptr;
 }
-
 

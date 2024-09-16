@@ -11,10 +11,9 @@ struct BF_FRAMEWORKBASE_API FIGS_SpeedMultiplier {
 public:
     UPROPERTY(VisibleAnywhere)
     UObject* Owner;
-    
+
     UPROPERTY(VisibleAnywhere)
     FActiveGameplayEffectHandle ActiveGEHandle;
-    
+
     FIGS_SpeedMultiplier();
 };
-

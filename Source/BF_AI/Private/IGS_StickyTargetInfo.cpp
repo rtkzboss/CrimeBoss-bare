@@ -2,4 +2,3 @@
 
 FIGS_StickyTargetInfo::FIGS_StickyTargetInfo() {
 }
-

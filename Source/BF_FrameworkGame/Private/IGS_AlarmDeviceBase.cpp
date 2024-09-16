@@ -1,5 +1,4 @@
 #include "IGS_AlarmDeviceBase.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 
 AIGS_AlarmDeviceBase::AIGS_AlarmDeviceBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -7,12 +6,12 @@ AIGS_AlarmDeviceBase::AIGS_AlarmDeviceBase(const FObjectInitializer& ObjectIniti
     (*this).SquadID = 118999881;
     (*this).UnlockAfterTime = 1.500000000e+01f;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
     (*this).NetDormancy = DORM_Initial;
 }
 
 
 void AIGS_AlarmDeviceBase::Disarm(AIGS_GameCharacterFramework* inUsingCharacter) {
 }
-
 

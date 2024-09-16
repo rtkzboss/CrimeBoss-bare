@@ -16,4 +16,3 @@ FIGS_CoverPointDataHolder::FIGS_CoverPointDataHolder() {
     (*this).bUpCoverCrouched = false;
     (*this).bCrouchedCover = false;
 }
-

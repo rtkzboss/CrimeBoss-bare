@@ -5,7 +5,6 @@ UIGS_PaperDollAnimInstance::UIGS_PaperDollAnimInstance() {
 }
 
 AIGS_CharacterPaperDoll* UIGS_PaperDollAnimInstance::GetOwningPaperDoll() const {
-    return NULL;
+    return nullptr;
 }
-
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "PrefabRandomizerCompleteBindableEventDelegate.h"
+#include "PrefabRandomizerCompleteBindableEvent.h"
 #include "PrefabRandomizer.generated.h"
 
 class APrefabActor;
@@ -14,24 +14,23 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Randomize(int32 InSeed);
-    
+
     UPROPERTY(EditAnywhere)
     bool bRandomizeOnBeginPlay;
-    
+
     UPROPERTY(EditAnywhere)
     int32 SeedOffset;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxBuildTimePerFrame;
-    
+
     UPROPERTY(BlueprintAssignable)
     FPrefabRandomizerCompleteBindableEvent OnRandomizationComplete;
-    
+
     UPROPERTY(EditAnywhere)
     bool bFastSyncBuild;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<APrefabActor*> ActorsToRandomize;
-    
-};
 
+};

@@ -2,14 +2,20 @@
 
 UIGS_BTTask_ThrowBase::UIGS_BTTask_ThrowBase() {
     (*this).BeingShotInterrupts = true;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ThrowNotifyTag, 0)) = TEXT("Anim.Combat.Throw.Frag.Throw");
-    auto& gen0 = (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).EventFilter, 0));
-    gen0.Empty();
-    gen0.AddDefaulted(1);
-    auto& gen1 = (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).EventFilter, 0));
-    gen1.Empty();
-    gen1.AddDefaulted(3);
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ThrowNotifyTag, 0)) = TEXT("Anim.Combat.Throw.Frag.Throw");
+    FGameplayTag gen2;
+    (*gen->ContainerPtrToValuePtr<FName>(&gen2, 0)) = TEXT("Anim.Combat.Throw.Frag");
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).EventFilter, 0)) = {MoveTemp(gen2)};
+    FGameplayTag gen4;
+    (*gen->ContainerPtrToValuePtr<FName>(&gen4, 0)) = TEXT("Anim.Combat.Throw");
+    FGameplayTag gen5;
+    (*gen->ContainerPtrToValuePtr<FName>(&gen5, 0)) = TEXT("Anim.Combat");
+    FGameplayTag gen6;
+    (*gen->ContainerPtrToValuePtr<FName>(&gen6, 0)) = TEXT("Anim");
+    auto gen7 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen7->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).EventFilter, 0)) = {MoveTemp(gen4), MoveTemp(gen5), MoveTemp(gen6)};
     (*this).NodeName = TEXT("DON'T USE BASE!");
 }
-
 

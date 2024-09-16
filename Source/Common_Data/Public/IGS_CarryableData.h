@@ -13,25 +13,24 @@ struct COMMON_DATA_API FIGS_CarryableData : public FIGS_WieldableBaseData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float BaseDamage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float BaseZoomMagnification;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsLoot;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_LootSize LootSize;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag LootCategoryTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AActor> ClassToDrop;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag PlacementType;
-    
+
     FIGS_CarryableData();
 };
-

@@ -7,4 +7,3 @@ FMETA_ItemSpawnSettings::FMETA_ItemSpawnSettings() {
     (*this).SpawnChance = 0;
     (*this).StayInShopDays = 0;
 }
-

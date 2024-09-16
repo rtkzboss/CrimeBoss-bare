@@ -15,4 +15,3 @@ UIGS_DestructableVehicleSettings::UIGS_DestructableVehicleSettings() {
     (*this).AiDamageMultiplier = 1.000000000e+00f;
 }
 
-

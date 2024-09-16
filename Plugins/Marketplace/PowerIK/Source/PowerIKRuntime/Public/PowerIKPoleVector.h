@@ -10,16 +10,15 @@ struct POWERIKRUNTIME_API FPowerIKPoleVector {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<EPoleVectorModeEnum> Mode;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FVector Position;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float AngleOffset;
-    
+
     FPowerIKPoleVector();
 };
-

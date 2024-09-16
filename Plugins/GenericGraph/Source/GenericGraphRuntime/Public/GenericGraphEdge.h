@@ -14,15 +14,14 @@ public:
 
     UFUNCTION(BlueprintPure)
     UGenericGraph* GetGraph() const;
-    
+
     UPROPERTY(VisibleAnywhere)
     UGenericGraph* Graph;
-    
+
     UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* StartNode;
-    
+
     UPROPERTY(BlueprintReadOnly)
     UGenericGraphNode* EndNode;
-    
-};
 
+};

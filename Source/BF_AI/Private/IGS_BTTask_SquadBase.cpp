@@ -4,4 +4,3 @@ UIGS_BTTask_SquadBase::UIGS_BTTask_SquadBase() {
     (*this).NodeName = TEXT("Squad Base");
 }
 
-

@@ -13,18 +13,17 @@ struct BF_ANIMATIONS_API FIGS_AnimNode_PoseBoneTransform : public FAnimNode_Skel
 public:
     UPROPERTY(EditAnywhere)
     FBoneReference Bone;
-    
+
     UPROPERTY(EditAnywhere)
     FName TransformPropertyName;
-    
+
 private:
     UPROPERTY(Instanced)
     USkeletalMeshComponent* m_CharacterMesh;
-    
+
     UPROPERTY()
     UAnimInstance* m_AnimInsatnce;
-    
+
 public:
     FIGS_AnimNode_PoseBoneTransform();
 };
-

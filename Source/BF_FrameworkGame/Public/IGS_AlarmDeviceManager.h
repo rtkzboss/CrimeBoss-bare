@@ -6,7 +6,6 @@
 class AIGS_AlarmButtonBase;
 class AIGS_TelephoneBase;
 class AIGS_WalkieTalkie;
-class UIGS_AlarmDeviceManager;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -17,18 +16,17 @@ public:
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_AlarmDeviceManager* Instance(const UObject* inWorldContextObject);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_AlarmButtonBase*> AlarmButtons;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_TelephoneBase*> Telephones;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_TelephoneBase*> ControlRoomTelephones;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_WalkieTalkie*> WalkieTalkies;
-    
-};
 
+};

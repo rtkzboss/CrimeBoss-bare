@@ -10,4 +10,3 @@ public:
     UIGS_SubControllerCommon(const FObjectInitializer& ObjectInitializer);
 
 };
-

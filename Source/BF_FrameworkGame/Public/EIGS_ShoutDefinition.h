@@ -7,4 +7,3 @@ enum class EIGS_ShoutDefinition : uint8 {
     Unknown = 255,
     Refused = 0,
 };
-

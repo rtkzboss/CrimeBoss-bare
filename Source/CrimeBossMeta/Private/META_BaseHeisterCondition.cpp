@@ -10,4 +10,3 @@ FMETA_CharacterID UMETA_BaseHeisterCondition::GetConsideredHeister() {
     return FMETA_CharacterID{};
 }
 
-

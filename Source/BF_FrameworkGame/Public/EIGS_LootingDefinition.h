@@ -8,4 +8,3 @@ enum class EIGS_LootingDefinition : uint8 {
     Start = 0,
     BagAdded,
 };
-

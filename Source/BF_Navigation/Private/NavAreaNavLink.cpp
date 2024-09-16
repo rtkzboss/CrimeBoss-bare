@@ -5,4 +5,3 @@ UNavAreaNavLink::UNavAreaNavLink() {
     (*this).DrawColor.R = 0;
 }
 
-

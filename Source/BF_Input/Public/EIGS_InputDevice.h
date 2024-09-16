@@ -19,4 +19,3 @@ enum class EIGS_InputDevice : uint8 {
     ID_VR_PSVR_PSMove,
     ID_MAX UMETA(Hidden),
 };
-

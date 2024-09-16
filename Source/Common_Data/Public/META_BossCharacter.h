@@ -13,24 +13,23 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetPerkInSlot(int32 inSlot, FGameplayTag inTagID);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetCharacterSkinTag(FGameplayTag inSkinTag);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetSlotByPerkTag(FGameplayTag inTagID) const;
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_PerkData GetPerkInSlot(int32 inSlot) const;
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetEquippedSecondaryWeaponID() const;
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetEquippedPrimaryWeaponID() const;
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetCharacterSkinTag() const;
-    
-};
 
+};

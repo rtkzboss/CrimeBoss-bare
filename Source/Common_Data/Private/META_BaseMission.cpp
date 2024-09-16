@@ -55,7 +55,7 @@ FGameplayTagContainer UMETA_BaseMission::GetRestrictedTiles() const {
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_BaseMission::GetPicture() {
-    return NULL;
+    return {};
 }
 
 void UMETA_BaseMission::GetParameters(TMap<FGameplayTag, int32>& Parameters) {
@@ -100,19 +100,19 @@ int32 UMETA_BaseMission::GetIntelLevelValue() {
 }
 
 TArray<EMETA_IntelUnlockLevel> UMETA_BaseMission::GetIntelLevels() {
-    return TArray<EMETA_IntelUnlockLevel>();
+    return {};
 }
 
 float UMETA_BaseMission::GetInitTime() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TSubclassOf<UMETA_MissionID> UMETA_BaseMission::GetId() const {
-    return NULL;
+    return nullptr;
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_BaseMission::GetIcon() {
-    return NULL;
+    return {};
 }
 
 FMETA_MissionDatabase UMETA_BaseMission::GetFullInfo() {
@@ -120,7 +120,7 @@ FMETA_MissionDatabase UMETA_BaseMission::GetFullInfo() {
 }
 
 float UMETA_BaseMission::GetExpireTime() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FGameplayTag UMETA_BaseMission::GetEntitlementTag() const {
@@ -159,5 +159,4 @@ void UMETA_BaseMission::AddParameters(const TMap<FGameplayTag, int32>& inParamet
 
 void UMETA_BaseMission::AddParameter(const FGameplayTag inParameterTag, int32 inParameterValue) {
 }
-
 

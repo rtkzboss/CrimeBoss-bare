@@ -11,10 +11,7 @@ UIGS_BTTask_SearchRotate::UIGS_BTTask_SearchRotate() {
     (*this).ThreatPointMaxAngle = 4.500000000e+01f;
     (*this).HighPrioThreatPointMaxAngle = 8.500000000e+01f;
     (*this).HighPrioThreatPointRotateAngle = 3.000000000e+01f;
-    auto& gen0 = (*this).BlackboardKey.AllowedTypes;
-    gen0.Empty();
-    gen0.AddDefaulted(2);
+    (*this).BlackboardKey.AllowedTypes = {nullptr, nullptr};
     (*this).NodeName = TEXT("Search Rotate");
 }
-
 

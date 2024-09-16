@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* FOVSpinBox;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* RenderingModeSpinBox;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FText> PerformanceModeConsoleVariables;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FText> QualityModeConsoleVariables;
-    
-};
 
+};

@@ -7,18 +7,17 @@ void UIGS_AnimationHelpers::StopAllMontages(UAnimInstance* inAnimInstance, float
 }
 
 UIGS_PlayerAnimInstance* UIGS_AnimationHelpers::GetPlayerAnimInstance(const AIGS_GameCharacterFramework*& inCharacter) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_AnimationHelpers::GetMeleePushMontages(const AIGS_GameCharacterFramework*& inCharacter, UAnimMontage*& outCharacterFPP, UAnimMontage*& outCharacterTPP, UAnimMontage*& outWeaponFPP) {
 }
 
 UIGS_UArmsAniminstance* UIGS_AnimationHelpers::GetArmsAnimInstance(const AIGS_GameCharacterFramework*& inCharacter) {
-    return NULL;
+    return nullptr;
 }
 
 EIGS_Anim4Sides UIGS_AnimationHelpers::GetAnimationSideForAngle(float inAngle) {
     return EIGS_Anim4Sides::Side_Back;
 }
-
 

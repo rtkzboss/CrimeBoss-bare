@@ -25,4 +25,3 @@ FIGS_ModAnimationDefinition::FIGS_ModAnimationDefinition() {
     (*this).GripMod = false;
     (*this).MagazineMod = false;
 }
-

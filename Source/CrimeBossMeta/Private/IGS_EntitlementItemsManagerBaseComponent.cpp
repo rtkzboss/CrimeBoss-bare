@@ -1,5 +1,4 @@
 #include "IGS_EntitlementItemsManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_EntitlementItemsManagerBaseComponent::UIGS_EntitlementItemsManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -7,6 +6,5 @@ UIGS_EntitlementItemsManagerBaseComponent::UIGS_EntitlementItemsManagerBaseCompo
 bool UIGS_EntitlementItemsManagerBaseComponent::IsManagerInitialized() const {
     return false;
 }
-
 
 

@@ -10,4 +10,3 @@ enum class EMETA_BossLevelCategory : uint8 {
     Captain,
     Army,
 };
-

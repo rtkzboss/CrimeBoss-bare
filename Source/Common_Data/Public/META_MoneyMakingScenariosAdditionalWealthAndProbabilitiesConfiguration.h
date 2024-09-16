@@ -11,10 +11,9 @@ struct COMMON_DATA_API FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitie
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer MoneyMakingScenarios;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_RespectLvl, FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios> RewardsAndProbabilities;
-    
+
     FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration();
 };
-

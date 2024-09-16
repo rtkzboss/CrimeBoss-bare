@@ -9,4 +9,3 @@ enum class EIGS_DialogueGroup : uint8 {
     Swat,
     Uni,
 };
-

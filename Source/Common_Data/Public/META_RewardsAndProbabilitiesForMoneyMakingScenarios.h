@@ -8,13 +8,12 @@ struct COMMON_DATA_API FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RelativeMonetaryValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ProbabilityWeight;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LimitOnMap;
-    
+
     FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios();
 };
-

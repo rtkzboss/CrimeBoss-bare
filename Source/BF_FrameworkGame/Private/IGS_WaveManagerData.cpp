@@ -8,6 +8,6 @@ UIGS_WaveManagerData::UIGS_WaveManagerData() {
     (*this).MaxAliveEnemiesToStartControl = 3;
     (*this).FirstSpawnDelayInAssault = 2.000000000e+01f;
     (*this).HelicopterCooldown = 3.000000000e+01f;
+    (*this).StormTypeHolders = {};
 }
-
 

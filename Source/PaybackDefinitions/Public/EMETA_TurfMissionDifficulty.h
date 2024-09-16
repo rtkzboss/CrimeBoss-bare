@@ -9,4 +9,3 @@ enum class EMETA_TurfMissionDifficulty : uint8 {
     Medium,
     Hard,
 };
-

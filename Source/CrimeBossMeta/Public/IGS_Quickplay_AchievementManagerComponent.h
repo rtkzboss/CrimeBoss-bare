@@ -10,4 +10,3 @@ public:
     UIGS_Quickplay_AchievementManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

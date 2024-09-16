@@ -12,13 +12,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetComparisonData(ETileComparisonUIData inComparisonUIData);
-    
+
     UFUNCTION(BlueprintPure)
     ETileComparisonUIData GetComparisonData() const;
-    
+
 private:
     UPROPERTY()
     ETileComparisonUIData m_ComparisonUIData;
-    
-};
 
+};

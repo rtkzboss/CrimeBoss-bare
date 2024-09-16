@@ -8,4 +8,3 @@ enum class EIGS_MPLobbyType : uint8 {
     Normal = 0,
     QuickJoin,
 };
-

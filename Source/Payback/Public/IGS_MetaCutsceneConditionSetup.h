@@ -11,10 +11,9 @@ struct PAYBACK_API FIGS_MetaCutsceneConditionSetup {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_MetaCutsceneConditionExecuter* ConditionExecuter;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UObject* MetaCondition;
-    
+
     FIGS_MetaCutsceneConditionSetup();
 };
-

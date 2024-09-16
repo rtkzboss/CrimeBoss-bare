@@ -7,4 +7,3 @@ UIGS_BTTask_SniperHidden::UIGS_BTTask_SniperHidden() {
     (*this).NodeName = TEXT("Sniper Hidden");
 }
 
-

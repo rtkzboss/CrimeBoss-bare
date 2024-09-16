@@ -2,4 +2,3 @@
 
 FIGS_AIGuardShieldTierData::FIGS_AIGuardShieldTierData() {
 }
-

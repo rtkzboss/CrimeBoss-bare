@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGuardSpecializationHolder : public FIGS_AIBas
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AIGuardDefaultTierDef Default;
-    
+
     FIGS_AIGuardSpecializationHolder();
 };
-

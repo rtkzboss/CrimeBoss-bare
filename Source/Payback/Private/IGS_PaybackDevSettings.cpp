@@ -7,4 +7,3 @@ UIGS_PaybackDevSettings::UIGS_PaybackDevSettings() {
     (*this).CutsceneSubsystemDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/Cutscenes/DA_CutsceneSubsystemData.DA_CutsceneSubsystemData"), TEXT(""));
 }
 
-

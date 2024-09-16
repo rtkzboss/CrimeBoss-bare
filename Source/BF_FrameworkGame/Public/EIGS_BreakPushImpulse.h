@@ -10,4 +10,3 @@ enum class EIGS_BreakPushImpulse : uint8 {
     Break_Impulse_Up,
     Break_Impulse_Custom,
 };
-

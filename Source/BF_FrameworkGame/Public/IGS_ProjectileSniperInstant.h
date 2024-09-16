@@ -10,4 +10,3 @@ public:
     AIGS_ProjectileSniperInstant(const FObjectInitializer& ObjectInitializer);
 
 };
-

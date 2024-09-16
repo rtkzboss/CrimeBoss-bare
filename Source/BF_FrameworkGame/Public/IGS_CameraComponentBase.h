@@ -12,9 +12,8 @@ public:
 
     UFUNCTION(BlueprintPure)
     TArray<EIGS_PostProcessType> GetGlobalPostProcesses() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void AddGlobalPostProcessType(TArray<EIGS_PostProcessType> inPostProcessTypesArray);
-    
-};
 
+};

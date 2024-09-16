@@ -1,9 +1,4 @@
 #include "IGS_PlayerAnimInstance.h"
-#include "EIGS_CharacterLeaningDirectionEnum.h"
-#include "EIGS_HealthState.h"
-#include "EIGS_CharacterHealthAnimState.h"
-#include "EIGS_LocomotionType.h"
-#include "EIGS_SpecialDeathNotifyState.h"
 
 UIGS_PlayerAnimInstance::UIGS_PlayerAnimInstance() {
     (*this).TeamSide = EIGS_TeamSideEnum::TS_Unknown;
@@ -107,7 +102,7 @@ int32 UIGS_PlayerAnimInstance::GetReplicatedRandomInt(int32 inMin, int32 inMax) 
 }
 
 float UIGS_PlayerAnimInstance::GetReplicatedRandomFloat(float inMin, float inMax) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FIGS_ThirdPersonCarryablesAnimDatabase UIGS_PlayerAnimInstance::GetCarryableDatabse() {
@@ -116,7 +111,6 @@ FIGS_ThirdPersonCarryablesAnimDatabase UIGS_PlayerAnimInstance::GetCarryableData
 
 void UIGS_PlayerAnimInstance::GetAnimationDatabase(FPlayerAnimationsDatabase& AnimDatabase) const {
 }
-
 
 
 

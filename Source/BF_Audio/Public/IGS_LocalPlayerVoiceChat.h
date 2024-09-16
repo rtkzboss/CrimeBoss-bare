@@ -14,6 +14,5 @@ public:
 protected:
     UPROPERTY(Instanced)
     UIGS_VoiceChatAudioInputComponent* m_WwiseInputComponent;
-    
-};
 
+};

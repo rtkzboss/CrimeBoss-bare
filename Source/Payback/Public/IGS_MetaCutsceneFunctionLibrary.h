@@ -21,18 +21,17 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void RefreshCutsceneID(UPARAM(Ref) FIGS_MetaCutsceneDataRow& inCutsceneRow);
-    
+
     UFUNCTION(BlueprintCallable)
     static EIGS_MetaDialogueCharacter GetMetaCharacterFromSpeaker(const FIGS_MetaCutsceneCharacters& inCharacterParameters, EIGS_MetaDialogueSpeaker inSpeaker);
-    
+
     UFUNCTION(BlueprintCallable)
     static UDataTable* GetCutsceneDatabase();
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<ULevelStreaming*> GetAllStreamedLevel(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EditorCutsceneInfo GetAllDialoguesForCutscene(UObject* inWCO, UIGS_MetaCutsceneDataAsset* inCutsceneData, FIGS_MetaCutsceneCharacters inCharacterParameters);
-    
-};
 
+};

@@ -3,4 +3,3 @@
 UMETA_BaseStoryGraph::UMETA_BaseStoryGraph() {
 }
 
-

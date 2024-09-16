@@ -16,21 +16,20 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SetupNavlink(UBoxComponent* helpersBox) const;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetNavlinkLinkEnabled(bool InValue);
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_NavLinkComponentFramework* NavLink;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsForced;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_GetActorByGameplayTagComponent* m_GetActorByGameplayTagComponent;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

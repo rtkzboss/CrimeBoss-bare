@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIModifiableFloatDataDef : public FIGS_AIModifi
 public:
     UPROPERTY(EditAnywhere)
     float Overload;
-    
+
     UPROPERTY(VisibleAnywhere)
     float Value;
-    
+
     FIGS_AIModifiableFloatDataDef();
 };
-

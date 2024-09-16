@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBaseTeamDef {
 public:
     UPROPERTY(VisibleAnywhere)
     EIGS_TeamSideEnum TeamSide;
-    
+
     FIGS_AIBaseTeamDef();
 };
-

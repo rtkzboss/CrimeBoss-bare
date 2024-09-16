@@ -9,16 +9,15 @@ struct PAYBACKDEFINITIONS_API FMETA_AssetsStatistic {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> AssetsEarned;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> AssetsBought;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> AssetsLost;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FMETA_AssetsDataForStatistic> TotalAssets;
-    
+
     FMETA_AssetsStatistic();
 };
-

@@ -2,4 +2,3 @@
 
 FIGS_AIThrowInformation::FIGS_AIThrowInformation() {
 }
-

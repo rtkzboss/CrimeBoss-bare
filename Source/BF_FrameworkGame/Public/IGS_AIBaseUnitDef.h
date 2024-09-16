@@ -10,10 +10,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBaseUnitDef {
 public:
     UPROPERTY(EditDefaultsOnly)
     FIGS_AIUnitBaseDataDefaults Stats;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_AILoadoutHolder Loadout;
-    
+
     FIGS_AIBaseUnitDef();
 };
-

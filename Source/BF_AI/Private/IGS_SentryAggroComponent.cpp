@@ -1,5 +1,4 @@
 #include "IGS_SentryAggroComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_SentryAggroComponent::UIGS_SentryAggroComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).AggroUpdateTick = 2.000000030e-01f;
@@ -10,7 +9,6 @@ UIGS_SentryAggroComponent::UIGS_SentryAggroComponent(const FObjectInitializer& O
 }
 
 AActor* UIGS_SentryAggroComponent::GetRecommendedTarget() const {
-    return NULL;
+    return nullptr;
 }
-
 

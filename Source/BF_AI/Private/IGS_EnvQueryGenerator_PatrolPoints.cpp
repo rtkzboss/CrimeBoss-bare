@@ -12,4 +12,3 @@ UIGS_EnvQueryGenerator_PatrolPoints::UIGS_EnvQueryGenerator_PatrolPoints() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

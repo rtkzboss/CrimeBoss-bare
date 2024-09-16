@@ -3,4 +3,3 @@
 UAnimNotify_PlayNiagaraEffectPooled::UAnimNotify_PlayNiagaraEffectPooled() {
 }
 
-

@@ -8,7 +8,6 @@ struct PAYBACKDEFINITIONS_API FCommon_GameStateSave {
 public:
     UPROPERTY()
     int32 HeatAmount;
-    
+
     FCommon_GameStateSave();
 };
-

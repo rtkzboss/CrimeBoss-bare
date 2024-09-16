@@ -8,4 +8,3 @@ struct BF_AI_API FIGS_HeisterSquadBotInfo {
 public:
     FIGS_HeisterSquadBotInfo();
 };
-

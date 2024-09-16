@@ -5,4 +5,3 @@ UHoudiniParameterMultiParm::UHoudiniParameterMultiParm() {
     (*this).ParmType = EHoudiniParameterType::MultiParm;
 }
 
-

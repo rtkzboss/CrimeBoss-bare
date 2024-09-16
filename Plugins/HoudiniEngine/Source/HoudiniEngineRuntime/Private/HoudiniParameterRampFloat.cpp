@@ -6,4 +6,3 @@ UHoudiniParameterRampFloat::UHoudiniParameterRampFloat() {
     (*this).ParmType = EHoudiniParameterType::FloatRamp;
 }
 
-

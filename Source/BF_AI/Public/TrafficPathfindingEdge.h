@@ -13,9 +13,8 @@ public:
 
     UPROPERTY()
     UTrafficPathfindingNode* FromNode;
-    
+
     UPROPERTY()
     UTrafficPathfindingNode* ToNode;
-    
-};
 
+};

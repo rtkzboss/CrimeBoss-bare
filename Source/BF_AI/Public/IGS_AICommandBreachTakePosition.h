@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Position;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector MoveLookAtPoint;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector FinalLookAtPoint;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AIMontageBreachVariant MontageVariant;
-    
-};
 
+};

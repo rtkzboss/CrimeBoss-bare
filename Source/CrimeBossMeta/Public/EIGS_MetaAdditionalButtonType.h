@@ -6,4 +6,3 @@ UENUM(BlueprintType)
 enum class EIGS_MetaAdditionalButtonType : uint8 {
     MABT_Detail,
 };
-

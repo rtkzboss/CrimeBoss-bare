@@ -12,25 +12,24 @@ struct PAYBACKDEFINITIONS_API FIGS_UserDifficulty {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_ScenarioDifficulty ScenarioDifficulty;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_FPSDifficulty FPSDifficulty;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_Heat Heat;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_AITiers PrimaryEnemyTier;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_AITiers SWATTier;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_AITiers AllyTier;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<int32, float> SpecialTierOverrideChanceForStormIntensity;
-    
+
     FIGS_UserDifficulty();
 };
-

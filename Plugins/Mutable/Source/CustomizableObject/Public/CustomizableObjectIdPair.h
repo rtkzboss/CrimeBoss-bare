@@ -8,10 +8,9 @@ struct CUSTOMIZABLEOBJECT_API FCustomizableObjectIdPair {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FString CustomizableObjectGroupName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FString CustomizableObjectName;
-    
+
     FCustomizableObjectIdPair();
 };
-

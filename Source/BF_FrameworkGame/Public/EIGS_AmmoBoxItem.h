@@ -8,4 +8,3 @@ enum class EIGS_AmmoBoxItem : uint8 {
     BaseSmall,
     BaseLarge,
 };
-

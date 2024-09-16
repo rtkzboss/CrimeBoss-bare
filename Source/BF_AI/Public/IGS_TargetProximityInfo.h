@@ -8,4 +8,3 @@ struct FIGS_TargetProximityInfo {
 public:
     BF_AI_API FIGS_TargetProximityInfo();
 };
-

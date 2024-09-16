@@ -13,6 +13,5 @@ class BF_FRAMEWORKGAME_API IIGS_GlassInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsGlass() const;
-    
-};
 
+};

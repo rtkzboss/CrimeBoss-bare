@@ -11,18 +11,17 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float LineTraceEndRange;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MoveSpreadClimbTime;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MoveSpreadFallTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float IdleRecoilDecayMult;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float RecoilInterpSpeed;
-    
-};
 
+};

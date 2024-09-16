@@ -7,4 +7,3 @@ FIGS_HealInfo::FIGS_HealInfo() {
     (*this).TargetActor = nullptr;
     (*this).DamageEventType = EIGS_DamageEventType::Any;
 }
-

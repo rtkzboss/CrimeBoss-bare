@@ -12,15 +12,14 @@ public:
 protected:
     UPROPERTY()
     TArray<FString> Values;
-    
+
     UPROPERTY()
     TArray<FString> DefaultValues;
-    
+
     UPROPERTY()
     FString Filters;
-    
+
     UPROPERTY()
     bool bIsReadOnly;
-    
-};
 
+};

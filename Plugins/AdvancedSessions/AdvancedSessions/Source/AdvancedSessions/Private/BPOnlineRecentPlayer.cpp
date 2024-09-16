@@ -3,4 +3,3 @@
 FBPOnlineRecentPlayer::FBPOnlineRecentPlayer() {
     (*this).LastSeen = TEXT("");
 }
-

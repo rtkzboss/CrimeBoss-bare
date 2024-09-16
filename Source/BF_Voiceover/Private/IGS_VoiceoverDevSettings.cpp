@@ -12,4 +12,3 @@ UIGS_VoiceoverDevSettings::UIGS_VoiceoverDevSettings() {
     (*this).MetaCutsceneLevelDialoguesDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Audio/Voiceovers/Meta/DT_LevelDialogues.DT_LevelDialogues"), TEXT(""));
 }
 
-

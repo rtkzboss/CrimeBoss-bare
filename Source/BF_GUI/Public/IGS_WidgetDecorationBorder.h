@@ -12,23 +12,22 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetBorderWidth(float inBorderWidth);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetBorderTint(FLinearColor inBorderTint);
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnBorderWidthChanged(float inBorderWidth);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnBorderTintChanged(FLinearColor inBorderTint);
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FLinearColor BorderTint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float BorderWidth;
-    
-};
 
+};

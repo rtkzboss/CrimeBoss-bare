@@ -5,16 +5,18 @@ FMETA_HeisterRandomizedData::FMETA_HeisterRandomizedData() {
     (*this).FinalCost = 0;
     (*this).FinalUpkeep = 0;
     (*this).MissionCut = 0;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits, 0)).Empty();
-    (*this).Perks.Empty();
+    auto gen = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits, 0)) = {};
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits, 0)) = {};
+    (*this).Perks = {};
     (*this).Loadout.PrimaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    auto gen3 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
     (*this).Loadout.SecondaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
-    (*this).Loadout.Equipment.Empty();
-    (*this).Loadout.Perks.Empty();
+    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.Equipment = {};
+    (*this).Loadout.Perks = {};
     (*this).Loadout.Ability1ChargesLeft = -1;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkinID, 0)) = NAME_None;
+    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkinID, 0)) = NAME_None;
 }
-

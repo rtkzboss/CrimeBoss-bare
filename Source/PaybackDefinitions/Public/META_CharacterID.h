@@ -10,14 +10,14 @@ struct PAYBACKDEFINITIONS_API FMETA_CharacterID {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag TagID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_CharacterID ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 UniqGenericId;
-    
+
     FMETA_CharacterID();
 };
 FORCEINLINE uint32 GetTypeHash(const FMETA_CharacterID&) { return 0; }
-
+FORCEINLINE bool operator==(const FMETA_CharacterID&, const FMETA_CharacterID&) { return true; }

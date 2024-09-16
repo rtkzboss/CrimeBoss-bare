@@ -3,4 +3,3 @@
 UIGS_EnvQueryItemType_LootCollection::UIGS_EnvQueryItemType_LootCollection() {
 }
 
-

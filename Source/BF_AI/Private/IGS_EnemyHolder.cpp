@@ -46,4 +46,3 @@ FIGS_EnemyHolder::FIGS_EnemyHolder() {
     (*this).AggroHolder.GlobalAggro = 0.000000000e+00f;
     (*this).AggroHolder.IsClose = false;
 }
-

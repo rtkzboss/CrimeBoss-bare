@@ -8,4 +8,3 @@ struct FIGS_SpeakerID {
 public:
     BF_NETWORK_API FIGS_SpeakerID();
 };
-

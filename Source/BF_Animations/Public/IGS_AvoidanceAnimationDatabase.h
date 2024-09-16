@@ -13,27 +13,26 @@ public:
 
     UPROPERTY(EditAnywhere)
     UAnimMontage* RollToStand;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* RollToCrouch;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* SlideToStandSMG;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* SlideToCrouchSMG;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* SlideToStandSMGShort;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* SlideToCrouchSMGShort;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* SlideToStandPistol;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* SlideToCrouchPistol;
-    
-};
 
+};

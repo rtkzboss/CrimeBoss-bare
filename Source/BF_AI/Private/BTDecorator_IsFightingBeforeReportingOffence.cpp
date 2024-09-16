@@ -4,4 +4,3 @@ UBTDecorator_IsFightingBeforeReportingOffence::UBTDecorator_IsFightingBeforeRepo
     (*this).NodeName = TEXT("Is Fighting Before Reporting Offence");
 }
 
-

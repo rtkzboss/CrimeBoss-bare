@@ -11,19 +11,18 @@ struct HOUDINIENGINERUNTIME_API FHoudiniCurveOutputProperties {
 public:
     UPROPERTY()
     EHoudiniCurveOutputType CurveOutputType;
-    
+
     UPROPERTY()
     int32 NumPoints;
-    
+
     UPROPERTY()
     bool bClosed;
-    
+
     UPROPERTY()
     EHoudiniCurveType CurveType;
-    
+
     UPROPERTY()
     EHoudiniCurveMethod CurveMethod;
-    
+
     FHoudiniCurveOutputProperties();
 };
-

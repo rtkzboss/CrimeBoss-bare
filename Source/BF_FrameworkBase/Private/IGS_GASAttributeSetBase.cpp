@@ -126,7 +126,7 @@ void UIGS_GASAttributeSetBase::OnRep_Ability1Charges(const FGameplayAttributeDat
 
 void UIGS_GASAttributeSetBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_GASAttributeSetBase, MoveSpeed);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, SprintSpeed);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, CrouchSpeed);
@@ -168,5 +168,4 @@ void UIGS_GASAttributeSetBase::GetLifetimeReplicatedProps(TArray<FLifetimeProper
     DOREPLIFETIME(UIGS_GASAttributeSetBase, AbilityRegenSpeedMult);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, AbilityDurationKillIncrease);
 }
-
 

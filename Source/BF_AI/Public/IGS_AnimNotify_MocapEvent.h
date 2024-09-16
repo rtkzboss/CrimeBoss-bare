@@ -11,6 +11,5 @@ public:
 
     UPROPERTY(EditAnywhere)
     FName EventName;
-    
-};
 
+};

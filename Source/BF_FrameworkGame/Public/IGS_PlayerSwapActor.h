@@ -14,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Setup(AController* InController, EIGS_CharacterID inCharacterID);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnSetup(AController* InController, EIGS_CharacterID inCharacterID);
-    
-};
 
+};

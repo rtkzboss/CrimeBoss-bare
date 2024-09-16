@@ -8,4 +8,3 @@ enum class EIGS_KeypadButton : uint8 {
     Escape,
     Clear,
 };
-

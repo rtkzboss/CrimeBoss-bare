@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UPFPathComponent* PathToFollow;
-    
-};
 
+};

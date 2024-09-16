@@ -14,21 +14,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SpawnGroup();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool AutomaticStart;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FInt32Range EasyAmount;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FInt32Range MediumAmount;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FInt32Range HardAmount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_AIEnemyGroupSpawner*> AISpawnGroups;
-    
-};
 
+};

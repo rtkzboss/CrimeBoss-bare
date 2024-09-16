@@ -16,39 +16,38 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetBlockerSize(float inBlockerSize);
-    
+
     UFUNCTION()
     void RefreshPostProcessSettings();
-    
+
 protected:
     UFUNCTION()
     void OnRep_BlockerSize();
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, ReplicatedUsing=OnRep_BlockerSize)
     float BlockerSize;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_CustomBoxComponent* BlockerComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NavModifierComponent* NavModifierComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UPostProcessComponent* PostProcessComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     UIGS_LevelBlockingBoundsSettings* Settings;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText OutOfBoundTextOverride;
-    
+
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     bool DontRegisterToNavigation;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

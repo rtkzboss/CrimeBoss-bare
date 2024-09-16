@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_Screen.h"
-#include "BinkWidgetEventDelegate.h"
+#include "BinkWidgetEvent.h"
 #include "IGS_BinkMediaWidget.generated.h"
 
 class UBinkMediaPlayer;
@@ -16,30 +16,29 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetVideoEnabled(bool inState);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetIsSkippable(bool inState);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetIsPlaceholder(bool inState);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetBinkPlayMedia(UIGS_PlayBinkMedia* inPlayBinkMedia);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetBinkPlayer(UBinkMediaPlayer* inBinkPlayer);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetBinkMediaTexture(UBinkMediaTexture* inTexture);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnBinkMediaStarted();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnBinkMediaFinished();
-    
+
     UPROPERTY(BlueprintCallable)
     FBinkWidgetEvent OnSkipButton;
-    
-};
 
+};

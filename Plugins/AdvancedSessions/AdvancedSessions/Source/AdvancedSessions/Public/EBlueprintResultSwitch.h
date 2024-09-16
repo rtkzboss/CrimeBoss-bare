@@ -7,4 +7,3 @@ enum class EBlueprintResultSwitch : uint8 {
     OnSuccess,
     OnFailure,
 };
-

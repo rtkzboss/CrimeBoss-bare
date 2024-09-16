@@ -4,4 +4,3 @@ UIGS_BTService_SentryDetecting::UIGS_BTService_SentryDetecting() {
     (*this).NodeName = TEXT("Sentry Detecting");
 }
 
-

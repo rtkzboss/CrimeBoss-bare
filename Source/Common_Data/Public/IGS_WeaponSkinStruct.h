@@ -11,10 +11,9 @@ struct COMMON_DATA_API FIGS_WeaponSkinStruct {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag TagID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UIGS_WeaponSkinData> WeaponSkinID;
-    
+
     FIGS_WeaponSkinStruct();
 };
-

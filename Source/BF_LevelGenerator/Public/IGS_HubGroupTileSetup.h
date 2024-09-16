@@ -10,22 +10,21 @@ struct FIGS_HubGroupTileSetup {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_SingleTileSetup Tile0;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_SingleTileSetup Tile1;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_SingleTileSetup Tile2;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_SingleTileSetup Tile3;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_HubScenarioFlag TileFlag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsPlayableArea;
-    
+
     BF_LEVELGENERATOR_API FIGS_HubGroupTileSetup();
 };
-

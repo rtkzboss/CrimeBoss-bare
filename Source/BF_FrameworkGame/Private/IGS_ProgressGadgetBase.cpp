@@ -1,7 +1,4 @@
 #include "IGS_ProgressGadgetBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_TeamSideEnum.h"
 
 AIGS_ProgressGadgetBase::AIGS_ProgressGadgetBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).PrimaryActorTick.bCanEverTick = true;
@@ -21,5 +18,4 @@ bool AIGS_ProgressGadgetBase::IsDisrupted_Implementation() {
 FVector AIGS_ProgressGadgetBase::GetDisruptLocation() const {
     return FVector{};
 }
-
 

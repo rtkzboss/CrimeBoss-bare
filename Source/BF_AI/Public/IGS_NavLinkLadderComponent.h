@@ -13,12 +13,11 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* FromBottomAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* FromTopAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* SlideAnimation;
-    
-};
 
+};

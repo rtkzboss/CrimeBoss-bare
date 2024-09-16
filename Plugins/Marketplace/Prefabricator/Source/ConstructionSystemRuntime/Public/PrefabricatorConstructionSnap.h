@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UPrefabricatorConstructionSnapComponent* ConstructionSnapComponent;
-    
-};
 
+};

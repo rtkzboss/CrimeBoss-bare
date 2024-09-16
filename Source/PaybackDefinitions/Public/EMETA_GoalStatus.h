@@ -10,4 +10,3 @@ enum class EMETA_GoalStatus : uint8 {
     Failed,
     Success,
 };
-

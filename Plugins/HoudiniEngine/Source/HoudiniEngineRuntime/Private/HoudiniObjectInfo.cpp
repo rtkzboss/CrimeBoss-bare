@@ -2,4 +2,3 @@
 
 FHoudiniObjectInfo::FHoudiniObjectInfo() {
 }
-

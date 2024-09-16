@@ -11,4 +11,3 @@ enum class EMETA_JobResult : uint8 {
     Escaped,
     MAX,
 };
-

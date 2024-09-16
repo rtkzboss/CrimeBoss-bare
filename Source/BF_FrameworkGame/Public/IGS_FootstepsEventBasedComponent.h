@@ -10,4 +10,3 @@ public:
     UIGS_FootstepsEventBasedComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

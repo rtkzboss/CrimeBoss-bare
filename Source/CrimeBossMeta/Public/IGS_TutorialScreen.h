@@ -13,12 +13,11 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void SetVideoTutorialData(const FIGS_TutorialPage& videoPageData, bool inSlowDownGame);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void SetTutorialData(const TArray<FIGS_TutorialPage>& Pages, bool inSlowDownGame);
-    
+
     UPROPERTY(BlueprintReadOnly)
     FGameplayTag TutorialTag;
-    
-};
 
+};

@@ -8,4 +8,3 @@ enum class EStreamlineSettingOverride : uint8 {
     Disabled,
     UseProjectSettings,
 };
-

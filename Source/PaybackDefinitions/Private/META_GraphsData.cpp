@@ -7,16 +7,16 @@ UMETA_GraphsData::UMETA_GraphsData() {
     (*this).SecondPlotlineDays.Max = 6;
     (*this).AnyNextPlotlineDays.Min = 2;
     (*this).AnyNextPlotlineDays.Max = 4;
-    (*this).CrewRandEventsGraph = nullptr;
-    (*this).SpecialCrewEventsGraph = nullptr;
+    (*this).CrewRandEventsGraph = FSoftObjectPath();
+    (*this).SpecialCrewEventsGraph = FSoftObjectPath();
 }
 
 TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus> UMETA_GraphsData::GetStartedGraphs(const TArray<EIGS_CharacterID>& inAvailableUniqueCharacters) {
-    return TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus>();
+    return {};
 }
 
 TSoftObjectPtr<UMETA_BaseStoryGraphManager> UMETA_GraphsData::GetSpecialCrewEventsGraph() const {
-    return NULL;
+    return {};
 }
 
 FMETA_Interval UMETA_GraphsData::GetSecondPlotlineDays() const {
@@ -24,7 +24,7 @@ FMETA_Interval UMETA_GraphsData::GetSecondPlotlineDays() const {
 }
 
 TArray<FIGS_PlotlineGraphData> UMETA_GraphsData::GetPlotlineGraphs() {
-    return TArray<FIGS_PlotlineGraphData>();
+    return {};
 }
 
 FMETA_Interval UMETA_GraphsData::GetFirstPlotlineDays() const {
@@ -32,11 +32,11 @@ FMETA_Interval UMETA_GraphsData::GetFirstPlotlineDays() const {
 }
 
 TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag> UMETA_GraphsData::GetEntitlementsGraph() const {
-    return TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, FGameplayTag>();
+    return {};
 }
 
 TSoftObjectPtr<UMETA_BaseStoryGraphManager> UMETA_GraphsData::GetCrewRandEventsGraph() const {
-    return NULL;
+    return {};
 }
 
 void UMETA_GraphsData::GetCharacterGraphInfo(EIGS_CharacterID inCharacterID, bool& outFind, FMETA_UniqueCharacterGraphInfo& outGraphInfo) {
@@ -45,5 +45,4 @@ void UMETA_GraphsData::GetCharacterGraphInfo(EIGS_CharacterID inCharacterID, boo
 FMETA_Interval UMETA_GraphsData::GetAnyNextPlotlineDays() const {
     return FMETA_Interval{};
 }
-
 

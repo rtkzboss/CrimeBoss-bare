@@ -7,4 +7,3 @@ FIGS_ExplosionParams::FIGS_ExplosionParams() {
     (*this).CausingActor = nullptr;
     (*this).EffectRadius = 4.500000000e+03f;
 }
-

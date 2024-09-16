@@ -1,12 +1,12 @@
 #include "IGS_SquadBase.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_SquadBase::AIGS_SquadBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).BehaviorTreeComponent = CreateDefaultSubobject<UBehaviorTreeComponent>(TEXT("BehaviorTreeComponent"));
-    (*this).BlackboardComponent = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BlackboardComponent"));
+    auto gen = CreateDefaultSubobject<UBehaviorTreeComponent>(TEXT("BehaviorTreeComponent"));
+    auto gen2 = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BlackboardComponent"));
+    (*this).BehaviorTreeComponent = gen;
+    (*this).BlackboardComponent = gen2;
     (*this).TeamSide = EIGS_TeamSideEnum::TS_Unknown;
 }
 
@@ -18,19 +18,18 @@ FVector AIGS_SquadBase::GetSquadMeanLocation() const {
 }
 
 AIGS_GameCharacterFramework* AIGS_SquadBase::GetRandomMember() const {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_GameCharacterFramework* AIGS_SquadBase::GetNearestMember(FVector Pos, TArray<AIGS_GameCharacterFramework*> excludeCharacters) const {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_GameCharacterFramework* AIGS_SquadBase::GetNearestAliveMember(FVector Pos, TArray<AIGS_GameCharacterFramework*> excludeCharacters) const {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_GameCharacterFramework* AIGS_SquadBase::GetCenterMember() const {
-    return NULL;
+    return nullptr;
 }
-
 

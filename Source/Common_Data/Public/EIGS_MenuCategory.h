@@ -14,4 +14,3 @@ enum class EIGS_MenuCategory : uint8 {
     Others = 32,
     Test = 254,
 };
-

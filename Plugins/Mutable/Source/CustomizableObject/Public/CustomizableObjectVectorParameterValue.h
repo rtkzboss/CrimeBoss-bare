@@ -9,13 +9,12 @@ struct FCustomizableObjectVectorParameterValue {
 public:
     UPROPERTY(VisibleAnywhere)
     FString ParameterName;
-    
+
     UPROPERTY(VisibleAnywhere)
     FLinearColor ParameterValue;
-    
+
     UPROPERTY(VisibleAnywhere)
     FString Uid;
-    
+
     CUSTOMIZABLEOBJECT_API FCustomizableObjectVectorParameterValue();
 };
-

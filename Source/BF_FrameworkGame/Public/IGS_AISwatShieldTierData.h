@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatShieldTierData : public FIGS_AIBaseShield
 public:
     UPROPERTY(EditAnywhere)
     float ShieldGlassHP;
-    
+
     FIGS_AISwatShieldTierData();
 };
-

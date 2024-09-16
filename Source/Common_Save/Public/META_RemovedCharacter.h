@@ -9,7 +9,6 @@ struct COMMON_SAVE_API FMETA_RemovedCharacter {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_CharacterID ID;
-    
+
     FMETA_RemovedCharacter();
 };
-

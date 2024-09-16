@@ -1,6 +1,4 @@
 #include "IGS_BotOrderTrigger.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_BotOrderTrigger::AIGS_BotOrderTrigger(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).InitialDelay = 5.000000000e+00f;
@@ -21,11 +19,11 @@ void AIGS_BotOrderTrigger::OnCollisionEnd(UPrimitiveComponent* inOverlappedCompo
 }
 
 TArray<FIGS_BotOrderData> AIGS_BotOrderTrigger::GetPlayersInBox() {
-    return TArray<FIGS_BotOrderData>();
+    return {};
 }
 
 TArray<FIGS_BotOrderData> AIGS_BotOrderTrigger::GetBotsInBox() {
-    return TArray<FIGS_BotOrderData>();
+    return {};
 }
 
 void AIGS_BotOrderTrigger::FinishBotOrder(AIGS_GameCharacterFramework* Bot) const {
@@ -43,5 +41,4 @@ void AIGS_BotOrderTrigger::AddIgnoredCharacter(AIGS_GameCharacterFramework* inCh
 
 void AIGS_BotOrderTrigger::Activate() {
 }
-
 

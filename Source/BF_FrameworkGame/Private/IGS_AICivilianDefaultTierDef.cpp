@@ -2,4 +2,3 @@
 
 FIGS_AICivilianDefaultTierDef::FIGS_AICivilianDefaultTierDef() {
 }
-

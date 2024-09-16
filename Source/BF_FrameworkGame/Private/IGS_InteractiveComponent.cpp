@@ -1,5 +1,5 @@
 #include "IGS_InteractiveComponent.h"
-#include "ComponentInstanceDataCache.h"
+#include "Components/ActorComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
@@ -18,6 +18,8 @@ UIGS_InteractiveComponent::UIGS_InteractiveComponent(const FObjectInitializer& O
     (*this).bOverrideMasterOutline = true;
     (*this).bReleaseLookInputAfterUse = true;
     (*this).SuspicionTagsKeepTime = -1.000000000e+00f;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_InteractiveComponent::Use(AIGS_GameCharacterFramework* inInstigator) {
@@ -115,7 +117,7 @@ void UIGS_InteractiveComponent::AddSusTags(AIGS_GameCharacterFramework* inInstig
 
 void UIGS_InteractiveComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_InteractiveComponent, bIsEnabled);
     DOREPLIFETIME(UIGS_InteractiveComponent, NeededItem);
     DOREPLIFETIME(UIGS_InteractiveComponent, R_bIsSuspicious);
@@ -123,5 +125,4 @@ void UIGS_InteractiveComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(UIGS_InteractiveComponent, R_CurrentlyUsingInstigator);
     DOREPLIFETIME(UIGS_InteractiveComponent, mR_WasUsed);
 }
-
 

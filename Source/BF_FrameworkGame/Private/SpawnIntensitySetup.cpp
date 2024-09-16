@@ -7,4 +7,3 @@ FSpawnIntensitySetup::FSpawnIntensitySetup() {
     (*this).AssaultDurationAddon = 0.000000000e+00f;
     (*this).EnemyDispersionCoef = 1.000000000e+00f;
 }
-

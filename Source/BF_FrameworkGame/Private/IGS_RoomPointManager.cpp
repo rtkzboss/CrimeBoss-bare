@@ -8,33 +8,32 @@ void UIGS_RoomPointManager::RefreshBadRooms(const bool inHighlight) {
 }
 
 UIGS_RoomPointManager* UIGS_RoomPointManager::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_RoomPointManager::InitializeRooms() {
 }
 
 TArray<AIGS_RoomBase*> UIGS_RoomPointManager::GetRoomsWithGameplayTag(FGameplayTag inTag) {
-    return TArray<AIGS_RoomBase*>();
+    return {};
 }
 
 ARoomNavmesh* UIGS_RoomPointManager::GetRoomNavData() {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_HumanNavMesh* UIGS_RoomPointManager::GetHumanNavData() {
-    return NULL;
+    return nullptr;
 }
 
 TArray<AIGS_RoomBase*> UIGS_RoomPointManager::GetAllRoomsInBox(FVector inOrigin, FVector InBoxExtent) const {
-    return TArray<AIGS_RoomBase*>();
+    return {};
 }
 
 void UIGS_RoomPointManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_RoomPointManager, Rooms);
     DOREPLIFETIME(UIGS_RoomPointManager, RoomsData);
 }
-
 

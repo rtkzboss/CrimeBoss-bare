@@ -17,4 +17,3 @@ enum class EMETA_MenuState : uint8 {
     MS_LevelUpBossCards,
     MS_INVALID = 255,
 };
-

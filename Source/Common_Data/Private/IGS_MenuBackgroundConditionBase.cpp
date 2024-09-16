@@ -7,4 +7,3 @@ bool UIGS_MenuBackgroundConditionBase::EvaluateCondition_Implementation(const UO
     return false;
 }
 
-

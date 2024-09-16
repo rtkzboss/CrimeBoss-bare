@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo=LatentInfo, WorldContext=WorldContextObject))
     static void WaitAndValidateCovers(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static void ReleaseCover(UCoverPoint* inCoverPoint, UObject* inWorldContextObject);
-    
+
     UFUNCTION(BlueprintCallable)
     static void ReachedCover(UCoverPoint* inCoverPoint, AController* InController);
-    
+
     UFUNCTION(BlueprintCallable)
     static bool OccupyCover(UCoverPoint* inCoverPoint, AController* InController);
-    
-};
 
+};

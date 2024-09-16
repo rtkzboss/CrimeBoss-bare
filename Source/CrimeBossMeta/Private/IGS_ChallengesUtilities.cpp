@@ -7,4 +7,3 @@ int32 UIGS_ChallengesUtilities::GetCompletedCampaignCount(UObject* inWCO, EIGS_U
     return 0;
 }
 
-

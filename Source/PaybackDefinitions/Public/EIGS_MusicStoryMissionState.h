@@ -16,4 +16,3 @@ enum class EIGS_MusicStoryMissionState : uint8 {
     Action,
     FadeOut,
 };
-

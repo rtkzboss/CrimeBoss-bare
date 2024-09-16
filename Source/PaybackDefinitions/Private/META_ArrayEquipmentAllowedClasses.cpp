@@ -3,4 +3,3 @@
 FMETA_ArrayEquipmentAllowedClasses::FMETA_ArrayEquipmentAllowedClasses() {
     (*this).Equipment = nullptr;
 }
-

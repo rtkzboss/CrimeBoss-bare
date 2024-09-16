@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(VisibleAnywhere)
     UIGS_CoverPointsDataAsset* CoverPointsDataAsset;
-    
-};
 
+};

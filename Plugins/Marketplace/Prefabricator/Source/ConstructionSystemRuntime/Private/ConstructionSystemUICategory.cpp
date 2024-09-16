@@ -1,8 +1,7 @@
 #include "ConstructionSystemUICategory.h"
 
 FConstructionSystemUICategory::FConstructionSystemUICategory() {
-    (*this).DisplayName = FText::FromString(TEXT(""));
+    (*this).DisplayName = FText::GetEmpty();
     (*this).Icon = nullptr;
-    (*this).PrefabEntries.Empty();
+    (*this).PrefabEntries = {};
 }
-

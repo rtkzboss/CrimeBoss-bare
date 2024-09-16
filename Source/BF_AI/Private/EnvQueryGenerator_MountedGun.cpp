@@ -5,4 +5,3 @@ UEnvQueryGenerator_MountedGun::UEnvQueryGenerator_MountedGun() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(EditAnywhere)
     UAnimMontage* Front;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* Left;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* Right;
-    
+
     UPROPERTY(EditAnywhere)
     UAnimMontage* Back;
-    
-};
 
+};

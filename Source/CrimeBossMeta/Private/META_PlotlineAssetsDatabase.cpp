@@ -4,7 +4,7 @@ UMETA_PlotlineAssetsDatabase::UMETA_PlotlineAssetsDatabase() {
 }
 
 TArray<UMETA_PlotlineAsset*> UMETA_PlotlineAssetsDatabase::SortAssetsByPrice(TArray<UMETA_PlotlineAsset*> inAssets, bool inAscending) {
-    return TArray<UMETA_PlotlineAsset*>();
+    return {};
 }
 
 bool UMETA_PlotlineAssetsDatabase::IsPersistent(FGameplayTag inAssetID) const {
@@ -32,7 +32,7 @@ FText UMETA_PlotlineAssetsDatabase::GetName(FGameplayTag inAssetID) const {
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_PlotlineAssetsDatabase::GetImage(FGameplayTag inAssetID) const {
-    return NULL;
+    return {};
 }
 
 FMETA_PlotlineAssetTableRow UMETA_PlotlineAssetsDatabase::GetEventInfo(FGameplayTag inAssetID, bool& outSuccess) const {
@@ -52,7 +52,7 @@ bool UMETA_PlotlineAssetsDatabase::GetCanBeBought(FGameplayTag inAssetID, FGamep
 }
 
 float UMETA_PlotlineAssetsDatabase::GetBossPointMultiplier(FGameplayTag inAssetID) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EMETA_PlotlineAssetAvailability UMETA_PlotlineAssetsDatabase::GetAvailability(FGameplayTag inAssetID) const {
@@ -60,7 +60,6 @@ EMETA_PlotlineAssetAvailability UMETA_PlotlineAssetsDatabase::GetAvailability(FG
 }
 
 TArray<FGameplayTag> UMETA_PlotlineAssetsDatabase::GetAssetsTags() const {
-    return TArray<FGameplayTag>();
+    return {};
 }
-
 

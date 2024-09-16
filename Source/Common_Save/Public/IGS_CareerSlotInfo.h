@@ -8,10 +8,9 @@ struct FIGS_CareerSlotInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FString CareerSlotName;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsDebugSaveFile;
-    
+
     COMMON_SAVE_API FIGS_CareerSlotInfo();
 };
-

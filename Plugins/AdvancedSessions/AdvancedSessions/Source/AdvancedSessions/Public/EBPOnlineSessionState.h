@@ -13,4 +13,3 @@ enum class EBPOnlineSessionState : uint8 {
     Ended,
     Destroying,
 };
-

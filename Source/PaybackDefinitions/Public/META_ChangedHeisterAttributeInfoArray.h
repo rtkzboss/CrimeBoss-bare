@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_ChangedHeisterAttributeInfoArray {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_ChangedHeisterAttributeInfo> ChangedAttributeArray;
-    
+
     FMETA_ChangedHeisterAttributeInfoArray();
 };
-

@@ -2,11 +2,12 @@
 #include "EIGS_DialogueGroup.h"
 
 FIGS_DialogueLevelName::FIGS_DialogueLevelName() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).LevelTag, 0)) = NAME_None;
-    (*this).LevelNames.Empty();
-    (*this).LevelCharacters.Empty();
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).LevelTag, 0)) = NAME_None;
+    (*this).LevelNames = {};
+    (*this).LevelCharacters = {};
     (*this).BlacklistOption = EIGS_DialogueBlacklistOption::NoBlacklist;
-    (*this).BlacklistLevelNames.Empty();
+    (*this).BlacklistLevelNames = {};
     (*this).BlacklistAlwaysEnabled = false;
     (*this).BlacklistDefaultLevelsPreload = false;
     (*this).UseDefaultLevelsPreload = true;
@@ -16,4 +17,3 @@ FIGS_DialogueLevelName::FIGS_DialogueLevelName() {
     (*this).SecondPlanner.DialogueGroup = EIGS_DialogueGroup::Heister;
     (*this).SecondPlanner.DialogueCharacter = 1;
 }
-

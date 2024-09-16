@@ -10,7 +10,6 @@ struct FMETA_Goals {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMETA_BaseGoal*> Goals;
-    
+
     CRIMEBOSSMETA_API FMETA_Goals();
 };
-

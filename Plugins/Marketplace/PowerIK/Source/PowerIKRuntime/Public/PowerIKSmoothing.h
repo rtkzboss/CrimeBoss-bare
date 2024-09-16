@@ -8,22 +8,21 @@ struct POWERIKRUNTIME_API FPowerIKSmoothing {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool SmoothPositionOverTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxPositionSpeed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxPositionDistance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool SmoothRotationOverTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxDegreesSpeed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxDegreesDistance;
-    
+
     FPowerIKSmoothing();
 };
-

@@ -1,19 +1,19 @@
 #include "IGS_FirstPersonMeleeAnimDatabase.h"
 
 FIGS_FirstPersonMeleeAnimDatabase::FIGS_FirstPersonMeleeAnimDatabase() {
-    (*this).ID = nullptr;
+    (*this).ID = FSoftObjectPath();
     (*this).EquipMontage = nullptr;
     (*this).UnequipMontage = nullptr;
-    (*this).Attack_Light_Chain.Empty();
-    (*this).Attack_Heavy_Chain.Empty();
+    (*this).Attack_Light_Chain = {};
+    (*this).Attack_Heavy_Chain = {};
     (*this).MeleePushMontage = nullptr;
     (*this).MarkMontage = nullptr;
     (*this).OneHandCalmWeaponPose = false;
     (*this).MeleePush = nullptr;
     (*this).EquipWeaponMontage = nullptr;
     (*this).UnequipWeaponMontage = nullptr;
-    (*this).WeaponAttack_Light_Chain.Empty();
-    (*this).WeaponAttack_Heavy_Chain.Empty();
+    (*this).WeaponAttack_Light_Chain = {};
+    (*this).WeaponAttack_Heavy_Chain = {};
     (*this).MarkWeaponMontage = nullptr;
     (*this).Locomotion.IdleWalkBlendSpace = nullptr;
     (*this).Locomotion.JumpStart = nullptr;
@@ -35,6 +35,5 @@ FIGS_FirstPersonMeleeAnimDatabase::FIGS_FirstPersonMeleeAnimDatabase() {
     (*this).SpecialAnimations.TakeWeaponMontage = nullptr;
     (*this).SpecialAnimations.SpecialTakeWeaponMontage = nullptr;
     (*this).SpecialAnimations.WeaponInteractonMontage = nullptr;
-    (*this).LinkedGraphs.Empty();
+    (*this).LinkedGraphs = {};
 }
-

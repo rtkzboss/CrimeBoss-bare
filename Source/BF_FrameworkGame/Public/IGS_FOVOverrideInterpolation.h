@@ -8,4 +8,3 @@ struct FIGS_FOVOverrideInterpolation {
 public:
     BF_FRAMEWORKGAME_API FIGS_FOVOverrideInterpolation();
 };
-

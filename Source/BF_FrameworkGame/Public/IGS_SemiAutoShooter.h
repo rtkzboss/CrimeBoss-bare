@@ -10,4 +10,3 @@ public:
     UIGS_SemiAutoShooter(const FObjectInitializer& ObjectInitializer);
 
 };
-

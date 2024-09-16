@@ -16,4 +16,3 @@ FIGS_GlobalItemTableRow UIGS_GlobalItemsDatabase::GetDataByIndexBP(int32 inIndex
     return FIGS_GlobalItemTableRow{};
 }
 
-

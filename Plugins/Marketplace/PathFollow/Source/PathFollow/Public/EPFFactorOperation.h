@@ -8,4 +8,3 @@ enum class EPFFactorOperation : uint8 {
     Add,
     Mul,
 };
-

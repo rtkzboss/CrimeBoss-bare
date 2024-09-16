@@ -9,4 +9,3 @@ void UIGS_ImpactManager::CreateSkinnedDecalImpact(USkinnedDecalSampler* inSample
 void UIGS_ImpactManager::CreateBloodSpatterImpact(const AIGS_GameCharacterFramework* inHitCharacter, UIGS_ImpactManager* inImpactManager, FIGS_ImpactParameters inParameters, const FHitResult& inHitResult) {
 }
 
-

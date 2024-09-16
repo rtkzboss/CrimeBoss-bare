@@ -9,4 +9,3 @@ enum class EIGS_DirectionalCueType : uint8 {
     DC_Melee,
     DC_Unknown = 255,
 };
-

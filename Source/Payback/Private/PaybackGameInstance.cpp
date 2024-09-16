@@ -12,4 +12,3 @@ void UPaybackGameInstance::SetUseEAS(bool inUseEAS) {
 void UPaybackGameInstance::GetUseEAS(bool& outUseEAS) {
 }
 
-

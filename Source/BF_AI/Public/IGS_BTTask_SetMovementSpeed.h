@@ -13,18 +13,17 @@ public:
 
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MovementSpeedBlackBoardKey;
-    
+
     UPROPERTY(EditAnywhere)
     bool bIsBlackboardBased;
-    
+
     UPROPERTY(EditAnywhere)
     bool bIsBasedOnCombatRange;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_Speed MovementSpeedOutsideCombatRange;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_Speed MovementSpeed;
-    
-};
 
+};

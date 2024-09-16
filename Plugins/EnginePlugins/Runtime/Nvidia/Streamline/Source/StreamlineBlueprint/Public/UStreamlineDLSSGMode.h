@@ -8,4 +8,3 @@ enum class UStreamlineDLSSGMode : uint8 {
     On,
     Auto,
 };
-

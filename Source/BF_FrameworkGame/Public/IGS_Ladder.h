@@ -16,36 +16,35 @@ public:
 
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector EndLocation;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USceneComponent* PlayerSnappingPoint;
-    
+
     UPROPERTY(EditAnywhere)
     float HandAlignLocationOffset;
-    
+
     UPROPERTY(EditAnywhere)
     float FirstTopStepOffset;
-    
+
     UPROPERTY(EditAnywhere)
     float StepsSpacing;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float BottomRungLocalZ;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AIGetOutUpOffset;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_LadderInteractiveComponent* LadderTopInteractiveComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_LadderInteractiveComponent* LadderBottomInteractiveComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> User;
-    
-};
 
+};

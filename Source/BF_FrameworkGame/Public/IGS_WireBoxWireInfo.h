@@ -8,13 +8,12 @@ struct BF_FRAMEWORKGAME_API FIGS_WireBoxWireInfo {
 public:
     UPROPERTY()
     bool bIsLightActive;
-    
+
     UPROPERTY()
     bool bIsWireRemoved;
-    
+
     UPROPERTY()
     bool bSuccessRemove;
-    
+
     FIGS_WireBoxWireInfo();
 };
-

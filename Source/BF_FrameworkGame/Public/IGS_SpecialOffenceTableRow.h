@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_SpecialOffenceTableRow : public FIGS_SuspicionD
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagQuery OffenceQuery;
-    
+
     FIGS_SpecialOffenceTableRow();
 };
-

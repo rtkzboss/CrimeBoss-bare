@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
-    
-};
 
+};

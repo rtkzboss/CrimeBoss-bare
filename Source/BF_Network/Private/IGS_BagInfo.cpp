@@ -2,6 +2,5 @@
 
 FIGS_BagInfo::FIGS_BagInfo() {
     (*this).BagCount = 0;
-    (*this).BagTypes.Empty();
+    (*this).BagTypes = {};
 }
-

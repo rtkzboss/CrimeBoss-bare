@@ -14,4 +14,3 @@ enum class ESteamUserOverlayType : uint8 {
     friendrequestaccept,
     friendrequestignore,
 };
-

@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     FName ProfileName;
-    
+
     UPROPERTY(EditAnywhere)
     FName PhysBodyName;
-    
-};
 
+};

@@ -12,22 +12,21 @@ struct COMMON_DATA_API FIGS_NewContentScreenDefinition : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag itemTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag EntitlementTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Title;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> BGImage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool ShowInMenu;
-    
+
     FIGS_NewContentScreenDefinition();
 };
-

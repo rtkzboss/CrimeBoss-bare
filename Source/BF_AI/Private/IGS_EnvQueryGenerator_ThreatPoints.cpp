@@ -5,4 +5,3 @@ UIGS_EnvQueryGenerator_ThreatPoints::UIGS_EnvQueryGenerator_ThreatPoints() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

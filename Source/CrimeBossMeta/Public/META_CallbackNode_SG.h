@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_BaseCallback* CallbackObject;
-    
-};
 
+};

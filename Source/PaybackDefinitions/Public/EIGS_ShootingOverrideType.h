@@ -7,4 +7,3 @@ enum class EIGS_ShootingOverrideType : uint8 {
     Clasic,
     Spray,
 };
-

@@ -9,4 +9,3 @@ enum class EIGS_AIStealthLootBehavior : uint8 {
     NeverStealth,
     Never,
 };
-

@@ -9,4 +9,3 @@ enum EHoudiniExecutableType {
     HRSHE_HoudiniCore,
     HRSHE_HoudiniIndie,
 };
-

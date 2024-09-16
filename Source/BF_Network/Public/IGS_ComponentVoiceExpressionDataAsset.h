@@ -16,27 +16,26 @@ public:
 
     UPROPERTY(EditAnywhere)
     UAkAudioEvent* PlayVoiceExpressionAkEvent;
-    
+
     UPROPERTY(EditAnywhere)
     UAkAudioEvent* StopVoiceExpressionAkEvent;
-    
+
     UPROPERTY(EditAnywhere)
     UAkSwitchValue* AkSwitchHit;
-    
+
     UPROPERTY(EditAnywhere)
     UAkSwitchValue* AkSwitchDie;
-    
+
     UPROPERTY(EditAnywhere)
     UAkSwitchValue* AkSwitchDeath;
-    
+
     UPROPERTY(EditAnywhere)
     UAkSwitchValue* AkSwitchInstaDeath;
-    
+
     UPROPERTY(EditAnywhere)
     UPhysicalMaterial* HeadshotMaterial;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<EIGS_VoiceExpressionType, float> Cooldowns;
-    
-};
 
+};

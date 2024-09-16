@@ -10,4 +10,3 @@ public:
     UAnimNotify_PlayNiagaraEffectPooled();
 
 };
-

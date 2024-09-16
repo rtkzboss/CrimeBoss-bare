@@ -2,7 +2,7 @@
 
 FIGS_Quick_ChainPlayerCharacters::FIGS_Quick_ChainPlayerCharacters() {
     (*this).PlayerId = 0;
-    (*TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes")->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)).Empty();
-    (*this).Heisters.Empty();
+    auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)) = {};
+    (*this).Heisters = {};
 }
-

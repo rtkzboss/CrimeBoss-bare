@@ -10,7 +10,6 @@ struct BF_AI_API FIGS_VehiclesRecord {
 public:
     UPROPERTY(Export)
     TArray<TWeakObjectPtr<UPFPathFollowerComponent>> Vehicles;
-    
+
     FIGS_VehiclesRecord();
 };
-

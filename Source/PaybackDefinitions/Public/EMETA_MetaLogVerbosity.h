@@ -10,4 +10,3 @@ enum class EMETA_MetaLogVerbosity : uint8 {
     Error,
     Count,
 };
-

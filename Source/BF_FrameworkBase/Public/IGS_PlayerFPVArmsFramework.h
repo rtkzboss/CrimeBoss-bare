@@ -17,22 +17,21 @@ public:
 
     UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetOwningPlayerCharacter() const;
-    
+
     UFUNCTION(BlueprintPure)
     USkeletalMeshComponent* GetArmsSkeletalMesh() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UMaterialParameterCollection* WieldableMPC;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UMaterialParameterCollectionInstance* WieldableMPCInstance;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USkeletalMeshComponent* ArmsSkeletalMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USceneComponent* ArmsRootComponent;
-    
-};
 
+};

@@ -14,21 +14,20 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void UnregisterGameCharacterEvents(AIGS_PlayerCharacter* inGameCharacter);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void RegisterGameCharacterEvents(AIGS_PlayerCharacter* inGameCharacter);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void RefreshLootInfo();
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float SecuredLootValue;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float SoftCollectedLootValue;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float GoalValue;
-    
-};
 
+};

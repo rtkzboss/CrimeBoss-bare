@@ -3,13 +3,12 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "GameplayTagContainer.h"
 #include "EMETA_ItemQuality.h"
+#include "IGS_EquipmentInventoryObject.h"
 #include "IGS_EquipmentTableRow.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_EquipmentDatabase.generated.h"
 
 class UDataTable;
-class UIGS_EquipmentDatabase;
-class UIGS_EquipmentInventoryObject;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -20,24 +19,23 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void ModAppendDataTable(UDataTable* inNewTable);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_EquipmentInventoryObject>& inClass) const;
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static UIGS_EquipmentDatabase* GetEquipmentDatabaseInstance(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> GetEquipmentByQualities(UObject* inWCO, const TArray<EMETA_ItemQuality>& inQualities, const TArray<FGameplayTag>& inUnlockedEquipment, bool inIgnoreUnlock);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EquipmentTableRow GetDataEquipmentByTagID(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EquipmentTableRow GetDataEquipment(UObject* inWCO, const TSubclassOf<UIGS_EquipmentInventoryObject>& inClass, bool& outSucceeded);
-    
+
     UFUNCTION(BlueprintPure)
     FIGS_EquipmentTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
-    
-};
 
+};

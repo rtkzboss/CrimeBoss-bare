@@ -10,16 +10,15 @@ struct CRIMEBOSSMETA_API FMETA_ChangeStatusPlanningBoardEvent {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag itemTag;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag voiceoverTag;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EMETA_PlanningBoardItemStatus fromStatus;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EMETA_PlanningBoardItemStatus toStatus;
-    
+
     FMETA_ChangeStatusPlanningBoardEvent();
 };
-

@@ -2,6 +2,5 @@
 
 FCommonSmallHitTile::FCommonSmallHitTile() {
     (*this).bSpecificTiles = false;
-    (*this).SpecifiedTiles.Empty();
+    (*this).SpecifiedTiles = {};
 }
-

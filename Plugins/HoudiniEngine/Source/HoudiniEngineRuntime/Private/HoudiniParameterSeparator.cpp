@@ -5,4 +5,3 @@ UHoudiniParameterSeparator::UHoudiniParameterSeparator() {
     (*this).ParmType = EHoudiniParameterType::Separator;
 }
 
-

@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_ThreatPointComponent* ThreatPointComponent;
-    
-};
 
+};

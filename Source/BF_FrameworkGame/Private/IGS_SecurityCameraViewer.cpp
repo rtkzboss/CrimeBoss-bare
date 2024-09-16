@@ -1,7 +1,4 @@
 #include "IGS_SecurityCameraViewer.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_SecurityCameraViewer::AIGS_SecurityCameraViewer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -66,7 +63,7 @@ bool AIGS_SecurityCameraViewer::IsActiveCameraDisabled() const {
 
 
 AIGS_GameCharacterFramework* AIGS_SecurityCameraViewer::GetUser() {
-    return NULL;
+    return nullptr;
 }
 
 int32 AIGS_SecurityCameraViewer::GetSourcesCount() const {
@@ -78,7 +75,7 @@ int32 AIGS_SecurityCameraViewer::GetActiveCameraIndex() const {
 }
 
 AIGS_SecurityCamera* AIGS_SecurityCameraViewer::GetActiveCamera() const {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_SecurityCameraViewer::DisableAllCameras() {
@@ -98,10 +95,9 @@ void AIGS_SecurityCameraViewer::AllowDisablingCameras(bool InValue) {
 
 void AIGS_SecurityCameraViewer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_SecurityCameraViewer, mR_AllCamerasDisabled);
     DOREPLIFETIME(AIGS_SecurityCameraViewer, mR_AllowDisablingCameras);
     DOREPLIFETIME(AIGS_SecurityCameraViewer, PossedPawn);
 }
-
 

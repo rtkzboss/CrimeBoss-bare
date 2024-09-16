@@ -12,4 +12,3 @@ enum class EIGS_PerformanceProfile : uint8 {
     PP_Cinematic,
     PP_Auto,
 };
-

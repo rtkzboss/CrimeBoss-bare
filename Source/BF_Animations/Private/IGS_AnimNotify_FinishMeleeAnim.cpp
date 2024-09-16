@@ -3,4 +3,3 @@
 UIGS_AnimNotify_FinishMeleeAnim::UIGS_AnimNotify_FinishMeleeAnim() {
 }
 
-

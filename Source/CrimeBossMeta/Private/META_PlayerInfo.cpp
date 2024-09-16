@@ -6,4 +6,3 @@ FMETA_PlayerInfo::FMETA_PlayerInfo() {
     (*this).AvailableArmy = 0;
     (*this).ArmyTier = EMETA_ArmyTier::Low;
 }
-

@@ -18,18 +18,17 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_RoomPathfindingComponent* RoomPathfindingComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_SquadSpeedSynchronizationComponent* SpeedSynchronizationComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_SquadAggroComponent* SquadAggroComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<AIGS_RoomBase*> EmptyRoomArray;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_DefendPointBase* defendPoint;
-    
-};
 
+};

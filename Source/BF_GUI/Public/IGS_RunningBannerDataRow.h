@@ -11,28 +11,27 @@ struct BF_GUI_API FIGS_RunningBannerDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag Tag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Separator;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Headline;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText BadgeText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateColor HeadlineColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateColor BadgeBackgroundColor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateColor BadgeTextColor;
-    
+
     FIGS_RunningBannerDataRow();
 };
-

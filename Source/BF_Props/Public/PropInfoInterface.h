@@ -14,9 +14,8 @@ class IPropInfoInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Spawn();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void GetPropInfo(FPropInfoStruct& outPropInfo);
-    
-};
 
+};

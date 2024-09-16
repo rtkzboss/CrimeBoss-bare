@@ -14,16 +14,15 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void InitMenu(FGameplayTagContainer inMethods);
-    
+
     UFUNCTION(BlueprintCallable)
     void ForceRefresh();
-    
+
     UPROPERTY(BlueprintReadOnly)
     FGameplayTagContainer UnlockMethods;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_IntelligentGameCharacter> OwningPlayerCharacter;
-    
-};
 
+};

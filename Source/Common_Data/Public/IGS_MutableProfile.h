@@ -12,10 +12,9 @@ struct COMMON_DATA_API FIGS_MutableProfile : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UCustomizableObjectPopulation> ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_MutableProfileData> MutableProfiles;
-    
+
     FIGS_MutableProfile();
 };
-

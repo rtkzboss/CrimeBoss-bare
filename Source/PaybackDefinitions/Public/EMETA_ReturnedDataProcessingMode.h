@@ -8,4 +8,3 @@ enum class EMETA_ReturnedDataProcessingMode : uint8 {
     IgnoreLoot,
     IgnoreLootAndWeapons,
 };
-

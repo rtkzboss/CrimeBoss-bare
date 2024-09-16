@@ -15,4 +15,3 @@ FPFAutoRollVisualConfig::FPFAutoRollVisualConfig() {
     (*this).PointSize = 2.000000000e+01f;
     (*this).LineThickness = 3.000000000e+00f;
 }
-

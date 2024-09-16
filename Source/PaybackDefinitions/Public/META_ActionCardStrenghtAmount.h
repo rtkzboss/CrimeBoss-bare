@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_ActionCardStrenghtAmount {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_ActionCardStrength, int32> Amount;
-    
+
     FMETA_ActionCardStrenghtAmount();
 };
-

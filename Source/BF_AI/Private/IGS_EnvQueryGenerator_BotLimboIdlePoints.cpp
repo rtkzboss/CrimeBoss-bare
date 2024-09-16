@@ -5,4 +5,3 @@ UIGS_EnvQueryGenerator_BotLimboIdlePoints::UIGS_EnvQueryGenerator_BotLimboIdlePo
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

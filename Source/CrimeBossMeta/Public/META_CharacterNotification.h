@@ -13,13 +13,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetCharacter(UMETA_Character* inCharacter, FText inOption);
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_Character* GetCharacter() const;
-    
+
 private:
     UPROPERTY()
     UMETA_Character* m_Character;
-    
-};
 
+};

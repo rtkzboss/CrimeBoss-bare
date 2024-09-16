@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<FPrefabricatorAssetCollectionItem> Prefabs;
-    
+
     UPROPERTY()
     uint32 Version;
-    
-};
 
+};

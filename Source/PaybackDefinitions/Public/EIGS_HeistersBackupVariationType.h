@@ -14,4 +14,3 @@ enum class EIGS_HeistersBackupVariationType : uint8 {
     US_STO_Hielos,
     US_Unknown = 255,
 };
-

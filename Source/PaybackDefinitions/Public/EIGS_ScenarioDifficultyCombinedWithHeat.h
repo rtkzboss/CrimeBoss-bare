@@ -11,4 +11,3 @@ enum class EIGS_ScenarioDifficultyCombinedWithHeat : uint8 {
     SDCWH_VeryHeavyForce,
     SDCWH_Extreme,
 };
-

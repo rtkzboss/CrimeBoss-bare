@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_GangArmyTierChangeData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ArmyTier ArmyTireChange;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CurrentGangArmyTierChangeCooldown;
-    
+
     FMETA_GangArmyTierChangeData();
 };
-

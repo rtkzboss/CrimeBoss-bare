@@ -9,4 +9,3 @@ FMETA_HeatTurfWarData::FMETA_HeatTurfWarData() {
     (*this).CapturinFourthTurfInTheSameDay = 30;
     (*this).CapturingFifthAndMoreTurfInTheSameDay = 40;
 }
-

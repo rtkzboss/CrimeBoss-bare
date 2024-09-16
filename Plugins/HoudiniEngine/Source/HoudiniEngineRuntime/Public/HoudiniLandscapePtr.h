@@ -14,12 +14,11 @@ public:
 
     UPROPERTY()
     TSoftObjectPtr<ALandscapeProxy> LandscapeSoftPtr;
-    
+
     UPROPERTY()
     EHoudiniLandscapeOutputBakeType BakeType;
-    
+
     UPROPERTY()
     FName EditLayerName;
-    
-};
 
+};

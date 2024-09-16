@@ -1,5 +1,4 @@
 #include "DetectorRotation.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UDetectorRotation::UDetectorRotation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -20,8 +19,7 @@ void UDetectorRotation::FullRotation(FVector inTarget, float inDeltaSeconds) {
 
 void UDetectorRotation::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UDetectorRotation, LookAtTarget);
 }
-
 

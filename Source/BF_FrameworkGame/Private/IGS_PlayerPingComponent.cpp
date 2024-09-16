@@ -1,5 +1,4 @@
 #include "IGS_PlayerPingComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerPingComponent::UIGS_PlayerPingComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).GenericPingDuration = 5.000000000e+00f;
@@ -16,5 +15,4 @@ void UIGS_PlayerPingComponent::Server_Ping_Implementation(EIGS_PingableType inTy
 
 void UIGS_PlayerPingComponent::Multicast_Ping_Implementation(UIGS_PingableComponent* InComponent, EIGS_PingableType inType, FVector_NetQuantize InLocation) {
 }
-
 

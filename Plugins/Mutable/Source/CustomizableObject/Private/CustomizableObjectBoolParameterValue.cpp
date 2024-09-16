@@ -5,4 +5,3 @@ FCustomizableObjectBoolParameterValue::FCustomizableObjectBoolParameterValue() {
     (*this).ParameterValue = true;
     (*this).Uid = TEXT("");
 }
-

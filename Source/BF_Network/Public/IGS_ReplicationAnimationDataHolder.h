@@ -13,28 +13,27 @@ struct FIGS_ReplicationAnimationDataHolder {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag MontageVariationTag;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_NetTransform EventTransform;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float RequestedDuration;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 RandomSeed;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bPlayingAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_AnimationTaskFinishedReason FinishReason;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_CarType CarType;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_CarSeatVariant SeatVariant;
-    
+
     BF_NETWORK_API FIGS_ReplicationAnimationDataHolder();
 };
-

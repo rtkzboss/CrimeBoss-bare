@@ -5,4 +5,3 @@ FIGS_PlayerCountWaveManagerModifierDef::FIGS_PlayerCountWaveManagerModifierDef()
     (*this).ThreePlayers.MaxSpawnedEnemiesAddition = 0;
     (*this).FourPlayers.MaxSpawnedEnemiesAddition = 0;
 }
-

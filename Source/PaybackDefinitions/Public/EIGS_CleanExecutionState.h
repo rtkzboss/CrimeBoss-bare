@@ -8,4 +8,3 @@ enum class EIGS_CleanExecutionState : uint8 {
     Active,
     Failed,
 };
-

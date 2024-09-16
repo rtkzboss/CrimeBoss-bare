@@ -29,4 +29,3 @@ UIGS_ImpactManagerSettings::UIGS_ImpactManagerSettings() {
     (*this).DecalImpactCountCap = 10;
 }
 
-

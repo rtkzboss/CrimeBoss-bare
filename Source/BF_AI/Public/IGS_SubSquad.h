@@ -11,16 +11,15 @@ struct BF_AI_API FIGS_SubSquad {
 public:
     UPROPERTY(VisibleAnywhere)
     AIGS_GameCharacterFramework* Leader;
-    
+
     UPROPERTY(VisibleAnywhere)
     UIGS_AICommand* LeaderCommand;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_GameCharacterFramework* Backup;
-    
+
     UPROPERTY(VisibleAnywhere)
     UIGS_AICommand* BackUpCommand;
-    
+
     FIGS_SubSquad();
 };
-

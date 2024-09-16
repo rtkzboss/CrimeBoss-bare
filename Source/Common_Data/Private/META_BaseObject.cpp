@@ -1,7 +1,7 @@
 #include "META_BaseObject.h"
 
 UMETA_BaseObject::UMETA_BaseObject() {
-    (*this).Icon = nullptr;
+    (*this).Icon = FSoftObjectPath();
     (*this).RelativeItemPrice = 5.000000000e-01f;
 }
 
@@ -25,7 +25,7 @@ FGameplayTag UMETA_BaseObject::GetTagID() const {
 }
 
 float UMETA_BaseObject::GetRelativeItemPrice() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EMETA_ItemQuality UMETA_BaseObject::GetItemQuality() const {
@@ -45,11 +45,10 @@ FText UMETA_BaseObject::GetItemDescription() const {
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_BaseObject::GetIcon() {
-    return NULL;
+    return {};
 }
 
 FGameplayTag UMETA_BaseObject::GetEntitlementTagID() const {
     return FGameplayTag{};
 }
-
 

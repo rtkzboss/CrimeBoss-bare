@@ -48,19 +48,19 @@ void UIGS_SaveManager::SaveAccount(const UObject* inWCO) {
 }
 
 UIGS_DebugWeaponCheatSelection* UIGS_SaveManager::LoadWeaponCheatSelection(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_PaybackSaveGameQuickplay* UIGS_SaveManager::LoadQuickplay(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_PaybackSaveGameCareer* UIGS_SaveManager::LoadCareer(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_PaybackSaveGameAccount* UIGS_SaveManager::LoadAccount(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_SaveManager::IsCareerDebugDataFilled(const UObject* inWCO) {
@@ -96,7 +96,7 @@ FMETA_SaveData_DebugCareer UIGS_SaveManager::GetCareerDebugData(const UObject* i
 }
 
 TArray<FIGS_CareerSlotInfo> UIGS_SaveManager::GetAllCareerSaveFiles() const {
-    return TArray<FIGS_CareerSlotInfo>();
+    return {};
 }
 
 bool UIGS_SaveManager::DoesQuickplaySaveExist() {
@@ -143,7 +143,7 @@ void UIGS_SaveManager::DeleteCareer(const UObject* inWCO) {
 }
 
 UIGS_PaybackSaveGameCareer* UIGS_SaveManager::CreateCareer(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_SaveManager::CheckPlayerWasPlayingGame(const UObject* inWCO) {
@@ -152,5 +152,4 @@ bool UIGS_SaveManager::CheckPlayerWasPlayingGame(const UObject* inWCO) {
 
 void UIGS_SaveManager::AddPlotlineTagToDebugData(const UObject* inWCO, FGameplayTag inPlotlineTag, bool& bSuccess) {
 }
-
 

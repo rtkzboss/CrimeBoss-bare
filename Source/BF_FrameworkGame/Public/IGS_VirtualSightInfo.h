@@ -13,16 +13,15 @@ struct BF_FRAMEWORKGAME_API FIGS_VirtualSightInfo {
 public:
     UPROPERTY()
     USkeletalMeshSocket* VirtualSightSkeletalSocket;
-    
+
     UPROPERTY(Instanced)
     USkeletalMeshComponent* VirtualSightSkeletalMesh;
-    
+
     UPROPERTY()
     UStaticMeshSocket* VirtualSightStaticSocket;
-    
+
     UPROPERTY(Instanced)
     UStaticMeshComponent* VirtualSightStaticMesh;
-    
+
     FIGS_VirtualSightInfo();
 };
-

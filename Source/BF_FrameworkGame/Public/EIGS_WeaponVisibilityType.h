@@ -9,4 +9,3 @@ enum class EIGS_WeaponVisibilityType : uint8 {
     VT_Flashlight,
     VT_ScopeGlint = 4,
 };
-

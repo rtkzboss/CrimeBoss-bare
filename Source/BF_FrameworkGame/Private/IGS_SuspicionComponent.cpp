@@ -1,5 +1,4 @@
 #include "IGS_SuspicionComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_SuspicionComponent::UIGS_SuspicionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bDisablePerceptionOnOffenceReported = true;
@@ -27,7 +26,7 @@ void UIGS_SuspicionComponent::InitFromItem(const FIGS_CommonItemData& inItemData
 }
 
 AIGS_GameCharacterFramework* UIGS_SuspicionComponent::GetOwningCharacter() const {
-    return NULL;
+    return nullptr;
 }
 
 FGameplayTagContainer UIGS_SuspicionComponent::GetOffences() const {
@@ -39,5 +38,4 @@ void UIGS_SuspicionComponent::EnablePerception() {
 
 void UIGS_SuspicionComponent::DisablePerception() {
 }
-
 

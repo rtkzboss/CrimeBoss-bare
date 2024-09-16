@@ -11,10 +11,9 @@ struct BF_IMPACTS_API FIGS_SoundImpactSettings : public FIGS_ImpactSettings {
 public:
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> AkAudioEventPath;
-    
+
     UPROPERTY(EditAnywhere)
     float SoundMaxLength;
-    
+
     FIGS_SoundImpactSettings();
 };
-

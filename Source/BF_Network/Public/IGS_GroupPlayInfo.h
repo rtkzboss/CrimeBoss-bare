@@ -8,4 +8,3 @@ struct FIGS_GroupPlayInfo {
 public:
     BF_NETWORK_API FIGS_GroupPlayInfo();
 };
-

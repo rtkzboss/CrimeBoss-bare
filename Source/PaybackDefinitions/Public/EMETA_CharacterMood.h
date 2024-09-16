@@ -8,4 +8,3 @@ enum class EMETA_CharacterMood : uint8 {
     Neutral,
     Happy,
 };
-

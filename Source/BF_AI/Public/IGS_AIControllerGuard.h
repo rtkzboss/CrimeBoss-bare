@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerGuard(const FObjectInitializer& ObjectInitializer);
 
 };
-

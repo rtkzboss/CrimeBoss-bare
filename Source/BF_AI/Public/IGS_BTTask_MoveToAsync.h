@@ -11,10 +11,9 @@ public:
 
     UPROPERTY(EditAnywhere)
     uint8 bUseHierarchicalPathfinding: 1;
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     uint8 bDontUsePathLengthLimiter: 1;
-    
-};
 
+};

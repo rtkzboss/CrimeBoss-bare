@@ -10,7 +10,6 @@ struct FIGS_DeathAnimationsSet {
 public:
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> DeathAnimationMontages;
-    
+
     BF_ANIMATIONS_API FIGS_DeathAnimationsSet();
 };
-

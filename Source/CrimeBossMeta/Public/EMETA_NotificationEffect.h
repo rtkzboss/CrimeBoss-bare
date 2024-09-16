@@ -9,4 +9,3 @@ enum class EMETA_NotificationEffect : uint8 {
     Positive,
     Story,
 };
-

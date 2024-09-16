@@ -3,4 +3,3 @@
 UIGS_NavmeshFunctionLibrary::UIGS_NavmeshFunctionLibrary() {
 }
 
-

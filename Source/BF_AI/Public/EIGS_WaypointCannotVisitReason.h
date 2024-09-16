@@ -13,4 +13,3 @@ enum class EIGS_WaypointCannotVisitReason : uint8 {
     Reason_CanVisit = 127,
     Reason_Other,
 };
-

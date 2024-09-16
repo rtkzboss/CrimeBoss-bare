@@ -6,4 +6,3 @@ FIGS_MetaCutsceneSlotSetup::FIGS_MetaCutsceneSlotSetup() {
     (*this).SlotCSpeaker = EIGS_MetaDialogueSpeaker::None;
     (*this).SlotDSpeaker = EIGS_MetaDialogueSpeaker::None;
 }
-

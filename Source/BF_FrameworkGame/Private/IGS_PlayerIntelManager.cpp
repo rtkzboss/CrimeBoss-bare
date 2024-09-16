@@ -1,5 +1,4 @@
 #include "IGS_PlayerIntelManager.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerIntelManager::UIGS_PlayerIntelManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -11,7 +10,6 @@ void UIGS_PlayerIntelManager::OnCharacterKilled(AIGS_GameCharacterFramework* inI
 }
 
 UIGS_PlayerIntelManager* UIGS_PlayerIntelManager::GetPlayerIntelManager(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
-
 

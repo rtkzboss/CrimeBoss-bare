@@ -8,4 +8,3 @@ struct POWERIKRUNTIME_API FPowerIKBoneData {
 public:
     FPowerIKBoneData();
 };
-

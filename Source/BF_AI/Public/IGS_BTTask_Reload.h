@@ -14,6 +14,5 @@ public:
 protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_WeaponBase* Weapon;
-    
-};
 
+};

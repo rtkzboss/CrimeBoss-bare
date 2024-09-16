@@ -3,4 +3,3 @@
 UIGS_PlayDialogueNodeBase::UIGS_PlayDialogueNodeBase() {
 }
 
-

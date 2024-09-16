@@ -8,4 +8,3 @@ FMETA_MissionAdditionalMonetaryValue::FMETA_MissionAdditionalMonetaryValue() {
     (*this).ObjectiveMonetaryValueInPercentOverride = 0.000000000e+00f;
     (*this).MaxMonetaryValueMultiplier = 1.000000000e+00f;
 }
-

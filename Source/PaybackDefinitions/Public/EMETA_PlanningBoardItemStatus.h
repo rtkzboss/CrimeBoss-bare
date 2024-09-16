@@ -9,4 +9,3 @@ enum class EMETA_PlanningBoardItemStatus : uint8 {
     Failed,
     Success,
 };
-

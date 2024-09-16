@@ -1,8 +1,7 @@
 #include "META_EventManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UMETA_EventManagerComponent::UMETA_EventManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).LocalRemovedGraph = nullptr;
+    (*this).LocalRemovedGraph = FSoftObjectPath();
 }
 
 bool UMETA_EventManagerComponent::WasGraphStarted(const FMETA_GraphStruct& inGraphData) {
@@ -56,15 +55,15 @@ int32 UMETA_EventManagerComponent::GetPersistentVarValue_Implementation(FGamepla
 }
 
 TSoftObjectPtr<UStoryGraphManager> UMETA_EventManagerComponent::GetParentGraphByStoryGraph_Implementation(const TSoftObjectPtr<UStoryGraphManager>& inGraph) {
-    return NULL;
+    return {};
 }
 
 UMETA_Graph* UMETA_EventManagerComponent::GetMasterGraphNodeByStoryGraph_Implementation(UStoryGraphManager* Graph) {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_Graph* UMETA_EventManagerComponent::GetMasterGraphNodeByGenericGraph_Implementation(UStoryGraphManager* inGraph) {
-    return NULL;
+    return nullptr;
 }
 
 
@@ -77,11 +76,11 @@ int32 UMETA_EventManagerComponent::GetGraphVarValue_Implementation(FGameplayTag 
 }
 
 TSoftObjectPtr<UStoryGraphManager> UMETA_EventManagerComponent::GetGoalGraphByNode_Implementation(const UGenericGraphNode* inNode) {
-    return NULL;
+    return {};
 }
 
 TSoftObjectPtr<UStoryGraphManager> UMETA_EventManagerComponent::GetGoalGraphByGraph_Implementation(const TSoftObjectPtr<UStoryGraphManager>& inGraph) {
-    return NULL;
+    return {};
 }
 
 EMETA_EventTime UMETA_EventManagerComponent::GetEventTime_Implementation() {
@@ -93,7 +92,7 @@ int32 UMETA_EventManagerComponent::GetCurrentDay_Implementation() {
 }
 
 TArray<FMETA_CharacterID> UMETA_EventManagerComponent::GetAllHeistersFromEvent_Implementation(FGameplayTag inEventTag, bool& outSuccess) {
-    return TArray<FMETA_CharacterID>();
+    return {};
 }
 
 void UMETA_EventManagerComponent::FilterByPlotlineConditions(const TArray<FIGS_PlotlineGraphData>& PlotlineGraphs, const int32 inUsedPlotlinesCount, TArray<FIGS_PlotlineGraphData>& outPlotlineGraphs) {
@@ -124,5 +123,4 @@ bool UMETA_EventManagerComponent::CanGraphBeExecutedFromBeginning(const FMETA_Gr
 bool UMETA_EventManagerComponent::AddHeisterToEvent_Implementation(FGameplayTag inEventTag, const FMETA_CharacterID inCharacterID, bool inUseInternalCheckForState) {
     return false;
 }
-
 

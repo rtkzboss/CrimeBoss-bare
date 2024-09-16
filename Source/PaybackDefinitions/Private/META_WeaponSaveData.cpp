@@ -5,8 +5,8 @@ FMETA_WeaponSaveData::FMETA_WeaponSaveData() {
     (*this).AdditionalPercentageOfWeaponPrice = 0;
     (*this).SuccessfulMissions = 0;
     (*this).DaysInShop = 0;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).WeaponSkin, 0)) = NAME_None;
-    (*this).TargetWeaponsForUpgrade.Empty();
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WeaponSkin, 0)) = NAME_None;
+    (*this).TargetWeaponsForUpgrade = {};
     (*this).TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
 }
-

@@ -8,4 +8,3 @@ enum class EIGS_JumpLinkState : uint8 {
     Running,
     Out,
 };
-

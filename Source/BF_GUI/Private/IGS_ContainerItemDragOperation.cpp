@@ -1,5 +1,4 @@
 #include "IGS_ContainerItemDragOperation.h"
-#include "Blueprint/DragDropOperation.h"
 
 UIGS_ContainerItemDragOperation::UIGS_ContainerItemDragOperation() {
     (*this).ItemRootSlotId = -1;
@@ -11,5 +10,4 @@ UIGS_ContainerItemDragOperation::UIGS_ContainerItemDragOperation() {
     (*this).ItemRowSize = -1;
     (*this).ItemColumnSize = -1;
 }
-
 

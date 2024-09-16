@@ -10,13 +10,12 @@ struct FIGS_GlassPanelPreset {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> BaseMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> FracturedMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DestroyedMesh;
-    
+
     BF_FRAMEWORKGAME_API FIGS_GlassPanelPreset();
 };
-

@@ -10,4 +10,3 @@ FIGS_AIGangsterHeavyMeleeTierDef::FIGS_AIGangsterHeavyMeleeTierDef() {
     (*this).SpecStats.ChargeSteeringMinWidth = 5.000000000e+01f;
     (*this).SpecStats.ChargeSteeringMaxDistance = 1.500000000e+03f;
 }
-

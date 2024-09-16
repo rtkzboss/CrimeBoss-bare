@@ -8,4 +8,3 @@ FIGS_SentrySenseHolder::FIGS_SentrySenseHolder() {
     (*this).IsSeen = false;
     (*this).IsSeenAndInCone = false;
 }
-

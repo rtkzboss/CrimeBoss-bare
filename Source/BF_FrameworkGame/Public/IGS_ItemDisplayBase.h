@@ -18,24 +18,23 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void UpdateLoot();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnUpdateLoot();
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     USceneComponent* RootObject;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     UStaticMeshComponent* ItemDisplay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     UIGS_BreakableWindowComponent* BreakableWindow;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_PickupSpawn> DefaultLoot;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     TArray<UChildActorComponent*> ItemPickups;
-    
-};
 
+};

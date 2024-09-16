@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* ShootStartAudioEvent;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAkAudioEvent* ShootStopAudioEvent;
-    
-};
 
+};

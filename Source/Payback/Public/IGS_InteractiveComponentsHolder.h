@@ -10,10 +10,9 @@ struct FIGS_InteractiveComponentsHolder {
 public:
     UPROPERTY(Export)
     TWeakObjectPtr<UIGS_InteractiveComponent> InteractiveComponent;
-    
+
     UPROPERTY()
     float Progress;
-    
+
     PAYBACK_API FIGS_InteractiveComponentsHolder();
 };
-

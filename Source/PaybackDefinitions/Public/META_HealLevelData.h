@@ -8,7 +8,6 @@ struct PAYBACKDEFINITIONS_API FMETA_HealLevelData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<int32, int32> WantedStarChances;
-    
+
     FMETA_HealLevelData();
 };
-

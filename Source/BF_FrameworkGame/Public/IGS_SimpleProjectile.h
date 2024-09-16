@@ -10,4 +10,3 @@ public:
     AIGS_SimpleProjectile(const FObjectInitializer& ObjectInitializer);
 
 };
-

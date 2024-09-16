@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerArtillery_HeavyBiker(const FObjectInitializer& ObjectInitializer);
 
 };
-

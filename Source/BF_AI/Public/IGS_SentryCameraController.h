@@ -10,4 +10,3 @@ public:
     AIGS_SentryCameraController(const FObjectInitializer& ObjectInitializer);
 
 };
-

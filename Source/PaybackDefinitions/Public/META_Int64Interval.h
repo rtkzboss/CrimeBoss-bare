@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_Int64Interval {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int64 Min;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int64 Max;
-    
+
     FMETA_Int64Interval();
 };
-

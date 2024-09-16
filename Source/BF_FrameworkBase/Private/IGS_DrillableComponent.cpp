@@ -1,5 +1,4 @@
 #include "IGS_DrillableComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_DrillableComponent::UIGS_DrillableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -7,6 +6,8 @@ UIGS_DrillableComponent::UIGS_DrillableComponent(const FObjectInitializer& Objec
     (*this).RelativeHealth = 1.000000000e+00f;
     (*this).MaxHealth = 1.000000000e+02f;
     (*this).FailThreshold = 2.000000030e-01f;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_DrillableComponent::SetDrilledState_Implementation(bool inDrilled) {
@@ -26,7 +27,7 @@ bool UIGS_DrillableComponent::GetDrilledState() {
 }
 
 float UIGS_DrillableComponent::GetDrillableRelativeHealth() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_DrillableComponent::DrillStart(FVector inStartPoint, AIGS_GameCharacterFramework* inInstigator) {
@@ -37,12 +38,11 @@ void UIGS_DrillableComponent::ApplyDrillDamage(float inAmount) {
 
 void UIGS_DrillableComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_DrillableComponent, CurrentHealth);
     DOREPLIFETIME(UIGS_DrillableComponent, RelativeHealth);
     DOREPLIFETIME(UIGS_DrillableComponent, bDrilled);
     DOREPLIFETIME(UIGS_DrillableComponent, CurrentInstigator);
     DOREPLIFETIME(UIGS_DrillableComponent, MaxHealth);
 }
-
 

@@ -9,4 +9,3 @@ UIGS_BTTask_SquadSearch::UIGS_BTTask_SquadSearch() {
 void UIGS_BTTask_SquadSearch::OnNotifyReceived(EIGS_AINotif inType, AIGS_GameCharacterFramework* inInstigator, AIGS_GameCharacterFramework* inTarget, FVector InPos, FVector inDir) {
 }
 
-

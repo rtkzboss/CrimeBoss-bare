@@ -9,7 +9,6 @@ struct FIGS_UnlockItemInfoList {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_UnlockItemInfo> UnlockItemInfoList;
-    
+
     BF_FRAMEWORKBASE_API FIGS_UnlockItemInfoList();
 };
-

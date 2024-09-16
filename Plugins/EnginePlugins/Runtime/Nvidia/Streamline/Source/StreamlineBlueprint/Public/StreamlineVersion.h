@@ -8,13 +8,12 @@ struct FStreamlineVersion {
 public:
     UPROPERTY(BlueprintReadWrite)
     int32 Major;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 Minor;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 Build;
-    
+
     STREAMLINEBLUEPRINT_API FStreamlineVersion();
 };
-

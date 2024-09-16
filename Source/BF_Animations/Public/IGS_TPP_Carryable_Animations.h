@@ -10,16 +10,15 @@ struct FIGS_TPP_Carryable_Animations {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemThrow;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemThrowLow;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemObjectThrow;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* CarryableItemObjectThrowLow;
-    
+
     BF_ANIMATIONS_API FIGS_TPP_Carryable_Animations();
 };
-

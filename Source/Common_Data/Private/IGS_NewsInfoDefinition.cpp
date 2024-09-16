@@ -1,14 +1,14 @@
 #include "IGS_NewsInfoDefinition.h"
 
 FIGS_NewsInfoDefinition::FIGS_NewsInfoDefinition() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).itemTag, 0)) = NAME_None;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
-    (*this).Title = FText::FromString(TEXT(""));
-    (*this).Description = FText::FromString(TEXT(""));
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).itemTag, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
+    (*this).Title = FText::GetEmpty();
+    (*this).Description = FText::GetEmpty();
     (*this).BinkAlpha = nullptr;
     (*this).BinkRGB = nullptr;
-    (*this).RGBVideo = nullptr;
-    (*this).VideoMask = nullptr;
+    (*this).RGBVideo = FSoftObjectPath();
+    (*this).VideoMask = FSoftObjectPath();
     (*this).ShowInMenu = false;
 }
-

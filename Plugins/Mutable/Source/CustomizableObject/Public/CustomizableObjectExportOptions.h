@@ -8,10 +8,9 @@ struct FCustomizableObjectExportOptions {
 public:
     UPROPERTY()
     bool bTextureCompression;
-    
+
     UPROPERTY()
     FString TargetPlatform;
-    
+
     CUSTOMIZABLEOBJECT_API FCustomizableObjectExportOptions();
 };
-

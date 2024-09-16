@@ -2,4 +2,3 @@
 
 FIGS_ActiveMontageHolder::FIGS_ActiveMontageHolder() {
 }
-

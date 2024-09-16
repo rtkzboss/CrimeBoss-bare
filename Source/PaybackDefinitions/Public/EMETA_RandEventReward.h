@@ -19,4 +19,3 @@ enum class EMETA_RandEventReward : uint8 {
     BetterLootPricesInStash,
     WorseLootPricesInStash,
 };
-

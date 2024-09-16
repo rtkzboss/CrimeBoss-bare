@@ -4,4 +4,3 @@ FIGS_RappelAnimationsInfo::FIGS_RappelAnimationsInfo() {
     (*this).IsOnRappel = false;
     (*this).ShouldRotateView = true;
 }
-

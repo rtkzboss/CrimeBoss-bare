@@ -2,7 +2,7 @@
 
 FIGS_CharacterEventNotificationData::FIGS_CharacterEventNotificationData() {
     (*this).Instigator = nullptr;
-    (*this).Targets.Empty();
+    (*this).Targets = {};
     (*this).ObjectOfInterest = nullptr;
     (*this).FloatValue = 0.000000000e+00f;
     (*this).VectorValue.X = 3.402823466e+38f;
@@ -10,4 +10,3 @@ FIGS_CharacterEventNotificationData::FIGS_CharacterEventNotificationData() {
     (*this).VectorValue.Z = 3.402823466e+38f;
     (*this).OptionalEnumData = 255;
 }
-

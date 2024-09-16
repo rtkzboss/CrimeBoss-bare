@@ -9,10 +9,9 @@ struct COMMON_DATA_API FMETA_UniqueCharacterCostsData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FloatInterval HireCostMultiplier;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FloatInterval UpkeepMultiplier;
-    
+
     FMETA_UniqueCharacterCostsData();
 };
-

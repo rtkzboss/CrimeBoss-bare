@@ -12,9 +12,8 @@ public:
 protected:
     UPROPERTY()
     TArray<int32> Values;
-    
+
     UPROPERTY()
     TArray<int32> DefaultValues;
-    
-};
 
+};

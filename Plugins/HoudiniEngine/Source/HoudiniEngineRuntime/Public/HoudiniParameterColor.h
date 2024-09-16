@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY()
     FLinearColor Color;
-    
+
     UPROPERTY()
     FLinearColor DefaultColor;
-    
+
     UPROPERTY()
     bool bIsChildOfRamp;
-    
-};
 
+};

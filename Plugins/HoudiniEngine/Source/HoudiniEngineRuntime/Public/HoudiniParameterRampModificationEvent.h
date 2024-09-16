@@ -14,25 +14,24 @@ public:
 private:
     UPROPERTY()
     bool bIsInsertEvent;
-    
+
     UPROPERTY()
     bool bIsFloatRamp;
-    
+
 public:
     UPROPERTY()
     int32 DeleteInstanceIndex;
-    
+
     UPROPERTY()
     float InsertPosition;
-    
+
     UPROPERTY()
     float InsertFloat;
-    
+
     UPROPERTY()
     FLinearColor InsertColor;
-    
+
     UPROPERTY()
     EHoudiniRampInterpolationType InsertInterpolation;
-    
-};
 
+};

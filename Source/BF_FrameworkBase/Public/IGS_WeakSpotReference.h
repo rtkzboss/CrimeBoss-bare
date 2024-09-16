@@ -10,7 +10,6 @@ struct BF_FRAMEWORKBASE_API FIGS_WeakSpotReference {
 public:
     UPROPERTY(Instanced)
     UIGS_ObjectStatus* WeakSpotObjectStatus;
-    
+
     FIGS_WeakSpotReference();
 };
-

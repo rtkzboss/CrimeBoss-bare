@@ -1,6 +1,4 @@
 #include "IGS_SoapCarry.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_SoapCarry::AIGS_SoapCarry(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bIsSlipEnabled = true;
@@ -10,5 +8,4 @@ AIGS_SoapCarry::AIGS_SoapCarry(const FObjectInitializer& ObjectInitializer) : Su
 
 void AIGS_SoapCarry::SlippingOff_Implementation() {
 }
-
 

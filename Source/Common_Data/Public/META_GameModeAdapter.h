@@ -21,33 +21,32 @@ class IMETA_GameModeAdapter : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool IsMetaGameMode() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     TArray<FText> GetUsedCharactersSurnames();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     TArray<FText> GetUsedCharactersFirstNames();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     TArray<UMETA_Character*> GetUniqueHeistersFromCrew();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UMETA_QuickPlayData* GetQuickplayData() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     EMETA_RespectLvl GetPlayerRespect();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UIGS_EconomyData_Base* GetEconomyData() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UIGS_MenuCommonData_Base* GetCommonData() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool DoesHeisterPresenceInCrew(EIGS_CharacterID inCharacterID);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool CanMissionHaveObjectives(const FMETA_MissionDatabase& inMissionData);
-    
-};
 
+};

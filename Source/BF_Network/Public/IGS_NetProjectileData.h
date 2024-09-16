@@ -10,10 +10,9 @@ struct FIGS_NetProjectileData {
 public:
     UPROPERTY()
     FIGS_NetProjectileHitResult NetProjectileHitResult;
-    
+
     UPROPERTY()
     FIGS_NetProjectileHitData NetProjectileHitData;
-    
+
     BF_NETWORK_API FIGS_NetProjectileData();
 };
-

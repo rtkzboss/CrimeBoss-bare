@@ -14,25 +14,24 @@ struct FProfileParameterDat {
 public:
     UPROPERTY()
     FString ProfileName;
-    
+
     UPROPERTY()
     TArray<FCustomizableObjectBoolParameterValue> BoolParameters;
-    
+
     UPROPERTY()
     TArray<FCustomizableObjectIntParameterValue> IntParameters;
-    
+
     UPROPERTY()
     TArray<FCustomizableObjectFloatParameterValue> FloatParameters;
-    
+
     UPROPERTY()
     TArray<FCustomizableObjectTextureParameterValue> TextureParameters;
-    
+
     UPROPERTY()
     TArray<FCustomizableObjectVectorParameterValue> VectorParameters;
-    
+
     UPROPERTY()
     TArray<FCustomizableObjectProjectorParameterValue> ProjectorParameters;
-    
+
     CUSTOMIZABLEOBJECT_API FProfileParameterDat();
 };
-

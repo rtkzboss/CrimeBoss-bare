@@ -12,10 +12,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGuardTeamDef : public FIGS_AIBaseTeamDef {
 public:
     UPROPERTY(EditAnywhere)
     TMap<EIGS_SecurityVariationType, FIGS_AIGuardTierDef> Variations;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AIGuardBaseDataDefaults DefaultStats;
-    
+
     FIGS_AIGuardTeamDef();
 };
-

@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     AActor* Actor;
-    
+
     UPROPERTY()
     TArray<uint8> ActorData;
-    
-};
 
+};

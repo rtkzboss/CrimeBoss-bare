@@ -9,10 +9,9 @@ struct FCustomizableObjectPopulationCharacteristic {
 public:
     UPROPERTY(EditAnywhere)
     FString ParameterName;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FCustomizableObjectPopulationConstraint> Constraints;
-    
+
     CUSTOMIZABLEOBJECTPOPULATION_API FCustomizableObjectPopulationCharacteristic();
 };
-

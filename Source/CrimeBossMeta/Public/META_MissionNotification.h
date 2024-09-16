@@ -13,13 +13,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetMission(UMETA_BaseMission* inMission);
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_BaseMission* GetMission() const;
-    
+
 private:
     UPROPERTY()
     UMETA_BaseMission* m_Mission;
-    
-};
 
+};

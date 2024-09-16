@@ -42,11 +42,11 @@ bool UDLSSLibrary::IsDLAAEnabled() {
 }
 
 TArray<UDLSSMode> UDLSSLibrary::GetSupportedDLSSModes() {
-    return TArray<UDLSSMode>();
+    return {};
 }
 
 float UDLSSLibrary::GetDLSSSharpness() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UDLSSLibrary::GetDLSSScreenPercentageRange(float& MinScreenPercentage, float& MaxScreenPercentage) {
@@ -77,5 +77,4 @@ void UDLSSLibrary::EnableDLSS(bool bEnabled) {
 
 void UDLSSLibrary::EnableDLAA(bool bEnabled) {
 }
-
 

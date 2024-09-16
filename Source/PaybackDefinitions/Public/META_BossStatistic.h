@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_BossStatistic {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GatheredBossPoints;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 BossLevel;
-    
+
     FMETA_BossStatistic();
 };
-

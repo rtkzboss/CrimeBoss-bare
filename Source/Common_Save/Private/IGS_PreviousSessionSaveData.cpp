@@ -7,4 +7,3 @@ FIGS_PreviousSessionSaveData::FIGS_PreviousSessionSaveData() {
     (*this).MissionID.C = 0;
     (*this).MissionID.D = 0;
 }
-

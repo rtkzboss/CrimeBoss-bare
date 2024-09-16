@@ -12,4 +12,3 @@ enum class EIGS_DsEffectMode : uint8 {
     MultiplePositionFeedback,
     MultiplePositionVibration,
 };
-

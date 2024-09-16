@@ -8,4 +8,3 @@ enum class EIGS_MovementSlope : uint8 {
     FSW_UpStairs,
     FSW_DownStairs,
 };
-

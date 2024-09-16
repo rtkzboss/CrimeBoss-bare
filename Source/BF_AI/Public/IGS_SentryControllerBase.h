@@ -18,25 +18,24 @@ public:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 SquadID;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SentryMemoryComponent* Memory;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SentryAggroComponent* Aggro;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SentryPerceptionComponent* Perception;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_DetectorBase* PossedPawn;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_BlackboardGameComponent* BlackboardGameComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_BehaviorTreeGameComponent* BehaviorTreeGameComponent;
-    
-};
 
+};

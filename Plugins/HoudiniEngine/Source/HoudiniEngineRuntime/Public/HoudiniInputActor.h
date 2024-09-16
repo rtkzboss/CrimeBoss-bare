@@ -15,15 +15,14 @@ public:
 protected:
     UPROPERTY()
     TArray<UHoudiniInputSceneComponent*> ActorComponents;
-    
+
     UPROPERTY()
     TSet<TSoftObjectPtr<UObject>> ActorSceneComponents;
-    
+
     UPROPERTY()
     int32 LastUpdateNumComponentsAdded;
-    
+
     UPROPERTY()
     int32 LastUpdateNumComponentsRemoved;
-    
-};
 
+};

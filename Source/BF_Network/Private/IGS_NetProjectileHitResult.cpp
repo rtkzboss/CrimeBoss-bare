@@ -21,4 +21,3 @@ FIGS_NetProjectileHitResult::FIGS_NetProjectileHitResult() {
     (*this).bBlockingHit = false;
     (*this).bIsPenetratingHit = false;
 }
-

@@ -9,10 +9,9 @@ struct BF_AI_API FIGS_TrafficLoopfindingResult {
 public:
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_TrafficLoop> ClassicLoops;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_TrafficLoop> ReversedLoops;
-    
+
     FIGS_TrafficLoopfindingResult();
 };
-

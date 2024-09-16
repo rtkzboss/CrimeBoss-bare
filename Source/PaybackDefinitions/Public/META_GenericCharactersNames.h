@@ -11,31 +11,30 @@ public:
 
     UFUNCTION(BlueprintCallable)
     TArray<FText> GetSurnames();
-    
+
     UFUNCTION(BlueprintCallable)
     FText GetRandomSurname();
-    
+
     UFUNCTION(BlueprintCallable)
     FText GetRandomMaleFirstName();
-    
+
     UFUNCTION(BlueprintCallable)
     FText GetRandomFemaleFirstName();
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FText> GetMaleNames();
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FText> GetFemaleNames();
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FText> MaleFirstNames;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FText> FemaleFirstNames;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FText> Surnames;
-    
-};
 
+};

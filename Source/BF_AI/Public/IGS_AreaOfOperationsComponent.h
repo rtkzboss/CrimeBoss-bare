@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY()
     TArray<FIGS_AreaOfOperations> AreaOfOperations;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<AIGS_RoomBase*> EmptyArray;
-    
-};
 
+};

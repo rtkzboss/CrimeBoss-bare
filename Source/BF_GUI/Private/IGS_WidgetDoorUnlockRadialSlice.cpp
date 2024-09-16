@@ -1,8 +1,4 @@
 #include "IGS_WidgetDoorUnlockRadialSlice.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetDoorUnlockRadialSlice::UIGS_WidgetDoorUnlockRadialSlice() {
     (*this).WieldedColor.R = 1.000000000e+00f;
@@ -14,7 +10,6 @@ UIGS_WidgetDoorUnlockRadialSlice::UIGS_WidgetDoorUnlockRadialSlice() {
     (*this).WieldedHoverColor.A = 1.000000000e+00f;
     (*this).bCanBeUsed = true;
 }
-
 
 
 

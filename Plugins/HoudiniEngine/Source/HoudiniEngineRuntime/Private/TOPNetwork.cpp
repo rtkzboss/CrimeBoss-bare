@@ -5,4 +5,3 @@ UTOPNetwork::UTOPNetwork() {
     (*this).SelectedTOPIndex = -1;
 }
 
-

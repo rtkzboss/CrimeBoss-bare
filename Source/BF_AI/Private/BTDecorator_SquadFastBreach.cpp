@@ -5,4 +5,3 @@ UBTDecorator_SquadFastBreach::UBTDecorator_SquadFastBreach() {
     (*this).NodeName = TEXT("Is Fast Breach");
 }
 
-

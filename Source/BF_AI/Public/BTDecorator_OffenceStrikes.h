@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     int32 DesiredStrikes;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
-    
-};
 
+};

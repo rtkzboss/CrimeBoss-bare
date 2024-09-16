@@ -7,4 +7,3 @@ FMETA_PartnerTableRow UMETA_PartnerDatabase::GetPartnerData(UObject* inWCO, cons
     return FMETA_PartnerTableRow{};
 }
 
-

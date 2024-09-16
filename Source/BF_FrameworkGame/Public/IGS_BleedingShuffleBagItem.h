@@ -9,10 +9,9 @@ struct FIGS_BleedingShuffleBagItem {
 public:
     UPROPERTY(VisibleAnywhere)
     EIGS_BleedType BleedType;
-    
+
     UPROPERTY(VisibleAnywhere)
     float Weight;
-    
+
     BF_FRAMEWORKGAME_API FIGS_BleedingShuffleBagItem();
 };
-

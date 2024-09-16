@@ -18,34 +18,33 @@ struct COMMON_SAVE_API FMETA_StatisticNoteSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_CrewStatistic CrewStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_MissionsStatistic MissionsStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_GoalsStatistic GoalsStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_CampaignStatistic CampaignStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FPSStatistic FPSStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_StoryStatistic StoryStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_EconomySaveStatistic EconomyStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_BossStatistic BossStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_TurfWarStatistic TurfWarStatistic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_AssetsStatistic AssetsStatistic;
-    
+
     FMETA_StatisticNoteSaveData();
 };
-

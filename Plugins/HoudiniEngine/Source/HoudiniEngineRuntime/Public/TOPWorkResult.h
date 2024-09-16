@@ -9,13 +9,12 @@ struct HOUDINIENGINERUNTIME_API FTOPWorkResult {
 public:
     UPROPERTY(NonTransactional)
     int32 WorkItemIndex;
-    
+
     UPROPERTY(Transient)
     int32 WorkItemID;
-    
+
     UPROPERTY(NonTransactional)
     TArray<FTOPWorkResultObject> ResultObjects;
-    
+
     FTOPWorkResult();
 };
-

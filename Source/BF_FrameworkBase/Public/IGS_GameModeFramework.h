@@ -14,12 +14,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetPlayersImmortal(bool inImmortal);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsAnyHeisterAlive(UObject* inWCO);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<APlayerState*> InactivePlayerArray;
-    
-};
 
+};

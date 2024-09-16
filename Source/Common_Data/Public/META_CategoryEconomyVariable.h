@@ -10,7 +10,6 @@ struct COMMON_DATA_API FMETA_CategoryEconomyVariable {
 public:
     UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, FMETA_EconomyGraphVariableModeData> GraphEconomyVariables;
-    
+
     FMETA_CategoryEconomyVariable();
 };
-

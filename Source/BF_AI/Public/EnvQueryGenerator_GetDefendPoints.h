@@ -10,4 +10,3 @@ public:
     UEnvQueryGenerator_GetDefendPoints();
 
 };
-

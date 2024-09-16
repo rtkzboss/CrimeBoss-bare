@@ -13,4 +13,3 @@ enum class EIGS_PlayerSwapPreventedReason : uint8 {
     SP_BotDead,
     SP_BotDowned,
 };
-

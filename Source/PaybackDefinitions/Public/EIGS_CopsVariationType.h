@@ -32,4 +32,3 @@ enum class EIGS_CopsVariationType : uint8 {
     US_STO_Jupiter5,
     US_Unknown = 255,
 };
-

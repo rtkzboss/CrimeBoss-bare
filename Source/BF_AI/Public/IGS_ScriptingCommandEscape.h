@@ -2,11 +2,10 @@
 #include "CoreMinimal.h"
 #include "EIGS_Speed.h"
 #include "IGS_ScriptingCommandAsyncBase.h"
-#include "ScriptingCommandOutputPinDelegate.h"
+#include "ScriptingCommandOutputPin.h"
 #include "IGS_ScriptingCommandEscape.generated.h"
 
 class AIGS_GameCharacterFramework;
-class UIGS_ScriptingCommandEscape;
 
 UCLASS()
 class BF_AI_API UIGS_ScriptingCommandEscape : public UIGS_ScriptingCommandAsyncBase {
@@ -16,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static UIGS_ScriptingCommandEscape* ScriptingCommandEscape(AIGS_GameCharacterFramework* Character, int32 scope, EIGS_Speed Speed);
-    
+
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Approach;
-    
+
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Arrive;
-    
+
     UPROPERTY(BlueprintAssignable)
     FScriptingCommandOutputPin Leave;
-    
-};
 
+};

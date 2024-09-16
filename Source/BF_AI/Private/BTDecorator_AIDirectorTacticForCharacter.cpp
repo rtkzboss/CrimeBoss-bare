@@ -4,4 +4,3 @@ UBTDecorator_AIDirectorTacticForCharacter::UBTDecorator_AIDirectorTacticForChara
     (*this).NodeName = TEXT("AIDirector Tactic For Character");
 }
 
-

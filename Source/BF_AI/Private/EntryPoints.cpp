@@ -7,4 +7,3 @@ FEntryPoints::FEntryPoints() {
     (*this).RightFar = nullptr;
     (*this).StackPos = nullptr;
 }
-

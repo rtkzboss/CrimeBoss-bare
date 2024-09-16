@@ -13,22 +13,21 @@ struct PAYBACKDEFINITIONS_API FMETA_GangInitialConfiguration {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval InitialTerritoryAmount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGameplayTagContainer> TileGroups;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Gang, int32> TopEnemies;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Gang, int32> Friends;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_GangStrategy Strategy;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ArmyTier ArmyTier;
-    
+
     FMETA_GangInitialConfiguration();
 };
-

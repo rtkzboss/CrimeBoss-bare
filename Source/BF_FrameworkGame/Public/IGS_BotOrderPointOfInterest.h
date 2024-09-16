@@ -11,13 +11,12 @@ struct FIGS_BotOrderPointOfInterest {
 public:
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<UObject> Object;
-    
+
     UPROPERTY(BlueprintReadOnly)
     FVector Location;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool PathExists;
-    
+
     BF_FRAMEWORKGAME_API FIGS_BotOrderPointOfInterest();
 };
-

@@ -13,12 +13,11 @@ public:
 
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* StackEntryPoint;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* BreachEntryPoint;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* StackExitPoint;
-    
-};
 
+};

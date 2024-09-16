@@ -12,4 +12,3 @@ class IIGS_DialogueInterface : public IInterface {
     GENERATED_BODY()
 public:
 };
-

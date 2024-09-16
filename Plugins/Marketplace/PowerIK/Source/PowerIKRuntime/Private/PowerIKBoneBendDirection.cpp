@@ -6,4 +6,3 @@ FPowerIKBoneBendDirection::FPowerIKBoneBendDirection() {
     (*this).BendDirection.Y = 1.000000000e+00f;
     (*this).BendDirection.Z = 0.000000000e+00f;
 }
-

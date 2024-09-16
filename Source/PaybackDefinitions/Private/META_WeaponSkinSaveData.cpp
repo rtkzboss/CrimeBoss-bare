@@ -2,4 +2,3 @@
 
 FMETA_WeaponSkinSaveData::FMETA_WeaponSkinSaveData() {
 }
-

@@ -8,10 +8,9 @@ struct FIGS_LevelBuilderRepProperties {
 public:
     UPROPERTY(VisibleAnywhere)
     int32 ReplicatedSeed;
-    
+
     UPROPERTY(VisibleAnywhere)
     FString OptionsString;
-    
+
     BF_LEVELGENERATOR_API FIGS_LevelBuilderRepProperties();
 };
-

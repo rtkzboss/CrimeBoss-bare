@@ -12,19 +12,18 @@ struct CRIMEBOSSMETA_API FMETA_PlanningBoardRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag EntitlementTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag voiceoverTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* ItemsTable;
-    
+
     FMETA_PlanningBoardRow();
 };
-

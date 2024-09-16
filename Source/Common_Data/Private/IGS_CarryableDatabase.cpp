@@ -16,4 +16,3 @@ FIGS_CarryableTableRow UIGS_CarryableDatabase::GetDataByIndexBP(int32 inIndex, b
     return FIGS_CarryableTableRow{};
 }
 
-

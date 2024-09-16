@@ -8,4 +8,3 @@ FPowerIKPoleVector::FPowerIKPoleVector() {
     (*this).BoneName = NAME_None;
     (*this).AngleOffset = 0.000000000e+00f;
 }
-

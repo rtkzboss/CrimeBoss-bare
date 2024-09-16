@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterTurfwarDefaultTierDef : public FIGS_A
 public:
     FIGS_AIGangsterTurfwarDefaultTierDef();
 };
-

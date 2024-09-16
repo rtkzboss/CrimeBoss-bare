@@ -7,4 +7,3 @@ enum EGlassShape {
     Rectangular,
     Circular,
 };
-

@@ -7,4 +7,3 @@ FIGS_ChallengeTableRow UIGS_ChallengesDatabase::GetChallenge(UObject* inWCO, FGa
     return FIGS_ChallengeTableRow{};
 }
 
-

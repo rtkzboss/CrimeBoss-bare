@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerEngineer_SWAT(const FObjectInitializer& ObjectInitializer);
 
 };
-

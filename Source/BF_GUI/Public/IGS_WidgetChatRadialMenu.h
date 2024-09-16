@@ -16,13 +16,12 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void HandleSliceClicked(UIGS_WidgetChatRadialSlice* inSlice);
-    
+
 private:
     UPROPERTY()
     UDataTable* m_DataTable;
-    
+
     UPROPERTY(Instanced)
     UIGS_PlayerChatWheelComponent* PlayerChatWheelComponent;
-    
-};
 
+};

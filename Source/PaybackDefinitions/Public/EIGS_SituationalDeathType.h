@@ -10,4 +10,3 @@ enum class EIGS_SituationalDeathType : uint8 {
     Wall_Back,
     Wall_Right,
 };
-

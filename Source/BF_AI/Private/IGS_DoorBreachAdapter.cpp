@@ -11,4 +11,3 @@ FEntryPoints UIGS_DoorBreachAdapter::GetEnterPoints(AActor* Actor, AIGS_RoomBase
     return FEntryPoints{};
 }
 
-

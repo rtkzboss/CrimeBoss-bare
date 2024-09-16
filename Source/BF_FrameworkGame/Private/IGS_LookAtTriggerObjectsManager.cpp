@@ -9,4 +9,3 @@ void UIGS_LookAtTriggerObjectsManager::UnregisterInteractiveComponent(UIGS_LookA
 void UIGS_LookAtTriggerObjectsManager::RegisterInteractiveComponent(UIGS_LookAtTriggerComponent* InComponent) {
 }
 
-

@@ -11,25 +11,24 @@ struct FMETA_WeaponSaveData : public FMETA_ItemSaveDataBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Amount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AdditionalPercentageOfWeaponPrice;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 SuccessfulMissions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DaysInShop;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag WeaponSkin;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UClass*> TargetWeaponsForUpgrade;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality TargetQualityToUpdateWeapon;
-    
+
     PAYBACKDEFINITIONS_API FMETA_WeaponSaveData();
 };
-

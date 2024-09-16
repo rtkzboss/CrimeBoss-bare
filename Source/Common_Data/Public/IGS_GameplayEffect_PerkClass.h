@@ -10,4 +10,3 @@ public:
     UIGS_GameplayEffect_PerkClass();
 
 };
-

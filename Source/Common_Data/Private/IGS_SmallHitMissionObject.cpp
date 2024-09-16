@@ -3,4 +3,3 @@
 UIGS_SmallHitMissionObject::UIGS_SmallHitMissionObject() {
 }
 
-

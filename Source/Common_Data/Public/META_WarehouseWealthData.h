@@ -8,7 +8,6 @@ struct COMMON_DATA_API FMETA_WarehouseWealthData {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float MultiplierOfMissionReward;
-    
+
     FMETA_WarehouseWealthData();
 };
-

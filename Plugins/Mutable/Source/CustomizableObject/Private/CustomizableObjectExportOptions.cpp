@@ -4,4 +4,3 @@ FCustomizableObjectExportOptions::FCustomizableObjectExportOptions() {
     (*this).bTextureCompression = true;
     (*this).TargetPlatform = TEXT("");
 }
-

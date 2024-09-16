@@ -1,13 +1,12 @@
 #include "IGS_LaserBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 
 AIGS_LaserBase::AIGS_LaserBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
     (*this).DestroyingReportsToHQ = true;
     (*this).DestroyingIsSuspicious = true;
     (*this).DisablingIsSuspicious = true;
-    (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
+    (*this).RootComponent = gen;
 }
 
 
@@ -17,5 +16,4 @@ void AIGS_LaserBase::OnLaserDeath(float inCurrentHealth, float inCurrentShield, 
 
 void AIGS_LaserBase::DisableLaser(AIGS_GameCharacterFramework* inInstigator) {
 }
-
 

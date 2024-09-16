@@ -10,10 +10,9 @@ struct COMMON_DATA_API FIGS_LootBagItemHolder {
 public:
     UPROPERTY(VisibleAnywhere)
     TArray<FIGS_LootBagSingleItem> Items;
-    
+
     UPROPERTY(VisibleAnywhere)
     EIGS_ItemType ItemType;
-    
+
     FIGS_LootBagItemHolder();
 };
-

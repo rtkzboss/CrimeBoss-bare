@@ -14,30 +14,29 @@ struct BF_ANIMATIONS_API FIGS_AnimNode_PoseEffectorTarget : public FAnimNode_Ske
 public:
     UPROPERTY(EditAnywhere)
     TArray<FBoneReference> EffectorTargers;
-    
+
     UPROPERTY(EditAnywhere)
     FBoneReference RootBone;
-    
+
     UPROPERTY(EditAnywhere)
     float EffectorToGroundDistance;
-    
+
     UPROPERTY(EditAnywhere)
     float EffectorProjectionPrecision;
-    
+
     UPROPERTY(EditAnywhere)
     float FoootLocationToleranceFilter;
-    
+
 private:
     UPROPERTY(Instanced)
     USkeletalMeshComponent* m_CharacterMesh;
-    
+
     UPROPERTY()
     UIGS_FootIKAnimInstance* m_FootIKAnimInstance;
-    
+
     UPROPERTY()
     UIGS_CharacterAnimInstance* m_CharacterAniminstance;
-    
+
 public:
     FIGS_AnimNode_PoseEffectorTarget();
 };
-

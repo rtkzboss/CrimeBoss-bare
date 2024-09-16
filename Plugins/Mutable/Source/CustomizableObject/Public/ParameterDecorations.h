@@ -10,7 +10,6 @@ struct FParameterDecorations {
 public:
     UPROPERTY(Transient)
     TArray<UTexture2D*> Images;
-    
+
     CUSTOMIZABLEOBJECT_API FParameterDecorations();
 };
-

@@ -7,4 +7,3 @@ FIGS_InterestPointHolder::FIGS_InterestPointHolder() {
     (*this).PointOrOffset.Z = 0.000000000e+00f;
     (*this).Enabled = false;
 }
-

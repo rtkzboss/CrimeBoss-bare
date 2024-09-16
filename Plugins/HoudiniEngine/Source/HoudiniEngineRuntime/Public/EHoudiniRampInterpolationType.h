@@ -13,4 +13,3 @@ enum class EHoudiniRampInterpolationType : int8 {
     BSPLINE,
     HERMITE,
 };
-

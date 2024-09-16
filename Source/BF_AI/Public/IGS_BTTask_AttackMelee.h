@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_IntelligentGameCharacter* AIGameCharacter;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_MeleeWeaponBase* Weapon;
-    
-};
 
+};

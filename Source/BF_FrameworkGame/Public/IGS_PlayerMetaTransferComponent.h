@@ -7,8 +7,8 @@
 
 class AIGS_WieldableBase;
 class IIGS_HeisterNumberInterface;
-class UIGS_HeisterNumberInterface;
 class IIGS_InventoryInterface;
+class UIGS_HeisterNumberInterface;
 class UIGS_InventoryInterface;
 class UIGS_WieldableInventoryObjectBase;
 
@@ -21,18 +21,17 @@ public:
 protected:
     UFUNCTION()
     void OnWieldableChanged(EIGS_WieldableSlot inSlotType, AIGS_WieldableBase* inWieldableBase, UIGS_WieldableInventoryObjectBase* inInventoryObject);
-    
+
     UFUNCTION()
     void HandlePlayerDownState(FIGS_HitInfo inHitInfo);
-    
+
     UPROPERTY()
     TScriptInterface<IIGS_InventoryInterface> OwningCharacterInventoryInterface;
-    
+
     UPROPERTY()
     TScriptInterface<IIGS_HeisterNumberInterface> OwningCharacterHeisterNumberInterface;
-    
+
     UPROPERTY()
     bool bIsBotControlled;
-    
-};
 
+};

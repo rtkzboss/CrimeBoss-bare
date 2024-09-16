@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerHeavy_SWAT(const FObjectInitializer& ObjectInitializer);
 
 };
-

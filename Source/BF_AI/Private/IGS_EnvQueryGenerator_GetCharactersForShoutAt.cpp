@@ -7,4 +7,3 @@ UIGS_EnvQueryGenerator_GetCharactersForShoutAt::UIGS_EnvQueryGenerator_GetCharac
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

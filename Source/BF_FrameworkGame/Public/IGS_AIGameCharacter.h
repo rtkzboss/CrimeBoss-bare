@@ -10,4 +10,3 @@ public:
     AIGS_AIGameCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

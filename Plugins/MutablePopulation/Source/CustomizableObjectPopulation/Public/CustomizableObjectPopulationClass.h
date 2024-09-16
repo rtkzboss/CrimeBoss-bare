@@ -14,21 +14,20 @@ public:
 
     UPROPERTY(EditAnywhere)
     FString Name;
-    
+
     UPROPERTY(EditAnywhere)
     UCustomizableObject* CustomizableObject;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FString> WhiteList;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FString> Blacklist;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FCustomizableObjectPopulationCharacteristic> Characteristics;
-    
+
     UPROPERTY()
     TArray<FString> Tags;
-    
-};
 
+};

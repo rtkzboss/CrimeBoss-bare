@@ -11,4 +11,3 @@ FIGS_VisualStyleConfig::FIGS_VisualStyleConfig() {
     (*this).OutlineColor.B = 0.000000000e+00f;
     (*this).OutlineColor.A = 1.000000000e+00f;
 }
-

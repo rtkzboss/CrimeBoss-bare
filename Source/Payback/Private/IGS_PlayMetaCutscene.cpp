@@ -4,7 +4,7 @@ UIGS_PlayMetaCutscene::UIGS_PlayMetaCutscene() {
 }
 
 UIGS_PlayMetaCutscene* UIGS_PlayMetaCutscene::PlayMetaCutscene(UObject* inWCO, FText inCutsceneID, FText inDebugText, TMap<FGameplayTag, FIGS_CutsceneTagValue> inTagParams, FIGS_MetaCutsceneCharacters inCharacters, bool inAutoStart) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_PlayMetaCutscene::OnCutsceneUnloaded(FName inCutsceneID) {
@@ -21,5 +21,4 @@ void UIGS_PlayMetaCutscene::OnCutsceneFinished(FName inCutsceneID, FIGS_MetaCuts
 
 void UIGS_PlayMetaCutscene::LoadCutscene(FName inCutsceneID) {
 }
-
 

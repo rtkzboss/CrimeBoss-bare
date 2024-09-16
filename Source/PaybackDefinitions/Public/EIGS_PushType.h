@@ -10,4 +10,3 @@ enum class EIGS_PushType : uint8 {
     Push_Back,
     Push_Right,
 };
-

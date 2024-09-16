@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerHeistersBackup(const FObjectInitializer& ObjectInitializer);
 
 };
-

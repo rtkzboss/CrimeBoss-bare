@@ -1,21 +1,21 @@
 #include "IGS_IdlePoint.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "GameplayTagContainer.h"
-#include "EIGS_ScenarioDifficulty.h"
-#include "EIGS_TeamSideEnum.h"
 
 AIGS_IdlePoint::AIGS_IdlePoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).MinTimeUntilBreaker = 1.500000000e+01f;
     (*this).MaxTimeUntilBreaker = 6.000000000e+01f;
     (*this).MinWaitTime = 6.000000000e+01f;
     (*this).MaxWaitTime = 1.200000000e+02f;
-    auto& gen0 = (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AnimationsToPlayTag, 0));
-    gen0.Empty();
-    gen0.AddDefaulted(1);
-    auto& gen1 = (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AnimationsToPlayTag, 0));
-    gen1.Empty();
-    gen1.AddDefaulted(2);
+    FGameplayTag gen;
+    auto gen2 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen2->ContainerPtrToValuePtr<FName>(&gen, 0)) = TEXT("Anim.Patrol.IdleBreaker");
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AnimationsToPlayTag, 0)) = {MoveTemp(gen)};
+    FGameplayTag gen4;
+    (*gen2->ContainerPtrToValuePtr<FName>(&gen4, 0)) = TEXT("Anim.Patrol");
+    FGameplayTag gen5;
+    (*gen2->ContainerPtrToValuePtr<FName>(&gen5, 0)) = TEXT("Anim");
+    auto gen6 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen6->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AnimationsToPlayTag, 0)) = {MoveTemp(gen4), MoveTemp(gen5)};
 }
-
 

@@ -8,4 +8,3 @@ enum class EDFLDrawDebugColour : uint8 {
     Secondary,
     Tertiary,
 };
-

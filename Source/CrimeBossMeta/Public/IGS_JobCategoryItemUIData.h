@@ -11,16 +11,15 @@ struct FIGS_JobCategoryItemUIData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Image;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EJobUITileType TileDisplayType;
-    
+
     CRIMEBOSSMETA_API FIGS_JobCategoryItemUIData();
 };
-

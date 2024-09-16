@@ -8,4 +8,3 @@ enum class EIGS_InteractionWarningPriority : uint8 {
     Critical,
     Important,
 };
-

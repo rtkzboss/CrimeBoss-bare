@@ -8,4 +8,3 @@ FIGS_AggroHolder::FIGS_AggroHolder() {
     (*this).GlobalAggro = 0.000000000e+00f;
     (*this).IsClose = false;
 }
-

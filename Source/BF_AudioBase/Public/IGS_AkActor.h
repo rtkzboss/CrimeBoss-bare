@@ -16,17 +16,16 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnPostSignificance(const UIGS_SignificanceComponent* inObjectInfo, EIGS_SignificanceValue inSignificanceValue);
-    
+
 public:
     UFUNCTION(BlueprintPure)
     UAkComponent* GetAkComponent() const;
-    
+
 protected:
     UPROPERTY(EditAnywhere, Instanced)
     UIGS_SignificanceComponent* SignificanceComponent;
-    
+
     UPROPERTY(EditAnywhere, Instanced)
     UAkComponent* AkComponent;
-    
-};
 
+};

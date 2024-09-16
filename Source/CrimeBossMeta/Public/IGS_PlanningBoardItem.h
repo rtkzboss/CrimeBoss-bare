@@ -18,32 +18,31 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetStatus(EMETA_PlanningBoardItemStatus NewStatus);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetItemData(const FMETA_PlanningBoardItemRow& inItemData);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnStatusChanged(EMETA_PlanningBoardItemStatus NewStatus);
-    
+
     UFUNCTION(BlueprintPure)
     float GetZoomOffset() const;
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetId() const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<FMETA_PlanningBoardItemConnectionData> GetConnections() const;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UStaticMeshComponent* StaticMeshComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FMETA_PlanningBoardItemRow itemData;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     EMETA_PlanningBoardItemStatus Status;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

@@ -3,4 +3,3 @@
 UIGS_ChainContractID::UIGS_ChainContractID() {
 }
 
-

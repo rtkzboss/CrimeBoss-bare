@@ -8,19 +8,18 @@ struct POWERIKRUNTIME_API FPowerIKBodyInertia {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool ApplyInertiaToBody;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SmoothFactor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool UseSpring;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpringStrength;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpringDamping;
-    
+
     FPowerIKBodyInertia();
 };
-

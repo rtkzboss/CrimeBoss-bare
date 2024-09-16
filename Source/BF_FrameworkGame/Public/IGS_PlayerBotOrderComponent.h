@@ -13,12 +13,11 @@ public:
 
     UPROPERTY()
     AIGS_GameCharacterFramework* CurrentBot;
-    
+
     UPROPERTY()
     FText CurrentBotText;
-    
+
     UPROPERTY()
     bool bBotOrderInProgress;
-    
-};
 
+};

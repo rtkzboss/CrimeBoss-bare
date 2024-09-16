@@ -2,4 +2,3 @@
 
 FIGS_AIGangsterShieldTierData::FIGS_AIGangsterShieldTierData() {
 }
-

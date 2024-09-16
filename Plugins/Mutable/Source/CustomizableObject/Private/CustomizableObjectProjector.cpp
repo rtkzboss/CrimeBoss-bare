@@ -16,4 +16,3 @@ FCustomizableObjectProjector::FCustomizableObjectProjector() {
     (*this).ProjectionType = ECustomizableObjectProjectorType::Planar;
     (*this).Angle = 6.283185482e+00f;
 }
-

@@ -8,4 +8,3 @@ enum class EIGS_HitMarkersSetting : uint8 {
     Kill,
     All,
 };
-

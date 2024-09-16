@@ -8,7 +8,6 @@ struct COMMON_SAVE_API FMETA_PlayedPresets {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FString> PlayedPresets;
-    
+
     FMETA_PlayedPresets();
 };
-

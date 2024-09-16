@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     int32 ShippingSaveFilesLimit;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     int32 DeveloperSaveFilesLimit;
-    
-};
 
+};

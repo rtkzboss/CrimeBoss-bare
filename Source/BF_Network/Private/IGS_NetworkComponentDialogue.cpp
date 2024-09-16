@@ -1,7 +1,8 @@
 #include "IGS_NetworkComponentDialogue.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_NetworkComponentDialogue::UIGS_NetworkComponentDialogue(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_NetworkComponentDialogue::StopVoice(const FIGS_PlayVariationData& inPlayVariationData) {
@@ -18,7 +19,7 @@ bool UIGS_NetworkComponentDialogue::IsPlayingVoice(int32 inGroupID, const FIGS_D
 }
 
 float UIGS_NetworkComponentDialogue::GetVoiceProgress(int32 inGroupID) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_NetworkComponentDialogue::All_ResetVoiceSGX_Implementation(uint16 inGroupID) {
@@ -29,5 +30,4 @@ void UIGS_NetworkComponentDialogue::All_OnStopVoice_Implementation(FIGS_PlayVari
 
 void UIGS_NetworkComponentDialogue::All_OnPlayVoice_Implementation(FIGS_PlayVariationData inPlayVariationData) {
 }
-
 

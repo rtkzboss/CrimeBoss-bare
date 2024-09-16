@@ -9,16 +9,15 @@ struct PAYBACKDEFINITIONS_API FMETA_RandEventCategoryConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BaseChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ChanceIncrease;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval CooldownInDays;
-    
+
     FMETA_RandEventCategoryConfig();
 };
-

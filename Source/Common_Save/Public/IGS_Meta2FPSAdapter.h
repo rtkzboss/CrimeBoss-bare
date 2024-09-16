@@ -17,9 +17,8 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void TransferDataToFPS(const UObject* inWCO, FIGS_SharedMetaTransfer_Data inSharedData, FIGS_Meta2FPS_Data InMetaData);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FCommonHeisterData> ConvertMetaCharactersToFPS(const UObject* inWCO, UPARAM(Ref) TArray<UMETA_Character*>& inMetaCharacters);
-    
-};
 
+};

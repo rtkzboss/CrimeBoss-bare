@@ -16,18 +16,17 @@ class IAdvancedFriendsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintImplementableEvent)
     void OnSessionInviteReceived(FBPUniqueNetId PersonInviting, const FBlueprintSessionResult& SearchResult);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnSessionInviteAccepted(FBPUniqueNetId PersonInvited, const FBlueprintSessionResult& SearchResult);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnPlayerVoiceStateChanged(FBPUniqueNetId PlayerId, bool bIsTalking);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnPlayerLoginStatusChanged(EBPLoginStatus PreviousStatus, EBPLoginStatus NewStatus, FBPUniqueNetId PlayerUniqueNetID);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnPlayerLoginChanged(int32 PlayerNum);
-    
-};
 
+};

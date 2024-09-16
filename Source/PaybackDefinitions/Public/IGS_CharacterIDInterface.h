@@ -15,27 +15,26 @@ class PAYBACKDEFINITIONS_API IIGS_CharacterIDInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable)
     virtual void SetIsMaxLeveled(bool inIsMaxLeveled) PURE_VIRTUAL(SetIsMaxLeveled,);
-    
+
     UFUNCTION(BlueprintCallable)
     virtual void SetGenericVariant(int32 inGenericVariant) PURE_VIRTUAL(SetGenericVariant,);
-    
+
     UFUNCTION(BlueprintCallable)
     virtual void SetCharacterSkinID(FGameplayTag inTagID) PURE_VIRTUAL(SetCharacterSkinID,);
-    
+
     UFUNCTION(BlueprintCallable)
     virtual void SetCharacterID(EIGS_CharacterID inCharacterID) PURE_VIRTUAL(SetCharacterID,);
-    
+
     UFUNCTION(BlueprintCallable)
     virtual bool IsMaxLeveled() const PURE_VIRTUAL(IsMaxLeveled, return false;);
-    
+
     UFUNCTION(BlueprintCallable)
     virtual int32 GetGenericVariant() const PURE_VIRTUAL(GetGenericVariant, return 0;);
-    
+
     UFUNCTION(BlueprintCallable)
     virtual FGameplayTag GetCharacterSkinID() const PURE_VIRTUAL(GetCharacterSkinID, return FGameplayTag{};);
-    
-    UFUNCTION(BlueprintCallable)
-    virtual EIGS_CharacterID GetCharacterID() const PURE_VIRTUAL(GetCharacterID, return EIGS_CharacterID::Char_Unknown;);
-    
-};
 
+    UFUNCTION(BlueprintCallable)
+    virtual EIGS_CharacterID GetCharacterID() const PURE_VIRTUAL(GetCharacterID, return EIGS_CharacterID::Char_Gen_Start;);
+
+};

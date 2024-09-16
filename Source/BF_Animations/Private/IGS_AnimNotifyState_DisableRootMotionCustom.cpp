@@ -3,4 +3,3 @@
 UIGS_AnimNotifyState_DisableRootMotionCustom::UIGS_AnimNotifyState_DisableRootMotionCustom() {
 }
 
-

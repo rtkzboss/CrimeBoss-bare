@@ -19,15 +19,15 @@ int32 UIGS_AmmoHelpers::GetAmmoReserveForWeapon(AIGS_GameCharacterFramework* inO
 }
 
 UIGS_AmmoInventoryObject* UIGS_AmmoHelpers::GetAmmoObjectForWeapon(AIGS_GameCharacterFramework* inOwner, UIGS_WeaponInventoryObject* inWeapon) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_AmmoInventoryObject* UIGS_AmmoHelpers::GetAmmoObject(AIGS_GameCharacterFramework* inOwner, TSubclassOf<UIGS_InventoryObjectFramework> inAmmoClass) {
-    return NULL;
+    return nullptr;
 }
 
 TSubclassOf<UIGS_InventoryObjectFramework> UIGS_AmmoHelpers::GetAmmoClassForWeapon(UIGS_WeaponInventoryObject* inWeapon) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_AmmoHelpers::AddFullAmmoToWeaponDontTakeReserve(UIGS_WeaponInventoryObject* inWeapon) {
@@ -41,5 +41,4 @@ void UIGS_AmmoHelpers::AddAmmoToWeapon(UIGS_WeaponInventoryObject* inWeapon, AIG
 
 void UIGS_AmmoHelpers::AddAmmo(AIGS_GameCharacterFramework* inOwner, TSubclassOf<UIGS_AmmoInventoryObject> inAmmoClass, float inAmmoPercent) {
 }
-
 

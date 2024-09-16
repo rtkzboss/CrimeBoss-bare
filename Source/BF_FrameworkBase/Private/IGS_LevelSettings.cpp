@@ -8,4 +8,3 @@ FIGS_LevelSettings::FIGS_LevelSettings() {
     (*this).TerritoryData = nullptr;
     (*this).WaveManagerData = nullptr;
 }
-

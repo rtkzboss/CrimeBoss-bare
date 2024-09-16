@@ -13,4 +13,3 @@ FIKProperties::FIKProperties() {
     (*this).StabilizationCurveTreshold = 9.800000191e-01f;
     (*this).StabilizationSmoothness = 3.500000000e+01f;
 }
-

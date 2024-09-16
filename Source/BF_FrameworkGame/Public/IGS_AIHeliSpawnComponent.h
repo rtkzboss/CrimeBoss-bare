@@ -12,13 +12,12 @@ public:
 
     UPROPERTY(EditAnywhere)
     float FallingSpeed;
-    
+
     UPROPERTY(EditAnywhere)
     float GetOutAnimationDistance;
-    
+
 protected:
     UPROPERTY()
     TArray<FIGS_HeliSpawnInfo> m_HeliSpawnInfos;
-    
-};
 
+};

@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetEnabled(bool inEnabled);
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag DangerType;
-    
+
     UPROPERTY(Instanced)
     UNavModifierComponent* NavModifier;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

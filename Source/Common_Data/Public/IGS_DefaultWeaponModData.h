@@ -10,25 +10,24 @@ struct COMMON_DATA_API FIGS_DefaultWeaponModData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultMagazineMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultStockMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultSightMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultDynamicSightMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultBarrelMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> DefaultVisibilityMesh;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DefaultZoomMagnification;
-    
+
     FIGS_DefaultWeaponModData();
 };
-

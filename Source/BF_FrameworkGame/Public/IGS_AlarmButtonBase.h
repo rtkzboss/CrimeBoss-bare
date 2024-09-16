@@ -12,13 +12,12 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void TriggerAlarm();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnButtonPressed(bool bAlarmSuccess);
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void ActivateAlarmButton();
-    
-};
 
+};

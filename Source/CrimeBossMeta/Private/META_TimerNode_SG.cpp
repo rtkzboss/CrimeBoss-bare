@@ -16,4 +16,3 @@ void UMETA_TimerNode_SG::SetSaveData(FMETA_TimerNodeSaveData SaveData) {
 void UMETA_TimerNode_SG::GetSaveData(FMETA_TimerNodeSaveData& SaveData) {
 }
 
-

@@ -14,27 +14,26 @@ public:
 
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UWorld> Level;
-    
+
     UPROPERTY(EditAnywhere)
     int32 Seed;
-    
+
     UPROPERTY(EditAnywhere)
     FString OptionString;
-    
+
     UPROPERTY(EditAnywhere)
     FBox2D BoundingBox;
-    
+
     UPROPERTY(EditAnywhere)
     bool bComputeBoundingBoxAutomatically;
-    
+
     UPROPERTY(EditAnywhere)
     float FramerateGridCellSize;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FString, float> CameraHeights;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RenderTargetGamma;
-    
-};
 
+};

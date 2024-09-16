@@ -9,10 +9,9 @@ struct BF_COVERS_API FIGS_CoverVariant {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName Name;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_CoverPointDataHolder> CoverPointDataHolders;
-    
+
     FIGS_CoverVariant();
 };
-

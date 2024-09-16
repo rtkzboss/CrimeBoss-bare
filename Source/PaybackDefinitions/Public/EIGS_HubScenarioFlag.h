@@ -13,4 +13,3 @@ enum class EIGS_HubScenarioFlag : uint8 {
     Start_Exit,
     Start_Objective_Exit,
 };
-

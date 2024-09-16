@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/SceneComponent.h"
 #include "EHoudiniCurveBreakpointParameterization.h"
 #include "EHoudiniCurveMethod.h"
@@ -17,66 +16,65 @@ public:
 
     UPROPERTY()
     TArray<FTransform> CurvePoints;
-    
+
     UPROPERTY()
     TArray<FVector> DisplayPoints;
-    
+
     UPROPERTY()
     TArray<int32> DisplayPointIndexDivider;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString HoudiniSplineName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bClosed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bReversed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CurveOrder;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsHoudiniSplineVisible;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EHoudiniCurveType CurveType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EHoudiniCurveMethod CurveMethod;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EHoudiniCurveBreakpointParameterization CurveBreakpointParameterization;
-    
+
     UPROPERTY()
     bool bIsOutputCurve;
-    
+
     UPROPERTY()
     bool bCookOnCurveChanged;
-    
+
     UPROPERTY()
     bool bIsLegacyInputCurve;
-    
+
 private:
     UPROPERTY(DuplicateTransient, Transient)
     bool bHasChanged;
-    
+
     UPROPERTY(DuplicateTransient, Transient)
     bool bNeedsToTriggerUpdate;
-    
+
     UPROPERTY()
     bool bIsInputCurve;
-    
+
     UPROPERTY()
     bool bIsEditableOutputCurve;
-    
+
     UPROPERTY(DuplicateTransient, Transient)
     int32 NodeId;
-    
+
     UPROPERTY()
     FString PartName;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

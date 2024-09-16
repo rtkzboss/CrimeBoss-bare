@@ -12,4 +12,3 @@ enum class UDLSSSupport : uint8 {
     NotSupportedByPlatformAtBuildTime,
     NotSupportedIncompatibleAPICaptureToolActive,
 };
-

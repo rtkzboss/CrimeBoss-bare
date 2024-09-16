@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY()
     UIGS_LocalPlayerVoiceChat* m_LocalPlayerVoiceChat;
-    
-};
 
+};

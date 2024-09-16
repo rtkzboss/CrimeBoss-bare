@@ -16,4 +16,3 @@ FMETA_FinanceManagerSaveData::FMETA_FinanceManagerSaveData() {
     (*this).OtherIncome = 0;
     (*this).OtherSpending = 0;
 }
-

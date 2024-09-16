@@ -13,16 +13,15 @@ struct FIGS_PlotlineGraphData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> Graph;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_PlotlineGraphStartTime StartTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_PlotlineGraphNestedCondition> PlotlineConditions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ConditionExprOperator OuterConditionOperator;
-    
+
     PAYBACKDEFINITIONS_API FIGS_PlotlineGraphData();
 };
-

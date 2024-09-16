@@ -7,4 +7,3 @@ FIGS_HitSoundParameters::FIGS_HitSoundParameters() {
     (*this).Instigator = nullptr;
     (*this).Cooldown = 0.000000000e+00f;
 }
-

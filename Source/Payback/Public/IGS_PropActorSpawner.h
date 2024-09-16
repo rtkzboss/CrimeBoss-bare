@@ -14,19 +14,18 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     bool IsSpawned() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     AActor* GetSpawnedActor() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     bool Despawn() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropActorInfoStruct PropActorInfo;
-    
+
     UPROPERTY()
     AActor* m_SpawnedActor;
-    
-};
 
+};

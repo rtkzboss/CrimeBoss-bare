@@ -14,18 +14,17 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Count;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_UnitSpecialization UnitSpecialization;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_SpawnAnimType SpawnAnim;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SpawnPeriod;
-    
-};
 
+};

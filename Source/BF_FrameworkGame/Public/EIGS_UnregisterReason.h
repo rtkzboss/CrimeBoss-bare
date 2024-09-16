@@ -8,4 +8,3 @@ enum class EIGS_UnregisterReason : uint8 {
     UR_Death,
     UR_BotSwitch,
 };
-

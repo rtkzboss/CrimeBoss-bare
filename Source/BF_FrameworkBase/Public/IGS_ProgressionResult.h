@@ -8,10 +8,9 @@ struct BF_FRAMEWORKBASE_API FIGS_ProgressionResult {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LevelsAdded;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PointsAdded;
-    
+
     FIGS_ProgressionResult();
 };
-

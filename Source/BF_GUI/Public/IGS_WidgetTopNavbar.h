@@ -3,7 +3,7 @@
 #include "GameplayTagContainer.h"
 #include "IGS_WidgetWithInput.h"
 #include "ETopNavbarDirection.h"
-#include "IGS_TabSelectedEventDelegate.h"
+#include "IGS_TabSelectedEvent.h"
 #include "IGS_WidgetTopNavbar.generated.h"
 
 class UHorizontalBox;
@@ -17,28 +17,27 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SelectTab(const UIGS_TabButton* inTab);
-    
+
     UFUNCTION(BlueprintCallable)
     void SelectNextTab(ETopNavbarDirection Direction);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTabSelected(FGameplayTag inScreenTag);
-    
+
     UFUNCTION(BlueprintPure)
     UIGS_TabButton* GetTabByScreenTag(FGameplayTag inScreenTag) const;
-    
+
     UFUNCTION(BlueprintCallable)
     void DeselectAllTabs();
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_TabSelectedEvent OnTabSelectedEvent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UHorizontalBox* TabsOnly;
-    
+
 private:
     UPROPERTY(Instanced)
     TArray<UIGS_TabButton*> m_Tabs;
-    
-};
 
+};

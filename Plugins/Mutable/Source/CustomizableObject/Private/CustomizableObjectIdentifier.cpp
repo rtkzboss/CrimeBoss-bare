@@ -5,4 +5,3 @@ FCustomizableObjectIdentifier::FCustomizableObjectIdentifier() {
     (*this).CustomizableObjectName = TEXT("");
     (*this).Guid = TEXT("");
 }
-

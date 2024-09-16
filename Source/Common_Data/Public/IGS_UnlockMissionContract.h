@@ -9,7 +9,6 @@ struct COMMON_DATA_API FIGS_UnlockMissionContract {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag MissionID;
-    
+
     FIGS_UnlockMissionContract();
 };
-

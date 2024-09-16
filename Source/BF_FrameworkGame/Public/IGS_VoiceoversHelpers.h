@@ -15,9 +15,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void ReportGrenadeThrown(AIGS_GameCharacterFramework* Instigator, AIGS_ThrowableProjectileBase* inProjectile);
-    
+
     UFUNCTION(BlueprintCallable)
     static void ReportGadgetDisrupted(AIGS_GameCharacterFramework* Instigator, AIGS_ProgressGadgetBase* inGadget, bool isDrill);
-    
-};
 
+};

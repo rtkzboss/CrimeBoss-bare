@@ -9,4 +9,3 @@ struct FBlendablePostProcessSettings : public FPostProcessSettings {
 public:
     BF_RENDERING_API FBlendablePostProcessSettings();
 };
-

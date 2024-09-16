@@ -1,6 +1,4 @@
 #include "IGS_SquadFramework.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_SquadFramework::AIGS_SquadFramework(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).SquadID = -1;
@@ -16,7 +14,7 @@ EIGS_TeamSideEnum AIGS_SquadFramework::GetTeamSide() const {
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_SquadFramework::GetSquadMembers() const {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 int32 AIGS_SquadFramework::GetSquadID() const {
@@ -30,5 +28,4 @@ int32 AIGS_SquadFramework::GetMemberCount() const {
 int32 AIGS_SquadFramework::GetAliveMemberCount() const {
     return 0;
 }
-
 

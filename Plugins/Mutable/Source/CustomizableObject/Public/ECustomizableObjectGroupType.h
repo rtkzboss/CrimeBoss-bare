@@ -9,4 +9,3 @@ enum class ECustomizableObjectGroupType : uint8 {
     COGT_ONE,
     COGT_ONE_OR_NONE,
 };
-

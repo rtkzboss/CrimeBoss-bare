@@ -5,4 +5,3 @@ FIGS_UnlockedCharacterSaveData::FIGS_UnlockedCharacterSaveData() {
     (*this).bCharacterMaxLeveled = false;
     (*this).bCharacterQuestlineCompleted = false;
 }
-

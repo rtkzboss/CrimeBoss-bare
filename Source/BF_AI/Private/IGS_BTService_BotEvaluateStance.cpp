@@ -4,4 +4,3 @@ UIGS_BTService_BotEvaluateStance::UIGS_BTService_BotEvaluateStance() {
     (*this).NodeName = TEXT("Bot Evaluate Stance and Speed");
 }
 
-

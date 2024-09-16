@@ -4,4 +4,3 @@ FMETA_BossEliminationRewardsDistribution::FMETA_BossEliminationRewardsDistributi
     (*this).PercantageOfEliminationWithTwoRewards = 0;
     (*this).PercantageOfEliminationWithThreeRewards = 0;
 }
-

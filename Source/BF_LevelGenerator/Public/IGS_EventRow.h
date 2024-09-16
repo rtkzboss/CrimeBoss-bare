@@ -11,13 +11,12 @@ struct BF_LEVELGENERATOR_API FIGS_EventRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_Event EventType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_BuildConfigurationTileable EventSubLevel;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ScriptActorTag;
-    
+
     FIGS_EventRow();
 };
-

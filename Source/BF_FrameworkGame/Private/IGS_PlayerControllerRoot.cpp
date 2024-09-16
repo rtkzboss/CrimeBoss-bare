@@ -1,8 +1,6 @@
 #include "IGS_PlayerControllerRoot.h"
 #include "IGS_InputDeviceDetectorComponent.h"
-#include "GameFramework/Controller.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
+#include "Components/SceneComponent.h"
 #include "Components/SphereComponent.h"
 #include "ActiveSubControllerHandler.h"
 #include "IGS_AimAssistComponent.h"
@@ -13,7 +11,16 @@
 #include "IGS_SubControllerVehicle.h"
 
 AIGS_PlayerControllerRoot::AIGS_PlayerControllerRoot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).DefaultHUDClass = nullptr;
+    auto gen = CreateDefaultSubobject<UActiveSubControllerHandler>(TEXT("ActiveSubControllerHandler"));
+    auto gen2 = CreateDefaultSubobject<UIGS_SubControllerHuman>(TEXT("SubControllerHuman"));
+    auto gen3 = CreateDefaultSubobject<UIGS_SubControllerMountable>(TEXT("SubControllerMountable"));
+    auto gen4 = CreateDefaultSubobject<UIGS_SubControllerVehicle>(TEXT("SubControllerVehicle"));
+    auto gen5 = CreateDefaultSubobject<USphereComponent>(TEXT("StreamingVolumeInstigator Sphere Collisions"));
+    auto gen6 = CreateDefaultSubobject<UIGS_InputDeviceDetectorComponent>(TEXT("InputDeviceDetectorComponent"));
+    auto gen7 = CreateDefaultSubobject<UIGS_PlayerDataComponent>(TEXT("PlayerDataComponent"));
+    auto gen8 = CreateDefaultSubobject<UIGS_PlayerBotOrderComponent>(TEXT("PlayerBotOrderComponent"));
+    auto gen9 = CreateDefaultSubobject<UIGS_AimAssistComponent>(TEXT("AimAssistComponent"));
+    (*this).DefaultHUDClass = FSoftObjectPath();
     (*this).bAllowSwitchFireModeInSprint = true;
     (*this).bAllowChangeSlotInSprint = true;
     (*this).bToggleCrouch = true;
@@ -22,19 +29,20 @@ AIGS_PlayerControllerRoot::AIGS_PlayerControllerRoot(const FObjectInitializer& O
     (*this).StartHeistHoldTimeInSeconds = 2.000000000e+00f;
     (*this).ContextualDoublePingThresholdInSeconds = 2.500000000e-01f;
     (*this).PingCooldownInSeconds = 1.000000015e-01f;
-    (*this).ActiveSubControllerHandler = CreateDefaultSubobject<UActiveSubControllerHandler>(TEXT("ActiveSubControllerHandler"));
-    (*this).SubControllerHuman = CreateDefaultSubobject<UIGS_SubControllerHuman>(TEXT("SubControllerHuman"));
-    (*this).SubControllerMountable = CreateDefaultSubobject<UIGS_SubControllerMountable>(TEXT("SubControllerMountable"));
-    (*this).SubControllerVehicle = CreateDefaultSubobject<UIGS_SubControllerVehicle>(TEXT("SubControllerVehicle"));
-    (*this).m_StreamingVolumeCollision = CreateDefaultSubobject<USphereComponent>(TEXT("StreamingVolumeInstigator Sphere Collisions"));
-    (*this).m_InputDeviceDetectorComponent = CreateDefaultSubobject<UIGS_InputDeviceDetectorComponent>(TEXT("InputDeviceDetectorComponent"));
-    (*this).PlayerDataComponent = CreateDefaultSubobject<UIGS_PlayerDataComponent>(TEXT("PlayerDataComponent"));
-    (*this).PlayerBotOrderComponent = CreateDefaultSubobject<UIGS_PlayerBotOrderComponent>(TEXT("PlayerBotOrderComponent"));
-    (*this).m_AimAssistComponent = CreateDefaultSubobject<UIGS_AimAssistComponent>(TEXT("AimAssistComponent"));
+    (*this).ActiveSubControllerHandler = gen;
+    (*this).SubControllerHuman = gen2;
+    (*this).SubControllerMountable = gen3;
+    (*this).SubControllerVehicle = gen4;
+    (*this).m_StreamingVolumeCollision = gen5;
+    (*this).m_InputDeviceDetectorComponent = gen6;
+    (*this).PlayerDataComponent = gen7;
+    (*this).PlayerBotOrderComponent = gen8;
+    (*this).m_AimAssistComponent = gen9;
     (*this).m_GivingUpTime = 2.000000000e+00f;
     (*this).HUDReconstructTimePeriod = 2.000000000e+00f;
     (*this).bAttachToPawn = true;
-    (*this).m_StreamingVolumeCollision->SetupAttachment((*this).RootComponent);
+    auto gen10 = Cast<USceneComponent>(GetDefaultSubobjectByName(TEXT("TransformComponent0")));
+    if (gen5) gen5->SetupAttachment(gen10);
 }
 
 void AIGS_PlayerControllerRoot::TryPossessSpectatedBot() {
@@ -143,11 +151,11 @@ void AIGS_PlayerControllerRoot::OnCloseUnlockMenu_Implementation() {
 
 
 float AIGS_PlayerControllerRoot::OnAddYawInput_Implementation(float inYaw) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_PlayerControllerRoot::OnAddPitchInput_Implementation(float InPitch) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool AIGS_PlayerControllerRoot::IsUsingKeyboardAndMouse() const {
@@ -188,31 +196,31 @@ bool AIGS_PlayerControllerRoot::IsBotSwapInputIgnored() const {
 
 
 float AIGS_PlayerControllerRoot::GetStartHeistHoldTimeInSeconds() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_PlayerControllerRoot::GetPingCooldownInSeconds() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_PlayerControllerRoot::GetHoldTimeInSeconds() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_PlayerControllerRoot::GetDoublePingThresholdInSeconds() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EIGS_InputDevice AIGS_PlayerControllerRoot::GetCurrentInputDeviceType() const {
-    return EIGS_InputDevice::ID_UNKNOWN;
+    return EIGS_InputDevice::ID_KeyboardAndMouse;
 }
 
 float AIGS_PlayerControllerRoot::GetContextualDoublePingThresholdInSeconds() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UIGS_AimAssistComponent* AIGS_PlayerControllerRoot::GetAimAssistComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 
@@ -243,5 +251,4 @@ void AIGS_PlayerControllerRoot::Client_UnlockMethodChosen_Implementation(const F
 
 void AIGS_PlayerControllerRoot::CallBotCommand(EIGS_BotCommandDefinition inCommand) {
 }
-
 

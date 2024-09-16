@@ -10,4 +10,3 @@ public:
     AIGS_CarNavMesh(const FObjectInitializer& ObjectInitializer);
 
 };
-

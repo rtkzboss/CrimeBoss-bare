@@ -8,10 +8,9 @@ struct COMMON_SAVE_API FMETA_BossLevelManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 AmountOfPrimaryWeaponsIssued;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 AmountOfAdditionalEquipmentIssued;
-    
+
     FMETA_BossLevelManagerSaveData();
 };
-

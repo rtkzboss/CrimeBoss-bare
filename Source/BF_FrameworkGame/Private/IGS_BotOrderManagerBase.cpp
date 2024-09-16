@@ -4,7 +4,7 @@ UIGS_BotOrderManagerBase::UIGS_BotOrderManagerBase() {
 }
 
 EIGS_BotOrderResult UIGS_BotOrderManagerBase::GetLastGetBestActionForResult() const {
-    return EIGS_BotOrderResult::Unknown;
+    return EIGS_BotOrderResult::Success;
 }
 
 FIGS_BotOrderAction UIGS_BotOrderManagerBase::GetBestActionFor(AIGS_GameCharacterFramework*& inInstigator, const AIGS_GameCharacterFramework* inBot, UObject* inObject, const FVector InLocation, const EIGS_BotOrderActionSource inSource) {
@@ -12,7 +12,7 @@ FIGS_BotOrderAction UIGS_BotOrderManagerBase::GetBestActionFor(AIGS_GameCharacte
 }
 
 TArray<FIGS_BotOrderAction> UIGS_BotOrderManagerBase::GetActions(AIGS_GameCharacterFramework*& inInstigator, const AIGS_GameCharacterFramework* inBot, UObject* inObject) {
-    return TArray<FIGS_BotOrderAction>();
+    return {};
 }
 
 bool UIGS_BotOrderManagerBase::DoActions(const TArray<FIGS_BotOrderAction>& inActions, const bool inAllMustSucceed) {
@@ -24,11 +24,10 @@ bool UIGS_BotOrderManagerBase::DoAction(FIGS_BotOrderAction& InAction) {
 }
 
 TArray<FIGS_BotOrderAction> UIGS_BotOrderManagerBase::CreateBotOrderActions(const UObject* inWCO, const EIGS_BotCommandDefinition inType, AIGS_GameCharacterFramework* inInstigator, const AIGS_GameCharacterFramework* inBot, UObject* inObject, const FVector InLocation) {
-    return TArray<FIGS_BotOrderAction>();
+    return {};
 }
 
 FIGS_BotOrderAction UIGS_BotOrderManagerBase::CreateBotOrderAction(const UObject* inWCO, const EIGS_BotCommandDefinition inType, AIGS_GameCharacterFramework* inInstigator, const AIGS_GameCharacterFramework* inBot, UObject* inObject, const FVector InLocation) {
     return FIGS_BotOrderAction{};
 }
-
 

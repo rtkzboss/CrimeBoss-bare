@@ -3,4 +3,3 @@
 UIGS_IdleAvoidanceManager::UIGS_IdleAvoidanceManager() {
 }
 
-

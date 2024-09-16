@@ -8,4 +8,3 @@ enum class EIGS_ChainType : uint8 {
     CrimeTime,
     Unknown,
 };
-

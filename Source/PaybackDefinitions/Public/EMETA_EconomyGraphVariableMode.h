@@ -7,4 +7,3 @@ enum class EMETA_EconomyGraphVariableMode : uint8 {
     Absolute,
     Multiplier,
 };
-

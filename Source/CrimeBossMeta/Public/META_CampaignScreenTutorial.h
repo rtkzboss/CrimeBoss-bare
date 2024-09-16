@@ -10,13 +10,12 @@ struct FMETA_CampaignScreenTutorial : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag screenTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag TutorialID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShowEvenFinished;
-    
+
     CRIMEBOSSMETA_API FMETA_CampaignScreenTutorial();
 };
-

@@ -9,4 +9,3 @@ enum class EIGS_TextDeviceType : uint8 {
     Other,
     Count,
 };
-

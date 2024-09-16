@@ -14,9 +14,8 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnOrderFinished(bool inResult);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnNewBotOrderEvent(AIGS_GameCharacterFramework* inBot, const FText& InText, float InTime);
-    
-};
 
+};

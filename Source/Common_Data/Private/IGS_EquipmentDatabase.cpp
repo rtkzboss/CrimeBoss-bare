@@ -12,11 +12,11 @@ int32 UIGS_EquipmentDatabase::GetIndex(const TSubclassOf<UIGS_EquipmentInventory
 }
 
 UIGS_EquipmentDatabase* UIGS_EquipmentDatabase::GetEquipmentDatabaseInstance(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> UIGS_EquipmentDatabase::GetEquipmentByQualities(UObject* inWCO, const TArray<EMETA_ItemQuality>& inQualities, const TArray<FGameplayTag>& inUnlockedEquipment, bool inIgnoreUnlock) {
-    return TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>();
+    return {};
 }
 
 FIGS_EquipmentTableRow UIGS_EquipmentDatabase::GetDataEquipmentByTagID(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded) {
@@ -30,5 +30,4 @@ FIGS_EquipmentTableRow UIGS_EquipmentDatabase::GetDataEquipment(UObject* inWCO, 
 FIGS_EquipmentTableRow UIGS_EquipmentDatabase::GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const {
     return FIGS_EquipmentTableRow{};
 }
-
 

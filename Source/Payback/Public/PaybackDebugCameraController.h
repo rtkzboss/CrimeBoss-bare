@@ -10,4 +10,3 @@ public:
     APaybackDebugCameraController(const FObjectInitializer& ObjectInitializer);
 
 };
-

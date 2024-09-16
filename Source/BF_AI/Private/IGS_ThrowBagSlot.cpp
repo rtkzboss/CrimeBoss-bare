@@ -6,4 +6,3 @@ UIGS_ThrowBagSlot::UIGS_ThrowBagSlot() {
 void UIGS_ThrowBagSlot::ReportSlotReached(AIGS_GameCharacterFramework* inCharacter) {
 }
 
-

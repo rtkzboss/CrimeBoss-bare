@@ -7,4 +7,3 @@ UConstructionSystemRemoveTool::UConstructionSystemRemoveTool() {
 void UConstructionSystemRemoveTool::HandleInput_RemoveAtCursor() {
 }
 
-

@@ -11,10 +11,9 @@ struct PAYBACK_API FIGS_MetaCutsceneCharacterPoseData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_MetaCutsceneCharacterPose PoseType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<UAnimMontage*> Variations;
-    
+
     FIGS_MetaCutsceneCharacterPoseData();
 };
-

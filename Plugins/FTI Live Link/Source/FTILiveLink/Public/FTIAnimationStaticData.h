@@ -9,4 +9,3 @@ struct FTILIVELINK_API FFTIAnimationStaticData : public FLiveLinkBaseStaticData 
 public:
     FFTIAnimationStaticData();
 };
-

@@ -8,4 +8,3 @@ enum class EMETA_NotificationType : uint8 {
     Big,
     BigManual,
 };
-

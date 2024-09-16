@@ -21,18 +21,17 @@ bool UNISLibrary::IsNISModeSupported(UNISMode NISMode) {
 }
 
 TArray<UNISMode> UNISLibrary::GetSupportedNISModes() {
-    return TArray<UNISMode>();
+    return {};
 }
 
 void UNISLibrary::GetNISScreenPercentageRange(float& MinScreenPercentage, float& MaxScreenPercentage) {
 }
 
 float UNISLibrary::GetNISRecommendedScreenPercentage(UNISMode NISMode) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UNISMode UNISLibrary::GetDefaultNISMode() {
     return UNISMode::Off;
 }
-
 

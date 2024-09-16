@@ -8,4 +8,3 @@ struct BF_VOICEOVER_API FIGS_LoadedLineDatabaseKey {
 public:
     FIGS_LoadedLineDatabaseKey();
 };
-

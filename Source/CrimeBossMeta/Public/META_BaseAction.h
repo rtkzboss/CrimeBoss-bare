@@ -14,8 +14,7 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ExecuteAction(AMETA_BaseGameMode* inGameMode);
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

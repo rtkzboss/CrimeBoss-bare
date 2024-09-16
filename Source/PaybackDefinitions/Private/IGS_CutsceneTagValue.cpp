@@ -2,6 +2,5 @@
 
 FIGS_CutsceneTagValue::FIGS_CutsceneTagValue() {
     (*this).Value = 0;
-    (*this).TextValue = FText::FromString(TEXT(""));
+    (*this).TextValue = FText::GetEmpty();
 }
-

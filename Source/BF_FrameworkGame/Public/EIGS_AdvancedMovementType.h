@@ -16,4 +16,3 @@ enum class EIGS_AdvancedMovementType : uint8 {
     AMT_CoopClimbHelp,
     AMT_CoopClimbing,
 };
-

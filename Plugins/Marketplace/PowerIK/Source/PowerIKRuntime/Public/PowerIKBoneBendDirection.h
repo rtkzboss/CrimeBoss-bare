@@ -9,10 +9,9 @@ struct POWERIKRUNTIME_API FPowerIKBoneBendDirection {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FVector BendDirection;
-    
+
     FPowerIKBoneBendDirection();
 };
-

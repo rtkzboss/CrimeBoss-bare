@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_TutorialBubbleDirection Direction;
-    
-};
 
+};

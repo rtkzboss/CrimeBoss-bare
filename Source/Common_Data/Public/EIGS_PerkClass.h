@@ -11,4 +11,3 @@ enum class EIGS_PerkClass : uint8 {
     PC_Agility,
     PC_Special,
 };
-

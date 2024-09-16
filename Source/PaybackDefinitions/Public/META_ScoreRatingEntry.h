@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_ScoreRatingEntry {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 RequiredScore;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FText RatingLabel;
-    
+
     FMETA_ScoreRatingEntry();
 };
-

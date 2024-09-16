@@ -12,11 +12,10 @@ FGameplayTag UMETA_MissionMapEvent::GetTileTag() {
 }
 
 UMETA_BaseMission* UMETA_MissionMapEvent::GetMission() {
-    return NULL;
+    return nullptr;
 }
 
 bool UMETA_MissionMapEvent::GetIsNew() {
     return false;
 }
-
 

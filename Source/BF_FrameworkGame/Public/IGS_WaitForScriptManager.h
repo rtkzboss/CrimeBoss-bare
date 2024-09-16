@@ -1,11 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "ScriptManagerReadyOutputPinDelegate.h"
+#include "ScriptManagerReadyOutputPin.h"
 #include "IGS_WaitForScriptManager.generated.h"
 
 class AIGS_ScriptManagerBase;
-class UIGS_WaitForScriptManager;
 class UObject;
 
 UCLASS()
@@ -16,14 +15,13 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_WaitForScriptManager* WaitForScriptManager(UObject* inWorldContextObject);
-    
+
 private:
     UFUNCTION()
     void ExecuteOnScriptManagerReady(AIGS_ScriptManagerBase* inScriptManager) const;
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FScriptManagerReadyOutputPin WhenScriptManagerReady;
-    
-};
 
+};

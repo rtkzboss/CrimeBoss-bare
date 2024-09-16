@@ -9,4 +9,3 @@ enum class EIGS_VIPSpawnPointDataSource : uint8 {
     VD_Story,
     VD_Old,
 };
-

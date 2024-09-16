@@ -17,18 +17,17 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ResetGraph();
-    
+
     UFUNCTION(BlueprintPure)
     UStoryGraphManager* GetOwningManager();
-    
+
     UFUNCTION(BlueprintCallable)
     UMETA_BaseNode_SG* GetNode(const int32 NodeId);
-    
+
     UFUNCTION(BlueprintCallable)
     void EndGraph(AMETA_BaseGameMode* inGameMode, EMETA_GoalStatus inResultResult);
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EMETA_RandEventCategory Type;
-    
-};
 
+};

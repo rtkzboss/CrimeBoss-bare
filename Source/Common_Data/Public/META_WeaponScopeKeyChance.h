@@ -9,7 +9,6 @@ struct COMMON_DATA_API FMETA_WeaponScopeKeyChance : public FMETA_WeaponScopeKey 
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float Chance;
-    
+
     FMETA_WeaponScopeKeyChance();
 };
-

@@ -8,16 +8,15 @@ struct PAYBACKDEFINITIONS_API FMETA_BonusSetup {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 StartLevel;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ChangeValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Frequency;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Repetition;
-    
+
     FMETA_BonusSetup();
 };
-

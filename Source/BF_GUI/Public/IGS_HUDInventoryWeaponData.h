@@ -12,13 +12,12 @@ struct BF_GUI_API FIGS_HUDInventoryWeaponData {
 public:
     UPROPERTY(BlueprintReadOnly)
     TSoftClassPtr<AIGS_WieldableBase> WieldableID;
-    
+
     UPROPERTY(BlueprintReadOnly)
     EIGS_WieldableSlot Slot;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<UTexture> WieldableIcon;
-    
+
     FIGS_HUDInventoryWeaponData();
 };
-

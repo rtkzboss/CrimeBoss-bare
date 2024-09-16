@@ -10,4 +10,3 @@ public:
     UIGS_BTService_OutlineCharacter();
 
 };
-

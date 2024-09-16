@@ -12,6 +12,5 @@ public:
 protected:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     FName RemoveSplittersWithTag;
-    
-};
 
+};

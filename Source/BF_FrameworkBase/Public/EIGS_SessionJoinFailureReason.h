@@ -11,4 +11,3 @@ enum class EIGS_SessionJoinFailureReason : uint8 {
     FR_UnknownError,
     FR_Invalid = 255,
 };
-

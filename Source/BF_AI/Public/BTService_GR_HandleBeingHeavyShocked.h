@@ -13,15 +13,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector AnimTypeTagKey;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float HitReactionChance;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float HeavyReactionChance;
-    
-};
 
+};

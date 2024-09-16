@@ -4,4 +4,3 @@ FMutableModelParameterValue::FMutableModelParameterValue() {
     (*this).Name = TEXT("");
     (*this).Value = 0;
 }
-

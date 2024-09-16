@@ -3,4 +3,3 @@
 UIGS_AnimNotify_FinishMeleeAttack::UIGS_AnimNotify_FinishMeleeAttack() {
 }
 
-

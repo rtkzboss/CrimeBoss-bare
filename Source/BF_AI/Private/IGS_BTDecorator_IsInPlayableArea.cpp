@@ -4,4 +4,3 @@ UIGS_BTDecorator_IsInPlayableArea::UIGS_BTDecorator_IsInPlayableArea() {
     (*this).NodeName = TEXT("Is In PlayableArea");
 }
 
-

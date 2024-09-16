@@ -1,5 +1,4 @@
 #include "META_JobManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_JobManagerComponent::UMETA_JobManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -23,7 +22,7 @@ int32 UMETA_JobManagerComponent::GetJobParameterFromStorage(const TSubclassOf<UM
 
 
 TMap<FGameplayTag, int32> UMETA_JobManagerComponent::GetAllJobParametersFromStorage(const TSubclassOf<UMETA_MissionID>& inJobID, bool bFlushAfterGet) {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 void UMETA_JobManagerComponent::ChangeJobParameterInStorage(const TSubclassOf<UMETA_MissionID>& inJobID, const FGameplayTag& inTag, int32 inChangeByValue) {
@@ -31,5 +30,4 @@ void UMETA_JobManagerComponent::ChangeJobParameterInStorage(const TSubclassOf<UM
 
 void UMETA_JobManagerComponent::AddJobParameterToStorage(const TSubclassOf<UMETA_MissionID>& inJobID, const FGameplayTag& inTag, int32 InValue) {
 }
-
 

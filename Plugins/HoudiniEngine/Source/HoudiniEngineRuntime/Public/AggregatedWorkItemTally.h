@@ -10,26 +10,25 @@ public:
 protected:
     UPROPERTY()
     int32 TotalWorkItems;
-    
+
     UPROPERTY()
     int32 WaitingWorkItems;
-    
+
     UPROPERTY()
     int32 ScheduledWorkItems;
-    
+
     UPROPERTY()
     int32 CookingWorkItems;
-    
+
     UPROPERTY()
     int32 CookedWorkItems;
-    
+
     UPROPERTY()
     int32 ErroredWorkItems;
-    
+
     UPROPERTY()
     int32 CookCancelledWorkItems;
-    
+
 public:
     FAggregatedWorkItemTally();
 };
-

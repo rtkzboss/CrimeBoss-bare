@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* PoliceSirenAkEvent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkRtpc* PoliceSirenAkRtpc;
-    
-};
 
+};

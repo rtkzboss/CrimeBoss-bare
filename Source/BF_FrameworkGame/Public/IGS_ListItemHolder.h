@@ -10,10 +10,9 @@ struct FIGS_ListItemHolder {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_InventoryObjectFramework* InventoryItem;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ListItemID;
-    
+
     BF_FRAMEWORKGAME_API FIGS_ListItemHolder();
 };
-

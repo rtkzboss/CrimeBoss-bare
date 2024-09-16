@@ -9,13 +9,12 @@ struct COMMON_SAVE_API FIGS_MissionRewardCalculations {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTag RowType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     float Value;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     float Score;
-    
+
     FIGS_MissionRewardCalculations();
 };
-

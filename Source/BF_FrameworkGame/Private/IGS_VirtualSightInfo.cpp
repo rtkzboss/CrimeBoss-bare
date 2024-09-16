@@ -6,4 +6,3 @@ FIGS_VirtualSightInfo::FIGS_VirtualSightInfo() {
     (*this).VirtualSightStaticSocket = nullptr;
     (*this).VirtualSightStaticMesh = nullptr;
 }
-

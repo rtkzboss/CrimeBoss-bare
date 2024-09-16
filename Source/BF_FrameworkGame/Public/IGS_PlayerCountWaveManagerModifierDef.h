@@ -9,13 +9,12 @@ struct BF_FRAMEWORKGAME_API FIGS_PlayerCountWaveManagerModifierDef {
 public:
     UPROPERTY(EditDefaultsOnly)
     FIGS_WaveManagerModifierDef TwoPlayers;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_WaveManagerModifierDef ThreePlayers;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_WaveManagerModifierDef FourPlayers;
-    
+
     FIGS_PlayerCountWaveManagerModifierDef();
 };
-

@@ -10,4 +10,3 @@ public:
     UEnvQueryTest_AISpawnGroupIsOnCoolDown();
 
 };
-

@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerAmbientLife(const FObjectInitializer& ObjectInitializer);
 
 };
-

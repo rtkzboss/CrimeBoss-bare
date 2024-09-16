@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterTierDef : public FIGS_AIBaseTierDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterBaseDataModifiers Stats;
-    
+
     FIGS_AIGangsterTierDef();
 };
-

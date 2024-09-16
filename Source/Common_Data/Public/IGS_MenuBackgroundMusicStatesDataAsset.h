@@ -14,6 +14,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FGameplayTag, UAkStateValue*> AkEvents;
-    
-};
 
+};

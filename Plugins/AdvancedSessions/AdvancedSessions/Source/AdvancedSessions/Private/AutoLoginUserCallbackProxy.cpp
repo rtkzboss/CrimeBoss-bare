@@ -4,7 +4,6 @@ UAutoLoginUserCallbackProxy::UAutoLoginUserCallbackProxy() {
 }
 
 UAutoLoginUserCallbackProxy* UAutoLoginUserCallbackProxy::AutoLoginUser(UObject* WorldContextObject, int32 LocalUserNum) {
-    return NULL;
+    return nullptr;
 }
-
 

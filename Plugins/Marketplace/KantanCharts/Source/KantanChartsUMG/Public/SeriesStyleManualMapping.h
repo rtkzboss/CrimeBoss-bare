@@ -9,10 +9,9 @@ struct FSeriesStyleManualMapping {
 public:
     UPROPERTY(EditAnywhere)
     FName SeriesId;
-    
+
     UPROPERTY(EditAnywhere)
     FKantanSeriesStyle Style;
-    
+
     KANTANCHARTSUMG_API FSeriesStyleManualMapping();
 };
-

@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "IGS_MetaCutsceneLoadPaperDollDelegateDelegate.h"
+#include "IGS_MetaCutsceneLoadPaperDollDelegate.h"
 #include "IGS_LoadMetaCutscenePaperDolls.generated.h"
 
-class UIGS_LoadMetaCutscenePaperDolls;
 class UObject;
 
 UCLASS()
@@ -15,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_LoadMetaCutscenePaperDolls* LoadMetaCutscenePaperDolls(UObject* inWCO);
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_MetaCutsceneLoadPaperDollDelegate Loaded;
-    
-};
 
+};

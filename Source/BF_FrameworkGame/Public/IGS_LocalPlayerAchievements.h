@@ -3,7 +3,7 @@
 #include "Subsystems/LocalPlayerSubsystem.h"
 #include "GameplayTagContainer.h"
 #include "IGS_Achievement.h"
-#include "IGS_LocalPlayerAchievementsInitializedDelegate.h"
+#include "IGS_LocalPlayerAchievementsInitialized.h"
 #include "IGS_LocalPlayerAchievements.generated.h"
 
 class UIGS_CommonAchievements;
@@ -16,16 +16,15 @@ public:
 
     UFUNCTION(BlueprintPure)
     bool IsInitialized() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void GetAchievementData(const FGameplayTag& AchievementID, bool& outFound, FIGS_Achievement& outAchievementData);
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_LocalPlayerAchievementsInitialized OnInitialized;
-    
+
 private:
     UPROPERTY()
     UIGS_CommonAchievements* m_CommonAchievements;
-    
-};
 
+};

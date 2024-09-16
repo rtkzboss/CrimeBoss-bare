@@ -17,4 +17,3 @@ enum class EIGS_SpeedUnit : uint8 {
     SpeedOfLight,
     YardPerSecond,
 };
-

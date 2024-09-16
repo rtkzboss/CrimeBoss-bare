@@ -42,4 +42,3 @@ enum class EIGS_DialogueUniCharacter : uint8 {
     NoVoiceMin = NoVoiceFemale,
     NoVoiceMax = NoVoice,
 };
-

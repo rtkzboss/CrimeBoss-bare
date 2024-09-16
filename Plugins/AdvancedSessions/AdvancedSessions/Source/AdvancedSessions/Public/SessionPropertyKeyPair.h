@@ -8,4 +8,3 @@ struct FSessionPropertyKeyPair {
 public:
     ADVANCEDSESSIONS_API FSessionPropertyKeyPair();
 };
-

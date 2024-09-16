@@ -1,8 +1,8 @@
 #include "META_ObjectiveConfig.h"
 
 FMETA_ObjectiveConfig::FMETA_ObjectiveConfig() {
-    (*this).ShorDescription = FText::FromString(TEXT(""));
-    (*this).Description = FText::FromString(TEXT(""));
+    (*this).ShorDescription = FText::GetEmpty();
+    (*this).Description = FText::GetEmpty();
     (*this).ObjectiveType = EMETA_ObjectiveType::None;
     (*this).Amount = -1;
     (*this).RevivesAmount = 0;
@@ -22,10 +22,10 @@ FMETA_ObjectiveConfig::FMETA_ObjectiveConfig() {
     (*this).SWATKills = 0;
     (*this).GeneralAmountOfKills = 0;
     (*this).KillsAmountOperator = EMETA_ConditionOperator::GreaterOrEqual;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).OutputParamTag, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).OutputParamTag, 0)) = NAME_None;
     (*this).OutputParamValue = 0;
     (*this).OutputParamOperator = EMETA_ConditionOperator::GreaterOrEqual;
     (*this).DaysToComplete = 1;
     (*this).ShowInFPS = true;
 }
-

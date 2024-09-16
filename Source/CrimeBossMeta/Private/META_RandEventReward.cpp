@@ -4,7 +4,8 @@ FMETA_RandEventReward::FMETA_RandEventReward() {
     (*this).RewardType = EMETA_RandEventReward::None;
     (*this).MissionRewardMultiplier.Min = 0.000000000e+00f;
     (*this).MissionRewardMultiplier.Max = 0.000000000e+00f;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).LootItem, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).LootItem, 0)) = NAME_None;
     (*this).LootCostMultiplier.Min = 0.000000000e+00f;
     (*this).LootCostMultiplier.Max = 0.000000000e+00f;
     (*this).Soldiers.Min = 0;
@@ -20,4 +21,3 @@ FMETA_RandEventReward::FMETA_RandEventReward() {
     (*this).Duration = 1;
     (*this).AttitudeChangeForAmountOfLvls = 0;
 }
-

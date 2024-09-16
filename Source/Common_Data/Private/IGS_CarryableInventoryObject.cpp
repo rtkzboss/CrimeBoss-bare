@@ -7,7 +7,6 @@ UIGS_CarryableInventoryObject::UIGS_CarryableInventoryObject() {
 }
 
 float UIGS_CarryableInventoryObject::GetRelativeHealth() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

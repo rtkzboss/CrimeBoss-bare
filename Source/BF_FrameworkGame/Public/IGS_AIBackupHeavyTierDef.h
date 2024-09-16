@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupHeavyTierDef : public FIGS_AIBackupTier
 public:
     FIGS_AIBackupHeavyTierDef();
 };
-

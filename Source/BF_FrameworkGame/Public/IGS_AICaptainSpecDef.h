@@ -9,22 +9,21 @@ struct BF_FRAMEWORKGAME_API FIGS_AICaptainSpecDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICaptainSpecHolder DollarDragon;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICaptainSpecHolder Hielo;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICaptainSpecHolder KarolKhan;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICaptainSpecHolder Cagnali;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICaptainSpecHolder LawEnforcement;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICaptainSpecHolder Friendlies;
-    
+
     FIGS_AICaptainSpecDef();
 };
-

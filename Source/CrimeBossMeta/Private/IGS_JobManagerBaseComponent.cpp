@@ -1,5 +1,4 @@
 #include "IGS_JobManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_JobManagerBaseComponent::UIGS_JobManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -52,11 +51,11 @@ void UIGS_JobManagerBaseComponent::GetObjectivesResult_Implementation(UMETA_Base
 }
 
 UMETA_Character* UIGS_JobManagerBaseComponent::GetHeisterBeingRescuedOnMission_Implementation(TSubclassOf<UMETA_MissionID> inMissionID) {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_BaseGoal* UIGS_JobManagerBaseComponent::GetGoalRelatedToMission_Implementation(TSubclassOf<UMETA_MissionID> inMissionID) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_JobManagerBaseComponent::GetGangsAmbushChance_Implementation(FMETA_PreviousMissionData inPrevMissionData) {
@@ -68,18 +67,18 @@ int32 UIGS_JobManagerBaseComponent::GetDayOfSpawn_Implementation(TSubclassOf<UME
 }
 
 UMETA_BaseMission* UIGS_JobManagerBaseComponent::GetCurrentJobInfo_Implementation(bool& outValid) {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_BaseMission*> UIGS_JobManagerBaseComponent::GetAllJobs_Implementation() {
-    return TArray<UMETA_BaseMission*>();
+    return {};
 }
 
 void UIGS_JobManagerBaseComponent::DoGatheringIntelForCurrentJob_Implementation() {
 }
 
 UMETA_BaseMission* UIGS_JobManagerBaseComponent::DEBUG_CreateMission_Implementation(TSubclassOf<UMETA_MissionID> inMissionID) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_JobManagerBaseComponent::ClearCharactersFromCurrentJob_Implementation(TArray<UMETA_Character*>& outAssignedCharacters) {
@@ -94,7 +93,7 @@ bool UIGS_JobManagerBaseComponent::CanJobBeStarted_Implementation(UMETA_BaseMiss
 }
 
 float UIGS_JobManagerBaseComponent::CalculateTotalBagsForMission_Implementation(UMETA_BaseFPSMission* inMission) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_JobManagerBaseComponent::AddJob_Implementation(UMETA_BaseMission* NewJob, TSubclassOf<UMETA_BaseGoal> inGoalID) {
@@ -103,5 +102,4 @@ void UIGS_JobManagerBaseComponent::AddJob_Implementation(UMETA_BaseMission* NewJ
 bool UIGS_JobManagerBaseComponent::AddCharacterToCurrentJob_Implementation(UMETA_Character* inCharacter) {
     return false;
 }
-
 

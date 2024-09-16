@@ -34,4 +34,3 @@ enum class EMETA_ObjectiveType : uint8 {
     DetectiveNoKill,
     RescueHostages,
 };
-

@@ -8,4 +8,3 @@ enum class ECustomizableObjectProjectorType : uint8 {
     Cylindrical,
     Wrapping,
 };
-

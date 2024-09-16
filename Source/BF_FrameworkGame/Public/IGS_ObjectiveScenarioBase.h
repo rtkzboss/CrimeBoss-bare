@@ -11,6 +11,5 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void OnObjectivesReadyEvent();
-    
-};
 
+};

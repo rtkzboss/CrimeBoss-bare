@@ -8,13 +8,12 @@ struct FIGS_DsWeaponTrigger {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 StartPosition;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 EndPosition;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Strength;
-    
+
     BF_INPUT_API FIGS_DsWeaponTrigger();
 };
-

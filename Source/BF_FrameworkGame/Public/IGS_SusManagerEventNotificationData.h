@@ -11,7 +11,6 @@ struct BF_FRAMEWORKGAME_API FIGS_SusManagerEventNotificationData : public FIGS_S
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AActor* PointOfInterest;
-    
+
     FIGS_SusManagerEventNotificationData();
 };
-

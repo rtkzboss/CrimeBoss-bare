@@ -11,4 +11,3 @@ FCustomMissionData UIGS_EditorSubsystemFunctionLibrary::GetCustomMission() {
     return FCustomMissionData{};
 }
 
-

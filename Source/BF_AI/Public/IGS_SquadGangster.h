@@ -10,4 +10,3 @@ public:
     AIGS_SquadGangster(const FObjectInitializer& ObjectInitializer);
 
 };
-

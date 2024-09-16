@@ -15,39 +15,38 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetInputActionToShow(EIGS_InputAction InAction);
-    
+
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnInputKeyCharacterChanged(FName inInputKeyCharacter, bool inIsFallback);
-    
+
     UFUNCTION()
     void OnInputDeviceChanged(EIGS_InputDevice inDevice);
-    
+
     UFUNCTION(BlueprintCallable)
     void ForceChangeInputDevice(EIGS_InputDevice inDevice);
-    
+
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bOverrideInputActionsByDevice;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_InputAction KeyboardMouseInputAction;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_InputAction GamepadInputAction;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly)
     FName InputKeyCharacter;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_InputAction InputActionToShow;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UTextBlock* CharacterText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_InputDevice PreviewInputDevice;
-    
-};
 
+};

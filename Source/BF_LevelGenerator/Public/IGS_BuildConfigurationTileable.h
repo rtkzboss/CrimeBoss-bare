@@ -10,10 +10,9 @@ struct BF_LEVELGENERATOR_API FIGS_BuildConfigurationTileable {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_BuildConfigurationDataAsset* BuildConfigurationDataAsset;
-    
+
     UPROPERTY()
     int32 VariantIndex;
-    
+
     FIGS_BuildConfigurationTileable();
 };
-

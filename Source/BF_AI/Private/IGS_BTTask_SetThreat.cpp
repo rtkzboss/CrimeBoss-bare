@@ -4,4 +4,3 @@ UIGS_BTTask_SetThreat::UIGS_BTTask_SetThreat() {
     (*this).NodeName = TEXT("Set Threat");
 }
 
-

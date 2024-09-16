@@ -7,4 +7,3 @@ UStreamlineSettings::UStreamlineSettings() {
     (*this).bAllowOTAUpdate = true;
 }
 
-

@@ -13,16 +13,15 @@ struct FIGS_SniperAimData {
 public:
     UPROPERTY()
     EIGS_AimType AimType;
-    
+
     UPROPERTY()
     AActor* AimActor;
-    
+
     UPROPERTY()
     FVector AimPoint;
-    
+
     UPROPERTY()
     AIGS_SniperPoint* SniperPoint;
-    
+
     BF_AI_API FIGS_SniperAimData();
 };
-

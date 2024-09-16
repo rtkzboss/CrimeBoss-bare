@@ -8,4 +8,3 @@ enum class EIGS_HubRotation : uint8 {
     Rotate180,
     RotateNone,
 };
-

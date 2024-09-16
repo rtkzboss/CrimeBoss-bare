@@ -11,4 +11,3 @@ enum class EIGS_SOScope : uint8 {
     CancelOnCombatTargetSeen = 8,
     IgnoreFightForWaypoint = 16,
 };
-

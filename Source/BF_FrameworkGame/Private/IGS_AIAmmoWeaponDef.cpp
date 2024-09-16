@@ -21,4 +21,3 @@ FIGS_AIAmmoWeaponDef::FIGS_AIAmmoWeaponDef() {
     (*this).AfterFireCooldownCover.Min = 1.500000000e+00f;
     (*this).AfterFireCooldownCover.Max = 3.000000000e+00f;
 }
-

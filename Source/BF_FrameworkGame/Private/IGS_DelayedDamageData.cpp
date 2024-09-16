@@ -31,4 +31,3 @@ FIGS_DelayedDamageData::FIGS_DelayedDamageData() {
     (*this).HitInfo.bIsHeadshot = false;
     (*this).ApplicationTime = 0.000000000e+00f;
 }
-

@@ -2,4 +2,3 @@
 
 FFTIAnimationStaticData::FFTIAnimationStaticData() {
 }
-

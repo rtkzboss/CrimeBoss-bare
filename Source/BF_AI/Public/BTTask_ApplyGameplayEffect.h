@@ -2,11 +2,10 @@
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTTaskNode.h"
 #include "UObject/NoExportTypes.h"
+#include "GameplayEffect.h"
 #include "EIGS_GameplayEffectTarget.h"
 #include "Templates/SubclassOf.h"
 #include "BTTask_ApplyGameplayEffect.generated.h"
-
-class UGameplayEffect;
 
 UCLASS()
 class BF_AI_API UBTTask_ApplyGameplayEffect : public UBTTaskNode {
@@ -16,12 +15,11 @@ public:
 
     UPROPERTY(EditAnywhere)
     EIGS_GameplayEffectTarget Target;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval Duration;
-    
+
     UPROPERTY(EditAnywhere)
     TSubclassOf<UGameplayEffect> GameplayEffect;
-    
-};
 
+};

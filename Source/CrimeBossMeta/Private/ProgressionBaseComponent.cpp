@@ -1,5 +1,4 @@
 #include "ProgressionBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UProgressionBaseComponent::UProgressionBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -50,11 +49,11 @@ bool UProgressionBaseComponent::HasSomePendingLevels() const {
 }
 
 TArray<FGameplayTag> UProgressionBaseComponent::GetPendingUnlockRewards() const {
-    return TArray<FGameplayTag>();
+    return {};
 }
 
 float UProgressionBaseComponent::GetPendingPoints() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UProgressionBaseComponent::GetPendingLevelsCount() const {
@@ -66,11 +65,11 @@ FDateTime UProgressionBaseComponent::GetLastClaimedDailyMultiplayerDateTime() co
 }
 
 float UProgressionBaseComponent::GetDailyXPBonus(int32 inLevel) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UProgressionBaseComponent::GetDailyCashBonus(int32 inLevel) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UProgressionBaseComponent::ClearPendingUnlockedRewards() {
@@ -84,5 +83,4 @@ bool UProgressionBaseComponent::CanRewardBeClaimed(FDateTime InDateTime) const {
 
 void UProgressionBaseComponent::AddPendingPoints(float inPoints) {
 }
-
 

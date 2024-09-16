@@ -8,10 +8,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AmmoBoxData {
 public:
     UPROPERTY(EditAnywhere)
     float MinAmmoPercent;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxAmmoPercent;
-    
+
     FIGS_AmmoBoxData();
 };
-

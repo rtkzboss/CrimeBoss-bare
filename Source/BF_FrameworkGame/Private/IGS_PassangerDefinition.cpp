@@ -8,4 +8,3 @@ FIGS_PassangerDefinition::FIGS_PassangerDefinition() {
     (*this).UnitSpecialization = EIGS_UnitSpecialization::US_None;
     (*this).SettingsOverride = nullptr;
 }
-

@@ -8,7 +8,6 @@ struct BF_INPUT_API FIGS_InputDeviceIconData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName ButtonSymbol;
-    
+
     FIGS_InputDeviceIconData();
 };
-

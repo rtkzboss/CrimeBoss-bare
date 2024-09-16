@@ -8,4 +8,3 @@ enum class EIGS_RappelNavLinkState : uint8 {
     Running,
     Out,
 };
-

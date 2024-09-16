@@ -17,7 +17,6 @@ FIGS_LootCollectionTableRow UIGS_LootCollectionDatabase::GetDataByIndexBP(int32 
 }
 
 TArray<FIGS_LootCollectionTableRow> UIGS_LootCollectionDatabase::GetDatabaseTableBP() {
-    return TArray<FIGS_LootCollectionTableRow>();
+    return {};
 }
-
 

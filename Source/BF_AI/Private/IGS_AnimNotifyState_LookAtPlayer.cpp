@@ -3,4 +3,3 @@
 UIGS_AnimNotifyState_LookAtPlayer::UIGS_AnimNotifyState_LookAtPlayer() {
 }
 
-

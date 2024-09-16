@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_PlayerBotItemsData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_PlayerBotSettings DefaultSettings;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_PlayerBotOverrideSettings> OverridetSettings;
-    
+
     FIGS_PlayerBotItemsData();
 };
-

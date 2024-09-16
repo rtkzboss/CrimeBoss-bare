@@ -8,4 +8,3 @@ enum class EKantanDataPointSize : uint8 {
     Medium,
     Large,
 };
-

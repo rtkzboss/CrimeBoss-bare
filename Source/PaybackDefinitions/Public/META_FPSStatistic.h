@@ -8,16 +8,15 @@ struct PAYBACKDEFINITIONS_API FMETA_FPSStatistic {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 KilledGangsters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 KilledSecurityPersonnel;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 KilledDetectives;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 KilledCivilians;
-    
+
     FMETA_FPSStatistic();
 };
-

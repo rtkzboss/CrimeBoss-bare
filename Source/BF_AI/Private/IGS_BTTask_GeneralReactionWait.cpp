@@ -6,4 +6,3 @@ UIGS_BTTask_GeneralReactionWait::UIGS_BTTask_GeneralReactionWait() {
     (*this).NodeName = TEXT("General Reaction Wait");
 }
 
-

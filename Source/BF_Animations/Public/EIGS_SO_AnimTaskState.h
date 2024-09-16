@@ -8,4 +8,3 @@ enum class EIGS_SO_AnimTaskState : uint8 {
     SO_Running = 0,
     SO_Finished,
 };
-

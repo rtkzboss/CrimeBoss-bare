@@ -5,7 +5,6 @@ UIGS_BTTask_SquadDoorBreachThrowGrenadeDoorsOpened::UIGS_BTTask_SquadDoorBreachT
 }
 
 UIGS_AICommand* UIGS_BTTask_SquadDoorBreachThrowGrenadeDoorsOpened::CommandToThrowGrenade(AIGS_GameCharacterFramework* inAgent, FVector position) {
-    return NULL;
+    return nullptr;
 }
-
 

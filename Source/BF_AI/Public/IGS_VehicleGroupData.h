@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_VehicleGroupData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FColor> Colors;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_VehicleDatabaseData> VehiclesData;
-    
+
     FIGS_VehicleGroupData();
 };
-

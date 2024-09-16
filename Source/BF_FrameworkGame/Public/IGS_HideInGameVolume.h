@@ -11,15 +11,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetObjectsHidden(bool inHidden);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDisableTick;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCollectOnlyObjectsWithTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName RequiredTag;
-    
-};
 
+};

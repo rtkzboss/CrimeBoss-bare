@@ -7,4 +7,3 @@ enum class EIGS_DebugBoneTextTransformSpaceFormat : uint8 {
     WorldSpace,
     LocalSpace,
 };
-

@@ -8,10 +8,9 @@ struct BF_AI_API FIGS_BotOrderDatabaseUIData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString IconCharacter;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ActionName;
-    
+
     FIGS_BotOrderDatabaseUIData();
 };
-

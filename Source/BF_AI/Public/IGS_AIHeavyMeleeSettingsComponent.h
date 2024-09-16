@@ -17,14 +17,13 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     float GetDestroyableWeaponHealth();
-    
+
     UFUNCTION(BlueprintCallable)
     float GetDestroyableWeaponDamage();
-    
+
     UFUNCTION(BlueprintCallable)
     float GetChargeSteeringRange();
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

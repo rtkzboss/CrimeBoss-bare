@@ -9,4 +9,3 @@ void UIGS_FPS2MetaAdapter::TransferDataToMeta(const UObject* inWCO, FIGS_SharedM
 void UIGS_FPS2MetaAdapter::LoadFPSData(const UObject* inWCO, bool& bIsLoaded, FIGS_SharedMetaTransfer_Data& SharedData, FIGS_FPS2Meta_Data& FPSData) {
 }
 
-

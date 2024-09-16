@@ -5,7 +5,7 @@ public class BF_Animations : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "AnimGraphRuntime",
             "AnimationBudgetAllocator",
@@ -22,6 +22,10 @@ public class BF_Animations : ModuleRules {
             "PaybackDefinitions",
             "PhysXVehicles",
             "PhysicsCore",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "RigVM",
         });
     }
 }

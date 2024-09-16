@@ -17,15 +17,14 @@ public:
 protected:
     UFUNCTION()
     void OnEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
+
     UFUNCTION()
     void OnBeginOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UBoxComponent* DetectionComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USceneComponent* PlacePinPoint;
-    
-};
 
+};

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_GameInstanceFramework.h"
-#include "IGS_LoginChangedAfterEASSignatureDelegate.h"
+#include "IGS_LoginChangedAfterEASSignature.h"
 #include "PaybackGameInstance.generated.h"
 
 class UPaybackCoreMapsData;
@@ -14,19 +14,18 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void TriggerOnLoginChangedAfterEAS() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void SetUseEAS(bool inUseEAS);
-    
+
     UFUNCTION(BlueprintPure)
     void GetUseEAS(bool& outUseEAS);
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_LoginChangedAfterEASSignature OnLoginChangedAfterEAS;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UPaybackCoreMapsData* CoreMapsData;
-    
-};
 
+};

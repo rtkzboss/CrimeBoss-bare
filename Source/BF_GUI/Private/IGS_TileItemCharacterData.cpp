@@ -3,4 +3,3 @@
 UIGS_TileItemCharacterData::UIGS_TileItemCharacterData() {
 }
 
-

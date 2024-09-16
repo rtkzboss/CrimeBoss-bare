@@ -5,4 +5,3 @@ UHoudiniParameterButtonStrip::UHoudiniParameterButtonStrip() {
     (*this).ParmType = EHoudiniParameterType::ButtonStrip;
 }
 
-

@@ -10,7 +10,6 @@ struct BF_ANIMATIONS_API FIGS_AnimationDatabaseBase : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     TArray<FIGS_LinkedGraphDefinition> LinkedGraphs;
-    
+
     FIGS_AnimationDatabaseBase();
 };
-

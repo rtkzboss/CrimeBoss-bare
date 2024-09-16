@@ -10,4 +10,3 @@ public:
     UIGS_UnlockManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

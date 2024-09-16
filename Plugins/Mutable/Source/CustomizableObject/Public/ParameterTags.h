@@ -9,10 +9,9 @@ struct FParameterTags {
 public:
     UPROPERTY(EditAnywhere)
     TArray<FString> Tags;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FString, FFParameterOptionsTags> ParameterOptions;
-    
+
     CUSTOMIZABLEOBJECT_API FParameterTags();
 };
-

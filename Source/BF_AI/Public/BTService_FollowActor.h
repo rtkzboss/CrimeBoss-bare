@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutFollowActorKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutFollowSpeedKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OutFollowDistanceKey;
-    
-};
 
+};

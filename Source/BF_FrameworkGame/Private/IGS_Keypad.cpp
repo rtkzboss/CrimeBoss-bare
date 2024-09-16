@@ -1,5 +1,4 @@
 #include "IGS_Keypad.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
@@ -8,7 +7,8 @@ AIGS_Keypad::AIGS_Keypad(const FObjectInitializer& ObjectInitializer) : Super(Ob
     (*this).TimeToClearAfterFail = 1.000000000e+00f;
     (*this).MaximalCodeLength = 4;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
     (*this).NetDormancy = DORM_Initial;
 }
 
@@ -59,8 +59,7 @@ void AIGS_Keypad::All_OnButtonHighlightOff_Implementation(int32 inButtonId) {
 
 void AIGS_Keypad::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_Keypad, mR_IsInUse);
 }
-
 

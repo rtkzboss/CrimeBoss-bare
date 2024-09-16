@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_CivOffenceReactionBehavior DesiredBehavior;
-    
-};
 
+};

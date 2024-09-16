@@ -16,28 +16,27 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     TArray<UMaterialInterface*> BlendableMaterials;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Priority;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
     float BlendRadius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
     float BlendWeight;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 bEnabled: 1;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 bUnbound: 1;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp)
     FPostProcessSettings Settings;
-    
+
 
     // Fix for true pure virtual functions not being implemented
     virtual bool EncompassesPoint(FVector Point, float SphereRadius/*=0.f*/, float* OutDistanceToPoint) override { return false; }
     virtual FPostProcessVolumeProperties GetProperties() const override { return {}; }
 };
-

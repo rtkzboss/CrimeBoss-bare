@@ -11,9 +11,8 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SetSpeed(float inSpeed);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SetRPM(float InRPM);
-    
-};
 
+};

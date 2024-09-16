@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/Brush.h"
 #include "HoudiniBrushInfo.generated.h"
 
@@ -13,22 +12,21 @@ struct FHoudiniBrushInfo {
 public:
     UPROPERTY()
     TWeakObjectPtr<ABrush> BrushActor;
-    
+
     UPROPERTY()
     FTransform CachedTransform;
-    
+
     UPROPERTY()
     FVector CachedOrigin;
-    
+
     UPROPERTY()
     FVector CachedExtent;
-    
+
     UPROPERTY()
     TEnumAsByte<EBrushType> CachedBrushType;
-    
+
     UPROPERTY()
     uint64 CachedSurfaceHash;
-    
+
     HOUDINIENGINERUNTIME_API FHoudiniBrushInfo();
 };
-

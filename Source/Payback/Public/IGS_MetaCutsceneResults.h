@@ -9,16 +9,15 @@ struct PAYBACK_API FIGS_MetaCutsceneResults {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText DebugText;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 Result;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag ResultTag;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool HideLevel;
-    
+
     FIGS_MetaCutsceneResults();
 };
-

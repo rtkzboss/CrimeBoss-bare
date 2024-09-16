@@ -10,4 +10,3 @@ enum class EIGS_PlayerMovingDirection : uint8 {
     D_Right,
     D_None,
 };
-

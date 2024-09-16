@@ -10,4 +10,3 @@ public:
     UMETA_DailyManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

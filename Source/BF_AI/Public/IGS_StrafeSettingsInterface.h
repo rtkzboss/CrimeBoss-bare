@@ -13,15 +13,14 @@ class BF_AI_API IIGS_StrafeSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetStrafeLongDistance();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetShortDistance();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetMinimumDistance();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetMediumDistance();
-    
-};
 
+};

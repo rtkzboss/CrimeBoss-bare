@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_InteractiveComponent.h"
-#include "IGS_ZiplineFinishedDelegate.h"
+#include "IGS_ZiplineFinished.h"
 #include "IGS_ZiplineInteractiveComponent.generated.h"
 
 class AIGS_GameCharacterFramework;
@@ -15,14 +15,13 @@ public:
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void Multicast_Use(AIGS_GameCharacterFramework* inInstigator);
-    
+
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool SlideUp;
-    
+
 protected:
     UPROPERTY(BlueprintAssignable)
     FIGS_ZiplineFinished OnZiplineAIFinished;
-    
-};
 
+};

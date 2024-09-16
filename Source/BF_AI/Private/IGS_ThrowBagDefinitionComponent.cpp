@@ -1,5 +1,4 @@
 #include "IGS_ThrowBagDefinitionComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_ThrowBagDefinitionComponent::UIGS_ThrowBagDefinitionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).m_IsThrowingAllowed = true;
@@ -18,11 +17,10 @@ void UIGS_ThrowBagDefinitionComponent::AllowThrowingBags(bool InValue) {
 }
 
 UIGS_ThrowBagSlot* UIGS_ThrowBagDefinitionComponent::AddSlotFromSocket(USkeletalMeshComponent* inSkeletalMeshComponent, FName InSocketName) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_ThrowBagSlot* UIGS_ThrowBagDefinitionComponent::AddSlotFromSceneComponent(USceneComponent* inSceneComponent) {
-    return NULL;
+    return nullptr;
 }
-
 

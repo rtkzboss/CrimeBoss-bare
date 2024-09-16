@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AICopSpecializationHolder : public FIGS_AIBaseS
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AICopDefaultTierDef Default;
-    
+
     FIGS_AICopSpecializationHolder();
 };
-

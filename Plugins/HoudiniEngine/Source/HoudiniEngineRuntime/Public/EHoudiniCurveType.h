@@ -10,4 +10,3 @@ enum class EHoudiniCurveType : int8 {
     Bezier,
     Points,
 };
-

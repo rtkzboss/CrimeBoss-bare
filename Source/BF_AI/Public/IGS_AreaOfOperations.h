@@ -10,19 +10,18 @@ struct FIGS_AreaOfOperations {
 public:
     UPROPERTY(VisibleAnywhere)
     TArray<AIGS_RoomBase*> AreaOfOperation;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<AIGS_RoomBase*> AllowedPath;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_RoomBase* LastStartingRoom;
-    
+
     UPROPERTY(VisibleAnywhere)
     int32 LastDepth;
-    
+
     UPROPERTY(VisibleAnywhere)
     bool Enabled;
-    
+
     BF_AI_API FIGS_AreaOfOperations();
 };
-

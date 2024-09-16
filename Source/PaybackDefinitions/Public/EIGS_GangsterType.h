@@ -12,4 +12,3 @@ enum class EIGS_GangsterType : uint8 {
     TravisBaker,
     DollarDragon,
 };
-

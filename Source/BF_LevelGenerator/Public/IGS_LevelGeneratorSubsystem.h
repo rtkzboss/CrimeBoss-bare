@@ -4,7 +4,6 @@
 #include "IGS_LevelGeneratorSubsystem.generated.h"
 
 class ANavigationData;
-class UIGS_LevelGeneratorSubsystem;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -15,18 +14,17 @@ public:
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_LevelGeneratorSubsystem* Instance(const UObject* inWorldContextObject);
-    
+
 private:
     UFUNCTION()
     void InitializeRooms_Server(ANavigationData* inNavData);
-    
+
 public:
     UFUNCTION(BlueprintPure)
     int32 GetDefaultSeed() const;
-    
+
     UPROPERTY()
     bool bIsBuildingFinished;
-    
+
     virtual TStatId GetStatId() const override { return {}; }
 };
-

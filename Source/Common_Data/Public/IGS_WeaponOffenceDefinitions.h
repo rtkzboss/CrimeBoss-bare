@@ -8,13 +8,12 @@ struct COMMON_DATA_API FIGS_WeaponOffenceDefinitions {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ShotLoudness;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ImpactLoudness;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float FireOffenceDelay;
-    
+
     FIGS_WeaponOffenceDefinitions();
 };
-

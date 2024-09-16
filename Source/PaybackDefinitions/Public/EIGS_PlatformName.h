@@ -12,4 +12,3 @@ enum class EIGS_PlatformName : uint8 {
     PN_XBSS,
     PN_Switch,
 };
-

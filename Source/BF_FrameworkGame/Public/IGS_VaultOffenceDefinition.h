@@ -8,4 +8,3 @@ struct FIGS_VaultOffenceDefinition {
 public:
     BF_FRAMEWORKGAME_API FIGS_VaultOffenceDefinition();
 };
-

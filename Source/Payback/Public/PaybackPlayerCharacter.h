@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentCharacter* NetworkCharacter;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentAnimation* NetworkAnimation;
-    
-};
 
+};

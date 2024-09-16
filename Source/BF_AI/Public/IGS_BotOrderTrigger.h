@@ -18,57 +18,56 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void TriggerOrder(AIGS_GameCharacterFramework* forCharacter, bool hasPlayerApproval);
-    
+
     UFUNCTION(BlueprintCallable)
     void RemoveIgnoredCharacter(AIGS_GameCharacterFramework* inCharacter);
-    
+
 protected:
     UFUNCTION()
     void OnCollisionEnter(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex, bool inFromSweep, const FHitResult& inSweepResult);
-    
+
     UFUNCTION()
     void OnCollisionEnd(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex);
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     TArray<FIGS_BotOrderData> GetPlayersInBox();
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FIGS_BotOrderData> GetBotsInBox();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void FinishBotOrder(AIGS_GameCharacterFramework* Bot) const;
-    
+
     UFUNCTION(BlueprintCallable)
     void Deactivate();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     bool CanBeTriggered(AIGS_GameCharacterFramework* forCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     void AddIgnoredCharacter(AIGS_GameCharacterFramework* inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     void Activate();
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Text;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float InitialDelay;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Cooldown;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<EIGS_CharacterID> IgnoredCharacters;
-    
+
     UPROPERTY()
     TArray<FIGS_BotOrderData> BotsInBox;
-    
+
     UPROPERTY()
     TArray<FIGS_BotOrderData> PlayersInBox;
-    
-};
 
+};

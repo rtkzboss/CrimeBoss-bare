@@ -5,4 +5,3 @@ UIGS_BTTask_WaitForOffenceReaction::UIGS_BTTask_WaitForOffenceReaction() {
     (*this).NodeName = TEXT("Wait for Offence Reaction");
 }
 
-

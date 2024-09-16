@@ -7,4 +7,3 @@ enum class EIGS_IntelFound : uint8 {
     Found,
     NotFound,
 };
-

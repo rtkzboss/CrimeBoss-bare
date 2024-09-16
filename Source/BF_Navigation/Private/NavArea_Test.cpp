@@ -6,4 +6,3 @@ UNavArea_Test::UNavArea_Test() {
     (*this).DrawColor.R = 243;
 }
 
-

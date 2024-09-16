@@ -3,4 +3,3 @@
 UIGS_ScriptingCommandAsyncBase::UIGS_ScriptingCommandAsyncBase() {
 }
 
-

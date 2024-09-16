@@ -9,22 +9,21 @@ struct PAYBACKDEFINITIONS_API FMETA_IntelDataSetup {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval SoldiersRangeFor100PercentIntel;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 UnlocksPossibilityToPlayMission;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercentageToRevealDifficulty;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercentageToIncreaseMaxMonetaryValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercentageToDifficultyReduction;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercentageToLowerDifficultyTwice;
-    
+
     FMETA_IntelDataSetup();
 };
-

@@ -11,19 +11,18 @@ struct BF_LEVELGENERATOR_API FIGS_LightingScenarioWorldSettings {
 public:
     UPROPERTY(VisibleAnywhere)
     FString LightingScenarioHelp;
-    
+
     UPROPERTY(EditAnywhere)
     bool bLevelIsPersistent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UWorld> DefaultLightingScenarioLevel;
-    
+
     UPROPERTY(EditAnywhere)
     bool bUseDefaultScenario;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<EIGS_LightingScenarioType, TSoftObjectPtr<UWorld>> LightingScenarioMapPairs;
-    
+
     FIGS_LightingScenarioWorldSettings();
 };
-

@@ -6,4 +6,3 @@ FMissionStats::FMissionStats() {
     (*this).RevivesLeft = -1.000000000e+00f;
     (*this).CollectedMoney = 0.000000000e+00f;
 }
-

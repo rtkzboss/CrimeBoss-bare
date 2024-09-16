@@ -11,9 +11,8 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void CloseSystemMenuScreen();
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool IsClosingInProcess;
-    
-};
 
+};

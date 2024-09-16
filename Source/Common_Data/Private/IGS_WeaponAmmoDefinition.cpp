@@ -6,4 +6,3 @@ FIGS_WeaponAmmoDefinition::FIGS_WeaponAmmoDefinition() {
     (*this).ReserveCapacity = 300;
     (*this).AmmoCostPerShot = 1;
 }
-

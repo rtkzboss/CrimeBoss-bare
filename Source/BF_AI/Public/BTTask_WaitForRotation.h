@@ -12,9 +12,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float MinAngle;
-    
+
     UPROPERTY(EditAnywhere)
     float Timeout;
-    
-};
 
+};

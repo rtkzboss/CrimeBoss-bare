@@ -18,18 +18,17 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void StopAllMontages(UAnimInstance* inAnimInstance, float inBlendOut);
-    
+
     UFUNCTION(BlueprintCallable)
     static UIGS_PlayerAnimInstance* GetPlayerAnimInstance(const AIGS_GameCharacterFramework*& inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     static void GetMeleePushMontages(const AIGS_GameCharacterFramework*& inCharacter, UAnimMontage*& outCharacterFPP, UAnimMontage*& outCharacterTPP, UAnimMontage*& outWeaponFPP);
-    
+
     UFUNCTION(BlueprintCallable)
     static UIGS_UArmsAniminstance* GetArmsAnimInstance(const AIGS_GameCharacterFramework*& inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     static EIGS_Anim4Sides GetAnimationSideForAngle(float inAngle);
-    
-};
 
+};

@@ -10,13 +10,12 @@ struct BF_AI_API FIGS_SnipePointData {
 public:
     UPROPERTY(EditAnywhere)
     AIGS_SnipePoint* SnipePoint;
-    
+
     UPROPERTY(EditAnywhere)
     float AimAtSpeed;
-    
+
     UPROPERTY(EditAnywhere)
     float WaitTime;
-    
+
     FIGS_SnipePointData();
 };
-

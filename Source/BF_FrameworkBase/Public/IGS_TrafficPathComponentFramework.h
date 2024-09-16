@@ -10,4 +10,3 @@ public:
     UIGS_TrafficPathComponentFramework(const FObjectInitializer& ObjectInitializer);
 
 };
-

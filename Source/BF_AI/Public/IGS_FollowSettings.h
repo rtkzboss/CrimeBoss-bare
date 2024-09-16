@@ -8,4 +8,3 @@ struct BF_AI_API FIGS_FollowSettings {
 public:
     FIGS_FollowSettings();
 };
-

@@ -3,4 +3,3 @@
 UPaybackAssetManager::UPaybackAssetManager() {
 }
 
-

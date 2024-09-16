@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "IGS_CarryableInventoryObject.h"
 #include "IGS_CarryableTableRow.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_CarryableDatabase.generated.h"
 
-class UIGS_CarryableInventoryObject;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -16,12 +16,11 @@ public:
 
     UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UIGS_CarryableInventoryObject>& inClass) const;
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_CarryableTableRow GetDataCarryable(const UObject* inWCO, const TSubclassOf<UIGS_CarryableInventoryObject>& inClass, bool& outSucceeded);
-    
+
     UFUNCTION(BlueprintPure)
     FIGS_CarryableTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
-    
-};
 
+};

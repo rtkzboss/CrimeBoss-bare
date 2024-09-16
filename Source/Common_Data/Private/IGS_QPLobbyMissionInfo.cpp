@@ -4,7 +4,7 @@
 
 FIGS_QPLobbyMissionInfo::FIGS_QPLobbyMissionInfo() {
     (*this).MissionID = nullptr;
-    (*this).Name = FText::FromString(TEXT(""));
+    (*this).Name = FText::GetEmpty();
     (*this).Difficulty = EIGS_ScenarioDifficulty::SD_Unknown;
     (*this).ObjectiveMonetaryValue = 0;
     (*this).MaxMonetaryValue = 0;
@@ -12,13 +12,13 @@ FIGS_QPLobbyMissionInfo::FIGS_QPLobbyMissionInfo() {
     (*this).SecondStarReward = 0;
     (*this).ThirdStarReward = 0;
     (*this).MonetaryLootValue = 0;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ObjectiveID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ObjectiveID, 0)) = NAME_None;
     (*this).ObjectiveReward.RewardType = EMETA_ObjectiveReward::None;
     (*this).ObjectiveReward.Cash = 0;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ObjectiveReward.LootItem, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ObjectiveReward.LootItem, 0)) = NAME_None;
     (*this).ObjectiveReward.LootMonetaryValue = 0;
     (*this).ObjectiveReward.WeaponQuality = EMETA_ItemQuality::None;
     (*this).ObjectiveReward.WeaponID = nullptr;
     (*this).ObjectiveReward.SoldiersAmount = 0;
 }
-

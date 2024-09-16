@@ -9,4 +9,3 @@ enum class EIGS_TileRotation : uint8 {
     Bottom,
     Left,
 };
-

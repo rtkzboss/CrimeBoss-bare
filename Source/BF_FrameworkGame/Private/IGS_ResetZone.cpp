@@ -1,11 +1,11 @@
 #include "IGS_ResetZone.h"
 #include "Components/BoxComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 
 AIGS_ResetZone::AIGS_ResetZone(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).ResetTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("ResetTrigger"));
+    auto gen = CreateDefaultSubobject<UBoxComponent>(TEXT("ResetTrigger"));
+    auto gen2 = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
+    (*this).ResetTrigger = gen;
     (*this).NavmeshSearchExtent.X = 1.000000000e+03f;
     (*this).NavmeshSearchExtent.Y = 1.000000000e+03f;
     (*this).NavmeshSearchExtent.Z = 2.000000000e+02f;
@@ -16,8 +16,8 @@ AIGS_ResetZone::AIGS_ResetZone(const FObjectInitializer& ObjectInitializer) : Su
     (*this).FadeOutTime = 5.000000000e-01f;
     (*this).FadeInTime = 5.000000000e-01f;
     (*this).FadeOutDuration = 1.000000000e+00f;
-    (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
-    (*this).ResetTrigger->SetupAttachment((*this).RootComponent);
+    (*this).RootComponent = gen2;
+    if (gen) gen->SetupAttachment(gen2);
 }
 
 bool AIGS_ResetZone::ResetCharacter(AIGS_PlayerCharacter* Character, FVector& safeResetLocation) {
@@ -39,5 +39,4 @@ bool AIGS_ResetZone::HandleBagReset(AIGS_LootBagPickup* bag, FVector& safeResetL
 
 void AIGS_ResetZone::HandleBagDestroy(AIGS_LootBagPickup* bag) {
 }
-
 

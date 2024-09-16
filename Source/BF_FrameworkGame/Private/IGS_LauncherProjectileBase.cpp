@@ -1,20 +1,22 @@
 #include "IGS_LauncherProjectileBase.h"
 #include "GameFramework/Actor.h"
 #include "Components/CapsuleComponent.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
 AIGS_LauncherProjectileBase::AIGS_LauncherProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).CapsuleCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleCollisionComponent"));
-    (*this).ThrowableMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ThrowableMeshComponent"));
+    auto gen = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleCollisionComponent"));
+    auto gen2 = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ThrowableMeshComponent"));
+    (*this).CapsuleCollision = gen;
+    (*this).ThrowableMesh = gen2;
     (*this).bMakeImpactNoise = true;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
-    (*this).RootComponent = (USceneComponent*)CapsuleCollision;
-    (*this).ThrowableMesh->SetupAttachment((*this).CapsuleCollision);
+    auto gen3 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).RootComponent = gen;
+    if (gen2) gen2->SetupAttachment(gen);
 }
 
 bool AIGS_LauncherProjectileBase::WasThrownByAI() const {
@@ -64,16 +66,16 @@ FVector AIGS_LauncherProjectileBase::GetInitialVelocity() const {
 }
 
 float AIGS_LauncherProjectileBase::GetInitialThrowSpeed() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_LauncherProjectileBase::ApplyThrowableDamage(const FHitResult& inHitResult, float inBaseDamage, AIGS_GameCharacterFramework* inDamageCauser, TSubclassOf<UDamageType> inDamageType) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void AIGS_LauncherProjectileBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_LauncherProjectileBase, mR_Thrower);
     DOREPLIFETIME(AIGS_LauncherProjectileBase, mR_ThrownData);
     DOREPLIFETIME(AIGS_LauncherProjectileBase, mR_ThrowableObjectClass);
@@ -82,5 +84,4 @@ void AIGS_LauncherProjectileBase::GetLifetimeReplicatedProps(TArray<FLifetimePro
     DOREPLIFETIME(AIGS_LauncherProjectileBase, mR_bHasHit);
     DOREPLIFETIME(AIGS_LauncherProjectileBase, mR_bThrowedByAI);
 }
-
 

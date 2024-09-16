@@ -7,4 +7,3 @@ enum class EHoudiniCurveOutputType : uint8 {
     UnrealSpline,
     HoudiniSpline,
 };
-

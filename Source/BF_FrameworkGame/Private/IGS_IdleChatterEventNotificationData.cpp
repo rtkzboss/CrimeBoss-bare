@@ -2,6 +2,5 @@
 
 FIGS_IdleChatterEventNotificationData::FIGS_IdleChatterEventNotificationData() {
     (*this).AsyncRequest = nullptr;
-    (*this).Characters.Empty();
+    (*this).Characters = {};
 }
-

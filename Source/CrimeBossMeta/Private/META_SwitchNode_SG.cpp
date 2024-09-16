@@ -7,4 +7,3 @@ UMETA_SwitchNode_SG::UMETA_SwitchNode_SG() {
     (*this).Type = EMETA_NodeType::Switch;
 }
 
-

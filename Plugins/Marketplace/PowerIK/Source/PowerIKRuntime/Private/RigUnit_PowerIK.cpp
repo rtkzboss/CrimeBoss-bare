@@ -3,10 +3,10 @@
 FRigUnit_PowerIK::FRigUnit_PowerIK() {
     (*this).CharacterRoot = TEXT("pelvis");
     (*this).RootRotationMultiplier = 1.000000000e+00f;
-    (*this).Effectors.Empty();
-    (*this).BendDirections.Empty();
-    (*this).ExcludedBones.Empty();
-    (*this).JointLimits.Empty();
+    (*this).Effectors = {};
+    (*this).BendDirections = {};
+    (*this).ExcludedBones = {};
+    (*this).JointLimits = {};
     (*this).CenterOfGravityConstraint.Alpha = 0.000000000e+00f;
     (*this).CenterOfGravityConstraint.HorizAmount = 1.200000048e+00f;
     (*this).CenterOfGravityConstraint.VertAmount = 3.000000119e-01f;
@@ -22,4 +22,3 @@ FRigUnit_PowerIK::FRigUnit_PowerIK() {
     (*this).AllowBoneTranslation = false;
     (*this).SolverAlpha = 1.000000000e+00f;
 }
-

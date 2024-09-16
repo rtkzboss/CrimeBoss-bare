@@ -11,16 +11,15 @@ struct FIGS_DialogueSpeakerSettings {
 public:
     UPROPERTY(EditAnywhere)
     float PlayVoiceDelay;
-    
+
     UPROPERTY(EditAnywhere)
     float FinishVoiceExtraDelay;
-    
+
     UPROPERTY(EditAnywhere)
     UAkSwitchValue* SpeakerAkSwitch;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FIGS_DialogueGroupCharacterHolder, UAkSwitchValue*> SpeakerCharacterAkSwitchMap;
-    
+
     BF_NETWORK_API FIGS_DialogueSpeakerSettings();
 };
-

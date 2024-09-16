@@ -12,12 +12,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool HasTileData(const FString& inTileName);
-    
+
     UFUNCTION(BlueprintCallable)
     void AddOrUpdate(const FString& inTileName, FIGS_TileManagerDatabaseRow inTileData);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FString, FIGS_TileManagerDatabaseRow> TileData;
-    
-};
 
+};

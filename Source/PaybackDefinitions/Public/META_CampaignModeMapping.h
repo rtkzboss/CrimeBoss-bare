@@ -10,10 +10,9 @@ struct FMETA_CampaignModeMapping {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag CampaignModeTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FMETA_CampaignModeMatchingData> MatchingData;
-    
+
     PAYBACKDEFINITIONS_API FMETA_CampaignModeMapping();
 };
-

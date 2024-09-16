@@ -9,4 +9,3 @@ FAggregatedWorkItemTally::FAggregatedWorkItemTally() {
     (*this).ErroredWorkItems = 0;
     (*this).CookCancelledWorkItems = 0;
 }
-

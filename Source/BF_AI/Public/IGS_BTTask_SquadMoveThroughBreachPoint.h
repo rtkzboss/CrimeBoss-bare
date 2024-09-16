@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector StackPosBlackboardKey;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* StackPosQuery;
-    
-};
 
+};

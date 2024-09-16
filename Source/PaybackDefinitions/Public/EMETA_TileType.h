@@ -12,4 +12,3 @@ enum class EMETA_TileType : uint8 {
     Cemetery,
     Central,
 };
-

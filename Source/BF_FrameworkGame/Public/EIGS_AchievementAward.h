@@ -9,4 +9,3 @@ enum class EIGS_AchievementAward : uint8 {
     Gold,
     Platinum,
 };
-

@@ -6,4 +6,3 @@ FIGS_GameplayTimeReward::FIGS_GameplayTimeReward() {
     (*this).MinGameplayTime = 0.000000000e+00f;
     (*this).MaxGameplayTime = 0.000000000e+00f;
 }
-

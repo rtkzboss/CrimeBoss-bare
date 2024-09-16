@@ -12,4 +12,3 @@ enum class EMutableParameterType : uint8 {
     Projector,
     Texture,
 };
-

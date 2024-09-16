@@ -5,4 +5,3 @@ UBTTask_RotateToNextPathPoint::UBTTask_RotateToNextPathPoint() {
     (*this).NodeName = TEXT("Rotate To Next Path Point");
 }
 
-

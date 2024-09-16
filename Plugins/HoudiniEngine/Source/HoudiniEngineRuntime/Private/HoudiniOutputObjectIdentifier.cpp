@@ -9,4 +9,3 @@ FHoudiniOutputObjectIdentifier::FHoudiniOutputObjectIdentifier() {
     (*this).PrimitiveIndex = -1;
     (*this).PointIndex = -1;
 }
-

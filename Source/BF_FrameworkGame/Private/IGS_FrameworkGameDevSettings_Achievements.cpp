@@ -7,4 +7,3 @@ UIGS_FrameworkGameDevSettings_Achievements::UIGS_FrameworkGameDevSettings_Achiev
     (*this).RichPresenceMissionsDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Achievements/RichPresenceExtras/DT_RichPresenceMissionNames.DT_RichPresenceMissionNames"), TEXT(""));
 }
 
-

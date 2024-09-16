@@ -10,4 +10,3 @@ public:
     AIGS_NavMeshBoundsVolume(const FObjectInitializer& ObjectInitializer);
 
 };
-

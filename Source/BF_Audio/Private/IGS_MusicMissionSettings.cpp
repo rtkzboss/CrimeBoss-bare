@@ -5,4 +5,3 @@ FIGS_MusicMissionSettings::FIGS_MusicMissionSettings() {
     (*this).bCutsceneNoMusic = false;
     (*this).bCutsceneNoSound = false;
 }
-

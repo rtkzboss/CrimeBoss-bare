@@ -11,15 +11,14 @@ EIGS_MetaDialogueCharacter UIGS_MetaCutsceneFunctionLibrary::GetMetaCharacterFro
 }
 
 UDataTable* UIGS_MetaCutsceneFunctionLibrary::GetCutsceneDatabase() {
-    return NULL;
+    return nullptr;
 }
 
 TArray<ULevelStreaming*> UIGS_MetaCutsceneFunctionLibrary::GetAllStreamedLevel(UObject* inWCO) {
-    return TArray<ULevelStreaming*>();
+    return {};
 }
 
 FIGS_EditorCutsceneInfo UIGS_MetaCutsceneFunctionLibrary::GetAllDialoguesForCutscene(UObject* inWCO, UIGS_MetaCutsceneDataAsset* inCutsceneData, FIGS_MetaCutsceneCharacters inCharacterParameters) {
     return FIGS_EditorCutsceneInfo{};
 }
-
 

@@ -5,4 +5,3 @@ UIGS_EnvQueryGenerator_LootBags::UIGS_EnvQueryGenerator_LootBags() {
     (*this).ItemType = UIGS_EnvQueryItemType_LootBag::StaticClass();
 }
 
-

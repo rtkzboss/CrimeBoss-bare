@@ -17,30 +17,29 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetBox(EIGS_AmmoBoxItem inBoxID);
-    
+
 protected:
     UFUNCTION()
     void OnRep_BoxIDChanged();
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* PickupSoundAkEvent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_InteractiveComponent* InteractiveComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AmmoBoxItem InitialBoxID;
-    
+
     UPROPERTY(ReplicatedUsing=OnRep_BoxIDChanged)
     EIGS_AmmoBoxItem mR_BoxID;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_CommonItemData CommonData;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 
     // Fix for true pure virtual functions not being implemented
 };
-

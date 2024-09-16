@@ -19,47 +19,46 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetStativeInformation(AMETA_BaseGameMode* inGameMode, FMETA_TaskStativeInfo inTaskStativeInfo);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetNeedValue(EMETA_NeedValueType inNeedValueType, int32 inNeedValue, FGameplayTag inNeedValueTag);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RefreshValues();
-    
+
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     int32 GetNeedValue();
-    
+
     UFUNCTION(BlueprintCallable)
     TSoftObjectPtr<UMETA_BaseStoryGraphManager> GetGraphSoftObjectCurrentNodeOwner();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void BindUnbindDelegates(bool inBind);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText TaskTitle;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 TaskID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ProcessValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_NeedValueType NeedValueType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     int32 NeedValue;
-    
+
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     FGameplayTag NeedTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
     bool bOptional;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EMETA_TaskStatus Status;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

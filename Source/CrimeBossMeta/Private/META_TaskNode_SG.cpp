@@ -5,4 +5,3 @@ UMETA_TaskNode_SG::UMETA_TaskNode_SG() {
     (*this).Type = EMETA_NodeType::TaskNode;
 }
 
-

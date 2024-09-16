@@ -16,4 +16,3 @@ enum class EIGS_CarSeatVariant : uint8 {
     CS_8,
     CS_9,
 };
-

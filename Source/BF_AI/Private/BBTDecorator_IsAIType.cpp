@@ -5,4 +5,3 @@ UBBTDecorator_IsAIType::UBBTDecorator_IsAIType() {
     (*this).NodeName = TEXT("Is AI Type");
 }
 
-

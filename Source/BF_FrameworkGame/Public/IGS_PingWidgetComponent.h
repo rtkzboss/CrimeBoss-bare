@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY(Instanced)
     UIGS_PingableComponent* m_PingableComponent;
-    
-};
 
+};

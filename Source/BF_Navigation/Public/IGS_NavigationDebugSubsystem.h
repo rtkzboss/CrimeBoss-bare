@@ -13,12 +13,11 @@ public:
 
     UFUNCTION()
     void OnNavUpdated(ANavigationData* inNavData);
-    
+
     UFUNCTION()
     void NavigationFinished(ANavigationData* inNavigation);
-    
+
     UPROPERTY()
     ANavigationData* HumanNavmesh;
-    
-};
 
+};

@@ -10,4 +10,3 @@ public:
     UIGS_AuthoritativeChildActorComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

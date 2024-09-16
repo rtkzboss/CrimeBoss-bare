@@ -3,4 +3,3 @@
 UIGS_LootCollectionObject::UIGS_LootCollectionObject() {
 }
 
-

@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY()
     TArray<UCustomizableObject*> PopulationObjects;
-    
-};
 
+};

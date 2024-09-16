@@ -8,4 +8,3 @@ enum class EIGS_CharacterTraceTickType : uint8 {
     TraceTick_SidesLean,
     TraceTick_Mantle,
 };
-

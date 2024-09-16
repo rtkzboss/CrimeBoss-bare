@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector UseMeleeKey;
-    
+
     UPROPERTY(EditAnywhere)
     float ExtraDistanceFromRangeToStopMelee;
-    
+
     UPROPERTY(EditAnywhere)
     float ExtraDistanceFromRangeToStopBash;
-    
-};
 
+};

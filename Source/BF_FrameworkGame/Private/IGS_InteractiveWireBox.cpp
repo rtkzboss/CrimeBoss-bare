@@ -1,6 +1,4 @@
 #include "IGS_InteractiveWireBox.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_InteractiveWireBox::AIGS_InteractiveWireBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -19,8 +17,7 @@ void AIGS_InteractiveWireBox::Client_SetFailStatus_Implementation() {
 
 void AIGS_InteractiveWireBox::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_InteractiveWireBox, mR_WiresInfo);
 }
-
 

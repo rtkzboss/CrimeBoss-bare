@@ -12,28 +12,27 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetCapsuleSize(float inCapsuleSize);
-    
+
 protected:
     UFUNCTION()
     void OnCharacterHit(float inDamage, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
-    
+
     UPROPERTY(EditDefaultsOnly)
     float TimeToWaitAfterSniperShake;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float HeadCollisionCapsuleRadius;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float AggroDuration;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float EventsToActivate;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float AggroDisabledDuration;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float AggroCumulationTimeout;
-    
-};
 
+};

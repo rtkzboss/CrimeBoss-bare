@@ -13,27 +13,26 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void SetReflexMode(const UStreamlineReflexMode Mode);
-    
+
     UFUNCTION(BlueprintPure)
     static UStreamlineFeatureSupport QueryReflexSupport();
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsReflexSupported();
-    
+
     UFUNCTION(BlueprintPure)
     static float GetRenderLatencyInMs();
-    
+
     UFUNCTION(BlueprintPure)
     static UStreamlineReflexMode GetReflexMode();
-    
+
     UFUNCTION(BlueprintPure)
     static float GetGameToRenderLatencyInMs();
-    
+
     UFUNCTION(BlueprintPure)
     static float GetGameLatencyInMs();
-    
+
     UFUNCTION(BlueprintPure)
     static UStreamlineReflexMode GetDefaultReflexMode();
-    
-};
 
+};

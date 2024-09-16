@@ -3,11 +3,7 @@
 UIGS_HUDDatabase::UIGS_HUDDatabase() {
 }
 
-void UIGS_HUDDatabase::ModAppendDataTable(UDataTable* inNewTable) {
-}
-
 FIGS_HUDData UIGS_HUDDatabase::GetDataFromWieldableClass(TSoftClassPtr<AIGS_WieldableBase> inClass) {
     return FIGS_HUDData{};
 }
-
 

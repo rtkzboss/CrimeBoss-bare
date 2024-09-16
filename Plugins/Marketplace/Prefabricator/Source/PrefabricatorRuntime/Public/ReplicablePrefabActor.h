@@ -10,4 +10,3 @@ public:
     AReplicablePrefabActor(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -5,11 +5,11 @@ UIGS_ItemDataHelpers::UIGS_ItemDataHelpers() {
 }
 
 TArray<FMETA_WeaponAmountInfo> UIGS_ItemDataHelpers::SortWeaponStash(TArray<FMETA_WeaponAmountInfo> inWeaponArray) {
-    return TArray<FMETA_WeaponAmountInfo>();
+    return {};
 }
 
 TArray<UMETA_Equipment*> UIGS_ItemDataHelpers::SortEquipmentStash(TArray<UMETA_Equipment*> inEquipmentArray) {
-    return TArray<UMETA_Equipment*>();
+    return {};
 }
 
 FMETA_HeisterLoadout UIGS_ItemDataHelpers::MakeMetaHeisterLoadoutFromSave(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, FMETA_WeaponSaveData inPrimaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, FMETA_WeaponSaveData inSecondaryWeaponSaveData, FMETA_EquipmentSaveData inEquipmentSaveData) {
@@ -97,27 +97,27 @@ EIGS_UnlockCategory UIGS_ItemDataHelpers::GetUnlockCategoryFromID(FGameplayTag i
 }
 
 TArray<UMETA_Weapon*> UIGS_ItemDataHelpers::GetUnequippedWeapons(const FMETA_WeaponAmountInfo& inWeaponArray) {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
 
 TSubclassOf<UIGS_ThrowableInventoryObject> UIGS_ItemDataHelpers::GetThrowableForEquipment(const UObject* inWCO, TSubclassOf<UIGS_EquipmentInventoryObject> inEquipment) {
-    return NULL;
+    return nullptr;
 }
 
 TSoftClassPtr<UIGS_ThrowableInventoryObject> UIGS_ItemDataHelpers::GetSoftThrowableForEquipment(const UObject* inWCO, TSoftClassPtr<UIGS_EquipmentInventoryObject> inEquipment) {
-    return NULL;
+    return {};
 }
 
 TSoftClassPtr<UIGS_EquipmentInventoryObject> UIGS_ItemDataHelpers::GetSoftEquipmentForThrowable(const UObject* inWCO, TSoftClassPtr<UIGS_ThrowableInventoryObject> inThrowable) {
-    return NULL;
+    return {};
 }
 
 TArray<EIGS_PerkCategory> UIGS_ItemDataHelpers::GetPerksFromBitmask(int32 inBitmask) {
-    return TArray<EIGS_PerkCategory>();
+    return {};
 }
 
 TArray<EIGS_PerkClass> UIGS_ItemDataHelpers::GetPerksClassesFromBitmask(int32 inBitmask) {
-    return TArray<EIGS_PerkClass>();
+    return {};
 }
 
 FIGS_ModTableRow UIGS_ItemDataHelpers::GetModDataFromObject(UIGS_ModInventoryObject* inModObject) {
@@ -141,7 +141,7 @@ FString UIGS_ItemDataHelpers::GetItemNameFromID(FGameplayTag inTagID) {
 }
 
 TSubclassOf<UIGS_EquipmentInventoryObject> UIGS_ItemDataHelpers::GetEquipmentForThrowable(const UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowable) {
-    return NULL;
+    return nullptr;
 }
 
 FGameplayTag UIGS_ItemDataHelpers::GetEntitlementTagFromContainer(const FGameplayTagContainer& inTagContainer) {
@@ -161,7 +161,6 @@ bool UIGS_ItemDataHelpers::DoesItemClassHaveProperty(const UObject* inWCO, const
 }
 
 TArray<UMETA_Weapon*> UIGS_ItemDataHelpers::CreateArrayOfWeaponAndLenght(TSubclassOf<UMETA_WeaponInventoryObject> inWeaponClass, UObject* inOuter, int32 inWeaponAmount) {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
-
 

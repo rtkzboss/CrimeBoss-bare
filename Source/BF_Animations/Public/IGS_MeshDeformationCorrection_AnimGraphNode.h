@@ -13,18 +13,17 @@ struct BF_ANIMATIONS_API FIGS_MeshDeformationCorrection_AnimGraphNode : public F
 public:
     UPROPERTY(EditAnywhere)
     TArray<FIGS_MeshDeformationBoneInfo> CorrectionData;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MeshDeformationBoneAlphaInfo Alphas;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseExposedAlpha;
-    
+
 protected:
     UPROPERTY(Instanced, Transient)
     USkeletalMeshComponent* m_CharacterMesh;
-    
+
 public:
     FIGS_MeshDeformationCorrection_AnimGraphNode();
 };
-

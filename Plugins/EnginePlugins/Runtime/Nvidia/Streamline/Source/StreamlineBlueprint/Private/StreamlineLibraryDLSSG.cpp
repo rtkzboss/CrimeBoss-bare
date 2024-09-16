@@ -19,7 +19,7 @@ bool UStreamlineLibraryDLSSG::IsDLSSGModeSupported(UStreamlineDLSSGMode DLSSGMod
 }
 
 TArray<UStreamlineDLSSGMode> UStreamlineLibraryDLSSG::GetSupportedDLSSGModes() {
-    return TArray<UStreamlineDLSSGMode>();
+    return {};
 }
 
 UStreamlineDLSSGMode UStreamlineLibraryDLSSG::GetDLSSGMode() {
@@ -32,5 +32,4 @@ void UStreamlineLibraryDLSSG::GetDLSSGFrameTiming(float& FrameRateInHertz, int32
 UStreamlineDLSSGMode UStreamlineLibraryDLSSG::GetDefaultDLSSGMode() {
     return UStreamlineDLSSGMode::Off;
 }
-
 

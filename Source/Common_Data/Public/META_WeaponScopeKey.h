@@ -10,11 +10,11 @@ struct COMMON_DATA_API FMETA_WeaponScopeKey {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag WieldableClass;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ItemQuality Quality;
-    
+
     FMETA_WeaponScopeKey();
 };
 FORCEINLINE uint32 GetTypeHash(const FMETA_WeaponScopeKey&) { return 0; }
-
+FORCEINLINE bool operator==(const FMETA_WeaponScopeKey&, const FMETA_WeaponScopeKey&) { return true; }

@@ -15,4 +15,3 @@ enum class EXformParameter : uint8 {
     SZ,
     COUNT,
 };
-

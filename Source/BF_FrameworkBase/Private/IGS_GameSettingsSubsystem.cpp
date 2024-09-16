@@ -3,4 +3,3 @@
 UIGS_GameSettingsSubsystem::UIGS_GameSettingsSubsystem() {
 }
 
-

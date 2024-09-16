@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGuardSniperTierData : public FIGS_AIBaseSnipe
 public:
     FIGS_AIGuardSniperTierData();
 };
-

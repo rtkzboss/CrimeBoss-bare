@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FIGS_QuickplayMissionNames {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> MoneyMaking;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> Contract;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FText> Other;
-    
+
     FIGS_QuickplayMissionNames();
 };
-

@@ -11,25 +11,24 @@ struct FIGS_SingleTileSetup {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bEnabled;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_HubTileType TileType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bRandomRotation;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TileRotation TileRotation;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsPlayableArea;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ForceTile;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FDataTableRowHandle ForcedTile;
-    
+
     BF_LEVELGENERATOR_API FIGS_SingleTileSetup();
 };
-

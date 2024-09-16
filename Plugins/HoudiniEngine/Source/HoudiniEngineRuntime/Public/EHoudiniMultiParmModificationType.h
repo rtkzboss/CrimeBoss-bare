@@ -9,4 +9,3 @@ enum class EHoudiniMultiParmModificationType : uint8 {
     Removed,
     Modified,
 };
-

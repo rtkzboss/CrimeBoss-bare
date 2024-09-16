@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     TArray<FIGS_InputActionEntry> InputActions;
-    
-};
 
+};

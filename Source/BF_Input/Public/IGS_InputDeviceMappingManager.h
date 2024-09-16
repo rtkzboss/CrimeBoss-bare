@@ -16,21 +16,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void GetInputActionSymbolBP(FKey inKey, EIGS_InputDevice inInputDevice, FName& outSymbol);
-    
+
     UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* PS5InputDeviceIconDataAsset;
-    
+
     UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* XBOXInputDeviceIconDataAsset;
-    
+
     UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* SteamDeckInputDeviceIconDataAsset;
-    
+
     UPROPERTY()
     UIGS_InputDeviceIconsDataAsset* PCInputDeviceIconDataAsset;
-    
+
     UPROPERTY()
     UIGS_InputActionMapDataAsset* InputActionMapDataAsset;
-    
-};
 
+};

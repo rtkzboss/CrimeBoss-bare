@@ -9,7 +9,6 @@ struct FIGS_UnlockRewardMaxAmount {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_ItemQuality, int32> MaxAmountMap;
-    
+
     BF_FRAMEWORKBASE_API FIGS_UnlockRewardMaxAmount();
 };
-

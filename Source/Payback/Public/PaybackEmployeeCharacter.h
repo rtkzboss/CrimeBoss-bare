@@ -10,4 +10,3 @@ public:
     APaybackEmployeeCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -2,22 +2,26 @@
 #include "IGS_ObjectStatus.h"
 #include "IGS_VisbilityComponent.h"
 #include "Components/ChildActorComponent.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_EntranceBase::AIGS_EntranceBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).EntranceRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("EntranceRootComponent"));
-    (*this).DoorObjectStatus = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("DoorObjectStatus"));
-    (*this).VisibilityComponent = CreateDefaultSubobject<UIGS_VisbilityComponent>(TEXT("VisibilityComponent"));
-    (*this).FrontBreachingPoints = CreateDefaultSubobject<UChildActorComponent>(TEXT("FrontBreachingPoints"));
-    (*this).BackBreachingPoints = CreateDefaultSubobject<UChildActorComponent>(TEXT("BackBreachingPoints"));
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("EntranceRootComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("DoorObjectStatus"));
+    auto gen3 = CreateDefaultSubobject<UIGS_VisbilityComponent>(TEXT("VisibilityComponent"));
+    auto gen4 = CreateDefaultSubobject<UChildActorComponent>(TEXT("FrontBreachingPoints"));
+    auto gen5 = CreateDefaultSubobject<UChildActorComponent>(TEXT("BackBreachingPoints"));
+    (*this).EntranceRootComponent = gen;
+    (*this).DoorObjectStatus = gen2;
+    (*this).VisibilityComponent = gen3;
+    (*this).FrontBreachingPoints = gen4;
+    (*this).BackBreachingPoints = gen5;
     (*this).bFullyProgressed = true;
     (*this).NetDormancy = DORM_Initial;
-    (*this).RootComponent = (USceneComponent*)EntranceRootComponent;
-    (*this).BackBreachingPoints->SetupAttachment((*this).EntranceRootComponent);
-    (*this).FrontBreachingPoints->SetupAttachment((*this).EntranceRootComponent);
+    (*this).RootComponent = gen;
+    if (gen4) gen4->SetupAttachment(gen);
+    if (gen5) gen5->SetupAttachment(gen);
 }
 
 void AIGS_EntranceBase::SetOpenState(bool inOpen) {
@@ -68,10 +72,9 @@ bool AIGS_EntranceBase::GetDoorOrientationFromDirection(FVector InDirection) {
 
 void AIGS_EntranceBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_EntranceBase, bLocked);
     DOREPLIFETIME(AIGS_EntranceBase, bOpen);
     DOREPLIFETIME(AIGS_EntranceBase, bFullyProgressed);
 }
-
 

@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeShieldTierData : public FIGS_AIBaseSh
 public:
     FIGS_AIEmployeeShieldTierData();
 };
-

@@ -31,4 +31,3 @@ enum class EIGS_WarzoneTiles : uint8 {
     EnemyPosition,
     Gallery,
 };
-

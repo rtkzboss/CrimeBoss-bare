@@ -17,4 +17,3 @@ int32 UIGS_ActionToken::GetPriority() const {
     return 0;
 }
 
-

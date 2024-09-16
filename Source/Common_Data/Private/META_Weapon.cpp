@@ -49,11 +49,11 @@ FIGS_WeaponTableRow UMETA_Weapon::GetWeaponTableRow() const {
 }
 
 EIGS_WeaponSubtype UMETA_Weapon::GetWeaponSubtype() const {
-    return EIGS_WeaponSubtype::None;
+    return EIGS_WeaponSubtype::AssaultRifle;
 }
 
 TSoftObjectPtr<UIGS_WeaponSkinData> UMETA_Weapon::GetWeaponSkinAsset(UObject* inWCO) const {
-    return NULL;
+    return {};
 }
 
 FGameplayTag UMETA_Weapon::GetWeaponSkin() const {
@@ -61,7 +61,7 @@ FGameplayTag UMETA_Weapon::GetWeaponSkin() const {
 }
 
 float UMETA_Weapon::GetUpgradeCostMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_Weapon::GetUpgradeCost() const {
@@ -73,7 +73,7 @@ FText UMETA_Weapon::GetTitle() const {
 }
 
 TArray<TSubclassOf<UMETA_WeaponInventoryObject>> UMETA_Weapon::GetTargetWeaponsForUpgrade() const {
-    return TArray<TSubclassOf<UMETA_WeaponInventoryObject>>();
+    return {};
 }
 
 EMETA_ItemQuality UMETA_Weapon::GetTargetQualityToUpdateWeapon() const {
@@ -101,15 +101,15 @@ FIGS_MeleeWeaponTableRow UMETA_Weapon::GetMeleeWeaponTableRow() const {
 }
 
 EIGS_InventorySlot UMETA_Weapon::GetInventorySlot() const {
-    return EIGS_InventorySlot::INVALID;
+    return EIGS_InventorySlot::Primary;
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_Weapon::GetImage() const {
-    return NULL;
+    return {};
 }
 
 TSubclassOf<UMETA_WeaponInventoryObject> UMETA_Weapon::GetId() const {
-    return NULL;
+    return nullptr;
 }
 
 FText UMETA_Weapon::GetDescription() const {
@@ -125,7 +125,7 @@ FGameplayTagContainer UMETA_Weapon::GetCompatibleWeaponSkins(UObject* inWCO, con
 }
 
 UMETA_Character* UMETA_Weapon::GetCharacter() const {
-    return NULL;
+    return nullptr;
 }
 
 int32 UMETA_Weapon::GetBasePrice() const {
@@ -148,5 +148,4 @@ void UMETA_Weapon::ChangeSuccessfulMissions(int32 inChangedBy) {
 
 void UMETA_Weapon::AddTargetWeaponForUpgrade(TSubclassOf<UMETA_WeaponInventoryObject> inNewTargerWeapon) {
 }
-
 

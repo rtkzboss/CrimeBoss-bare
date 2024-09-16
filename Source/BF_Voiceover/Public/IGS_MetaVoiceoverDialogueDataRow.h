@@ -10,7 +10,6 @@ struct BF_VOICEOVER_API FIGS_MetaVoiceoverDialogueDataRow : public FTableRowBase
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMETA_DialogueUIData DialogueData;
-    
+
     FIGS_MetaVoiceoverDialogueDataRow();
 };
-

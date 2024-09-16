@@ -31,4 +31,3 @@ FMETA_TutorialTextTableRow UMETA_TutorialTextDatabase::GetTutorialTextData(UObje
 void UMETA_TutorialTextDatabase::AddActiveTag(FGameplayTag inTag, bool inPersistent) {
 }
 
-

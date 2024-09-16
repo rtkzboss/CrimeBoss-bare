@@ -14,21 +14,20 @@ public:
 
     UPROPERTY(BlueprintReadWrite)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadWrite)
     TSoftObjectPtr<UTexture2D> Image;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 UnlockedCount;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 UnlockableCount;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool HasDlcItem;
-    
-};
 
+};

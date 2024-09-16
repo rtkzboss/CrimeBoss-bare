@@ -9,7 +9,6 @@ struct FMETA_FPSBonusesFromMeta {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_PerkDataToFPS> ArmyPerkData;
-    
+
     COMMON_DATA_API FMETA_FPSBonusesFromMeta();
 };
-

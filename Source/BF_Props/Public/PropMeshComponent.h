@@ -15,14 +15,13 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPropInfoStruct mPropInfo;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UStaticMesh> StaticMeshPtr;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool RenderMesh;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

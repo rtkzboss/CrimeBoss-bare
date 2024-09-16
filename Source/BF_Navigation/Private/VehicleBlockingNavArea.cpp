@@ -5,4 +5,3 @@ UVehicleBlockingNavArea::UVehicleBlockingNavArea() {
     (*this).bSupportsAgent0 = false;
 }
 
-

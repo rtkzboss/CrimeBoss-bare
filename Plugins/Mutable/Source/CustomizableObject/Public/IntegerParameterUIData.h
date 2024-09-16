@@ -9,10 +9,9 @@ struct FIntegerParameterUIData {
 public:
     UPROPERTY(BlueprintReadWrite)
     FString Name;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FMutableParamUIMetadata ParamUIMetadata;
-    
+
     CUSTOMIZABLEOBJECT_API FIntegerParameterUIData();
 };
-

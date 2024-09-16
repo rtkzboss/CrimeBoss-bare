@@ -14,18 +14,17 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_SmartLinkAnimVariant CommonAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_SmartLinkAnimVariant LeftAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* LeftAnimationAsset;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_SmartLinkAnimVariant RightAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimMontage* RightAnimationAsset;
-    
-};
 
+};

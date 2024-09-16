@@ -13,9 +13,9 @@ FMETA_AmbushConfig::FMETA_AmbushConfig() {
     (*this).PoliceChances.HeatMedium = 4;
     (*this).PoliceChances.HeatHigh = 8;
     (*this).PoliceChances.HeatVeryHigh = 12;
+    (*this).GangsChances.DefaultForGangAmbush = {};
     (*this).GangsChances.NoGangsterKilledInMission = -5;
     (*this).GangsChances.MissionWasDoneInStealth = -20;
     (*this).GangsChances.BossInTopEnemyList = 20;
     (*this).GangsChances.BossIsInGangsEnemyList = 20;
 }
-

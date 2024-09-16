@@ -4,7 +4,6 @@
 #include "IGS_LootBagsManager.generated.h"
 
 class AIGS_LootBagPickup;
-class UIGS_LootBagsManager;
 class UObject;
 
 UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -15,13 +14,12 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_LootBagsManager* GetLootBagsManager(UObject* inWCO);
-    
+
 protected:
     UPROPERTY()
     TArray<AIGS_LootBagPickup*> m_LootBags;
-    
+
     UPROPERTY()
     TArray<AIGS_LootBagPickup*> m_GadgetBags;
-    
-};
 
+};

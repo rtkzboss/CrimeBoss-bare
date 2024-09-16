@@ -7,4 +7,3 @@ enum class EIGS_VoiceChatActivationMode : uint8 {
     VoiceThreshold,
     PushToTalk,
 };
-

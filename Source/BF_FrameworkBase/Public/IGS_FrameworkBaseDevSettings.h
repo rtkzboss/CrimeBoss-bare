@@ -19,30 +19,29 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkSwitchValue> FootstepNoneAkSwitch;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> DeathAkEvent;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> StopInspectAkEvent;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMaterialParameterCollection> WieldableMPCPath;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftClassPtr<UGameplayEffect> MoveSpeedGameplayEffect;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_GASDefaultAttributesDataAsset> DefaultCharacterAttributes;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_GASDefaultAttributesDataAsset> DefaultGlobalAttributes;
-    
+
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_UnlockManagerData> UnlockManagerData;
-    
+
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_ProgressionManagerData> ProgressionManagerData;
-    
-};
 
+};

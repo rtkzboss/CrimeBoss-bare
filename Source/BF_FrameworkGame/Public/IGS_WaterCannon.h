@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_MountedWeapon.h"
-#include "InteractedWithWaterTurretDelegate.h"
+#include "InteractedWithWaterTurret.h"
 #include "IGS_WaterCannon.generated.h"
 
 class AIGS_HoseSegmentBase;
@@ -15,29 +15,28 @@ public:
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void RemoveUnusedTurrets_MULTICAST();
-    
+
     UFUNCTION(NetMulticast, Reliable)
     void MakeVisible_MULTICAST();
-    
+
     UFUNCTION(Reliable, Server)
     void CheckItemAndMakeVisible_SERVER();
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FInteractedWithWaterTurret InteractedWithWaterTurret;
-    
+
     UPROPERTY()
     AIGS_HoseSegmentBase* WaterHoseObject;
-    
+
     UPROPERTY()
     int32 TurretID;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Replicated)
     bool IsItemInInventory;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

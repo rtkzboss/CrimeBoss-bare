@@ -2,4 +2,3 @@
 
 FIGS_ActiveTPVMontageHolder::FIGS_ActiveTPVMontageHolder() {
 }
-

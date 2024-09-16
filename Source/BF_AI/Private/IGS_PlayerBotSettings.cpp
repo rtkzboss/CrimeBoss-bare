@@ -16,4 +16,3 @@ FIGS_PlayerBotSettings::FIGS_PlayerBotSettings() {
     (*this).CoverStickiness = 5.000000000e-01f;
     (*this).ReactionIntensity = 8.000000119e-01f;
 }
-

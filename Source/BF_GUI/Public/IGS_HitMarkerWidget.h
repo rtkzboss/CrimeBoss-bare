@@ -19,36 +19,35 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void OnProjectileKillEnemy(bool inIsHeadshot, const FHitResult& inHitResult);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnProjectileHitEnemy(const FHitResult& inHitResult);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnProjectileHeadshotEnemy(const FHitResult& inHitResult);
-    
+
     UFUNCTION(BlueprintPure)
     bool IsAiming() const;
-    
+
     UFUNCTION(BlueprintCallable)
     FVector2D GetSightScreenPosition();
-    
+
     UFUNCTION(BlueprintCallable)
     FVector2D GetSightOffsetFromScreenCenter();
-    
+
     UFUNCTION(BlueprintCallable)
     void BindToSimpleShooter(UIGS_SimpleHitScanShooter* inShooter);
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_WeaponBase* CurrentWeapon;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_HitMarkersSetting HitMarkersSetting;
-    
-};
 
+};

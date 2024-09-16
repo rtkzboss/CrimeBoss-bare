@@ -11,13 +11,12 @@ struct CRIMEBOSSMETA_API FIGS_TutorialTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool SlowDownGame;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_TutorialPage> Pages;
-    
+
     FIGS_TutorialTableRow();
 };
-

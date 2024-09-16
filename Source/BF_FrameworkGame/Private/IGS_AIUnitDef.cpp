@@ -2,12 +2,12 @@
 #include "EIGS_CoverPreset.h"
 
 FIGS_AIUnitDef::FIGS_AIUnitDef() {
-    (*this).Controller = nullptr;
-    (*this).Pawn = nullptr;
+    (*this).Controller = FSoftObjectPath();
+    (*this).Pawn = FSoftObjectPath();
     (*this).Loadout.PrimaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.MeleeWeapon = nullptr;
-    (*this).ThrowablePool.Empty();
+    (*this).ThrowablePool = {};
     (*this).Stats.HP = 2.800000000e+02f;
     (*this).Stats.Shield = 0.000000000e+00f;
     (*this).Stats.WeaponDamage = 1.000000000e+00f;
@@ -25,4 +25,3 @@ FIGS_AIUnitDef::FIGS_AIUnitDef() {
     (*this).IsMeleeOnly = false;
     (*this).Source = EIGS_AIUnitDBSource::US_Old;
 }
-

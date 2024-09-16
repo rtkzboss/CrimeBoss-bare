@@ -7,4 +7,3 @@ FMETA_MusicPacksTableRow UMETA_MusicPacksDatabase::GetMusicData(UObject* inWCO, 
     return FMETA_MusicPacksTableRow{};
 }
 
-

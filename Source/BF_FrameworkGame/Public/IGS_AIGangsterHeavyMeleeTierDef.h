@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterHeavyMeleeTierDef : public FIGS_AIGan
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AIGangsterHeavyMeleeTierData SpecStats;
-    
+
     FIGS_AIGangsterHeavyMeleeTierDef();
 };
-

@@ -97,11 +97,11 @@ bool UMETA_Character::IncreaseLevel() {
 }
 
 UMETA_Weapon* UMETA_Character::GetWeaponInSlot(EIGS_InventorySlot inSlot) const {
-    return NULL;
+    return nullptr;
 }
 
 TMap<FGameplayTag, int32> UMETA_Character::GetVariables() const {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 int32 UMETA_Character::GetUpkeepCostWithModifiers() {
@@ -137,7 +137,7 @@ EMETA_ItemQuality UMETA_Character::GetQualityTier() const {
 }
 
 TArray<FMETA_PerkData> UMETA_Character::GetPerks() const {
-    return TArray<FMETA_PerkData>();
+    return {};
 }
 
 int32 UMETA_Character::GetMutableIndex() {
@@ -213,11 +213,11 @@ FCommonHeisterData UMETA_Character::GetCommonHeisterData(const UObject* inWCO) {
 }
 
 float UMETA_Character::GetCharacterPromoteProgress() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_Character::GetCharacterPreviousPromoteProgress() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_Character::GetBaseUpkeepCost() const {
@@ -229,7 +229,7 @@ int32 UMETA_Character::GetBaseMissionCutPercent() {
 }
 
 float UMETA_Character::GetBaseLevelUpMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_Character::GetBaseHireCost() const {
@@ -245,7 +245,7 @@ int32 UMETA_Character::GetAditionalReviveCount() const {
 }
 
 float UMETA_Character::GetActiveHeisterAttributeMultiplier(EMETA_ChangedHeisterAttribute inAttribute) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_Character::GetAbility1Charges() {
@@ -256,7 +256,7 @@ void UMETA_Character::DecreaseCurrentAmountOfJobsWhichCanBeCompletedToday(int32 
 }
 
 UMETA_Equipment* UMETA_Character::ClearEquipment() {
-    return NULL;
+    return nullptr;
 }
 
 void UMETA_Character::ClearAndReturnWeaponFromSlot(EIGS_InventorySlot inSlot, UMETA_Weapon*& outWeapon, UMETA_Equipment*& outEquipment) {
@@ -282,5 +282,4 @@ bool UMETA_Character::AddTrait(FGameplayTag inTrait) {
 
 void UMETA_Character::AddPerk(const FMETA_PerkData inPerk) {
 }
-
 

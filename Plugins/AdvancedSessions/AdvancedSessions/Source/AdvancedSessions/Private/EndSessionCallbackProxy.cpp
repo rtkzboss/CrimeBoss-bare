@@ -4,7 +4,6 @@ UEndSessionCallbackProxy::UEndSessionCallbackProxy() {
 }
 
 UEndSessionCallbackProxy* UEndSessionCallbackProxy::EndSession(UObject* WorldContextObject, APlayerController* PlayerController) {
-    return NULL;
+    return nullptr;
 }
-
 

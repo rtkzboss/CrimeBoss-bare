@@ -15,4 +15,3 @@ FIGS_CommonModData::FIGS_CommonModData() {
     (*this).MaxRangeMultiplier = 1.000000000e+00f;
     (*this).RPMMultiplier = 1.000000000e+00f;
 }
-

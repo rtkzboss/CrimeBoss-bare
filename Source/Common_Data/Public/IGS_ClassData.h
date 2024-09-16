@@ -11,16 +11,15 @@ struct FIGS_ClassData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ClassPerk;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Image;
-    
+
     COMMON_DATA_API FIGS_ClassData();
 };
-

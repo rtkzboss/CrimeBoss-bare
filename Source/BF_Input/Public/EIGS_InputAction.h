@@ -66,4 +66,3 @@ enum class EIGS_InputAction : uint8 {
     IA_WheelMenu,
     IA_PushToTalk,
 };
-

@@ -9,4 +9,3 @@ enum class EMETA_PerkOptions : uint8 {
     Compliment,
     Intimidate,
 };
-

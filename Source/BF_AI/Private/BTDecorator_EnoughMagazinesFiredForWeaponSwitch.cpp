@@ -4,4 +4,3 @@ UBTDecorator_EnoughMagazinesFiredForWeaponSwitch::UBTDecorator_EnoughMagazinesFi
     (*this).NodeName = TEXT("Enough Magazines Fired For WeaponSwitch");
 }
 
-

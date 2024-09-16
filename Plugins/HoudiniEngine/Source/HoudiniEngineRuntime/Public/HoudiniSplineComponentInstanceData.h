@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "ComponentInstanceDataCache.h"
 #include "HoudiniSplineComponentInstanceData.generated.h"
 
@@ -11,13 +10,12 @@ struct FHoudiniSplineComponentInstanceData : public FActorComponentInstanceData 
 public:
     UPROPERTY()
     TArray<FTransform> CurvePoints;
-    
+
     UPROPERTY()
     TArray<FVector> DisplayPoints;
-    
+
     UPROPERTY()
     TArray<int32> DisplayPointIndexDivider;
-    
+
     HOUDINIENGINERUNTIME_API FHoudiniSplineComponentInstanceData();
 };
-

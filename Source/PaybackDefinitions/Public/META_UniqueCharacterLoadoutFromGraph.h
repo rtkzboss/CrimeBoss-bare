@@ -9,13 +9,12 @@ struct FMETA_UniqueCharacterLoadoutFromGraph {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* PrimaryWeapon;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* SecondaryWeapon;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_ArrayEquipmentAllowedClasses Equipment;
-    
+
     PAYBACKDEFINITIONS_API FMETA_UniqueCharacterLoadoutFromGraph();
 };
-

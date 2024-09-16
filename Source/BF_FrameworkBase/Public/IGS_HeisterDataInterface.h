@@ -12,4 +12,3 @@ class IIGS_HeisterDataInterface : public IInterface {
     GENERATED_BODY()
 public:
 };
-

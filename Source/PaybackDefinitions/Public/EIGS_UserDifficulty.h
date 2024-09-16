@@ -9,4 +9,3 @@ enum class EIGS_UserDifficulty : uint8 {
     UD_Medium,
     UD_Hard,
 };
-

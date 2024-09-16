@@ -22,7 +22,7 @@ bool UMETA_BaseGoal::IsGoalRepeatable(int32& outDaysBeetwenAttempts) const {
 }
 
 TSet<int32> UMETA_BaseGoal::GetVisitedNodeIDs() const {
-    return TSet<int32>();
+    return {};
 }
 
 EMETA_GoalType UMETA_BaseGoal::GetType() const {
@@ -42,11 +42,11 @@ EMETA_GoalPriority UMETA_BaseGoal::GetPriority() const {
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_BaseGoal::GetPicture() const {
-    return NULL;
+    return {};
 }
 
 TArray<TSubclassOf<UMETA_MissionID>> UMETA_BaseGoal::GetMissions() {
-    return TArray<TSubclassOf<UMETA_MissionID>>();
+    return {};
 }
 
 EMETA_Partner UMETA_BaseGoal::GetInstigatorPartner() const {
@@ -54,11 +54,11 @@ EMETA_Partner UMETA_BaseGoal::GetInstigatorPartner() const {
 }
 
 TSubclassOf<UMETA_BaseGoal> UMETA_BaseGoal::GetId() const {
-    return NULL;
+    return nullptr;
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_BaseGoal::GetIcon() const {
-    return NULL;
+    return {};
 }
 
 EMETA_GoalStatus UMETA_BaseGoal::GetGoalResult() const {
@@ -78,5 +78,4 @@ void UMETA_BaseGoal::AddVisitedNode(const int32 inNodeID) {
 
 void UMETA_BaseGoal::AddMission(TSubclassOf<UMETA_MissionID> inMissionID) {
 }
-
 

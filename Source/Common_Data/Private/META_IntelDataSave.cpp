@@ -6,4 +6,3 @@ FMETA_IntelDataSave::FMETA_IntelDataSave() {
     (*this).RespectValueOnMissionSpawn = EMETA_RespectLvl::Low;
     (*this).IntelRewardMultiplier = 1.000000000e+00f;
 }
-

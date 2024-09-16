@@ -14,4 +14,3 @@ FIGS_PickupClassesCustomThrowingData::FIGS_PickupClassesCustomThrowingData() {
     (*this).SpawnDelay = 0.000000000e+00f;
     (*this).SpawnHeightRelative = 1.000000000e+00f;
 }
-

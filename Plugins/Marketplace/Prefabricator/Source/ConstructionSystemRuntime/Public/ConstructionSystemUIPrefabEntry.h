@@ -11,16 +11,15 @@ struct CONSTRUCTIONSYSTEMRUNTIME_API FConstructionSystemUIPrefabEntry {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText DisplayName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Tooltip;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UTexture2D* Icon;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UPrefabricatorAssetInterface* Prefab;
-    
+
     FConstructionSystemUIPrefabEntry();
 };
-

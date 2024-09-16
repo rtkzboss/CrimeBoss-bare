@@ -9,4 +9,3 @@ enum class EHoudiniCurveBreakpointParameterization : int8 {
     Chord,
     Centripetal,
 };
-

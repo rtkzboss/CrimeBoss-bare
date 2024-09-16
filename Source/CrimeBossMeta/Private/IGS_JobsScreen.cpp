@@ -1,12 +1,4 @@
 #include "IGS_JobsScreen.h"
-#include "EScreenInputMode.h"
-#include "EScreenInputPass.h"
-#include "EScreenModifier.h"
-#include "EScreenZOrder.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_JobsScreen::UIGS_JobsScreen() {
 }
@@ -40,19 +32,18 @@ void UIGS_JobsScreen::GoToCategory(int32 Direction) {
 }
 
 UUserWidget* UIGS_JobsScreen::GetWidgetByJobTag(FGameplayTag inTag, bool inIncludeRecomended) const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_JobsScreenCategoryWidget* UIGS_JobsScreen::GetSelectedCategoryWidget() const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_JobsScreenCategoryWidget* UIGS_JobsScreen::GetCategoryByIndex(int32 Index) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_JobsScreen::GetCategoriesCount() {
     return 0;
 }
-
 

@@ -12,4 +12,3 @@ enum class EIGS_LightingScenarioType : uint8 {
     RainyDay,
     RainyNight,
 };
-

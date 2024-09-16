@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FMETA_ActionCardStrengthValues {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bNeedOverrideTitle;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText NewTitle;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<int32> Values;
-    
+
     FMETA_ActionCardStrengthValues();
 };
-

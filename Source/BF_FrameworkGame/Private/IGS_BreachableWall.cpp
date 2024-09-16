@@ -1,16 +1,16 @@
 #include "IGS_BreachableWall.h"
 #include "Components/ChildActorComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 
 AIGS_BreachableWall::AIGS_BreachableWall(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).WallRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("WallRootComponent"));
-    (*this).FrontBreachingPoints = CreateDefaultSubobject<UChildActorComponent>(TEXT("FrontBreachingPoints"));
-    (*this).BackBreachingPoints = CreateDefaultSubobject<UChildActorComponent>(TEXT("BackBreachingPoints"));
-    (*this).RootComponent = (USceneComponent*)WallRootComponent;
-    (*this).BackBreachingPoints->SetupAttachment((*this).WallRootComponent);
-    (*this).FrontBreachingPoints->SetupAttachment((*this).WallRootComponent);
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("WallRootComponent"));
+    auto gen2 = CreateDefaultSubobject<UChildActorComponent>(TEXT("FrontBreachingPoints"));
+    auto gen3 = CreateDefaultSubobject<UChildActorComponent>(TEXT("BackBreachingPoints"));
+    (*this).WallRootComponent = gen;
+    (*this).FrontBreachingPoints = gen2;
+    (*this).BackBreachingPoints = gen3;
+    (*this).RootComponent = gen;
+    if (gen2) gen2->SetupAttachment(gen);
+    if (gen3) gen3->SetupAttachment(gen);
 }
-
 

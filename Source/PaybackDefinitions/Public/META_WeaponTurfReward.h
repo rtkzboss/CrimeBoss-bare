@@ -9,13 +9,12 @@ struct PAYBACKDEFINITIONS_API FMETA_WeaponTurfReward {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality Quality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 WeaponQuality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Amount;
-    
+
     FMETA_WeaponTurfReward();
 };
-

@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_GangArmyTierChangeQueueData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_GangArmyTierChangeData> GangArmyTierChangeData;
-    
+
     FMETA_GangArmyTierChangeQueueData();
 };
-

@@ -17,31 +17,30 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnReposses(AIGS_GameCharacterFramework* inCharacter);
-    
+
 public:
     UFUNCTION(BlueprintImplementableEvent)
     void ClearList();
-    
+
 protected:
     UFUNCTION(BlueprintCallable)
     void BindToPlayerJoinManager();
-    
+
 public:
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_TeammateHealthInfoSingleWidget* SecondPlayerWidget;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_TeammateHealthInfoSingleWidget* ThirdPlayerWidget;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_TeammateHealthInfoSingleWidget* FourthPlayerWidget;
-    
-};
 
+};

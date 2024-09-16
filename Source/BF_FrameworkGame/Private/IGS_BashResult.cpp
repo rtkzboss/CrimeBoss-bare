@@ -40,4 +40,3 @@ FIGS_BashResult::FIGS_BashResult() {
     (*this).bIsAI = false;
     (*this).bIsUnarmedMelee = false;
 }
-

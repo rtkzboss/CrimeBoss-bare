@@ -13,15 +13,14 @@ FIGS_DialogueVariationData::FIGS_DialogueVariationData() {
     (*this).Cooldown = 0.000000000e+00f;
     (*this).DelayMin = 0.000000000e+00f;
     (*this).DelayMax = 0.000000000e+00f;
-    (*this).VoicesMedia.Empty();
-    (*this).VoicesMediaList.Empty();
-    (*this).CensoredMediaList.Empty();
+    (*this).VoicesMedia = {};
+    (*this).VoicesMediaList = {};
+    (*this).CensoredMediaList = {};
     (*this).IsTTS = false;
     (*this).FacialAnimation = nullptr;
-    (*this).SubtitleKey = FText::FromString(TEXT(""));
-    (*this).SubtitleKeyEng = FText::FromString(TEXT(""));
-    (*this).CustomCharacterName = FText::FromString(TEXT(""));
+    (*this).SubtitleKey = FText::GetEmpty();
+    (*this).SubtitleKeyEng = FText::GetEmpty();
+    (*this).CustomCharacterName = FText::GetEmpty();
     (*this).TriggerDialogue.Group = EIGS_DialogueGroup::None;
     (*this).TriggerDialogue.DialogueID = NAME_None;
 }
-

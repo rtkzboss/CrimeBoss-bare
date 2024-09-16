@@ -12,4 +12,3 @@ enum class EIGS_LevelRangeBit : uint8 {
     Level4,
     Level5,
 };
-

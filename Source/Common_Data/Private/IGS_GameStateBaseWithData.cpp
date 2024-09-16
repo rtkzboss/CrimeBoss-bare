@@ -1,6 +1,4 @@
 #include "IGS_GameStateBaseWithData.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_GameStateBaseWithData::AIGS_GameStateBaseWithData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -92,7 +90,7 @@ EIGS_AITiers AIGS_GameStateBaseWithData::GetSWATTier() const {
 }
 
 EIGS_MissionStartupSource AIGS_GameStateBaseWithData::GetStartupSource() const {
-    return EIGS_MissionStartupSource::INVALID;
+    return EIGS_MissionStartupSource::Editor;
 }
 
 EIGS_MusicMissionState AIGS_GameStateBaseWithData::GetStartMusic() const {
@@ -120,7 +118,7 @@ EMETA_RespectLvl AIGS_GameStateBaseWithData::GetRespect() const {
 }
 
 EIGS_QPModeSource AIGS_GameStateBaseWithData::GetQPModeSource() const {
-    return EIGS_QPModeSource::INVALID;
+    return EIGS_QPModeSource::Lobby;
 }
 
 int32 AIGS_GameStateBaseWithData::GetProgressionLevel() const {
@@ -144,7 +142,7 @@ bool AIGS_GameStateBaseWithData::GetNeedObjectiveCompletion() const {
 }
 
 EIGS_MPLobbyType AIGS_GameStateBaseWithData::GetMPLobbyType() const {
-    return EIGS_MPLobbyType::INVALID;
+    return EIGS_MPLobbyType::Normal;
 }
 
 EIGS_HubScenarioType AIGS_GameStateBaseWithData::GetMissionType() const {
@@ -196,7 +194,7 @@ EIGS_HubBackdropTypes AIGS_GameStateBaseWithData::GetHubVariant() const {
 }
 
 EIGS_HubDistrict AIGS_GameStateBaseWithData::GetHubDistrict() const {
-    return EIGS_HubDistrict::INVALID;
+    return EIGS_HubDistrict::Downtown;
 }
 
 int32 AIGS_GameStateBaseWithData::GetHeistersDataNum() const {
@@ -204,7 +202,7 @@ int32 AIGS_GameStateBaseWithData::GetHeistersDataNum() const {
 }
 
 TArray<FCommonHeisterData> AIGS_GameStateBaseWithData::GetHeistersData() const {
-    return TArray<FCommonHeisterData>();
+    return {};
 }
 
 EMETA_Heat AIGS_GameStateBaseWithData::GetHeat() const {
@@ -253,8 +251,7 @@ EIGS_AITiers AIGS_GameStateBaseWithData::GetAllyTier() const {
 
 void AIGS_GameStateBaseWithData::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_GameStateBaseWithData, GameStateData);
 }
-
 

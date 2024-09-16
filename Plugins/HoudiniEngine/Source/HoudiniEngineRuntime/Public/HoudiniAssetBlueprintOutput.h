@@ -9,10 +9,9 @@ struct FHoudiniAssetBlueprintOutput {
 public:
     UPROPERTY()
     int32 OutputIndex;
-    
+
     UPROPERTY()
     FHoudiniOutputObject OutputObject;
-    
+
     HOUDINIENGINERUNTIME_API FHoudiniAssetBlueprintOutput();
 };
-

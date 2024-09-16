@@ -8,4 +8,3 @@ enum class EIGS_PerkCategory : uint8 {
     PC_Positive,
     PC_Powerful,
 };
-

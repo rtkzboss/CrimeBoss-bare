@@ -8,10 +8,9 @@ struct COMMON_SAVE_API FMETA_TimerNodeSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 StartingDay;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ResultValue;
-    
+
     FMETA_TimerNodeSaveData();
 };
-

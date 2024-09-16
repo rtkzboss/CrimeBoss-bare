@@ -4,4 +4,3 @@ FIGS_ThrowableLiveObjectsHolder::FIGS_ThrowableLiveObjectsHolder() {
     (*this).InventoryObject = nullptr;
     (*this).Projectile = nullptr;
 }
-

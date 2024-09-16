@@ -10,13 +10,12 @@ struct PAYBACKDEFINITIONS_API FMETA_HeisterStatisticData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_CharacterID HeisterID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_HeisterSpecialData HeisterSpecialData;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 Statuses;
-    
+
     FMETA_HeisterStatisticData();
 };
-

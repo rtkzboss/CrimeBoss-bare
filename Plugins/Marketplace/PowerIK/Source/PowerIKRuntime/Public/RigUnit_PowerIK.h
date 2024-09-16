@@ -16,46 +16,45 @@ struct FRigUnit_PowerIK : public FRigUnitMutable {
 public:
     UPROPERTY()
     FName CharacterRoot;
-    
+
     UPROPERTY()
     float RootRotationMultiplier;
-    
+
     UPROPERTY()
     TArray<FPowerIKEffector> Effectors;
-    
+
     UPROPERTY()
     TArray<FPowerIKBoneBendDirection> BendDirections;
-    
+
     UPROPERTY()
     TArray<FPowerIKExcludedBone> ExcludedBones;
-    
+
     UPROPERTY()
     TArray<FPowerIKBoneLimit> JointLimits;
-    
+
     UPROPERTY()
     FPowerIKCenterOfGravity CenterOfGravityConstraint;
-    
+
     UPROPERTY()
     FPowerIKBodyInertia Inertia;
-    
+
     UPROPERTY()
     int32 MaxSquashIterations;
-    
+
     UPROPERTY()
     int32 MaxStretchIterations;
-    
+
     UPROPERTY()
     int32 MaxFinalIterations;
-    
+
     UPROPERTY()
     bool AllowBoneTranslation;
-    
+
     UPROPERTY()
     float SolverAlpha;
-    
+
     UPROPERTY(Transient)
     FPowerIKCore Core;
-    
+
     POWERIKRUNTIME_API FRigUnit_PowerIK();
 };
-

@@ -10,4 +10,3 @@ public:
     UIGS_ChildActorComponentWithNotify(const FObjectInitializer& ObjectInitializer);
 
 };
-

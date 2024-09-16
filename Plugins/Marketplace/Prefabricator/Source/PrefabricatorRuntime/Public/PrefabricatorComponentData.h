@@ -11,13 +11,12 @@ struct PREFABRICATORRUNTIME_API FPrefabricatorComponentData {
 public:
     UPROPERTY()
     FTransform RelativeTransform;
-    
+
     UPROPERTY()
     FString ComponentName;
-    
+
     UPROPERTY()
     TArray<UPrefabricatorProperty*> Properties;
-    
+
     FPrefabricatorComponentData();
 };
-

@@ -10,4 +10,3 @@ public:
     AIGS_SquadCop(const FObjectInitializer& ObjectInitializer);
 
 };
-

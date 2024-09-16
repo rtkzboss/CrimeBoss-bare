@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterTiersDef : public FIGS_AIBaseTiersDef
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterSpecializationHolder Tier1;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterSpecializationHolder Tier2;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterSpecializationHolder Tier3;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterSpecializationHolder Special;
-    
+
     FIGS_AIGangsterTiersDef();
 };
-

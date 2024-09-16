@@ -1,10 +1,10 @@
 #include "IGS_ScriptActorBase.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 
 AIGS_ScriptActorBase::AIGS_ScriptActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
     (*this).NetDormancy = DORM_Initial;
 }
 
@@ -20,10 +20,9 @@ FRandomStream AIGS_ScriptActorBase::RandomStreamGetter() const {
 
 
 UIGS_RandomStreamHolder* AIGS_ScriptActorBase::GetRandomStreamHolder() {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_ScriptActorBase::GetRandomStream(FRandomStream& outRandomStream) {
 }
-
 

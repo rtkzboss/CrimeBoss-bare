@@ -10,4 +10,3 @@ public:
     UIGS_LocalPlayerVoiceChat_EOS();
 
 };
-

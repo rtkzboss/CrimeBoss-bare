@@ -7,4 +7,3 @@ FMETA_Loan::FMETA_Loan() {
     (*this).DaysToRepay = 0;
     (*this).CooldownToNextOffer = 0;
 }
-

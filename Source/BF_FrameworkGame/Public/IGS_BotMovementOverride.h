@@ -8,10 +8,9 @@ struct BF_FRAMEWORKGAME_API FIGS_BotMovementOverride {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BotOverrideMaxAcceleration;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BotOverrideBrakingDecelerationWalking;
-    
+
     FIGS_BotMovementOverride();
 };
-

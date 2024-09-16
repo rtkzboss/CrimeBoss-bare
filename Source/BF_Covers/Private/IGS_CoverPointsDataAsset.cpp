@@ -3,4 +3,3 @@
 UIGS_CoverPointsDataAsset::UIGS_CoverPointsDataAsset() {
 }
 
-

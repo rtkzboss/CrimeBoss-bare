@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_HeisterEliminationReward {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<EMETA_ItemQuality> Quality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsUnique;
-    
+
     FMETA_HeisterEliminationReward();
 };
-

@@ -8,10 +8,9 @@ struct BF_VOICEOVER_API FIGS_MetaDialogueSpeakerVoiceLengthData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float VoiceLength;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LinesCount;
-    
+
     FIGS_MetaDialogueSpeakerVoiceLengthData();
 };
-

@@ -4,7 +4,6 @@
 #include "IGS_InteractiveObjectsManager.generated.h"
 
 class UIGS_InteractiveComponent;
-class UIGS_InteractiveObjectsManager;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -15,18 +14,17 @@ public:
 
     UFUNCTION()
     void UnregisterInteractiveComponent(UIGS_InteractiveComponent* InComponent);
-    
+
     UFUNCTION()
     void RegisterInteractiveComponent(UIGS_InteractiveComponent* InComponent);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWorldContextObject))
     static UIGS_InteractiveObjectsManager* Instance(const UObject* inWorldContextObject);
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     TArray<UIGS_InteractiveComponent*> InteractiveComponents;
-    
+
     UPROPERTY()
     bool bAlreadyReset;
-    
-};
 
+};

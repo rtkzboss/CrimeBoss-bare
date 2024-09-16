@@ -13,21 +13,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UseVirtualCursor();
-    
+
     UFUNCTION(BlueprintCallable)
     void UseNativeCursor();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsHovering() const;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleInstanceOnly)
     UIGS_CursorWidget* VirtualSoftwareCursorWidget;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleInstanceOnly)
     UIGS_CursorWidget* NativeSoftwareCursorWidget;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bUsingVirtualCursor;
-    
-};
 
+};

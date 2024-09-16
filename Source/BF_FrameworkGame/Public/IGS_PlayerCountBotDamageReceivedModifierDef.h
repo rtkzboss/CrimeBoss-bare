@@ -10,13 +10,12 @@ struct BF_FRAMEWORKGAME_API FIGS_PlayerCountBotDamageReceivedModifierDef {
 public:
     UPROPERTY(EditDefaultsOnly)
     UCurveFloat* OnePlayer;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UCurveFloat* TwoPlayers;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UCurveFloat* ThreePlayers;
-    
+
     FIGS_PlayerCountBotDamageReceivedModifierDef();
 };
-

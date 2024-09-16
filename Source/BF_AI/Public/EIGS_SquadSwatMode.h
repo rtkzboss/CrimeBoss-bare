@@ -11,4 +11,3 @@ enum class EIGS_SquadSwatMode : uint8 {
     Scripted,
     DisruptGadget,
 };
-

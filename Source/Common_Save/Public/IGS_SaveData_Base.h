@@ -8,7 +8,6 @@ struct COMMON_SAVE_API FIGS_SaveData_Base {
 public:
     UPROPERTY(SaveGame)
     FString MetaPersistentId;
-    
+
     FIGS_SaveData_Base();
 };
-

@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FMETA_WeakenMissionTurfActionGenData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 WeaknessChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NeutralizeChance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CaptureChance;
-    
+
     FMETA_WeakenMissionTurfActionGenData();
 };
-

@@ -6,4 +6,3 @@ FMETA_BonusSetup::FMETA_BonusSetup() {
     (*this).Frequency = 0;
     (*this).Repetition = 0;
 }
-

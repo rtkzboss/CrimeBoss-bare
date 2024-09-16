@@ -12,4 +12,3 @@ enum class EIGS_AmbientReaction : uint8 {
     Fear,
     Inspect,
 };
-

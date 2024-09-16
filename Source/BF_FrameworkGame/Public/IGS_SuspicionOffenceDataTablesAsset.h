@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* PlayerOffenceTable;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* NoiseOffenceTable;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* SuspActorsOffenceTable;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UDataTable* SpecialOffenceTable;
-    
-};
 
+};

@@ -14,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsUserEntitledTo(const UObject* inWCO, FGameplayTag inGameplayTag);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetEntitlementOwnedSavedDiff(const UObject* inWCO, const TArray<FGameplayTag> inOwnedEntitlements, const TArray<FGameplayTag> inSavedEntitlements, bool& outAnyMissingInSave, bool& outAnyMissingCurrent);
-    
-};
 
+};

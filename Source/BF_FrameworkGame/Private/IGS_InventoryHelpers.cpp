@@ -13,7 +13,7 @@ bool UIGS_InventoryHelpers::HasWTInGlobalInventory(const UObject* inWCO) {
 }
 
 UIGS_ListInventory* UIGS_InventoryHelpers::GetPlayerInventory(AIGS_GameCharacterFramework* inPlayer) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_InventoryHelpers::GetItemCountInPlayerInventory(AIGS_GameCharacterFramework* inPlayer, TSubclassOf<UIGS_InventoryObjectFramework> inItemClass) {
@@ -29,11 +29,11 @@ int32 UIGS_InventoryHelpers::GetGlobalInventoryFreeSlotsCount(const UObject* inW
 }
 
 UIGS_GlobalInventory* UIGS_InventoryHelpers::GetGlobalInventory(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 float UIGS_InventoryHelpers::GetCurrentInventoryValue(AIGS_GameCharacterFramework* inPlayer) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UIGS_InventoryHelpers::DoesPlayerHaveItemWithPropertyInInventory(AIGS_GameCharacterFramework* inPlayer, EIGS_ItemPropertyFlags inItemFlag) {
@@ -79,5 +79,4 @@ bool UIGS_InventoryHelpers::AddItemToGlobalInventory(const UObject* inWCO, TSubc
 bool UIGS_InventoryHelpers::AddItemsToGlobalInventory(const UObject* inWCO, TSubclassOf<UIGS_GlobalInventoryObject> inItemClass, int32 inCount) {
     return false;
 }
-
 

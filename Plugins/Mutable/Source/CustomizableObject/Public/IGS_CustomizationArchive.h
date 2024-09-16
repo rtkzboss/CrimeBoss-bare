@@ -8,7 +8,6 @@ struct FIGS_CustomizationArchive {
 public:
     UPROPERTY(BlueprintReadOnly)
     TArray<uint8> StoredArchive;
-    
+
     CUSTOMIZABLEOBJECT_API FIGS_CustomizationArchive();
 };
-

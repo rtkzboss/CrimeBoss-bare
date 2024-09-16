@@ -1,5 +1,4 @@
 #include "IGS_SubtitleManager.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_SubtitleManager::UIGS_SubtitleManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -18,5 +17,4 @@ void UIGS_SubtitleManager::ClearDialogueSubtitle(EIGS_SubtitleType inSubtitleTyp
 
 void UIGS_SubtitleManager::ClearAndDisableAllSubtitles() {
 }
-
 

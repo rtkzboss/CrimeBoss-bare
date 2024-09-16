@@ -13,27 +13,26 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool StartOnAlarm;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TimeAfterAlarm;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinControlTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpawnStopEndAssaultTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxAliveEnemiesToStartControl;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FirstSpawnDelayInAssault;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HelicopterCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_StormType, FIGS_StormTypeHolder> StormTypeHolders;
-    
-};
 
+};

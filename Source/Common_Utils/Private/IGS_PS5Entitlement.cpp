@@ -10,4 +10,3 @@ FIGS_PS5Entitlement::FIGS_PS5Entitlement() {
     (*this).ASIA_OfferId = TEXT("");
     (*this).ASIA_StoreId = TEXT("");
 }
-

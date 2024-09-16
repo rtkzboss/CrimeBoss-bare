@@ -14,6 +14,5 @@ public:
 protected:
     UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_PostProcessManagerComponent> m_PostProcessManager;
-    
-};
 
+};

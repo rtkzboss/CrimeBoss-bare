@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     uint32 VehicleGroups;
-    
+
     UPROPERTY(EditAnywhere)
     AIGS_TrafficSegment* PossiblePath;
-    
-};
 
+};

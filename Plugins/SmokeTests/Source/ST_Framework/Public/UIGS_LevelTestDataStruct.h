@@ -8,4 +8,3 @@ struct ST_FRAMEWORK_API FUIGS_LevelTestDataStruct {
 public:
     FUIGS_LevelTestDataStruct();
 };
-

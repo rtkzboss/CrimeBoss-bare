@@ -1,16 +1,18 @@
 #include "IGS_RopeActor.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "IGS_RopeComponent.h"
 
 AIGS_RopeActor::AIGS_RopeActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).RopeComponent = CreateDefaultSubobject<UIGS_RopeComponent>(TEXT("RopeComponennt"));
+    auto gen = CreateDefaultSubobject<UIGS_RopeComponent>(TEXT("RopeComponennt"));
+    auto gen2 = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    (*this).RopeComponent = gen;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen3 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
     (*this).NetDormancy = DORM_Initial;
-    (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-    (*this).RopeComponent->SetupAttachment((*this).RootComponent);
+    (*this).RootComponent = gen2;
+    if (gen) gen->SetupAttachment(gen2);
 }
 
 void AIGS_RopeActor::UnLockEndParticle_Implementation() {
@@ -42,5 +44,4 @@ void AIGS_RopeActor::PlayerStartUsingRope_Implementation(AIGS_GameCharacterFrame
 
 void AIGS_RopeActor::AllowEndPointMove_Implementation() {
 }
-
 

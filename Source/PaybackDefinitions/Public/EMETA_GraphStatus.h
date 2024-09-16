@@ -7,4 +7,3 @@ enum class EMETA_GraphStatus : uint8 {
     Active,
     Deactive,
 };
-

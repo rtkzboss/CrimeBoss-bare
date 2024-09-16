@@ -24,74 +24,73 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnHoldTick_Internal(float InProgress);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnHoldStarted_Internal();
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void OnHoldStarted();
-    
+
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnHoldFinished_Internal();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnHoldCancelled_Internal();
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void OnHoldCancelled();
-    
+
 private:
     UFUNCTION()
     FEventReply OnHoldBorderMouseButtonUp(FGeometry InMyGeometry, const FPointerEvent& InMouseEvent);
-    
+
     UFUNCTION()
     FEventReply OnHoldBorderMouseButtonDown(FGeometry Geometry, const FPointerEvent& PointerEvent);
-    
+
 protected:
     UFUNCTION()
     void NativePreConstruct();
-    
+
 private:
     UFUNCTION()
     void HandleHoldTick();
-    
+
     UFUNCTION()
     void HandleHoldFinished();
-    
+
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HoldTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 HoldTicksPerSecond;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor ProgressColor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSlateColor TextColor;
-    
+
     UPROPERTY(BlueprintAssignable)
     FOnButtonClickedEvent OnHoldFinished;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UBorder* HoldBorder;
-    
+
     UPROPERTY(BlueprintReadWrite)
     UMaterialInstanceDynamic* ProgressMaterial;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UImage* Progress;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UTextBlock* ButtonText;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, meta=(BindWidget))
     UIGS_WidgetInputKeyIcon* InputKeyIcon;
-    
-};
 
+};

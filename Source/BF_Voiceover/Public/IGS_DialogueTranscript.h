@@ -9,13 +9,12 @@ struct BF_VOICEOVER_API FIGS_DialogueTranscript {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_DialogueSpeaker Speaker;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName LineID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsDisabled;
-    
+
     FIGS_DialogueTranscript();
 };
-

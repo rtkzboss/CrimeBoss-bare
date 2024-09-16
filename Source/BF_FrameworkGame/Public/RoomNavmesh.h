@@ -12,6 +12,5 @@ public:
 private:
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     uint8 bLockRebuild: 1;
-    
-};
 
+};

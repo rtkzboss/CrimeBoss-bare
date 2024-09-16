@@ -9,4 +9,3 @@ UIGS_InputDevSettings::UIGS_InputDevSettings() {
     (*this).InputActionDefaultKeys = FSoftObjectPath(TEXT("/Game/00_Main/Input/InputTables/DA_DefaultInputKeys.DA_DefaultInputKeys"), TEXT(""));
 }
 
-

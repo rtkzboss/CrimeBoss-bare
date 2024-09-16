@@ -13,4 +13,3 @@ enum class EMETA_BonusUsage : uint8 {
     Heisters,
     Percentage,
 };
-

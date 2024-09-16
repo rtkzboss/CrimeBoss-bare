@@ -5,7 +5,6 @@
 #include "IGS_HUDDatabase.generated.h"
 
 class AIGS_WieldableBase;
-class UDataTable;
 
 UCLASS(BlueprintType)
 class BF_GUI_API UIGS_HUDDatabase : public UGameInstanceSubsystem {
@@ -14,10 +13,6 @@ public:
     UIGS_HUDDatabase();
 
     UFUNCTION(BlueprintCallable)
-    void ModAppendDataTable(UDataTable* inNewTable);
-    
-    UFUNCTION(BlueprintCallable)
     FIGS_HUDData GetDataFromWieldableClass(TSoftClassPtr<AIGS_WieldableBase> inClass);
-    
-};
 
+};

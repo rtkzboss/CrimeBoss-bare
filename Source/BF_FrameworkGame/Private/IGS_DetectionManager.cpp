@@ -3,4 +3,3 @@
 UIGS_DetectionManager::UIGS_DetectionManager() {
 }
 
-

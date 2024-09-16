@@ -8,4 +8,3 @@ UIGS_PanicPathQueryFilter::UIGS_PanicPathQueryFilter() {
     (*this).IsActive = true;
 }
 
-

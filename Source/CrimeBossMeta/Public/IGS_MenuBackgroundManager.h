@@ -12,6 +12,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     FGameplayTag GetMenuBackgroundTagToShow();
-    
-};
 
+};

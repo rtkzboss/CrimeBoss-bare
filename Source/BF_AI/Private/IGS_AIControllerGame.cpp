@@ -1,7 +1,4 @@
 #include "IGS_AIControllerGame.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_TeamSideEnum.h"
 #include "IGS_AIInitialSpawnDataComponent.h"
 #include "IGS_AreaOfOperationsComponent.h"
 #include "IGS_BehaviorTreeGameComponent.h"
@@ -10,12 +7,17 @@
 #include "IGS_NavLinkHandlerComponent.h"
 
 AIGS_AIControllerGame::AIGS_AIControllerGame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UIGS_ComplexPathFollowingComponent>(TEXT("PathFollowingComponent"))) {
+    auto gen = CreateDefaultSubobject<UIGS_BlackboardGameComponent>(TEXT("BlackboardGameComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_BehaviorTreeGameComponent>(TEXT("BehaviorTreeGameComponent"));
+    auto gen3 = CreateDefaultSubobject<UIGS_AreaOfOperationsComponent>(TEXT("AreaOf Operations Component"));
+    auto gen4 = CreateDefaultSubobject<UIGS_NavLinkHandlerComponent>(TEXT("NavLink Handler Component"));
+    auto gen5 = CreateDefaultSubobject<UIGS_AIInitialSpawnDataComponent>(TEXT("Initial Spawn Data Component"));
     (*this).MaxCornerOffset = 6.000000000e+01f;
-    (*this).BlackboardGameComponent = CreateDefaultSubobject<UIGS_BlackboardGameComponent>(TEXT("BlackboardGameComponent"));
-    (*this).BehaviorTreeGameComponent = CreateDefaultSubobject<UIGS_BehaviorTreeGameComponent>(TEXT("BehaviorTreeGameComponent"));
-    (*this).AreaOfOperationsComponent = CreateDefaultSubobject<UIGS_AreaOfOperationsComponent>(TEXT("AreaOf Operations Component"));
-    (*this).NavLinkHandlerComponent = CreateDefaultSubobject<UIGS_NavLinkHandlerComponent>(TEXT("NavLink Handler Component"));
-    (*this).InitialSpawnDataComponent = CreateDefaultSubobject<UIGS_AIInitialSpawnDataComponent>(TEXT("Initial Spawn Data Component"));
+    (*this).BlackboardGameComponent = gen;
+    (*this).BehaviorTreeGameComponent = gen2;
+    (*this).AreaOfOperationsComponent = gen3;
+    (*this).NavLinkHandlerComponent = gen4;
+    (*this).InitialSpawnDataComponent = gen5;
 }
 
 void AIGS_AIControllerGame::SetScriptingPostponed(bool InValue) {
@@ -46,27 +48,27 @@ int32 AIGS_AIControllerGame::GetReloadRequireAmmoUsed() const {
 }
 
 UIGS_AISuspiciousnessComponentBase* AIGS_AIControllerGame::GetOptionalAISuspiciousnessComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_AIDetectionComponent* AIGS_AIControllerGame::GetOptionalAIDetectionComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_NavLinkHandlerComponent* AIGS_AIControllerGame::GetNavlinkHandlerComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 float AIGS_AIControllerGame::GetCornerOffsetMin() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_AIControllerGame::GetCornerOffsetMax() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float AIGS_AIControllerGame::GetCombatRangePrefered() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 AIGS_AIControllerGame::GetAmmoUsedSinceLastReload() const {
@@ -75,5 +77,4 @@ int32 AIGS_AIControllerGame::GetAmmoUsedSinceLastReload() const {
 
 void AIGS_AIControllerGame::ForceLeaveWaypoint() {
 }
-
 

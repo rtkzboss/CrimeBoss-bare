@@ -11,4 +11,3 @@ enum class EMETA_AmbushGang : uint8 {
     DollarDragon,
     Cagnali,
 };
-

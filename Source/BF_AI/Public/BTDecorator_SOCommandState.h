@@ -14,10 +14,9 @@ public:
 
     UPROPERTY(EditAnywhere)
     EIGS_AICommandState CommandState;
-    
+
 protected:
     UPROPERTY()
     UIGS_AICommand* Command;
-    
-};
 
+};

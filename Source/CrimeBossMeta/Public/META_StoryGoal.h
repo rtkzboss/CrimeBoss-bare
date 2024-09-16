@@ -16,12 +16,11 @@ public:
 
     UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UStoryGraphManager> GetGraph();
-    
+
 private:
     UPROPERTY()
     FMETA_Goal m_Goal;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

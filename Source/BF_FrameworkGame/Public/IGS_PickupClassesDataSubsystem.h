@@ -14,6 +14,5 @@ public:
 protected:
     UPROPERTY(VisibleAnywhere)
     UIGS_PickupClassesData* PickupClasses;
-    
-};
 
+};

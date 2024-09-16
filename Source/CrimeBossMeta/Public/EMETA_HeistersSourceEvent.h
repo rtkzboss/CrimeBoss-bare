@@ -7,4 +7,3 @@ enum class EMETA_HeistersSourceEvent : uint8 {
     FromEventManagerMap,
     FromCrewOrByID,
 };
-

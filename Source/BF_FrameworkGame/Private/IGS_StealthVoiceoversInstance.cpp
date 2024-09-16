@@ -4,11 +4,11 @@ UIGS_StealthVoiceoversInstance::UIGS_StealthVoiceoversInstance() {
 }
 
 float UIGS_StealthVoiceoversInstance::GetReactionVoiceoversDistanceMaxToPlayer() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_StealthVoiceoversInstance::GetReactionVoiceoversCooldown() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FText UIGS_StealthVoiceoversInstance::GetIdle() const {
@@ -24,15 +24,15 @@ FText UIGS_StealthVoiceoversInstance::GetGangstersBumpInto() const {
 }
 
 TArray<FText> UIGS_StealthVoiceoversInstance::GetDefaultGuardRadioReactionsForStrikes() const {
-    return TArray<FText>();
+    return {};
 }
 
 TArray<FText> UIGS_StealthVoiceoversInstance::GetAmbientReportingEmpToGuard() const {
-    return TArray<FText>();
+    return {};
 }
 
 TArray<FText> UIGS_StealthVoiceoversInstance::GetAmbientReportingCivUsingPhones() const {
-    return TArray<FText>();
+    return {};
 }
 
 FText UIGS_StealthVoiceoversInstance::GetAmbientReportingCivToGuard() const {
@@ -66,5 +66,4 @@ FText UIGS_StealthVoiceoversInstance::GetAmbientDutyPlayer() const {
 FText UIGS_StealthVoiceoversInstance::GetAmbientDutyItem() const {
     return FText::GetEmpty();
 }
-
 

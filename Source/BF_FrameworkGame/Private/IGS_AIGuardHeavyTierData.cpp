@@ -2,4 +2,3 @@
 
 FIGS_AIGuardHeavyTierData::FIGS_AIGuardHeavyTierData() {
 }
-

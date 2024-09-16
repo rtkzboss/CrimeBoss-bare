@@ -3,4 +3,3 @@
 UIGS_SquadClassesHolder::UIGS_SquadClassesHolder() {
 }
 
-

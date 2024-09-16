@@ -12,4 +12,3 @@ FMETA_MissionMonetaryValue::FMETA_MissionMonetaryValue() {
     (*this).MultiplierOfExpensesForMissionsWithoutIntelInPercent.Max = 0;
     (*this).MultiplierOfMaxMonetaryValueForMissionWithIntel = 0.000000000e+00f;
 }
-

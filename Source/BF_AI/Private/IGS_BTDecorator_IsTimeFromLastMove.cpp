@@ -5,4 +5,3 @@ UIGS_BTDecorator_IsTimeFromLastMove::UIGS_BTDecorator_IsTimeFromLastMove() {
     (*this).NodeName = TEXT("Is Time From Last Move");
 }
 
-

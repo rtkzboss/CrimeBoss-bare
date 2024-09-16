@@ -2,4 +2,3 @@
 
 FHoudiniCurveInfo::FHoudiniCurveInfo() {
 }
-

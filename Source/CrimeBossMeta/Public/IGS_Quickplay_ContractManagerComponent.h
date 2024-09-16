@@ -10,4 +10,3 @@ public:
     UIGS_Quickplay_ContractManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

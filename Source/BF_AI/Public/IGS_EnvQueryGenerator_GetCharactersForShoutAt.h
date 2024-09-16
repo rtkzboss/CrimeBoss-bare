@@ -12,12 +12,11 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     TArray<EIGS_TeamSideEnum> TeamSides;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float DistanceCalm;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float DistanceDetecting;
-    
-};
 
+};

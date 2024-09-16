@@ -12,9 +12,8 @@ public:
 
     UFUNCTION(BlueprintPure)
     EIGS_InputDevice GetCurrentInputDevice() const;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float GamepadDeadzone;
-    
-};
 
+};

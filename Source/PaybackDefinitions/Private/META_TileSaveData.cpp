@@ -12,9 +12,9 @@ FMETA_TileSaveData::FMETA_TileSaveData() {
     (*this).CounterOfCapturesByPlayer = 0;
     (*this).CountdownForAttackAfterLost = 0;
     (*this).Wealth = EMETA_TileWealth::Poor;
-    (*this).CaptureRewards.Empty();
-    (*this).BossEliminationRewards.Empty();
+    (*this).CaptureRewards = {};
+    (*this).BossEliminationRewards = {};
     (*this).IncomeMultiplier = 0.000000000e+00f;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).IncomeLootItem, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).IncomeLootItem, 0)) = NAME_None;
 }
-

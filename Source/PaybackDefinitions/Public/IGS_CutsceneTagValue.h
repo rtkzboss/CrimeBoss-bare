@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FIGS_CutsceneTagValue {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Value;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText TextValue;
-    
+
     FIGS_CutsceneTagValue();
 };
-

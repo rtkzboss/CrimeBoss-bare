@@ -11,4 +11,3 @@ enum class EAttribStorageType : int8 {
     FLOAT64,
     STRING,
 };
-

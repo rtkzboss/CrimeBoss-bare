@@ -8,7 +8,6 @@ struct PAYBACKDEFINITIONS_API FIGS_DistrictVariant {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 DistrictVariant;
-    
+
     FIGS_DistrictVariant();
 };
-

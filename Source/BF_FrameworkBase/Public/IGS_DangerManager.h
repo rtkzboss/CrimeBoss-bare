@@ -14,10 +14,9 @@ public:
 private:
     UPROPERTY()
     TArray<FDangerArea> m_DangerAreas;
-    
+
     UPROPERTY()
     TArray<FAfraidOfDanger> m_AfraidOfDanger;
-    
+
     virtual TStatId GetStatId() const override { return {}; }
 };
-

@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_CustomTaskInfo {
 public:
     UPROPERTY()
     EIGS_ObjectiveComponentType ObjectiveCompType;
-    
+
     FIGS_CustomTaskInfo();
 };
-

@@ -1,5 +1,4 @@
 #include "IGS_AIPassengerSpawnComponentBase.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AIPassengerSpawnComponentBase::UIGS_AIPassengerSpawnComponentBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).TeamSide = EIGS_TeamSideEnum::TS_Cops;
@@ -30,5 +29,4 @@ int32 UIGS_AIPassengerSpawnComponentBase::GetRandomPassengerAmountInRange() {
 
 void UIGS_AIPassengerSpawnComponentBase::AddPassengerManually(AIGS_GameCharacterFramework* inPassenger, EIGS_CarSeatVariant inSeatVariant) {
 }
-
 

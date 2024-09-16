@@ -1,8 +1,4 @@
 #include "IGS_WidgetDecorationBorder.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetDecorationBorder::UIGS_WidgetDecorationBorder() : Super(FObjectInitializer::Get()) {
     (*this).BorderTint.R = 1.000000000e+00f;
@@ -23,5 +19,4 @@ void UIGS_WidgetDecorationBorder::OnBorderWidthChanged_Implementation(float inBo
 
 void UIGS_WidgetDecorationBorder::OnBorderTintChanged_Implementation(FLinearColor inBorderTint) {
 }
-
 

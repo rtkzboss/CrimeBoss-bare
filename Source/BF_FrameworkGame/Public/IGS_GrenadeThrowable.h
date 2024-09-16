@@ -10,4 +10,3 @@ public:
     AIGS_GrenadeThrowable(const FObjectInitializer& ObjectInitializer);
 
 };
-

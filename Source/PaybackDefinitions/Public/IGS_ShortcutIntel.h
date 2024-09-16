@@ -11,6 +11,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bShortcutFound;
-    
-};
 
+};

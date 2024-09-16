@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestPickupBag;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_HelpersCharacters;
-    
-};
 
+};

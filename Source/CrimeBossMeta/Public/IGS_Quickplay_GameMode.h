@@ -10,4 +10,3 @@ public:
     AIGS_Quickplay_GameMode(const FObjectInitializer& ObjectInitializer);
 
 };
-

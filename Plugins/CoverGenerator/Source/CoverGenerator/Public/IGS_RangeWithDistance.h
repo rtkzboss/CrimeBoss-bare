@@ -9,10 +9,9 @@ struct COVERGENERATOR_API FIGS_RangeWithDistance : public FIGS_Range {
 public:
     UPROPERTY(VisibleAnywhere)
     float Range;
-    
+
     UPROPERTY(VisibleAnywhere)
     float Weight;
-    
+
     FIGS_RangeWithDistance();
 };
-

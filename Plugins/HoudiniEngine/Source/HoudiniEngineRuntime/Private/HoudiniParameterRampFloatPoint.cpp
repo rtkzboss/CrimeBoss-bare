@@ -5,4 +5,3 @@ UHoudiniParameterRampFloatPoint::UHoudiniParameterRampFloatPoint() {
     (*this).InstanceIndex = -1;
 }
 
-

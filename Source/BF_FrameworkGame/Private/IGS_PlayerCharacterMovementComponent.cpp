@@ -1,10 +1,5 @@
 #include "IGS_PlayerCharacterMovementComponent.h"
-#include "EIGS_MovementSlope.h"
-#include "EIGS_Speed.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
-#include "GameFramework/MovementComponent.h"
 
 UIGS_PlayerCharacterMovementComponent::UIGS_PlayerCharacterMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).MinAnalogValueForSprint = 6.999999881e-01f;
@@ -38,8 +33,10 @@ UIGS_PlayerCharacterMovementComponent::UIGS_PlayerCharacterMovementComponent(con
     (*this).CameraShakeScaleLadder = 5.000000000e+00f;
     (*this).MaxStepHeight = 4.000000000e+01f;
     (*this).JumpZVelocity = 3.400000000e+02f;
-    (*UCharacterMovementComponent::StaticClass()->FindPropertyByName("WalkableFloorAngle")->ContainerPtrToValuePtr<float>(&(*this), 0)) = 5.050000000e+01f;
-    (*UCharacterMovementComponent::StaticClass()->FindPropertyByName("WalkableFloorZ")->ContainerPtrToValuePtr<float>(&(*this), 0)) = 6.360782385e-01f;
+    auto gen = UCharacterMovementComponent::StaticClass()->FindPropertyByName("WalkableFloorAngle");
+    (*gen->ContainerPtrToValuePtr<float>(&(*this), 0)) = 5.050000000e+01f;
+    auto gen2 = UCharacterMovementComponent::StaticClass()->FindPropertyByName("WalkableFloorZ");
+    (*gen2->ContainerPtrToValuePtr<float>(&(*this), 0)) = 6.360782385e-01f;
     (*this).CrouchedHalfHeight = 6.000000000e+01f;
 }
 
@@ -69,5 +66,4 @@ void UIGS_PlayerCharacterMovementComponent::NetMulticast_BotSlideOnZiplineStarte
 
 void UIGS_PlayerCharacterMovementComponent::NetMulticast_BotSlideOnZiplineEnded_Implementation() {
 }
-
 

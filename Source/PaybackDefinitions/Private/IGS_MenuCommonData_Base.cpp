@@ -5,7 +5,7 @@ UIGS_MenuCommonData_Base::UIGS_MenuCommonData_Base() {
 }
 
 TArray<EIGS_UserDifficulty> UIGS_MenuCommonData_Base::GetSupportedDifficulties() {
-    return TArray<EIGS_UserDifficulty>();
+    return {};
 }
 
 EIGS_ScenarioDifficulty UIGS_MenuCommonData_Base::GetRandomizedDifficulty(EMETA_RespectLvl inRespectLvl) const {
@@ -27,5 +27,4 @@ int32 UIGS_MenuCommonData_Base::GetAmountOfMissionsCanBeCompletedByEachHeisterPe
 FGameplayTagContainer UIGS_MenuCommonData_Base::GetAllowedLoot() const {
     return FGameplayTagContainer{};
 }
-
 

@@ -163,4 +163,3 @@ FIGS_EncryptedI32 UIGS_MemoryAntiTampering_I32::Add1(FIGS_EncryptedI32& Encrypte
     return FIGS_EncryptedI32{};
 }
 
-

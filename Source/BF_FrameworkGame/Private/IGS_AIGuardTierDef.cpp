@@ -34,4 +34,3 @@ FIGS_AIGuardTierDef::FIGS_AIGuardTierDef() {
     (*this).Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Stats.ReactionIntensity.bOverloadValue = false;
 }
-

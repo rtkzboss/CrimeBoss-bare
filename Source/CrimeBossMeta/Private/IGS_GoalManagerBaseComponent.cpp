@@ -1,5 +1,4 @@
 #include "IGS_GoalManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_GoalManagerBaseComponent::UIGS_GoalManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -9,19 +8,18 @@ void UIGS_GoalManagerBaseComponent::SelectNewGoal_Implementation(TSubclassOf<UME
 }
 
 TArray<UMETA_BaseGoal*> UIGS_GoalManagerBaseComponent::GetGoalsPoolByPartner_Implementation(EMETA_Partner inPartner) {
-    return TArray<UMETA_BaseGoal*>();
+    return {};
 }
 
 TArray<UMETA_BaseGoal*> UIGS_GoalManagerBaseComponent::GetGoalsPool_Implementation() {
-    return TArray<UMETA_BaseGoal*>();
+    return {};
 }
 
 TArray<UMETA_BaseGoal*> UIGS_GoalManagerBaseComponent::GetActiveGoalsByPartner_Implementation(EMETA_Partner inPartner) {
-    return TArray<UMETA_BaseGoal*>();
+    return {};
 }
 
 TArray<UMETA_BaseGoal*> UIGS_GoalManagerBaseComponent::GetActiveGoals_Implementation() {
-    return TArray<UMETA_BaseGoal*>();
+    return {};
 }
-
 

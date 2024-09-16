@@ -8,4 +8,3 @@ enum class EMETA_TileWealth : uint8 {
     Middle,
     Rich,
 };
-

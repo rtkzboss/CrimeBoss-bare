@@ -11,21 +11,20 @@ public:
 
     UPROPERTY()
     bool IsFreeWeekend;
-    
+
     UPROPERTY()
     FString ResponseString;
-    
+
     UPROPERTY()
     bool IsSystemReady;
-    
+
     UPROPERTY()
     bool IsEntitlementSystemReady;
-    
+
     UPROPERTY()
     int32 TotalTriesCount;
-    
+
     UPROPERTY()
     bool IsProcessingRequest;
-    
-};
 
+};

@@ -3,4 +3,3 @@
 FIGS_ImpactDataID::FIGS_ImpactDataID() {
     (*this).ObjectId = nullptr;
 }
-

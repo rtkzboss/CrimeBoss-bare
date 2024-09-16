@@ -4,27 +4,27 @@ UIGS_TileItemDataConvertorsBFL::UIGS_TileItemDataConvertorsBFL() {
 }
 
 UIGS_TileItemData* UIGS_TileItemDataConvertorsBFL::UnlockItemToTileItemData(FIGS_UnlockItemInfo inUnlockItemInfo, EIGS_TileItemState inState, UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UIGS_TileItemWeaponFamilyData*> UIGS_TileItemDataConvertorsBFL::SortWeaponFamilyData(TArray<UIGS_TileItemWeaponFamilyData*> inArray) {
-    return TArray<UIGS_TileItemWeaponFamilyData*>();
+    return {};
 }
 
 TArray<UIGS_TileItemData*> UIGS_TileItemDataConvertorsBFL::SortTileItemData(TArray<UIGS_TileItemData*> inArray) {
-    return TArray<UIGS_TileItemData*>();
+    return {};
 }
 
 TArray<UIGS_TileItemData*> UIGS_TileItemDataConvertorsBFL::SortedUnlockItemsToTileItemData(TArray<FIGS_UnlockItemInfo> inUnlockItemsInfo, EIGS_TileItemState inState, UObject* inWCO) {
-    return TArray<UIGS_TileItemData*>();
+    return {};
 }
 
 TArray<UIGS_TileItemData*> UIGS_TileItemDataConvertorsBFL::SortedBaseObjectsToTileItemData(const UIGS_UnlockManager* inUnlockManager, TArray<UMETA_BaseObject*> inObjects, EIGS_TileItemState inState, UObject* inWCO) {
-    return TArray<UIGS_TileItemData*>();
+    return {};
 }
 
 UIGS_TileItemData* UIGS_TileItemDataConvertorsBFL::MetaBaseObjectToTileItemData(const UIGS_UnlockManager* inUnlockManager, const UMETA_BaseObject* inBaseObject, EIGS_TileItemState inState, UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_CharacterPanelDataStruct UIGS_TileItemDataConvertorsBFL::HeisterDataToCharacterPanelData(FCommonHeisterData& inHeisterData, UObject* inWCO) {
@@ -40,7 +40,6 @@ FIGS_CharacterPanelDataStruct UIGS_TileItemDataConvertorsBFL::CharacterToCharact
 }
 
 UIGS_TileItemData* UIGS_TileItemDataConvertorsBFL::BossCharacterToTileItemData(const UIGS_UnlockManager* inUnlockManager, const UMETA_BossCharacter* inBossCharacter) {
-    return NULL;
+    return nullptr;
 }
-
 

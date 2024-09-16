@@ -8,4 +8,3 @@ enum class EIGS_CustomSlotFilteringResult : uint8 {
     Res_Failed,
     Res_Unhandled,
 };
-

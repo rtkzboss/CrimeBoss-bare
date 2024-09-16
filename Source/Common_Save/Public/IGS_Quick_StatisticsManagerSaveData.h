@@ -9,7 +9,6 @@ struct COMMON_SAVE_API FIGS_Quick_StatisticsManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<int32, FMETA_StatisticNoteSaveData> Statistic;
-    
+
     FIGS_Quick_StatisticsManagerSaveData();
 };
-

@@ -3,4 +3,3 @@
 UIGS_ApplyPhysStrengthMultiplyer::UIGS_ApplyPhysStrengthMultiplyer() {
 }
 
-

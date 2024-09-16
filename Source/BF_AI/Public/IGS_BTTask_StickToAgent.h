@@ -15,15 +15,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float RecalculateTimeMin;
-    
+
     UPROPERTY(EditAnywhere)
     float RecalculateTimeMax;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
-    
-};
 
+};

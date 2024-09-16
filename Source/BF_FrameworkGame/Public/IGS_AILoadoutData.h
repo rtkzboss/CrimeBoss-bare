@@ -9,13 +9,12 @@ struct BF_FRAMEWORKGAME_API FIGS_AILoadoutData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag WeaponTag;
-    
+
     UPROPERTY(EditAnywhere)
     int32 Chance;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float NormalizedChance;
-    
+
     FIGS_AILoadoutData();
 };
-

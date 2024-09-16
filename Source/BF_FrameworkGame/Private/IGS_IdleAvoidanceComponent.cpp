@@ -1,5 +1,4 @@
 #include "IGS_IdleAvoidanceComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_IdleAvoidanceComponent::UIGS_IdleAvoidanceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -7,6 +6,8 @@ UIGS_IdleAvoidanceComponent::UIGS_IdleAvoidanceComponent(const FObjectInitialize
     (*this).AvoidanceWeihgtOverride = -1.000000000e+00f;
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.TickInterval = 2.000000030e-01f;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_IdleAvoidanceComponent::OnRep_CharacterVsHeistersCollisionStatus() {
@@ -14,8 +15,7 @@ void UIGS_IdleAvoidanceComponent::OnRep_CharacterVsHeistersCollisionStatus() {
 
 void UIGS_IdleAvoidanceComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_IdleAvoidanceComponent, m_CharacterVsHeistersCollisionStatus);
 }
-
 

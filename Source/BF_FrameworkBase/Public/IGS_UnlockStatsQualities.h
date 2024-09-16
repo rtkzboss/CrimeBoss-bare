@@ -10,7 +10,6 @@ struct FIGS_UnlockStatsQualities {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_ItemQuality, FIGS_UnlockStatsLevels> Qualities;
-    
+
     BF_FRAMEWORKBASE_API FIGS_UnlockStatsQualities();
 };
-

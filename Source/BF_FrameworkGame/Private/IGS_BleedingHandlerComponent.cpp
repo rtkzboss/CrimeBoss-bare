@@ -1,5 +1,5 @@
 #include "IGS_BleedingHandlerComponent.h"
-#include "ComponentInstanceDataCache.h"
+#include "Components/ActorComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_BleedingHandlerComponent::UIGS_BleedingHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -19,6 +19,8 @@ UIGS_BleedingHandlerComponent::UIGS_BleedingHandlerComponent(const FObjectInitia
     (*this).BleedPinnedLifetimeMax = 1.200000000e+01f;
     (*this).BleedDamageInterval = 2.000000030e-01f;
     (*this).UseDownState = true;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_BleedingHandlerComponent::Multicast_StartInjured_Implementation(EIGS_BleedType BleedType, const FIGS_HitInfo& inHitInfo) {
@@ -47,7 +49,7 @@ bool UIGS_BleedingHandlerComponent::Multicast_Die_Validate(float inHealthChanged
 
 void UIGS_BleedingHandlerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_BleedingHandlerComponent, CanBeRevived);
     DOREPLIFETIME(UIGS_BleedingHandlerComponent, BleedChanceFromNormal);
     DOREPLIFETIME(UIGS_BleedingHandlerComponent, BleedChanceFromInjured);
@@ -55,5 +57,4 @@ void UIGS_BleedingHandlerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeP
     DOREPLIFETIME(UIGS_BleedingHandlerComponent, mR_NextBleedType);
     DOREPLIFETIME(UIGS_BleedingHandlerComponent, InvulnerableInDownstate);
 }
-
 

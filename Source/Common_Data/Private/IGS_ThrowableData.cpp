@@ -1,12 +1,11 @@
 #include "IGS_ThrowableData.h"
+#include "Engine/EngineTypes.h"
 #include "GameplayTagContainer.h"
-#include "EMETA_ItemQuality.h"
 #include "EIGS_ItemType.h"
-#include "EIGS_WieldableClass.h"
 
 FIGS_ThrowableData::FIGS_ThrowableData() {
-    (*this).Projectile = nullptr;
-    (*this).Equipment = nullptr;
+    (*this).Projectile = FSoftObjectPath();
+    (*this).Equipment = FSoftObjectPath();
     (*this).GrenadeData.OverlapsOnExplosion = true;
     (*this).GrenadeData.bLineTraceOnOverlap = false;
     (*this).GrenadeData.LineTraceZOffset = 1.000000000e+02f;
@@ -52,8 +51,8 @@ FIGS_ThrowableData::FIGS_ThrowableData() {
     (*this).ThrowRotationAxis.X = 1.000000000e+00f;
     (*this).ThrowRotationAxis.Y = 1.000000000e+00f;
     (*this).ThrowRotationAxis.Z = 1.000000000e+00f;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).WieldingOffence, 0)) = TEXT("Offence.Player.Wielding.Weapon");
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldingOffence, 0)) = TEXT("Offence.Player.Wielding.Weapon");
     (*this).ItemType = EIGS_ItemType::Item_Throwable;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ItemOffence, 0)) = TEXT("Offence.Actor.Item.Weapon");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ItemOffence, 0)) = TEXT("Offence.Actor.Item.Weapon");
 }
-

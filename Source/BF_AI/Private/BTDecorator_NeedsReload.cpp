@@ -4,4 +4,3 @@ UBTDecorator_NeedsReload::UBTDecorator_NeedsReload() {
     (*this).NodeName = TEXT("Needs Reload");
 }
 
-

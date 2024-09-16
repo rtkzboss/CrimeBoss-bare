@@ -10,4 +10,3 @@ public:
     AIGS_WaypointVisitable(const FObjectInitializer& ObjectInitializer);
 
 };
-

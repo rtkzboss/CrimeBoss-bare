@@ -3,4 +3,3 @@
 UIGS_GameplayAbility_Passive::UIGS_GameplayAbility_Passive() {
 }
 
-

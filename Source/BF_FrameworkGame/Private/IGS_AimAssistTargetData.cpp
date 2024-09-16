@@ -2,4 +2,3 @@
 
 FIGS_AimAssistTargetData::FIGS_AimAssistTargetData() {
 }
-

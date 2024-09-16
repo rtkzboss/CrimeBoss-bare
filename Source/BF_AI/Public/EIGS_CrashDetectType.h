@@ -10,4 +10,3 @@ enum class EIGS_CrashDetectType : uint8 {
     CDT_SkeletalMesh,
     Count,
 };
-

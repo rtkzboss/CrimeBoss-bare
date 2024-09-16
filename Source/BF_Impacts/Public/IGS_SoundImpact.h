@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(Instanced, Transient)
     UAkComponent* AkComponent;
-    
+
     UPROPERTY(Transient)
     UAkAudioEvent* AkAudioEvent;
-    
-};
 
+};

@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(EditAnywhere)
     UNiagaraSystem* TracerEffectNiagara;
-    
+
     UPROPERTY(EditAnywhere)
     UNiagaraSystem* TracerEffectNiagaraFPV;
-    
+
     UPROPERTY(EditAnywhere)
     float TracerEffectNiagaraChance;
-    
+
     UPROPERTY(EditAnywhere)
     float TracerEffectNiagaraChanceFPV;
-    
-};
 
+};

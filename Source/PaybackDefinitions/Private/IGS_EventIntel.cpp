@@ -3,4 +3,3 @@
 UIGS_EventIntel::UIGS_EventIntel() {
 }
 
-

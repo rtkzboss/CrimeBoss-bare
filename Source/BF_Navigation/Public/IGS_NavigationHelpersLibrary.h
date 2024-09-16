@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "AI/Navigation/NavAreaBase.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_NavigationHelpersLibrary.generated.h"
 
 class UCapsuleComponent;
-class UNavAreaBase;
 
 UCLASS(BlueprintType)
 class BF_NAVIGATION_API UIGS_NavigationHelpersLibrary : public UBlueprintFunctionLibrary {
@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void SetNavArea(UCapsuleComponent* capsule, TSubclassOf<UNavAreaBase> navAreaClass);
-    
-};
 
+};

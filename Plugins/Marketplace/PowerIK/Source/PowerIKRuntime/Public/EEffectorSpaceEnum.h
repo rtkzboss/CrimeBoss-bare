@@ -8,4 +8,3 @@ enum EEffectorSpaceEnum {
     ES_World,
     ES_Component,
 };
-

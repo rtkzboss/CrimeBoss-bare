@@ -15,12 +15,11 @@ public:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_ConnectionPointData> ConnectionPoints;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_VariantDefinition> Variants;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSoftObjectPtr<UWorld> Level;
-    
-};
 
+};

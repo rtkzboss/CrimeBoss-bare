@@ -29,4 +29,3 @@ enum class EIGS_DialogueSwatCharacter : uint8 {
     NoVoiceMin = NoVoiceFemale,
     NoVoiceMax = NoVoice,
 };
-

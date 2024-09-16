@@ -10,13 +10,12 @@ struct PAYBACKDEFINITIONS_API FMETA_VariableScopeDefinition {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_VariablesScope VariablesScope;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Variable;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag variableTag;
-    
+
     FMETA_VariableScopeDefinition();
 };
-

@@ -8,4 +8,3 @@ struct FIGS_AttackLocations {
 public:
     BF_FRAMEWORKBASE_API FIGS_AttackLocations();
 };
-

@@ -13,6 +13,5 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_SquadSwatMode SwatMode;
-    
-};
 
+};

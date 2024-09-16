@@ -5,4 +5,3 @@ UMETA_RootNode_SG::UMETA_RootNode_SG() {
     (*this).Type = EMETA_NodeType::Root;
 }
 
-

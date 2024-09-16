@@ -1,6 +1,6 @@
 #include "HoudiniRuntimeSettings.h"
 #include "PhysicsEngine/BodyInstance.h"
-#include "Chaos/ChaosEngineInterface.h"
+#include "Engine/EngineTypes.h"
 
 UHoudiniRuntimeSettings::UHoudiniRuntimeSettings() {
     (*this).SessionType = HRSST_NamedPipe;
@@ -25,47 +25,62 @@ UHoudiniRuntimeSettings::UHoudiniRuntimeSettings() {
     (*this).ProxyMeshAutoRefineTimeoutSeconds = 1.000000000e+01f;
     (*this).bEnableProxyStaticMeshRefinementOnPreSaveWorld = true;
     (*this).bEnableProxyStaticMeshRefinementOnPreBeginPIE = true;
-    (*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionEnabled")->ContainerPtrToValuePtr<TEnumAsByte<ECollisionEnabled::Type>>(&(*this).DefaultBodyInstance, 0)) = ECollisionEnabled::QueryAndPhysics;
+    auto gen = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionEnabled");
+    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ECollisionEnabled::Type>>(&(*this).DefaultBodyInstance, 0)) = ECollisionEnabled::QueryAndPhysics;
     (*this).DefaultBodyInstance.bLockTranslation = true;
     (*this).DefaultBodyInstance.bLockRotation = true;
-    (*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName")->ContainerPtrToValuePtr<FName>(&(*this).DefaultBodyInstance, 0)) = TEXT("BlockAll");
+    auto gen2 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("bInterpolateWhenSubStepping");
+    CastField<FBoolProperty>(gen2)->SetPropertyValue(&(*gen2->ContainerPtrToValuePtr<uint8>(&(*this).DefaultBodyInstance, 0)), true);
+    auto gen3 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName");
+    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).DefaultBodyInstance, 0)) = TEXT("BlockAll");
     (*this).DefaultBodyInstance.PositionSolverIterationCount = 8;
     (*this).DefaultBodyInstance.VelocitySolverIterationCount = 1;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).WorldStatic = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).WorldDynamic = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Pawn = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Visibility = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Camera = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).PhysicsBody = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Vehicle = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Destructible = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel2 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel3 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel4 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel5 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel6 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel1 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel2 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel3 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel4 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel5 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel6 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel7 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel8 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel9 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel10 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel11 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel12 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel13 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel14 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel15 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel16 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel17 = ECR_Block;
-    (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels")->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel18 = ECR_Block;
-    auto& gen0 = (*TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseArray")->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses")->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0));
-    gen0.Empty();
-    gen0.AddDefaulted(3);
-    (*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("MassInKgOverride")->ContainerPtrToValuePtr<float>(&(*this).DefaultBodyInstance, 0)) = 1.000000000e+02f;
+    auto gen4 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionResponses");
+    auto gen5 = TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseToChannels");
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).WorldStatic = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).WorldDynamic = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Pawn = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Visibility = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Camera = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).PhysicsBody = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Vehicle = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).Destructible = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel2 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel3 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel4 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel5 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).EngineTraceChannel6 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel1 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel2 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel3 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel4 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel5 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel6 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel7 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel8 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel9 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel10 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel11 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel12 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel13 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel14 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel15 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel16 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel17 = ECR_Block;
+    (*gen5->ContainerPtrToValuePtr<FCollisionResponseContainer>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)).GameTraceChannel18 = ECR_Block;
+    FResponseChannel gen6;
+    gen6.Channel = TEXT("Ping");
+    gen6.Response = ECR_Block;
+    FResponseChannel gen7;
+    gen7.Channel = TEXT("Wheels");
+    gen7.Response = ECR_Block;
+    FResponseChannel gen8;
+    gen8.Channel = TEXT("cover");
+    gen8.Response = ECR_Block;
+    auto gen9 = TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseArray");
+    (*gen9->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).DefaultBodyInstance, 0)), 0)) = {MoveTemp(gen6), MoveTemp(gen7), MoveTemp(gen8)};
+    auto gen10 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("MassInKgOverride");
+    (*gen10->ContainerPtrToValuePtr<float>(&(*this).DefaultBodyInstance, 0)) = 1.000000000e+02f;
     (*this).DefaultBodyInstance.LinearDamping = 9.999999776e-03f;
     (*this).DefaultBodyInstance.MassScale = 1.000000000e+00f;
     (*this).DefaultBodyInstance.InertiaTensorScale.X = 1.000000000e+00f;
@@ -92,5 +107,4 @@ UHoudiniRuntimeSettings::UHoudiniRuntimeSettings() {
     (*this).bEnableBackwardCompatibility = true;
     (*this).CookingThreadStackSize = -1;
 }
-
 

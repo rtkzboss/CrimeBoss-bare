@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector MoveToPositionKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ReactToThreathKey;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
-    
-};
 
+};

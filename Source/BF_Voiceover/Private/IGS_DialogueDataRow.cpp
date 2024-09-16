@@ -9,6 +9,5 @@ FIGS_DialogueDataRow::FIGS_DialogueDataRow() {
     (*this).PlayChance = 0.000000000e+00f;
     (*this).PlayOncePerMission = false;
     (*this).PlayOncePerWave = false;
-    (*this).Transcript.Empty();
+    (*this).Transcript = {};
 }
-

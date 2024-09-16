@@ -11,6 +11,5 @@ public:
 
     UPROPERTY()
     TArray<FString> LabelStrings;
-    
-};
 
+};

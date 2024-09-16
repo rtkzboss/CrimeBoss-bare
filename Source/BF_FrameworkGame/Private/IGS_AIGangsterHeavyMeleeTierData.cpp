@@ -2,4 +2,3 @@
 
 FIGS_AIGangsterHeavyMeleeTierData::FIGS_AIGangsterHeavyMeleeTierData() {
 }
-

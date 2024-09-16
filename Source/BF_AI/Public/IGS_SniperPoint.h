@@ -15,31 +15,30 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetVisitorManually(AIGS_GameCharacterFramework* inGameCharacter);
-    
+
     UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetVisitor() const;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SnipeAngleVertical;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SnipeAngleHorizontal;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SnipeAngleVerticalOffset;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bRandomSnipingPoints;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_SnipePointData> SnipingBehavior;
-    
+
 protected:
     UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> m_Sniper;
-    
+
     UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<AIGS_AIControllerSniper> m_SniperController;
-    
-};
 
+};

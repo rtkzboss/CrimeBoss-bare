@@ -19,11 +19,10 @@ EXeSSQualityMode UXeSSBlueprintLibrary::GetXeSSQualityMode() {
 }
 
 TArray<EXeSSQualityMode> UXeSSBlueprintLibrary::GetSupportedXeSSQualityModes() {
-    return TArray<EXeSSQualityMode>();
+    return {};
 }
 
 EXeSSQualityMode UXeSSBlueprintLibrary::GetDefaultXeSSQualityMode(FIntPoint ScreenResolution) {
     return EXeSSQualityMode::Off;
 }
-
 

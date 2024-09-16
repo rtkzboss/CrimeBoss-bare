@@ -3,4 +3,3 @@
 UIGS_DialogueSubsystemBase::UIGS_DialogueSubsystemBase() {
 }
 
-

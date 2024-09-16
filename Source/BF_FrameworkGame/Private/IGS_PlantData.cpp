@@ -6,4 +6,3 @@ FIGS_PlantData::FIGS_PlantData() {
     (*this).PlantRotation.Yaw = 0.000000000e+00f;
     (*this).PlantRotation.Roll = 0.000000000e+00f;
 }
-

@@ -17,4 +17,3 @@ UPlayerDeathAnimationDatabase::UPlayerDeathAnimationDatabase() {
     (*this).MaxEventCalls = 10;
 }
 
-

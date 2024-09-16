@@ -10,10 +10,9 @@ struct FIGS_BotOrderData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     AIGS_GameCharacterFramework* Character;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float EnterTime;
-    
+
     BF_AI_API FIGS_BotOrderData();
 };
-

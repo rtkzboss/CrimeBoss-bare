@@ -12,13 +12,12 @@ struct CRIMEBOSSMETA_API FMETA_TradeVendorTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_TradeVendor ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Image;
-    
+
     FMETA_TradeVendorTableRow();
 };
-

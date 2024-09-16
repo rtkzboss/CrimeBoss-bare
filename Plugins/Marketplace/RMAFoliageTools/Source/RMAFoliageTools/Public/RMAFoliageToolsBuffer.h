@@ -11,13 +11,12 @@ struct RMAFOLIAGETOOLS_API FRMAFoliageToolsBuffer {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FTransform> Transform;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UStaticMesh*> Mesh;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UClass*> Class;
-    
+
     FRMAFoliageToolsBuffer();
 };
-

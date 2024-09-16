@@ -11,4 +11,3 @@ FPowerIKGroundFoot::FPowerIKGroundFoot() {
     (*this).NegativePullFactor.Y = 0.000000000e+00f;
     (*this).NegativePullFactor.Z = 1.000000000e+00f;
 }
-

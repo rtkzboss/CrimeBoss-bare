@@ -10,4 +10,3 @@ enum class EIGS_BotOrderActionSource : uint8 {
     HoldPing,
     BotWheel,
 };
-

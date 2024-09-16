@@ -10,10 +10,9 @@ struct FIGS_InventoryHolder {
 public:
     UPROPERTY()
     TWeakObjectPtr<UIGS_InventoryObjectFramework> InventoryObjectFramework;
-    
+
     UPROPERTY()
     uint32 ID;
-    
+
     BF_NETWORK_API FIGS_InventoryHolder();
 };
-

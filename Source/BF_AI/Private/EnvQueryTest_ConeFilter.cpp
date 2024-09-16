@@ -1,5 +1,4 @@
 #include "EnvQueryTest_ConeFilter.h"
-#include "EnvironmentQuery/EnvQueryTest.h"
 #include "EnvironmentQuery/Contexts/EnvQueryContext_Querier.h"
 
 UEnvQueryTest_ConeFilter::UEnvQueryTest_ConeFilter() {
@@ -10,5 +9,4 @@ UEnvQueryTest_ConeFilter::UEnvQueryTest_ConeFilter() {
     (*this).Is2DOnly.DefaultValue = true;
     (*this).Context = UEnvQueryContext_Querier::StaticClass();
 }
-
 

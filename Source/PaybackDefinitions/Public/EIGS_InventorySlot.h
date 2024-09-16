@@ -13,4 +13,3 @@ enum class EIGS_InventorySlot : uint8 {
     CharacterSkin,
     Perk,
 };
-

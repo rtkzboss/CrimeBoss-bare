@@ -9,13 +9,12 @@ struct COMMON_SAVE_API FIGS_AchievementSaveData {
 public:
     UPROPERTY()
     FGameplayTag ID;
-    
+
     UPROPERTY()
     int32 CurrentValue;
-    
+
     UPROPERTY()
     int32 UploadedValue;
-    
+
     FIGS_AchievementSaveData();
 };
-

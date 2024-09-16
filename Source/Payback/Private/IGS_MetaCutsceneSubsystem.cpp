@@ -104,11 +104,11 @@ bool UIGS_MetaCutsceneSubsystem::HasCurrentNodeOptions() {
 }
 
 TMap<FGameplayTag, FIGS_CutsceneTagValue> UIGS_MetaCutsceneSubsystem::GetTagsValues() const {
-    return TMap<FGameplayTag, FIGS_CutsceneTagValue>();
+    return {};
 }
 
 TArray<TSoftClassPtr<AIGS_CharacterPaperDoll>> UIGS_MetaCutsceneSubsystem::GetSlotCharactersPaperDoll() {
-    return TArray<TSoftClassPtr<AIGS_CharacterPaperDoll>>();
+    return {};
 }
 
 FName UIGS_MetaCutsceneSubsystem::GetEndSequenceName(int32 inOption) {
@@ -124,7 +124,7 @@ EIGS_MetaDialogueCharacterSlot UIGS_MetaCutsceneSubsystem::GetDialogueSlot(EIGS_
 }
 
 UIGS_CutsceneSubsystemDataAsset* UIGS_MetaCutsceneSubsystem::GetCutsceneSubsystemDataAsset() const {
-    return NULL;
+    return nullptr;
 }
 
 EIGS_CutsceneState UIGS_MetaCutsceneSubsystem::GetCutsceneState() const {
@@ -140,15 +140,15 @@ EIGS_MetaDialogueCharacterSlot UIGS_MetaCutsceneSubsystem::GetCutsceneSlot(EIGS_
 }
 
 TSoftObjectPtr<UIGS_MetaCutsceneDataAsset> UIGS_MetaCutsceneSubsystem::GetCutsceneDataAsset(UObject* inWCO, FText inCutsceneID) {
-    return NULL;
+    return {};
 }
 
 float UIGS_MetaCutsceneSubsystem::GetCurrentNodeSkipTime() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 UIGS_MetaCutsceneDataAsset* UIGS_MetaCutsceneSubsystem::GetCurrentCutsceneDataAsset() const {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_MetaCutsceneCharacterPoseData UIGS_MetaCutsceneSubsystem::GetCharacterSlotPose(EIGS_MetaDialogueCharacterSlot inSlot, FGameplayTagContainer inPoseSets) {
@@ -160,7 +160,7 @@ FIGS_MetaCutsceneCharacterPoseData UIGS_MetaCutsceneSubsystem::GetCharacterPose(
 }
 
 TArray<FIGS_MetaCutsceneDataRow> UIGS_MetaCutsceneSubsystem::GetAllCutscenesData(UObject* inWCO) {
-    return TArray<FIGS_MetaCutsceneDataRow>();
+    return {};
 }
 
 FIGS_MetaCutscenePoseSet UIGS_MetaCutsceneSubsystem::GetAllCharacterSlotPoses(EIGS_MetaDialogueCharacterSlot inSlot, FGameplayTagContainer inPoseSets) {
@@ -176,5 +176,4 @@ void UIGS_MetaCutsceneSubsystem::FinishCutscene() {
 
 void UIGS_MetaCutsceneSubsystem::AllowPoseSet(FGameplayTag inPoseSet) {
 }
-
 

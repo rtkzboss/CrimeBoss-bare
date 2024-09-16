@@ -1,5 +1,4 @@
 #include "IGS_DamageHandlerComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_DamageHandlerComponent::UIGS_DamageHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -26,8 +25,7 @@ UIGS_DamageHandlerComponent::UIGS_DamageHandlerComponent(const FObjectInitialize
 
 void UIGS_DamageHandlerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_DamageHandlerComponent, bCanSkipDownstate);
 }
-
 

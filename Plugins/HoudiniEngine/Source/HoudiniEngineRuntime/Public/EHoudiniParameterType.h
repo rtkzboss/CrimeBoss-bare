@@ -28,4 +28,3 @@ enum class EHoudiniParameterType : uint8 {
     StringAssetRef,
     Toggle,
 };
-

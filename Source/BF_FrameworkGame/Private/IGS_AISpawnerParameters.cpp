@@ -3,4 +3,3 @@
 FIGS_AISpawnerParameters::FIGS_AISpawnerParameters() {
     (*this).SettingsOverride = nullptr;
 }
-

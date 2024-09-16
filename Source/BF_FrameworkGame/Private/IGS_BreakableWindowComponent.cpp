@@ -1,17 +1,8 @@
 #include "IGS_BreakableWindowComponent.h"
-#include "EIGS_OverlapResponseType.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
-#include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
-#include "EIGS_BreakPushImpulse.h"
-#include "EIGS_WindowBreakBehaviour.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_BreakableWindowComponent::UIGS_BreakableWindowComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto& gen0 = (*this).mR_DecalsLocation;
-    gen0.Empty();
-    gen0.AddDefaulted(7);
+    (*this).mR_DecalsLocation = {FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}};
     (*this).mR_CurrentDecalIndex = -1;
     (*this).MinDecalAngle = 1.500000060e-01f;
     (*this).MaxDecalAngle = 8.500000238e-01f;
@@ -38,10 +29,9 @@ void UIGS_BreakableWindowComponent::OnComponentBroken_Implementation(AActor* inD
 
 void UIGS_BreakableWindowComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_BreakableWindowComponent, mR_DecalsLocation);
     DOREPLIFETIME(UIGS_BreakableWindowComponent, mR_RandomDecalRotation);
     DOREPLIFETIME(UIGS_BreakableWindowComponent, mR_CurrentDecalIndex);
 }
-
 

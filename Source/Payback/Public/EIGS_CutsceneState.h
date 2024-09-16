@@ -10,4 +10,3 @@ enum class EIGS_CutsceneState : uint8 {
     Unloading,
     Started,
 };
-

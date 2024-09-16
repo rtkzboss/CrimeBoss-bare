@@ -16,15 +16,14 @@ class BF_FRAMEWORKGAME_API IIGS_SuspicionInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnOffenceReported(AActor* inReporter);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnOffenceNoticed(AActor* inNoticer);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     AActor* GetOwningActor();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FGameplayTagContainer GetOffences();
-    
-};
 
+};

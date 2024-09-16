@@ -2,4 +2,3 @@
 
 FWorkItemTallyBase::FWorkItemTallyBase() {
 }
-

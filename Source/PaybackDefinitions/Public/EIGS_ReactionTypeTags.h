@@ -15,4 +15,3 @@ enum class EIGS_ReactionTypeTags : uint8 {
     ET_Special_SurpriseDangerous,
     ET_Special_SentToInvestigate,
 };
-

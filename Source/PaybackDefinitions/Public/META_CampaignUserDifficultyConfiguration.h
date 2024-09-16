@@ -10,16 +10,15 @@ struct PAYBACKDEFINITIONS_API FMETA_CampaignUserDifficultyConfiguration {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName Label;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_FPSDifficulty FPSDifficulty;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float FinalScoreBaseMultiplier;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_ScenarioDifficulty BigHeistDifficultyOverride;
-    
+
     FMETA_CampaignUserDifficultyConfiguration();
 };
-

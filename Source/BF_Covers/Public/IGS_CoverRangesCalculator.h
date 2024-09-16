@@ -14,12 +14,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void TestCompute(UWorld* InWorld);
-    
+
     UFUNCTION(BlueprintCallable)
     static void LoadCoverRanges(UWorld* InWorld, AActor* inLSA, FName inVariantName);
-    
+
     UFUNCTION(BlueprintCallable)
     static TArray<FIGS_CoverPointDataHolder> GetCoverPointDataHolders(UWorld* InWorld, bool inUseCoverZones, bool inDebugDraw);
-    
-};
 
+};

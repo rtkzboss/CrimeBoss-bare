@@ -10,4 +10,3 @@ enum class EIGS_TerritoryVolumeType : uint8 {
     Shelter,
     Custom = 10,
 };
-

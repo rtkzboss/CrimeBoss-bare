@@ -17,4 +17,3 @@ enum class EIGS_PlayerEffect : uint8 {
     PE_StimshotEffect,
     PE_None = 255,
 };
-

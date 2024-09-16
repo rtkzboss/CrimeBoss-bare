@@ -9,10 +9,9 @@ struct FMETA_WeaponClassChance {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag WeaponClass;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Chance;
-    
+
     PAYBACKDEFINITIONS_API FMETA_WeaponClassChance();
 };
-

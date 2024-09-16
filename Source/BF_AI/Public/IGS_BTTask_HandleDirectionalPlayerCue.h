@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_DirectionalCueType Type;
-    
+
     UPROPERTY(EditAnywhere)
     float Cooldown;
-    
-};
 
+};

@@ -1,7 +1,6 @@
 #include "IGS_LinkedGraphDefinition.h"
 
 FIGS_LinkedGraphDefinition::FIGS_LinkedGraphDefinition() {
-    (*this).LinkedAnimInstance = nullptr;
+    (*this).LinkedAnimInstance = FSoftObjectPath();
     (*this).GraphTag = NAME_None;
 }
-

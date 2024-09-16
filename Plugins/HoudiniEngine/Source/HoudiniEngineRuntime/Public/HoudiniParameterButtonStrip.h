@@ -11,12 +11,11 @@ public:
 
     UPROPERTY()
     int32 Count;
-    
+
     UPROPERTY()
     TArray<FString> Labels;
-    
+
     UPROPERTY()
     TArray<int32> Values;
-    
-};
 
+};

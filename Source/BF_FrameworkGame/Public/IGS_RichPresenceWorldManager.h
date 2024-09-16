@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WCO))
     static void SetRichPresence(const UObject* WCO, FGameplayTag MessageID, const TArray<FIGS_RichPresenceParam>& MessageParams);
-    
-};
 
+};

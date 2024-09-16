@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     bool LeftHandIKdisabled;
-    
+
     UPROPERTY(EditAnywhere)
     bool RightHandIKdisabled;
-    
-};
 
+};

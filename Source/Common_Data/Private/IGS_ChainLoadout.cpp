@@ -2,8 +2,7 @@
 
 FIGS_ChainLoadout::FIGS_ChainLoadout() {
     (*this).ID = nullptr;
-    (*this).PrimaryWeapon.Empty();
-    (*this).SecondaryWeapon.Empty();
-    (*this).Equipment.Empty();
+    (*this).PrimaryWeapon = {};
+    (*this).SecondaryWeapon = {};
+    (*this).Equipment = {};
 }
-

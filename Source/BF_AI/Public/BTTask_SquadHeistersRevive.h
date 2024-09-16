@@ -13,6 +13,5 @@ public:
 protected:
     UPROPERTY()
     TArray<FIGS_ReviveRecord> m_RevivingRecord;
-    
-};
 
+};

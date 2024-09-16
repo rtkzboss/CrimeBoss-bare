@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatTeamDef : public FIGS_AIBaseTeamDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatTiersDef Tiers;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_AISwatBaseDataDefaults DefaultStats;
-    
+
     FIGS_AISwatTeamDef();
 };
-

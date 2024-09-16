@@ -1,9 +1,8 @@
 #include "CoverGenerator.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 
 ACoverGenerator::ACoverGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
     (*this).SegmentLength = 5.000000000e+00f;
     (*this).CharWidth = 4.000000000e+01f;
     (*this).CharHeight = 1.800000000e+02f;
@@ -21,7 +20,7 @@ ACoverGenerator::ACoverGenerator(const FObjectInitializer& ObjectInitializer) : 
     (*this).OffsetFrontAim = 2.000000000e+02f;
     (*this).DebugDistance = 2.500000000e+04f;
     (*this).PrimaryActorTick.bCanEverTick = true;
-    (*this).RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootSceneComponent"));
+    (*this).RootComponent = gen;
 }
 
 void ACoverGenerator::ReleaseCover(UCoverPoint* CoverPoint) {
@@ -39,15 +38,14 @@ bool ACoverGenerator::IsFreeCoverPoint(const UCoverPoint* CoverPoint) {
 }
 
 TArray<UCoverPoint*> ACoverGenerator::GetCoverWithinBox(const FBox& BoxIn) {
-    return TArray<UCoverPoint*>();
+    return {};
 }
 
 ACoverGenerator* ACoverGenerator::GetCoverGenerator(const UObject* WorldContextObject) {
-    return NULL;
+    return nullptr;
 }
 
 bool ACoverGenerator::CoverExistWithinBox(const FBox& BoxIn) {
     return false;
 }
-
 

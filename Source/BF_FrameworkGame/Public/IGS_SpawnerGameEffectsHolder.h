@@ -10,16 +10,15 @@ struct FIGS_SpawnerGameEffectsHolder {
 public:
     UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> AIBaseUnitMultipliersGE;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> AISpreadIncreasedGE;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> FlashedGE;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TSoftClassPtr<UGameplayEffect> StunnedGE;
-    
+
     BF_FRAMEWORKGAME_API FIGS_SpawnerGameEffectsHolder();
 };
-

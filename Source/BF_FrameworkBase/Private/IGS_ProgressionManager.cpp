@@ -29,19 +29,19 @@ bool UIGS_ProgressionManager::HasMaxLevel() const {
 }
 
 float UIGS_ProgressionManager::GetProgressToNextLevelFromPoints(float inPoints, int32 inNextLevel) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ProgressionManager::GetProgressToNextLevel() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ProgressionManager::GetPointsForLevel(int32 inLevel) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_ProgressionManager::GetMaxPointsForLevel(int32 inLevel) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UIGS_ProgressionManager::GetMaxLevel() const {
@@ -49,7 +49,6 @@ int32 UIGS_ProgressionManager::GetMaxLevel() const {
 }
 
 float UIGS_ProgressionManager::GetDebugMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

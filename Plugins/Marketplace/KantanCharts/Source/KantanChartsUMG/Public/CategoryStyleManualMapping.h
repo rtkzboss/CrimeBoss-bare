@@ -9,10 +9,9 @@ struct FCategoryStyleManualMapping {
 public:
     UPROPERTY(EditAnywhere)
     FName CategoryId;
-    
+
     UPROPERTY(EditAnywhere)
     FKantanCategoryStyle Style;
-    
+
     KANTANCHARTSUMG_API FCategoryStyleManualMapping();
 };
-

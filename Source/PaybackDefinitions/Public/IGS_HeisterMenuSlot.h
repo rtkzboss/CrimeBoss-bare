@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FIGS_HeisterMenuSlot {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FString DisplayName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MenuSlotOccupation SlotOccupation;
-    
+
     FIGS_HeisterMenuSlot();
 };
-

@@ -2,13 +2,7 @@
 #include "IGS_CharacterWieldablesHolderComponent.h"
 #include "IGS_SignificanceComponent.h"
 #include "Components/ArrowComponent.h"
-#include "GameFramework/Character.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_CharacterID.h"
-#include "EIGS_TeamSideEnum.h"
-#include "EIGS_UnitSpecialization.h"
+#include "Components/CapsuleComponent.h"
 #include "IGS_AimAssistTargetComponent.h"
 #include "IGS_AnimBudgetAllocatorComponent.h"
 #include "IGS_CharacterPressureWatcherComponent.h"
@@ -19,8 +13,19 @@
 #include "Net/UnrealNetwork.h"
 
 AIGS_IntelligentGameCharacter::AIGS_IntelligentGameCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UIGS_DamageHandlerComponent>(TEXT("DamageHandlerComponent2"))) {
-    (*this).SignificanceComponent = CreateDefaultSubobject<UIGS_SignificanceComponent>(TEXT("SignificanceComponent"));
-    (*this).CharacterWieldablesHolderComponent = CreateDefaultSubobject<UIGS_CharacterWieldablesHolderComponent>(TEXT("CharacterWieldablesHolderComponent"));
+    auto gen = CreateDefaultSubobject<UIGS_SignificanceComponent>(TEXT("SignificanceComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_CharacterWieldablesHolderComponent>(TEXT("CharacterWieldablesHolderComponent"));
+    auto gen3 = CreateDefaultSubobject<UIGS_FootstepsEventBasedComponent>(TEXT("FootstepEventBaseComponent"));
+    auto gen4 = CreateDefaultSubobject<UIGS_FallDamageComponent>(TEXT("FallDamageComponent"));
+    auto gen5 = CreateDefaultSubobject<UArrowComponent>(TEXT("AimAtDirection"));
+    auto gen6 = CreateDefaultSubobject<UArrowComponent>(TEXT("LookAtDirection"));
+    auto gen7 = CreateDefaultSubobject<UArrowComponent>(TEXT("PawnDirection"));
+    auto gen8 = CreateDefaultSubobject<UIGS_AnimBudgetAllocatorComponent>(TEXT("AnimBudgetAllocatorComponent"));
+    auto gen9 = CreateDefaultSubobject<UIGS_DecalContactShadowComponent>(TEXT("DecalContactShadowComponent"));
+    auto gen10 = CreateDefaultSubobject<UIGS_CharacterPressureWatcherComponent>(TEXT("PressureWatcherComponent"));
+    auto gen11 = CreateDefaultSubobject<UIGS_AimAssistTargetComponent>(TEXT("AimAssistTargetComponent"));
+    (*this).SignificanceComponent = gen;
+    (*this).CharacterWieldablesHolderComponent = gen2;
     (*this).bIsValidForAimAssist = true;
     (*this).ExplorationZoomMagnification = 1.250000000e+00f;
     (*this).ExplorationZoomInSpeedMult = 1.000000000e+00f;
@@ -30,20 +35,21 @@ AIGS_IntelligentGameCharacter::AIGS_IntelligentGameCharacter(const FObjectInitia
     (*this).HeadBoneName = TEXT("head");
     (*this).ChestBoneName = TEXT("spine_03");
     (*this).AimDummySocketName = TEXT("AimRSocket");
-    (*this).FootstepEventBaseComponent = CreateDefaultSubobject<UIGS_FootstepsEventBasedComponent>(TEXT("FootstepEventBaseComponent"));
-    (*this).FallDamageComponent = CreateDefaultSubobject<UIGS_FallDamageComponent>(TEXT("FallDamageComponent"));
-    (*this).AimAtArrowComp = CreateDefaultSubobject<UArrowComponent>(TEXT("AimAtDirection"));
-    (*this).LookAtArrowComp = CreateDefaultSubobject<UArrowComponent>(TEXT("LookAtDirection"));
-    (*this).PawnDirArrowComp = CreateDefaultSubobject<UArrowComponent>(TEXT("PawnDirection"));
-    (*this).AnimBudgetAllocatorComponent = CreateDefaultSubobject<UIGS_AnimBudgetAllocatorComponent>(TEXT("AnimBudgetAllocatorComponent"));
-    (*this).DecalContactShadowComponent = CreateDefaultSubobject<UIGS_DecalContactShadowComponent>(TEXT("DecalContactShadowComponent"));
-    (*this).PressureWatcherComponent = CreateDefaultSubobject<UIGS_CharacterPressureWatcherComponent>(TEXT("PressureWatcherComponent"));
-    (*this).AimAssistTargetComponent = CreateDefaultSubobject<UIGS_AimAssistTargetComponent>(TEXT("AimAssistTargetComponent"));
+    (*this).FootstepEventBaseComponent = gen3;
+    (*this).FallDamageComponent = gen4;
+    (*this).AimAtArrowComp = gen5;
+    (*this).LookAtArrowComp = gen6;
+    (*this).PawnDirArrowComp = gen7;
+    (*this).AnimBudgetAllocatorComponent = gen8;
+    (*this).DecalContactShadowComponent = gen9;
+    (*this).PressureWatcherComponent = gen10;
+    (*this).AimAssistTargetComponent = gen11;
     (*this).HeadComponentReference.ComponentProperty = TEXT("head");
     (*this).mR_NextRandomAnimationSeed = -1;
-    (*this).AimAtArrowComp->SetupAttachment((*this).RootComponent);
-    (*this).LookAtArrowComp->SetupAttachment((*this).RootComponent);
-    (*this).PawnDirArrowComp->SetupAttachment((*this).RootComponent);
+    auto gen12 = Cast<UCapsuleComponent>(GetDefaultSubobjectByName(TEXT("CollisionCylinder")));
+    if (gen5) gen5->SetupAttachment(gen12);
+    if (gen6) gen6->SetupAttachment(gen12);
+    if (gen7) gen7->SetupAttachment(gen12);
 }
 
 void AIGS_IntelligentGameCharacter::ThrowAwayBag() const {
@@ -116,15 +122,15 @@ void AIGS_IntelligentGameCharacter::HolsterWeapon() const {
 }
 
 UIGS_LootBagComponent* AIGS_IntelligentGameCharacter::GetLootBagComponent() const {
-    return NULL;
+    return nullptr;
 }
 
 USkeletalMeshComponent* AIGS_IntelligentGameCharacter::GetHeadComp() {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_BleedingHandlerComponent* AIGS_IntelligentGameCharacter::GetBleedingComponent() {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_IntelligentGameCharacter::ForceDestroyZiptieComponent() {
@@ -150,8 +156,7 @@ bool AIGS_IntelligentGameCharacter::CanInterruptInspecting() const {
 
 void AIGS_IntelligentGameCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_IntelligentGameCharacter, mR_NextRandomAnimationSeed);
 }
-
 

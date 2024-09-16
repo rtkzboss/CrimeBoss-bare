@@ -78,4 +78,3 @@ enum class EIGS_AIMontageSOVariant : uint8 {
     SO_L_SearchTable = 166,
     SO_L_Discussion = 170,
 };
-

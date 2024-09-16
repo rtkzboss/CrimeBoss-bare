@@ -17,4 +17,3 @@ FMETA_PlanningBoardItemRow UMETA_PlanningBoardItemObject::GetData() const {
     return FMETA_PlanningBoardItemRow{};
 }
 
-

@@ -7,4 +7,3 @@ FIGS_AIGangsterHeavyTierData::FIGS_AIGangsterHeavyTierData() {
     (*this).TimeTillOverheat.Min = 1.300000000e+01f;
     (*this).TimeTillOverheat.Max = 1.500000000e+01f;
 }
-

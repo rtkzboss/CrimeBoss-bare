@@ -11,6 +11,5 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetOption(FText inOption);
-    
-};
 
+};

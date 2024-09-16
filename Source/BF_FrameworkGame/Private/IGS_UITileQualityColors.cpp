@@ -42,4 +42,3 @@ FIGS_UITileQualityColors::FIGS_UITileQualityColors() {
     (*this).LockedColor.B = 0.000000000e+00f;
     (*this).LockedColor.A = 0.000000000e+00f;
 }
-

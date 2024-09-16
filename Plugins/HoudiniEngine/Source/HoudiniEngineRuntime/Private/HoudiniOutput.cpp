@@ -4,4 +4,3 @@ UHoudiniOutput::UHoudiniOutput() {
     (*this).bCanDeleteHoudiniNodes = true;
 }
 
-

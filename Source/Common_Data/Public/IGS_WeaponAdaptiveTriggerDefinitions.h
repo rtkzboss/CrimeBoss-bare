@@ -11,13 +11,12 @@ struct COMMON_DATA_API FIGS_WeaponAdaptiveTriggerDefinitions {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_DualSenseFeedbackMode FeedbackMode;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_DualSenseWeaponMode WeaponMode;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_DualSenseVibrationMode VibrationMode;
-    
+
     FIGS_WeaponAdaptiveTriggerDefinitions();
 };
-

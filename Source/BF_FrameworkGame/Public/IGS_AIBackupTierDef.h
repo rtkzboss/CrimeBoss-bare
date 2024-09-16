@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupTierDef : public FIGS_AIBaseTierDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupBaseDataModifiers Stats;
-    
+
     FIGS_AIBackupTierDef();
 };
-

@@ -10,4 +10,3 @@ public:
     UIGS_WeaponSkinHandler(const FObjectInitializer& ObjectInitializer);
 
 };
-

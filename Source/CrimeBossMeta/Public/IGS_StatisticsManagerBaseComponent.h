@@ -12,12 +12,11 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ProvideStatisticForDay(int32 inDay, FMETA_StatisticNoteSaveData& outStatistic);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ProvideStatisticForAnIntervalOfDay(int32 inStartDay, int32 inEndDay, FMETA_StatisticNoteSaveData& outStatistic);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ProvideAllStatisticForCampaign(FMETA_StatisticNoteSaveData& outStatistic);
-    
-};
 
+};

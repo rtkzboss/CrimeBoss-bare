@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "EventPointReachedSignatureDelegate.h"
+#include "EventPointReachedSignature.h"
 #include "EventPointDelegateHolder.generated.h"
 
 UCLASS()
@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FEventPointReachedSignature OnEventPointReached;
-    
-};
 
+};

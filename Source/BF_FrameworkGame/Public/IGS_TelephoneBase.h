@@ -16,32 +16,31 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void TriggerAlarm();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnTelephoneRingEnded(bool inAnswered);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnTelephoneRing();
-    
+
 public:
     UFUNCTION(BlueprintCallable)
     void BeginCheckInCall();
-    
+
     UFUNCTION(BlueprintCallable)
     void AnswerCall(AIGS_GameCharacterFramework* inInstigator);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bRinging;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bPublicTelephone;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AIGS_ControlRoomBase* ControlRoom;
-    
+
 protected:
     UPROPERTY()
     UIGS_StealthSettingsInstance* m_StealthSettingsInstance;
-    
-};
 
+};

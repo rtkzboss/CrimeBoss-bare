@@ -15,6 +15,5 @@ class BF_FRAMEWORKBASE_API IIGS_HasWeakSpotInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UIGS_WeakSpotComponent* GetWeakSpotComponent();
-    
-};
 
+};

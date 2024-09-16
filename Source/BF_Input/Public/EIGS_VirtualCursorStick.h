@@ -9,4 +9,3 @@ enum class EIGS_VirtualCursorStick : uint8 {
     Right,
     Max,
 };
-

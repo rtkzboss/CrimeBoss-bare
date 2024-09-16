@@ -9,4 +9,3 @@ enum class EScreenInputMode : uint8 {
     UIOnly,
     GameOnly,
 };
-

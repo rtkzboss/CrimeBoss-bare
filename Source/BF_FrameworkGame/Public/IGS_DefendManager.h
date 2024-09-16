@@ -13,22 +13,21 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UnregisterDefendPointInitial(AIGS_WaypointFramework* inDefendPoint);
-    
+
     UFUNCTION(BlueprintCallable)
     void UnregisterDefendPoint(AIGS_WaypointFramework* inDefendPoint);
-    
+
     UFUNCTION(BlueprintCallable)
     void RegisterDefendPointInitial(AIGS_WaypointFramework* inDefendPoint);
-    
+
     UFUNCTION(BlueprintCallable)
     void RegisterDefendPoint(AIGS_WaypointFramework* inDefendPoint);
-    
+
 protected:
     UPROPERTY()
     TArray<AIGS_WaypointFramework*> m_DefendPoints;
-    
+
     UPROPERTY()
     TArray<AIGS_WaypointFramework*> m_DefendPointsInitial;
-    
-};
 
+};

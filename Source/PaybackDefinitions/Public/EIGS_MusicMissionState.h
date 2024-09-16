@@ -20,4 +20,3 @@ enum class EIGS_MusicMissionState : uint8 {
     Default,
     CustomCombat = 30,
 };
-

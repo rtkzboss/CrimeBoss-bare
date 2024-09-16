@@ -7,4 +7,3 @@ FMETA_TradeVendorTableRow UMETA_TradeVendorDatabase::GetTradeVendorData(UObject*
     return FMETA_TradeVendorTableRow{};
 }
 
-

@@ -2,4 +2,3 @@
 
 FIGS_AICopHeavyTierDef::FIGS_AICopHeavyTierDef() {
 }
-

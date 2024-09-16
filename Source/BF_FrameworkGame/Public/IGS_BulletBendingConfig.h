@@ -10,31 +10,30 @@ struct BF_FRAMEWORKGAME_API FIGS_BulletBendingConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinStartRadius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxStartRadius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinFullPowerRadius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxFullPowerRadius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HipFireZoneScale;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bUseInterpolationCurve;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FRuntimeFloatCurve InterpolationCurve;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bZonesScalingEnabled;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_ZonesScalingConfig ZonesScalingConfig;
-    
+
     FIGS_BulletBendingConfig();
 };
-

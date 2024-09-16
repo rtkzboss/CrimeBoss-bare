@@ -1,5 +1,4 @@
 #include "IGS_MediaManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_MediaManagerBaseComponent::UIGS_MediaManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -27,5 +26,4 @@ void UIGS_MediaManagerBaseComponent::DialogueShouldBePlayed_Implementation(FMETA
 
 void UIGS_MediaManagerBaseComponent::CutsceneShouldBePlayed_Implementation(FMETA_CutsceneUIData CutsceneData) {
 }
-
 

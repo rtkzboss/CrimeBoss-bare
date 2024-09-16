@@ -12,16 +12,15 @@ struct BF_AI_API FIGS_VehicleDestinationInfo {
 public:
     UPROPERTY()
     FVector Position;
-    
+
     UPROPERTY()
     int32 Amount;
-    
+
     UPROPERTY()
     AIGS_VehicleDestinationPoint* DestinationPoint;
-    
+
     UPROPERTY()
     AIGS_VehicleDestinationArea* DestinationArea;
-    
+
     FIGS_VehicleDestinationInfo();
 };
-

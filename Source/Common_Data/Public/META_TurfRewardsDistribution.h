@@ -8,16 +8,15 @@ struct COMMON_DATA_API FMETA_TurfRewardsDistribution {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercantageOfTilesWithOneReward;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercantageOfTilesWithTwoRewards;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 PercantageOfTilesWithThreeRewards;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 RewardsAmountForRepeatedCapture;
-    
+
     FMETA_TurfRewardsDistribution();
 };
-

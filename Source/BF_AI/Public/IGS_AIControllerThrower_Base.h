@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerThrower_Base(const FObjectInitializer& ObjectInitializer);
 
 };
-

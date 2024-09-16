@@ -11,19 +11,18 @@ struct BF_IMPACTS_API FIGS_FootstepSoundParameters {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseThis;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float WalkSpeed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MovementSlope SlopeType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<UAkSwitchValue> FootstepAkSwitch;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<UAkSwitchValue> ShoeAkSwitch;
-    
+
     FIGS_FootstepSoundParameters();
 };
-

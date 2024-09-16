@@ -15,9 +15,8 @@ class IMETA_GraphNode : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ResetNodeToDefault();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 ExecuteNode(AMETA_BaseGameMode* inGameMode);
-    
-};
 
+};

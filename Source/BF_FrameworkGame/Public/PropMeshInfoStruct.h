@@ -9,10 +9,9 @@ struct FPropMeshInfoStruct {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PivotVariationMax;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FMeshInfoStruct> MeshesToSpawn;
-    
+
     BF_FRAMEWORKGAME_API FPropMeshInfoStruct();
 };
-

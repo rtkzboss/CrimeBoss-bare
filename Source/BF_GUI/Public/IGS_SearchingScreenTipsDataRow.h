@@ -9,7 +9,6 @@ struct FIGS_SearchingScreenTipsDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Tip;
-    
+
     BF_GUI_API FIGS_SearchingScreenTipsDataRow();
 };
-

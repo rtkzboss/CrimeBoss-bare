@@ -5,4 +5,3 @@ UIGS_MeleeWeaponInventoryObject::UIGS_MeleeWeaponInventoryObject() {
     (*this).ItemType = EIGS_ItemType::Item_MeleeWeapon;
 }
 
-

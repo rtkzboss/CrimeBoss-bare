@@ -9,7 +9,6 @@ struct FIGS_JobsScreenCategoryColumn {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_JobsScreenCategoryItem> Items;
-    
+
     CRIMEBOSSMETA_API FIGS_JobsScreenCategoryColumn();
 };
-

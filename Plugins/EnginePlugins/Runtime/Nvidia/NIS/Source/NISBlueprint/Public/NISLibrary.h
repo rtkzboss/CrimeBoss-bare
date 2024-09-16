@@ -12,30 +12,29 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void SetNISSharpness(float Sharpness);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetNISMode(UNISMode NISMode);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetNISCustomScreenPercentage(float CustomScreenPercentage);
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsNISSupported();
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsNISModeSupported(UNISMode NISMode);
-    
+
     UFUNCTION(BlueprintPure)
     static TArray<UNISMode> GetSupportedNISModes();
-    
+
     UFUNCTION(BlueprintPure)
     static void GetNISScreenPercentageRange(float& MinScreenPercentage, float& MaxScreenPercentage);
-    
+
     UFUNCTION(BlueprintPure)
     static float GetNISRecommendedScreenPercentage(UNISMode NISMode);
-    
+
     UFUNCTION(BlueprintPure)
     static UNISMode GetDefaultNISMode();
-    
-};
 
+};

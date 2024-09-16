@@ -14,31 +14,30 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetSubGraphResult(EMETA_GoalStatus inResult);
-    
+
     UFUNCTION(BlueprintCallable)
     int32 GetNextNodeIDByResult();
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UStoryGraphManager> SubGraph;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FString SubGraphMan;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 TrueNodeId;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 FalseNodeId;
-    
+
     UPROPERTY()
     UStoryGraphManager* LoadedSubGraph;
-    
+
 private:
     UPROPERTY()
     EMETA_GoalStatus Result;
-    
+
     UPROPERTY()
     int32 OldConnectionsCount;
-    
-};
 
+};

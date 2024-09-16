@@ -19,25 +19,24 @@ public:
 
     UPROPERTY(Transient)
     TArray<FGeneratedMaterial> GeneratedMaterials;
-    
+
     UPROPERTY(Transient)
     TArray<FGeneratedMesh> GeneratedMeshes;
-    
+
     UPROPERTY(Transient)
     TArray<FGeneratedTexture> GeneratedTextures;
-    
+
     UPROPERTY(Transient)
     TArray<FParameterDecorations> ParameterDecorations;
-    
+
     UPROPERTY(Transient)
     TMap<FString, TWeakObjectPtr<UTexture2D>> TextureReuseCache;
-    
+
 private:
     UPROPERTY(Transient)
     TArray<UMaterialInterface*> ReferencedMaterials;
-    
+
     UPROPERTY(Transient)
     TArray<UPhysicsAsset*> PhysicsAssetsToMerge;
-    
-};
 
+};

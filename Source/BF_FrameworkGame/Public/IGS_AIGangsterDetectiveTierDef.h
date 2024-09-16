@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterDetectiveTierDef : public FIGS_AIGang
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AIGangsterDetectiveTierData SpecStats;
-    
+
     FIGS_AIGangsterDetectiveTierDef();
 };
-

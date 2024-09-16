@@ -11,4 +11,3 @@ enum class EIGS_AIUnitDBSource : uint8 {
     US_FPS_VIP = 11,
     US_Story_VIP,
 };
-

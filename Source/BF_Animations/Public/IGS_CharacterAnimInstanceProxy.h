@@ -9,4 +9,3 @@ struct BF_ANIMATIONS_API FIGS_CharacterAnimInstanceProxy : public FAnimInstanceP
 public:
     FIGS_CharacterAnimInstanceProxy();
 };
-

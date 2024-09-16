@@ -12,13 +12,13 @@ FIGS_AIBaseUnitDef::FIGS_AIBaseUnitDef() {
     (*this).Stats.CoverPreset = EIGS_CoverPreset::AICS_None;
     (*this).Stats.CoverStickiness = 5.000000000e-01f;
     (*this).Stats.ReactionIntensity = 5.000000000e-01f;
-    (*this).Loadout.WeaponPool.PrimaryWeapons.Empty();
-    (*this).Loadout.WeaponPool.SecondaryWeapons.Empty();
-    (*this).Loadout.WeaponPool.MeleeWeapons.Empty();
-    (*this).Loadout.WeaponProbability.Empty();
+    (*this).Loadout.WeaponPool.PrimaryWeapons = {};
+    (*this).Loadout.WeaponPool.SecondaryWeapons = {};
+    (*this).Loadout.WeaponPool.MeleeWeapons = {};
+    (*this).Loadout.WeaponProbability = {};
     (*this).Loadout.NoThrowableChance = 0;
-    (*this).Loadout.ThrowablePool.Empty();
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Loadout.ThrowablePool = {};
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
     (*this).Loadout.ShowNoThrowableBool = 0;
 }
-

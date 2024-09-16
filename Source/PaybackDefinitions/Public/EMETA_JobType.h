@@ -14,4 +14,3 @@ enum class EMETA_JobType : uint8 {
     TerritoryDefence,
     Ambush,
 };
-

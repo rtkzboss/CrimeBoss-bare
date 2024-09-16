@@ -16,29 +16,28 @@ public:
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void OnThrowStart(bool inLow);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnThrowFinish(bool inLow);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnThrowCancel(bool inLow);
-    
+
     UFUNCTION()
     void OnDebugSettingsChanged();
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<UIGS_ThrowableInventoryObject> ThrowableInventoryObject;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Transient)
     FIGS_ThrowableData ThrowableData;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_SkinHandlerBase* SkinHandler;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UClass* LoadedProjectileClass;
-    
-};
 
+};

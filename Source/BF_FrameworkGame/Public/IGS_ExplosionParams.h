@@ -11,13 +11,12 @@ struct FIGS_ExplosionParams {
 public:
     UPROPERTY()
     FVector_NetQuantize Origin;
-    
+
     UPROPERTY()
     TWeakObjectPtr<AActor> CausingActor;
-    
+
     UPROPERTY()
     float EffectRadius;
-    
+
     BF_FRAMEWORKGAME_API FIGS_ExplosionParams();
 };
-

@@ -2,11 +2,10 @@
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "BPUniqueNetId.h"
-#include "BlueprintFindFriendSessionDelegateDelegate.h"
+#include "BlueprintFindFriendSessionDelegate.h"
 #include "FindFriendSessionCallbackProxy.generated.h"
 
 class APlayerController;
-class UFindFriendSessionCallbackProxy;
 class UObject;
 
 UCLASS(MinimalAPI)
@@ -17,12 +16,11 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static UFindFriendSessionCallbackProxy* FindFriendSession(UObject* WorldContextObject, APlayerController* PlayerController, const FBPUniqueNetId& FriendUniqueNetId);
-    
+
     UPROPERTY(BlueprintAssignable)
     FBlueprintFindFriendSessionDelegate OnSuccess;
-    
+
     UPROPERTY(BlueprintAssignable)
     FBlueprintFindFriendSessionDelegate OnFailure;
-    
-};
 
+};

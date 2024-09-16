@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_DetectivesInvestigationConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AmountOfDetectives;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AmountOfTurfsWillBeNeutralizedByEachDetective;
-    
+
     FMETA_DetectivesInvestigationConfig();
 };
-

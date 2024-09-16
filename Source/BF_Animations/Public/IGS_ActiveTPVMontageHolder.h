@@ -8,4 +8,3 @@ struct FIGS_ActiveTPVMontageHolder {
 public:
     BF_ANIMATIONS_API FIGS_ActiveTPVMontageHolder();
 };
-

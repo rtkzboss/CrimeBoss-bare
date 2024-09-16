@@ -10,11 +10,11 @@ struct PAYBACKDEFINITIONS_API FMETA_VendorLootKey {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_TradeVendor Vendor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag Loot;
-    
+
     FMETA_VendorLootKey();
 };
 FORCEINLINE uint32 GetTypeHash(const FMETA_VendorLootKey&) { return 0; }
-
+FORCEINLINE bool operator==(const FMETA_VendorLootKey&, const FMETA_VendorLootKey&) { return true; }

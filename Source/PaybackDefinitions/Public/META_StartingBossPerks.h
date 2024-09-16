@@ -8,7 +8,6 @@ struct PAYBACKDEFINITIONS_API FMETA_StartingBossPerks {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AdditionalPerkAmount;
-    
+
     FMETA_StartingBossPerks();
 };
-

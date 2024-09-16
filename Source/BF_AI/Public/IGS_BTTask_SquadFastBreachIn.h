@@ -10,4 +10,3 @@ public:
     UIGS_BTTask_SquadFastBreachIn();
 
 };
-

@@ -15,25 +15,24 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool PutItemToInventory(AIGS_GameCharacterFramework* inInstigator);
-    
+
     UFUNCTION()
     void OnRep_Items();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnCantBePicked();
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FIGS_LootBagSingleItem> GetItems();
-    
+
 protected:
     UPROPERTY(ReplicatedUsing=OnRep_Items)
     FIGS_LootBagItemHolder mR_ItemInfo;
-    
+
     UPROPERTY()
     TArray<FIGS_LootBagSingleItem> ItemsToAdd;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

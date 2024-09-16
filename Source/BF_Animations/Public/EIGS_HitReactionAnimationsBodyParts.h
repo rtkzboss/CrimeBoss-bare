@@ -18,4 +18,3 @@ enum class EIGS_HitReactionAnimationsBodyParts : uint8 {
     Ch_Left_Head,
     Ch_None,
 };
-

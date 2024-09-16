@@ -10,4 +10,3 @@ public:
     AIGS_EscapeVehicle(const FObjectInitializer& ObjectInitializer);
 
 };
-

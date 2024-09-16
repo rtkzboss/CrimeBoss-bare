@@ -37,4 +37,3 @@ FPowerIKGroundSlope::FPowerIKGroundSlope() {
     (*this).OffsetFeetPositions = false;
     (*this).StaticFootOffset = 4.000000000e+00f;
 }
-

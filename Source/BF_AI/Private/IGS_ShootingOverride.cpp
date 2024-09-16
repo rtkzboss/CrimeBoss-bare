@@ -9,4 +9,3 @@ FIGS_ShootingOverride::FIGS_ShootingOverride() {
     (*this).Target.Enabled = false;
     (*this).ShootingType = EIGS_ShootingOverrideType::Clasic;
 }
-

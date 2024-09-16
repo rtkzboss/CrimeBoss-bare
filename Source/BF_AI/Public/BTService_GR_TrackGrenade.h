@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GeneralReactionDataKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector GrenadeActorKey;
-    
+
     UPROPERTY(EditAnywhere)
     float SafePeriod;
-    
-};
 
+};

@@ -3,4 +3,3 @@
 FGateExplosiveInfo::FGateExplosiveInfo() {
     (*this).ExplosivePoint = nullptr;
 }
-

@@ -10,7 +10,6 @@ struct COMMON_DATA_API FMETA_UsableEquipment {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<EMETA_ItemQuality, FGameplayTag> Data;
-    
+
     FMETA_UsableEquipment();
 };
-

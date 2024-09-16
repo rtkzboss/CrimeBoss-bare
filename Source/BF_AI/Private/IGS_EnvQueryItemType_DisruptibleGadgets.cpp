@@ -3,4 +3,3 @@
 UIGS_EnvQueryItemType_DisruptibleGadgets::UIGS_EnvQueryItemType_DisruptibleGadgets() {
 }
 
-

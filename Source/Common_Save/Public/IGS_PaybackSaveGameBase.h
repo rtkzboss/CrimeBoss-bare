@@ -13,30 +13,29 @@ public:
 protected:
     UPROPERTY(SaveGame)
     uint32 SaveFileVersion;
-    
+
     UPROPERTY(Transient)
     FString SaveData;
-    
+
     UPROPERTY(SaveGame)
     TArray<uint8> SaveDataCompressedBuffer;
-    
+
     UPROPERTY(Transient)
     FString SaveDataSlotName;
-    
+
     UPROPERTY(Transient)
     FString SaveDataEncryptionKey;
-    
+
     UPROPERTY(Transient)
     bool bFailedChecksum;
-    
+
     UPROPERTY(Transient)
     FIGS_SaveData_Base DebugSaveDataBase;
-    
+
     UPROPERTY(SaveGame)
     bool bShouldUnlockVeteranRewards;
-    
+
     UPROPERTY(SaveGame)
     bool bAppliedPatchSave;
-    
-};
 
+};

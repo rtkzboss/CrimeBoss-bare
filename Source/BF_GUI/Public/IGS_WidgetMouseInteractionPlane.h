@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "OnHoverBorderHoverEventDelegate.h"
+#include "OnHoverBorderHoverEvent.h"
 #include "IGS_WidgetMouseInteractionPlane.generated.h"
 
 UCLASS(Abstract, EditInlineNew)
@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FOnHoverBorderHoverEvent OnHoverBorderHover;
-    
+
     UPROPERTY(BlueprintAssignable)
     FOnHoverBorderHoverEvent OnHoverBorderUnhover;
-    
-};
 
+};

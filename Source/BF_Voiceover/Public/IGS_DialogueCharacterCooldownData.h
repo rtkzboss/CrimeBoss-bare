@@ -9,16 +9,15 @@ struct BF_VOICEOVER_API FIGS_DialogueCharacterCooldownData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_DialogueCharacterCooldown StealthCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_DialogueCharacterCooldown LimboCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_DialogueCharacterCooldown ControlCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_DialogueCharacterCooldown AssaultCooldown;
-    
+
     FIGS_DialogueCharacterCooldownData();
 };
-

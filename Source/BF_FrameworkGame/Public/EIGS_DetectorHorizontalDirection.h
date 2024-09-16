@@ -7,4 +7,3 @@ enum class EIGS_DetectorHorizontalDirection : uint8 {
     Left,
     Right,
 };
-

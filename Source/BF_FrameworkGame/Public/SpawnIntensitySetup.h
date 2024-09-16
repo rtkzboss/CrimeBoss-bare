@@ -8,19 +8,18 @@ struct FSpawnIntensitySetup {
 public:
     UPROPERTY(EditAnywhere)
     float FakeSpawnUsedPercantage;
-    
+
     UPROPERTY(EditAnywhere)
     float SpawnDelayBetweenWavesCoef;
-    
+
     UPROPERTY(EditAnywhere)
     int32 MaxEnemiesInSceneAddon;
-    
+
     UPROPERTY(EditAnywhere)
     float AssaultDurationAddon;
-    
+
     UPROPERTY(EditAnywhere)
     float EnemyDispersionCoef;
-    
+
     BF_FRAMEWORKGAME_API FSpawnIntensitySetup();
 };
-

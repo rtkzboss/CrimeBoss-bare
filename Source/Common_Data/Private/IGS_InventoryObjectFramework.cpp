@@ -77,4 +77,3 @@ FIGS_CommonItemData UIGS_InventoryObjectFramework::GetCommonDataBP() {
     return FIGS_CommonItemData{};
 }
 
-

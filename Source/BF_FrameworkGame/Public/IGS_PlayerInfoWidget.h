@@ -13,28 +13,27 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void OnWidgetInitialized();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnNewName(const FText& InName);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnNewHeisterNumber(int32 inNumber);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     int32 GetHeisterNumber();
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText PlayerName;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 HeisterNumber;
-    
+
     UPROPERTY()
     FText DebugEditorName;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly)
     AIGS_IntelligentGameCharacter* CharacterOwner;
-    
-};
 
+};

@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_GameplayAbilityTargetData_Mantle : public FGame
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector_NetQuantize MantleLocation;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MantleType MantleType;
-    
+
     FIGS_GameplayAbilityTargetData_Mantle();
 };
-

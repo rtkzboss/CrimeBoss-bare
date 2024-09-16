@@ -7,4 +7,3 @@ FIGS_AnimNode_LocalPoseBoneTransform::FIGS_AnimNode_LocalPoseBoneTransform() {
     (*this).m_CharacterMesh = nullptr;
     (*this).m_AnimInsatnce = nullptr;
 }
-

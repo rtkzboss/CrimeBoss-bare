@@ -6,4 +6,3 @@ UEnvQueryGenerator_Cover::UEnvQueryGenerator_Cover() {
     (*this).ItemType = UEnvQueryItemType_Cover::StaticClass();
 }
 
-

@@ -11,13 +11,12 @@ struct FKantanSeriesStyle {
 public:
     UPROPERTY(EditAnywhere)
     FName StyleId;
-    
+
     UPROPERTY(EditAnywhere)
     UKantanPointStyle* PointStyle;
-    
+
     UPROPERTY(EditAnywhere)
     FLinearColor Color;
-    
+
     KANTANCHARTSSLATE_API FKantanSeriesStyle();
 };
-

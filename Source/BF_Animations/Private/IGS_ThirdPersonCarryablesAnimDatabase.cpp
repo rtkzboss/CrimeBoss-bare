@@ -1,7 +1,7 @@
 #include "IGS_ThirdPersonCarryablesAnimDatabase.h"
 
 FIGS_ThirdPersonCarryablesAnimDatabase::FIGS_ThirdPersonCarryablesAnimDatabase() {
-    (*this).ID = nullptr;
+    (*this).ID = FSoftObjectPath();
     (*this).WeaponGripStand = nullptr;
     (*this).WeaponGripCrouch = nullptr;
     (*this).WeaponGripRun = nullptr;
@@ -61,4 +61,3 @@ FIGS_ThirdPersonCarryablesAnimDatabase::FIGS_ThirdPersonCarryablesAnimDatabase()
     (*this).LeftHandIKAlpha = 0.000000000e+00f;
     (*this).RightHandIKAlpha = 0.000000000e+00f;
 }
-

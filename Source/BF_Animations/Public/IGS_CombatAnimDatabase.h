@@ -12,13 +12,12 @@ struct FIGS_CombatAnimDatabase : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> AnimVariations;
-    
+
     UPROPERTY(EditAnywhere)
     bool isLooped;
-    
+
     BF_ANIMATIONS_API FIGS_CombatAnimDatabase();
 };
-

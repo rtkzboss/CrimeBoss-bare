@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     EIGS_AICommandType commandType;
-    
+
     UPROPERTY(EditAnywhere)
     bool RestartOnNewCommand;
-    
-};
 
+};

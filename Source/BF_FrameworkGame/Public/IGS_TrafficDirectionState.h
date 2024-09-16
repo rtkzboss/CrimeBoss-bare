@@ -8,10 +8,9 @@ struct BF_FRAMEWORKGAME_API FIGS_TrafficDirectionState {
 public:
     UPROPERTY()
     bool IsLocked;
-    
+
     UPROPERTY()
     bool Reversed;
-    
+
     FIGS_TrafficDirectionState();
 };
-

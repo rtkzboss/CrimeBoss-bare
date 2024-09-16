@@ -1,23 +1,24 @@
 #include "IGS_LootCollectionBase.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_LootCollectionBase::AIGS_LootCollectionBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
     (*this).LootingPos.X = 3.402823466e+38f;
     (*this).LootingPos.Y = 3.402823466e+38f;
     (*this).LootingPos.Z = 3.402823466e+38f;
     (*this).LootingRotation.Pitch = 3.402823466e+38f;
     (*this).LootingRotation.Yaw = 3.402823466e+38f;
     (*this).LootingRotation.Roll = 3.402823466e+38f;
-    (*this).DefaultSceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
+    (*this).DefaultSceneRoot = gen;
     (*this).bIsShineEnabled = true;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen2 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
     (*this).NetDormancy = DORM_Initial;
-    (*this).RootComponent = (USceneComponent*)DefaultSceneRoot;
+    (*this).RootComponent = gen;
 }
 
 void AIGS_LootCollectionBase::TestLootPosition() {
@@ -67,7 +68,7 @@ bool AIGS_LootCollectionBase::IsLootValidForAI(const bool inIgnoreOnlyUnlocked) 
 }
 
 AIGS_LootHolderBase* AIGS_LootCollectionBase::GetLootHolder() const {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_LootCollectionBase::AddAllowedCharacter(AIGS_GameCharacterFramework* inCharacter) {
@@ -75,10 +76,9 @@ void AIGS_LootCollectionBase::AddAllowedCharacter(AIGS_GameCharacterFramework* i
 
 void AIGS_LootCollectionBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_LootCollectionBase, LootItems);
     DOREPLIFETIME(AIGS_LootCollectionBase, bIsEmpty);
     DOREPLIFETIME(AIGS_LootCollectionBase, m_bIsInCase);
 }
-
 

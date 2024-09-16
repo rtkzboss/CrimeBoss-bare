@@ -8,4 +8,3 @@ FCommonMissionDataBase UCommonMissionsDatabase::GetBaseMissionDataBP(const UObje
     return FCommonMissionDataBase{};
 }
 
-

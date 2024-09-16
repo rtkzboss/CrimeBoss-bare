@@ -1,6 +1,4 @@
 #include "IGS_LootHolderBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_LootHolderBase::AIGS_LootHolderBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).OpeningAffectsLootCollection = true;
@@ -41,5 +39,4 @@ bool AIGS_LootHolderBase::IsBroken() const {
 bool AIGS_LootHolderBase::CanBeOpenedSilently() const {
     return false;
 }
-
 

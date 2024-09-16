@@ -7,4 +7,3 @@ FConstructionSystemSavePlayerInfo::FConstructionSystemSavePlayerInfo() {
     (*this).ControlRotation.Yaw = 0.000000000e+00f;
     (*this).ControlRotation.Roll = 0.000000000e+00f;
 }
-

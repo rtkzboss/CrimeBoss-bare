@@ -4,4 +4,3 @@ UIGS_BTService_BotThrowSolveSpeed::UIGS_BTService_BotThrowSolveSpeed() {
     (*this).NodeName = TEXT("Bot Throw Solve Speed");
 }
 
-

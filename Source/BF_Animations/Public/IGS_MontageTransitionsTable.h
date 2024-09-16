@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> MontageTransitions;
-    
-};
 
+};

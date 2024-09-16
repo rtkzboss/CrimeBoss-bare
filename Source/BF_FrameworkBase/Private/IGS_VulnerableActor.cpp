@@ -1,6 +1,4 @@
 #include "IGS_VulnerableActor.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_VulnerableActor::AIGS_VulnerableActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).CurrentHealth = 1.000000000e+02f;
@@ -17,5 +15,4 @@ bool AIGS_VulnerableActor::GetIsBroken() {
 
 void AIGS_VulnerableActor::ApplyVulnerableDamage(float inAmount) {
 }
-
 

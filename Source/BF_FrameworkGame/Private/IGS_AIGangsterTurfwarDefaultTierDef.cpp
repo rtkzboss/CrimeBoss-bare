@@ -2,4 +2,3 @@
 
 FIGS_AIGangsterTurfwarDefaultTierDef::FIGS_AIGangsterTurfwarDefaultTierDef() {
 }
-

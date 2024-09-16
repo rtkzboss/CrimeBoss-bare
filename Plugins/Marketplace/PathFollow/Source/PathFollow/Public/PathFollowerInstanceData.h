@@ -9,4 +9,3 @@ struct FPathFollowerInstanceData : public FActorComponentInstanceData {
 public:
     PATHFOLLOW_API FPathFollowerInstanceData();
 };
-

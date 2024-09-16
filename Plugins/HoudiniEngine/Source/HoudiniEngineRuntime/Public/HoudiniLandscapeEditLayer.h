@@ -13,9 +13,8 @@ public:
 
     UPROPERTY()
     TSoftObjectPtr<ALandscapeProxy> LandscapeSoftPtr;
-    
+
     UPROPERTY()
     FString LayerName;
-    
-};
 
+};

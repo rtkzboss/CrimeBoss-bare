@@ -11,16 +11,15 @@ struct BF_VOICEOVER_API FMETA_DialogueUIData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<EIGS_MetaDialogueCharacterSlot, EIGS_MetaDialogueCharacter> Characters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag screenTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag TypeTag;
-    
+
     FMETA_DialogueUIData();
 };
-

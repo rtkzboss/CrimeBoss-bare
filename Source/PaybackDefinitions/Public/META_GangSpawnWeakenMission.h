@@ -8,10 +8,9 @@ struct PAYBACKDEFINITIONS_API FMETA_GangSpawnWeakenMission {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MissionCount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ThresholdPriority;
-    
+
     FMETA_GangSpawnWeakenMission();
 };
-

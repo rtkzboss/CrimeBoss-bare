@@ -7,4 +7,3 @@ FIGS_BadgesPerHeat::FIGS_BadgesPerHeat() {
     (*this).Badge4 = 0;
     (*this).Badge5 = 0;
 }
-

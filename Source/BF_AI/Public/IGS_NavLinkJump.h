@@ -10,4 +10,3 @@ public:
     AIGS_NavLinkJump(const FObjectInitializer& ObjectInitializer);
 
 };
-

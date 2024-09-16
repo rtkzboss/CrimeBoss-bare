@@ -8,4 +8,3 @@ enum class EIGS_NavFilterType : uint8 {
     TraceTarget,
     CheckSpawnValidity,
 };
-

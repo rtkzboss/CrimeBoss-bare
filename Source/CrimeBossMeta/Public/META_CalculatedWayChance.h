@@ -8,13 +8,12 @@ struct FMETA_CalculatedWayChance {
 public:
     UPROPERTY()
     int32 NodeId;
-    
+
     UPROPERTY()
     int32 LeftValue;
-    
+
     UPROPERTY()
     int32 RightValue;
-    
+
     CRIMEBOSSMETA_API FMETA_CalculatedWayChance();
 };
-

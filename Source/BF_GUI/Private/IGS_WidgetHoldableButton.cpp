@@ -1,10 +1,4 @@
 #include "IGS_WidgetHoldableButton.h"
-#include "EIGS_InputAction.h"
-#include "Input/CommonInputMode.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetHoldableButton::UIGS_WidgetHoldableButton() {
     (*this).HoldTime = 1.000000000e+00f;
@@ -37,5 +31,4 @@ void UIGS_WidgetHoldableButton::HandleHoldTick() {
 
 void UIGS_WidgetHoldableButton::HandleHoldFinished() {
 }
-
 

@@ -3,4 +3,3 @@
 FMETA_EquipmentSaveData::FMETA_EquipmentSaveData() {
     (*this).EquipmentID = nullptr;
 }
-

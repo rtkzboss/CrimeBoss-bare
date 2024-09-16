@@ -7,4 +7,3 @@ enum class EIGS_TPP_DeathDamageTypeReaction : uint8 {
     D_OnlyPhysics,
     D_AnimationAndPhysics,
 };
-

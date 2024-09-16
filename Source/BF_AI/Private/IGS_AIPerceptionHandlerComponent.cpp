@@ -1,5 +1,4 @@
 #include "IGS_AIPerceptionHandlerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AIPerceptionHandlerComponent::UIGS_AIPerceptionHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).AIMemoryUpdateTick = 3.000000119e-01f;
@@ -19,7 +18,6 @@ void UIGS_AIPerceptionHandlerComponent::OnSusActorEndPlay(AActor* inActor, TEnum
 }
 
 AIGS_GameCharacterFramework* UIGS_AIPerceptionHandlerComponent::GetPossesedPawn() const {
-    return NULL;
+    return nullptr;
 }
-
 

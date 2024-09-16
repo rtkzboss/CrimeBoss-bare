@@ -6,4 +6,3 @@ UIGS_OffenceData::UIGS_OffenceData() {
     (*this).OffencePosition.Z = 3.402823466e+38f;
 }
 
-

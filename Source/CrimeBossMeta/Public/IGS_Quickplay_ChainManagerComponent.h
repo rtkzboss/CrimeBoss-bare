@@ -13,21 +13,20 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool WasCurrentMissionUrbanLegendMission();
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool WasCurrentMissionChainMission();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool ShouldUseChainCrew();
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool IsCurrentMissionUrbanLegendMission();
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     bool IsCurrentMissionChainMission();
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     TArray<UMETA_Character*> GetChainCharacters();
-    
-};
 
+};

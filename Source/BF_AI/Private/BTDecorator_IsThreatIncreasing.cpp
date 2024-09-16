@@ -5,4 +5,3 @@ UBTDecorator_IsThreatIncreasing::UBTDecorator_IsThreatIncreasing() {
     (*this).NodeName = TEXT("Is Threath Increasing");
 }
 
-

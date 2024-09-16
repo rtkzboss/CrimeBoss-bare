@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     AActor* LookatActorNew;
-    
+
     UPROPERTY()
     AActor* LookatActor;
-    
-};
 
+};

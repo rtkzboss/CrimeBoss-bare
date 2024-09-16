@@ -7,4 +7,3 @@ enum class EIGS_PlayerStateMachineState : uint8 {
     EIGS_Stand,
     EIGS_Down,
 };
-

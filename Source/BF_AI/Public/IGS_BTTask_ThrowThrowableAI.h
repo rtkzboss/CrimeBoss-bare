@@ -15,15 +15,14 @@ public:
 
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector Target;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UIGS_ThrowableInventoryObject> Throwable;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ThrowTag;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag AfterFireCooldownTag;
-    
-};
 
+};

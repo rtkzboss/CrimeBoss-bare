@@ -14,4 +14,3 @@ enum class UStreamlineFeatureSupport : uint8 {
     NotSupportedByPlatformAtBuildTime,
     NotSupportedIncompatibleAPICaptureToolActive,
 };
-

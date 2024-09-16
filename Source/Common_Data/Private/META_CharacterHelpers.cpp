@@ -4,11 +4,11 @@ UMETA_CharacterHelpers::UMETA_CharacterHelpers() {
 }
 
 TArray<FMETA_PerkData> UMETA_CharacterHelpers::RecalculateRandomPerksAtLevel(UObject* inWCO, FGameplayTag inCharacterTag, int32 inCharacterLevel, const TArray<FMETA_PerkData>& inCurrentPerks, int32 inPerkLimit) {
-    return TArray<FMETA_PerkData>();
+    return {};
 }
 
 TArray<FMETA_PerkData> UMETA_CharacterHelpers::RecalculateBossRandomPerks(UObject* inWCO, FGameplayTag inCharacterTag, const TArray<FMETA_PerkData>& inCurrentPerks, int32 inPerkLimit) {
-    return TArray<FMETA_PerkData>();
+    return {};
 }
 
 FMETA_PerkData UMETA_CharacterHelpers::GetClassPerkForCharacter(UObject* inWCO, FGameplayTag inCharacterTag) {
@@ -16,19 +16,18 @@ FMETA_PerkData UMETA_CharacterHelpers::GetClassPerkForCharacter(UObject* inWCO, 
 }
 
 TArray<FMETA_PerkData> UMETA_CharacterHelpers::GetCharacterPerksAtLevel(UObject* inWCO, FGameplayTag inCharacterTag, int32 inCharacterLevel, int32 inStartingPerkCount) {
-    return TArray<FMETA_PerkData>();
+    return {};
 }
 
 TArray<FMETA_PerkData> UMETA_CharacterHelpers::GetAvailableNewPerks(UObject* inWCO, FGameplayTag inCharacterTag, const TArray<FMETA_PerkData>& inCurrentPerks) {
-    return TArray<FMETA_PerkData>();
+    return {};
 }
 
 TArray<FMETA_PerkData> UMETA_CharacterHelpers::GenerateGenericCharacterPerksAtLevel(UObject* inWCO, FGameplayTag inCharacterTag, int32 inCharacterLevel, const TArray<FMETA_PerkData>& inCurrentPerks, int32 inPerkLimit) {
-    return TArray<FMETA_PerkData>();
+    return {};
 }
 
 UMETA_Character* UMETA_CharacterHelpers::CreateCharacter(UObject* inWCO, UObject* inOuter, UIGS_EconomyData_Base* inEconomyData, const FGameplayTag inCharacterTag, const TArray<FGameplayTag>& inUnlockedWeaponSkins) {
-    return NULL;
+    return nullptr;
 }
-
 

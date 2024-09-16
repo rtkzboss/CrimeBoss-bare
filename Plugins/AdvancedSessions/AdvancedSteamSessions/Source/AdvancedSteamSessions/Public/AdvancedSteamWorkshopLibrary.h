@@ -12,9 +12,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static TArray<FBPSteamWorkshopID> GetSubscribedWorkshopItems(int32& NumberOfItems);
-    
+
     UFUNCTION(BlueprintCallable)
     static void GetNumSubscribedWorkshopItems(int32& NumberOfItems);
-    
-};
 
+};

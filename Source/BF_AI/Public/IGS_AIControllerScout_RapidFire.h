@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerScout_RapidFire(const FObjectInitializer& ObjectInitializer);
 
 };
-

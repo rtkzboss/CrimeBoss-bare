@@ -5,4 +5,3 @@ FCommonDetectiveData::FCommonDetectiveData() {
     (*this).bAlive = false;
     (*this).bWasSpawned = false;
 }
-

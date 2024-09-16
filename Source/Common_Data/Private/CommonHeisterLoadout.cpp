@@ -2,12 +2,12 @@
 
 FCommonHeisterLoadout::FCommonHeisterLoadout() {
     (*this).PrimaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).PrimaryWeaponSkin, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).PrimaryWeaponSkin, 0)) = NAME_None;
     (*this).SecondaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).SecondaryWeaponSkin, 0)) = NAME_None;
-    (*this).Equipment.Empty();
-    (*this).Perks.Empty();
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).Equipment = {};
+    (*this).Perks = {};
     (*this).Ability1ChargesLeft = -1;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).CharacterSkinID, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CharacterSkinID, 0)) = NAME_None;
 }
-

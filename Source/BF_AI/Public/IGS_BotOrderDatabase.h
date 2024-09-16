@@ -13,6 +13,5 @@ public:
 
     UFUNCTION(BlueprintPure)
     FIGS_BotOrderDatabaseUIData GetUIData(EIGS_BotCommandDefinition inType) const;
-    
-};
 
+};

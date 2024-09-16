@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY(Transient)
     AIGS_IntelligentGameCharacter* m_Character;
-    
-};
 
+};

@@ -16,4 +16,3 @@ enum class EIGS_DodgeVariant : uint8 {
     DODGE_Step_Long_L,
     DODGE_Step_Long_R,
 };
-

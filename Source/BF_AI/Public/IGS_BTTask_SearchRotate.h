@@ -12,36 +12,35 @@ public:
 
     UPROPERTY(EditAnywhere)
     bool bKeepFacingForward;
-    
+
     UPROPERTY(EditAnywhere)
     FVector TracePointOffset;
-    
+
     UPROPERTY(EditAnywhere)
     float ThreatPointLookAtTime;
-    
+
     UPROPERTY(EditAnywhere)
     float ThreatPointLookAtTimeDeviation;
-    
+
     UPROPERTY(EditAnywhere)
     float HighPrioThreatPointLookAtTime;
-    
+
     UPROPERTY(EditAnywhere)
     float HighPrioThreatPointLookAtTimeDeviation;
-    
+
     UPROPERTY(EditAnywhere)
     float ForwardLookAtTime;
-    
+
     UPROPERTY(EditAnywhere)
     float ForwardLookAtTimeDeviation;
-    
+
     UPROPERTY(EditAnywhere)
     float ThreatPointMaxAngle;
-    
+
     UPROPERTY(EditAnywhere)
     float HighPrioThreatPointMaxAngle;
-    
+
     UPROPERTY(EditAnywhere)
     float HighPrioThreatPointRotateAngle;
-    
-};
 
+};

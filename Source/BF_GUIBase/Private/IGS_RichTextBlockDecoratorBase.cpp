@@ -4,4 +4,3 @@ UIGS_RichTextBlockDecoratorBase::UIGS_RichTextBlockDecoratorBase() : Super(FObje
     (*this).bGamepadDecorator = true;
 }
 
-

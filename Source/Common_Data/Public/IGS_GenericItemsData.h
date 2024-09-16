@@ -10,7 +10,6 @@ struct COMMON_DATA_API FIGS_GenericItemsData : public FIGS_CommonItemData {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EIGS_ItemWeight ItemWeight;
-    
+
     FIGS_GenericItemsData();
 };
-

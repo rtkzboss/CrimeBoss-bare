@@ -9,4 +9,3 @@ FMorphTargetVertexData::FMorphTargetVertexData() {
     (*this).TangentZDelta.Z = 0.000000000e+00f;
     (*this).MorphIndex = 0;
 }
-

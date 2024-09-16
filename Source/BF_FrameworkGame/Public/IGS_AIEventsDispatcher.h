@@ -18,21 +18,20 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SendHeisterEventNotification(const UObject* inWCO, EIGS_HeistersEventNotificationType inType, const FIGS_CharacterEventNotificationData& inNotificationData);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SendAIEventNotificationToWholeSquad(const UObject* inWCO, EIGS_AIEventNotificationType inType, AIGS_GameCharacterFramework* inInstigator);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SendAIEventNotificationSimple(const UObject* inWCO, EIGS_AIEventNotificationType inType, AIGS_GameCharacterFramework* inInstigator);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SendAIEventNotificationRandomMember(const UObject* inWCO, EIGS_AIEventNotificationType inType, AIGS_SquadFramework* inSquad, AActor* inObjectOfInterest);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SendAIEventNotificationForSquad(const UObject* inWCO, EIGS_AIEventNotificationType inType, AIGS_GameCharacterFramework* inInstigator, TArray<AIGS_GameCharacterFramework*> inSquadMembers);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void SendAIEventNotification(const UObject* inWCO, EIGS_AIEventNotificationType inType, const FIGS_CharacterEventNotificationData& inNotificationData);
-    
-};
 
+};

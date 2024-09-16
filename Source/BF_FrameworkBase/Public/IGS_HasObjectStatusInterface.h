@@ -15,6 +15,5 @@ class BF_FRAMEWORKBASE_API IIGS_HasObjectStatusInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UIGS_ObjectStatus* IGetObjectStatus() const;
-    
-};
 
+};

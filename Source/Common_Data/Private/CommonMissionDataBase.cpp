@@ -2,14 +2,16 @@
 
 FCommonMissionDataBase::FCommonMissionDataBase() {
     (*this).ID = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).MissionTagID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionTagID, 0)) = NAME_None;
     (*this).Map = NAME_None;
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Scenarios, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Scenarios, 0)).Empty();
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Scenarios, 0)) = {};
+    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Scenarios, 0)) = {};
     (*this).MenuCategory = EIGS_MenuCategory::UNKNOWN;
-    (*this).Name = FText::FromString(TEXT(""));
+    (*this).Name = FText::GetEmpty();
     (*this).IsHubGeneratorMission = false;
     (*this).DistrictVariant = 0;
     (*this).ForceCharacter = EIGS_CharacterID::Char_Gen_Start;
 }
-

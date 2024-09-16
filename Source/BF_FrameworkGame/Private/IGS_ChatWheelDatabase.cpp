@@ -23,7 +23,6 @@ FIGS_ChatWheelDataRow UIGS_ChatWheelDatabase::GetDataByIndexBP(int32 inIndex, bo
 }
 
 TArray<FIGS_ChatWheelDataRow> UIGS_ChatWheelDatabase::GetDatabaseTableBP() const {
-    return TArray<FIGS_ChatWheelDataRow>();
+    return {};
 }
-
 

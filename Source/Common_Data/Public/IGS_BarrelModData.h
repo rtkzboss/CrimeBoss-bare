@@ -10,19 +10,18 @@ struct COMMON_DATA_API FIGS_BarrelModData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsSuppressor;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UParticleSystem> MuzzleFlashParticle;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UParticleSystem> MuzzleFlashTortillaParticle;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MuzzleFlashStimuliMultiplier;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ShotSoundStimuliMultiplier;
-    
+
     FIGS_BarrelModData();
 };
-

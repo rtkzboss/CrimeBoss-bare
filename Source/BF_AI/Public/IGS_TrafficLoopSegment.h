@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_TrafficLoopSegment {
 public:
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_TrafficPathComponent* Segment;
-    
+
     UPROPERTY(VisibleAnywhere)
     bool Reversed;
-    
+
     FIGS_TrafficLoopSegment();
 };
-

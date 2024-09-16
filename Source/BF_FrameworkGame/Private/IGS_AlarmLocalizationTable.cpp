@@ -3,4 +3,3 @@
 UIGS_AlarmLocalizationTable::UIGS_AlarmLocalizationTable() {
 }
 
-

@@ -8,7 +8,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBaseTiersDef {
 public:
     UPROPERTY(EditAnywhere)
     int32 TierSelection;
-    
+
     FIGS_AIBaseTiersDef();
 };
-

@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UBinkMediaPlayer* Movie;
-    
+
     UPROPERTY(BlueprintReadWrite, Transient)
     bool bAlreadyPlayingMovie;
-    
-};
 
+};

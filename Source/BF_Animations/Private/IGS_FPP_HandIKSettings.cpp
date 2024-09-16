@@ -11,4 +11,3 @@ FIGS_FPP_HandIKSettings::FIGS_FPP_HandIKSettings() {
     (*this).Magazine_R_Offset.Yaw = 0.000000000e+00f;
     (*this).Magazine_R_Offset.Roll = 0.000000000e+00f;
 }
-

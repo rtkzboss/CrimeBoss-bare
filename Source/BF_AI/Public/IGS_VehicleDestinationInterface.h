@@ -17,9 +17,8 @@ class BF_AI_API IIGS_VehicleDestinationInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void PathToDestinationIntrrupted(AIGS_VehicleBase* forVehicle);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TArray<UIGS_TrafficPathComponent*> FindLeavePath(UIGS_TrafficPathComponent* currSegment, EIGS_VehicleSplineGroup vehicleGroup);
-    
-};
 
+};

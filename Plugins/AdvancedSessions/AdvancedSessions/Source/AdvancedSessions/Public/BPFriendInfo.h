@@ -11,22 +11,21 @@ struct FBPFriendInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString DisplayName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString RealName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EBPOnlinePresenceState OnlineState;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FBPUniqueNetId UniqueNetId;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsPlayingSameGame;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FBPFriendPresenceInfo PresenceInfo;
-    
+
     ADVANCEDSESSIONS_API FBPFriendInfo();
 };
-

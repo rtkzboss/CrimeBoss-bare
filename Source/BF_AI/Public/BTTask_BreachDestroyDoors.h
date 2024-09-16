@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY()
     AIGS_AIControllerGame* m_Controller;
-    
+
     UPROPERTY()
     AIGS_GameCharacterBase* m_Character;
-    
-};
 
+};

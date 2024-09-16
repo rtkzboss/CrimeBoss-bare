@@ -10,4 +10,3 @@ public:
     UIGS_NavLinkDoorComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

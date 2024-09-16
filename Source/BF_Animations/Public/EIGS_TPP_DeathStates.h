@@ -12,4 +12,3 @@ enum class EIGS_TPP_DeathStates : uint8 {
     D_CrouchHeavy,
     D_Crouch,
 };
-

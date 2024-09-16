@@ -3,4 +3,3 @@
 FIGS_FirstPersonAdditiveAnimations::FIGS_FirstPersonAdditiveAnimations() {
     (*this).ShootAdditive = nullptr;
 }
-

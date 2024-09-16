@@ -9,4 +9,3 @@ enum class EIGS_MenuSlotState : uint8 {
     NotReady,
     Ready,
 };
-

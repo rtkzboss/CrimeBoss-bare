@@ -10,4 +10,3 @@ enum class EMETA_TradeRelationship : uint8 {
     Bad,
     Hostile,
 };
-

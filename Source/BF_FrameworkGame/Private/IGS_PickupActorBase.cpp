@@ -1,18 +1,21 @@
 #include "IGS_PickupActorBase.h"
 #include "GameFramework/Actor.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
-#include "EIGS_TeamSideEnum.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_PickupActorBase::AIGS_PickupActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.DoNotCreateDefaultSubobject(TEXT("RootComp"))) {
     (*this).bRegistersToPickupsManager = true;
     (*this).SquaredVelocityForInAirNeeded = 4.000000000e+03f;
     (*this).DisableInteractionOnThrowTime = 5.000000000e-01f;
+    (*this).SceneRoot = nullptr;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).PrimaryActorTick.bStartWithTickEnabled = false;
+    auto gen = AActor::StaticClass()->FindPropertyByName("bReplicateMovement");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen2 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).RootComponent = nullptr;
 }
 
 void AIGS_PickupActorBase::WakePhysics(bool inThrownPhysics) {
@@ -77,7 +80,7 @@ bool AIGS_PickupActorBase::GetWasThrown() {
 }
 
 UIGS_InteractiveComponent* AIGS_PickupActorBase::GetInteractiveComponent() {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_CommonItemData AIGS_PickupActorBase::GetCommonDataBP() {
@@ -89,10 +92,9 @@ void AIGS_PickupActorBase::AI_Use(AIGS_GameCharacterFramework* inInstigator) {
 
 void AIGS_PickupActorBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_PickupActorBase, bShouldMove);
     DOREPLIFETIME(AIGS_PickupActorBase, OwningPawn);
     DOREPLIFETIME(AIGS_PickupActorBase, mR_bWasThrown);
 }
-
 

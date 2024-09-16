@@ -5,4 +5,3 @@ UBTDecorator_WantsCover::UBTDecorator_WantsCover() {
     (*this).NodeName = TEXT("Wants cover");
 }
 
-

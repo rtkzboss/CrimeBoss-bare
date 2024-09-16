@@ -5,4 +5,3 @@ FMETA_JobLootSettings::FMETA_JobLootSettings() {
     (*this).RandomAmountInterval.Min = 0;
     (*this).RandomAmountInterval.Max = 0;
 }
-

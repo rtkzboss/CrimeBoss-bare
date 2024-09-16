@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBaseDisabledSpecializations {
 public:
     UPROPERTY(EditAnywhere)
     TSet<EIGS_UnitSpecialization> Gangster;
-    
+
     FIGS_AIBaseDisabledSpecializations();
 };
-

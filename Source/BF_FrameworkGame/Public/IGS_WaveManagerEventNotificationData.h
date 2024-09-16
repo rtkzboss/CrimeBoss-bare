@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_WaveManagerEventNotificationData : public FIGS_
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_StormTacticType ControlTactic;
-    
+
     FIGS_WaveManagerEventNotificationData();
 };
-

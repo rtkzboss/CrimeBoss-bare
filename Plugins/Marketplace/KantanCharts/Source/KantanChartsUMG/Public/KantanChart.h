@@ -12,27 +12,26 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetUpdateTickRate(float InRate);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetMargins(const FMargin& InMargins);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetChartTitlePadding(const FMargin& InPadding);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetChartTitle(const FText& InTitle);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMargin Margins;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ChartTitle;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FMargin TitlePadding;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float UpdateTickRate;
-    
-};
 
+};

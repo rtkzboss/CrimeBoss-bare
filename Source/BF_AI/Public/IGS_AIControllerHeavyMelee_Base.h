@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerHeavyMelee_Base(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -5,4 +5,3 @@ UEnvQueryGenerator_GetAllCharactersOfTeamsides::UEnvQueryGenerator_GetAllCharact
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

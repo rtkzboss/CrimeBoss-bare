@@ -11,25 +11,24 @@ struct COMMON_DATA_API FMETA_HeisterEconomyData {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_Interval HireValueRange;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_Interval UpkeepValueRange;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_Interval MissionCutRange;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_ItemQualityBitmask WeaponQuality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_WeaponGenerationRestriction WeaponGenerationRestriction;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_ItemQualityBitmask EquipmentQuality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 EquipmentChance;
-    
+
     FMETA_HeisterEconomyData();
 };
-

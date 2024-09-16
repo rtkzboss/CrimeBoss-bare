@@ -1,5 +1,4 @@
 #include "IGS_PingableComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_PingableComponent::UIGS_PingableComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -9,6 +8,8 @@ UIGS_PingableComponent::UIGS_PingableComponent(const FObjectInitializer& ObjectI
     (*this).mR_bCanBePinged = true;
     (*this).PingedAkAudioEvent = FSoftObjectPath(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_GUI/Ping/AKE_Ping_Highlight_Generic.AKE_Ping_Highlight_Generic"), TEXT(""));
     (*this).PingedDangerousAkAudioEvent = FSoftObjectPath(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_GUI/Ping/AKE_Ping_Highlight_Dangerous.AKE_Ping_Highlight_Dangerous"), TEXT(""));
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_PingableComponent::SetOutlineState(EIGS_CameraOutlineState inType, bool inEnabled) {
@@ -38,9 +39,8 @@ void UIGS_PingableComponent::EndPing() {
 
 void UIGS_PingableComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_PingableComponent, mR_bCanBePinged);
     DOREPLIFETIME(UIGS_PingableComponent, mR_bIsPinged);
 }
-
 

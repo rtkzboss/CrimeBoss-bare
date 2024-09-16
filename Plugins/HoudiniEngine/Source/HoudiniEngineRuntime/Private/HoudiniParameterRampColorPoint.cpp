@@ -5,4 +5,3 @@ UHoudiniParameterRampColorPoint::UHoudiniParameterRampColorPoint() {
     (*this).InstanceIndex = -1;
 }
 
-

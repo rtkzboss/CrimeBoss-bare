@@ -12,4 +12,3 @@ FIGS_ArmsAnimtionDefinition::FIGS_ArmsAnimtionDefinition() {
     (*this).LadderShooting = nullptr;
     (*this).LadderShooterChange = nullptr;
 }
-

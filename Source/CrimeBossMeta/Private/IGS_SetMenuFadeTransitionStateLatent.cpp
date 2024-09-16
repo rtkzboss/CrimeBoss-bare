@@ -7,11 +7,10 @@ void UIGS_SetMenuFadeTransitionStateLatent::TransitionFinished_Internal() {
 }
 
 UIGS_SetMenuFadeTransitionStateLatent* UIGS_SetMenuFadeTransitionStateLatent::ShowMenuTransition(UObject* WorldContextObject, bool inShouldFade, float inFadeTime, bool inShowLoader) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_SetMenuFadeTransitionStateLatent* UIGS_SetMenuFadeTransitionStateLatent::HideMenuTransition(UObject* WorldContextObject, bool inShouldFade, float inFadeTime) {
-    return NULL;
+    return nullptr;
 }
-
 

@@ -11,16 +11,15 @@ struct PAYBACK_API FIGS_DialogueCameraOverride {
 public:
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     FText DialogueID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<ACineCameraActor*> TranscriptCameras;
-    
+
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<float> TranscriptDelayes;
-    
+
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<FIGS_DialoguePoseAnimationOverride> TranscriptPoseAnimation;
-    
+
     FIGS_DialogueCameraOverride();
 };
-

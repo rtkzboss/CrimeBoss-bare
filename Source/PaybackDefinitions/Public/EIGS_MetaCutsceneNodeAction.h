@@ -10,4 +10,3 @@ enum class EIGS_MetaCutsceneNodeAction : uint8 {
     ResultC,
     None = 255,
 };
-

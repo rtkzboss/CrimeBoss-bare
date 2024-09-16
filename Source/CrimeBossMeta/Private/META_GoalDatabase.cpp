@@ -8,7 +8,7 @@ void UMETA_GoalDatabase::GetPreparedGoalData(UObject* inWCO, TSubclassOf<UMETA_B
 }
 
 TArray<FMETA_GoalTableRow> UMETA_GoalDatabase::GetMoneyMakingGoalsForPartner(EMETA_Partner inPartner) {
-    return TArray<FMETA_GoalTableRow>();
+    return {};
 }
 
 int32 UMETA_GoalDatabase::GetIndex(const TSubclassOf<UMETA_BaseGoal>& inClass) const {
@@ -20,7 +20,7 @@ EMETA_GoalType UMETA_GoalDatabase::GetGoalType(TSubclassOf<UMETA_BaseGoal> inGoa
 }
 
 UMETA_BaseGoal* UMETA_GoalDatabase::GetGoalObject(const UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inGoalID) {
-    return NULL;
+    return nullptr;
 }
 
 void UMETA_GoalDatabase::GetGoalIDByGraph(UObject* inWCO, TSoftObjectPtr<UStoryGraphManager> inGraph, bool& outSucceeded, TSubclassOf<UMETA_BaseGoal>& outClass) {
@@ -35,11 +35,10 @@ FMETA_GoalTableRow UMETA_GoalDatabase::GetDataByIndexBP(int32 inIndex, bool& out
 }
 
 TArray<FMETA_GoalTableRow> UMETA_GoalDatabase::GetDatabaseTableBP() {
-    return TArray<FMETA_GoalTableRow>();
+    return {};
 }
 
 TArray<TSubclassOf<UMETA_BaseGoal>> UMETA_GoalDatabase::GetDatabaseIDs() {
-    return TArray<TSubclassOf<UMETA_BaseGoal>>();
+    return {};
 }
-
 

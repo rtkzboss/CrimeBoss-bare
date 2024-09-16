@@ -10,4 +10,3 @@ public:
     AIGS_RoomFramework(const FObjectInitializer& ObjectInitializer);
 
 };
-

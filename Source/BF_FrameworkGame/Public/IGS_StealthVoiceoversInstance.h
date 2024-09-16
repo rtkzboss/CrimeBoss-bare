@@ -13,54 +13,53 @@ public:
 
     UFUNCTION(BlueprintPure)
     float GetReactionVoiceoversDistanceMaxToPlayer() const;
-    
+
     UFUNCTION(BlueprintPure)
     float GetReactionVoiceoversCooldown() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetIdle() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetGangstersOffenceReaction() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetGangstersBumpInto() const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<FText> GetDefaultGuardRadioReactionsForStrikes() const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<FText> GetAmbientReportingEmpToGuard() const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<FText> GetAmbientReportingCivUsingPhones() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientReportingCivToGuard() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientReportingCivToEmp() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientPanicShootout() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientPanicAimAt() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientPanic() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientInspect() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientDutyPlayer() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetAmbientDutyItem() const;
-    
+
     UPROPERTY(BlueprintReadOnly)
     UIGS_StealthVoiceovers* StealthVoiceovers;
-    
-};
 
+};

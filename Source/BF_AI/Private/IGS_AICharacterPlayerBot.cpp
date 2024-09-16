@@ -1,4 +1,5 @@
 #include "IGS_AICharacterPlayerBot.h"
+#include "SkeletalMeshComponentBudgeted.h"
 #include "IGS_DownStateHandlerComponent.h"
 #include "IGS_ListInventory.h"
 #include "IGS_LootBagComponent.h"
@@ -10,28 +11,30 @@
 #include "IGS_PlayerStatus.h"
 #include "IGS_SuppressionHandlerComponent.h"
 #include "IGS_NetworkComponentCharacter.h"
-#include "GameFramework/Character.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_CharacterID.h"
-#include "EIGS_TeamSideEnum.h"
-#include "EIGS_UnitSpecialization.h"
 
 ADEPRECATED_IGS_AICharacterPlayerBot::ADEPRECATED_IGS_AICharacterPlayerBot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UIGS_PlayerStatus>(TEXT("Object Status")).SetDefaultSubobjectClass<UIGS_PlayerDamageHandlerComponent>(TEXT("DamageHandlerComponent2")).SetDefaultSubobjectClass<UIGS_PlayerGASComponent>(TEXT("GASComponent"))) {
-    (*this).PlayerLoadoutComponent = CreateDefaultSubobject<UIGS_PlayerLoadoutComponent>(TEXT("PlayerLoadoutComponent"));
-    (*this).BotInventory = CreateDefaultSubobject<UIGS_ListInventory>(TEXT("BotInventory"));
-    (*this).PlayerMetaTransferComponent = CreateDefaultSubobject<UIGS_PlayerMetaTransferComponent>(TEXT("PlayerMetaTransferComponent"));
-    (*this).BotSuppressionHandlerComponent = CreateDefaultSubobject<UIGS_SuppressionHandlerComponent>(TEXT("SuppressionHandlerCapsuleComponent"));
-    (*this).LootBagInteractiveComponent = CreateDefaultSubobject<UIGS_LootBagInteractiveComponent>(TEXT("LootBagInteractiveComponent"));
-    (*this).NetworkCharacter = CreateDefaultSubobject<UIGS_NetworkComponentCharacter>(TEXT("NetworkComponentCharacter"));
-    (*this).LootBagComponent = CreateDefaultSubobject<UIGS_LootBagComponent>(TEXT("LootBagComponent"));
-    (*this).DownStateHandlerComponent = CreateDefaultSubobject<UIGS_DownStateHandlerComponent>(TEXT("DownStateHandlerComponent"));
+    auto gen = CreateDefaultSubobject<UIGS_PlayerLoadoutComponent>(TEXT("PlayerLoadoutComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_ListInventory>(TEXT("BotInventory"));
+    auto gen3 = CreateDefaultSubobject<UIGS_PlayerMetaTransferComponent>(TEXT("PlayerMetaTransferComponent"));
+    auto gen4 = CreateDefaultSubobject<UIGS_SuppressionHandlerComponent>(TEXT("SuppressionHandlerCapsuleComponent"));
+    auto gen5 = CreateDefaultSubobject<UIGS_LootBagInteractiveComponent>(TEXT("LootBagInteractiveComponent"));
+    auto gen6 = CreateDefaultSubobject<UIGS_NetworkComponentCharacter>(TEXT("NetworkComponentCharacter"));
+    auto gen7 = CreateDefaultSubobject<UIGS_LootBagComponent>(TEXT("LootBagComponent"));
+    auto gen8 = CreateDefaultSubobject<UIGS_DownStateHandlerComponent>(TEXT("DownStateHandlerComponent"));
+    (*this).PlayerLoadoutComponent = gen;
+    (*this).BotInventory = gen2;
+    (*this).PlayerMetaTransferComponent = gen3;
+    (*this).BotSuppressionHandlerComponent = gen4;
+    (*this).LootBagInteractiveComponent = gen5;
+    (*this).NetworkCharacter = gen6;
+    (*this).LootBagComponent = gen7;
+    (*this).DownStateHandlerComponent = gen8;
     (*this).bUseControllerRotationYaw = false;
     (*this).AutoPossessAI = EAutoPossessAI::Disabled;
     (*this).AIControllerClass = nullptr;
-    (*this).BotSuppressionHandlerComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
-    (*this).LootBagInteractiveComponent->SetupAttachment((*ACharacter::StaticClass()->FindPropertyByName("Mesh")->ContainerPtrToValuePtr<USkeletalMeshComponent*>(&(*this), 0)));
+    auto gen9 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("CharacterMesh0")));
+    if (gen4) gen4->SetupAttachment(gen9);
+    if (gen5) gen5->SetupAttachment(gen9);
 }
-
 

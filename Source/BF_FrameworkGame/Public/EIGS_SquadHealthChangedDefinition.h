@@ -8,4 +8,3 @@ enum class EIGS_SquadHealthChangedDefinition : uint8 {
     HeistersLowHP = 0,
     HeistersHalfHP,
 };
-

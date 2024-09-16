@@ -12,30 +12,29 @@ struct BF_ANIMATIONS_API FIGS_CarWheels_AnimGraphNode : public FAnimNode_Skeleta
 public:
     UPROPERTY(EditAnywhere)
     TArray<FBoneReference> Wheels;
-    
+
     UPROPERTY(EditAnywhere)
     FBoneReference SuspenssionRoot;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float WheelsRadius;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float FrontWheelsAngle;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float WheelsSpeed;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ChassisSideRotation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float WheelSpacing;
-    
+
 private:
     UPROPERTY(Instanced, Transient)
     USkeletalMeshComponent* m_SkeletalMesh;
-    
+
 public:
     FIGS_CarWheels_AnimGraphNode();
 };
-

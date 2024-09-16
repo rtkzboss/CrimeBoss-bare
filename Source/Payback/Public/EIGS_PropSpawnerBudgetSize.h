@@ -8,4 +8,3 @@ enum class EIGS_PropSpawnerBudgetSize : uint8 {
     Medium,
     Large,
 };
-

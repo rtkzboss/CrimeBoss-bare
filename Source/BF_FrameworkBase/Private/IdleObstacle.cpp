@@ -2,4 +2,3 @@
 
 FIdleObstacle::FIdleObstacle() {
 }
-

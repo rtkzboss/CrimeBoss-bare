@@ -9,4 +9,3 @@ struct COMMON_DATA_API FMETA_TradeMissionSave : public FMETA_BaseMissionSave {
 public:
     FMETA_TradeMissionSave();
 };
-

@@ -1,5 +1,4 @@
 #include "IGS_UnlockMethodComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_UnlockMethodComponent::UIGS_UnlockMethodComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -14,6 +13,5 @@ FGameplayTagContainer UIGS_UnlockMethodComponent::GetUnlockMethods() {
 int32 UIGS_UnlockMethodComponent::GetUnlockMethodCount() {
     return 0;
 }
-
 
 

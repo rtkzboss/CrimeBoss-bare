@@ -6,4 +6,3 @@ UEnvQueryGenerator_CoverDefendPoint::UEnvQueryGenerator_CoverDefendPoint() {
     (*this).ItemType = UEnvQueryItemType_Cover::StaticClass();
 }
 
-

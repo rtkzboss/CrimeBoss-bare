@@ -10,19 +10,18 @@ struct BF_IMPACTS_API FIGS_HitSoundParameters {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool UseThis;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Mass;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Velocity;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* Instigator;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Cooldown;
-    
+
     FIGS_HitSoundParameters();
 };
-

@@ -10,15 +10,15 @@ void UIGS_InputHelpers::GetInputActionString(UObject* inWCO, EIGS_InputAction In
 }
 
 TArray<EIGS_InputAction> UIGS_InputHelpers::GetInputActionsFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey) {
-    return TArray<EIGS_InputAction>();
+    return {};
 }
 
 TArray<FText> UIGS_InputHelpers::GetInputActionNamesFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey) {
-    return TArray<FText>();
+    return {};
 }
 
 EIGS_InputAction UIGS_InputHelpers::GetInputActionFromFKey(UObject* inWCO, FKey inKey, bool bGamepadKey) {
-    return EIGS_InputAction::IA_UNKNOWN;
+    return EIGS_InputAction::IA_MoveForward;
 }
 
 FIGS_InputActionEntry UIGS_InputHelpers::GetInputActionEntry(UObject* inWCO, EIGS_InputAction InAction) {
@@ -30,7 +30,7 @@ FKey UIGS_InputHelpers::GetFKeyByActionName(FName inActionName, bool bGamepadKey
 }
 
 TArray<FName> UIGS_InputHelpers::GetActionNamesByFKey(FKey inKey, bool bGamepadKey) {
-    return TArray<FName>();
+    return {};
 }
 
 void UIGS_InputHelpers::DsSetLightColor(const APlayerController* inPc, const FColor& InColor) {
@@ -62,5 +62,4 @@ void UIGS_InputHelpers::DsResetLightColor(const APlayerController* inPc) {
 
 void UIGS_InputHelpers::DsDualSenseRestoreLastTriggerStates() {
 }
-
 

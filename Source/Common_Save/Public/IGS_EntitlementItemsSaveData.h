@@ -9,7 +9,6 @@ struct COMMON_SAVE_API FIGS_EntitlementItemsSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTagContainer IDs;
-    
+
     FIGS_EntitlementItemsSaveData();
 };
-

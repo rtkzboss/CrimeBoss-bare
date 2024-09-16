@@ -4,14 +4,13 @@ UIGS_AsyncTaskAttributeChanged::UIGS_AsyncTaskAttributeChanged() {
 }
 
 UIGS_AsyncTaskAttributeChanged* UIGS_AsyncTaskAttributeChanged::ListenForAttributesChange(UAbilitySystemComponent* inAbilitySystemComponent, TArray<FGameplayAttribute> inAttributes) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_AsyncTaskAttributeChanged* UIGS_AsyncTaskAttributeChanged::ListenForAttributeChange(UAbilitySystemComponent* inAbilitySystemComponent, FGameplayAttribute inAttribute) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_AsyncTaskAttributeChanged::EndTask() {
 }
-
 

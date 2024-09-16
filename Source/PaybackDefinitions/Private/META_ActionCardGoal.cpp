@@ -5,4 +5,3 @@ FMETA_ActionCardGoal::FMETA_ActionCardGoal() {
     (*this).MinStrength = EMETA_ActionCardStrength::Strength1;
     (*this).MaxStrength = EMETA_ActionCardStrength::Strength1;
 }
-

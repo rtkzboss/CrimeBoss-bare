@@ -10,4 +10,3 @@ enum class EMETA_PlotlineAssetAvailability : uint8 {
     Story,
     OwnedByDefault,
 };
-

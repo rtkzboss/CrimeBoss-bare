@@ -11,21 +11,20 @@ public:
 
     UPROPERTY()
     float FOV;
-    
+
     UPROPERTY()
     float AspectRatio;
-    
+
     UPROPERTY()
     bool bIsOrthographic;
-    
+
     UPROPERTY()
     float OrthoWidth;
-    
+
     UPROPERTY()
     float OrthoNearClipPlane;
-    
+
     UPROPERTY()
     float OrthoFarClipPlane;
-    
-};
 
+};

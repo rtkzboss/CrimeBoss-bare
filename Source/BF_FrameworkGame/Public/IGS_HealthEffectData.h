@@ -11,7 +11,6 @@ struct BF_FRAMEWORKGAME_API FIGS_HealthEffectData : public FIGS_PlayerEffectData
 public:
     UPROPERTY(EditAnywhere)
     UIGS_LowHealthEffectDataAsset* LowHealthEffectDataAsset;
-    
+
     FIGS_HealthEffectData();
 };
-

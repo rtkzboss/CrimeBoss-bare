@@ -16,4 +16,3 @@ enum class EIGS_CarType : uint8 {
     C_DodgeCharger,
     C_Boat,
 };
-

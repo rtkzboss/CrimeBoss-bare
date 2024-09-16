@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIUnitCharacterData {
 public:
     UPROPERTY(EditAnywhere)
     TSoftClassPtr<AIGS_AIControllerFramework> Controller;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<TSoftClassPtr<AIGS_GameCharacterFramework>> Pawns;
-    
+
     FIGS_AIUnitCharacterData();
 };
-

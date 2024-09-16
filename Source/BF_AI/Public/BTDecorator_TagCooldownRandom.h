@@ -12,18 +12,17 @@ public:
 
     UPROPERTY(EditAnywhere)
     FGameplayTag CooldownTag;
-    
+
     UPROPERTY(EditAnywhere)
     float CooldownDurationMin;
-    
+
     UPROPERTY(EditAnywhere)
     float CooldownDurationMax;
-    
+
     UPROPERTY(EditAnywhere)
     bool bAddToExistingDuration;
-    
+
     UPROPERTY(EditAnywhere)
     bool bActivatesCooldown;
-    
-};
 
+};

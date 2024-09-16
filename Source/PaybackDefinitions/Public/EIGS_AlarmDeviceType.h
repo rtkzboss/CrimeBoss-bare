@@ -9,4 +9,3 @@ enum class EIGS_AlarmDeviceType : uint8 {
     AD_AlarmButton,
     AD_Telephone,
 };
-

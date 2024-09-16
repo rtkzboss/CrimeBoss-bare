@@ -14,25 +14,24 @@ struct FIGS_MutableProfileData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UCustomizableObjectInstance* MutableInstanceTPP;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UCustomizableObjectInstance* MutableInstanceFPV;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UCustomizableObjectPopulation* OverridePopulation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_CustomizationArchive MutableProfile;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> CharacterIcon;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bUseSecondPopulation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_DialogueHeisterCharacter DialogueID;
-    
+
     COMMON_DATA_API FIGS_MutableProfileData();
 };
-

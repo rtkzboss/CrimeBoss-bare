@@ -3,4 +3,3 @@
 UKantanCategoryStyleSet::UKantanCategoryStyleSet() {
 }
 
-

@@ -24,4 +24,3 @@ enum class EIGS_DialogueSpeaker : uint8 {
     Speaker3DMin = Heister,
     Speaker3DMax = Harmful,
 };
-

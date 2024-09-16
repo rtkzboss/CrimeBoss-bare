@@ -10,4 +10,3 @@ public:
     APaybackDetectiveCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

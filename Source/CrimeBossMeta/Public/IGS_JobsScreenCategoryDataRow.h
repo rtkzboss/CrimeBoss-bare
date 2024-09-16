@@ -10,10 +10,9 @@ struct FIGS_JobsScreenCategoryDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText CategoryName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_JobsScreenCategoryColumn> Columns;
-    
+
     CRIMEBOSSMETA_API FIGS_JobsScreenCategoryDataRow();
 };
-

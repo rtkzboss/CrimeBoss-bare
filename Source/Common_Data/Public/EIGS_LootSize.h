@@ -8,4 +8,3 @@ enum class EIGS_LootSize : uint8 {
     Medium,
     Big,
 };
-

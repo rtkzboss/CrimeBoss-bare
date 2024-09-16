@@ -8,4 +8,3 @@ enum class EIGS_WieldableAction : uint8 {
     StopAction,
     ForceStopAction,
 };
-

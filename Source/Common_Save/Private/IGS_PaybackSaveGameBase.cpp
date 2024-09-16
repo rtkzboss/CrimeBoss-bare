@@ -4,4 +4,3 @@ UIGS_PaybackSaveGameBase::UIGS_PaybackSaveGameBase() {
     (*this).SaveDataEncryptionKey = TEXT("6516263");
 }
 
-

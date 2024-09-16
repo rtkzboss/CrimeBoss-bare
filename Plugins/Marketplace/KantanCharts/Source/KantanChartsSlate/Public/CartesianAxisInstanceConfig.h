@@ -8,16 +8,15 @@ struct FCartesianAxisInstanceConfig {
 public:
     UPROPERTY(EditAnywhere)
     bool bEnabled;
-    
+
     UPROPERTY(EditAnywhere)
     bool bShowTitle;
-    
+
     UPROPERTY(EditAnywhere)
     bool bShowMarkers;
-    
+
     UPROPERTY(EditAnywhere)
     bool bShowLabels;
-    
+
     KANTANCHARTSSLATE_API FCartesianAxisInstanceConfig();
 };
-

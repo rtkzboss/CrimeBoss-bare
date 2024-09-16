@@ -16,17 +16,16 @@ public:
 private:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static void UnPauseNavigationAutoUpdate(const UObject* WorldContextObject);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static void PauseNavigationAutoUpdate(const UObject* WorldContextObject);
-    
+
     UFUNCTION(BlueprintPure, meta=(WorldContext=WorldContextObject))
     static bool IsNavigationAutoUpdatePaused(const UObject* WorldContextObject);
-    
+
     UPROPERTY(Transient)
     TSet<AIGS_NavHintVolume*> m_NavHints;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

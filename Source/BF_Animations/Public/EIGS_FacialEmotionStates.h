@@ -13,4 +13,3 @@ enum class EIGS_FacialEmotionStates : uint8 {
     FES_Sad,
     FES_Death,
 };
-

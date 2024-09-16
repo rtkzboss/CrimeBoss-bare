@@ -13,9 +13,8 @@ public:
 protected:
     UFUNCTION()
     void OnAlarmed(EIGS_AlarmReason inReason);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bSpawnAfterAlarmed;
-    
-};
 
+};

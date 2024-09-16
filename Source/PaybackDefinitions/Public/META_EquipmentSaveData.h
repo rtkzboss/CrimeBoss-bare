@@ -9,7 +9,6 @@ struct FMETA_EquipmentSaveData : public FMETA_ItemSaveDataBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* EquipmentID;
-    
+
     PAYBACKDEFINITIONS_API FMETA_EquipmentSaveData();
 };
-

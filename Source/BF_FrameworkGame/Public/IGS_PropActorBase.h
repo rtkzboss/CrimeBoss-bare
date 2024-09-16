@@ -15,18 +15,17 @@ public:
 
     UFUNCTION(BlueprintNativeEvent)
     void OnDeath(float CurrentHealth, float CurrentShield, float HealthChange, float ShieldChange, const FIGS_HitInfo& HitInfo);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnDamaged(float CurrentHealth, float CurrentShield, float HealthChange, float ShieldChange, const FIGS_HitInfo& HitInfo);
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_ObjectStatus* ObjectStatus;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float DefaultNetUpdateFrequency;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

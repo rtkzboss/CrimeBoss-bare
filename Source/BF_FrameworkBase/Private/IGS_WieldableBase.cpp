@@ -1,20 +1,20 @@
 #include "IGS_WieldableBase.h"
 #include "AkAudioEvent.h"
 #include "SkeletalMeshComponentBudgeted.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Materials/MaterialParameterCollection.h"
 #include "IGS_DynamicMaterialHandlerComponent.h"
 
 AIGS_WieldableBase::AIGS_WieldableBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    static ConstructorHelpers::FObjectFinder<UMaterialParameterCollection> gen0(TEXT("/Game/00_Main/MaterialLibrary/Common/MPC_GlobalsCharactersWeapons.MPC_GlobalsCharactersWeapons"));
-    (*this).WieldableMPC = gen0.Object;
-    (*this).DynamicMaterialHandlerComponent = CreateDefaultSubobject<UIGS_DynamicMaterialHandlerComponent>(TEXT("DynamicMaterialHandlerComponent"));
-    (*this).WieldableMesh = CreateDefaultSubobject<USkeletalMeshComponentBudgeted>(TEXT("WieldableMesh"));
-    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen1(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_Weapon_Inspect_Stop.AKE_Weapon_Inspect_Stop"));
-    (*this).StopInspectingAkEvent = gen1.Object;
+    auto gen = CreateDefaultSubobject<UIGS_DynamicMaterialHandlerComponent>(TEXT("DynamicMaterialHandlerComponent"));
+    auto gen2 = CreateDefaultSubobject<USkeletalMeshComponentBudgeted>(TEXT("WieldableMesh"));
+    static ConstructorHelpers::FObjectFinder<UMaterialParameterCollection> gen3(TEXT("/Game/00_Main/MaterialLibrary/Common/MPC_GlobalsCharactersWeapons.MPC_GlobalsCharactersWeapons"));
+    (*this).WieldableMPC = gen3.Object;
+    (*this).DynamicMaterialHandlerComponent = gen;
+    (*this).WieldableMesh = gen2;
+    static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen4(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_Weapon_Inspect_Stop.AKE_Weapon_Inspect_Stop"));
+    (*this).StopInspectingAkEvent = gen4.Object;
     (*this).PrimaryActorTick.bCanEverTick = true;
-    (*this).RootComponent = (USceneComponent*)WieldableMesh;
+    (*this).RootComponent = gen2;
 }
 
 bool AIGS_WieldableBase::UsesAmmo() {
@@ -104,11 +104,11 @@ EIGS_ItemType AIGS_WieldableBase::GetWieldableType() const {
 }
 
 UIGS_WieldableInventoryObjectBase* AIGS_WieldableBase::GetWieldableObject() const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_InventoryObjectFramework* AIGS_WieldableBase::GetInventoryObject() const {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_WieldableBase::ForceStopActions() {
@@ -166,5 +166,4 @@ bool AIGS_WieldableBase::CanAim() const {
 int32 AIGS_WieldableBase::AmmoCount() {
     return 0;
 }
-
 

@@ -1,5 +1,4 @@
 #include "PaybackHeisterBarksManager.h"
-#include "ComponentInstanceDataCache.h"
 
 UPaybackHeisterBarksManager::UPaybackHeisterBarksManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).SilenceMinHeisterShootingTime = 2.000000000e+01f;
@@ -9,7 +8,6 @@ UPaybackHeisterBarksManager::UPaybackHeisterBarksManager(const FObjectInitialize
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.TickInterval = 5.000000000e-01f;
 }
-
 
 
 

@@ -16,4 +16,3 @@ FIGS_KeyItemTableRow UIGS_KeyItemsDatabase::GetDataByIndexBP(int32 inIndex, bool
     return FIGS_KeyItemTableRow{};
 }
 
-

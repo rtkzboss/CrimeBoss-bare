@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_FinishedGoals {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_FinishedGoal> Goals;
-    
+
     FMETA_FinishedGoals();
 };
-

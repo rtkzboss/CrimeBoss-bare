@@ -16,49 +16,48 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetInfo(UObject* inWCO, const FGameplayTag& inPlotlineAssetId);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetAdditionalPricePercent(float inAdditionalPricePercent);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetUnlockBossLevel() const;
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetScore() const;
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetPrice() const;
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetPreviousVersion() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetName() const;
-    
+
     UFUNCTION(BlueprintPure)
     TSoftObjectPtr<UTexture2D> GetImage() const;
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetId() const;
-    
+
     UFUNCTION(BlueprintPure)
     FText GetDescription() const;
-    
+
     UFUNCTION(BlueprintPure)
     bool GetCanBeLost() const;
-    
+
     UFUNCTION(BlueprintPure)
     float GetBossPointsMultiplier() const;
-    
+
     UFUNCTION(BlueprintPure)
     EMETA_PlotlineAssetAvailability GetAvailability() const;
-    
+
 private:
     UPROPERTY()
     int32 m_Price;
-    
+
     UPROPERTY()
     float m_AdditionalPricePercent;
-    
-};
 
+};

@@ -4,4 +4,3 @@ UIGS_BTService_StealthTakedowned::UIGS_BTService_StealthTakedowned() {
     (*this).NodeName = TEXT("Stealth Takedowned");
 }
 
-

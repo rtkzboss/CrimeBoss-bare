@@ -8,4 +8,3 @@ struct FIGS_FakeLightConfig {
 public:
     BF_FRAMEWORKGAME_API FIGS_FakeLightConfig();
 };
-

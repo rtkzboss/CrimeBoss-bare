@@ -15,12 +15,11 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MetaMissionNames MetaMissionNames;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_QuickplayMissionNames QuickplayMissionNames;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_ChainMissionNames ChainMissionNames;
-    
-};
 
+};

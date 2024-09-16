@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "IGS_OffenceChangedEventSignatureDelegate.h"
+#include "IGS_OffenceChangedEventSignature.h"
 #include "SusPlayerInfo.h"
 #include "IGS_AISuspiciousnessComponentBase.generated.h"
 
@@ -19,34 +19,33 @@ public:
 
     UFUNCTION(BlueprintCallable)
     bool IsReacting();
-    
+
     UFUNCTION(BlueprintPure)
     bool IsAlerted() const;
-    
+
     UFUNCTION(BlueprintCallable)
     AIGS_GameCharacterFramework* GetAlertedByCharacter();
-    
+
     UFUNCTION(BlueprintCallable)
     void ClearOffence();
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OffenceChangedEventSignature OnOffenceChangedEvent;
-    
+
 protected:
     UPROPERTY()
     TMap<AIGS_PlayerCharacter*, FSusPlayerInfo> m_PlayerSusInfo;
-    
+
     UPROPERTY()
     TArray<AActor*> m_SusActors;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_GameCharacterFramework* AlertedByCharacter;
-    
+
     UPROPERTY()
     UObject* AlertedByCharacterSusObject;
-    
+
     UPROPERTY()
     UIGS_OffenceData* m_Offence;
-    
-};
 
+};

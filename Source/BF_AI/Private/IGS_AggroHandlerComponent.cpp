@@ -1,5 +1,4 @@
 #include "IGS_AggroHandlerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_AggroHandlerComponent::UIGS_AggroHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).AggroUpdateTick = 2.000000030e-01f;
@@ -8,11 +7,10 @@ UIGS_AggroHandlerComponent::UIGS_AggroHandlerComponent(const FObjectInitializer&
 }
 
 AActor* UIGS_AggroHandlerComponent::GetRecommendedTarget() const {
-    return NULL;
+    return nullptr;
 }
 
 FIGS_EnemyHolder UIGS_AggroHandlerComponent::BPGetRecommendedTargetHolder() const {
     return FIGS_EnemyHolder{};
 }
-
 

@@ -13,4 +13,3 @@ FIGS_ArmsLocomotion::FIGS_ArmsLocomotion() {
     (*this).SwingCrouch = nullptr;
     (*this).SwingHip = nullptr;
 }
-

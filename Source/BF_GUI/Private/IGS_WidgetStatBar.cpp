@@ -1,8 +1,4 @@
 #include "IGS_WidgetStatBar.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetStatBar::UIGS_WidgetStatBar() : Super(FObjectInitializer::Get()) {
     (*this).ProgressBarBackground.R = 2.999999933e-02f;
@@ -20,5 +16,4 @@ UIGS_WidgetStatBar::UIGS_WidgetStatBar() : Super(FObjectInitializer::Get()) {
     (*this).StatName = FText::FromString(TEXT("UNKNOWN_STAT"));
     (*this).StatMaxValue = 1.000000000e+03f;
 }
-
 

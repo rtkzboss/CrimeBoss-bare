@@ -21,30 +21,29 @@ public:
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UPaybackCoreMapsData> CoreMapsDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_BossLevelData> MetaBossLevelDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_CommonData> MetaCommonDataDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_DebugData> MetaDebugDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_GraphsData> MetaGraphsDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_TurfWarData> MetaTurfWarDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_VoiceoverDialogueSettings> MetaVODialogueSettingsDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_MissionNamesDatabase> MissionNamesDataAsset;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UMETA_GenericCharactersNames> GenericCharactersNamesDataAsset;
-    
-};
 
+};

@@ -79,4 +79,3 @@ enum class EIGS_WorldWidgetType : uint8 {
     Widget_ChatWheelIcon,
     Widget_HordeVan,
 };
-

@@ -10,10 +10,9 @@ struct BF_ANIMATIONS_API FIGS_LinkedGraphDefinition {
 public:
     UPROPERTY(EditAnywhere)
     TSoftClassPtr<UIGS_LinkedAnimInstance> LinkedAnimInstance;
-    
+
     UPROPERTY(EditAnywhere)
     FName GraphTag;
-    
+
     FIGS_LinkedGraphDefinition();
 };
-

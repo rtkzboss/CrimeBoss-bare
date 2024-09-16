@@ -8,4 +8,3 @@ enum class EInclusionPresetType : uint8 {
     CharacterMissions,
     All,
 };
-

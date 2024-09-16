@@ -5,12 +5,13 @@ public class CustomizableObject : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "ClothingSystemRuntimeCommon",
             "Core",
             "CoreUObject",
             "Engine",
+            "PhysicsCore",
         });
     }
 }

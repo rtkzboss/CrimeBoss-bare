@@ -10,4 +10,3 @@ public:
     UEnvQueryItemType_Cover();
 
 };
-

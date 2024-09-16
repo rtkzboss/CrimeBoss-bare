@@ -11,4 +11,3 @@ FIGS_AIUnitBaseDataDefaults::FIGS_AIUnitBaseDataDefaults() {
     (*this).CoverStickiness = 5.000000000e-01f;
     (*this).ReactionIntensity = 5.000000000e-01f;
 }
-

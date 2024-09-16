@@ -10,10 +10,9 @@ struct BF_INPUT_API FIGS_DefaultInputDeviceSingleSetting {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_InputAction, FInputActionKeyMapping> DefaultInputActionKey;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EIGS_InputAction, FInputActionKeyMapping> SecondaryInputActionKey;
-    
+
     FIGS_DefaultInputDeviceSingleSetting();
 };
-

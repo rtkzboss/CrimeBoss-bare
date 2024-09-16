@@ -4,4 +4,3 @@ UBTTask_SwitchWeaponCustom::UBTTask_SwitchWeaponCustom() {
     (*this).NodeName = TEXT("Switch Weapon Custom");
 }
 
-

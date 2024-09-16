@@ -2,4 +2,3 @@
 
 FIGS_DialoguePlayParams::FIGS_DialoguePlayParams() {
 }
-

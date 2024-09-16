@@ -4,4 +4,3 @@ UBTDecorator_HasShootOverrideType::UBTDecorator_HasShootOverrideType() {
     (*this).NodeName = TEXT("Has Shoot Override Type");
 }
 
-

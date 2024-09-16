@@ -13,12 +13,11 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     float AngleToStartTransition;
-    
+
     UPROPERTY(EditAnywhere)
     float DistToStartTransition;
-    
+
     UPROPERTY(EditAnywhere)
     EIGS_TransitionState m_State;
-    
-};
 
+};

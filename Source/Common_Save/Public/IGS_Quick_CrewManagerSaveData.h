@@ -10,13 +10,12 @@ struct COMMON_SAVE_API FIGS_Quick_CrewManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bInited;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_HeisterSaveData> Heisters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FMETA_BossCharacterSave BossCharacter;
-    
+
     FIGS_Quick_CrewManagerSaveData();
 };
-

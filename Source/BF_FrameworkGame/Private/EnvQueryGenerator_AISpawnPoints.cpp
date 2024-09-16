@@ -7,4 +7,3 @@ UEnvQueryGenerator_AISpawnPoints::UEnvQueryGenerator_AISpawnPoints() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

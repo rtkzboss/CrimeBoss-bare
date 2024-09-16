@@ -12,10 +12,9 @@ struct PAYBACK_API FIGS_MetaCutsceneCharacterPoseDataRow : public FTableRowBase 
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_MetaDialogueCharacter ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FGameplayTag, FIGS_MetaCutscenePoseSet> PoseSetsMap;
-    
+
     FIGS_MetaCutsceneCharacterPoseDataRow();
 };
-

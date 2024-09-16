@@ -5,4 +5,3 @@ FMETA_UniqueCharacterLoadoutFromGraph::FMETA_UniqueCharacterLoadoutFromGraph() {
     (*this).SecondaryWeapon = nullptr;
     (*this).Equipment.Equipment = nullptr;
 }
-

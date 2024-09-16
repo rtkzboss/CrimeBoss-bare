@@ -1,7 +1,7 @@
 #include "IGS_WeaponBase.h"
+#include "SkeletalMeshComponentBudgeted.h"
 #include "Components/ArrowComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
+#include "Engine/EngineBaseTypes.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/PointLightComponent.h"
 #include "Components/SceneComponent.h"
@@ -18,58 +18,83 @@
 #include "IGS_WeaponVisibilityHandler.h"
 
 AIGS_WeaponBase::AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SightModMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SightModMesh"));
-    (*this).DynamicScopeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DynamicScopeModMesh"));
-    (*this).VisibilityModMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("VisibilityModMesh"));
-    (*this).BarrelModMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BarrelModMesh"));
-    (*this).GripModMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GripModMesh"));
-    (*this).MagazineModMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MagazineModMesh"));
-    (*this).SecondMagazineModMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SecondMagazineModMesh"));
-    (*this).StockModMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StockModMesh"));
-    auto& gen0 = (*this).WeaponModsArray;
-    gen0.Empty();
-    gen0.AddDefaulted(8);
-    (*this).LaserArrow = CreateDefaultSubobject<UArrowComponent>(TEXT("LaserArrow"));
-    (*this).FlashSpotLight = CreateDefaultSubobject<USpotLightComponent>(TEXT("FlashSpotLight"));
-    (*this).FlashPointLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("FlashPointLight"));
-    (*this).MuzzleFlashHandlerComponent = CreateDefaultSubobject<UIGS_MuzzleFlashHandlerComponent>(TEXT("Muzzle Flash Handler Component"));
-    (*this).MuzzleFlashRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Muzzle Flash Root"));
-    (*this).MuzzleFlashParticleComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Muzzle Flash Particle"));
-    (*this).MuzzleFlashParticleComponentCascade = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Muzzle Flash Cascade Particle"));
-    (*this).BarrelSmokeParticleComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Barell Smoke Particle"));
-    (*this).MuzzleFlashLight3PV = CreateDefaultSubobject<UPointLightComponent>(TEXT("Muzzle Flash Light 3PV"));
-    (*this).MuzzleFlashLightFPV = CreateDefaultSubobject<UPointLightComponent>(TEXT("Muzzle Flash Light FPV"));
-    (*this).MuzzleFlashLightFPVSecondary = CreateDefaultSubobject<UPointLightComponent>(TEXT("Muzzle Flash Light FPV Secondary"));
+    auto gen = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SightModMesh"));
+    auto gen2 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DynamicScopeModMesh"));
+    auto gen3 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("VisibilityModMesh"));
+    auto gen4 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BarrelModMesh"));
+    auto gen5 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GripModMesh"));
+    auto gen6 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MagazineModMesh"));
+    auto gen7 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SecondMagazineModMesh"));
+    auto gen8 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StockModMesh"));
+    auto gen9 = CreateDefaultSubobject<UArrowComponent>(TEXT("LaserArrow"));
+    auto gen10 = CreateDefaultSubobject<USpotLightComponent>(TEXT("FlashSpotLight"));
+    auto gen11 = CreateDefaultSubobject<UPointLightComponent>(TEXT("FlashPointLight"));
+    auto gen12 = CreateDefaultSubobject<UIGS_MuzzleFlashHandlerComponent>(TEXT("Muzzle Flash Handler Component"));
+    auto gen13 = CreateDefaultSubobject<USceneComponent>(TEXT("Muzzle Flash Root"));
+    auto gen14 = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Muzzle Flash Particle"));
+    auto gen15 = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Muzzle Flash Cascade Particle"));
+    auto gen16 = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Barell Smoke Particle"));
+    auto gen17 = CreateDefaultSubobject<UPointLightComponent>(TEXT("Muzzle Flash Light 3PV"));
+    auto gen18 = CreateDefaultSubobject<UPointLightComponent>(TEXT("Muzzle Flash Light FPV"));
+    auto gen19 = CreateDefaultSubobject<UPointLightComponent>(TEXT("Muzzle Flash Light FPV Secondary"));
+    auto gen20 = CreateDefaultSubobject<UIGS_WeaponAccuracyComponent>(TEXT("WeaponAccuracy"));
+    auto gen21 = CreateDefaultSubobject<UIGS_WeaponRecoilComponent>(TEXT("WeaponRecoil"));
+    auto gen22 = CreateDefaultSubobject<UIGS_WeaponModsHandler>(TEXT("WeaponModsHandler"));
+    auto gen23 = CreateDefaultSubobject<UIGS_WeaponSkinHandler>(TEXT("WeaponSkinHandler"));
+    auto gen24 = CreateDefaultSubobject<UIGS_WeaponVisibilityHandler>(TEXT("WeaponVisibilityHandler"));
+    auto gen25 = CreateDefaultSubobject<UIGS_WeaponDynamicScopeHandler>(TEXT("WeaponDynamicScopeHandler"));
+    auto gen26 = CreateDefaultSubobject<UIGS_BasherComponent>(TEXT("Basher"));
+    (*this).SightModMesh = gen;
+    (*this).DynamicScopeMesh = gen2;
+    (*this).VisibilityModMesh = gen3;
+    (*this).BarrelModMesh = gen4;
+    (*this).GripModMesh = gen5;
+    (*this).MagazineModMesh = gen6;
+    (*this).SecondMagazineModMesh = gen7;
+    (*this).StockModMesh = gen8;
+    (*this).WeaponModsArray = {gen, gen2, gen3, gen4, gen5, gen8, gen6, gen7};
+    (*this).LaserArrow = gen9;
+    (*this).FlashSpotLight = gen10;
+    (*this).FlashPointLight = gen11;
+    (*this).MuzzleFlashHandlerComponent = gen12;
+    (*this).MuzzleFlashRootComponent = gen13;
+    (*this).MuzzleFlashParticleComponent = gen14;
+    (*this).MuzzleFlashParticleComponentCascade = gen15;
+    (*this).BarrelSmokeParticleComponent = gen16;
+    (*this).MuzzleFlashLight3PV = gen17;
+    (*this).MuzzleFlashLightFPV = gen18;
+    (*this).MuzzleFlashLightFPVSecondary = gen19;
     (*this).CanReloadInADS = true;
     (*this).ReloadAfterLastBulletDelay = 2.000000030e-01f;
-    (*this).WeaponAccuracy = CreateDefaultSubobject<UIGS_WeaponAccuracyComponent>(TEXT("WeaponAccuracy"));
-    (*this).WeaponRecoil = CreateDefaultSubobject<UIGS_WeaponRecoilComponent>(TEXT("WeaponRecoil"));
-    (*this).WeaponModsHandler = CreateDefaultSubobject<UIGS_WeaponModsHandler>(TEXT("WeaponModsHandler"));
-    (*this).WeaponSkinHandler = CreateDefaultSubobject<UIGS_WeaponSkinHandler>(TEXT("WeaponSkinHandler"));
-    (*this).WeaponVisibilityHandler = CreateDefaultSubobject<UIGS_WeaponVisibilityHandler>(TEXT("WeaponVisibilityHandler"));
-    (*this).WeaponDynamicScopeHandler = CreateDefaultSubobject<UIGS_WeaponDynamicScopeHandler>(TEXT("WeaponDynamicScopeHandler"));
+    (*this).WeaponAccuracy = gen20;
+    (*this).WeaponRecoil = gen21;
+    (*this).WeaponModsHandler = gen22;
+    (*this).WeaponSkinHandler = gen23;
+    (*this).WeaponVisibilityHandler = gen24;
+    (*this).WeaponDynamicScopeHandler = gen25;
     (*this).PrimaryShooter = EIGS_WeaponAttackType::AT_UNKNOWN;
-    (*this).Basher = CreateDefaultSubobject<UIGS_BasherComponent>(TEXT("Basher"));
+    (*this).Basher = gen26;
     (*this).VirtualSightSocketName = TEXT("VirtualSight");
     (*this).PrimaryActorTick.TickGroup = TG_DuringPhysics;
-    (*this).BarrelModMesh->SetupAttachment((*this).RootComponent);
-    (*this).BarrelSmokeParticleComponent->SetupAttachment((*this).MuzzleFlashRootComponent);
-    (*this).DynamicScopeMesh->SetupAttachment((*this).RootComponent);
-    (*this).FlashPointLight->SetupAttachment((*this).FlashSpotLight);
-    (*this).FlashSpotLight->SetupAttachment((*this).RootComponent);
-    (*this).GripModMesh->SetupAttachment((*this).RootComponent);
-    (*this).LaserArrow->SetupAttachment((*this).RootComponent);
-    (*this).MagazineModMesh->SetupAttachment((*this).RootComponent);
-    (*this).MuzzleFlashLight3PV->SetupAttachment((*this).MuzzleFlashRootComponent);
-    (*this).MuzzleFlashLightFPV->SetupAttachment((*this).MuzzleFlashRootComponent);
-    (*this).MuzzleFlashLightFPVSecondary->SetupAttachment((*this).RootComponent);
-    (*this).MuzzleFlashParticleComponent->SetupAttachment((*this).MuzzleFlashRootComponent);
-    (*this).MuzzleFlashParticleComponentCascade->SetupAttachment((*this).MuzzleFlashRootComponent);
-    (*this).MuzzleFlashRootComponent->SetupAttachment((*this).RootComponent);
-    (*this).SecondMagazineModMesh->SetupAttachment((*this).RootComponent);
-    (*this).SightModMesh->SetupAttachment((*this).RootComponent);
-    (*this).StockModMesh->SetupAttachment((*this).RootComponent);
-    (*this).VisibilityModMesh->SetupAttachment((*this).RootComponent);
+    auto gen27 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("WieldableMesh")));
+    if (gen) gen->SetupAttachment(gen27);
+    if (gen2) gen2->SetupAttachment(gen27);
+    if (gen3) gen3->SetupAttachment(gen27);
+    if (gen4) gen4->SetupAttachment(gen27);
+    if (gen5) gen5->SetupAttachment(gen27);
+    if (gen6) gen6->SetupAttachment(gen27);
+    if (gen7) gen7->SetupAttachment(gen27);
+    if (gen8) gen8->SetupAttachment(gen27);
+    if (gen9) gen9->SetupAttachment(gen27);
+    if (gen10) gen10->SetupAttachment(gen27);
+    if (gen11) gen11->SetupAttachment(gen10);
+    if (gen13) gen13->SetupAttachment(gen27);
+    if (gen14) gen14->SetupAttachment(gen13);
+    if (gen15) gen15->SetupAttachment(gen13);
+    if (gen16) gen16->SetupAttachment(gen13);
+    if (gen17) gen17->SetupAttachment(gen13);
+    if (gen18) gen18->SetupAttachment(gen13);
+    if (gen19) gen19->SetupAttachment(gen27);
 }
 
 void AIGS_WeaponBase::StopAttack() {
@@ -95,15 +120,15 @@ bool AIGS_WeaponBase::IsAttacking() {
 }
 
 UIGS_WeaponVisibilityHandler* AIGS_WeaponBase::GetWeaponVisibilityHandler() const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_WeaponInventoryObject* AIGS_WeaponBase::GetWeaponInventoryObject() const {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_ReloaderBase* AIGS_WeaponBase::GetReloader() const {
-    return NULL;
+    return nullptr;
 }
 
 EIGS_WeaponAttackType AIGS_WeaponBase::GetCurrentShooterType() {
@@ -111,14 +136,14 @@ EIGS_WeaponAttackType AIGS_WeaponBase::GetCurrentShooterType() {
 }
 
 UIGS_ShooterBase* AIGS_WeaponBase::GetCurrentShooterObject() const {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_WeaponBase::GetCurrentShooterModifications(float& outBaseDamageMultiplier, float& outEffectiveRangeMultiplier, float& outMaxRangeMultiplier, float& outRPMMultiplier) const {
 }
 
 float AIGS_WeaponBase::GetCurrentReloadTimeMultiplier() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void AIGS_WeaponBase::GetCurrentRecoilModifications(float& outVerticalRecoilMultiplier, float& outHorizontalRecoilMultiplier) const {
@@ -159,5 +184,4 @@ void AIGS_WeaponBase::BeginAttack() {
 
 void AIGS_WeaponBase::Bash() {
 }
-
 

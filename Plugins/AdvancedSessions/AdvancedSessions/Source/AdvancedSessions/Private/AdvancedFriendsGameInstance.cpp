@@ -16,4 +16,3 @@ bool UAdvancedFriendsGameInstance::UserPrivilegeCheckInProgress() const {
 
 
 
-

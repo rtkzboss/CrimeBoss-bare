@@ -8,4 +8,3 @@ struct HOUDINIENGINERUNTIME_API FHoudiniVolumeInfo {
 public:
     FHoudiniVolumeInfo();
 };
-

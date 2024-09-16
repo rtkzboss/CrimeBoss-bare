@@ -8,4 +8,3 @@ FIGS_AIDangerEvent::FIGS_AIDangerEvent() {
     (*this).DangerActor = nullptr;
     (*this).Tag = NAME_None;
 }
-

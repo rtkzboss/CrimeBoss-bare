@@ -4,7 +4,7 @@ UIGS_LevelGeneratorSubsystem::UIGS_LevelGeneratorSubsystem() {
 }
 
 UIGS_LevelGeneratorSubsystem* UIGS_LevelGeneratorSubsystem::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_LevelGeneratorSubsystem::InitializeRooms_Server(ANavigationData* inNavData) {
@@ -13,5 +13,4 @@ void UIGS_LevelGeneratorSubsystem::InitializeRooms_Server(ANavigationData* inNav
 int32 UIGS_LevelGeneratorSubsystem::GetDefaultSeed() const {
     return 0;
 }
-
 

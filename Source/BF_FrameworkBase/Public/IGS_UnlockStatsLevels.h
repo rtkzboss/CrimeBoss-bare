@@ -8,7 +8,6 @@ struct FIGS_UnlockStatsLevels {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<int32> Levels;
-    
+
     BF_FRAMEWORKBASE_API FIGS_UnlockStatsLevels();
 };
-

@@ -15,4 +15,3 @@ enum class EIGS_InfoMessageType : uint8 {
     Info_TelephoneAlarm,
     Info_AlarmButton,
 };
-

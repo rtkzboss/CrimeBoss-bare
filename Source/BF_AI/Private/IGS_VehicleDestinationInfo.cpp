@@ -8,4 +8,3 @@ FIGS_VehicleDestinationInfo::FIGS_VehicleDestinationInfo() {
     (*this).DestinationPoint = nullptr;
     (*this).DestinationArea = nullptr;
 }
-

@@ -7,4 +7,3 @@ enum class EMETA_MapDisplayMode : uint8 {
     Missions,
     Turfs,
 };
-

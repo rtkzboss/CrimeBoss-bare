@@ -5,5 +5,6 @@ FMETA_DefenceResultCalculatingConfigForAI::FMETA_DefenceResultCalculatingConfigF
     (*this).DefenceChancePerMissingTurf = 4;
     (*this).ChanceTweakingPerArmyTierDifference = 15;
     (*this).ChanceTweakingIfItIsLastTileOfGang = 10;
+    (*this).InfluenceByDefenderCurrentStrategy = {};
+    (*this).InfluenceByAttackerCurrentStrategy = {};
 }
-

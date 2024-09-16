@@ -7,4 +7,3 @@ enum class EIGS_PlayerDirectionalCueDefinition : uint8 {
     Unknown = 255,
     Melee = 0,
 };
-

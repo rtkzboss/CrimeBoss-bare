@@ -1,6 +1,4 @@
 #include "META_LootNotification.h"
-#include "EMETA_NotificationEffect.h"
-#include "EMETA_NotificationType.h"
 
 UMETA_LootNotification::UMETA_LootNotification() {
 }
@@ -19,5 +17,4 @@ EMETA_LootPurpose UMETA_LootNotification::GetLootPurpose() const {
 FText UMETA_LootNotification::GetLootCategory() const {
     return FText::GetEmpty();
 }
-
 

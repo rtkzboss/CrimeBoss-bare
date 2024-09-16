@@ -15,11 +15,10 @@ public:
 private:
     UPROPERTY(Transient)
     AAIController* Querier;
-    
+
     UPROPERTY(Transient)
     AActor* GoalActor;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

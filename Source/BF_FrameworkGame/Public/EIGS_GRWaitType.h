@@ -13,4 +13,3 @@ enum class EIGS_GRWaitType : uint8 {
     GW_Grenade_React,
     GW_Unknown = 255,
 };
-

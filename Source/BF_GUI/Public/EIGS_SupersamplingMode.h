@@ -9,4 +9,3 @@ enum class EIGS_SupersamplingMode : uint8 {
     SSM_XeSS,
     SSM_FSR,
 };
-

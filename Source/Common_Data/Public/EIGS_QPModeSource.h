@@ -9,4 +9,3 @@ enum class EIGS_QPModeSource : uint8 {
     UrbanLegends,
     Shuffle,
 };
-

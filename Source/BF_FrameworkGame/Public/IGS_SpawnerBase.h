@@ -10,4 +10,3 @@ public:
     AIGS_SpawnerBase(const FObjectInitializer& ObjectInitializer);
 
 };
-

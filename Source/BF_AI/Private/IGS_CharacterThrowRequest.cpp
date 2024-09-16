@@ -2,4 +2,3 @@
 
 FIGS_CharacterThrowRequest::FIGS_CharacterThrowRequest() {
 }
-

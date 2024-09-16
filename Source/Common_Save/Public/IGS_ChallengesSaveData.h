@@ -9,10 +9,9 @@ struct COMMON_SAVE_API FIGS_ChallengesSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, int32> ChallengesInProgress;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, int32> CompletedChallenges;
-    
+
     FIGS_ChallengesSaveData();
 };
-

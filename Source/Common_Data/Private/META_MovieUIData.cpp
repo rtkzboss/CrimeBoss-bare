@@ -6,4 +6,3 @@ FMETA_MovieUIData::FMETA_MovieUIData() {
     (*this).OriginalID = 0;
     (*this).NextNodeID = 0;
 }
-

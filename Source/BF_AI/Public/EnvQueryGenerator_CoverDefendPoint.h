@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderFloatValue BoxHeight;
-    
-};
 
+};

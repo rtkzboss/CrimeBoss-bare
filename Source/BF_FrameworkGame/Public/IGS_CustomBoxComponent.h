@@ -10,4 +10,3 @@ public:
     UIGS_CustomBoxComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

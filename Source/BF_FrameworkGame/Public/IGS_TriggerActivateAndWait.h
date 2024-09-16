@@ -1,11 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "IGS_TriggerEventOutputPinDelegate.h"
+#include "IGS_TriggerEventOutputPin.h"
 #include "IGS_TriggerActivateAndWait.generated.h"
 
 class AIGS_Trigger;
-class UIGS_TriggerActivateAndWait;
 
 UCLASS()
 class BF_FRAMEWORKGAME_API UIGS_TriggerActivateAndWait : public UBlueprintAsyncActionBase {
@@ -15,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static UIGS_TriggerActivateAndWait* TriggerActivateAndWait(AIGS_Trigger* inTrigger, bool inResetCount);
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_TriggerEventOutputPin Triggered;
-    
-};
 
+};

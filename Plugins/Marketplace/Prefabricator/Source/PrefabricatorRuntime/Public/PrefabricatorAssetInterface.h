@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
+#include "PrefabricatorEventListener.h"
 #include "Templates/SubclassOf.h"
 #include "PrefabricatorAssetInterface.generated.h"
-
-class UPrefabricatorEventListener;
 
 UCLASS(Abstract)
 class PREFABRICATORRUNTIME_API UPrefabricatorAssetInterface : public UObject {
@@ -14,9 +13,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     TSubclassOf<UPrefabricatorEventListener> EventListener;
-    
+
     UPROPERTY(EditAnywhere)
     bool bReplicates;
-    
-};
 
+};

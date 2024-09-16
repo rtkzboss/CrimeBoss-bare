@@ -13,6 +13,5 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_SwitchWeaponTask_WeaponType WeaponType;
-    
-};
 
+};

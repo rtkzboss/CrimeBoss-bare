@@ -1,8 +1,4 @@
 #include "IGS_MenuListView.h"
-#include "Styling/SlateTypes.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
 
 UIGS_MenuListView::UIGS_MenuListView() : Super(FObjectInitializer::Get()) {
 }
@@ -17,7 +13,7 @@ void UIGS_MenuListView::HoverListItem(UObject* inItem) {
 }
 
 UUserWidget* UIGS_MenuListView::GetSelectedWidget() {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_MenuListView::DoubleClickListItem(UObject* inItem) {
@@ -25,5 +21,4 @@ void UIGS_MenuListView::DoubleClickListItem(UObject* inItem) {
 
 void UIGS_MenuListView::ClickListItem(UObject* inItem) {
 }
-
 

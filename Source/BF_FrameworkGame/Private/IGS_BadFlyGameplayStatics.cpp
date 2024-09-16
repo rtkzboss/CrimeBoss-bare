@@ -44,19 +44,19 @@ void UIGS_BadFlyGameplayStatics::StartBreak(const UObject* inWCO) {
 }
 
 AIGS_SuspicionEventActor* UIGS_BadFlyGameplayStatics::SpawnSuspicionEventActorAttachedToComp(const UObject* inWCO, USceneComponent* inAttachTo, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, TArray<AIGS_GameCharacterFramework*> inIgnoredBy, FName InBoneName) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_SuspicionEventActor* UIGS_BadFlyGameplayStatics::SpawnSuspicionEventActorAttached(const UObject* inWCO, AActor* inAttachTo, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, TArray<AIGS_GameCharacterFramework*> inIgnoredBy) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_SuspicionEventActor* UIGS_BadFlyGameplayStatics::SpawnSuspicionEventActorAdvanced(const UObject* inWCO, const FTransform& InTransform, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, TArray<AIGS_GameCharacterFramework*> inIgnoredBy) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_SuspicionEventActor* UIGS_BadFlyGameplayStatics::SpawnSuspicionEventActor(const UObject* inWCO, const FTransform& InTransform, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, TArray<AIGS_GameCharacterFramework*> inIgnoredBy) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_BadFlyGameplayStatics::SpawnSquadAroundActorWithoutDelegate(AActor* inActor, EIGS_TeamSideEnum inTeamSide, EIGS_UnitSpecialization inUnitSpecialization, int32 inEnemyCount) {
@@ -66,19 +66,19 @@ void UIGS_BadFlyGameplayStatics::SpawnSquadAroundActor(AActor* inActor, EIGS_Tea
 }
 
 AIGS_LootBagPickup* UIGS_BadFlyGameplayStatics::SpawnLootBagWithData(const UObject* inWCO, TArray<FIGS_LootBagSingleItem> inItems, FTransform InTransform) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_LootBagPickup* UIGS_BadFlyGameplayStatics::SpawnLootBag(const UObject* inWCO, TArray<TSubclassOf<UIGS_InventoryObjectFramework>> inItemClasses, FTransform InTransform, bool bRegisterToLootManager) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_LootBagPickup* UIGS_BadFlyGameplayStatics::SpawnGadgetBag(const UObject* inWCO, TSubclassOf<UIGS_InventoryObjectFramework> inItemClas, FTransform InTransform) {
-    return NULL;
+    return nullptr;
 }
 
 TArray<FVector> UIGS_BadFlyGameplayStatics::SortLocationsByDistance(TArray<FVector> inLocations, FVector inOriginPoint) {
-    return TArray<FVector>();
+    return {};
 }
 
 void UIGS_BadFlyGameplayStatics::SetWaveManagerData(const UObject* inWCO, UIGS_WaveManagerData* inWaveManagerData) {
@@ -196,11 +196,11 @@ bool UIGS_BadFlyGameplayStatics::IsAlarmed(const UObject* inWCO) {
 }
 
 float UIGS_BadFlyGameplayStatics::GetTotalWeightSpawned(UObject* inWCO) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_BadFlyGameplayStatics::GetSuspicionAmountForOffence(const UObject* inWCO, AIGS_PlayerCharacter* inPlayer, FGameplayTagContainer inOffences) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_BadFlyGameplayStatics::GetSubTagOnDepth(FGameplayTag inTag, int32 InDepth, FGameplayTag& outTag) {
@@ -215,11 +215,11 @@ EIGS_StorePlatform UIGS_BadFlyGameplayStatics::GetStorePlatformType(const UObjec
 }
 
 AIGS_ScriptManagerBase* UIGS_BadFlyGameplayStatics::GetScriptManager(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 float UIGS_BadFlyGameplayStatics::GetPingForLocalPlayer(APlayerState* inPlayerState) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FString UIGS_BadFlyGameplayStatics::GetPersistentLevelName(UObject* inWCO) {
@@ -227,11 +227,11 @@ FString UIGS_BadFlyGameplayStatics::GetPersistentLevelName(UObject* inWCO) {
 }
 
 AIGS_ObjectiveScenarioBase* UIGS_BadFlyGameplayStatics::GetObjectiveScenario(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 UTexture2D* UIGS_BadFlyGameplayStatics::GetMetaCharacterPicture(UObject* inWCO, UMETA_Character* inCharacter) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_BadFlyGameplayStatics::GetMaximumStrikes() {
@@ -271,7 +271,7 @@ EIGS_PlatformName UIGS_BadFlyGameplayStatics::GetCurrentPlatform() {
 }
 
 UTexture2D* UIGS_BadFlyGameplayStatics::GetCharacterPicture(UObject* inWCO, EIGS_CharacterID inCharacterID, bool bIsMaxLeveled, int32 inGenericID, FGameplayTag inCharacterSkinID) {
-    return NULL;
+    return nullptr;
 }
 
 FText UIGS_BadFlyGameplayStatics::GetCharacterNameFromPlayerState(AIGS_PlayerStateGame* inPS) {
@@ -287,7 +287,7 @@ FText UIGS_BadFlyGameplayStatics::GetCharacterName(UObject* inWCO, EIGS_Characte
 }
 
 float UIGS_BadFlyGameplayStatics::GetBagValue(UObject* inWCO, FIGS_LootBagInfo inBagInfo) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 EIGS_BagType UIGS_BadFlyGameplayStatics::GetBagTypeForInfo(UObject* inWCO, FIGS_LootBagInfo inBagInfo) {
@@ -299,11 +299,11 @@ EIGS_BagType UIGS_BadFlyGameplayStatics::GetBagType(UObject* inWCO, EIGS_ItemTyp
 }
 
 UIGS_OutlineComponent* UIGS_BadFlyGameplayStatics::GetActorOutlineComponent(const AActor* inActor, const bool inWarnFindComponentByClass) {
-    return NULL;
+    return nullptr;
 }
 
 UIGS_ObjectStatus* UIGS_BadFlyGameplayStatics::GetActorObjectStatus(const AActor* inActor) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_BadFlyGameplayStatics::ForceSWATSpawn(const UObject* inWCO) {
@@ -340,7 +340,7 @@ void UIGS_BadFlyGameplayStatics::CreateDestroyEffect(UPrimitiveComponent* inSour
 }
 
 TArray<FString> UIGS_BadFlyGameplayStatics::CompareStrings(TArray<FString> inStringArray) {
-    return TArray<FString>();
+    return {};
 }
 
 bool UIGS_BadFlyGameplayStatics::CheckIsRunningCommandlet() {
@@ -348,7 +348,7 @@ bool UIGS_BadFlyGameplayStatics::CheckIsRunningCommandlet() {
 }
 
 float UIGS_BadFlyGameplayStatics::ApplyDamage(const FHitResult& inHitResult, AIGS_GameCharacterFramework* inOwner, float inDamage, const TSubclassOf<UDamageType> inDamageType) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_BadFlyGameplayStatics::AddWaveManagerWavesRandomDirection(const UObject* inWCO) {
@@ -392,5 +392,4 @@ void UIGS_BadFlyGameplayStatics::AddInfoMessageClientOnly(const UObject* inWCO, 
 
 void UIGS_BadFlyGameplayStatics::AddErrorMessage(const UObject* inWCO, FText inErrorText) {
 }
-
 

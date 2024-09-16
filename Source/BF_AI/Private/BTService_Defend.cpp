@@ -4,4 +4,3 @@ UBTService_Defend::UBTService_Defend() {
     (*this).NodeName = TEXT("Defend Sequence");
 }
 
-

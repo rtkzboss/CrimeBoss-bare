@@ -7,4 +7,3 @@ UIGS_AnimNotify_PlayParticleEffectTortilla::UIGS_AnimNotify_PlayParticleEffectTo
     (*this).Attached = true;
 }
 
-

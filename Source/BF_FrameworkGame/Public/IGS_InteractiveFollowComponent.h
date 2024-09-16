@@ -12,24 +12,23 @@ public:
 protected:
     UFUNCTION()
     void OnRep_IsFollowing();
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_IsFollowing)
     bool IsFollowing;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TimerHoldTimeFollow;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float TimerHoldTimeStop;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float followDistance;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool CanBeUseInAlarm;
-    
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

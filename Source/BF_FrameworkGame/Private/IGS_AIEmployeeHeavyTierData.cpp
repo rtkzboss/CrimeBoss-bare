@@ -2,4 +2,3 @@
 
 FIGS_AIEmployeeHeavyTierData::FIGS_AIEmployeeHeavyTierData() {
 }
-

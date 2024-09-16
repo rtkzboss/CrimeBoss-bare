@@ -8,4 +8,3 @@ enum class EIGS_DamageStrengthType : uint8 {
     Light = 0,
     Heavy,
 };
-

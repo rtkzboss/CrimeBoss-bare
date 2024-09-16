@@ -10,4 +10,3 @@ public:
     UIGS_InteractionStealthKillComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

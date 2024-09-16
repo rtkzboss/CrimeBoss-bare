@@ -58,4 +58,3 @@ void UIGS_GameInstanceFramework::FinishMission(const UObject* inWCO, ECommonMiss
 void UIGS_GameInstanceFramework::CreateLoadingFader(const UObject* inWCO) {
 }
 
-

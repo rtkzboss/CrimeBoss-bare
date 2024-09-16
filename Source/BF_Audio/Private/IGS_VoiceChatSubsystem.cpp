@@ -40,11 +40,10 @@ bool UIGS_VoiceChatSubsystem::IsLocalPlayerMuted(UObject* WCO, int32 LocalPlayer
 }
 
 TArray<FString> UIGS_VoiceChatSubsystem::GetAvailableOutputs(UObject* WCO) {
-    return TArray<FString>();
+    return {};
 }
 
 TArray<FString> UIGS_VoiceChatSubsystem::GetAvailableInputs(UObject* WCO) {
-    return TArray<FString>();
+    return {};
 }
-
 

@@ -8,4 +8,3 @@ FMETA_SellLootSpawnSettings::FMETA_SellLootSpawnSettings() {
     (*this).SpawnChance = 0;
     (*this).OnlyIfPlayerHasSom = false;
 }
-

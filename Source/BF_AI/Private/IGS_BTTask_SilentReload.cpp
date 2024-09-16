@@ -4,4 +4,3 @@ UIGS_BTTask_SilentReload::UIGS_BTTask_SilentReload() {
     (*this).NodeName = TEXT("Silent Reload");
 }
 
-

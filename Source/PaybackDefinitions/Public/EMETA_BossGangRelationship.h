@@ -9,4 +9,3 @@ enum class EMETA_BossGangRelationship : uint8 {
     Unfriendly,
     Hostile,
 };
-

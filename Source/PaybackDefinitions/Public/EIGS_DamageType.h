@@ -22,4 +22,3 @@ enum class EIGS_DamageType : uint8 {
     TemporaryHealth,
     FallDamage,
 };
-

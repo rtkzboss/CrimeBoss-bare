@@ -2,4 +2,3 @@
 
 FIGS_CharacterAnimInstanceProxy::FIGS_CharacterAnimInstanceProxy() {
 }
-

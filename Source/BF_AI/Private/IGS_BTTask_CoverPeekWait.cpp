@@ -6,4 +6,3 @@ UIGS_BTTask_CoverPeekWait::UIGS_BTTask_CoverPeekWait() {
     (*this).NodeName = TEXT("Cover Peek Wait");
 }
 
-

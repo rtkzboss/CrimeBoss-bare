@@ -9,4 +9,3 @@ enum class EIGS_BreachingAnimationTaskStatus : uint8 {
     Finished,
     Canceled,
 };
-

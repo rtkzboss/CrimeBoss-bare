@@ -3,4 +3,3 @@
 FIGS_MetaDialogueSpeakerKey::FIGS_MetaDialogueSpeakerKey() {
     (*this).Speaker = EIGS_MetaDialogueSpeaker::None;
 }
-

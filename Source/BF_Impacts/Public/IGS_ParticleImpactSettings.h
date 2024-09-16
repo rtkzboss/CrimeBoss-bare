@@ -13,13 +13,12 @@ struct BF_IMPACTS_API FIGS_ParticleImpactSettings : public FIGS_ImpactSettings {
 public:
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UParticleSystem> ParticleSystemPath;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UNiagaraSystem> NiagaraSystemPath;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftClassPtr<UIGS_ImpactTypeObject> ParticleDecalIDSoft;
-    
+
     FIGS_ParticleImpactSettings();
 };
-

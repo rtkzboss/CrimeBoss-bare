@@ -12,16 +12,15 @@ struct BF_AI_API FIGS_ReviveRecord {
 public:
     UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> InjuredCharacter;
-    
+
     UPROPERTY(VisibleAnywhere)
     UIGS_AICommandBeingRevived* BeingRevivedCommand;
-    
+
     UPROPERTY(VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> RevivingCharacter;
-    
+
     UPROPERTY(VisibleAnywhere)
     UIGS_AICommandRevive* RevivingCommand;
-    
+
     FIGS_ReviveRecord();
 };
-

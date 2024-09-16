@@ -9,4 +9,3 @@ enum class EMETA_PerkStatGroupUsage : uint8 {
     PercentageBonus,
     Value,
 };
-

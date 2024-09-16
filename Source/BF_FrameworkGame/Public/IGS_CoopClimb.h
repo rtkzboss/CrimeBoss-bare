@@ -18,26 +18,25 @@ public:
 protected:
     UFUNCTION()
     void OnUsed(AIGS_GameCharacterFramework* inInstigator);
-    
+
 public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector StartLocation;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector EndLocation;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_InteractiveComponent* CoopClimbInteractiveComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> User;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<AIGS_VentShaft> VentShaft;
-    
+
 protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UCapsuleComponent* CapsuleComponent;
-    
-};
 
+};

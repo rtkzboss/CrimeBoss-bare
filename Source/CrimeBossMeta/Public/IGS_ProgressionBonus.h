@@ -9,10 +9,9 @@ struct FIGS_ProgressionBonus {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag BonusTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Value;
-    
+
     CRIMEBOSSMETA_API FIGS_ProgressionBonus();
 };
-

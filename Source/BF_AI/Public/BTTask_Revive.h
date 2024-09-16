@@ -15,18 +15,17 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharToReviveKey;
-    
+
     UPROPERTY(EditAnywhere)
     float DistanceToMove;
-    
+
     UPROPERTY(EditAnywhere)
     float DistanceToStop;
-    
+
     UPROPERTY()
     AIGS_GameCharacterFramework* Character;
-    
+
     UPROPERTY()
     AIGS_GameCharacterFramework* CharacterToRevive;
-    
-};
 
+};

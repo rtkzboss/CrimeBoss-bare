@@ -7,7 +7,7 @@ void UMETA_ObjectiveDatabase::SetObjectiveByID(FGameplayTag inObjectiveID, FMETA
 }
 
 TArray<FMETA_ObjectivePresetTableRow> UMETA_ObjectiveDatabase::GetPresetsDatabaseTable() {
-    return TArray<FMETA_ObjectivePresetTableRow>();
+    return {};
 }
 
 FMETA_ObjectivePresetTableRow UMETA_ObjectiveDatabase::GetPresetDataBP(const UObject* inWCO, FGameplayTag inID, bool& outSucceeded) {
@@ -15,11 +15,10 @@ FMETA_ObjectivePresetTableRow UMETA_ObjectiveDatabase::GetPresetDataBP(const UOb
 }
 
 TArray<FMETA_ObjectiveTableRow> UMETA_ObjectiveDatabase::GetObjectivesDatabaseTable() {
-    return TArray<FMETA_ObjectiveTableRow>();
+    return {};
 }
 
 FMETA_ObjectiveTableRow UMETA_ObjectiveDatabase::GetObjectiveDataBP(const UObject* inWCO, FGameplayTag inID, bool& outSucceeded) {
     return FMETA_ObjectiveTableRow{};
 }
-
 

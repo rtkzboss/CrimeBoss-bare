@@ -9,4 +9,3 @@ void UIGS_ShoutHelpers::Shout(AIGS_GameCharacterFramework* Instigator, FShoutSca
 void UIGS_ShoutHelpers::GetShoutAtCharacters(AIGS_GameCharacterFramework* Instigator, FShoutScanData& outScanData) {
 }
 
-

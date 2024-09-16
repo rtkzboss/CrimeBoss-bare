@@ -10,4 +10,3 @@ enum class EMETA_HeisterActionScope : uint8 {
     ByCharacterID,
     SortedHeistersByConditions,
 };
-

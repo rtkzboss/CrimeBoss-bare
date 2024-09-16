@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_WeaponBashAttackDefinition BashAttackDefinition;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_WeaponBashAttackDefinition AIAttackDefinition;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETraceTypeQuery> TraceChannel;
-    
-};
 
+};

@@ -8,4 +8,3 @@ struct FIGS_EquipAnimationData {
 public:
     BF_ANIMATIONS_API FIGS_EquipAnimationData();
 };
-

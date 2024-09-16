@@ -2,4 +2,3 @@
 
 FIGS_GoToSpawnData::FIGS_GoToSpawnData() {
 }
-

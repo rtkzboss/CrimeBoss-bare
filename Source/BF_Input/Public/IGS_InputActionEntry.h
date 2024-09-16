@@ -9,16 +9,15 @@ struct BF_INPUT_API FIGS_InputActionEntry {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_InputAction InputAction;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText DisplayName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName ActionName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsHidden;
-    
+
     FIGS_InputActionEntry();
 };
-

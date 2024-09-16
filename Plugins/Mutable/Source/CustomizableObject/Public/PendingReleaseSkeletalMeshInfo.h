@@ -10,10 +10,9 @@ struct FPendingReleaseSkeletalMeshInfo {
 public:
     UPROPERTY()
     USkeletalMesh* SkeletalMesh;
-    
+
     UPROPERTY()
     double Timestamp;
-    
+
     CUSTOMIZABLEOBJECT_API FPendingReleaseSkeletalMeshInfo();
 };
-

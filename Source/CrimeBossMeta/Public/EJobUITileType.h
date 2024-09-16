@@ -7,4 +7,3 @@ enum class EJobUITileType : uint8 {
     Big,
     Small,
 };
-

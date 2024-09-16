@@ -14,13 +14,12 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<EIGS_ConnectionPointTag> PopulatorTags;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName ConnectionPointTag;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USceneComponent* Root;
-    
-};
 
+};

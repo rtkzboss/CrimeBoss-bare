@@ -9,4 +9,3 @@ FSeriesStyleManualMapping::FSeriesStyleManualMapping() {
     (*this).Style.Color.B = 1.000000000e+00f;
     (*this).Style.Color.A = 1.000000000e+00f;
 }
-

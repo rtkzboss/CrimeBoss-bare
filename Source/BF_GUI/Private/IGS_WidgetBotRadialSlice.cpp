@@ -1,8 +1,4 @@
 #include "IGS_WidgetBotRadialSlice.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetBotRadialSlice::UIGS_WidgetBotRadialSlice() {
     (*this).bIsDefending = true;
@@ -16,5 +12,4 @@ UIGS_WidgetBotRadialSlice::UIGS_WidgetBotRadialSlice() {
 
 void UIGS_WidgetBotRadialSlice::OnDefendChanged(bool inDefend) {
 }
-
 

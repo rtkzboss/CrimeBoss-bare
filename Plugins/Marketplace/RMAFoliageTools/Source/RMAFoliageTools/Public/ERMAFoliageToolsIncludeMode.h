@@ -7,4 +7,3 @@ enum class ERMAFoliageToolsIncludeMode : uint8 {
     RMAIM_All,
     RMAIM_Selection,
 };
-

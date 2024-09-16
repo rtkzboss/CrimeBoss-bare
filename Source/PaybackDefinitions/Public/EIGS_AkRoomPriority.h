@@ -11,4 +11,3 @@ enum class EIGS_AkRoomPriority : uint8 {
     High = 15,
     Max = 20,
 };
-

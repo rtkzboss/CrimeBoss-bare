@@ -8,10 +8,9 @@ struct POWERIKRUNTIME_API FPowerIKBoneLimit {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BoneName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float Stiffness;
-    
+
     FPowerIKBoneLimit();
 };
-

@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(Config, EditAnywhere)
     bool bEnableInGame;
-    
+
     UPROPERTY(Config, EditAnywhere)
     bool bEnableInEditor;
-    
-};
 
+};

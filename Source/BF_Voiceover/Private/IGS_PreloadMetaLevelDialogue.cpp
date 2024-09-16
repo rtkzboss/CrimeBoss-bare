@@ -4,10 +4,9 @@ UIGS_PreloadMetaLevelDialogue::UIGS_PreloadMetaLevelDialogue() {
 }
 
 UIGS_PreloadMetaLevelDialogue* UIGS_PreloadMetaLevelDialogue::PreloadMetaLevelDialogues(UObject* inWCO, FText DialogueID, TArray<EIGS_MetaDialogueCharacter>& inCharacters) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_PreloadMetaLevelDialogue::FinishPreload() {
 }
-
 

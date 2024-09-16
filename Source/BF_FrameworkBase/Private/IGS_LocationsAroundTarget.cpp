@@ -3,4 +3,3 @@
 UIGS_LocationsAroundTarget::UIGS_LocationsAroundTarget() {
 }
 
-

@@ -5,4 +5,3 @@ UStreamlineOverrideSettings::UStreamlineOverrideSettings() {
     (*this).LoadDebugOverlayOverride = EStreamlineSettingOverride::UseProjectSettings;
 }
 
-

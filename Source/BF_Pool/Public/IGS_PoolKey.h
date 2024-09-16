@@ -9,11 +9,11 @@ struct BF_POOL_API FIGS_PoolKey {
 public:
     UPROPERTY()
     UClass* PoolObjectClass;
-    
+
     UPROPERTY()
     FGameplayTagContainer PoolTagContainer;
-    
+
     FIGS_PoolKey();
 };
 FORCEINLINE uint32 GetTypeHash(const FIGS_PoolKey&) { return 0; }
-
+FORCEINLINE bool operator==(const FIGS_PoolKey&, const FIGS_PoolKey&) { return true; }

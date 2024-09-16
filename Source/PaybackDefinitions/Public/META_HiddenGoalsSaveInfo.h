@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FMETA_HiddenGoalsSaveInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 CurrentValue;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bSuccess;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bRewardReceived;
-    
+
     FMETA_HiddenGoalsSaveInfo();
 };
-

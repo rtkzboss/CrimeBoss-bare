@@ -5,4 +5,3 @@ FIGS_GeneralReactionData::FIGS_GeneralReactionData() {
     (*this).BehaviorTree = nullptr;
     (*this).DataAsset = nullptr;
 }
-

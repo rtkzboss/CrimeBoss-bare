@@ -15,27 +15,26 @@ public:
 
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterRampColorPoint*> Points;
-    
+
     UPROPERTY()
     bool bCaching;
-    
+
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterRampColorPoint*> CachedPoints;
-    
+
     UPROPERTY()
     TArray<float> DefaultPositions;
-    
+
     UPROPERTY()
     TArray<FLinearColor> DefaultValues;
-    
+
     UPROPERTY()
     TArray<int32> DefaultChoices;
-    
+
     UPROPERTY()
     int32 NumDefaultPoints;
-    
+
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterRampModificationEvent*> ModificationEvents;
-    
-};
 
+};

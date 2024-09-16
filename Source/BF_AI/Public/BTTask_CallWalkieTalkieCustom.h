@@ -13,12 +13,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     int32 StrikesToAdd;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag BlameTag;
-    
+
     UPROPERTY(EditAnywhere)
     FText DialogueID;
-    
-};
 
+};

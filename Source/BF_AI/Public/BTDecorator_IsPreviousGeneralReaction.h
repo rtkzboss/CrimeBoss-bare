@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag PreviousGlobalReactionTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MaxTimeSince;
-    
-};
 
+};

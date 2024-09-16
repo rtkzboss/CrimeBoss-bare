@@ -5,4 +5,3 @@ UHoudiniParameterLabel::UHoudiniParameterLabel() {
     (*this).ParmType = EHoudiniParameterType::Label;
 }
 
-

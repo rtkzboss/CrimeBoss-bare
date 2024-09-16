@@ -13,24 +13,23 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetSaveData(FMETA_TimerNodeSaveData SaveData);
-    
+
     UFUNCTION(BlueprintCallable)
     void GetSaveData(FMETA_TimerNodeSaveData& SaveData);
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 MinDaysValue;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 MaxDaysValue;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_EventTime ContinueAfter;
-    
+
     UPROPERTY()
     int32 StartingDay;
-    
+
     UPROPERTY()
     int32 ResultValue;
-    
-};
 
+};

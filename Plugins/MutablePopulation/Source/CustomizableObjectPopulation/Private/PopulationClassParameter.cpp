@@ -1,6 +1,6 @@
 #include "PopulationClassParameter.h"
 
 FPopulationClassParameter::FPopulationClassParameter() {
-    (*this).Tags.Empty();
+    (*this).Tags = {};
+    (*this).ParameterOptions = {};
 }
-

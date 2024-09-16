@@ -52,27 +52,27 @@ bool UCommonCharacterIDHelpers::IsBossCharacterTag(UObject* inWCO, FGameplayTag 
 }
 
 TArray<FIGS_CharacterTableRow> UCommonCharacterIDHelpers::GetValidUniqueCharactersData(const UObject* inWCO) {
-    return TArray<FIGS_CharacterTableRow>();
+    return {};
 }
 
 TArray<EIGS_CharacterID> UCommonCharacterIDHelpers::GetValidUniqueCharacters(const UObject* inWCO) {
-    return TArray<EIGS_CharacterID>();
+    return {};
 }
 
 TArray<FIGS_CharacterTableRow> UCommonCharacterIDHelpers::GetValidGenericCharactersData(const UObject* inWCO) {
-    return TArray<FIGS_CharacterTableRow>();
+    return {};
 }
 
 TArray<EIGS_CharacterID> UCommonCharacterIDHelpers::GetValidGenericCharacters(const UObject* inWCO) {
-    return TArray<EIGS_CharacterID>();
+    return {};
 }
 
 TArray<FIGS_CharacterTableRow> UCommonCharacterIDHelpers::GetValidBossCharactersData(const UObject* inWCO) {
-    return TArray<FIGS_CharacterTableRow>();
+    return {};
 }
 
 TArray<EIGS_CharacterID> UCommonCharacterIDHelpers::GetValidBossCharacters(const UObject* inWCO) {
-    return TArray<EIGS_CharacterID>();
+    return {};
 }
 
 FGameplayTagContainer UCommonCharacterIDHelpers::GetRelatedCharacterTagIDs(const UObject* inWCO, FGameplayTag inCharacterTagID) {
@@ -80,43 +80,42 @@ FGameplayTagContainer UCommonCharacterIDHelpers::GetRelatedCharacterTagIDs(const
 }
 
 EIGS_CharacterID UCommonCharacterIDHelpers::GetRandomUniqueCharacter(const UObject* inWCO) {
-    return EIGS_CharacterID::Char_Unknown;
+    return EIGS_CharacterID::Char_Gen_Start;
 }
 
 EIGS_CharacterID UCommonCharacterIDHelpers::GetRandomGenericCharacter(const UObject* inWCO) {
-    return EIGS_CharacterID::Char_Unknown;
+    return EIGS_CharacterID::Char_Gen_Start;
 }
 
 EIGS_CharacterID UCommonCharacterIDHelpers::GetRandomCharacter(const UObject* inWCO) {
-    return EIGS_CharacterID::Char_Unknown;
+    return EIGS_CharacterID::Char_Gen_Start;
 }
 
 EIGS_CharacterID UCommonCharacterIDHelpers::GetRandomBossCharacter(const UObject* inWCO) {
-    return EIGS_CharacterID::Char_Unknown;
+    return EIGS_CharacterID::Char_Gen_Start;
 }
 
 EIGS_CharacterID UCommonCharacterIDHelpers::GetCharacterIDFromTagID(const UObject* inWCO, FGameplayTag inCharacterTagID) {
-    return EIGS_CharacterID::Char_Unknown;
+    return EIGS_CharacterID::Char_Gen_Start;
 }
 
 TArray<FIGS_CharacterTableRow> UCommonCharacterIDHelpers::GetAllValidCharactersData(const UObject* inWCO) {
-    return TArray<FIGS_CharacterTableRow>();
+    return {};
 }
 
 TArray<EIGS_CharacterID> UCommonCharacterIDHelpers::GetAllValidCharacters(const UObject* inWCO) {
-    return TArray<EIGS_CharacterID>();
+    return {};
 }
 
 TArray<FIGS_CharacterSkinTableRow> UCommonCharacterIDHelpers::GetAllCharacterSkinsData(const UObject* inWCO) {
-    return TArray<FIGS_CharacterSkinTableRow>();
+    return {};
 }
 
 EIGS_CharacterID UCommonCharacterIDHelpers::ConvertTagIDToCharacterID(UObject* inWCO, FGameplayTag inTagID) {
-    return EIGS_CharacterID::Char_Unknown;
+    return EIGS_CharacterID::Char_Gen_Start;
 }
 
 FGameplayTag UCommonCharacterIDHelpers::ConvertCharacterIDToTagID(UObject* inWCO, EIGS_CharacterID inCharacterID) {
     return FGameplayTag{};
 }
-
 

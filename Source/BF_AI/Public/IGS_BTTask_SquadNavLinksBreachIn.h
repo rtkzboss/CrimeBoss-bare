@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> BreachingMembers;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> AllreadyBreachedMembers;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> WaitingForBreachMembers;
-    
-};
 
+};

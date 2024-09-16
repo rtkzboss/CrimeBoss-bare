@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGuardHeavyTierData : public FIGS_AIBaseHeavyT
 public:
     FIGS_AIGuardHeavyTierData();
 };
-

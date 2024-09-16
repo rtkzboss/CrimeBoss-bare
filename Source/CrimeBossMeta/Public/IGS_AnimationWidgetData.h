@@ -11,10 +11,9 @@ struct CRIMEBOSSMETA_API FIGS_AnimationWidgetData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_AnimatedWidget* AnimatedWidget;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* PayloadData;
-    
+
     FIGS_AnimationWidgetData();
 };
-

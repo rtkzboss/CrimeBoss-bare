@@ -15,31 +15,30 @@ struct CRIMEBOSSMETA_API FMapTileRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FGameplayTag> Neighbours;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_TileWealth MinWealth;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_TileWealth MaxWealth;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_TileType Type;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_TileSize Size;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_HubDistrict DistrictType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_HubBackdropTypes BackdropType;
-    
+
     FMapTileRow();
 };
-

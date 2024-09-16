@@ -1,6 +1,4 @@
 #include "IGS_EnvironmentVolume.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_EnvironmentVolume::AIGS_EnvironmentVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).EffectBlendStartDuration = 1.000000000e+01f;
@@ -25,5 +23,4 @@ void AIGS_EnvironmentVolume::OnEnvironmentVolumeBeginOverlap(UPrimitiveComponent
 bool AIGS_EnvironmentVolume::GetEnabled() const {
     return false;
 }
-
 

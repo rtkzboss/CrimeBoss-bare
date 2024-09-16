@@ -17,55 +17,54 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetEnabled(bool inState);
-    
+
 protected:
     UFUNCTION()
     void SetAlarmDisabledDelayed() const;
-    
+
     UFUNCTION()
     void OnRep_OnSetEnabled() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-    
+
     UFUNCTION(BlueprintCallable)
     void OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void InitProperties();
-    
+
     UFUNCTION(NetMulticast, Reliable)
     void Client_OnDetected();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UAkComponent* AlarmAudioComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UBoxComponent* BoxCollisionComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UPointLightComponent* AlarmLight;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UPointLightComponent* StatusLight;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AlarmLightDuration;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AINoiseLoudness;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AINoiseMaxRange;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PlayerOffenceDuration;
-    
+
     UPROPERTY(ReplicatedUsing=OnRep_OnSetEnabled)
     bool mR_bIsEnabled;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

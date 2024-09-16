@@ -9,4 +9,3 @@ enum class EIGS_SubtitleType : uint8 {
     HeisterNonImportant,
     Custom,
 };
-

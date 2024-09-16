@@ -13,18 +13,17 @@ public:
 protected:
     UFUNCTION()
     void OnRep_CharacterVsHeistersCollisionStatus();
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float VelocityTreshold;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float AvoidanceWeihgtOverride;
-    
+
     UPROPERTY(ReplicatedUsing=OnRep_CharacterVsHeistersCollisionStatus)
     EIGS_CharacterVsHeistersCollisionStatus m_CharacterVsHeistersCollisionStatus;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

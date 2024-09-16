@@ -12,28 +12,27 @@ struct PAYBACKDEFINITIONS_API FMETA_BossEliminationRewardData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_BossEliminationReward RewardType;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Value;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag LootItem;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality WeaponQuality;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGameplayTag> WeaponSkinTags;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* Weapon;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_CharacterID Heister;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality HeisterQuality;
-    
+
     FMETA_BossEliminationRewardData();
 };
-

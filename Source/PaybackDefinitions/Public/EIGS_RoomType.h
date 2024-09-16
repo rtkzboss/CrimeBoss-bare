@@ -25,4 +25,3 @@ enum class EIGS_RoomType : uint8 {
     Roof,
     Street,
 };
-

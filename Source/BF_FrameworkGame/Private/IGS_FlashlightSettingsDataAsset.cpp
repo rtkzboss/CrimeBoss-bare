@@ -26,4 +26,3 @@ UIGS_FlashlightSettingsDataAsset::UIGS_FlashlightSettingsDataAsset() {
     (*this).PointShadowFilterSharpen = 1.000000015e-01f;
 }
 
-

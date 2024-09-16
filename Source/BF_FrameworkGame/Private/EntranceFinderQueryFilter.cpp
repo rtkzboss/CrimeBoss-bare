@@ -5,4 +5,3 @@ UEntranceFinderQueryFilter::UEntranceFinderQueryFilter() {
     (*this).IsActive = true;
 }
 
-

@@ -14,19 +14,18 @@ public:
 
     UFUNCTION(BlueprintCallable)
     int32 GetTargetNodeID(int32 inResult);
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     UMETA_MediaCondition* ExecutionBlueprint;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 ExpireTimerResultNode;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TMap<int32, int32> ResultNodesMap;
-    
+
 private:
     UPROPERTY()
     EMETA_MediaNodeType MediaNodeType;
-    
-};
 
+};

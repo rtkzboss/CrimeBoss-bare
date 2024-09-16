@@ -15,19 +15,18 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnNotificationReady();
-    
+
     UFUNCTION(BlueprintCallable)
     void InitializeObjectiveNotification(FIGS_MissionObjective inObjectiveStruct, bool bAddedObjective);
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FText ObjectiveName;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool ObjectivePreviouslyAdded;
-    
+
 private:
     UPROPERTY(Instanced)
     UIGS_ObjectiveManager* m_ObjectiveManager;
-    
-};
 
+};

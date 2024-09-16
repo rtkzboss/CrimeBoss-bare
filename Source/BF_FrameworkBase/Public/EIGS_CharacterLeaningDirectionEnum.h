@@ -12,4 +12,3 @@ enum class EIGS_CharacterLeaningDirectionEnum : uint8 {
     MAX,
     UNKNOWN = 255,
 };
-

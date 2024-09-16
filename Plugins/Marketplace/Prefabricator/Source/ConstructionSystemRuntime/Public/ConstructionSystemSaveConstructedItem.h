@@ -11,13 +11,12 @@ struct CONSTRUCTIONSYSTEMRUNTIME_API FConstructionSystemSaveConstructedItem {
 public:
     UPROPERTY()
     UPrefabricatorAssetInterface* PrefabAsset;
-    
+
     UPROPERTY()
     int32 Seed;
-    
+
     UPROPERTY()
     FTransform Transform;
-    
+
     FConstructionSystemSaveConstructedItem();
 };
-

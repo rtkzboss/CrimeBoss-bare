@@ -1,24 +1,26 @@
 #include "CommonHeisterData.h"
 
 FCommonHeisterData::FCommonHeisterData() {
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
     (*this).CharacterID = EIGS_CharacterID::Char_Unknown;
     (*this).UniqGenericId = -1;
     (*this).GenericVariantID = -1;
-    (*this).CharacterName = FText::FromString(TEXT(""));
+    (*this).CharacterName = FText::GetEmpty();
     (*this).bIsMaxLeveled = false;
     (*this).HeisterNumber = -1;
     (*this).PlayerId = -1;
     (*this).ProgressionLevel = 1;
-    (*TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes")->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)).Empty();
+    auto gen2 = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
+    (*gen2->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)) = {};
     (*this).Loadout.PrimaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
     (*this).Loadout.SecondaryWeapon = nullptr;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
-    (*this).Loadout.Equipment.Empty();
-    (*this).Loadout.Perks.Empty();
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.Equipment = {};
+    (*this).Loadout.Perks = {};
     (*this).Loadout.Ability1ChargesLeft = -1;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkinID, 0)) = NAME_None;
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkinID, 0)) = NAME_None;
     (*this).Experience = 0;
     (*this).Injuries = 0;
     (*this).CharacterState = EMETA_CharacterState::None;
@@ -34,6 +36,5 @@ FCommonHeisterData::FCommonHeisterData() {
     (*this).PlayerRespect = EMETA_RespectLvl::Low;
     (*this).MutableVariationIndex = -1;
     (*this).MissionCutPercentWithModifiers = 0;
-    (*this).CachedPlayerName = FText::FromString(TEXT(""));
+    (*this).CachedPlayerName = FText::GetEmpty();
 }
-

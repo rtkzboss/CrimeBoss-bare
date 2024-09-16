@@ -15,13 +15,12 @@ public:
 private:
     UFUNCTION()
     void OnParticleMovementFinished(UParticleSystemComponent* inParticleSystemComponent);
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UParticleSystemComponent* ParticleSystemMovement;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UAudioComponent* AudioComponentMovement;
-    
-};
 
+};

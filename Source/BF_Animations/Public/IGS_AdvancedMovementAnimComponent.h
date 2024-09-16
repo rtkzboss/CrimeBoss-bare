@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY()
     AIGS_WieldableBase* m_WieldableBase;
-    
+
     UPROPERTY()
     AIGS_PlayerFPVArmsFramework* m_ArmsActor;
-    
-};
 
+};

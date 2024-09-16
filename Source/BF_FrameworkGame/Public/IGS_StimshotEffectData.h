@@ -11,7 +11,6 @@ struct BF_FRAMEWORKGAME_API FIGS_StimshotEffectData : public FIGS_PlayerEffectDa
 public:
     UPROPERTY(EditAnywhere)
     UIGS_StimshotEffectDataAsset* StimshotEffectDataAsset;
-    
+
     FIGS_StimshotEffectData();
 };
-

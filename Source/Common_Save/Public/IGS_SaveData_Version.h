@@ -8,16 +8,15 @@ struct COMMON_SAVE_API FIGS_SaveData_Version {
 public:
     UPROPERTY(SaveGame)
     uint32 JsonVersion;
-    
+
     UPROPERTY(SaveGame)
     FString RevisionCreated;
-    
+
     UPROPERTY(SaveGame)
     FString RevisionSaved;
-    
+
     UPROPERTY(SaveGame)
     FString SnapshotRevision;
-    
+
     FIGS_SaveData_Version();
 };
-

@@ -9,4 +9,3 @@ enum class EIGS_LightReactionPoseVariant : uint8 {
     D_LyingOnGround,
     D_Downstate,
 };
-

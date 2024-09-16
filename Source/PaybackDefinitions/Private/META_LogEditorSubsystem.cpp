@@ -17,4 +17,3 @@ FString UMETA_LogEditorSubsystem::GetDateString() {
 void UMETA_LogEditorSubsystem::CreateMetaLogFile(bool inNewCompaing, bool inIsDebug, const FString& inSaveFileName) {
 }
 
-

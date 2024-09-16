@@ -18,24 +18,23 @@ public:
 protected:
     UFUNCTION()
     void OnWaitFinished(AIGS_AIControllerGame* inOwningContoller, UIGS_AICommand* inCommand, bool inFailed);
-    
+
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     AIGS_WaypointBase* GetPatrolPoint(AIGS_GameCharacterFramework* inCharacter);
-    
+
 protected:
     UFUNCTION(BlueprintPure)
     TArray<AIGS_WaypointBase*> GetAllVisitablePoints(AIGS_GameCharacterFramework* inCharacter) const;
-    
+
 public:
     UPROPERTY()
     TArray<AIGS_PatrolPoint*> PatrolPoints_DEPRECATED;
-    
+
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<AIGS_WaypointFramework*> Waypoints;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<AIGS_WaypointBase*> WaypointsCasted;
-    
-};
 
+};

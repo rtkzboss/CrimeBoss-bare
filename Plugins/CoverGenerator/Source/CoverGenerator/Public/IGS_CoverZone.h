@@ -10,4 +10,3 @@ public:
     AIGS_CoverZone(const FObjectInitializer& ObjectInitializer);
 
 };
-

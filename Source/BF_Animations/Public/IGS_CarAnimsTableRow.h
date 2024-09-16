@@ -12,19 +12,18 @@ struct FIGS_CarAnimsTableRow : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> Idle;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> GetOut_Normal;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> GetOut_Fast;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<FGameplayTag, UAnimMontage*> GetOutMontages;
-    
+
     BF_ANIMATIONS_API FIGS_CarAnimsTableRow();
 };
-

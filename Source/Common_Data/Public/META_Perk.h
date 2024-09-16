@@ -12,9 +12,8 @@ public:
 
     UFUNCTION(BlueprintPure)
     int32 GetPerkLevel();
-    
+
     UFUNCTION(BlueprintPure)
     FIGS_PerksTableRow GetPerkData();
-    
-};
 
+};

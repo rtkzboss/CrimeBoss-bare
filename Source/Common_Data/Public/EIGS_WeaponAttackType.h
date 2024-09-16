@@ -15,4 +15,3 @@ enum class EIGS_WeaponAttackType : uint8 {
     AT_MAX UMETA(Hidden),
     AT_UNKNOWN = 255,
 };
-

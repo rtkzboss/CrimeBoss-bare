@@ -2,6 +2,8 @@
 
 FIGS_FPS2Meta_Data::FIGS_FPS2Meta_Data() {
     (*this).MissionResult = ECommonMissionResult::Res_UNKNOWN;
+    (*this).CollectedObjectiveLoot = {};
+    (*this).CollectedBonusLoot = {};
     (*this).MoneyCollected = 0;
     (*this).CivilCasualties = 0;
     (*this).PoliceCasualties = 0;
@@ -15,4 +17,3 @@ FIGS_FPS2Meta_Data::FIGS_FPS2Meta_Data() {
     (*this).LootBagsCollected = 0;
     (*this).GameplayTime = 0.000000000e+00f;
 }
-

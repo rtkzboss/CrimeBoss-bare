@@ -9,4 +9,3 @@ enum class EIGS_HubDistrict : uint8 {
     Industrial,
     Beach,
 };
-

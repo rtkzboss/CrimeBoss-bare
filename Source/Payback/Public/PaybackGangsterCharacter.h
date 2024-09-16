@@ -10,4 +10,3 @@ public:
     APaybackGangsterCharacter(const FObjectInitializer& ObjectInitializer);
 
 };
-

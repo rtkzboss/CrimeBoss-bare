@@ -10,4 +10,3 @@ public:
     AIGS_SquadCivlian(const FObjectInitializer& ObjectInitializer);
 
 };
-

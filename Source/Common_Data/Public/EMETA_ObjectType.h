@@ -10,4 +10,3 @@ enum class EMETA_ObjectType : uint8 {
     PlotlineAsset,
     Equipment,
 };
-

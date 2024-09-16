@@ -9,16 +9,15 @@ struct FIGS_LightHitReactionsVariant {
 public:
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Front;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Right;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Back;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_LightHitReactionsBodyVariants Left;
-    
+
     BF_ANIMATIONS_API FIGS_LightHitReactionsVariant();
 };
-

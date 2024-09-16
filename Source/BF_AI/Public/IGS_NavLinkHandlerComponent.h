@@ -12,9 +12,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     bool UseSlideForLadder;
-    
+
     UPROPERTY(EditAnywhere)
     bool CanUseDoors;
-    
-};
 
+};

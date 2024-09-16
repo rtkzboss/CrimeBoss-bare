@@ -8,4 +8,3 @@ struct FBPUniqueNetId {
 public:
     ADVANCEDSESSIONS_API FBPUniqueNetId();
 };
-

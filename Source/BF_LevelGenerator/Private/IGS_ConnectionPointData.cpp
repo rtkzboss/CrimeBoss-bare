@@ -7,4 +7,3 @@ FIGS_ConnectionPointData::FIGS_ConnectionPointData() {
     (*this).Location.Z = 0.000000000e+00f;
     (*this).Rotation = 0.000000000e+00f;
 }
-

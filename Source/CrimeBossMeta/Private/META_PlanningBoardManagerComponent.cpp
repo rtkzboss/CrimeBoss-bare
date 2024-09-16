@@ -1,5 +1,4 @@
 #include "META_PlanningBoardManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UMETA_PlanningBoardManagerComponent::UMETA_PlanningBoardManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -31,7 +30,7 @@ void UMETA_PlanningBoardManagerComponent::HandleChangeStatusEvent(FMETA_ChangeSt
 }
 
 TMap<FGameplayTag, EMETA_PlanningBoardItemStatus> UMETA_PlanningBoardManagerComponent::GetPlanningBoardStatuses() const {
-    return TMap<FGameplayTag, EMETA_PlanningBoardItemStatus>();
+    return {};
 }
 
 EMETA_PlanningBoardItemStatus UMETA_PlanningBoardManagerComponent::GetPlanningBoardItemStatus(FGameplayTag itemTag) const {
@@ -39,7 +38,7 @@ EMETA_PlanningBoardItemStatus UMETA_PlanningBoardManagerComponent::GetPlanningBo
 }
 
 TMap<FGameplayTag, UMETA_PlanningBoardItemObject*> UMETA_PlanningBoardManagerComponent::GetPlanningBoardItemsMap() const {
-    return TMap<FGameplayTag, UMETA_PlanningBoardItemObject*>();
+    return {};
 }
 
 FMETA_PlanningBoardItemRow UMETA_PlanningBoardManagerComponent::GetPlanningBoardItemData(FGameplayTag itemTag) const {
@@ -56,5 +55,4 @@ FGameplayTag UMETA_PlanningBoardManagerComponent::GetActivePlanningBoardTag() co
 
 void UMETA_PlanningBoardManagerComponent::AddChangeStatusEvent(FGameplayTag itemTag, FGameplayTag voiceoverTag, EMETA_PlanningBoardItemStatus fromStatus, EMETA_PlanningBoardItemStatus toStatus) {
 }
-
 

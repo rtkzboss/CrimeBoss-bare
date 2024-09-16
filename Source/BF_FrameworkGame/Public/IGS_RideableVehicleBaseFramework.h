@@ -13,9 +13,8 @@ public:
 
     UFUNCTION(BlueprintPure)
     int32 GetSeatIndexForPawn(AIGS_GameCharacterFramework* inCharacter) const;
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetLocalSeatIndex() const;
-    
-};
 
+};

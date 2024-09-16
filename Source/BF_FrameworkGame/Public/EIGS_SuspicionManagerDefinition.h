@@ -12,4 +12,3 @@ enum class EIGS_SuspicionManagerDefinition : uint8 {
     AllGuardsDead,
     HeistStarted,
 };
-

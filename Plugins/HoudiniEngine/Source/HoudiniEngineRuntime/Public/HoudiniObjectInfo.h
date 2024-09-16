@@ -8,4 +8,3 @@ struct HOUDINIENGINERUNTIME_API FHoudiniObjectInfo {
 public:
     FHoudiniObjectInfo();
 };
-

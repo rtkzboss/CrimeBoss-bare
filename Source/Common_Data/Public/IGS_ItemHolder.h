@@ -9,10 +9,9 @@ struct COMMON_DATA_API FIGS_ItemHolder {
 public:
     UPROPERTY(VisibleAnywhere)
     int32 ItemId;
-    
+
     UPROPERTY(VisibleAnywhere)
     EIGS_ItemType ItemType;
-    
+
     FIGS_ItemHolder();
 };
-

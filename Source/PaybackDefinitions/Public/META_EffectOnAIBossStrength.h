@@ -8,13 +8,12 @@ struct PAYBACKDEFINITIONS_API FMETA_EffectOnAIBossStrength {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ChangedByValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 RemainingDays;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 RemainingAttacksOrDefences;
-    
+
     FMETA_EffectOnAIBossStrength();
 };
-

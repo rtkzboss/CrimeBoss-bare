@@ -13,6 +13,5 @@ class BF_FRAMEWORKGAME_API IIGS_NavLinksBreachInterface : public IIGS_BreachInte
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetNavLinkCount();
-    
-};
 
+};

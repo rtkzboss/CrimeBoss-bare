@@ -8,4 +8,3 @@ UIGS_Common_DataDevSettings_Items::UIGS_Common_DataDevSettings_Items() {
     (*this).LootCollectionDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Blueprints/Loot/DT_LootCollectionsDatatable.DT_LootCollectionsDatatable"), TEXT(""));
 }
 
-

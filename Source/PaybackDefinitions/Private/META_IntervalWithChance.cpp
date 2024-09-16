@@ -5,4 +5,3 @@ FMETA_IntervalWithChance::FMETA_IntervalWithChance() {
     (*this).Max = 0;
     (*this).IncreasingChanceInsideRange = 5.000000000e-01f;
 }
-

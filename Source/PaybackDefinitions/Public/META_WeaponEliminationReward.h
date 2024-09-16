@@ -8,7 +8,6 @@ struct PAYBACKDEFINITIONS_API FMETA_WeaponEliminationReward {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 WeaponQuality;
-    
+
     FMETA_WeaponEliminationReward();
 };
-

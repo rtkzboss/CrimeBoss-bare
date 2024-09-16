@@ -13,40 +13,39 @@ struct COMMON_DATA_API FMETA_CutsceneUIData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, FIGS_CutsceneTagValue> CutsceneChoiceTagParams;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_Partner Partner;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool CanStartDelayed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShouldExpire;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DaysToExpire;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ScreenAfterEnd;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FText DebugText;
-    
+
     UPROPERTY(BlueprintReadWrite)
     UMETA_BaseStoryGraphManager* GraphRef;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 OriginalID;
-    
+
     UPROPERTY(BlueprintReadWrite)
     TMap<int32, int32> ResultEdgeMap;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 ExpiredID;
-    
+
     FMETA_CutsceneUIData();
 };
-

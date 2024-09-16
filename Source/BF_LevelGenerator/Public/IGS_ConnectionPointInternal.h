@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<EIGS_Event> Event;
-    
-};
 
+};

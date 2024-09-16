@@ -3,11 +3,10 @@
 #include "EIGS_QPModeSource.h"
 #include "UObject/NoExportTypes.h"
 #include "EIGS_UserDifficulty.h"
+#include "META_MissionID.h"
 #include "META_MissionsSave.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_Quick_JobManagerSaveData.generated.h"
-
-class UMETA_MissionID;
 
 USTRUCT(BlueprintType)
 struct COMMON_SAVE_API FIGS_Quick_JobManagerSaveData {
@@ -15,22 +14,21 @@ struct COMMON_SAVE_API FIGS_Quick_JobManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TSubclassOf<UMETA_MissionID> CurrentJob;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FMETA_MissionsSave Opportunities;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<EIGS_QPModeSource, EIGS_UserDifficulty> LastSelectedDifficulties;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FMETA_MissionsSave LastPlayedMission;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FGuid> FinishedMissionsIDs;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bLastPlayedWasChain;
-    
+
     FIGS_Quick_JobManagerSaveData();
 };
-

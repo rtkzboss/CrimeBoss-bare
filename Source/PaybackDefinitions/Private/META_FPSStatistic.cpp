@@ -6,4 +6,3 @@ FMETA_FPSStatistic::FMETA_FPSStatistic() {
     (*this).KilledDetectives = 0;
     (*this).KilledCivilians = 0;
 }
-

@@ -10,4 +10,3 @@ public:
     AIGS_ScriptPointCharacterRemover(const FObjectInitializer& ObjectInitializer);
 
 };
-

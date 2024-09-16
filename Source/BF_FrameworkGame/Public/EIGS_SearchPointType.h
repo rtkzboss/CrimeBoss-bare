@@ -17,4 +17,3 @@ enum class EIGS_SearchPointType : uint8 {
     Drill,
     Hostage,
 };
-

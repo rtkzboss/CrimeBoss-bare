@@ -9,10 +9,9 @@ struct FIGS_CameraShake {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag CameraShakeTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Intensity;
-    
+
     BF_FRAMEWORKGAME_API FIGS_CameraShake();
 };
-

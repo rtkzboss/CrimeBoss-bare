@@ -5,4 +5,3 @@ UIGS_BTService_ClearCoverPoint::UIGS_BTService_ClearCoverPoint() {
     (*this).NodeName = TEXT("Clear Cover Point");
 }
 
-

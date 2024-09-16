@@ -10,10 +10,9 @@ struct BF_VOICEOVER_API FIGS_DialogueCharacterCooldownDefinitionRow : public FTa
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_DialogueCharacterCooldown ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CooldownSeconds;
-    
+
     FIGS_DialogueCharacterCooldownDefinitionRow();
 };
-

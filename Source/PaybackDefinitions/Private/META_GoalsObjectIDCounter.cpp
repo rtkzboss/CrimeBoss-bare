@@ -4,4 +4,3 @@ FMETA_GoalsObjectIDCounter::FMETA_GoalsObjectIDCounter() {
     (*this).GoalID = nullptr;
     (*this).Counter = 0;
 }
-

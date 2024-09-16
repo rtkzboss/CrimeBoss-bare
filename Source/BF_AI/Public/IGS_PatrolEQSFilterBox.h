@@ -13,16 +13,15 @@ public:
 protected:
     UFUNCTION()
     void UpdateDebugSubsystemSettings();
-    
+
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool FiltersByTeamSide;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ValidTeamSides;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer EQSFilteringTags;
-    
-};
 
+};

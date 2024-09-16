@@ -18,37 +18,36 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetLightsColors();
-    
+
 protected:
     UFUNCTION(NetMulticast, Reliable)
     void Client_SetLightFailColors(int32 inWireIndex);
-    
+
     UFUNCTION(NetMulticast, Reliable)
     void Client_SetLightColors(int32 inWireIndex, int32 inFirstColorIndex, int32 inSecondColorIndex);
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UTimelineComponent* LightsTimeline;
-    
+
     UPROPERTY(EditAnywhere)
     UMaterialInterface* LightFailMaterial;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UAkComponent* AkAudioComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* CutSuccessAkEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<UMaterialInterface*> LightColorMaterials;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UPrimitiveComponent*> WireSpheresLeft;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UPrimitiveComponent*> WireSpheresRight;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UIGS_InteractiveComponent*> WireInteractiveComponents;
-    
-};
 
+};

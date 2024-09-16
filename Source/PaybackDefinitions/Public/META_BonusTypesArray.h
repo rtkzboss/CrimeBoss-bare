@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_BonusTypesArray {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<EMETA_BonusType> Bonuses;
-    
+
     FMETA_BonusTypesArray();
 };
-

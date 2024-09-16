@@ -1,14 +1,14 @@
 #include "IGS_EscapeVanVehicle.h"
 #include "IGS_InteractiveComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "EIGS_VehicleSplineGroup.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_EscapeVanVehicle::AIGS_EscapeVanVehicle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).MiddleRightDoorInteractive = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("MiddleRightDoorInteractive"));
-    (*this).RearRightDoorInteractive = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("RearRightDoorInteractive"));
-    (*this).RearLeftDoorInteractive = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("RearLeftDoorInteractive"));
+    auto gen = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("MiddleRightDoorInteractive"));
+    auto gen2 = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("RearRightDoorInteractive"));
+    auto gen3 = CreateDefaultSubobject<UIGS_InteractiveComponent>(TEXT("RearLeftDoorInteractive"));
+    (*this).MiddleRightDoorInteractive = gen;
+    (*this).RearRightDoorInteractive = gen2;
+    (*this).RearLeftDoorInteractive = gen3;
 }
 
 void AIGS_EscapeVanVehicle::OnRep_IsRearDoorsOpened() {
@@ -43,10 +43,9 @@ void AIGS_EscapeVanVehicle::CloseDoors() {
 
 void AIGS_EscapeVanVehicle::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_EscapeVanVehicle, mR_bIsRearDoorsOpened);
     DOREPLIFETIME(AIGS_EscapeVanVehicle, mR_bIsMiddleDoorOpened);
     DOREPLIFETIME(AIGS_EscapeVanVehicle, mR_bIsPassDoorOpened);
 }
-
 

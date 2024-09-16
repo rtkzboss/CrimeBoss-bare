@@ -16,15 +16,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetPlanningBoardData(FGameplayTag inPlanningBoardID);
-    
+
     UFUNCTION(BlueprintPure)
     FGameplayTag GetPlanningBoardID() const;
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_BaseMission* GetMissionFromMapByPriority(TArray<FMETA_PlanningBoardMission> planningBoardItemMissions, UPARAM(Ref) TArray<UMETA_BaseMission*>& missionsOnMap) const;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FMETA_PlanningBoardRow PlanningBoardData;
-    
-};
 
+};

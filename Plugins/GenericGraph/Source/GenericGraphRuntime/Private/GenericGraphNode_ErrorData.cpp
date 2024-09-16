@@ -5,4 +5,3 @@ FGenericGraphNode_ErrorData::FGenericGraphNode_ErrorData() {
     (*this).Message = TEXT("");
     (*this).Node = nullptr;
 }
-

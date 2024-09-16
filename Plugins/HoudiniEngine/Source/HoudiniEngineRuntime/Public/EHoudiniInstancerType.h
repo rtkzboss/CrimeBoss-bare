@@ -11,4 +11,3 @@ enum class EHoudiniInstancerType : uint8 {
     OldSchoolAttributeInstancer,
     GeometryCollection,
 };
-

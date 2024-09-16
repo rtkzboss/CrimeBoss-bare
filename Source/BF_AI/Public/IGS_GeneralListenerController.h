@@ -15,6 +15,5 @@ public:
 protected:
     UFUNCTION()
     void OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus);
-    
-};
 
+};

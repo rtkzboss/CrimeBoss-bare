@@ -48,4 +48,3 @@ FFTIAnimationValueData::FFTIAnimationValueData() {
     (*this).noseSneerLeft = 0.000000000e+00f;
     (*this).noseSneerRight = 0.000000000e+00f;
 }
-

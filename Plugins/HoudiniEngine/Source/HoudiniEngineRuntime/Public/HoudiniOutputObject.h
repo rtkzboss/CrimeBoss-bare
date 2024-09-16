@@ -11,40 +11,39 @@ struct HOUDINIENGINERUNTIME_API FHoudiniOutputObject {
 public:
     UPROPERTY()
     UObject* OutputObject;
-    
+
     UPROPERTY()
     UObject* OutputComponent;
-    
+
     UPROPERTY()
     UObject* ProxyObject;
-    
+
     UPROPERTY()
     UObject* ProxyComponent;
-    
+
     UPROPERTY()
     bool bProxyIsCurrent;
-    
+
     UPROPERTY()
     bool bIsImplicit;
-    
+
     UPROPERTY()
     bool bIsGeometryCollectionPiece;
-    
+
     UPROPERTY()
     FString GeometryCollectionPieceName;
-    
+
     UPROPERTY()
     FString BakeName;
-    
+
     UPROPERTY()
     FHoudiniCurveOutputProperties CurveOutputProperty;
-    
+
     UPROPERTY()
     TMap<FString, FString> CachedAttributes;
-    
+
     UPROPERTY()
     TMap<FString, FString> CachedTokens;
-    
+
     FHoudiniOutputObject();
 };
-

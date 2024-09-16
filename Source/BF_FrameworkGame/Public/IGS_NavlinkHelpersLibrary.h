@@ -14,6 +14,5 @@ public:
 
     UFUNCTION()
     static bool IsLinkHeadingTo(UIGS_NavLinkComponentFramework* inNavLink, AIGS_RoomBase* inDestinationRoom);
-    
-};
 
+};

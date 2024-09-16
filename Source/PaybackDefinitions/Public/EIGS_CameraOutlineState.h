@@ -25,4 +25,3 @@ enum class EIGS_CameraOutlineState : uint8 {
     DynamicScopeMesh = 168,
     FirstPersonArms,
 };
-

@@ -10,4 +10,3 @@ public:
     AIGS_ConnectionPointExternal(const FObjectInitializer& ObjectInitializer);
 
 };
-

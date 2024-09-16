@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     float HighIntensityChance;
-    
+
     UPROPERTY(EditAnywhere)
     float LowIntensityChance;
-    
-};
 
+};

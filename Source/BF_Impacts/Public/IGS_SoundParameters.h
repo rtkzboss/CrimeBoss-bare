@@ -14,28 +14,27 @@ struct BF_IMPACTS_API FIGS_SoundParameters {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_FootstepSoundParameters FootstepParameters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_MeleeSoundParameters MeleeParameters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_HitSoundParameters HitParameters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
     TWeakObjectPtr<UAkComponent> CustomAkComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 PhysicalSurface;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsPlayer;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IgnoreOptimizations;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer PoolTags;
-    
+
     FIGS_SoundParameters();
 };
-

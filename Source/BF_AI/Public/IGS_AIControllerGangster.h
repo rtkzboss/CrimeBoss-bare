@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerGangster(const FObjectInitializer& ObjectInitializer);
 
 };
-

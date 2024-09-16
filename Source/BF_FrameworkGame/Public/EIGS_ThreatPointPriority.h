@@ -7,4 +7,3 @@ enum class EIGS_ThreatPointPriority : uint8 {
     TPP_Low,
     TPP_High,
 };
-

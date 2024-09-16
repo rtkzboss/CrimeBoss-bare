@@ -7,4 +7,3 @@ enum class EMETA_NeedValueType : uint8 {
     Integer,
     Tag,
 };
-

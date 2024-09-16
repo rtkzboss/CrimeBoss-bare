@@ -11,10 +11,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     bool IsCursorHovering() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bHovering;
-    
-};
 
+};

@@ -15,9 +15,8 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void TransferDataToMeta(const UObject* inWCO, FIGS_SharedMetaTransfer_Data inSharedData, FIGS_FPS2Meta_Data inFPSData);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void LoadFPSData(const UObject* inWCO, bool& bIsLoaded, FIGS_SharedMetaTransfer_Data& SharedData, FIGS_FPS2Meta_Data& FPSData);
-    
-};
 
+};

@@ -20,39 +20,38 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void StopHeisterDialogue(UObject* inWCO, FText inDialogueID);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void StopDialogueOnCharacter(UObject* inWCO, FText inDialogueID, AActor* inCharacter);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void StopAllDialogues(UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable)
     static FName GetLevelIDFromLineID(FName inLineID);
-    
+
     UFUNCTION(BlueprintCallable)
     static FName GetLevelID(FText inDialogueID);
-    
+
     UFUNCTION(BlueprintCallable)
     static EIGS_DialogueSpeaker GetDialogueSpeakerFromDialogueHolder(FIGS_DialogueGroupCharacterHolder inHolder);
-    
+
     UFUNCTION(BlueprintCallable)
     static FText GetDialogueID(const FString& inDialogueID);
-    
+
     UFUNCTION(BlueprintCallable)
     static FIGS_DialogueGroupCharacterHolder CreateUniCharacterHolder(EIGS_DialogueUniCharacter inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     static FIGS_DialogueGroupCharacterHolder CreateSwatCharacterHolder(EIGS_DialogueSwatCharacter inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     static FIGS_DialogueGroupCharacterHolder CreateHeisterCharacterHolder(EIGS_DialogueHeisterCharacter inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     static void ComputeMissionDialoguesVoices(FName inLevelName, FIGS_DialogueGroupCharacterHolder inCharacter, int32& outNoVoiceCount, int32& outTTSVoice, int32& outTrueVoice);
-    
+
     UFUNCTION(BlueprintCallable)
     static void ComputeMetaDialoguesVoices(FName inLevelName, EIGS_MetaDialogueCharacter inCharacter, int32& outNoVoiceCount, int32& outTTSVoice, int32& outTrueVoice);
-    
-};
 
+};

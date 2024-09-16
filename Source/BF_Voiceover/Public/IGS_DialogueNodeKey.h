@@ -9,4 +9,4 @@ public:
     FIGS_DialogueNodeKey();
 };
 FORCEINLINE uint32 GetTypeHash(const FIGS_DialogueNodeKey&) { return 0; }
-
+FORCEINLINE bool operator==(const FIGS_DialogueNodeKey&, const FIGS_DialogueNodeKey&) { return true; }

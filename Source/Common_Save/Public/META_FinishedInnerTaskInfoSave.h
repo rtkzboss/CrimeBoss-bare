@@ -9,10 +9,9 @@ struct COMMON_SAVE_API FMETA_FinishedInnerTaskInfoSave {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* TaskClass;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_TaskStativeInfo Info;
-    
+
     FMETA_FinishedInnerTaskInfoSave();
 };
-

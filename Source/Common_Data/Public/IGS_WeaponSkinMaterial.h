@@ -10,7 +10,6 @@ struct COMMON_DATA_API FIGS_WeaponSkinMaterial {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UMaterialInterface* TortillaMaterial;
-    
+
     FIGS_WeaponSkinMaterial();
 };
-

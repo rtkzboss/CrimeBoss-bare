@@ -16,16 +16,15 @@ public:
 
     UFUNCTION(BlueprintPure)
     UCoverPoint* GetCoverPoint() const;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_CoverPointComponent* CoverPointComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UIGS_CoverPointComponentsManager* CoverPointComponentsManager;
-    
+
 protected:
     UPROPERTY(VisibleInstanceOnly)
     TWeakObjectPtr<UIGS_AICommand> m_CurrentCommand;
-    
-};
 
+};

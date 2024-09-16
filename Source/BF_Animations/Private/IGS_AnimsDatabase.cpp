@@ -3,4 +3,3 @@
 UIGS_AnimsDatabase::UIGS_AnimsDatabase() {
 }
 
-

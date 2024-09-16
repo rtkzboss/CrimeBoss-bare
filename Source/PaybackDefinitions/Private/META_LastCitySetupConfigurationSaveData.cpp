@@ -2,6 +2,5 @@
 
 FMETA_LastCitySetupConfigurationSaveData::FMETA_LastCitySetupConfigurationSaveData() {
     (*this).LastPlayerTileGroupIndex = 0;
-    (*this).LastPlayerInitialTileGroup.Empty();
+    (*this).LastPlayerInitialTileGroup = {};
 }
-

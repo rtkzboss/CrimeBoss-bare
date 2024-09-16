@@ -11,13 +11,12 @@ struct BF_ANIMATIONS_API FIGS_SlideTransition_AnimGraphNode : public FAnimNode_S
 public:
     UPROPERTY(EditAnywhere)
     FBoneReference RootBone;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector SlidingDirection;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Angle;
-    
+
     FIGS_SlideTransition_AnimGraphNode();
 };
-

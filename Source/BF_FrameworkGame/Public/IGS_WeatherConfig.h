@@ -11,19 +11,18 @@ struct FIGS_WeatherConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_WeatherScenarioType WeatherScenario;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_WindScenarioType WindScenario;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_WindGeneralDirectionsType WindGeneralDirection;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float WeatherUpdateInterval;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 bDynamicWind: 1;
-    
+
     BF_FRAMEWORKGAME_API FIGS_WeatherConfig();
 };
-

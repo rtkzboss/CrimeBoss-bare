@@ -4,7 +4,6 @@ UIGS_WaitForPlayerStateFromPawn::UIGS_WaitForPlayerStateFromPawn() {
 }
 
 UIGS_WaitForPlayerStateFromPawn* UIGS_WaitForPlayerStateFromPawn::WaitForPlayerStateFromPawn(UObject* inWorldContextObject, AIGS_PlayerCharacter* inPlayer) {
-    return NULL;
+    return nullptr;
 }
-
 

@@ -2,4 +2,3 @@
 
 FIGS_PlayerEffectData::FIGS_PlayerEffectData() {
 }
-

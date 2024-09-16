@@ -6,4 +6,3 @@ FMETA_CampaignStatistic::FMETA_CampaignStatistic() {
     (*this).CareerCompletionReason = EMETA_CareerCompletionReason::NoTurfTiles;
     (*this).ScoreForCampaign = 0;
 }
-

@@ -7,10 +7,9 @@ void UIGS_GlobalPostProcessSubsystem::RemovePostProcessesFromCamera(UCameraCompo
 }
 
 UIGS_GlobalPostProcessSubsystem* UIGS_GlobalPostProcessSubsystem::Instance(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_GlobalPostProcessSubsystem::ApplyPostProcessesToCamera(UCameraComponent* inCamera, TArray<EIGS_PostProcessType> inPostProcessesTypes) {
 }
-
 

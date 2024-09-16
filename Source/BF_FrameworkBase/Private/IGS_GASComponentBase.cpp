@@ -1,11 +1,10 @@
 #include "IGS_GASComponentBase.h"
-#include "ComponentInstanceDataCache.h"
 #include "IGS_GASDefaultAttributesDataAsset.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_GASComponentBase::UIGS_GASComponentBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    static ConstructorHelpers::FObjectFinder<UIGS_GASDefaultAttributesDataAsset> gen0(TEXT("/Game/00_Main/GameplayAbilitySystem/Attributes/DA_DefaultCharacterAttributes.DA_DefaultCharacterAttributes"));
-    (*this).DefaultAttributesDataAsset = gen0.Object;
+    static ConstructorHelpers::FObjectFinder<UIGS_GASDefaultAttributesDataAsset> gen(TEXT("/Game/00_Main/GameplayAbilitySystem/Attributes/DA_DefaultCharacterAttributes.DA_DefaultCharacterAttributes"));
+    (*this).DefaultAttributesDataAsset = gen.Object;
 }
 
 void UIGS_GASComponentBase::TryCancelAbilityByClass(TSubclassOf<UGameplayAbility> InAbilityToActivate) {
@@ -26,15 +25,15 @@ FGameplayAbilitySpecHandle UIGS_GASComponentBase::GiveAbilityStatic(UAbilitySyst
 }
 
 TArray<TSubclassOf<UGameplayAbility>> UIGS_GASComponentBase::GetActivatableAbilitiesByTagBlueprint(FGameplayTagContainer inAbilityTags) const {
-    return TArray<TSubclassOf<UGameplayAbility>>();
+    return {};
 }
 
 TArray<TSubclassOf<UGameplayAbility>> UIGS_GASComponentBase::GetActivatableAbilitiesByClassBlueprint(TSubclassOf<UGameplayAbility> inAbilityClass) const {
-    return TArray<TSubclassOf<UGameplayAbility>>();
+    return {};
 }
 
 TArray<TSubclassOf<UGameplayAbility>> UIGS_GASComponentBase::GetActivatableAbilitiesBlueprint() const {
-    return TArray<TSubclassOf<UGameplayAbility>>();
+    return {};
 }
 
 void UIGS_GASComponentBase::DebugPrintStartingEffects() {
@@ -53,5 +52,4 @@ void UIGS_GASComponentBase::CancelAbilities(const FGameplayTagContainer inWithTa
 FActiveGameplayEffectHandle UIGS_GASComponentBase::ApplyEffectWithValue(UObject* inOwner, UAbilitySystemComponent* inAbilitySystemComponent, TSubclassOf<UGameplayEffect> inEffectClass, FGameplayTag inRuntimeValueTag, float inRuntimeValue) {
     return FActiveGameplayEffectHandle{};
 }
-
 

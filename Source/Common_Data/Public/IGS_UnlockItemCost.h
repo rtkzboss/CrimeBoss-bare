@@ -10,10 +10,9 @@ struct COMMON_DATA_API FIGS_UnlockItemCost {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BaseCategoryCostMultiplier;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_ItemQuality, FMETA_FloatInterval> QualityCostMultipliers;
-    
+
     FIGS_UnlockItemCost();
 };
-

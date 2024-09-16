@@ -6,4 +6,3 @@ UHoudiniParameterRampColor::UHoudiniParameterRampColor() {
     (*this).ParmType = EHoudiniParameterType::ColorRamp;
 }
 
-

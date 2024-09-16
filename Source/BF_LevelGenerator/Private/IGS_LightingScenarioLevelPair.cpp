@@ -2,4 +2,3 @@
 
 FIGS_LightingScenarioLevelPair::FIGS_LightingScenarioLevelPair() {
 }
-

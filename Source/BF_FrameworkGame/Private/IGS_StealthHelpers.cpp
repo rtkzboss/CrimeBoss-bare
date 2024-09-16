@@ -28,7 +28,7 @@ void UIGS_StealthHelpers::ReportSusOpenedEnd(AActor* inObject) {
 }
 
 AIGS_SuspicionEventActor* UIGS_StealthHelpers::ReportSusGlider(AActor* inGlider) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_StealthHelpers::ReportSubdue(AIGS_GameCharacterFramework* inInstigator, AIGS_GameCharacterFramework* inTarget) {
@@ -85,5 +85,4 @@ void UIGS_StealthHelpers::CreateBrokenEventsTwoSided(UObject* inWCO, FVector InL
 
 void UIGS_StealthHelpers::CreateBrokenEvents(UObject* inWCO, FVector InLocation, AActor* inInstigator, bool inIsImportant, float inLoudness) {
 }
-
 

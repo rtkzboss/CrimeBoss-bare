@@ -13,21 +13,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void SetXeSSQualityMode(EXeSSQualityMode QualityMode);
-    
+
     UFUNCTION(BlueprintPure)
     static bool IsXeSSSupported();
-    
+
     UFUNCTION(BlueprintCallable)
     static bool GetXeSSQualityModeInformation(EXeSSQualityMode QualityMode, float& ScreenPercentage);
-    
+
     UFUNCTION(BlueprintPure)
     static EXeSSQualityMode GetXeSSQualityMode();
-    
+
     UFUNCTION(BlueprintPure)
     static TArray<EXeSSQualityMode> GetSupportedXeSSQualityModes();
-    
+
     UFUNCTION(BlueprintPure)
     static EXeSSQualityMode GetDefaultXeSSQualityMode(FIntPoint ScreenResolution);
-    
-};
 
+};

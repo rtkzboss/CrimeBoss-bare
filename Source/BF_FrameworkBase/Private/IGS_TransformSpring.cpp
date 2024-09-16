@@ -1,5 +1,4 @@
 #include "IGS_TransformSpring.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_TransformSpring::UIGS_TransformSpring(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).FrameRate = 6.000000000e+01f;
@@ -11,5 +10,4 @@ void UIGS_TransformSpring::SetTarget(USceneComponent* inTargetComponent, TEnumAs
 
 void UIGS_TransformSpring::AddVelocity(const FVector& inVelocity) {
 }
-
 

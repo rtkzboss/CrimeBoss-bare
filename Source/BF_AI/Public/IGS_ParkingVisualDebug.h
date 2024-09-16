@@ -11,9 +11,8 @@ public:
 
     UFUNCTION()
     void CheckIfStillValid();
-    
+
     UPROPERTY(VisibleAnywhere)
     AActor* ParentDestination;
-    
-};
 
+};

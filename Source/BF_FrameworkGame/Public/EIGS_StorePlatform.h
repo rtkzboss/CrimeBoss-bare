@@ -10,4 +10,3 @@ enum class EIGS_StorePlatform : uint8 {
     PS5,
     Xbox,
 };
-

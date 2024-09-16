@@ -11,10 +11,9 @@ struct BF_AI_API FIGS_TrafficPathfidingResult {
 public:
     UPROPERTY(VisibleAnywhere)
     AIGS_VehicleSpawnerFramework* Spawner;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     TArray<UIGS_TrafficPathComponent*> Path;
-    
+
     FIGS_TrafficPathfidingResult();
 };
-

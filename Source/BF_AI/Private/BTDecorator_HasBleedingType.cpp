@@ -4,4 +4,3 @@ UBTDecorator_HasBleedingType::UBTDecorator_HasBleedingType() {
     (*this).NodeName = TEXT("Has Bleed Type");
 }
 
-

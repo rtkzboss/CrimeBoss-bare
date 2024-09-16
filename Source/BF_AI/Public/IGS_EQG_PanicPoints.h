@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EnvironmentQuery/EnvQueryContext.h"
 #include "EnvironmentQuery/EnvQueryGenerator.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_EQG_PanicPoints.generated.h"
-
-class UEnvQueryContext;
 
 UCLASS(EditInlineNew)
 class BF_AI_API UIGS_EQG_PanicPoints : public UEnvQueryGenerator {
@@ -15,6 +14,5 @@ public:
 private:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<UEnvQueryContext> Querier;
-    
-};
 
+};

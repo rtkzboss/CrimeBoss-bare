@@ -13,4 +13,3 @@ enum class EIGS_PickupType : uint8 {
     CarryableLoot,
     StaticMesh,
 };
-

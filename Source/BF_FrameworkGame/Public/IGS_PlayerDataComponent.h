@@ -11,12 +11,11 @@ public:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastEnemyHitTime;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastShootTime;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float LastInjuredTime;
-    
-};
 
+};

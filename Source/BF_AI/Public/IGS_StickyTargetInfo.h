@@ -8,4 +8,3 @@ struct FIGS_StickyTargetInfo {
 public:
     BF_AI_API FIGS_StickyTargetInfo();
 };
-

@@ -15,11 +15,10 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_NetworkComponentDialogue* NetworkDialogue;
-    
+
     UPROPERTY(Instanced)
     UAkComponent* AkComponent;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

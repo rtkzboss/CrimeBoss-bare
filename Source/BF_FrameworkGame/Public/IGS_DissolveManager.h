@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     int32 MaxBodiesCount;
-    
+
     UPROPERTY(EditAnywhere)
     float DissolveTime;
-    
-};
 
+};

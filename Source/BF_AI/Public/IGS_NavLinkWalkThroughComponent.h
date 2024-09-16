@@ -10,4 +10,3 @@ public:
     UIGS_NavLinkWalkThroughComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -3,4 +3,3 @@
 UTacticalPathfindingFilter_CheckSpawnerValidity::UTacticalPathfindingFilter_CheckSpawnerValidity() {
 }
 
-

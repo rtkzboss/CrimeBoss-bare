@@ -10,4 +10,3 @@ public:
     UIGS_SimpleReloader(const FObjectInitializer& ObjectInitializer);
 
 };
-

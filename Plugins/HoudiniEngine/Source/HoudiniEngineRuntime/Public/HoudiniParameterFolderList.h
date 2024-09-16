@@ -13,12 +13,11 @@ public:
 
     UPROPERTY()
     bool bIsTabMenu;
-    
+
     UPROPERTY()
     bool bIsTabsShown;
-    
+
     UPROPERTY(Instanced)
     TArray<UHoudiniParameterFolder*> TabFolders;
-    
-};
 
+};

@@ -9,4 +9,3 @@ enum class EIGS_SWATVariationType : uint8 {
     US_FPSMaxIndex = 128,
     US_Unknown = 255,
 };
-

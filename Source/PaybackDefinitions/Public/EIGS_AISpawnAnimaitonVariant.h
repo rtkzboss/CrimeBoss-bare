@@ -10,4 +10,3 @@ enum class EIGS_AISpawnAnimaitonVariant : uint8 {
     SP_Rope,
     SP_Ceiling,
 };
-

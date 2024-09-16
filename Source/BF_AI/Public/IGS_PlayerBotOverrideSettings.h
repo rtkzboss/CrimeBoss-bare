@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_PlayerBotOverrideSettings {
 public:
     UPROPERTY(EditAnywhere)
     EIGS_WieldableClass ForItemClass;
-    
+
     UPROPERTY(EditAnywhere)
     FIGS_PlayerBotSettings PlayerBotSettings;
-    
+
     FIGS_PlayerBotOverrideSettings();
 };
-

@@ -6,7 +6,8 @@ FIGS_BotOrderDatabaseTableRow::FIGS_BotOrderDatabaseTableRow() {
     (*this).Data.PathMustExist = true;
     (*this).Data.Stacks = false;
     (*this).Data.CancelOnObject = true;
+    (*this).Data.CannotBeInterruptedBy = {};
+    (*this).Data.AllowedSources = {};
     (*this).UI.IconCharacter = TEXT("");
-    (*this).UI.ActionName = FText::FromString(TEXT(""));
+    (*this).UI.ActionName = FText::GetEmpty();
 }
-

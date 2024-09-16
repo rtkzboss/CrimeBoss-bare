@@ -10,10 +10,9 @@ struct BF_AI_API FIGS_VehicleDatabaseData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_StaticVehicleBase> VehicleBlueprint;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float PickProbability;
-    
+
     FIGS_VehicleDatabaseData();
 };
-

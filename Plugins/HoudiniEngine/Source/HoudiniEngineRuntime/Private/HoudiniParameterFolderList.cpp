@@ -5,4 +5,3 @@ UHoudiniParameterFolderList::UHoudiniParameterFolderList() {
     (*this).ParmType = EHoudiniParameterType::FolderList;
 }
 
-

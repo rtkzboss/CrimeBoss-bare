@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBackupTiersDef : public FIGS_AIBaseTiersDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Tier1;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Tier2;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Tier3;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupSpecializationHolder Special;
-    
+
     FIGS_AIBackupTiersDef();
 };
-

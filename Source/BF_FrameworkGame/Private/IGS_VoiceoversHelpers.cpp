@@ -9,4 +9,3 @@ void UIGS_VoiceoversHelpers::ReportGrenadeThrown(AIGS_GameCharacterFramework* In
 void UIGS_VoiceoversHelpers::ReportGadgetDisrupted(AIGS_GameCharacterFramework* Instigator, AIGS_ProgressGadgetBase* inGadget, bool isDrill) {
 }
 
-

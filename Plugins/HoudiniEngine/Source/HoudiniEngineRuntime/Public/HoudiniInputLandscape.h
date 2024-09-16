@@ -12,9 +12,8 @@ public:
 
     UPROPERTY()
     FTransform CachedInputLandscapeTraqnsform;
-    
+
     UPROPERTY()
     int32 CachedNumLandscapeComponents;
-    
-};
 
+};

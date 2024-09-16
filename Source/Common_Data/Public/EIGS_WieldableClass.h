@@ -19,4 +19,3 @@ enum class EIGS_WieldableClass : uint8 {
     T_MAX UMETA(Hidden),
     T_UNKNOWN = 255,
 };
-

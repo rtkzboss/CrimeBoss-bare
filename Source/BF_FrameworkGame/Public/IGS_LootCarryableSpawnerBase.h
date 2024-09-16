@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IGS_CarryableLootSpawnedSignatureDelegate.h"
+#include "IGS_CarryableLootSpawnedSignature.h"
 #include "IGS_SpawnerBase.h"
 #include "IGS_LootCarryableSpawnerBase.generated.h"
 
@@ -17,21 +17,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void LootCarryableSpawned(AIGS_StaticMeshInventoryItemPickup* inPickup);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     USceneComponent* Scene;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UStaticMeshComponent* SpawnPlaceholder;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AActor* SpawnedActor;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TSoftClassPtr<AActor> ActorToSpawn;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_CarryableLootSpawnedSignature OnCarryableLootCollectionSpawned;
-    
-};
 
+};

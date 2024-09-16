@@ -10,7 +10,6 @@ struct COMMON_DATA_API FMETA_HeisterDataByTier {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<EMETA_ItemQuality, FMETA_HeisterEconomyData> QualityData;
-    
+
     FMETA_HeisterDataByTier();
 };
-

@@ -1,8 +1,8 @@
 #include "PlayerAnimationsDatabase.h"
 
 FPlayerAnimationsDatabase::FPlayerAnimationsDatabase() {
-    (*this).ID = nullptr;
-    (*this).AttackType.Empty();
+    (*this).ID = FSoftObjectPath();
+    (*this).AttackType = {};
     (*this).WeaponGripStand = nullptr;
     (*this).WeaponGripCrouch = nullptr;
     (*this).WeaponGripRun = nullptr;
@@ -68,11 +68,12 @@ FPlayerAnimationsDatabase::FPlayerAnimationsDatabase() {
     (*this).SlidingAnimations.Slide_Out_Crouch_Idle = nullptr;
     (*this).SlidingAnimations.Slide_Out_Idle = nullptr;
     (*this).SlidingAnimations.Slide_Out_Crouch_Walk = nullptr;
-    (*this).ModInfo.Empty();
+    (*this).ModInfo = {};
     (*this).LightHitReactions = nullptr;
     (*this).MediumHitReactions = nullptr;
     (*this).HeavyHitReactions = nullptr;
     (*this).AvoidanceAnimations = nullptr;
+    (*this).SpecialActions = {};
     (*this).SpecialAnimations.WalkieTalkieEquipMontage = nullptr;
     (*this).SpecialAnimations.HandsetEquipMontage = nullptr;
     (*this).SpecialAnimations.OpenDoorInteractionMontage = nullptr;
@@ -89,4 +90,3 @@ FPlayerAnimationsDatabase::FPlayerAnimationsDatabase() {
     (*this).LeftHandIKAlpha = 0.000000000e+00f;
     (*this).RightHandIKAlpha = 0.000000000e+00f;
 }
-

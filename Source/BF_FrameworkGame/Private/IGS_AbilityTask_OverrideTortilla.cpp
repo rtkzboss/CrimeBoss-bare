@@ -1,5 +1,4 @@
 #include "IGS_AbilityTask_OverrideTortilla.h"
-#include "GameplayTask.h"
 
 UIGS_AbilityTask_OverrideTortilla::UIGS_AbilityTask_OverrideTortilla() {
     (*this).OverrideFOV = true;
@@ -8,7 +7,6 @@ UIGS_AbilityTask_OverrideTortilla::UIGS_AbilityTask_OverrideTortilla() {
 }
 
 UIGS_AbilityTask_OverrideTortilla* UIGS_AbilityTask_OverrideTortilla::CreateOverrideTortillaProxy(UGameplayAbility* inOwningAbility, FName inTaskInstanceName, bool inTortillaEnabled, bool inOverrideFOV, float inOverridenFOVValue, float inInterpSpeed) {
-    return NULL;
+    return nullptr;
 }
-
 

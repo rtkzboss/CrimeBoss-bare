@@ -13,19 +13,18 @@ struct BF_FRAMEWORKBASE_API FIGS_HealInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AController> Instigator;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<APawn> InstigatorPawn;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AActor> SourceActor;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AActor> TargetActor;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_DamageEventType DamageEventType;
-    
+
     FIGS_HealInfo();
 };
-

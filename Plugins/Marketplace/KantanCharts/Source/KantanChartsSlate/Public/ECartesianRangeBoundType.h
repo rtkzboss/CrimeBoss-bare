@@ -8,4 +8,3 @@ enum class ECartesianRangeBoundType : uint8 {
     FitToData,
     FitToDataRounded,
 };
-

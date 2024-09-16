@@ -10,10 +10,9 @@ struct FIGS_DangerHolder {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AActor> Danger;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float Timestamp;
-    
+
     BF_AI_API FIGS_DangerHolder();
 };
-

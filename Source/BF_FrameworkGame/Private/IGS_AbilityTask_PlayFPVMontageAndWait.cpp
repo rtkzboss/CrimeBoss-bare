@@ -1,5 +1,4 @@
 #include "IGS_AbilityTask_PlayFPVMontageAndWait.h"
-#include "GameplayTask.h"
 
 UIGS_AbilityTask_PlayFPVMontageAndWait::UIGS_AbilityTask_PlayFPVMontageAndWait() {
     (*this).Rate = 1.000000000e+00f;
@@ -16,7 +15,6 @@ void UIGS_AbilityTask_PlayFPVMontageAndWait::OnMontageBlendingOut(UAnimMontage* 
 }
 
 UIGS_AbilityTask_PlayFPVMontageAndWait* UIGS_AbilityTask_PlayFPVMontageAndWait::CreatePlayMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* MontageToPlay, float Rate, FName StartSection, bool bStopWhenAbilityEnds, float StartTimeSeconds) {
-    return NULL;
+    return nullptr;
 }
-
 

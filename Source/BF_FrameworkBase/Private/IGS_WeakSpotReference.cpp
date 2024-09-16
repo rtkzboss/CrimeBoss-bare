@@ -3,4 +3,3 @@
 FIGS_WeakSpotReference::FIGS_WeakSpotReference() {
     (*this).WeakSpotObjectStatus = nullptr;
 }
-

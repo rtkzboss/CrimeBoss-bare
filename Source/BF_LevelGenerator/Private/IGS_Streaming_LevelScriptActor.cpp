@@ -1,6 +1,4 @@
 #include "IGS_Streaming_LevelScriptActor.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 
 AIGS_Streaming_LevelScriptActor::AIGS_Streaming_LevelScriptActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bRegenerateRoomNavmesh = true;
@@ -9,5 +7,4 @@ AIGS_Streaming_LevelScriptActor::AIGS_Streaming_LevelScriptActor(const FObjectIn
 
 void AIGS_Streaming_LevelScriptActor::LevelGenerationFinished() const {
 }
-
 

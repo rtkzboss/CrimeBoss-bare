@@ -9,10 +9,9 @@ struct FPropActorInfoStruct {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PivotVariationMax;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FActorInfoStruct> ActorsToSpawn;
-    
+
     PAYBACK_API FPropActorInfoStruct();
 };
-

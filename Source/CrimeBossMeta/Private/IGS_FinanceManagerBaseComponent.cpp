@@ -1,5 +1,4 @@
 #include "IGS_FinanceManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_FinanceManagerBaseComponent::UIGS_FinanceManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -36,7 +35,7 @@ int32 UIGS_FinanceManagerBaseComponent::GetSoldiersCostForAttack_Implementation(
 }
 
 TArray<FMETA_Loan> UIGS_FinanceManagerBaseComponent::GetProvidedLoans_Implementation() {
-    return TArray<FMETA_Loan>();
+    return {};
 }
 
 int32 UIGS_FinanceManagerBaseComponent::GetMissionIncome_Implementation() {
@@ -48,11 +47,11 @@ int32 UIGS_FinanceManagerBaseComponent::GetMarketSpending_Implementation() {
 }
 
 TMap<FGameplayTag, int32> UIGS_FinanceManagerBaseComponent::GetLootNextDay_Implementation() {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 TMap<FGameplayTag, int32> UIGS_FinanceManagerBaseComponent::GetLootDailyBalance_Implementation() {
-    return TMap<FGameplayTag, int32>();
+    return {};
 }
 
 int32 UIGS_FinanceManagerBaseComponent::GetIncome_Implementation() {
@@ -113,5 +112,4 @@ bool UIGS_FinanceManagerBaseComponent::CanBuyItem(int32 inPrice) {
 bool UIGS_FinanceManagerBaseComponent::ActivateLoan_Implementation(FMETA_Loan inLoan) {
     return false;
 }
-
 

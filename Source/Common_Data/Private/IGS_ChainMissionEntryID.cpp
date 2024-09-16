@@ -3,4 +3,3 @@
 UIGS_ChainMissionEntryID::UIGS_ChainMissionEntryID() {
 }
 
-

@@ -11,7 +11,6 @@ struct FIGS_PostProcessEffect {
 public:
     UPROPERTY(Transient)
     TScriptInterface<IBlendableInterface> PostProcessMaterial;
-    
+
     BF_RENDERING_API FIGS_PostProcessEffect();
 };
-

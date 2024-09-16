@@ -13,34 +13,33 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsActive;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float Radius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsLocked;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShowDebug;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShowShootingRange;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShowSideSteps;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShowSideStepsOnly;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShowAngles;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShowStanding;
-    
+
 private:
     UPROPERTY(Instanced)
     UBillboardComponent* SpriteComponent;
-    
-};
 
+};

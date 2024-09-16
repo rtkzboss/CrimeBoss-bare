@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TWeakObjectPtr<AActor> Actor;
-    
-};
 
+};

@@ -8,4 +8,3 @@ enum class EIGS_RotationType : uint8 {
     Full360,
     Frozen,
 };
-

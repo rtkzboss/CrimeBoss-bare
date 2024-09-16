@@ -8,4 +8,3 @@ struct POWERIKRUNTIME_API FPowerIKCore {
 public:
     FPowerIKCore();
 };
-

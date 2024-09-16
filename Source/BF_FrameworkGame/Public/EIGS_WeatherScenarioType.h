@@ -11,4 +11,3 @@ enum class EIGS_WeatherScenarioType : uint8 {
     Weather_MediumRain,
     Weather_HeavyRain,
 };
-

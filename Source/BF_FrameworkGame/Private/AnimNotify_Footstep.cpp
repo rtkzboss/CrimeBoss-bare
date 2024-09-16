@@ -6,4 +6,3 @@ UAnimNotify_Footstep::UAnimNotify_Footstep() {
     (*this).ApplyOwnerScale = true;
 }
 
-

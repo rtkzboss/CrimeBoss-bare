@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "PlayerStateReadyOutputPinDelegate.h"
+#include "PlayerStateReadyOutputPin.h"
 #include "IGS_WaitForPlayerState.generated.h"
 
-class UIGS_WaitForPlayerState;
 class UObject;
 
 UCLASS()
@@ -15,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWorldContextObject))
     static UIGS_WaitForPlayerState* WaitForPlayerState(UObject* inWorldContextObject);
-    
+
     UPROPERTY(BlueprintAssignable)
     FPlayerStateReadyOutputPin WhenPlayerStateReady;
-    
-};
 
+};

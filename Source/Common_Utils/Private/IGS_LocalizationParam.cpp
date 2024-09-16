@@ -2,6 +2,5 @@
 
 FIGS_LocalizationParam::FIGS_LocalizationParam() {
     (*this).Name = TEXT("");
-    (*this).Value = FText::FromString(TEXT(""));
+    (*this).Value = FText::GetEmpty();
 }
-

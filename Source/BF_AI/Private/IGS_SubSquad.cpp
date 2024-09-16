@@ -6,4 +6,3 @@ FIGS_SubSquad::FIGS_SubSquad() {
     (*this).Backup = nullptr;
     (*this).BackUpCommand = nullptr;
 }
-

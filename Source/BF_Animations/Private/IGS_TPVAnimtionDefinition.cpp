@@ -19,4 +19,3 @@ FIGS_TPVAnimtionDefinition::FIGS_TPVAnimtionDefinition() {
     (*this).ShooterChangeMontage = nullptr;
     (*this).AttackPlayRate = 1.000000000e+00f;
 }
-

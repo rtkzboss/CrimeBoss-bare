@@ -10,4 +10,3 @@ public:
     UHoudiniInstancedActorComponent_V1(const FObjectInitializer& ObjectInitializer);
 
 };
-

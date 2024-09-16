@@ -20,38 +20,38 @@ bool UMETA_CharacterPerksHandling::HasAlwaysLoyalTrait(UMETA_Character* inCharac
 }
 
 float UMETA_CharacterPerksHandling::GetPriceCoefficientOfHealingAction(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UMETA_CharacterPerksHandling::GetPerkStats(const UObject* inWCO, const FGameplayTag inPerkID, bool& outSuccess, TMap<FGameplayAttribute, float>& outStats) {
 }
 
 float UMETA_CharacterPerksHandling::GetPercentageOfMissionPlaningCost(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetPercentageOfExtraCashAfterSellingLootFromStashAndTrades(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetPercentageOfBonusExtraLootFromMission(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetMultiplierForUpkeepCost(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetMultiplierForRecruitmentCost(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetMultiplierForChanceOfAmbush(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetMultiplierCostUpgrade(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_CharacterPerksHandling::GetMinAmountOfPowerfulPerksAndNoNegative(UMETA_Character* inCharacter) {
@@ -67,15 +67,15 @@ int32 UMETA_CharacterPerksHandling::GetHeisterAdditionallyCanBeUsedTimesInDay(UM
 }
 
 float UMETA_CharacterPerksHandling::GetHeatAfterMissionMultiplier(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetHealsExtraChunksPerDay(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetHealingMultiplier(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FText UMETA_CharacterPerksHandling::GetFormattedPerkDescription(const UObject* inWCO, const FGameplayTag inPerkID, const bool inEnableRichText, const FString& inOverrideStyle) {
@@ -83,7 +83,7 @@ FText UMETA_CharacterPerksHandling::GetFormattedPerkDescription(const UObject* i
 }
 
 float UMETA_CharacterPerksHandling::GetExtraMoneyInPercentsAfterMission(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_CharacterPerksHandling::GetConvertsAmountFromDeathToRestingAfterFps(UMETA_Character* inCharacter) {
@@ -94,22 +94,22 @@ void UMETA_CharacterPerksHandling::GetCombinedPerkStats(const UObject* inWCO, co
 }
 
 float UMETA_CharacterPerksHandling::GetChanceToStartMissionWith1LessWantedStart(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UMETA_CharacterPerksHandling::GetChancesForEventsAfterUsedConvertsFromDeathToResting(UMETA_Character* inCharacter, int32& outSurvivalEventChance, int32& outSelfReturnEventChance) {
 }
 
 float UMETA_CharacterPerksHandling::GetChanceIgnoreChuckOfInjureAfterFPS(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetAdditionalPercentangeTWDefensesCost(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UMETA_CharacterPerksHandling::GetAdditionalPercentangeTWAttacksCost(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_CharacterPerksHandling::GetAdditionalPercentageOfMissionCut(UMETA_Character* inCharacter) {
@@ -117,7 +117,7 @@ int32 UMETA_CharacterPerksHandling::GetAdditionalPercentageOfMissionCut(UMETA_Ch
 }
 
 float UMETA_CharacterPerksHandling::GetAdditionalPercentageBossLevelUP(UMETA_Character* inCharacter) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UMETA_CharacterPerksHandling::GetAdditionalAmountOfMissionToUpgrade(UMETA_Character* inCharacter) {
@@ -139,5 +139,4 @@ bool UMETA_CharacterPerksHandling::DoesMultiplierForRecruitmentCostInfluenceOnWe
 bool UMETA_CharacterPerksHandling::CannotGetLoyalyTrait(UMETA_Character* inCharacter) {
     return false;
 }
-
 

@@ -8,4 +8,3 @@ enum class EMETA_LootPurpose : uint8 {
     Spent,
     Sold,
 };
-

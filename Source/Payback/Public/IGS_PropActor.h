@@ -10,4 +10,3 @@ public:
     AIGS_PropActor(const FObjectInitializer& ObjectInitializer);
 
 };
-

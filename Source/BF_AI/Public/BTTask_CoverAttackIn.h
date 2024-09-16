@@ -14,15 +14,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_CoverAttackType CoverAttackType;
-    
+
     UPROPERTY(EditAnywhere)
     float DurationMin;
-    
+
     UPROPERTY(EditAnywhere)
     float DurationMax;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TagretLastSeenPosition;
-    
-};
 
+};

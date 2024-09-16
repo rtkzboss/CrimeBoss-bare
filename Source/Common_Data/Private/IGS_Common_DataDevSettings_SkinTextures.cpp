@@ -9,4 +9,3 @@ UIGS_Common_DataDevSettings_SkinTextures::UIGS_Common_DataDevSettings_SkinTextur
     (*this).Scratches_BreakupMask = FSoftObjectPath(TEXT("/Game/00_Main/MaterialLibrary/Utilities/T_Default_LC.T_Default_LC"), TEXT(""));
 }
 
-

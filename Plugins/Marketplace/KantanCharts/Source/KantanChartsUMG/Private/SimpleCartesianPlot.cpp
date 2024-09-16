@@ -1,8 +1,4 @@
 #include "SimpleCartesianPlot.h"
-#include "EKantanDataPointSize.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
 
 USimpleCartesianPlot::USimpleCartesianPlot() {
 }
@@ -21,5 +17,4 @@ void USimpleCartesianPlot::BP_AddSeries(FName& SeriesId, FText Name, bool bEnabl
 
 void USimpleCartesianPlot::BP_AddDatapoint(FName SeriesId, const FVector2D& Point, bool& bSuccess) {
 }
-
 

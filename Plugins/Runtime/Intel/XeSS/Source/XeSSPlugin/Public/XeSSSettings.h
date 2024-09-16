@@ -11,9 +11,8 @@ public:
 
     UPROPERTY(Config, EditAnywhere)
     bool bEnableXeSSInEditorViewports;
-    
+
     UPROPERTY(Config, EditAnywhere)
     FString DebugDataDumpPath;
-    
-};
 
+};

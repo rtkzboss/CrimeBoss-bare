@@ -1,11 +1,12 @@
 #include "IGS_SuspicionManager.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_SuspicionManager::UIGS_SuspicionManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).AlarmReason = EIGS_AlarmReason::Alarm_UNKNOWN;
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.TickInterval = 2.000000000e+00f;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 bool UIGS_SuspicionManager::WouldStrikeCauseAlarm(int32 inStrikeCount) const {
@@ -42,11 +43,11 @@ bool UIGS_SuspicionManager::IsLastStrike() const {
 }
 
 UIGS_SuspicionManager* UIGS_SuspicionManager::GetSuspicionManager(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 float UIGS_SuspicionManager::GetHQSuspicion() {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_SuspicionManager::CanShowHeistHint(const bool inCanShow) {
@@ -54,11 +55,10 @@ void UIGS_SuspicionManager::CanShowHeistHint(const bool inCanShow) {
 
 void UIGS_SuspicionManager::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_SuspicionManager, CurrentStrikes);
     DOREPLIFETIME(UIGS_SuspicionManager, BlameTag);
     DOREPLIFETIME(UIGS_SuspicionManager, AlarmReason);
     DOREPLIFETIME(UIGS_SuspicionManager, IsAlarmed);
 }
-
 

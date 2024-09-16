@@ -5,12 +5,13 @@ public class PaybackDefinitions : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "AkAudio",
             "CommonUI",
             "Core",
             "CoreUObject",
+            "DataRegistry",
             "DeveloperSettings",
             "Engine",
             "GameplayAbilities",

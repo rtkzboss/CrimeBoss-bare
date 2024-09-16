@@ -1,5 +1,4 @@
 #include "IGS_FAnimNode_BoneSpring.h"
-#include "Animation/InputScaleBias.h"
 
 FIGS_FAnimNode_BoneSpring::FIGS_FAnimNode_BoneSpring() {
     (*this).SpringBone.BoneName = NAME_None;
@@ -16,4 +15,3 @@ FIGS_FAnimNode_BoneSpring::FIGS_FAnimNode_BoneSpring() {
     (*this).bRotateY = false;
     (*this).bRotateZ = false;
 }
-

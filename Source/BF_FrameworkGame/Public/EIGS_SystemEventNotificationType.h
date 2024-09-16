@@ -8,4 +8,3 @@ enum class EIGS_SystemEventNotificationType : uint8 {
     WaveManager = 0,
     SuspicionManager,
 };
-

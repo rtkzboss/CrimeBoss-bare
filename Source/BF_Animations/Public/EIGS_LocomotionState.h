@@ -14,4 +14,3 @@ enum class EIGS_LocomotionState : uint8 {
     BT_ContinuousTurnStart,
     BT_ContinuousTurnStop,
 };
-

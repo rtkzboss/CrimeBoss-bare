@@ -14,15 +14,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UpdateSkeletalMeshAsync(bool bNeverSkipUpdate);
-    
+
     UPROPERTY(Transient)
     float SkippedLastRenderTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UCustomizableObjectInstance* CustomizableObjectInstance;
-    
+
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
     FLightingChannels LightingChannels;
-    
-};
 
+};

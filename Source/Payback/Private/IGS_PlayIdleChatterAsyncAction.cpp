@@ -4,7 +4,6 @@ UIGS_PlayIdleChatterAsyncAction::UIGS_PlayIdleChatterAsyncAction() {
 }
 
 UIGS_PlayIdleChatterAsyncAction* UIGS_PlayIdleChatterAsyncAction::PlayIdleChatterAsyncAction(TArray<AIGS_GameCharacterFramework*> inCharacters) {
-    return NULL;
+    return nullptr;
 }
-
 

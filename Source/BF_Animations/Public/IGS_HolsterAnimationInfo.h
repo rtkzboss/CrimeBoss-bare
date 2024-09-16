@@ -8,7 +8,6 @@ struct FIGS_HolsterAnimationInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentHolster;
-    
+
     BF_ANIMATIONS_API FIGS_HolsterAnimationInfo();
 };
-

@@ -15,17 +15,16 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void ShowSecurityChanged(EIGS_RoomSecurityType inType);
-    
+
 protected:
     UFUNCTION()
     void OnSecurityTierChanged(EIGS_RoomSecurityType inType);
-    
+
 public:
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerCharacter* PlayerPawn;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerControllerRoot* PlayerController;
-    
-};
 
+};

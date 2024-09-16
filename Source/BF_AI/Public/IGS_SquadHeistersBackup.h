@@ -10,4 +10,3 @@ public:
     AIGS_SquadHeistersBackup(const FObjectInitializer& ObjectInitializer);
 
 };
-

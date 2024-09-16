@@ -1,6 +1,4 @@
 #include "IGS_ProjectileBase.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Templates/SubclassOf.h"
 
 AIGS_ProjectileBase::AIGS_ProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -35,15 +33,15 @@ void AIGS_ProjectileBase::MakeImpactNoiseAndEvent(FVector inNoiseLocation) {
 }
 
 float AIGS_ProjectileBase::GetDamageForRange(float inDistance) const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 AActor* AIGS_ProjectileBase::GetCharacterOwner() const {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_GameCharacterFramework* AIGS_ProjectileBase::GetCharacterInstigator() const {
-    return NULL;
+    return nullptr;
 }
 
 void AIGS_ProjectileBase::CreateEffect(AIGS_GameCharacterFramework* inInstigatorCharacter, TSubclassOf<UDamageType> inDamageType, TSubclassOf<UIGS_ImpactTypeObject> inImpactType, const FHitResult inHitResult) {
@@ -53,7 +51,6 @@ void AIGS_ProjectileBase::ApplyDebuffs(AActor* inDamagedActor, float inDistance)
 }
 
 float AIGS_ProjectileBase::ApplyDamage(float inDistance, const FHitResult& inHitInfo) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
-
 

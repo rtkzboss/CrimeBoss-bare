@@ -10,16 +10,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterHeavyTierData : public FIGS_AIBaseHea
 public:
     UPROPERTY(EditAnywhere)
     float WeakspotExplosionDamage;
-    
+
     UPROPERTY(EditAnywhere)
     float InitialSpreadMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     float SpreadDuration;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval TimeTillOverheat;
-    
+
     FIGS_AIGangsterHeavyTierData();
 };
-

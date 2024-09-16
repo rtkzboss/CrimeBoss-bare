@@ -10,13 +10,12 @@ struct COMMON_DATA_API FMETA_AllowedWeaponsInfo {
 public:
     UPROPERTY(EditDefaultsOnly)
     int32 MaxNumberOfWeapons;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<FGameplayTag, int32> WeaponClassChance;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_ItemQuality, int32> WeaponQualityChance;
-    
+
     FMETA_AllowedWeaponsInfo();
 };
-

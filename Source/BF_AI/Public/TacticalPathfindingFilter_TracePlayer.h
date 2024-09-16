@@ -10,4 +10,3 @@ public:
     UTacticalPathfindingFilter_TracePlayer();
 
 };
-

@@ -4,4 +4,3 @@ FIGS_AnimationWidgetData::FIGS_AnimationWidgetData() {
     (*this).AnimatedWidget = nullptr;
     (*this).PayloadData = nullptr;
 }
-

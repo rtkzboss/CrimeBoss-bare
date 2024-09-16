@@ -14,4 +14,3 @@ enum class EIGS_LevelTransitionType : uint8 {
     LT_StarterMap,
     LT_MultiplayerMenu,
 };
-

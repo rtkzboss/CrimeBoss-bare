@@ -16,9 +16,8 @@ public:
 protected:
     UFUNCTION()
     void OnComponentEndOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inPrimitiveComponent1, int32 ini);
-    
+
     UFUNCTION()
     void OnComponentBeginOverlap(UPrimitiveComponent* inPrimitiveComponent, AActor* inOther, UPrimitiveComponent* inPrimitiveComponent1, int32 ini, bool inArg, const FHitResult& inHitResult);
-    
-};
 
+};

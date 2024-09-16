@@ -3,4 +3,3 @@
 UIGS_DownStateDatabase::UIGS_DownStateDatabase() {
 }
 
-

@@ -11,19 +11,18 @@ struct FIGS_UnlockProperties {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool IsUnlockable;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer RequiredTags;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RequiredValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool ShowIfNotOwned;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UTexture2D> UnlockCoverImage;
-    
+
     COMMON_DATA_API FIGS_UnlockProperties();
 };
-

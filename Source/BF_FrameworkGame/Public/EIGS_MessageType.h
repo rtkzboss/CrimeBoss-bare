@@ -8,4 +8,3 @@ enum class EIGS_MessageType : uint8 {
     Message_Whisper,
     Message_System,
 };
-

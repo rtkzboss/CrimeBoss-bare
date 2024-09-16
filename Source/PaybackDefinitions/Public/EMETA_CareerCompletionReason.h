@@ -19,4 +19,3 @@ enum class EMETA_CareerCompletionReason : uint8 {
     CampaignModeFail,
     PlayerSurrendered,
 };
-

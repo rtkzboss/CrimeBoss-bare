@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     EMETA_GoalStatus Result;
-    
+
     UPROPERTY(VisibleDefaultsOnly)
     bool bShouldWaitUntilAllInnerGraphsBeFinished;
-    
-};
 
+};

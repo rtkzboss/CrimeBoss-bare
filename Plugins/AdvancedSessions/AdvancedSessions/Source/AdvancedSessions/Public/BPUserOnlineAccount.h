@@ -8,4 +8,3 @@ struct FBPUserOnlineAccount {
 public:
     ADVANCEDSESSIONS_API FBPUserOnlineAccount();
 };
-

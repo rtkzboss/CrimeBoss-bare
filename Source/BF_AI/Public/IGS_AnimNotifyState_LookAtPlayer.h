@@ -13,6 +13,5 @@ public:
 
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_Players;
-    
-};
 
+};

@@ -13,4 +13,3 @@ FBPFriendInfo::FBPFriendInfo() {
     (*this).PresenceInfo.PresenceState = EBPOnlinePresenceState::Offline;
     (*this).PresenceInfo.StatusString = TEXT("");
 }
-

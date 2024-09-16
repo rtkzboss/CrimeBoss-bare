@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void TransferDataToFPS(const UObject* inWCO, FIGS_SharedMetaTransfer_Data inSharedData, FIGS_Meta2FPS_Data inQuickplayData);
-    
-};
 
+};

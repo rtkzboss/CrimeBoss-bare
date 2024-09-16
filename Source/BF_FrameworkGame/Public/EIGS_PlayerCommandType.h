@@ -23,4 +23,3 @@ enum class EIGS_PlayerCommandType : uint8 {
     Command_DeliverLoot,
     Command_DeliverLootAll,
 };
-

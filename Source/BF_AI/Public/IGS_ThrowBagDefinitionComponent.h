@@ -17,34 +17,33 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void RequestThrowStart(AIGS_GameCharacterFramework* inCharacter, bool inPlayerThrown);
-    
+
     UFUNCTION(BlueprintCallable)
     void RequestThrowEnd(AIGS_GameCharacterFramework* inCharacter);
-    
+
     UFUNCTION(BlueprintCallable)
     void AllowThrowingBags(bool InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     UIGS_ThrowBagSlot* AddSlotFromSocket(USkeletalMeshComponent* inSkeletalMeshComponent, FName InSocketName);
-    
+
     UFUNCTION(BlueprintCallable)
     UIGS_ThrowBagSlot* AddSlotFromSceneComponent(USceneComponent* inSceneComponent);
-    
+
 protected:
     UPROPERTY()
     TArray<UIGS_ThrowBagSlot*> m_Slots;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_CloseCharacters;
-    
+
     UPROPERTY()
     TArray<AIGS_GameCharacterFramework*> m_PlayerFollowCharacters;
-    
+
     UPROPERTY()
     TArray<FIGS_CharacterThrowRequest> m_TmpCharacterRequests;
-    
+
     UPROPERTY()
     bool m_IsThrowingAllowed;
-    
-};
 
+};

@@ -9,13 +9,12 @@ struct BF_FRAMEWORKGAME_API FIGS_PlayerCountThrowableCooldownModifierDef {
 public:
     UPROPERTY(EditDefaultsOnly)
     FIGS_ThrowableCooldownModifierDef TwoPlayers;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_ThrowableCooldownModifierDef ThreePlayers;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_ThrowableCooldownModifierDef FourPlayers;
-    
+
     FIGS_PlayerCountThrowableCooldownModifierDef();
 };
-

@@ -10,4 +10,3 @@ public:
     UIGS_VisbilityComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

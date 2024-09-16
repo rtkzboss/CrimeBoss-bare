@@ -2,6 +2,5 @@
 
 FIGS_PatchNotesDefinition::FIGS_PatchNotesDefinition() {
     (*this).GameVersion = TEXT("");
-    (*this).Text = FText::FromString(TEXT(""));
+    (*this).Text = FText::GetEmpty();
 }
-

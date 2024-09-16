@@ -10,12 +10,11 @@ struct BF_ANIMATIONS_API FIGS_ThirdpersonHolsterAnimation {
 public:
     UPROPERTY()
     FIGS_TPP_EquipAnimationData EqipAnimationData;
-    
+
 protected:
     UPROPERTY()
     FIGS_TPP_Holster_MontageHolder m_ThirdpersonHolsterMontageHolder;
-    
+
 public:
     FIGS_ThirdpersonHolsterAnimation();
 };
-

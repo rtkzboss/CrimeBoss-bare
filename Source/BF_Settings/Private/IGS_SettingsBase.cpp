@@ -3,4 +3,3 @@
 UIGS_SettingsBase::UIGS_SettingsBase() {
 }
 
-

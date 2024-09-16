@@ -18,36 +18,35 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_HeistersSourceEvent HeistersSource;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag EventTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Index;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_HeisterActionScope ActionScope;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AmountOfHeisters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_CharacterID CharacterID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ConditionExprOperator ConditionOperator;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxAmountOfSortedHeisters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IncludeBoss;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IncludeDead;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TArray<UMETA_BaseHeisterCondition*> SortingConditions;
-    
-};
 
+};

@@ -15,6 +15,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FStashLootDefinitionRow GetLootData(UObject* inWCO, const FGameplayTag inLoot, bool& outSucceeded);
-    
-};
 
+};

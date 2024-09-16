@@ -10,4 +10,3 @@ public:
     APaybackGameSession(const FObjectInitializer& ObjectInitializer);
 
 };
-

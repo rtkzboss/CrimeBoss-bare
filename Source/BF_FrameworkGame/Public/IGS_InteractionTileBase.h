@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ChildActorComponent.h"
-#include "IGS_OnTileSuccessDelegate.h"
+#include "IGS_OnTileSuccess.h"
 #include "IGS_InteractionTileBase.generated.h"
 
 class AIGS_InteractionSubTileActor;
@@ -14,13 +14,12 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_OnTileSuccess OnTileSuccessEvent;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnTileSuccess OnTileActivatedEvent;
-    
+
 protected:
     UPROPERTY()
     AIGS_InteractionSubTileActor* m_SubTileActor;
-    
-};
 
+};

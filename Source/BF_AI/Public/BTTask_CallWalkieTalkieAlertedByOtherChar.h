@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector OffenceDataKey;
-    
+
     UPROPERTY(Instanced)
     UIGS_AISuspiciousnessComponentBase* m_SusComp;
-    
-};
 
+};

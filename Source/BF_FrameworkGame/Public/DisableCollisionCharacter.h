@@ -8,4 +8,3 @@ struct FDisableCollisionCharacter {
 public:
     BF_FRAMEWORKGAME_API FDisableCollisionCharacter();
 };
-

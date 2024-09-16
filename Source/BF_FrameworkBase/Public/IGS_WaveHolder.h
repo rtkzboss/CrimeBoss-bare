@@ -9,13 +9,12 @@ struct FIGS_WaveHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Amount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Random;
-    
+
     BF_FRAMEWORKBASE_API FIGS_WaveHolder();
 };
-

@@ -8,4 +8,3 @@ enum class EIGS_Event : uint8 {
     DrugDeal,
     RedLady,
 };
-

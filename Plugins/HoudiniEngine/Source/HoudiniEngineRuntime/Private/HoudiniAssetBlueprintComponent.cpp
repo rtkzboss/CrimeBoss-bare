@@ -1,11 +1,6 @@
 #include "HoudiniAssetBlueprintComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Engine/EngineTypes.h"
-#include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
 #include "EHoudiniAssetState.h"
-#include "EHoudiniAssetStateResult.h"
-#include "EHoudiniStaticMeshMethod.h"
 
 UHoudiniAssetBlueprintComponent::UHoudiniAssetBlueprintComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bOverrideGlobalProxyStaticMeshSettings = true;
@@ -25,5 +20,4 @@ void UHoudiniAssetBlueprintComponent::SetFloatParameter(const FString& Name, flo
 bool UHoudiniAssetBlueprintComponent::HasParameter(const FString& Name) {
     return false;
 }
-
 

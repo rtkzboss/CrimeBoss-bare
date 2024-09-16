@@ -15,21 +15,20 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetUnreachable;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector UnreachableWeaponSelected;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector Target;
-    
+
     UPROPERTY()
     float CheckTargetreachableTime;
-    
+
     UPROPERTY()
     float CurrentTime;
-    
+
     UPROPERTY()
     UIGS_WieldableInventoryObjectBase* SawWieldable;
-    
-};
 
+};

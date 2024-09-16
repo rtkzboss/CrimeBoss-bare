@@ -13,21 +13,20 @@ class BF_AI_API IIGS_WeaponSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetSwitchWeaponmagazineFired();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetSprayFireShotsCount();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetFireShotsCount();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetAmmoToReload();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetAfterFireCooldownCover();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetAfterFireCooldown();
-    
-};
 
+};

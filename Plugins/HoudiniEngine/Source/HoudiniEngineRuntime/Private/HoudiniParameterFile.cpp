@@ -5,4 +5,3 @@ UHoudiniParameterFile::UHoudiniParameterFile() {
     (*this).ParmType = EHoudiniParameterType::File;
 }
 
-

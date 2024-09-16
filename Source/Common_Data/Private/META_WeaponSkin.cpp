@@ -7,4 +7,3 @@ FIGS_WeaponSkinTableRow UMETA_WeaponSkin::GetWeaponSkinData() {
     return FIGS_WeaponSkinTableRow{};
 }
 
-

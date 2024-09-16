@@ -18,5 +18,6 @@ FHoudiniOutputObject::FHoudiniOutputObject() {
     (*this).CurveOutputProperty.bClosed = false;
     (*this).CurveOutputProperty.CurveType = EHoudiniCurveType::Invalid;
     (*this).CurveOutputProperty.CurveMethod = EHoudiniCurveMethod::Invalid;
+    (*this).CachedAttributes = {};
+    (*this).CachedTokens = {};
 }
-

@@ -23,4 +23,3 @@ UIGS_Common_DataDevSettings_Meta::UIGS_Common_DataDevSettings_Meta() {
     (*this).ChallengesDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/DT_ChallengesDatabase.DT_ChallengesDatabase"), TEXT(""));
 }
 
-

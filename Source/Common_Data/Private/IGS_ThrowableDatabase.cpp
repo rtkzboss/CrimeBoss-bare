@@ -8,7 +8,7 @@ void UIGS_ThrowableDatabase::ModAppendDataTable(UDataTable* inNewTable) {
 }
 
 UIGS_ThrowableDatabase* UIGS_ThrowableDatabase::GetThrowableDatabaseInstance(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 int32 UIGS_ThrowableDatabase::GetIndex(const TSubclassOf<UIGS_ThrowableInventoryObject>& inClass) const {
@@ -22,5 +22,4 @@ FIGS_ThrowableTableRow UIGS_ThrowableDatabase::GetDataThrowable(UObject* inWCO, 
 FIGS_ThrowableTableRow UIGS_ThrowableDatabase::GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const {
     return FIGS_ThrowableTableRow{};
 }
-
 

@@ -11,10 +11,9 @@ struct FIGS_SpawnDefHolder {
 public:
     UPROPERTY()
     TArray<TWeakObjectPtr<AIGS_AIEnemyGroupSpawner>> SpawnGroups;
-    
+
     UPROPERTY()
     FGameplayTagContainer DefendTags;
-    
+
     BF_FRAMEWORKGAME_API FIGS_SpawnDefHolder();
 };
-

@@ -3,4 +3,3 @@
 UIGS_MontageTransitionsTable::UIGS_MontageTransitionsTable() {
 }
 
-

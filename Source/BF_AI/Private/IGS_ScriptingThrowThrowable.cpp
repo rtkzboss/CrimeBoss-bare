@@ -5,10 +5,9 @@ UIGS_ScriptingThrowThrowable::UIGS_ScriptingThrowThrowable() {
 }
 
 UIGS_ScriptingThrowThrowable* UIGS_ScriptingThrowThrowable::ScriptingCommandThrowThrowable(AIGS_GameCharacterFramework* inCharacter, FIGS_InterestPointHolder inTarget, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowable) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_ScriptingThrowThrowable::OnCommandFinished(AIGS_AIControllerGame* inOwningController, UIGS_AICommand* inCommand, bool inFailed) {
 }
-
 

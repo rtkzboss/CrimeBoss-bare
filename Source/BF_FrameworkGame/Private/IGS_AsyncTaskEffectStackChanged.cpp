@@ -4,10 +4,9 @@ UIGS_AsyncTaskEffectStackChanged::UIGS_AsyncTaskEffectStackChanged() {
 }
 
 UIGS_AsyncTaskEffectStackChanged* UIGS_AsyncTaskEffectStackChanged::ListenForGameplayEffectStackChange(UAbilitySystemComponent* inAbilitySystemComponent, FGameplayTag inEffectGameplayTag) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_AsyncTaskEffectStackChanged::EndTask() {
 }
-
 

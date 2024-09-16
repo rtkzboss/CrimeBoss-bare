@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(Transient)
     TMap<FUniqueNetIdRepl, FText> BanList;
-    
-};
 
+};

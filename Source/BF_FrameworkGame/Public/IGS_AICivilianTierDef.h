@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AICivilianTierDef : public FIGS_AIBaseTierDef {
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AICivilianBaseDataModifiers Stats;
-    
+
     FIGS_AICivilianTierDef();
 };
-

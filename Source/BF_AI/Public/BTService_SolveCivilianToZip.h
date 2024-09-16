@@ -15,12 +15,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CivlianToZipKey;
-    
+
     UPROPERTY(EditAnywhere)
     float RefreshDelay;
-    
-};
 
+};

@@ -14,19 +14,18 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetTaskAndGoal(UMETA_TaskCondition* inTask, UMETA_BaseGoal* inGoal);
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_TaskCondition* GetTask() const;
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_BaseGoal* GetGoal() const;
-    
+
 private:
     UPROPERTY()
     UMETA_BaseGoal* m_Goal;
-    
+
     UPROPERTY()
     UMETA_TaskCondition* m_Task;
-    
-};
 
+};

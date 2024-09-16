@@ -7,4 +7,3 @@ enum class EIGS_PingSoundType : uint8 {
     Generic,
     Dangerous,
 };
-

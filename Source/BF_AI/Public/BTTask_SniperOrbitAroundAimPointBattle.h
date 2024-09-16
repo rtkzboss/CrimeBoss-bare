@@ -10,4 +10,3 @@ public:
     UBTTask_SniperOrbitAroundAimPointBattle();
 
 };
-

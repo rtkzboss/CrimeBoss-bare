@@ -15,25 +15,24 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetupSockets(const TArray<FIGS_AimAssistSocketData>& inAimTargetSockets);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetAimAssistTargetActive(bool InValue);
-    
+
     UFUNCTION(BlueprintCallable)
     void Init(UMeshComponent* InMesh);
-    
+
 protected:
     UPROPERTY(Instanced)
     UMeshComponent* MeshComponent;
-    
+
     UPROPERTY()
     AActor* ActorOwner;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsAimAssistActive;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_AimAssistSocketData> AimTargetSockets;
-    
-};
 
+};

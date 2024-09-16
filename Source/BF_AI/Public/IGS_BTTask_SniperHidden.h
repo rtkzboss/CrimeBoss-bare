@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FFloatInterval Cooldown;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxThreatToFinish;
-    
-};
 
+};

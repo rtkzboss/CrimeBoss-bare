@@ -3,7 +3,6 @@
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "IGS_ClientTravel.generated.h"
 
-class UIGS_ClientTravel;
 class UObject;
 
 UCLASS()
@@ -14,6 +13,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_ClientTravel* ClientTravel(UObject* inWCO, FName inLevelName);
-    
-};
 
+};

@@ -16,16 +16,15 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static void ReportGrenadeThrowing(UObject* WorldContextObject, AActor* DangerActor);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static void ReportDangerAreaWithTag(UObject* WorldContextObject, AActor* DangerActor, FGameplayTag Tag, float Radius, float Duration);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static void ReportDangerArea(UObject* WorldContextObject, AActor* DangerActor, float Radius, float Duration);
-    
+
 private:
     UPROPERTY()
     TArray<FIGS_AIDangerEvent> RegisteredEvents;
-    
-};
 
+};

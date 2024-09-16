@@ -7,4 +7,3 @@ enum class EMETA_ObjectiveRevivesCalculation : uint8 {
     AccumulateForAll,
     PerMember,
 };
-

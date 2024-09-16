@@ -8,22 +8,21 @@ struct BF_FRAMEWORKGAME_API FIGS_WeaponRecoilInfoHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RecoilPitchBank;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CompensatingPitchBank;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float LastPitch;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float LastYaw;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CurrentDownSpeed;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsShooting;
-    
+
     FIGS_WeaponRecoilInfoHolder();
 };
-

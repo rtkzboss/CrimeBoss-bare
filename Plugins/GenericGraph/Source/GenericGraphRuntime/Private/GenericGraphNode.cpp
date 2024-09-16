@@ -15,15 +15,14 @@ int32 UGenericGraphNode::GetNodeId() const {
 }
 
 UGenericGraph* UGenericGraphNode::GetGraph() const {
-    return NULL;
+    return nullptr;
 }
 
 UGenericGraphEdge* UGenericGraphNode::GetEdge(UGenericGraphNode* ChildNode) {
-    return NULL;
+    return nullptr;
 }
 
 FText UGenericGraphNode::GetDescription_Implementation() const {
     return FText::GetEmpty();
 }
-
 

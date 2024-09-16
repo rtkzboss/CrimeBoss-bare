@@ -11,10 +11,9 @@ struct BF_ANIMATIONS_API FIGS_HeavyHitReactionData {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> AnimVariations;
-    
+
     FIGS_HeavyHitReactionData();
 };
-

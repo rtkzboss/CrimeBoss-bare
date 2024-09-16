@@ -8,13 +8,12 @@ struct COMMON_DATA_API FIGS_WeaponStatUIData {
 public:
     UPROPERTY(BlueprintReadWrite)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadWrite)
     float Value;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool DisplayAsBar;
-    
+
     FIGS_WeaponStatUIData();
 };
-

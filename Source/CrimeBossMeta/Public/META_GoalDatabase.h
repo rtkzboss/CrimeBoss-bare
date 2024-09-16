@@ -4,11 +4,11 @@
 #include "EMETA_GoalType.h"
 #include "EMETA_Partner.h"
 #include "EMETA_RespectLvl.h"
+#include "META_BaseGoal.h"
 #include "META_GoalTableRow.h"
 #include "Templates/SubclassOf.h"
 #include "META_GoalDatabase.generated.h"
 
-class UMETA_BaseGoal;
 class UObject;
 class UStoryGraphManager;
 
@@ -20,33 +20,32 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void GetPreparedGoalData(UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inClass, bool& outSucceeded, bool& outUseLockRespectCondition, EMETA_RespectLvl& outUnlockRespect, EMETA_RespectLvl& outLockRespect, EMETA_Partner& outInstigatorPartner);
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_GoalTableRow> GetMoneyMakingGoalsForPartner(EMETA_Partner inPartner);
-    
+
     UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSubclassOf<UMETA_BaseGoal>& inClass) const;
-    
+
     UFUNCTION(BlueprintCallable)
     EMETA_GoalType GetGoalType(TSubclassOf<UMETA_BaseGoal> inGoalID);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     UMETA_BaseGoal* GetGoalObject(const UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inGoalID);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void GetGoalIDByGraph(UObject* inWCO, TSoftObjectPtr<UStoryGraphManager> inGraph, bool& outSucceeded, TSubclassOf<UMETA_BaseGoal>& outClass);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_GoalTableRow GetGoalData(UObject* inWCO, TSubclassOf<UMETA_BaseGoal> inClass, bool& outSucceeded);
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_GoalTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_GoalTableRow> GetDatabaseTableBP();
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<TSubclassOf<UMETA_BaseGoal>> GetDatabaseIDs();
-    
-};
 
+};

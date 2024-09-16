@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestWeaponPickup;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* WeaponPickupEQS;
-    
-};
 
+};

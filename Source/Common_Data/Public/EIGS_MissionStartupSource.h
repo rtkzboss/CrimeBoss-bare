@@ -9,4 +9,3 @@ enum class EIGS_MissionStartupSource : uint8 {
     Meta,
     Quickplay,
 };
-

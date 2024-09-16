@@ -3,4 +3,3 @@
 FIGS_DialogueSpeakerKey::FIGS_DialogueSpeakerKey() {
     (*this).Speaker = EIGS_DialogueSpeaker::None;
 }
-

@@ -13,4 +13,3 @@ enum class EIGS_VehicleGroup : uint8 {
     Luxury,
     Motorbikes,
 };
-

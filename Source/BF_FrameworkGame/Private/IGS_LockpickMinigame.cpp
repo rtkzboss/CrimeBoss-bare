@@ -1,5 +1,4 @@
 #include "IGS_LockpickMinigame.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 
 AIGS_LockpickMinigame::AIGS_LockpickMinigame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -7,7 +6,8 @@ AIGS_LockpickMinigame::AIGS_LockpickMinigame(const FObjectInitializer& ObjectIni
     (*this).CurrentRadius = 3.600000000e+02f;
     (*this).ClampRadiusPercentage = 5.000000000e-01f;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
 }
 
 void AIGS_LockpickMinigame::SuccessOnePick() {
@@ -40,7 +40,7 @@ void AIGS_LockpickMinigame::Init(AIGS_PlayerCharacter* inCharacter, UIGS_Interac
 }
 
 float AIGS_LockpickMinigame::HandleMouseInput_Implementation(FVector2D inXY) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void AIGS_LockpickMinigame::Escape(bool bForceEscapeWithoutNotifying) {
@@ -48,5 +48,4 @@ void AIGS_LockpickMinigame::Escape(bool bForceEscapeWithoutNotifying) {
 
 void AIGS_LockpickMinigame::Client_Escape_Implementation() {
 }
-
 

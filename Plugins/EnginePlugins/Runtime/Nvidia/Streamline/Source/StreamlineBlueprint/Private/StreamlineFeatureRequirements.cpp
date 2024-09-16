@@ -16,4 +16,3 @@ FStreamlineFeatureRequirements::FStreamlineFeatureRequirements() {
     (*this).DetectedDriverVersion.Minor = 0;
     (*this).DetectedDriverVersion.Build = 0;
 }
-

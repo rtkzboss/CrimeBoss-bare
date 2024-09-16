@@ -9,4 +9,3 @@ enum class EIGS_MuzzleLightState : uint8 {
     MZLS_Lit,
     MZLS_FadingOut,
 };
-

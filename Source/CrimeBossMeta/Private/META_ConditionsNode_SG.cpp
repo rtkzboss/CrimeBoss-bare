@@ -5,4 +5,3 @@ UMETA_ConditionsNode_SG::UMETA_ConditionsNode_SG() {
     (*this).Type = EMETA_NodeType::Conditions;
 }
 
-

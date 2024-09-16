@@ -8,4 +8,3 @@ FIGS_PlayerCountThrowableCooldownModifierDef::FIGS_PlayerCountThrowableCooldownM
     (*this).FourPlayers.GlobalCooldownMultiplier = 1.000000000e+00f;
     (*this).FourPlayers.ThrowableCooldownMultiplier = 1.000000000e+00f;
 }
-

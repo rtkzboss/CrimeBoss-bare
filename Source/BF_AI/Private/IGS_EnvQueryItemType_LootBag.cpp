@@ -3,4 +3,3 @@
 UIGS_EnvQueryItemType_LootBag::UIGS_EnvQueryItemType_LootBag() {
 }
 
-

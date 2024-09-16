@@ -4,7 +4,7 @@ UIGS_InfoMessagesManager::UIGS_InfoMessagesManager() {
 }
 
 UIGS_InfoMessagesManager* UIGS_InfoMessagesManager::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_InfoMessagesManager::AddItemAddedMessage(UIGS_InventoryObjectFramework* inItem) {
@@ -12,5 +12,4 @@ void UIGS_InfoMessagesManager::AddItemAddedMessage(UIGS_InventoryObjectFramework
 
 void UIGS_InfoMessagesManager::AddInfoMessage(const FText& InText, EIGS_InfoMessageType inMessageType, int32 inHeisterID) {
 }
-
 

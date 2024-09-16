@@ -13,6 +13,5 @@ public:
 
     UPROPERTY()
     UControlRig* ControlRig;
-    
-};
 
+};

@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     TMap<EIGS_AdvancedMovementType, float> InterpolationSpeeds;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<EIGS_AdvancedMovementType, float> InterpolationSpeedsRotation;
-    
-};
 
+};

@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "IGS_ThrowableInventoryObject.h"
 #include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "IGS_AffectActorsDelayedEntry.h"
@@ -10,7 +10,6 @@
 class AActor;
 class AIGS_GameCharacterFramework;
 class AIGS_ThrowableProjectileBase;
-class UIGS_ThrowableInventoryObject;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -21,36 +20,35 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableObjectCustom(UObject* inWCO, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inVelocity, float inTimeHeldInHand);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableObjectAt(UObject* inWCO, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inTargetPoint, float inTimeHeldInHand);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableObject(UObject* inWCO, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, bool inThrowLow, float inTimeHeldInHand);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableClassCustom(UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inVelocity, float inTimeHeldInHand);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableClassAt(UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, FVector inTargetPoint, float inTimeHeldInHand);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* ThrowThrowableClass(UObject* inWCO, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, AIGS_GameCharacterFramework* inThrower, bool inThrowLow, float inTimeHeldInHand);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* SpawnThrowableObject(UObject* inWCO, AActor* inOwner, UIGS_ThrowableInventoryObject* inThrowableObject, FTransform inSpawnTransform, float inTimeHeldInHand, bool inStartWithPhysics);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_ThrowableProjectileBase* SpawnThrowableClass(UObject* inWCO, AActor* inOwner, TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, FTransform inSpawnTransform, float inTimeHeldInHand, bool inStartWithPhysics);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SortAffectedActors(UPARAM(Ref) TArray<FIGS_AffectActorsDelayedEntry>& refActors);
-    
+
     UFUNCTION(BlueprintCallable)
     static FVector GetVelocityInLocalSpaceOfTransform(FVector inThrowDirection, float inThrowSpeed, FTransform InTransform);
-    
+
     UFUNCTION(BlueprintCallable)
     static FTransform GetPlayerThrowTransform(TSubclassOf<UIGS_ThrowableInventoryObject> inThrowableClass, AIGS_GameCharacterFramework* inThrowingPlayer, bool inLow);
-    
-};
 
+};

@@ -9,8 +9,8 @@ FPFSpeedPointsDrawConfig::FPFSpeedPointsDrawConfig() {
     (*this).SpeedPointsColor.R = 0;
     (*this).SpeedPointsColor.A = 255;
     (*this).SpeedPointHitProxySize = 2.000000000e+01f;
-    static ConstructorHelpers::FObjectFinder<UTexture2D> gen0(TEXT("/PathFollow/S_Speed.S_Speed"));
-    (*this)._SpeedPointSpriteTexture = gen0.Object;
+    static ConstructorHelpers::FObjectFinder<UTexture2D> gen(TEXT("/PathFollow/S_Speed.S_Speed"));
+    (*this)._SpeedPointSpriteTexture = gen.Object;
     (*this).bVisualizeSpeed = false;
     (*this).LowSpeedColor.R = 0.000000000e+00f;
     (*this).LowSpeedColor.G = 1.000000000e+00f;
@@ -21,4 +21,3 @@ FPFSpeedPointsDrawConfig::FPFSpeedPointsDrawConfig() {
     (*this).HighSpeedColor.B = 0.000000000e+00f;
     (*this).HighSpeedColor.A = 1.000000000e+00f;
 }
-

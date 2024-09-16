@@ -4,4 +4,3 @@ UIGS_BTService_ReactionToOffenceGuard::UIGS_BTService_ReactionToOffenceGuard() {
     (*this).NodeName = TEXT("Reaction To Offence Guard");
 }
 
-

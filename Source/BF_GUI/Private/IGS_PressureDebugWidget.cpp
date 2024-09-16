@@ -1,9 +1,4 @@
 #include "IGS_PressureDebugWidget.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
-#include "EIGS_HUDVisibilityMode.h"
 
 UIGS_PressureDebugWidget::UIGS_PressureDebugWidget() {
     (*this).PressureColor.R = 1.000000000e+00f;
@@ -16,6 +11,5 @@ UIGS_PressureDebugWidget::UIGS_PressureDebugWidget() {
     (*this).GreyLegendColor.B = 5.000000000e-01f;
     (*this).GreyLegendColor.A = 2.500000000e-01f;
 }
-
 
 

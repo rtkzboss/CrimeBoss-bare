@@ -11,4 +11,3 @@ enum class EIGS_GangsterPresence : uint8 {
     More,
     Extreme,
 };
-

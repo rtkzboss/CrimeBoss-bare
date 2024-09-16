@@ -18,21 +18,20 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     UMETA_NotificationManagerComponent* GetNotificationManager();
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     UIGS_Quickplay_ChainManagerComponent* GetChainManager();
-    
+
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     UIGS_BossBackgroundManager* GetBossBackgroundManager();
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UMETA_QuickPlayData* QuickPlayData;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UIGS_Quickplay_EconomyData* EconomyQuickData;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_SubtitleManager* SubtitleManager;
-    
-};
 
+};

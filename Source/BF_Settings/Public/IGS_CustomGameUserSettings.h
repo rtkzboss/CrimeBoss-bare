@@ -4,7 +4,6 @@
 #include "IGS_CustomGameUserSettings.generated.h"
 
 class UIGS_ControllerSettings;
-class UIGS_CustomGameUserSettings;
 class UIGS_GameSettings;
 class UIGS_InputBindSettings;
 class UIGS_MouseSettings;
@@ -20,27 +19,26 @@ public:
 
     UFUNCTION(BlueprintPure)
     static UIGS_CustomGameUserSettings* Instance();
-    
+
     UPROPERTY()
     UIGS_SoundSettings* SoundSettings;
-    
+
     UPROPERTY()
     UIGS_GameSettings* GameSettings;
-    
+
     UPROPERTY()
     UIGS_RenderingSettings* RenderingSettings;
-    
+
     UPROPERTY()
     UIGS_ControllerSettings* ControllerSettings;
-    
+
     UPROPERTY()
     UIGS_TogglesSettings* TogglesSettings;
-    
+
     UPROPERTY()
     UIGS_MouseSettings* MouseSettings;
-    
+
     UPROPERTY()
     UIGS_InputBindSettings* InputBindSettings;
-    
-};
 
+};

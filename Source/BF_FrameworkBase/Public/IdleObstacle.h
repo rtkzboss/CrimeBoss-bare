@@ -8,4 +8,3 @@ struct FIdleObstacle {
 public:
     BF_FRAMEWORKBASE_API FIdleObstacle();
 };
-

@@ -14,16 +14,15 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UnregisterRemoverSpecialObjective(AIGS_WaypointFramework* inSpecialObjective);
-    
+
     UFUNCTION(BlueprintCallable)
     void SpawnOne();
-    
+
     UFUNCTION(BlueprintCallable)
     void RegisterRemoverSpecialObjective(AIGS_WaypointFramework* inSpecialObjective);
-    
+
 protected:
     UPROPERTY()
     TArray<AIGS_AIEnemyGroupSpawner*> m_SpawnGroups;
-    
-};
 
+};

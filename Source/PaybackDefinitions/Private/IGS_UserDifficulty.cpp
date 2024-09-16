@@ -7,5 +7,5 @@ FIGS_UserDifficulty::FIGS_UserDifficulty() {
     (*this).PrimaryEnemyTier = EIGS_AITiers::AT_Unknown;
     (*this).SWATTier = EIGS_AITiers::AT_Unknown;
     (*this).AllyTier = EIGS_AITiers::AT_Unknown;
+    (*this).SpecialTierOverrideChanceForStormIntensity = {};
 }
-

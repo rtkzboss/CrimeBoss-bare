@@ -10,10 +10,9 @@ struct BF_VOICEOVER_API FIGS_MetaDialogueDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_MetaDialogueTranscript> Transcript;
-    
+
     FIGS_MetaDialogueDataRow();
 };
-

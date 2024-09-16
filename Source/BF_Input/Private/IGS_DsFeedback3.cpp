@@ -6,4 +6,3 @@ FIGS_DsFeedback3::FIGS_DsFeedback3() {
     (*this).StartStrength = 1;
     (*this).EndStrength = 1;
 }
-

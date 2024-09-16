@@ -4,4 +4,3 @@ UBTDecorator_SquadCanBreach::UBTDecorator_SquadCanBreach() {
     (*this).NodeName = TEXT("Squad Can Breach");
 }
 
-

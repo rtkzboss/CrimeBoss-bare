@@ -13,24 +13,23 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void OnOnScreenChanged(bool inOnScreen);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnCloseByChanged(bool inClose);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnChosenChanged(bool inChosen);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void CanvasTick(UIGS_InteractiveComponent* inInteraction);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float FadeDistance;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bOnScreen;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float Angle;
-    
-};
 
+};

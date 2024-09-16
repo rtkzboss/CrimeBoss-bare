@@ -15,15 +15,14 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void PrintMetaLog(const UObject* inWCO, EMETA_LogCategory inCategory, const FText& inMessage, EMETA_MetaLogVerbosity inVerbosity);
-    
+
     UFUNCTION(BlueprintCallable)
     static FString GetTimeString();
-    
+
     UFUNCTION(BlueprintCallable)
     static FString GetDateString();
-    
+
     UFUNCTION(BlueprintCallable)
     void CreateMetaLogFile(bool inNewCompaing, bool inIsDebug, const FString& inSaveFileName);
-    
-};
 
+};

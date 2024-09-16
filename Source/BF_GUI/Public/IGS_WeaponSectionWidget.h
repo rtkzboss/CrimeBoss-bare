@@ -16,27 +16,26 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void WeaponShooterChanged(EIGS_WeaponAttackType AttackType);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void WeaponMagazineAmmoChanged(int32 CurrentWieldableMagazineAmmo, int32 CurrentWieldableMaxMagazineAmmo);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void WeaponAmmoReserveChanged(int32 CurrentWieldableAmmoReserve);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnWidgetHidden();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnWeaponInspected();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnActiveWieldableChanged(EIGS_ItemType inType);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_ItemType CurrentWieldableType;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_WieldableBase* ActiveWieldable;
-    
-};
 
+};

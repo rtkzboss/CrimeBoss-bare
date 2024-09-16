@@ -1,5 +1,4 @@
 #include "IGS_PlayerLoadoutComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerLoadoutComponent::UIGS_PlayerLoadoutComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -35,7 +34,7 @@ void UIGS_PlayerLoadoutComponent::HandlePlayerDownState() {
 }
 
 UIGS_EquipmentInventoryObject* UIGS_PlayerLoadoutComponent::GetCurrentEquipmentObject() {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_PlayerLoadoutComponent::ForceDownstateUseAbility() {
@@ -43,5 +42,4 @@ void UIGS_PlayerLoadoutComponent::ForceDownstateUseAbility() {
 
 void UIGS_PlayerLoadoutComponent::Client_SetEquipmentData_Implementation(float inTimestamp, int32 inCount, int32 inKillCount) {
 }
-
 

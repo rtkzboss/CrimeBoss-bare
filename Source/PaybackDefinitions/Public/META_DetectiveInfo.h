@@ -9,16 +9,15 @@ struct PAYBACKDEFINITIONS_API FMETA_DetectiveInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag CurrentTurfTileID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCurrentTileNeutralized;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 DaysLeftToStayOnCurrentTile;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGameplayTag> NeutralizedTiles;
-    
+
     FMETA_DetectiveInfo();
 };
-

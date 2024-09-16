@@ -21,12 +21,12 @@
 #include "IGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef.h"
 #include "IGS_PlayerCountThrowableCooldownModifierDef.h"
 #include "IGS_PlayerCountWaveManagerModifierDef.h"
+#include "IGS_SettingsID.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_AIDatabaseFPS.generated.h"
 
 class AIGS_GameCharacterFramework;
 class UIGS_AIDatabaseStory;
-class UIGS_SettingsID;
 class UObject;
 
 UCLASS(BlueprintType)
@@ -37,78 +37,77 @@ public:
 
     UFUNCTION(BlueprintPure)
     FIGS_AILoadout GetLoadout(const FIGS_AILoadoutHolder& inLoadoutHolder, FGameplayTagContainer inLoadoutTags, const TSubclassOf<UIGS_SettingsID> inSettingsOverride, const bool inIsStory, const UObject* inDebugWco) const;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICivilianTeamDef Civilians;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIEmployeeTeamDef Employees;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AICopTeamDef Cops;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIDetectiveHolder Detectives;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGuardTeamDef Guards;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AISwatTeamDef SWATs;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterTeamDef DollarDragon;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterTeamDef Hielo;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterTeamDef KarolKhan;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIGangsterTeamDef Cagnali;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIBackupTeamDef Backup;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<TSubclassOf<UIGS_SettingsID>, FIGS_AILoadoutHolder> LoadoutOverrides;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_PlayerCountAIDifficultyModifierDef PlayerCount;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_PlayerCountThrowableCooldownModifierDef ThrowableCooldown;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef BotDamageReceived;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_PlayerCountWaveManagerModifierDef WaveManager;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TMap<TSoftClassPtr<AIGS_GameCharacterFramework>, FIGS_AIBaseUnitDef> VIPs;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_AICaptainSpecDef Captains;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FString Password;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FControllerDefaultsHolder DefaultControllers;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_GeneralReactionTeamHolder GeneralReactions;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UIGS_AIDatabaseStory* StoryDatabase;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_AIBaseDisabledSpecializations DisabledSpecializations;
-    
+
     UPROPERTY()
     uint8 CanEdit;
-    
-};
 
+};

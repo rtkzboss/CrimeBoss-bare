@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IGS_SettingsValueChangedEventDelegate.h"
+#include "IGS_SettingsValueChangedEvent.h"
 #include "IGS_WidgetSubMenuBase.h"
 #include "IGS_WidgetSubMenuSettingsBase.generated.h"
 
@@ -12,24 +12,23 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetDirty();
-    
+
     UFUNCTION(BlueprintCallable)
     void RevertToDefaults();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RefreshFocus();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnRevertToDefaults();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnRevert();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnApply();
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_SettingsValueChangedEvent OnSettingsValueChanged;
-    
-};
 
+};

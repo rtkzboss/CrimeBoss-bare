@@ -15,24 +15,23 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     USceneComponent* Root;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_GlassRegularPreset GlassPanelPreset;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ScaleUniform;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ScaleY;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ScaleZ;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<EGlassShape> GlassType;
-    
+
     UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
     bool bCanEverAffectNavigation;
-    
-};
 
+};

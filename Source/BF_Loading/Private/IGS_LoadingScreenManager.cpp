@@ -1,7 +1,7 @@
 #include "IGS_LoadingScreenManager.h"
 
 UIGS_LoadingScreenManager::UIGS_LoadingScreenManager() {
-    (*this).CustomBackgroundTexture = nullptr;
+    (*this).CustomBackgroundTexture = FSoftObjectPath();
 }
 
 void UIGS_LoadingScreenManager::SetLoadingScreenSetupType(UObject* inWCO, FGameplayTag inTag) {
@@ -32,5 +32,4 @@ bool UIGS_LoadingScreenManager::IsLoadingScreenSetupTypeSet(UObject* inWCO) {
 bool UIGS_LoadingScreenManager::GetDebugState(UObject* inWCO, bool inState) {
     return false;
 }
-
 

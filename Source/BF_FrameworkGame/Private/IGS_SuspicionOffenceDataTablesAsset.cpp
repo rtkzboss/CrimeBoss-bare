@@ -3,4 +3,3 @@
 UIGS_SuspicionOffenceDataTablesAsset::UIGS_SuspicionOffenceDataTablesAsset() {
 }
 
-

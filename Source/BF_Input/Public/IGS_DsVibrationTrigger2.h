@@ -8,10 +8,9 @@ struct FIGS_DsVibrationTrigger2 {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Frequency;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<uint8> Amplitudes;
-    
+
     BF_INPUT_API FIGS_DsVibrationTrigger2();
 };
-

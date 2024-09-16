@@ -15,15 +15,14 @@ public:
 protected:
     UFUNCTION()
     void TickTimelineUpdate(float InValue);
-    
+
     UFUNCTION()
     void TickTimelineFinished();
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USceneComponent* ExtraRootObject;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UArrowComponent* RootObjectEnd;
-    
-};
 
+};

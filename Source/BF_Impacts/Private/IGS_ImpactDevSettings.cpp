@@ -9,4 +9,3 @@ UIGS_ImpactDevSettings::UIGS_ImpactDevSettings() {
     (*this).ImpactManagerSettingsDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/Impacts/DA_ImpactManagerSettings.DA_ImpactManagerSettings"), TEXT(""));
 }
 
-

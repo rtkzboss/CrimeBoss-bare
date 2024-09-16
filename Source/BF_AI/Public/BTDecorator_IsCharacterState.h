@@ -13,13 +13,12 @@ public:
 
     UPROPERTY(EditAnywhere)
     bool bIsCharacterBlackboardBased;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharacterBlackboardKey;
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     EIGS_CharacterState DesiredCharacterState;
-    
-};
 
+};

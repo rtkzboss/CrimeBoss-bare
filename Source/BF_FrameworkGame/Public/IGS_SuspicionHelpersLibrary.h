@@ -21,33 +21,32 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void TriggerBotLimbo(const UObject* inWCO, bool inPlayVioceovers);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_SuspicionEventActor* SpawnSuspicionEventActorAttachedToComp(const UObject* inWCO, USceneComponent* inAttachTo, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy, FName InBoneName);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_SuspicionEventActor* SpawnSuspicionEventActorAttached(const UObject* inWCO, AActor* inAttachTo, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_SuspicionEventActor* SpawnSuspicionEventActorAdvanced(const UObject* inWCO, const FTransform& InTransform, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static AIGS_SuspicionEventActor* SpawnSuspicionEventActor(const UObject* inWCO, const FTransform& InTransform, AIGS_GameCharacterFramework* inCauser, const FGameplayTagContainer& inOffences, const TArray<AIGS_GameCharacterFramework*>& inIgnoredBy);
-    
+
     UFUNCTION(BlueprintPure)
     static bool ShouldDetectSusComp(UIGS_SuspicionComponent* inSusComp, AActor* inDetector);
-    
+
     UFUNCTION(BlueprintPure)
     static bool ShouldDetectOffender(AActor* inOffender, AActor* inDetector);
-    
+
     UFUNCTION(BlueprintCallable)
     static void MakeExplosionNoiseAndEvent(const AActor* inSource, AIGS_GameCharacterFramework* inInstigator, const float inLoudness);
-    
+
     UFUNCTION(BlueprintPure)
     static float GetOffenceBasedDetectionMultiplier(UIGS_PlayerSuspicionComponent* inOffender, AActor* inDetector);
-    
+
     UFUNCTION(BlueprintPure)
     static float GetAttributeBasedDetectionMultiplier(AIGS_GameCharacterFramework* inOffender);
-    
-};
 
+};

@@ -8,4 +8,3 @@ struct FIGS_WeatherParameters {
 public:
     BF_FRAMEWORKGAME_API FIGS_WeatherParameters();
 };
-

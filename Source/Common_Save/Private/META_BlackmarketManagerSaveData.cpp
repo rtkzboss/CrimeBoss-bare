@@ -2,36 +2,43 @@
 #include "EMETA_TradeVendor.h"
 
 FMETA_BlackmarketManagerSaveData::FMETA_BlackmarketManagerSaveData() {
-    (*this).GenericRecruitsPool.Empty();
-    (*this).GenericCheapRecruitsPool.Empty();
-    (*this).UniqueRecruitsPool.Empty();
-    (*this).UnseenUnlockedCharacterTagIDs.Empty();
-    (*this).UnseenUnlockedWeaponTagIDs.Empty();
-    (*this).UnseenUnlockedEquipmentTagIDs.Empty();
+    (*this).GenericRecruitsPool = {};
+    (*this).GenericCheapRecruitsPool = {};
+    (*this).UniqueRecruitsPool = {};
+    (*this).WeaponsBlackmarket = {};
+    (*this).EquipmentBlackmarket = {};
+    (*this).UnseenUnlockedCharacterTagIDs = {};
+    (*this).UnseenUnlockedWeaponTagIDs = {};
+    (*this).UnseenUnlockedEquipmentTagIDs = {};
     (*this).GenericPrevID = 0;
     (*this).DayWhenHeistersMarketBecameAvailable = 0;
     (*this).DayWhenWeaponsMarketBecameAvailable = 0;
-    (*this).PlotlineAssetsPool.Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).TemporaryLockedPlotlineAssetsTags, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).TemporaryLockedPlotlineAssetsTags, 0)).Empty();
+    (*this).PlotlineAssetsPool = {};
+    auto gen = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).TemporaryLockedPlotlineAssetsTags, 0)) = {};
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).TemporaryLockedPlotlineAssetsTags, 0)) = {};
     (*this).ActiveLootEvent.Vendor = EMETA_TradeVendor::UNDEFINED;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).ActiveLootEvent.LootTag, 0)) = NAME_None;
+    auto gen3 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).ActiveLootEvent.LootTag, 0)) = NAME_None;
     (*this).ActiveLootEvent.MinLootValue = 0;
     (*this).ActiveLootEvent.MissionID = nullptr;
+    (*this).ReadyLootEvents = {};
     (*this).BaseDayForLootEvents = 0;
     (*this).WeaponEvent.Cooldown = 0;
     (*this).WeaponEvent.MinAvailableCash = 0;
     (*this).WeaponEvent.NumberOfWeaponsPerEvent = 1;
     (*this).WeaponEvent.ExpirationTime = 0;
-    (*this).WeaponEvent.WeaponClassesChances.Empty();
-    (*this).WeaponEvent.WeaponQualitiesChances.Empty();
+    (*this).WeaponEvent.WeaponClassesChances = {};
+    (*this).WeaponEvent.WeaponQualitiesChances = {};
+    (*this).WeaponsEventPool = {};
     (*this).BaseDayForWeaponEvent = 0;
     (*this).EquipmentEvent.Cooldown = 0;
     (*this).EquipmentEvent.MinAvailableCash = 0;
     (*this).EquipmentEvent.NumberOfEquipmentPerEvent = 1;
     (*this).EquipmentEvent.ExpirationTime = 0;
-    (*this).EquipmentEvent.EquipmentQualitiesChances.Empty();
-    (*this).EquipmentEventPool.Empty();
+    (*this).EquipmentEvent.EquipmentQualitiesChances = {};
+    (*this).EquipmentEventPool = {};
     (*this).BaseDayForEquipmentEvent = 0;
     (*this).WeaponsPoolRefreshesCounter = 0;
     (*this).WeaponsPoolRefreshesPrice = 0;
@@ -54,4 +61,3 @@ FMETA_BlackmarketManagerSaveData::FMETA_BlackmarketManagerSaveData() {
     (*this).HeistersPoolRefreshesCounter = 0;
     (*this).HeistersPoolRefreshPrice = 0;
 }
-

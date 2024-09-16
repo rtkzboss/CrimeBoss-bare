@@ -10,4 +10,3 @@ public:
     AIGS_VehicleExitPointFramework(const FObjectInitializer& ObjectInitializer);
 
 };
-

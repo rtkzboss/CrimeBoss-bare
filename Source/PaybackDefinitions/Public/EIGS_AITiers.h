@@ -10,4 +10,3 @@ enum class EIGS_AITiers : uint8 {
     AT_Special = 8,
     AT_Unknown = 128,
 };
-

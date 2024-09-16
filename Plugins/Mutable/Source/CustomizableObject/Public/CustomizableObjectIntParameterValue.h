@@ -8,16 +8,15 @@ struct FCustomizableObjectIntParameterValue {
 public:
     UPROPERTY(VisibleAnywhere)
     FString ParameterName;
-    
+
     UPROPERTY(VisibleAnywhere)
     FString ParameterValueName;
-    
+
     UPROPERTY(VisibleAnywhere)
     FString Uid;
-    
+
     UPROPERTY()
     TArray<FString> ParameterRangeValueNames;
-    
+
     CUSTOMIZABLEOBJECT_API FCustomizableObjectIntParameterValue();
 };
-

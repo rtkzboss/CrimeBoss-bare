@@ -10,22 +10,21 @@ struct COMMON_DATA_API FMETA_TextScreenUIData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText ScreenText;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText SecondaryText;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Duration;
-    
+
     UPROPERTY(BlueprintReadWrite)
     UMETA_BaseStoryGraphManager* GraphRef;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 OriginalID;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 NextNodeID;
-    
+
     FMETA_TextScreenUIData();
 };
-

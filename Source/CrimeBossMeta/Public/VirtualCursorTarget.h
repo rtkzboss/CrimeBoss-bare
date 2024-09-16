@@ -14,18 +14,17 @@ class IVirtualCursorTarget : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SelectByVirtualCursor();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEndVirtualCursorOver();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnBeginVirtualCursorOver();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     FVector GetTargetLocation() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DeselectByVirtualCursor();
-    
-};
 
+};

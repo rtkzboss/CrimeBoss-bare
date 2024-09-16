@@ -15,10 +15,9 @@ public:
 private:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void ReportLockPickEnded(AIGS_GameCharacterFramework* inInstigator, const bool inSuccess) const;
-    
+
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FIGS_LockPickDifficultySetting GetLockPickDifficultySettings();
-    
-};
 
+};

@@ -1,5 +1,4 @@
 #include "IGS_PlayerWorldTracingComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerWorldTracingComponent::UIGS_PlayerWorldTracingComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).TrackingDistance = 1.000000000e+04f;
@@ -55,11 +54,11 @@ TEnumAsByte<ETeamAttitude::Type> UIGS_PlayerWorldTracingComponent::GetAimCharact
 }
 
 AIGS_GameCharacterFramework* UIGS_PlayerWorldTracingComponent::GetAimCharacter() const {
-    return NULL;
+    return nullptr;
 }
 
 AActor* UIGS_PlayerWorldTracingComponent::GetAimActor() const {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_PlayerWorldTracingComponent::CanMantle() const {
@@ -69,5 +68,4 @@ bool UIGS_PlayerWorldTracingComponent::CanMantle() const {
 bool UIGS_PlayerWorldTracingComponent::CanLean() const {
     return false;
 }
-
 

@@ -4,4 +4,3 @@ UBTDecorator_SquadHeistersIsPlayerSpawned::UBTDecorator_SquadHeistersIsPlayerSpa
     (*this).NodeName = TEXT("Squad Heisters Is Player Spawned");
 }
 
-

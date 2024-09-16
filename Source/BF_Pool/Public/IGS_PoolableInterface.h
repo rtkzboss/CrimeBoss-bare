@@ -17,33 +17,32 @@ public:
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void SetPoolTagContainer(FGameplayTagContainer inTagContainer);
-    
+
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Release();
-    
+
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void OnSpawnedEvent();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnReleasedEvent();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     bool OnFindEvent(UObject* inCompareItem);
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnActivatedEvent();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     void OnAcquiredEvent();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     FGameplayTagContainer GetPoolTagContainer();
-    
+
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Activate();
-    
-};
 
+};

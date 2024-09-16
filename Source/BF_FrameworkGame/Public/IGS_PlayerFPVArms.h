@@ -14,26 +14,25 @@ public:
 
     UFUNCTION(BlueprintNativeEvent)
     void SetArmsTickEnabled(bool Enabled);
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bMoveArmsInCode;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bRotateArmsPitchInCode;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bKeepArmsAtFeet;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ArmsGrabLadderRotationSpeed;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     AActor* LeftHandAttachedActor;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
     AActor* RightHandAttachedActor;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

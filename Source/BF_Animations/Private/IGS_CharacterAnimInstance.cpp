@@ -14,10 +14,9 @@ void UIGS_CharacterAnimInstance::OnComponentHit(UPrimitiveComponent* HitComp, AA
 
 
 UIGS_HeadAnimInstance* UIGS_CharacterAnimInstance::GetHeadAnimInstance() const {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_CharacterAnimInstance::EnterRadialDamageRagdollState_Implementation(const FIGS_HitInfo& inHitInfo, float inImpulse, bool inIsVelocityChange) {
 }
-
 

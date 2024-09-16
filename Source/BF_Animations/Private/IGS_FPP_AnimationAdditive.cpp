@@ -8,4 +8,3 @@ FIGS_FPP_AnimationAdditive::FIGS_FPP_AnimationAdditive() {
     (*this).IsMoving = false;
     (*this).IsShooting = false;
 }
-

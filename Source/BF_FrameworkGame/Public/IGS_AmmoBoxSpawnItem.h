@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AmmoBoxSpawnItem {
 public:
     UPROPERTY(EditAnywhere)
     EIGS_AmmoBoxItem ID;
-    
+
     UPROPERTY(EditAnywhere)
     float SpawnChance;
-    
+
     FIGS_AmmoBoxSpawnItem();
 };
-

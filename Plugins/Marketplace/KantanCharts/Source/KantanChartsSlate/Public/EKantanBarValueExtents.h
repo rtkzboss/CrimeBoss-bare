@@ -8,4 +8,3 @@ enum class EKantanBarValueExtents : uint8 {
     ZeroLineOnly,
     ZeroAndMaxLines,
 };
-

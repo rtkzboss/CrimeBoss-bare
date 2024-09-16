@@ -12,7 +12,7 @@ EIGS_WieldableSlot UIGS_AIHelpersLibrary::TranslateWeaponTypeToSlot(EIGS_SwitchW
 }
 
 EIGS_SwitchWeaponTask_WeaponType UIGS_AIHelpersLibrary::TranslateSlotToWeaponType(EIGS_WieldableSlot Slot) {
-    return EIGS_SwitchWeaponTask_WeaponType::WT_Unknown;
+    return EIGS_SwitchWeaponTask_WeaponType::WT_Primary;
 }
 
 bool UIGS_AIHelpersLibrary::TargetIsGuardingPos(AIGS_GameCharacterFramework* inCharacter, FVector InPos) {
@@ -119,27 +119,27 @@ void UIGS_AIHelpersLibrary::HitByCar(AIGS_GameCharacterFramework* Instigator) {
 }
 
 AActor* UIGS_AIHelpersLibrary::GetPotentialTarget(AIGS_GameCharacterFramework* inCharacter) {
-    return NULL;
+    return nullptr;
 }
 
 TArray<AActor*> UIGS_AIHelpersLibrary::GetPlayerDetectingCharacters(AIGS_GameCharacterFramework* inPlayer) {
-    return TArray<AActor*>();
+    return {};
 }
 
 AIGS_GameCharacterFramework* UIGS_AIHelpersLibrary::GetNearestCharacterOfTeamSide(const UObject* inWCO, EIGS_TeamSideEnum inTeamSide, const FVector& InLocation) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_GameCharacterFramework* UIGS_AIHelpersLibrary::GetNearestBot(const UObject* inWCO, const FVector& InLocation) {
-    return NULL;
+    return nullptr;
 }
 
 AIGS_GameCharacterFramework* UIGS_AIHelpersLibrary::GetLocalPlayerCharacter(const UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
 
 float UIGS_AIHelpersLibrary::GetGlobalAggro(const AActor* inActor, const AActor* inInstigator) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FGenericTeamId UIGS_AIHelpersLibrary::GetGenericTeamId(const AActor* inActor) {
@@ -159,7 +159,7 @@ bool UIGS_AIHelpersLibrary::GetEnemiesOfSide(const UObject* inWCO, EIGS_TeamSide
 }
 
 float UIGS_AIHelpersLibrary::GetDestinationDistanceBetweenCharacters(AIGS_GameCharacterFramework* inQuerrier, FVector inPoint1, FVector inPoint2) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UIGS_AIHelpersLibrary::GetCountOfAlivePlayersWithDownedState(UObject* inWCO) {
@@ -183,11 +183,11 @@ bool UIGS_AIHelpersLibrary::GetCharactersOfSide(const UObject* inWCO, EIGS_TeamS
 }
 
 EIGS_SwitchWeaponTask_WeaponType UIGS_AIHelpersLibrary::GetBestWeaponType(AIGS_IntelligentGameCharacter* Character) {
-    return EIGS_SwitchWeaponTask_WeaponType::WT_Unknown;
+    return EIGS_SwitchWeaponTask_WeaponType::WT_Primary;
 }
 
 float UIGS_AIHelpersLibrary::GetAngleToDirection2D(AIGS_GameCharacterFramework* Instigator, FVector InDirection) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UIGS_AIHelpersLibrary::GetAllPlayers(const UObject* inWorldContextObject, TArray<AIGS_GameCharacterFramework*>& outArray) {
@@ -202,7 +202,7 @@ bool UIGS_AIHelpersLibrary::GetAllHeisterCharacters(const UObject* inWCO, TArray
 }
 
 TArray<AIGS_GameCharacterFramework*> UIGS_AIHelpersLibrary::GetAllCharacterThatCanBeShoutDown(UObject* inWCO) {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 bool UIGS_AIHelpersLibrary::GetAllCharactersInRange(const UObject* inWCO, const FVector& InLocation, float InRange, TArray<AIGS_GameCharacterFramework*>& outCharacters) {
@@ -226,7 +226,7 @@ FVector UIGS_AIHelpersLibrary::GetAIFocusLocationOffsetForActor(const AActor* in
 }
 
 TArray<FIGS_BotOrderAction> UIGS_AIHelpersLibrary::CreateBotOrderActions(APawn* inPlayerPawn, EIGS_BotCommandDefinition InAction, EIGS_BotOrderActionSource inSource, const APawn* inBotPawn) {
-    return TArray<FIGS_BotOrderAction>();
+    return {};
 }
 
 void UIGS_AIHelpersLibrary::ClearFocusHelper(AIGS_GameCharacterFramework* inCharacter) {
@@ -242,5 +242,4 @@ void UIGS_AIHelpersLibrary::CalculateAreaOfOperation(AIGS_RoomBase* fromRoom, in
 bool UIGS_AIHelpersLibrary::AreAllHeistersDead(UObject* inWCO) {
     return false;
 }
-
 

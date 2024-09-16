@@ -9,4 +9,3 @@ enum class EIGS_IntelType : uint8 {
     Loot,
     Event,
 };
-

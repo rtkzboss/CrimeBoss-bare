@@ -10,4 +10,3 @@ public:
     UIGS_AIBoatSpawnComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

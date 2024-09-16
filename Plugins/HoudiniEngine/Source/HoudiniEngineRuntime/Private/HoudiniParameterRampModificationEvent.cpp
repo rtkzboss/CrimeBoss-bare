@@ -4,4 +4,3 @@ UHoudiniParameterRampModificationEvent::UHoudiniParameterRampModificationEvent()
     (*this).DeleteInstanceIndex = -1;
 }
 
-

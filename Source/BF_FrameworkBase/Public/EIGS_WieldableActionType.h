@@ -7,4 +7,3 @@ enum class EIGS_WieldableActionType : uint8 {
     PrimaryAction,
     SecondaryAction,
 };
-

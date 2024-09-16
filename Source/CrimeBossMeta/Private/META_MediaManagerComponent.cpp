@@ -1,5 +1,4 @@
 #include "META_MediaManagerComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UMETA_MediaManagerComponent::UMETA_MediaManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).PrimaryComponentTick.bCanEverTick = true;
@@ -78,11 +77,10 @@ FMETA_CutsceneUIData UMETA_MediaManagerComponent::GetFirstDelayedCutsceneForPart
 }
 
 TArray<FMETA_CutsceneUIData> UMETA_MediaManagerComponent::GetExpiredCutscenes(bool& outResult) {
-    return TArray<FMETA_CutsceneUIData>();
+    return {};
 }
 
 TArray<FMETA_CutsceneUIData> UMETA_MediaManagerComponent::GetCutscenesAboutToExpire(bool& outResult) {
-    return TArray<FMETA_CutsceneUIData>();
+    return {};
 }
-
 

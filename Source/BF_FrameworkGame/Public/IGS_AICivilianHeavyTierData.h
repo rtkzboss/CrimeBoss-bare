@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AICivilianHeavyTierData : public FIGS_AIBaseHea
 public:
     FIGS_AICivilianHeavyTierData();
 };
-

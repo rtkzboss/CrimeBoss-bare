@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestTarget;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector SuspectedTargetLocation;
-    
-};
 
+};

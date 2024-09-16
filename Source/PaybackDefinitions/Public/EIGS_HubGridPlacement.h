@@ -8,4 +8,3 @@ enum class EIGS_HubGridPlacement : uint8 {
     Outer,
     Inner,
 };
-

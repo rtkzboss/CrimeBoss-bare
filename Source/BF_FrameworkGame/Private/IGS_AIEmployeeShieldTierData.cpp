@@ -2,4 +2,3 @@
 
 FIGS_AIEmployeeShieldTierData::FIGS_AIEmployeeShieldTierData() {
 }
-

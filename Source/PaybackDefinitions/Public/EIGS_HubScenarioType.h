@@ -21,4 +21,3 @@ enum class EIGS_HubScenarioType : uint8 {
     Prologue,
     WIZ04,
 };
-

@@ -128,11 +128,11 @@ FIGS_EncryptedF32 UIGS_MemoryAntiTampering_F32::Div1(FIGS_EncryptedF32& Encrypte
 }
 
 float UIGS_MemoryAntiTampering_F32::Decrypt2(const FIGS_EncryptedF32& Encrypted) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UIGS_MemoryAntiTampering_F32::Decrypt1(const FIGS_EncryptedF32& Encrypted) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FIGS_EncryptedF32 UIGS_MemoryAntiTampering_F32::Decrement(FIGS_EncryptedF32& EncryptedFloat, float& Result) {
@@ -162,5 +162,4 @@ FIGS_EncryptedF32 UIGS_MemoryAntiTampering_F32::Add2(FIGS_EncryptedF32& Encrypte
 FIGS_EncryptedF32 UIGS_MemoryAntiTampering_F32::Add1(FIGS_EncryptedF32& EncryptedFloat, float& Output, float Float) {
     return FIGS_EncryptedF32{};
 }
-
 

@@ -20,7 +20,7 @@ UIGS_AIPrimaryWeaponDef::UIGS_AIPrimaryWeaponDef() {
     (*this).Weapon.AfterFireCooldown.Max = 2.000000000e+00f;
     (*this).Weapon.AfterFireCooldownCover.Min = 1.500000000e+00f;
     (*this).Weapon.AfterFireCooldownCover.Max = 3.000000000e+00f;
-    (*TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName")->ContainerPtrToValuePtr<FName>(&(*this).Weapon.WeaponTag, 0)) = TEXT("Item.Wieldable.Weapon.PrimaryWeapon");
+    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Weapon.WeaponTag, 0)) = TEXT("Item.Wieldable.Weapon.PrimaryWeapon");
 }
-
 

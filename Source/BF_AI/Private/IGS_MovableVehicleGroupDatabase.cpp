@@ -3,4 +3,3 @@
 UIGS_MovableVehicleGroupDatabase::UIGS_MovableVehicleGroupDatabase() {
 }
 
-

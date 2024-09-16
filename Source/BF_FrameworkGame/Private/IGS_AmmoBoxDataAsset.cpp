@@ -3,4 +3,3 @@
 UIGS_AmmoBoxDataAsset::UIGS_AmmoBoxDataAsset() {
 }
 
-

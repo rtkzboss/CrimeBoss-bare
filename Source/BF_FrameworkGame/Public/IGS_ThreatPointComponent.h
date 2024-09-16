@@ -10,4 +10,3 @@ public:
     UIGS_ThreatPointComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

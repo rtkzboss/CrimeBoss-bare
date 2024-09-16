@@ -10,7 +10,6 @@ struct FIGS_MetaCutsceneOverrideData {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<TSoftClassPtr<AIGS_CharacterPaperDoll>> OverrideSlotCharacterPaperDolls;
-    
+
     PAYBACK_API FIGS_MetaCutsceneOverrideData();
 };
-

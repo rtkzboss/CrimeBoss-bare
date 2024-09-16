@@ -12,4 +12,3 @@ void UMETA_BaseActionCard::ExecuteActionCard_Implementation(AGameModeBase* inGam
 void UMETA_BaseActionCard::DeExecuteActionCard_Implementation(AGameModeBase* inGameMode, EMETA_ActionCardStrength Strength) {
 }
 
-

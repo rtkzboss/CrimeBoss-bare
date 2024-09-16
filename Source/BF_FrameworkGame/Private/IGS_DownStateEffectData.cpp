@@ -3,4 +3,3 @@
 FIGS_DownStateEffectData::FIGS_DownStateEffectData() {
     (*this).DownStateEffectDataAsset = nullptr;
 }
-

@@ -9,4 +9,3 @@ enum class EIGS_PushForTarget : uint8 {
     Medium,
     High,
 };
-

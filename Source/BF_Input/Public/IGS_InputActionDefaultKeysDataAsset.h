@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     FIGS_DefaultInputDeviceSingleSetting KeyboardDefaultKeyInputs;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FIGS_DefaultInputDeviceSingleSetting GamepadDefaultKeyInputs;
-    
-};
 
+};

@@ -7,4 +7,3 @@ FMETA_MusicScenarioPacksTableRow UMETA_MusicScenarioPacksDatabase::GetMusicData(
     return FMETA_MusicScenarioPacksTableRow{};
 }
 
-

@@ -13,12 +13,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetText(FText Text);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetDefaultText();
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced, meta=(BindWidget))
     UTextBlock* Title;
-    
-};
 
+};

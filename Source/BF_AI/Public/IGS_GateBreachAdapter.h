@@ -15,6 +15,5 @@ public:
 
     UFUNCTION()
     static FGateExplosiveInfo GetExplosivePoint(AActor* Actor, AIGS_RoomBase* priorRoom);
-    
-};
 
+};

@@ -12,15 +12,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float SeePlayerConeHalfAngleDeg;
-    
+
     UPROPERTY(EditAnywhere)
     float SeePlayerDistance;
-    
+
     UPROPERTY(EditAnywhere)
     float PlayerAimingAtHalfAngleDeg;
-    
+
     UPROPERTY(EditAnywhere)
     bool ShouldCheckLineTrace;
-    
-};
 
+};

@@ -1,8 +1,4 @@
 #include "IGS_WidgetPingRadialSlice.h"
-#include "Layout/FlowDirection.h"
-#include "Layout/Clipping.h"
-#include "Components/SlateWrapperTypes.h"
-#include "Blueprint/UserWidget.h"
 
 UIGS_WidgetPingRadialSlice::UIGS_WidgetPingRadialSlice() : Super(FObjectInitializer::Get()) {
     (*this).NormalColor.R = 5.000000000e-01f;
@@ -32,7 +28,6 @@ void UIGS_WidgetPingRadialSlice::SliceHover_Implementation() {
 bool UIGS_WidgetPingRadialSlice::SliceClicked_Implementation() {
     return false;
 }
-
 
 
 

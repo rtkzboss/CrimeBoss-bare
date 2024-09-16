@@ -8,4 +8,3 @@ FIGS_AmmoBoxDataRow::FIGS_AmmoBoxDataRow() {
     (*this).BoxScale.Y = 1.000000000e+00f;
     (*this).BoxScale.Z = 1.000000000e+00f;
 }
-

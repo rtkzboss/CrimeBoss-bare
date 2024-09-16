@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGangsterBaseDataModifiers : public FIGS_AIUni
 public:
     FIGS_AIGangsterBaseDataModifiers();
 };
-

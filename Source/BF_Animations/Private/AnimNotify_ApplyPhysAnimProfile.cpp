@@ -5,4 +5,3 @@ UAnimNotify_ApplyPhysAnimProfile::UAnimNotify_ApplyPhysAnimProfile() {
     (*this).PhysBodyName = TEXT("Root");
 }
 
-

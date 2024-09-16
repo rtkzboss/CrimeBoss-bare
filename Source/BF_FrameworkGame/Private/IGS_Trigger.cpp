@@ -1,15 +1,12 @@
 #include "IGS_Trigger.h"
 #include "PhysicsEngine/BodyInstance.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
-#include "Chaos/ChaosEngineInterface.h"
-#include "EIGS_BoxSphereShape.h"
 
 AIGS_Trigger::AIGS_Trigger(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).TriggerOnBotRepossess = true;
     (*this).bNotifyLeftOnDeath = true;
     (*this).bUseTriggerDebugOptions = true;
-    (*TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName")->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("Trigger");
+    auto gen = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName");
+    (*gen->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("Trigger");
     (*this).Color.B = 0;
     (*this).Color.G = 128;
     (*this).Color.R = 255;
@@ -32,15 +29,15 @@ bool AIGS_Trigger::IsActorInTrigger(AActor* inActor) const {
 }
 
 TArray<AIGS_PlayerCharacter*> AIGS_Trigger::GetAllPlayersInTrigger() const {
-    return TArray<AIGS_PlayerCharacter*>();
+    return {};
 }
 
 TArray<AIGS_GameCharacterFramework*> AIGS_Trigger::GetAllCharactersInTrigger() const {
-    return TArray<AIGS_GameCharacterFramework*>();
+    return {};
 }
 
 TArray<AActor*> AIGS_Trigger::GetAllActorsInTrigger() const {
-    return TArray<AActor*>();
+    return {};
 }
 
 void AIGS_Trigger::Execute_Implementation(AActor* inExecutingActor) {
@@ -50,5 +47,4 @@ void AIGS_Trigger::Execute_Implementation(AActor* inExecutingActor) {
 int32 AIGS_Trigger::CheckAllCharactersInTrigger() {
     return 0;
 }
-
 

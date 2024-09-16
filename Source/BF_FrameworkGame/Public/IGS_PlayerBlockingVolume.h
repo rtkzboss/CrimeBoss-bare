@@ -16,13 +16,12 @@ public:
 
     UFUNCTION()
     void OnComponentHit(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
-    
+
 private:
     UPROPERTY(EditInstanceOnly)
     uint8 bPushOut: 1;
-    
+
     UPROPERTY(EditInstanceOnly)
     uint8 bPushOutForceAddUpImpulse: 1;
-    
-};
 
+};

@@ -9,4 +9,3 @@ enum class EHoudiniProxyRefineRequestResult : uint8 {
     PendingCooks,
     Refined,
 };
-

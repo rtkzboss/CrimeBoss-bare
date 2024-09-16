@@ -1,22 +1,21 @@
 #include "ControllerDefaultsHolder.h"
 
 FControllerDefaultsHolder::FControllerDefaultsHolder() {
-    (*this).GangsterDefaultController = nullptr;
-    (*this).GangsterSniperController = nullptr;
-    (*this).GangsterShieldController = nullptr;
-    (*this).GangsterHeavyController = nullptr;
-    (*this).GangsterDetectiveController = nullptr;
-    (*this).GangsterHeavyMeleeController = nullptr;
-    (*this).BackupDefaultController = nullptr;
-    (*this).BackupHeavyController = nullptr;
-    (*this).SwatDefaultController = nullptr;
-    (*this).SwatSniperController = nullptr;
-    (*this).SwatShieldController = nullptr;
-    (*this).SwatHeavyController = nullptr;
-    (*this).SwatHeavyScoutController = nullptr;
-    (*this).CopDefaultController = nullptr;
-    (*this).GuardDefaultController = nullptr;
-    (*this).EmployeeDefaultController = nullptr;
-    (*this).CivilianDefaultController = nullptr;
+    (*this).GangsterDefaultController = FSoftObjectPath();
+    (*this).GangsterSniperController = FSoftObjectPath();
+    (*this).GangsterShieldController = FSoftObjectPath();
+    (*this).GangsterHeavyController = FSoftObjectPath();
+    (*this).GangsterDetectiveController = FSoftObjectPath();
+    (*this).GangsterHeavyMeleeController = FSoftObjectPath();
+    (*this).BackupDefaultController = FSoftObjectPath();
+    (*this).BackupHeavyController = FSoftObjectPath();
+    (*this).SwatDefaultController = FSoftObjectPath();
+    (*this).SwatSniperController = FSoftObjectPath();
+    (*this).SwatShieldController = FSoftObjectPath();
+    (*this).SwatHeavyController = FSoftObjectPath();
+    (*this).SwatHeavyScoutController = FSoftObjectPath();
+    (*this).CopDefaultController = FSoftObjectPath();
+    (*this).GuardDefaultController = FSoftObjectPath();
+    (*this).EmployeeDefaultController = FSoftObjectPath();
+    (*this).CivilianDefaultController = FSoftObjectPath();
 }
-

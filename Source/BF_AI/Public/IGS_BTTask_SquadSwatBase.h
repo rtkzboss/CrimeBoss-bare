@@ -16,12 +16,11 @@ public:
 protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_RoomPathfindingComponent* RoomPathfindingComponent;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_SquadSpeedSynchronizationComponent* SpeedSyncroComponent;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_SquadAggroComponent* SquadAggroComponent;
-    
-};
 
+};

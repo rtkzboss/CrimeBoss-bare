@@ -12,13 +12,12 @@ struct FWaterTurretElements {
 public:
     UPROPERTY()
     AIGS_WaterCannon* Turret;
-    
+
     UPROPERTY(Instanced)
     USplineComponent* Hose;
-    
+
     UPROPERTY(Instanced)
     TArray<USplineMeshComponent*> HoseMeshes;
-    
+
     BF_FRAMEWORKGAME_API FWaterTurretElements();
 };
-

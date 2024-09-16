@@ -8,4 +8,3 @@ struct FIGS_ActorEnvironmentTracker {
 public:
     BF_FRAMEWORKGAME_API FIGS_ActorEnvironmentTracker();
 };
-

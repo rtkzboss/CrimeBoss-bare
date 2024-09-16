@@ -12,22 +12,21 @@ struct BF_FRAMEWORKGAME_API FIGS_CharacterEventNotificationData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<AIGS_GameCharacterFramework> Instigator;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<AIGS_GameCharacterFramework*> Targets;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<AActor> ObjectOfInterest;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FloatValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector VectorValue;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 OptionalEnumData;
-    
+
     FIGS_CharacterEventNotificationData();
 };
-

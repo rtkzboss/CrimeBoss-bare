@@ -1,4 +1,6 @@
 #include "IGS_BulletBendingConfig.h"
+#include "Curves/RealCurve.h"
+#include "Curves/RichCurve.h"
 
 FIGS_BulletBendingConfig::FIGS_BulletBendingConfig() {
     (*this).MinStartRadius = 4.500000000e+01f;
@@ -7,20 +9,45 @@ FIGS_BulletBendingConfig::FIGS_BulletBendingConfig() {
     (*this).MaxFullPowerRadius = 3.000000000e+01f;
     (*this).HipFireZoneScale = 1.000000000e+00f;
     (*this).bUseInterpolationCurve = true;
-    auto& gen0 = (*this).InterpolationCurve.EditorCurveData.Keys;
-    gen0.Empty();
-    gen0.AddDefaulted(2);
+    FRichCurveKey gen;
+    gen.InterpMode = RCIM_Linear;
+    gen.TangentMode = RCTM_Auto;
+    gen.TangentWeightMode = RCTWM_WeightedNone;
+    gen.Time = 1.000000000e+00f;
+    gen.Value = 1.000000000e+00f;
+    gen.ArriveTangent = 0.000000000e+00f;
+    gen.ArriveTangentWeight = 0.000000000e+00f;
+    gen.LeaveTangent = 0.000000000e+00f;
+    gen.LeaveTangentWeight = 0.000000000e+00f;
+    (*this).InterpolationCurve.EditorCurveData.Keys = {FRichCurveKey{}, MoveTemp(gen)};
     (*this).InterpolationCurve.EditorCurveData.DefaultValue = 3.402823466e+38f;
     (*this).InterpolationCurve.EditorCurveData.PreInfinityExtrap = RCCE_Constant;
     (*this).InterpolationCurve.EditorCurveData.PostInfinityExtrap = RCCE_Constant;
     (*this).InterpolationCurve.ExternalCurve = nullptr;
     (*this).bZonesScalingEnabled = false;
-    auto& gen1 = (*this).ZonesScalingConfig.ZonesScalingCurve.EditorCurveData.Keys;
-    gen1.Empty();
-    gen1.AddDefaulted(2);
+    FRichCurveKey gen2;
+    gen2.InterpMode = RCIM_Linear;
+    gen2.TangentMode = RCTM_Auto;
+    gen2.TangentWeightMode = RCTWM_WeightedNone;
+    gen2.Time = 0.000000000e+00f;
+    gen2.Value = 1.000000000e+00f;
+    gen2.ArriveTangent = 0.000000000e+00f;
+    gen2.ArriveTangentWeight = 0.000000000e+00f;
+    gen2.LeaveTangent = 0.000000000e+00f;
+    gen2.LeaveTangentWeight = 0.000000000e+00f;
+    FRichCurveKey gen3;
+    gen3.InterpMode = RCIM_Linear;
+    gen3.TangentMode = RCTM_Auto;
+    gen3.TangentWeightMode = RCTWM_WeightedNone;
+    gen3.Time = 2.500000000e+03f;
+    gen3.Value = 1.000000000e+00f;
+    gen3.ArriveTangent = 0.000000000e+00f;
+    gen3.ArriveTangentWeight = 0.000000000e+00f;
+    gen3.LeaveTangent = 0.000000000e+00f;
+    gen3.LeaveTangentWeight = 0.000000000e+00f;
+    (*this).ZonesScalingConfig.ZonesScalingCurve.EditorCurveData.Keys = {MoveTemp(gen2), MoveTemp(gen3)};
     (*this).ZonesScalingConfig.ZonesScalingCurve.EditorCurveData.DefaultValue = 3.402823466e+38f;
     (*this).ZonesScalingConfig.ZonesScalingCurve.EditorCurveData.PreInfinityExtrap = RCCE_Constant;
     (*this).ZonesScalingConfig.ZonesScalingCurve.EditorCurveData.PostInfinityExtrap = RCCE_Constant;
     (*this).ZonesScalingConfig.ZonesScalingCurve.ExternalCurve = nullptr;
 }
-

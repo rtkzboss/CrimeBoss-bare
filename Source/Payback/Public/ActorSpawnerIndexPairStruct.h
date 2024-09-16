@@ -10,10 +10,9 @@ struct FActorSpawnerIndexPairStruct {
 public:
     UPROPERTY(Instanced)
     UIGS_PropActorSpawner* PropActorSpawner;
-    
+
     UPROPERTY()
     int32 Index;
-    
+
     PAYBACK_API FActorSpawnerIndexPairStruct();
 };
-

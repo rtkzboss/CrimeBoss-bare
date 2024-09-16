@@ -5,4 +5,3 @@ UIGS_EnvQueryGenerator_DisruptibleGadgets::UIGS_EnvQueryGenerator_DisruptibleGad
     (*this).ItemType = UIGS_EnvQueryItemType_DisruptibleGadgets::StaticClass();
 }
 
-

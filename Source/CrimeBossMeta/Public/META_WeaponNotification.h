@@ -13,13 +13,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetWeapon(UMETA_Weapon* inWeapon);
-    
+
     UFUNCTION(BlueprintPure)
     UMETA_Weapon* GetWeapon() const;
-    
+
 private:
     UPROPERTY()
     UMETA_Weapon* m_Weapon;
-    
-};
 
+};

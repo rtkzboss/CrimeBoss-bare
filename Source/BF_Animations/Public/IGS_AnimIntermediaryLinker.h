@@ -10,11 +10,10 @@ public:
 protected:
     UPROPERTY()
     TArray<FIGS_LinkedGraphDefinition> m_LinkedGraphs;
-    
+
     UPROPERTY()
     TArray<UClass*> m_LoadedClasses;
-    
+
 public:
     FIGS_AnimIntermediaryLinker();
 };
-

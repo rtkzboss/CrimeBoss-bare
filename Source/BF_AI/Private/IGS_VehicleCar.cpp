@@ -2,26 +2,33 @@
 #include "IGS_ObjectStatus.h"
 #include "IGS_AICarSpawnComponent.h"
 #include "IGS_NavModifierComponent.h"
-#include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "SimpleWheeledVehicleMovementComponent.h"
-#include "EIGS_VehicleSplineGroup.h"
 #include "IGS_DestructableVehicleComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_VehicleCar::AIGS_VehicleCar(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).ObjectStatus = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("ObjectStatus"));
-    (*this).DestructableVehicleComponent = CreateDefaultSubobject<UIGS_DestructableVehicleComponent>(TEXT("DestructableVehicleComponent"));
-    (*this).AICarSpawner = CreateDefaultSubobject<UIGS_AICarSpawnComponent>(TEXT("AICarSpawnComponent"));
-    (*this).WheeledVehicleComponent = CreateDefaultSubobject<USimpleWheeledVehicleMovementComponent>(TEXT("WheeledVehicleComponent"));
-    (*this).PlayerPushAwayTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("PlayerPushAwayTrigger"));
-    (*this).PlayerPushAwayBlockingCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("PlayerPushAwayBlockingCollider"));
-    (*this).TopTrigger = CreateDefaultSubobject<UBoxComponent>(TEXT("TopTrigger"));
-    (*this).DistanceSensorLocation = CreateDefaultSubobject<USceneComponent>(TEXT("DistanceSensorLocation"));
-    (*this).NavModifier = CreateDefaultSubobject<UIGS_NavModifierComponent>(TEXT("NavModifierComponent"));
+    auto gen = CreateDefaultSubobject<UIGS_ObjectStatus>(TEXT("ObjectStatus"));
+    auto gen2 = CreateDefaultSubobject<UIGS_DestructableVehicleComponent>(TEXT("DestructableVehicleComponent"));
+    auto gen3 = CreateDefaultSubobject<UIGS_AICarSpawnComponent>(TEXT("AICarSpawnComponent"));
+    auto gen4 = CreateDefaultSubobject<USimpleWheeledVehicleMovementComponent>(TEXT("WheeledVehicleComponent"));
+    auto gen5 = CreateDefaultSubobject<UBoxComponent>(TEXT("PlayerPushAwayTrigger"));
+    auto gen6 = CreateDefaultSubobject<UBoxComponent>(TEXT("PlayerPushAwayBlockingCollider"));
+    auto gen7 = CreateDefaultSubobject<UBoxComponent>(TEXT("TopTrigger"));
+    auto gen8 = CreateDefaultSubobject<USceneComponent>(TEXT("DistanceSensorLocation"));
+    auto gen9 = CreateDefaultSubobject<UIGS_NavModifierComponent>(TEXT("NavModifierComponent"));
+    (*this).ObjectStatus = gen;
+    (*this).DestructableVehicleComponent = gen2;
+    (*this).AICarSpawner = gen3;
+    (*this).WheeledVehicleComponent = gen4;
+    (*this).PlayerPushAwayTrigger = gen5;
+    (*this).PlayerPushAwayBlockingCollider = gen6;
+    (*this).TopTrigger = gen7;
+    (*this).DistanceSensorLocation = gen8;
+    (*this).NavModifier = gen9;
     (*this).NeedsPassengers = true;
     (*this).bUseGravity = true;
     (*this).GravityDefault = 5.000000000e+02f;
@@ -39,11 +46,13 @@ AIGS_VehicleCar::AIGS_VehicleCar(const FObjectInitializer& ObjectInitializer) : 
     (*this).WheelSize = 5.000000000e+01f;
     (*this).FrontStopTriggerOffset = -1.000000000e+01f;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
-    (*this).DestructableVehicleComponent->SetupAttachment((*this).RootComponent);
-    (*this).PlayerPushAwayBlockingCollider->SetupAttachment((*this).RootComponent);
-    (*this).PlayerPushAwayTrigger->SetupAttachment((*this).RootComponent);
-    (*this).TopTrigger->SetupAttachment((*this).RootComponent);
+    auto gen10 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen10->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen11 = Cast<USkeletalMeshComponent>(GetDefaultSubobjectByName(TEXT("VehicleSkeletalMesh")));
+    if (gen2) gen2->SetupAttachment(gen11);
+    if (gen5) gen5->SetupAttachment(gen11);
+    if (gen6) gen6->SetupAttachment(gen11);
+    if (gen7) gen7->SetupAttachment(gen11);
 }
 
 void AIGS_VehicleCar::SpawnPassengers() {
@@ -90,7 +99,7 @@ void AIGS_VehicleCar::CheckParkingLocation() {
 
 void AIGS_VehicleCar::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_VehicleCar, mR_OpenedDoors);
     DOREPLIFETIME(AIGS_VehicleCar, bUseGravity);
     DOREPLIFETIME(AIGS_VehicleCar, bDisableCar);
@@ -99,5 +108,4 @@ void AIGS_VehicleCar::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(AIGS_VehicleCar, mR_FinalRotation);
     DOREPLIFETIME(AIGS_VehicleCar, mR_FinalWheelRotation);
 }
-
 

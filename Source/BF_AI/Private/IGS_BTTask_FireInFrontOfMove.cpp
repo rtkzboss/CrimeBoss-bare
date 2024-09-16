@@ -6,4 +6,3 @@ UIGS_BTTask_FireInFrontOfMove::UIGS_BTTask_FireInFrontOfMove() {
     (*this).NodeName = TEXT("Fire In Front Of Move");
 }
 
-

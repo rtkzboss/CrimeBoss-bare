@@ -11,4 +11,3 @@ enum class EIGS_DefendPointRotationType : uint8 {
     TS_Custom,
     TS_InToCenter,
 };
-

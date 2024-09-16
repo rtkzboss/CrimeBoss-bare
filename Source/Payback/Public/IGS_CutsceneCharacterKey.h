@@ -9,8 +9,8 @@ struct PAYBACK_API FIGS_CutsceneCharacterKey {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_MetaDialogueCharacter CharacterID;
-    
+
     FIGS_CutsceneCharacterKey();
 };
 FORCEINLINE uint32 GetTypeHash(const FIGS_CutsceneCharacterKey&) { return 0; }
-
+FORCEINLINE bool operator==(const FIGS_CutsceneCharacterKey&, const FIGS_CutsceneCharacterKey&) { return true; }

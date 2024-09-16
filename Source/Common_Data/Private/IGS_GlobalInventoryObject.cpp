@@ -9,4 +9,3 @@ int32 UIGS_GlobalInventoryObject::GetMaxCount() {
     return 0;
 }
 
-

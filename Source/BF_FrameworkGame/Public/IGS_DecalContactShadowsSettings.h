@@ -8,13 +8,12 @@ struct FIGS_DecalContactShadowsSettings {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Radius;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float WidthScale;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Offset;
-    
+
     BF_FRAMEWORKGAME_API FIGS_DecalContactShadowsSettings();
 };
-

@@ -10,4 +10,3 @@ enum class EIGS_TileItemState : uint8 {
     Owned,
     LockedDLC,
 };
-

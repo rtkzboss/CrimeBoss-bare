@@ -1,23 +1,24 @@
 #include "IGS_VehicleBase.h"
 #include "AkComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "IGS_VehiclePathFollowerComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_VehicleBase::AIGS_VehicleBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UAkComponent>(TEXT("AkComponent"));
+    auto gen2 = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("VehicleSkeletalMesh"));
+    auto gen3 = CreateDefaultSubobject<UIGS_VehiclePathFollowerComponent>(TEXT("FollowComponent"));
     (*this).PassengersGetOutAfterDriveFinished = true;
     (*this).Speed.Min = 1.500000000e+03f;
     (*this).Speed.Max = 2.000000000e+03f;
     (*this).bStartIdleOnBeginPlay = true;
-    (*this).AkAudioComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkComponent"));
-    (*this).VehicleMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("VehicleSkeletalMesh"));
-    (*this).FollowerComponent = CreateDefaultSubobject<UIGS_VehiclePathFollowerComponent>(TEXT("FollowComponent"));
+    (*this).AkAudioComponent = gen;
+    (*this).VehicleMesh = gen2;
+    (*this).FollowerComponent = gen3;
     (*this).bCanSpawnPassengers = true;
     (*this).PrimaryActorTick.bCanEverTick = true;
-    (*this).RootComponent = (USceneComponent*)VehicleMesh;
-    (*this).AkAudioComponent->SetupAttachment((*this).RootComponent);
+    (*this).RootComponent = gen2;
+    if (gen) gen->SetupAttachment(gen2);
 }
 
 void AIGS_VehicleBase::UpdateEscapeInteractions(bool inIsObjectiveCompleted, float inHoldTime) {
@@ -98,10 +99,9 @@ void AIGS_VehicleBase::BindHeistersHealthState() {
 
 void AIGS_VehicleBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_VehicleBase, isEscaping);
     DOREPLIFETIME(AIGS_VehicleBase, mR_Color);
     DOREPLIFETIME(AIGS_VehicleBase, bIsDriving);
 }
-
 

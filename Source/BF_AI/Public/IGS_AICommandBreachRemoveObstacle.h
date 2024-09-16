@@ -14,9 +14,8 @@ public:
 
     UPROPERTY()
     AActor* BreachableObject;
-    
+
     UPROPERTY()
     AIGS_BreachExplodable* ExplosiveObject;
-    
-};
 
+};

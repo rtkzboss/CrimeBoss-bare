@@ -17,18 +17,17 @@ class IMETA_GraphComponent : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void StartSetUp(AMETA_BaseGameMode* inGameMode, UGenericGraphNode* inOwnerNode);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ResetToDefault(bool inForceReset);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsComponentValid(UGenericGraphNode* inNodeEditor, TArray<FGenericGraphNode_ErrorData>& outErrorsData);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FText GetInfo();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool DoesContainClass(UClass* inClass, bool inNeedCheckAsChild);
-    
-};
 
+};

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "IGS_OnTransitionFinishedDelegate.h"
+#include "IGS_OnTransitionFinished.h"
 #include "IGS_MenuFadeTransitionComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -12,12 +12,11 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void Show(bool ShouldFade, float FadeTime, bool inShowLoader);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void Hide(bool ShouldFade, float FadeTime);
-    
+
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_OnTransitionFinished OnTransitionFinished;
-    
-};
 
+};

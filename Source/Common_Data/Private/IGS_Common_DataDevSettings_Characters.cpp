@@ -7,4 +7,3 @@ UIGS_Common_DataDevSettings_Characters::UIGS_Common_DataDevSettings_Characters()
     (*this).CharacterSkinDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/CDT_CharacterSkinDatabase.CDT_CharacterSkinDatabase"), TEXT(""));
 }
 
-

@@ -9,25 +9,24 @@ struct PATHFOLLOW_API FPFAutoRollVisualConfig {
 public:
     UPROPERTY(EditAnywhere)
     bool bHidePointsVisualization;
-    
+
     UPROPERTY(EditAnywhere)
     bool bHideTextInfo;
-    
+
     UPROPERTY(EditAnywhere)
     float LineLength;
-    
+
     UPROPERTY(EditAnywhere)
     FLinearColor PointColor;
-    
+
     UPROPERTY(EditAnywhere)
     FLinearColor SelectedPointColor;
-    
+
     UPROPERTY(EditAnywhere)
     float PointSize;
-    
+
     UPROPERTY(EditAnywhere)
     float LineThickness;
-    
+
     FPFAutoRollVisualConfig();
 };
-

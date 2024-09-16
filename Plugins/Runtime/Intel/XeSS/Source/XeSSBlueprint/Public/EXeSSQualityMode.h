@@ -13,4 +13,3 @@ enum class EXeSSQualityMode : uint8 {
     UltraQualityPlus,
     AntiAliasing,
 };
-

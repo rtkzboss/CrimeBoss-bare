@@ -7,4 +7,3 @@ FMETA_CareerEndSaveData::FMETA_CareerEndSaveData() {
     (*this).Reason = EMETA_CareerCompletionReason::NoTurfTiles;
     (*this).BossKilledBy = EMETA_Gang::None;
 }
-

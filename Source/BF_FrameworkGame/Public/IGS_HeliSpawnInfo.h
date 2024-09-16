@@ -8,4 +8,3 @@ struct FIGS_HeliSpawnInfo {
 public:
     BF_FRAMEWORKGAME_API FIGS_HeliSpawnInfo();
 };
-

@@ -16,18 +16,17 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void PostConstruction();
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     USceneComponent* SceneComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USphereComponent* SourceBounds;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UMaterialInstanceDynamic* CoreMaterialDynamic;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UMaterialInstanceDynamic* StreakMaterialDynamic;
-    
-};
 
+};

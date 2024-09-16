@@ -14,12 +14,11 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void OnWireCut(AIGS_GameCharacterFramework* inInstigator);
-    
+
     UFUNCTION(NetMulticast, Unreliable)
     void Multicast_CosmeticWireCut();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void CosmeticWireCut();
-    
-};
 
+};

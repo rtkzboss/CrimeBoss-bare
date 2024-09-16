@@ -12,9 +12,8 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     float MaxDistance;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxDistanceDefend;
-    
-};
 
+};

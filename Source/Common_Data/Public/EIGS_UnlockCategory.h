@@ -13,4 +13,3 @@ enum class EIGS_UnlockCategory : uint8 {
     UC_NumOfCategories,
     UC_Unknown = 255,
 };
-

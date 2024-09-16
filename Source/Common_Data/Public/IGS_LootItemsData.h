@@ -13,16 +13,15 @@ struct COMMON_DATA_API FIGS_LootItemsData : public FIGS_GenericItemsData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_LootSize LootSize;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool SmallHits;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag LootCategoryTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftObjectPtr<UStaticMesh> StandMesh;
-    
+
     FIGS_LootItemsData();
 };
-

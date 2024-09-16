@@ -1,17 +1,23 @@
 #include "IGS_MountedWeapon.h"
 #include "AkComponent.h"
-#include "EIGS_WeaponAttackType.h"
+#include "SkeletalMeshComponentBudgeted.h"
 #include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
 #include "Curves/CurveFloat.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
+#include "Components/StaticMeshComponent.h"
 #include "Components/TimelineComponent.h"
 #include "IGS_AnimatedInteractiveComponentSimple.h"
 #include "IGS_SimpleReloader.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_MountedWeapon::AIGS_MountedWeapon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
+    auto gen2 = CreateDefaultSubobject<UIGS_AnimatedInteractiveComponentSimple>(TEXT("Interactive"));
+    auto gen3 = CreateDefaultSubobject<UBoxComponent>(TEXT("InteractiveBoxComponent"));
+    auto gen4 = CreateDefaultSubobject<UTimelineComponent>(TEXT("ReloadTimelineComponent"));
+    auto gen5 = CreateDefaultSubobject<UCurveFloat>(TEXT("ReloadCurve"));
+    auto gen6 = CreateDefaultSubobject<UIGS_SimpleReloader>(TEXT("Reloader"));
     (*this).UseByAI = true;
     (*this).AIShotsToFire.Min = 30;
     (*this).AIShotsToFire.Max = 40;
@@ -20,28 +26,36 @@ AIGS_MountedWeapon::AIGS_MountedWeapon(const FObjectInitializer& ObjectInitializ
     (*this).AIUseCooldown.Min = 7.000000000e+00f;
     (*this).AIUseCooldown.Max = 1.000000000e+01f;
     (*this).AnimationRotationOffset.Yaw = -1.800000000e+02f;
-    (*this).AkComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
+    (*this).AkComponent = gen;
     (*this).PitchLimit = 4.500000000e+01f;
     (*this).PitchDotLimit = 7.071067691e-01f;
     (*this).YawLimit = 4.500000000e+01f;
     (*this).YawDotLimit = 7.071067691e-01f;
-    (*this).InteractiveComponent = CreateDefaultSubobject<UIGS_AnimatedInteractiveComponentSimple>(TEXT("Interactive"));
-    (*this).InteractiveBoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("InteractiveBoxComponent"));
-    (*this).ReloadTimelineComponent = CreateDefaultSubobject<UTimelineComponent>(TEXT("ReloadTimelineComponent"));
-    (*this).ReloadCurve = CreateDefaultSubobject<UCurveFloat>(TEXT("ReloadCurve"));
-    (*this).Reloader = CreateDefaultSubobject<UIGS_SimpleReloader>(TEXT("Reloader"));
+    (*this).InteractiveComponent = gen2;
+    (*this).InteractiveBoxComponent = gen3;
+    (*this).ReloadTimelineComponent = gen4;
+    (*this).ReloadCurve = gen5;
+    (*this).Reloader = gen6;
     (*this).DefaultMagazineCount = 3;
     (*this).lastActiveSlot = EIGS_WieldableSlot::S_Unarmed;
-    auto& gen0 = (*this).WeaponModsArray;
-    gen0.Empty();
-    gen0.AddDefaulted(8);
+    auto gen7 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("SightModMesh")));
+    auto gen8 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("DynamicScopeModMesh")));
+    auto gen9 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("VisibilityModMesh")));
+    auto gen10 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("BarrelModMesh")));
+    auto gen11 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("GripModMesh")));
+    auto gen12 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("StockModMesh")));
+    auto gen13 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("MagazineModMesh")));
+    auto gen14 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("SecondMagazineModMesh")));
+    (*this).WeaponModsArray = {gen7, gen8, gen9, gen10, gen11, gen12, gen13, gen14};
     (*this).CanReloadInADS = false;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen15 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen15->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
     (*this).NetDormancy = DORM_Initial;
-    (*this).AkComponent->SetupAttachment((*this).RootComponent);
-    (*this).InteractiveBoxComponent->SetupAttachment((*this).RootComponent);
-    (*this).InteractiveComponent->SetupAttachment((*this).RootComponent);
+    auto gen16 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("WieldableMesh")));
+    if (gen) gen->SetupAttachment(gen16);
+    if (gen2) gen2->SetupAttachment(gen16);
+    if (gen3) gen3->SetupAttachment(gen16);
 }
 
 
@@ -70,9 +84,8 @@ FVector AIGS_MountedWeapon::GetPawnPosition(AIGS_GameCharacterFramework* charToP
 
 void AIGS_MountedWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_MountedWeapon, WeaponYaw);
     DOREPLIFETIME(AIGS_MountedWeapon, WeaponPitch);
 }
-
 

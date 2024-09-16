@@ -15,6 +15,5 @@ class BF_FRAMEWORKGAME_API IIGS_CraneObjectInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UIGS_CraneObjectComponent* GetCraneObjectComponent() const;
-    
-};
 
+};

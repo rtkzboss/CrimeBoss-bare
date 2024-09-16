@@ -10,10 +10,9 @@ struct CRIMEBOSSMETA_API FMETA_TutorialTextTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Text;
-    
+
     FMETA_TutorialTextTableRow();
 };
-

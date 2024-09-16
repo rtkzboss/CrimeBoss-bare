@@ -15,12 +15,11 @@ public:
 protected:
     UPROPERTY()
     AIGS_GameCharacterFramework* CharacterOwner;
-    
+
     UPROPERTY(Instanced)
     UIGS_OutlineComponent* OwnerOutlineComponent;
-    
+
     UPROPERTY()
     AIGS_GameCharacterFramework* LocalPlayerCharacter;
-    
-};
 
+};

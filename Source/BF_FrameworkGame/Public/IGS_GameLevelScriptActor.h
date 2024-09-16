@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly)
     AIGS_ObjectiveScenarioBase* ObjectiveScenarioInstance;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_ScriptManagerBase* ScriptManagerInstance;
-    
-};
 
+};

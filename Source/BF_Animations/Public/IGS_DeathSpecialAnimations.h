@@ -11,19 +11,18 @@ struct FIGS_DeathSpecialAnimations {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<UAnimMontage*> DeathAnimationMontages;
-    
+
     UPROPERTY(EditAnywhere)
     FName PhysicalAnimationProfileName;
-    
+
     UPROPERTY(EditAnywhere)
     bool UsePhysics;
-    
+
     UPROPERTY(EditAnywhere)
     bool OnlyPhysics;
-    
+
     BF_ANIMATIONS_API FIGS_DeathSpecialAnimations();
 };
-

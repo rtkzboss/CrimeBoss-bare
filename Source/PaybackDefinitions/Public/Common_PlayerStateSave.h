@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FCommon_PlayerStateSave {
 public:
     UPROPERTY()
     int32 MoneyAmount;
-    
+
     UPROPERTY()
     TArray<FSoftObjectPath> Items;
-    
+
     FCommon_PlayerStateSave();
 };
-

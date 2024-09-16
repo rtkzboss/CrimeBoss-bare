@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<APrefabActor>> LinkedActors;
-    
+
     UPROPERTY(Instanced)
     UPrefabSeedLinkerComponent* SeedLinkerComponent;
-    
-};
 
+};

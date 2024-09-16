@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_ExtraBossWeaponsData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AmountOfWeapons;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality Quality;
-    
+
     FMETA_ExtraBossWeaponsData();
 };
-

@@ -9,10 +9,9 @@ struct FIGS_NoSpawnPointDefinition {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_NoSpawnPointSpawnDefinition> PassengerSpawnDefinitions;
-    
+
     UPROPERTY()
     bool bIsFilled;
-    
+
     BF_FRAMEWORKGAME_API FIGS_NoSpawnPointDefinition();
 };
-

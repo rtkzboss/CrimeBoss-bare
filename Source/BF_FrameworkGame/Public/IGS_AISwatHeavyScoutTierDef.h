@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatHeavyScoutTierDef : public FIGS_AISwatTie
 public:
     FIGS_AISwatHeavyScoutTierDef();
 };
-

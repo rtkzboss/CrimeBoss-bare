@@ -15,16 +15,15 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void SetDataFromSave(const UObject* inWCO, const FMETA_MoneyMakingMissionSave& inMoneyMakingMissionSave);
-    
+
     UFUNCTION(BlueprintCallable)
     FMETA_MoneyMakingMissionSave GetSaveData();
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_FPSMissionRowInfo GetInfo() const;
-    
+
 private:
     UPROPERTY()
     FMETA_MoneyMakingMissionSave m_MoneyMakingMissionSave;
-    
-};
 
+};

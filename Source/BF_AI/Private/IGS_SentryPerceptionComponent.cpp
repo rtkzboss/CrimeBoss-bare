@@ -1,5 +1,4 @@
 #include "IGS_SentryPerceptionComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_SentryPerceptionComponent::UIGS_SentryPerceptionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).PrimaryComponentTick.bCanEverTick = true;
@@ -9,5 +8,4 @@ UIGS_SentryPerceptionComponent::UIGS_SentryPerceptionComponent(const FObjectInit
 
 void UIGS_SentryPerceptionComponent::OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus) {
 }
-
 

@@ -9,7 +9,6 @@ struct COVERGENERATOR_API FIGS_ListWrapper {
 public:
     UPROPERTY(EditAnywhere)
     TArray<FIGS_RangeWithDistance> List;
-    
+
     FIGS_ListWrapper();
 };
-

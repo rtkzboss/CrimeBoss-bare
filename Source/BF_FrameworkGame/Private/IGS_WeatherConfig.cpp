@@ -7,4 +7,3 @@ FIGS_WeatherConfig::FIGS_WeatherConfig() {
     (*this).WeatherUpdateInterval = 1.000000000e+01f;
     (*this).bDynamicWind = false;
 }
-

@@ -1,23 +1,25 @@
 #include "IGS_GrenadeLauncherProjectileBase.h"
 #include "AkComponent.h"
 #include "AkSwitchValue.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "Components/PointLightComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_GrenadeLauncherProjectileBase::AIGS_GrenadeLauncherProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).ExplosionLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("ExplosionLight"));
-    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen0(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Environment/SwitchGrp_EnviroSpace/SwitchGrp_EnviroSpace-Switch_Indoors.SwitchGrp_EnviroSpace-Switch_Indoors"));
-    (*this).IndoorsAkSwitch = gen0.Object;
-    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen1(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Environment/SwitchGrp_EnviroSpace/SwitchGrp_EnviroSpace-Switch_Outdoors.SwitchGrp_EnviroSpace-Switch_Outdoors"));
-    (*this).OutdoorsAkSwitch = gen1.Object;
-    (*this).AkComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkComponent"));
+    auto gen = CreateDefaultSubobject<UPointLightComponent>(TEXT("ExplosionLight"));
+    auto gen2 = CreateDefaultSubobject<UAkComponent>(TEXT("AkComponent"));
+    (*this).ExplosionLight = gen;
+    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen3(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Environment/SwitchGrp_EnviroSpace/SwitchGrp_EnviroSpace-Switch_Indoors.SwitchGrp_EnviroSpace-Switch_Indoors"));
+    (*this).IndoorsAkSwitch = gen3.Object;
+    static ConstructorHelpers::FObjectFinder<UAkSwitchValue> gen4(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Switches/Default_Work_Unit/WU_Environment/SwitchGrp_EnviroSpace/SwitchGrp_EnviroSpace-Switch_Outdoors.SwitchGrp_EnviroSpace-Switch_Outdoors"));
+    (*this).OutdoorsAkSwitch = gen4.Object;
+    (*this).AkComponent = gen2;
     (*this).LightFlashTime = 2.000000030e-01f;
     (*this).ImpactDistance = 1.500000000e+02f;
     (*this).bMakeNoiseAndEvent = true;
-    (*this).AkComponent->SetupAttachment((*this).ThrowableMesh);
-    (*this).ExplosionLight->SetupAttachment((*this).ThrowableMesh);
+    auto gen5 = Cast<USkeletalMeshComponent>(GetDefaultSubobjectByName(TEXT("ThrowableMeshComponent")));
+    if (gen) gen->SetupAttachment(gen5);
+    if (gen2) gen2->SetupAttachment(gen5);
 }
 
 void AIGS_GrenadeLauncherProjectileBase::PlayEffect_Implementation() {
@@ -37,7 +39,7 @@ bool AIGS_GrenadeLauncherProjectileBase::HasExploded() const {
 }
 
 float AIGS_GrenadeLauncherProjectileBase::GetOuterEffectRadius() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void AIGS_GrenadeLauncherProjectileBase::Explode() {
@@ -51,8 +53,7 @@ void AIGS_GrenadeLauncherProjectileBase::AffectNPC_Implementation(const AIGS_Gam
 
 void AIGS_GrenadeLauncherProjectileBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_GrenadeLauncherProjectileBase, mR_bIsExploded);
 }
-
 

@@ -9,10 +9,9 @@ struct COMMON_SAVE_API FIGS_QuickPlayPreferencesSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FCommonHeisterData PlayerHeisterData;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bKeepCustomizedLoadout;
-    
+
     FIGS_QuickPlayPreferencesSaveData();
 };
-

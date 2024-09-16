@@ -8,10 +8,9 @@ struct FIGS_TPP_Mutable_Speed_Animaitons {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UClass* Animation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Speed;
-    
+
     BF_ANIMATIONS_API FIGS_TPP_Mutable_Speed_Animaitons();
 };
-

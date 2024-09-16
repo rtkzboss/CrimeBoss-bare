@@ -6,4 +6,3 @@ FIGS_ReviveRecord::FIGS_ReviveRecord() {
     (*this).RevivingCharacter = nullptr;
     (*this).RevivingCommand = nullptr;
 }
-

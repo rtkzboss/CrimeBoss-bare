@@ -2,4 +2,3 @@
 
 FIGS_AIBaseSpecializationHolder::FIGS_AIBaseSpecializationHolder() {
 }
-

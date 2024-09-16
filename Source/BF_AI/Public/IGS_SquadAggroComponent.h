@@ -14,18 +14,17 @@ public:
 protected:
     UPROPERTY()
     TMap<AActor*, int32> m_TmpMap;
-    
+
     UPROPERTY()
     TArray<AActor*> m_TmpCharacterArray;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float FightSecondsAfterTargetLost;
-    
+
     UPROPERTY()
     float TraceDelay;
-    
+
     UPROPERTY()
     int32 TraceCount;
-    
-};
 
+};

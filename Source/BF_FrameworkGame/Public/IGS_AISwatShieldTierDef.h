@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AISwatShieldTierDef : public FIGS_AISwatTierDef
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AISwatShieldTierData SpecStats;
-    
+
     FIGS_AISwatShieldTierDef();
 };
-

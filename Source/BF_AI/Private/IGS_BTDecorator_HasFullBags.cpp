@@ -4,4 +4,3 @@ UIGS_BTDecorator_HasFullBags::UIGS_BTDecorator_HasFullBags() {
     (*this).NodeName = TEXT("Has Full Bags");
 }
 
-

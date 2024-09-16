@@ -20,4 +20,3 @@ void UConstructionSystemBuildTool::HandleInput_CursorMoveNext() {
 void UConstructionSystemBuildTool::HandleInput_ConstructAtCursor() {
 }
 
-

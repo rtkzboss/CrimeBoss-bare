@@ -15,10 +15,9 @@ public:
 protected:
     UPROPERTY(EditDefaultsOnly)
     UParticleSystem* WorldRainEffectParticleSystem;
-    
+
 private:
     UPROPERTY(Instanced, Transient)
     UParticleSystemComponent* m_ParticleComponent;
-    
-};
 
+};

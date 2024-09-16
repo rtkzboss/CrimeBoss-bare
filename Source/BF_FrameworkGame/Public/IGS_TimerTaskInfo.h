@@ -9,16 +9,15 @@ struct BF_FRAMEWORKGAME_API FIGS_TimerTaskInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float StartTimestamp;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float Duration;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bPaused;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FTimerHandle TimerTaskHandle;
-    
+
     FIGS_TimerTaskInfo();
 };
-

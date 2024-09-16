@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FIGS_EventMission {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float Chance;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FDataTableRowHandle Event;
-    
+
     FIGS_EventMission();
 };
-

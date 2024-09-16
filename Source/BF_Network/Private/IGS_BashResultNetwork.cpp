@@ -27,4 +27,3 @@ FIGS_BashResultNetwork::FIGS_BashResultNetwork() {
     (*this).bHit = false;
     (*this).bIsUnarmedMelee = false;
 }
-

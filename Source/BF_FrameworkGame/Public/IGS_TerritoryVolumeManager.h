@@ -17,30 +17,29 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void RemoveRestrictionTag(const FName& inTag);
-    
+
 protected:
     UFUNCTION()
     void OnTerritoryVolumeEndOverlap(AVolume* inOverlappedActorVolume, EIGS_TerritoryVolumeType EnvironmentType, AActor* inOtherActor) const;
-    
+
     UFUNCTION()
     void OnTerritoryVolumeBeginOverlap(AVolume* inOverlappedActorVolume, EIGS_TerritoryVolumeType EnvironmentType, AActor* inOtherActor) const;
-    
+
 public:
     UFUNCTION(BlueprintPure)
     TArray<FName> GetRestrictionTags() const;
-    
+
     UFUNCTION(BlueprintPure)
     TArray<FName> GetRestrictedTags() const;
-    
+
     UFUNCTION(BlueprintCallable)
     void AddRestrictionTag(const FName& inTag);
-    
+
     UPROPERTY()
     UIGS_TerritoryData* TerritoryData;
-    
+
 private:
     UPROPERTY()
     TArray<AIGS_TerritoryVolume*> m_TerritoryVolumes;
-    
-};
 
+};

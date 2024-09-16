@@ -2,4 +2,3 @@
 
 FIGS_BonusGameData::FIGS_BonusGameData() {
 }
-

@@ -27,4 +27,3 @@ bool UIGS_FootIKAnimInstance::GetEnablePlacement() {
     return false;
 }
 
-

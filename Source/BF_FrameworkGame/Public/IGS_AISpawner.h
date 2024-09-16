@@ -18,28 +18,27 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SpawnUnitFromBlueprint(EIGS_TeamSideEnum inTeamSide, uint8 inUnitVariation, EIGS_UnitSpecialization inUnitSpecialization, FTransform InTransform, int32 inCount, EIGS_SpawnAnimType inSpawnAnim);
-    
+
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_AISpawnerData* AISpawnerData;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag NoneSpawnAnimTag;
-    
+
     UPROPERTY()
     FGameplayTag StoryMissionTag;
-    
+
     UPROPERTY()
     FGameplayTag UnknownMissionTag;
-    
+
     UPROPERTY()
     FGameplayTag NoSpecialTierTag;
-    
+
     UPROPERTY()
     FGameplayTag ForceSpecialTierTag;
-    
+
     UPROPERTY()
     TArray<UClass*> LoadedPawnClasses;
-    
-};
 
+};

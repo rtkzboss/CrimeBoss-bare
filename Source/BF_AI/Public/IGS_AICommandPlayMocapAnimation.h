@@ -13,15 +13,14 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAnimMontage* AnimationMontage;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName SectionName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PlayRate;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StartPosition;
-    
-};
 
+};

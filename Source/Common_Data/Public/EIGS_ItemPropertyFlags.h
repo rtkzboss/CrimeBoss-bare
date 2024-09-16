@@ -13,4 +13,3 @@ enum class EIGS_ItemPropertyFlags : uint8 {
     Property_Money,
     Property_LootBag,
 };
-

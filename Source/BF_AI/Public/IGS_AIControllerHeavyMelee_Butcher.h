@@ -12,12 +12,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void NotifySawBroke();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag SawBrokenAnimation;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bSawBroken;
-    
-};
 
+};

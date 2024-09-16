@@ -9,19 +9,18 @@ struct FMETA_BMEventEquipmentData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Cooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MinAvailableCash;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NumberOfEquipmentPerEvent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 ExpirationTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_EquipmentQualityChance> EquipmentQualitiesChances;
-    
+
     PAYBACKDEFINITIONS_API FMETA_BMEventEquipmentData();
 };
-

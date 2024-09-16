@@ -15,27 +15,26 @@ public:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_OffenceReactionType OffenceReactionType;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_CivOffenceReactionBehavior ReactionBehavior;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UObject* OffenceObject;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector OffencePosition;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool IsReactionForced;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 Strikes;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FGameplayTag BlameTag;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText DialogueID;
-    
-};
 
+};

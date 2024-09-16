@@ -7,12 +7,13 @@ FIGS_MissionTask::FIGS_MissionTask() {
     (*this).ID = 0;
     (*this).ObjectiveType = EIGS_TaskObjectiveType::None;
     (*this).ObjectiveState = EIGS_ObjectiveState::Active;
-    (*this).TaskName = FText::FromString(TEXT(""));
+    (*this).TaskName = FText::GetEmpty();
     (*this).bOptionalTask = false;
     (*this).bCrucialTask = false;
     (*this).bWatchWhenInactive = false;
     (*this).bInitialized = false;
     (*this).TimerType = EIGS_TaskTimerType::None;
+    (*this).OnTaskStateChanged = {};
     (*this).CountToComplete = 1;
     (*this).CurrentCompletedCount = 0;
     (*this).CustomTaskInfo.ObjectiveCompType = EIGS_ObjectiveComponentType::Default;
@@ -23,6 +24,6 @@ FIGS_MissionTask::FIGS_MissionTask() {
     (*this).TimerTaskInfo.StartTimestamp = 0.000000000e+00f;
     (*this).TimerTaskInfo.Duration = 0.000000000e+00f;
     (*this).TimerTaskInfo.bPaused = false;
-    (*TBaseStructure<FTimerHandle>::Get()->FindPropertyByName("Handle")->ContainerPtrToValuePtr<uint64>(&(*this).TimerTaskInfo.TimerTaskHandle, 0)) = 0;
+    auto gen = TBaseStructure<FTimerHandle>::Get()->FindPropertyByName("Handle");
+    (*gen->ContainerPtrToValuePtr<uint64>(&(*this).TimerTaskInfo.TimerTaskHandle, 0)) = 0;
 }
-

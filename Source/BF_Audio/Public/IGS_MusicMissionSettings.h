@@ -9,13 +9,12 @@ struct FIGS_MusicMissionSettings {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_MusicMissionSource MissionSource;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bCutsceneNoMusic;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bCutsceneNoSound;
-    
+
     BF_AUDIO_API FIGS_MusicMissionSettings();
 };
-

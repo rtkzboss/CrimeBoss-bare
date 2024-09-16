@@ -9,4 +9,3 @@ enum class EIGS_AILootingBehavior : uint8 {
     OnlyUnlocked,
     Never,
 };
-

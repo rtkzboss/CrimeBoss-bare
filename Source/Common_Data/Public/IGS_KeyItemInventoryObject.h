@@ -12,12 +12,11 @@ public:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_RoomType KeyRoomType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 UniqueId;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText UniqueName;
-    
-};
 
+};

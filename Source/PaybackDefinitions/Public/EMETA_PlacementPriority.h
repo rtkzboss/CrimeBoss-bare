@@ -9,4 +9,3 @@ enum class EMETA_PlacementPriority : uint8 {
     PlayerTerritory,
     OutsideCity,
 };
-

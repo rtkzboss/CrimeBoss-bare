@@ -7,4 +7,3 @@ FIGS_AIBaseSniperTierData::FIGS_AIBaseSniperTierData() {
     (*this).CompromisedRange = 5.000000000e+02f;
     (*this).WeaponVisibilityType = EIGS_WeaponVisibilityType::VT_Laser;
 }
-

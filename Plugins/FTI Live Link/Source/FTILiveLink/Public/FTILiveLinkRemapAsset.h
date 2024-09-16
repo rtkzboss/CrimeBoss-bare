@@ -11,6 +11,5 @@ public:
 
     UPROPERTY(EditAnywhere)
     TMap<FName, FName> AnimationNamesMap;
-    
-};
 
+};

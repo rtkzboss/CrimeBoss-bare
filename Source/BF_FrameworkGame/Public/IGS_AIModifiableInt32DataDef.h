@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_AIModifiableInt32DataDef : public FIGS_AIModifi
 public:
     UPROPERTY(EditAnywhere)
     int32 Overload;
-    
+
     UPROPERTY(VisibleAnywhere)
     int32 Value;
-    
+
     FIGS_AIModifiableInt32DataDef();
 };
-

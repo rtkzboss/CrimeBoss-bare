@@ -8,4 +8,3 @@ enum class EMETA_TaskStatus : uint8 {
     Failed,
     Success,
 };
-

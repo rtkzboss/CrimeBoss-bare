@@ -10,4 +10,3 @@ enum class EMutableCompileMeshType : uint8 {
     AddWorkingSetNoChildren,
     AddWorkingSetAndChildren,
 };
-

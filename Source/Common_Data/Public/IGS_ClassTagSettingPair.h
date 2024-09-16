@@ -11,10 +11,9 @@ struct COMMON_DATA_API FIGS_ClassTagSettingPair {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ClassTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_WeaponClassSettingsDataAsset* Settings;
-    
+
     FIGS_ClassTagSettingPair();
 };
-

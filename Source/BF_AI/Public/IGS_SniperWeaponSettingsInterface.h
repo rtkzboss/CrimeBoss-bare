@@ -14,12 +14,11 @@ class BF_AI_API IIGS_SniperWeaponSettingsInterface : public IIGS_WeaponSettingsI
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     EIGS_WeaponVisibilityType GetWeaponVisibilityType();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool GetSniperShouldHit();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetHiddenTime();
-    
-};
 
+};

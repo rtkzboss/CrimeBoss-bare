@@ -10,10 +10,9 @@ struct FIGS_RichPresenceMissionNameTableRow : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     FText Name;
-    
+
     BF_FRAMEWORKGAME_API FIGS_RichPresenceMissionNameTableRow();
 };
-

@@ -12,13 +12,12 @@ struct COMMON_DATA_API FIGS_MeleeWeaponData : public FIGS_WieldableBaseData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UAkSwitchValue> WwiseWeaponName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_WeaponBashAttackDefinition> AttackDefinitions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponBashAttackDefinition AIAttackDefinition;
-    
+
     FIGS_MeleeWeaponData();
 };
-

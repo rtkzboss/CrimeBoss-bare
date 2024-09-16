@@ -13,10 +13,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     UIGS_GuardControlRoomComponent* GetGuardControlRoomComponent() const;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UIGS_GuardControlRoomComponent* GuardControlRoomComponent;
-    
-};
 
+};

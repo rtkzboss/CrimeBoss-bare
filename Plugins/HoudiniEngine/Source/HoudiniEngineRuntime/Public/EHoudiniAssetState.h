@@ -19,4 +19,3 @@ enum class EHoudiniAssetState : uint8 {
     Deleting,
     ProcessTemplate,
 };
-

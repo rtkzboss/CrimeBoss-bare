@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AICivilianSpecializationHolder : public FIGS_AI
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AICivilianDefaultTierDef Default;
-    
+
     FIGS_AICivilianSpecializationHolder();
 };
-

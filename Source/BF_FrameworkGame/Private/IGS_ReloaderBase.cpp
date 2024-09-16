@@ -1,5 +1,4 @@
 #include "IGS_ReloaderBase.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_ReloaderBase::UIGS_ReloaderBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -21,7 +20,7 @@ void UIGS_ReloaderBase::InterruptReload(EIGS_ReloadInterruptReasonEnum inReason,
 }
 
 float UIGS_ReloaderBase::GetCurrentReloadSpeed(bool inIsCombat, bool inIsEmptyMagazine) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UIGS_ReloaderBase::CanReload() {
@@ -31,5 +30,4 @@ bool UIGS_ReloaderBase::CanReload() {
 bool UIGS_ReloaderBase::CanBeInterrupted() const {
     return false;
 }
-
 

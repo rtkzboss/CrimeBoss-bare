@@ -11,10 +11,9 @@ struct BF_FRAMEWORKGAME_API FIGS_SquadClassDefinition {
 public:
     UPROPERTY(EditAnywhere)
     TSoftClassPtr<AIGS_SquadFramework> Default;
-    
+
     UPROPERTY(EditAnywhere)
     TMap<EIGS_UnitSpecialization, TSoftClassPtr<AIGS_SquadFramework>> UnitSpecializationOverride;
-    
+
     FIGS_SquadClassDefinition();
 };
-

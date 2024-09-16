@@ -9,4 +9,3 @@ enum class EMETA_ActionCardTheme : uint8 {
     Favour,
     Power,
 };
-

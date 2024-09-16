@@ -5,4 +5,3 @@ FMETA_HeisterStateChangeNote::FMETA_HeisterStateChangeNote() {
     (*this).NewState = EMETA_CharacterState::None;
     (*this).ChangeDay = 0;
 }
-

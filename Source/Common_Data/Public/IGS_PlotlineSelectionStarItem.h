@@ -9,10 +9,9 @@ struct COMMON_DATA_API FIGS_PlotlineSelectionStarItem {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag UnlockCriteriaTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Description;
-    
+
     FIGS_PlotlineSelectionStarItem();
 };
-

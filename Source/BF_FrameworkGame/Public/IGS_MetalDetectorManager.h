@@ -11,17 +11,16 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetDetectorsEnabled(bool inState);
-    
+
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnDetected();
-    
+
 public:
     UFUNCTION(BlueprintPure)
     bool GetMetalDetectorsState() const;
-    
+
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void DeleteObstacle() const;
-    
-};
 
+};

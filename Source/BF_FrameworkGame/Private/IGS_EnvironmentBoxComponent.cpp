@@ -1,8 +1,4 @@
 #include "IGS_EnvironmentBoxComponent.h"
-#include "ComponentInstanceDataCache.h"
-#include "Engine/EngineTypes.h"
-#include "Components/PrimitiveComponent.h"
-#include "VT/RuntimeVirtualTextureEnum.h"
 #include "NavAreas/NavArea_Obstacle.h"
 
 UIGS_EnvironmentBoxComponent::UIGS_EnvironmentBoxComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -25,5 +21,4 @@ void UIGS_EnvironmentBoxComponent::OnEnvironmentVolumeBeginOverlap(UPrimitiveCom
 bool UIGS_EnvironmentBoxComponent::GetEnabled() const {
     return false;
 }
-
 

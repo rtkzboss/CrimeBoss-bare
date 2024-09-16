@@ -12,4 +12,3 @@ enum class EMETA_AIBossStrengthChangeIntensity : uint8 {
     Power_Medium,
     Power_High,
 };
-

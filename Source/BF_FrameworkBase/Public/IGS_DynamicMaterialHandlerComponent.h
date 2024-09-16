@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "IGS_DynamicMaterialsRegeneratedOnActorEventDelegate.h"
+#include "IGS_DynamicMaterialsRegeneratedOnActorEvent.h"
 #include "IGS_DynamicMaterialHandlerComponent.generated.h"
 
 class UMaterialInstanceDynamic;
@@ -15,12 +15,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     UMaterialInstanceDynamic* GetDynamicMaterialInstanceFor(UMaterialInterface* inMaterial);
-    
+
     UFUNCTION(BlueprintCallable)
     void CreateDynamicMaterials(bool inEnableSkinnedDecals);
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_DynamicMaterialsRegeneratedOnActorEvent OnDynamicMaterialsRegeneratedOnActorEvent;
-    
-};
 
+};

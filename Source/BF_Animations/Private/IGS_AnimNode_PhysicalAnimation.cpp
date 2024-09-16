@@ -10,4 +10,3 @@ FIGS_AnimNode_PhysicalAnimation::FIGS_AnimNode_PhysicalAnimation() {
     (*this).RagdollCurveValue = 0.000000000e+00f;
     (*this).EnableGravityCurveTreshold = 1.000000015e-01f;
 }
-

@@ -11,19 +11,18 @@ struct COMMON_DATA_API FMETA_AmbushMissionRowInfo {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Name;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText Description;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> Picture;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> MapIconOverride;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_FPSMissionInfo FPSMissionInfo;
-    
+
     FMETA_AmbushMissionRowInfo();
 };
-

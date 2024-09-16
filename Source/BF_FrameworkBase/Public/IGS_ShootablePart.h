@@ -10,19 +10,18 @@ struct FIGS_ShootablePart {
 public:
     UPROPERTY(EditAnywhere)
     FComponentReference VisibleComponent;
-    
+
     UPROPERTY(EditAnywhere)
     FComponentReference CollisionComponent;
-    
+
     UPROPERTY(EditAnywhere)
     FScalableFloat ReducesDamage;
-    
+
     UPROPERTY(EditAnywhere)
     FScalableFloat DamagePenetration;
-    
+
     UPROPERTY(EditAnywhere)
     FScalableFloat ChanceToShootOff;
-    
+
     BF_FRAMEWORKBASE_API FIGS_ShootablePart();
 };
-

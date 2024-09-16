@@ -23,4 +23,3 @@ int32 UMETA_DebugData::GetChanceBeKiaAfterFail() const {
     return 0;
 }
 
-

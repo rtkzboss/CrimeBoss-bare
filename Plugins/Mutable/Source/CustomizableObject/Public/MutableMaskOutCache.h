@@ -12,9 +12,8 @@ public:
 
     UPROPERTY()
     TMap<FString, FString> Materials;
-    
+
     UPROPERTY()
     TMap<FString, FMaskOutTexture> Textures;
-    
-};
 
+};

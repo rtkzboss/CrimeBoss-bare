@@ -3,4 +3,3 @@
 UIGS_HeavyHitReactionTable::UIGS_HeavyHitReactionTable() {
 }
 
-

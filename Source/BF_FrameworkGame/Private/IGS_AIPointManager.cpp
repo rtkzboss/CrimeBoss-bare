@@ -16,19 +16,18 @@ void UIGS_AIPointManager::RegisterBotLimboIdlePoint(AIGS_WaypointFramework* inWa
 }
 
 TArray<UActorComponent*> UIGS_AIPointManager::GetThrowBagComponents() const {
-    return TArray<UActorComponent*>();
+    return {};
 }
 
 TArray<AIGS_ProgressGadgetBase*> UIGS_AIPointManager::GetDisruptibleGadgets() const {
-    return TArray<AIGS_ProgressGadgetBase*>();
+    return {};
 }
 
 TArray<AIGS_WaypointFramework*> UIGS_AIPointManager::GetBotLimboJumpPoints() const {
-    return TArray<AIGS_WaypointFramework*>();
+    return {};
 }
 
 TArray<AIGS_WaypointFramework*> UIGS_AIPointManager::GetBotLimboIdlePoints() const {
-    return TArray<AIGS_WaypointFramework*>();
+    return {};
 }
-
 

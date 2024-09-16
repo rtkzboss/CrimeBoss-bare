@@ -16,4 +16,3 @@ enum class EVectorSideEnum : uint8 {
     VS_MAX UMETA(Hidden),
     VS_INVALID = 255,
 };
-

@@ -8,4 +8,3 @@ enum class EIGS_PerkType : uint8 {
     PT_FPSPerk,
     PT_CombinedPerk,
 };
-

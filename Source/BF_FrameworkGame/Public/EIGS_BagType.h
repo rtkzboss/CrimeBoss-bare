@@ -12,4 +12,3 @@ enum class EIGS_BagType : uint8 {
     Bag_Loot_Epic,
     Bag_Loot_Legendary,
 };
-

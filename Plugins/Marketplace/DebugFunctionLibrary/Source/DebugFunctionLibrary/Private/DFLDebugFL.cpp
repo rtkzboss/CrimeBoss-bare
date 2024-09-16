@@ -27,7 +27,7 @@ FLinearColor UDFLDebugFL::GetTertiaryColour(UObject* Owner) {
 }
 
 float UDFLDebugFL::GetSize(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UDFLDebugFL::GetSegments(UObject* Owner) {
@@ -43,11 +43,11 @@ FLinearColor UDFLDebugFL::GetSecondaryColour(UObject* Owner) {
 }
 
 float UDFLDebugFL::GetScale(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UDFLDebugFL::GetRadius(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 FLinearColor UDFLDebugFL::GetPrintWarningColour(UObject* Owner) {
@@ -63,7 +63,7 @@ FLinearColor UDFLDebugFL::GetPrintErrorColour(UObject* Owner) {
 }
 
 float UDFLDebugFL::GetPrintDuration(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 bool UDFLDebugFL::GetPrintDebug(UObject* Owner) {
@@ -99,19 +99,19 @@ bool UDFLDebugFL::GetLogClass(UObject* Owner) {
 }
 
 float UDFLDebugFL::GetLineThickness(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UDFLDebugFL::GetLineLength(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UDFLDebugFL::GetHalfHeight(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 float UDFLDebugFL::GetDrawDuration(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 TEnumAsByte<EDrawDebugTrace::Type> UDFLDebugFL::GetDrawDebugTrace(UObject* Owner) {
@@ -159,7 +159,7 @@ FColor UDFLDebugFL::GetDebug_FColour(UObject* Owner, EDFLDrawDebugColour DebugCo
 }
 
 float UDFLDebugFL::GetArrowSize(UObject* Owner) {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 void UDFLDebugFL::DFLPrintWarning(UObject* WorldContext, const FString& String, float Duration, const FString& CallingFunction) {
@@ -327,5 +327,4 @@ void UDFLDebugFL::DFLDrawDebugActor(UObject* Owner, AActor* Actor) {
 bool UDFLDebugFL::BlueprintHasDebugProperties(const UBlueprint* Blueprint) {
     return false;
 }
-
 

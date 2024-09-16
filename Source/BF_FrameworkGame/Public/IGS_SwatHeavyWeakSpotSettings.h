@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_SwatHeavyWeakSpotSettings {
 public:
     UPROPERTY(EditAnywhere)
     float WeakSpotHealth;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval DoomTimer;
-    
+
     FIGS_SwatHeavyWeakSpotSettings();
 };
-

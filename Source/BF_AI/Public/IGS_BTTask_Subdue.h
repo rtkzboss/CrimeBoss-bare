@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CharToSubdueKey;
-    
+
     UPROPERTY()
     TWeakObjectPtr<AIGS_PlayerCharacter> Character;
-    
-};
 
+};

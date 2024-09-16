@@ -8,16 +8,15 @@ struct POWERIKRUNTIME_API FPowerIKCenterOfGravity {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Alpha;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HorizAmount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float VertAmount;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PullBodyAmount;
-    
+
     FPowerIKCenterOfGravity();
 };
-

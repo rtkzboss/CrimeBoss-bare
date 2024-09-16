@@ -9,4 +9,3 @@ enum class EIGS_ScenarioDifficulty : uint8 {
     SD_MediumForce,
     SD_HeavyForce,
 };
-

@@ -9,10 +9,9 @@ struct KANTANCHARTSSLATE_API FKantanCartesianChartStyle : public FKantanChartSty
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DataOpacity;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DataLineThickness;
-    
+
     FKantanCartesianChartStyle();
 };
-

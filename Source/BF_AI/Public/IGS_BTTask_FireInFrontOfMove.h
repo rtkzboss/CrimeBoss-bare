@@ -12,9 +12,8 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     float Distance;
-    
+
     UPROPERTY(EditAnywhere)
     float FireTime;
-    
-};
 
+};

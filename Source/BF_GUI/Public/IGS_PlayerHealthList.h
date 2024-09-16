@@ -14,12 +14,11 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void PostPlayerListChanged();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnNewPlayerWidget(UIGS_HealthSectionWidget* InWidget);
-    
+
     UFUNCTION(BlueprintCallable)
     void ForcePlayerListRefresh();
-    
-};
 
+};

@@ -7,4 +7,3 @@ FIGS_TutorialTableRow UIGS_TutorialsDatabase::GetTutorialData(UObject* inWCO, co
     return FIGS_TutorialTableRow{};
 }
 
-

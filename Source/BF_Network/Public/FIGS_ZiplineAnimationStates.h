@@ -7,4 +7,3 @@ enum class FIGS_ZiplineAnimationStates : uint8 {
     LD_Started,
     LD_Ended,
 };
-

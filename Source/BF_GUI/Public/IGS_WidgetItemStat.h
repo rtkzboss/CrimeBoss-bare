@@ -14,19 +14,18 @@ public:
 
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* StatNameTextBlock;
-    
+
     UPROPERTY(BlueprintReadWrite, Instanced)
     UTextBlock* StatValueTextBlock;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor TextColor;
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText StatName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText StatValue;
-    
-};
 
+};

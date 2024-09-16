@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_CharacterClassConfig {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* CharacterClass;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag ClassPerk;
-    
+
     FMETA_CharacterClassConfig();
 };
-

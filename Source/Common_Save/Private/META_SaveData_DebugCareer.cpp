@@ -2,10 +2,11 @@
 
 FMETA_SaveData_DebugCareer::FMETA_SaveData_DebugCareer() {
     (*this).bIsFilled = false;
-    (*this).Plotlines.Empty();
+    (*this).Plotlines = {};
     (*this).DisablePlotlines = false;
-    (*this).CrewIds.Empty();
-    (*this).CrewQualities.Empty();
+    (*this).CrewIds = {};
+    (*this).CrewQualities = {};
+    (*this).Loot = {};
     (*this).Day = 0;
     (*this).Cash = 0;
     (*this).Respect = EMETA_RespectLvl::Low;
@@ -13,5 +14,5 @@ FMETA_SaveData_DebugCareer::FMETA_SaveData_DebugCareer() {
     (*this).ArmySize = 0;
     (*this).HeatState = EMETA_Heat::Low;
     (*this).PoliceInvestigationValue = 0;
+    (*this).GraphVariables = {};
 }
-

@@ -8,4 +8,3 @@ FMETA_GenericCharacterConfiguration::FMETA_GenericCharacterConfiguration() {
     (*this).StartingPerkCount = 1;
     (*this).MaximumPerkCount = 3;
 }
-

@@ -10,4 +10,3 @@ public:
     UIGS_CharacterPressureWatcherComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

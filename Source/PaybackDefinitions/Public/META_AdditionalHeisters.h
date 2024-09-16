@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_AdditionalHeisters {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_AdditionalHeister> Heisters;
-    
+
     FMETA_AdditionalHeisters();
 };
-

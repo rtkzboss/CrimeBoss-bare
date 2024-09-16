@@ -5,4 +5,3 @@ UMETA_UnaryOperationNode_SG::UMETA_UnaryOperationNode_SG() {
     (*this).Type = EMETA_NodeType::UnaryOperation;
 }
 
-

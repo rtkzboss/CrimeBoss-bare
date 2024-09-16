@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "EIGS_AICommandState.h"
 #include "EIGS_AICommandType.h"
-#include "IGS_AICommandFinishedDelegateDelegate.h"
+#include "IGS_AICommandFinishedDelegate.h"
 #include "IGS_AICommand.generated.h"
 
 class AIGS_AIControllerGame;
@@ -16,21 +16,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void Finish();
-    
+
     UFUNCTION(BlueprintCallable)
     void Fail();
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AICommandState State;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_AICommandType Type;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<AIGS_AIControllerGame> OwningController;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FIGS_AICommandFinishedDelegate OnAICommandFinished;
-    
-};
 
+};

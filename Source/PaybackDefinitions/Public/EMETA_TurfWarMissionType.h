@@ -9,4 +9,3 @@ enum class EMETA_TurfWarMissionType : uint8 {
     Defence,
     Capture,
 };
-

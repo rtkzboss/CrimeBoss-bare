@@ -9,19 +9,18 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBaseDetectiveTierData {
 public:
     UPROPERTY(EditAnywhere)
     FFloatInterval ReviveTimer;
-    
+
     UPROPERTY(EditAnywhere)
     float DownstateHealth;
-    
+
     UPROPERTY(EditAnywhere)
     int32 RevivesToRetreat;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxHealthForReaction;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxHealthForCover;
-    
+
     FIGS_AIBaseDetectiveTierData();
 };
-

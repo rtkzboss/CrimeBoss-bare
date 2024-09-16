@@ -8,16 +8,15 @@ struct BF_FRAMEWORKBASE_API FIGS_GameplayTimeReward {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinPoints;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxPoints;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinGameplayTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxGameplayTime;
-    
+
     FIGS_GameplayTimeReward();
 };
-

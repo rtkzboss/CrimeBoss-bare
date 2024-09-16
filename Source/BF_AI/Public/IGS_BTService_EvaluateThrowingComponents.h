@@ -15,15 +15,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplateAlways;
-    
+
     UPROPERTY(EditAnywhere)
     UEnvQuery* QueryTemplateControl;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootCollection;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestLootCarryable;
-    
-};
 
+};

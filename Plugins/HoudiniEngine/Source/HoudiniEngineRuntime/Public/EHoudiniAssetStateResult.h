@@ -11,4 +11,3 @@ enum class EHoudiniAssetStateResult : uint8 {
     FinishedWithFatalError,
     Aborted,
 };
-

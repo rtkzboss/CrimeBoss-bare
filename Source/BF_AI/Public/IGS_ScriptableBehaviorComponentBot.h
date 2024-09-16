@@ -10,4 +10,3 @@ public:
     UIGS_ScriptableBehaviorComponentBot(const FObjectInitializer& ObjectInitializer);
 
 };
-

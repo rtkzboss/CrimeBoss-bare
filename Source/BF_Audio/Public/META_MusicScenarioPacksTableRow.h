@@ -10,13 +10,12 @@ struct BF_AUDIO_API FMETA_MusicScenarioPacksTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ScenarioID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag MusicCollectionID;
-    
+
     FMETA_MusicScenarioPacksTableRow();
 };
-

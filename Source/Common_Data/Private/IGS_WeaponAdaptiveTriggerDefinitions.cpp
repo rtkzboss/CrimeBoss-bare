@@ -13,4 +13,3 @@ FIGS_WeaponAdaptiveTriggerDefinitions::FIGS_WeaponAdaptiveTriggerDefinitions() {
     (*this).VibrationMode.Frequency = 0;
     (*this).VibrationMode.Amplitude = 0;
 }
-

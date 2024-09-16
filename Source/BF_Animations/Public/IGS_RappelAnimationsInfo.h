@@ -8,10 +8,9 @@ struct FIGS_RappelAnimationsInfo {
 public:
     UPROPERTY(BlueprintReadOnly)
     bool IsOnRappel;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool ShouldRotateView;
-    
+
     BF_ANIMATIONS_API FIGS_RappelAnimationsInfo();
 };
-

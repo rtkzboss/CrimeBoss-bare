@@ -4,7 +4,6 @@ UIGS_LoadMetaCutscenePaperDolls::UIGS_LoadMetaCutscenePaperDolls() {
 }
 
 UIGS_LoadMetaCutscenePaperDolls* UIGS_LoadMetaCutscenePaperDolls::LoadMetaCutscenePaperDolls(UObject* inWCO) {
-    return NULL;
+    return nullptr;
 }
-
 

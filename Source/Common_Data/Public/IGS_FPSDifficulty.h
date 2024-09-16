@@ -14,6 +14,5 @@ public:
 private:
     UPROPERTY(Transient)
     UIGS_FPSDifficultyDataAsset* m_FPSDifficultyDA;
-    
-};
 
+};

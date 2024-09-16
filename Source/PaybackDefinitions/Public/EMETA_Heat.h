@@ -11,4 +11,3 @@ enum class EMETA_Heat : uint8 {
     High,
     VeryHigh,
 };
-

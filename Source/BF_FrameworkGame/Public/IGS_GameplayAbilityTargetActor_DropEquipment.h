@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Abilities/GameplayAbilityTargetActor.h"
 #include "IGS_GameplayAbilityTargetActor_DropEquipment.generated.h"
 
@@ -13,12 +12,11 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector BoxDimensions;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpawnDistance;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTransform LocalSpawnTransform;
-    
-};
 
+};

@@ -4,4 +4,3 @@ UIGS_BTService_UseSmartObjectSequence::UIGS_BTService_UseSmartObjectSequence() {
     (*this).NodeName = TEXT("Use Smart Object Sequence");
 }
 
-

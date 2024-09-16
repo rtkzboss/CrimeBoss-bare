@@ -13,13 +13,12 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     int32 GetResultsCount();
-    
+
     UFUNCTION(BlueprintNativeEvent)
     FText GetEdgeResultText(uint8 inResultID);
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite)
     AMETA_BaseGameMode* CachedGameMode;
-    
-};
 
+};

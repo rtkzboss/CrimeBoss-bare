@@ -9,13 +9,12 @@ struct FIGS_SpecialLoot {
 public:
     UPROPERTY(BlueprintReadWrite)
     TArray<FIGS_SpecificSpecialLoot> Loot;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 Money;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bIsFilled;
-    
+
     COMMON_DATA_API FIGS_SpecialLoot();
 };
-

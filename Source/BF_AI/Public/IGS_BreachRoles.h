@@ -14,33 +14,32 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* Leader;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* LeaderEntryPoint;
-    
+
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* Deputy;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* DeputyEntryPoint;
-    
+
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* LeaderBackup;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* LeaderBackupEntryPoint;
-    
+
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* DeputyBackup;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* DeputyBackupEntryPoint;
-    
+
     UPROPERTY(EditDefaultsOnly)
     TArray<AIGS_GameCharacterFramework*> Stack;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BreachPointComponent* StackPoint;
-    
-};
 
+};

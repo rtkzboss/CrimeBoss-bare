@@ -58,4 +58,3 @@ enum class EIGS_ObjectiveComponentType : uint8 {
     Finish,
     AlarmDisable,
 };
-

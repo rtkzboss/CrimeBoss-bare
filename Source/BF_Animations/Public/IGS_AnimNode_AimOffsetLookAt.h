@@ -11,25 +11,24 @@ struct BF_ANIMATIONS_API FIGS_AnimNode_AimOffsetLookAt : public FAnimNode_BlendS
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FPoseLink BasePose;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LODThreshold;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName SourceSocketName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName PivotSocketName;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector LookAtLocation;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector SocketAxis;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Alpha;
-    
+
     FIGS_AnimNode_AimOffsetLookAt();
 };
-

@@ -8,4 +8,3 @@ enum class EMETA_ForceJobFillCharacter : uint8 {
     Manual,
     RevengePool,
 };
-

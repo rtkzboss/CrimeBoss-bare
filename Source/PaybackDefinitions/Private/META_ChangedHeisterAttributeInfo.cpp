@@ -5,4 +5,3 @@ FMETA_ChangedHeisterAttributeInfo::FMETA_ChangedHeisterAttributeInfo() {
     (*this).ChangeMultiplier = 0.000000000e+00f;
     (*this).DaysDuration = 0;
 }
-

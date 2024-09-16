@@ -10,16 +10,15 @@ struct PAYBACKDEFINITIONS_API FMETA_PerkInfo {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Bonus;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_PerkOptions, FMETA_Chance> ChanceForBetterPrice;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_PerkOptions, FMETA_Chance> ChanceForNoDeal;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_PerkOptions, FMETA_Chance> ChanceForVendorToAttack;
-    
+
     FMETA_PerkInfo();
 };
-

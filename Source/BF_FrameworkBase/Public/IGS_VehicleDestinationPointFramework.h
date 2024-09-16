@@ -10,4 +10,3 @@ public:
     AIGS_VehicleDestinationPointFramework(const FObjectInitializer& ObjectInitializer);
 
 };
-

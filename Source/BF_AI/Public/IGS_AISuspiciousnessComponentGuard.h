@@ -10,4 +10,3 @@ public:
     UIGS_AISuspiciousnessComponentGuard(const FObjectInitializer& ObjectInitializer);
 
 };
-

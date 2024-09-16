@@ -1,7 +1,7 @@
 #include "IGS_FirstPersonLadderAnimDatabase.h"
 
 FIGS_FirstPersonLadderAnimDatabase::FIGS_FirstPersonLadderAnimDatabase() {
-    (*this).ID = nullptr;
+    (*this).ID = FSoftObjectPath();
     (*this).Locomotion.IdleWalkBlendSpace = nullptr;
     (*this).Locomotion.JumpStart = nullptr;
     (*this).Locomotion.JumpLoop = nullptr;
@@ -14,4 +14,3 @@ FIGS_FirstPersonLadderAnimDatabase::FIGS_FirstPersonLadderAnimDatabase() {
     (*this).Locomotion.SwingCrouch = nullptr;
     (*this).Locomotion.SwingHip = nullptr;
 }
-

@@ -9,4 +9,3 @@ struct COMMON_DATA_API FIGS_GadgetData : public FIGS_CommonItemData {
 public:
     FIGS_GadgetData();
 };
-

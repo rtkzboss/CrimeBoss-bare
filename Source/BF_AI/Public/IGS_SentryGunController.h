@@ -10,4 +10,3 @@ public:
     AIGS_SentryGunController(const FObjectInitializer& ObjectInitializer);
 
 };
-

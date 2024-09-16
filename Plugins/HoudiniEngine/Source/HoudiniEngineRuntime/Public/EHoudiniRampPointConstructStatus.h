@@ -10,4 +10,3 @@ enum class EHoudiniRampPointConstructStatus : uint8 {
     VALUE_INSERTED,
     INTERPTYPE_INSERTED,
 };
-

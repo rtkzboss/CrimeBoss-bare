@@ -8,4 +8,3 @@ enum class EIGS_LocomotionType : uint8 {
     BT_Normal,
     BT_Injured,
 };
-

@@ -5,4 +5,3 @@ UIGS_BTTask_BlindFire::UIGS_BTTask_BlindFire() {
     (*this).NodeName = TEXT("Blind Fire");
 }
 
-

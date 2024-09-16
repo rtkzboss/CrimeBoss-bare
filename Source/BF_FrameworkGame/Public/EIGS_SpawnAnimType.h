@@ -26,4 +26,3 @@ enum class EIGS_SpawnAnimType : uint8 {
     SA_Helicopter_Left,
     SA_Helicopter_Right,
 };
-

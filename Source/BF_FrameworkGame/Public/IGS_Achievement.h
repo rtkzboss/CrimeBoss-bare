@@ -8,7 +8,6 @@ struct FIGS_Achievement {
 public:
     UPROPERTY(BlueprintReadOnly)
     int32 CurrentValue;
-    
+
     BF_FRAMEWORKGAME_API FIGS_Achievement();
 };
-

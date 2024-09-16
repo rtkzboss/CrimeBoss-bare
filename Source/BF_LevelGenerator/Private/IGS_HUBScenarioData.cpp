@@ -5,4 +5,3 @@ FIGS_HUBScenarioData::FIGS_HUBScenarioData() {
     (*this).ScenarioDA.BuildConfigurationDataAsset = nullptr;
     (*this).ScenarioDA.VariantIndex = 0;
 }
-

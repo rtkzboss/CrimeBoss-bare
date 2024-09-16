@@ -2,4 +2,3 @@
 
 FIGS_FakeLightConfig::FIGS_FakeLightConfig() {
 }
-

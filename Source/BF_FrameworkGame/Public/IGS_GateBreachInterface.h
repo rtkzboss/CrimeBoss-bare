@@ -12,4 +12,3 @@ class BF_FRAMEWORKGAME_API IIGS_GateBreachInterface : public IIGS_BreachInterfac
     GENERATED_BODY()
 public:
 };
-

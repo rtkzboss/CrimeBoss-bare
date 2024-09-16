@@ -15,21 +15,20 @@ class BF_AI_API IIGS_DetectiveSettingsInterface : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetReviveTimeMin();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetReviveTimeMax();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetReviveCharges();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetHealthMultiplier();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     UGameplayEffect* GetGameplayEffect();
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetDownstateHealth();
-    
-};
 
+};

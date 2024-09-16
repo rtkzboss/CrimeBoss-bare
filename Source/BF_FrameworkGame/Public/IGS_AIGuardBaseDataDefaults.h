@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIGuardBaseDataDefaults : public FIGS_AIUnitBas
 public:
     FIGS_AIGuardBaseDataDefaults();
 };
-

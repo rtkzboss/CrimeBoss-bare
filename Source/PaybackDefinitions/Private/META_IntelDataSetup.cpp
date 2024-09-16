@@ -9,4 +9,3 @@ FMETA_IntelDataSetup::FMETA_IntelDataSetup() {
     (*this).PercentageToDifficultyReduction = 0;
     (*this).PercentageToLowerDifficultyTwice = 50;
 }
-

@@ -8,13 +8,12 @@ struct COMMON_DATA_API FIGS_DualSenseFeedbackMode {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool OverrideEnabled;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Position;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Strength;
-    
+
     FIGS_DualSenseFeedbackMode();
 };
-

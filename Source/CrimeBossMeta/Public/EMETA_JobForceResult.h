@@ -9,4 +9,3 @@ enum class EMETA_JobForceResult : uint8 {
     Custom,
     JobCalculate,
 };
-

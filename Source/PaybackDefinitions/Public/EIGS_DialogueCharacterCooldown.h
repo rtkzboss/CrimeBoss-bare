@@ -9,4 +9,3 @@ enum class EIGS_DialogueCharacterCooldown : uint8 {
     Medium,
     Long,
 };
-

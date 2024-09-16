@@ -9,13 +9,12 @@ struct PAYBACKDEFINITIONS_API FMETA_HeisterSpecialData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString Name;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Surname;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_ItemQuality HeisterQuality;
-    
+
     FMETA_HeisterSpecialData();
 };
-

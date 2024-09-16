@@ -5,4 +5,3 @@ UXeSSSettings::UXeSSSettings() {
     (*this).DebugDataDumpPath = TEXT(".");
 }
 
-

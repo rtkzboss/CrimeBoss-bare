@@ -1,21 +1,22 @@
 #include "IGS_PropGenerator.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "IGS_PropLogicComponent.h"
 
 AIGS_PropGenerator::AIGS_PropGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    (*this).m_PropLogicComponent = CreateDefaultSubobject<UIGS_PropLogicComponent>(TEXT("PropLogicComponent"));
+    auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+    auto gen2 = CreateDefaultSubobject<UIGS_PropLogicComponent>(TEXT("PropLogicComponent"));
+    (*this).Root = gen;
+    (*this).m_PropLogicComponent = gen2;
     (*this).bReplicates = true;
-    (*AActor::StaticClass()->FindPropertyByName("RemoteRole")->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    auto gen3 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
+    (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
     (*this).NetDormancy = DORM_Initial;
-    (*this).RootComponent = (USceneComponent*)Root;
-    (*this).m_PropLogicComponent->SetupAttachment((*this).Root);
+    (*this).RootComponent = gen;
+    if (gen2) gen2->SetupAttachment(gen);
 }
 
 UIGS_PropLogicComponent* AIGS_PropGenerator::GetLogicComponent() const {
-    return NULL;
+    return nullptr;
 }
-
 

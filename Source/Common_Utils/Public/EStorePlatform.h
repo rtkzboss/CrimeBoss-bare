@@ -7,4 +7,3 @@ enum class EStorePlatform : uint8 {
     Epic,
     Steam,
 };
-

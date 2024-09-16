@@ -5,11 +5,10 @@ UMETA_DetectiveDatabase::UMETA_DetectiveDatabase() {
 }
 
 TArray<TSubclassOf<UMETA_DetectiveID>> UMETA_DetectiveDatabase::GetDetectivesIDs(UObject* inWCO) const {
-    return TArray<TSubclassOf<UMETA_DetectiveID>>();
+    return {};
 }
 
 FMETA_DetectiveTableRow UMETA_DetectiveDatabase::GetDetectiveData(UObject* inWCO, TSubclassOf<UMETA_DetectiveID> inID, bool& outSucceeded) {
     return FMETA_DetectiveTableRow{};
 }
-
 

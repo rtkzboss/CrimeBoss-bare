@@ -25,4 +25,3 @@ enum class EHoudiniInputObjectType : uint8 {
     GeometryCollectionComponent,
     GeometryCollectionActor_Deprecated,
 };
-

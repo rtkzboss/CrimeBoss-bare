@@ -1,4 +1,5 @@
 #include "KantanChartStyle.h"
+#include "Styling/SlateBrush.h"
 #include "Styling/SlateColor.h"
 
 FKantanChartStyle::FKantanChartStyle() {
@@ -8,22 +9,31 @@ FKantanChartStyle::FKantanChartStyle() {
     (*this).Background.Margin.Top = 0.000000000e+00f;
     (*this).Background.Margin.Right = 0.000000000e+00f;
     (*this).Background.Margin.Bottom = 0.000000000e+00f;
-    (*TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor")->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).R = 1.000000000e+00f;
-    (*TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor")->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).G = 1.000000000e+00f;
-    (*TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor")->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).B = 1.000000000e+00f;
-    (*TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor")->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).A = 1.000000000e+00f;
-    (*TBaseStructure<FSlateColor>::Get()->FindPropertyByName("ColorUseRule")->ContainerPtrToValuePtr<TEnumAsByte<ESlateColorStylingMode::Type>>(&(*this).Background.TintColor, 0)) = ESlateColorStylingMode::UseColor_Specified;
-    (*TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("ResourceObject")->ContainerPtrToValuePtr<UObject*>(&(*this).Background, 0)) = nullptr;
-    (*TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("ResourceName")->ContainerPtrToValuePtr<FName>(&(*this).Background, 0)) = NAME_None;
-    (*TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("UVRegion")->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Min.X = 0.000000000e+00f;
-    (*TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("UVRegion")->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Min.Y = 0.000000000e+00f;
-    (*TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("UVRegion")->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Max.X = 0.000000000e+00f;
-    (*TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("UVRegion")->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Max.Y = 0.000000000e+00f;
-    (*TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("UVRegion")->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).bIsValid = 0;
+    auto gen = TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor");
+    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).R = 1.000000000e+00f;
+    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).G = 1.000000000e+00f;
+    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).B = 1.000000000e+00f;
+    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).Background.TintColor, 0)).A = 1.000000000e+00f;
+    auto gen2 = TBaseStructure<FSlateColor>::Get()->FindPropertyByName("ColorUseRule");
+    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ESlateColorStylingMode::Type>>(&(*this).Background.TintColor, 0)) = ESlateColorStylingMode::UseColor_Specified;
+    auto gen3 = TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("ResourceObject");
+    (*gen3->ContainerPtrToValuePtr<UObject*>(&(*this).Background, 0)) = nullptr;
+    auto gen4 = TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("ResourceName");
+    (*gen4->ContainerPtrToValuePtr<FName>(&(*this).Background, 0)) = NAME_None;
+    auto gen5 = TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("UVRegion");
+    (*gen5->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Min.X = 0.000000000e+00f;
+    (*gen5->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Min.Y = 0.000000000e+00f;
+    (*gen5->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Max.X = 0.000000000e+00f;
+    (*gen5->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).Max.Y = 0.000000000e+00f;
+    (*gen5->ContainerPtrToValuePtr<FBox2D>(&(*this).Background, 0)).bIsValid = 0;
     (*this).Background.DrawAs = ESlateBrushDrawType::Image;
     (*this).Background.Tiling = ESlateBrushTileType::NoTile;
     (*this).Background.Mirroring = ESlateBrushMirrorType::NoMirror;
     (*this).Background.ImageType = ESlateBrushImageType::NoImage;
+    auto gen6 = TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("bIsDynamicallyLoaded");
+    CastField<FBoolProperty>(gen6)->SetPropertyValue(&(*gen6->ContainerPtrToValuePtr<uint8>(&(*this).Background, 0)), false);
+    auto gen7 = TBaseStructure<FSlateBrush>::Get()->FindPropertyByName("bHasUObject");
+    CastField<FBoolProperty>(gen7)->SetPropertyValue(&(*gen7->ContainerPtrToValuePtr<uint8>(&(*this).Background, 0)), false);
     (*this).ChartLineColor.R = 1.000000000e+00f;
     (*this).ChartLineColor.G = 1.000000000e+00f;
     (*this).ChartLineColor.B = 1.000000000e+00f;
@@ -50,4 +60,3 @@ FKantanChartStyle::FKantanChartStyle() {
     (*this).FontColor.B = 1.000000000e+00f;
     (*this).FontColor.A = 1.000000000e+00f;
 }
-

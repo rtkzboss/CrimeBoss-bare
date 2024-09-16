@@ -6,4 +6,3 @@ UBTTask_WaitForRotation::UBTTask_WaitForRotation() {
     (*this).NodeName = TEXT("Wait For Rotation");
 }
 
-

@@ -12,4 +12,3 @@ class BF_FRAMEWORKBASE_API IDangerAreaInterface : public IInterface {
     GENERATED_BODY()
 public:
 };
-

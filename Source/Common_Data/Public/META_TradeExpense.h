@@ -10,19 +10,18 @@ struct COMMON_DATA_API FMETA_TradeExpense {
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_TradeExpenseType ExpenseType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag LootCategory;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag EconomyVariable;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag GraphVariable;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool Alternative;
-    
+
     FMETA_TradeExpense();
 };
-

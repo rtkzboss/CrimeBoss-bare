@@ -12,12 +12,11 @@ public:
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void RemoveValue(int32 InValue);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void AddValue(int32 InValue);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     int32 SecuredLoot;
-    
-};
 
+};

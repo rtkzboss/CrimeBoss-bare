@@ -6,4 +6,3 @@ UEnvQueryGenerator_SniperPoints::UEnvQueryGenerator_SniperPoints() {
     (*this).ItemType = UEnvQueryItemType_Actor::StaticClass();
 }
 
-

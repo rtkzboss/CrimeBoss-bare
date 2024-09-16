@@ -14,8 +14,7 @@ public:
 
     UPROPERTY(VisibleAnywhere)
     AActor* AttachedActor;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

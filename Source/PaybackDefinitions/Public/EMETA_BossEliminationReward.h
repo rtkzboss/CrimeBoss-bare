@@ -11,4 +11,3 @@ enum class EMETA_BossEliminationReward : uint8 {
     Weapon,
     Heister,
 };
-

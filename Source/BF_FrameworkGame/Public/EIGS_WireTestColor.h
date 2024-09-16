@@ -9,4 +9,3 @@ enum class EIGS_WireTestColor : uint8 {
     E_Green,
     E_Red,
 };
-

@@ -7,4 +7,3 @@ FMutableBuiltData::FMutableBuiltData() {
     (*this).CompilationId.D = 0;
     (*this).SupportedVersion = -1;
 }
-

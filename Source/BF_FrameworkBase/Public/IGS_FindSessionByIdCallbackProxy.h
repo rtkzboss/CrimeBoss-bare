@@ -2,11 +2,9 @@
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FindSessionsCallbackProxy.h"
-#include "FindSessionsCallbackProxy.h"
 #include "IGS_FindSessionByIdCallbackProxy.generated.h"
 
 class APlayerController;
-class UIGS_FindSessionByIdCallbackProxy;
 class UObject;
 
 UCLASS(MinimalAPI)
@@ -17,16 +15,15 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=WorldContextObject))
     static UIGS_FindSessionByIdCallbackProxy* FindSessionById(UObject* WorldContextObject, APlayerController* PlayerController, const FBlueprintSessionResult& SessionToCheck, bool bUseLAN);
-    
+
     UPROPERTY(BlueprintAssignable)
     FBlueprintFindSessionsResultDelegate OnSuccess;
-    
+
     UPROPERTY(BlueprintAssignable)
     FBlueprintFindSessionsResultDelegate OnFailure;
-    
+
 private:
     UPROPERTY()
     UObject* WorldContextObject;
-    
-};
 
+};

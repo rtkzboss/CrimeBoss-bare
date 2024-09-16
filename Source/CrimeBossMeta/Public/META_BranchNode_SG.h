@@ -14,15 +14,14 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseCondition*> Conditions;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_ConditionExprOperator ConditionOperator;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 TrueNodeId;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 FalseNodeId;
-    
-};
 
+};

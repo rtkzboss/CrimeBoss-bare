@@ -7,4 +7,3 @@ enum class EMETA_ChangedHeisterAttribute : uint8 {
     Upkeep,
     MissionCutPercent,
 };
-

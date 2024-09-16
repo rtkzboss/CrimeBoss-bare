@@ -10,4 +10,3 @@ public:
     UBTDecorator_IsOverlapingWithPlayer();
 
 };
-

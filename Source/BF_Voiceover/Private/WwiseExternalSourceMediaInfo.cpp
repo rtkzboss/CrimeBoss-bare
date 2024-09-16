@@ -9,4 +9,3 @@ FWwiseExternalSourceMediaInfo::FWwiseExternalSourceMediaInfo() {
     (*this).MemoryAlignment = 0;
     (*this).PrefetchSize = 0;
 }
-

@@ -8,4 +8,3 @@ enum class EIGS_HealthState : uint8 {
     HS_DownMoveable,
     HS_DownPinned,
 };
-

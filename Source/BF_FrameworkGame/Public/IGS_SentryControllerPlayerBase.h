@@ -15,21 +15,20 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bUsePitch;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bUseYaw;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_DetectorBase* PossedPawn;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     AIGS_PlayerControllerRoot* PlayerController;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentYaw;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float CurrentPitch;
-    
-};
 
+};

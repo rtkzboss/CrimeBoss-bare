@@ -15,21 +15,20 @@ public:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FString> Filters;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     UIGS_BuildConfigurationDataAsset* BuildConfigurationDataAsset;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName VariantName;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName ConnectionName;
-    
+
     UPROPERTY()
     TArray<FIGS_ConnectionPointData> Cooked_ConnectionPoints;
-    
+
     UPROPERTY()
     TArray<FIGS_VariantDefinition> Cooked_Variants;
-    
-};
 
+};

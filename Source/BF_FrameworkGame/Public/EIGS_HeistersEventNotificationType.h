@@ -42,4 +42,3 @@ enum class EIGS_HeistersEventNotificationType : uint8 {
     Lockpick,
     Looting,
 };
-

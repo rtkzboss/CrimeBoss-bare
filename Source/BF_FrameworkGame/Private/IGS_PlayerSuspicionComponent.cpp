@@ -1,5 +1,4 @@
 #include "IGS_PlayerSuspicionComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_PlayerSuspicionComponent::UIGS_PlayerSuspicionComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -30,5 +29,4 @@ FGameplayTag UIGS_PlayerSuspicionComponent::GetCurrentWieldableClass() const {
 FGameplayTagContainer UIGS_PlayerSuspicionComponent::GetCurrentOffences() {
     return FGameplayTagContainer{};
 }
-
 

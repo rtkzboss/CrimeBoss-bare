@@ -8,13 +8,12 @@ struct COMMON_DATA_API FIGS_WeaponAccuracyDefinitionMultipliers {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float CrouchMult;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float MovementMult;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float JumpMult;
-    
+
     FIGS_WeaponAccuracyDefinitionMultipliers();
 };
-

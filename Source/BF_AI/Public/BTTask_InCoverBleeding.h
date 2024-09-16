@@ -17,15 +17,14 @@ public:
 protected:
     UPROPERTY(VisibleAnywhere)
     UCoverPoint* m_CoverPoint;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_AIControllerBase* m_Controller;
-    
+
     UPROPERTY(VisibleAnywhere)
     AIGS_IntelligentGameCharacter* m_Character;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_CharacterData* m_CharacterData;
-    
-};
 
+};

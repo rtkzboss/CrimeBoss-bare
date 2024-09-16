@@ -10,4 +10,3 @@ enum class EIGS_SmartLinkAnimVariant : uint8 {
     AIM_Jump_OverObstacle,
     AIM_Montage,
 };
-

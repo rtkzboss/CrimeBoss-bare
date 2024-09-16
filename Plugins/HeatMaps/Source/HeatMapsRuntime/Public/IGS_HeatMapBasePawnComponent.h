@@ -10,4 +10,3 @@ public:
     UIGS_HeatMapBasePawnComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

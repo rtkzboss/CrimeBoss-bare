@@ -5,13 +5,14 @@ public class BF_Navigation : ModuleRules {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bLegacyPublicIncludePaths = false;
         ShadowVariableWarningLevel = WarningLevel.Warning;
-        
+
         PublicDependencyModuleNames.AddRange(new string[] {
             "BF_FrameworkBase",
             "Core",
             "CoreUObject",
             "Engine",
             "NavigationSystem",
+            "PhysicsCore",
         });
     }
 }

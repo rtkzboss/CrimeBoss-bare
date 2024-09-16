@@ -8,4 +8,3 @@ enum class EChartAxisPosition : uint8 {
     RightTop,
     Floating,
 };
-

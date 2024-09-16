@@ -12,9 +12,8 @@ public:
 
     UPROPERTY(Config, EditAnywhere)
     EStreamlineSettingOverride EnableDLSSFGInPlayInEditorViewportsOverride;
-    
+
     UPROPERTY(Config, EditAnywhere)
     EStreamlineSettingOverride LoadDebugOverlayOverride;
-    
-};
 
+};

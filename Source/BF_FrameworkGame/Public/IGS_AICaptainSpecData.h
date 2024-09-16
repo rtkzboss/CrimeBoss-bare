@@ -11,16 +11,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AICaptainSpecData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_UnitSpecialization Specialization;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_GameCharacterFramework> VIP;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Chance;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     float NormalizedChance;
-    
+
     FIGS_AICaptainSpecData();
 };
-

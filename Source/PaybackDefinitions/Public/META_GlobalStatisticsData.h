@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_GlobalStatisticsData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, float> Singleplayer;
-    
+
     FMETA_GlobalStatisticsData();
 };
-

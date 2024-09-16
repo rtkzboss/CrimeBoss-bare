@@ -8,7 +8,6 @@ struct FMETA_ArrayEquipmentAllowedClasses {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* Equipment;
-    
+
     PAYBACKDEFINITIONS_API FMETA_ArrayEquipmentAllowedClasses();
 };
-

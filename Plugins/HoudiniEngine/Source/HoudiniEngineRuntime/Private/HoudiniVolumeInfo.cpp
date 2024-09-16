@@ -2,4 +2,3 @@
 
 FHoudiniVolumeInfo::FHoudiniVolumeInfo() {
 }
-

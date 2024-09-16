@@ -128,4 +128,3 @@ bool UAdvancedSessionsLibrary::BanPlayer(UObject* WorldContextObject, APlayerCon
 void UAdvancedSessionsLibrary::AddOrModifyExtraSettings(TArray<FSessionPropertyKeyPair>& SettingsArray, TArray<FSessionPropertyKeyPair>& NewOrChangedSettings, TArray<FSessionPropertyKeyPair>& ModifiedSettingsArray) {
 }
 
-

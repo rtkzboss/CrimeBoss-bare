@@ -13,16 +13,15 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetData(EMETA_TradeVendor inVendor, FGameplayTag inLoot, FText inMoney);
-    
+
 private:
     UPROPERTY()
     EMETA_TradeVendor m_Vendor;
-    
+
     UPROPERTY()
     FGameplayTag m_Loot;
-    
+
     UPROPERTY()
     FText m_Money;
-    
-};
 
+};

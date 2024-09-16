@@ -8,13 +8,12 @@ struct COMMON_DATA_API FIGS_MagazineModData {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ExtendedAmmoCount;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 ExtendedReserveCount;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float ReloadTimeMultiplier;
-    
+
     FIGS_MagazineModData();
 };
-

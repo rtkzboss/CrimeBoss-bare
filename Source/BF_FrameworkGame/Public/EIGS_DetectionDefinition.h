@@ -8,4 +8,3 @@ enum class EIGS_DetectionDefinition : uint8 {
     Start = 0,
     End,
 };
-

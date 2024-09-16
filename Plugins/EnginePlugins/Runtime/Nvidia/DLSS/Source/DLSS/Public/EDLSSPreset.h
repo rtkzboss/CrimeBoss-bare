@@ -13,4 +13,3 @@ enum class EDLSSPreset : uint8 {
     F,
     G,
 };
-

@@ -9,4 +9,3 @@ enum class EIGS_FPSDifficulty : uint8 {
     FD_Hard,
     FD_Extreme,
 };
-

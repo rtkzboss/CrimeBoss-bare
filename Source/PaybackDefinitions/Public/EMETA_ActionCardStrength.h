@@ -8,4 +8,3 @@ enum class EMETA_ActionCardStrength : uint8 {
     Strength2,
     Strength3,
 };
-

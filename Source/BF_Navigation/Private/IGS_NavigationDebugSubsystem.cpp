@@ -9,4 +9,3 @@ void UIGS_NavigationDebugSubsystem::OnNavUpdated(ANavigationData* inNavData) {
 void UIGS_NavigationDebugSubsystem::NavigationFinished(ANavigationData* inNavigation) {
 }
 
-

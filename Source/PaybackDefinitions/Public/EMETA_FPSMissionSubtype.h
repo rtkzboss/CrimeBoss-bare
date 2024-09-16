@@ -12,4 +12,3 @@ enum class EMETA_FPSMissionSubtype : uint8 {
     WarehouseAttack,
     WeakenMission,
 };
-

@@ -4,4 +4,3 @@ UIGS_BTTask_ThrowGrenade::UIGS_BTTask_ThrowGrenade() {
     (*this).NodeName = TEXT("Throw Grenade - AI Grenade Manager");
 }
 
-

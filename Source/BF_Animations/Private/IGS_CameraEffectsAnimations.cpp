@@ -10,4 +10,3 @@ FIGS_CameraEffectsAnimations::FIGS_CameraEffectsAnimations() {
     (*this).MaximumEffectDistance = 1.500000000e+01f;
     (*this).MinimumEffectDistance = 4.500000000e+01f;
 }
-

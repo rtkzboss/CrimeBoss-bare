@@ -13,49 +13,48 @@ struct PAYBACKDEFINITIONS_API FMETA_TileSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_Gang CurrentGang;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMETA_Gang ConquestState;
-    
+
     UPROPERTY()
     int32 MinAmountOfSoldiersForAttack;
-    
+
     UPROPERTY()
     int32 MinAmountOfSoldiersForDefence;
-    
+
     UPROPERTY()
     int32 CurrentStrength;
-    
+
     UPROPERTY()
     bool WeaknessLowerTier;
-    
+
     UPROPERTY()
     int32 CurrentWeakness;
-    
+
     UPROPERTY()
     int32 WeaknessExpireDays;
-    
+
     UPROPERTY()
     int32 CounterOfCapturesByPlayer;
-    
+
     UPROPERTY()
     int32 CountdownForAttackAfterLost;
-    
+
     UPROPERTY()
     EMETA_TileWealth Wealth;
-    
+
     UPROPERTY()
     TArray<FMETA_TileRewardData> CaptureRewards;
-    
+
     UPROPERTY()
     TArray<FMETA_BossEliminationRewardData> BossEliminationRewards;
-    
+
     UPROPERTY()
     float IncomeMultiplier;
-    
+
     UPROPERTY()
     FGameplayTag IncomeLootItem;
-    
+
     FMETA_TileSaveData();
 };
-

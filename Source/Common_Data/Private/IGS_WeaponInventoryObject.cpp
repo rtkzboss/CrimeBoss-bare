@@ -3,8 +3,8 @@
 #include "Templates/SubclassOf.h"
 
 UIGS_WeaponInventoryObject::UIGS_WeaponInventoryObject() {
-    (*this).WeaponSkin = nullptr;
-    (*this).DefaultWeaponSkin = nullptr;
+    (*this).WeaponSkin = FSoftObjectPath();
+    (*this).DefaultWeaponSkin = FSoftObjectPath();
     (*this).ShouldConsumeAmmo = true;
     (*this).ItemType = EIGS_ItemType::Item_Weapon;
 }
@@ -45,5 +45,4 @@ void UIGS_WeaponInventoryObject::AddMod(TSubclassOf<UIGS_ModInventoryObject> inM
 int32 UIGS_WeaponInventoryObject::AddAmmoToMagazine(int32 inCount) {
     return 0;
 }
-
 

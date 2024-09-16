@@ -4,4 +4,3 @@ UBTDecorator_SquadBreachNavLinks::UBTDecorator_SquadBreachNavLinks() {
     (*this).NodeName = TEXT("Is Breachable NavLinks");
 }
 
-

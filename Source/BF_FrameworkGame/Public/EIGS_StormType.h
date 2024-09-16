@@ -10,4 +10,3 @@ enum class EIGS_StormType : uint8 {
     ST_VeryHigh,
     ST_Insane,
 };
-

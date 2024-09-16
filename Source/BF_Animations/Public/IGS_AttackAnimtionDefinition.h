@@ -11,19 +11,18 @@ struct BF_ANIMATIONS_API FIGS_AttackAnimtionDefinition {
 public:
     UPROPERTY(EditAnywhere)
     EIGS_WeaponAttackType AttackType;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_ArmsAnimtionDefinition ArmsAnimations;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAnimtionDefinition WeaponAnimations;
-    
+
     UPROPERTY(EditAnywhere)
     float AttackPlayRate;
-    
+
     UPROPERTY(EditAnywhere)
     float ReloadPlayRate;
-    
+
     FIGS_AttackAnimtionDefinition();
 };
-

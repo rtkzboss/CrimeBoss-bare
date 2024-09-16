@@ -10,4 +10,3 @@ public:
     UIGS_Common_DataDevSettings_Base();
 
 };
-

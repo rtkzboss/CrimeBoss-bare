@@ -16,4 +16,3 @@ UIGS_FrameworkGameDevSettings::UIGS_FrameworkGameDevSettings() {
     (*this).OffenceTablesDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/Stealth/DA_OffenceTables.DA_OffenceTables"), TEXT(""));
 }
 
-

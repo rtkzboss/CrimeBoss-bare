@@ -14,15 +14,14 @@ public:
 
     UPROPERTY(BlueprintReadOnly)
     FVector StackPos;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AActor* Brechable;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool Breaching;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool Crouch;
-    
-};
 
+};

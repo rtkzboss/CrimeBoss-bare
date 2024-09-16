@@ -2,4 +2,3 @@
 
 FIGS_AIBaseHeavyTierData::FIGS_AIBaseHeavyTierData() {
 }
-

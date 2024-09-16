@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FIGS_MetaDialogueSpeakerKey, FLinearColor> SpeakerSubtitleColors;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TMap<FName, FText> CharacterNames;
-    
-};
 
+};

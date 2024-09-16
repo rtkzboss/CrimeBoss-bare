@@ -9,4 +9,3 @@ enum class ECombatState : uint8 {
     CS_Searching,
     CS_Battle,
 };
-

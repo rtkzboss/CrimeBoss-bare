@@ -23,4 +23,3 @@ enum class EIGS_PingableType : uint8 {
     Laser,
     Objective,
 };
-

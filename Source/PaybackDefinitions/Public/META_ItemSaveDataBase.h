@@ -9,16 +9,15 @@ struct FMETA_ItemSaveDataBase {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag itemTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Price;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RelativePrice;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsUnseenInShop;
-    
+
     PAYBACKDEFINITIONS_API FMETA_ItemSaveDataBase();
 };
-

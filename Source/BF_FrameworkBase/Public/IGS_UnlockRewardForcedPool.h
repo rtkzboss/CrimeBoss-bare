@@ -9,13 +9,12 @@ struct FIGS_UnlockRewardForcedPool {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Level;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag Item;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AllowedQuality;
-    
+
     BF_FRAMEWORKBASE_API FIGS_UnlockRewardForcedPool();
 };
-

@@ -8,4 +8,3 @@ enum class EMETA_AmbushStartMethod : uint8 {
     DEGUB_ForceDecline,
     DEBUG_ForceStart,
 };
-

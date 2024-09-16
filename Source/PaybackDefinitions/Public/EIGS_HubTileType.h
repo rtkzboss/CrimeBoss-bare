@@ -35,4 +35,3 @@ enum class EIGS_HubTileType : uint8 {
     StraightSpecial,
     SpecialTurn,
 };
-

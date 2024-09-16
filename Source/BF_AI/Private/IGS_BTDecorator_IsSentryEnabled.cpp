@@ -4,4 +4,3 @@ UIGS_BTDecorator_IsSentryEnabled::UIGS_BTDecorator_IsSentryEnabled() {
     (*this).NodeName = TEXT("Is Sentry Enabled");
 }
 
-

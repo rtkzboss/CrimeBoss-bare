@@ -12,10 +12,9 @@ struct BF_ANIMATIONS_API FIGS_FirstPersonLadderAnimDatabase : public FTableRowBa
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftClassPtr<AIGS_WeaponBase> ID;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_ArmsLocomotion Locomotion;
-    
+
     FIGS_FirstPersonLadderAnimDatabase();
 };
-

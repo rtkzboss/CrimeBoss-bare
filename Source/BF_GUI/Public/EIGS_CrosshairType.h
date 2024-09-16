@@ -11,4 +11,3 @@ enum class EIGS_CrosshairType : uint8 {
     Arcs,
     Circle,
 };
-

@@ -3,4 +3,3 @@
 FIGS_DistrictVariant::FIGS_DistrictVariant() {
     (*this).DistrictVariant = 0;
 }
-

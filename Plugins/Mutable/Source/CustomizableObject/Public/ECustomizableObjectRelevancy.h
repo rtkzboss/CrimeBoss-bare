@@ -7,4 +7,3 @@ enum class ECustomizableObjectRelevancy : uint8 {
     All,
     ClientOnly,
 };
-

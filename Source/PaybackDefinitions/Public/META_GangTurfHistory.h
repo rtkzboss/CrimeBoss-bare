@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FMETA_GangTurfHistory {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Gang, int32> CapturedTerritory;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EMETA_Gang, int32> LostTerritory;
-    
+
     FMETA_GangTurfHistory();
 };
-

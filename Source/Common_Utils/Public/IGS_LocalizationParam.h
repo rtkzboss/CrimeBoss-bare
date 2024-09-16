@@ -8,10 +8,9 @@ struct COMMON_UTILS_API FIGS_LocalizationParam {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString Name;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText Value;
-    
+
     FIGS_LocalizationParam();
 };
-

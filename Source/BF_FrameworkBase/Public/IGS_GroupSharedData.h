@@ -15,16 +15,15 @@ public:
 
     UFUNCTION(BlueprintPure)
     UIGS_TokenPool* GetTokenPool() const;
-    
+
 private:
     UPROPERTY(Export, Transient)
     TWeakObjectPtr<UIGS_CharacterData> OwnerCharacterData;
-    
+
     UPROPERTY(Transient)
     UIGS_TokenPool* TokenPool;
-    
+
     UPROPERTY(Transient)
     UIGS_LocationsAroundTarget* LocationsAroundTarget;
-    
-};
 
+};

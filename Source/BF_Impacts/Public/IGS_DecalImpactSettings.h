@@ -11,7 +11,6 @@ struct BF_IMPACTS_API FIGS_DecalImpactSettings : public FIGS_ImpactSettings {
 public:
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UIGS_DecalImpactDataAsset> DecalImpactDataPath;
-    
+
     FIGS_DecalImpactSettings();
 };
-

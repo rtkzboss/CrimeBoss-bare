@@ -11,4 +11,3 @@ enum class EIGS_ItemWeight : uint8 {
     VeryHeavy,
     UNKNOWN = 255,
 };
-

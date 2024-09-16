@@ -3,4 +3,3 @@
 UKantanBarChartWidgetStyle::UKantanBarChartWidgetStyle() {
 }
 
-

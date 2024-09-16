@@ -10,4 +10,3 @@ public:
     UPaybackWaveManager(const FObjectInitializer& ObjectInitializer);
 
 };
-

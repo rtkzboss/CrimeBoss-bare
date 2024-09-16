@@ -8,4 +8,3 @@ enum class EIGS_AimType : uint8 {
     Idle,
     Combat,
 };
-

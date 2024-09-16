@@ -7,4 +7,3 @@ bool UIGS_NavlinkHelpersLibrary::IsLinkHeadingTo(UIGS_NavLinkComponentFramework*
     return false;
 }
 
-

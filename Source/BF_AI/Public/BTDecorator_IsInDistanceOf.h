@@ -13,15 +13,14 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     bool bIsBlackBoardDistance;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector DistanceBlackboardKey;
-    
+
     UPROPERTY(EditAnywhere)
     float Distance;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector TargetBlackboardKey;
-    
-};
 
+};

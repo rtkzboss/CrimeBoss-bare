@@ -7,4 +7,3 @@ enum class EIGS_AkEnvironmentSpace : uint8 {
     Indoors,
     Outdoors,
 };
-

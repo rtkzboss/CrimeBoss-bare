@@ -9,7 +9,6 @@ struct FMETA_WeaponSaveDataArray {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_WeaponSaveData> WeaponsSaveData;
-    
+
     PAYBACKDEFINITIONS_API FMETA_WeaponSaveDataArray();
 };
-

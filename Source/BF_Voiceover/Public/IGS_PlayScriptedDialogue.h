@@ -4,7 +4,6 @@
 #include "IGS_PlayScriptedDialogue.generated.h"
 
 class AActor;
-class UIGS_PlayScriptedDialogue;
 class UObject;
 
 UCLASS()
@@ -15,6 +14,5 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_PlayScriptedDialogue* PlayScriptedDialogue(UObject* inWCO, FText DialogueID, UPARAM(Ref) TArray<AActor*>& inCharacters);
-    
-};
 
+};

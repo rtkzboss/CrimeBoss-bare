@@ -10,4 +10,3 @@ public:
     AIGS_VolumeBase(const FObjectInitializer& ObjectInitializer);
 
 };
-

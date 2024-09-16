@@ -9,7 +9,6 @@ struct PATHFOLLOW_API FPFSpeedCurve {
 public:
     UPROPERTY(EditAnywhere)
     FInterpCurveFloat _speedCurve;
-    
+
     FPFSpeedCurve();
 };
-

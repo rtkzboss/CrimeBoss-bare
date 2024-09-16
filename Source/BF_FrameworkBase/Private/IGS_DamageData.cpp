@@ -31,4 +31,3 @@ FIGS_DamageData::FIGS_DamageData() {
     (*this).HitInfo.InstigatorTeamSide = EIGS_TeamSideEnum::TS_Unknown;
     (*this).HitInfo.bIsHeadshot = false;
 }
-

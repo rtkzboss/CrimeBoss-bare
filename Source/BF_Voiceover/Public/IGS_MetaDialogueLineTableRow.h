@@ -10,10 +10,9 @@ struct BF_VOICEOVER_API FIGS_MetaDialogueLineTableRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FName ID;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FIGS_MetaDialogueVariationData> Variations;
-    
+
     FIGS_MetaDialogueLineTableRow();
 };
-

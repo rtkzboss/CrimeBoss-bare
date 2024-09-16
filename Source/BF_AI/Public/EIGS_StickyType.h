@@ -9,4 +9,3 @@ enum class EIGS_StickyType : uint8 {
     StickyType_Moving,
     StickyType_UNKNOWN = 255,
 };
-

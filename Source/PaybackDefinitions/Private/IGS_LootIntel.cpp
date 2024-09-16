@@ -3,4 +3,3 @@
 UIGS_LootIntel::UIGS_LootIntel() {
 }
 
-

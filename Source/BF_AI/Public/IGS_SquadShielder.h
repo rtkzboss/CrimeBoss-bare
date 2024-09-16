@@ -10,4 +10,3 @@ public:
     AIGS_SquadShielder(const FObjectInitializer& ObjectInitializer);
 
 };
-

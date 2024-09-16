@@ -9,4 +9,3 @@ struct BF_FRAMEWORKGAME_API FIGS_AIEmployeeDefaultTierDef : public FIGS_AIEmploy
 public:
     FIGS_AIEmployeeDefaultTierDef();
 };
-

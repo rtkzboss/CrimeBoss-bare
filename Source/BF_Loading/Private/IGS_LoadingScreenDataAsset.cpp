@@ -3,4 +3,3 @@
 UIGS_LoadingScreenDataAsset::UIGS_LoadingScreenDataAsset() {
 }
 
-

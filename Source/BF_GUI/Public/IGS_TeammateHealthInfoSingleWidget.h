@@ -18,46 +18,45 @@ public:
 
     UFUNCTION(BlueprintNativeEvent)
     void UnregisterGameCharacterEvents(AIGS_GameCharacterFramework* inGameCharacter);
-    
+
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void RelativeHealthChangedEvent(float inRelativeHealth);
-    
+
 public:
     UFUNCTION(BlueprintNativeEvent)
     void RegisterGameCharacterEvents(AIGS_GameCharacterFramework* inGameCharacter);
-    
+
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void HealthStateChangedEvent(EIGS_HealthState inHealthState);
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void DeathEvent();
-    
+
     UFUNCTION(BlueprintImplementableEvent)
     void CharacterIDChanged(EIGS_CharacterID inCharacterID);
-    
+
 public:
     UPROPERTY(BlueprintReadOnly)
     float CurrentRelativeHealth;
-    
+
     UPROPERTY(BlueprintReadOnly)
     bool IsBot;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_GameCharacterFramework* TeammatePawn;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_ObjectStatus* TeammateObjectStatus;
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_PlayerStatus* TeammatePlayerStatus;
-    
+
     UPROPERTY(BlueprintReadOnly)
     FString PlayerName;
-    
+
     UPROPERTY(BlueprintReadOnly)
     AIGS_PlayerStateGame* TeammatePlayerState;
-    
-};
 
+};

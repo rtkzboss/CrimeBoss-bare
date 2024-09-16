@@ -5,4 +5,3 @@ UMETA_WeaponInventoryObject::UMETA_WeaponInventoryObject() {
     (*this).ItemType = EIGS_ItemType::Item_WeaponDefinition;
 }
 
-

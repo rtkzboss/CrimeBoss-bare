@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSoftClassPtr<UObject>> AdditionalClasses;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSoftObjectPtr<UObject>> AdditionalObjects;
-    
-};
 
+};

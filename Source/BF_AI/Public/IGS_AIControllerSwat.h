@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerSwat(const FObjectInitializer& ObjectInitializer);
 
 };
-

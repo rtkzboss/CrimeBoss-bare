@@ -8,4 +8,3 @@ struct FStealthIdleDialogueReport {
 public:
     PAYBACK_API FStealthIdleDialogueReport();
 };
-

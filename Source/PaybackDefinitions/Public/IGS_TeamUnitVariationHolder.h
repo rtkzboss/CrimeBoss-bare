@@ -9,10 +9,9 @@ struct PAYBACKDEFINITIONS_API FIGS_TeamUnitVariationHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EIGS_TeamSideEnum TeamSide;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 UnitVariation;
-    
+
     FIGS_TeamUnitVariationHolder();
 };
-

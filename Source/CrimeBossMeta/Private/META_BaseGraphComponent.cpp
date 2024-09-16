@@ -21,4 +21,3 @@ bool UMETA_BaseGraphComponent::DoesContainClass_Implementation(UClass* inClass, 
     return false;
 }
 
-

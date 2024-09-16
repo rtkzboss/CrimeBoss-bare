@@ -2,4 +2,3 @@
 
 FIGS_AIBackupBaseDataModifiers::FIGS_AIBackupBaseDataModifiers() {
 }
-

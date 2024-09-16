@@ -3,4 +3,3 @@
 UIGS_EarnedMoneyAnimationData::UIGS_EarnedMoneyAnimationData() {
 }
 
-

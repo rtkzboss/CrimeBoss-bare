@@ -11,22 +11,21 @@ public:
 
     UPROPERTY(EditAnywhere)
     int32 AllowedRoomSecurity;
-    
+
 protected:
     UPROPERTY(EditAnywhere)
     float CostMultiplier;
-    
+
     UPROPERTY(EditAnywhere)
     bool IsActive;
-    
+
     UPROPERTY()
     int32 AllowedRoomSecurityBitMask;
-    
+
     UPROPERTY()
     int32 AllowedTierBitMask;
-    
+
     UPROPERTY()
     int32 AllowedBasicTypeBitMask;
-    
-};
 
+};

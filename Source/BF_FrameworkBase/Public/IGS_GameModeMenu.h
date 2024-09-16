@@ -11,6 +11,5 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void QuitLobby();
-    
-};
 
+};

@@ -3,9 +3,6 @@
 #include "EnvironmentQuery/EnvQueryTypes.h"
 #include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
-#include "EnvironmentQuery/EnvQueryTypes.h"
-#include "EnvironmentQuery/EnvQueryTypes.h"
-#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "BTTask_RunEQSQueryRandom.generated.h"
 
 class UEnvQuery;
@@ -18,27 +15,26 @@ public:
 
     UPROPERTY(VisibleAnywhere)
     UEnvQuery* QueryTemplate;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<FEnvNamedValue> QueryParams;
-    
+
     UPROPERTY(VisibleAnywhere)
     TArray<FAIDynamicParam> QueryConfig;
-    
+
     UPROPERTY(VisibleAnywhere)
     TEnumAsByte<EEnvQueryRunMode::Type> RunMode;
-    
+
     UPROPERTY(VisibleAnywhere)
     FBlackboardKeySelector EQSQueryBlackboardKey;
-    
+
     UPROPERTY(EditAnywhere)
     bool bUseBBKey;
-    
+
     UPROPERTY(EditAnywhere)
     int32 RandomItemCount;
-    
+
     UPROPERTY(EditAnywhere)
     FEQSParametrizedQueryExecutionRequest EQSRequest;
-    
-};
 
+};

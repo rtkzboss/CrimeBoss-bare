@@ -10,4 +10,3 @@ public:
     AIGS_ThrowableProjectileFramework(const FObjectInitializer& ObjectInitializer);
 
 };
-

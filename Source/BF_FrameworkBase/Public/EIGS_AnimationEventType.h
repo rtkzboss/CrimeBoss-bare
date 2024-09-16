@@ -11,4 +11,3 @@ enum class EIGS_AnimationEventType : uint8 {
     Event_OutAnim,
     Event_BreakAnim,
 };
-

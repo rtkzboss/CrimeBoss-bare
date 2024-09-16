@@ -15,7 +15,7 @@ FString UIGS_ToolFunctionLibrary::GetRegionCodeFromLocation(const FString& Count
 }
 
 TArray<FString> UIGS_ToolFunctionLibrary::GetRecentLevels() {
-    return TArray<FString>();
+    return {};
 }
 
 int32 UIGS_ToolFunctionLibrary::EvaluateGeoLocation(const FString& LocalRegion, const FString& RemoteRegion) {
@@ -24,5 +24,4 @@ int32 UIGS_ToolFunctionLibrary::EvaluateGeoLocation(const FString& LocalRegion, 
 
 void UIGS_ToolFunctionLibrary::AppendTableToComposite(UCompositeDataTable* inTargetCompositeTable, UDataTable* inNewTable) {
 }
-
 

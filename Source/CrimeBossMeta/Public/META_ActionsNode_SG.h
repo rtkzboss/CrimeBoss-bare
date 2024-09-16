@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
     TArray<UMETA_BaseAction*> Actions;
-    
-};
 
+};

@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
     UIGS_TrafficPathComponent* PathComponent;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool Hidden;
-    
-};
 
+};

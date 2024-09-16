@@ -11,19 +11,18 @@ struct FIGS_MultiplayerHubDataRow : public FTableRowBase {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSoftObjectPtr<UTexture2D> ButtonImage;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ButtonName;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText ButtonDescription;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText SelectionLabelDefaultText;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText SelectionLabelDisabledText;
-    
+
     BF_GUI_API FIGS_MultiplayerHubDataRow();
 };
-

@@ -3,4 +3,3 @@
 UEventPointDelegateHolder::UEventPointDelegateHolder() {
 }
 
-

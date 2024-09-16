@@ -10,10 +10,9 @@ struct FIGS_HUBLevelWithTag {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag ScenarioTag;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_BuildConfigurationTileable LevelDA;
-    
+
     BF_LEVELGENERATOR_API FIGS_HUBLevelWithTag();
 };
-

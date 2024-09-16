@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UIGS_MeleeWeaponInventoryObject* WeaponDefinition;
-    
-};
 
+};

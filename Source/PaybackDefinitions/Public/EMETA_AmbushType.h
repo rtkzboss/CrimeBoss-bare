@@ -8,4 +8,3 @@ enum class EMETA_AmbushType : uint8 {
     Instant,
     Escape,
 };
-

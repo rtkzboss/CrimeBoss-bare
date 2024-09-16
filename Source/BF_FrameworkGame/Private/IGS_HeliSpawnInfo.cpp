@@ -2,4 +2,3 @@
 
 FIGS_HeliSpawnInfo::FIGS_HeliSpawnInfo() {
 }
-

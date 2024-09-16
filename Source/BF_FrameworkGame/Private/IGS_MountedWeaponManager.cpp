@@ -9,4 +9,3 @@ void UIGS_MountedWeaponManager::UnregisterMountedWeapon(AIGS_MountedWeapon* inDe
 void UIGS_MountedWeaponManager::RegisterMountedWeapon(AIGS_MountedWeapon* inDefendPoint) {
 }
 
-

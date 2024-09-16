@@ -1,5 +1,4 @@
 #include "IGS_WieldableInventoryObjectBase.h"
-#include "EIGS_ItemType.h"
 
 UIGS_WieldableInventoryObjectBase::UIGS_WieldableInventoryObjectBase() {
 }
@@ -29,15 +28,14 @@ FIGS_WieldableBaseData UIGS_WieldableInventoryObjectBase::GetWieldableDataBP() {
 }
 
 TSoftObjectPtr<UIGS_WeaponSkinData> UIGS_WieldableInventoryObjectBase::GetCurrentSpecificSkin() {
-    return NULL;
+    return {};
 }
 
 TSoftObjectPtr<UIGS_WeaponSkinData> UIGS_WieldableInventoryObjectBase::GetCurrentDefaultSkin() {
-    return NULL;
+    return {};
 }
 
 TSoftObjectPtr<UIGS_WeaponSkinData> UIGS_WieldableInventoryObjectBase::GetBaseSkin() {
-    return NULL;
+    return {};
 }
-
 

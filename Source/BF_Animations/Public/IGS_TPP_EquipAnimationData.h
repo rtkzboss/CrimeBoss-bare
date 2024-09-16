@@ -10,7 +10,6 @@ struct FIGS_TPP_EquipAnimationData {
 public:
     UPROPERTY()
     TArray<UAnimMontage*> Animations;
-    
+
     BF_ANIMATIONS_API FIGS_TPP_EquipAnimationData();
 };
-

@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY()
     TMap<TWeakObjectPtr<UIGS_TrafficPathComponent>, FIGS_VehiclesRecord> VehiclesOnPaths;
-    
+
     UPROPERTY(Export)
     TArray<TWeakObjectPtr<UIGS_TrafficPathComponent>> m_VisitedPathsTmp;
-    
-};
 
+};

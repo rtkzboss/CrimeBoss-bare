@@ -23,4 +23,3 @@ FIGS_NetProjectileData::FIGS_NetProjectileData() {
     (*this).NetProjectileHitData.Damage = 0.000000000e+00f;
     (*this).NetProjectileHitData.DamageType = nullptr;
 }
-

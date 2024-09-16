@@ -12,4 +12,3 @@ enum class EIGS_CoverVariant : uint8 {
     AIM_CoverPeekRight_Out,
     AIM_CoverPeekUp_Out,
 };
-

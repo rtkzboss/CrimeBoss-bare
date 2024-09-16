@@ -59,4 +59,3 @@ void UAdvancedVoiceLibrary::IsHeadsetPresent(bool& bHasHeadset, uint8 LocalPlaye
 void UAdvancedVoiceLibrary::GetNumLocalTalkers(int32& NumLocalTalkers) {
 }
 
-

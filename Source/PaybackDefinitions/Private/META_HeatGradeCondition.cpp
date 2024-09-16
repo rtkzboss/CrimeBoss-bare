@@ -6,4 +6,3 @@ FMETA_HeatGradeCondition::FMETA_HeatGradeCondition() {
     (*this).PoliceCasualties = 0;
     (*this).PoliceCasualtiesOperator = EMETA_ConditionOperator::Equal;
 }
-

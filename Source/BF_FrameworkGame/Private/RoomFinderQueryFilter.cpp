@@ -5,4 +5,3 @@ URoomFinderQueryFilter::URoomFinderQueryFilter() {
     (*this).IsActive = true;
 }
 
-

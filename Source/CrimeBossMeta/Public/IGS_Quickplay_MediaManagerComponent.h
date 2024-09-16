@@ -10,4 +10,3 @@ public:
     UIGS_Quickplay_MediaManagerComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -12,4 +12,3 @@ enum class EMETA_ConditionOperator : uint8 {
     LessOrEqual,
     Divisible,
 };
-

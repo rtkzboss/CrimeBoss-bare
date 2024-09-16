@@ -5,4 +5,3 @@ FMETA_EquipmentPriceIntervalsPerQuality::FMETA_EquipmentPriceIntervalsPerQuality
     (*this).BuyCostValueRange.Min = 0;
     (*this).BuyCostValueRange.Max = 0;
 }
-

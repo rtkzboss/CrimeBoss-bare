@@ -9,4 +9,3 @@ enum class EIGS_HitReactionDirection : uint8 {
     D_Back,
     D_Right,
 };
-

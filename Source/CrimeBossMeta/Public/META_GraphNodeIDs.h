@@ -8,7 +8,6 @@ struct CRIMEBOSSMETA_API FMETA_GraphNodeIDs {
 public:
     UPROPERTY(BlueprintReadWrite)
     TArray<int32> NodeIDs;
-    
+
     FMETA_GraphNodeIDs();
 };
-

@@ -17,10 +17,9 @@ int32 UMETA_TaskCondition::GetNeedValue_Implementation() {
 }
 
 TSoftObjectPtr<UMETA_BaseStoryGraphManager> UMETA_TaskCondition::GetGraphSoftObjectCurrentNodeOwner() {
-    return NULL;
+    return {};
 }
 
 void UMETA_TaskCondition::BindUnbindDelegates_Implementation(bool inBind) {
 }
-
 

@@ -7,4 +7,3 @@ enum class EIGS_AchievementType : uint8 {
     PerAccount,
     PerCareer,
 };
-

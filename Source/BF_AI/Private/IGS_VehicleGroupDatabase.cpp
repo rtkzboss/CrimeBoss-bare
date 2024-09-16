@@ -3,4 +3,3 @@
 UIGS_VehicleGroupDatabase::UIGS_VehicleGroupDatabase() {
 }
 
-

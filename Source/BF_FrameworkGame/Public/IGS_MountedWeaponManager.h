@@ -13,13 +13,12 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void UnregisterMountedWeapon(AIGS_MountedWeapon* inDefendPoint);
-    
+
     UFUNCTION(BlueprintCallable)
     void RegisterMountedWeapon(AIGS_MountedWeapon* inDefendPoint);
-    
+
 protected:
     UPROPERTY()
     TArray<AIGS_MountedWeapon*> m_MountedWeapons;
-    
-};
 
+};

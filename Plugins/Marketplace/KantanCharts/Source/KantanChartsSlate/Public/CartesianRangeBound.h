@@ -9,10 +9,9 @@ struct FCartesianRangeBound {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ECartesianRangeBoundType Type;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FixedBoundValue;
-    
+
     KANTANCHARTSSLATE_API FCartesianRangeBound();
 };
-

@@ -216,4 +216,3 @@ void UPaybackCheatManager::ActivateDamageLimiter(int32 inType) {
 void UPaybackCheatManager::AbortMission() {
 }
 
-

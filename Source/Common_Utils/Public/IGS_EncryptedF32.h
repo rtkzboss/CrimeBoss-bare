@@ -8,4 +8,3 @@ struct COMMON_UTILS_API FIGS_EncryptedF32 {
 public:
     FIGS_EncryptedF32();
 };
-

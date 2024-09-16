@@ -17,24 +17,23 @@ public:
 
     UPROPERTY()
     float Position;
-    
+
     UPROPERTY()
     FLinearColor Value;
-    
+
     UPROPERTY()
     EHoudiniRampInterpolationType Interpolation;
-    
+
     UPROPERTY()
     int32 InstanceIndex;
-    
+
     UPROPERTY(Instanced)
     UHoudiniParameterFloat* PositionParentParm;
-    
+
     UPROPERTY(Instanced)
     UHoudiniParameterColor* ValueParentParm;
-    
+
     UPROPERTY(Instanced)
     UHoudiniParameterChoice* InterpolationParentParm;
-    
-};
 
+};

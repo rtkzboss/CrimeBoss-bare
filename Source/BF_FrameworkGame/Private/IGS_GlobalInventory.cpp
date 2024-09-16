@@ -1,9 +1,10 @@
 #include "IGS_GlobalInventory.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 #include "Templates/SubclassOf.h"
 
 UIGS_GlobalInventory::UIGS_GlobalInventory(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 bool UIGS_GlobalInventory::RemoveItem(const TSubclassOf<UIGS_GlobalInventoryObject>& inItemClass, bool inRemoveAll) {
@@ -33,7 +34,7 @@ int32 UIGS_GlobalInventory::GetItemCount(const TSubclassOf<UIGS_GlobalInventoryO
 }
 
 TArray<FIGS_GlobalItemSlot> UIGS_GlobalInventory::GetAllSlotsBP() const {
-    return TArray<FIGS_GlobalItemSlot>();
+    return {};
 }
 
 bool UIGS_GlobalInventory::CanAddItems(const TSubclassOf<UIGS_GlobalInventoryObject>& inItemClassToAdd, int32 inCount) {
@@ -58,9 +59,8 @@ bool UIGS_GlobalInventory::AddItem(const TSubclassOf<UIGS_GlobalInventoryObject>
 
 void UIGS_GlobalInventory::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_GlobalInventory, mR_Slots);
     DOREPLIFETIME(UIGS_GlobalInventory, mR_WTSlot);
 }
-
 

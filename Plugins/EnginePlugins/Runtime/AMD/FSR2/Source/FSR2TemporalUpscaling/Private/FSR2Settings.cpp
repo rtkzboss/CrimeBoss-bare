@@ -3,4 +3,3 @@
 UFSR2Settings::UFSR2Settings() {
 }
 
-

@@ -12,25 +12,24 @@ struct FParameterUIData {
 public:
     UPROPERTY(BlueprintReadWrite)
     FString Name;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FMutableParamUIMetadata ParamUIMetadata;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EMutableParameterType Type;
-    
+
     UPROPERTY(BlueprintReadWrite)
     TArray<FIntegerParameterUIData> ArrayIntegerParameterOption;
-    
+
     UPROPERTY(BlueprintReadWrite)
     ECustomizableObjectGroupType IntegerParameterGroupType;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bDontCompressRuntimeTextures;
-    
+
     UPROPERTY(BlueprintReadWrite)
     TMap<FString, FString> ForcedParameterValues;
-    
+
     CUSTOMIZABLEOBJECT_API FParameterUIData();
 };
-

@@ -9,7 +9,6 @@ struct FIGS_TPVAttackTypeAnimData {
 public:
     UPROPERTY()
     FIGS_TPVAnimtionDefinition AnimationTypeData;
-    
+
     BF_ANIMATIONS_API FIGS_TPVAttackTypeAnimData();
 };
-

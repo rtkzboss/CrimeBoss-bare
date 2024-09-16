@@ -8,4 +8,3 @@ enum class EDLSSSettingOverride : uint8 {
     Disabled,
     UseProjectSettings,
 };
-

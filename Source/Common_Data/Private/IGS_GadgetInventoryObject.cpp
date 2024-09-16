@@ -5,4 +5,3 @@ UIGS_GadgetInventoryObject::UIGS_GadgetInventoryObject() {
     (*this).ItemType = EIGS_ItemType::Item_Gadget;
 }
 
-

@@ -30,4 +30,3 @@ FIGS_PlayerCountAIDifficultyModifierDef::FIGS_PlayerCountAIDifficultyModifierDef
     (*this).FourPlayers.CoverStickiness = 1.000000000e+00f;
     (*this).FourPlayers.ReactionIntensity = 1.000000000e+00f;
 }
-

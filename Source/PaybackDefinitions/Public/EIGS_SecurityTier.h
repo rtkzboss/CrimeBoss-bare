@@ -9,4 +9,3 @@ enum class EIGS_SecurityTier : uint8 {
     Tier2,
     Tier3,
 };
-

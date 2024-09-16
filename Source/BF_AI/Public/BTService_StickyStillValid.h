@@ -14,12 +14,11 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector StickToChar;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval InvalidTimeCommon;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval InvalidTimeOutside;
-    
-};
 
+};

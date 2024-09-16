@@ -10,4 +10,3 @@ public:
     UIGS_ChokeComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

@@ -10,7 +10,6 @@ struct HOUDINIENGINERUNTIME_API FHoudiniBakedOutput {
 public:
     UPROPERTY()
     TMap<FHoudiniBakedOutputObjectIdentifier, FHoudiniBakedOutputObject> BakedOutputObjects;
-    
+
     FHoudiniBakedOutput();
 };
-

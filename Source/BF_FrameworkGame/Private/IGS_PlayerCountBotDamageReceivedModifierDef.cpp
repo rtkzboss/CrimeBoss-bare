@@ -5,4 +5,3 @@ FIGS_PlayerCountBotDamageReceivedModifierDef::FIGS_PlayerCountBotDamageReceivedM
     (*this).TwoPlayers = nullptr;
     (*this).ThreePlayers = nullptr;
 }
-

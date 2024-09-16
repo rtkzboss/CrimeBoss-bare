@@ -14,4 +14,3 @@ enum class EIGS_RadialImpactChassis : uint8 {
     Hit_Right,
     Hit_FrontRight,
 };
-

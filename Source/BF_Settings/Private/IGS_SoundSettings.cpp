@@ -6,15 +6,14 @@ UIGS_SoundSettings::UIGS_SoundSettings() {
     (*this).MusicVolumeValue = 8.000000000e+01f;
     (*this).DialogueVolumeValue = 8.000000000e+01f;
     (*this).ControllerSpeakerVolumeValue = 8.000000000e+01f;
-    (*this).LastOutputDevice = TEXT("Default Device");
     (*this).bAudioMixSpeakers = true;
+    (*this).bSoundEnabledValue = true;
     (*this).RadioDialogueOutputValue = 2;
     (*this).VoiceChatVolumeValue = 1.000000000e+02f;
     (*this).bSettingsValid = true;
 }
 
 UIGS_SoundSettings* UIGS_SoundSettings::Instance() {
-    return NULL;
+    return nullptr;
 }
-
 

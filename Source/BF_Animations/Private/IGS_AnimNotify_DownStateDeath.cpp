@@ -3,4 +3,3 @@
 UIGS_AnimNotify_DownStateDeath::UIGS_AnimNotify_DownStateDeath() {
 }
 
-

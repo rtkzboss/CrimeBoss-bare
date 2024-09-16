@@ -14,12 +14,11 @@ public:
 
     UFUNCTION(BlueprintImplementableEvent)
     void SplitterInit();
-    
+
 protected:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UShapeComponent* SplitterShape;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

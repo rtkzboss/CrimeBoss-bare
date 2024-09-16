@@ -14,21 +14,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static bool IsTextLocalized(FText Text, FString& outErrorMessage);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static FVector2D GetParameterPositionInLocalizedTextByKey(const FSlateFontInfo& Font, const FString& Namespace, const FString& Key, const FString& ParamName, bool& Success);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static FVector2D GetParameterPositionInLocalizedText(const FSlateFontInfo& Font, FText Text, const FString& ParamName, bool& Success);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static FVector2D GetParameterPositionInEvaluatedLocalizedText(const FSlateFontInfo& Font, FText Text, UPARAM(Ref) TArray<FIGS_LocalizationParam>& Params, const FString& ParamName, bool& Success);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)
     static FText GetEvaluatedLocalizedText(FText Text, UPARAM(Ref) TArray<FIGS_LocalizationParam>& Params);
-    
+
     UFUNCTION(BlueprintCosmetic, BlueprintPure)
     static FText ConvertTextToInvariant(const FText& Text);
-    
-};
 
+};

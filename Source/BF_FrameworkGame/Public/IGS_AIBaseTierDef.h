@@ -11,16 +11,15 @@ struct BF_FRAMEWORKGAME_API FIGS_AIBaseTierDef {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool Enabled;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AIUnitCharacterData Character;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_AILoadoutHolder Loadout;
-    
+
     UPROPERTY()
     FGameplayTag Specialization;
-    
+
     FIGS_AIBaseTierDef();
 };
-

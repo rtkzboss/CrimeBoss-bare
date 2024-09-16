@@ -8,4 +8,3 @@ enum class EPFLoopType : uint8 {
     ReplayFromStart,
     PingPong,
 };
-

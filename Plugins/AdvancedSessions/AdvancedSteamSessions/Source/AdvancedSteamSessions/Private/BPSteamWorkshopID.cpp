@@ -2,4 +2,3 @@
 
 FBPSteamWorkshopID::FBPSteamWorkshopID() {
 }
-

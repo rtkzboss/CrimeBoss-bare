@@ -1,5 +1,4 @@
 #include "IGS_BlackmarketManagerBaseComponent.h"
-#include "ComponentInstanceDataCache.h"
 
 UIGS_BlackmarketManagerBaseComponent::UIGS_BlackmarketManagerBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
@@ -9,35 +8,34 @@ bool UIGS_BlackmarketManagerBaseComponent::IsManagerInitialized() const {
 }
 
 TArray<UMETA_Weapon*> UIGS_BlackmarketManagerBaseComponent::GetWeaponsMarketPool() const {
-    return TArray<UMETA_Weapon*>();
+    return {};
 }
 
 UMETA_Weapon* UIGS_BlackmarketManagerBaseComponent::GetWeaponByTagAndSkinTag(FGameplayTag inWeaponTag, FGameplayTag inSkinTag) const {
-    return NULL;
+    return nullptr;
 }
 
 UMETA_Weapon* UIGS_BlackmarketManagerBaseComponent::GetWeaponByTag(FGameplayTag inWeaponTag) const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_Equipment*> UIGS_BlackmarketManagerBaseComponent::GetEquipmentMarketPool() const {
-    return TArray<UMETA_Equipment*>();
+    return {};
 }
 
 UMETA_Equipment* UIGS_BlackmarketManagerBaseComponent::GetEquipmentByTag(FGameplayTag inEquipmentTag) const {
-    return NULL;
+    return nullptr;
 }
 
 TArray<UMETA_Character*> UIGS_BlackmarketManagerBaseComponent::GetCharactersMarketPool() const {
-    return TArray<UMETA_Character*>();
+    return {};
 }
 
 UMETA_Character* UIGS_BlackmarketManagerBaseComponent::GetCharacterByTag(FGameplayTag inCharacterTag) const {
-    return NULL;
+    return nullptr;
 }
 
 bool UIGS_BlackmarketManagerBaseComponent::BuyItem_Implementation(FGameplayTag itemTag, FGameplayTag screenTag, FGameplayTag SkinTag) {
     return false;
 }
-
 

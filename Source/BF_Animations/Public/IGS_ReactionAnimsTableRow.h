@@ -11,10 +11,9 @@ struct FIGS_ReactionAnimsTableRow : public FTableRowBase {
 public:
     UPROPERTY(EditAnywhere)
     FGameplayTag ID;
-    
+
     UPROPERTY(EditAnywhere)
     TArray<FIGS_ReactionAnimData> AnimVariations;
-    
+
     BF_ANIMATIONS_API FIGS_ReactionAnimsTableRow();
 };
-

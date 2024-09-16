@@ -11,9 +11,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void ToggleGlobalInvalidation(bool inEnabled);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool ShowBlackScreen;
-    
-};
 
+};

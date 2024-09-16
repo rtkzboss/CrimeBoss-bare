@@ -44,4 +44,3 @@ FDFLDebugProperties::FDFLDebugProperties() {
     (*this).TertiaryColour.B = 1.000000000e+00f;
     (*this).TertiaryColour.A = 1.000000000e+00f;
 }
-

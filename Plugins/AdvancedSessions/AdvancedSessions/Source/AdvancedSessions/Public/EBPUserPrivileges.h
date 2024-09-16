@@ -9,4 +9,3 @@ enum class EBPUserPrivileges : uint8 {
     CanCommunicateOnline,
     CanUseUserGeneratedContent,
 };
-

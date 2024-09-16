@@ -7,4 +7,3 @@ UMETA_BranchNode_SG::UMETA_BranchNode_SG() {
     (*this).Type = EMETA_NodeType::Branch;
 }
 
-

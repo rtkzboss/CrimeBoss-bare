@@ -9,19 +9,18 @@ struct PAYBACKDEFINITIONS_API FMETA_PawnShopTrendData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval TrendDuration;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval TrendCooldown;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMETA_Interval MaximumDailyChange;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaximumChangeForPositiveTrend;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaximumChangeForNegativeTrend;
-    
+
     FMETA_PawnShopTrendData();
 };
-

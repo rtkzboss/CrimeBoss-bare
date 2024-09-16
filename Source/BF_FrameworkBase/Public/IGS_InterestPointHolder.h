@@ -11,13 +11,12 @@ struct BF_FRAMEWORKBASE_API FIGS_InterestPointHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TWeakObjectPtr<AActor> Actor;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector PointOrOffset;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool Enabled;
-    
+
     FIGS_InterestPointHolder();
 };
-

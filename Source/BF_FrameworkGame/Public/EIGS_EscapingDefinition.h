@@ -8,4 +8,3 @@ enum class EIGS_EscapingDefinition : uint8 {
     Start = 0,
     Finished,
 };
-

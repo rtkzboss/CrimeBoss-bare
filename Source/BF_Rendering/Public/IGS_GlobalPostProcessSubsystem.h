@@ -6,7 +6,6 @@
 #include "IGS_GlobalPostProcessSubsystem.generated.h"
 
 class UCameraComponent;
-class UIGS_GlobalPostProcessSubsystem;
 class UIGS_GlobalPostProcessesDataAsset;
 class UObject;
 
@@ -18,22 +17,21 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void RemovePostProcessesFromCamera(UCameraComponent* inCamera, TArray<EIGS_PostProcessType> inPostProcessesTypes);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_GlobalPostProcessSubsystem* Instance(const UObject* inWCO);
-    
+
     UFUNCTION(BlueprintCallable)
     void ApplyPostProcessesToCamera(UCameraComponent* inCamera, TArray<EIGS_PostProcessType> inPostProcessesTypes);
-    
+
 protected:
     UPROPERTY()
     UIGS_GlobalPostProcessesDataAsset* m_GloballyAppliedPostProcesses;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FWeightedBlendable> m_VisualStylePostProcesses;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<FWeightedBlendable> m_VisorPostProcesses;
-    
-};
 
+};

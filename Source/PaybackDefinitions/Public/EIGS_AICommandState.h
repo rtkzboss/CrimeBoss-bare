@@ -9,4 +9,3 @@ enum class EIGS_AICommandState : uint8 {
     AICS_Failed,
     AICS_Unknown = 255,
 };
-

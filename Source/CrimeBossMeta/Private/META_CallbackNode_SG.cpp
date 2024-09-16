@@ -5,4 +5,3 @@ UMETA_CallbackNode_SG::UMETA_CallbackNode_SG() {
     (*this).Type = EMETA_NodeType::Callback;
 }
 
-

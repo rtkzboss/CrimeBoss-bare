@@ -3,4 +3,3 @@
 UIGS_BotOrderManager::UIGS_BotOrderManager() {
 }
 
-

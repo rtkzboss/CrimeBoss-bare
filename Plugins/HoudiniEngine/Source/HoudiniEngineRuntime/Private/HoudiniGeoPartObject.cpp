@@ -9,7 +9,7 @@ FHoudiniGeoPartObject::FHoudiniGeoPartObject() {
     (*this).PartId = -1;
     (*this).PartName = TEXT("");
     (*this).bHasCustomPartName = false;
-    (*this).SplitGroups.Empty();
+    (*this).SplitGroups = {};
     (*this).TransformMatrix = FTransform(FQuat(0.000000000e+00,0.000000000e+00,0.000000000e+00,1.000000000e+00), FVector(0.000000000e+00,0.000000000e+00,0.000000000e+00), FVector(1.000000000e+00,1.000000000e+00,1.000000000e+00));
     (*this).NodePath = TEXT("");
     (*this).Type = EHoudiniPartType::Invalid;
@@ -26,6 +26,5 @@ FHoudiniGeoPartObject::FHoudiniGeoPartObject() {
     (*this).bHasPartChanged = true;
     (*this).bHasTransformChanged = true;
     (*this).bHasMaterialsChanged = true;
-    (*this).AllMeshSockets.Empty();
+    (*this).AllMeshSockets = {};
 }
-

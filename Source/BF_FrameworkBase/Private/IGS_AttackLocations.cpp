@@ -2,4 +2,3 @@
 
 FIGS_AttackLocations::FIGS_AttackLocations() {
 }
-

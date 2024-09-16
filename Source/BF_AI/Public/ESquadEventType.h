@@ -14,4 +14,3 @@ enum class ESquadEventType : uint8 {
     TargetChanged,
     Unknown = 255,
 };
-

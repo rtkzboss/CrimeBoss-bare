@@ -37,7 +37,7 @@ void UIGS_LevelGeneratorFunctionLibrary::FindShortestPathInGrid(int32 Start, int
 }
 
 UIGS_GeneratorBuildConfiguration* UIGS_LevelGeneratorFunctionLibrary::CreateUObjectConfigurationFromTile(UObject* WorldContextObject, FIGS_BuildConfigurationTileable inTileConfiguration) {
-    return NULL;
+    return nullptr;
 }
 
 void UIGS_LevelGeneratorFunctionLibrary::CallVariantOnWorld(UObject* WorldContextObject, UIGS_RandomStreamHolder* RandomStreamHolder, FIGS_GeneratorVariantData inGeneratorVariantData, const FString& VariantName) {
@@ -46,5 +46,4 @@ void UIGS_LevelGeneratorFunctionLibrary::CallVariantOnWorld(UObject* WorldContex
 bool UIGS_LevelGeneratorFunctionLibrary::AddLeafTag(FGameplayTagContainer& inContainer, const FGameplayTag& inTagToAdd) {
     return false;
 }
-
 

@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_EthnicityVoiceArray {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<EIGS_DialogueHeisterCharacter> EthnicityVoiceArray;
-    
+
     FIGS_EthnicityVoiceArray();
 };
-

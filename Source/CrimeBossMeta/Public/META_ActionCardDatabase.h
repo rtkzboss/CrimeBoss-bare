@@ -15,18 +15,17 @@ public:
 
     UFUNCTION(BlueprintPure)
     int32 GetIndex(const TSoftClassPtr<UMETA_BaseActionCard>& inClass) const;
-    
+
     UFUNCTION(BlueprintPure)
     FMETA_ActionCardTableRow GetDataByIndexBP(int32 inIndex, bool& outSucceeded) const;
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<FMETA_ActionCardTableRow> GetDatabaseTableBP();
-    
+
     UFUNCTION(BlueprintCallable)
     TArray<TSoftClassPtr<UMETA_BaseActionCard>> GetDatabaseIDs();
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FMETA_ActionCardTableRow GetDataActionCard(UObject* inWCO, TSoftClassPtr<UMETA_BaseActionCard> inClass, bool& outSucceeded);
-    
-};
 
+};

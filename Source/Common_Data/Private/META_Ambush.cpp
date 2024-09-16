@@ -1,7 +1,4 @@
 #include "META_Ambush.h"
-#include "EIGS_UserDifficulty.h"
-#include "EMETA_JobResult.h"
-#include "EMETA_LobbyVisibilityType.h"
 #include "Templates/SubclassOf.h"
 
 UMETA_Ambush::UMETA_Ambush() {
@@ -29,11 +26,10 @@ FGameplayTag UMETA_Ambush::GetInstigatorMissionTileID() const {
 }
 
 TSubclassOf<UMETA_MissionID> UMETA_Ambush::GetInstigatorMissionID() const {
-    return NULL;
+    return nullptr;
 }
 
 FMETA_AmbushMissionRowInfo UMETA_Ambush::GetInfo() const {
     return FMETA_AmbushMissionRowInfo{};
 }
-
 

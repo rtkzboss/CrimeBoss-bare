@@ -4,4 +4,3 @@ UIGS_BTDecorator_IsSentryDestroyed::UIGS_BTDecorator_IsSentryDestroyed() {
     (*this).NodeName = TEXT("Is Sentry Destroyed");
 }
 
-

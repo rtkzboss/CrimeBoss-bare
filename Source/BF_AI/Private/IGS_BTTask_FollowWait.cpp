@@ -4,4 +4,3 @@ UIGS_BTTask_FollowWait::UIGS_BTTask_FollowWait() {
     (*this).NodeName = TEXT("Follow Wait");
 }
 
-

@@ -4,4 +4,3 @@ UIGS_BTService_SentryCameraPatrol::UIGS_BTService_SentryCameraPatrol() {
     (*this).NodeName = TEXT("Sentry Camera Patrol");
 }
 
-

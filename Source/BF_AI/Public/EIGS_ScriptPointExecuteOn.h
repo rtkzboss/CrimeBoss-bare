@@ -8,4 +8,3 @@ enum class EIGS_ScriptPointExecuteOn : uint8 {
     ExecuteOn_Approach,
     ExecuteOn_Visit,
 };
-

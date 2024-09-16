@@ -2,4 +2,3 @@
 
 FIGS_AICopBaseDataModifiers::FIGS_AICopBaseDataModifiers() {
 }
-

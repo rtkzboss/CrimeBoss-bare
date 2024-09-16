@@ -3,4 +3,3 @@
 UIGS_BTTask_SniperFire::UIGS_BTTask_SniperFire() {
 }
 
-

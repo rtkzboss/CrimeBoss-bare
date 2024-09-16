@@ -12,15 +12,14 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetParameters(const FAnimationBudgetAllocatorParameters& inParameters);
-    
+
     UPROPERTY(EditAnywhere)
     float MinimumSignificance;
-    
+
     UPROPERTY(EditAnywhere)
     float MaximumSignificance;
-    
+
     UPROPERTY(EditAnywhere)
     float PauseAnimSignificanceThreshold;
-    
-};
 
+};

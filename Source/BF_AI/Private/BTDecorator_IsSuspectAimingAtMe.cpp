@@ -8,4 +8,3 @@ UBTDecorator_IsSuspectAimingAtMe::UBTDecorator_IsSuspectAimingAtMe() {
     (*this).NodeName = TEXT("Is Someone Aiming At Me");
 }
 
-

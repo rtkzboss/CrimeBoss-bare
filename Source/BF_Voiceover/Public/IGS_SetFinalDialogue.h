@@ -2,11 +2,10 @@
 #include "CoreMinimal.h"
 #include "IGS_DialogueAsyncActionInterface.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
-#include "IGS_FinalDialogueDelegateDelegate.h"
+#include "IGS_FinalDialogueDelegate.h"
 #include "IGS_SetFinalDialogue.generated.h"
 
 class AActor;
-class UIGS_SetFinalDialogue;
 class UObject;
 
 UCLASS()
@@ -17,11 +16,10 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static UIGS_SetFinalDialogue* SetFinalDialogue(UObject* inWCO, FText DialogueID, AActor* Character);
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_FinalDialogueDelegate DialogueFinished;
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

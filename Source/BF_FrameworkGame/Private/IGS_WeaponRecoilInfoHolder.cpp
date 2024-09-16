@@ -8,4 +8,3 @@ FIGS_WeaponRecoilInfoHolder::FIGS_WeaponRecoilInfoHolder() {
     (*this).CurrentDownSpeed = 0.000000000e+00f;
     (*this).IsShooting = false;
 }
-

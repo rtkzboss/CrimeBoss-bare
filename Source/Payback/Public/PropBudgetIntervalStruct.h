@@ -8,10 +8,9 @@ struct FPropBudgetIntervalStruct {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Min;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Max;
-    
+
     PAYBACK_API FPropBudgetIntervalStruct();
 };
-

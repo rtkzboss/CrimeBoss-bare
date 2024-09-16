@@ -6,4 +6,3 @@ FMETA_CampaignUserDifficultyConfiguration::FMETA_CampaignUserDifficultyConfigura
     (*this).FinalScoreBaseMultiplier = 1.000000000e+00f;
     (*this).BigHeistDifficultyOverride = EIGS_ScenarioDifficulty::SD_Unknown;
 }
-

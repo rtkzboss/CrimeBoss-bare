@@ -15,14 +15,13 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void GetValues(EMETA_ActionCardStrength Strength, TArray<int32>& Values);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ExecuteActionCard(AGameModeBase* inGameMode, EMETA_ActionCardStrength Strength);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void DeExecuteActionCard(AGameModeBase* inGameMode, EMETA_ActionCardStrength Strength);
-    
+
 
     // Fix for true pure virtual functions not being implemented
 };
-

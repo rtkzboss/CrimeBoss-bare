@@ -1,10 +1,11 @@
 #include "IGS_JobsScreenCategoryItem.h"
 
 FIGS_JobsScreenCategoryItem::FIGS_JobsScreenCategoryItem() {
-    (*this).ButtonImage = nullptr;
-    (*this).ButtonName = FText::FromString(TEXT(""));
-    (*this).ButtonDescription = FText::FromString(TEXT(""));
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionScenarios, 0)).Empty();
-    (*TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags")->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionScenarios, 0)).Empty();
+    (*this).ButtonImage = FSoftObjectPath();
+    (*this).ButtonName = FText::GetEmpty();
+    (*this).ButtonDescription = FText::GetEmpty();
+    auto gen = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
+    (*gen->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionScenarios, 0)) = {};
+    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionScenarios, 0)) = {};
 }
-

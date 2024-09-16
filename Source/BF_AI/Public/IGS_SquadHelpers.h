@@ -14,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static FString GetActiveNodeName(AIGS_SquadFramework* inSquadFramework);
-    
+
     UFUNCTION(BlueprintCallable)
     static bool CanEnterNextRoom(AIGS_SquadSwat* inSquad);
-    
-};
 
+};

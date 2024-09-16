@@ -9,10 +9,9 @@ struct PAYBACK_API FIGS_EditorDialogueInfo {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FText DialogueID;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FIGS_MetaDialogueVariationData> Lines;
-    
+
     FIGS_EditorDialogueInfo();
 };
-

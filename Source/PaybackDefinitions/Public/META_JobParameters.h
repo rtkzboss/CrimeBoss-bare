@@ -9,7 +9,6 @@ struct PAYBACKDEFINITIONS_API FMETA_JobParameters {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FGameplayTag, int32> ParametersMap;
-    
+
     FMETA_JobParameters();
 };
-

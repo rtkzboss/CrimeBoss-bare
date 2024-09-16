@@ -6,7 +6,7 @@ UIGS_EquipmentInventoryObject::UIGS_EquipmentInventoryObject() {
 }
 
 float UIGS_EquipmentInventoryObject::GetLastChargeTimestamp() const {
-    return 0.0f;
+    return 0.000000000e+00f;
 }
 
 int32 UIGS_EquipmentInventoryObject::GetLastChargeKillCount() const {
@@ -20,5 +20,4 @@ int32 UIGS_EquipmentInventoryObject::GetHasInfiniteCharges() const {
 int32 UIGS_EquipmentInventoryObject::GetChargeCount() const {
     return 0;
 }
-
 

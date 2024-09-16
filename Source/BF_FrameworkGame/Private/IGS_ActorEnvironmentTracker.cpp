@@ -2,4 +2,3 @@
 
 FIGS_ActorEnvironmentTracker::FIGS_ActorEnvironmentTracker() {
 }
-

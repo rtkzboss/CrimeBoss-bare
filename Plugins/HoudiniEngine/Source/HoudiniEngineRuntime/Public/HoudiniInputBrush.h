@@ -16,15 +16,14 @@ public:
 protected:
     UPROPERTY()
     TArray<FHoudiniBrushInfo> BrushesInfo;
-    
+
     UPROPERTY(DuplicateTransient, Transient)
     UModel* CombinedModel;
-    
+
     UPROPERTY()
     bool bIgnoreInputObject;
-    
+
     UPROPERTY()
     TEnumAsByte<EBrushType> CachedInputBrushType;
-    
-};
 
+};

@@ -10,7 +10,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AICopHeavyTierDef : public FIGS_AICopTierDef {
 public:
     UPROPERTY(EditAnywhere)
     FIGS_AICopHeavyTierData SpecStats;
-    
+
     FIGS_AICopHeavyTierDef();
 };
-

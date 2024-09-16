@@ -7,4 +7,3 @@ enum class EIGS_ChanceEnum : uint8 {
     Success,
     Fail,
 };
-

@@ -16,4 +16,3 @@ FIGS_GadgetTableRow UIGS_GadgetDatabase::GetDataByIndexBP(int32 inIndex, bool& o
     return FIGS_GadgetTableRow{};
 }
 
-

@@ -10,4 +10,3 @@ FIGS_FirstPersonSpecialAnimations::FIGS_FirstPersonSpecialAnimations() {
     (*this).SpecialTakeWeaponMontage = nullptr;
     (*this).WeaponInteractonMontage = nullptr;
 }
-

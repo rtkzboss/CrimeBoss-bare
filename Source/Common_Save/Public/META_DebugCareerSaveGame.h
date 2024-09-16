@@ -12,6 +12,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FMETA_SaveData_DebugCareer SaveData_DebugCareer;
-    
-};
 
+};

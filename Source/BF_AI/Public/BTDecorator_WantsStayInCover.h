@@ -17,21 +17,20 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float RefreshTime;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector CoverKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector BestCoverKey;
-    
+
     UPROPERTY()
     UObject* m_LastCover;
-    
+
     UPROPERTY(Instanced)
     UIGS_CharacterData* CharacterData;
-    
+
     UPROPERTY(Instanced)
     UIGS_ObjectStatus* ObjectStatus;
-    
-};
 
+};

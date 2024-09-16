@@ -8,4 +8,3 @@ enum class EIGS_InteractionType : uint8 {
     Interaction_Hold,
     Interaction_Invalid,
 };
-

@@ -14,18 +14,17 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static FGameplayTag GetWeaponFamilyTag(const FGameplayTag& inTag);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FGameplayTag> GetAllWeaponSkinsFromFamilyTag(UObject* inWCO, const FGameplayTag& inTag);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FGameplayTag> GetAllWeaponsFromFamilyTag(UObject* inWCO, const FGameplayTag& inTag);
-    
+
     UFUNCTION(BlueprintCallable)
     static TArray<FGameplayTag> GetAllWeaponFamilyTagsFromWeaponTags(TArray<FGameplayTag> inWeaponTags);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TArray<FGameplayTag> GetAllWeaponFamilyTags(UObject* inWCO);
-    
-};
 
+};

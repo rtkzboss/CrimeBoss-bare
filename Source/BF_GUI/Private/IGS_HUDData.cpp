@@ -2,7 +2,6 @@
 
 FIGS_HUDData::FIGS_HUDData() {
     (*this).WieldableName = TEXT("");
-    (*this).WieldableIcon = nullptr;
-    (*this).WieldableHUDIcon = nullptr;
+    (*this).WieldableIcon = FSoftObjectPath();
+    (*this).WieldableHUDIcon = FSoftObjectPath();
 }
-

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "IGS_AITransitionObjectBase.h"
 #include "UObject/NoExportTypes.h"
-#include "NavLinkLeftSignatureDelegate.h"
-#include "NavLinkReachedSignatureDelegate.h"
+#include "NavLinkLeftSignature.h"
+#include "NavLinkReachedSignature.h"
 #include "IGS_NavLinkBase.generated.h"
 
 class AIGS_GameCharacterFramework;
@@ -19,32 +19,31 @@ public:
 protected:
     UFUNCTION()
     void OnNavlinkTransitionStarted(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn, bool IsRight);
-    
+
     UFUNCTION()
     void OnNavlinkComponentReached(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn, bool IsRight);
-    
+
     UFUNCTION()
     void OnNavlinkComponentLeft(const UIGS_NavLinkComponentFramework* NavLinkComponent, const AIGS_GameCharacterFramework* Pawn);
-    
+
 public:
     UPROPERTY(BlueprintAssignable)
     FNavLinkReachedSignature OnNavlinkReached;
-    
+
     UPROPERTY(BlueprintAssignable)
     FNavLinkReachedSignature OnTransitionStarted;
-    
+
     UPROPERTY(BlueprintAssignable)
     FNavLinkLeftSignature OnNavlinkLeft;
-    
+
 protected:
     UPROPERTY(Instanced, VisibleAnywhere)
     UBoxComponent* helpersBox;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Left;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Right;
-    
-};
 
+};

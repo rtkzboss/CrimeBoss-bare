@@ -15,6 +15,5 @@ class CRIMEBOSSMETA_API IMETA_Action : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ExecuteAction(AMETA_BaseGameMode* inGameMode);
-    
-};
 
+};

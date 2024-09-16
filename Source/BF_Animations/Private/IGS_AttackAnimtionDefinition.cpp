@@ -25,4 +25,3 @@ FIGS_AttackAnimtionDefinition::FIGS_AttackAnimtionDefinition() {
     (*this).AttackPlayRate = 1.000000000e+00f;
     (*this).ReloadPlayRate = 1.000000000e+00f;
 }
-

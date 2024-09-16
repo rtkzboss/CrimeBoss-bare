@@ -8,4 +8,3 @@ enum class EIGS_PlatformServerConnectionStatus : uint8 {
     Connected,
     Disconnected,
 };
-

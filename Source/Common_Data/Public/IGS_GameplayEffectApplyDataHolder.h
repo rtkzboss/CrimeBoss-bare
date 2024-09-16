@@ -11,13 +11,12 @@ struct COMMON_DATA_API FIGS_GameplayEffectApplyDataHolder {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UGameplayEffect> Effect;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag RuntimeValueTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RuntimeValue;
-    
+
     FIGS_GameplayEffectApplyDataHolder();
 };
-

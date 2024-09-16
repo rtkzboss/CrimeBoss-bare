@@ -16,4 +16,3 @@ enum class EIGS_AlarmReason : uint8 {
     Alarm_LastStrikeAdded,
     Alarm_SusNoise,
 };
-

@@ -15,13 +15,12 @@ public:
 protected:
     UFUNCTION()
     bool IsNotificationInQueue(TSoftObjectPtr<UMETA_NotificationID> inID);
-    
+
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void AddNotification(UMETA_BaseNotification* inNotification);
-    
+
     UPROPERTY(BlueprintReadOnly)
     TArray<UMETA_BaseNotification*> NotificationQueue;
-    
-};
 
+};

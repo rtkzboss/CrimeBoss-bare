@@ -2,4 +2,3 @@
 
 FIGS_FollowSettings::FIGS_FollowSettings() {
 }
-

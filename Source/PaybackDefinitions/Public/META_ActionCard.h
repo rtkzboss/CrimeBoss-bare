@@ -16,9 +16,8 @@ class PAYBACKDEFINITIONS_API IMETA_ActionCard : public IInterface {
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ExecuteActionCard(AGameModeBase* inGameMode, EMETA_ActionCardStrength Strength);
-    
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void DeExecuteActionCard(AGameModeBase* inGameMode, EMETA_ActionCardStrength Strength);
-    
-};
 
+};

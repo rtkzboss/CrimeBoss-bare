@@ -3,4 +3,3 @@
 FIGS_SusManagerEventNotificationData::FIGS_SusManagerEventNotificationData() {
     (*this).PointOfInterest = nullptr;
 }
-

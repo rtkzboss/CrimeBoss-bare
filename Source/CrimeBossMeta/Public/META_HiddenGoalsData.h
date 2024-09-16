@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "META_HiddenGoalID.h"
 #include "Templates/SubclassOf.h"
 #include "META_HiddenGoalsData.generated.h"
 
-class UMETA_HiddenGoalID;
 class UMETA_HiddenGoalObject;
 
 UCLASS(BlueprintType)
@@ -15,6 +15,5 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     TMap<TSubclassOf<UMETA_HiddenGoalID>, UMETA_HiddenGoalObject*> HiddenGoals;
-    
-};
 
+};

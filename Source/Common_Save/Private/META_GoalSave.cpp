@@ -3,8 +3,9 @@
 FMETA_GoalSave::FMETA_GoalSave() {
     (*this).GoalID = nullptr;
     (*this).Result = EMETA_GoalStatus::None;
-    (*this).Missions.Empty();
-    (*this).FinishedInnerTasks.Empty();
-    (*this).ActionCards.Empty();
+    (*this).Missions = {};
+    (*this).GraphsTasks = {};
+    (*this).FinishedInnerTasks = {};
+    (*this).ActionCards = {};
+    (*this).VisitedGraphNodeIDs = {};
 }
-

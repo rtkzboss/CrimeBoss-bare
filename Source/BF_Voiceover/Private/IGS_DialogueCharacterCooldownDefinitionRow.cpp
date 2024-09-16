@@ -4,4 +4,3 @@ FIGS_DialogueCharacterCooldownDefinitionRow::FIGS_DialogueCharacterCooldownDefin
     (*this).ID = EIGS_DialogueCharacterCooldown::Instant;
     (*this).CooldownSeconds = 0.000000000e+00f;
 }
-

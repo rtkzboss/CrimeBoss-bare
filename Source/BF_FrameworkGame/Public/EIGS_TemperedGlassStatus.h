@@ -8,4 +8,3 @@ enum class EIGS_TemperedGlassStatus : uint8 {
     Fractured,
     Destroyed,
 };
-

@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
 #include "EIGS_AITiers.h"
 #include "EIGS_FPSDifficulty.h"
 #include "EIGS_GangsterVariationType.h"
@@ -33,151 +32,150 @@ struct COMMON_DATA_API FIGS_GameStateData {
 public:
     UPROPERTY(BlueprintReadWrite)
     TArray<FCommonHeisterData> Heisters;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_MissionStartupSource StartupSource;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FString MissionSubtype;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_QPModeSource QPModeSource;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_MPLobbyType MPLobbyType;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EMETA_LobbyVisibilityType LobbyVisibility;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FGameplayTag MissionTag;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FGameplayTag MissionScenario;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_HubScenarioType MissionType;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_TileEnviroment TileEnvironment;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_HubDistrict HubDistrict;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_HubBackdropTypes HubVariant;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_LightingScenarioType LightingScenario;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EMETA_Heat Heat;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 WantedBadges;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_UserDifficulty UserDifficulty;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_ScenarioDifficulty ScenarioDifficulty;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_FPSDifficulty FPSDifficulty;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_MusicMissionState StartMusic;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_GangsterVariationType PrimaryEnemyVariation;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_AITiers PrimaryEnemyTier;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_GangsterVariationType SecondaryEnemyVariation;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_AITiers SecondaryEnemyTier;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_SWATVariationType SWATVariation;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_AITiers SWATTier;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_HeistersBackupVariationType AllyVariation;
-    
+
     UPROPERTY(BlueprintReadWrite)
     EIGS_AITiers AllyTier;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FMETA_ObjectiveTableRow BonusObjectiveData;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FMETA_FPSBonusesFromMeta MetaBonuses;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 IntelLevel;
-    
+
     UPROPERTY()
     int32 ExpectedPlayerCount;
-    
+
     UPROPERTY()
     FText MissionName;
-    
+
     UPROPERTY()
     int32 TotalMissionValue;
-    
+
     UPROPERTY()
     int32 ObjectiveValue;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool SupportsCleanExecution;
-    
+
     UPROPERTY()
     int32 TotalLootbagCount;
-    
+
     UPROPERTY()
     FGameplayTagContainer SpecificLootTypes;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FIGS_SpecialLoot SpecialLoot;
-    
+
     UPROPERTY()
     EMETA_RespectLvl Respect;
-    
+
     UPROPERTY()
     int32 ProgressionLevel;
-    
+
     UPROPERTY()
     bool IsChainMission;
-    
+
     UPROPERTY()
     bool bIsInited;
-    
+
     UPROPERTY()
     bool bDataMarkedFinal;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool NeedObjectiveCompletion;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bDownedCharctersSurvive;
-    
+
     UPROPERTY(BlueprintReadWrite)
     bool bIsDebug;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FString DebugTile;
-    
+
     UPROPERTY(BlueprintReadWrite)
     FString DebugPreset;
-    
+
     UPROPERTY(BlueprintReadWrite)
     int32 CiviliansAmountOverride;
-    
+
     FIGS_GameStateData();
 };
-

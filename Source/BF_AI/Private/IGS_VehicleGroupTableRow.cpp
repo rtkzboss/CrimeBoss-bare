@@ -2,7 +2,6 @@
 
 FIGS_VehicleGroupTableRow::FIGS_VehicleGroupTableRow() {
     (*this).ID = EIGS_VehicleGroup::CommonCivilian;
-    (*this).Data.Colors.Empty();
-    (*this).Data.VehiclesData.Empty();
+    (*this).Data.Colors = {};
+    (*this).Data.VehiclesData = {};
 }
-

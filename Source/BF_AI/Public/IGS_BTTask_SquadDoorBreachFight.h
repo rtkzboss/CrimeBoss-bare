@@ -15,9 +15,8 @@ public:
 protected:
     UPROPERTY(EditDefaultsOnly)
     AIGS_GameCharacterFramework* FightingCharacter;
-    
+
     UPROPERTY(EditDefaultsOnly)
     UIGS_AICommand* BreachFightCommand;
-    
-};
 
+};

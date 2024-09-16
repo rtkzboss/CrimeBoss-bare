@@ -13,12 +13,11 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTag AnimationTag;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AnimationTime;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FIGS_InterestPointHolder LookAt;
-    
-};
 
+};

@@ -8,4 +8,3 @@ enum class EIGS_MenuSlotOccupation : uint8 {
     Player,
     Bot,
 };
-

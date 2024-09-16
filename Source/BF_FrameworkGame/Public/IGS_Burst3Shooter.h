@@ -10,4 +10,3 @@ public:
     UIGS_Burst3Shooter(const FObjectInitializer& ObjectInitializer);
 
 };
-

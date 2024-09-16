@@ -11,4 +11,3 @@ enum class EMETA_RespectLvl : uint8 {
     CrimeBoss,
     GodFather,
 };
-

@@ -10,4 +10,3 @@ enum class EAttribOwner : int8 {
     Prim,
     Detail,
 };
-

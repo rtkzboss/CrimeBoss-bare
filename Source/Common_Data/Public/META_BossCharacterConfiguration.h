@@ -9,10 +9,9 @@ struct COMMON_DATA_API FMETA_BossCharacterConfiguration {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_Interval LevelRange;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float MissionBonusReward;
-    
+
     FMETA_BossCharacterConfiguration();
 };
-

@@ -7,4 +7,3 @@ FMETA_PlanningBoardRow UMETA_PlanningBoardDatabase::GetPlanningBoardData(UObject
     return FMETA_PlanningBoardRow{};
 }
 
-

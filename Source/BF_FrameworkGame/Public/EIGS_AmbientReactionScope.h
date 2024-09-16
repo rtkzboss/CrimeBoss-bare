@@ -7,4 +7,3 @@ enum class EIGS_AmbientReactionScope : uint8 {
     Calm,
     Combat,
 };
-

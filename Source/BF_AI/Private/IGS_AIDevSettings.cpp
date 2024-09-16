@@ -9,4 +9,3 @@ UIGS_AIDevSettings::UIGS_AIDevSettings() {
     (*this).VehicleDestinationAreaPointSprite_Disabled = FSoftObjectPath(TEXT("/Game/00_Main/UI/EditorIcons/T_GUI_Icon_VehicleDestinationAreaPoint_Disabled.T_GUI_Icon_VehicleDestinationAreaPoint_Disabled"), TEXT(""));
 }
 
-

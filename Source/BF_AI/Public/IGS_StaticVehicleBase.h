@@ -15,25 +15,24 @@ public:
 
     UFUNCTION(Reliable, Server)
     void Server_SetColor(FColor InColor);
-    
+
 protected:
     UFUNCTION()
     void OnRep_OnColorChanged() const;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UStaticMeshComponent* VehicleMesh;
-    
+
     UPROPERTY(Instanced, VisibleAnywhere)
     UNavModifierComponent* NavModifier;
-    
+
     UPROPERTY(ReplicatedUsing=OnRep_OnColorChanged)
     FColor mR_Color;
-    
+
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     bool ClearCanAffectNavigationFlag;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

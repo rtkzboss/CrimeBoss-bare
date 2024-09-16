@@ -10,4 +10,3 @@ public:
     UIGS_HeatMapController(const FObjectInitializer& ObjectInitializer);
 
 };
-

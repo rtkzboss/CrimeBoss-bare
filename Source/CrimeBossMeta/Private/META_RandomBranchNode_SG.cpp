@@ -5,4 +5,3 @@ UMETA_RandomBranchNode_SG::UMETA_RandomBranchNode_SG() {
     (*this).Type = EMETA_NodeType::RandomBranch;
 }
 
-

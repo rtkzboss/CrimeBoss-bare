@@ -7,4 +7,3 @@ UIGS_LoadingDevSettings::UIGS_LoadingDevSettings() {
     (*this).LoadingScreenDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/LoadingScreen/DA_LoadingScreenManager.DA_LoadingScreenManager"), TEXT(""));
 }
 
-

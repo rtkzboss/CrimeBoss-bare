@@ -15,4 +15,3 @@ enum class EIGS_ConnectionPointTag : uint8 {
     Tier2,
     Tier3,
 };
-

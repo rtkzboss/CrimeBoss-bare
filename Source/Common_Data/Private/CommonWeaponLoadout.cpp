@@ -1,8 +1,7 @@
 #include "CommonWeaponLoadout.h"
 
 FCommonWeaponLoadout::FCommonWeaponLoadout() {
-    (*this).METAWeaponClass = nullptr;
+    (*this).METAWeaponClass = FSoftObjectPath();
     (*this).WeaponClass = nullptr;
-    (*this).WeaponMods.Empty();
+    (*this).WeaponMods = {};
 }
-

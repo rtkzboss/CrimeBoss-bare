@@ -80,4 +80,3 @@ enum class EIGS_MetaDialogueCharacter : uint8 {
     Empty = 254,
     Custom,
 };
-

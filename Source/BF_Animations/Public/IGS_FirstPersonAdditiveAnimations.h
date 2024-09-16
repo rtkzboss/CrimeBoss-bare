@@ -10,7 +10,6 @@ struct BF_ANIMATIONS_API FIGS_FirstPersonAdditiveAnimations {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimSequence* ShootAdditive;
-    
+
     FIGS_FirstPersonAdditiveAnimations();
 };
-

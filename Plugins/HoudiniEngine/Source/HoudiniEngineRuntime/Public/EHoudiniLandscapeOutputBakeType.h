@@ -9,4 +9,3 @@ enum class EHoudiniLandscapeOutputBakeType : uint8 {
     BakeToWorld,
     InValid,
 };
-

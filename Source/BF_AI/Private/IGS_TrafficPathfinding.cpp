@@ -19,11 +19,10 @@ void UIGS_TrafficPathfinding::ForceSetVehicleGroup(UObject* inDestination, int32
 }
 
 TArray<AIGS_VehicleBase*> UIGS_TrafficPathfinding::CallCarsWithPassengersToPosition(const UObject* inWCO, FIGS_NoSpawnPointDefinition inCustomPassengers, FVector InPosition, EIGS_VehicleSpawnGroup inVehicleGroup, int32 inAmount, float MaxDistance) {
-    return TArray<AIGS_VehicleBase*>();
+    return {};
 }
 
 TArray<AIGS_VehicleBase*> UIGS_TrafficPathfinding::CallCarsToPosition(const UObject* inWCO, FVector InPosition, EIGS_VehicleSpawnGroup inVehicleGroup, int32 inAmount, int32 inMinPassengers, int32 inMaxPassengers) {
-    return TArray<AIGS_VehicleBase*>();
+    return {};
 }
-
 

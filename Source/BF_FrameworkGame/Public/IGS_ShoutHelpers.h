@@ -14,9 +14,8 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void Shout(AIGS_GameCharacterFramework* Instigator, FShoutScanData inScanData);
-    
+
     UFUNCTION(BlueprintCallable)
     static void GetShoutAtCharacters(AIGS_GameCharacterFramework* Instigator, FShoutScanData& outScanData);
-    
-};
 
+};

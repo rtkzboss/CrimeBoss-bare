@@ -2,4 +2,3 @@
 
 FIGS_DetectiveSpecificData::FIGS_DetectiveSpecificData() {
 }
-

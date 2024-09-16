@@ -3,4 +3,3 @@
 UIGS_AmmoDatabase::UIGS_AmmoDatabase() {
 }
 
-

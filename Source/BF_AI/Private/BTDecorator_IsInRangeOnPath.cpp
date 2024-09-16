@@ -6,4 +6,3 @@ UBTDecorator_IsInRangeOnPath::UBTDecorator_IsInRangeOnPath() {
     (*this).NodeName = TEXT("Is In Range On Path");
 }
 
-

@@ -14,9 +14,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TSoftObjectPtr<UAkSwitchValue> SongAkSwitch;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkAudioEvent* SongAkEvent;
-    
-};
 
+};

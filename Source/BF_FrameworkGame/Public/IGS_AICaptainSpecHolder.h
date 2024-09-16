@@ -9,7 +9,6 @@ struct BF_FRAMEWORKGAME_API FIGS_AICaptainSpecHolder {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FIGS_AICaptainSpecData> Captains;
-    
+
     FIGS_AICaptainSpecHolder();
 };
-

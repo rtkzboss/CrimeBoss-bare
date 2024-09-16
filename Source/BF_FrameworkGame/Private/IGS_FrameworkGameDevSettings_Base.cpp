@@ -3,4 +3,3 @@
 UIGS_FrameworkGameDevSettings_Base::UIGS_FrameworkGameDevSettings_Base() {
 }
 
-

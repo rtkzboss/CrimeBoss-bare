@@ -15,12 +15,11 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     void RemoveAfterTime();
-    
+
     UPROPERTY(Instanced, Transient)
     USceneComponent* RootDecal;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient)
     UDecalComponent* Decal;
-    
-};
 
+};

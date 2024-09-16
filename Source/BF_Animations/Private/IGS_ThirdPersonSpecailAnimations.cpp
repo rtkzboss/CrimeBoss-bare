@@ -12,4 +12,3 @@ FIGS_ThirdPersonSpecailAnimations::FIGS_ThirdPersonSpecailAnimations() {
     (*this).CloseDoorInteractionWeaponMontage = nullptr;
     (*this).PickupInteractionWeaponMontage = nullptr;
 }
-

@@ -1,9 +1,10 @@
 #include "IGS_OutlineComponent.h"
-#include "ComponentInstanceDataCache.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_OutlineComponent::UIGS_OutlineComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bUseRootForOutline = true;
+    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
+    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
 }
 
 void UIGS_OutlineComponent::SetOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled) {
@@ -44,8 +45,7 @@ void UIGS_OutlineComponent::AddComponentsToOutline(const TArray<UActorComponent*
 
 void UIGS_OutlineComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(UIGS_OutlineComponent, CurrentOutlineState);
 }
-
 

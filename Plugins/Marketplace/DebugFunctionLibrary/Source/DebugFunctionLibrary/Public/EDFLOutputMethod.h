@@ -9,4 +9,3 @@ enum class EDFLOutputMethod : uint8 {
     OutputLog,
     None,
 };
-

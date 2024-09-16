@@ -5,4 +5,3 @@ FMETA_EnemyTierLimitOnCampaignStart::FMETA_EnemyTierLimitOnCampaignStart() {
     (*this).DayRange.Min = 1;
     (*this).DayRange.Max = 6;
 }
-

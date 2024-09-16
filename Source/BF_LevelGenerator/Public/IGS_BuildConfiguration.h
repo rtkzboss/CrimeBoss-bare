@@ -11,22 +11,21 @@ struct BF_LEVELGENERATOR_API FIGS_BuildConfiguration {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TArray<FString> Filters;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSoftObjectPtr<UIGS_BuildConfigurationDataAsset> BuildConfigurationDataAsset;
-    
+
     UPROPERTY(Transient)
     UIGS_BuildConfigurationDataAsset* BuildConfigurationDataAsset_Holder;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName VariantName;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FName ConnectionName;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_CachedBuildConfiguration CachedBuildConfiguration;
-    
+
     FIGS_BuildConfiguration();
 };
-

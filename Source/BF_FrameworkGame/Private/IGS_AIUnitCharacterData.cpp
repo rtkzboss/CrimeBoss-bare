@@ -1,7 +1,6 @@
 #include "IGS_AIUnitCharacterData.h"
 
 FIGS_AIUnitCharacterData::FIGS_AIUnitCharacterData() {
-    (*this).Controller = nullptr;
-    (*this).Pawns.Empty();
+    (*this).Controller = FSoftObjectPath();
+    (*this).Pawns = {};
 }
-

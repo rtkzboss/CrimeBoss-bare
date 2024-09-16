@@ -3,4 +3,3 @@
 UIGS_WeaponSkinData::UIGS_WeaponSkinData() {
 }
 
-

@@ -15,34 +15,33 @@ struct COMMON_SAVE_API FIGS_Quick_BlackmarketManagerSaveData {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bInited;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_HeisterSaveData> Heisters;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_WeaponSaveData> Weapons;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_WeaponSkinSaveData> WeaponSkins;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_EquipmentSaveData> Equipment;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_PerkSaveData> Perks;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_CharacterSkinSaveData> BossCharacterSkins;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FGameplayTag> UnseenUnlockedCharacterTagIDs;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FGameplayTag> UnseenUnlockedWeaponTagIDs;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FGameplayTag> UnseenUnlockedEquipmentTagIDs;
-    
+
     FIGS_Quick_BlackmarketManagerSaveData();
 };
-

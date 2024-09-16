@@ -9,4 +9,3 @@ enum class EMETA_TileSize : uint8 {
     Medium,
     Large,
 };
-

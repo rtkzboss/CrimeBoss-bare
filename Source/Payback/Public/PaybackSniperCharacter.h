@@ -12,11 +12,10 @@ public:
 
     UFUNCTION()
     void OnRep_WeaponVisibilityType() const;
-    
+
     UPROPERTY(ReplicatedUsing=OnRep_WeaponVisibilityType)
     EIGS_WeaponVisibilityType WeaponVisibilityType;
-    
+
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

@@ -15,4 +15,3 @@ void UIGS_AmmoPickupManager::SetWeaponPickupsEnabled(UObject* inWCO, bool inStat
 void UIGS_AmmoPickupManager::SetAmmoBoxesEnabled(UObject* inWCO, bool inState) {
 }
 
-

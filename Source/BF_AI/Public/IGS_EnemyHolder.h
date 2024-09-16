@@ -12,13 +12,12 @@ struct FIGS_EnemyHolder {
 public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TWeakObjectPtr<AActor> Enemy;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_SenseHolder SenseHolder;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FIGS_AggroHolder AggroHolder;
-    
+
     BF_AI_API FIGS_EnemyHolder();
 };
-

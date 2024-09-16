@@ -17,4 +17,3 @@ enum class EIGS_AIMontageBreachVariant : uint8 {
     Throw_Grenade_Right_01,
     Breach_MAX_INDEX,
 };
-

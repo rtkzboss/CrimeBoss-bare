@@ -4,7 +4,6 @@ UIGS_PingableManager::UIGS_PingableManager() {
 }
 
 UIGS_PingableManager* UIGS_PingableManager::Instance(const UObject* inWorldContextObject) {
-    return NULL;
+    return nullptr;
 }
-
 

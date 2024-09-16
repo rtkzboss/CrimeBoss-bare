@@ -6,4 +6,3 @@ UIGS_FightPathQueryFilter::UIGS_FightPathQueryFilter() {
     (*this).IsActive = true;
 }
 
-

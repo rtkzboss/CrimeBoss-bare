@@ -8,4 +8,3 @@ struct BF_ANIMATIONS_API FIGS_ThirdPersonWeaponAnimations {
 public:
     FIGS_ThirdPersonWeaponAnimations();
 };
-

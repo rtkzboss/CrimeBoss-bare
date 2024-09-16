@@ -11,15 +11,14 @@ struct PATHFOLLOW_API FPFEventPoints {
 public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TArray<FEventPoint> Points;
-    
+
 private:
     UPROPERTY()
     UEventPointDelegateHolder* AllEventHolder;
-    
+
     UPROPERTY()
     TArray<UEventPointDelegateHolder*> Holders;
-    
+
 public:
     FPFEventPoints();
 };
-

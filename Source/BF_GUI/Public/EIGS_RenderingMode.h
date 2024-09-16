@@ -8,4 +8,3 @@ enum class EIGS_RenderingMode : uint8 {
     RM_Performance = 0,
     RM_Quality,
 };
-

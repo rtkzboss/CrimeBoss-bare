@@ -9,13 +9,12 @@ struct FIGS_VesselParticleData {
 public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bIsUnder;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     int32 PontoonIndex;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector PontoonLocation;
-    
+
     BF_RIDEABLEVEHICLES_API FIGS_VesselParticleData();
 };
-

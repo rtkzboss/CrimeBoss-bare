@@ -13,9 +13,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     EMETA_UnaryOperation UnaryOperation;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag GraphVariable;
-    
-};
 
+};

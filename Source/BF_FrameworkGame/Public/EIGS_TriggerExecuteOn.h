@@ -8,4 +8,3 @@ enum class EIGS_TriggerExecuteOn : uint8 {
     EIGS_EndOverlap,
     EIGS_Both,
 };
-

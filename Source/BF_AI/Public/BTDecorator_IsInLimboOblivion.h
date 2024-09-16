@@ -10,4 +10,3 @@ public:
     UDEPRECATED_BTDecorator_IsInLimboOblivion();
 
 };
-

@@ -17,4 +17,3 @@ enum class EIGS_TeamSideEnum : uint8 {
     TS_GeneralListener,
     TS_Unknown = 255,
 };
-

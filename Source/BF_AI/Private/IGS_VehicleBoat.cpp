@@ -1,16 +1,16 @@
 #include "IGS_VehicleBoat.h"
 #include "IGS_AIBoatSpawnComponent.h"
 #include "Components/ChildActorComponent.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
 #include "BuoyancyComponent.h"
-#include "EIGS_VehicleSplineGroup.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_VehicleBoat::AIGS_VehicleBoat(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).Buoyancy = CreateDefaultSubobject<UBuoyancyComponent>(TEXT("Buoyancy"));
-    (*this).PlayerResetTrigger = CreateDefaultSubobject<UChildActorComponent>(TEXT("PlayerResetTrigger"));
-    (*this).AIBoatSpawnerComponent = CreateDefaultSubobject<UIGS_AIBoatSpawnComponent>(TEXT("AIBoatSpawnerComponent"));
+    auto gen = CreateDefaultSubobject<UBuoyancyComponent>(TEXT("Buoyancy"));
+    auto gen2 = CreateDefaultSubobject<UChildActorComponent>(TEXT("PlayerResetTrigger"));
+    auto gen3 = CreateDefaultSubobject<UIGS_AIBoatSpawnComponent>(TEXT("AIBoatSpawnerComponent"));
+    (*this).Buoyancy = gen;
+    (*this).PlayerResetTrigger = gen2;
+    (*this).AIBoatSpawnerComponent = gen3;
     (*this).bPassengersGetOutAfterDriveFinished = true;
     (*this).TimeToStop = 5.000000000e+00f;
     (*this).followDistance = 1.000000000e+03f;
@@ -48,7 +48,7 @@ void AIGS_VehicleBoat::ChangeBoatSpeed(float newSpeed) {
 
 void AIGS_VehicleBoat::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_VehicleBoat, mR_TargetPosition);
     DOREPLIFETIME(AIGS_VehicleBoat, mR_TargetRotation);
     DOREPLIFETIME(AIGS_VehicleBoat, mR_NewTargetParkingLocation);
@@ -57,5 +57,4 @@ void AIGS_VehicleBoat::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(AIGS_VehicleBoat, mR_ParkPosition);
     DOREPLIFETIME(AIGS_VehicleBoat, mR_ParkRotation);
 }
-
 

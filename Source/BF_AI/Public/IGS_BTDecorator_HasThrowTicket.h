@@ -13,9 +13,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowRequestKey;
-    
+
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ThrowSlotKey;
-    
-};
 
+};

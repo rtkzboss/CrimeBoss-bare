@@ -12,9 +12,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     float MinDistance;
-    
+
     UPROPERTY(EditAnywhere)
     float MaxDistance;
-    
-};
 
+};

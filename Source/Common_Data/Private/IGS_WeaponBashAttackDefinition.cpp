@@ -8,4 +8,3 @@ FIGS_WeaponBashAttackDefinition::FIGS_WeaponBashAttackDefinition() {
     (*this).MaxRange = 1.000000000e+02f;
     (*this).TraceRadius = 3.000000000e+01f;
 }
-

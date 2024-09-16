@@ -11,6 +11,5 @@ public:
 
     UPROPERTY(VisibleAnywhere)
     int32 Seed;
-    
-};
 
+};

@@ -10,10 +10,9 @@ struct PREFABRICATORRUNTIME_API FPrefabricatorAssetCollectionItem {
 public:
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UPrefabricatorAsset> PrefabAsset;
-    
+
     UPROPERTY(EditAnywhere)
     float Weight;
-    
+
     FPrefabricatorAssetCollectionItem();
 };
-

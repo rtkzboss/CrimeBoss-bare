@@ -11,12 +11,11 @@ public:
 
     UFUNCTION(BlueprintCallable)
     float GetRelativeHealth();
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float CurrentHealth;
-    
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float BaseHealth;
-    
-};
 
+};

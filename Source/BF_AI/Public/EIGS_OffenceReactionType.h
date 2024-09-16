@@ -9,4 +9,3 @@ enum class EIGS_OffenceReactionType : uint8 {
     Offence_Noise,
     Offence_SuspActors,
 };
-

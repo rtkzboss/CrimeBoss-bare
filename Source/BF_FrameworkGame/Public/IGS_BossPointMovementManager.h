@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "IGS_OnSplineCompletedEventDelegate.h"
+#include "IGS_OnSplineCompletedEvent.h"
 #include "IGS_BossPointMovementManager.generated.h"
 
 class AIGS_PlayerCharacter;
@@ -16,27 +16,26 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void ResumeMoving();
-    
+
     UFUNCTION(BlueprintCallable)
     void PauseMoving();
-    
+
     UFUNCTION(BlueprintCallable)
     void InitializeWithPlayer(AIGS_PlayerCharacter* inPlayer);
-    
+
     UFUNCTION(BlueprintCallable)
     void AbortMoving();
-    
+
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     USplineComponent* SplineComponent;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     AIGS_PlayerCharacter* MovingPlayer;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UIGS_PlayerCharacterMovementComponent* MovementComp;
-    
+
     UPROPERTY(BlueprintAssignable)
     FIGS_OnSplineCompletedEvent OnSplineCompletedEvent;
-    
-};
 
+};

@@ -7,6 +7,8 @@
 FIGS_JobCompletedInfo::FIGS_JobCompletedInfo() {
     (*this).MetaMissionID = nullptr;
     (*this).MetaData.MissionResult = ECommonMissionResult::Res_UNKNOWN;
+    (*this).MetaData.CollectedObjectiveLoot = {};
+    (*this).MetaData.CollectedBonusLoot = {};
     (*this).MetaData.MoneyCollected = 0;
     (*this).MetaData.CivilCasualties = 0;
     (*this).MetaData.PoliceCasualties = 0;
@@ -24,12 +26,11 @@ FIGS_JobCompletedInfo::FIGS_JobCompletedInfo() {
     (*this).SharedData.MissionID.B = 0;
     (*this).SharedData.MissionID.C = 0;
     (*this).SharedData.MissionID.D = 0;
-    (*this).SharedData.Heisters.Empty();
-    (*this).SharedData.Detectives.Empty();
-    (*this).SharedData.PlayedPresets.PlayedPresets.Empty();
+    (*this).SharedData.Heisters = {};
+    (*this).SharedData.Detectives = {};
+    (*this).SharedData.PlayedPresets.PlayedPresets = {};
     (*this).SharedData.UserDifficulty = EIGS_UserDifficulty::UD_Easy;
     (*this).SharedData.LobbyVisibility = EMETA_LobbyVisibilityType::Private;
     (*this).SharedData.MPLobbyType = EIGS_MPLobbyType::Normal;
     (*this).SharedData.bIsFilled = false;
 }
-

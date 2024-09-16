@@ -12,4 +12,3 @@ void UIGS_GameplayRenderingSubsystem::ToggleTo3PV() {
 void UIGS_GameplayRenderingSubsystem::RenderingSettingsChanged() {
 }
 
-

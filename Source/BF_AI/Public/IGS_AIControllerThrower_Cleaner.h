@@ -10,4 +10,3 @@ public:
     AIGS_AIControllerThrower_Cleaner(const FObjectInitializer& ObjectInitializer);
 
 };
-

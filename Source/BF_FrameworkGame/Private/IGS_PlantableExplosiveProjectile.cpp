@@ -1,15 +1,15 @@
 #include "IGS_PlantableExplosiveProjectile.h"
-#include "GameFramework/Actor.h"
-#include "Engine/EngineTypes.h"
+#include "Components/CapsuleComponent.h"
 #include "Components/SphereComponent.h"
-#include "EIGS_WorldWidgetType.h"
 #include "Net/UnrealNetwork.h"
 
 AIGS_PlantableExplosiveProjectile::AIGS_PlantableExplosiveProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    auto gen = CreateDefaultSubobject<USphereComponent>(TEXT("ShootCollisionSphere"));
     (*this).PushIntoMeshDistance = 3.000000000e+00f;
     (*this).RotateMeshOnPlant.Pitch = -9.000000000e+01f;
-    (*this).ShootCollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("ShootCollisionSphere"));
-    (*this).ShootCollisionSphere->SetupAttachment((*this).RootComponent);
+    (*this).ShootCollisionSphere = gen;
+    auto gen2 = Cast<UCapsuleComponent>(GetDefaultSubobjectByName(TEXT("CapsuleCollisionComponent")));
+    if (gen) gen->SetupAttachment(gen2);
 }
 
 
@@ -25,8 +25,7 @@ bool AIGS_PlantableExplosiveProjectile::CanStick_Implementation(UPrimitiveCompon
 
 void AIGS_PlantableExplosiveProjectile::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
+
     DOREPLIFETIME(AIGS_PlantableExplosiveProjectile, mR_PlantData);
 }
-
 

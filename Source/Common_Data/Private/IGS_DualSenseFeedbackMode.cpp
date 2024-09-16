@@ -5,4 +5,3 @@ FIGS_DualSenseFeedbackMode::FIGS_DualSenseFeedbackMode() {
     (*this).Position = 0;
     (*this).Strength = 0;
 }
-

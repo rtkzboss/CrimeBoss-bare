@@ -10,4 +10,3 @@ public:
     UIGS_AchievementManagerBaseComponent(const FObjectInitializer& ObjectInitializer);
 
 };
-

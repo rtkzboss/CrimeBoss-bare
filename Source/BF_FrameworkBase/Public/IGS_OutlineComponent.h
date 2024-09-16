@@ -16,106 +16,105 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetLocalOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetLocalCharacterOutline(const bool inEnabled, const bool inIsBackup);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetIsSmartPinged(const bool inEnabled);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetHeisterOutlineCategoryState(const AActor* inHeisterReference, const bool inEnabled);
-    
+
     UFUNCTION(BlueprintCallable)
     void SetComponentsToOutline(const TArray<USceneComponent*>& inComponentsToOutline);
-    
+
     UFUNCTION(BlueprintCallable)
     void ResetOutline();
-    
+
     UFUNCTION(BlueprintCallable)
     void RemoveComponentToOutline(UActorComponent* inComponentToOutline);
-    
+
     UFUNCTION(BlueprintCallable)
     void RemoveComponentsToOutline(const TArray<UActorComponent*>& inComponentsToOutline);
-    
+
     UFUNCTION()
     void OnRep_CurrentOutlineState();
-    
+
     UFUNCTION(BlueprintCallable)
     void AddComponentToOutline(UActorComponent* inComponentToOutline);
-    
+
     UFUNCTION(BlueprintCallable)
     void AddComponentsToOutline(const TArray<UActorComponent*>& inComponentsToOutline);
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_CurrentOutlineState)
     EIGS_CameraOutlineState CurrentOutlineState;
-    
+
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_CameraOutlineState LocalOverrideOutlineState;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bUseRootForOutline;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool bShineWhenInactive;
-    
+
 private:
     UPROPERTY(Instanced)
     TArray<UMeshComponent*> m_ComponentsToOutline;
-    
+
     UPROPERTY()
     uint8 bSolidInteractiveOutline: 1;
-    
+
     UPROPERTY()
     uint8 bBlinkingInteractiveOutline: 1;
-    
+
     UPROPERTY()
     uint8 bPingOutline: 1;
-    
+
     UPROPERTY()
     uint8 bEnemyDetectingOutline: 1;
-    
+
     UPROPERTY()
     uint8 bEnemyPingOutline: 1;
-    
+
     UPROPERTY()
     uint8 bObjectiveOutline: 1;
-    
+
     UPROPERTY()
     uint8 bHeisterOutline: 1;
-    
+
     UPROPERTY()
     uint8 bHeister2Outline: 1;
-    
+
     UPROPERTY()
     uint8 bHeister3Outline: 1;
-    
+
     UPROPERTY()
     uint8 bHeister4Outline: 1;
-    
+
     UPROPERTY()
     uint8 bBackupHeisterOutline: 1;
-    
+
     UPROPERTY()
     uint8 bHighlightOutline: 1;
-    
+
     UPROPERTY()
     uint8 bIsShineEnabled: 1;
-    
+
     UPROPERTY()
     uint8 bIsSmartPinged: 1;
-    
+
     UPROPERTY()
     uint8 bRobotHighlighted: 1;
-    
+
     UPROPERTY()
     uint8 bVanHighlighted: 1;
-    
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };
-

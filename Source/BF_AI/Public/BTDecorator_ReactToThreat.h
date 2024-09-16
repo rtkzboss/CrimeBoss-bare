@@ -14,9 +14,8 @@ public:
 protected:
     UPROPERTY(EditAnywhere)
     FBlackboardKeySelector ReactToThreathKey;
-    
+
     UPROPERTY(EditAnywhere)
     FGameplayTag ReactionCooldownTag;
-    
-};
 
+};

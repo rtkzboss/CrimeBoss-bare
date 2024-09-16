@@ -5,4 +5,3 @@ UCoverPoint::UCoverPoint() {
     (*this).IsValid = true;
 }
 
-

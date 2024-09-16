@@ -8,4 +8,3 @@ FIGS_GlassHit::FIGS_GlassHit() {
     (*this).UVLocation.Y = 0.000000000e+00f;
     (*this).SizeRatio = 1.000000000e+00f;
 }
-

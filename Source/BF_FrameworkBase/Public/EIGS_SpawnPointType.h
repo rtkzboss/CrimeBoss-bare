@@ -11,4 +11,3 @@ enum class EIGS_SpawnPointType : uint8 {
     SPT_FuseBox,
     SPT_Note,
 };
-

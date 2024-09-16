@@ -16,21 +16,20 @@ public:
 
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UMaterialInterface> LowHealthPostProcessInterface;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UCurveFloat> LowHealthCurve;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> EffectStartAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkAudioEvent> EffectStopAkAudioEvent;
-    
+
     UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UAkRtpc> EffectAkRtpc;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float AbsoluteLowHealthThreshold;
-    
-};
 
+};

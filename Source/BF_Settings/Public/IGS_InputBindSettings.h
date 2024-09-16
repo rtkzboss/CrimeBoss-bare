@@ -9,7 +9,6 @@
 
 class UIGS_InputActionDefaultKeysDataAsset;
 class UIGS_InputActionMapDataAsset;
-class UIGS_InputBindSettings;
 
 UCLASS(BlueprintType, DefaultConfig)
 class BF_SETTINGS_API UIGS_InputBindSettings : public UIGS_SettingsBase {
@@ -19,42 +18,41 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void SetInputAxisBinding(EIGS_InputAction InAction, FInputChord inInputChord, bool bIsGamepad, bool inSaveToConfig, float InValue, bool inAlternativeKey);
-    
+
     UFUNCTION(BlueprintCallable)
     static void SetInputActionBinding(EIGS_InputAction InAction, FInputChord inInputChord, bool bIsGamepad, bool inSaveToConfig, bool inAlternativeKey);
-    
+
     UFUNCTION(BlueprintCallable)
     void RevertSettings();
-    
+
     UFUNCTION(BlueprintCallable)
     void ResetToDefaults();
-    
+
     UFUNCTION(BlueprintCallable)
     void ResetGamepadBindings();
-    
+
     UFUNCTION(BlueprintPure)
     static UIGS_InputBindSettings* Instance();
-    
+
     UFUNCTION(BlueprintCallable)
     void FailsafeFillEmptyBindings();
-    
+
     UFUNCTION(BlueprintCallable)
     void CacheBindings();
-    
+
     UFUNCTION(BlueprintCallable)
     void ApplySettings(bool inSave);
-    
+
     UPROPERTY()
     UIGS_InputActionMapDataAsset* InputActionMapDataAsset;
-    
+
     UPROPERTY()
     UIGS_InputActionDefaultKeysDataAsset* InputActionDefaultKeysAsset;
-    
+
     UPROPERTY()
     FIGS_CachedInputBinding CachedBindings;
-    
+
     UPROPERTY()
     TMap<EIGS_InputAction, FKey> GamepadMappings;
-    
-};
 
+};

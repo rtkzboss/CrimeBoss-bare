@@ -2,12 +2,12 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "NavFilters/NavigationQueryFilter.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_AINavigationHelpersLibrary.generated.h"
 
 class AIGS_RoomBase;
 class UActorComponent;
-class UNavigationQueryFilter;
 class UObject;
 class UStaticMeshComponent;
 
@@ -19,21 +19,20 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void UpdateNavigationData(UActorComponent* comp);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool ProjectPointToNavigation(const UObject* inWCO, const FVector& inPoint, FVector& OutLocation, const FVector inQueryExtent, const bool inFilterFromWco, TSubclassOf<UNavigationQueryFilter> inFilterClass);
-    
+
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsInDangerArea(const UObject* inWCO, const FVector InLocation, const float InRadius, const bool inAddCapsuleRadiusIfCharacterWco);
-    
+
     UFUNCTION(BlueprintCallable)
     static void ForceEnableForNavigation(UStaticMeshComponent* comp);
-    
+
     UFUNCTION(BlueprintCallable)
     static void AffectNavigation(UStaticMeshComponent* comp, bool Value);
-    
+
     UFUNCTION(BlueprintCallable)
     static void AddRoomConnection(AIGS_RoomBase* roomOne, AIGS_RoomBase* roomTwo);
-    
-};
 
+};

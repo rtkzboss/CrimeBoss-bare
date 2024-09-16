@@ -3,4 +3,3 @@
 UIGS_MediumHitReactionsTable::UIGS_MediumHitReactionsTable() {
 }
 
-

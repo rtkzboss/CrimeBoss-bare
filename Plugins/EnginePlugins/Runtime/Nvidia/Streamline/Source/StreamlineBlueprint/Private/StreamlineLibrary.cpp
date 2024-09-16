@@ -18,4 +18,3 @@ FStreamlineFeatureRequirements UStreamlineLibrary::GetStreamlineFeatureInformati
 void UStreamlineLibrary::BreakStreamlineFeatureRequirements(UStreamlineFeatureRequirementsFlags Requirements, bool& D3D11Supported, bool& D3D12Supported, bool& VulkanSupported, bool& VSyncOffRequired, bool& HardwareSchedulingRequired) {
 }
 
-

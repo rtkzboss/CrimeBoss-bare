@@ -10,10 +10,9 @@ struct FIGS_ThrowableLiveObjectsHolder {
 public:
     UPROPERTY()
     UIGS_ThrowableInventoryObject* InventoryObject;
-    
+
     UPROPERTY()
     UClass* Projectile;
-    
+
     BF_AI_API FIGS_ThrowableLiveObjectsHolder();
 };
-

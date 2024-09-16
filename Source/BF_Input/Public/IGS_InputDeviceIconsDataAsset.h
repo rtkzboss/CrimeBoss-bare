@@ -13,6 +13,5 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     TMap<FKey, FIGS_InputDeviceButtonData> ButtonIconData;
-    
-};
 
+};

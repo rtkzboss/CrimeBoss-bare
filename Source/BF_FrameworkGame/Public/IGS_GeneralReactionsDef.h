@@ -9,10 +9,9 @@ struct BF_FRAMEWORKGAME_API FIGS_GeneralReactionsDef {
 public:
     UPROPERTY(EditAnywhere)
     bool bEnabled;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatInterval WaitTime;
-    
+
     FIGS_GeneralReactionsDef();
 };
-

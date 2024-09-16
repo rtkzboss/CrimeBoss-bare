@@ -10,10 +10,9 @@ struct FIGS_GlassStatus {
 public:
     UPROPERTY()
     EIGS_TemperedGlassStatus State;
-    
+
     UPROPERTY()
     TArray<FIGS_GlassHit> PreviousHitPoints;
-    
+
     BF_FRAMEWORKGAME_API FIGS_GlassStatus();
 };
-

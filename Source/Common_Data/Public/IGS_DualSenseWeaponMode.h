@@ -8,16 +8,15 @@ struct COMMON_DATA_API FIGS_DualSenseWeaponMode {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool OverrideEnabled;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 StartPosition;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 EndPosition;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 Strength;
-    
+
     FIGS_DualSenseWeaponMode();
 };
-

@@ -7,4 +7,3 @@ FMETA_LevelUpHeisterData::FMETA_LevelUpHeisterData() {
     (*this).NumberOfPerksAddedWithPromote = 0;
     (*this).NumberOfEquipmentUnlockedWithPromote = 0;
 }
-

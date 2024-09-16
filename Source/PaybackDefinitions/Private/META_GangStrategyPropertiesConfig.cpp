@@ -6,4 +6,3 @@ FMETA_GangStrategyPropertiesConfig::FMETA_GangStrategyPropertiesConfig() {
     (*this).DailyAttackLimitAgainstAnotherGang = 0;
     (*this).SelectClosestTurfs = true;
 }
-

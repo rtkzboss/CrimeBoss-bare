@@ -9,4 +9,3 @@ FIGS_TPP_SlideAnimationData::FIGS_TPP_SlideAnimationData() {
     (*this).Slide_Out_Idle = nullptr;
     (*this).Slide_Out_Crouch_Walk = nullptr;
 }
-

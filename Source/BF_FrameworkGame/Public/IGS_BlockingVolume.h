@@ -10,4 +10,3 @@ public:
     AIGS_BlockingVolume(const FObjectInitializer& ObjectInitializer);
 
 };
-

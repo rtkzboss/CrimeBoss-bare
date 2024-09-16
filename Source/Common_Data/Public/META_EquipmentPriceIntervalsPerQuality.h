@@ -9,10 +9,9 @@ struct COMMON_DATA_API FMETA_EquipmentPriceIntervalsPerQuality {
 public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SellModifier;
-    
+
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FMETA_Interval BuyCostValueRange;
-    
+
     FMETA_EquipmentPriceIntervalsPerQuality();
 };
-

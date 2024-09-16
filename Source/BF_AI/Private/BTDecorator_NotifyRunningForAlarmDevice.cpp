@@ -4,4 +4,3 @@ UBTDecorator_NotifyRunningForAlarmDevice::UBTDecorator_NotifyRunningForAlarmDevi
     (*this).NodeName = TEXT("Notify Running For Alarm Device");
 }
 
-
