@@ -114,7 +114,7 @@ float UDFLDebugFL::GetDrawDuration(UObject* Owner) {
     return 0.000000000e+00f;
 }
 
-TEnumAsByte<EDrawDebugTrace::Type> UDFLDebugFL::GetDrawDebugTrace(UObject* Owner) {
+EDrawDebugTrace::Type UDFLDebugFL::GetDrawDebugTrace(UObject* Owner) {
     return EDrawDebugTrace::None;
 }
 

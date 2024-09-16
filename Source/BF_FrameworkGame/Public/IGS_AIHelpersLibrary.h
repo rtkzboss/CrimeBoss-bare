@@ -42,7 +42,7 @@ public:
     static bool TargetIsGuardingPos(AIGS_GameCharacterFramework* inCharacter, FVector InPos);
 
     UFUNCTION(BlueprintCallable)
-    static TEnumAsByte<ETeamAttitude::Type> SolveAttitude(FGenericTeamId inTeamId1, FGenericTeamId inTeamId2);
+    static ETeamAttitude::Type SolveAttitude(FGenericTeamId inTeamId1, FGenericTeamId inTeamId2);
 
     UFUNCTION(BlueprintCallable)
     static void SetGlobalAggro(AActor* inActor, const float InFloat, const AActor* inInstigator);

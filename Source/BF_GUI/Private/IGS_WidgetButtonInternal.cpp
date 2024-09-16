@@ -67,19 +67,19 @@ UIGS_WidgetButtonInternal::UIGS_WidgetButtonInternal() {
     (*this).IsFocusable = true;
 }
 
-void UIGS_WidgetButtonInternal::SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod) {
+void UIGS_WidgetButtonInternal::SetTouchMethod(EButtonTouchMethod::Type InTouchMethod) {
 }
 
 void UIGS_WidgetButtonInternal::SetStyle(const FButtonStyle& InStyle) {
 }
 
-void UIGS_WidgetButtonInternal::SetPressMethod(TEnumAsByte<EButtonPressMethod::Type> InPressMethod) {
+void UIGS_WidgetButtonInternal::SetPressMethod(EButtonPressMethod::Type InPressMethod) {
 }
 
 void UIGS_WidgetButtonInternal::SetColorAndOpacity(FLinearColor InColorAndOpacity) {
 }
 
-void UIGS_WidgetButtonInternal::SetClickMethod(TEnumAsByte<EButtonClickMethod::Type> InClickMethod) {
+void UIGS_WidgetButtonInternal::SetClickMethod(EButtonClickMethod::Type InClickMethod) {
 }
 
 void UIGS_WidgetButtonInternal::SetBackgroundColor(FLinearColor InBackgroundColor) {

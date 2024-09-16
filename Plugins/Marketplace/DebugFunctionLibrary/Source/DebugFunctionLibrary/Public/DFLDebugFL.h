@@ -107,7 +107,7 @@ public:
     static float GetDrawDuration(UObject* Owner);
 
     UFUNCTION(BlueprintPure)
-    static TEnumAsByte<EDrawDebugTrace::Type> GetDrawDebugTrace(UObject* Owner);
+    static EDrawDebugTrace::Type GetDrawDebugTrace(UObject* Owner);
 
     UFUNCTION(BlueprintPure)
     static bool GetDrawDebug(UObject* Owner);

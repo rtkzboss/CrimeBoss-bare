@@ -27,7 +27,7 @@ float UIGS_AnimationFunctionsLibrary::GetCurveTimeAtValue(UAnimSequence* InAnimS
     return 0.000000000e+00f;
 }
 
-UAnimNotify_Footstep* UIGS_AnimationFunctionsLibrary::AddFootStepNotifyEvent(UAnimSequence* AnimationSequence, FName NotifyTrackName, float StartTime, TSubclassOf<UAnimNotify_Footstep> NotifyClass, const FName& InBoneName, TEnumAsByte<ETraceTypeQuery> inTraceChannel, EIGS_FootstepType inFootstepType) {
+UAnimNotify_Footstep* UIGS_AnimationFunctionsLibrary::AddFootStepNotifyEvent(UAnimSequence* AnimationSequence, FName NotifyTrackName, float StartTime, TSubclassOf<UAnimNotify_Footstep> NotifyClass, const FName& InBoneName, ETraceTypeQuery inTraceChannel, EIGS_FootstepType inFootstepType) {
     return nullptr;
 }
 

@@ -55,7 +55,7 @@ public:
     void Server_AuthUse(UIGS_InteractiveComponent* inInteractiveComponent);
 
     UFUNCTION()
-    void OnMovementModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode);
+    void OnMovementModeChanged(ACharacter* inCharacter, EMovementMode inPrevMovementMode, uint8 inPreviousCustomMode);
 
     UFUNCTION(Client, Reliable, WithValidation)
     void Client_Rollback(UIGS_InteractiveComponent* inInteractiveComponent);

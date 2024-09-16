@@ -23,7 +23,7 @@ public:
 
 protected:
     UFUNCTION()
-    void OnActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason);
+    void OnActorEndPlay(AActor* inActor, EEndPlayReason::Type inEndPlayReason);
 
     UFUNCTION(NetMulticast, Reliable, WithValidation)
     void Multicast_OnPossessed(AIGS_GameCharacterFramework* inPlayerCharacter);

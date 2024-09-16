@@ -49,7 +49,7 @@ public:
     EIGS_TeamSideEnum GetAimCharacterTeamside() const;
 
     UFUNCTION(BlueprintPure)
-    TEnumAsByte<ETeamAttitude::Type> GetAimCharacterAttitude() const;
+    ETeamAttitude::Type GetAimCharacterAttitude() const;
 
     UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetAimCharacter() const;

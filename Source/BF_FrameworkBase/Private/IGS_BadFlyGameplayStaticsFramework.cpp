@@ -49,7 +49,7 @@ void UIGS_BadFlyGameplayStaticsFramework::SetCastDynamicShadowsEnabled(ULightCom
 void UIGS_BadFlyGameplayStaticsFramework::RestoreRevertibleCommandVariables() {
 }
 
-UTexture2D* UIGS_BadFlyGameplayStaticsFramework::RenderTargetCreateStaticTexture2DEditorOnlyToSameFile(UTextureRenderTarget2D* RenderTarget, const FString& Name, const FString& InPath, TEnumAsByte<TextureCompressionSettings> CompressionSettings, TEnumAsByte<TextureMipGenSettings> MipSettings) {
+UTexture2D* UIGS_BadFlyGameplayStaticsFramework::RenderTargetCreateStaticTexture2DEditorOnlyToSameFile(UTextureRenderTarget2D* RenderTarget, const FString& Name, const FString& InPath, TextureCompressionSettings CompressionSettings, TextureMipGenSettings MipSettings) {
     return nullptr;
 }
 

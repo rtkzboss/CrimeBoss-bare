@@ -71,7 +71,7 @@ bool UIGS_UseComponent::Server_AuthUse_Validate(UIGS_InteractiveComponent* inInt
     return true;
 }
 
-void UIGS_UseComponent::OnMovementModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode) {
+void UIGS_UseComponent::OnMovementModeChanged(ACharacter* inCharacter, EMovementMode inPrevMovementMode, uint8 inPreviousCustomMode) {
 }
 
 void UIGS_UseComponent::Client_Rollback_Implementation(UIGS_InteractiveComponent* inInteractiveComponent) {

@@ -77,7 +77,7 @@ public:
     float GetSpeedAtDistance(float Distance) const;
 
     UFUNCTION(BlueprintPure)
-    FRotator GetRotationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const;
+    FRotator GetRotationAtDistance(float Distance, ESplineCoordinateSpace::Type Coord) const;
 
     UFUNCTION(BlueprintCallable)
     UPFPathComponent* GetPathToFollow();
@@ -89,7 +89,7 @@ public:
     FVector GetMoveDirection() const;
 
     UFUNCTION(BlueprintPure)
-    FVector GetLocationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const;
+    FVector GetLocationAtDistance(float Distance, ESplineCoordinateSpace::Type Coord) const;
 
     UFUNCTION(BlueprintCallable)
     FPFEventPoints GetEventPoints();

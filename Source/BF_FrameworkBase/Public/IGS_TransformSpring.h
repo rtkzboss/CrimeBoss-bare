@@ -14,7 +14,7 @@ public:
     UIGS_TransformSpring(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
-    void SetTarget(USceneComponent* inTargetComponent, TEnumAsByte<ESpringTypeEnum::Type> inSpringType);
+    void SetTarget(USceneComponent* inTargetComponent, ESpringTypeEnum::Type inSpringType);
 
     UFUNCTION(BlueprintCallable)
     void AddVelocity(const FVector& inVelocity);

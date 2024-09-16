@@ -78,7 +78,7 @@ float UPFPathFollowerComponent::GetSpeedAtDistance(float Distance) const {
     return 0.000000000e+00f;
 }
 
-FRotator UPFPathFollowerComponent::GetRotationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const {
+FRotator UPFPathFollowerComponent::GetRotationAtDistance(float Distance, ESplineCoordinateSpace::Type Coord) const {
     return FRotator{};
 }
 
@@ -94,7 +94,7 @@ FVector UPFPathFollowerComponent::GetMoveDirection() const {
     return FVector{};
 }
 
-FVector UPFPathFollowerComponent::GetLocationAtDistance(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> Coord) const {
+FVector UPFPathFollowerComponent::GetLocationAtDistance(float Distance, ESplineCoordinateSpace::Type Coord) const {
     return FVector{};
 }
 

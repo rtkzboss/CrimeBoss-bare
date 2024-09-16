@@ -21,7 +21,7 @@ protected:
     void OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus);
 
     UFUNCTION()
-    void OnSusActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason);
+    void OnSusActorEndPlay(AActor* inActor, EEndPlayReason::Type inEndPlayReason);
 
 public:
     UFUNCTION(BlueprintPure)

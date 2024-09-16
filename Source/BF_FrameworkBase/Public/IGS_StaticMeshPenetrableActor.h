@@ -14,7 +14,7 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
-    void SetMobility(TEnumAsByte<EComponentMobility::Type> inMobility);
+    void SetMobility(EComponentMobility::Type inMobility);
 
 protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)

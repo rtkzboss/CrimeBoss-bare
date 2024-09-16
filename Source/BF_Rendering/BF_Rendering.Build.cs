@@ -11,6 +11,9 @@ public class BF_Rendering : ModuleRules {
             "CoreUObject",
             "DeveloperSettings",
             "Engine",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
             "PhysicsCore",
         });
     }

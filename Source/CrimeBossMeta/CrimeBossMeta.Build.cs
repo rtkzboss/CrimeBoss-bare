@@ -24,9 +24,12 @@ public class CrimeBossMeta : ModuleRules {
             "GenericGraphRuntime",
             "IGS_UIFramework",
             "PaybackDefinitions",
-            "PhysicsCore",
             "SlateCore",
             "UMG",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "PhysicsCore",
         });
     }
 }

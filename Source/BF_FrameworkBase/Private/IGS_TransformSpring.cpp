@@ -5,7 +5,7 @@ UIGS_TransformSpring::UIGS_TransformSpring(const FObjectInitializer& ObjectIniti
     (*this).PrimaryComponentTick.bCanEverTick = true;
 }
 
-void UIGS_TransformSpring::SetTarget(USceneComponent* inTargetComponent, TEnumAsByte<ESpringTypeEnum::Type> inSpringType) {
+void UIGS_TransformSpring::SetTarget(USceneComponent* inTargetComponent, ESpringTypeEnum::Type inSpringType) {
 }
 
 void UIGS_TransformSpring::AddVelocity(const FVector& inVelocity) {

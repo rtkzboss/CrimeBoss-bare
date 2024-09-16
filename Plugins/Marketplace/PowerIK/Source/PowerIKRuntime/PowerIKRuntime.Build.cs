@@ -14,9 +14,5 @@ public class PowerIKRuntime : ModuleRules {
             "Engine",
             "RigVM",
         });
-
-        PrivateDependencyModuleNames.AddRange(new string[] {
-            "RigVM",
-        });
     }
 }

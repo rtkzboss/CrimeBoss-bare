@@ -20,9 +20,9 @@ UIGS_RenderingSettings::UIGS_RenderingSettings() {
     (*this).bSSREnabled = true;
     (*this).bAOEnabled = true;
     (*this).SharpenFilterStrength = 10;
-    (*this).FramerateLimitInGame = 1000;
-    (*this).FramerateLimitInMenu = 1000;
-    (*this).FramerateLimitOutOfFocus = 30;
+    (*this).FramerateLimitInGame = 239;
+    (*this).FramerateLimitInMenu = 239;
+    (*this).FramerateLimitOutOfFocus = 5;
     (*this).bCanChangeMonitorPositions = true;
     (*this).bSettingsValid = true;
 }

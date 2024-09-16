@@ -83,7 +83,7 @@ public:
     static void RestoreRevertibleCommandVariables();
 
     UFUNCTION(BlueprintCallable)
-    static UTexture2D* RenderTargetCreateStaticTexture2DEditorOnlyToSameFile(UTextureRenderTarget2D* RenderTarget, const FString& Name, const FString& InPath, TEnumAsByte<TextureCompressionSettings> CompressionSettings, TEnumAsByte<TextureMipGenSettings> MipSettings);
+    static UTexture2D* RenderTargetCreateStaticTexture2DEditorOnlyToSameFile(UTextureRenderTarget2D* RenderTarget, const FString& Name, const FString& InPath, TextureCompressionSettings CompressionSettings, TextureMipGenSettings MipSettings);
 
     UFUNCTION(BlueprintPure)
     static int32 RemainingCompilingShaders();

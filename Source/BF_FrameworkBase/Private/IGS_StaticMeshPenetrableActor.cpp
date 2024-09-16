@@ -9,6 +9,6 @@ AIGS_StaticMeshPenetrableActor::AIGS_StaticMeshPenetrableActor(const FObjectInit
     (*this).RootComponent = gen;
 }
 
-void AIGS_StaticMeshPenetrableActor::SetMobility(TEnumAsByte<EComponentMobility::Type> inMobility) {
+void AIGS_StaticMeshPenetrableActor::SetMobility(EComponentMobility::Type inMobility) {
 }
 

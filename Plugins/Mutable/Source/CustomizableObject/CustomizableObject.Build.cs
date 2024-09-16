@@ -11,6 +11,9 @@ public class CustomizableObject : ModuleRules {
             "Core",
             "CoreUObject",
             "Engine",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
             "PhysicsCore",
         });
     }

@@ -14,7 +14,7 @@ UIGS_AIPerceptionHandlerComponent::UIGS_AIPerceptionHandlerComponent(const FObje
 void UIGS_AIPerceptionHandlerComponent::OnTargetPerceptionUpdated(AActor* inActor, FAIStimulus inStimulus) {
 }
 
-void UIGS_AIPerceptionHandlerComponent::OnSusActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason) {
+void UIGS_AIPerceptionHandlerComponent::OnSusActorEndPlay(AActor* inActor, EEndPlayReason::Type inEndPlayReason) {
 }
 
 AIGS_GameCharacterFramework* UIGS_AIPerceptionHandlerComponent::GetPossesedPawn() const {

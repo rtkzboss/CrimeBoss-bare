@@ -26,15 +26,15 @@ float UPFPathComponent::GetTimeForPath() {
     return 0.000000000e+00f;
 }
 
-FVector UPFPathComponent::GetLocationAtSplinePointMirrored(int32 PointIdx, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const {
+FVector UPFPathComponent::GetLocationAtSplinePointMirrored(int32 PointIdx, ESplineCoordinateSpace::Type CoordinateSpace) const {
     return FVector{};
 }
 
-FVector UPFPathComponent::GetLocationAtSplineInputKeyMirrored(float Key, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const {
+FVector UPFPathComponent::GetLocationAtSplineInputKeyMirrored(float Key, ESplineCoordinateSpace::Type CoordinateSpace) const {
     return FVector{};
 }
 
-FVector UPFPathComponent::GetLocationAtDistanceAlongSplineMirrored(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const {
+FVector UPFPathComponent::GetLocationAtDistanceAlongSplineMirrored(float Distance, ESplineCoordinateSpace::Type CoordinateSpace) const {
     return FVector{};
 }
 

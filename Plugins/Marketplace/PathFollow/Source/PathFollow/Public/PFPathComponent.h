@@ -23,13 +23,13 @@ public:
     float GetTimeForPath();
 
     UFUNCTION(BlueprintPure)
-    FVector GetLocationAtSplinePointMirrored(int32 PointIdx, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
+    FVector GetLocationAtSplinePointMirrored(int32 PointIdx, ESplineCoordinateSpace::Type CoordinateSpace) const;
 
     UFUNCTION(BlueprintPure)
-    FVector GetLocationAtSplineInputKeyMirrored(float Key, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
+    FVector GetLocationAtSplineInputKeyMirrored(float Key, ESplineCoordinateSpace::Type CoordinateSpace) const;
 
     UFUNCTION(BlueprintPure)
-    FVector GetLocationAtDistanceAlongSplineMirrored(float Distance, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
+    FVector GetLocationAtDistanceAlongSplineMirrored(float Distance, ESplineCoordinateSpace::Type CoordinateSpace) const;
 
     UPROPERTY(EditAnywhere)
     FDrawerData DrawerConfig;

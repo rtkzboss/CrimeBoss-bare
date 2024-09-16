@@ -19,7 +19,7 @@ public:
 
 protected:
     UFUNCTION()
-    void OnMovementModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode);
+    void OnMovementModeChanged(ACharacter* inCharacter, EMovementMode inPrevMovementMode, uint8 inPreviousCustomMode);
 
 public:
     UFUNCTION(BlueprintPure)

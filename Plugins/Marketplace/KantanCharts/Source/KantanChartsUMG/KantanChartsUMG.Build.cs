@@ -15,5 +15,9 @@ public class KantanChartsUMG : ModuleRules {
             "SlateCore",
             "UMG",
         });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "Engine",
+        });
     }
 }

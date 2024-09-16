@@ -23,9 +23,5 @@ public class BF_Animations : ModuleRules {
             "PhysXVehicles",
             "PhysicsCore",
         });
-
-        PrivateDependencyModuleNames.AddRange(new string[] {
-            "RigVM",
-        });
     }
 }

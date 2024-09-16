@@ -333,13 +333,13 @@ public:
     static void DebugTestRequestAnimation(AIGS_GameCharacterFramework* inCharacter, EIGS_AIMontageType inMontageType, uint8 inMontageVariation);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static void CreateExplosiontWithFalloff(UObject* inWCO, float inBaseDamage, float inMinDamage, FVector inOrigin, float inDamageInnerRadius, float inDamageOuterRadius, float inDamageFalloff, float inEffectRadius, TSubclassOf<UDamageType> inDamageTypeClass, const TArray<AActor*>& IgnoreActors, AActor* DamageCauser, AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel);
+    static void CreateExplosiontWithFalloff(UObject* inWCO, float inBaseDamage, float inMinDamage, FVector inOrigin, float inDamageInnerRadius, float inDamageOuterRadius, float inDamageFalloff, float inEffectRadius, TSubclassOf<UDamageType> inDamageTypeClass, const TArray<AActor*>& IgnoreActors, AActor* DamageCauser, AController* InstigatedByController, ECollisionChannel DamagePreventionChannel);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void CreateExplosionEffectOnly(UObject* inWCO, FVector inOrigin, float inEffectRadius, AActor* inCausingActor);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static void CreateExplosion(UObject* inWCO, float inBaseDamage, FVector inOrigin, float inDamageRadius, float inEffectRadius, TSubclassOf<UDamageType> inDamageTypeClass, const TArray<AActor*>& IgnoreActors, AActor* DamageCauser, AController* InstigatedByController, bool bDoFullDamage, TEnumAsByte<ECollisionChannel> DamagePreventionChannel);
+    static void CreateExplosion(UObject* inWCO, float inBaseDamage, FVector inOrigin, float inDamageRadius, float inEffectRadius, TSubclassOf<UDamageType> inDamageTypeClass, const TArray<AActor*>& IgnoreActors, AActor* DamageCauser, AController* InstigatedByController, bool bDoFullDamage, ECollisionChannel DamagePreventionChannel);
 
     UFUNCTION(BlueprintCallable)
     static void CreateDestroyEffect(UPrimitiveComponent* inSourceComponent, TSubclassOf<UIGS_DamageTypeBase> inDamageType, TSubclassOf<UIGS_ImpactTypeObject> inImpactType, const FHitResult& inHitResult, const AIGS_GameCharacterFramework* inOwnerCharacter);

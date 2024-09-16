@@ -4,7 +4,7 @@
 UMETA_EventFunctionLibrary::UMETA_EventFunctionLibrary() {
 }
 
-UTexture2D* UMETA_EventFunctionLibrary::WidgetToTexture(const UUserWidget* InWidget, const FVector2D& inDrawSize, TEnumAsByte<EPixelFormat> inFormat) {
+UTexture2D* UMETA_EventFunctionLibrary::WidgetToTexture(const UUserWidget* InWidget, const FVector2D& inDrawSize, EPixelFormat inFormat) {
     return nullptr;
 }
 

@@ -19,7 +19,7 @@ bool UIGS_AIHelpersLibrary::TargetIsGuardingPos(AIGS_GameCharacterFramework* inC
     return false;
 }
 
-TEnumAsByte<ETeamAttitude::Type> UIGS_AIHelpersLibrary::SolveAttitude(FGenericTeamId inTeamId1, FGenericTeamId inTeamId2) {
+ETeamAttitude::Type UIGS_AIHelpersLibrary::SolveAttitude(FGenericTeamId inTeamId1, FGenericTeamId inTeamId2) {
     return ETeamAttitude::Friendly;
 }
 

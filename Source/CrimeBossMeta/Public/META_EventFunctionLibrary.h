@@ -37,7 +37,7 @@ public:
     UMETA_EventFunctionLibrary();
 
     UFUNCTION(BlueprintCallable)
-    static UTexture2D* WidgetToTexture(const UUserWidget* InWidget, const FVector2D& inDrawSize, TEnumAsByte<EPixelFormat> inFormat);
+    static UTexture2D* WidgetToTexture(const UUserWidget* InWidget, const FVector2D& inDrawSize, EPixelFormat inFormat);
 
     UFUNCTION(BlueprintCallable)
     static void ToStartedGraphs(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GraphStatus>& outStartedGraphs, const TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GraphStatus>& StartedGraphs);

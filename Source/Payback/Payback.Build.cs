@@ -10,7 +10,6 @@ public class Payback : ModuleRules {
             "AIModule",
             "AdvancedSessions",
             "AkAudio",
-            "AnimationBudgetAllocator",
             "BF_AI",
             "BF_Debug",
             "BF_FrameworkBase",
@@ -22,7 +21,6 @@ public class Payback : ModuleRules {
             "CommonUI",
             "Common_Data",
             "Common_Save",
-            "Common_Utils",
             "Core",
             "CoreUObject",
             "CrimeBossUGC",
@@ -42,6 +40,8 @@ public class Payback : ModuleRules {
         });
 
         PrivateDependencyModuleNames.AddRange(new string[] {
+            "AnimationBudgetAllocator",
+            "Common_Utils",
             "OnlineSubsystem",
         });
     }

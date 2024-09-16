@@ -7,7 +7,7 @@ bool UIGS_PlayerSuspicionComponent::ShouldFootstepsBeDetectable() const {
     return false;
 }
 
-void UIGS_PlayerSuspicionComponent::OnMovementModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode) {
+void UIGS_PlayerSuspicionComponent::OnMovementModeChanged(ACharacter* inCharacter, EMovementMode inPrevMovementMode, uint8 inPreviousCustomMode) {
 }
 
 bool UIGS_PlayerSuspicionComponent::HasAnyOffence() const {

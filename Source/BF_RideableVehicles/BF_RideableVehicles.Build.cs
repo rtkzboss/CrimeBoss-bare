@@ -10,16 +10,19 @@ public class BF_RideableVehicles : ModuleRules {
             "AkAudio",
             "BF_FrameworkBase",
             "BF_FrameworkGame",
-            "Common_Utils",
             "Core",
             "CoreUObject",
             "Engine",
-            "GameplayTags",
             "PhysXVehicles",
             "PhysicsCore",
             "SlateCore",
             "UMG",
             "Water",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
+            "Common_Utils",
+            "GameplayTags",
         });
     }
 }

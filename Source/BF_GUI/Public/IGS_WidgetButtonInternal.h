@@ -17,19 +17,19 @@ public:
     UIGS_WidgetButtonInternal();
 
     UFUNCTION(BlueprintCallable)
-    void SetTouchMethod(TEnumAsByte<EButtonTouchMethod::Type> InTouchMethod);
+    void SetTouchMethod(EButtonTouchMethod::Type InTouchMethod);
 
     UFUNCTION(BlueprintCallable)
     void SetStyle(const FButtonStyle& InStyle);
 
     UFUNCTION(BlueprintCallable)
-    void SetPressMethod(TEnumAsByte<EButtonPressMethod::Type> InPressMethod);
+    void SetPressMethod(EButtonPressMethod::Type InPressMethod);
 
     UFUNCTION(BlueprintCallable)
     void SetColorAndOpacity(FLinearColor InColorAndOpacity);
 
     UFUNCTION(BlueprintCallable)
-    void SetClickMethod(TEnumAsByte<EButtonClickMethod::Type> InClickMethod);
+    void SetClickMethod(EButtonClickMethod::Type InClickMethod);
 
     UFUNCTION(BlueprintCallable)
     void SetBackgroundColor(FLinearColor InBackgroundColor);

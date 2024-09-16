@@ -15,7 +15,7 @@ public:
 
 protected:
     UFUNCTION()
-    void OnMoveModeChanged(ACharacter* inCharacter, TEnumAsByte<EMovementMode> inPrevMovementMode, uint8 inPreviousCustomMode);
+    void OnMoveModeChanged(ACharacter* inCharacter, EMovementMode inPrevMovementMode, uint8 inPreviousCustomMode);
 
 private:
     UFUNCTION(Reliable, Server)

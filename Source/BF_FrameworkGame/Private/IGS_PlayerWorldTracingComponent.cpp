@@ -49,7 +49,7 @@ EIGS_TeamSideEnum UIGS_PlayerWorldTracingComponent::GetAimCharacterTeamside() co
     return EIGS_TeamSideEnum::TS_Heisters;
 }
 
-TEnumAsByte<ETeamAttitude::Type> UIGS_PlayerWorldTracingComponent::GetAimCharacterAttitude() const {
+ETeamAttitude::Type UIGS_PlayerWorldTracingComponent::GetAimCharacterAttitude() const {
     return ETeamAttitude::Friendly;
 }
 

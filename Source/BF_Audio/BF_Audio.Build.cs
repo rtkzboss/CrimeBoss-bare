@@ -15,6 +15,9 @@ public class BF_Audio : ModuleRules {
             "Engine",
             "GameplayTags",
             "PaybackDefinitions",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
             "PhysicsCore",
         });
     }

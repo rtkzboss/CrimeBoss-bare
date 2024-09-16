@@ -15,7 +15,7 @@ AIGS_Trigger::AIGS_Trigger(const FObjectInitializer& ObjectInitializer) : Super(
 void AIGS_Trigger::ResetCount() {
 }
 
-void AIGS_Trigger::OnActorEndPlay(AActor* inActor, TEnumAsByte<EEndPlayReason::Type> inEndPlayReason) {
+void AIGS_Trigger::OnActorEndPlay(AActor* inActor, EEndPlayReason::Type inEndPlayReason) {
 }
 
 void AIGS_Trigger::Multicast_OnPossessed_Implementation(AIGS_GameCharacterFramework* inPlayerCharacter) {

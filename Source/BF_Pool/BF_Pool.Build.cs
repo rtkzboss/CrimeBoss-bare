@@ -13,6 +13,9 @@ public class BF_Pool : ModuleRules {
             "Engine",
             "GameplayTags",
             "Niagara",
+        });
+
+        PrivateDependencyModuleNames.AddRange(new string[] {
             "PhysicsCore",
         });
     }

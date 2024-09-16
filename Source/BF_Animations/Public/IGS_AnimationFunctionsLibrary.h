@@ -37,6 +37,6 @@ public:
     static float GetCurveTimeAtValue(UAnimSequence* InAnimSequence, const FName CurveName, int32 NumOfSamples, const float CurveValue);
 
     UFUNCTION(BlueprintCallable)
-    static UAnimNotify_Footstep* AddFootStepNotifyEvent(UAnimSequence* AnimationSequence, FName NotifyTrackName, float StartTime, TSubclassOf<UAnimNotify_Footstep> NotifyClass, const FName& InBoneName, TEnumAsByte<ETraceTypeQuery> inTraceChannel, EIGS_FootstepType inFootstepType);
+    static UAnimNotify_Footstep* AddFootStepNotifyEvent(UAnimSequence* AnimationSequence, FName NotifyTrackName, float StartTime, TSubclassOf<UAnimNotify_Footstep> NotifyClass, const FName& InBoneName, ETraceTypeQuery inTraceChannel, EIGS_FootstepType inFootstepType);
 
 };
