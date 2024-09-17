@@ -45,10 +45,9 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Default.Loadout.WeaponProbability = {};
     (*this).Default.Loadout.NoThrowableChance = 0;
     (*this).Default.Loadout.ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Sniper.SpecStats.HitChance = 8.000000119e-01f;
     (*this).Sniper.SpecStats.HiddenTimeInterval.Min = 3.000000000e+00f;
     (*this).Sniper.SpecStats.HiddenTimeInterval.Max = 5.000000000e+00f;
@@ -95,9 +94,9 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Sniper.Loadout.WeaponProbability = {};
     (*this).Sniper.Loadout.NoThrowableChance = 0;
     (*this).Sniper.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Sniper.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Sniper.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Sniper.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Shield.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Shield.Stats.HP.Value = 0.000000000e+00f;
     (*this).Shield.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -139,9 +138,9 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Shield.Loadout.WeaponProbability = {};
     (*this).Shield.Loadout.NoThrowableChance = 0;
     (*this).Shield.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Shield.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Shield.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Shield.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Heavy.SpecStats.WeakspotExplosionDamage = 1.000000000e+02f;
     (*this).Heavy.SpecStats.InitialSpreadMultiplier = 2.000000000e+00f;
     (*this).Heavy.SpecStats.SpreadDuration = 4.000000000e+00f;
@@ -188,9 +187,9 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Heavy.Loadout.WeaponProbability = {};
     (*this).Heavy.Loadout.NoThrowableChance = 0;
     (*this).Heavy.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Heavy.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Heavy.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Detective.SpecStats.ReviveTimer.Min = 2.000000000e+01f;
     (*this).Detective.SpecStats.ReviveTimer.Max = 3.000000000e+01f;
     (*this).Detective.SpecStats.DownstateHealth = 2.000000000e+03f;
@@ -238,9 +237,9 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Detective.Loadout.WeaponProbability = {};
     (*this).Detective.Loadout.NoThrowableChance = 0;
     (*this).Detective.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Detective.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Detective.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Detective.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).TurfWar.Stats.HP.Overload = 0.000000000e+00f;
     (*this).TurfWar.Stats.HP.Value = 0.000000000e+00f;
     (*this).TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -282,9 +281,9 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).TurfWar.Loadout.WeaponProbability = {};
     (*this).TurfWar.Loadout.NoThrowableChance = 0;
     (*this).TurfWar.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TurfWar.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).TurfWar.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).TurfWar.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).HeavyMelee.SpecStats.SecondaryMeleeWeapon = nullptr;
     (*this).HeavyMelee.SpecStats.MaxMeleeRange = 0.000000000e+00f;
     (*this).HeavyMelee.SpecStats.MinMeleeRange = 0.000000000e+00f;
@@ -334,7 +333,7 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).HeavyMelee.Loadout.WeaponProbability = {};
     (*this).HeavyMelee.Loadout.NoThrowableChance = 0;
     (*this).HeavyMelee.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).HeavyMelee.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).HeavyMelee.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).HeavyMelee.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
 }

@@ -2,6 +2,5 @@
 
 FIGS_AIWeaponDef::FIGS_AIWeaponDef() {
     (*this).WeaponDefinition = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).WeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
 }

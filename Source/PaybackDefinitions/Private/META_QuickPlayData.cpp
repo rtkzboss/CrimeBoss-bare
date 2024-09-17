@@ -39,7 +39,7 @@ UMETA_QuickPlayData::UMETA_QuickPlayData() {
     (*this).ChainMinusScorePerKilledHeister = 20000;
     (*this).EnemyTiersPerShuffleDifficulty = {};
     (*this).BadgesPerShuffleDifficulty = {};
-    (*this).TutorialCharacters = {FGameplayTag{}, FGameplayTag{}, FGameplayTag{}, FGameplayTag{}};
+    (*this).TutorialCharacters = {FGameplayTag(), FGameplayTag(), FGameplayTag(), FGameplayTag()};
 }
 
 void UMETA_QuickPlayData::GetSpecialTierChance(const EIGS_UserDifficulty inUserDifficulty, const int32 inStormIntensity, bool& outHasOverride, float& outRatio) {

@@ -1,9 +1,8 @@
 #include "IGS_TileItemDataStruct.h"
 
 FIGS_TileItemDataStruct::FIGS_TileItemDataStruct() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ItemId, 0)) = NAME_None;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
+    (*this).ItemId = FGameplayTag();
+    (*this).EntitlementTag = FGameplayTag();
     (*this).Image = FSoftObjectPath();
     (*this).Name = FText::GetEmpty();
     (*this).Description = FText::GetEmpty();

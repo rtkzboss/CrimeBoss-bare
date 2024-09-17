@@ -10,8 +10,7 @@ AIGS_BreakableGlassBase::AIGS_BreakableGlassBase(const FObjectInitializer& Objec
     (*this).ScaleY = 1.000000000e+00f;
     (*this).ScaleZ = 1.000000000e+00f;
     (*this).bReplicates = true;
-    auto gen2 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
     (*this).RootComponent = gen;
 }

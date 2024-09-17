@@ -60,7 +60,7 @@ TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetForcedUnlockRewards(const TAr
 }
 
 FGameplayTagContainer UIGS_UnlockManager::GetChallengeTags(FGameplayTag inTagID) const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 TArray<FIGS_UnlockItemInfo> UIGS_UnlockManager::GetAllUnlockedItemsByCategory(EIGS_UnlockCategory inUnlockCategory) const {

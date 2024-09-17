@@ -9,8 +9,7 @@ UIGS_WaveManager::UIGS_WaveManager(const FObjectInitializer& ObjectInitializer) 
     (*this).InitControlCheckTime = -1.000000000e+00f;
     (*this).LastTeamSideEnum = EIGS_TeamSideEnum::TS_Unknown;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    auto gen2 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen2)->SetPropertyValue(&(*gen2->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_WaveManager::SetUpWaveManagerWavesDirections(int32 inWavesDirections) {

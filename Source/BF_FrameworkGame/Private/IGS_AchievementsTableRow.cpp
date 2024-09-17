@@ -1,8 +1,7 @@
 #include "IGS_AchievementsTableRow.h"
 
 FIGS_AchievementsTableRow::FIGS_AchievementsTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).PlatformID = NAME_None;
     (*this).Type = EIGS_AchievementType::PerAccount;
     (*this).InitialValue = 0;

@@ -25,13 +25,9 @@ FIGS_SaveData_Career::FIGS_SaveData_Career() {
     (*this).BlackmarketManagerData.DayWhenHeistersMarketBecameAvailable = 0;
     (*this).BlackmarketManagerData.DayWhenWeaponsMarketBecameAvailable = 0;
     (*this).BlackmarketManagerData.PlotlineAssetsPool = {};
-    auto gen = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).BlackmarketManagerData.TemporaryLockedPlotlineAssetsTags, 0)) = {};
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).BlackmarketManagerData.TemporaryLockedPlotlineAssetsTags, 0)) = {};
+    (*this).BlackmarketManagerData.TemporaryLockedPlotlineAssetsTags = FGameplayTagContainer();
     (*this).BlackmarketManagerData.ActiveLootEvent.Vendor = EMETA_TradeVendor::UNDEFINED;
-    auto gen3 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).BlackmarketManagerData.ActiveLootEvent.LootTag, 0)) = NAME_None;
+    (*this).BlackmarketManagerData.ActiveLootEvent.LootTag = FGameplayTag();
     (*this).BlackmarketManagerData.ActiveLootEvent.MinLootValue = 0;
     (*this).BlackmarketManagerData.ActiveLootEvent.MissionID = nullptr;
     (*this).BlackmarketManagerData.ReadyLootEvents = {};
@@ -122,7 +118,7 @@ FIGS_SaveData_Career::FIGS_SaveData_Career() {
     (*this).GoalManagerData.GoalsRepeatCounters = {};
     (*this).GoalManagerData.HiddenGoalsData = {};
     (*this).JobManagerData.CurrentJob = nullptr;
-    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).JobManagerData.CurrentJobTileID, 0)) = NAME_None;
+    (*this).JobManagerData.CurrentJobTileID = FGameplayTag();
     (*this).JobManagerData.JobsOnMap.MoneyMakingMissions = {};
     (*this).JobManagerData.JobsOnMap.AmbushMissions = {};
     (*this).JobManagerData.JobsOnMap.StoryMissions = {};
@@ -202,7 +198,7 @@ FIGS_SaveData_Career::FIGS_SaveData_Career() {
     (*this).BossLevelManagerData.AmountOfPrimaryWeaponsIssued = 0;
     (*this).BossLevelManagerData.AmountOfAdditionalEquipmentIssued = 0;
     (*this).StatisticsManagerData.Statistic = {};
-    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).PlanningBoardManagerData.ActivePlanningBoardTag, 0)) = NAME_None;
+    (*this).PlanningBoardManagerData.ActivePlanningBoardTag = FGameplayTag();
     (*this).PlanningBoardManagerData.PlanningBoardItemsStatuses = {};
     (*this).CareerEnd.bIsPending = false;
     (*this).CareerEnd.bChallengeRewardGenerated = false;

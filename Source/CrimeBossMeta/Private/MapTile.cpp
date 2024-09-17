@@ -127,7 +127,7 @@ void UMapTile::GetIncome(const UObject* inWCO, int32& OutValue, FGameplayTag& ou
 }
 
 FGameplayTag UMapTile::GetId() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 EMETA_Gang UMapTile::GetGang() const {

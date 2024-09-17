@@ -1,5 +1,4 @@
 #include "IGS_Rappel.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "IGS_RappelInteractiveComponent.h"
@@ -14,8 +13,7 @@ AIGS_Rappel::AIGS_Rappel(const FObjectInitializer& ObjectInitializer) : Super(Ob
     (*this).RappelTopInteractiveComponent = gen;
     (*this).ShouldRotateView = true;
     (*this).bReplicates = true;
-    auto gen3 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).RootComponent = gen2;
     if (gen) gen->SetupAttachment(gen2);
 }

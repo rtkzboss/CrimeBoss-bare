@@ -4,12 +4,11 @@
 UIGS_AISpawner::UIGS_AISpawner() {
     static ConstructorHelpers::FObjectFinder<UIGS_AISpawnerData> gen(TEXT("/Game/00_Main/Core/AI/Spawning/DA_AISpawnerData.DA_AISpawnerData"));
     (*this).AISpawnerData = gen.Object;
-    auto gen2 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen2->ContainerPtrToValuePtr<FName>(&(*this).NoneSpawnAnimTag, 0)) = TEXT("Anim.Spawn.None");
-    (*gen2->ContainerPtrToValuePtr<FName>(&(*this).StoryMissionTag, 0)) = TEXT("Mission.Story");
-    (*gen2->ContainerPtrToValuePtr<FName>(&(*this).UnknownMissionTag, 0)) = TEXT("Mission.Unknown");
-    (*gen2->ContainerPtrToValuePtr<FName>(&(*this).NoSpecialTierTag, 0)) = TEXT("Point.Spawn.Init.Disallow.Tier.Special");
-    (*gen2->ContainerPtrToValuePtr<FName>(&(*this).ForceSpecialTierTag, 0)) = TEXT("Point.Spawn.Init.Force.Tier.Special");
+    (*this).NoneSpawnAnimTag = FGameplayTag::RequestGameplayTag(TEXT("Anim.Spawn.None"));
+    (*this).StoryMissionTag = FGameplayTag::RequestGameplayTag(TEXT("Mission.Story"));
+    (*this).UnknownMissionTag = FGameplayTag::RequestGameplayTag(TEXT("Mission.Unknown"));
+    (*this).NoSpecialTierTag = FGameplayTag::RequestGameplayTag(TEXT("Point.Spawn.Init.Disallow.Tier.Special"));
+    (*this).ForceSpecialTierTag = FGameplayTag::RequestGameplayTag(TEXT("Point.Spawn.Init.Force.Tier.Special"));
 }
 
 void UIGS_AISpawner::SpawnUnitFromBlueprint(EIGS_TeamSideEnum inTeamSide, uint8 inUnitVariation, EIGS_UnitSpecialization inUnitSpecialization, FTransform InTransform, int32 inCount, EIGS_SpawnAnimType inSpawnAnim) {

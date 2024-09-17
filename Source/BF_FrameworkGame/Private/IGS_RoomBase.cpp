@@ -3,8 +3,7 @@
 
 AIGS_RoomBase::AIGS_RoomBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
-    auto gen2 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen2->ContainerPtrToValuePtr<FName>(&(*this).Tag, 0)) = TEXT("Room.Area.Unknown");
+    (*this).Tag = FGameplayTag::RequestGameplayTag(TEXT("Room.Area.Unknown"));
     (*this).OwnerTeamSide = EIGS_TeamSideEnum::TS_Unknown;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).PrimaryActorTick.bStartWithTickEnabled = false;

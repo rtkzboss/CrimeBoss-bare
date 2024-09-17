@@ -11,9 +11,8 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).QPModeSource = EIGS_QPModeSource::INVALID;
     (*this).MPLobbyType = EIGS_MPLobbyType::Normal;
     (*this).LobbyVisibility = EMETA_LobbyVisibilityType::Private;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionTag, 0)) = NAME_None;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionScenario, 0)) = NAME_None;
+    (*this).MissionTag = FGameplayTag();
+    (*this).MissionScenario = FGameplayTag();
     (*this).MissionType = EIGS_HubScenarioType::Empty;
     (*this).TileEnvironment = EIGS_TileEnviroment::None;
     (*this).HubDistrict = EIGS_HubDistrict::Downtown;
@@ -33,7 +32,7 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).SWATTier = EIGS_AITiers::AT_Tier1;
     (*this).AllyVariation = EIGS_HeistersBackupVariationType::US_None;
     (*this).AllyTier = EIGS_AITiers::AT_Tier1;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).BonusObjectiveData.ID, 0)) = NAME_None;
+    (*this).BonusObjectiveData.ID = FGameplayTag();
     (*this).BonusObjectiveData.CampaignOnly = false;
     (*this).BonusObjectiveData.Config.ShorDescription = FText::GetEmpty();
     (*this).BonusObjectiveData.Config.Description = FText::GetEmpty();
@@ -56,7 +55,7 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).BonusObjectiveData.Config.SWATKills = 0;
     (*this).BonusObjectiveData.Config.GeneralAmountOfKills = 0;
     (*this).BonusObjectiveData.Config.KillsAmountOperator = EMETA_ConditionOperator::GreaterOrEqual;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).BonusObjectiveData.Config.OutputParamTag, 0)) = NAME_None;
+    (*this).BonusObjectiveData.Config.OutputParamTag = FGameplayTag();
     (*this).BonusObjectiveData.Config.OutputParamValue = 0;
     (*this).BonusObjectiveData.Config.OutputParamOperator = EMETA_ConditionOperator::GreaterOrEqual;
     (*this).BonusObjectiveData.Config.DaysToComplete = 1;
@@ -69,10 +68,7 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).ObjectiveValue = 0;
     (*this).SupportsCleanExecution = false;
     (*this).TotalLootbagCount = -1;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)) = {};
+    (*this).SpecificLootTypes = FGameplayTagContainer();
     (*this).SpecialLoot.Loot = {};
     (*this).SpecialLoot.Money = 0;
     (*this).SpecialLoot.bIsFilled = false;

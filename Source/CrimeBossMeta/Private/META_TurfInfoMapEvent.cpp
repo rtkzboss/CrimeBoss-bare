@@ -7,7 +7,7 @@ void UMETA_TurfInfoMapEvent::Init(FGameplayTag inTileTag, EMETA_Gang inNewGang, 
 }
 
 FGameplayTag UMETA_TurfInfoMapEvent::GetTileTag() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 EMETA_Gang UMETA_TurfInfoMapEvent::GetPrevGang() {

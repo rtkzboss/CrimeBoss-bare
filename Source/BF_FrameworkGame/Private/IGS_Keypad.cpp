@@ -7,8 +7,7 @@ AIGS_Keypad::AIGS_Keypad(const FObjectInitializer& ObjectInitializer) : Super(Ob
     (*this).TimeToClearAfterFail = 1.000000000e+00f;
     (*this).MaximalCodeLength = 4;
     (*this).bReplicates = true;
-    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
 }
 

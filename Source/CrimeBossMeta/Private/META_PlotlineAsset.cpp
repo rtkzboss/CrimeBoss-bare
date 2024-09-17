@@ -22,7 +22,7 @@ int32 UMETA_PlotlineAsset::GetPrice() const {
 }
 
 FGameplayTag UMETA_PlotlineAsset::GetPreviousVersion() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FText UMETA_PlotlineAsset::GetName() const {
@@ -34,7 +34,7 @@ TSoftObjectPtr<UTexture2D> UMETA_PlotlineAsset::GetImage() const {
 }
 
 FGameplayTag UMETA_PlotlineAsset::GetId() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FText UMETA_PlotlineAsset::GetDescription() const {

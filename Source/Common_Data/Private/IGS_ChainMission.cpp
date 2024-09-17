@@ -7,10 +7,9 @@ FIGS_ChainMission::FIGS_ChainMission() {
     (*this).Difficulty = EIGS_ChainDifficulty::Unknown;
     (*this).MenuImage = FSoftObjectPath();
     (*this).Description = FText::GetEmpty();
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).UnlockCriteriaTag, 0)) = NAME_None;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ContractSelectedVOType, 0)) = NAME_None;
+    (*this).UnlockCriteriaTag = FGameplayTag();
+    (*this).EntitlementTag = FGameplayTag();
+    (*this).ContractSelectedVOType = FGameplayTag();
     (*this).IntroCutscene = FText::GetEmpty();
     (*this).IntroMovie = nullptr;
     (*this).FailCutsceneOverride = FText::GetEmpty();

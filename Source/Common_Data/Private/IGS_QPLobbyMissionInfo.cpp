@@ -12,11 +12,10 @@ FIGS_QPLobbyMissionInfo::FIGS_QPLobbyMissionInfo() {
     (*this).SecondStarReward = 0;
     (*this).ThirdStarReward = 0;
     (*this).MonetaryLootValue = 0;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ObjectiveID, 0)) = NAME_None;
+    (*this).ObjectiveID = FGameplayTag();
     (*this).ObjectiveReward.RewardType = EMETA_ObjectiveReward::None;
     (*this).ObjectiveReward.Cash = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ObjectiveReward.LootItem, 0)) = NAME_None;
+    (*this).ObjectiveReward.LootItem = FGameplayTag();
     (*this).ObjectiveReward.LootMonetaryValue = 0;
     (*this).ObjectiveReward.WeaponQuality = EMETA_ItemQuality::None;
     (*this).ObjectiveReward.WeaponID = nullptr;

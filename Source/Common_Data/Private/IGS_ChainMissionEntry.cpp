@@ -11,6 +11,5 @@ FIGS_ChainMissionEntry::FIGS_ChainMissionEntry() {
     (*this).DebriefMovie = nullptr;
     (*this).FailCutscene = FText::GetEmpty();
     (*this).FailMovie = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).LobbyMenuVOType, 0)) = NAME_None;
+    (*this).LobbyMenuVOType = FGameplayTag();
 }

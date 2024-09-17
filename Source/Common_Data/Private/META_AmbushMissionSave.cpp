@@ -4,8 +4,7 @@
 
 FMETA_AmbushMissionSave::FMETA_AmbushMissionSave() {
     (*this).InstigatorMissionID = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).InstigatorMissionTileID, 0)) = NAME_None;
+    (*this).InstigatorMissionTileID = FGameplayTag();
     (*this).Parameters = {};
     (*this).PreviousFPSMissionData.MissionResult = EMETA_JobResult::Success;
     (*this).PreviousFPSMissionData.Loot = {};

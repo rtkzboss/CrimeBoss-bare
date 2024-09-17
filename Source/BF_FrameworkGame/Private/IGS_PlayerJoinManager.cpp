@@ -2,8 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_PlayerJoinManager::UIGS_PlayerJoinManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_PlayerJoinManager::OnRep_JoinedPlayers() const {

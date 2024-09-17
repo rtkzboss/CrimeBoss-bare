@@ -1,5 +1,4 @@
 #include "IGS_PickupActorBase.h"
-#include "GameFramework/Actor.h"
 #include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
 
@@ -10,11 +9,9 @@ AIGS_PickupActorBase::AIGS_PickupActorBase(const FObjectInitializer& ObjectIniti
     (*this).SceneRoot = nullptr;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).PrimaryActorTick.bStartWithTickEnabled = false;
-    auto gen = AActor::StaticClass()->FindPropertyByName("bReplicateMovement");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetReplicatingMovement(true);
     (*this).bReplicates = true;
-    auto gen2 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).RootComponent = nullptr;
 }
 

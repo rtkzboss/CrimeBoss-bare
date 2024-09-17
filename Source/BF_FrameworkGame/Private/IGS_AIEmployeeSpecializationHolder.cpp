@@ -43,8 +43,7 @@ FIGS_AIEmployeeSpecializationHolder::FIGS_AIEmployeeSpecializationHolder() {
     (*this).Default.Loadout.WeaponProbability = {};
     (*this).Default.Loadout.NoThrowableChance = 0;
     (*this).Default.Loadout.ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
 }

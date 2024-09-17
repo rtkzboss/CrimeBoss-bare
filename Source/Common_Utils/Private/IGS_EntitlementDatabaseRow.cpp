@@ -1,8 +1,7 @@
 #include "IGS_EntitlementDatabaseRow.h"
 
 FIGS_EntitlementDatabaseRow::FIGS_EntitlementDatabaseRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).Title = FText::GetEmpty();
     (*this).RequiresCampaignRestart = false;
     (*this).Steam_AppId = 0;

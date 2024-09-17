@@ -43,10 +43,9 @@ FIGS_AIBackupSpecializationHolder::FIGS_AIBackupSpecializationHolder() {
     (*this).Default.Loadout.WeaponProbability = {};
     (*this).Default.Loadout.NoThrowableChance = 0;
     (*this).Default.Loadout.ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Heavy.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Heavy.Stats.HP.Value = 0.000000000e+00f;
     (*this).Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -88,7 +87,7 @@ FIGS_AIBackupSpecializationHolder::FIGS_AIBackupSpecializationHolder() {
     (*this).Heavy.Loadout.WeaponProbability = {};
     (*this).Heavy.Loadout.NoThrowableChance = 0;
     (*this).Heavy.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Heavy.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Heavy.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
 }

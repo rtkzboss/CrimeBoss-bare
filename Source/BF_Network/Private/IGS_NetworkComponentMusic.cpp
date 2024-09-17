@@ -3,8 +3,7 @@
 
 UIGS_NetworkComponentMusic::UIGS_NetworkComponentMusic(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).mR_MusicPackIndex = -1;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_NetworkComponentMusic::OnRep_MusicPackIndex() const {

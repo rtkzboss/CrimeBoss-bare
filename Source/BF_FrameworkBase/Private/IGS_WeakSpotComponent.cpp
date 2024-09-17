@@ -1,8 +1,7 @@
 #include "IGS_WeakSpotComponent.h"
 
 UIGS_WeakSpotComponent::UIGS_WeakSpotComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 bool UIGS_WeakSpotComponent::SetWeakSpotEnabled(const UPrimitiveComponent* inWeakSpotReference, const bool inEnabled) {

@@ -19,8 +19,7 @@ UIGS_CharacterData::UIGS_CharacterData(const FObjectInitializer& ObjectInitializ
     (*this).bCanAbortAnimation = true;
     (*this).AlarmDeviceType = EIGS_AlarmDeviceType::AD_Unknown;
     (*this).mR_ReportDetection = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_CharacterData::UpdateIsCharging(bool inIsCharging) {

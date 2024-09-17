@@ -2,11 +2,10 @@
 #include "Templates/SubclassOf.h"
 
 UMETA_StatisticsManagerComponent::UMETA_StatisticsManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_civilians_tag, 0)) = TEXT("MissionData.Common.Dead.Civilians");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_gangsters_tag, 0)) = TEXT("MissionData.Common.Dead.Gangsters");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_police_tag, 0)) = TEXT("MissionData.Common.Dead.Police");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).killed_swat_tag, 0)) = TEXT("MissionData.Common.Dead.Swats");
+    (*this).killed_civilians_tag = FGameplayTag::RequestGameplayTag(TEXT("MissionData.Common.Dead.Civilians"));
+    (*this).killed_gangsters_tag = FGameplayTag::RequestGameplayTag(TEXT("MissionData.Common.Dead.Gangsters"));
+    (*this).killed_police_tag = FGameplayTag::RequestGameplayTag(TEXT("MissionData.Common.Dead.Police"));
+    (*this).killed_swat_tag = FGameplayTag::RequestGameplayTag(TEXT("MissionData.Common.Dead.Swats"));
 }
 
 bool UMETA_StatisticsManagerComponent::TryModifyGlobalStatistic(const FGameplayTag inStatistic, const float InValue, float& outNewValue, const bool inExpand, const EMETA_StatisticModificationType inMode) {

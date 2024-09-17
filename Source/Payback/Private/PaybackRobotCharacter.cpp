@@ -14,11 +14,10 @@ APaybackRobotCharacter::APaybackRobotCharacter(const FObjectInitializer& ObjectI
     (*this).OverloadInnerDamageRadius = 2.000000000e+02f;
     (*this).OverloadEffectRadius = 1.500000000e+03f;
     (*this).OverloadBaseDamage = 5.000000000e+02f;
-    auto gen3 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).OverloadAnimationTag, 0)) = TEXT("Anim.Combat.Robot.Overload");
+    (*this).OverloadAnimationTag = FGameplayTag::RequestGameplayTag(TEXT("Anim.Combat.Robot.Overload"));
     (*this).m_WeakSpotComponent = gen2;
-    auto gen4 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("CharacterMesh0")));
-    if (gen) gen->SetupAttachment(gen4);
+    auto gen3 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("CharacterMesh0")));
+    if (gen) gen->SetupAttachment(gen3);
 }
 
 void APaybackRobotCharacter::StartOverloadSequenceDelayed(AController* inInstigator, const float inDelay) {

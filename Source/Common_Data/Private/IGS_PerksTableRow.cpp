@@ -6,9 +6,8 @@
 
 FIGS_PerksTableRow::FIGS_PerksTableRow() {
     (*this).ID = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Data.TagID, 0)) = NAME_None;
+    (*this).TagID = FGameplayTag();
+    (*this).Data.TagID = FGameplayTag();
     (*this).Data.Name = FText::FromString(TEXT("None"));
     (*this).Data.Description = FText::FromString(TEXT("None"));
     (*this).Data.Image = FSoftObjectPath();
@@ -19,17 +18,14 @@ FIGS_PerksTableRow::FIGS_PerksTableRow() {
     (*this).Data.PerkModeUsage = 0;
     (*this).Data.AllowedHeistersOverride = {};
     (*this).Data.ForbiddenHeistersLevel = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Data.MutuallyExclusiveTag, 0)) = NAME_None;
+    (*this).Data.MutuallyExclusiveTag = FGameplayTag();
     (*this).Data.bAllowedForGeneration = false;
     (*this).Data.SiblingID = nullptr;
     (*this).Data.PerkLevel = 1;
     (*this).Data.SwapPerkIDAfterPromotion = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Data.SwapPerkTagAfterPromotion, 0)) = NAME_None;
+    (*this).Data.SwapPerkTagAfterPromotion = FGameplayTag();
     (*this).Data.UnlockProperties.IsUnlockable = false;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Data.UnlockProperties.RequiredTags, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Data.UnlockProperties.RequiredTags, 0)) = {};
+    (*this).Data.UnlockProperties.RequiredTags = FGameplayTagContainer();
     (*this).Data.UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).Data.UnlockProperties.ShowIfNotOwned = true;
     (*this).Data.UnlockProperties.UnlockCoverImage = FSoftObjectPath();

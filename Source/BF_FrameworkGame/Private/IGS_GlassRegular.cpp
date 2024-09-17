@@ -1,6 +1,5 @@
 #include "IGS_GlassRegular.h"
 #include "IGS_BoxOverlappableComponent.h"
-#include "Components/ActorComponent.h"
 #include "PhysicsEngine/BodyInstance.h"
 #include "Components/BoxComponent.h"
 #include "Engine/EngineTypes.h"
@@ -38,8 +37,7 @@ UIGS_GlassRegular::UIGS_GlassRegular(const FObjectInitializer& ObjectInitializer
     (*gen5->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("BreakableGlassPhysicsOnly");
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
     (*this).PrimaryComponentTick.TickInterval = 1.999999955e-02f;
-    auto gen6 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen6)->SetPropertyValue(&(*gen6->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
     (*this).bAutoActivate = false;
 }
 

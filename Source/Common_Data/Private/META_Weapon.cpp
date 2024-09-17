@@ -57,7 +57,7 @@ TSoftObjectPtr<UIGS_WeaponSkinData> UMETA_Weapon::GetWeaponSkinAsset(UObject* in
 }
 
 FGameplayTag UMETA_Weapon::GetWeaponSkin() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 float UMETA_Weapon::GetUpgradeCostMultiplier() const {
@@ -121,7 +121,7 @@ int32 UMETA_Weapon::GetDaysInShop() const {
 }
 
 FGameplayTagContainer UMETA_Weapon::GetCompatibleWeaponSkins(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs) {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 UMETA_Character* UMETA_Weapon::GetCharacter() const {

@@ -8,7 +8,7 @@ void UMETA_MissionMapEvent::Init(UMETA_BaseMission* inMission, FGameplayTag inTi
 }
 
 FGameplayTag UMETA_MissionMapEvent::GetTileTag() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 UMETA_BaseMission* UMETA_MissionMapEvent::GetMission() {

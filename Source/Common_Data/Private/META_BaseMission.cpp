@@ -51,7 +51,7 @@ int32 UMETA_BaseMission::GetTilePlacementIndex() {
 }
 
 FGameplayTagContainer UMETA_BaseMission::GetRestrictedTiles() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 TSoftObjectPtr<UTexture2D> UMETA_BaseMission::GetPicture() {
@@ -65,7 +65,7 @@ void UMETA_BaseMission::GetParameter(const FGameplayTag inParameterTag, int32& i
 }
 
 FGameplayTag UMETA_BaseMission::GetOwningTile() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 EMETA_JobResult UMETA_BaseMission::GetMissionResult() {
@@ -124,7 +124,7 @@ float UMETA_BaseMission::GetExpireTime() const {
 }
 
 FGameplayTag UMETA_BaseMission::GetEntitlementTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 EMETA_DebriefType UMETA_BaseMission::GetDebriefType() {
@@ -144,7 +144,7 @@ EMETA_JobResult UMETA_BaseMission::GetAmbushResult() {
 }
 
 FGameplayTagContainer UMETA_BaseMission::GetAllowedTiles() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 void UMETA_BaseMission::ExpireMission() {

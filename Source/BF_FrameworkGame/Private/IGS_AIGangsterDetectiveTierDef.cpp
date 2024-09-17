@@ -8,6 +8,5 @@ FIGS_AIGangsterDetectiveTierDef::FIGS_AIGangsterDetectiveTierDef() {
     (*this).SpecStats.RevivesToRetreat = 3;
     (*this).SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).SpecStats.MaxHealthForCover = 1.000000000e+00f;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
 }

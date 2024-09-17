@@ -66,7 +66,7 @@ EMETA_GoalStatus UMETA_BaseGoal::GetGoalResult() const {
 }
 
 FGameplayTag UMETA_BaseGoal::GetEntitlementTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FText UMETA_BaseGoal::GetDescription() const {

@@ -13,7 +13,7 @@ void UIGS_ChallengesBaseComponent::ResetChallenges() {
 }
 
 FGameplayTagContainer UIGS_ChallengesBaseComponent::GetRequiredCompletedChallenges(FGameplayTag inTag) const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 TMap<FGameplayTag, int32> UIGS_ChallengesBaseComponent::GetCompletedChallenges() const {

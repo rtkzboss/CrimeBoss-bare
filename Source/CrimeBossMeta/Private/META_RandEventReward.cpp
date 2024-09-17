@@ -4,8 +4,7 @@ FMETA_RandEventReward::FMETA_RandEventReward() {
     (*this).RewardType = EMETA_RandEventReward::None;
     (*this).MissionRewardMultiplier.Min = 0.000000000e+00f;
     (*this).MissionRewardMultiplier.Max = 0.000000000e+00f;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).LootItem, 0)) = NAME_None;
+    (*this).LootItem = FGameplayTag();
     (*this).LootCostMultiplier.Min = 0.000000000e+00f;
     (*this).LootCostMultiplier.Max = 0.000000000e+00f;
     (*this).Soldiers.Min = 0;

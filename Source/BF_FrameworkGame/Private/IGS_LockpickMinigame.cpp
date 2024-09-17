@@ -6,8 +6,7 @@ AIGS_LockpickMinigame::AIGS_LockpickMinigame(const FObjectInitializer& ObjectIni
     (*this).CurrentRadius = 3.600000000e+02f;
     (*this).ClampRadiusPercentage = 5.000000000e-01f;
     (*this).bReplicates = true;
-    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
 }
 
 void AIGS_LockpickMinigame::SuccessOnePick() {

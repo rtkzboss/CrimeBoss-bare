@@ -1,5 +1,4 @@
 #include "IGS_LookAtTriggerComponent.h"
-#include "Components/ActorComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_LookAtTriggerComponent::UIGS_LookAtTriggerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -8,8 +7,7 @@ UIGS_LookAtTriggerComponent::UIGS_LookAtTriggerComponent(const FObjectInitialize
     (*this).bSingleUse = true;
     (*this).bIsEnabled = true;
     (*this).mR_bIsEnabledRuntime = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_LookAtTriggerComponent::SetEnabled(bool inEnabled) {

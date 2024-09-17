@@ -7,7 +7,7 @@ void AIGS_PlanningBoard::SetPlanningBoardData(FGameplayTag inPlanningBoardID) {
 }
 
 FGameplayTag AIGS_PlanningBoard::GetPlanningBoardID() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 UMETA_BaseMission* AIGS_PlanningBoard::GetMissionFromMapByPriority(TArray<FMETA_PlanningBoardMission> planningBoardItemMissions, TArray<UMETA_BaseMission*>& missionsOnMap) const {

@@ -17,10 +17,9 @@
 #include "EMETA_RespectLvl.h"
 
 FCustomMissionData::FCustomMissionData() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionData.MissionTag, 0)) = NAME_None;
+    (*this).MissionData.MissionTag = FGameplayTag();
     (*this).MissionData.MapName = TEXT("");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionData.MissionScenario, 0)) = NAME_None;
+    (*this).MissionData.MissionScenario = FGameplayTag();
     (*this).MissionData.TileEnvironment = EIGS_TileEnviroment::None;
     (*this).MissionData.HubDistrict = EIGS_HubDistrict::Downtown;
     (*this).MissionData.HubVariant = EIGS_HubBackdropTypes::AllRandom;
@@ -30,7 +29,7 @@ FCustomMissionData::FCustomMissionData() {
     (*this).MissionData.Heat = EMETA_Heat::Medium;
     (*this).MissionData.WantedBadges = 0;
     (*this).MissionData.IntelLevel = -1;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionData.BonusObjectiveID, 0)) = NAME_None;
+    (*this).MissionData.BonusObjectiveID = FGameplayTag();
     (*this).MissionData.SupportsCleanExecution = false;
     (*this).MissionData.StartMusic = EIGS_MusicMissionState::None;
     (*this).MissionData.StartupSource = EIGS_MissionStartupSource::INVALID;
@@ -40,10 +39,7 @@ FCustomMissionData::FCustomMissionData() {
     (*this).MissionData.ObjectiveValue = 0;
     (*this).MissionData.TotalMissionValue = 0;
     (*this).MissionData.TotalLootbagCount = -1;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionData.SpecificLootTypes, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionData.SpecificLootTypes, 0)) = {};
+    (*this).MissionData.SpecificLootTypes = FGameplayTagContainer();
     (*this).MissionData.SpecialLoot.Loot = {};
     (*this).MissionData.SpecialLoot.Money = 0;
     (*this).MissionData.SpecialLoot.bIsFilled = false;
@@ -67,21 +63,20 @@ FCustomMissionData::FCustomMissionData() {
     (*this).MissionData.bIsDebug = false;
     (*this).MissionData.bIsFilled = false;
     (*this).CommonMissionData.ID = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CommonMissionData.MissionTagID, 0)) = NAME_None;
+    (*this).CommonMissionData.MissionTagID = FGameplayTag();
     (*this).CommonMissionData.Map = NAME_None;
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).CommonMissionData.Scenarios, 0)) = {};
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).CommonMissionData.Scenarios, 0)) = {};
+    (*this).CommonMissionData.Scenarios = FGameplayTagContainer();
     (*this).CommonMissionData.MenuCategory = EIGS_MenuCategory::UNKNOWN;
     (*this).CommonMissionData.Name = FText::GetEmpty();
     (*this).CommonMissionData.IsHubGeneratorMission = false;
     (*this).CommonMissionData.DistrictVariant = 0;
     (*this).CommonMissionData.ForceCharacter = EIGS_CharacterID::Char_Gen_Start;
     (*this).DistrictVariant = EIGS_HubBackdropTypes::AllRandom;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Scenario, 0)) = NAME_None;
+    (*this).Scenario = FGameplayTag();
     (*this).LightingScenario = EIGS_LightingScenarioType::Midday;
     (*this).Seed = TEXT("");
     (*this).DebugOptions = TEXT("");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).SelectedCharacter.TagID, 0)) = NAME_None;
+    (*this).SelectedCharacter.TagID = FGameplayTag();
     (*this).SelectedCharacter.CharacterID = EIGS_CharacterID::Char_Unknown;
     (*this).SelectedCharacter.UniqGenericId = -1;
     (*this).SelectedCharacter.GenericVariantID = -1;
@@ -90,16 +85,16 @@ FCustomMissionData::FCustomMissionData() {
     (*this).SelectedCharacter.HeisterNumber = -1;
     (*this).SelectedCharacter.PlayerId = -1;
     (*this).SelectedCharacter.ProgressionLevel = 1;
-    auto gen4 = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
-    (*gen4->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).SelectedCharacter.UniquePlayerId, 0)) = {};
+    auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).SelectedCharacter.UniquePlayerId, 0)) = {};
     (*this).SelectedCharacter.Loadout.PrimaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).SelectedCharacter.Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    (*this).SelectedCharacter.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).SelectedCharacter.Loadout.SecondaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).SelectedCharacter.Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).SelectedCharacter.Loadout.SecondaryWeaponSkin = FGameplayTag();
     (*this).SelectedCharacter.Loadout.Equipment = {};
     (*this).SelectedCharacter.Loadout.Perks = {};
     (*this).SelectedCharacter.Loadout.Ability1ChargesLeft = -1;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).SelectedCharacter.Loadout.CharacterSkinID, 0)) = NAME_None;
+    (*this).SelectedCharacter.Loadout.CharacterSkinID = FGameplayTag();
     (*this).SelectedCharacter.Experience = 0;
     (*this).SelectedCharacter.Injuries = 0;
     (*this).SelectedCharacter.CharacterState = EMETA_CharacterState::None;

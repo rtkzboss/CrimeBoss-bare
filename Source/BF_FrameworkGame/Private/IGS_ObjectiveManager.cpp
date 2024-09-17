@@ -2,8 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_ObjectiveManager::UIGS_ObjectiveManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_ObjectiveManager::UnpauseTimerForTask(UObject* inWCO, FIGS_MissionTask inTask) {

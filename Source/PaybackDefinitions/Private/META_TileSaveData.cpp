@@ -15,6 +15,5 @@ FMETA_TileSaveData::FMETA_TileSaveData() {
     (*this).CaptureRewards = {};
     (*this).BossEliminationRewards = {};
     (*this).IncomeMultiplier = 0.000000000e+00f;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).IncomeLootItem, 0)) = NAME_None;
+    (*this).IncomeLootItem = FGameplayTag();
 }

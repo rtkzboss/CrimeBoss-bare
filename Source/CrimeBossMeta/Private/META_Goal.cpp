@@ -19,6 +19,5 @@ FMETA_Goal::FMETA_Goal() {
     (*this).RespectByDefault = 0;
     (*this).InstigatorPartner = EMETA_Partner::Secretary;
     (*this).Purpose = EMETA_GoalPurpose::INVALID;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
+    (*this).EntitlementTag = FGameplayTag();
 }

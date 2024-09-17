@@ -5,8 +5,7 @@
 #include "EMETA_ObjectiveType.h"
 
 FMETA_ObjectiveTableRow::FMETA_ObjectiveTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).CampaignOnly = false;
     (*this).Config.ShorDescription = FText::GetEmpty();
     (*this).Config.Description = FText::GetEmpty();
@@ -29,7 +28,7 @@ FMETA_ObjectiveTableRow::FMETA_ObjectiveTableRow() {
     (*this).Config.SWATKills = 0;
     (*this).Config.GeneralAmountOfKills = 0;
     (*this).Config.KillsAmountOperator = EMETA_ConditionOperator::GreaterOrEqual;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Config.OutputParamTag, 0)) = NAME_None;
+    (*this).Config.OutputParamTag = FGameplayTag();
     (*this).Config.OutputParamValue = 0;
     (*this).Config.OutputParamOperator = EMETA_ConditionOperator::GreaterOrEqual;
     (*this).Config.DaysToComplete = 1;

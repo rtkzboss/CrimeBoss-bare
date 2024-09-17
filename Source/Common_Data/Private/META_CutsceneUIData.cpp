@@ -7,8 +7,7 @@ FMETA_CutsceneUIData::FMETA_CutsceneUIData() {
     (*this).CanStartDelayed = false;
     (*this).ShouldExpire = false;
     (*this).DaysToExpire = 0;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ScreenAfterEnd, 0)) = NAME_None;
+    (*this).ScreenAfterEnd = FGameplayTag();
     (*this).DebugText = FText::GetEmpty();
     (*this).GraphRef = nullptr;
     (*this).OriginalID = 0;

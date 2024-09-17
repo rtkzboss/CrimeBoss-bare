@@ -7,7 +7,6 @@ FIGS_AILoadoutHolder::FIGS_AILoadoutHolder() {
     (*this).WeaponProbability = {};
     (*this).NoThrowableChance = 0;
     (*this).ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).ShowNoThrowableBool = 0;
 }

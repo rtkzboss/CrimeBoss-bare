@@ -1,8 +1,7 @@
 #include "CommonHeisterData.h"
 
 FCommonHeisterData::FCommonHeisterData() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    (*this).TagID = FGameplayTag();
     (*this).CharacterID = EIGS_CharacterID::Char_Unknown;
     (*this).UniqGenericId = -1;
     (*this).GenericVariantID = -1;
@@ -11,16 +10,16 @@ FCommonHeisterData::FCommonHeisterData() {
     (*this).HeisterNumber = -1;
     (*this).PlayerId = -1;
     (*this).ProgressionLevel = 1;
-    auto gen2 = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
-    (*gen2->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)) = {};
+    auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)) = {};
     (*this).Loadout.PrimaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).Loadout.SecondaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.SecondaryWeaponSkin = FGameplayTag();
     (*this).Loadout.Equipment = {};
     (*this).Loadout.Perks = {};
     (*this).Loadout.Ability1ChargesLeft = -1;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkinID, 0)) = NAME_None;
+    (*this).Loadout.CharacterSkinID = FGameplayTag();
     (*this).Experience = 0;
     (*this).Injuries = 0;
     (*this).CharacterState = EMETA_CharacterState::None;

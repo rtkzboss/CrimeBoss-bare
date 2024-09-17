@@ -1,5 +1,4 @@
 #include "IGS_LauncherProjectileBase.h"
-#include "GameFramework/Actor.h"
 #include "Components/CapsuleComponent.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SkeletalMeshComponent.h"
@@ -13,8 +12,7 @@ AIGS_LauncherProjectileBase::AIGS_LauncherProjectileBase(const FObjectInitialize
     (*this).ThrowableMesh = gen2;
     (*this).bMakeImpactNoise = true;
     (*this).bReplicates = true;
-    auto gen3 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).RootComponent = gen;
     if (gen2) gen2->SetupAttachment(gen);
 }

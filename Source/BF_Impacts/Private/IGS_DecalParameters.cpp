@@ -6,8 +6,5 @@ FIGS_DecalParameters::FIGS_DecalParameters() {
     (*this).AttachToSocket = NAME_None;
     (*this).AttachToComponent = nullptr;
     (*this).IgnoreOptimizations = false;
-    auto gen = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).PoolTags, 0)) = {};
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).PoolTags, 0)) = {};
+    (*this).PoolTags = FGameplayTagContainer();
 }

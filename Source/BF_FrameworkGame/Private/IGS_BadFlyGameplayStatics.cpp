@@ -239,7 +239,7 @@ int32 UIGS_BadFlyGameplayStatics::GetMaximumStrikes() {
 }
 
 FGameplayTag UIGS_BadFlyGameplayStatics::GetMainCategoryTagFromMetaHierarchy(FGameplayTag inTag) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 int32 UIGS_BadFlyGameplayStatics::GetLatencyForPlayerState(APlayerState* inPlayerState) {
@@ -255,7 +255,7 @@ bool UIGS_BadFlyGameplayStatics::GetIsPS5() {
 }
 
 FGameplayTagContainer UIGS_BadFlyGameplayStatics::GetGameplayTagHierarchy(FGameplayTag inTag) {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 FString UIGS_BadFlyGameplayStatics::GetCurrentTextPlatformName() {

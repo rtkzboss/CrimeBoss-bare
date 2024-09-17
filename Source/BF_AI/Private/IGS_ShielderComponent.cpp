@@ -3,8 +3,7 @@
 
 UIGS_ShielderComponent::UIGS_ShielderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).HandleHolsterFromCode = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_ShielderComponent::OnShieldTakeAnyDamage(AActor* inDamagedActor, float inDamage, const UDamageType* inDamageType, AController* inInstigatedBy, AActor* inDamageCauser) {

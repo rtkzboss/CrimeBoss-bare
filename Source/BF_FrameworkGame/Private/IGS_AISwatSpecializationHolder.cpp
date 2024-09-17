@@ -44,10 +44,9 @@ FIGS_AISwatSpecializationHolder::FIGS_AISwatSpecializationHolder() {
     (*this).Default.Loadout.WeaponProbability = {};
     (*this).Default.Loadout.NoThrowableChance = 0;
     (*this).Default.Loadout.ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Sniper.SpecStats.HitChance = 8.000000119e-01f;
     (*this).Sniper.SpecStats.HiddenTimeInterval.Min = 3.000000000e+00f;
     (*this).Sniper.SpecStats.HiddenTimeInterval.Max = 5.000000000e+00f;
@@ -94,9 +93,9 @@ FIGS_AISwatSpecializationHolder::FIGS_AISwatSpecializationHolder() {
     (*this).Sniper.Loadout.WeaponProbability = {};
     (*this).Sniper.Loadout.NoThrowableChance = 0;
     (*this).Sniper.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Sniper.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Sniper.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Sniper.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Shield.SpecStats.ShieldGlassHP = 3.000000000e+02f;
     (*this).Shield.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Shield.Stats.HP.Value = 0.000000000e+00f;
@@ -139,9 +138,9 @@ FIGS_AISwatSpecializationHolder::FIGS_AISwatSpecializationHolder() {
     (*this).Shield.Loadout.WeaponProbability = {};
     (*this).Shield.Loadout.NoThrowableChance = 0;
     (*this).Shield.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Shield.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Shield.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Shield.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Heavy.SpecStats.Shock.ActivationDistance = 3.000000000e+02f;
     (*this).Heavy.SpecStats.Shock.Cooldown = 1.000000000e+01f;
     (*this).Heavy.SpecStats.Shock.Radius = 3.500000000e+02f;
@@ -198,9 +197,9 @@ FIGS_AISwatSpecializationHolder::FIGS_AISwatSpecializationHolder() {
     (*this).Heavy.Loadout.WeaponProbability = {};
     (*this).Heavy.Loadout.NoThrowableChance = 0;
     (*this).Heavy.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Heavy.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Heavy.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).HeavyScout.Stats.HP.Overload = 0.000000000e+00f;
     (*this).HeavyScout.Stats.HP.Value = 0.000000000e+00f;
     (*this).HeavyScout.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -242,7 +241,7 @@ FIGS_AISwatSpecializationHolder::FIGS_AISwatSpecializationHolder() {
     (*this).HeavyScout.Loadout.WeaponProbability = {};
     (*this).HeavyScout.Loadout.NoThrowableChance = 0;
     (*this).HeavyScout.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).HeavyScout.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).HeavyScout.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).HeavyScout.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).HeavyScout.Specialization, 0)) = TEXT("AI.Specialization.Special.Scout.Heavy");
+    (*this).HeavyScout.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Scout.Heavy"));
 }

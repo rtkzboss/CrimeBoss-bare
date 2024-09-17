@@ -1,5 +1,4 @@
 #include "IGS_MaskedChassisComponent.h"
-#include "Components/ActorComponent.h"
 #include "PhysicsEngine/BodyInstance.h"
 #include "Engine/EngineTypes.h"
 #include "Components/PrimitiveComponent.h"
@@ -71,8 +70,7 @@ UIGS_MaskedChassisComponent::UIGS_MaskedChassisComponent(const FObjectInitialize
     (*gen16->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = {MoveTemp(gen6), MoveTemp(gen7), MoveTemp(gen8), MoveTemp(gen9), MoveTemp(gen10), MoveTemp(gen11), MoveTemp(gen12), MoveTemp(gen13), MoveTemp(gen14), MoveTemp(gen15)};
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
-    auto gen17 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen17)->SetPropertyValue(&(*gen17->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_MaskedChassisComponent::TriggerCarAlarm() {

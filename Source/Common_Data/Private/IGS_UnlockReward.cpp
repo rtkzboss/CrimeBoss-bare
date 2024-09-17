@@ -2,8 +2,7 @@
 #include "EIGS_CharacterID.h"
 
 FIGS_UnlockReward::FIGS_UnlockReward() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).Type = EIGS_RewardType::UNKNOWN;
     (*this).Name = FText::GetEmpty();
     (*this).Description = FText::GetEmpty();
@@ -11,5 +10,5 @@ FIGS_UnlockReward::FIGS_UnlockReward() {
     (*this).UnlockTip = FText::GetEmpty();
     (*this).CharacterData.CharacterID = EIGS_CharacterID::Char_Unknown;
     (*this).CharacterData.bMaxLevel = false;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionContractData.MissionID, 0)) = NAME_None;
+    (*this).MissionContractData.MissionID = FGameplayTag();
 }

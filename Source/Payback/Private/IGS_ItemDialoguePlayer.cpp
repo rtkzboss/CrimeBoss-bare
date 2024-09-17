@@ -9,8 +9,7 @@ AIGS_ItemDialoguePlayer::AIGS_ItemDialoguePlayer(const FObjectInitializer& Objec
     (*this).NetworkDialogue = gen;
     (*this).AkComponent = gen2;
     (*this).bReplicates = true;
-    auto gen3 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
     (*this).RootComponent = gen2;
 }

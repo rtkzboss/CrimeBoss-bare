@@ -94,7 +94,7 @@ EMETA_CampaignVictoryCondition UMETA_PlotlineSelection::GetCampaignVictoryCondit
 }
 
 FGameplayTag UMETA_PlotlineSelection::GetCampaignModeTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FMETA_Interval UMETA_PlotlineSelection::GetAnyNextPlotlineDays() const {

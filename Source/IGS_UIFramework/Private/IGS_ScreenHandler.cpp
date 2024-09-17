@@ -60,7 +60,7 @@ bool UIGS_ScreenHandler::HandleBack(UIGS_Screen* screen) {
 }
 
 FGameplayTag UIGS_ScreenHandler::GetTopScreenTag(bool includeOverlay) const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 UIGS_Screen* UIGS_ScreenHandler::GetTopScreen(bool includeOverlay) const {

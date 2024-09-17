@@ -2,7 +2,6 @@
 #include "AkComponent.h"
 #include "IGS_ObjectStatus.h"
 #include "IGS_InteractiveComponent.h"
-#include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/SkeletalMeshComponent.h"
@@ -31,8 +30,7 @@ AIGS_RideableVehicle_Base::AIGS_RideableVehicle_Base(const FObjectInitializer& O
     (*this).BagInteractionDistance = 4.000000000e+02f;
     (*this).Mesh = gen6;
     (*this).bAlwaysRelevant = true;
-    auto gen7 = AActor::StaticClass()->FindPropertyByName("bReplicateMovement");
-    CastField<FBoolProperty>(gen7)->SetPropertyValue(&(*gen7->ContainerPtrToValuePtr<uint8>(&(*this), 0)), false);
+    (*this).SetReplicatingMovement(false);
     (*this).RootComponent = gen6;
     if (gen2) gen2->SetupAttachment(gen6);
     if (gen3) gen3->SetupAttachment(gen6);

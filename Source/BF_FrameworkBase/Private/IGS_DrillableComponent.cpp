@@ -6,8 +6,7 @@ UIGS_DrillableComponent::UIGS_DrillableComponent(const FObjectInitializer& Objec
     (*this).RelativeHealth = 1.000000000e+00f;
     (*this).MaxHealth = 1.000000000e+02f;
     (*this).FailThreshold = 2.000000030e-01f;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_DrillableComponent::SetDrilledState_Implementation(bool inDrilled) {

@@ -4,6 +4,6 @@ UIGS_MenuBackgroundManager::UIGS_MenuBackgroundManager(const FObjectInitializer&
 }
 
 FGameplayTag UIGS_MenuBackgroundManager::GetMenuBackgroundTagToShow() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 

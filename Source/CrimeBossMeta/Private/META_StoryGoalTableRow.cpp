@@ -15,6 +15,5 @@ FMETA_StoryGoalTableRow::FMETA_StoryGoalTableRow() {
     (*this).UnlockRespect = EMETA_RespectLvl::Low;
     (*this).LockRespect = EMETA_RespectLvl::Low;
     (*this).InstigatorPartner = EMETA_Partner::Secretary;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
+    (*this).EntitlementTag = FGameplayTag();
 }

@@ -1,8 +1,7 @@
 #include "IGS_ReplicationAnimationDataHolder.h"
 
 FIGS_ReplicationAnimationDataHolder::FIGS_ReplicationAnimationDataHolder() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MontageVariationTag, 0)) = NAME_None;
+    (*this).MontageVariationTag = FGameplayTag();
     (*this).EventTransform.Location.X = 0.000000000e+00f;
     (*this).EventTransform.Location.Y = 0.000000000e+00f;
     (*this).EventTransform.Location.Z = 0.000000000e+00f;

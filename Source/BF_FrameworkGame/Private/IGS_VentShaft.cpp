@@ -16,8 +16,7 @@ AIGS_VentShaft::AIGS_VentShaft(const FObjectInitializer& ObjectInitializer) : Su
     (*this).BoxBlocker = gen3;
     (*this).BoxTrigger = gen4;
     (*this).bReplicates = true;
-    auto gen6 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen6->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
     (*this).RootComponent = gen5;
     if (gen) gen->SetupAttachment(gen5);

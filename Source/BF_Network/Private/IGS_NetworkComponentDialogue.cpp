@@ -1,8 +1,7 @@
 #include "IGS_NetworkComponentDialogue.h"
 
 UIGS_NetworkComponentDialogue::UIGS_NetworkComponentDialogue(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_NetworkComponentDialogue::StopVoice(const FIGS_PlayVariationData& inPlayVariationData) {

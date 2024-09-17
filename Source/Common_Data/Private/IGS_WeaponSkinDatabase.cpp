@@ -8,7 +8,7 @@ void UIGS_WeaponSkinDatabase::ModAppendDataTable(UDataTable* inNewTable) {
 }
 
 FGameplayTag UIGS_WeaponSkinDatabase::GetWeaponSkinTagFromDefaultSkin(UObject* inWCO, TSoftObjectPtr<UIGS_WeaponSkinData> inDefaultSkin, TSubclassOf<UIGS_InventoryObjectFramework> inWeaponId) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FIGS_WeaponSkinStruct UIGS_WeaponSkinDatabase::GetWeaponSkinStructFromDefaultSkin(UObject* inWCO, TSoftObjectPtr<UIGS_WeaponSkinData> inDefaultSkin, TSubclassOf<UIGS_InventoryObjectFramework> inWeaponId) {
@@ -24,7 +24,7 @@ UIGS_WeaponSkinDatabase* UIGS_WeaponSkinDatabase::GetWeaponSkinDatabaseInstance(
 }
 
 FGameplayTag UIGS_WeaponSkinDatabase::GetSkinTagFromDefaultSkin(UObject* inWCO, TSoftObjectPtr<UIGS_WeaponSkinData> inDefaultSkin) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TSoftObjectPtr<UIGS_WeaponSkinData> UIGS_WeaponSkinDatabase::GetDefaultSkinMaterialSlotFromTag(UObject* inWCO, FGameplayTag inWeaponSkinTag) {

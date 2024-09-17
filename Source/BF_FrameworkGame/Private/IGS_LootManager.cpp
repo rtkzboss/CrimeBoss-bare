@@ -4,8 +4,7 @@
 
 UIGS_LootManager::UIGS_LootManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).LootWeightMultiplier = 1.000000000e+00f;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 float UIGS_LootManager::UpdateLootWeightMultiplier(UObject* inWCO) {
@@ -64,7 +63,7 @@ float UIGS_LootManager::GetItemValueFromClass(TSubclassOf<UIGS_LootItemInventory
 }
 
 FGameplayTag UIGS_LootManager::GetItemTypeFromClass(TSubclassOf<UIGS_LootItemInventoryObject> inItemClass) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 float UIGS_LootManager::GetItemSize(EIGS_ItemWeight inWeight) const {

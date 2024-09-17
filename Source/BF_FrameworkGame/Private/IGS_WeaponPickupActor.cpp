@@ -12,11 +12,10 @@ AIGS_WeaponPickupActor::AIGS_WeaponPickupActor(const FObjectInitializer& ObjectI
     auto gen5 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MagazineModMesh"));
     auto gen6 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StockModMesh"));
     (*this).WeaponSkin = FSoftObjectPath();
-    auto gen7 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen7->ContainerPtrToValuePtr<FName>(&(*this).WeaponSkinTag, 0)) = TEXT("ID.Skins.Weapons.Default.Base");
+    (*this).WeaponSkinTag = FGameplayTag::RequestGameplayTag(TEXT("ID.Skins.Weapons.Default.Base"));
     (*this).DefaultMesh = FSoftObjectPath();
-    auto gen8 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("RootComp")));
-    (*this).WeaponPickupSkelMeshComp = gen8;
+    auto gen7 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("RootComp")));
+    (*this).WeaponPickupSkelMeshComp = gen7;
     (*this).SightModMesh = gen;
     (*this).VisibilityModMesh = gen2;
     (*this).BarrelModMesh = gen3;
@@ -26,15 +25,15 @@ AIGS_WeaponPickupActor::AIGS_WeaponPickupActor(const FObjectInitializer& ObjectI
     (*this).WeaponModsArray = {gen, gen2, gen3, gen4, gen6, gen5};
     (*this).mR_IsVisible = true;
     (*this).IsPickableByAI = true;
-    (*this).PickupMeshComp = gen8;
-    (*this).SceneRoot = gen8;
-    (*this).RootComponent = gen8;
-    if (gen) gen->SetupAttachment(gen8);
-    if (gen2) gen2->SetupAttachment(gen8);
-    if (gen3) gen3->SetupAttachment(gen8);
-    if (gen4) gen4->SetupAttachment(gen8);
-    if (gen5) gen5->SetupAttachment(gen8);
-    if (gen6) gen6->SetupAttachment(gen8);
+    (*this).PickupMeshComp = gen7;
+    (*this).SceneRoot = gen7;
+    (*this).RootComponent = gen7;
+    if (gen) gen->SetupAttachment(gen7);
+    if (gen2) gen2->SetupAttachment(gen7);
+    if (gen3) gen3->SetupAttachment(gen7);
+    if (gen4) gen4->SetupAttachment(gen7);
+    if (gen5) gen5->SetupAttachment(gen7);
+    if (gen6) gen6->SetupAttachment(gen7);
 }
 
 void AIGS_WeaponPickupActor::Setup(const TSubclassOf<UMETA_WeaponInventoryObject>& inItemClass, const TSoftObjectPtr<UIGS_WeaponSkinData> inSkin) {

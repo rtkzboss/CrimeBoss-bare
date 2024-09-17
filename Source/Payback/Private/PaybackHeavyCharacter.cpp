@@ -15,8 +15,7 @@ APaybackHeavyCharacter::APaybackHeavyCharacter(const FObjectInitializer& ObjectI
     (*this).WeakSpotCapsule = gen;
     (*this).CompromisedDamageMultiplier.Value = 2.000000000e+00f;
     (*this).WeakSpotComponent = gen2;
-    auto gen7 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen7->ContainerPtrToValuePtr<FName>(&(*this).WeakSpotCompromisedAnimation, 0)) = TEXT("Anim.Combat.Heavy.HelmOff");
+    (*this).WeakSpotCompromisedAnimation = FGameplayTag::RequestGameplayTag(TEXT("Anim.Combat.Heavy.HelmOff"));
     (*this).PSTemplate = FSoftObjectPath();
     (*this).ParticleScale.X = 1.000000000e+00f;
     (*this).ParticleScale.Y = 1.000000000e+00f;
@@ -30,12 +29,12 @@ APaybackHeavyCharacter::APaybackHeavyCharacter(const FObjectInitializer& ObjectI
     (*this).ShockChargeMeshScale.Y = 1.000000000e+00f;
     (*this).ShockChargeMeshScale.Z = 1.000000000e+00f;
     (*this).ShockChargeMeshComponentAttachBone = TEXT("neck_01");
-    auto gen8 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("CharacterMesh0")));
-    if (gen) gen->SetupAttachment(gen8);
-    if (gen3) gen3->SetupAttachment(gen8);
-    if (gen4) gen4->SetupAttachment(gen8);
-    if (gen5) gen5->SetupAttachment(gen8);
-    if (gen6) gen6->SetupAttachment(gen8);
+    auto gen7 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("CharacterMesh0")));
+    if (gen) gen->SetupAttachment(gen7);
+    if (gen3) gen3->SetupAttachment(gen7);
+    if (gen4) gen4->SetupAttachment(gen7);
+    if (gen5) gen5->SetupAttachment(gen7);
+    if (gen6) gen6->SetupAttachment(gen7);
 }
 
 void APaybackHeavyCharacter::OnWeakSpotCompromised(const UPrimitiveComponent* inWeakSpotComponent, const FIGS_HitInfo& inLastHitInfo) {

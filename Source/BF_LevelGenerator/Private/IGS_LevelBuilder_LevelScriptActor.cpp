@@ -3,9 +3,8 @@
 #include "Net/UnrealNetwork.h"
 
 AIGS_LevelBuilder_LevelScriptActor::AIGS_LevelBuilder_LevelScriptActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DefaultMissionTag, 0)) = TEXT("Mission.Unknown");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DefaultScenarioTag, 0)) = TEXT("Mission.Unknown");
+    (*this).DefaultMissionTag = FGameplayTag::RequestGameplayTag(TEXT("Mission.Unknown"));
+    (*this).DefaultScenarioTag = FGameplayTag::RequestGameplayTag(TEXT("Mission.Unknown"));
     (*this).DefaultSeed = -1;
     (*this).NetDormancy = DORM_DormantAll;
     (*this).NetPriority = 5.000000000e+00f;

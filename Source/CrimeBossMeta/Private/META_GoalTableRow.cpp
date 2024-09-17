@@ -22,8 +22,7 @@ FMETA_GoalTableRow::FMETA_GoalTableRow() {
     (*this).StoryGoal.UnlockRespect = EMETA_RespectLvl::Low;
     (*this).StoryGoal.LockRespect = EMETA_RespectLvl::Low;
     (*this).StoryGoal.InstigatorPartner = EMETA_Partner::Secretary;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).StoryGoal.EntitlementTag, 0)) = NAME_None;
+    (*this).StoryGoal.EntitlementTag = FGameplayTag();
     (*this).MoneyMakingGoal.Title = FText::GetEmpty();
     (*this).MoneyMakingGoal.Description = FText::GetEmpty();
     (*this).MoneyMakingGoal.Icon = FSoftObjectPath();
@@ -33,13 +32,10 @@ FMETA_GoalTableRow::FMETA_GoalTableRow() {
     (*this).MoneyMakingGoal.LockRespect = EMETA_RespectLvl::Low;
     (*this).MoneyMakingGoal.InstigatorPartner = EMETA_Partner::Secretary;
     (*this).MoneyMakingGoal.TaskTitle = FText::GetEmpty();
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MoneyMakingGoal.LootType, 0)) = NAME_None;
+    (*this).MoneyMakingGoal.LootType = FGameplayTag();
     (*this).MoneyMakingGoal.MonetaryValue.Min = 0;
     (*this).MoneyMakingGoal.MonetaryValue.Max = 0;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MoneyMakingGoal.MissionTypeTags, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MoneyMakingGoal.MissionTypeTags, 0)) = {};
+    (*this).MoneyMakingGoal.MissionTypeTags = FGameplayTagContainer();
     (*this).MoneyMakingGoal.EnemyGangIDs = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MoneyMakingGoal.EntitlementTag, 0)) = NAME_None;
+    (*this).MoneyMakingGoal.EntitlementTag = FGameplayTag();
 }

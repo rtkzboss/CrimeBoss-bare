@@ -76,7 +76,7 @@ TArray<EIGS_CharacterID> UCommonCharacterIDHelpers::GetValidBossCharacters(const
 }
 
 FGameplayTagContainer UCommonCharacterIDHelpers::GetRelatedCharacterTagIDs(const UObject* inWCO, FGameplayTag inCharacterTagID) {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 EIGS_CharacterID UCommonCharacterIDHelpers::GetRandomUniqueCharacter(const UObject* inWCO) {
@@ -116,6 +116,6 @@ EIGS_CharacterID UCommonCharacterIDHelpers::ConvertTagIDToCharacterID(UObject* i
 }
 
 FGameplayTag UCommonCharacterIDHelpers::ConvertCharacterIDToTagID(UObject* inWCO, EIGS_CharacterID inCharacterID) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 

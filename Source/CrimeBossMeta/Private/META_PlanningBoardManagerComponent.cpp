@@ -50,7 +50,7 @@ FMETA_ChangeStatusPlanningBoardEvent UMETA_PlanningBoardManagerComponent::GetNex
 }
 
 FGameplayTag UMETA_PlanningBoardManagerComponent::GetActivePlanningBoardTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 void UMETA_PlanningBoardManagerComponent::AddChangeStatusEvent(FGameplayTag itemTag, FGameplayTag voiceoverTag, EMETA_PlanningBoardItemStatus fromStatus, EMETA_PlanningBoardItemStatus toStatus) {

@@ -16,7 +16,7 @@ void UMETA_TurfWar::SetDataFromSave(const FMETA_TurfWarMissionSave& inTurfWarMis
 }
 
 FGameplayTag UMETA_TurfWar::GetWarTile() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FMETA_TurfWarMissionSave UMETA_TurfWar::GetSaveData() {

@@ -2,8 +2,7 @@
 
 FMETA_JobManagerSaveData::FMETA_JobManagerSaveData() {
     (*this).CurrentJob = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CurrentJobTileID, 0)) = NAME_None;
+    (*this).CurrentJobTileID = FGameplayTag();
     (*this).JobsOnMap.MoneyMakingMissions = {};
     (*this).JobsOnMap.AmbushMissions = {};
     (*this).JobsOnMap.StoryMissions = {};

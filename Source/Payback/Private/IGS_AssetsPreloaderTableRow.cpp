@@ -1,8 +1,7 @@
 #include "IGS_AssetsPreloaderTableRow.h"
 
 FIGS_AssetsPreloaderTableRow::FIGS_AssetsPreloaderTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).CopsVariationTypes = {};
     (*this).SWATVariationTypes = {};
     (*this).GangstersVariationTypes = {};

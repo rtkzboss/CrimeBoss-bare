@@ -2,8 +2,7 @@
 #include "EIGS_DialogueGroup.h"
 
 FIGS_DialogueLevelName::FIGS_DialogueLevelName() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).LevelTag, 0)) = NAME_None;
+    (*this).LevelTag = FGameplayTag();
     (*this).LevelNames = {};
     (*this).LevelCharacters = {};
     (*this).BlacklistOption = EIGS_DialogueBlacklistOption::NoBlacklist;

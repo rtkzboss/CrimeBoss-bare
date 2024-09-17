@@ -43,10 +43,9 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Tier1.Default.Loadout.WeaponProbability = {};
     (*this).Tier1.Default.Loadout.NoThrowableChance = 0;
     (*this).Tier1.Default.Loadout.ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier1.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier1.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier1.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier1.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Tier1.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Tier1.Heavy.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Tier1.Heavy.Stats.HP.Value = 0.000000000e+00f;
     (*this).Tier1.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -88,9 +87,9 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Tier1.Heavy.Loadout.WeaponProbability = {};
     (*this).Tier1.Heavy.Loadout.NoThrowableChance = 0;
     (*this).Tier1.Heavy.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier1.Heavy.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier1.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier1.Heavy.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier1.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Tier1.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Tier2.Default.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Tier2.Default.Stats.HP.Value = 0.000000000e+00f;
     (*this).Tier2.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -132,9 +131,9 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Tier2.Default.Loadout.WeaponProbability = {};
     (*this).Tier2.Default.Loadout.NoThrowableChance = 0;
     (*this).Tier2.Default.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier2.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier2.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier2.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier2.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Tier2.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Tier2.Heavy.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Tier2.Heavy.Stats.HP.Value = 0.000000000e+00f;
     (*this).Tier2.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -176,9 +175,9 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Tier2.Heavy.Loadout.WeaponProbability = {};
     (*this).Tier2.Heavy.Loadout.NoThrowableChance = 0;
     (*this).Tier2.Heavy.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier2.Heavy.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier2.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier2.Heavy.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier2.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Tier2.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Tier3.Default.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Tier3.Default.Stats.HP.Value = 0.000000000e+00f;
     (*this).Tier3.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -220,9 +219,9 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Tier3.Default.Loadout.WeaponProbability = {};
     (*this).Tier3.Default.Loadout.NoThrowableChance = 0;
     (*this).Tier3.Default.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier3.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier3.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier3.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier3.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Tier3.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Tier3.Heavy.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Tier3.Heavy.Stats.HP.Value = 0.000000000e+00f;
     (*this).Tier3.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -264,9 +263,9 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Tier3.Heavy.Loadout.WeaponProbability = {};
     (*this).Tier3.Heavy.Loadout.NoThrowableChance = 0;
     (*this).Tier3.Heavy.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier3.Heavy.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier3.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier3.Heavy.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier3.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Tier3.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Special.Default.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Special.Default.Stats.HP.Value = 0.000000000e+00f;
     (*this).Special.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -308,9 +307,9 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Special.Default.Loadout.WeaponProbability = {};
     (*this).Special.Default.Loadout.NoThrowableChance = 0;
     (*this).Special.Default.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Special.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Special.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Special.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Special.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Special.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Special.Heavy.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Special.Heavy.Stats.HP.Value = 0.000000000e+00f;
     (*this).Special.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -352,7 +351,7 @@ FIGS_AIBackupTiersDef::FIGS_AIBackupTiersDef() {
     (*this).Special.Heavy.Loadout.WeaponProbability = {};
     (*this).Special.Heavy.Loadout.NoThrowableChance = 0;
     (*this).Special.Heavy.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Special.Heavy.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Special.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Special.Heavy.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Special.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Special.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
 }

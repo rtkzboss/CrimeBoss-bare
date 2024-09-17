@@ -9,7 +9,7 @@ UIGS_MetaCutsceneDataAsset::UIGS_MetaCutsceneDataAsset() {
 }
 
 FGameplayTag UIGS_MetaCutsceneDataAsset::GetEventIDTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TArray<FGameplayTag> UIGS_MetaCutsceneDataAsset::GetAllChoicesTags() {

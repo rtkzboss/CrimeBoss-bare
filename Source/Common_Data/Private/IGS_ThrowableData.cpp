@@ -51,8 +51,7 @@ FIGS_ThrowableData::FIGS_ThrowableData() {
     (*this).ThrowRotationAxis.X = 1.000000000e+00f;
     (*this).ThrowRotationAxis.Y = 1.000000000e+00f;
     (*this).ThrowRotationAxis.Z = 1.000000000e+00f;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldingOffence, 0)) = TEXT("Offence.Player.Wielding.Weapon");
+    (*this).WieldingOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Player.Wielding.Weapon"));
     (*this).ItemType = EIGS_ItemType::Item_Throwable;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ItemOffence, 0)) = TEXT("Offence.Actor.Item.Weapon");
+    (*this).ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Weapon"));
 }

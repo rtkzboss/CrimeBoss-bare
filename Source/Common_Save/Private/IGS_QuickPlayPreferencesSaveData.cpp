@@ -8,8 +8,7 @@
 #include "EMETA_RespectLvl.h"
 
 FIGS_QuickPlayPreferencesSaveData::FIGS_QuickPlayPreferencesSaveData() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).PlayerHeisterData.TagID, 0)) = NAME_None;
+    (*this).PlayerHeisterData.TagID = FGameplayTag();
     (*this).PlayerHeisterData.CharacterID = EIGS_CharacterID::Char_Unknown;
     (*this).PlayerHeisterData.UniqGenericId = -1;
     (*this).PlayerHeisterData.GenericVariantID = -1;
@@ -18,16 +17,16 @@ FIGS_QuickPlayPreferencesSaveData::FIGS_QuickPlayPreferencesSaveData() {
     (*this).PlayerHeisterData.HeisterNumber = -1;
     (*this).PlayerHeisterData.PlayerId = -1;
     (*this).PlayerHeisterData.ProgressionLevel = 1;
-    auto gen2 = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
-    (*gen2->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).PlayerHeisterData.UniquePlayerId, 0)) = {};
+    auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).PlayerHeisterData.UniquePlayerId, 0)) = {};
     (*this).PlayerHeisterData.Loadout.PrimaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).PlayerHeisterData.Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    (*this).PlayerHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).PlayerHeisterData.Loadout.SecondaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).PlayerHeisterData.Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).PlayerHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
     (*this).PlayerHeisterData.Loadout.Equipment = {};
     (*this).PlayerHeisterData.Loadout.Perks = {};
     (*this).PlayerHeisterData.Loadout.Ability1ChargesLeft = -1;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).PlayerHeisterData.Loadout.CharacterSkinID, 0)) = NAME_None;
+    (*this).PlayerHeisterData.Loadout.CharacterSkinID = FGameplayTag();
     (*this).PlayerHeisterData.Experience = 0;
     (*this).PlayerHeisterData.Injuries = 0;
     (*this).PlayerHeisterData.CharacterState = EMETA_CharacterState::None;

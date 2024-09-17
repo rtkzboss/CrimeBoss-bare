@@ -4,8 +4,7 @@
 #include "EMETA_ItemQuality.h"
 
 FMETA_HeisterStatisticData::FMETA_HeisterStatisticData() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).HeisterID.TagID, 0)) = NAME_None;
+    (*this).HeisterID.TagID = FGameplayTag();
     (*this).HeisterID.ID = EIGS_CharacterID::Char_Unknown;
     (*this).HeisterID.UniqGenericId = -1;
     (*this).HeisterSpecialData.Name = TEXT("");

@@ -1,5 +1,4 @@
 #include "IGS_ThrowableProjectileBase.h"
-#include "GameFramework/Actor.h"
 #include "Components/CapsuleComponent.h"
 #include "Engine/EngineTypes.h"
 #include "GameFramework/ProjectileMovementComponent.h"
@@ -17,8 +16,7 @@ AIGS_ThrowableProjectileBase::AIGS_ThrowableProjectileBase(const FObjectInitiali
     (*this).bMakeImpactNoise = true;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).bReplicates = true;
-    auto gen4 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen4->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).RootComponent = gen;
     if (gen2) gen2->SetupAttachment(gen);
 }

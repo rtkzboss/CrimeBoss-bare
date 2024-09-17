@@ -1,13 +1,11 @@
 #include "IGS_PlayerSuppressionHandlerComponent.h"
-#include "Components/ActorComponent.h"
 #include "NavAreas/NavArea_Obstacle.h"
 
 UIGS_PlayerSuppressionHandlerComponent::UIGS_PlayerSuppressionHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).AreaClass = UNavArea_Obstacle::StaticClass();
     (*this).PrimaryComponentTick.bTickEvenWhenPaused = true;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_PlayerSuppressionHandlerComponent::PlayWhizSound() const {

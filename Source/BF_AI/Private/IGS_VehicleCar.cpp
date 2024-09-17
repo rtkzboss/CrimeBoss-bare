@@ -46,13 +46,12 @@ AIGS_VehicleCar::AIGS_VehicleCar(const FObjectInitializer& ObjectInitializer) : 
     (*this).WheelSize = 5.000000000e+01f;
     (*this).FrontStopTriggerOffset = -1.000000000e+01f;
     (*this).bReplicates = true;
-    auto gen10 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen10->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
-    auto gen11 = Cast<USkeletalMeshComponent>(GetDefaultSubobjectByName(TEXT("VehicleSkeletalMesh")));
-    if (gen2) gen2->SetupAttachment(gen11);
-    if (gen5) gen5->SetupAttachment(gen11);
-    if (gen6) gen6->SetupAttachment(gen11);
-    if (gen7) gen7->SetupAttachment(gen11);
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
+    auto gen10 = Cast<USkeletalMeshComponent>(GetDefaultSubobjectByName(TEXT("VehicleSkeletalMesh")));
+    if (gen2) gen2->SetupAttachment(gen10);
+    if (gen5) gen5->SetupAttachment(gen10);
+    if (gen6) gen6->SetupAttachment(gen10);
+    if (gen7) gen7->SetupAttachment(gen10);
 }
 
 void AIGS_VehicleCar::SpawnPassengers() {

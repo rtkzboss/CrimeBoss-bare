@@ -2,8 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_HordeModeManager::UIGS_HordeModeManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_HordeModeManager::SetHordeModeCounterValues(const UObject* inWCO, int32 inTotalValue, float inCurrentProgress) {

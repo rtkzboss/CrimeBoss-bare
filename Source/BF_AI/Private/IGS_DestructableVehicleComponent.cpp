@@ -1,5 +1,4 @@
 #include "IGS_DestructableVehicleComponent.h"
-#include "Components/ActorComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_DestructableVehicleComponent::UIGS_DestructableVehicleComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -12,8 +11,7 @@ UIGS_DestructableVehicleComponent::UIGS_DestructableVehicleComponent(const FObje
     (*this).CoolerPercentStartPosWidth = 3.334999979e-01f;
     (*this).CoolerPercentStartPosZ = 3.499999940e-01f;
     (*this).CoolerPercentEndPosZ = 5.450000167e-01f;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_DestructableVehicleComponent::UpdateShakeCar() {

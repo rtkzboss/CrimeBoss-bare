@@ -8,11 +8,11 @@ void UIGS_RandEventManagerBaseComponent::SetEventAsActive_Implementation(FGamepl
 }
 
 FGameplayTag UIGS_RandEventManagerBaseComponent::GetReadyEventOfPartner_Implementation(EMETA_Partner inPartner) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FGameplayTag UIGS_RandEventManagerBaseComponent::GetEventRelatedToMission_Implementation(TSubclassOf<UMETA_MissionID> inMissionID) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 int32 UIGS_RandEventManagerBaseComponent::GetEventPrice_Implementation(FGameplayTag inEventTag) {
@@ -20,6 +20,6 @@ int32 UIGS_RandEventManagerBaseComponent::GetEventPrice_Implementation(FGameplay
 }
 
 FGameplayTag UIGS_RandEventManagerBaseComponent::GetActiveEventOfPartner_Implementation(EMETA_Partner inPartner) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 

@@ -29,7 +29,7 @@ FMETA_CharacterID UMETA_RandEventManagerComponent::GetMissingHeisterForMission(T
 }
 
 FGameplayTag UMETA_RandEventManagerComponent::GetEventIdForMissingHeister(FMETA_CharacterID inCharacterID) const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 void UMETA_RandEventManagerComponent::GetEventDataForMissingHeister(FMETA_CharacterID inCharacterID, FMETA_MissingHeisterEventData& outData, bool& outSuccess) const {

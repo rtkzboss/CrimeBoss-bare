@@ -11,9 +11,6 @@ FIGS_UnlockRewardRanges::FIGS_UnlockRewardRanges() {
     (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ERangeBoundTypes::Type>>(&(*gen4->ContainerPtrToValuePtr<FInt32RangeBound>(&(*this).LevelRange, 0)), 0)) = ERangeBoundTypes::Inclusive;
     (*gen3->ContainerPtrToValuePtr<int32>(&(*gen4->ContainerPtrToValuePtr<FInt32RangeBound>(&(*this).LevelRange, 0)), 0)) = 1;
     (*this).RewardCategoryMap = {};
-    auto gen5 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen5->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AvailableItems, 0)) = {};
-    auto gen6 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen6->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AvailableItems, 0)) = {};
+    (*this).AvailableItems = FGameplayTagContainer();
     (*this).ForcedPool = {};
 }

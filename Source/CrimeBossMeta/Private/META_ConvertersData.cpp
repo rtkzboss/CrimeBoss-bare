@@ -5,7 +5,7 @@ UMETA_ConvertersData::UMETA_ConvertersData() {
 }
 
 FGameplayTagContainer UMETA_ConvertersData::GetCharactersTagFromSaveForCrew(UObject* inWCO, TArray<FMETA_HeisterSaveData>& inUniqueCharacters) {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 TArray<FMETA_WeaponSaveData> UMETA_ConvertersData::ConvertWeaponsToSave2(TArray<UMETA_Weapon*>& inWeapons) {

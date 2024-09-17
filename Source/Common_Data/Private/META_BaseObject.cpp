@@ -21,7 +21,7 @@ void UMETA_BaseObject::SetEntitlementTagID(FGameplayTag inTag) {
 }
 
 FGameplayTag UMETA_BaseObject::GetTagID() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 float UMETA_BaseObject::GetRelativeItemPrice() const {
@@ -49,6 +49,6 @@ TSoftObjectPtr<UTexture2D> UMETA_BaseObject::GetIcon() {
 }
 
 FGameplayTag UMETA_BaseObject::GetEntitlementTagID() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 

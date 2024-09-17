@@ -13,6 +13,6 @@ int32 UMETA_MoneyMakingGoal::GetMonetaryValue() {
 }
 
 FGameplayTag UMETA_MoneyMakingGoal::GetLootType() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 

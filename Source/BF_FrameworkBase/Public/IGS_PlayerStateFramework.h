@@ -56,7 +56,7 @@ public:
     int32 GetGenericVariant() const override PURE_VIRTUAL(GetGenericVariant, return 0;);
 
     UFUNCTION(BlueprintCallable)
-    FGameplayTag GetCharacterSkinID() const override PURE_VIRTUAL(GetCharacterSkinID, return FGameplayTag{};);
+    FGameplayTag GetCharacterSkinID() const override PURE_VIRTUAL(GetCharacterSkinID, return FGameplayTag(););
 
     UFUNCTION(BlueprintCallable)
     EIGS_CharacterID GetCharacterID() const override PURE_VIRTUAL(GetCharacterID, return EIGS_CharacterID::Char_Gen_Start;);

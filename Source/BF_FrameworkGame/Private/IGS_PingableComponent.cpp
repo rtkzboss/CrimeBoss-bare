@@ -8,8 +8,7 @@ UIGS_PingableComponent::UIGS_PingableComponent(const FObjectInitializer& ObjectI
     (*this).mR_bCanBePinged = true;
     (*this).PingedAkAudioEvent = FSoftObjectPath(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_GUI/Ping/AKE_Ping_Highlight_Generic.AKE_Ping_Highlight_Generic"), TEXT(""));
     (*this).PingedDangerousAkAudioEvent = FSoftObjectPath(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_GUI/Ping/AKE_Ping_Highlight_Dangerous.AKE_Ping_Highlight_Dangerous"), TEXT(""));
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_PingableComponent::SetOutlineState(EIGS_CameraOutlineState inType, bool inEnabled) {

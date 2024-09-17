@@ -19,14 +19,14 @@ EIGS_RoomSecurityType UIGS_PlayerSuspicionComponent::GetRoomSecurityType() const
 }
 
 FGameplayTag UIGS_PlayerSuspicionComponent::GetCurrentWieldableOffences() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FGameplayTag UIGS_PlayerSuspicionComponent::GetCurrentWieldableClass() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FGameplayTagContainer UIGS_PlayerSuspicionComponent::GetCurrentOffences() {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 

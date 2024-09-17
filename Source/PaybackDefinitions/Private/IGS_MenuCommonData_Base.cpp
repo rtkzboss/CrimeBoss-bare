@@ -13,11 +13,11 @@ EIGS_ScenarioDifficulty UIGS_MenuCommonData_Base::GetRandomizedDifficulty(EMETA_
 }
 
 FGameplayTag UIGS_MenuCommonData_Base::GetEdgeCaseObjective() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FGameplayTag UIGS_MenuCommonData_Base::GetBossCharacterTagID() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 int32 UIGS_MenuCommonData_Base::GetAmountOfMissionsCanBeCompletedByEachHeisterPerDay() const {
@@ -25,6 +25,6 @@ int32 UIGS_MenuCommonData_Base::GetAmountOfMissionsCanBeCompletedByEachHeisterPe
 }
 
 FGameplayTagContainer UIGS_MenuCommonData_Base::GetAllowedLoot() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 

@@ -1,10 +1,9 @@
 #include "IGS_Meta2FPS_Data.h"
 
 FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionTag, 0)) = NAME_None;
+    (*this).MissionTag = FGameplayTag();
     (*this).MapName = TEXT("");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionScenario, 0)) = NAME_None;
+    (*this).MissionScenario = FGameplayTag();
     (*this).TileEnvironment = EIGS_TileEnviroment::None;
     (*this).HubDistrict = EIGS_HubDistrict::Downtown;
     (*this).HubVariant = EIGS_HubBackdropTypes::AllRandom;
@@ -14,7 +13,7 @@ FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).Heat = EMETA_Heat::Medium;
     (*this).WantedBadges = 0;
     (*this).IntelLevel = -1;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).BonusObjectiveID, 0)) = NAME_None;
+    (*this).BonusObjectiveID = FGameplayTag();
     (*this).SupportsCleanExecution = false;
     (*this).StartMusic = EIGS_MusicMissionState::None;
     (*this).StartupSource = EIGS_MissionStartupSource::INVALID;
@@ -24,10 +23,7 @@ FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).ObjectiveValue = 0;
     (*this).TotalMissionValue = 0;
     (*this).TotalLootbagCount = -1;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SpecificLootTypes, 0)) = {};
+    (*this).SpecificLootTypes = FGameplayTagContainer();
     (*this).SpecialLoot.Loot = {};
     (*this).SpecialLoot.Money = 0;
     (*this).SpecialLoot.bIsFilled = false;

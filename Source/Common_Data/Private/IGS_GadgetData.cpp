@@ -4,6 +4,5 @@
 
 FIGS_GadgetData::FIGS_GadgetData() {
     (*this).ItemType = EIGS_ItemType::Item_Gadget;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ItemOffence, 0)) = TEXT("Offence.Actor.Item.Gadget");
+    (*this).ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Gadget"));
 }

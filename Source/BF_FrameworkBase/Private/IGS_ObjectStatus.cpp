@@ -6,8 +6,7 @@ UIGS_ObjectStatus::UIGS_ObjectStatus(const FObjectInitializer& ObjectInitializer
     (*this).HealthMultiplierAttribute = 1.000000000e+00f;
     (*this).AccumulateDamagePeriod = 2.999999933e-02f;
     (*this).mR_BaseMaxHealth = -1.000000000e+00f;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_ObjectStatus::SetHealthDecayDisabled(bool inDisabled) {

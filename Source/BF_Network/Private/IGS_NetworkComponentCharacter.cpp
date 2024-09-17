@@ -122,8 +122,7 @@ UIGS_NetworkComponentCharacter::UIGS_NetworkComponentCharacter(const FObjectInit
     (*this).NearDeathHealthPercentage = 4.000000060e-01f;
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
-    auto gen6 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen6)->SetPropertyValue(&(*gen6->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_NetworkComponentCharacter::StopVoice(const FIGS_PlayVariationData& inPlayVariationData) {

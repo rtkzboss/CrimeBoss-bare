@@ -22,8 +22,7 @@ FMETA_ObjectiveConfig::FMETA_ObjectiveConfig() {
     (*this).SWATKills = 0;
     (*this).GeneralAmountOfKills = 0;
     (*this).KillsAmountOperator = EMETA_ConditionOperator::GreaterOrEqual;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).OutputParamTag, 0)) = NAME_None;
+    (*this).OutputParamTag = FGameplayTag();
     (*this).OutputParamValue = 0;
     (*this).OutputParamOperator = EMETA_ConditionOperator::GreaterOrEqual;
     (*this).DaysToComplete = 1;

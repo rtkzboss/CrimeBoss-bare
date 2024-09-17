@@ -3,8 +3,7 @@
 FIGS_SingleChainMission::FIGS_SingleChainMission() {
     (*this).ID = nullptr;
     (*this).FPSMissionID = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Scenario, 0)) = NAME_None;
+    (*this).Scenario = FGameplayTag();
     (*this).LightingScenario = EIGS_LightingScenarioType::Morning;
     (*this).BackdropType = EIGS_HubBackdropTypes::AllRandom;
     (*this).TileEnviroment = EIGS_TileEnviroment::None;

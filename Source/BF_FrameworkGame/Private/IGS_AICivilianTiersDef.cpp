@@ -43,10 +43,9 @@ FIGS_AICivilianTiersDef::FIGS_AICivilianTiersDef() {
     (*this).Tier1.Default.Loadout.WeaponProbability = {};
     (*this).Tier1.Default.Loadout.NoThrowableChance = 0;
     (*this).Tier1.Default.Loadout.ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier1.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier1.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier1.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier1.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Tier1.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Tier2.Default.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Tier2.Default.Stats.HP.Value = 0.000000000e+00f;
     (*this).Tier2.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -88,9 +87,9 @@ FIGS_AICivilianTiersDef::FIGS_AICivilianTiersDef() {
     (*this).Tier2.Default.Loadout.WeaponProbability = {};
     (*this).Tier2.Default.Loadout.NoThrowableChance = 0;
     (*this).Tier2.Default.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier2.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier2.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier2.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier2.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Tier2.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Tier3.Default.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Tier3.Default.Stats.HP.Value = 0.000000000e+00f;
     (*this).Tier3.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -132,9 +131,9 @@ FIGS_AICivilianTiersDef::FIGS_AICivilianTiersDef() {
     (*this).Tier3.Default.Loadout.WeaponProbability = {};
     (*this).Tier3.Default.Loadout.NoThrowableChance = 0;
     (*this).Tier3.Default.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier3.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Tier3.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tier3.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Tier3.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Tier3.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Special.Default.Stats.HP.Overload = 0.000000000e+00f;
     (*this).Special.Default.Stats.HP.Value = 0.000000000e+00f;
     (*this).Special.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -176,7 +175,7 @@ FIGS_AICivilianTiersDef::FIGS_AICivilianTiersDef() {
     (*this).Special.Default.Loadout.WeaponProbability = {};
     (*this).Special.Default.Loadout.NoThrowableChance = 0;
     (*this).Special.Default.Loadout.ThrowablePool = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Special.Default.Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Special.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Special.Default.Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Special.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Special.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
 }

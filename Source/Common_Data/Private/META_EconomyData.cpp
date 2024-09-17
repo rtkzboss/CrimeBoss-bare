@@ -48,7 +48,7 @@ int32 UMETA_EconomyData::GetWeaponMarketAvailableInDays() const {
 }
 
 FGameplayTag UMETA_EconomyData::GetWeaponEventUnlockTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 float UMETA_EconomyData::GetWeaponCoefficientPriceForHeister() const {
@@ -180,7 +180,7 @@ FMETA_LevelUpHeisterData UMETA_EconomyData::GetLevelUpBossData(int32 inCharacter
 }
 
 FGameplayTag UMETA_EconomyData::GetHireArmyEventUnlockTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 float UMETA_EconomyData::GetHeisterUpkeepMultiplierByEquipmentQuality(EMETA_ItemQuality inEquipmentQuality) const {

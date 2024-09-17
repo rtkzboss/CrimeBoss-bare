@@ -3,8 +3,7 @@
 FMETA_RandEventRewardRuntimeData::FMETA_RandEventRewardRuntimeData() {
     (*this).RewardType = EMETA_RandEventReward::None;
     (*this).CashValue = 0;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).LootItem, 0)) = NAME_None;
+    (*this).LootItem = FGameplayTag();
     (*this).LootMonetaryValuer = 0;
     (*this).Soldiers = 0;
     (*this).NewHeisterID = EIGS_CharacterID::Char_Unknown;

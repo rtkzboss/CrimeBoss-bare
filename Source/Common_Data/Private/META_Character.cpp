@@ -113,7 +113,7 @@ bool UMETA_Character::GetUnlockedForQP() const {
 }
 
 FGameplayTagContainer UMETA_Character::GetTraits() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 int32 UMETA_Character::GetTimesHealed() {

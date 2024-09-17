@@ -3,8 +3,7 @@
 
 UIGS_OutlineComponent::UIGS_OutlineComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bUseRootForOutline = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_OutlineComponent::SetOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled) {

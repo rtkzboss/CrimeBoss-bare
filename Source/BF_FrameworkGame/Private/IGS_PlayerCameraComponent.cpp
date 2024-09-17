@@ -1,5 +1,4 @@
 #include "IGS_PlayerCameraComponent.h"
-#include "Components/ActorComponent.h"
 #include "Engine/EngineBaseTypes.h"
 #include "Net/UnrealNetwork.h"
 
@@ -12,8 +11,7 @@ UIGS_PlayerCameraComponent::UIGS_PlayerCameraComponent(const FObjectInitializer&
     (*this).CameraBoneAttachment = TEXT("camera_root");
     (*this).PrimaryComponentTick.TickGroup = TG_PrePhysics;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_PlayerCameraComponent::StopCameraShake(const FGameplayTag inCameraShakeTag) {

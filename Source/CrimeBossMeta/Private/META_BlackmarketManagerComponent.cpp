@@ -44,7 +44,7 @@ TArray<UMETA_Weapon*> UMETA_BlackmarketManagerComponent::GetWeaponsPoolForBMWeap
 }
 
 FGameplayTag UMETA_BlackmarketManagerComponent::GetWeaponEventUnlockTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TArray<UMETA_Character*> UMETA_BlackmarketManagerComponent::GetUniqueHeistersPoolForBlackmarket(EMETA_RespectLvl inCurrentBossStatus, int32 inTargetAmountOfUnseenItemsForPurchase) {
@@ -68,7 +68,7 @@ TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> UMETA_BlackmarketManagerCompo
 }
 
 FGameplayTag UMETA_BlackmarketManagerComponent::GetHireArmyEventUnlockTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FMETA_ArmyTierConfiguration UMETA_BlackmarketManagerComponent::GetHireArmyEventData_Implementation(bool& bActive) const {

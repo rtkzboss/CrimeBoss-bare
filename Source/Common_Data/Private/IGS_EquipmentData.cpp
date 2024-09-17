@@ -3,8 +3,7 @@
 #include "EIGS_ItemType.h"
 
 FIGS_EquipmentData::FIGS_EquipmentData() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    (*this).TagID = FGameplayTag();
     (*this).Throwable = FSoftObjectPath();
     (*this).Description = FText::FromString(TEXT("None"));
     (*this).bAllowedForGeneration = false;
@@ -21,13 +20,10 @@ FIGS_EquipmentData::FIGS_EquipmentData() {
     (*this).InventoryIconStringGlyph = TEXT("");
     (*this).InventoryIconOverrideFontObject = nullptr;
     (*this).UnlockProperties.IsUnlockable = false;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
+    (*this).UnlockProperties.RequiredTags = FGameplayTagContainer();
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
     (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();
     (*this).ItemType = EIGS_ItemType::Item_Equipment;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ItemOffence, 0)) = TEXT("Offence.Actor.Item.Equipment");
+    (*this).ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Equipment"));
 }

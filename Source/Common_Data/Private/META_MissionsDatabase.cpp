@@ -45,7 +45,7 @@ TSubclassOf<UMETA_MissionID> UMETA_MissionsDatabase::GetAmbushMission(TSubclassO
 }
 
 FGameplayTag UMETA_MissionsDatabase::GetAmbushChanceTagByMissionID(TSubclassOf<UMETA_MissionID> inMissionID) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TArray<FMETA_MissionDatabase> UMETA_MissionsDatabase::GetAllFPSMissions() {

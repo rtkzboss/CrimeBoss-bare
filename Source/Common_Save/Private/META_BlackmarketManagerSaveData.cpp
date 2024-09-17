@@ -14,13 +14,9 @@ FMETA_BlackmarketManagerSaveData::FMETA_BlackmarketManagerSaveData() {
     (*this).DayWhenHeistersMarketBecameAvailable = 0;
     (*this).DayWhenWeaponsMarketBecameAvailable = 0;
     (*this).PlotlineAssetsPool = {};
-    auto gen = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).TemporaryLockedPlotlineAssetsTags, 0)) = {};
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).TemporaryLockedPlotlineAssetsTags, 0)) = {};
+    (*this).TemporaryLockedPlotlineAssetsTags = FGameplayTagContainer();
     (*this).ActiveLootEvent.Vendor = EMETA_TradeVendor::UNDEFINED;
-    auto gen3 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen3->ContainerPtrToValuePtr<FName>(&(*this).ActiveLootEvent.LootTag, 0)) = NAME_None;
+    (*this).ActiveLootEvent.LootTag = FGameplayTag();
     (*this).ActiveLootEvent.MinLootValue = 0;
     (*this).ActiveLootEvent.MissionID = nullptr;
     (*this).ReadyLootEvents = {};

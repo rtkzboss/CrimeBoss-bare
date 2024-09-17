@@ -11,17 +11,16 @@ FIGS_CharacterPanelDataStruct::FIGS_CharacterPanelDataStruct() {
     (*this).Loadout.PrimaryWeapon = nullptr;
     (*this).Loadout.PrimaryWeaponClass = nullptr;
     (*this).Loadout.PrimaryPersonalWeapons = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).Loadout.PrimaryPersonalWeaponsClass = {};
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeaponClass = nullptr;
     (*this).Loadout.SecondaryPersonalWeapons = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.SecondaryWeaponSkin = FGameplayTag();
     (*this).Loadout.SecondaryPersonalWeaponsClass = {};
     (*this).Loadout.SelectedEquipment = nullptr;
     (*this).Loadout.ChainEquipments = {};
     (*this).Loadout.ChainEquipmentsObjects = {};
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkin, 0)) = NAME_None;
+    (*this).Loadout.CharacterSkin = FGameplayTag();
     (*this).Loadout.Ability1ChargesLeft = -1;
 }

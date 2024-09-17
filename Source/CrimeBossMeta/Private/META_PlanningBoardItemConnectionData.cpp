@@ -1,8 +1,7 @@
 #include "META_PlanningBoardItemConnectionData.h"
 
 FMETA_PlanningBoardItemConnectionData::FMETA_PlanningBoardItemConnectionData() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ToItemGameplayTag, 0)) = NAME_None;
+    (*this).ToItemGameplayTag = FGameplayTag();
     (*this).FromSocketName = NAME_None;
     (*this).FromConnectionStaticMesh = FSoftObjectPath();
     (*this).ToSocketName = NAME_None;

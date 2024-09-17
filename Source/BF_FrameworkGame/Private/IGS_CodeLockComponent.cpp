@@ -5,8 +5,7 @@ UIGS_CodeLockComponent::UIGS_CodeLockComponent(const FObjectInitializer& ObjectI
     (*this).MinCylinderValue = 1;
     (*this).MaxCylinderValue = 7;
     (*this).R_IsLocked = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_CodeLockComponent::SetInstigator(AIGS_GameCharacterFramework* inInstigator) {

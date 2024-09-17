@@ -4,8 +4,7 @@ UIGS_ScanLookAtTriggerComponent::UIGS_ScanLookAtTriggerComponent(const FObjectIn
     (*this).ScreenPercentage = 8.000000119e-01f;
     (*this).bIsScanEnabled = true;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_ScanLookAtTriggerComponent::SetScanEnabled(bool inState) {

@@ -10,8 +10,7 @@ FIGS_AIBaseTierDef::FIGS_AIBaseTierDef() {
     (*this).Loadout.WeaponProbability = {};
     (*this).Loadout.NoThrowableChance = 0;
     (*this).Loadout.ThrowablePool = {};
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.EmptyWeaponTag, 0)) = TEXT("Item.Wieldable.Weapon");
+    (*this).Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Loadout.ShowNoThrowableBool = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
 }

@@ -82,7 +82,7 @@ FMETA_StatisticsRootTags UMETA_CommonData::GetStatisticsRootTags() const {
 }
 
 FGameplayTagContainer UMETA_CommonData::GetStatisticsRootTagContainer() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 EMETA_RespectLvl UMETA_CommonData::GetRespectLvlRelatedToTurfsAmount(int32 inTurfsUnderControl) const {
@@ -205,15 +205,15 @@ EMETA_Heat UMETA_CommonData::GetInitialHeatState() const {
 }
 
 FGameplayTag UMETA_CommonData::GetID_SurvivalEvent() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FGameplayTag UMETA_CommonData::GetID_SelfReturnEvent() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FGameplayTag UMETA_CommonData::GetID_DeathEvent() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 int32 UMETA_CommonData::GetHowManyDaysGenericHeistersStayingInPoolForFuneral() const {
@@ -237,7 +237,7 @@ FMETA_HeatHeistsData UMETA_CommonData::GetHeatHeistsData() {
 }
 
 FGameplayTagContainer UMETA_CommonData::GetGoodTraits() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 FMETA_GangTradeInfo UMETA_CommonData::GetGangTradeInfo(EMETA_TradeVendor inTradeVendor, bool& bSuccess) const {
@@ -253,7 +253,7 @@ FMETA_DetectivesInvestigationConfig UMETA_CommonData::GetDetectivesInvestigation
 }
 
 FGameplayTag UMETA_CommonData::GetDetectiveObjectivePreset() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FMETA_DetectiveChancesToAppear UMETA_CommonData::GetDetectiveChancesToAppear() {
@@ -347,7 +347,7 @@ void UMETA_CommonData::GetBossLoadout(UClass*& outPrimaryWeapon, UClass*& outSec
 }
 
 FGameplayTagContainer UMETA_CommonData::GetBadTraits() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 FMETA_Interval UMETA_CommonData::GetAmountOfUnseenItemsToBeAddedForPurchase() const {
@@ -379,7 +379,7 @@ EMETA_AmbushType UMETA_CommonData::GetAmbushTypeByFPSMissionTag(FGameplayTag inM
 }
 
 FGameplayTag UMETA_CommonData::GetAmbushTagByType(EMETA_AmbushType inType) const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FMETA_AmbushConfig UMETA_CommonData::GetAmbushConfig() {

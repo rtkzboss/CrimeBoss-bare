@@ -4,7 +4,7 @@ UIGS_WeaponHelpers::UIGS_WeaponHelpers() {
 }
 
 FGameplayTag UIGS_WeaponHelpers::GetWeaponFamilyTag(const FGameplayTag& inTag) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TArray<FGameplayTag> UIGS_WeaponHelpers::GetAllWeaponSkinsFromFamilyTag(UObject* inWCO, const FGameplayTag& inTag) {

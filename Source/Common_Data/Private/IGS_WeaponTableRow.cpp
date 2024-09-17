@@ -7,8 +7,7 @@
 #include "EIGS_WieldableClass.h"
 
 FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    (*this).TagID = FGameplayTag();
     (*this).ID = nullptr;
     (*this).ClassDataOverride = nullptr;
     (*this).Attack.ProjectileClass = nullptr;
@@ -75,8 +74,8 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).WieldableData.HolsterTimeInSeconds = 5.000000000e-01f;
     (*this).WieldableData.WieldingMovementSpeedMultiplier = 1.000000000e+00f;
     (*this).WieldableData.Class = EIGS_WieldableClass::C_Generic;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.ClassTag, 0)) = TEXT("Item.Wieldable");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.WieldingOffence, 0)) = TEXT("Offence.Player.Wielding.Weapon");
+    (*this).WieldableData.ClassTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable"));
+    (*this).WieldableData.WieldingOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Player.Wielding.Weapon"));
     (*this).WieldableData.DefaultSkin = FSoftObjectPath();
     (*this).WieldableData.ItemType = EIGS_ItemType::Item_Weapon;
     (*this).WieldableData.Name = FText::FromString(TEXT("None"));
@@ -89,11 +88,8 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).WieldableData.HitImpactID = nullptr;
     (*this).WieldableData.HitImpactMass = 1.000000000e+00f;
     (*this).WieldableData.Quality = EMETA_ItemQuality::MinGenerate;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).WieldableData.ItemOffence, 0)) = TEXT("Offence.Actor.Item.Weapon");
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).WieldableData.GrantedTags, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).WieldableData.GrantedTags, 0)) = {};
+    (*this).WieldableData.ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Weapon"));
+    (*this).WieldableData.GrantedTags = FGameplayTagContainer();
     (*this).WieldableData.GrantedAbilities = {};
     (*this).WieldableData.AppliedEffects = {};
     (*this).WieldableData.ItemPropertyFlags = 1;

@@ -20,7 +20,6 @@ UIGS_AISecondaryWeaponDef::UIGS_AISecondaryWeaponDef() {
     (*this).Weapon.AfterFireCooldown.Max = 2.000000000e+00f;
     (*this).Weapon.AfterFireCooldownCover.Min = 1.500000000e+00f;
     (*this).Weapon.AfterFireCooldownCover.Max = 3.000000000e+00f;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Weapon.WeaponTag, 0)) = TEXT("Item.Wieldable.Weapon.SecondaryWeapon");
+    (*this).Weapon.WeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon.SecondaryWeapon"));
 }
 

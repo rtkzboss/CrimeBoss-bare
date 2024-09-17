@@ -3,8 +3,7 @@
 
 FIGS_LootCollectionTableRow::FIGS_LootCollectionTableRow() {
     (*this).ID = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Data.PlacementType, 0)) = TEXT("Loot.None");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Data.LootCategory, 0)) = TEXT("Loot");
+    (*this).Data.PlacementType = FGameplayTag::RequestGameplayTag(TEXT("Loot.None"));
+    (*this).Data.LootCategory = FGameplayTag::RequestGameplayTag(TEXT("Loot"));
     (*this).Data.LootCollection = FSoftObjectPath();
 }

@@ -10,14 +10,10 @@ FMETA_MoneyMakingGoalTableRow::FMETA_MoneyMakingGoalTableRow() {
     (*this).LockRespect = EMETA_RespectLvl::Low;
     (*this).InstigatorPartner = EMETA_Partner::Secretary;
     (*this).TaskTitle = FText::GetEmpty();
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).LootType, 0)) = NAME_None;
+    (*this).LootType = FGameplayTag();
     (*this).MonetaryValue.Min = 0;
     (*this).MonetaryValue.Max = 0;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionTypeTags, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).MissionTypeTags, 0)) = {};
+    (*this).MissionTypeTags = FGameplayTagContainer();
     (*this).EnemyGangIDs = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).EntitlementTag, 0)) = NAME_None;
+    (*this).EntitlementTag = FGameplayTag();
 }

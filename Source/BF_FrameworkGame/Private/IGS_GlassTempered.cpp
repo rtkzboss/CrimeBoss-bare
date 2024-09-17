@@ -1,5 +1,4 @@
 #include "IGS_GlassTempered.h"
-#include "Components/ActorComponent.h"
 #include "PhysicsEngine/BodyInstance.h"
 #include "Engine/EngineTypes.h"
 #include "Components/PrimitiveComponent.h"
@@ -46,8 +45,7 @@ UIGS_GlassTempered::UIGS_GlassTempered(const FObjectInitializer& ObjectInitializ
     gen10.Response = ECR_Block;
     auto gen11 = TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseArray");
     (*gen11->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = {MoveTemp(gen6), MoveTemp(gen7), MoveTemp(gen8), MoveTemp(gen9), MoveTemp(gen10)};
-    auto gen12 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen12)->SetPropertyValue(&(*gen12->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_GlassTempered::UpdateRenderTarget() {

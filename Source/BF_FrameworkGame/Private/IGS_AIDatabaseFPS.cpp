@@ -21,8 +21,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier1.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier1.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Default.Enabled = true;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier1.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier1.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier1.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier1.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -38,7 +37,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier1.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).DollarDragon.Tiers.Tier1.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).DollarDragon.Tiers.Tier1.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier1.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -54,7 +53,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier1.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier1.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier1.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).DollarDragon.Tiers.Tier1.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).DollarDragon.Tiers.Tier1.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier1.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -70,7 +69,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier1.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).DollarDragon.Tiers.Tier1.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).DollarDragon.Tiers.Tier1.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier1.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -86,7 +85,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier1.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier1.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier1.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).DollarDragon.Tiers.Tier1.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).DollarDragon.Tiers.Tier1.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier1.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -102,7 +101,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier1.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier1.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier1.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier1.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -118,7 +117,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier1.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier1.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier1.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier2.Variation = EIGS_GangsterVariationType::US_Sicarios;
     (*this).DollarDragon.Tiers.Tier2.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier2.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -135,7 +134,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier2.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier2.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier2.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier2.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier2.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier2.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -151,7 +150,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier2.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).DollarDragon.Tiers.Tier2.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).DollarDragon.Tiers.Tier2.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier2.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -167,7 +166,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier2.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier2.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier2.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).DollarDragon.Tiers.Tier2.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).DollarDragon.Tiers.Tier2.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier2.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -183,7 +182,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier2.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).DollarDragon.Tiers.Tier2.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).DollarDragon.Tiers.Tier2.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier2.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -199,7 +198,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier2.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier2.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier2.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).DollarDragon.Tiers.Tier2.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).DollarDragon.Tiers.Tier2.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier2.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -215,7 +214,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier2.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier2.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier2.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier2.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -231,7 +230,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier2.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier2.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier2.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier3.Variation = EIGS_GangsterVariationType::US_Sicarios;
     (*this).DollarDragon.Tiers.Tier3.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier3.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -248,7 +247,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier3.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier3.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier3.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier3.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier3.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier3.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -264,7 +263,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier3.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).DollarDragon.Tiers.Tier3.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).DollarDragon.Tiers.Tier3.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier3.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -280,7 +279,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier3.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier3.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier3.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).DollarDragon.Tiers.Tier3.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).DollarDragon.Tiers.Tier3.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier3.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -296,7 +295,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier3.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).DollarDragon.Tiers.Tier3.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).DollarDragon.Tiers.Tier3.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier3.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -312,7 +311,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier3.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier3.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier3.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).DollarDragon.Tiers.Tier3.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).DollarDragon.Tiers.Tier3.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier3.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -328,7 +327,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier3.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier3.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Tier3.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Tier3.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -344,7 +343,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Tier3.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Tier3.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Tier3.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Special.Variation = EIGS_GangsterVariationType::US_Sicarios;
     (*this).DollarDragon.Tiers.Special.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Special.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -361,7 +360,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Special.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Special.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Special.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Special.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Special.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Special.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -377,7 +376,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Special.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Special.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Special.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).DollarDragon.Tiers.Special.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).DollarDragon.Tiers.Special.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Special.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -393,7 +392,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Special.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Special.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Special.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).DollarDragon.Tiers.Special.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).DollarDragon.Tiers.Special.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Special.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -409,7 +408,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Special.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Special.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Special.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).DollarDragon.Tiers.Special.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).DollarDragon.Tiers.Special.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Special.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -425,7 +424,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Special.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Special.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Special.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).DollarDragon.Tiers.Special.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).DollarDragon.Tiers.Special.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Special.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -441,7 +440,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Special.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Special.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Special.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Special.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Tiers.Special.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).DollarDragon.Tiers.Special.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -457,7 +456,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).DollarDragon.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).DollarDragon.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).DollarDragon.Tiers.Special.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DollarDragon.Tiers.Special.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).DollarDragon.Tiers.Special.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).DollarDragon.Variation = EIGS_GangsterVariationType::US_Sicarios;
     (*this).DollarDragon.TeamSide = EIGS_TeamSideEnum::TS_Gangsters;
     (*this).Hielo.Tiers.Tier1.Variation = EIGS_GangsterVariationType::US_Hielo;
@@ -476,7 +475,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier1.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier1.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier1.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier1.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier1.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier1.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -492,7 +491,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier1.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Hielo.Tiers.Tier1.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Hielo.Tiers.Tier1.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier1.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -508,7 +507,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier1.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier1.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier1.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Hielo.Tiers.Tier1.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Hielo.Tiers.Tier1.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier1.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -524,7 +523,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier1.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Hielo.Tiers.Tier1.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Hielo.Tiers.Tier1.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier1.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -540,7 +539,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier1.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier1.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier1.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Hielo.Tiers.Tier1.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Hielo.Tiers.Tier1.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier1.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -556,7 +555,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier1.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier1.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier1.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier1.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -572,7 +571,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier1.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier1.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier1.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier2.Variation = EIGS_GangsterVariationType::US_Hielo;
     (*this).Hielo.Tiers.Tier2.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier2.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -589,7 +588,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier2.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier2.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier2.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier2.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier2.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier2.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -605,7 +604,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier2.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Hielo.Tiers.Tier2.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Hielo.Tiers.Tier2.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier2.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -621,7 +620,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier2.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier2.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier2.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Hielo.Tiers.Tier2.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Hielo.Tiers.Tier2.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier2.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -637,7 +636,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier2.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Hielo.Tiers.Tier2.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Hielo.Tiers.Tier2.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier2.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -653,7 +652,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier2.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier2.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier2.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Hielo.Tiers.Tier2.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Hielo.Tiers.Tier2.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier2.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -669,7 +668,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier2.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier2.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier2.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier2.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -685,7 +684,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier2.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier2.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier2.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier3.Variation = EIGS_GangsterVariationType::US_Hielo;
     (*this).Hielo.Tiers.Tier3.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier3.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -702,7 +701,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier3.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier3.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier3.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier3.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier3.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier3.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -718,7 +717,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier3.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Hielo.Tiers.Tier3.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Hielo.Tiers.Tier3.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier3.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -734,7 +733,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier3.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier3.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier3.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Hielo.Tiers.Tier3.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Hielo.Tiers.Tier3.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier3.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -750,7 +749,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier3.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Hielo.Tiers.Tier3.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Hielo.Tiers.Tier3.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier3.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -766,7 +765,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier3.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier3.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier3.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Hielo.Tiers.Tier3.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Hielo.Tiers.Tier3.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier3.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -782,7 +781,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier3.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier3.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Tier3.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Tier3.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -798,7 +797,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Tier3.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Tier3.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Tier3.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Special.Variation = EIGS_GangsterVariationType::US_Hielo;
     (*this).Hielo.Tiers.Special.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Special.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -815,7 +814,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Special.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Special.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Special.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Special.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Special.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Special.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -831,7 +830,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Special.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Special.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Special.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Hielo.Tiers.Special.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Hielo.Tiers.Special.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Special.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -847,7 +846,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Special.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Special.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Special.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Hielo.Tiers.Special.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Hielo.Tiers.Special.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Special.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -863,7 +862,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Special.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Special.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Special.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Hielo.Tiers.Special.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Hielo.Tiers.Special.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Special.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -879,7 +878,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Special.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Special.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Special.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Hielo.Tiers.Special.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Hielo.Tiers.Special.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Special.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -895,7 +894,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Special.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Special.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Special.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Special.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Tiers.Special.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Hielo.Tiers.Special.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -911,7 +910,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Hielo.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Hielo.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Hielo.Tiers.Special.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Hielo.Tiers.Special.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Hielo.Tiers.Special.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Hielo.Variation = EIGS_GangsterVariationType::US_Hielo;
     (*this).Hielo.TeamSide = EIGS_TeamSideEnum::TS_Gangsters;
     (*this).KarolKhan.Tiers.Tier1.Variation = EIGS_GangsterVariationType::US_Riders;
@@ -930,7 +929,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier1.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier1.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier1.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier1.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier1.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier1.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -946,7 +945,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier1.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).KarolKhan.Tiers.Tier1.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).KarolKhan.Tiers.Tier1.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier1.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -962,7 +961,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier1.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier1.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier1.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).KarolKhan.Tiers.Tier1.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).KarolKhan.Tiers.Tier1.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier1.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -978,7 +977,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier1.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).KarolKhan.Tiers.Tier1.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).KarolKhan.Tiers.Tier1.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier1.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -994,7 +993,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier1.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier1.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier1.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).KarolKhan.Tiers.Tier1.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).KarolKhan.Tiers.Tier1.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier1.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1010,7 +1009,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier1.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier1.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier1.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier1.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1026,7 +1025,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier1.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier1.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier1.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier2.Variation = EIGS_GangsterVariationType::US_Riders;
     (*this).KarolKhan.Tiers.Tier2.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier2.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -1043,7 +1042,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier2.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier2.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier2.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier2.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier2.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier2.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1059,7 +1058,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier2.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).KarolKhan.Tiers.Tier2.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).KarolKhan.Tiers.Tier2.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier2.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1075,7 +1074,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier2.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier2.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier2.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).KarolKhan.Tiers.Tier2.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).KarolKhan.Tiers.Tier2.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier2.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1091,7 +1090,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier2.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).KarolKhan.Tiers.Tier2.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).KarolKhan.Tiers.Tier2.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier2.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1107,7 +1106,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier2.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier2.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier2.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).KarolKhan.Tiers.Tier2.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).KarolKhan.Tiers.Tier2.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier2.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1123,7 +1122,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier2.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier2.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier2.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier2.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1139,7 +1138,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier2.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier2.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier2.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier3.Variation = EIGS_GangsterVariationType::US_Riders;
     (*this).KarolKhan.Tiers.Tier3.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier3.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -1156,7 +1155,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier3.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier3.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier3.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier3.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier3.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier3.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1172,7 +1171,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier3.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).KarolKhan.Tiers.Tier3.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).KarolKhan.Tiers.Tier3.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier3.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1188,7 +1187,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier3.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier3.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier3.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).KarolKhan.Tiers.Tier3.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).KarolKhan.Tiers.Tier3.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier3.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1204,7 +1203,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier3.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).KarolKhan.Tiers.Tier3.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).KarolKhan.Tiers.Tier3.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier3.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1220,7 +1219,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier3.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier3.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier3.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).KarolKhan.Tiers.Tier3.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).KarolKhan.Tiers.Tier3.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier3.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1236,7 +1235,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier3.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier3.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Tier3.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Tier3.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1252,7 +1251,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Tier3.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Tier3.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Tier3.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Special.Variation = EIGS_GangsterVariationType::US_Riders;
     (*this).KarolKhan.Tiers.Special.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Special.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -1269,7 +1268,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Special.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Special.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Special.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Special.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Special.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Special.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1285,7 +1284,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Special.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Special.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Special.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).KarolKhan.Tiers.Special.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).KarolKhan.Tiers.Special.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Special.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1301,7 +1300,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Special.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Special.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Special.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).KarolKhan.Tiers.Special.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).KarolKhan.Tiers.Special.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Special.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1317,7 +1316,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Special.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Special.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Special.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).KarolKhan.Tiers.Special.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).KarolKhan.Tiers.Special.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Special.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1333,7 +1332,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Special.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Special.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Special.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).KarolKhan.Tiers.Special.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).KarolKhan.Tiers.Special.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Special.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1349,7 +1348,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Special.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Special.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Special.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Special.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Tiers.Special.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).KarolKhan.Tiers.Special.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1365,7 +1364,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).KarolKhan.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).KarolKhan.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).KarolKhan.Tiers.Special.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).KarolKhan.Tiers.Special.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).KarolKhan.Tiers.Special.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).KarolKhan.Variation = EIGS_GangsterVariationType::US_Riders;
     (*this).KarolKhan.TeamSide = EIGS_TeamSideEnum::TS_Gangsters;
     (*this).Cagnali.Tiers.Tier1.Variation = EIGS_GangsterVariationType::US_Scudos;
@@ -1384,7 +1383,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier1.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier1.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier1.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier1.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier1.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier1.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1400,7 +1399,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier1.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier1.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Cagnali.Tiers.Tier1.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Cagnali.Tiers.Tier1.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier1.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1416,7 +1415,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier1.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier1.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier1.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Cagnali.Tiers.Tier1.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Cagnali.Tiers.Tier1.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier1.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1432,7 +1431,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier1.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier1.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Cagnali.Tiers.Tier1.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Cagnali.Tiers.Tier1.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier1.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1448,7 +1447,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier1.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier1.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier1.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Cagnali.Tiers.Tier1.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Cagnali.Tiers.Tier1.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier1.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1464,7 +1463,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier1.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier1.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier1.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier1.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier1.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1480,7 +1479,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier1.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier1.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier1.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier1.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier2.Variation = EIGS_GangsterVariationType::US_Scudos;
     (*this).Cagnali.Tiers.Tier2.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier2.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -1497,7 +1496,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier2.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier2.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier2.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier2.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier2.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier2.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1513,7 +1512,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier2.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier2.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Cagnali.Tiers.Tier2.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Cagnali.Tiers.Tier2.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier2.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1529,7 +1528,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier2.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier2.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier2.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Cagnali.Tiers.Tier2.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Cagnali.Tiers.Tier2.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier2.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1545,7 +1544,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier2.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier2.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Cagnali.Tiers.Tier2.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Cagnali.Tiers.Tier2.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier2.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1561,7 +1560,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier2.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier2.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier2.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Cagnali.Tiers.Tier2.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Cagnali.Tiers.Tier2.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier2.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1577,7 +1576,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier2.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier2.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier2.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier2.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier2.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1593,7 +1592,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier2.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier2.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier2.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier2.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier3.Variation = EIGS_GangsterVariationType::US_Scudos;
     (*this).Cagnali.Tiers.Tier3.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier3.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -1610,7 +1609,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier3.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier3.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier3.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier3.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier3.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier3.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1626,7 +1625,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier3.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier3.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Cagnali.Tiers.Tier3.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Cagnali.Tiers.Tier3.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier3.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1642,7 +1641,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier3.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier3.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier3.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Cagnali.Tiers.Tier3.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Cagnali.Tiers.Tier3.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier3.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1658,7 +1657,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier3.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier3.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Cagnali.Tiers.Tier3.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Cagnali.Tiers.Tier3.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier3.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1674,7 +1673,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier3.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier3.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier3.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Cagnali.Tiers.Tier3.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Cagnali.Tiers.Tier3.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier3.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1690,7 +1689,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier3.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier3.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier3.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Tier3.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Tier3.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1706,7 +1705,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Tier3.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Tier3.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Tier3.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Tier3.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Special.Variation = EIGS_GangsterVariationType::US_Scudos;
     (*this).Cagnali.Tiers.Special.Default.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Special.Default.Stats.HP.Multiplier = 1.000000000e+00f;
@@ -1723,7 +1722,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Special.Default.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Special.Default.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Default.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Special.Default.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Special.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Special.Sniper.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Special.Sniper.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Sniper.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1739,7 +1738,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Special.Sniper.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Special.Sniper.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Sniper.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Special.Sniper.Specialization, 0)) = TEXT("AI.Specialization.Sniper");
+    (*this).Cagnali.Tiers.Special.Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
     (*this).Cagnali.Tiers.Special.Shield.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Special.Shield.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Shield.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1755,7 +1754,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Special.Shield.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Special.Shield.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Shield.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Special.Shield.Specialization, 0)) = TEXT("AI.Specialization.Special.Shield");
+    (*this).Cagnali.Tiers.Special.Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
     (*this).Cagnali.Tiers.Special.Heavy.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Special.Heavy.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Heavy.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1771,7 +1770,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Special.Heavy.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Special.Heavy.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Heavy.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Special.Heavy.Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Cagnali.Tiers.Special.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
     (*this).Cagnali.Tiers.Special.Detective.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Special.Detective.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Detective.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1787,7 +1786,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Special.Detective.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Special.Detective.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.Detective.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Special.Detective.Specialization, 0)) = TEXT("AI.Specialization.Special.Detective");
+    (*this).Cagnali.Tiers.Special.Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
     (*this).Cagnali.Tiers.Special.TurfWar.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Special.TurfWar.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.TurfWar.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1803,7 +1802,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Special.TurfWar.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Special.TurfWar.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.TurfWar.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Special.TurfWar.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Special.TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Tiers.Special.HeavyMelee.Stats.HP.Value = 2.800000000e+02f;
     (*this).Cagnali.Tiers.Special.HeavyMelee.Stats.HP.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.HeavyMelee.Stats.WeaponDamage.Value = 1.000000000e+00f;
@@ -1819,7 +1818,7 @@ UIGS_AIDatabaseFPS::UIGS_AIDatabaseFPS() {
     (*this).Cagnali.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Value = 5.000000000e-01f;
     (*this).Cagnali.Tiers.Special.HeavyMelee.Stats.ReactionIntensity.Multiplier = 1.000000000e+00f;
     (*this).Cagnali.Tiers.Special.HeavyMelee.Enabled = true;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Cagnali.Tiers.Special.HeavyMelee.Specialization, 0)) = TEXT("AI.Specialization.Default");
+    (*this).Cagnali.Tiers.Special.HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
     (*this).Cagnali.Variation = EIGS_GangsterVariationType::US_Scudos;
     (*this).Cagnali.TeamSide = EIGS_TeamSideEnum::TS_Gangsters;
 }

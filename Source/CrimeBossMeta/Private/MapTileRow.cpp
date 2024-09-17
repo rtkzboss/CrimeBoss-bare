@@ -1,8 +1,7 @@
 #include "MapTileRow.h"
 
 FMapTileRow::FMapTileRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).Name = FText::GetEmpty();
     (*this).Neighbours = {};
     (*this).MinWealth = EMETA_TileWealth::Poor;

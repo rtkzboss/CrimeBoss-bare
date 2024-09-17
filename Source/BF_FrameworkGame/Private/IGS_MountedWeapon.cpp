@@ -1,7 +1,6 @@
 #include "IGS_MountedWeapon.h"
 #include "AkComponent.h"
 #include "SkeletalMeshComponentBudgeted.h"
-#include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
 #include "Curves/CurveFloat.h"
 #include "Engine/EngineTypes.h"
@@ -49,13 +48,12 @@ AIGS_MountedWeapon::AIGS_MountedWeapon(const FObjectInitializer& ObjectInitializ
     (*this).WeaponModsArray = {gen7, gen8, gen9, gen10, gen11, gen12, gen13, gen14};
     (*this).CanReloadInADS = false;
     (*this).bReplicates = true;
-    auto gen15 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen15->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
-    auto gen16 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("WieldableMesh")));
-    if (gen) gen->SetupAttachment(gen16);
-    if (gen2) gen2->SetupAttachment(gen16);
-    if (gen3) gen3->SetupAttachment(gen16);
+    auto gen15 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("WieldableMesh")));
+    if (gen) gen->SetupAttachment(gen15);
+    if (gen2) gen2->SetupAttachment(gen15);
+    if (gen3) gen3->SetupAttachment(gen15);
 }
 
 

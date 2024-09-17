@@ -7,6 +7,5 @@ FIGS_AIGangsterHeavyTierDef::FIGS_AIGangsterHeavyTierDef() {
     (*this).SpecStats.SpreadDuration = 4.000000000e+00f;
     (*this).SpecStats.TimeTillOverheat.Min = 1.300000000e+01f;
     (*this).SpecStats.TimeTillOverheat.Max = 1.500000000e+01f;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Specialization, 0)) = TEXT("AI.Specialization.Special.Heavy");
+    (*this).Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
 }

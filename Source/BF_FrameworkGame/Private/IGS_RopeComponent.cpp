@@ -1,5 +1,4 @@
 #include "IGS_RopeComponent.h"
-#include "Components/ActorComponent.h"
 #include "PhysicsEngine/BodyInstance.h"
 #include "Engine/EngineTypes.h"
 #include "Net/UnrealNetwork.h"
@@ -107,8 +106,7 @@ UIGS_RopeComponent::UIGS_RopeComponent(const FObjectInitializer& ObjectInitializ
     (*gen21->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen3->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = {MoveTemp(gen5), MoveTemp(gen6), MoveTemp(gen7), MoveTemp(gen8), MoveTemp(gen9), MoveTemp(gen10), MoveTemp(gen11), MoveTemp(gen12), MoveTemp(gen13), MoveTemp(gen14), MoveTemp(gen15), MoveTemp(gen16), MoveTemp(gen17), MoveTemp(gen18), MoveTemp(gen19), MoveTemp(gen20)};
     (*this).bHiddenInGame = true;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    auto gen22 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen22)->SetPropertyValue(&(*gen22->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
     (*this).bAutoActivate = true;
 }
 

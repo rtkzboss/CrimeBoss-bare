@@ -4,11 +4,11 @@ UIGS_MultiplayerJobsDatabase::UIGS_MultiplayerJobsDatabase() {
 }
 
 FGameplayTagContainer UIGS_MultiplayerJobsDatabase::GetScenariosForJob(UObject* inWCO, const FGameplayTag inJobTag) {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 FGameplayTagContainer UIGS_MultiplayerJobsDatabase::GetRandomScenarioForQJLobby(UObject* inWCO) {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 FIGS_MultiplayerJobCategoryRow UIGS_MultiplayerJobsDatabase::GetMultiplayerJobCategory(UObject* inWCO, const FGameplayTag inMultiplayerJobCategoryID, bool& outSucceeded) {

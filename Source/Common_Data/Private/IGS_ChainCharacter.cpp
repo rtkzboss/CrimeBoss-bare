@@ -1,8 +1,7 @@
 #include "IGS_ChainCharacter.h"
 
 FIGS_ChainCharacter::FIGS_ChainCharacter() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).CharacterTagID, 0)) = NAME_None;
+    (*this).CharacterTagID = FGameplayTag();
     (*this).CharacterID = EIGS_CharacterID::Char_Unknown;
     (*this).CharacterLoadout = nullptr;
     (*this).bOverrideState = false;

@@ -7,7 +7,7 @@ void UIGS_UnlockMethodComponent::InitUnlockMethodComponent(FGameplayTagContainer
 }
 
 FGameplayTagContainer UIGS_UnlockMethodComponent::GetUnlockMethods() {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 int32 UIGS_UnlockMethodComponent::GetUnlockMethodCount() {

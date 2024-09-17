@@ -2,17 +2,13 @@
 #include "GameplayTagContainer.h"
 
 FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).RootTagID, 0)) = NAME_None;
+    (*this).RootTagID = FGameplayTag();
     (*this).SkinName = FText::GetEmpty();
     (*this).SkinImage = FSoftObjectPath();
     (*this).ID = FSoftObjectPath();
     (*this).SkinQuality = EMETA_ItemQuality::None;
     (*this).UnlockProperties.IsUnlockable = false;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
+    (*this).UnlockProperties.RequiredTags = FGameplayTagContainer();
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
     (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();

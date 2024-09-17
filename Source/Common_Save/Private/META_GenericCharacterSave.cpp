@@ -1,8 +1,7 @@
 #include "META_GenericCharacterSave.h"
 
 FMETA_GenericCharacterSave::FMETA_GenericCharacterSave() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    (*this).TagID = FGameplayTag();
     (*this).ItemPrice = 0;
     (*this).RelativeItemPrice = 0.000000000e+00f;
     (*this).ArrayIndex = 0;
@@ -25,10 +24,7 @@ FMETA_GenericCharacterSave::FMETA_GenericCharacterSave() {
     (*this).JobsCanBeCompletedPerDay = 1;
     (*this).State = EMETA_CharacterState::None;
     (*this).Mood = EMETA_CharacterMood::Neutral;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits, 0)) = {};
+    (*this).Traits = FGameplayTagContainer();
     (*this).Perks = {};
     (*this).ChangedHeisterAttributes = {};
     (*this).Variables = {};
@@ -38,10 +34,10 @@ FMETA_GenericCharacterSave::FMETA_GenericCharacterSave() {
     (*this).Loadout.PrimaryWeaponSaveData.AdditionalPercentageOfWeaponPrice = 0;
     (*this).Loadout.PrimaryWeaponSaveData.SuccessfulMissions = 0;
     (*this).Loadout.PrimaryWeaponSaveData.DaysInShop = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSaveData.WeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.PrimaryWeaponSaveData.WeaponSkin = FGameplayTag();
     (*this).Loadout.PrimaryWeaponSaveData.TargetWeaponsForUpgrade = {};
     (*this).Loadout.PrimaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.PrimaryWeaponSaveData.itemTag, 0)) = NAME_None;
+    (*this).Loadout.PrimaryWeaponSaveData.itemTag = FGameplayTag();
     (*this).Loadout.PrimaryWeaponSaveData.Price = 0;
     (*this).Loadout.PrimaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).Loadout.PrimaryWeaponSaveData.IsUnseenInShop = false;
@@ -51,21 +47,21 @@ FMETA_GenericCharacterSave::FMETA_GenericCharacterSave() {
     (*this).Loadout.SecondaryWeaponSaveData.AdditionalPercentageOfWeaponPrice = 0;
     (*this).Loadout.SecondaryWeaponSaveData.SuccessfulMissions = 0;
     (*this).Loadout.SecondaryWeaponSaveData.DaysInShop = 0;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSaveData.WeaponSkin, 0)) = NAME_None;
+    (*this).Loadout.SecondaryWeaponSaveData.WeaponSkin = FGameplayTag();
     (*this).Loadout.SecondaryWeaponSaveData.TargetWeaponsForUpgrade = {};
     (*this).Loadout.SecondaryWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SecondaryWeaponSaveData.itemTag, 0)) = NAME_None;
+    (*this).Loadout.SecondaryWeaponSaveData.itemTag = FGameplayTag();
     (*this).Loadout.SecondaryWeaponSaveData.Price = 0;
     (*this).Loadout.SecondaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).Loadout.SecondaryWeaponSaveData.IsUnseenInShop = false;
     (*this).Loadout.SecondaryPersonalWeapons = {};
     (*this).Loadout.Equipment = {};
     (*this).Loadout.SelectedEquipment.EquipmentID = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.SelectedEquipment.itemTag, 0)) = NAME_None;
+    (*this).Loadout.SelectedEquipment.itemTag = FGameplayTag();
     (*this).Loadout.SelectedEquipment.Price = 0;
     (*this).Loadout.SelectedEquipment.RelativePrice = 0.000000000e+00f;
     (*this).Loadout.SelectedEquipment.IsUnseenInShop = false;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Loadout.CharacterSkin, 0)) = NAME_None;
+    (*this).Loadout.CharacterSkin = FGameplayTag();
     (*this).MissionsWasPlayed = 0;
     (*this).bTemporary = false;
     (*this).SerializedMutableProfile = {};

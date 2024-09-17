@@ -3,8 +3,7 @@
 UIGS_LockComponent::UIGS_LockComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).KeyRoomType = EIGS_RoomType::Street;
     (*this).UniqueKeyID = -1;
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_LockComponent::SetLockState(bool inLocked) {

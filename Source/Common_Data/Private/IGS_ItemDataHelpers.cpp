@@ -145,7 +145,7 @@ TSubclassOf<UIGS_EquipmentInventoryObject> UIGS_ItemDataHelpers::GetEquipmentFor
 }
 
 FGameplayTag UIGS_ItemDataHelpers::GetEntitlementTagFromContainer(const FGameplayTagContainer& inTagContainer) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FIGS_CommonItemData UIGS_ItemDataHelpers::GetCommonDataForClassBP(const UObject* inWCO, const TSubclassOf<UIGS_InventoryObjectFramework>& inItemClass) {

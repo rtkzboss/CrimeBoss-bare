@@ -1,8 +1,7 @@
 #include "IGS_TextChatManager.h"
 
 UIGS_TextChatManager::UIGS_TextChatManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_TextChatManager::Server_SendTextChatMessageTextOnly_Implementation(const FText& inMessage) {

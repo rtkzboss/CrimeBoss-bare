@@ -3,8 +3,7 @@
 #include "EIGS_DialogueHeisterCharacter.h"
 
 FIGS_CharacterSkinTableRow::FIGS_CharacterSkinTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).CharacterClasses.bIsMale = true;
     (*this).CharacterClasses.bIsMutable = false;
     (*this).CharacterClasses.MutableProfile = FSoftObjectPath();
@@ -19,10 +18,7 @@ FIGS_CharacterSkinTableRow::FIGS_CharacterSkinTableRow() {
     (*this).CharacterClasses.DialogueID = EIGS_DialogueHeisterCharacter::None;
     (*this).Quality = EMETA_ItemQuality::MinGenerate;
     (*this).UnlockProperties.IsUnlockable = false;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
+    (*this).UnlockProperties.RequiredTags = FGameplayTagContainer();
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
     (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();

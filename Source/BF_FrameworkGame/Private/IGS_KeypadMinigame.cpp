@@ -4,8 +4,7 @@
 AIGS_KeypadMinigame::AIGS_KeypadMinigame(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).SolutionCode = TEXT("0451");
     (*this).bReplicates = true;
-    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
 }
 
 void AIGS_KeypadMinigame::WinKeypad() {

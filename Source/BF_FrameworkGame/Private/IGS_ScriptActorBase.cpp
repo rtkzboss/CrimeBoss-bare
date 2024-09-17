@@ -3,8 +3,7 @@
 
 AIGS_ScriptActorBase::AIGS_ScriptActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bReplicates = true;
-    auto gen = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
 }
 

@@ -20,11 +20,11 @@ int32 UMETA_PlotlineAssetsDatabase::GetScore(FGameplayTag inAssetID) const {
 }
 
 FGameplayTag UMETA_PlotlineAssetsDatabase::GetPreviousVersion(FGameplayTag inAssetID) const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FGameplayTag UMETA_PlotlineAssetsDatabase::GetNextTier(FGameplayTag inAssetID) const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FText UMETA_PlotlineAssetsDatabase::GetName(FGameplayTag inAssetID) const {

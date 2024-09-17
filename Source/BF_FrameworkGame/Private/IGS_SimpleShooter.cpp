@@ -22,8 +22,7 @@ UIGS_SimpleShooter::UIGS_SimpleShooter(const FObjectInitializer& ObjectInitializ
     (*this).AdsAkRtpc = gen7.Object;
     (*this).TracerEffectChance = 1.000000000e+02f;
     (*this).TrailEffectChance = 1.000000000e+01f;
-    auto gen8 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen8)->SetPropertyValue(&(*gen8->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_SimpleShooter::StopAttack(const bool inForced) {

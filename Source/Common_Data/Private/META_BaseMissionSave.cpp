@@ -3,7 +3,6 @@
 
 FMETA_BaseMissionSave::FMETA_BaseMissionSave() {
     (*this).MissionID = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionOnTileInfo.OwningTileTag, 0)) = NAME_None;
+    (*this).MissionOnTileInfo.OwningTileTag = FGameplayTag();
     (*this).MissionOnTileInfo.TilePositionIndex = -1;
 }

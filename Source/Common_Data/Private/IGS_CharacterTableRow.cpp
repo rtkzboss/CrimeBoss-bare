@@ -3,8 +3,7 @@
 #include "EIGS_DialogueHeisterCharacter.h"
 
 FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).TagID, 0)) = NAME_None;
+    (*this).TagID = FGameplayTag();
     (*this).ID = EIGS_CharacterID::Char_Unknown;
     (*this).bIsGeneric = false;
     (*this).bUseInRandomPool = false;
@@ -34,27 +33,25 @@ FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     (*this).UniqueLeveledClasses.DialogueID = EIGS_DialogueHeisterCharacter::None;
     (*this).GenericVariants = {};
     (*this).DefaultLoadout.PrimaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DefaultLoadout.PrimaryWeaponSkin, 0)) = NAME_None;
+    (*this).DefaultLoadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).DefaultLoadout.SecondaryWeapon = nullptr;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DefaultLoadout.SecondaryWeaponSkin, 0)) = NAME_None;
+    (*this).DefaultLoadout.SecondaryWeaponSkin = FGameplayTag();
     (*this).DefaultLoadout.Equipment = {};
     (*this).DefaultLoadout.Perks = {};
     (*this).DefaultLoadout.Ability1ChargesLeft = -1;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).DefaultLoadout.CharacterSkinID, 0)) = NAME_None;
+    (*this).DefaultLoadout.CharacterSkinID = FGameplayTag();
     (*this).Traits.MaxHealth = 960;
     (*this).Traits.ReviveCount = 3;
-    auto gen2 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TokenStreamVersion");
-    (*gen2->ContainerPtrToValuePtr<int32>(&(*this).Traits.AllowedWieldables, 0)) = 0;
-    FGameplayTag gen3;
-    (*gen->ContainerPtrToValuePtr<FName>(&gen3, 0)) = TEXT("Item.Wieldable");
-    auto gen4 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TagDictionary");
-    (*gen4->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits.AllowedWieldables, 0)) = {MoveTemp(gen3)};
-    auto gen5 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("QueryTokenStream");
-    (*gen5->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).Traits.AllowedWieldables, 0)) = {0, 1, 2, 1, 0};
-    auto gen6 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("UserDescription");
-    (*gen6->ContainerPtrToValuePtr<FString>(&(*this).Traits.AllowedWieldables, 0)) = TEXT("");
-    auto gen7 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("AutoDescription");
-    (*gen7->ContainerPtrToValuePtr<FString>(&(*this).Traits.AllowedWieldables, 0)) = TEXT("");
+    auto gen = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TokenStreamVersion");
+    (*gen->ContainerPtrToValuePtr<int32>(&(*this).Traits.AllowedWieldables, 0)) = 0;
+    auto gen2 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TagDictionary");
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits.AllowedWieldables, 0)) = {FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable"))};
+    auto gen3 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("QueryTokenStream");
+    (*gen3->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).Traits.AllowedWieldables, 0)) = {0, 1, 2, 1, 0};
+    auto gen4 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("UserDescription");
+    (*gen4->ContainerPtrToValuePtr<FString>(&(*this).Traits.AllowedWieldables, 0)) = TEXT("");
+    auto gen5 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("AutoDescription");
+    (*gen5->ContainerPtrToValuePtr<FString>(&(*this).Traits.AllowedWieldables, 0)) = TEXT("");
     (*this).CharacterName = FText::GetEmpty();
     (*this).Description = FText::GetEmpty();
     (*this).Class = nullptr;
@@ -65,10 +62,7 @@ FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     (*this).MetaData.Perks = {};
     (*this).Quality = EMETA_ItemQuality::MinGenerate;
     (*this).UnlockProperties.IsUnlockable = false;
-    auto gen8 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen8->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
-    auto gen9 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen9->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).UnlockProperties.RequiredTags, 0)) = {};
+    (*this).UnlockProperties.RequiredTags = FGameplayTagContainer();
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
     (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();

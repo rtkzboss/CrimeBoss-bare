@@ -6,8 +6,7 @@ FIGS_MissionResult::FIGS_MissionResult() {
     (*this).MissionID.B = 0;
     (*this).MissionID.C = 0;
     (*this).MissionID.D = 0;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).MissionTag, 0)) = NAME_None;
+    (*this).MissionTag = FGameplayTag();
     (*this).MissionSubtype = EMETA_FPSMissionSubtype::MoneyMaking;
     (*this).MissionResult = ECommonMissionResult::Res_UNKNOWN;
     (*this).bCleanExecution = false;

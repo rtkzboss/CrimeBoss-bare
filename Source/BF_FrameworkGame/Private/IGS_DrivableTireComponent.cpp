@@ -1,5 +1,4 @@
 #include "IGS_DrivableTireComponent.h"
-#include "Components/ActorComponent.h"
 #include "PhysicsEngine/BodyInstance.h"
 #include "Engine/EngineTypes.h"
 #include "Components/PrimitiveComponent.h"
@@ -63,8 +62,7 @@ UIGS_DrivableTireComponent::UIGS_DrivableTireComponent(const FObjectInitializer&
     auto gen16 = TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseArray");
     (*gen16->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen4->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = {MoveTemp(gen6), MoveTemp(gen7), MoveTemp(gen8), MoveTemp(gen9), MoveTemp(gen10), MoveTemp(gen11), MoveTemp(gen12), MoveTemp(gen13), MoveTemp(gen14), MoveTemp(gen15)};
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
-    auto gen17 = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen17)->SetPropertyValue(&(*gen17->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
     (*this).bCanEverAffectNavigation = false;
 }
 

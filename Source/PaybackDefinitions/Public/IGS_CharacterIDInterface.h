@@ -32,7 +32,7 @@ public:
     virtual int32 GetGenericVariant() const PURE_VIRTUAL(GetGenericVariant, return 0;);
 
     UFUNCTION(BlueprintCallable)
-    virtual FGameplayTag GetCharacterSkinID() const PURE_VIRTUAL(GetCharacterSkinID, return FGameplayTag{};);
+    virtual FGameplayTag GetCharacterSkinID() const PURE_VIRTUAL(GetCharacterSkinID, return FGameplayTag(););
 
     UFUNCTION(BlueprintCallable)
     virtual EIGS_CharacterID GetCharacterID() const PURE_VIRTUAL(GetCharacterID, return EIGS_CharacterID::Char_Gen_Start;);

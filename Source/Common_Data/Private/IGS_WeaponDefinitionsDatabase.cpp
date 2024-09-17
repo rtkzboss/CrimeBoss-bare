@@ -11,7 +11,7 @@ void UIGS_WeaponDefinitionsDatabase::ModAppendDataTable(UDataTable* inNewTable) 
 }
 
 FGameplayTag UIGS_WeaponDefinitionsDatabase::GetWiedableClassById(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inWeaponId) {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TSoftObjectPtr<UTexture2D> UIGS_WeaponDefinitionsDatabase::GetWeaponIcon(UObject* inWCO, TSubclassOf<UMETA_WeaponInventoryObject> inWeaponObject, TSoftObjectPtr<UDataAsset> inWeaponSkin) {

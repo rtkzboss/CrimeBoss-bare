@@ -32,7 +32,7 @@ int32 UMETA_TradeDealSell::GetLootAmount() {
 }
 
 FGameplayTag UMETA_TradeDealSell::GetLoot() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FMETA_TradeDealSellMissionRowInfo UMETA_TradeDealSell::GetInfo() const {

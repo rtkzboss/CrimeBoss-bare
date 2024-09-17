@@ -46,13 +46,10 @@ UIGS_CharacterWieldablesHolderComponent::UIGS_CharacterWieldablesHolderComponent
     gen6.IsPendingRemoval = false;
     (*this).WieldableSlots = {MoveTemp(gen), MoveTemp(gen2), MoveTemp(gen3), MoveTemp(gen4), MoveTemp(gen5), MoveTemp(gen6)};
     (*this).ReduceWeaponDamageForTeamSides = 1;
-    FGameplayTag gen7;
-    auto gen8 = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen8->ContainerPtrToValuePtr<FName>(&gen7, 0)) = TEXT("Item.Wieldable");
-    auto gen9 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TagDictionary");
-    (*gen9->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AllowedWieldables, 0)) = {MoveTemp(gen7)};
-    auto gen10 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("QueryTokenStream");
-    (*gen10->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).AllowedWieldables, 0)) = {0, 1, 2, 1, 0};
+    auto gen7 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TagDictionary");
+    (*gen7->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).AllowedWieldables, 0)) = {FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable"))};
+    auto gen8 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("QueryTokenStream");
+    (*gen8->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).AllowedWieldables, 0)) = {0, 1, 2, 1, 0};
 }
 
 bool UIGS_CharacterWieldablesHolderComponent::WieldItem(UIGS_WieldableInventoryObjectBase* inInventoryObject) {

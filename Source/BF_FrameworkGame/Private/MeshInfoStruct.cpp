@@ -1,4 +1,5 @@
 #include "MeshInfoStruct.h"
+#include "UObject/NoExportTypes.h"
 
 FMeshInfoStruct::FMeshInfoStruct() {
     (*this).MeshSpawnerComponent = FSoftObjectPath();

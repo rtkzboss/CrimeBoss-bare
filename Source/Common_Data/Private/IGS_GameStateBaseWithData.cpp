@@ -98,7 +98,7 @@ EIGS_MusicMissionState AIGS_GameStateBaseWithData::GetStartMusic() const {
 }
 
 FGameplayTagContainer AIGS_GameStateBaseWithData::GetSpecificLootTypes() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 FIGS_SpecialLoot AIGS_GameStateBaseWithData::GetSpecialLoot() const {
@@ -150,7 +150,7 @@ EIGS_HubScenarioType AIGS_GameStateBaseWithData::GetMissionType() const {
 }
 
 FGameplayTag AIGS_GameStateBaseWithData::GetMissionTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FString AIGS_GameStateBaseWithData::GetMissionSubtype() const {
@@ -158,7 +158,7 @@ FString AIGS_GameStateBaseWithData::GetMissionSubtype() const {
 }
 
 FGameplayTag AIGS_GameStateBaseWithData::GetMissionScenario() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FText AIGS_GameStateBaseWithData::GetMissionName() const {

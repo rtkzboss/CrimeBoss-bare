@@ -22,7 +22,7 @@ float AIGS_PlanningBoardItem::GetZoomOffset() const {
 }
 
 FGameplayTag AIGS_PlanningBoardItem::GetId() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TArray<FMETA_PlanningBoardItemConnectionData> AIGS_PlanningBoardItem::GetConnections() const {

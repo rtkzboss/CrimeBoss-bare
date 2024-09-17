@@ -58,7 +58,7 @@ TSoftObjectPtr<UTexture2D> UIGS_TileItemData::GetImage() const {
 }
 
 FGameplayTag UIGS_TileItemData::GetId() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 bool UIGS_TileItemData::GetHasCustomAction() const {
@@ -66,7 +66,7 @@ bool UIGS_TileItemData::GetHasCustomAction() const {
 }
 
 FGameplayTag UIGS_TileItemData::GetEntitlementTag() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 FText UIGS_TileItemData::GetDescription() const {

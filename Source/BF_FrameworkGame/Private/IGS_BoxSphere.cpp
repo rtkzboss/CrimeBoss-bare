@@ -152,8 +152,7 @@ AIGS_BoxSphere::AIGS_BoxSphere(const FObjectInitializer& ObjectInitializer) : Su
     (*this).BoxCollisionComponent = gen2;
     (*this).SphereCollisionComponent = gen3;
     (*this).bReplicates = true;
-    auto gen35 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen35->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
     (*this).RootComponent = gen;
     if (gen2) gen2->SetupAttachment(gen);

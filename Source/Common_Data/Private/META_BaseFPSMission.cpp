@@ -87,7 +87,7 @@ bool UMETA_BaseFPSMission::GetStealthCompletionFlag() {
 }
 
 FGameplayTag UMETA_BaseFPSMission::GetSelectedLoot() {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 EMETA_ReturnedDataProcessingMode UMETA_BaseFPSMission::GetReturnedDataProcessingMode() {

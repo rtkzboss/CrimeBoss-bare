@@ -15,8 +15,7 @@ AIGS_LootCollectionBase::AIGS_LootCollectionBase(const FObjectInitializer& Objec
     (*this).bIsShineEnabled = true;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).bReplicates = true;
-    auto gen2 = AActor::StaticClass()->FindPropertyByName("RemoteRole");
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ENetRole>>(&(*this), 0)) = ROLE_SimulatedProxy;
+    (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);
     (*this).NetDormancy = DORM_Initial;
     (*this).RootComponent = gen;
 }

@@ -22,7 +22,7 @@ FMETA_PreviousMissionData UMETA_Ambush::GetPreviousFPSMissionData() const {
 }
 
 FGameplayTag UMETA_Ambush::GetInstigatorMissionTileID() const {
-    return FGameplayTag{};
+    return FGameplayTag();
 }
 
 TSubclassOf<UMETA_MissionID> UMETA_Ambush::GetInstigatorMissionID() const {

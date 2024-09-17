@@ -1,8 +1,7 @@
 #include "META_RandEventTableRow.h"
 
 FMETA_RandEventTableRow::FMETA_RandEventTableRow() {
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).ID, 0)) = NAME_None;
+    (*this).ID = FGameplayTag();
     (*this).EvenCategory = EMETA_RandEventCategory::None;
     (*this).Partner = EMETA_Partner::None;
     (*this).UseLockRespectCondition = false;
@@ -10,7 +9,7 @@ FMETA_RandEventTableRow::FMETA_RandEventTableRow() {
     (*this).LockRespect = EMETA_RespectLvl::GodFather;
     (*this).MinHeat = EMETA_Heat::Low;
     (*this).MinInvestigation = 0.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).UnlockAssetID, 0)) = NAME_None;
+    (*this).UnlockAssetID = FGameplayTag();
     (*this).TargetGang.bAutomaticGangSelection = true;
     (*this).TargetGang.ConsideringTimeInDays = 7;
     (*this).TargetGang.OccupiedTerritoriesOfOtherGang = -1;

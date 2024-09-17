@@ -1,8 +1,7 @@
 #include "IGS_NetworkComponentAnimation.h"
 
 UIGS_NetworkComponentAnimation::UIGS_NetworkComponentAnimation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    auto gen = UActorComponent::StaticClass()->FindPropertyByName("bReplicates");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), true);
+    (*this).SetIsReplicated(true);
 }
 
 void UIGS_NetworkComponentAnimation::MessageToServer_PlayerLightMeleeChainAttackVariantChange_Implementation(int32 inChainIdx) {

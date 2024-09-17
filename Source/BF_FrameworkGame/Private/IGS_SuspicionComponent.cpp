@@ -30,7 +30,7 @@ AIGS_GameCharacterFramework* UIGS_SuspicionComponent::GetOwningCharacter() const
 }
 
 FGameplayTagContainer UIGS_SuspicionComponent::GetOffences() const {
-    return FGameplayTagContainer{};
+    return FGameplayTagContainer();
 }
 
 void UIGS_SuspicionComponent::EnablePerception() {

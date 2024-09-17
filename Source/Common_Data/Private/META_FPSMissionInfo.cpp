@@ -2,8 +2,7 @@
 
 FMETA_FPSMissionInfo::FMETA_FPSMissionInfo() {
     (*this).FPSMissionID = nullptr;
-    auto gen = TBaseStructure<FGameplayTag>::Get()->FindPropertyByName("TagName");
-    (*gen->ContainerPtrToValuePtr<FName>(&(*this).Scenario, 0)) = NAME_None;
+    (*this).Scenario = FGameplayTag();
     (*this).LightingScenario = EIGS_LightingScenarioType::Morning;
     (*this).BackdropType = EIGS_HubBackdropTypes::AllRandom;
     (*this).TileEnviroment = EIGS_TileEnviroment::None;
@@ -23,10 +22,7 @@ FMETA_FPSMissionInfo::FMETA_FPSMissionInfo() {
     (*this).bForceHeat = false;
     (*this).bMinimalHeatOnly = false;
     (*this).Heat = EMETA_Heat::Medium;
-    auto gen2 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("GameplayTags");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SupportedLoot, 0)) = {};
-    auto gen3 = TBaseStructure<FGameplayTagContainer>::Get()->FindPropertyByName("ParentTags");
-    (*gen3->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).SupportedLoot, 0)) = {};
+    (*this).SupportedLoot = FGameplayTagContainer();
     (*this).TotalLootbagCount = -1;
     (*this).ForcedDetectivesCount = 0;
     (*this).Parameters = {};
