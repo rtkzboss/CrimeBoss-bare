@@ -2,5 +2,5 @@
 
 FIGS_ReactionAnimsTableRow::FIGS_ReactionAnimsTableRow() {
     (*this).ID = FGameplayTag::RequestGameplayTag(TEXT("Anim.Reaction.Unknown"));
-    (*this).AnimVariations = {};
+    (*this).AnimVariations = TArray<FIGS_ReactionAnimData>{};
 }

@@ -3,7 +3,7 @@
 
 UIGS_ShielderComponent::UIGS_ShielderComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).HandleHolsterFromCode = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_ShielderComponent::OnShieldTakeAnyDamage(AActor* inDamagedActor, float inDamage, const UDamageType* inDamageType, AController* inInstigatedBy, AActor* inDamageCauser) {

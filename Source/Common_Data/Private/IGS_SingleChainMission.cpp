@@ -11,5 +11,5 @@ FIGS_SingleChainMission::FIGS_SingleChainMission() {
     (*this).SecondaryEnemyVariation = EIGS_GangsterVariationType::US_None;
     (*this).SWATVariation = EIGS_SWATVariationType::US_None;
     (*this).AllyVariation = EIGS_HeistersBackupVariationType::US_None;
-    (*this).Parameters = {};
+    (*this).Parameters = TMap<FGameplayTag, int32>{};
 }

@@ -1,7 +1,7 @@
 #include "IGS_PlayerChatWheelComponent.h"
 
 UIGS_PlayerChatWheelComponent::UIGS_PlayerChatWheelComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_PlayerChatWheelComponent::ShowSpamPreventionMessage() {

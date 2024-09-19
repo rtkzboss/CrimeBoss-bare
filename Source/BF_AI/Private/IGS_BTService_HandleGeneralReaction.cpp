@@ -1,9 +1,10 @@
 #include "IGS_BTService_HandleGeneralReaction.h"
+#include "IGS_GeneralReactionData_Base.h"
 
 UIGS_BTService_HandleGeneralReaction::UIGS_BTService_HandleGeneralReaction() {
-    (*this).GeneralReactionDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).GeneralReactionDataKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("GeneralReactionDataKey_Object_2147482573"), UIGS_GeneralReactionData_Base::StaticClass());
+    (*this).GeneralReactionDataKey = gen;
     (*this).NodeName = TEXT("Handle Global Reaction(s)");
 }
 

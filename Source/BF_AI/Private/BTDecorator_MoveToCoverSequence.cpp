@@ -1,21 +1,26 @@
 #include "BTDecorator_MoveToCoverSequence.h"
+#include "CoverPoint.h"
 
 UBTDecorator_MoveToCoverSequence::UBTDecorator_MoveToCoverSequence() {
-    (*this).ReactToThreathKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).ReactToThreathKey, 0)) = 255;
-    auto gen2 = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("bNoneIsAllowedValue");
-    CastField<FBoolProperty>(gen2)->SetPropertyValue(&(*gen2->ContainerPtrToValuePtr<uint8>(&(*this).ReactToThreathKey, 0)), true);
-    (*this).UpdateCoverKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).UpdateCoverKey, 0)) = 255;
-    (*this).BestCoverKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestCoverKey, 0)) = 255;
-    (*this).CoverKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).CoverKey, 0)) = 255;
-    (*this).MoveToPositionKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).MoveToPositionKey, 0)) = 255;
-    (*this).IsDodgingKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).IsDodgingKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddBoolFilter(this, TEXT("ReactToThreathKey"));
+    gen.AllowNoneAsValue(true);
+    (*this).ReactToThreathKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddBoolFilter(this, TEXT("UpdateCoverKey"));
+    (*this).UpdateCoverKey = gen2;
+    FBlackboardKeySelector gen3;
+    gen3.AddObjectFilter(this, TEXT("BestCoverKey_Object_2147482620"), UCoverPoint::StaticClass());
+    (*this).BestCoverKey = gen3;
+    FBlackboardKeySelector gen4;
+    gen4.AddObjectFilter(this, TEXT("CoverKey_Object_2147482621"), UCoverPoint::StaticClass());
+    (*this).CoverKey = gen4;
+    FBlackboardKeySelector gen5;
+    gen5.AddVectorFilter(this, TEXT("MoveToPositionKey"));
+    (*this).MoveToPositionKey = gen5;
+    FBlackboardKeySelector gen6;
+    gen6.AddBoolFilter(this, TEXT("IsDodgingKey"));
+    (*this).IsDodgingKey = gen6;
     (*this).m_RefreshTimeStartMin = 1.000000000e+00f;
     (*this).m_RefreshTimeStartMax = 1.500000000e+00f;
     (*this).m_RefreshTimeMin = 3.000000119e-01f;

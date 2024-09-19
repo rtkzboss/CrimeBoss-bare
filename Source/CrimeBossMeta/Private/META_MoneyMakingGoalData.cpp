@@ -1,4 +1,5 @@
 #include "META_MoneyMakingGoalData.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_MoneyMakingGoalData::FMETA_MoneyMakingGoalData() {
     (*this).Title = FText::GetEmpty();
@@ -6,8 +7,8 @@ FMETA_MoneyMakingGoalData::FMETA_MoneyMakingGoalData() {
     (*this).Icon = FSoftObjectPath();
     (*this).Picture = FSoftObjectPath();
     (*this).Result = EMETA_GoalStatus::None;
-    (*this).Missions = {};
-    (*this).AssignedTasks = {};
+    (*this).Missions = TArray<TSubclassOf<UMETA_MissionID>>{};
+    (*this).AssignedTasks = TArray<UMETA_TaskCondition*>{};
     (*this).InstigatorPartner = EMETA_Partner::Secretary;
     (*this).MonetaryValue = 0;
     (*this).LootType = FGameplayTag();

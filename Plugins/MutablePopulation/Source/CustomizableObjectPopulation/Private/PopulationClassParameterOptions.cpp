@@ -1,5 +1,5 @@
 #include "PopulationClassParameterOptions.h"
 
 FPopulationClassParameterOptions::FPopulationClassParameterOptions() {
-    (*this).Tags = {};
+    (*this).Tags = TArray<FString>{};
 }

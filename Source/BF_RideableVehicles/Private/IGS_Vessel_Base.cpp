@@ -36,12 +36,8 @@ AIGS_Vessel_Base::AIGS_Vessel_Base(const FObjectInitializer& ObjectInitializer) 
     (*this).EngineInitialScale = 1.000000000e+00f;
     (*this).SideBoardInitialScale = 1.000000000e+00f;
     FIGS_VesselParticleData gen8;
-    gen8.bIsUnder = false;
     gen8.PontoonIndex = 1;
-    gen8.PontoonLocation.X = 0.000000000e+00f;
-    gen8.PontoonLocation.Y = 0.000000000e+00f;
-    gen8.PontoonLocation.Z = 0.000000000e+00f;
-    (*this).PontoonWaterStatus = {MoveTemp(gen8), FIGS_VesselParticleData{}};
+    (*this).PontoonWaterStatus = TArray<FIGS_VesselParticleData>{gen8, FIGS_VesselParticleData{}};
     auto gen9 = Cast<USkeletalMeshComponent>(GetDefaultSubobjectByName(TEXT("Mesh")));
     if (gen) gen->SetupAttachment(gen9);
     if (gen2) gen2->SetupAttachment(gen9);

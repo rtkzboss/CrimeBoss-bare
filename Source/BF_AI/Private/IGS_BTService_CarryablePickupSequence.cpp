@@ -1,9 +1,10 @@
 #include "IGS_BTService_CarryablePickupSequence.h"
+#include "IGS_CarryableItemPickup.h"
 
 UIGS_BTService_CarryablePickupSequence::UIGS_BTService_CarryablePickupSequence() {
-    (*this).BestCarryablePickup.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestCarryablePickup, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestCarryablePickup_Object_2147482600"), AIGS_CarryableItemPickup::StaticClass());
+    (*this).BestCarryablePickup = gen;
     (*this).NodeName = TEXT("Weapon Pickup Sequence");
 }
 

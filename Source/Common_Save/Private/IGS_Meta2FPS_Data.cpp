@@ -1,4 +1,6 @@
 #include "IGS_Meta2FPS_Data.h"
+#include "IGS_SpecificSpecialLoot.h"
+#include "META_PerkDataToFPS.h"
 
 FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).MissionTag = FGameplayTag();
@@ -24,7 +26,7 @@ FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).TotalMissionValue = 0;
     (*this).TotalLootbagCount = -1;
     (*this).SpecificLootTypes = FGameplayTagContainer();
-    (*this).SpecialLoot.Loot = {};
+    (*this).SpecialLoot.Loot = TArray<FIGS_SpecificSpecialLoot>{};
     (*this).SpecialLoot.Money = 0;
     (*this).SpecialLoot.bIsFilled = false;
     (*this).Respect = EMETA_RespectLvl::Connected;
@@ -39,7 +41,7 @@ FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).AllyVariation = EIGS_HeistersBackupVariationType::US_None;
     (*this).AllyTier = EIGS_AITiers::AT_Tier2;
     (*this).ExpectedPlayerCount = -1;
-    (*this).MetaBonuses.ArmyPerkData = {};
+    (*this).MetaBonuses.ArmyPerkData = TArray<FMETA_PerkDataToFPS>{};
     (*this).ObjectivePercentage = 50;
     (*this).NeedObjectiveCompletion = false;
     (*this).bDownedCharctersSurvive = false;

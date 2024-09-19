@@ -1,6 +1,6 @@
 #include "PopulationClassParameter.h"
 
 FPopulationClassParameter::FPopulationClassParameter() {
-    (*this).Tags = {};
-    (*this).ParameterOptions = {};
+    (*this).Tags = TArray<FString>{};
+    (*this).ParameterOptions = TMap<FString, FPopulationClassParameterOptions>{};
 }

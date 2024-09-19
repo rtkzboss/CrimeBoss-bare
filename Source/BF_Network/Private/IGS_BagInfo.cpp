@@ -2,5 +2,5 @@
 
 FIGS_BagInfo::FIGS_BagInfo() {
     (*this).BagCount = 0;
-    (*this).BagTypes = {};
+    (*this).BagTypes = TArray<EIGS_BagType>{};
 }

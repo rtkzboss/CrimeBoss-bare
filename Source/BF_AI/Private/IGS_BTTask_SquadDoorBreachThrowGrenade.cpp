@@ -1,7 +1,11 @@
 #include "IGS_BTTask_SquadDoorBreachThrowGrenade.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
+#include "IGS_BreachRoles.h"
 
 UIGS_BTTask_SquadDoorBreachThrowGrenade::UIGS_BTTask_SquadDoorBreachThrowGrenade() {
-    (*this).BreachRolesKey.AllowedTypes = {nullptr};
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BreachRolesKey_Object_2147482479"), UIGS_BreachRoles::StaticClass());
+    (*this).BreachRolesKey = gen;
     (*this).NodeName = TEXT("Squad Breach Throw Grenade");
 }
 

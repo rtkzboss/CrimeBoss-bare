@@ -1,13 +1,16 @@
 #include "IGS_BTService_ApproachWaypointRotation.h"
+#include "IGS_WaypointBase.h"
 
 UIGS_BTService_ApproachWaypointRotation::UIGS_BTService_ApproachWaypointRotation() {
-    (*this).WaypointKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).WaypointKey, 0)) = 255;
-    (*this).ApproachNotifiedKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).ApproachNotifiedKey, 0)) = 255;
-    (*this).OutRotationKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OutRotationKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("WaypointKey_Object_2147482604"), AIGS_WaypointBase::StaticClass());
+    (*this).WaypointKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddBoolFilter(this, TEXT("ApproachNotifiedKey"));
+    (*this).ApproachNotifiedKey = gen2;
+    FBlackboardKeySelector gen3;
+    gen3.AddVectorFilter(this, TEXT("OutRotationKey"));
+    (*this).OutRotationKey = gen3;
     (*this).NodeName = TEXT("Approach To Waypoint Rotation");
 }
 

@@ -2,11 +2,11 @@
 
 FMETA_SaveData_DebugCareer::FMETA_SaveData_DebugCareer() {
     (*this).bIsFilled = false;
-    (*this).Plotlines = {};
+    (*this).Plotlines = TArray<FGameplayTag>{};
     (*this).DisablePlotlines = false;
-    (*this).CrewIds = {};
-    (*this).CrewQualities = {};
-    (*this).Loot = {};
+    (*this).CrewIds = TArray<EIGS_CharacterID>{};
+    (*this).CrewQualities = TArray<EMETA_ItemQuality>{};
+    (*this).Loot = TMap<FGameplayTag, int32>{};
     (*this).Day = 0;
     (*this).Cash = 0;
     (*this).Respect = EMETA_RespectLvl::Low;
@@ -14,5 +14,5 @@ FMETA_SaveData_DebugCareer::FMETA_SaveData_DebugCareer() {
     (*this).ArmySize = 0;
     (*this).HeatState = EMETA_Heat::Low;
     (*this).PoliceInvestigationValue = 0;
-    (*this).GraphVariables = {};
+    (*this).GraphVariables = TMap<FGameplayTag, int32>{};
 }

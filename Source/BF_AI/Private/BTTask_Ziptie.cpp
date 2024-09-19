@@ -1,9 +1,10 @@
 #include "BTTask_Ziptie.h"
+#include "IGS_GameCharacterFramework.h"
 
 UBTTask_Ziptie::UBTTask_Ziptie() {
-    (*this).CivToZiptieKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).CivToZiptieKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("CivToZiptieKey_Object_2147482467"), AIGS_GameCharacterFramework::StaticClass());
+    (*this).CivToZiptieKey = gen;
     (*this).NodeName = TEXT("Ziptie");
 }
 

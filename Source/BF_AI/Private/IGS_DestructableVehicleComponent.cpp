@@ -11,7 +11,7 @@ UIGS_DestructableVehicleComponent::UIGS_DestructableVehicleComponent(const FObje
     (*this).CoolerPercentStartPosWidth = 3.334999979e-01f;
     (*this).CoolerPercentStartPosZ = 3.499999940e-01f;
     (*this).CoolerPercentEndPosZ = 5.450000167e-01f;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_DestructableVehicleComponent::UpdateShakeCar() {

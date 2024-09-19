@@ -7,7 +7,7 @@ UIGS_LookAtTriggerComponent::UIGS_LookAtTriggerComponent(const FObjectInitialize
     (*this).bSingleUse = true;
     (*this).bIsEnabled = true;
     (*this).mR_bIsEnabledRuntime = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_LookAtTriggerComponent::SetEnabled(bool inEnabled) {

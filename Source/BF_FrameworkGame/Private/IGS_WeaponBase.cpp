@@ -52,7 +52,7 @@ AIGS_WeaponBase::AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer) : 
     (*this).MagazineModMesh = gen6;
     (*this).SecondMagazineModMesh = gen7;
     (*this).StockModMesh = gen8;
-    (*this).WeaponModsArray = {gen, gen2, gen3, gen4, gen5, gen8, gen6, gen7};
+    (*this).WeaponModsArray = TArray<UStaticMeshComponent*>{gen, gen2, gen3, gen4, gen5, gen8, gen6, gen7};
     (*this).LaserArrow = gen9;
     (*this).FlashSpotLight = gen10;
     (*this).FlashPointLight = gen11;

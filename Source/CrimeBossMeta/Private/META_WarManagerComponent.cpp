@@ -1,7 +1,7 @@
 #include "META_WarManagerComponent.h"
 
 UMETA_WarManagerComponent::UMETA_WarManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).TradeRelationshipWithGangs = {};
+    (*this).TradeRelationshipWithGangs = TMap<EMETA_TradeVendor, EMETA_TradeRelationship>{};
     (*this).NeutralDaysThresholdFromAttack = 10;
     (*this).UnfriendlyDaysThresholdFromAttack = 3;
     (*this).PrimaryComponentTick.bCanEverTick = true;

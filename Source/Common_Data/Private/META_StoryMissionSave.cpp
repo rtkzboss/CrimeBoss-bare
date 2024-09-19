@@ -13,12 +13,12 @@ FMETA_StoryMissionSave::FMETA_StoryMissionSave() {
     (*this).IntelData.RespectValueOnMissionSpawn = EMETA_RespectLvl::Low;
     (*this).IntelData.IntelRewardMultiplier = 1.000000000e+00f;
     (*this).Type = EMETA_JobType::FPSMission;
-    (*this).Parameters = {};
+    (*this).Parameters = TMap<FGameplayTag, int32>{};
     (*this).MissionExpenses = 0;
     (*this).HeistersCut = 0;
     (*this).FencingExpenses = 0;
     (*this).MissionOutcome = 0;
-    (*this).BonusLoot = {};
+    (*this).BonusLoot = TMap<FGameplayTag, int32>{};
     (*this).BonusCash = 0;
     (*this).ObjectiveMonetaryValue = 0;
     (*this).MaxMonetaryValue = 0;

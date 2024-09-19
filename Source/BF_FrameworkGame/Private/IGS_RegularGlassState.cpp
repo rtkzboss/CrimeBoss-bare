@@ -8,5 +8,5 @@ FIGS_RegularGlassState::FIGS_RegularGlassState() {
     (*this).UVOffset.Y = 0.000000000e+00f;
     (*this).UVOffset.Z = 0.000000000e+00f;
     (*this).bIsBroken = false;
-    (*this).BrokenGlassShards = {};
+    (*this).BrokenGlassShards = TArray<uint8>{};
 }

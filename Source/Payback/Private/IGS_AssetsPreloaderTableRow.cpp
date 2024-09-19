@@ -2,13 +2,13 @@
 
 FIGS_AssetsPreloaderTableRow::FIGS_AssetsPreloaderTableRow() {
     (*this).ID = FGameplayTag();
-    (*this).CopsVariationTypes = {};
-    (*this).SWATVariationTypes = {};
-    (*this).GangstersVariationTypes = {};
-    (*this).VehicleTypes = {};
+    (*this).CopsVariationTypes = TArray<EIGS_CopsVariationType>{};
+    (*this).SWATVariationTypes = TArray<EIGS_SWATVariationType>{};
+    (*this).GangstersVariationTypes = TArray<EIGS_GangsterVariationType>{};
+    (*this).VehicleTypes = TArray<EIGS_VehicleSpawnGroup>{};
     (*this).PreloadBackupHeisters = false;
     (*this).PreloadRobots = false;
-    (*this).AdditionalClasses = {};
-    (*this).AdditionalObjects = {};
-    (*this).PoolDatabases = {};
+    (*this).AdditionalClasses = TArray<TSoftClassPtr<UObject>>{};
+    (*this).AdditionalObjects = TArray<TSoftObjectPtr<UObject>>{};
+    (*this).PoolDatabases = TArray<TSoftObjectPtr<UDataTable>>{};
 }

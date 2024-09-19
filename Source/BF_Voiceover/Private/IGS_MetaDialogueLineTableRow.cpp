@@ -2,5 +2,5 @@
 
 FIGS_MetaDialogueLineTableRow::FIGS_MetaDialogueLineTableRow() {
     (*this).ID = NAME_None;
-    (*this).Variations = {};
+    (*this).Variations = TArray<FIGS_MetaDialogueVariationData>{};
 }

@@ -12,5 +12,5 @@ FMETA_CrewStatistic::FMETA_CrewStatistic() {
     (*this).ArrestedHeisters = 0;
     (*this).MissingUniqueHeisters = 0;
     (*this).MissingHeisters = 0;
-    (*this).HeistersStatisticData = {};
+    (*this).HeistersStatisticData = TArray<FMETA_HeisterStatisticData>{};
 }

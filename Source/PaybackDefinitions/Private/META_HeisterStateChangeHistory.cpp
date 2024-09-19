@@ -1,5 +1,5 @@
 #include "META_HeisterStateChangeHistory.h"
 
 FMETA_HeisterStateChangeHistory::FMETA_HeisterStateChangeHistory() {
-    (*this).StateChanges = {};
+    (*this).StateChanges = TArray<FMETA_HeisterStateChangeNote>{};
 }

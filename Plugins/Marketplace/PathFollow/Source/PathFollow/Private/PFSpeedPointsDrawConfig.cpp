@@ -12,12 +12,6 @@ FPFSpeedPointsDrawConfig::FPFSpeedPointsDrawConfig() {
     static ConstructorHelpers::FObjectFinder<UTexture2D> gen(TEXT("/PathFollow/S_Speed.S_Speed"));
     (*this)._SpeedPointSpriteTexture = gen.Object;
     (*this).bVisualizeSpeed = false;
-    (*this).LowSpeedColor.R = 0.000000000e+00f;
-    (*this).LowSpeedColor.G = 1.000000000e+00f;
-    (*this).LowSpeedColor.B = 0.000000000e+00f;
-    (*this).LowSpeedColor.A = 1.000000000e+00f;
-    (*this).HighSpeedColor.R = 1.000000000e+00f;
-    (*this).HighSpeedColor.G = 0.000000000e+00f;
-    (*this).HighSpeedColor.B = 0.000000000e+00f;
-    (*this).HighSpeedColor.A = 1.000000000e+00f;
+    (*this).LowSpeedColor = FLinearColor(0.000000000e+00f, 1.000000000e+00f, 0.000000000e+00f, 1.000000000e+00f);
+    (*this).HighSpeedColor = FLinearColor(1.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 1.000000000e+00f);
 }

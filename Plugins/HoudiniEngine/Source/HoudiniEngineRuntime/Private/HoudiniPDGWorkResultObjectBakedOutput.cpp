@@ -1,5 +1,5 @@
 #include "HoudiniPDGWorkResultObjectBakedOutput.h"
 
 FHoudiniPDGWorkResultObjectBakedOutput::FHoudiniPDGWorkResultObjectBakedOutput() {
-    (*this).BakedOutputs = {};
+    (*this).BakedOutputs = TArray<FHoudiniBakedOutput>{};
 }

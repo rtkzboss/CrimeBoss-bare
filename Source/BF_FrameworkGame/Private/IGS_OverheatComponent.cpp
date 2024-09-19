@@ -7,7 +7,7 @@ UIGS_OverheatComponent::UIGS_OverheatComponent(const FObjectInitializer& ObjectI
     (*this).DecreasePerSecond = -1.000000000e+00f;
     (*this).TimeUntilCooldown = 5.000000000e-01f;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_OverheatComponent::SetStaticMeshToApplyOverheat(UStaticMeshComponent* inStaticMesh, const int32 inIndex) {

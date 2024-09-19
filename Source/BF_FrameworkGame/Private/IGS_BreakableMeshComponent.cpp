@@ -1,5 +1,4 @@
 #include "IGS_BreakableMeshComponent.h"
-#include "Components/PrimitiveComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UIGS_BreakableMeshComponent::UIGS_BreakableMeshComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -11,9 +10,8 @@ UIGS_BreakableMeshComponent::UIGS_BreakableMeshComponent(const FObjectInitialize
     (*this).bCanTakeExplosiveDamage = true;
     (*this).CollisionProfileOnBreak = TEXT("PhysicsActor");
     (*this).PushImpulseStrength = 1.000000000e+02f;
-    auto gen = UPrimitiveComponent::StaticClass()->FindPropertyByName("bGenerateOverlapEvents");
-    CastField<FBoolProperty>(gen)->SetPropertyValue(&(*gen->ContainerPtrToValuePtr<uint8>(&(*this), 0)), false);
-    (*this).SetIsReplicated(true);
+    (*this).SetGenerateOverlapEvents(false);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_BreakableMeshComponent::TriggerBreakEvents(AActor* inDmgCauser) {

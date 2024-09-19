@@ -4,7 +4,7 @@
 UIGS_ShootablePartsHandlerComponent::UIGS_ShootablePartsHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).ShootOffVelocity = 1.500000000e+03f;
     (*this).SpawnDistance = 5.000000000e+01f;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_ShootablePartsHandlerComponent::OnRep_VisibleComponents() {

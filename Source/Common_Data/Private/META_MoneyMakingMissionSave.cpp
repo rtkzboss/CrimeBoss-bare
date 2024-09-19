@@ -12,14 +12,14 @@ FMETA_MoneyMakingMissionSave::FMETA_MoneyMakingMissionSave() {
     (*this).IntelData.RequiredSoldiersForFullRevealIntel = 0;
     (*this).IntelData.RespectValueOnMissionSpawn = EMETA_RespectLvl::Low;
     (*this).IntelData.IntelRewardMultiplier = 1.000000000e+00f;
-    (*this).Parameters = {};
+    (*this).Parameters = TMap<FGameplayTag, int32>{};
     (*this).OwnerGoal = nullptr;
     (*this).MissionExpenses = 0;
     (*this).HeistersCut = 0;
     (*this).FencingExpenses = 0;
     (*this).MissionOutcome = 0;
     (*this).BonusCash = 0;
-    (*this).BonusLoot = {};
+    (*this).BonusLoot = TMap<FGameplayTag, int32>{};
     (*this).ObjectiveMonetaryValue = 0;
     (*this).MaxMonetaryValue = 0;
     (*this).MonetaryValueMultiplier = 1.000000000e+00f;

@@ -3,5 +3,5 @@
 FConstructionSystemUICategory::FConstructionSystemUICategory() {
     (*this).DisplayName = FText::GetEmpty();
     (*this).Icon = nullptr;
-    (*this).PrefabEntries = {};
+    (*this).PrefabEntries = TArray<FConstructionSystemUIPrefabEntry>{};
 }

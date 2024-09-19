@@ -1,9 +1,10 @@
 #include "BTTask_UseSmartObject.h"
+#include "GameFramework/Actor.h"
 
 UBTTask_UseSmartObject::UBTTask_UseSmartObject() {
-    (*this).SmartObjectBBKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).SmartObjectBBKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("SmartObjectBBKey_Object_2147482469"), AActor::StaticClass());
+    (*this).SmartObjectBBKey = gen;
     (*this).NodeName = TEXT("Use Smart Object");
 }
 

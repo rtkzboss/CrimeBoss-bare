@@ -7,7 +7,7 @@ FIGS_AIUnitDef::FIGS_AIUnitDef() {
     (*this).Loadout.PrimaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.MeleeWeapon = nullptr;
-    (*this).ThrowablePool = {};
+    (*this).ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Stats.HP = 2.800000000e+02f;
     (*this).Stats.Shield = 0.000000000e+00f;
     (*this).Stats.WeaponDamage = 1.000000000e+00f;

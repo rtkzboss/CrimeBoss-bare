@@ -7,5 +7,5 @@ FMETA_ActionCardData::FMETA_ActionCardData() {
     (*this).bImmediately = false;
     (*this).bActionCardWithDuration = false;
     (*this).IndexOfDurationValue = 0;
-    (*this).Strength = {};
+    (*this).Strength = TMap<EMETA_ActionCardStrength, FMETA_ActionCardStrengthValues>{};
 }

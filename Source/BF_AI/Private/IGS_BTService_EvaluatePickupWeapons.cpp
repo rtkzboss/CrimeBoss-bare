@@ -1,9 +1,10 @@
 #include "IGS_BTService_EvaluatePickupWeapons.h"
+#include "IGS_WeaponPickupActor.h"
 
 UIGS_BTService_EvaluatePickupWeapons::UIGS_BTService_EvaluatePickupWeapons() {
-    (*this).BestWeaponPickup.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestWeaponPickup, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestWeaponPickup_Object_2147482588"), AIGS_WeaponPickupActor::StaticClass());
+    (*this).BestWeaponPickup = gen;
     (*this).NodeName = TEXT("Evaluate Pickup Weapons");
 }
 

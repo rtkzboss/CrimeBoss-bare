@@ -2,6 +2,9 @@
 #include "GameplayTagContainer.h"
 #include "EMETA_Partner.h"
 #include "EMETA_RespectLvl.h"
+#include "META_ActionCardGoal.h"
+#include "META_MissionID.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_GoalTableRow::FMETA_GoalTableRow() {
     (*this).ID = nullptr;
@@ -15,8 +18,8 @@ FMETA_GoalTableRow::FMETA_GoalTableRow() {
     (*this).StoryGoal.Picture = FSoftObjectPath();
     (*this).StoryGoal.bIsGoalRepeatable = false;
     (*this).StoryGoal.DaysBetweenAttempts = 1;
-    (*this).StoryGoal.Missions = {};
-    (*this).StoryGoal.ActionCardsGoal = {};
+    (*this).StoryGoal.Missions = TArray<TSubclassOf<UMETA_MissionID>>{};
+    (*this).StoryGoal.ActionCardsGoal = TArray<FMETA_ActionCardGoal>{};
     (*this).StoryGoal.RespectByDefault = 0;
     (*this).StoryGoal.UseLockRespectCondition = false;
     (*this).StoryGoal.UnlockRespect = EMETA_RespectLvl::Low;

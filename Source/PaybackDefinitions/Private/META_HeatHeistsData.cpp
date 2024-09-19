@@ -13,5 +13,5 @@ FMETA_HeatHeistsData::FMETA_HeatHeistsData() {
     (*this).NoTurfAttackAttamepWhenDayEnds = -40;
     (*this).AnyTurfAttackAttempt = -10;
     (*this).DetectiveKilled = 50;
-    (*this).FPSSubtypesNotAffectingHeat = {};
+    (*this).FPSSubtypesNotAffectingHeat = TSet<EMETA_FPSMissionSubtype>{};
 }

@@ -18,8 +18,8 @@ FIGS_ChainMission::FIGS_ChainMission() {
     (*this).OutroCutsceneChoiceForce = EIGS_MetaCutsceneNodeAction::MoveToNode;
     (*this).OutroMovie = nullptr;
     (*this).CrewID = nullptr;
-    (*this).ChainStep = {};
-    (*this).Star1Rewards = {};
-    (*this).Star2Rewards = {};
-    (*this).Star3Rewards = {};
+    (*this).ChainStep = TArray<FIGS_ChainMissionStep>{};
+    (*this).Star1Rewards = TArray<FGameplayTag>{};
+    (*this).Star2Rewards = TArray<FGameplayTag>{};
+    (*this).Star3Rewards = TArray<FGameplayTag>{};
 }

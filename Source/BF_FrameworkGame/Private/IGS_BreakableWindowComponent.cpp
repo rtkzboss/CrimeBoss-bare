@@ -2,7 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_BreakableWindowComponent::UIGS_BreakableWindowComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).mR_DecalsLocation = {FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}};
+    (*this).mR_DecalsLocation = TArray<FVector4>{FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}, FVector4{}};
     (*this).mR_CurrentDecalIndex = -1;
     (*this).MinDecalAngle = 1.500000060e-01f;
     (*this).MaxDecalAngle = 8.500000238e-01f;

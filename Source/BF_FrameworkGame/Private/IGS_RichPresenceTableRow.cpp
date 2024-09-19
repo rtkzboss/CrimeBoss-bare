@@ -6,5 +6,5 @@ FIGS_RichPresenceTableRow::FIGS_RichPresenceTableRow() {
     (*this).StrEpic = TEXT("");
     (*this).StrSteam = TEXT("");
     (*this).StrXbox = TEXT("");
-    (*this).Params = {};
+    (*this).Params = TArray<FGameplayTag>{};
 }

@@ -3,5 +3,5 @@
 FWaterTurretElements::FWaterTurretElements() {
     (*this).Turret = nullptr;
     (*this).Hose = nullptr;
-    (*this).HoseMeshes = {};
+    (*this).HoseMeshes = TArray<USplineMeshComponent*>{};
 }

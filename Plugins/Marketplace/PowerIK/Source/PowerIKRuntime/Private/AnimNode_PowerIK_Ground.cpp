@@ -8,7 +8,7 @@ FAnimNode_PowerIK_Ground::FAnimNode_PowerIK_Ground() {
     (*this).BodyInertia.UseSpring = false;
     (*this).BodyInertia.SpringStrength = 1.000000000e+02f;
     (*this).BodyInertia.SpringDamping = 2.000000030e-01f;
-    (*this).Feet = {};
+    (*this).Feet = TArray<FPowerIKGroundFoot>{};
     (*this).FeetDeltaSmoothSpeed = 2.000000000e+02f;
     (*this).RootRotationMultiplier = 1.000000000e+00f;
     (*this).GroundCollision.CollisionChannel = ECC_WorldStatic;
@@ -52,9 +52,9 @@ FAnimNode_PowerIK_Ground::FAnimNode_PowerIK_Ground() {
     (*this).GroundSlope.FootAngleDeltaSmoothSpeed = 0.000000000e+00f;
     (*this).GroundSlope.OffsetFeetPositions = false;
     (*this).GroundSlope.StaticFootOffset = 4.000000000e+00f;
-    (*this).BendDirections = {};
-    (*this).ExcludedBones = {};
-    (*this).JointLimits = {};
+    (*this).BendDirections = TArray<FPowerIKBoneBendDirection>{};
+    (*this).ExcludedBones = TArray<FPowerIKExcludedBone>{};
+    (*this).JointLimits = TArray<FPowerIKBoneLimit>{};
     (*this).MaxSquashIterations = 6;
     (*this).MaxStretchIterations = 6;
     (*this).MaxFinalIterations = 3;

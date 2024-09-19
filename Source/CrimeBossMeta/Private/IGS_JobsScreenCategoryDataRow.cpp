@@ -2,5 +2,5 @@
 
 FIGS_JobsScreenCategoryDataRow::FIGS_JobsScreenCategoryDataRow() {
     (*this).CategoryName = FText::GetEmpty();
-    (*this).Columns = {};
+    (*this).Columns = TArray<FIGS_JobsScreenCategoryColumn>{};
 }

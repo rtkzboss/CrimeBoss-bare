@@ -1,4 +1,10 @@
 #include "IGS_CharacterPanelDataStruct.h"
+#include "IGS_EquipmentInventoryObject.h"
+#include "META_WeaponInventoryObject.h"
+#include "Templates/SubclassOf.h"
+
+class UMETA_Equipment;
+class UMETA_Weapon;
 
 FIGS_CharacterPanelDataStruct::FIGS_CharacterPanelDataStruct() {
     (*this).Health = 0;
@@ -6,21 +12,21 @@ FIGS_CharacterPanelDataStruct::FIGS_CharacterPanelDataStruct() {
     (*this).MissionCut = 0;
     (*this).XP = 0.000000000e+00f;
     (*this).Level = 0;
-    (*this).PerkTags = {};
-    (*this).Perks = {};
+    (*this).PerkTags = TArray<FGameplayTag>{};
+    (*this).Perks = TArray<FMETA_PerkData>{};
     (*this).Loadout.PrimaryWeapon = nullptr;
     (*this).Loadout.PrimaryWeaponClass = nullptr;
-    (*this).Loadout.PrimaryPersonalWeapons = {};
+    (*this).Loadout.PrimaryPersonalWeapons = TArray<UMETA_Weapon*>{};
     (*this).Loadout.PrimaryWeaponSkin = FGameplayTag();
-    (*this).Loadout.PrimaryPersonalWeaponsClass = {};
+    (*this).Loadout.PrimaryPersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeaponClass = nullptr;
-    (*this).Loadout.SecondaryPersonalWeapons = {};
+    (*this).Loadout.SecondaryPersonalWeapons = TArray<UMETA_Weapon*>{};
     (*this).Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).Loadout.SecondaryPersonalWeaponsClass = {};
+    (*this).Loadout.SecondaryPersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).Loadout.SelectedEquipment = nullptr;
-    (*this).Loadout.ChainEquipments = {};
-    (*this).Loadout.ChainEquipmentsObjects = {};
+    (*this).Loadout.ChainEquipments = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).Loadout.ChainEquipmentsObjects = TArray<UMETA_Equipment*>{};
     (*this).Loadout.CharacterSkin = FGameplayTag();
     (*this).Loadout.Ability1ChargesLeft = -1;
 }

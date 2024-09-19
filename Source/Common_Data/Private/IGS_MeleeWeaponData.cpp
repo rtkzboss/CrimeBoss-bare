@@ -5,7 +5,7 @@
 
 FIGS_MeleeWeaponData::FIGS_MeleeWeaponData() {
     (*this).WwiseWeaponName = FSoftObjectPath();
-    (*this).AttackDefinitions = {};
+    (*this).AttackDefinitions = TArray<FIGS_WeaponBashAttackDefinition>{};
     (*this).AIAttackDefinition.AttackType = EIGS_MeleeAttackType::MAT_Primary;
     (*this).AIAttackDefinition.DamageType = nullptr;
     (*this).AIAttackDefinition.ImpactType = nullptr;

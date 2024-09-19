@@ -23,7 +23,7 @@ FColor UDFLDebugFL::GetTertiaryColour_FColor(UObject* Owner) {
 }
 
 FLinearColor UDFLDebugFL::GetTertiaryColour(UObject* Owner) {
-    return FLinearColor{};
+    return FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
 }
 
 float UDFLDebugFL::GetSize(UObject* Owner) {
@@ -39,7 +39,7 @@ FColor UDFLDebugFL::GetSecondaryColour_FColor(UObject* Owner) {
 }
 
 FLinearColor UDFLDebugFL::GetSecondaryColour(UObject* Owner) {
-    return FLinearColor{};
+    return FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
 }
 
 float UDFLDebugFL::GetScale(UObject* Owner) {
@@ -51,7 +51,7 @@ float UDFLDebugFL::GetRadius(UObject* Owner) {
 }
 
 FLinearColor UDFLDebugFL::GetPrintWarningColour(UObject* Owner) {
-    return FLinearColor{};
+    return FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
 }
 
 bool UDFLDebugFL::GetPrintFunction(UObject* Owner) {
@@ -59,7 +59,7 @@ bool UDFLDebugFL::GetPrintFunction(UObject* Owner) {
 }
 
 FLinearColor UDFLDebugFL::GetPrintErrorColour(UObject* Owner) {
-    return FLinearColor{};
+    return FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
 }
 
 float UDFLDebugFL::GetPrintDuration(UObject* Owner) {
@@ -71,7 +71,7 @@ bool UDFLDebugFL::GetPrintDebug(UObject* Owner) {
 }
 
 FLinearColor UDFLDebugFL::GetPrintColour(UObject* Owner) {
-    return FLinearColor{};
+    return FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
 }
 
 bool UDFLDebugFL::GetPrintClass(UObject* Owner) {
@@ -83,7 +83,7 @@ FColor UDFLDebugFL::GetPrimaryColour_FColor(UObject* Owner) {
 }
 
 FLinearColor UDFLDebugFL::GetPrimaryColour(UObject* Owner) {
-    return FLinearColor{};
+    return FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
 }
 
 bool UDFLDebugFL::GetLogFunction(UObject* Owner) {
@@ -151,7 +151,7 @@ bool UDFLDebugFL::GetDebugProperties(UObject* Owner, FDFLDebugProperties& ActorD
 }
 
 FLinearColor UDFLDebugFL::GetDebugColour(UObject* Owner, EDFLDrawDebugColour DebugColour) {
-    return FLinearColor{};
+    return FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
 }
 
 FColor UDFLDebugFL::GetDebug_FColour(UObject* Owner, EDFLDrawDebugColour DebugColour) {

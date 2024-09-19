@@ -48,10 +48,10 @@ FIGS_ThirdPersonMeleeAnimDatabase::FIGS_ThirdPersonMeleeAnimDatabase() {
     (*this).LeanRightCrouch = nullptr;
     (*this).LeanCrouchUp = nullptr;
     (*this).MeleePush = nullptr;
-    (*this).Attack_Light_Chain = {};
-    (*this).Attack_Heavy_Chain = {};
-    (*this).Attack_Light_Chain_Crouch = {};
-    (*this).Attack_Heavy_Chain_Crouch = {};
+    (*this).Attack_Light_Chain = TArray<UAnimMontage*>{};
+    (*this).Attack_Heavy_Chain = TArray<UAnimMontage*>{};
+    (*this).Attack_Light_Chain_Crouch = TArray<UAnimMontage*>{};
+    (*this).Attack_Heavy_Chain_Crouch = TArray<UAnimMontage*>{};
     (*this).SlidingAnimations.Weapon_Slide_Aim_Offset = nullptr;
     (*this).SlidingAnimations.Slide_In = nullptr;
     (*this).SlidingAnimations.Slide_Loop = nullptr;
@@ -60,7 +60,7 @@ FIGS_ThirdPersonMeleeAnimDatabase::FIGS_ThirdPersonMeleeAnimDatabase() {
     (*this).SlidingAnimations.Slide_Out_Idle = nullptr;
     (*this).SlidingAnimations.Slide_Out_Crouch_Walk = nullptr;
     (*this).LightHitReactions = nullptr;
-    (*this).SpecialActions = {};
+    (*this).SpecialActions = TMap<EIGS_SpecialActionType, UAnimMontage*>{};
     (*this).SpecialAnimations.WalkieTalkieEquipMontage = nullptr;
     (*this).SpecialAnimations.HandsetEquipMontage = nullptr;
     (*this).SpecialAnimations.OpenDoorInteractionMontage = nullptr;

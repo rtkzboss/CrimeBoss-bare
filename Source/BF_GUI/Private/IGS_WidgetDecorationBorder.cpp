@@ -1,10 +1,7 @@
 #include "IGS_WidgetDecorationBorder.h"
 
 UIGS_WidgetDecorationBorder::UIGS_WidgetDecorationBorder() : Super(FObjectInitializer::Get()) {
-    (*this).BorderTint.R = 1.000000000e+00f;
-    (*this).BorderTint.G = 1.000000000e+00f;
-    (*this).BorderTint.B = 1.000000000e+00f;
-    (*this).BorderTint.A = 1.000000000e+00f;
+    (*this).BorderTint = FLinearColor(1.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f);
     (*this).BorderWidth = 1.000000000e+00f;
 }
 

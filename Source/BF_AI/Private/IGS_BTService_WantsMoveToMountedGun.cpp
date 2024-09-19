@@ -1,11 +1,13 @@
 #include "IGS_BTService_WantsMoveToMountedGun.h"
+#include "IGS_MountedWeapon.h"
 
 UIGS_BTService_WantsMoveToMountedGun::UIGS_BTService_WantsMoveToMountedGun() {
-    (*this).BestMountedGunKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestMountedGunKey, 0)) = 255;
-    (*this).MountedGunKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).MountedGunKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestMountedGunKey_Object_2147482551"), AIGS_MountedWeapon::StaticClass());
+    (*this).BestMountedGunKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddObjectFilter(this, TEXT("MountedGunKey_Object_2147482552"), AIGS_MountedWeapon::StaticClass());
+    (*this).MountedGunKey = gen2;
     (*this).NodeName = TEXT("Wants Move To Mounted Gun");
 }
 

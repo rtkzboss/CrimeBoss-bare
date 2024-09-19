@@ -1,10 +1,10 @@
 #include "META_CommonData.h"
 
 UMETA_CommonData::UMETA_CommonData() {
-    (*this).RelationOfTurfsToRespect = {};
+    (*this).RelationOfTurfsToRespect = TMap<EMETA_RespectLvl, int32>{};
     (*this).PlayersCharacter = EIGS_CharacterID::Char_Boss_Start;
     (*this).AmountOfMissionsCanBeCompletedByBossPerDay = 1;
-    (*this).CrewCapacity = {};
+    (*this).CrewCapacity = TMap<EMETA_RespectLvl, int32>{};
     (*this).DayOfBunkruptcyWhenHeistersStartLeavePlayer = 3;
     (*this).TimeForCharactersMoodSwitchToNeutral = 5;
     (*this).ChanceForNoTraits = 6.000000238e-01f;

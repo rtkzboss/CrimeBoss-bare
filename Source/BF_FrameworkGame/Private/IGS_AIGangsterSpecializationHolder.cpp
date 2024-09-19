@@ -1,6 +1,14 @@
 #include "IGS_AIGangsterSpecializationHolder.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_WeaponVisibilityType.h"
+#include "IGS_AILoadoutData.h"
+#include "IGS_AIMeleeWeaponDef.h"
+#include "IGS_AIPrimaryWeaponDef.h"
+#include "IGS_AISecondaryWeaponDef.h"
+#include "IGS_AIThrowableWeaponDef.h"
+#include "Templates/SubclassOf.h"
+
+class AIGS_GameCharacterFramework;
 
 FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Variation = EIGS_GangsterVariationType::US_None;
@@ -38,13 +46,13 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Default.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Default.Enabled = true;
     (*this).Default.Character.Controller = FSoftObjectPath();
-    (*this).Default.Character.Pawns = {};
-    (*this).Default.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Default.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Default.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Default.Loadout.WeaponProbability = {};
+    (*this).Default.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Default.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Default.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Default.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Default.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Default.Loadout.NoThrowableChance = 0;
-    (*this).Default.Loadout.ThrowablePool = {};
+    (*this).Default.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Default.Loadout.ShowNoThrowableBool = 0;
     (*this).Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
@@ -87,13 +95,13 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Sniper.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Sniper.Enabled = true;
     (*this).Sniper.Character.Controller = FSoftObjectPath();
-    (*this).Sniper.Character.Pawns = {};
-    (*this).Sniper.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Sniper.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Sniper.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Sniper.Loadout.WeaponProbability = {};
+    (*this).Sniper.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Sniper.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Sniper.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Sniper.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Sniper.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Sniper.Loadout.NoThrowableChance = 0;
-    (*this).Sniper.Loadout.ThrowablePool = {};
+    (*this).Sniper.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Sniper.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Sniper.Loadout.ShowNoThrowableBool = 0;
     (*this).Sniper.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Sniper"));
@@ -131,13 +139,13 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Shield.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Shield.Enabled = true;
     (*this).Shield.Character.Controller = FSoftObjectPath();
-    (*this).Shield.Character.Pawns = {};
-    (*this).Shield.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Shield.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Shield.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Shield.Loadout.WeaponProbability = {};
+    (*this).Shield.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Shield.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Shield.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Shield.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Shield.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Shield.Loadout.NoThrowableChance = 0;
-    (*this).Shield.Loadout.ThrowablePool = {};
+    (*this).Shield.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Shield.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Shield.Loadout.ShowNoThrowableBool = 0;
     (*this).Shield.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Shield"));
@@ -180,13 +188,13 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Heavy.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Heavy.Enabled = true;
     (*this).Heavy.Character.Controller = FSoftObjectPath();
-    (*this).Heavy.Character.Pawns = {};
-    (*this).Heavy.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Heavy.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Heavy.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Heavy.Loadout.WeaponProbability = {};
+    (*this).Heavy.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Heavy.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Heavy.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Heavy.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Heavy.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Heavy.Loadout.NoThrowableChance = 0;
-    (*this).Heavy.Loadout.ThrowablePool = {};
+    (*this).Heavy.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Heavy.Loadout.ShowNoThrowableBool = 0;
     (*this).Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
@@ -230,13 +238,13 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).Detective.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Detective.Enabled = true;
     (*this).Detective.Character.Controller = FSoftObjectPath();
-    (*this).Detective.Character.Pawns = {};
-    (*this).Detective.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Detective.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Detective.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Detective.Loadout.WeaponProbability = {};
+    (*this).Detective.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Detective.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Detective.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Detective.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Detective.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Detective.Loadout.NoThrowableChance = 0;
-    (*this).Detective.Loadout.ThrowablePool = {};
+    (*this).Detective.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Detective.Loadout.ShowNoThrowableBool = 0;
     (*this).Detective.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Detective"));
@@ -274,13 +282,13 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).TurfWar.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).TurfWar.Enabled = true;
     (*this).TurfWar.Character.Controller = FSoftObjectPath();
-    (*this).TurfWar.Character.Pawns = {};
-    (*this).TurfWar.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).TurfWar.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).TurfWar.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).TurfWar.Loadout.WeaponProbability = {};
+    (*this).TurfWar.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).TurfWar.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).TurfWar.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).TurfWar.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).TurfWar.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).TurfWar.Loadout.NoThrowableChance = 0;
-    (*this).TurfWar.Loadout.ThrowablePool = {};
+    (*this).TurfWar.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).TurfWar.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).TurfWar.Loadout.ShowNoThrowableBool = 0;
     (*this).TurfWar.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
@@ -326,13 +334,13 @@ FIGS_AIGangsterSpecializationHolder::FIGS_AIGangsterSpecializationHolder() {
     (*this).HeavyMelee.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).HeavyMelee.Enabled = true;
     (*this).HeavyMelee.Character.Controller = FSoftObjectPath();
-    (*this).HeavyMelee.Character.Pawns = {};
-    (*this).HeavyMelee.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).HeavyMelee.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).HeavyMelee.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).HeavyMelee.Loadout.WeaponProbability = {};
+    (*this).HeavyMelee.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).HeavyMelee.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).HeavyMelee.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).HeavyMelee.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).HeavyMelee.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).HeavyMelee.Loadout.NoThrowableChance = 0;
-    (*this).HeavyMelee.Loadout.ThrowablePool = {};
+    (*this).HeavyMelee.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).HeavyMelee.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).HeavyMelee.Loadout.ShowNoThrowableBool = 0;
     (*this).HeavyMelee.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));

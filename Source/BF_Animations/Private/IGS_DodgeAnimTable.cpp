@@ -2,5 +2,5 @@
 
 FIGS_DodgeAnimTable::FIGS_DodgeAnimTable() {
     (*this).ID = FGameplayTag::RequestGameplayTag(TEXT("Anim.Dodge.Unknown"));
-    (*this).AnimVariations = {};
+    (*this).AnimVariations = TArray<UAnimMontage*>{};
 }

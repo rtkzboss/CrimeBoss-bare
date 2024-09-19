@@ -1,4 +1,6 @@
 #include "IGS_PlayerStateData.h"
+#include "IGS_EquipmentInventoryObject.h"
+#include "META_PerkDataToFPS.h"
 #include "GameFramework/OnlineReplStructs.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_CharacterID.h"
@@ -6,6 +8,7 @@
 #include "EIGS_TeamSideEnum.h"
 #include "EMETA_CharacterState.h"
 #include "EMETA_RespectLvl.h"
+#include "Templates/SubclassOf.h"
 
 FIGS_PlayerStateData::FIGS_PlayerStateData() {
     (*this).HeisterDataHolder.TagID = FGameplayTag();
@@ -18,13 +21,13 @@ FIGS_PlayerStateData::FIGS_PlayerStateData() {
     (*this).HeisterDataHolder.PlayerId = -1;
     (*this).HeisterDataHolder.ProgressionLevel = 1;
     auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
-    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).HeisterDataHolder.UniquePlayerId, 0)) = {};
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).HeisterDataHolder.UniquePlayerId, 0)) = TArray<uint8>{};
     (*this).HeisterDataHolder.Loadout.PrimaryWeapon = nullptr;
     (*this).HeisterDataHolder.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).HeisterDataHolder.Loadout.SecondaryWeapon = nullptr;
     (*this).HeisterDataHolder.Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).HeisterDataHolder.Loadout.Equipment = {};
-    (*this).HeisterDataHolder.Loadout.Perks = {};
+    (*this).HeisterDataHolder.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).HeisterDataHolder.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).HeisterDataHolder.Loadout.Ability1ChargesLeft = -1;
     (*this).HeisterDataHolder.Loadout.CharacterSkinID = FGameplayTag();
     (*this).HeisterDataHolder.Experience = 0;

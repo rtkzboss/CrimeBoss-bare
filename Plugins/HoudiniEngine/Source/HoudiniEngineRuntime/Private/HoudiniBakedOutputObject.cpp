@@ -6,7 +6,7 @@ FHoudiniBakedOutputObject::FHoudiniBakedOutputObject() {
     (*this).ActorBakeName = NAME_None;
     (*this).BakedObject = TEXT("");
     (*this).BakedComponent = TEXT("");
-    (*this).InstancedActors = {};
-    (*this).InstancedComponents = {};
-    (*this).LandscapeLayers = {};
+    (*this).InstancedActors = TArray<FString>{};
+    (*this).InstancedComponents = TArray<FString>{};
+    (*this).LandscapeLayers = TMap<FName, FString>{};
 }

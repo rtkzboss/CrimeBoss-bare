@@ -1,5 +1,5 @@
 #include "IGS_RunningBannerDataRow.h"
-#include "Styling/SlateColor.h"
+#include "UObject/NoExportTypes.h"
 
 FIGS_RunningBannerDataRow::FIGS_RunningBannerDataRow() {
     (*this).Tag = FGameplayTag();
@@ -7,21 +7,7 @@ FIGS_RunningBannerDataRow::FIGS_RunningBannerDataRow() {
     (*this).Headline = FText::GetEmpty();
     (*this).Description = FText::GetEmpty();
     (*this).BadgeText = FText::GetEmpty();
-    auto gen = TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor");
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).HeadlineColor, 0)).R = 1.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).HeadlineColor, 0)).G = 0.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).HeadlineColor, 0)).B = 1.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).HeadlineColor, 0)).A = 1.000000000e+00f;
-    auto gen2 = TBaseStructure<FSlateColor>::Get()->FindPropertyByName("ColorUseRule");
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ESlateColorStylingMode::Type>>(&(*this).HeadlineColor, 0)) = ESlateColorStylingMode::UseColor_Specified;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeBackgroundColor, 0)).R = 1.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeBackgroundColor, 0)).G = 0.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeBackgroundColor, 0)).B = 1.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeBackgroundColor, 0)).A = 1.000000000e+00f;
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ESlateColorStylingMode::Type>>(&(*this).BadgeBackgroundColor, 0)) = ESlateColorStylingMode::UseColor_Specified;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeTextColor, 0)).R = 1.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeTextColor, 0)).G = 0.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeTextColor, 0)).B = 1.000000000e+00f;
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).BadgeTextColor, 0)).A = 1.000000000e+00f;
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ESlateColorStylingMode::Type>>(&(*this).BadgeTextColor, 0)) = ESlateColorStylingMode::UseColor_Specified;
+    (*this).HeadlineColor = FSlateColor(FLinearColor(1.000000000e+00f, 0.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f));
+    (*this).BadgeBackgroundColor = FSlateColor(FLinearColor(1.000000000e+00f, 0.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f));
+    (*this).BadgeTextColor = FSlateColor(FLinearColor(1.000000000e+00f, 0.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f));
 }

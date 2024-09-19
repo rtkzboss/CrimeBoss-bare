@@ -1,9 +1,10 @@
 #include "IGS_BTService_SentryRotateToActor.h"
+#include "GameFramework/Actor.h"
 
 UIGS_BTService_SentryRotateToActor::UIGS_BTService_SentryRotateToActor() {
-    (*this).TargetActor.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).TargetActor, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("TargetActor_Object_2147482564"), AActor::StaticClass());
+    (*this).TargetActor = gen;
     (*this).NodeName = TEXT("Sentry Rotate To Actor");
 }
 

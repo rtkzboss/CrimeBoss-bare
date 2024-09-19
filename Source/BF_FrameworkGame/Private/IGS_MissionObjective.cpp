@@ -2,7 +2,7 @@
 
 FIGS_MissionObjective::FIGS_MissionObjective() {
     (*this).ID = -1;
-    (*this).TaskIDs = {};
+    (*this).TaskIDs = TArray<int32>{};
     (*this).ObjectiveState = EIGS_ObjectiveState::Active;
     (*this).ObjectiveName = FText::GetEmpty();
     (*this).bInitialized = false;

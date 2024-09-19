@@ -1,7 +1,7 @@
 #include "IGS_TextChatManager.h"
 
 UIGS_TextChatManager::UIGS_TextChatManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_TextChatManager::Server_SendTextChatMessageTextOnly_Implementation(const FText& inMessage) {

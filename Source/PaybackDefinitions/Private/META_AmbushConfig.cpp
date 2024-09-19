@@ -1,4 +1,6 @@
 #include "META_AmbushConfig.h"
+#include "EMETA_Gang.h"
+#include "META_Chance.h"
 
 FMETA_AmbushConfig::FMETA_AmbushConfig() {
     (*this).PoliceChances.PoliceAmbush = 0;
@@ -13,7 +15,7 @@ FMETA_AmbushConfig::FMETA_AmbushConfig() {
     (*this).PoliceChances.HeatMedium = 4;
     (*this).PoliceChances.HeatHigh = 8;
     (*this).PoliceChances.HeatVeryHigh = 12;
-    (*this).GangsChances.DefaultForGangAmbush = {};
+    (*this).GangsChances.DefaultForGangAmbush = TMap<EMETA_Gang, FMETA_Chance>{};
     (*this).GangsChances.NoGangsterKilledInMission = -5;
     (*this).GangsChances.MissionWasDoneInStealth = -20;
     (*this).GangsChances.BossInTopEnemyList = 20;

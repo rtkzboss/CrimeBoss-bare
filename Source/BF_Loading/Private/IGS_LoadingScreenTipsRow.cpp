@@ -2,7 +2,7 @@
 
 FIGS_LoadingScreenTipsRow::FIGS_LoadingScreenTipsRow() {
     (*this).ID = FGameplayTag();
-    (*this).Tips = {};
-    (*this).ControllerTips = {};
-    (*this).KeyboardMouseTips = {};
+    (*this).Tips = TArray<FText>{};
+    (*this).ControllerTips = TArray<FText>{};
+    (*this).KeyboardMouseTips = TArray<FText>{};
 }

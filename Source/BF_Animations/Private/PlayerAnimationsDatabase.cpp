@@ -2,7 +2,7 @@
 
 FPlayerAnimationsDatabase::FPlayerAnimationsDatabase() {
     (*this).ID = FSoftObjectPath();
-    (*this).AttackType = {};
+    (*this).AttackType = TArray<FIGS_TPVAnimtionDefinition>{};
     (*this).WeaponGripStand = nullptr;
     (*this).WeaponGripCrouch = nullptr;
     (*this).WeaponGripRun = nullptr;
@@ -68,12 +68,12 @@ FPlayerAnimationsDatabase::FPlayerAnimationsDatabase() {
     (*this).SlidingAnimations.Slide_Out_Crouch_Idle = nullptr;
     (*this).SlidingAnimations.Slide_Out_Idle = nullptr;
     (*this).SlidingAnimations.Slide_Out_Crouch_Walk = nullptr;
-    (*this).ModInfo = {};
+    (*this).ModInfo = TArray<FIGS_TPP_ModAnimationDefinition>{};
     (*this).LightHitReactions = nullptr;
     (*this).MediumHitReactions = nullptr;
     (*this).HeavyHitReactions = nullptr;
     (*this).AvoidanceAnimations = nullptr;
-    (*this).SpecialActions = {};
+    (*this).SpecialActions = TMap<EIGS_SpecialActionType, UAnimMontage*>{};
     (*this).SpecialAnimations.WalkieTalkieEquipMontage = nullptr;
     (*this).SpecialAnimations.HandsetEquipMontage = nullptr;
     (*this).SpecialAnimations.OpenDoorInteractionMontage = nullptr;

@@ -5,6 +5,10 @@
 #include "EIGS_MeleeAttackType.h"
 #include "EIGS_WeaponAttackType.h"
 #include "EIGS_WieldableClass.h"
+#include "IGS_GameplayAbilityGrantDataHolder.h"
+#include "IGS_GameplayEffectApplyDataHolder.h"
+
+class UObject;
 
 FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).TagID = FGameplayTag();
@@ -90,14 +94,14 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).WieldableData.Quality = EMETA_ItemQuality::MinGenerate;
     (*this).WieldableData.ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Weapon"));
     (*this).WieldableData.GrantedTags = FGameplayTagContainer();
-    (*this).WieldableData.GrantedAbilities = {};
-    (*this).WieldableData.AppliedEffects = {};
+    (*this).WieldableData.GrantedAbilities = TArray<FIGS_GameplayAbilityGrantDataHolder>{};
+    (*this).WieldableData.AppliedEffects = TArray<FIGS_GameplayEffectApplyDataHolder>{};
     (*this).WieldableData.ItemPropertyFlags = 1;
     (*this).WieldableData.MonetaryValue = 0;
     (*this).WieldableData.ModelScaleFPV = 1.000000000e+00f;
     (*this).WieldableData.ModelScale3PV = 1.000000000e+00f;
-    (*this).WieldableData.AdditionalPreloadClasses = {};
-    (*this).WieldableData.AdditionalPreloadObjects = {};
+    (*this).WieldableData.AdditionalPreloadClasses = TArray<TSoftClassPtr<UObject>>{};
+    (*this).WieldableData.AdditionalPreloadObjects = TArray<TSoftObjectPtr<UObject>>{};
     (*this).DefaultModData.DefaultMagazineMesh = FSoftObjectPath();
     (*this).DefaultModData.DefaultStockMesh = FSoftObjectPath();
     (*this).DefaultModData.DefaultSightMesh = FSoftObjectPath();

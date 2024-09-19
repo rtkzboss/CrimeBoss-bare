@@ -6,7 +6,7 @@ FIGS_ScopeModData::FIGS_ScopeModData() {
     (*this).ReticleMaterial = FSoftObjectPath();
     (*this).ReticleTortillaMaterial = FSoftObjectPath();
     (*this).ScopeType = EIGS_ScopeType::Scope_Normal;
-    (*this).ScopeZoom = {1.250000000e+00f};
+    (*this).ScopeZoom = TArray<float>{1.250000000e+00f};
     (*this).WeaponTortillaOffset.X = 0.000000000e+00f;
     (*this).WeaponTortillaOffset.Y = 0.000000000e+00f;
     (*this).WeaponTortillaOffset.Z = 0.000000000e+00f;

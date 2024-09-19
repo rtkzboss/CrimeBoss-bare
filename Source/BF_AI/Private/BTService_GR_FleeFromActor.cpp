@@ -1,13 +1,16 @@
 #include "BTService_GR_FleeFromActor.h"
+#include "IGS_GeneralReactionData_Base.h"
 
 UBTService_GR_FleeFromActor::UBTService_GR_FleeFromActor() {
-    (*this).GeneralReactionDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).GeneralReactionDataKey, 0)) = 255;
-    (*this).BestEvadePosKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestEvadePosKey, 0)) = 255;
-    (*this).SafeDistanceKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).SafeDistanceKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("GeneralReactionDataKey_Object_2147482578"), UIGS_GeneralReactionData_Base::StaticClass());
+    (*this).GeneralReactionDataKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddVectorFilter(this, TEXT("BestEvadePosKey"));
+    (*this).BestEvadePosKey = gen2;
+    FBlackboardKeySelector gen3;
+    gen3.AddFloatFilter(this, TEXT("SafeDistanceKey"));
+    (*this).SafeDistanceKey = gen3;
     (*this).SafeDistance = 5.000000000e+02f;
     (*this).SafeDistanceFromBB = true;
     (*this).EQSCooldown = 1.000000000e+00f;

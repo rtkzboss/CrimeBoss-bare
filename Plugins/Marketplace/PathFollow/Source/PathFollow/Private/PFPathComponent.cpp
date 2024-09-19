@@ -8,18 +8,11 @@ UPFPathComponent::UPFPathComponent(const FObjectInitializer& ObjectInitializer) 
     (*this).DrawerConfig.PathColor.A = 255;
     (*this).DrawerConfig.Thickness = 5.000000000e+00f;
     FInterpCurvePointFloat gen;
-    gen.InVal = 0.000000000e+00f;
     gen.OutVal = 1.000000000e+00f;
-    gen.ArriveTangent = 0.000000000e+00f;
-    gen.LeaveTangent = 0.000000000e+00f;
-    gen.InterpMode = CIM_Linear;
     FInterpCurvePointFloat gen2;
     gen2.InVal = 1.000000000e+02f;
     gen2.OutVal = 1.000000000e+00f;
-    gen2.ArriveTangent = 0.000000000e+00f;
-    gen2.LeaveTangent = 0.000000000e+00f;
-    gen2.InterpMode = CIM_Linear;
-    (*this)._speedCurve._speedCurve.Points = {MoveTemp(gen), MoveTemp(gen2)};
+    (*this)._speedCurve._speedCurve.Points = TArray<FInterpCurvePointFloat>{gen, gen2};
 }
 
 float UPFPathComponent::GetTimeForPath() {

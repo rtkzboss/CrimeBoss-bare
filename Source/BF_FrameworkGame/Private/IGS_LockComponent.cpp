@@ -3,7 +3,7 @@
 UIGS_LockComponent::UIGS_LockComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).KeyRoomType = EIGS_RoomType::Street;
     (*this).UniqueKeyID = -1;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_LockComponent::SetLockState(bool inLocked) {

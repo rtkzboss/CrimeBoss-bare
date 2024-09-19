@@ -9,6 +9,7 @@
 #include "EIGS_TileEnviroment.h"
 #include "EMETA_Heat.h"
 #include "EMETA_StealthMode.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_FPSMissionRowInfo::FMETA_FPSMissionRowInfo() {
     (*this).MissionSubtype = EMETA_FPSMissionSubtype::Story;
@@ -22,10 +23,10 @@ FMETA_FPSMissionRowInfo::FMETA_FPSMissionRowInfo() {
     (*this).IntelSoldierMultiplier = 1.000000000e+00f;
     (*this).MinCrewSize = 1;
     (*this).MaxCrewSize = 4;
-    (*this).WeaponsRequired = {};
-    (*this).CharactersRequired = {};
-    (*this).CharactersRequiredButNotOwned = {};
-    (*this).ResultsWhenJobIsNotRemovedFromTheMap = {};
+    (*this).WeaponsRequired = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
+    (*this).CharactersRequired = TArray<EIGS_CharacterID>{};
+    (*this).CharactersRequiredButNotOwned = TArray<EIGS_CharacterID>{};
+    (*this).ResultsWhenJobIsNotRemovedFromTheMap = TArray<EMETA_JobResult>{};
     (*this).ReturnedDataProcessingMode = EMETA_ReturnedDataProcessingMode::AcceptLoot;
     (*this).LootPercentageFromSuccess = 0;
     (*this).TurfActionAfterSuccess = EMETA_TurfActionAfterSuccess::None;
@@ -54,7 +55,7 @@ FMETA_FPSMissionRowInfo::FMETA_FPSMissionRowInfo() {
     (*this).FPSMissionInfo.SupportedLoot = FGameplayTagContainer();
     (*this).FPSMissionInfo.TotalLootbagCount = -1;
     (*this).FPSMissionInfo.ForcedDetectivesCount = 0;
-    (*this).FPSMissionInfo.Parameters = {};
+    (*this).FPSMissionInfo.Parameters = TMap<FGameplayTag, int32>{};
     (*this).FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).FPSMissionInfo.bDownedCharctersSurvive = false;
     (*this).ObjectivesPreset = FGameplayTag();

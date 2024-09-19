@@ -3,7 +3,7 @@
 #include "Templates/SubclassOf.h"
 
 UIGS_GlobalInventory::UIGS_GlobalInventory(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 bool UIGS_GlobalInventory::RemoveItem(const TSubclassOf<UIGS_GlobalInventoryObject>& inItemClass, bool inRemoveAll) {

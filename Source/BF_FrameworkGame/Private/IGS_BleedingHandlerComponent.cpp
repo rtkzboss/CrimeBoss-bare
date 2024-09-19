@@ -18,7 +18,7 @@ UIGS_BleedingHandlerComponent::UIGS_BleedingHandlerComponent(const FObjectInitia
     (*this).BleedPinnedLifetimeMax = 1.200000000e+01f;
     (*this).BleedDamageInterval = 2.000000030e-01f;
     (*this).UseDownState = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_BleedingHandlerComponent::Multicast_StartInjured_Implementation(EIGS_BleedType BleedType, const FIGS_HitInfo& inHitInfo) {

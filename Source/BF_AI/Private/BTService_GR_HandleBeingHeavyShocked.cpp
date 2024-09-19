@@ -1,11 +1,13 @@
 #include "BTService_GR_HandleBeingHeavyShocked.h"
+#include "IGS_GeneralReactionData_Base.h"
 
 UBTService_GR_HandleBeingHeavyShocked::UBTService_GR_HandleBeingHeavyShocked() {
-    (*this).GeneralReactionDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).GeneralReactionDataKey, 0)) = 255;
-    (*this).AnimTypeTagKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).AnimTypeTagKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("GeneralReactionDataKey_Object_2147482576"), UIGS_GeneralReactionData_Base::StaticClass());
+    (*this).GeneralReactionDataKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddNameFilter(this, TEXT("AnimTypeTagKey"));
+    (*this).AnimTypeTagKey = gen2;
     (*this).HitReactionChance = 1.000000000e+02f;
     (*this).HeavyReactionChance = 1.000000000e+02f;
     (*this).NodeName = TEXT("GlobalReaction - Handle Being Heavy Shocked");

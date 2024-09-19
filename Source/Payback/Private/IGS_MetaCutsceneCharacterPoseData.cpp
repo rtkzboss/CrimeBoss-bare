@@ -2,5 +2,5 @@
 
 FIGS_MetaCutsceneCharacterPoseData::FIGS_MetaCutsceneCharacterPoseData() {
     (*this).PoseType = EIGS_MetaCutsceneCharacterPose::Listening;
-    (*this).Variations = {};
+    (*this).Variations = TArray<UAnimMontage*>{};
 }

@@ -1,6 +1,6 @@
 #include "FTILiveLinkRemapAsset.h"
 
 UFTILiveLinkRemapAsset::UFTILiveLinkRemapAsset() {
-    (*this).AnimationNamesMap = {};
+    (*this).AnimationNamesMap = TMap<FName, FName>{};
 }
 

@@ -4,6 +4,6 @@ UIGS_InteractionStealthKillComponent::UIGS_InteractionStealthKillComponent(const
     (*this).bServerFirst = true;
     (*this).InteractionDistance = 5.000000000e+01f;
     (*this).HUDDistance = 5.000000000e+01f;
-    (*this).SetIsReplicated(false);
+    (*this).SetIsReplicatedByDefault(false);
 }
 

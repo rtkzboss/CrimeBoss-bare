@@ -2,5 +2,5 @@
 
 FIGS_SquadClassDefinition::FIGS_SquadClassDefinition() {
     (*this).Default = FSoftObjectPath();
-    (*this).UnitSpecializationOverride = {};
+    (*this).UnitSpecializationOverride = TMap<EIGS_UnitSpecialization, TSoftClassPtr<AIGS_SquadFramework>>{};
 }

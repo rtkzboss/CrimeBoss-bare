@@ -1,9 +1,10 @@
 #include "IGS_BTService_DisruptGadgetSequence.h"
+#include "IGS_ProgressGadgetBase.h"
 
 UIGS_BTService_DisruptGadgetSequence::UIGS_BTService_DisruptGadgetSequence() {
-    (*this).BestGadget.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestGadget, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestGadget_Object_2147482597"), AIGS_ProgressGadgetBase::StaticClass());
+    (*this).BestGadget = gen;
     (*this).NodeName = TEXT("Disrupt Gadget Sequence");
 }
 

@@ -1,5 +1,7 @@
 #include "IGS_WeaponSkinTableRow.h"
+#include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
+#include "Templates/SubclassOf.h"
 
 FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
     (*this).RootTagID = FGameplayTag();
@@ -12,10 +14,7 @@ FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;
     (*this).UnlockProperties.ShowIfNotOwned = true;
     (*this).UnlockProperties.UnlockCoverImage = FSoftObjectPath();
-    (*this).MaterialParameters.Albedo_Tint.R = 1.000000000e+00f;
-    (*this).MaterialParameters.Albedo_Tint.G = 1.000000000e+00f;
-    (*this).MaterialParameters.Albedo_Tint.B = 1.000000000e+00f;
-    (*this).MaterialParameters.Albedo_Tint.A = 1.000000000e+00f;
+    (*this).MaterialParameters.Albedo_Tint = FLinearColor(1.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f);
     (*this).MaterialParameters.Albedo_Brightness = 1.000000000e+00f;
     (*this).MaterialParameters.Albedo_Contrast = 1.000000000e+00f;
     (*this).MaterialParameters.Albedo_Desaturate = 0.000000000e+00f;
@@ -34,10 +33,7 @@ FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
     (*this).MaterialParameters.ORM = FSoftObjectPath(TEXT("/Game/00_Main/Weapons/TileSkins/T_CamoBrush_04_ORM.T_CamoBrush_04_ORM"), TEXT(""));
     (*this).MaterialParameters.Roughness_Contrast = 1.000000000e+00f;
     (*this).MaterialParameters.Roughness_Offset = 0.000000000e+00f;
-    (*this).MaterialParameters.Dust_Albedo.R = 4.313699901e-02f;
-    (*this).MaterialParameters.Dust_Albedo.G = 3.529400006e-02f;
-    (*this).MaterialParameters.Dust_Albedo.B = 1.568599977e-02f;
-    (*this).MaterialParameters.Dust_Albedo.A = 1.000000000e+00f;
+    (*this).MaterialParameters.Dust_Albedo = FLinearColor(4.313699901e-02f, 3.529400006e-02f, 1.568599977e-02f, 1.000000000e+00f);
     (*this).MaterialParameters.Dust_BreakupMask = FSoftObjectPath(TEXT("/Game/00_Main/MaterialLibrary/Utilities/T_Default_LC.T_Default_LC"), TEXT(""));
     (*this).MaterialParameters.Dust_BreakupMask_Contrast = 0.000000000e+00f;
     (*this).MaterialParameters.Dust_BreakupMask_Intensity = 0.000000000e+00f;
@@ -46,10 +42,7 @@ FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
     (*this).MaterialParameters.Dust_Metallic = 0.000000000e+00f;
     (*this).MaterialParameters.Dust_Roughness = 9.499999881e-01f;
     (*this).MaterialParameters.Dust_Specular = 5.000000000e-01f;
-    (*this).MaterialParameters.Scratches_Albedo.R = 3.137300164e-02f;
-    (*this).MaterialParameters.Scratches_Albedo.G = 3.529400006e-02f;
-    (*this).MaterialParameters.Scratches_Albedo.B = 5.098000169e-02f;
-    (*this).MaterialParameters.Scratches_Albedo.A = 1.000000000e+00f;
+    (*this).MaterialParameters.Scratches_Albedo = FLinearColor(3.137300164e-02f, 3.529400006e-02f, 5.098000169e-02f, 1.000000000e+00f);
     (*this).MaterialParameters.Scratches_BreakupMask = FSoftObjectPath(TEXT("/Game/00_Main/MaterialLibrary/Utilities/T_Default_LC.T_Default_LC"), TEXT(""));
     (*this).MaterialParameters.Scratches_BreakupMask_Contrast = 0.000000000e+00f;
     (*this).MaterialParameters.Scratches_BreakupMask_Intensity = 0.000000000e+00f;
@@ -65,5 +58,5 @@ FIGS_WeaponSkinTableRow::FIGS_WeaponSkinTableRow() {
     (*this).MaterialParameters.Mask_Offset = 0.000000000e+00f;
     (*this).MaterialParameters.Normal_BlendIntensity = 1.000000000e+00f;
     (*this).MaterialParameters.Roughness_Opacity = 1.000000000e+00f;
-    (*this).SkinMaterialSlot = {};
+    (*this).SkinMaterialSlot = TMap<TSubclassOf<UIGS_WieldableInventoryObjectBase>, FIGS_WeaponSkinStruct>{};
 }

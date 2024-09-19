@@ -8,7 +8,7 @@ FIGS_WieldableReplicatedData::FIGS_WieldableReplicatedData() {
     (*this).WeaponSkin = FSoftObjectPath();
     (*this).WeaponDefinition = nullptr;
     (*this).DefaultWeaponSkin = FSoftObjectPath();
-    (*this).Mods = {};
+    (*this).Mods = TArray<int16>{};
     (*this).UniversalData.bUseDefaultValues = true;
     (*this).UniversalData.bUseCustomName = false;
     (*this).UniversalData.UniversalBool_1 = false;

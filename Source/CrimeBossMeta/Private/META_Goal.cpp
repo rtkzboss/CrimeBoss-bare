@@ -1,4 +1,5 @@
 #include "META_Goal.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_Goal::FMETA_Goal() {
     (*this).Graph = FSoftObjectPath();
@@ -9,12 +10,12 @@ FMETA_Goal::FMETA_Goal() {
     (*this).bIsGoalRepeatable = false;
     (*this).DaysBetweenAttempts = 0;
     (*this).MinRespectWhenGoalAvailableForPlayer = 0;
-    (*this).Missions = {};
+    (*this).Missions = TArray<TSubclassOf<UMETA_MissionID>>{};
     (*this).Result = EMETA_GoalStatus::None;
-    (*this).AssignedTasks = {};
-    (*this).FinishedInnerTasks = {};
-    (*this).ActionCards = {};
-    (*this).VisitedGraphNodeIDs = {};
+    (*this).AssignedTasks = TArray<UMETA_TaskCondition*>{};
+    (*this).FinishedInnerTasks = TArray<UMETA_TaskCondition*>{};
+    (*this).ActionCards = TArray<FMETA_ActionCardGraph>{};
+    (*this).VisitedGraphNodeIDs = TSet<int32>{};
     (*this).SelectedActionCardNumber = -1;
     (*this).RespectByDefault = 0;
     (*this).InstigatorPartner = EMETA_Partner::Secretary;

@@ -2,5 +2,5 @@
 
 FMETA_PlayerStateSave::FMETA_PlayerStateSave() {
     (*this).MoneyAmount = 0;
-    (*this).Items = {};
+    (*this).Items = TArray<FSoftObjectPath>{};
 }

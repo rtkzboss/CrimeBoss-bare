@@ -5,6 +5,6 @@ FIGS_BotOrderDatabaseData::FIGS_BotOrderDatabaseData() {
     (*this).PathMustExist = true;
     (*this).Stacks = false;
     (*this).CancelOnObject = true;
-    (*this).CannotBeInterruptedBy = {};
-    (*this).AllowedSources = {};
+    (*this).CannotBeInterruptedBy = TSet<EIGS_BotCommandDefinition>{};
+    (*this).AllowedSources = TSet<EIGS_BotOrderActionSource>{};
 }

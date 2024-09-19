@@ -1,9 +1,10 @@
 #include "BTDecorator_MoveToIdlePointSequence.h"
+#include "IGS_PatrolPoint.h"
 
 UBTDecorator_MoveToIdlePointSequence::UBTDecorator_MoveToIdlePointSequence() {
-    (*this).PatrolPointKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).PatrolPointKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("PatrolPointKey_Object_2147482619"), AIGS_PatrolPoint::StaticClass());
+    (*this).PatrolPointKey = gen;
     (*this).NodeName = TEXT("Move To Idle Point Sequence");
 }
 

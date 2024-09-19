@@ -1,14 +1,16 @@
 #include "META_AmbushMissionSave.h"
 #include "EIGS_LightingScenarioType.h"
 #include "EMETA_JobResult.h"
+#include "IGS_InventoryObjectFramework.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_AmbushMissionSave::FMETA_AmbushMissionSave() {
     (*this).InstigatorMissionID = nullptr;
     (*this).InstigatorMissionTileID = FGameplayTag();
-    (*this).Parameters = {};
+    (*this).Parameters = TMap<FGameplayTag, int32>{};
     (*this).PreviousFPSMissionData.MissionResult = EMETA_JobResult::Success;
-    (*this).PreviousFPSMissionData.Loot = {};
-    (*this).PreviousFPSMissionData.CollectedLoot = {};
+    (*this).PreviousFPSMissionData.Loot = TArray<TSubclassOf<UIGS_InventoryObjectFramework>>{};
+    (*this).PreviousFPSMissionData.CollectedLoot = TMap<FGameplayTag, int32>{};
     (*this).PreviousFPSMissionData.MoneyCollected = 0;
     (*this).PreviousFPSMissionData.CivilCasualties = 0;
     (*this).PreviousFPSMissionData.PoliceCasualties = 0;

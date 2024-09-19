@@ -8,7 +8,7 @@ FAnimNode_PowerIK_Walk::FAnimNode_PowerIK_Walk() {
     (*this).BodyInertia.UseSpring = false;
     (*this).BodyInertia.SpringStrength = 1.000000000e+02f;
     (*this).BodyInertia.SpringDamping = 2.000000030e-01f;
-    (*this).Limbs = {};
+    (*this).Limbs = TArray<FPowerIKWalkingLimb>{};
     (*this).StepMaxReachDistance = 2.000000000e+02f;
     (*this).StepDurationMultiplier = 1.000000000e+00f;
     (*this).StepHeightMultiplier = 1.000000000e+00f;
@@ -18,9 +18,9 @@ FAnimNode_PowerIK_Walk::FAnimNode_PowerIK_Walk() {
     (*this).PrintTeleportWarning = false;
     (*this).CollisionChannel = ECC_WorldStatic;
     (*this).TraceComplex = true;
-    (*this).BendDirections = {};
-    (*this).ExcludedBones = {};
-    (*this).JointLimits = {};
+    (*this).BendDirections = TArray<FPowerIKBoneBendDirection>{};
+    (*this).ExcludedBones = TArray<FPowerIKExcludedBone>{};
+    (*this).JointLimits = TArray<FPowerIKBoneLimit>{};
     (*this).MaxSquashIterations = 6;
     (*this).MaxStretchIterations = 6;
     (*this).MaxFinalIterations = 3;

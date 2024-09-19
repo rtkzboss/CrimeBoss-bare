@@ -5,5 +5,5 @@ FIGS_LightingScenarioWorldSettings::FIGS_LightingScenarioWorldSettings() {
     (*this).bLevelIsPersistent = false;
     (*this).DefaultLightingScenarioLevel = FSoftObjectPath();
     (*this).bUseDefaultScenario = true;
-    (*this).LightingScenarioMapPairs = {};
+    (*this).LightingScenarioMapPairs = TMap<EIGS_LightingScenarioType, TSoftObjectPtr<UWorld>>{};
 }

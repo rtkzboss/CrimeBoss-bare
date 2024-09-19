@@ -10,9 +10,9 @@ FMETA_CinematicMissionRowInfo::FMETA_CinematicMissionRowInfo() {
     (*this).DaysOnMap = -1;
     (*this).MinCrewSize = 1;
     (*this).MaxCrewSize = 4;
-    (*this).CharactersRequired = {};
-    (*this).CharactersRequiredButNotOwned = {};
-    (*this).ResultsWhenJobIsNotRemovedFromTheMap = {};
+    (*this).CharactersRequired = TArray<EIGS_CharacterID>{};
+    (*this).CharactersRequiredButNotOwned = TArray<EIGS_CharacterID>{};
+    (*this).ResultsWhenJobIsNotRemovedFromTheMap = TArray<EMETA_JobResult>{};
     (*this).DistrictType = EIGS_HubDistrict::INVALID;
     (*this).BackdropType = EIGS_HubBackdropTypes::AllRandom;
 }

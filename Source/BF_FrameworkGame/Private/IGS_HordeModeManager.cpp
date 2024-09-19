@@ -2,7 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_HordeModeManager::UIGS_HordeModeManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_HordeModeManager::SetHordeModeCounterValues(const UObject* inWCO, int32 inTotalValue, float inCurrentProgress) {

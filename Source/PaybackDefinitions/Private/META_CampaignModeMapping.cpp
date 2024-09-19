@@ -2,5 +2,5 @@
 
 FMETA_CampaignModeMapping::FMETA_CampaignModeMapping() {
     (*this).CampaignModeTag = FGameplayTag();
-    (*this).MatchingData = {};
+    (*this).MatchingData = TArray<FMETA_CampaignModeMatchingData>{};
 }

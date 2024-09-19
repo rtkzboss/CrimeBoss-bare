@@ -1,11 +1,14 @@
 #include "IGS_BTService_CopSolveDesiredWeapon.h"
+#include "EIGS_SwitchWeaponTask_WeaponType.h"
+#include "EIGS_MeleeType.h"
 
 UIGS_BTService_CopSolveDesiredWeapon::UIGS_BTService_CopSolveDesiredWeapon() {
-    (*this).MeleeTypeKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).MeleeTypeKey, 0)) = 255;
-    (*this).DesiredWeaponKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).DesiredWeaponKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddEnumFilter(this, TEXT("MeleeTypeKey_Enum_2147482599"), StaticEnum<EIGS_MeleeType>());
+    (*this).MeleeTypeKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddEnumFilter(this, TEXT("DesiredWeaponKey_Enum_2147482598"), StaticEnum<EIGS_SwitchWeaponTask_WeaponType>());
+    (*this).DesiredWeaponKey = gen2;
     (*this).NodeName = TEXT("Cop Solve Desired Weapon");
 }
 

@@ -5,7 +5,7 @@ UIGS_SuspicionManager::UIGS_SuspicionManager(const FObjectInitializer& ObjectIni
     (*this).AlarmReason = EIGS_AlarmReason::Alarm_UNKNOWN;
     (*this).PrimaryComponentTick.bCanEverTick = true;
     (*this).PrimaryComponentTick.TickInterval = 2.000000000e+00f;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 bool UIGS_SuspicionManager::WouldStrikeCauseAlarm(int32 inStrikeCount) const {

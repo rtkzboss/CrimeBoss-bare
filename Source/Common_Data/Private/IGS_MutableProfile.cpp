@@ -2,5 +2,5 @@
 
 FIGS_MutableProfile::FIGS_MutableProfile() {
     (*this).ID = FSoftObjectPath();
-    (*this).MutableProfiles = {};
+    (*this).MutableProfiles = TArray<FIGS_MutableProfileData>{};
 }

@@ -9,5 +9,5 @@ FMETA_HeisterPerksEconomyData::FMETA_HeisterPerksEconomyData() {
     (*this).MaxNegativePerksForPromotion = 0;
     (*this).MinPerksForPromotion = 0;
     (*this).PerkClasses = 0;
-    (*this).Preference = {};
+    (*this).Preference = TMap<EIGS_PerkClass, EMETA_PerksPreference>{};
 }

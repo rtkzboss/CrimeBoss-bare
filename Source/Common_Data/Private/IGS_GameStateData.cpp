@@ -3,9 +3,11 @@
 #include "EMETA_ConditionOperator.h"
 #include "EMETA_ObjectiveRevivesCalculation.h"
 #include "EMETA_ObjectiveType.h"
+#include "IGS_SpecificSpecialLoot.h"
+#include "META_PerkDataToFPS.h"
 
 FIGS_GameStateData::FIGS_GameStateData() {
-    (*this).Heisters = {};
+    (*this).Heisters = TArray<FCommonHeisterData>{};
     (*this).StartupSource = EIGS_MissionStartupSource::Editor;
     (*this).MissionSubtype = TEXT("");
     (*this).QPModeSource = EIGS_QPModeSource::INVALID;
@@ -60,7 +62,7 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).BonusObjectiveData.Config.OutputParamOperator = EMETA_ConditionOperator::GreaterOrEqual;
     (*this).BonusObjectiveData.Config.DaysToComplete = 1;
     (*this).BonusObjectiveData.Config.ShowInFPS = true;
-    (*this).MetaBonuses.ArmyPerkData = {};
+    (*this).MetaBonuses.ArmyPerkData = TArray<FMETA_PerkDataToFPS>{};
     (*this).IntelLevel = -1;
     (*this).ExpectedPlayerCount = -1;
     (*this).MissionName = FText::GetEmpty();
@@ -69,7 +71,7 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).SupportsCleanExecution = false;
     (*this).TotalLootbagCount = -1;
     (*this).SpecificLootTypes = FGameplayTagContainer();
-    (*this).SpecialLoot.Loot = {};
+    (*this).SpecialLoot.Loot = TArray<FIGS_SpecificSpecialLoot>{};
     (*this).SpecialLoot.Money = 0;
     (*this).SpecialLoot.bIsFilled = false;
     (*this).Respect = EMETA_RespectLvl::Low;

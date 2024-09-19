@@ -8,7 +8,7 @@ FIGS_PlotlineSelectionDefinition::FIGS_PlotlineSelectionDefinition() {
     (*this).UnlockCriteriaTag = FGameplayTag();
     (*this).EntitlementTag = FGameplayTag();
     (*this).LockedMessage = FText::GetEmpty();
-    (*this).StarItems = {};
+    (*this).StarItems = TArray<FIGS_PlotlineSelectionStarItem>{};
     (*this).IsPlotline = false;
     (*this).IsDebugOnly = false;
 }

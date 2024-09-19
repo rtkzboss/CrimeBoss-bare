@@ -1,7 +1,7 @@
 #include "BreakableMeshProperties.h"
 
 FBreakableMeshProperties::FBreakableMeshProperties() {
-    (*this).ChainedComponentsToBreak = {};
+    (*this).ChainedComponentsToBreak = TArray<UPrimitiveComponent*>{};
     (*this).mR_IsBroken = false;
     (*this).mR_IsMaterialSwitched = false;
     (*this).bCanTakeBulletDamage = true;
@@ -10,12 +10,12 @@ FBreakableMeshProperties::FBreakableMeshProperties() {
     (*this).bCanTakeBreachExplosiveDamage = false;
     (*this).HealthToSwitchMaterial = 0;
     (*this).bSimulatePhysicsOnBreak = false;
-    (*this).BreakOtherComponents = {};
+    (*this).BreakOtherComponents = TArray<FName>{};
     (*this).StaticMeshBroken = nullptr;
     (*this).ParticleBreak = nullptr;
-    (*this).ParticleInstanceParameters = {};
+    (*this).ParticleInstanceParameters = TArray<FParticleSysParam>{};
     (*this).ParticleSpawnOffset = FTransform(FQuat(0.000000000e+00,0.000000000e+00,0.000000000e+00,1.000000000e+00), FVector(0.000000000e+00,0.000000000e+00,0.000000000e+00), FVector(1.000000000e+00,1.000000000e+00,1.000000000e+00));
-    (*this).MaterialsOnBreak = {};
+    (*this).MaterialsOnBreak = TArray<UMaterialInstance*>{};
     (*this).AkEventOnBreak = nullptr;
     (*this).AkEventOnImpact = nullptr;
 }

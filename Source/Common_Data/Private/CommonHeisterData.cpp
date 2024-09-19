@@ -1,4 +1,7 @@
 #include "CommonHeisterData.h"
+#include "IGS_EquipmentInventoryObject.h"
+#include "META_PerkDataToFPS.h"
+#include "Templates/SubclassOf.h"
 
 FCommonHeisterData::FCommonHeisterData() {
     (*this).TagID = FGameplayTag();
@@ -11,13 +14,13 @@ FCommonHeisterData::FCommonHeisterData() {
     (*this).PlayerId = -1;
     (*this).ProgressionLevel = 1;
     auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
-    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)) = {};
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).UniquePlayerId, 0)) = TArray<uint8>{};
     (*this).Loadout.PrimaryWeapon = nullptr;
     (*this).Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).Loadout.Equipment = {};
-    (*this).Loadout.Perks = {};
+    (*this).Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).Loadout.Ability1ChargesLeft = -1;
     (*this).Loadout.CharacterSkinID = FGameplayTag();
     (*this).Experience = 0;

@@ -22,7 +22,7 @@ UIGS_SimpleShooter::UIGS_SimpleShooter(const FObjectInitializer& ObjectInitializ
     (*this).AdsAkRtpc = gen7.Object;
     (*this).TracerEffectChance = 1.000000000e+02f;
     (*this).TrailEffectChance = 1.000000000e+01f;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_SimpleShooter::StopAttack(const bool inForced) {

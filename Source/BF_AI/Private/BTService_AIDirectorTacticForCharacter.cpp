@@ -1,9 +1,10 @@
 #include "BTService_AIDirectorTacticForCharacter.h"
+#include "EIGS_StormTacticType.h"
 
 UBTService_AIDirectorTacticForCharacter::UBTService_AIDirectorTacticForCharacter() {
-    (*this).WaveManagerTacticKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).WaveManagerTacticKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddEnumFilter(this, TEXT("WaveManagerTacticKey_Enum_2147482607"), StaticEnum<EIGS_StormTacticType>());
+    (*this).WaveManagerTacticKey = gen;
     (*this).NodeName = TEXT("AIDirector Tactic For Character");
 }
 

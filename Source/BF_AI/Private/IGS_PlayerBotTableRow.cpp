@@ -1,4 +1,5 @@
 #include "IGS_PlayerBotTableRow.h"
+#include "IGS_PlayerBotOverrideSettings.h"
 
 FIGS_PlayerBotTableRow::FIGS_PlayerBotTableRow() {
     (*this).ID = nullptr;
@@ -16,5 +17,5 @@ FIGS_PlayerBotTableRow::FIGS_PlayerBotTableRow() {
     (*this).Data.DefaultSettings.AffterFireCooldownCover.Max = 3.000000000e+00f;
     (*this).Data.DefaultSettings.CoverStickiness = 5.000000000e-01f;
     (*this).Data.DefaultSettings.ReactionIntensity = 8.000000119e-01f;
-    (*this).Data.OverridetSettings = {};
+    (*this).Data.OverridetSettings = TArray<FIGS_PlayerBotOverrideSettings>{};
 }

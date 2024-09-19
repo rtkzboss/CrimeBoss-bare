@@ -40,7 +40,7 @@ FMETA_RivalAttackMissionRowInfo::FMETA_RivalAttackMissionRowInfo() {
     (*this).FPSMissionInfo.SupportedLoot = FGameplayTagContainer();
     (*this).FPSMissionInfo.TotalLootbagCount = -1;
     (*this).FPSMissionInfo.ForcedDetectivesCount = 0;
-    (*this).FPSMissionInfo.Parameters = {};
+    (*this).FPSMissionInfo.Parameters = TMap<FGameplayTag, int32>{};
     (*this).FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).FPSMissionInfo.bDownedCharctersSurvive = false;
     (*this).UnlockTag = FGameplayTag();

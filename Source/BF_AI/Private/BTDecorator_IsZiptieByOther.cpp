@@ -1,9 +1,10 @@
 #include "BTDecorator_IsZiptieByOther.h"
+#include "IGS_GameCharacterFramework.h"
 
 UBTDecorator_IsZiptieByOther::UBTDecorator_IsZiptieByOther() {
-    (*this).CivToZiptieKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).CivToZiptieKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("CivToZiptieKey_Object_2147482622"), AIGS_GameCharacterFramework::StaticClass());
+    (*this).CivToZiptieKey = gen;
     (*this).NodeName = TEXT("Is Ziptie By Other");
 }
 

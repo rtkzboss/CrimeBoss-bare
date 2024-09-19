@@ -12,7 +12,7 @@ UIGS_AnimatedInteractiveComponentBase::UIGS_AnimatedInteractiveComponentBase(con
     (*this).FailsafeTime = 2.000000000e+00f;
     (*this).bSetFlyingWhenLerping = true;
     (*this).bRotatePitch = true;
-    (*this).InputTagsToApply = FGameplayTagContainer::CreateFromArray({FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.Move")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.Look")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.BotSwitch")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.Interact")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.ChangeSlot")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.DropBag"))});
+    (*this).InputTagsToApply = FGameplayTagContainer::CreateFromArray(TArray<FGameplayTag>{FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.Move")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.Look")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.BotSwitch")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.Interact")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.ChangeSlot")), FGameplayTag::RequestGameplayTag(TEXT("Gameplay.Input.Block.DropBag"))});
     (*this).PrimaryComponentTick.bCanEverTick = true;
 }
 

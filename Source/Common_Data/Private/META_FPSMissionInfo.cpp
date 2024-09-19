@@ -25,7 +25,7 @@ FMETA_FPSMissionInfo::FMETA_FPSMissionInfo() {
     (*this).SupportedLoot = FGameplayTagContainer();
     (*this).TotalLootbagCount = -1;
     (*this).ForcedDetectivesCount = 0;
-    (*this).Parameters = {};
+    (*this).Parameters = TMap<FGameplayTag, int32>{};
     (*this).StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).bDownedCharctersSurvive = false;
 }

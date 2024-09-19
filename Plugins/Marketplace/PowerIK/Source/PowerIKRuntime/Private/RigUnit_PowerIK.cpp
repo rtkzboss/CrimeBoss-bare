@@ -3,10 +3,10 @@
 FRigUnit_PowerIK::FRigUnit_PowerIK() {
     (*this).CharacterRoot = TEXT("pelvis");
     (*this).RootRotationMultiplier = 1.000000000e+00f;
-    (*this).Effectors = {};
-    (*this).BendDirections = {};
-    (*this).ExcludedBones = {};
-    (*this).JointLimits = {};
+    (*this).Effectors = TArray<FPowerIKEffector>{};
+    (*this).BendDirections = TArray<FPowerIKBoneBendDirection>{};
+    (*this).ExcludedBones = TArray<FPowerIKExcludedBone>{};
+    (*this).JointLimits = TArray<FPowerIKBoneLimit>{};
     (*this).CenterOfGravityConstraint.Alpha = 0.000000000e+00f;
     (*this).CenterOfGravityConstraint.HorizAmount = 1.200000048e+00f;
     (*this).CenterOfGravityConstraint.VertAmount = 3.000000119e-01f;

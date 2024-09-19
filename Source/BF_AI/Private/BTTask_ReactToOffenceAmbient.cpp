@@ -1,11 +1,11 @@
 #include "BTTask_ReactToOffenceAmbient.h"
+#include "IGS_OffenceData.h"
 
 UBTTask_ReactToOffenceAmbient::UBTTask_ReactToOffenceAmbient() {
-    (*this).OffenceDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OffenceDataKey, 0)) = 255;
-    auto gen2 = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("bNoneIsAllowedValue");
-    CastField<FBoolProperty>(gen2)->SetPropertyValue(&(*gen2->ContainerPtrToValuePtr<uint8>(&(*this).OffenceDataKey, 0)), true);
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("OffenceDataKey_Object_2147482547"), UIGS_OffenceData::StaticClass());
+    gen.AllowNoneAsValue(true);
+    (*this).OffenceDataKey = gen;
     (*this).NodeName = TEXT("ReactToOffenceAmbient");
 }
 

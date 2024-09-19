@@ -1,4 +1,6 @@
 #include "IGS_JoinedPlayers.h"
+#include "IGS_EquipmentInventoryObject.h"
+#include "META_PerkDataToFPS.h"
 #include "GameFramework/OnlineReplStructs.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_CharacterID.h"
@@ -6,6 +8,7 @@
 #include "EIGS_TeamSideEnum.h"
 #include "EMETA_CharacterState.h"
 #include "EMETA_RespectLvl.h"
+#include "Templates/SubclassOf.h"
 
 FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).FirstPlayer.PlayerName = TEXT("");
@@ -36,13 +39,13 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).FirstPlayer.CachedHeisterData.PlayerId = -1;
     (*this).FirstPlayer.CachedHeisterData.ProgressionLevel = 1;
     auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
-    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).FirstPlayer.CachedHeisterData.UniquePlayerId, 0)) = {};
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).FirstPlayer.CachedHeisterData.UniquePlayerId, 0)) = TArray<uint8>{};
     (*this).FirstPlayer.CachedHeisterData.Loadout.PrimaryWeapon = nullptr;
     (*this).FirstPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).FirstPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).FirstPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).FirstPlayer.CachedHeisterData.Loadout.Equipment = {};
-    (*this).FirstPlayer.CachedHeisterData.Loadout.Perks = {};
+    (*this).FirstPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).FirstPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).FirstPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
     (*this).FirstPlayer.CachedHeisterData.Loadout.CharacterSkinID = FGameplayTag();
     (*this).FirstPlayer.CachedHeisterData.Experience = 0;
@@ -88,13 +91,13 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).SecondPlayer.CachedHeisterData.HeisterNumber = -1;
     (*this).SecondPlayer.CachedHeisterData.PlayerId = -1;
     (*this).SecondPlayer.CachedHeisterData.ProgressionLevel = 1;
-    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).SecondPlayer.CachedHeisterData.UniquePlayerId, 0)) = {};
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).SecondPlayer.CachedHeisterData.UniquePlayerId, 0)) = TArray<uint8>{};
     (*this).SecondPlayer.CachedHeisterData.Loadout.PrimaryWeapon = nullptr;
     (*this).SecondPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).SecondPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).SecondPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).SecondPlayer.CachedHeisterData.Loadout.Equipment = {};
-    (*this).SecondPlayer.CachedHeisterData.Loadout.Perks = {};
+    (*this).SecondPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).SecondPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).SecondPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
     (*this).SecondPlayer.CachedHeisterData.Loadout.CharacterSkinID = FGameplayTag();
     (*this).SecondPlayer.CachedHeisterData.Experience = 0;
@@ -140,13 +143,13 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).ThirdPlayer.CachedHeisterData.HeisterNumber = -1;
     (*this).ThirdPlayer.CachedHeisterData.PlayerId = -1;
     (*this).ThirdPlayer.CachedHeisterData.ProgressionLevel = 1;
-    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).ThirdPlayer.CachedHeisterData.UniquePlayerId, 0)) = {};
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).ThirdPlayer.CachedHeisterData.UniquePlayerId, 0)) = TArray<uint8>{};
     (*this).ThirdPlayer.CachedHeisterData.Loadout.PrimaryWeapon = nullptr;
     (*this).ThirdPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).ThirdPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).ThirdPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).ThirdPlayer.CachedHeisterData.Loadout.Equipment = {};
-    (*this).ThirdPlayer.CachedHeisterData.Loadout.Perks = {};
+    (*this).ThirdPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).ThirdPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).ThirdPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
     (*this).ThirdPlayer.CachedHeisterData.Loadout.CharacterSkinID = FGameplayTag();
     (*this).ThirdPlayer.CachedHeisterData.Experience = 0;
@@ -192,13 +195,13 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).FourthPlayer.CachedHeisterData.HeisterNumber = -1;
     (*this).FourthPlayer.CachedHeisterData.PlayerId = -1;
     (*this).FourthPlayer.CachedHeisterData.ProgressionLevel = 1;
-    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).FourthPlayer.CachedHeisterData.UniquePlayerId, 0)) = {};
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).FourthPlayer.CachedHeisterData.UniquePlayerId, 0)) = TArray<uint8>{};
     (*this).FourthPlayer.CachedHeisterData.Loadout.PrimaryWeapon = nullptr;
     (*this).FourthPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).FourthPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).FourthPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).FourthPlayer.CachedHeisterData.Loadout.Equipment = {};
-    (*this).FourthPlayer.CachedHeisterData.Loadout.Perks = {};
+    (*this).FourthPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).FourthPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).FourthPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
     (*this).FourthPlayer.CachedHeisterData.Loadout.CharacterSkinID = FGameplayTag();
     (*this).FourthPlayer.CachedHeisterData.Experience = 0;

@@ -1,11 +1,13 @@
 #include "BTService_ReactToThreat.h"
+#include "CoverPoint.h"
 
 UBTService_ReactToThreat::UBTService_ReactToThreat() {
-    (*this).BestCoverKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestCoverKey, 0)) = 255;
-    (*this).NeedReactToThreathKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).NeedReactToThreathKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestCoverKey_Object_2147482566"), UCoverPoint::StaticClass());
+    (*this).BestCoverKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddBoolFilter(this, TEXT("NeedReactToThreathKey"));
+    (*this).NeedReactToThreathKey = gen2;
     (*this).NodeName = TEXT("React to threath");
 }
 

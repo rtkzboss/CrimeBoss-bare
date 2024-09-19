@@ -2,5 +2,5 @@
 
 FMETA_MusicPacksTableRow::FMETA_MusicPacksTableRow() {
     (*this).ID = FGameplayTag::RequestGameplayTag(TEXT("Music.Collection"));
-    (*this).MusicPacks = {};
+    (*this).MusicPacks = TArray<TSoftObjectPtr<UAkStateValue>>{};
 }

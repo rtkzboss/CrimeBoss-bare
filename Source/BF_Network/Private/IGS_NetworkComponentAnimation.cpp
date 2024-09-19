@@ -1,7 +1,7 @@
 #include "IGS_NetworkComponentAnimation.h"
 
 UIGS_NetworkComponentAnimation::UIGS_NetworkComponentAnimation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_NetworkComponentAnimation::MessageToServer_PlayerLightMeleeChainAttackVariantChange_Implementation(int32 inChainIdx) {

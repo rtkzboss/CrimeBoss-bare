@@ -11,7 +11,7 @@ FIGS_PerkData::FIGS_PerkData() {
     (*this).PerkClass = EIGS_PerkClass::PC_Generic;
     (*this).PerkCategory = 0;
     (*this).PerkModeUsage = 0;
-    (*this).AllowedHeistersOverride = {};
+    (*this).AllowedHeistersOverride = TArray<EIGS_CharacterID>{};
     (*this).ForbiddenHeistersLevel = 0;
     (*this).MutuallyExclusiveTag = FGameplayTag();
     (*this).bAllowedForGeneration = false;

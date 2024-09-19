@@ -4,10 +4,10 @@ FMETA_FinishedMissionInfo::FMETA_FinishedMissionInfo() {
     (*this).MissionID = nullptr;
     (*this).MissionOutcome = 0;
     (*this).BonusCash = 0;
-    (*this).BonusLoot = {};
+    (*this).BonusLoot = TMap<FGameplayTag, int32>{};
     (*this).bStealthCompletionFlag = false;
-    (*this).MissionOutParameters = {};
-    (*this).AssignedCrew = {};
+    (*this).MissionOutParameters = TMap<FGameplayTag, int32>{};
+    (*this).AssignedCrew = TMap<EIGS_CharacterID, EMETA_CharacterState>{};
     (*this).CivilianCasualties = 0;
     (*this).PoliceCasualties = 0;
     (*this).BonusObjectiveResult = EMETA_ObjectiveState::InProgress;

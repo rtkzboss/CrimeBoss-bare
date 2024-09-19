@@ -6,13 +6,10 @@ FCustomizableObjectPopulationConstraint::FCustomizableObjectPopulationConstraint
     (*this).TrueWeight = 1;
     (*this).FalseWeight = 1;
     (*this).DiscreteValue = TEXT("");
-    (*this).DiscreteColor.R = 0.000000000e+00f;
-    (*this).DiscreteColor.G = 0.000000000e+00f;
-    (*this).DiscreteColor.B = 0.000000000e+00f;
-    (*this).DiscreteColor.A = 0.000000000e+00f;
-    (*this).WhiteList = {};
-    (*this).Blacklist = {};
-    (*this).Ranges = {};
+    (*this).DiscreteColor = FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f);
+    (*this).WhiteList = TArray<FString>{};
+    (*this).Blacklist = TArray<FString>{};
+    (*this).Ranges = TArray<FConstraintRanges>{};
     (*this).Curve = nullptr;
     (*this).CurveColor = ECurveColor::RED;
 }

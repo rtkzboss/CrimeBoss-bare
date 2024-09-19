@@ -1,8 +1,8 @@
 #include "BTDecorator_CoverAttackSequenceBase.h"
 
 UBTDecorator_CoverAttackSequenceBase::UBTDecorator_CoverAttackSequenceBase() {
-    (*this).UpdateCoverKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).UpdateCoverKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddBoolFilter(this, TEXT("UpdateCoverKey"));
+    (*this).UpdateCoverKey = gen;
 }
 

@@ -2,5 +2,5 @@
 
 FIGS_AIUnitCharacterData::FIGS_AIUnitCharacterData() {
     (*this).Controller = FSoftObjectPath();
-    (*this).Pawns = {};
+    (*this).Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
 }

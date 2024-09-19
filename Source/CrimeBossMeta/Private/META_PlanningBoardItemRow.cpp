@@ -6,9 +6,9 @@ FMETA_PlanningBoardItemRow::FMETA_PlanningBoardItemRow() {
     (*this).Description = FText::GetEmpty();
     (*this).IsVisualOnly = false;
     (*this).AudioMessageTag = FGameplayTag();
-    (*this).Missions = {};
+    (*this).Missions = TArray<FMETA_PlanningBoardMission>{};
     (*this).StaticMesh = FSoftObjectPath();
-    (*this).Connections = {};
+    (*this).Connections = TArray<FMETA_PlanningBoardItemConnectionData>{};
     (*this).PositionX = 0.000000000e+00f;
     (*this).PositionY = 0.000000000e+00f;
     (*this).ZoomOffset = 0.000000000e+00f;

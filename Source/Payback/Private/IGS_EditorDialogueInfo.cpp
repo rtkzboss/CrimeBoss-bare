@@ -2,5 +2,5 @@
 
 FIGS_EditorDialogueInfo::FIGS_EditorDialogueInfo() {
     (*this).DialogueID = FText::GetEmpty();
-    (*this).Lines = {};
+    (*this).Lines = TArray<FIGS_MetaDialogueVariationData>{};
 }

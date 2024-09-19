@@ -1,5 +1,4 @@
 #include "IGS_PlayerCharacterMovementComponent.h"
-#include "GameFramework/CharacterMovementComponent.h"
 
 UIGS_PlayerCharacterMovementComponent::UIGS_PlayerCharacterMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).MinAnalogValueForSprint = 6.999999881e-01f;
@@ -33,10 +32,8 @@ UIGS_PlayerCharacterMovementComponent::UIGS_PlayerCharacterMovementComponent(con
     (*this).CameraShakeScaleLadder = 5.000000000e+00f;
     (*this).MaxStepHeight = 4.000000000e+01f;
     (*this).JumpZVelocity = 3.400000000e+02f;
-    auto gen = UCharacterMovementComponent::StaticClass()->FindPropertyByName("WalkableFloorAngle");
-    (*gen->ContainerPtrToValuePtr<float>(&(*this), 0)) = 5.050000000e+01f;
-    auto gen2 = UCharacterMovementComponent::StaticClass()->FindPropertyByName("WalkableFloorZ");
-    (*gen2->ContainerPtrToValuePtr<float>(&(*this), 0)) = 6.360782385e-01f;
+    (*this).SetWalkableFloorAngle(5.050000000e+01f);
+    (*this).SetWalkableFloorZ(6.360782385e-01f);
     (*this).CrouchedHalfHeight = 6.000000000e+01f;
 }
 

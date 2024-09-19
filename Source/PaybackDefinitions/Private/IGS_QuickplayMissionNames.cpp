@@ -1,7 +1,7 @@
 #include "IGS_QuickplayMissionNames.h"
 
 FIGS_QuickplayMissionNames::FIGS_QuickplayMissionNames() {
-    (*this).MoneyMaking = {};
-    (*this).Contract = {};
-    (*this).Other = {};
+    (*this).MoneyMaking = TArray<FText>{};
+    (*this).Contract = TArray<FText>{};
+    (*this).Other = TArray<FText>{};
 }

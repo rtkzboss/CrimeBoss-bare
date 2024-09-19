@@ -1,5 +1,5 @@
 #include "META_GraphNodeIDs.h"
 
 FMETA_GraphNodeIDs::FMETA_GraphNodeIDs() {
-    (*this).NodeIDs = {};
+    (*this).NodeIDs = TArray<int32>{};
 }

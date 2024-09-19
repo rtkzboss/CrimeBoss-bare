@@ -1,15 +1,9 @@
 #include "IGS_PressureDebugWidget.h"
 
 UIGS_PressureDebugWidget::UIGS_PressureDebugWidget() {
-    (*this).PressureColor.R = 1.000000000e+00f;
-    (*this).PressureColor.A = 1.000000000e+00f;
-    (*this).LegendColor.R = 1.000000000e+00f;
-    (*this).LegendColor.G = 8.500000238e-01f;
-    (*this).LegendColor.A = 7.500000000e-01f;
-    (*this).GreyLegendColor.R = 5.000000000e-01f;
-    (*this).GreyLegendColor.G = 5.000000000e-01f;
-    (*this).GreyLegendColor.B = 5.000000000e-01f;
-    (*this).GreyLegendColor.A = 2.500000000e-01f;
+    (*this).PressureColor = FLinearColor(1.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 1.000000000e+00f);
+    (*this).LegendColor = FLinearColor(1.000000000e+00f, 8.500000238e-01f, 0.000000000e+00f, 7.500000000e-01f);
+    (*this).GreyLegendColor = FLinearColor(5.000000000e-01f, 5.000000000e-01f, 5.000000000e-01f, 2.500000000e-01f);
 }
 
 

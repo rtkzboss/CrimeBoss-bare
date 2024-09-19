@@ -4,9 +4,9 @@ FIGS_LoadingScreenSetup::FIGS_LoadingScreenSetup() {
     (*this).ID = FGameplayTag();
     (*this).BackgroundTexture = FSoftObjectPath();
     (*this).ThrobberSprite = FSoftObjectPath();
-    (*this).BinkMoviePaths = {};
+    (*this).BinkMoviePaths = TArray<FString>{};
     (*this).TipsTagContainer = FGameplayTagContainer();
-    (*this).Tips = {};
-    (*this).ControllerTips = {};
-    (*this).KeyboardMouseTips = {};
+    (*this).Tips = TArray<FText>{};
+    (*this).ControllerTips = TArray<FText>{};
+    (*this).KeyboardMouseTips = TArray<FText>{};
 }

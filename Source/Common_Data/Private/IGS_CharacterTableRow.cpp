@@ -1,6 +1,10 @@
 #include "IGS_CharacterTableRow.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_DialogueHeisterCharacter.h"
+#include "IGS_EquipmentInventoryObject.h"
+#include "IGS_GameplayEffect_PerkBase.h"
+#include "META_PerkDataToFPS.h"
+#include "Templates/SubclassOf.h"
 
 FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     (*this).TagID = FGameplayTag();
@@ -31,13 +35,13 @@ FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     (*this).UniqueLeveledClasses.VariantName = FText::GetEmpty();
     (*this).UniqueLeveledClasses.VariantDescription = FText::GetEmpty();
     (*this).UniqueLeveledClasses.DialogueID = EIGS_DialogueHeisterCharacter::None;
-    (*this).GenericVariants = {};
+    (*this).GenericVariants = TArray<FIGS_CharacterClasses>{};
     (*this).DefaultLoadout.PrimaryWeapon = nullptr;
     (*this).DefaultLoadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).DefaultLoadout.SecondaryWeapon = nullptr;
     (*this).DefaultLoadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).DefaultLoadout.Equipment = {};
-    (*this).DefaultLoadout.Perks = {};
+    (*this).DefaultLoadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).DefaultLoadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).DefaultLoadout.Ability1ChargesLeft = -1;
     (*this).DefaultLoadout.CharacterSkinID = FGameplayTag();
     (*this).Traits.MaxHealth = 960;
@@ -45,9 +49,9 @@ FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     auto gen = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TokenStreamVersion");
     (*gen->ContainerPtrToValuePtr<int32>(&(*this).Traits.AllowedWieldables, 0)) = 0;
     auto gen2 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("TagDictionary");
-    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits.AllowedWieldables, 0)) = {FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable"))};
+    (*gen2->ContainerPtrToValuePtr<TArray<FGameplayTag>>(&(*this).Traits.AllowedWieldables, 0)) = TArray<FGameplayTag>{FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable"))};
     auto gen3 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("QueryTokenStream");
-    (*gen3->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).Traits.AllowedWieldables, 0)) = {0, 1, 2, 1, 0};
+    (*gen3->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).Traits.AllowedWieldables, 0)) = TArray<uint8>{0, 1, 2, 1, 0};
     auto gen4 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("UserDescription");
     (*gen4->ContainerPtrToValuePtr<FString>(&(*this).Traits.AllowedWieldables, 0)) = TEXT("");
     auto gen5 = TBaseStructure<FGameplayTagQuery>::Get()->FindPropertyByName("AutoDescription");
@@ -58,8 +62,8 @@ FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     (*this).CharacterWieldable3PVModelScaleMultiplier = 1.000000000e+00f;
     (*this).CharacterWieldableFPVModelScaleMultiplier = 1.000000000e+00f;
     (*this).MetaData.CharacterQuality = EMETA_ItemQuality::MinGenerate;
-    (*this).MetaData.PerkTags = {};
-    (*this).MetaData.Perks = {};
+    (*this).MetaData.PerkTags = TArray<FGameplayTag>{};
+    (*this).MetaData.Perks = TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>>{};
     (*this).Quality = EMETA_ItemQuality::MinGenerate;
     (*this).UnlockProperties.IsUnlockable = false;
     (*this).UnlockProperties.RequiredTags = FGameplayTagContainer();

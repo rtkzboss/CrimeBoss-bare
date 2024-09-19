@@ -1,5 +1,5 @@
 #include "META_DifficultyConfig.h"
 
 FMETA_DifficultyConfig::FMETA_DifficultyConfig() {
-    (*this).Config = {};
+    (*this).Config = TMap<EIGS_ScenarioDifficulty, int32>{};
 }

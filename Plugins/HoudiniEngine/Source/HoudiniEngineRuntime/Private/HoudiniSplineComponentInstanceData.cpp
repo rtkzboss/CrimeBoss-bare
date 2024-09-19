@@ -1,7 +1,7 @@
 #include "HoudiniSplineComponentInstanceData.h"
 
 FHoudiniSplineComponentInstanceData::FHoudiniSplineComponentInstanceData() {
-    (*this).CurvePoints = {};
-    (*this).DisplayPoints = {};
-    (*this).DisplayPointIndexDivider = {};
+    (*this).CurvePoints = TArray<FTransform>{};
+    (*this).DisplayPoints = TArray<FVector>{};
+    (*this).DisplayPointIndexDivider = TArray<int32>{};
 }

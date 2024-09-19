@@ -3,10 +3,10 @@
 
 FIGS_DialogueLevelName::FIGS_DialogueLevelName() {
     (*this).LevelTag = FGameplayTag();
-    (*this).LevelNames = {};
-    (*this).LevelCharacters = {};
+    (*this).LevelNames = TArray<FName>{};
+    (*this).LevelCharacters = TArray<FIGS_DialogueGroupCharacterHolder>{};
     (*this).BlacklistOption = EIGS_DialogueBlacklistOption::NoBlacklist;
-    (*this).BlacklistLevelNames = {};
+    (*this).BlacklistLevelNames = TArray<FName>{};
     (*this).BlacklistAlwaysEnabled = false;
     (*this).BlacklistDefaultLevelsPreload = false;
     (*this).UseDefaultLevelsPreload = true;

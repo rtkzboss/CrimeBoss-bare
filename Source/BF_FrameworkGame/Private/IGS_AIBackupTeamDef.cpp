@@ -2,6 +2,14 @@
 #include "GameplayTagContainer.h"
 #include "EIGS_CoverPreset.h"
 #include "EIGS_TeamSideEnum.h"
+#include "IGS_AILoadoutData.h"
+#include "IGS_AIMeleeWeaponDef.h"
+#include "IGS_AIPrimaryWeaponDef.h"
+#include "IGS_AISecondaryWeaponDef.h"
+#include "IGS_AIThrowableWeaponDef.h"
+#include "Templates/SubclassOf.h"
+
+class AIGS_GameCharacterFramework;
 
 FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Tier1.Default.Stats.HP.Overload = 0.000000000e+00f;
@@ -38,13 +46,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Tier1.Default.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Tier1.Default.Enabled = true;
     (*this).Tiers.Tier1.Default.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Tier1.Default.Character.Pawns = {};
-    (*this).Tiers.Tier1.Default.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Tier1.Default.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Tier1.Default.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Tier1.Default.Loadout.WeaponProbability = {};
+    (*this).Tiers.Tier1.Default.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Tier1.Default.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Tier1.Default.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Tier1.Default.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Tier1.Default.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Tier1.Default.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Tier1.Default.Loadout.ThrowablePool = {};
+    (*this).Tiers.Tier1.Default.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Tier1.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Tier1.Default.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Tier1.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
@@ -82,13 +90,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Tier1.Heavy.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Tier1.Heavy.Enabled = true;
     (*this).Tiers.Tier1.Heavy.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Tier1.Heavy.Character.Pawns = {};
-    (*this).Tiers.Tier1.Heavy.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Tier1.Heavy.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Tier1.Heavy.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Tier1.Heavy.Loadout.WeaponProbability = {};
+    (*this).Tiers.Tier1.Heavy.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Tier1.Heavy.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Tier1.Heavy.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Tier1.Heavy.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Tier1.Heavy.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Tier1.Heavy.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Tier1.Heavy.Loadout.ThrowablePool = {};
+    (*this).Tiers.Tier1.Heavy.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Tier1.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Tier1.Heavy.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Tier1.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
@@ -126,13 +134,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Tier2.Default.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Tier2.Default.Enabled = true;
     (*this).Tiers.Tier2.Default.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Tier2.Default.Character.Pawns = {};
-    (*this).Tiers.Tier2.Default.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Tier2.Default.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Tier2.Default.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Tier2.Default.Loadout.WeaponProbability = {};
+    (*this).Tiers.Tier2.Default.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Tier2.Default.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Tier2.Default.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Tier2.Default.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Tier2.Default.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Tier2.Default.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Tier2.Default.Loadout.ThrowablePool = {};
+    (*this).Tiers.Tier2.Default.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Tier2.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Tier2.Default.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Tier2.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
@@ -170,13 +178,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Tier2.Heavy.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Tier2.Heavy.Enabled = true;
     (*this).Tiers.Tier2.Heavy.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Tier2.Heavy.Character.Pawns = {};
-    (*this).Tiers.Tier2.Heavy.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Tier2.Heavy.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Tier2.Heavy.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Tier2.Heavy.Loadout.WeaponProbability = {};
+    (*this).Tiers.Tier2.Heavy.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Tier2.Heavy.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Tier2.Heavy.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Tier2.Heavy.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Tier2.Heavy.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Tier2.Heavy.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Tier2.Heavy.Loadout.ThrowablePool = {};
+    (*this).Tiers.Tier2.Heavy.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Tier2.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Tier2.Heavy.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Tier2.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
@@ -214,13 +222,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Tier3.Default.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Tier3.Default.Enabled = true;
     (*this).Tiers.Tier3.Default.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Tier3.Default.Character.Pawns = {};
-    (*this).Tiers.Tier3.Default.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Tier3.Default.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Tier3.Default.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Tier3.Default.Loadout.WeaponProbability = {};
+    (*this).Tiers.Tier3.Default.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Tier3.Default.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Tier3.Default.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Tier3.Default.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Tier3.Default.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Tier3.Default.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Tier3.Default.Loadout.ThrowablePool = {};
+    (*this).Tiers.Tier3.Default.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Tier3.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Tier3.Default.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Tier3.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
@@ -258,13 +266,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Tier3.Heavy.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Tier3.Heavy.Enabled = true;
     (*this).Tiers.Tier3.Heavy.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Tier3.Heavy.Character.Pawns = {};
-    (*this).Tiers.Tier3.Heavy.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Tier3.Heavy.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Tier3.Heavy.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Tier3.Heavy.Loadout.WeaponProbability = {};
+    (*this).Tiers.Tier3.Heavy.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Tier3.Heavy.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Tier3.Heavy.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Tier3.Heavy.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Tier3.Heavy.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Tier3.Heavy.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Tier3.Heavy.Loadout.ThrowablePool = {};
+    (*this).Tiers.Tier3.Heavy.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Tier3.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Tier3.Heavy.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Tier3.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));
@@ -302,13 +310,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Special.Default.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Special.Default.Enabled = true;
     (*this).Tiers.Special.Default.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Special.Default.Character.Pawns = {};
-    (*this).Tiers.Special.Default.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Special.Default.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Special.Default.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Special.Default.Loadout.WeaponProbability = {};
+    (*this).Tiers.Special.Default.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Special.Default.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Special.Default.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Special.Default.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Special.Default.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Special.Default.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Special.Default.Loadout.ThrowablePool = {};
+    (*this).Tiers.Special.Default.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Special.Default.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Special.Default.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Special.Default.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Default"));
@@ -346,13 +354,13 @@ FIGS_AIBackupTeamDef::FIGS_AIBackupTeamDef() {
     (*this).Tiers.Special.Heavy.Stats.ReactionIntensity.bOverloadValue = false;
     (*this).Tiers.Special.Heavy.Enabled = true;
     (*this).Tiers.Special.Heavy.Character.Controller = FSoftObjectPath();
-    (*this).Tiers.Special.Heavy.Character.Pawns = {};
-    (*this).Tiers.Special.Heavy.Loadout.WeaponPool.PrimaryWeapons = {};
-    (*this).Tiers.Special.Heavy.Loadout.WeaponPool.SecondaryWeapons = {};
-    (*this).Tiers.Special.Heavy.Loadout.WeaponPool.MeleeWeapons = {};
-    (*this).Tiers.Special.Heavy.Loadout.WeaponProbability = {};
+    (*this).Tiers.Special.Heavy.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
+    (*this).Tiers.Special.Heavy.Loadout.WeaponPool.PrimaryWeapons = TArray<TSubclassOf<UIGS_AIPrimaryWeaponDef>>{};
+    (*this).Tiers.Special.Heavy.Loadout.WeaponPool.SecondaryWeapons = TArray<TSubclassOf<UIGS_AISecondaryWeaponDef>>{};
+    (*this).Tiers.Special.Heavy.Loadout.WeaponPool.MeleeWeapons = TArray<TSubclassOf<UIGS_AIMeleeWeaponDef>>{};
+    (*this).Tiers.Special.Heavy.Loadout.WeaponProbability = TArray<FIGS_AILoadoutData>{};
     (*this).Tiers.Special.Heavy.Loadout.NoThrowableChance = 0;
-    (*this).Tiers.Special.Heavy.Loadout.ThrowablePool = {};
+    (*this).Tiers.Special.Heavy.Loadout.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Tiers.Special.Heavy.Loadout.EmptyWeaponTag = FGameplayTag::RequestGameplayTag(TEXT("Item.Wieldable.Weapon"));
     (*this).Tiers.Special.Heavy.Loadout.ShowNoThrowableBool = 0;
     (*this).Tiers.Special.Heavy.Specialization = FGameplayTag::RequestGameplayTag(TEXT("AI.Specialization.Special.Heavy"));

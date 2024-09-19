@@ -4,5 +4,5 @@ FCustomizableObjectIntParameterValue::FCustomizableObjectIntParameterValue() {
     (*this).ParameterName = TEXT("");
     (*this).ParameterValueName = TEXT("");
     (*this).Uid = TEXT("");
-    (*this).ParameterRangeValueNames = {};
+    (*this).ParameterRangeValueNames = TArray<FString>{};
 }

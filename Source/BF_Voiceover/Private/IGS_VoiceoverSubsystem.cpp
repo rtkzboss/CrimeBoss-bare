@@ -1,7 +1,7 @@
 #include "IGS_VoiceoverSubsystem.h"
 
 UIGS_VoiceoverSubsystem::UIGS_VoiceoverSubsystem() {
-    (*this).VoiceoverControllers = {};
+    (*this).VoiceoverControllers = TMap<FIGS_VoiceoverControllerKey, UIGS_VoiceoverGroupController*>{};
 }
 
 void UIGS_VoiceoverSubsystem::SetSecondPlanner(FIGS_DialogueGroupCharacterHolder inCharacterHolder) {

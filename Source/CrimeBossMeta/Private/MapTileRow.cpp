@@ -3,7 +3,7 @@
 FMapTileRow::FMapTileRow() {
     (*this).ID = FGameplayTag();
     (*this).Name = FText::GetEmpty();
-    (*this).Neighbours = {};
+    (*this).Neighbours = TArray<FGameplayTag>{};
     (*this).MinWealth = EMETA_TileWealth::Poor;
     (*this).MaxWealth = EMETA_TileWealth::Rich;
     (*this).Type = EMETA_TileType::Empty;

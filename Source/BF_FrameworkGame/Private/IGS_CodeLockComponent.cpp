@@ -5,7 +5,7 @@ UIGS_CodeLockComponent::UIGS_CodeLockComponent(const FObjectInitializer& ObjectI
     (*this).MinCylinderValue = 1;
     (*this).MaxCylinderValue = 7;
     (*this).R_IsLocked = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_CodeLockComponent::SetInstigator(AIGS_GameCharacterFramework* inInstigator) {

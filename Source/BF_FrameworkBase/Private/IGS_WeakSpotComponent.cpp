@@ -1,7 +1,7 @@
 #include "IGS_WeakSpotComponent.h"
 
 UIGS_WeakSpotComponent::UIGS_WeakSpotComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 bool UIGS_WeakSpotComponent::SetWeakSpotEnabled(const UPrimitiveComponent* inWeakSpotReference, const bool inEnabled) {

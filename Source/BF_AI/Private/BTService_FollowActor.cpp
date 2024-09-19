@@ -1,11 +1,13 @@
 #include "BTService_FollowActor.h"
+#include "GameFramework/Actor.h"
 
 UBTService_FollowActor::UBTService_FollowActor() {
-    (*this).OutFollowActorKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OutFollowActorKey, 0)) = 255;
-    (*this).OutFollowDistanceKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OutFollowDistanceKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("OutFollowActorKey_Object_2147482581"), AActor::StaticClass());
+    (*this).OutFollowActorKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddFloatFilter(this, TEXT("OutFollowDistanceKey"));
+    (*this).OutFollowDistanceKey = gen2;
     (*this).NodeName = TEXT("Follow Actor");
 }
 

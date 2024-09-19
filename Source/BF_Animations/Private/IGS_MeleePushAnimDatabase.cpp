@@ -2,5 +2,5 @@
 
 FIGS_MeleePushAnimDatabase::FIGS_MeleePushAnimDatabase() {
     (*this).ID = FGameplayTag::RequestGameplayTag(TEXT("Anim.Push.Unknown"));
-    (*this).AnimVariations = {};
+    (*this).AnimVariations = TArray<UAnimMontage*>{};
 }

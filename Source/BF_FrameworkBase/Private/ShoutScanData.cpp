@@ -1,8 +1,8 @@
 #include "ShoutScanData.h"
 
 FShoutScanData::FShoutScanData() {
-    (*this).WillBeShoutChars = {};
-    (*this).CanNotShoutChars = {};
+    (*this).WillBeShoutChars = TArray<AIGS_GameCharacterFramework*>{};
+    (*this).CanNotShoutChars = TArray<AIGS_GameCharacterFramework*>{};
     (*this).HasImposibleToShoutCharacters = false;
     (*this).HasCharacterForHint = false;
 }

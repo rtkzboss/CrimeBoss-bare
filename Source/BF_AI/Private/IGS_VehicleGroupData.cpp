@@ -1,6 +1,6 @@
 #include "IGS_VehicleGroupData.h"
 
 FIGS_VehicleGroupData::FIGS_VehicleGroupData() {
-    (*this).Colors = {};
-    (*this).VehiclesData = {};
+    (*this).Colors = TArray<FColor>{};
+    (*this).VehiclesData = TArray<FIGS_VehicleDatabaseData>{};
 }

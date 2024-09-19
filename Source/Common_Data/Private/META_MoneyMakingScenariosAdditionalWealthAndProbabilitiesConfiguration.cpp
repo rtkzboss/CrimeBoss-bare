@@ -2,5 +2,5 @@
 
 FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration::FMETA_MoneyMakingScenariosAdditionalWealthAndProbabilitiesConfiguration() {
     (*this).MoneyMakingScenarios = FGameplayTagContainer();
-    (*this).RewardsAndProbabilities = {};
+    (*this).RewardsAndProbabilities = TMap<EMETA_RespectLvl, FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios>{};
 }

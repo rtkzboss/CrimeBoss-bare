@@ -3,6 +3,6 @@
 UIGS_SignificanceComponent::UIGS_SignificanceComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bIsEnabled = true;
     (*this).bEventOnlyOnChanged = true;
-    (*this).SignificanceDistanceMap = {};
+    (*this).SignificanceDistanceMap = TMap<float, EIGS_SignificanceValue>{};
 }
 

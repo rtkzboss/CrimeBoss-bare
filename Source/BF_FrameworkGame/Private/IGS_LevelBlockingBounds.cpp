@@ -105,7 +105,7 @@ AIGS_LevelBlockingBounds::AIGS_LevelBlockingBounds(const FObjectInitializer& Obj
     gen30.Channel = TEXT("PlaceDynamicObject");
     gen30.Response = ECR_Ignore;
     auto gen31 = TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseArray");
-    (*gen31->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen7->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = {MoveTemp(gen9), MoveTemp(gen10), MoveTemp(gen11), MoveTemp(gen12), MoveTemp(gen13), MoveTemp(gen14), MoveTemp(gen15), MoveTemp(gen16), MoveTemp(gen17), MoveTemp(gen18), MoveTemp(gen19), MoveTemp(gen20), MoveTemp(gen21), MoveTemp(gen22), MoveTemp(gen23), MoveTemp(gen24), MoveTemp(gen25), MoveTemp(gen26), MoveTemp(gen27), MoveTemp(gen28), MoveTemp(gen29), MoveTemp(gen30)};
+    (*gen31->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen7->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = TArray<FResponseChannel>{gen9, gen10, gen11, gen12, gen13, gen14, gen15, gen16, gen17, gen18, gen19, gen20, gen21, gen22, gen23, gen24, gen25, gen26, gen27, gen28, gen29, gen30};
     (*this).Color.B = 0;
     (*this).Color.G = 0;
     (*this).Color.R = 255;

@@ -1,5 +1,6 @@
 #include "META_MissionDatabase.h"
 #include "EIGS_AITiers.h"
+#include "EIGS_CharacterID.h"
 #include "EIGS_GangsterVariationType.h"
 #include "EIGS_HeistersBackupVariationType.h"
 #include "EIGS_HubBackdropTypes.h"
@@ -11,11 +12,15 @@
 #include "EMETA_AIBossStrengthChangeIntensity.h"
 #include "EMETA_FPSMissionSubtype.h"
 #include "EMETA_Heat.h"
+#include "EMETA_JobResult.h"
 #include "EMETA_RespectLvl.h"
 #include "EMETA_ReturnedDataProcessingMode.h"
 #include "EMETA_StealthMode.h"
 #include "EMETA_TradeVendor.h"
 #include "EMETA_TurfActionAfterSuccess.h"
+#include "META_TradeExpense.h"
+#include "META_WeaponInventoryObject.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).ID = nullptr;
@@ -31,10 +36,10 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).MissionInfo.IntelSoldierMultiplier = 1.000000000e+00f;
     (*this).MissionInfo.MinCrewSize = 1;
     (*this).MissionInfo.MaxCrewSize = 4;
-    (*this).MissionInfo.WeaponsRequired = {};
-    (*this).MissionInfo.CharactersRequired = {};
-    (*this).MissionInfo.CharactersRequiredButNotOwned = {};
-    (*this).MissionInfo.ResultsWhenJobIsNotRemovedFromTheMap = {};
+    (*this).MissionInfo.WeaponsRequired = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
+    (*this).MissionInfo.CharactersRequired = TArray<EIGS_CharacterID>{};
+    (*this).MissionInfo.CharactersRequiredButNotOwned = TArray<EIGS_CharacterID>{};
+    (*this).MissionInfo.ResultsWhenJobIsNotRemovedFromTheMap = TArray<EMETA_JobResult>{};
     (*this).MissionInfo.ReturnedDataProcessingMode = EMETA_ReturnedDataProcessingMode::AcceptLoot;
     (*this).MissionInfo.LootPercentageFromSuccess = 0;
     (*this).MissionInfo.TurfActionAfterSuccess = EMETA_TurfActionAfterSuccess::None;
@@ -63,7 +68,7 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).MissionInfo.FPSMissionInfo.SupportedLoot = FGameplayTagContainer();
     (*this).MissionInfo.FPSMissionInfo.TotalLootbagCount = -1;
     (*this).MissionInfo.FPSMissionInfo.ForcedDetectivesCount = 0;
-    (*this).MissionInfo.FPSMissionInfo.Parameters = {};
+    (*this).MissionInfo.FPSMissionInfo.Parameters = TMap<FGameplayTag, int32>{};
     (*this).MissionInfo.FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).MissionInfo.FPSMissionInfo.bDownedCharctersSurvive = false;
     (*this).MissionInfo.ObjectivesPreset = FGameplayTag();
@@ -75,16 +80,16 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).TradeInfo.DebugText = FText::GetEmpty();
     (*this).TradeInfo.Picture = FSoftObjectPath();
     (*this).TradeInfo.MapIconOverride = FSoftObjectPath();
-    (*this).TradeInfo.ExpensesMap = {};
-    (*this).TradeInfo.Expenses = {};
+    (*this).TradeInfo.ExpensesMap = TMap<FGameplayTag, FGameplayTag>{};
+    (*this).TradeInfo.Expenses = TArray<FMETA_TradeExpense>{};
     (*this).TradeInfo.Name = FText::GetEmpty();
     (*this).TradeInfo.Description = FText::GetEmpty();
     (*this).TradeInfo.DaysOnMap = -1;
     (*this).TradeInfo.MinCrewSize = 1;
     (*this).TradeInfo.MaxCrewSize = 4;
-    (*this).TradeInfo.CharactersRequired = {};
-    (*this).TradeInfo.CharactersRequiredButNotOwned = {};
-    (*this).TradeInfo.ResultsWhenJobIsNotRemovedFromTheMap = {};
+    (*this).TradeInfo.CharactersRequired = TArray<EIGS_CharacterID>{};
+    (*this).TradeInfo.CharactersRequiredButNotOwned = TArray<EIGS_CharacterID>{};
+    (*this).TradeInfo.ResultsWhenJobIsNotRemovedFromTheMap = TArray<EMETA_JobResult>{};
     (*this).TradeInfo.DistrictType = EIGS_HubDistrict::Downtown;
     (*this).TradeInfo.BackdropType = EIGS_HubBackdropTypes::AllRandom;
     (*this).CinematicInfo.CutsceneID = FText::GetEmpty();
@@ -96,9 +101,9 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).CinematicInfo.DaysOnMap = -1;
     (*this).CinematicInfo.MinCrewSize = 1;
     (*this).CinematicInfo.MaxCrewSize = 4;
-    (*this).CinematicInfo.CharactersRequired = {};
-    (*this).CinematicInfo.CharactersRequiredButNotOwned = {};
-    (*this).CinematicInfo.ResultsWhenJobIsNotRemovedFromTheMap = {};
+    (*this).CinematicInfo.CharactersRequired = TArray<EIGS_CharacterID>{};
+    (*this).CinematicInfo.CharactersRequiredButNotOwned = TArray<EIGS_CharacterID>{};
+    (*this).CinematicInfo.ResultsWhenJobIsNotRemovedFromTheMap = TArray<EMETA_JobResult>{};
     (*this).CinematicInfo.DistrictType = EIGS_HubDistrict::INVALID;
     (*this).CinematicInfo.BackdropType = EIGS_HubBackdropTypes::AllRandom;
     (*this).AmbushInfo.Name = FText::GetEmpty();
@@ -129,7 +134,7 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).AmbushInfo.FPSMissionInfo.SupportedLoot = FGameplayTagContainer();
     (*this).AmbushInfo.FPSMissionInfo.TotalLootbagCount = -1;
     (*this).AmbushInfo.FPSMissionInfo.ForcedDetectivesCount = 0;
-    (*this).AmbushInfo.FPSMissionInfo.Parameters = {};
+    (*this).AmbushInfo.FPSMissionInfo.Parameters = TMap<FGameplayTag, int32>{};
     (*this).AmbushInfo.FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).AmbushInfo.FPSMissionInfo.bDownedCharctersSurvive = false;
     (*this).RivalAttack.Name = FText::GetEmpty();
@@ -160,7 +165,7 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).RivalAttack.FPSMissionInfo.SupportedLoot = FGameplayTagContainer();
     (*this).RivalAttack.FPSMissionInfo.TotalLootbagCount = -1;
     (*this).RivalAttack.FPSMissionInfo.ForcedDetectivesCount = 0;
-    (*this).RivalAttack.FPSMissionInfo.Parameters = {};
+    (*this).RivalAttack.FPSMissionInfo.Parameters = TMap<FGameplayTag, int32>{};
     (*this).RivalAttack.FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).RivalAttack.FPSMissionInfo.bDownedCharctersSurvive = false;
     (*this).RivalAttack.UnlockTag = FGameplayTag();
@@ -196,7 +201,7 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).Defence.FPSMissionInfo.SupportedLoot = FGameplayTagContainer();
     (*this).Defence.FPSMissionInfo.TotalLootbagCount = -1;
     (*this).Defence.FPSMissionInfo.ForcedDetectivesCount = 0;
-    (*this).Defence.FPSMissionInfo.Parameters = {};
+    (*this).Defence.FPSMissionInfo.Parameters = TMap<FGameplayTag, int32>{};
     (*this).Defence.FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).Defence.FPSMissionInfo.bDownedCharctersSurvive = false;
     (*this).Defence.UnlockTag = FGameplayTag();
@@ -209,12 +214,12 @@ FMETA_MissionDatabase::FMETA_MissionDatabase() {
     (*this).TradeDeal.DaysOnMap = -1;
     (*this).TradeDeal.MinCrewSize = 1;
     (*this).TradeDeal.MaxCrewSize = 4;
-    (*this).TradeDeal.CharactersRequired = {};
-    (*this).TradeDeal.CharactersRequiredButNotOwned = {};
-    (*this).TradeDeal.ResultsWhenJobIsNotRemovedFromTheMap = {};
+    (*this).TradeDeal.CharactersRequired = TArray<EIGS_CharacterID>{};
+    (*this).TradeDeal.CharactersRequiredButNotOwned = TArray<EIGS_CharacterID>{};
+    (*this).TradeDeal.ResultsWhenJobIsNotRemovedFromTheMap = TArray<EMETA_JobResult>{};
     (*this).TradeDeal.Vendor = EMETA_TradeVendor::UNDEFINED;
     (*this).CanAmbushAppear = false;
-    (*this).AmbushOverrideIDs = {};
+    (*this).AmbushOverrideIDs = TArray<TSubclassOf<UMETA_MissionID>>{};
     (*this).AmbushOverrideChance = FGameplayTag();
     (*this).AmbushResultOverridesTotalMissionResult = false;
     (*this).AmbushGang = EMETA_AmbushGang::None;

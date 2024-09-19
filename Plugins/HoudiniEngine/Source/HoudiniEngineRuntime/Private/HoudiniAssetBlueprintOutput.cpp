@@ -19,6 +19,6 @@ FHoudiniAssetBlueprintOutput::FHoudiniAssetBlueprintOutput() {
     (*this).OutputObject.CurveOutputProperty.bClosed = false;
     (*this).OutputObject.CurveOutputProperty.CurveType = EHoudiniCurveType::Invalid;
     (*this).OutputObject.CurveOutputProperty.CurveMethod = EHoudiniCurveMethod::Invalid;
-    (*this).OutputObject.CachedAttributes = {};
-    (*this).OutputObject.CachedTokens = {};
+    (*this).OutputObject.CachedAttributes = TMap<FString, FString>{};
+    (*this).OutputObject.CachedTokens = TMap<FString, FString>{};
 }

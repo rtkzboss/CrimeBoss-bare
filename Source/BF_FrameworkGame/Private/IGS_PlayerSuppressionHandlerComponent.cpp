@@ -5,7 +5,7 @@ UIGS_PlayerSuppressionHandlerComponent::UIGS_PlayerSuppressionHandlerComponent(c
     (*this).AreaClass = UNavArea_Obstacle::StaticClass();
     (*this).PrimaryComponentTick.bTickEvenWhenPaused = true;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_PlayerSuppressionHandlerComponent::PlayWhizSound() const {

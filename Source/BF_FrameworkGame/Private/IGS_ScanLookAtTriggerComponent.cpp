@@ -4,7 +4,7 @@ UIGS_ScanLookAtTriggerComponent::UIGS_ScanLookAtTriggerComponent(const FObjectIn
     (*this).ScreenPercentage = 8.000000119e-01f;
     (*this).bIsScanEnabled = true;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_ScanLookAtTriggerComponent::SetScanEnabled(bool inState) {

@@ -1,7 +1,7 @@
 #include "PFEventPoints.h"
 
 FPFEventPoints::FPFEventPoints() {
-    (*this).Points = {};
+    (*this).Points = TArray<FEventPoint>{};
     (*this).AllEventHolder = nullptr;
-    (*this).Holders = {};
+    (*this).Holders = TArray<UEventPointDelegateHolder*>{};
 }

@@ -2,5 +2,5 @@
 
 FCommon_PlayerStateSave::FCommon_PlayerStateSave() {
     (*this).MoneyAmount = 0;
-    (*this).Items = {};
+    (*this).Items = TArray<FSoftObjectPath>{};
 }

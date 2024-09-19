@@ -6,10 +6,7 @@ UIGS_WidgetInfoBoxBig::UIGS_WidgetInfoBoxBig() : Super(FObjectInitializer::Get()
     (*this).Type = FText::FromString(TEXT("UNKNOWN"));
     (*this).LeftSubType = FText::FromString(TEXT("UNKNOWN"));
     (*this).RightSubType = FText::FromString(TEXT("UNKNOWN"));
-    (*this).HeaderColor.R = 5.649999976e-01f;
-    (*this).HeaderColor.G = 8.880000114e-01f;
-    (*this).HeaderColor.B = 5.329999924e-01f;
-    (*this).HeaderColor.A = 1.000000000e+00f;
+    (*this).HeaderColor = FLinearColor(5.649999976e-01f, 8.880000114e-01f, 5.329999924e-01f, 1.000000000e+00f);
 }
 
 void UIGS_WidgetInfoBoxBig::Setup(FText InName, FText inInfo, FText inType, FText inLeftSubType, FText inRightSubType) {

@@ -45,7 +45,7 @@ AIGS_MountedWeapon::AIGS_MountedWeapon(const FObjectInitializer& ObjectInitializ
     auto gen12 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("StockModMesh")));
     auto gen13 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("MagazineModMesh")));
     auto gen14 = Cast<UStaticMeshComponent>(GetDefaultSubobjectByName(TEXT("SecondMagazineModMesh")));
-    (*this).WeaponModsArray = {gen7, gen8, gen9, gen10, gen11, gen12, gen13, gen14};
+    (*this).WeaponModsArray = TArray<UStaticMeshComponent*>{gen7, gen8, gen9, gen10, gen11, gen12, gen13, gen14};
     (*this).CanReloadInADS = false;
     (*this).bReplicates = true;
     (*this).SetRemoteRoleForBackwardsCompat(ROLE_SimulatedProxy);

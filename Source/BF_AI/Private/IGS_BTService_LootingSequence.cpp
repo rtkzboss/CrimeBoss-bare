@@ -1,9 +1,10 @@
 #include "IGS_BTService_LootingSequence.h"
+#include "IGS_LootCollectionBase.h"
 
 UIGS_BTService_LootingSequence::UIGS_BTService_LootingSequence() {
-    (*this).BestLootingCollection.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestLootingCollection, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestLootingCollection_Object_2147482569"), AIGS_LootCollectionBase::StaticClass());
+    (*this).BestLootingCollection = gen;
     (*this).NodeName = TEXT("Looting Sequence");
 }
 

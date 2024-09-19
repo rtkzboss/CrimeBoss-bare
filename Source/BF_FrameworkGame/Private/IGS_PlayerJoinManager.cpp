@@ -2,7 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_PlayerJoinManager::UIGS_PlayerJoinManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_PlayerJoinManager::OnRep_JoinedPlayers() const {

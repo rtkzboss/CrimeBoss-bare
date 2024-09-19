@@ -1,9 +1,10 @@
 #include "BTTask_SniperOrbitAroundAimPoint.h"
+#include "IGS_WaypointBase.h"
 
 UBTTask_SniperOrbitAroundAimPoint::UBTTask_SniperOrbitAroundAimPoint() {
-    (*this).SnipePointKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).SnipePointKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("SnipePointKey_Object_2147482486"), AIGS_WaypointBase::StaticClass());
+    (*this).SnipePointKey = gen;
     (*this).AimType = EIGS_AimType::Combat;
     (*this).NodeName = TEXT("Sniper orbit around aim point");
 }

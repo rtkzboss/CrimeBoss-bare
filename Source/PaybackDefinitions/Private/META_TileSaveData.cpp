@@ -12,8 +12,8 @@ FMETA_TileSaveData::FMETA_TileSaveData() {
     (*this).CounterOfCapturesByPlayer = 0;
     (*this).CountdownForAttackAfterLost = 0;
     (*this).Wealth = EMETA_TileWealth::Poor;
-    (*this).CaptureRewards = {};
-    (*this).BossEliminationRewards = {};
+    (*this).CaptureRewards = TArray<FMETA_TileRewardData>{};
+    (*this).BossEliminationRewards = TArray<FMETA_BossEliminationRewardData>{};
     (*this).IncomeMultiplier = 0.000000000e+00f;
     (*this).IncomeLootItem = FGameplayTag();
 }

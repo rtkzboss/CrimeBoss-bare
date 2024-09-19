@@ -1,19 +1,20 @@
 #include "META_HeisterLoadout.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_HeisterLoadout::FMETA_HeisterLoadout() {
     (*this).PrimaryWeapon = nullptr;
     (*this).PrimaryWeaponClass = nullptr;
-    (*this).PrimaryPersonalWeapons = {};
+    (*this).PrimaryPersonalWeapons = TArray<UMETA_Weapon*>{};
     (*this).PrimaryWeaponSkin = FGameplayTag();
-    (*this).PrimaryPersonalWeaponsClass = {};
+    (*this).PrimaryPersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).SecondaryWeapon = nullptr;
     (*this).SecondaryWeaponClass = nullptr;
-    (*this).SecondaryPersonalWeapons = {};
+    (*this).SecondaryPersonalWeapons = TArray<UMETA_Weapon*>{};
     (*this).SecondaryWeaponSkin = FGameplayTag();
-    (*this).SecondaryPersonalWeaponsClass = {};
+    (*this).SecondaryPersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).SelectedEquipment = nullptr;
-    (*this).ChainEquipments = {};
-    (*this).ChainEquipmentsObjects = {};
+    (*this).ChainEquipments = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).ChainEquipmentsObjects = TArray<UMETA_Equipment*>{};
     (*this).CharacterSkin = FGameplayTag();
     (*this).Ability1ChargesLeft = -1;
 }

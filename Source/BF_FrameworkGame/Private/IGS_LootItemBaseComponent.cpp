@@ -1,7 +1,7 @@
 #include "IGS_LootItemBaseComponent.h"
 
 UIGS_LootItemBaseComponent::UIGS_LootItemBaseComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
     (*this).bCanEverAffectNavigation = false;
 }
 

@@ -103,10 +103,10 @@ UIGS_RopeComponent::UIGS_RopeComponent(const FObjectInitializer& ObjectInitializ
     gen20.Channel = TEXT("VisibilityExplosion");
     gen20.Response = ECR_Ignore;
     auto gen21 = TBaseStructure<FCollisionResponse>::Get()->FindPropertyByName("ResponseArray");
-    (*gen21->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen3->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = {MoveTemp(gen5), MoveTemp(gen6), MoveTemp(gen7), MoveTemp(gen8), MoveTemp(gen9), MoveTemp(gen10), MoveTemp(gen11), MoveTemp(gen12), MoveTemp(gen13), MoveTemp(gen14), MoveTemp(gen15), MoveTemp(gen16), MoveTemp(gen17), MoveTemp(gen18), MoveTemp(gen19), MoveTemp(gen20)};
+    (*gen21->ContainerPtrToValuePtr<TArray<FResponseChannel>>(&(*gen3->ContainerPtrToValuePtr<FCollisionResponse>(&(*this).BodyInstance, 0)), 0)) = TArray<FResponseChannel>{gen5, gen6, gen7, gen8, gen9, gen10, gen11, gen12, gen13, gen14, gen15, gen16, gen17, gen18, gen19, gen20};
     (*this).bHiddenInGame = true;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
     (*this).bAutoActivate = true;
 }
 

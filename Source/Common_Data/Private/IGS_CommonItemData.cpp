@@ -14,12 +14,12 @@ FIGS_CommonItemData::FIGS_CommonItemData() {
     (*this).Quality = EMETA_ItemQuality::MinGenerate;
     (*this).ItemOffence = FGameplayTag();
     (*this).GrantedTags = FGameplayTagContainer();
-    (*this).GrantedAbilities = {};
-    (*this).AppliedEffects = {};
+    (*this).GrantedAbilities = TArray<FIGS_GameplayAbilityGrantDataHolder>{};
+    (*this).AppliedEffects = TArray<FIGS_GameplayEffectApplyDataHolder>{};
     (*this).ItemPropertyFlags = 1;
     (*this).MonetaryValue = 0;
     (*this).ModelScaleFPV = 1.000000000e+00f;
     (*this).ModelScale3PV = 1.000000000e+00f;
-    (*this).AdditionalPreloadClasses = {};
-    (*this).AdditionalPreloadObjects = {};
+    (*this).AdditionalPreloadClasses = TArray<TSoftClassPtr<UObject>>{};
+    (*this).AdditionalPreloadObjects = TArray<TSoftObjectPtr<UObject>>{};
 }

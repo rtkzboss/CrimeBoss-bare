@@ -4,6 +4,10 @@
 #include "EIGS_ItemType.h"
 #include "EIGS_ItemWeight.h"
 #include "EIGS_LootSize.h"
+#include "IGS_GameplayAbilityGrantDataHolder.h"
+#include "IGS_GameplayEffectApplyDataHolder.h"
+
+class UObject;
 
 FIGS_LootItemTableRow::FIGS_LootItemTableRow() {
     (*this).ID = nullptr;
@@ -25,12 +29,12 @@ FIGS_LootItemTableRow::FIGS_LootItemTableRow() {
     (*this).Data.Quality = EMETA_ItemQuality::MinGenerate;
     (*this).Data.ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Valuable"));
     (*this).Data.GrantedTags = FGameplayTagContainer();
-    (*this).Data.GrantedAbilities = {};
-    (*this).Data.AppliedEffects = {};
+    (*this).Data.GrantedAbilities = TArray<FIGS_GameplayAbilityGrantDataHolder>{};
+    (*this).Data.AppliedEffects = TArray<FIGS_GameplayEffectApplyDataHolder>{};
     (*this).Data.ItemPropertyFlags = 1;
     (*this).Data.MonetaryValue = 0;
     (*this).Data.ModelScaleFPV = 1.000000000e+00f;
     (*this).Data.ModelScale3PV = 1.000000000e+00f;
-    (*this).Data.AdditionalPreloadClasses = {};
-    (*this).Data.AdditionalPreloadObjects = {};
+    (*this).Data.AdditionalPreloadClasses = TArray<TSoftClassPtr<UObject>>{};
+    (*this).Data.AdditionalPreloadObjects = TArray<TSoftObjectPtr<UObject>>{};
 }

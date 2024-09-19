@@ -2,5 +2,5 @@
 
 FIGS_MetaDialogueDataRow::FIGS_MetaDialogueDataRow() {
     (*this).ID = NAME_None;
-    (*this).Transcript = {};
+    (*this).Transcript = TArray<FIGS_MetaDialogueTranscript>{};
 }

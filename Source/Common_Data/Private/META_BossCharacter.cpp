@@ -5,7 +5,7 @@
 UMETA_BossCharacter::UMETA_BossCharacter() {
     (*this).m_CharacterInfo.ID = EIGS_CharacterID::Char_Boss_End;
     (*this).m_CharacterInfo.Data.State = EMETA_CharacterState::Available;
-    (*this).m_CharacterInfo.Data.Perks = {FMETA_PerkData{}, FMETA_PerkData{}, FMETA_PerkData{}, FMETA_PerkData{}};
+    (*this).m_CharacterInfo.Data.Perks = TArray<FMETA_PerkData>{FMETA_PerkData{}, FMETA_PerkData{}, FMETA_PerkData{}, FMETA_PerkData{}};
 }
 
 void UMETA_BossCharacter::SetPerkInSlot(int32 inSlot, FGameplayTag inTagID) {

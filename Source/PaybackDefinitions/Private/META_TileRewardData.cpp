@@ -4,7 +4,7 @@ FMETA_TileRewardData::FMETA_TileRewardData() {
     (*this).RewardType = EMETA_TileReward::None;
     (*this).Value = 0.000000000e+00f;
     (*this).LootItem = FGameplayTag();
-    (*this).WeaponSkinTags = {};
+    (*this).WeaponSkinTags = TArray<FGameplayTag>{};
     (*this).WeaponQuality = EMETA_ItemQuality::None;
-    (*this).Weapons = {};
+    (*this).Weapons = TArray<UClass*>{};
 }

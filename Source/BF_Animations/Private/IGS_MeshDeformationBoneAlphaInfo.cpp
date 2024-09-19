@@ -1,7 +1,7 @@
 #include "IGS_MeshDeformationBoneAlphaInfo.h"
 
 FIGS_MeshDeformationBoneAlphaInfo::FIGS_MeshDeformationBoneAlphaInfo() {
-    (*this).RotationAlphas = {};
-    (*this).LocationAlphas = {};
-    (*this).ScaleAlphas = {};
+    (*this).RotationAlphas = TArray<float>{};
+    (*this).LocationAlphas = TArray<float>{};
+    (*this).ScaleAlphas = TArray<float>{};
 }

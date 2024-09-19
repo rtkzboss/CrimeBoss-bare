@@ -2,5 +2,5 @@
 
 FIGS_GlassStatus::FIGS_GlassStatus() {
     (*this).State = EIGS_TemperedGlassStatus::Normal;
-    (*this).PreviousHitPoints = {};
+    (*this).PreviousHitPoints = TArray<FIGS_GlassHit>{};
 }

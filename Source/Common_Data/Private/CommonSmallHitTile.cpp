@@ -2,5 +2,5 @@
 
 FCommonSmallHitTile::FCommonSmallHitTile() {
     (*this).bSpecificTiles = false;
-    (*this).SpecifiedTiles = {};
+    (*this).SpecifiedTiles = TArray<uint8>{};
 }

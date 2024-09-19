@@ -2,5 +2,5 @@
 
 FIGS_UnlockItemCost::FIGS_UnlockItemCost() {
     (*this).BaseCategoryCostMultiplier = 1.000000000e+00f;
-    (*this).QualityCostMultipliers = {};
+    (*this).QualityCostMultipliers = TMap<EMETA_ItemQuality, FMETA_FloatInterval>{};
 }

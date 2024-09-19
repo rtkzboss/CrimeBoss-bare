@@ -20,11 +20,11 @@ FMETA_RandEventTableRow::FMETA_RandEventTableRow() {
     (*this).CooldownForEvent = 0;
     (*this).bUseCutsceneSpecificationPerGang = false;
     (*this).CutsceneID = FText::GetEmpty();
-    (*this).CutscenesPerGang = {};
+    (*this).CutscenesPerGang = TMap<EMETA_Gang, FText>{};
     (*this).DebugText = FText::GetEmpty();
     (*this).MissionID = nullptr;
     (*this).PriceMultiplier.Min = 0.000000000e+00f;
     (*this).PriceMultiplier.Max = 0.000000000e+00f;
     (*this).bCanBeSelectedEvenIfPlayerHasNotEnoughMoney = false;
-    (*this).Rewards = {};
+    (*this).Rewards = TArray<FMETA_RandEventReward>{};
 }

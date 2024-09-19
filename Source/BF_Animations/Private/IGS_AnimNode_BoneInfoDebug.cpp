@@ -2,7 +2,7 @@
 
 FIGS_AnimNode_BoneInfoDebug::FIGS_AnimNode_BoneInfoDebug() {
     (*this).InputPose.LinkID = -1;
-    (*this).Bones = {};
+    (*this).Bones = TArray<FBoneReference>{};
     (*this).DebugBoneAxisType = EIGS_DebugBoneAxisTypes::XYZ;
     (*this).DisplayBoneInfo = false;
     (*this).DisplayTransformSpace = EIGS_DebugBoneTextTransformSpaceFormat::WorldSpace;

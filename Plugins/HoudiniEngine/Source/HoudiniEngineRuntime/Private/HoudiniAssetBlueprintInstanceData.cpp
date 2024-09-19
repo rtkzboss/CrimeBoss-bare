@@ -24,6 +24,6 @@ FHoudiniAssetBlueprintInstanceData::FHoudiniAssetBlueprintInstanceData() {
     (*this).HapiGUID.D = 0;
     (*this).bRegisteredComponentTemplate = false;
     (*this).SourceName = TEXT("");
-    (*this).Outputs = {};
-    (*this).Inputs = {};
+    (*this).Outputs = TMap<FHoudiniOutputObjectIdentifier, FHoudiniAssetBlueprintOutput>{};
+    (*this).Inputs = TArray<UHoudiniInput*>{};
 }

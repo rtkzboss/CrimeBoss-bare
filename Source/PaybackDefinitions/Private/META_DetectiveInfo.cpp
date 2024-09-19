@@ -4,5 +4,5 @@ FMETA_DetectiveInfo::FMETA_DetectiveInfo() {
     (*this).CurrentTurfTileID = FGameplayTag();
     (*this).bCurrentTileNeutralized = false;
     (*this).DaysLeftToStayOnCurrentTile = 0;
-    (*this).NeutralizedTiles = {};
+    (*this).NeutralizedTiles = TArray<FGameplayTag>{};
 }

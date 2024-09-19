@@ -3,5 +3,5 @@
 FIGS_MetaDialogueTranscript::FIGS_MetaDialogueTranscript() {
     (*this).SpeakerSlot = EIGS_MetaDialogueCharacterSlot::None;
     (*this).LineID = NAME_None;
-    (*this).CharactersPose = {};
+    (*this).CharactersPose = TMap<EIGS_MetaDialogueCharacterSlot, EIGS_MetaCutsceneCharacterPose>{};
 }

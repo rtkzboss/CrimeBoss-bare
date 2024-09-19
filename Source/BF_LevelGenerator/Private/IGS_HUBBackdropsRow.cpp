@@ -7,5 +7,5 @@ FIGS_HUBBackdropsRow::FIGS_HUBBackdropsRow() {
     (*this).DistrictType = EIGS_HubDistrict::Downtown;
     (*this).DA_Art.BuildConfigurationDataAsset = nullptr;
     (*this).DA_Art.VariantIndex = 0;
-    (*this).Scenarios = {};
+    (*this).Scenarios = TArray<FIGS_HUBLevelWithTag>{};
 }

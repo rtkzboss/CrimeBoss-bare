@@ -1,5 +1,7 @@
 #include "IGS_AIDetectiveDef.h"
 
+class AIGS_GameCharacterFramework;
+
 FIGS_AIDetectiveDef::FIGS_AIDetectiveDef() {
     (*this).Name = FText::FromString(TEXT("Detective"));
     (*this).MetaID = nullptr;
@@ -42,10 +44,10 @@ FIGS_AIDetectiveDef::FIGS_AIDetectiveDef() {
     (*this).SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Character.Controller = FSoftObjectPath();
-    (*this).Character.Pawns = {};
+    (*this).Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Loadout.PrimaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.MeleeWeapon = nullptr;
-    (*this).ThrowablePool = {};
+    (*this).ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Variation = EIGS_CopsVariationType::US_Detective;
 }

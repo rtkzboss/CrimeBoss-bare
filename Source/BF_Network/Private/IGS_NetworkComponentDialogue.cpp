@@ -1,7 +1,7 @@
 #include "IGS_NetworkComponentDialogue.h"
 
 UIGS_NetworkComponentDialogue::UIGS_NetworkComponentDialogue(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_NetworkComponentDialogue::StopVoice(const FIGS_PlayVariationData& inPlayVariationData) {

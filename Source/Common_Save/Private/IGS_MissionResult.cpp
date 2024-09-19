@@ -18,7 +18,7 @@ FIGS_MissionResult::FIGS_MissionResult() {
     (*this).ObjectiveValue = 0;
     (*this).BonusValue = 0;
     (*this).BonusCash = 0;
-    (*this).RewardCalculations = {};
+    (*this).RewardCalculations = TArray<FIGS_MissionRewardCalculations>{};
     (*this).KilledCivilians = 0;
     (*this).KilledPolice = 0;
     (*this).KilledGangsters = 0;
@@ -27,8 +27,8 @@ FIGS_MissionResult::FIGS_MissionResult() {
     (*this).RevivesUsed = 0;
     (*this).BonusObjective = FText::GetEmpty();
     (*this).MissionObjective = FText::GetEmpty();
-    (*this).Heisters = {};
-    (*this).Detectives = {};
+    (*this).Heisters = TArray<FCommonHeisterData>{};
+    (*this).Detectives = TArray<FCommonDetectiveData>{};
     (*this).bIsChainMission = false;
     (*this).bChainCompleted = false;
     (*this).ChainType = EIGS_ChainType::UrbanLegend;

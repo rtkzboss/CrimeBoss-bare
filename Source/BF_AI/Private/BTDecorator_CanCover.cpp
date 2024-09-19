@@ -1,9 +1,10 @@
 #include "BTDecorator_CanCover.h"
+#include "CoverPoint.h"
 
 UBTDecorator_CanCover::UBTDecorator_CanCover() {
-    (*this).BestCoverKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestCoverKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestCoverKey_Object_2147482636"), UCoverPoint::StaticClass());
+    (*this).BestCoverKey = gen;
     (*this).NodeName = TEXT("Can cover");
 }
 

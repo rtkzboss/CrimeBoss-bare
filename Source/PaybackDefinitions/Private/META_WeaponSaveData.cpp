@@ -6,6 +6,6 @@ FMETA_WeaponSaveData::FMETA_WeaponSaveData() {
     (*this).SuccessfulMissions = 0;
     (*this).DaysInShop = 0;
     (*this).WeaponSkin = FGameplayTag();
-    (*this).TargetWeaponsForUpgrade = {};
+    (*this).TargetWeaponsForUpgrade = TArray<UClass*>{};
     (*this).TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
 }

@@ -5,6 +5,6 @@ FIGS_PlotlineGraphData::FIGS_PlotlineGraphData() {
     (*this).Graph = FSoftObjectPath();
     (*this).StartTime.Time = EMETA_PlotlineGraphStartTime::Universal;
     (*this).StartTime.MinDay = 0;
-    (*this).PlotlineConditions = {};
+    (*this).PlotlineConditions = TArray<FIGS_PlotlineGraphNestedCondition>{};
     (*this).OuterConditionOperator = EMETA_ConditionExprOperator::Or;
 }

@@ -1,5 +1,6 @@
 #include "IGS_PerksTableRow.h"
 #include "GameplayTagContainer.h"
+#include "EIGS_CharacterID.h"
 #include "EMETA_ItemQuality.h"
 #include "EIGS_PerkClass.h"
 #include "EIGS_PerkType.h"
@@ -16,7 +17,7 @@ FIGS_PerksTableRow::FIGS_PerksTableRow() {
     (*this).Data.PerkClass = EIGS_PerkClass::PC_Generic;
     (*this).Data.PerkCategory = 0;
     (*this).Data.PerkModeUsage = 0;
-    (*this).Data.AllowedHeistersOverride = {};
+    (*this).Data.AllowedHeistersOverride = TArray<EIGS_CharacterID>{};
     (*this).Data.ForbiddenHeistersLevel = 0;
     (*this).Data.MutuallyExclusiveTag = FGameplayTag();
     (*this).Data.bAllowedForGeneration = false;

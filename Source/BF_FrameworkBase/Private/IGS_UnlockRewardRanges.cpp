@@ -2,15 +2,8 @@
 #include "UObject/NoExportTypes.h"
 
 FIGS_UnlockRewardRanges::FIGS_UnlockRewardRanges() {
-    auto gen = TBaseStructure<FInt32Range>::Get()->FindPropertyByName("LowerBound");
-    auto gen2 = TBaseStructure<FInt32RangeBound>::Get()->FindPropertyByName("Type");
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ERangeBoundTypes::Type>>(&(*gen->ContainerPtrToValuePtr<FInt32RangeBound>(&(*this).LevelRange, 0)), 0)) = ERangeBoundTypes::Inclusive;
-    auto gen3 = TBaseStructure<FInt32RangeBound>::Get()->FindPropertyByName("Value");
-    (*gen3->ContainerPtrToValuePtr<int32>(&(*gen->ContainerPtrToValuePtr<FInt32RangeBound>(&(*this).LevelRange, 0)), 0)) = 1;
-    auto gen4 = TBaseStructure<FInt32Range>::Get()->FindPropertyByName("UpperBound");
-    (*gen2->ContainerPtrToValuePtr<TEnumAsByte<ERangeBoundTypes::Type>>(&(*gen4->ContainerPtrToValuePtr<FInt32RangeBound>(&(*this).LevelRange, 0)), 0)) = ERangeBoundTypes::Inclusive;
-    (*gen3->ContainerPtrToValuePtr<int32>(&(*gen4->ContainerPtrToValuePtr<FInt32RangeBound>(&(*this).LevelRange, 0)), 0)) = 1;
-    (*this).RewardCategoryMap = {};
+    (*this).LevelRange = FInt32Range(FInt32RangeBound::Inclusive(1), FInt32RangeBound::Inclusive(1));
+    (*this).RewardCategoryMap = TMap<EIGS_UnlockCategory, FIGS_UnlockRewardMaxAmount>{};
     (*this).AvailableItems = FGameplayTagContainer();
-    (*this).ForcedPool = {};
+    (*this).ForcedPool = TArray<FIGS_UnlockRewardForcedPool>{};
 }

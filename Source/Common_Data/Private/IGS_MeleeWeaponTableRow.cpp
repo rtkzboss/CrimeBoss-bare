@@ -4,12 +4,17 @@
 #include "EIGS_ItemType.h"
 #include "EIGS_MeleeAttackType.h"
 #include "EIGS_WieldableClass.h"
+#include "IGS_GameplayAbilityGrantDataHolder.h"
+#include "IGS_GameplayEffectApplyDataHolder.h"
+#include "IGS_WeaponBashAttackDefinition.h"
+
+class UObject;
 
 FIGS_MeleeWeaponTableRow::FIGS_MeleeWeaponTableRow() {
     (*this).TagID = FGameplayTag();
     (*this).ID = nullptr;
     (*this).Data.WwiseWeaponName = FSoftObjectPath();
-    (*this).Data.AttackDefinitions = {};
+    (*this).Data.AttackDefinitions = TArray<FIGS_WeaponBashAttackDefinition>{};
     (*this).Data.AIAttackDefinition.AttackType = EIGS_MeleeAttackType::MAT_Primary;
     (*this).Data.AIAttackDefinition.DamageType = nullptr;
     (*this).Data.AIAttackDefinition.ImpactType = nullptr;
@@ -38,12 +43,12 @@ FIGS_MeleeWeaponTableRow::FIGS_MeleeWeaponTableRow() {
     (*this).Data.Quality = EMETA_ItemQuality::MinGenerate;
     (*this).Data.ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Weapon"));
     (*this).Data.GrantedTags = FGameplayTagContainer();
-    (*this).Data.GrantedAbilities = {};
-    (*this).Data.AppliedEffects = {};
+    (*this).Data.GrantedAbilities = TArray<FIGS_GameplayAbilityGrantDataHolder>{};
+    (*this).Data.AppliedEffects = TArray<FIGS_GameplayEffectApplyDataHolder>{};
     (*this).Data.ItemPropertyFlags = 1;
     (*this).Data.MonetaryValue = 0;
     (*this).Data.ModelScaleFPV = 1.000000000e+00f;
     (*this).Data.ModelScale3PV = 1.000000000e+00f;
-    (*this).Data.AdditionalPreloadClasses = {};
-    (*this).Data.AdditionalPreloadObjects = {};
+    (*this).Data.AdditionalPreloadClasses = TArray<TSoftClassPtr<UObject>>{};
+    (*this).Data.AdditionalPreloadObjects = TArray<TSoftObjectPtr<UObject>>{};
 }

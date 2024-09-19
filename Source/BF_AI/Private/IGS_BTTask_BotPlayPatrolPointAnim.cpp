@@ -1,9 +1,10 @@
 #include "IGS_BTTask_BotPlayPatrolPointAnim.h"
+#include "IGS_PatrolPoint.h"
 
 UIGS_BTTask_BotPlayPatrolPointAnim::UIGS_BTTask_BotPlayPatrolPointAnim() {
-    (*this).PatrolPointKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).PatrolPointKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("PatrolPointKey_Object_2147482542"), AIGS_PatrolPoint::StaticClass());
+    (*this).PatrolPointKey = gen;
     (*this).NodeName = TEXT("Bot Play Patrol Point Anim");
 }
 

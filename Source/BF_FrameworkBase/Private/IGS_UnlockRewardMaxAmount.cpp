@@ -1,5 +1,5 @@
 #include "IGS_UnlockRewardMaxAmount.h"
 
 FIGS_UnlockRewardMaxAmount::FIGS_UnlockRewardMaxAmount() {
-    (*this).MaxAmountMap = {};
+    (*this).MaxAmountMap = TMap<EMETA_ItemQuality, int32>{};
 }

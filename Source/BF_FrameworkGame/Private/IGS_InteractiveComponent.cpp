@@ -17,7 +17,7 @@ UIGS_InteractiveComponent::UIGS_InteractiveComponent(const FObjectInitializer& O
     (*this).bOverrideMasterOutline = true;
     (*this).bReleaseLookInputAfterUse = true;
     (*this).SuspicionTagsKeepTime = -1.000000000e+00f;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_InteractiveComponent::Use(AIGS_GameCharacterFramework* inInstigator) {

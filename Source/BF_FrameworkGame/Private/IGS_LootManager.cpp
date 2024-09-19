@@ -4,7 +4,7 @@
 
 UIGS_LootManager::UIGS_LootManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).LootWeightMultiplier = 1.000000000e+00f;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 float UIGS_LootManager::UpdateLootWeightMultiplier(UObject* inWCO) {

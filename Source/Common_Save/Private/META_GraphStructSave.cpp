@@ -3,5 +3,5 @@
 FMETA_GraphStructSave::FMETA_GraphStructSave() {
     (*this).Graph = FSoftObjectPath();
     (*this).Status = EMETA_GraphStatus::Deactive;
-    (*this).CurrentNodeIds = {};
+    (*this).CurrentNodeIds = TArray<int32>{};
 }

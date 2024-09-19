@@ -1,9 +1,10 @@
 #include "IGS_BTDecorator_IsStillFeared.h"
+#include "IGS_OffenceData.h"
 
 UIGS_BTDecorator_IsStillFeared::UIGS_BTDecorator_IsStillFeared() {
-    (*this).OffenceDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OffenceDataKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("OffenceDataKey_Object_2147482623"), UIGS_OffenceData::StaticClass());
+    (*this).OffenceDataKey = gen;
     (*this).DesiredTimeWithoutFear.Min = 2.000000000e+01f;
     (*this).DesiredTimeWithoutFear.Max = 5.000000000e+01f;
     (*this).DesiredTimeWithoutFearZiptieAddon.Min = 7.000000000e+01f;

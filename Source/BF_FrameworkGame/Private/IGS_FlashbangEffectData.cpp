@@ -1,7 +1,7 @@
 #include "IGS_FlashbangEffectData.h"
 
 FIGS_FlashbangEffectData::FIGS_FlashbangEffectData() {
-    (*this).EffectPostProcesses = {};
+    (*this).EffectPostProcesses = TArray<TSoftObjectPtr<UObject>>{};
     (*this).WeightTimeCurve = FSoftObjectPath();
     (*this).EffectDuration = 1.000000000e+00f;
     (*this).EffectAkAudioEvent = FSoftObjectPath();

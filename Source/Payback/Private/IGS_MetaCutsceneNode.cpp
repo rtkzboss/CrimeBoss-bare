@@ -6,6 +6,6 @@ FIGS_MetaCutsceneNode::FIGS_MetaCutsceneNode() {
     (*this).DialogueID = FText::GetEmpty();
     (*this).ChoiceText = FText::GetEmpty();
     (*this).DefaultOptionIndex = 0;
-    (*this).ChoiceTextTagParams = {};
-    (*this).Options = {};
+    (*this).ChoiceTextTagParams = TArray<FGameplayTag>{};
+    (*this).Options = TArray<FIGS_MetaCutsceneNodeOption>{};
 }

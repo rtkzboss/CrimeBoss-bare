@@ -1,6 +1,6 @@
 #include "ParameterTags.h"
 
 FParameterTags::FParameterTags() {
-    (*this).Tags = {};
-    (*this).ParameterOptions = {};
+    (*this).Tags = TArray<FString>{};
+    (*this).ParameterOptions = TMap<FString, FFParameterOptionsTags>{};
 }

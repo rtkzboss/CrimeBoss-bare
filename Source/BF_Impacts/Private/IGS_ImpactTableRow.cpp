@@ -20,5 +20,5 @@ FIGS_ImpactTableRow::FIGS_ImpactTableRow() {
     (*this).FallBackItem.NiagaraSystem = nullptr;
     (*this).FallBackItem.ParticleDecalID = nullptr;
     (*this).FallBackItem.DecalImpactData = nullptr;
-    (*this).ImpactItem = {};
+    (*this).ImpactItem = TArray<FIGS_ImpactItem>{};
 }

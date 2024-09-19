@@ -2,6 +2,6 @@
 
 FMETA_CampaignModeMatchingData::FMETA_CampaignModeMatchingData() {
     (*this).CampaignMode = FSoftObjectPath();
-    (*this).Conditions = {};
+    (*this).Conditions = TArray<FMETA_CampaignModeCondition>{};
     (*this).ExpressionOperator = EMETA_ConditionExprOperator::And;
 }

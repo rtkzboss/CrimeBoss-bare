@@ -1,7 +1,11 @@
 #include "IGS_BTTask_SquadDoorBreachTakePos.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
+#include "IGS_BreachRoles.h"
 
 UIGS_BTTask_SquadDoorBreachTakePos::UIGS_BTTask_SquadDoorBreachTakePos() {
-    (*this).BreachRolesKey.AllowedTypes = {nullptr};
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BreachRolesKey_Object_2147482480"), UIGS_BreachRoles::StaticClass());
+    (*this).BreachRolesKey = gen;
     (*this).NodeName = TEXT("Squad Breach Take Pos");
 }
 

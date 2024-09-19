@@ -3,7 +3,7 @@
 #include "EIGS_TeamSideEnum.h"
 
 FIGS_AIEmployeeTeamDef::FIGS_AIEmployeeTeamDef() {
-    (*this).Variations = {};
+    (*this).Variations = TMap<EIGS_EmployeesVariationType, FIGS_AIEmployeeTierDef>{};
     (*this).DefaultStats.HP = 2.800000000e+02f;
     (*this).DefaultStats.Shield = 0.000000000e+00f;
     (*this).DefaultStats.WeaponDamage = 1.000000000e+00f;

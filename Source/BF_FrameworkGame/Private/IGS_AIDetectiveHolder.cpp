@@ -1,5 +1,9 @@
 #include "IGS_AIDetectiveHolder.h"
 #include "EIGS_CoverPreset.h"
+#include "IGS_AIThrowableWeaponDef.h"
+#include "Templates/SubclassOf.h"
+
+class AIGS_GameCharacterFramework;
 
 FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).DefaultStats.HP = 2.800000000e+02f;
@@ -52,11 +56,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective1.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective1.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective1.Character.Controller = FSoftObjectPath();
-    (*this).Detective1.Character.Pawns = {};
+    (*this).Detective1.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective1.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective1.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective1.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective1.ThrowablePool = {};
+    (*this).Detective1.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective1.Variation = EIGS_CopsVariationType::US_Detective1;
     (*this).Detective2.Name = FText::FromString(TEXT("Detective 2"));
     (*this).Detective2.MetaID = nullptr;
@@ -99,11 +103,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective2.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective2.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective2.Character.Controller = FSoftObjectPath();
-    (*this).Detective2.Character.Pawns = {};
+    (*this).Detective2.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective2.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective2.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective2.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective2.ThrowablePool = {};
+    (*this).Detective2.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective2.Variation = EIGS_CopsVariationType::US_Detective2;
     (*this).Detective3.Name = FText::FromString(TEXT("Detective 3"));
     (*this).Detective3.MetaID = nullptr;
@@ -146,11 +150,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective3.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective3.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective3.Character.Controller = FSoftObjectPath();
-    (*this).Detective3.Character.Pawns = {};
+    (*this).Detective3.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective3.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective3.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective3.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective3.ThrowablePool = {};
+    (*this).Detective3.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective3.Variation = EIGS_CopsVariationType::US_Detective3;
     (*this).Detective4.Name = FText::FromString(TEXT("Detective 4"));
     (*this).Detective4.MetaID = nullptr;
@@ -193,11 +197,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective4.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective4.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective4.Character.Controller = FSoftObjectPath();
-    (*this).Detective4.Character.Pawns = {};
+    (*this).Detective4.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective4.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective4.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective4.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective4.ThrowablePool = {};
+    (*this).Detective4.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective4.Variation = EIGS_CopsVariationType::US_Detective4;
     (*this).Detective5.Name = FText::FromString(TEXT("Detective 5"));
     (*this).Detective5.MetaID = nullptr;
@@ -240,11 +244,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective5.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective5.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective5.Character.Controller = FSoftObjectPath();
-    (*this).Detective5.Character.Pawns = {};
+    (*this).Detective5.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective5.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective5.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective5.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective5.ThrowablePool = {};
+    (*this).Detective5.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective5.Variation = EIGS_CopsVariationType::US_Detective5;
     (*this).Detective6.Name = FText::FromString(TEXT("Detective 6"));
     (*this).Detective6.MetaID = nullptr;
@@ -287,11 +291,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective6.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective6.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective6.Character.Controller = FSoftObjectPath();
-    (*this).Detective6.Character.Pawns = {};
+    (*this).Detective6.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective6.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective6.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective6.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective6.ThrowablePool = {};
+    (*this).Detective6.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective6.Variation = EIGS_CopsVariationType::US_Detective6;
     (*this).Detective7.Name = FText::FromString(TEXT("Detective 7"));
     (*this).Detective7.MetaID = nullptr;
@@ -334,11 +338,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective7.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective7.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective7.Character.Controller = FSoftObjectPath();
-    (*this).Detective7.Character.Pawns = {};
+    (*this).Detective7.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective7.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective7.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective7.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective7.ThrowablePool = {};
+    (*this).Detective7.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective7.Variation = EIGS_CopsVariationType::US_Detective7;
     (*this).Detective8.Name = FText::FromString(TEXT("Detective 8"));
     (*this).Detective8.MetaID = nullptr;
@@ -381,11 +385,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective8.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective8.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective8.Character.Controller = FSoftObjectPath();
-    (*this).Detective8.Character.Pawns = {};
+    (*this).Detective8.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective8.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective8.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective8.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective8.ThrowablePool = {};
+    (*this).Detective8.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective8.Variation = EIGS_CopsVariationType::US_Detective8;
     (*this).Detective9.Name = FText::FromString(TEXT("Detective 9"));
     (*this).Detective9.MetaID = nullptr;
@@ -428,11 +432,11 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective9.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective9.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective9.Character.Controller = FSoftObjectPath();
-    (*this).Detective9.Character.Pawns = {};
+    (*this).Detective9.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective9.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective9.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective9.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective9.ThrowablePool = {};
+    (*this).Detective9.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective9.Variation = EIGS_CopsVariationType::US_Detective9;
     (*this).Detective10.Name = FText::FromString(TEXT("Detective 10"));
     (*this).Detective10.MetaID = nullptr;
@@ -475,12 +479,12 @@ FIGS_AIDetectiveHolder::FIGS_AIDetectiveHolder() {
     (*this).Detective10.SpecStats.MaxHealthForReaction = 1.000000000e+00f;
     (*this).Detective10.SpecStats.MaxHealthForCover = 1.000000000e+00f;
     (*this).Detective10.Character.Controller = FSoftObjectPath();
-    (*this).Detective10.Character.Pawns = {};
+    (*this).Detective10.Character.Pawns = TArray<TSoftClassPtr<AIGS_GameCharacterFramework>>{};
     (*this).Detective10.Loadout.PrimaryWeapon = nullptr;
     (*this).Detective10.Loadout.SecondaryWeapon = nullptr;
     (*this).Detective10.Loadout.MeleeWeapon = nullptr;
-    (*this).Detective10.ThrowablePool = {};
+    (*this).Detective10.ThrowablePool = TArray<FIGS_AIThrowableWeaponDef>{};
     (*this).Detective10.Variation = EIGS_CopsVariationType::US_Detective10;
-    (*this).m_MetaToDetectiveMap = {};
-    (*this).m_VarToDetectiveMap = {};
+    (*this).m_MetaToDetectiveMap = TMap<TSubclassOf<UMETA_DetectiveID>, FIGS_AIDetectiveDef>{};
+    (*this).m_VarToDetectiveMap = TMap<EIGS_CopsVariationType, FIGS_AIDetectiveDef>{};
 }

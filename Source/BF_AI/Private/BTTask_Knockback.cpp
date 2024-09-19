@@ -1,11 +1,13 @@
 #include "BTTask_Knockback.h"
+#include "GameFramework/Actor.h"
 
 UBTTask_Knockback::UBTTask_Knockback() {
-    (*this).Actor.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).Actor, 0)) = 255;
-    (*this).Location.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).Location, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("Actor_Object_2147482521"), AActor::StaticClass());
+    (*this).Actor = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddVectorFilter(this, TEXT("Location"));
+    (*this).Location = gen2;
     (*this).Forward = FGameplayTag::RequestGameplayTag(TEXT("Anim.HitReaction.Heavy.Front"));
     (*this).Backward = FGameplayTag::RequestGameplayTag(TEXT("Anim.HitReaction.Heavy.Back"));
     (*this).Left = FGameplayTag::RequestGameplayTag(TEXT("Anim.HitReaction.Heavy.Left"));

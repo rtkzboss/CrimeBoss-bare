@@ -3,7 +3,7 @@
 #include "IGS_GeneralListenerController.h"
 
 AIGS_GeneralListener::AIGS_GeneralListener(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SupportedHearingTags = {TEXT("Shooting"), TEXT("Explosion")};
+    (*this).SupportedHearingTags = TArray<FName>{TEXT("Shooting"), TEXT("Explosion")};
     (*this).bStartsActive = true;
     (*this).AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
     (*this).AIControllerClass = AIGS_GeneralListenerController::StaticClass();

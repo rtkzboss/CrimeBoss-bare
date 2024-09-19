@@ -2,5 +2,5 @@
 
 FIGS_TrafficPathfidingResult::FIGS_TrafficPathfidingResult() {
     (*this).Spawner = nullptr;
-    (*this).Path = {};
+    (*this).Path = TArray<UIGS_TrafficPathComponent*>{};
 }

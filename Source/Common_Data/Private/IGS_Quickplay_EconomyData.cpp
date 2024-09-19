@@ -7,8 +7,8 @@ UIGS_Quickplay_EconomyData::UIGS_Quickplay_EconomyData() {
     (*this).CompleteChainMoneyRewardMultiplier = 1.000000000e+00f;
     (*this).BaseItemCost = 10000;
     (*this).DigitsWithoutRounding = 3;
-    (*this).HeisterLevelPerQuality = {};
-    (*this).CharacterStartingPerksPerQuality = {};
+    (*this).HeisterLevelPerQuality = TMap<EMETA_ItemQuality, int32>{};
+    (*this).CharacterStartingPerksPerQuality = TMap<EMETA_ItemQuality, int32>{};
 }
 
 int32 UIGS_Quickplay_EconomyData::GetStartingCash() const {

@@ -31,13 +31,12 @@ UIGS_GlassRegular::UIGS_GlassRegular(const FObjectInitializer& ObjectInitializer
     (*this).CastShadow = false;
     auto gen3 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("ObjectType");
     (*gen3->ContainerPtrToValuePtr<TEnumAsByte<ECollisionChannel>>(&(*this).BodyInstance, 0)) = ECC_PhysicsBody;
-    auto gen4 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionEnabled");
-    (*gen4->ContainerPtrToValuePtr<TEnumAsByte<ECollisionEnabled::Type>>(&(*this).BodyInstance, 0)) = ECollisionEnabled::QueryAndPhysics;
-    auto gen5 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName");
-    (*gen5->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("BreakableGlassPhysicsOnly");
+    (*this).BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+    auto gen4 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName");
+    (*gen4->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("BreakableGlassPhysicsOnly");
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
     (*this).PrimaryComponentTick.TickInterval = 1.999999955e-02f;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
     (*this).bAutoActivate = false;
 }
 

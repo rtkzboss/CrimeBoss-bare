@@ -8,19 +8,12 @@ UKantanCartesianChartBase::UKantanCartesianChartBase() {
     (*this).WidgetStyle.DataLineThickness = 1.000000000e+00f;
     (*this).WidgetStyle.Background.ImageSize.X = 3.200000000e+01f;
     (*this).WidgetStyle.Background.ImageSize.Y = 3.200000000e+01f;
-    auto gen = TBaseStructure<FSlateColor>::Get()->FindPropertyByName("SpecifiedColor");
-    (*gen->ContainerPtrToValuePtr<FLinearColor>(&(*this).WidgetStyle.Background.TintColor, 0)).A = 3.000000119e-01f;
+    (*this).WidgetStyle.Background.TintColor = FSlateColor(FLinearColor(0.000000000e+00f, 0.000000000e+00f, 0.000000000e+00f, 3.000000119e-01f));
     (*this).WidgetStyle.Background.DrawAs = ESlateBrushDrawType::Image;
-    (*this).WidgetStyle.ChartLineColor.R = 1.000000000e+00f;
-    (*this).WidgetStyle.ChartLineColor.G = 1.000000000e+00f;
-    (*this).WidgetStyle.ChartLineColor.B = 1.000000000e+00f;
-    (*this).WidgetStyle.ChartLineColor.A = 6.000000238e-01f;
+    (*this).WidgetStyle.ChartLineColor = FLinearColor(1.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f, 6.000000238e-01f);
     (*this).WidgetStyle.ChartLineThickness = 1.000000000e+00f;
     (*this).WidgetStyle.TitleFontSize = 24;
-    (*this).WidgetStyle.FontColor.R = 1.000000000e+00f;
-    (*this).WidgetStyle.FontColor.G = 1.000000000e+00f;
-    (*this).WidgetStyle.FontColor.B = 1.000000000e+00f;
-    (*this).WidgetStyle.FontColor.A = 1.000000000e+00f;
+    (*this).WidgetStyle.FontColor = FLinearColor(1.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f, 1.000000000e+00f);
     (*this).DataPointSize = EKantanDataPointSize::Medium;
     (*this).XAxisCfg.MarkerSpacing = 1.000000000e+00f;
     (*this).XAxisCfg.MaxValueDigits = 5;
@@ -34,8 +27,8 @@ UKantanCartesianChartBase::UKantanCartesianChartBase() {
     (*this).YAxisCfg.LeftBottomAxis.bShowLabels = true;
     (*this).AxisTitlePadding.Top = 4.000000000e+00f;
     (*this).AxisTitlePadding.Bottom = 4.000000000e+00f;
-    static ConstructorHelpers::FObjectFinder<UKantanSeriesStyleSet> gen2(TEXT("/KantanCharts/Style/SeriesStyles/DefaultSeriesStyleSet.DefaultSeriesStyleSet"));
-    (*this).SeriesStyleSet = gen2.Object;
+    static ConstructorHelpers::FObjectFinder<UKantanSeriesStyleSet> gen(TEXT("/KantanCharts/Style/SeriesStyles/DefaultSeriesStyleSet.DefaultSeriesStyleSet"));
+    (*this).SeriesStyleSet = gen.Object;
     (*this).bAntiAlias = true;
 }
 

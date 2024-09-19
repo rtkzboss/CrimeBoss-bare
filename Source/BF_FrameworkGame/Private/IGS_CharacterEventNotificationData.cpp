@@ -2,7 +2,7 @@
 
 FIGS_CharacterEventNotificationData::FIGS_CharacterEventNotificationData() {
     (*this).Instigator = nullptr;
-    (*this).Targets = {};
+    (*this).Targets = TArray<AIGS_GameCharacterFramework*>{};
     (*this).ObjectOfInterest = nullptr;
     (*this).FloatValue = 0.000000000e+00f;
     (*this).VectorValue.X = 3.402823466e+38f;

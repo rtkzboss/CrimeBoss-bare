@@ -1,6 +1,9 @@
 #include "CustomMissionData.h"
 #include "EIGS_MissionStartupSource.h"
 #include "EIGS_QPModeSource.h"
+#include "IGS_EquipmentInventoryObject.h"
+#include "IGS_SpecificSpecialLoot.h"
+#include "META_PerkDataToFPS.h"
 #include "GameFramework/OnlineReplStructs.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_AITiers.h"
@@ -15,6 +18,7 @@
 #include "EIGS_TileEnviroment.h"
 #include "EMETA_CharacterState.h"
 #include "EMETA_RespectLvl.h"
+#include "Templates/SubclassOf.h"
 
 FCustomMissionData::FCustomMissionData() {
     (*this).MissionData.MissionTag = FGameplayTag();
@@ -40,7 +44,7 @@ FCustomMissionData::FCustomMissionData() {
     (*this).MissionData.TotalMissionValue = 0;
     (*this).MissionData.TotalLootbagCount = -1;
     (*this).MissionData.SpecificLootTypes = FGameplayTagContainer();
-    (*this).MissionData.SpecialLoot.Loot = {};
+    (*this).MissionData.SpecialLoot.Loot = TArray<FIGS_SpecificSpecialLoot>{};
     (*this).MissionData.SpecialLoot.Money = 0;
     (*this).MissionData.SpecialLoot.bIsFilled = false;
     (*this).MissionData.Respect = EMETA_RespectLvl::Connected;
@@ -55,7 +59,7 @@ FCustomMissionData::FCustomMissionData() {
     (*this).MissionData.AllyVariation = EIGS_HeistersBackupVariationType::US_None;
     (*this).MissionData.AllyTier = EIGS_AITiers::AT_Tier2;
     (*this).MissionData.ExpectedPlayerCount = -1;
-    (*this).MissionData.MetaBonuses.ArmyPerkData = {};
+    (*this).MissionData.MetaBonuses.ArmyPerkData = TArray<FMETA_PerkDataToFPS>{};
     (*this).MissionData.ObjectivePercentage = 50;
     (*this).MissionData.NeedObjectiveCompletion = false;
     (*this).MissionData.bDownedCharctersSurvive = false;
@@ -86,13 +90,13 @@ FCustomMissionData::FCustomMissionData() {
     (*this).SelectedCharacter.PlayerId = -1;
     (*this).SelectedCharacter.ProgressionLevel = 1;
     auto gen = TBaseStructure<FUniqueNetIdRepl>::Get()->FindPropertyByName("ReplicationBytes");
-    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).SelectedCharacter.UniquePlayerId, 0)) = {};
+    (*gen->ContainerPtrToValuePtr<TArray<uint8>>(&(*this).SelectedCharacter.UniquePlayerId, 0)) = TArray<uint8>{};
     (*this).SelectedCharacter.Loadout.PrimaryWeapon = nullptr;
     (*this).SelectedCharacter.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).SelectedCharacter.Loadout.SecondaryWeapon = nullptr;
     (*this).SelectedCharacter.Loadout.SecondaryWeaponSkin = FGameplayTag();
-    (*this).SelectedCharacter.Loadout.Equipment = {};
-    (*this).SelectedCharacter.Loadout.Perks = {};
+    (*this).SelectedCharacter.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
+    (*this).SelectedCharacter.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).SelectedCharacter.Loadout.Ability1ChargesLeft = -1;
     (*this).SelectedCharacter.Loadout.CharacterSkinID = FGameplayTag();
     (*this).SelectedCharacter.Experience = 0;
@@ -112,7 +116,7 @@ FCustomMissionData::FCustomMissionData() {
     (*this).SelectedCharacter.MissionCutPercentWithModifiers = 0;
     (*this).SelectedCharacter.CachedPlayerName = FText::GetEmpty();
     (*this).AmountOfBots = 0;
-    (*this).SpecificBotIDs = {};
+    (*this).SpecificBotIDs = TArray<EIGS_CharacterID>{};
     (*this).Heat = EMETA_Heat::INVALID;
     (*this).MissionType = EIGS_MenuCategory::UNKNOWN;
     (*this).MissionDifficulty = EIGS_ScenarioDifficulty::SD_Unknown;

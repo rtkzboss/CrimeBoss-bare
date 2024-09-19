@@ -13,9 +13,9 @@ FIGS_DialogueVariationData::FIGS_DialogueVariationData() {
     (*this).Cooldown = 0.000000000e+00f;
     (*this).DelayMin = 0.000000000e+00f;
     (*this).DelayMax = 0.000000000e+00f;
-    (*this).VoicesMedia = {};
-    (*this).VoicesMediaList = {};
-    (*this).CensoredMediaList = {};
+    (*this).VoicesMedia = TArray<FIGS_VoiceMediaInfo>{};
+    (*this).VoicesMediaList = TArray<FIGS_VoiceMediaInfo>{};
+    (*this).CensoredMediaList = TArray<FIGS_VoiceMediaInfo>{};
     (*this).IsTTS = false;
     (*this).FacialAnimation = nullptr;
     (*this).SubtitleKey = FText::GetEmpty();

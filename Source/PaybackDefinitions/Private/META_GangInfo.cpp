@@ -5,13 +5,13 @@ FMETA_GangInfo::FMETA_GangInfo() {
     (*this).Priority = 0;
     (*this).BaseStrength = 0;
     (*this).StrengthChangeFromTerritory = 0;
-    (*this).TopEnemies = {};
-    (*this).Friends = {};
-    (*this).Enemies = {};
-    (*this).LostTerritory = {};
-    (*this).EffectsOnAIBossStrength = {};
-    (*this).GangModifiers = {};
+    (*this).TopEnemies = TMap<EMETA_Gang, int32>{};
+    (*this).Friends = TMap<EMETA_Gang, int32>{};
+    (*this).Enemies = TMap<EMETA_Gang, int32>{};
+    (*this).LostTerritory = TMap<FGameplayTag, int32>{};
+    (*this).EffectsOnAIBossStrength = TArray<FMETA_EffectOnAIBossStrength>{};
+    (*this).GangModifiers = TMap<FGameplayTag, int32>{};
     (*this).Strategy = EMETA_GangStrategy::Normal;
     (*this).ArmyTier = EMETA_ArmyTier::Low;
-    (*this).ConditionsForAiArmyTierChange = {};
+    (*this).ConditionsForAiArmyTierChange = TArray<FMETA_ConditionForArmyTierChangingRuntime>{};
 }

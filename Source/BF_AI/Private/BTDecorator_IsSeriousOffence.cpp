@@ -1,9 +1,10 @@
 #include "BTDecorator_IsSeriousOffence.h"
+#include "IGS_OffenceData.h"
 
 UBTDecorator_IsSeriousOffence::UBTDecorator_IsSeriousOffence() {
-    (*this).OffenceDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OffenceDataKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("OffenceDataKey_Object_2147482625"), UIGS_OffenceData::StaticClass());
+    (*this).OffenceDataKey = gen;
     (*this).NodeName = TEXT("Is Serious Offence");
 }
 

@@ -2,8 +2,8 @@
 
 FIGS_FPS2Meta_Data::FIGS_FPS2Meta_Data() {
     (*this).MissionResult = ECommonMissionResult::Res_UNKNOWN;
-    (*this).CollectedObjectiveLoot = {};
-    (*this).CollectedBonusLoot = {};
+    (*this).CollectedObjectiveLoot = TMap<FGameplayTag, int32>{};
+    (*this).CollectedBonusLoot = TMap<FGameplayTag, int32>{};
     (*this).MoneyCollected = 0;
     (*this).CivilCasualties = 0;
     (*this).PoliceCasualties = 0;

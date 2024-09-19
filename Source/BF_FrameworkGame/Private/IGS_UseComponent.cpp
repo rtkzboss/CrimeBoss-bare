@@ -9,7 +9,7 @@ UIGS_UseComponent::UIGS_UseComponent(const FObjectInitializer& ObjectInitializer
     (*this).InteractiveObjectsNearPlayerForHUDAngleLimit = 4.500000000e+01f;
     (*this).InteractiveObjectsNearPlayerForHUDAngleDotLimit = 7.071067691e-01f;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 bool UIGS_UseComponent::Use(UIGS_InteractiveComponent* inInteractiveComponent, bool bIsHolding) {

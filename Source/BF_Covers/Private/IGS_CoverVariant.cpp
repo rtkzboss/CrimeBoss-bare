@@ -2,5 +2,5 @@
 
 FIGS_CoverVariant::FIGS_CoverVariant() {
     (*this).Name = NAME_None;
-    (*this).CoverPointDataHolders = {};
+    (*this).CoverPointDataHolders = TArray<FIGS_CoverPointDataHolder>{};
 }

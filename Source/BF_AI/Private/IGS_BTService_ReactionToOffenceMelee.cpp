@@ -1,9 +1,10 @@
 #include "IGS_BTService_ReactionToOffenceMelee.h"
+#include "IGS_OffenceData.h"
 
 UIGS_BTService_ReactionToOffenceMelee::UIGS_BTService_ReactionToOffenceMelee() {
-    (*this).OffenceDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OffenceDataKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("OffenceDataKey_Object_2147482567"), UIGS_OffenceData::StaticClass());
+    (*this).OffenceDataKey = gen;
     (*this).NodeName = TEXT("Reaction To Offence Melee");
 }
 

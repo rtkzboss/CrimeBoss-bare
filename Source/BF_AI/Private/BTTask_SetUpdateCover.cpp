@@ -1,9 +1,9 @@
 #include "BTTask_SetUpdateCover.h"
 
 UBTTask_SetUpdateCover::UBTTask_SetUpdateCover() {
-    (*this).UpdateCoverKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).UpdateCoverKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddBoolFilter(this, TEXT("UpdateCoverKey"));
+    (*this).UpdateCoverKey = gen;
     (*this).NodeName = TEXT("Set Update Cover");
 }
 

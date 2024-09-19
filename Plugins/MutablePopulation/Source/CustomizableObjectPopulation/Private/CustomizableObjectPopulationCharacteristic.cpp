@@ -2,5 +2,5 @@
 
 FCustomizableObjectPopulationCharacteristic::FCustomizableObjectPopulationCharacteristic() {
     (*this).ParameterName = TEXT("");
-    (*this).Constraints = {};
+    (*this).Constraints = TArray<FCustomizableObjectPopulationConstraint>{};
 }

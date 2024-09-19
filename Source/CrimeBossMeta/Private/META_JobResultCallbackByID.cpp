@@ -2,7 +2,7 @@
 #include "Templates/SubclassOf.h"
 
 UMETA_JobResultCallbackByID::UMETA_JobResultCallbackByID() {
-    (*this).NextNodesMap = {};
+    (*this).NextNodesMap = TMap<EMETA_JobResult, int32>{};
     (*this).OverridePath = EMETA_JobResult::Ignored;
 }
 

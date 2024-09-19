@@ -3,7 +3,7 @@
 
 UIGS_NetworkComponentMusic::UIGS_NetworkComponentMusic(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).mR_MusicPackIndex = -1;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_NetworkComponentMusic::OnRep_MusicPackIndex() const {

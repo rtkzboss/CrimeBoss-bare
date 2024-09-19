@@ -3,6 +3,10 @@
 #include "EMETA_ItemQuality.h"
 #include "EIGS_EquipmentResourceType.h"
 #include "EIGS_ItemType.h"
+#include "IGS_GameplayAbilityGrantDataHolder.h"
+#include "IGS_GameplayEffectApplyDataHolder.h"
+
+class UObject;
 
 FIGS_EquipmentTableRow::FIGS_EquipmentTableRow() {
     (*this).ID = nullptr;
@@ -40,12 +44,12 @@ FIGS_EquipmentTableRow::FIGS_EquipmentTableRow() {
     (*this).Data.Quality = EMETA_ItemQuality::MinGenerate;
     (*this).Data.ItemOffence = FGameplayTag::RequestGameplayTag(TEXT("Offence.Actor.Item.Equipment"));
     (*this).Data.GrantedTags = FGameplayTagContainer();
-    (*this).Data.GrantedAbilities = {};
-    (*this).Data.AppliedEffects = {};
+    (*this).Data.GrantedAbilities = TArray<FIGS_GameplayAbilityGrantDataHolder>{};
+    (*this).Data.AppliedEffects = TArray<FIGS_GameplayEffectApplyDataHolder>{};
     (*this).Data.ItemPropertyFlags = 1;
     (*this).Data.MonetaryValue = 0;
     (*this).Data.ModelScaleFPV = 1.000000000e+00f;
     (*this).Data.ModelScale3PV = 1.000000000e+00f;
-    (*this).Data.AdditionalPreloadClasses = {};
-    (*this).Data.AdditionalPreloadObjects = {};
+    (*this).Data.AdditionalPreloadClasses = TArray<TSoftClassPtr<UObject>>{};
+    (*this).Data.AdditionalPreloadObjects = TArray<TSoftObjectPtr<UObject>>{};
 }

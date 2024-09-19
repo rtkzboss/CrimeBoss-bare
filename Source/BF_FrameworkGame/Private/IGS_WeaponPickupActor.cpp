@@ -22,7 +22,7 @@ AIGS_WeaponPickupActor::AIGS_WeaponPickupActor(const FObjectInitializer& ObjectI
     (*this).GripModMesh = gen4;
     (*this).MagazineModMesh = gen5;
     (*this).StockModMesh = gen6;
-    (*this).WeaponModsArray = {gen, gen2, gen3, gen4, gen6, gen5};
+    (*this).WeaponModsArray = TArray<UStaticMeshComponent*>{gen, gen2, gen3, gen4, gen6, gen5};
     (*this).mR_IsVisible = true;
     (*this).IsPickableByAI = true;
     (*this).PickupMeshComp = gen7;

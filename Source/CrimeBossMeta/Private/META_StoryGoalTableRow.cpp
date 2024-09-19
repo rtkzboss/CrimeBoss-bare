@@ -1,4 +1,5 @@
 #include "META_StoryGoalTableRow.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_StoryGoalTableRow::FMETA_StoryGoalTableRow() {
     (*this).Graph = FSoftObjectPath();
@@ -8,8 +9,8 @@ FMETA_StoryGoalTableRow::FMETA_StoryGoalTableRow() {
     (*this).Picture = FSoftObjectPath();
     (*this).bIsGoalRepeatable = false;
     (*this).DaysBetweenAttempts = 1;
-    (*this).Missions = {};
-    (*this).ActionCardsGoal = {};
+    (*this).Missions = TArray<TSubclassOf<UMETA_MissionID>>{};
+    (*this).ActionCardsGoal = TArray<FMETA_ActionCardGoal>{};
     (*this).RespectByDefault = 0;
     (*this).UseLockRespectCondition = false;
     (*this).UnlockRespect = EMETA_RespectLvl::Low;

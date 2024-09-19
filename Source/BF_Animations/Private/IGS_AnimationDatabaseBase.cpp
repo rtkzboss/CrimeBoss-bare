@@ -1,5 +1,5 @@
 #include "IGS_AnimationDatabaseBase.h"
 
 FIGS_AnimationDatabaseBase::FIGS_AnimationDatabaseBase() {
-    (*this).LinkedGraphs = {};
+    (*this).LinkedGraphs = TArray<FIGS_LinkedGraphDefinition>{};
 }

@@ -5,6 +5,6 @@ UIGS_CorpseInteractiveComponent::UIGS_CorpseInteractiveComponent(const FObjectIn
     (*this).TimerHoldTime = 3.000000000e+00f;
     (*this).NameToDisplay = FText::FromString(TEXT("Unknown name"));
     (*this).bOverrideMasterOutline = false;
-    (*this).SetIsReplicated(false);
+    (*this).SetIsReplicatedByDefault(false);
 }
 

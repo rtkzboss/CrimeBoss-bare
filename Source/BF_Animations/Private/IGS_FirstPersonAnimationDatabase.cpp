@@ -2,7 +2,7 @@
 
 FIGS_FirstPersonAnimationDatabase::FIGS_FirstPersonAnimationDatabase() {
     (*this).ID = FSoftObjectPath();
-    (*this).AttackType = {};
+    (*this).AttackType = TArray<FIGS_AttackAnimtionDefinition>{};
     (*this).FirstEquipMontage = nullptr;
     (*this).ReloadTacticalSilent = nullptr;
     (*this).ReloadNormalSilent = nullptr;
@@ -22,5 +22,5 @@ FIGS_FirstPersonAnimationDatabase::FIGS_FirstPersonAnimationDatabase() {
     (*this).FirstWeaponEquipMontage = nullptr;
     (*this).MeleeWeaponMontage = nullptr;
     (*this).MeleePushMontage = nullptr;
-    (*this).ModInfo = {};
+    (*this).ModInfo = TArray<FIGS_ModAnimationDefinition>{};
 }

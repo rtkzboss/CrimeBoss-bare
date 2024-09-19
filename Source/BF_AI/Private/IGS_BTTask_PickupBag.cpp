@@ -1,9 +1,10 @@
 #include "IGS_BTTask_PickupBag.h"
+#include "IGS_LootBagPickup.h"
 
 UIGS_BTTask_PickupBag::UIGS_BTTask_PickupBag() {
-    (*this).BestPickupBag.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestPickupBag, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("BestPickupBag_Object_2147482496"), AIGS_LootBagPickup::StaticClass());
+    (*this).BestPickupBag = gen;
     (*this).NodeName = TEXT("Pickup Bag");
 }
 

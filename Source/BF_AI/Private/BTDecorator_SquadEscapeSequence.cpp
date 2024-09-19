@@ -1,9 +1,10 @@
 #include "BTDecorator_SquadEscapeSequence.h"
+#include "IGS_WaypointFramework.h"
 
 UBTDecorator_SquadEscapeSequence::UBTDecorator_SquadEscapeSequence() {
-    (*this).EscapePointKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).EscapePointKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("EscapePointKey_Object_2147482613"), AIGS_WaypointFramework::StaticClass());
+    (*this).EscapePointKey = gen;
     (*this).NodeName = TEXT("Squad Escape Sequence");
 }
 

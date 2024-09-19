@@ -1,9 +1,10 @@
 #include "IGS_BTService_FetchOffenceToBlackboard.h"
+#include "IGS_OffenceData.h"
 
 UIGS_BTService_FetchOffenceToBlackboard::UIGS_BTService_FetchOffenceToBlackboard() {
-    (*this).OffenceDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).OffenceDataKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("OffenceDataKey_Object_2147482584"), UIGS_OffenceData::StaticClass());
+    (*this).OffenceDataKey = gen;
     (*this).NodeName = TEXT("Fetch Offence To Blackboard");
 }
 

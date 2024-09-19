@@ -4,8 +4,8 @@ FMETA_BossLevelSaveData::FMETA_BossLevelSaveData() {
     (*this).CurrentBossLevel = 0;
     (*this).MaxBossPointsToNextLevel = 0;
     (*this).AccumulatedBossPointsToNextLevel = 0.000000000e+00f;
-    (*this).BonusesLvls = {};
-    (*this).PreparedBonuses = {};
+    (*this).BonusesLvls = TMap<EMETA_BonusType, int32>{};
+    (*this).PreparedBonuses = TArray<EMETA_BonusType>{};
     (*this).RemainingLvlUps = 0;
     (*this).LastSeenLvlUpScreen = 1;
 }

@@ -14,7 +14,7 @@ UIGS_DownStateHandlerComponent::UIGS_DownStateHandlerComponent(const FObjectInit
     (*this).DownStateMovementSpeedMultiplier.Value = 5.000000000e-01f;
     (*this).CurrentDownStatesCount = 3;
     (*this).BaseDownStatesCount = 3;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_DownStateHandlerComponent::OnRep_DownStateCount() {

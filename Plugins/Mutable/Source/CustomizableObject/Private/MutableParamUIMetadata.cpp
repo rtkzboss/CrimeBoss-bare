@@ -5,6 +5,6 @@ FMutableParamUIMetadata::FMutableParamUIMetadata() {
     (*this).UISectionName = TEXT("");
     (*this).UIOrder = 0;
     (*this).UIThumbnail = FSoftObjectPath();
-    (*this).ExtraInformation = {};
-    (*this).ExtraAssets = {};
+    (*this).ExtraInformation = TMap<FString, FString>{};
+    (*this).ExtraAssets = TMap<FString, TSoftObjectPtr<UObject>>{};
 }

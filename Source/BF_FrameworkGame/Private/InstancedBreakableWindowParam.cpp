@@ -15,6 +15,6 @@ FInstancedBreakableWindowParam::FInstancedBreakableWindowParam() {
     (*this).InstanceParticleVelocity.X = 1.000000000e+02f;
     (*this).InstanceParticleVelocity.Y = 0.000000000e+00f;
     (*this).InstanceParticleVelocity.Z = 0.000000000e+00f;
-    (*this).InstanceParticleParameters = {};
+    (*this).InstanceParticleParameters = TArray<FParticleSysParam>{};
     (*this).BulletsToDestroyInstance = 1;
 }

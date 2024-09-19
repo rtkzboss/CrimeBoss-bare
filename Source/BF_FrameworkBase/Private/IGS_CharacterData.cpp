@@ -19,7 +19,7 @@ UIGS_CharacterData::UIGS_CharacterData(const FObjectInitializer& ObjectInitializ
     (*this).bCanAbortAnimation = true;
     (*this).AlarmDeviceType = EIGS_AlarmDeviceType::AD_Unknown;
     (*this).mR_ReportDetection = true;
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_CharacterData::UpdateIsCharging(bool inIsCharging) {

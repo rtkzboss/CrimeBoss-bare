@@ -2,5 +2,5 @@
 
 FMETA_PlanningBoardManagerSaveData::FMETA_PlanningBoardManagerSaveData() {
     (*this).ActivePlanningBoardTag = FGameplayTag();
-    (*this).PlanningBoardItemsStatuses = {};
+    (*this).PlanningBoardItemsStatuses = TMap<FGameplayTag, EMETA_PlanningBoardItemStatus>{};
 }

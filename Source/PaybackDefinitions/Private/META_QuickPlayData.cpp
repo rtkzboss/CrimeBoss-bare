@@ -1,26 +1,26 @@
 #include "META_QuickPlayData.h"
 
 UMETA_QuickPlayData::UMETA_QuickPlayData() {
-    (*this).UserDifficulties = {};
-    (*this).DifficultyBonusPercentage = {};
-    (*this).BadgesPerHeat = {};
-    (*this).BadgesDifficultyModifier = {};
+    (*this).UserDifficulties = TMap<EIGS_UserDifficulty, FIGS_UserDifficulty>{};
+    (*this).DifficultyBonusPercentage = TMap<EIGS_UserDifficulty, float>{};
+    (*this).BadgesPerHeat = TMap<EMETA_Heat, FIGS_BadgesPerHeat>{};
+    (*this).BadgesDifficultyModifier = TMap<EIGS_ScenarioDifficulty, int32>{};
     (*this).LobbyLonelyWaitingTime = 180;
     (*this).LobbyNewClientJoinedWaitingTime = 120;
     (*this).LobbyFinalWaitingTime = 10;
     (*this).BlackMarketRefreshTimeInMinutes = 60;
-    (*this).HeisterLevelPerQuality = {};
+    (*this).HeisterLevelPerQuality = TMap<EMETA_ItemQuality, int32>{};
     (*this).BlackMarketHeisterRefreshBaseCost = 25000;
     (*this).BlackMarketHeisterRefreshCoefficient = 1.200000048e+00f;
     (*this).BlackmarketHeisterRefreshCooldownTime = 30;
     (*this).BlackMarketWeaponRefreshBaseCost = 45000;
     (*this).BlackMarketWeaponRefreshCoefficient = 1.200000048e+00f;
     (*this).BlackmarketWeaponRefreshCooldownTime = 30;
-    (*this).WeaponPriceMultiplier = {};
-    (*this).EquipmentPriceMultiplier = {};
+    (*this).WeaponPriceMultiplier = TMap<EMETA_ItemQuality, float>{};
+    (*this).EquipmentPriceMultiplier = TMap<EMETA_ItemQuality, float>{};
     (*this).BuybackWeaponPriceMultiplier = 1.500000000e+00f;
     (*this).BuybackWeaponDaysInShop = 3;
-    (*this).RespectLevelsByPoints = {};
+    (*this).RespectLevelsByPoints = TMap<EMETA_RespectLvl, int32>{};
     (*this).MoneyToPointsMultiplier = 1.000000000e+00f;
     (*this).OneStarsPointsGainPercentage = 5.000000000e+01f;
     (*this).TwoStarsPointsGainPercentage = 1.000000000e+02f;
@@ -37,9 +37,9 @@ UMETA_QuickPlayData::UMETA_QuickPlayData() {
     (*this).ChainMinusScorePerKilledCivilian = 5000;
     (*this).ChainMinusScorePerReviveUsed = 10000;
     (*this).ChainMinusScorePerKilledHeister = 20000;
-    (*this).EnemyTiersPerShuffleDifficulty = {};
-    (*this).BadgesPerShuffleDifficulty = {};
-    (*this).TutorialCharacters = {FGameplayTag(), FGameplayTag(), FGameplayTag(), FGameplayTag()};
+    (*this).EnemyTiersPerShuffleDifficulty = TMap<EIGS_ChainDifficulty, int32>{};
+    (*this).BadgesPerShuffleDifficulty = TMap<EIGS_ChainDifficulty, int32>{};
+    (*this).TutorialCharacters = TArray<FGameplayTag>{FGameplayTag(), FGameplayTag(), FGameplayTag(), FGameplayTag()};
 }
 
 void UMETA_QuickPlayData::GetSpecialTierChance(const EIGS_UserDifficulty inUserDifficulty, const int32 inStormIntensity, bool& outHasOverride, float& outRatio) {

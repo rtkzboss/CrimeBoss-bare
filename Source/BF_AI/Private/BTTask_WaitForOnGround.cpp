@@ -1,9 +1,10 @@
 #include "BTTask_WaitForOnGround.h"
+#include "IGS_GameCharacterFramework.h"
 
 UBTTask_WaitForOnGround::UBTTask_WaitForOnGround() {
-    (*this).CivlianToZipKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).CivlianToZipKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("CivlianToZipKey_Object_2147482468"), AIGS_GameCharacterFramework::StaticClass());
+    (*this).CivlianToZipKey = gen;
     (*this).NodeName = TEXT("Wait For On Ground");
 }
 

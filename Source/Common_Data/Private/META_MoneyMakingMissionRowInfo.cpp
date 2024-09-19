@@ -10,6 +10,7 @@
 #include "EIGS_TileEnviroment.h"
 #include "EMETA_Heat.h"
 #include "EMETA_StealthMode.h"
+#include "Templates/SubclassOf.h"
 
 FMETA_MoneyMakingMissionRowInfo::FMETA_MoneyMakingMissionRowInfo() {
     (*this).Picture = FSoftObjectPath();
@@ -19,10 +20,10 @@ FMETA_MoneyMakingMissionRowInfo::FMETA_MoneyMakingMissionRowInfo() {
     (*this).DaysOnMap = -1;
     (*this).MinCrewSize = 1;
     (*this).MaxCrewSize = 4;
-    (*this).WeaponsRequired = {};
-    (*this).CharactersRequired = {};
-    (*this).CharactersRequiredButNotOwned = {};
-    (*this).ResultsWhenJobIsNotRemovedFromTheMap = {};
+    (*this).WeaponsRequired = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
+    (*this).CharactersRequired = TArray<EIGS_CharacterID>{};
+    (*this).CharactersRequiredButNotOwned = TArray<EIGS_CharacterID>{};
+    (*this).ResultsWhenJobIsNotRemovedFromTheMap = TArray<EMETA_JobResult>{};
     (*this).FPSMissionInfo.FPSMissionID = nullptr;
     (*this).FPSMissionInfo.Scenario = FGameplayTag();
     (*this).FPSMissionInfo.LightingScenario = EIGS_LightingScenarioType::Morning;
@@ -47,7 +48,7 @@ FMETA_MoneyMakingMissionRowInfo::FMETA_MoneyMakingMissionRowInfo() {
     (*this).FPSMissionInfo.SupportedLoot = FGameplayTagContainer();
     (*this).FPSMissionInfo.TotalLootbagCount = -1;
     (*this).FPSMissionInfo.ForcedDetectivesCount = 0;
-    (*this).FPSMissionInfo.Parameters = {};
+    (*this).FPSMissionInfo.Parameters = TMap<FGameplayTag, int32>{};
     (*this).FPSMissionInfo.StealthMode = EMETA_StealthMode::NotAvailable;
     (*this).FPSMissionInfo.bDownedCharctersSurvive = false;
     (*this).UnlockRespect = EMETA_RespectLvl::Low;

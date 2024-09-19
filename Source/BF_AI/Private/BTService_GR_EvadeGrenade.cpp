@@ -1,11 +1,13 @@
 #include "BTService_GR_EvadeGrenade.h"
+#include "IGS_GeneralReactionData_Base.h"
 
 UBTService_GR_EvadeGrenade::UBTService_GR_EvadeGrenade() {
-    (*this).GeneralReactionDataKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).GeneralReactionDataKey, 0)) = 255;
-    (*this).BestEvadePosKey.AllowedTypes = {nullptr};
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).BestEvadePosKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("GeneralReactionDataKey_Object_2147482580"), UIGS_GeneralReactionData_Base::StaticClass());
+    (*this).GeneralReactionDataKey = gen;
+    FBlackboardKeySelector gen2;
+    gen2.AddVectorFilter(this, TEXT("BestEvadePosKey"));
+    (*this).BestEvadePosKey = gen2;
     (*this).NodeName = TEXT("GlobalReaction - Evade Grenade");
 }
 

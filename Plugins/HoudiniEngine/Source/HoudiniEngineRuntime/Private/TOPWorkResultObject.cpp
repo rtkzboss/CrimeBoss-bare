@@ -5,7 +5,7 @@ FTOPWorkResultObject::FTOPWorkResultObject() {
     (*this).FilePath = TEXT("");
     (*this).State = EPDGWorkResultState::None;
     (*this).WorkItemResultInfoIndex = -1;
-    (*this).ResultOutputs = {};
+    (*this).ResultOutputs = TArray<UHoudiniOutput*>{};
     (*this).bAutoBakedSinceLastLoad = false;
     auto gen = TBaseStructure<FOutputActorOwner>::Get()->FindPropertyByName("OutputActor");
     (*gen->ContainerPtrToValuePtr<AActor*>(&(*this).OutputActorOwner, 0)) = nullptr;

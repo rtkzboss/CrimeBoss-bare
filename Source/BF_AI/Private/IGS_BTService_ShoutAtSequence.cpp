@@ -1,9 +1,10 @@
 #include "IGS_BTService_ShoutAtSequence.h"
+#include "IGS_GameCharacterFramework.h"
 
 UIGS_BTService_ShoutAtSequence::UIGS_BTService_ShoutAtSequence() {
-    (*this).CharacterToShoutKey.AllowedTypes = {nullptr};
-    auto gen = TBaseStructure<FBlackboardKeySelector>::Get()->FindPropertyByName("SelectedKeyID");
-    (*gen->ContainerPtrToValuePtr<uint8>(&(*this).CharacterToShoutKey, 0)) = 255;
+    FBlackboardKeySelector gen;
+    gen.AddObjectFilter(this, TEXT("CharacterToShoutKey_Object_2147482562"), AIGS_GameCharacterFramework::StaticClass());
+    (*this).CharacterToShoutKey = gen;
     (*this).NodeName = TEXT("Shout At Sequence");
 }
 

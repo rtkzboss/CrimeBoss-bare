@@ -2,7 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_ObjectiveManager::UIGS_ObjectiveManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    (*this).SetIsReplicated(true);
+    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_ObjectiveManager::UnpauseTimerForTask(UObject* inWCO, FIGS_MissionTask inTask) {
