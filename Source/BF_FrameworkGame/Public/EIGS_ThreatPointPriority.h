@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EIGS_ThreatPointPriority : uint8 {
-    TPP_Low,
-    TPP_High,
+    TPP_Low UMETA(DisplayName=Low),
+    TPP_High UMETA(DisplayName=High),
 };

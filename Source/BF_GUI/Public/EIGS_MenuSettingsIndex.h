@@ -4,10 +4,10 @@
 
 UENUM(BlueprintType)
 enum class EIGS_MenuSettingsIndex : uint8 {
-    MS_INVALID = 255,
-    MS_GameSet = 0,
-    MS_ControlsSet,
-    MS_GraphicsSet,
-    MS_SoundSet,
-    MS_VoiceSet,
+    MS_INVALID = 255 UMETA(DisplayName=INVALID),
+    MS_GameSet = 0 UMETA(DisplayName="Game Set"),
+    MS_ControlsSet UMETA(DisplayName="Controls Set"),
+    MS_GraphicsSet UMETA(DisplayName="Graphics Set"),
+    MS_SoundSet UMETA(DisplayName="Sound Set"),
+    MS_VoiceSet UMETA(DisplayName="Voice Set"),
 };

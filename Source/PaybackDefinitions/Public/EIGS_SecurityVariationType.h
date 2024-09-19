@@ -4,16 +4,16 @@
 
 UENUM(BlueprintType)
 enum class EIGS_SecurityVariationType : uint8 {
-    US_None,
-    US_RDR,
-    US_RDR2,
-    US_Metahuman,
-    US_Jewelry,
-    US_Bay,
-    US_Prison,
-    US_Cop,
-    US_Elite,
-    US_FPSMaxIndex = 128,
-    US_STO_Prison,
-    US_Unknown = 255,
+    US_None UMETA(DisplayName=None),
+    US_RDR UMETA(DisplayName=RDR),
+    US_RDR2 UMETA(DisplayName="RDR 2"),
+    US_Metahuman UMETA(DisplayName=Metahuman),
+    US_Jewelry UMETA(DisplayName=Jewelry),
+    US_Bay UMETA(DisplayName=Bay),
+    US_Prison UMETA(DisplayName=Prison),
+    US_Cop UMETA(DisplayName=Cop),
+    US_Elite UMETA(DisplayName=Elite),
+    US_FPSMaxIndex = 128 UMETA(DisplayName="FPS Max Index"),
+    US_STO_Prison UMETA(DisplayName="STO Prison"),
+    US_Unknown = 255 UMETA(DisplayName=Unknown),
 };

@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_DisplayMode : uint8 {
-    DM_INVALID = 255,
-    DM_FullScreen = 0,
-    DM_Borderless,
-    DM_Windowed,
+    DM_INVALID = 255 UMETA(DisplayName=INVALID),
+    DM_FullScreen = 0 UMETA(DisplayName="Full Screen"),
+    DM_Borderless UMETA(DisplayName=Borderless),
+    DM_Windowed UMETA(DisplayName=Windowed),
     DM_MAX UMETA(Hidden),
 };

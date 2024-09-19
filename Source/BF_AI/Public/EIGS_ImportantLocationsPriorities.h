@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_ImportantLocationsPriorities : uint8 {
-    BT_Squad,
-    BT_Character,
-    BT_Defending,
-    BT_Breaching,
+    BT_Squad UMETA(DisplayName=Squad),
+    BT_Character UMETA(DisplayName=Character),
+    BT_Defending UMETA(DisplayName=Defending),
+    BT_Breaching UMETA(DisplayName=Breaching),
 };

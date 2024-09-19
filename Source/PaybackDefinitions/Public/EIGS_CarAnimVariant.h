@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_CarAnimVariant : uint8 {
-    C_Unknown = 255,
-    C_Sitting = 0,
-    C_GetIn,
-    C_GetOut,
+    C_Unknown = 255 UMETA(DisplayName=Unknown),
+    C_Sitting = 0 UMETA(DisplayName=Sitting),
+    C_GetIn UMETA(DisplayName="Get In"),
+    C_GetOut UMETA(DisplayName="Get Out"),
 };

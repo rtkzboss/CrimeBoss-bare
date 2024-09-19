@@ -4,10 +4,10 @@
 
 UENUM(BlueprintType)
 enum class EIGS_SpawnPointType : uint8 {
-    SPT_Unknown,
-    SPT_Card,
-    SPT_Computer,
-    SPT_Key,
-    SPT_FuseBox,
-    SPT_Note,
+    SPT_Unknown UMETA(DisplayName=Unknown),
+    SPT_Card UMETA(DisplayName=Card),
+    SPT_Computer UMETA(DisplayName=Computer),
+    SPT_Key UMETA(DisplayName=Key),
+    SPT_FuseBox UMETA(DisplayName="Fuse Box"),
+    SPT_Note UMETA(DisplayName=Note),
 };

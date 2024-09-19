@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EIGS_HandsetRespondVariants : uint8 {
-    EIGS_Started,
-    EIGS_Stopped,
+    EIGS_Started UMETA(DisplayName=Started),
+    EIGS_Stopped UMETA(DisplayName=Stopped),
 };

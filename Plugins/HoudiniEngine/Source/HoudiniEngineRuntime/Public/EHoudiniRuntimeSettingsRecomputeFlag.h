@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum EHoudiniRuntimeSettingsRecomputeFlag {
-    HRSRF_Always,
-    HRSRF_OnlyIfMissing,
-    HRSRF_Never,
+    HRSRF_Always UMETA(DisplayName=Always),
+    HRSRF_OnlyIfMissing UMETA(DisplayName="Only If Missing"),
+    HRSRF_Never UMETA(DisplayName=Never),
 };

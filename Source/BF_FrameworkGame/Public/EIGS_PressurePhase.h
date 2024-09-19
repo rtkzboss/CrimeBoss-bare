@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_PressurePhase : uint8 {
-    PP_Unknown = 255,
-    PP_Control = 0,
-    PP_Action,
+    PP_Unknown = 255 UMETA(DisplayName=Unknown),
+    PP_Control = 0 UMETA(DisplayName=Control),
+    PP_Action UMETA(DisplayName=Action),
 };

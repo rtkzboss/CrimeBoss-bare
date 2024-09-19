@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_UnregisterReason : uint8 {
-    UR_EndPlay,
-    UR_Death,
-    UR_BotSwitch,
+    UR_EndPlay UMETA(DisplayName="End Play"),
+    UR_Death UMETA(DisplayName=Death),
+    UR_BotSwitch UMETA(DisplayName="Bot Switch"),
 };

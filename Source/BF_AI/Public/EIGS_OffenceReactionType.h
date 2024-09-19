@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_OffenceReactionType : uint8 {
-    Offence_UNKNOWN = 255,
-    Offence_Player = 0,
-    Offence_Noise,
-    Offence_SuspActors,
+    Offence_UNKNOWN = 255 UMETA(DisplayName=UNKNOWN),
+    Offence_Player = 0 UMETA(DisplayName=Player),
+    Offence_Noise UMETA(DisplayName=Noise),
+    Offence_SuspActors UMETA(DisplayName="Susp Actors"),
 };

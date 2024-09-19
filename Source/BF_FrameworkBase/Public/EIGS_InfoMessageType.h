@@ -4,14 +4,14 @@
 
 UENUM(BlueprintType)
 enum class EIGS_InfoMessageType : uint8 {
-    Info_Generic,
-    Info_ItemAdded,
-    Info_SuspicionAdded,
-    Info_PlayerDown,
-    Info_PlayerDied,
-    Info_PingWeapon,
-    Info_ControlRoom,
-    Info_AmmoPickup,
-    Info_TelephoneAlarm,
-    Info_AlarmButton,
+    Info_Generic UMETA(DisplayName=Generic),
+    Info_ItemAdded UMETA(DisplayName="Item Added"),
+    Info_SuspicionAdded UMETA(DisplayName="Suspicion Added"),
+    Info_PlayerDown UMETA(DisplayName="Player Down"),
+    Info_PlayerDied UMETA(DisplayName="Player Died"),
+    Info_PingWeapon UMETA(DisplayName="Ping Weapon"),
+    Info_ControlRoom UMETA(DisplayName="Control Room"),
+    Info_AmmoPickup UMETA(DisplayName="Ammo Pickup"),
+    Info_TelephoneAlarm UMETA(DisplayName="Telephone Alarm"),
+    Info_AlarmButton UMETA(DisplayName="Alarm Button"),
 };

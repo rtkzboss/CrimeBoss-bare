@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_WaveDirectionType : uint8 {
-    WDT_None,
-    WDT_North,
-    WDT_East,
-    WDT_South,
-    WDT_West,
+    WDT_None UMETA(DisplayName=None),
+    WDT_North UMETA(DisplayName=North),
+    WDT_East UMETA(DisplayName=East),
+    WDT_South UMETA(DisplayName=South),
+    WDT_West UMETA(DisplayName=West),
 };

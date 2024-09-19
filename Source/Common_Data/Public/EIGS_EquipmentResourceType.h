@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_EquipmentResourceType : uint8 {
-    ERT_Charges,
-    ERT_Cooldown,
-    ERT_Custom = 100,
+    ERT_Charges UMETA(DisplayName=Charges),
+    ERT_Cooldown UMETA(DisplayName=Cooldown),
+    ERT_Custom = 100 UMETA(DisplayName=Custom),
 };

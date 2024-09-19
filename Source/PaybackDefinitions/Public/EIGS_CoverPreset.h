@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_CoverPreset : uint8 {
-    AICS_None,
-    AICS_Reckless,
-    AICS_Standard,
-    AICS_Cautious,
-    AICS_Unknown = 255,
+    AICS_None UMETA(DisplayName=None),
+    AICS_Reckless UMETA(DisplayName=Reckless),
+    AICS_Standard UMETA(DisplayName=Standard),
+    AICS_Cautious UMETA(DisplayName=Cautious),
+    AICS_Unknown = 255 UMETA(DisplayName=Unknown),
 };

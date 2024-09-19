@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_SuppressionType : uint8 {
-    EST_Normal,
-    EST_Sniper,
-    EST_None = 255,
+    EST_Normal UMETA(DisplayName=Normal),
+    EST_Sniper UMETA(DisplayName=Sniper),
+    EST_None = 255 UMETA(DisplayName=None),
 };

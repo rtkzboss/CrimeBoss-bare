@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_UserDifficulty : uint8 {
-    UD_Unknown,
-    UD_Easy,
-    UD_Medium,
-    UD_Hard,
+    UD_Unknown UMETA(DisplayName=Unknown),
+    UD_Easy UMETA(DisplayName=Easy),
+    UD_Medium UMETA(DisplayName=Medium),
+    UD_Hard UMETA(DisplayName=Hard),
 };

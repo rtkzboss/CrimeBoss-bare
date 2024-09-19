@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_BoneAxis : uint8 {
-    BA_None,
-    BA_X,
-    BA_Y,
-    BA_Z,
+    BA_None UMETA(DisplayName=None),
+    BA_X UMETA(DisplayName=X),
+    BA_Y UMETA(DisplayName=Y),
+    BA_Z UMETA(DisplayName=Z),
 };

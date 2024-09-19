@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_TriggerExecuteOn : uint8 {
-    EIGS_BeginOverlap,
-    EIGS_EndOverlap,
-    EIGS_Both,
+    EIGS_BeginOverlap UMETA(DisplayName="Begin Overlap"),
+    EIGS_EndOverlap UMETA(DisplayName="End Overlap"),
+    EIGS_Both UMETA(DisplayName=Both),
 };

@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EIGS_FacialEmotionIdles : uint8 {
-    FEI_Default,
-    FEI_Talking,
+    FEI_Default UMETA(DisplayName=Default),
+    FEI_Talking UMETA(DisplayName=Talking),
 };

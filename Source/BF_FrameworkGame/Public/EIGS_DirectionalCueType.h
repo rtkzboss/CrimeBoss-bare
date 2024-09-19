@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_DirectionalCueType : uint8 {
-    DC_Generic,
-    DC_Bullet,
-    DC_Melee,
-    DC_Unknown = 255,
+    DC_Generic UMETA(DisplayName=Generic),
+    DC_Bullet UMETA(DisplayName=Bullet),
+    DC_Melee UMETA(DisplayName=Melee),
+    DC_Unknown = 255 UMETA(DisplayName=Unknown),
 };

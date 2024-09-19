@@ -4,10 +4,10 @@
 
 UENUM(BlueprintType)
 enum class EIGS_BleedType : uint8 {
-    BT_None,
-    BT_MoveableWithCovers,
-    BT_Moveable,
-    BT_Pinned,
-    BT_Injured,
-    BT_Died,
+    BT_None UMETA(DisplayName=None),
+    BT_MoveableWithCovers UMETA(DisplayName="Moveable With Covers"),
+    BT_Moveable UMETA(DisplayName=Moveable),
+    BT_Pinned UMETA(DisplayName=Pinned),
+    BT_Injured UMETA(DisplayName=Injured),
+    BT_Died UMETA(DisplayName=Died),
 };

@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EIGS_CombatStatus : uint8 {
-    EIGS_Combat,
-    EIGS_Stealth,
+    EIGS_Combat UMETA(DisplayName=Combat),
+    EIGS_Stealth UMETA(DisplayName=Stealth),
 };

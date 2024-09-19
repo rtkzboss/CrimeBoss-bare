@@ -4,12 +4,12 @@
 
 UENUM(BlueprintType)
 enum class EIGS_ItemPropertyFlags : uint8 {
-    Property_Droppable,
-    Property_Stackable,
-    Property_Consumable,
-    Property_Wieldable,
-    Property_PlayerForbidden,
-    Property_Metal,
-    Property_Money,
-    Property_LootBag,
+    Property_Droppable UMETA(DisplayName=Droppable),
+    Property_Stackable UMETA(DisplayName=Stackable),
+    Property_Consumable UMETA(DisplayName=Consumable),
+    Property_Wieldable UMETA(DisplayName=Wieldable),
+    Property_PlayerForbidden UMETA(DisplayName="Player Forbidden"),
+    Property_Metal UMETA(DisplayName=Metal),
+    Property_Money UMETA(DisplayName=Money),
+    Property_LootBag UMETA(DisplayName="Loot Bag"),
 };

@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_ThreatLevel : uint8 {
-    Threat_UNKNOWN = 255,
-    Threat_None = 0,
-    Threat_Suspicious,
-    Threat_Dangerous,
+    Threat_UNKNOWN = 255 UMETA(DisplayName=UNKNOWN),
+    Threat_None = 0 UMETA(DisplayName=None),
+    Threat_Suspicious UMETA(DisplayName=Suspicious),
+    Threat_Dangerous UMETA(DisplayName=Dangerous),
 };

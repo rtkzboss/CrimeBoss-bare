@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EIGS_BoxSphereShape : uint8 {
-    EBF_Box,
-    EBF_Sphere,
+    EBF_Box UMETA(DisplayName=Box),
+    EBF_Sphere UMETA(DisplayName=Sphere),
 };

@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_TriggerDeadOrAlive : uint8 {
-    DOA_Alive,
-    DOA_Dead,
-    DOA_Both,
+    DOA_Alive UMETA(DisplayName=Alive),
+    DOA_Dead UMETA(DisplayName=Dead),
+    DOA_Both UMETA(DisplayName=Both),
 };

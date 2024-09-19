@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum EPoleVectorModeEnum {
-    PV_None,
-    PV_Position,
-    PV_Bone,
-    PV_AngleOffset,
+    PV_None UMETA(DisplayName=None),
+    PV_Position UMETA(DisplayName=Position),
+    PV_Bone UMETA(DisplayName=Bone),
+    PV_AngleOffset UMETA(DisplayName="Angle Offset"),
 };

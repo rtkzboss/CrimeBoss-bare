@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum EEffectorSpaceEnum {
-    ES_Additive,
-    ES_World,
-    ES_Component,
+    ES_Additive UMETA(DisplayName=Additive),
+    ES_World UMETA(DisplayName=World),
+    ES_Component UMETA(DisplayName=Component),
 };

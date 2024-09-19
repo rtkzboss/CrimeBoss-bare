@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_OverlapResponseType : uint8 {
-    ORT_None,
-    ORT_NotifyOnly,
-    ORT_Penetration,
-    ORT_PenetrationNoReduction,
-    ORT_Block,
+    ORT_None UMETA(DisplayName=None),
+    ORT_NotifyOnly UMETA(DisplayName="Notify Only"),
+    ORT_Penetration UMETA(DisplayName=Penetration),
+    ORT_PenetrationNoReduction UMETA(DisplayName="Penetration No Reduction"),
+    ORT_Block UMETA(DisplayName=Block),
 };

@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_RopeType : uint8 {
-    RT_None,
-    RT_Navlink,
-    RT_Helicopter,
-    RT_PlayerRapelling,
+    RT_None UMETA(DisplayName=None),
+    RT_Navlink UMETA(DisplayName=Navlink),
+    RT_Helicopter UMETA(DisplayName=Helicopter),
+    RT_PlayerRapelling UMETA(DisplayName="Player Rapelling"),
 };

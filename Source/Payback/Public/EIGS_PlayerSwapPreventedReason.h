@@ -4,12 +4,12 @@
 
 UENUM(BlueprintType)
 enum class EIGS_PlayerSwapPreventedReason : uint8 {
-    SP_Unknown,
-    SP_PlayerBusy,
-    SP_PlayerDead,
-    SP_PlayerDowned,
-    SP_PlayerLocation,
-    SP_BotBusy = 11,
-    SP_BotDead,
-    SP_BotDowned,
+    SP_Unknown UMETA(DisplayName=Unknown),
+    SP_PlayerBusy UMETA(DisplayName="Player Busy"),
+    SP_PlayerDead UMETA(DisplayName="Player Dead"),
+    SP_PlayerDowned UMETA(DisplayName="Player Downed"),
+    SP_PlayerLocation UMETA(DisplayName="Player Location"),
+    SP_BotBusy = 11 UMETA(DisplayName="Bot Busy"),
+    SP_BotDead UMETA(DisplayName="Bot Dead"),
+    SP_BotDowned UMETA(DisplayName="Bot Downed"),
 };

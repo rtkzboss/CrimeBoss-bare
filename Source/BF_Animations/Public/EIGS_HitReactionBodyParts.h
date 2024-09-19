@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_HitReactionBodyParts : uint8 {
-    D_UpperBody,
-    D_LowerBody,
-    D_Head,
-    D_None,
+    D_UpperBody UMETA(DisplayName="Upper Body"),
+    D_LowerBody UMETA(DisplayName="Lower Body"),
+    D_Head UMETA(DisplayName=Head),
+    D_None UMETA(DisplayName=None),
 };

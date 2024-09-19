@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class ERMAFoliageToolsIncludeMode : uint8 {
-    RMAIM_All,
-    RMAIM_Selection,
+    RMAIM_All UMETA(DisplayName=All),
+    RMAIM_Selection UMETA(DisplayName=Selection),
 };

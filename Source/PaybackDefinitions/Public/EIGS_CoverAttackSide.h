@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_CoverAttackSide : uint8 {
-    CAS_Unknown = 255,
-    CAS_None = 0,
-    CAS_Left,
-    CAS_Right,
-    CAS_Up,
+    CAS_Unknown = 255 UMETA(DisplayName=Unknown),
+    CAS_None = 0 UMETA(DisplayName=None),
+    CAS_Left UMETA(DisplayName=Left),
+    CAS_Right UMETA(DisplayName=Right),
+    CAS_Up UMETA(DisplayName=Up),
 };

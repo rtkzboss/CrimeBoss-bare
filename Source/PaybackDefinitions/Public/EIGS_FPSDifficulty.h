@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_FPSDifficulty : uint8 {
-    FD_Unknown,
-    FD_Normal,
-    FD_Hard,
-    FD_Extreme,
+    FD_Unknown UMETA(DisplayName=Unknown),
+    FD_Normal UMETA(DisplayName=Normal),
+    FD_Hard UMETA(DisplayName=Hard),
+    FD_Extreme UMETA(DisplayName=Extreme),
 };

@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_HealthState : uint8 {
-    HS_Normal,
-    HS_DownMoveable,
-    HS_DownPinned,
+    HS_Normal UMETA(DisplayName=Normal),
+    HS_DownMoveable UMETA(DisplayName="Down Moveable"),
+    HS_DownPinned UMETA(DisplayName="Down Pinned"),
 };

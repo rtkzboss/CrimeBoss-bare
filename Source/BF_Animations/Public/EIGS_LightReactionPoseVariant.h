@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_LightReactionPoseVariant : uint8 {
-    D_Standing,
-    D_Crouching,
-    D_LyingOnGround,
-    D_Downstate,
+    D_Standing UMETA(DisplayName=Standing),
+    D_Crouching UMETA(DisplayName=Crouching),
+    D_LyingOnGround UMETA(DisplayName="Lying On Ground"),
+    D_Downstate UMETA(DisplayName=Downstate),
 };

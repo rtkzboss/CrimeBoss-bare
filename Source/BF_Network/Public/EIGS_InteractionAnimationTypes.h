@@ -4,15 +4,15 @@
 
 UENUM(BlueprintType)
 enum class EIGS_InteractionAnimationTypes : uint8 {
-    EIGS_DoorOpened,
-    EIGS_DoorClosed,
-    EIGS_Pickup,
-    EIGS_ThrowLoot,
-    EIGS_Ziptie,
-    EIGS_CarryableThrowLow,
-    EIGS_CarryableThrow,
-    EIGS_LootBagPickup,
-    EIGS_LootCollectionStart,
-    EIGS_LootCollectionEnd,
-    EIGS_Undefined,
+    EIGS_DoorOpened UMETA(DisplayName="Door Opened"),
+    EIGS_DoorClosed UMETA(DisplayName="Door Closed"),
+    EIGS_Pickup UMETA(DisplayName=Pickup),
+    EIGS_ThrowLoot UMETA(DisplayName="Throw Loot"),
+    EIGS_Ziptie UMETA(DisplayName=Ziptie),
+    EIGS_CarryableThrowLow UMETA(DisplayName="Carryable Throw Low"),
+    EIGS_CarryableThrow UMETA(DisplayName="Carryable Throw"),
+    EIGS_LootBagPickup UMETA(DisplayName="Loot Bag Pickup"),
+    EIGS_LootCollectionStart UMETA(DisplayName="Loot Collection Start"),
+    EIGS_LootCollectionEnd UMETA(DisplayName="Loot Collection End"),
+    EIGS_Undefined UMETA(DisplayName=Undefined),
 };

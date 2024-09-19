@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_FlyBySide : uint8 {
-    EST_Left,
-    EST_Right,
-    EST_None = 255,
+    EST_Left UMETA(DisplayName=Left),
+    EST_Right UMETA(DisplayName=Right),
+    EST_None = 255 UMETA(DisplayName=None),
 };

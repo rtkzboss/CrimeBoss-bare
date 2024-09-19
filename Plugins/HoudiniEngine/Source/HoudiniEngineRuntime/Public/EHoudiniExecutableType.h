@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum EHoudiniExecutableType {
-    HRSHE_Houdini,
-    HRSHE_HoudiniFX,
-    HRSHE_HoudiniCore,
-    HRSHE_HoudiniIndie,
+    HRSHE_Houdini UMETA(DisplayName=Houdini),
+    HRSHE_HoudiniFX UMETA(DisplayName="Houdini FX"),
+    HRSHE_HoudiniCore UMETA(DisplayName="Houdini Core"),
+    HRSHE_HoudiniIndie UMETA(DisplayName="Houdini Indie"),
 };

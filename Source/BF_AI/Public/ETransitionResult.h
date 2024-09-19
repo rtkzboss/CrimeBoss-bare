@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum ETransitionResult {
-    TR_None,
-    TR_Success,
-    TR_Failed,
+    TR_None UMETA(DisplayName=None),
+    TR_Success UMETA(DisplayName=Success),
+    TR_Failed UMETA(DisplayName=Failed),
 };

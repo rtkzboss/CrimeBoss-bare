@@ -4,10 +4,10 @@
 
 UENUM(BlueprintType)
 enum class EIGS_SessionJoinFailureReason : uint8 {
-    FR_SessionIsFull,
-    FR_SessionDoesNotExist,
-    FR_CouldNotRetrieveAddress,
-    FR_AlreadyInSession,
-    FR_UnknownError,
-    FR_Invalid = 255,
+    FR_SessionIsFull UMETA(DisplayName="Session Is Full"),
+    FR_SessionDoesNotExist UMETA(DisplayName="Session Does Not Exist"),
+    FR_CouldNotRetrieveAddress UMETA(DisplayName="Could Not Retrieve Address"),
+    FR_AlreadyInSession UMETA(DisplayName="Already In Session"),
+    FR_UnknownError UMETA(DisplayName="Unknown Error"),
+    FR_Invalid = 255 UMETA(DisplayName=Invalid),
 };

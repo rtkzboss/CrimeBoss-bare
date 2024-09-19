@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_DamageLimiterType : uint8 {
-    DLT_None,
-    DLT_FirstHit,
-    DLT_DPSThreshold,
-    DLT_LowHealth,
+    DLT_None UMETA(DisplayName=None),
+    DLT_FirstHit UMETA(DisplayName="First Hit"),
+    DLT_DPSThreshold UMETA(DisplayName="DPS Threshold"),
+    DLT_LowHealth UMETA(DisplayName="Low Health"),
 };

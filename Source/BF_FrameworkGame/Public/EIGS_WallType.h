@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_WallType : uint8 {
-    Wall_Wall,
-    Wall_Door,
-    Wall_Window,
-    Wall_Elevator,
-    Wall_Shaft,
+    Wall_Wall UMETA(DisplayName=Wall),
+    Wall_Door UMETA(DisplayName=Door),
+    Wall_Window UMETA(DisplayName=Window),
+    Wall_Elevator UMETA(DisplayName=Elevator),
+    Wall_Shaft UMETA(DisplayName=Shaft),
 };

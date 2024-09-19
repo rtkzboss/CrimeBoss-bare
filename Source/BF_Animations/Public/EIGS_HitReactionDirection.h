@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_HitReactionDirection : uint8 {
-    D_Front,
-    D_Left,
-    D_Back,
-    D_Right,
+    D_Front UMETA(DisplayName=Front),
+    D_Left UMETA(DisplayName=Left),
+    D_Back UMETA(DisplayName=Back),
+    D_Right UMETA(DisplayName=Right),
 };

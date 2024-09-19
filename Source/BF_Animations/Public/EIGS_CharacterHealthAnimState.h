@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EIGS_CharacterHealthAnimState : uint8 {
-    EBF_Alive,
-    EBF_Dead,
+    EBF_Alive UMETA(DisplayName=Alive),
+    EBF_Dead UMETA(DisplayName=Dead),
 };

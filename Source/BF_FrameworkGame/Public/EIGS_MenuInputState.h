@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_MenuInputState : uint8 {
-    Input_Open,
-    Input_Close,
-    Input_Toggle,
+    Input_Open UMETA(DisplayName=Open),
+    Input_Close UMETA(DisplayName=Close),
+    Input_Toggle UMETA(DisplayName=Toggle),
     Input_MAX UMETA(Hidden),
-    Input_UNKNOWN = 255,
+    Input_UNKNOWN = 255 UMETA(DisplayName=UNKNOWN),
 };

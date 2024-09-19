@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum EHoudiniRuntimeSettingsSessionType {
-    HRSST_InProcess,
-    HRSST_Socket,
-    HRSST_NamedPipe,
-    HRSST_None,
+    HRSST_InProcess UMETA(DisplayName="In Process"),
+    HRSST_Socket UMETA(DisplayName=Socket),
+    HRSST_NamedPipe UMETA(DisplayName="Named Pipe"),
+    HRSST_None UMETA(DisplayName=None),
 };

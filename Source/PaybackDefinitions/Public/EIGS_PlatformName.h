@@ -4,11 +4,11 @@
 
 UENUM(BlueprintType)
 enum class EIGS_PlatformName : uint8 {
-    PN_Unknown,
-    PN_Windows,
-    PN_Linux,
-    PN_PS5,
-    PN_XBSX,
-    PN_XBSS,
-    PN_Switch,
+    PN_Unknown UMETA(DisplayName=Unknown),
+    PN_Windows UMETA(DisplayName=Windows),
+    PN_Linux UMETA(DisplayName=Linux),
+    PN_PS5 UMETA(DisplayName="PS 5"),
+    PN_XBSX UMETA(DisplayName=XBSX),
+    PN_XBSS UMETA(DisplayName=XBSS),
+    PN_Switch UMETA(DisplayName=Switch),
 };

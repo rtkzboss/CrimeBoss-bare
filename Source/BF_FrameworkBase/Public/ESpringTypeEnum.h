@@ -5,10 +5,10 @@
 UENUM(BlueprintType)
 namespace ESpringTypeEnum {
     enum Type {
-        ST_Position,
-        ST_Rotation,
-        ST_Scale,
-        ST_PositionAdditive,
-        ST_RotationAdditive,
+        ST_Position UMETA(DisplayName=Position),
+        ST_Rotation UMETA(DisplayName=Rotation),
+        ST_Scale UMETA(DisplayName=Scale),
+        ST_PositionAdditive UMETA(DisplayName="Position Additive"),
+        ST_RotationAdditive UMETA(DisplayName="Rotation Additive"),
     };
 }

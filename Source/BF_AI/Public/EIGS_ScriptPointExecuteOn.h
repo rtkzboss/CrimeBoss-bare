@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_ScriptPointExecuteOn : uint8 {
-    ExecuteOn_Arrive,
-    ExecuteOn_Approach,
-    ExecuteOn_Visit,
+    ExecuteOn_Arrive UMETA(DisplayName=Arrive),
+    ExecuteOn_Approach UMETA(DisplayName=Approach),
+    ExecuteOn_Visit UMETA(DisplayName=Visit),
 };

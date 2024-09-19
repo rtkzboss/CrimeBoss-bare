@@ -4,6 +4,6 @@
 
 UENUM(BlueprintType)
 enum class EIGS_PlayerStateMachineState : uint8 {
-    EIGS_Stand,
-    EIGS_Down,
+    EIGS_Stand UMETA(DisplayName=Stand),
+    EIGS_Down UMETA(DisplayName=Down),
 };

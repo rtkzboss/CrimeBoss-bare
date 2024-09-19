@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_StickyType : uint8 {
-    StickyType_None,
-    StickyType_Static,
-    StickyType_Moving,
-    StickyType_UNKNOWN = 255,
+    StickyType_None UMETA(DisplayName=None),
+    StickyType_Static UMETA(DisplayName=Static),
+    StickyType_Moving UMETA(DisplayName=Moving),
+    StickyType_UNKNOWN = 255 UMETA(DisplayName=UNKNOWN),
 };

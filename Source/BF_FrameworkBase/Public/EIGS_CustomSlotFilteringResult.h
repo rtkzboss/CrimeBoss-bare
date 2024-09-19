@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_CustomSlotFilteringResult : uint8 {
-    Res_Passed,
-    Res_Failed,
-    Res_Unhandled,
+    Res_Passed UMETA(DisplayName=Passed),
+    Res_Failed UMETA(DisplayName=Failed),
+    Res_Unhandled UMETA(DisplayName=Unhandled),
 };

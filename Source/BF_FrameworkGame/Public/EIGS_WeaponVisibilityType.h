@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_WeaponVisibilityType : uint8 {
-    VT_None,
-    VT_Laser,
-    VT_Flashlight,
-    VT_ScopeGlint = 4,
+    VT_None UMETA(DisplayName=None),
+    VT_Laser UMETA(DisplayName=Laser),
+    VT_Flashlight UMETA(DisplayName=Flashlight),
+    VT_ScopeGlint = 4 UMETA(DisplayName="Scope Glint"),
 };

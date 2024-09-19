@@ -4,13 +4,13 @@
 
 UENUM(BlueprintType)
 enum class EIGS_AdvancedMovementEvent : uint8 {
-    AME_Slide,
-    AME_StopSlide,
-    AME_StopSlideOnZipline,
-    AME_LeaveLadder,
-    AME_LeaveLadderTop,
-    AME_LeaveLadderJump,
-    AME_LeaveRappel,
-    AME_LeaveRappelFinished,
-    AME_LeaveCoopClimbHelpMode,
+    AME_Slide UMETA(DisplayName=Slide),
+    AME_StopSlide UMETA(DisplayName="Stop Slide"),
+    AME_StopSlideOnZipline UMETA(DisplayName="Stop Slide On Zipline"),
+    AME_LeaveLadder UMETA(DisplayName="Leave Ladder"),
+    AME_LeaveLadderTop UMETA(DisplayName="Leave Ladder Top"),
+    AME_LeaveLadderJump UMETA(DisplayName="Leave Ladder Jump"),
+    AME_LeaveRappel UMETA(DisplayName="Leave Rappel"),
+    AME_LeaveRappelFinished UMETA(DisplayName="Leave Rappel Finished"),
+    AME_LeaveCoopClimbHelpMode UMETA(DisplayName="Leave Coop Climb Help Mode"),
 };

@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_StormType : uint8 {
-    ST_Low,
-    ST_Medium,
-    ST_High,
-    ST_VeryHigh,
-    ST_Insane,
+    ST_Low UMETA(DisplayName=Low),
+    ST_Medium UMETA(DisplayName=Medium),
+    ST_High UMETA(DisplayName=High),
+    ST_VeryHigh UMETA(DisplayName="Very High"),
+    ST_Insane UMETA(DisplayName=Insane),
 };

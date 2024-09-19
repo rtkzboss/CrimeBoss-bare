@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EIGS_MuzzleLightState : uint8 {
-    MZLS_Off,
-    MZLS_FadingIn,
-    MZLS_Lit,
-    MZLS_FadingOut,
+    MZLS_Off UMETA(DisplayName=Off),
+    MZLS_FadingIn UMETA(DisplayName="Fading In"),
+    MZLS_Lit UMETA(DisplayName=Lit),
+    MZLS_FadingOut UMETA(DisplayName="Fading Out"),
 };

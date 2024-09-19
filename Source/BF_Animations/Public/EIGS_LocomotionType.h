@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_LocomotionType : uint8 {
-    BT_None,
-    BT_Normal,
-    BT_Injured,
+    BT_None UMETA(DisplayName=None),
+    BT_Normal UMETA(DisplayName=Normal),
+    BT_Injured UMETA(DisplayName=Injured),
 };

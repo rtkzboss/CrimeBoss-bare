@@ -4,7 +4,7 @@
 
 UENUM(BlueprintType)
 enum class EIGS_MantleType : uint8 {
-    MantleType_None,
-    MantleType_Stand,
-    MantleType_Crouch,
+    MantleType_None UMETA(DisplayName=None),
+    MantleType_Stand UMETA(DisplayName=Stand),
+    MantleType_Crouch UMETA(DisplayName=Crouch),
 };

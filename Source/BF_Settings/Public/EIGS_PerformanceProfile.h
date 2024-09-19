@@ -4,11 +4,11 @@
 
 UENUM(BlueprintType)
 enum class EIGS_PerformanceProfile : uint8 {
-    PP_Custom,
-    PP_Low,
-    PP_Medium,
-    PP_High,
-    PP_Epic,
-    PP_Cinematic,
-    PP_Auto,
+    PP_Custom UMETA(DisplayName=Custom),
+    PP_Low UMETA(DisplayName=Low),
+    PP_Medium UMETA(DisplayName=Medium),
+    PP_High UMETA(DisplayName=High),
+    PP_Epic UMETA(DisplayName=Epic),
+    PP_Cinematic UMETA(DisplayName=Cinematic),
+    PP_Auto UMETA(DisplayName=Auto),
 };

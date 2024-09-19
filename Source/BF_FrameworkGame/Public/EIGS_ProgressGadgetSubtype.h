@@ -4,9 +4,9 @@
 
 UENUM(BlueprintType)
 enum class EIGS_ProgressGadgetSubtype : uint8 {
-    Type_Default,
-    Type_Buzzsaw,
-    Type_Drill,
-    Type_Computer,
-    Type_DefendPoint,
+    Type_Default UMETA(DisplayName=Default),
+    Type_Buzzsaw UMETA(DisplayName=Buzzsaw),
+    Type_Drill UMETA(DisplayName=Drill),
+    Type_Computer UMETA(DisplayName=Computer),
+    Type_DefendPoint UMETA(DisplayName="Defend Point"),
 };

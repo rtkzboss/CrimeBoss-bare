@@ -4,8 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EBPTextFilteringContext : uint8 {
-    FContext_Unknown,
-    FContext_GameContent,
-    FContext_Chat,
-    FContext_Name,
+    FContext_Unknown UMETA(DisplayName=Unknown),
+    FContext_GameContent UMETA(DisplayName="Game Content"),
+    FContext_Chat UMETA(DisplayName=Chat),
+    FContext_Name UMETA(DisplayName=Name),
 };
