@@ -12,7 +12,7 @@ enum class EIGS_TeamSideEnum : uint8 {
     TS_Employees UMETA(DisplayName=Employees),
     TS_Gangsters UMETA(DisplayName=Gangsters),
     TS_HeistersBackup UMETA(DisplayName="Heisters Backup"),
-    TS_MAX_INDEX UMETA(DisplayName="MAX INDEX"),
+    TS_MAX_INDEX UMETA(Hidden),
     TS_StimuliEvent = 129 UMETA(DisplayName="Stimuli Event"),
     TS_GeneralListener UMETA(DisplayName="General Listener"),
     TS_Unknown = 255 UMETA(DisplayName=Unknown),
