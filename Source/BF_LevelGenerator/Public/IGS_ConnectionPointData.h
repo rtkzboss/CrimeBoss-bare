@@ -17,4 +17,9 @@ public:
     float Rotation;
 
     FIGS_ConnectionPointData();
+
+	inline bool operator==(FName OtherName) const
+	{
+		return Name == OtherName;
+	}
 };

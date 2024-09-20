@@ -40,6 +40,7 @@ public class CrimeBossEditorTarget : TargetRules {
 		});
 		ExtraModuleNames.AddRange(new string[] {
 			"RacketeerEditor",
+			"RacketeerKismet",
 		});
 	}
 }

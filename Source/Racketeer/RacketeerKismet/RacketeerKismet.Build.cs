@@ -1,8 +1,8 @@
 using UnrealBuildTool;
 
-public class RacketeerEditor : ModuleRules
+public class RacketeerKismet : ModuleRules
 {
-	public RacketeerEditor(ReadOnlyTargetRules Target) : base(Target)
+	public RacketeerKismet(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
@@ -22,6 +22,7 @@ public class RacketeerEditor : ModuleRules
 			new string[]
 			{
 				"Core",
+				"BlueprintGraph",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -34,11 +35,11 @@ public class RacketeerEditor : ModuleRules
 				"Slate",
 				"SlateCore",
 				"UnrealEd",
-				"PropertyEditor",
-				"EditorWidgets",
-				"Documentation",
+				"KismetCompiler",
 
 				"PaybackDefinitions",
+				"BF_FrameworkBase",
+				"BF_LevelGenerator",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -1,4 +1,6 @@
 #include "IGS_LevelGeneratorFunctionLibrary.h"
+#include "IGS_ConnectionPointBase.h"
+#include "IGS_RoundNumbersLibrary.h"
 
 UIGS_LevelGeneratorFunctionLibrary::UIGS_LevelGeneratorFunctionLibrary() {
 }
@@ -30,7 +32,11 @@ void UIGS_LevelGeneratorFunctionLibrary::GetGameplayTagParent(const FGameplayTag
 }
 
 FIGS_ConnectionPointData UIGS_LevelGeneratorFunctionLibrary::GetConnectionPointData(AIGS_ConnectionPointBase* ConnectionPoint) {
-    return FIGS_ConnectionPointData{};
+	FIGS_ConnectionPointData out;
+	out.Name = ConnectionPoint->GetFName();
+	out.Location = UIGS_RoundNumbersLibrary::Round(ConnectionPoint->GetActorLocation());
+	out.Rotation = UIGS_RoundNumbersLibrary::Round(ConnectionPoint->GetActorRotation().Yaw);
+    return out;
 }
 
 void UIGS_LevelGeneratorFunctionLibrary::FindShortestPathInGrid(int32 Start, int32 Target, int32 rowSize, TArray<int32> bLocked, TArray<int32>& Path) {
