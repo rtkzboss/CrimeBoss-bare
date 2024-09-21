@@ -2,6 +2,9 @@
 #include "GameMetaTransferComponent.h"
 #include "PaybackGameStateBase.h"
 #include "PaybackPlayerSwapper.h"
+#include "Kismet/GameplayStatics.h"
+#include "IGS_LevelGeneratorSubsystem.h"
+#include "PaybackModule.h"
 
 APaybackGameModeBase::APaybackGameModeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     auto gen = CreateDefaultSubobject<UPaybackPlayerSwapper>(TEXT("Player Swapper"));
@@ -111,5 +114,10 @@ void APaybackGameModeBase::DebugSetMatchAction(bool inIsAction) {
 }
 
 void APaybackGameModeBase::AbortMatch() {
+}
+
+void APaybackGameModeBase::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
+{
+	Super::InitGame(MapName, Options, ErrorMessage);
 }
 

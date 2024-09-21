@@ -201,4 +201,6 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
     UGameMetaTransferComponent* MetaTransferComponent;
 
+public:
+	void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 };

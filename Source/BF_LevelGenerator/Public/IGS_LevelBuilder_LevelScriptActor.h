@@ -63,4 +63,9 @@ private:
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+protected:
+	void PostInitializeComponents() override;
+	void InitDefaultVariant_MainLevel();
+	void InitDefaultVariant_Common();
+	//void RunDefaultVariant_Server_MainLevelOnly();
 };

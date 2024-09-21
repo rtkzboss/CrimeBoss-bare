@@ -11,6 +11,6 @@ void UIGS_LevelGeneratorSubsystem::InitializeRooms_Server(ANavigationData* inNav
 }
 
 int32 UIGS_LevelGeneratorSubsystem::GetDefaultSeed() const {
-    return 0;
+    return DefaultSeed;
 }
 

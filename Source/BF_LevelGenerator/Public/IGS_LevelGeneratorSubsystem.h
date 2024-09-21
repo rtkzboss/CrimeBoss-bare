@@ -27,4 +27,9 @@ public:
     bool bIsBuildingFinished;
 
     virtual TStatId GetStatId() const override { return {}; }
+
+public:
+	void SetDefaultSeed(int32 inDefaultSeed) { DefaultSeed = inDefaultSeed; }
+private:
+	int32 DefaultSeed = -1;
 };

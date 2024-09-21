@@ -37,14 +37,16 @@ public:
 	UEdGraphPin* GetWorldContextPin() const;
 	UEdGraphPin* GetResultPin() const;
 	UEdGraphPin* GetConnectionPin() const;
+	UEdGraphPin* GetConnectionNamePin() const;
 	UEdGraphPin* GetRandomStreamHolderPin() const;
 	UEdGraphPin* GetGeneratorVariantDataPin() const;
 	UEdGraphPin* GetBuildConfigurationPin(TOptional<TArrayView<UEdGraphPin* const>> Pins = {}) const;
 	UIGS_BuildConfigurationDataAsset* GetBuildConfigurationDataAsset(TOptional<TArrayView<UEdGraphPin* const>> Pins = {}) const;
 	bool HasBuildConfiguration() const;
+	FName GetConnectionName() const;
 
-	UPROPERTY()
-	bool bUseUObjectConfiguration = true;
+	//UPROPERTY()
+	//bool bUseUObjectConfiguration = true;
 
 protected:
 	bool UseWorldContext() const;

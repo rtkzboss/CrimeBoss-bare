@@ -1,5 +1,6 @@
 #include "IGS_PaybackGameplayStatics.h"
 #include "Templates/SubclassOf.h"
+#include "Kismet/GameplayStatics.h"
 
 UIGS_PaybackGameplayStatics::UIGS_PaybackGameplayStatics() {
 }
@@ -93,11 +94,11 @@ UPaybackGameViewportClient* UIGS_PaybackGameplayStatics::GetPaybackViewport(UObj
 }
 
 AIGS_GameStateGame* UIGS_PaybackGameplayStatics::GetGameStateGame(UObject* inWCO) {
-    return nullptr;
+    return Cast<AIGS_GameStateGame>(UGameplayStatics::GetGameState(inWCO));
 }
 
 APaybackGameModeBase* UIGS_PaybackGameplayStatics::GetGameModeBase(UObject* inWCO) {
-    return nullptr;
+    return Cast<APaybackGameModeBase>(UGameplayStatics::GetGameMode(inWCO));
 }
 
 TSubclassOf<UIGS_EquipmentInventoryObject> UIGS_PaybackGameplayStatics::GetEquipmentFromAILoadoutHolder(const UObject* inWCO, const FIGS_AILoadoutHolder& inLoadoutHolder) {
