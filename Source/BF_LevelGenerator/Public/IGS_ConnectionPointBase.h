@@ -24,8 +24,15 @@ protected:
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     USceneComponent* Root;
 
-protected:
+#if WITH_EDITOR
+public:
+	void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+	void PostEditMove(bool bFinished) override;
+	void ConstrainRotation();
+#endif
+
 #if WITH_EDITORONLY_DATA
+protected:
 	UPROPERTY(VisibleDefaultsOnly)
 	UBillboardComponent* Sprite;
 	UPROPERTY(VisibleDefaultsOnly)
