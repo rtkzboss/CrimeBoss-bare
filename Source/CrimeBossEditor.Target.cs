@@ -38,9 +38,5 @@ public class CrimeBossEditorTarget : TargetRules {
 			"PaybackDefinitions",
 			"PS5AudioFeatures",
 		});
-		ExtraModuleNames.AddRange(new string[] {
-			"RacketeerEditor",
-			"RacketeerKismet",
-		});
 	}
 }

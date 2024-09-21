@@ -719,16 +719,6 @@
 			"Name": "PS5AudioFeatures",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "RacketeerEditor",
-			"Type": "Editor",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "RacketeerKismet",
-			"Type": "UncookedOnly",
-			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
