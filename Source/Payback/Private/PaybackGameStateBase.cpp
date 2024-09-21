@@ -13,6 +13,7 @@
 #include "IGS_PropsManager.h"
 #include "Net/UnrealNetwork.h"
 #include "PaybackWaveManager.h"
+#include "PaybackModule.h"
 
 APaybackGameStateBase::APaybackGameStateBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     auto gen = CreateDefaultSubobject<UIGS_SuspicionManager>(TEXT("Suspicion Manager"));
@@ -107,5 +108,12 @@ void APaybackGameStateBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(APaybackGameStateBase, R_PlayersSpawned);
     DOREPLIFETIME(APaybackGameStateBase, MatchState);
     DOREPLIFETIME(APaybackGameStateBase, ElapsedTime);
+}
+
+void APaybackGameStateBase::HandleBeginPlay()
+{
+	UE_LOG(LogPayback, Display, TEXT("HandleBeginPlay %s"), *GetFullNameSafe(this));
+	FDebug::DumpStackTraceToLog(ELogVerbosity::Display);
+	Super::HandleBeginPlay();
 }
 

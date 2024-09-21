@@ -120,4 +120,8 @@ void APaybackGameModeBase::InitGame(const FString& MapName, const FString& Optio
 {
 	Super::InitGame(MapName, Options, ErrorMessage);
 }
+void APaybackGameModeBase::StartPlay()
+{
+	Super::StartPlay();
+}
 

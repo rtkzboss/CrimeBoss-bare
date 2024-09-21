@@ -65,7 +65,9 @@ public:
 
 protected:
 	void PostInitializeComponents() override;
-	void InitDefaultVariant_MainLevel();
-	void InitDefaultVariant_Common();
+	void RunDefaultVariant_MainLevel_Client();
+	void RunDefaultVariant_MainLevel_Server();
+	void RunDefaultVariant_MainLevel_Common();
+	void RunDefaultVariant_Common(FIGS_GeneratorVariantData VariantData);
 	//void RunDefaultVariant_Server_MainLevelOnly();
 };

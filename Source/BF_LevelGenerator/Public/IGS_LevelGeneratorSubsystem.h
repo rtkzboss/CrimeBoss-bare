@@ -5,6 +5,8 @@
 
 class ANavigationData;
 class UObject;
+struct FIGS_ConnectionPointData;
+struct FIGS_VariantData;
 
 UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_LevelGeneratorSubsystem : public UTickableWorldSubsystem {
@@ -30,6 +32,7 @@ public:
 
 public:
 	void SetDefaultSeed(int32 inDefaultSeed) { DefaultSeed = inDefaultSeed; }
+	void LoadLevelAccordingToConfiguration(UObject* WCO, FIGS_ConnectionPointData Connection, FName ConnectionName, TArrayView<FIGS_ConnectionPointData> ConnectionPoints, FName VariantName, TArrayView<FIGS_VariantData> Variants);
 private:
 	int32 DefaultSeed = -1;
 };

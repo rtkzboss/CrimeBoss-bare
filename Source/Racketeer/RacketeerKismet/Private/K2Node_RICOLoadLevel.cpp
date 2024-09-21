@@ -45,6 +45,10 @@ bool UK2Node_RICOLoadLevel::IsFreeConnectionPointPin(UEdGraphPin* Pin) const
 void UK2Node_RICOLoadLevel::CreatePinsForBuildConfiguration(UIGS_BuildConfigurationDataAsset* BuildConfiguration, TArray<UEdGraphPin*>* OutPins)
 {
 	check(BuildConfiguration);
+	if (BuildConfiguration->HasAnyFlags(RF_NeedLoad))
+	{
+		BuildConfiguration->GetLinker()->Preload(BuildConfiguration);
+	}
 	UScriptStruct* SubtypeObject = TBaseStructure<FIGS_ConnectionPointData>::Get();
 	for (FIGS_ConnectionPointData& ConnectionPoint : BuildConfiguration->ConnectionPoints)
 	{

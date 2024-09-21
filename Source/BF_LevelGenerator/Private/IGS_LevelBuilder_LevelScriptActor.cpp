@@ -5,6 +5,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "IGS_GameStateGame.h"
 #include "IGS_LevelGeneratorSubsystem.h"
+#include "BF_LevelGeneratorModule.h"
 
 AIGS_LevelBuilder_LevelScriptActor::AIGS_LevelBuilder_LevelScriptActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).DefaultMissionTag = FGameplayTag::RequestGameplayTag(TEXT("Mission.Unknown"));
@@ -16,7 +17,8 @@ AIGS_LevelBuilder_LevelScriptActor::AIGS_LevelBuilder_LevelScriptActor(const FOb
 
 
 void AIGS_LevelBuilder_LevelScriptActor::OnRep_Seed() {
-
+	UE_LOG(LogBF_LevelGenerator, Display, TEXT("OnRep_Seed %s"), *GetFullNameSafe(this));
+	FDebug::DumpStackTraceToLog(ELogVerbosity::Display);
 }
 
 
@@ -31,14 +33,25 @@ void AIGS_LevelBuilder_LevelScriptActor::PostInitializeComponents()
 	Super::PostInitializeComponents();
 	bool bMainLevel = GetWorld()->GetLevelScriptActor() == this;
 	if (!bMainLevel || !HasAuthority()) return;
+	RunDefaultVariant_MainLevel_Server();
+}
+void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Server()
+{
+	UE_LOG(LogBF_LevelGenerator, Display, TEXT("Server init main %s"), *GetFullNameSafe(this));
 
+	// set up authoritative data
 	mR_RepProperties.OptionsString = GetWorld()->GetAuthGameMode()->OptionsString;
 	mR_RepProperties.ReplicatedSeed = UGameplayStatics::GetIntOption(mR_RepProperties.OptionsString, TEXT("Seed"), -1);
 	if (mR_RepProperties.ReplicatedSeed < 0) mR_RepProperties.ReplicatedSeed = FMath::Rand();
 
-	InitDefaultVariant_MainLevel();
+	RunDefaultVariant_MainLevel_Common();
 }
-void AIGS_LevelBuilder_LevelScriptActor::InitDefaultVariant_MainLevel()
+void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Client()
+{
+	UE_LOG(LogBF_LevelGenerator, Display, TEXT("Client init main %s"), *GetFullNameSafe(this));
+	RunDefaultVariant_MainLevel_Common();
+}
+void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Common()
 {
 	// set some legacy things from authoritative data
 	DefaultSeed = mR_RepProperties.ReplicatedSeed;
@@ -50,11 +63,12 @@ void AIGS_LevelBuilder_LevelScriptActor::InitDefaultVariant_MainLevel()
 	m_RandomStreamHolder = NewObject<UIGS_RandomStreamHolder>(this);
 	m_RandomStreamHolder->RandomStream.Initialize(DefaultSeed);
 
-	InitDefaultVariant_Common();
+	RunDefaultVariant_Common(FIGS_GeneratorVariantData());
 }
-void AIGS_LevelBuilder_LevelScriptActor::InitDefaultVariant_Common()
+void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_Common(FIGS_GeneratorVariantData VariantData)
 {
+	UE_LOG(LogBF_LevelGenerator, Display, TEXT("Run default variant of %s"), *GetFullNameSafe(this));
 	OnPrepareData(m_RandomStreamHolder);
-	RunDefaultVariant(m_RandomStreamHolder, FIGS_GeneratorVariantData());
+	RunDefaultVariant(m_RandomStreamHolder, VariantData);
 }
 
