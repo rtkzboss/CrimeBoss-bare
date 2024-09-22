@@ -92,15 +92,38 @@ static UIGS_BuildConfigurationDataAsset* UpdateBuildConfigurationDataAsset(ULeve
 	return BCDA;
 }
 
+static ULevel* AffectsBuildConfiguration(AActor const* Actor)
+{
+	return Actor && Actor->IsA<AIGS_ConnectionPointExternal>() ? Actor->GetLevel() : nullptr;
+}
+static ULevel* AffectsBuildConfiguration(UActorComponent const* Component)
+{
+	if (!Component) return nullptr;
+	AIGS_ConnectionPointExternal* CP = Component->GetOwner<AIGS_ConnectionPointExternal>();
+	return CP && Component == CP->GetRootComponent() ? CP->GetLevel() : nullptr;
+}
+
 void FRacketeerLevelGeneratorModule::StartupModule()
 {
 	FCoreDelegates::OnPostEngineInit.AddRaw(this, &FRacketeerLevelGeneratorModule::HandlePostEngineInit);
+	FCoreDelegates::OnActorLabelChanged.AddRaw(this, &FRacketeerLevelGeneratorModule::HandleActorLabelChanged);
+	FCoreUObjectDelegates::OnObjectModified.AddRaw(this, &FRacketeerLevelGeneratorModule::HandleObjectModified);
 	FEditorDelegates::PostSaveWorld.AddRaw(this, &FRacketeerLevelGeneratorModule::HandlePostSaveWorld);
+	FAssetToolsModule& AssetToolsModule = FAssetToolsModule::GetModule();
+	//AssetToolsModule.Get().OnAssetPostRename().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleAssetPostRename);
 }
 void FRacketeerLevelGeneratorModule::HandlePostEngineInit()
 {
 	//GEngine->OnActorsMoved().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleActorsMovedEvent);
 	GEngine->OnComponentTransformChanged().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleComponentTransformChanged);
+	GEngine->OnLevelActorListChanged().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorListChanged);
+	GEngine->OnLevelActorAdded().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorAdded);
+	GEngine->OnLevelActorDeleted().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorDeleted);
+	//GEngine->OnLevelActorRequestRename().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorRequestRename);
+	//if (FAssetToolsModule* AssetToolsModule = FModuleManager::GetModulePtr<FAssetToolsModule>("AssetTools"))
+	//{
+	//	AssetToolsModule->Get().OnAssetPostRename().RemoveAll(this);
+	//}
 }
 void FRacketeerLevelGeneratorModule::ShutdownModule()
 {
@@ -108,42 +131,93 @@ void FRacketeerLevelGeneratorModule::ShutdownModule()
 	{
 		//GEngine->OnActorsMoved().RemoveAll(this);
 		GEngine->OnComponentTransformChanged().RemoveAll(this);
+		GEngine->OnLevelActorListChanged().RemoveAll(this);
+		GEngine->OnLevelActorAdded().RemoveAll(this);
+		GEngine->OnLevelActorDeleted().RemoveAll(this);
+		GEngine->OnLevelActorRequestRename().RemoveAll(this);
 	}
 	FCoreDelegates::OnPostEngineInit.RemoveAll(this);
+	FCoreDelegates::OnActorLabelChanged.RemoveAll(this);
+	FCoreUObjectDelegates::OnObjectModified.RemoveAll(this);
 	FEditorDelegates::PostSaveWorld.RemoveAll(this);
 }
 
 void FRacketeerLevelGeneratorModule::HandlePostSaveWorld(uint32 SaveFlags, UWorld* World, bool bSuccess)
 {
-	//UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("HandlePostSaveWorld %s"), *GetFullNameSafe(World));
 	UIGS_BuildConfigurationDataAsset* BCDA = UpdateBuildConfigurationDataAsset(World->PersistentLevel);
 	if (!BCDA) return;
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Save BCDA %s"), *GetFullNameSafe(BCDA));
 	TArray<UPackage*> PackagesToSave{ BCDA->GetPackage() };
 	UEditorLoadingAndSavingUtils::SavePackages(PackagesToSave, true);
 }
-void FRacketeerLevelGeneratorModule::MarkLevelBuilderDataDirty(ULevel* Level)
+void FRacketeerLevelGeneratorModule::MarkBuildConfigurationDirty(ULevel* Level)
 {
 	UpdateBuildConfigurationDataAsset(Level);
 }
-//void FRacketeerLevelGeneratorModule::HandleActorsMovedEvent(TArray<AActor*>& Actors)
-//{
-//	for (AActor* Actor : Actors)
-//	{
-//		AIGS_ConnectionPointExternal* CP = Cast<AIGS_ConnectionPointExternal>(Actor);
-//		if (!CP) continue;
-//		UE_LOG(LogRICOLevelGenerator, Display, TEXT("Moved external connection point %s"), *GetFullNameSafe(Actor));
-//		MarkLevelBuilderDataDirty(Actor->GetLevel());
-//	}
-//}
 void FRacketeerLevelGeneratorModule::HandleComponentTransformChanged(USceneComponent* Component, ETeleportType Teleport)
 {
-	AIGS_ConnectionPointExternal* CP = Component->GetOwner<AIGS_ConnectionPointExternal>();
-	if (!CP || Component != CP->GetRootComponent()) return;
+	ULevel* Level = AffectsBuildConfiguration(Component);
+	if (!Level) return;
 	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Moved connection point %s"), *GetFullNameSafe(Component));
-	MarkLevelBuilderDataDirty(CP->GetLevel());
+	MarkBuildConfigurationDirty(Level);
 }
+void FRacketeerLevelGeneratorModule::HandleLevelActorListChanged()
+{
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Actor list changed"));
+}
+void FRacketeerLevelGeneratorModule::HandleLevelActorAdded(AActor* Actor)
+{
+	ULevel* Level = AffectsBuildConfiguration(Actor);
+	if (!Level) return;
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Added connection point %s"), *GetFullNameSafe(Actor));
+	MarkBuildConfigurationDirty(Level);
+}
+void FRacketeerLevelGeneratorModule::HandleLevelActorDeleted(AActor* Actor)
+{
+	ULevel* Level = AffectsBuildConfiguration(Actor);
+	if (!Level) return;
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Deleted connection point %s"), *GetFullNameSafe(Actor));
+	MarkBuildConfigurationDirty(Level);
+}
+void FRacketeerLevelGeneratorModule::HandleActorLabelChanged(AActor* Actor)
+{
+	ULevel* Level = AffectsBuildConfiguration(Actor);
+	if (!Level) return;
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Changed connection point name %s"), *GetFullNameSafe(Actor));
+	MarkBuildConfigurationDirty(Level);
+}
+void FRacketeerLevelGeneratorModule::HandleObjectModified(UObject* Object)
+{
+	ULevel* Level = AffectsBuildConfiguration(Cast<AActor>(Object));
+	if (!Level) return;
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Connection point changed %s"), *GetFullNameSafe(Object));
+	MarkBuildConfigurationDirty(Level);
+}
+//void FRacketeerLevelGeneratorModule::HandleAssetPostRename(TArray<FAssetRenameData> const& Datas)
+//{
+//	TArray<ULevel*> Levels;
+//	for (FAssetRenameData const& Data : Datas)
+//	{
+//		AActor* Actor = Cast<AActor>(Data.Asset.Get());
+//		ULevel* Level = AffectsBuildConfiguration(Actor);
+//		if (!Level) continue;
+//		UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Renamed connection point %s"), *GetFullNameSafe(Actor));
+//		Levels.AddUnique(Level);
+//	}
+//	for (ULevel* Level : Levels)
+//	{
+//		MarkBuildConfigurationDirty(Level);
+//	}
+//}
+//void FRacketeerLevelGeneratorModule::HandleLevelActorRequestRename(AActor const* Actor)
+//{
+//	ULevel* Level = AffectsBuildConfiguration(Actor);
+//	if (!Level) return;
+//	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Renamed connection point %s"), *GetFullNameSafe(Actor));
+//	MarkBuildConfigurationDirty(Level);
+//}
 
 #undef LOCTEXT_NAMESPACE
-	
+
 IMPLEMENT_MODULE(FRacketeerLevelGeneratorModule, RacketeerLevelGenerator)
 DEFINE_LOG_CATEGORY(LogRICOLevelGenerator);
