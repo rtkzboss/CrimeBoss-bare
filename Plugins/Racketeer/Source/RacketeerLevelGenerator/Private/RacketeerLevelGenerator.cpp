@@ -14,6 +14,17 @@
 
 #define LOCTEXT_NAMESPACE "Racketeer"
 
+static ULevel* AffectsBuildConfiguration(AActor const* Actor)
+{
+	return Actor && Actor->IsA<AIGS_ConnectionPointExternal>() ? Actor->GetLevel() : nullptr;
+}
+static ULevel* AffectsBuildConfiguration(UActorComponent const* Component)
+{
+	if (!Component) return nullptr;
+	AIGS_ConnectionPointExternal* CP = Component->GetOwner<AIGS_ConnectionPointExternal>();
+	return CP && Component == CP->GetRootComponent() ? CP->GetLevel() : nullptr;
+}
+
 static void GatherConnectionPoints(ULevel* Level, TArray<FIGS_ConnectionPointData>& Out)
 {
 	for (AActor* Actor : Level->Actors)
@@ -82,25 +93,15 @@ static UIGS_BuildConfigurationDataAsset* LoadOrCreateBuildConfigurationDataAsset
 }
 static UIGS_BuildConfigurationDataAsset* UpdateBuildConfigurationDataAsset(ULevel* Level)
 {
-	ALevelScriptActor* LSA = Level->GetLevelScriptActor();
-	if (!LSA || !LSA->IsA<AIGS_LevelBuilder_LevelScriptActor>()) return nullptr;
+	if (Level->HasAnyFlags(RF_Transient)) return nullptr;
+	//ALevelScriptActor* LSA = Level->GetLevelScriptActor();
+	//if (!LSA || !LSA->IsA<AIGS_LevelBuilder_LevelScriptActor>()) return nullptr;
 	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Updating build configuration data asset for %s"), *GetFullNameSafe(Level));
 
 	UIGS_BuildConfigurationDataAsset* BCDA = LoadOrCreateBuildConfigurationDataAsset(Level->GetPackage());
 	GenerateBuildConfiguration(Level, BCDA);
 	BCDA->Modify(true);
 	return BCDA;
-}
-
-static ULevel* AffectsBuildConfiguration(AActor const* Actor)
-{
-	return Actor && Actor->IsA<AIGS_ConnectionPointExternal>() ? Actor->GetLevel() : nullptr;
-}
-static ULevel* AffectsBuildConfiguration(UActorComponent const* Component)
-{
-	if (!Component) return nullptr;
-	AIGS_ConnectionPointExternal* CP = Component->GetOwner<AIGS_ConnectionPointExternal>();
-	return CP && Component == CP->GetRootComponent() ? CP->GetLevel() : nullptr;
 }
 
 void FRacketeerLevelGeneratorModule::StartupModule()

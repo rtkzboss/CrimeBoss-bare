@@ -2,6 +2,8 @@
 #include "IGS_ConnectionPointBase.h"
 #include "IGS_RoundNumbersLibrary.h"
 #include "IGS_RandomStreamHolder.h"
+#include "IGS_LevelGeneratorSubsystem.h"
+#include "IGS_GeneratorBuildConfiguration.h"
 
 UIGS_LevelGeneratorFunctionLibrary::UIGS_LevelGeneratorFunctionLibrary() {
 }
@@ -12,7 +14,11 @@ void UIGS_LevelGeneratorFunctionLibrary::RandomIntegerInRangeWithRandomStreamHol
 }
 
 bool UIGS_LevelGeneratorFunctionLibrary::LoadLevelAccordingToUObjectConfiguration(UObject* WorldContextObject, UIGS_GeneratorBuildConfiguration* UObjectConfiguration, const FIGS_ConnectionPointData& Connection, UIGS_RandomStreamHolder* RandomStreamHolder, FIGS_GeneratorVariantData GeneratorVariantData, TArray<FIGS_ConnectionPointData>& outFreeConnectionPoints) {
-    return false;
+	UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull);
+	if (!World) return false;
+	UIGS_LevelGeneratorSubsystem* LGS = World->GetSubsystem<UIGS_LevelGeneratorSubsystem>();
+	if (!LGS) return false;
+	return LGS->LoadLevelAccordingToConfiguration(Connection, UObjectConfiguration->ConnectionName, UObjectConfiguration->Cooked_ConnectionPoints, UObjectConfiguration->VariantName, UObjectConfiguration->Cooked_Variants, UObjectConfiguration->BuildConfigurationDataAsset, outFreeConnectionPoints);
 }
 
 bool UIGS_LevelGeneratorFunctionLibrary::LoadLevelAccordingToTileConfiguration(UObject* WorldContextObject, FIGS_BuildConfigurationTileable Configuration, const FIGS_ConnectionPointData& Connection, UIGS_RandomStreamHolder* RandomStreamHolder, FIGS_GeneratorVariantData GeneratorVariantData, TArray<FIGS_ConnectionPointData>& outFreeConnectionPoints) {
@@ -64,6 +70,7 @@ FIGS_ConnectionPointData UIGS_LevelGeneratorFunctionLibrary::GetConnectionPointD
 }
 
 void UIGS_LevelGeneratorFunctionLibrary::FindShortestPathInGrid(int32 Start, int32 Target, int32 rowSize, TArray<int32> bLocked, TArray<int32>& Path) {
+	check(0); //unimplemented
 }
 
 UIGS_GeneratorBuildConfiguration* UIGS_LevelGeneratorFunctionLibrary::CreateUObjectConfigurationFromTile(UObject* WorldContextObject, FIGS_BuildConfigurationTileable inTileConfiguration) {
@@ -73,7 +80,7 @@ UIGS_GeneratorBuildConfiguration* UIGS_LevelGeneratorFunctionLibrary::CreateUObj
 }
 
 void UIGS_LevelGeneratorFunctionLibrary::CallVariantOnWorld(UObject* WorldContextObject, UIGS_RandomStreamHolder* RandomStreamHolder, FIGS_GeneratorVariantData inGeneratorVariantData, const FString& VariantName) {
-	check(0);
+	check(0); //unused
 }
 
 bool UIGS_LevelGeneratorFunctionLibrary::AddLeafTag(FGameplayTagContainer& inContainer, const FGameplayTag& inTagToAdd) {
