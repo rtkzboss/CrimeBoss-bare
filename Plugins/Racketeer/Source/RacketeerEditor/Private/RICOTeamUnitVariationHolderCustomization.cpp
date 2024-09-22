@@ -224,10 +224,9 @@ void FRICOTeamUnitVariationHolderCustomization::OnTeamSideValueSelected(const FS
 	int64 Value = Enum->GetValueByIndex(Index);
 	ensure(0 <= Value && Value <= 0xff);
 
-	GEditor->BeginTransaction(FText::Format(LOCTEXT("BeginEditProperty", "Edit {0}"), TeamSideHandle->GetPropertyDisplayName()));
+	FScopedTransaction Transaction(FText::Format(LOCTEXT("BeginEditProperty", "Edit {0}"), TeamSideHandle->GetPropertyDisplayName()));
 	TeamSideHandle->SetValue(static_cast<uint8>(Value));
 	UnitVariationHandle->SetValue(static_cast<uint8>(0));
-	GEditor->EndTransaction();
 }
 void FRICOTeamUnitVariationHolderCustomization::OnUnitVariationValueSelected(const FString& ValueString, TWeakPtr<IPropertyHandle> WeakTeamSideHandle, TWeakPtr<IPropertyHandle> WeakUnitVariationHandle) const
 {

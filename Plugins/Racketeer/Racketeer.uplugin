@@ -21,6 +21,11 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "RacketeerLevelGenerator",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "RacketeerKismet",
 			"Type": "UncookedOnly",
 			"LoadingPhase": "Default"
