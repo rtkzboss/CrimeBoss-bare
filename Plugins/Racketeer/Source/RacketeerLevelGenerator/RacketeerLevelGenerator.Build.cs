@@ -35,6 +35,7 @@ public class RacketeerLevelGenerator : ModuleRules
 				"SlateCore",
 				"UnrealEd",
 				"AssetTools",
+				"AssetRegistry",
 
 				"BF_LevelGenerator",
 				// ... add private dependencies that you statically link with here ...	

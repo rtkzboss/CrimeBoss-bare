@@ -27,8 +27,10 @@ protected:
 	void HandleLevelActorDeleted(AActor* Actor);
 	void HandleActorLabelChanged(AActor* Actor);
 	void HandleObjectModified(UObject* Object);
-	//void HandleLevelActorRequestRename(AActor const* Actor);
 	//void HandleAssetPostRename(TArray<FAssetRenameData> const& Data);
+	void HandleAssetRenamed(const FAssetData& Data, const FString& OldName);
+	//void HandleAssetRemoved(const FAssetData& Data);
+	void HandleAssetsAddExtraObjectsToDelete(TArray<UObject*>& Objects);
 
 private:
 	//TSet<ULevel*> DirtyLevels;

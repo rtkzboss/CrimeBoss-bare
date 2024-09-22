@@ -11,6 +11,9 @@
 #include "IAssetTools.h"
 #include "Factories/DataAssetFactory.h"
 #include "FileHelpers.h"
+#include "AssetRegistryModule.h"
+#include "IAssetRegistry.h"
+#include "ObjectTools.h"
 
 #define LOCTEXT_NAMESPACE "Racketeer"
 
@@ -34,7 +37,7 @@ static void GatherConnectionPoints(ULevel* Level, TArray<FIGS_ConnectionPointDat
 		Out.Emplace(UIGS_LevelGeneratorFunctionLibrary::GetConnectionPointData(CP));
 	}
 }
-static void GenerateBuildConfiguration(ULevel* Level, UIGS_BuildConfigurationDataAsset* Out)
+static bool GenerateBuildConfiguration(ULevel* Level, UIGS_BuildConfigurationDataAsset* Out)
 {
 	UWorld* LevelWorld = Level->GetTypedOuter<UWorld>();
 	Out->Level = LevelWorld;
@@ -48,20 +51,20 @@ static void GenerateBuildConfiguration(ULevel* Level, UIGS_BuildConfigurationDat
 		});
 
 	// TODO: variants?
+	return Out->ConnectionPoints.Num() > 0;
 }
-static FString GetDerivedDataAssetPath(UPackage* Package, TCHAR const* TypeName)
+static FString GetDerivedDataAssetPath(FString const& LongPackageName, TCHAR const* TypeName)
 {
-	FString LongPackageName = Package->GetName();
 	FString Out = FPackageName::GetLongPackagePath(LongPackageName);
 	Out += TEXT("/DA_");
-	Out += FPackageName::GetShortName(Package->GetFName());
+	Out += FPackageName::GetShortName(LongPackageName);
 	Out += TEXT("_");
 	Out += TypeName;
 	return Out;
 }
-static FString GetDerivedDataAssetLongName(UPackage* Package, TCHAR const* TypeName)
+static FString GetDerivedDataAssetLongName(FString const& LongPackageName, TCHAR const* TypeName)
 {
-	FString Out = GetDerivedDataAssetPath(Package, TypeName);
+	FString Out = GetDerivedDataAssetPath(LongPackageName, TypeName);
 	FString ShortName = FPackageName::GetShortName(Out);
 	Out += TEXT(".");
 	Out += ShortName;
@@ -69,9 +72,15 @@ static FString GetDerivedDataAssetLongName(UPackage* Package, TCHAR const* TypeN
 }
 static TCHAR const* BuildConfigurationDataAssetTypeName = TEXT("LevelBuilder");
 template<class T>
+static T* TryLoadDerivedDataAsset(UPackage* Package, TCHAR const* TypeName)
+{
+	FString DataAssetName = GetDerivedDataAssetLongName(Package->GetName(), TypeName);
+	return LoadObject<T>(nullptr, *DataAssetName, nullptr, LOAD_Quiet);
+}
+template<class T>
 static T* LoadOrCreateDerivedDataAsset(UPackage* Package, TCHAR const* TypeName)
 {
-	FString DataAssetName = GetDerivedDataAssetLongName(Package, TypeName);
+	FString DataAssetName = GetDerivedDataAssetLongName(Package->GetName(), TypeName);
 
 	T* Existing = LoadObject<T>(nullptr, *DataAssetName, nullptr, LOAD_Quiet);
 	if (Existing) return Existing;
@@ -82,7 +91,7 @@ static T* LoadOrCreateDerivedDataAsset(UPackage* Package, TCHAR const* TypeName)
 	FString PackageName = FPackageName::ObjectPathToPackageName(DataAssetName);
 	FString PackagePath = FPackageName::GetLongPackagePath(PackageName);
 	FString AssetName = FPackageName::GetLongPackageAssetName(PackageName);
-	check(AssetName == FPackageName::ObjectPathToObjectName(FWideStringView(DataAssetName)));
+	check(AssetName == FPackageName::ObjectPathToObjectName(FStringView(DataAssetName)));
 	UObject* Object = AssetToolsModule.Get().CreateAsset(AssetName, PackagePath, UIGS_BuildConfigurationDataAsset::StaticClass(), Factory);
 	if (!Object) return nullptr;
 	return CastChecked<T>(Object);
@@ -110,8 +119,12 @@ void FRacketeerLevelGeneratorModule::StartupModule()
 	FCoreDelegates::OnActorLabelChanged.AddRaw(this, &FRacketeerLevelGeneratorModule::HandleActorLabelChanged);
 	FCoreUObjectDelegates::OnObjectModified.AddRaw(this, &FRacketeerLevelGeneratorModule::HandleObjectModified);
 	FEditorDelegates::PostSaveWorld.AddRaw(this, &FRacketeerLevelGeneratorModule::HandlePostSaveWorld);
-	FAssetToolsModule& AssetToolsModule = FAssetToolsModule::GetModule();
+	FEditorDelegates::OnAssetsAddExtraObjectsToDelete.AddRaw(this, &FRacketeerLevelGeneratorModule::HandleAssetsAddExtraObjectsToDelete);
+	//FAssetToolsModule& AssetToolsModule = FAssetToolsModule::GetModule();
 	//AssetToolsModule.Get().OnAssetPostRename().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleAssetPostRename);
+	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>(TEXT("AssetRegistry"));
+	AssetRegistryModule.Get().OnAssetRenamed().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleAssetRenamed);
+	//AssetRegistryModule.Get().OnAssetRemoved().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleAssetRemoved);
 }
 void FRacketeerLevelGeneratorModule::HandlePostEngineInit()
 {
@@ -120,14 +133,23 @@ void FRacketeerLevelGeneratorModule::HandlePostEngineInit()
 	GEngine->OnLevelActorListChanged().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorListChanged);
 	GEngine->OnLevelActorAdded().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorAdded);
 	GEngine->OnLevelActorDeleted().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorDeleted);
-	//GEngine->OnLevelActorRequestRename().AddRaw(this, &FRacketeerLevelGeneratorModule::HandleLevelActorRequestRename);
+}
+void FRacketeerLevelGeneratorModule::ShutdownModule()
+{
+	FCoreDelegates::OnPostEngineInit.RemoveAll(this);
+	FCoreDelegates::OnActorLabelChanged.RemoveAll(this);
+	FCoreUObjectDelegates::OnObjectModified.RemoveAll(this);
+	FEditorDelegates::PostSaveWorld.RemoveAll(this);
+	FEditorDelegates::OnAssetsAddExtraObjectsToDelete.RemoveAll(this);
 	//if (FAssetToolsModule* AssetToolsModule = FModuleManager::GetModulePtr<FAssetToolsModule>("AssetTools"))
 	//{
 	//	AssetToolsModule->Get().OnAssetPostRename().RemoveAll(this);
 	//}
-}
-void FRacketeerLevelGeneratorModule::ShutdownModule()
-{
+	if (FAssetRegistryModule* AssetRegistryModule = FModuleManager::GetModulePtr<FAssetRegistryModule>("AssetRegistry"))
+	{
+		AssetRegistryModule->Get().OnAssetRenamed().RemoveAll(this);
+		//AssetRegistryModule->Get().OnAssetRemoved().RemoveAll(this);
+	}
 	if (GEngine)
 	{
 		//GEngine->OnActorsMoved().RemoveAll(this);
@@ -135,16 +157,12 @@ void FRacketeerLevelGeneratorModule::ShutdownModule()
 		GEngine->OnLevelActorListChanged().RemoveAll(this);
 		GEngine->OnLevelActorAdded().RemoveAll(this);
 		GEngine->OnLevelActorDeleted().RemoveAll(this);
-		GEngine->OnLevelActorRequestRename().RemoveAll(this);
 	}
-	FCoreDelegates::OnPostEngineInit.RemoveAll(this);
-	FCoreDelegates::OnActorLabelChanged.RemoveAll(this);
-	FCoreUObjectDelegates::OnObjectModified.RemoveAll(this);
-	FEditorDelegates::PostSaveWorld.RemoveAll(this);
 }
 
 void FRacketeerLevelGeneratorModule::HandlePostSaveWorld(uint32 SaveFlags, UWorld* World, bool bSuccess)
 {
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("World saved %s %u"), *GetFullNameSafe(World), SaveFlags);
 	UIGS_BuildConfigurationDataAsset* BCDA = UpdateBuildConfigurationDataAsset(World->PersistentLevel);
 	if (!BCDA) return;
 	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Save BCDA %s"), *GetFullNameSafe(BCDA));
@@ -196,26 +214,56 @@ void FRacketeerLevelGeneratorModule::HandleObjectModified(UObject* Object)
 }
 //void FRacketeerLevelGeneratorModule::HandleAssetPostRename(TArray<FAssetRenameData> const& Datas)
 //{
-//	TArray<ULevel*> Levels;
+//	TArray<FAssetRenameData> ToRename;
 //	for (FAssetRenameData const& Data : Datas)
 //	{
-//		AActor* Actor = Cast<AActor>(Data.Asset.Get());
-//		ULevel* Level = AffectsBuildConfiguration(Actor);
-//		if (!Level) continue;
-//		UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Renamed connection point %s"), *GetFullNameSafe(Actor));
-//		Levels.AddUnique(Level);
+//		UWorld* World = Cast<UWorld>(Data.Asset.Get());
+//		if (!World) continue;
+//		FString OldBCDAPath = GetDerivedDataAssetLongName(Data.OldObjectPath.GetLongPackageName(), BuildConfigurationDataAssetTypeName);
+//		if (!FPackageName::DoesPackageExist(FPackageName::ObjectPathToPackageName(OldBCDAPath))) continue;
+//		FString NewBCDAPath = GetDerivedDataAssetLongName(Data.NewObjectPath.GetLongPackageName(), BuildConfigurationDataAssetTypeName);
+//		UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Renaming BCDA %s -> %s"), *OldBCDAPath, *NewBCDAPath);
+//		ToRename.Add(FAssetRenameData(OldBCDAPath, NewBCDAPath));
 //	}
-//	for (ULevel* Level : Levels)
-//	{
-//		MarkBuildConfigurationDirty(Level);
-//	}
+//	if (!ToRename.Num()) return;
+//	FAssetToolsModule& AssetToolsModule = FAssetToolsModule::GetModule();
+//	AssetToolsModule.Get().RenameAssets(ToRename);
 //}
-//void FRacketeerLevelGeneratorModule::HandleLevelActorRequestRename(AActor const* Actor)
+void FRacketeerLevelGeneratorModule::HandleAssetRenamed(const FAssetData& Data, const FString& OldName)
+{
+	// there is no rename equivalent to FEditorDelegates::OnAssetsAddExtraObjectsToDelete, so we have to do it handle it here
+	if (Data.AssetClass != UWorld::StaticClass()->GetFName()) return;
+
+	FString OldBCDAPath = GetDerivedDataAssetLongName(FPackageName::ObjectPathToPackageName(OldName), BuildConfigurationDataAssetTypeName);
+	if (!FPackageName::DoesPackageExist(FPackageName::ObjectPathToPackageName(OldBCDAPath))) return;
+
+	FString NewBCDAPath = GetDerivedDataAssetLongName(Data.PackagePath.ToString(), BuildConfigurationDataAssetTypeName);
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Renaming BCDA %s -> %s"), *OldBCDAPath, *NewBCDAPath);
+	FAssetToolsModule& AssetToolsModule = FAssetToolsModule::GetModule();
+	AssetToolsModule.Get().RenameAssets({ FAssetRenameData(OldBCDAPath, NewBCDAPath) });
+}
+void FRacketeerLevelGeneratorModule::HandleAssetsAddExtraObjectsToDelete(TArray<UObject*>& Objects)
+{
+	for (int32 I = 0; I < Objects.Num(); ++I)
+	{
+		UWorld* World = Cast<UWorld>(Objects[I]);
+		if (!World) continue;
+		UIGS_BuildConfigurationDataAsset* BCDA = TryLoadDerivedDataAsset<UIGS_BuildConfigurationDataAsset>(World->GetPackage(), BuildConfigurationDataAssetTypeName);
+		if (!BCDA) continue;
+		UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Flagging %s for deletion"), *GetFullNameSafe(BCDA));
+		Objects.AddUnique(BCDA);
+	}
+}
+//void FRacketeerLevelGeneratorModule::HandleAssetRemoved(const FAssetData& Data)
 //{
-//	ULevel* Level = AffectsBuildConfiguration(Actor);
-//	if (!Level) return;
-//	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Renamed connection point %s"), *GetFullNameSafe(Actor));
-//	MarkBuildConfigurationDirty(Level);
+//	if (!(Data.PackageFlags & PKG_ContainsMap)) return;
+//	FString OldBCDAPath = GetDerivedDataAssetLongName(Data.PackageName.ToString(), BuildConfigurationDataAssetTypeName);
+//
+//	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>(TEXT("AssetRegistry"));
+//	AssetRegistryModule.Get().GetAssetByObjectPath(FName(OldBCDAPath));
+//	ObjectTools::AddExtraObjectsToDelete
+//	FAssetToolsModule& AssetToolsModule = FAssetToolsModule::GetModule();
+//	AssetToolsModule.Get().
 //}
 
 #undef LOCTEXT_NAMESPACE
