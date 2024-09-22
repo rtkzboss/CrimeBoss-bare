@@ -19,13 +19,13 @@
 
 static ULevel* AffectsBuildConfiguration(AActor const* Actor)
 {
-	return Actor && Actor->IsA<AIGS_ConnectionPointExternal>() ? Actor->GetLevel() : nullptr;
+	return Actor && Actor->IsA<AIGS_ConnectionPointExternal>() && !Actor->GetWorld()->IsPlayInEditor() ? Actor->GetLevel() : nullptr;
 }
 static ULevel* AffectsBuildConfiguration(UActorComponent const* Component)
 {
 	if (!Component) return nullptr;
 	AIGS_ConnectionPointExternal* CP = Component->GetOwner<AIGS_ConnectionPointExternal>();
-	return CP && Component == CP->GetRootComponent() ? CP->GetLevel() : nullptr;
+	return CP && Component == CP->GetRootComponent() && !CP->GetWorld()->IsPlayInEditor() ? CP->GetLevel() : nullptr;
 }
 
 static void GatherConnectionPoints(ULevel* Level, TArray<FIGS_ConnectionPointData>& Out)
@@ -102,7 +102,7 @@ static UIGS_BuildConfigurationDataAsset* LoadOrCreateBuildConfigurationDataAsset
 }
 static UIGS_BuildConfigurationDataAsset* UpdateBuildConfigurationDataAsset(ULevel* Level)
 {
-	if (Level->HasAnyFlags(RF_Transient)) return nullptr;
+	if (Level->GetWorld()->IsPlayInEditor()) return nullptr;
 	//ALevelScriptActor* LSA = Level->GetLevelScriptActor();
 	//if (!LSA || !LSA->IsA<AIGS_LevelBuilder_LevelScriptActor>()) return nullptr;
 	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Updating build configuration data asset for %s"), *GetFullNameSafe(Level));
