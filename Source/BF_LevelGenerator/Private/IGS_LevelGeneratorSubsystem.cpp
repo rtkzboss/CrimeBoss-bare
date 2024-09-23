@@ -4,6 +4,7 @@
 #include "IGS_BuildConfigurationDataAsset.h"
 #include "Engine/LevelStreamingDynamic.h"
 #include "BF_LevelGeneratorModule.h"
+#include "IGS_LevelBuilder_LevelScriptActor.h"
 
 UIGS_LevelGeneratorSubsystem::UIGS_LevelGeneratorSubsystem() {
 }
@@ -19,43 +20,75 @@ int32 UIGS_LevelGeneratorSubsystem::GetDefaultSeed() const {
     return DefaultSeed;
 }
 
-bool UIGS_LevelGeneratorSubsystem::LoadLevelAccordingToConfiguration(FIGS_ConnectionPointData const& Connection, FName ConnectionName, TArrayView<FIGS_ConnectionPointData const> ConnectionPoints, FName VariantName, TArrayView<FIGS_VariantDefinition const> Variants, UIGS_BuildConfigurationDataAsset* BuildConfiguration, TArray<FIGS_ConnectionPointData>& OutConnectionPoints)
+UIGS_LevelGeneratorSubsystem::FCachedConfiguration::FCachedConfiguration(UIGS_BuildConfigurationDataAsset* BCDA)
+	: ConnectionPoints(BCDA->ConnectionPoints)
+	, Variants(BCDA->Variants)
+	, Level(BCDA->Level)
 {
-	if (!ConnectionPoints.Num()) ConnectionPoints = BuildConfiguration->ConnectionPoints;
-	if (!Variants.Num()) Variants = BuildConfiguration->Variants;
-	if (!ConnectionPoints.Num())
+}
+bool UIGS_LevelGeneratorSubsystem::LoadLevelAccordingToConfiguration(UIGS_RandomStreamHolder* RSH, FIGS_GeneratorVariantData VariantData, FIGS_ConnectionPointData const& Connection, FName ConnectionName, FName VariantName, FCachedConfiguration Configuration, TArray<FIGS_ConnectionPointData>& OutConnectionPoints)
+{
+	if (!Configuration.ConnectionPoints.Num())
 	{
-		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("No connection points in %s"), *BuildConfiguration->Level.ToString()), ELogVerbosity::Warning);
+		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("No connection points in %s"), *Configuration.Level.ToString()), ELogVerbosity::Warning);
+		return false;
+	}
+	if (!VariantName.IsNone() && !Configuration.Variants.Contains(VariantName))
+	{
+		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("No variant %s in %s"), *VariantName.ToString(), *Configuration.Level.ToString()), ELogVerbosity::Warning);
 		return false;
 	}
 
-	UWorld* World = GetWorld();
-
-	FIGS_ConnectionPointData const* SrcConnection = ConnectionPoints.FindByKey(ConnectionName);
+	FIGS_ConnectionPointData const* SrcConnection = Configuration.ConnectionPoints.FindByKey(ConnectionName);
 	if (!SrcConnection)
 	{
-		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("No connection %s in %s"), *ConnectionName.ToString(), *BuildConfiguration->Level.ToString()), ELogVerbosity::Warning);
+		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("No connection %s in %s"), *ConnectionName.ToString(), *Configuration.Level.ToString()), ELogVerbosity::Warning);
 		return false;
 	}
 	FConnectionPointTransform Transform = FConnectionPointTransform::Between(*SrcConnection, Connection);
 
 	OutConnectionPoints.Empty();
-	for (FIGS_ConnectionPointData const& CP : ConnectionPoints)
+	for (FIGS_ConnectionPointData const& CP : Configuration.ConnectionPoints)
 	{
 		Transform.ApplyTo(OutConnectionPoints.Add_GetRef(CP));
 	}
 
-	//check((Transform.GetScale3D() - 1.).IsNearlyZero());
 	bool bSuccess;
-	ULevelStreaming* StreamingLevel = ULevelStreamingDynamic::LoadLevelInstanceBySoftObjectPtr(this, BuildConfiguration->Level, Transform.Translation, Transform.Rotator(), bSuccess);
+	ULevelStreamingDynamic* StreamingLevel = ULevelStreamingDynamic::LoadLevelInstanceBySoftObjectPtr(this, Configuration.Level, Transform.Translation, Transform.Rotator(), bSuccess);
 	if (!bSuccess)
 	{
-		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("Failed to add level instance %s"), *BuildConfiguration->Level.ToString()), ELogVerbosity::Warning);
+		UE_LOG(LogBF_LevelGenerator, Error, TEXT("Failed to add level instance %s"), *Configuration.Level.ToString());
 		return false;
 	}
-	UE_LOG(LogBF_LevelGenerator, Verbose, TEXT("Added level instance %s"), *BuildConfiguration->Level.ToString());
+	UE_LOG(LogBF_LevelGenerator, Verbose, TEXT("Added level instance %s"), *Configuration.Level.ToString());
+
+	// unfortunately, we have to do this synchronously due to intrinsic problems w/ the design of LevelBuilder
+	// LSA BPs run synchronously and expect to use the RSH for other tasks immediately after we return, so we must load & run the sublevel on the RSH before we do
+	StreamingLevel->bShouldBlockOnLoad = true;
+	GetWorld()->FlushLevelStreaming();
+	ULevel* Level = StreamingLevel->GetLoadedLevel();
+	if (!Level)
+	{
+		UE_LOG(LogBF_LevelGenerator, Error, TEXT("Failed to load level instance %s"), *Configuration.Level.ToString());
+		return false;
+	}
+
+	UE_LOG(LogBF_LevelGenerator, Verbose, TEXT("Loaded level instance %s"), *Configuration.Level.ToString());
+	AIGS_LevelBuilder_LevelScriptActor* LSA = Cast<AIGS_LevelBuilder_LevelScriptActor>(Level->GetLevelScriptActor());
+	if (LSA)
+	{
+		LSA->RunVariant_Sublevel(RSH, VariantName, VariantData);
+	}
 	return true;
-	//check(0);
+}
+AIGS_LevelBuilder_LevelScriptActor* UIGS_LevelGeneratorSubsystem::GetMainLevelScriptActor() const
+{
+	return Cast<AIGS_LevelBuilder_LevelScriptActor>(GetWorld()->GetLevelScriptActor());
+}
+ULevel* UIGS_LevelGeneratorSubsystem::GetMainLevel() const
+{
+	AIGS_LevelBuilder_LevelScriptActor* LSA = GetMainLevelScriptActor();
+	return LSA ? LSA->GetLevel() : nullptr;
 }
 UIGS_LevelGeneratorSubsystem::FConnectionPointTransform UIGS_LevelGeneratorSubsystem::FConnectionPointTransform::Between(FIGS_ConnectionPointData const& Src, FIGS_ConnectionPointData const& Dst)
 {

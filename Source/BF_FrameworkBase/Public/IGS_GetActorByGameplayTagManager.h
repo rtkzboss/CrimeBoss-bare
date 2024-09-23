@@ -25,4 +25,6 @@ public:
     UFUNCTION(BlueprintPure)
     TArray<AActor*> GetAllActorsWithGameplayTag(const FGameplayTag& inGameplayTag) const;
 
+private:
+	AActor* GetRandomActorWithGameplayTag_Internal(const FGameplayTag& inGameplayTag, FRandomStream& RandomStream) const;
 };

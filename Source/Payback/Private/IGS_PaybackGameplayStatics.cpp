@@ -1,6 +1,7 @@
 #include "IGS_PaybackGameplayStatics.h"
 #include "Templates/SubclassOf.h"
 #include "Kismet/GameplayStatics.h"
+#include "IGS_RandomStreamHolder.h"
 
 UIGS_PaybackGameplayStatics::UIGS_PaybackGameplayStatics() {
 }
@@ -47,6 +48,7 @@ void UIGS_PaybackGameplayStatics::RemoveWeaponFromPlayer(AIGS_PlayerCharacter* i
 }
 
 void UIGS_PaybackGameplayStatics::RandomChanceFromStream(int32 inChance, UIGS_RandomStreamHolder*& inRandomStream, EIGS_ChanceEnum& outBranches) {
+	outBranches = inRandomStream->RandomStream.GetFraction() < inChance ? EIGS_ChanceEnum::Success : EIGS_ChanceEnum::Fail;
 }
 
 void UIGS_PaybackGameplayStatics::OwnsCommonHeisterData(const APlayerState* inPlayerState, const FCommonHeisterData inCommonHeisterData, bool& OwnsHeisterData) {

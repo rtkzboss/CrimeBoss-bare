@@ -87,7 +87,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void RemoveWeaponFromPlayer(AIGS_PlayerCharacter* inPlayerCharacter, EIGS_WieldableSlot inSlotToRemove);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(ExpandEnumAsExecs=outBranches))
     static void RandomChanceFromStream(int32 inChance, UPARAM(Ref) UIGS_RandomStreamHolder*& inRandomStream, EIGS_ChanceEnum& outBranches);
 
     UFUNCTION(BlueprintPure)

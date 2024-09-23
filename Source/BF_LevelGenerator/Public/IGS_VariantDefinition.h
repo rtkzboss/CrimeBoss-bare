@@ -10,4 +10,9 @@ public:
     FName Name;
 
     FIGS_VariantDefinition();
+
+	inline bool operator==(FName OtherName) const
+	{
+		return Name == OtherName;
+	}
 };

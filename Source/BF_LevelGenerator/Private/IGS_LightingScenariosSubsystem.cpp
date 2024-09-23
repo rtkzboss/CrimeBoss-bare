@@ -5,20 +5,27 @@ UIGS_LightingScenariosSubsystem::UIGS_LightingScenariosSubsystem() {
 }
 
 void UIGS_LightingScenariosSubsystem::SetUseLightScenarios(bool inUseLightScenarios) {
+	bUseLightScenarios = inUseLightScenarios;
+	if (!bUseLightScenarios) return;
+
 }
 
+/** Must be set before SetUseLightScenarios */
 void UIGS_LightingScenariosSubsystem::SetLightingScenario(EIGS_LightingScenarioType inType) {
+	LightingScenario = inType;
 }
 
 void UIGS_LightingScenariosSubsystem::RepropagateLightingScenarioChangesOnStaticMeshes() {
+	checkf(0, TEXT("unimplemented"));
 }
 
 UIGS_LightingScenariosSubsystem* UIGS_LightingScenariosSubsystem::Instance(const UObject* inWorldContextObject) {
-    return nullptr;
+	UWorld* World = GEngine->GetWorldFromContextObject(inWorldContextObject, EGetWorldErrorMode::LogAndReturnNull);
+	return World ? World->GetSubsystem<ThisClass>() : nullptr;
 }
 
 bool UIGS_LightingScenariosSubsystem::GetUseLightScenarios() const {
-    return false;
+    return bUseLightScenarios;
 }
 
 TArray<FIGS_LightingScenarioLevelPair> UIGS_LightingScenariosSubsystem::GetLoadedLightingScenarios() {
@@ -26,7 +33,7 @@ TArray<FIGS_LightingScenarioLevelPair> UIGS_LightingScenariosSubsystem::GetLoade
 }
 
 EIGS_LightingScenarioType UIGS_LightingScenariosSubsystem::GetCurrentLightingScenarioType() const {
-    return EIGS_LightingScenarioType::Midday;
+    return LightingScenario;
 }
 
 void UIGS_LightingScenariosSubsystem::DeleteStaticLights() {

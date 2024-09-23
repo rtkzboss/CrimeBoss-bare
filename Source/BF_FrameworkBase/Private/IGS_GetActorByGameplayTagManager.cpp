@@ -1,4 +1,5 @@
 #include "IGS_GetActorByGameplayTagManager.h"
+#include "Kismet/GameplayStatics.h"
 
 UIGS_GetActorByGameplayTagManager::UIGS_GetActorByGameplayTagManager() {
 }
@@ -17,5 +18,11 @@ AActor* UIGS_GetActorByGameplayTagManager::GetFirstActorWithGameplayTag(const FG
 
 TArray<AActor*> UIGS_GetActorByGameplayTagManager::GetAllActorsWithGameplayTag(const FGameplayTag& inGameplayTag) const {
     return {};
+}
+
+AActor* UIGS_GetActorByGameplayTagManager::GetRandomActorWithGameplayTag_Internal(const FGameplayTag& inGameplayTag, FRandomStream& RandomStream) const
+{
+	ensureMsgf(0, TEXT("unimplemented"));
+	return nullptr;
 }
 

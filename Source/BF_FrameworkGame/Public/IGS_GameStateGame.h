@@ -26,7 +26,7 @@ class BF_FRAMEWORKGAME_API AIGS_GameStateGame : public AIGS_GameStateFramework {
 public:
     AIGS_GameStateGame(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(ExpandEnumAsExecs=outBranches))
     void SwitchStartupSource(EIGS_MissionStartupSource& outBranches);
 
     UFUNCTION(BlueprintImplementableEvent)

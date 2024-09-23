@@ -17,27 +17,28 @@ AIGS_LevelBuilder_LevelScriptActor::AIGS_LevelBuilder_LevelScriptActor(const FOb
 
 
 void AIGS_LevelBuilder_LevelScriptActor::OnRep_Seed() {
-	UE_LOG(LogBF_LevelGenerator, Display, TEXT("OnRep_Seed %s"), *GetFullNameSafe(this));
-	FDebug::DumpStackTraceToLog(ELogVerbosity::Display);
+	UE_LOG(LogBF_LevelGenerator, Display, TEXT("OnRep_Seed %s seed=%d options=%s"), *GetFullNameSafe(this), mR_RepProperties.ReplicatedSeed, *mR_RepProperties.OptionsString);
+	// TODO: should wait for gamestate data to be ready
+	RunDefaultVariant_MainLevel_Client();
 }
 
 
 void AIGS_LevelBuilder_LevelScriptActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME_CONDITION(AIGS_LevelBuilder_LevelScriptActor, mR_RepProperties, COND_InitialOnly);
+	DOREPLIFETIME_CONDITION(ThisClass, mR_RepProperties, COND_InitialOnly);
 }
 
 void AIGS_LevelBuilder_LevelScriptActor::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-	bool bMainLevel = GetWorld()->GetLevelScriptActor() == this;
+	bool bMainLevel = GetWorld()->GetSubsystem<UIGS_LevelGeneratorSubsystem>()->GetMainLevelScriptActor() == this;
 	if (!bMainLevel || !HasAuthority()) return;
 	RunDefaultVariant_MainLevel_Server();
 }
 void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Server()
 {
-	UE_LOG(LogBF_LevelGenerator, Display, TEXT("Server init main %s"), *GetFullNameSafe(this));
+	UE_LOG(LogBF_LevelGenerator, Log, TEXT("Server init %s"), *GetFullNameSafe(this));
 
 	// set up authoritative data
 	mR_RepProperties.OptionsString = GetWorld()->GetAuthGameMode()->OptionsString;
@@ -48,7 +49,7 @@ void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Server()
 }
 void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Client()
 {
-	UE_LOG(LogBF_LevelGenerator, Display, TEXT("Client init main %s"), *GetFullNameSafe(this));
+	UE_LOG(LogBF_LevelGenerator, Log, TEXT("Client init %s"), *GetFullNameSafe(this));
 	RunDefaultVariant_MainLevel_Common();
 }
 void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Common()
@@ -63,12 +64,54 @@ void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_MainLevel_Common()
 	m_RandomStreamHolder = NewObject<UIGS_RandomStreamHolder>(this);
 	m_RandomStreamHolder->RandomStream.Initialize(DefaultSeed);
 
-	RunDefaultVariant_Common(FIGS_GeneratorVariantData());
+	UE_LOG(LogBF_LevelGenerator, Display, TEXT("Run main level builder %s seed=%d options=%s"), *GetFullNameSafe(this), DefaultSeed, *OptionsString);
+
+	RunVariant_Common(NAME_None, FIGS_GeneratorVariantData());
 }
-void AIGS_LevelBuilder_LevelScriptActor::RunDefaultVariant_Common(FIGS_GeneratorVariantData VariantData)
+TCHAR const* AIGS_LevelBuilder_LevelScriptActor::VariantPrefix = TEXT("BUILDVT_");
+FName AIGS_LevelBuilder_LevelScriptActor::GetEventNameFromVariant(FName VariantName)
 {
-	UE_LOG(LogBF_LevelGenerator, Display, TEXT("Run default variant of %s"), *GetFullNameSafe(this));
+	FString Out = VariantPrefix;
+	VariantName.ToString(Out);
+	return FName(Out);
+}
+FName AIGS_LevelBuilder_LevelScriptActor::GetVariantNameFromEvent(FName EventName)
+{
+	FString Str = EventName.ToString();
+	if (!Str.RemoveFromStart(VariantPrefix)) return NAME_None;
+	return FName(Str);
+}
+void AIGS_LevelBuilder_LevelScriptActor::RunVariant_Sublevel(UIGS_RandomStreamHolder* RSH, FName VariantName, FIGS_GeneratorVariantData VariantData)
+{
+	UIGS_LevelGeneratorSubsystem* LGS = GetWorld()->GetSubsystem<UIGS_LevelGeneratorSubsystem>();
+	AIGS_LevelBuilder_LevelScriptActor* Main = LGS->GetMainLevelScriptActor();
+	DefaultSeed = Main->DefaultSeed;
+	OptionsString = Main->OptionsString;
+
+	m_RandomStreamHolder = RSH;
+
+	RunVariant_Common(VariantName, VariantData);
+}
+void AIGS_LevelBuilder_LevelScriptActor::RunVariant_Common(FName VariantName, FIGS_GeneratorVariantData VariantData)
+{
+	UE_LOG(LogBF_LevelGenerator, Verbose, TEXT("Prepare data for %s"), *GetFullNameSafe(this));
 	OnPrepareData(m_RandomStreamHolder);
-	RunDefaultVariant(m_RandomStreamHolder, VariantData);
+
+	if (VariantName.IsNone())
+	{
+		UE_LOG(LogBF_LevelGenerator, Verbose, TEXT("Run default variant of %s"), *GetFullNameSafe(this));
+		RunDefaultVariant(m_RandomStreamHolder, VariantData);
+		return;
+	}
+
+	FRICOBuildVariantEvent Event;
+	Event.BindUFunction(this, GetEventNameFromVariant(VariantName));
+	if (!Event.IsBound()) // i.e. the event doesn't exist
+	{
+		UE_LOG(LogBF_LevelGenerator, Error, TEXT("Variant %s of %s does not exist!"), *VariantName.ToString(), *GetFullNameSafe(this));
+		return;
+	}
+	UE_LOG(LogBF_LevelGenerator, Verbose, TEXT("Run variant %s of %s"), *VariantName.ToString(), *GetFullNameSafe(this));
+	Event.Execute(m_RandomStreamHolder, VariantData);
 }
 

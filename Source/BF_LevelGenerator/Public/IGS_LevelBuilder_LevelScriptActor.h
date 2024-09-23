@@ -11,6 +11,9 @@
 #include "IGS_LevelBuilder_LevelScriptActor.generated.h"
 
 class UIGS_RandomStreamHolder;
+class UIGS_LevelGeneratorSubsystem;
+
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FRICOBuildVariantEvent, UIGS_RandomStreamHolder*, RandomStreamHolder, FIGS_GeneratorVariantData, GeneratorVariantData);
 
 UCLASS()
 class BF_LEVELGENERATOR_API AIGS_LevelBuilder_LevelScriptActor : public AIGS_GameLevelScriptActor {
@@ -63,11 +66,20 @@ private:
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+public:
+
+	static TCHAR const* VariantPrefix;
+	static FName GetEventNameFromVariant(FName VariantName);
+	static FName GetVariantNameFromEvent(FName EventName);
+
 protected:
 	void PostInitializeComponents() override;
 	void RunDefaultVariant_MainLevel_Client();
 	void RunDefaultVariant_MainLevel_Server();
 	void RunDefaultVariant_MainLevel_Common();
-	void RunDefaultVariant_Common(FIGS_GeneratorVariantData VariantData);
+	void RunVariant_Sublevel(UIGS_RandomStreamHolder* RSH, FName VariantName, FIGS_GeneratorVariantData VariantData);
+	void RunVariant_Common(FName VariantName, FIGS_GeneratorVariantData VariantData);
 	//void RunDefaultVariant_Server_MainLevelOnly();
+
+	friend UIGS_LevelGeneratorSubsystem;
 };

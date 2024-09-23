@@ -57,11 +57,11 @@ void UIGS_BlueprintUtilities::GetUniqueNetID(APlayerController* PlayerController
 }
 
 APlayerController* UIGS_BlueprintUtilities::GetLocalPlayerControllerForWorld(UObject* inWCO) {
-    return UGameplayStatics::GetPlayerController(inWCO->GetWorld(), 0);
+    return UGameplayStatics::GetPlayerController(inWCO, 0);
 }
 
 APlayerController* UIGS_BlueprintUtilities::GetLocalPlayerController(UObject* inWCO) {
-    return UGameplayStatics::GetPlayerController(inWCO->GetWorld(), 0);
+    return UGameplayStatics::GetPlayerController(inWCO, 0);
 }
 
 FColor UIGS_BlueprintUtilities::GetColorForTeamSide(EIGS_TeamSideEnum inTeamSide) {

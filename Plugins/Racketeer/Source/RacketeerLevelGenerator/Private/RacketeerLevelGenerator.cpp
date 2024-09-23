@@ -14,6 +14,7 @@
 #include "AssetRegistryModule.h"
 #include "IAssetRegistry.h"
 #include "ObjectTools.h"
+#include "Engine/LevelScriptBlueprint.h"
 
 #define LOCTEXT_NAMESPACE "Racketeer"
 
@@ -37,6 +38,18 @@ static void GatherConnectionPoints(ULevel* Level, TArray<FIGS_ConnectionPointDat
 		Out.Emplace(UIGS_LevelGeneratorFunctionLibrary::GetConnectionPointData(CP));
 	}
 }
+static void GatherVariants(ULevel* Level, TArray<FIGS_VariantDefinition>& Out)
+{
+	ULevelScriptBlueprint* LSBP = Level->GetLevelScriptBlueprint(true);
+	if (!LSBP || !LSBP->ParentClass || !LSBP->ParentClass->IsChildOf<AIGS_LevelBuilder_LevelScriptActor>()) return;
+	if (!LSBP->SkeletonGeneratedClass) return;
+
+	for (TFieldIterator<UFunction> It(LSBP->SkeletonGeneratedClass, EFieldIteratorFlags::IncludeSuper); It; ++It) {
+		FIGS_VariantDefinition Variant;
+		Variant.Name = AIGS_LevelBuilder_LevelScriptActor::GetVariantNameFromEvent(It->GetFName());
+		if (!Variant.Name.IsNone()) Out.Add(MoveTemp(Variant));
+	}
+}
 static bool GenerateBuildConfiguration(ULevel* Level, UIGS_BuildConfigurationDataAsset* Out)
 {
 	UWorld* LevelWorld = Level->GetTypedOuter<UWorld>();
@@ -45,13 +58,18 @@ static bool GenerateBuildConfiguration(ULevel* Level, UIGS_BuildConfigurationDat
 	Out->Variants.Empty();
 
 	GatherConnectionPoints(Level, Out->ConnectionPoints);
+	GatherVariants(Level, Out->Variants);
+
 	Out->ConnectionPoints.Sort([](FIGS_ConnectionPointData const& A, FIGS_ConnectionPointData const& B)
 		{
 			return A.Name.Compare(B.Name) < 0;
 		});
+	Out->Variants.Sort([](FIGS_VariantDefinition const& A, FIGS_VariantDefinition const& B)
+		{
+			return A.Name.Compare(B.Name) < 0;
+		});
 
-	// TODO: variants?
-	return Out->ConnectionPoints.Num() > 0;
+	return Out->ConnectionPoints.Num() > 0 || Out->Variants.Num() > 0;
 }
 static FString GetDerivedDataAssetPath(FString const& LongPackageName, TCHAR const* TypeName)
 {
