@@ -3,6 +3,7 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "EIGS_LightingScenarioType.h"
 #include "IGS_LightingScenarioLevelPair.h"
+#include "IGS_LevelGeneratorSubsystem.h"
 #include "IGS_LightingScenariosSubsystem.generated.h"
 
 class ULevelStreamingDynamic;
@@ -54,4 +55,10 @@ private:
     UPROPERTY()
     ULevelStreamingDynamic* m_RootLevelScenarioStreaming;
 
+public:
+	void LoadLightingScenario(ULevel* Level, UIGS_LevelGeneratorSubsystem::FConnectionPointTransform Transform);
+
+private:
+	//UPROPERTY()
+	//TMap<TWeakObjectPtr<ULevel*>, ULevelStreamingDynamic*> LightScenarios;
 };

@@ -38,9 +38,14 @@ public:
 public:
 	struct FConnectionPointTransform
 	{
-		FVector Translation;
-		float Rotation;
+		FVector Translation = FVector::ZeroVector;
+		float Rotation = 0.f;
 
+		FConnectionPointTransform() {}
+		FConnectionPointTransform(FVector Translation, float Rotation)
+			: Translation(Translation)
+			, Rotation(Rotation)
+		{}
 		static FConnectionPointTransform Between(FIGS_ConnectionPointData const& Src, FIGS_ConnectionPointData const& Dst);
 		FRotator Rotator() const;
 		void ApplyTo(FIGS_ConnectionPointData& CP) const;

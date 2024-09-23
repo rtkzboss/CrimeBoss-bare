@@ -5,6 +5,7 @@
 #include "Engine/LevelStreamingDynamic.h"
 #include "BF_LevelGeneratorModule.h"
 #include "IGS_LevelBuilder_LevelScriptActor.h"
+#include "IGS_LightingScenariosSubsystem.h"
 
 UIGS_LevelGeneratorSubsystem::UIGS_LevelGeneratorSubsystem() {
 }
@@ -45,6 +46,7 @@ bool UIGS_LevelGeneratorSubsystem::LoadLevelAccordingToConfiguration(UIGS_Random
 		FFrame::KismetExecutionMessage(*FString::Printf(TEXT("No connection %s in %s"), *ConnectionName.ToString(), *Configuration.Level.ToString()), ELogVerbosity::Warning);
 		return false;
 	}
+	// TODO: game does rounding approximately everywhere in the transform process, we may need to round CPs and the level transform as well
 	FConnectionPointTransform Transform = FConnectionPointTransform::Between(*SrcConnection, Connection);
 
 	OutConnectionPoints.Empty();
@@ -75,10 +77,11 @@ bool UIGS_LevelGeneratorSubsystem::LoadLevelAccordingToConfiguration(UIGS_Random
 
 	UE_LOG(LogBF_LevelGenerator, Verbose, TEXT("Loaded level instance %s"), *Configuration.Level.ToString());
 	AIGS_LevelBuilder_LevelScriptActor* LSA = Cast<AIGS_LevelBuilder_LevelScriptActor>(Level->GetLevelScriptActor());
-	if (LSA)
-	{
-		LSA->RunVariant_Sublevel(RSH, VariantName, VariantData);
-	}
+	if (LSA) LSA->RunVariant_Sublevel(RSH, VariantName, VariantData);
+
+	UIGS_LightingScenariosSubsystem* LSS = GetWorld()->GetSubsystem<UIGS_LightingScenariosSubsystem>();
+	if (LSS) LSS->LoadLightingScenario(Level, Transform);
+
 	return true;
 }
 AIGS_LevelBuilder_LevelScriptActor* UIGS_LevelGeneratorSubsystem::GetMainLevelScriptActor() const
@@ -90,10 +93,14 @@ ULevel* UIGS_LevelGeneratorSubsystem::GetMainLevel() const
 	AIGS_LevelBuilder_LevelScriptActor* LSA = GetMainLevelScriptActor();
 	return LSA ? LSA->GetLevel() : nullptr;
 }
+static inline FVector RotateZ(FVector In, float Rotation)
+{
+	return FVector(FVector2D(In).GetRotated(Rotation), In.Z);
+};
 UIGS_LevelGeneratorSubsystem::FConnectionPointTransform UIGS_LevelGeneratorSubsystem::FConnectionPointTransform::Between(FIGS_ConnectionPointData const& Src, FIGS_ConnectionPointData const& Dst)
 {
 	float DeltaYaw = Dst.Rotation - Src.Rotation;
-	FVector Translation = Dst.Location - Src.Location.RotateAngleAxis(DeltaYaw, FVector::UpVector);
+	FVector Translation = Dst.Location - RotateZ(Src.Location, DeltaYaw);
 	return FConnectionPointTransform{ Translation, DeltaYaw };
 	//float DeltaYaw = Dst.Rotation - Src.Rotation;
 	//FRotator Rotation(0, DeltaYaw, 0);
@@ -107,5 +114,5 @@ FRotator UIGS_LevelGeneratorSubsystem::FConnectionPointTransform::Rotator() cons
 void UIGS_LevelGeneratorSubsystem::FConnectionPointTransform::ApplyTo(FIGS_ConnectionPointData& CP) const
 {
 	CP.Rotation += Rotation;
-	CP.Location = CP.Location.RotateAngleAxis(Rotation, FVector::UpVector) + Translation;
+	CP.Location = RotateZ(CP.Location, Rotation) + Translation;
 }
