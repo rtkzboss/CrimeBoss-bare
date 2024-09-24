@@ -31,4 +31,5 @@ public:
     UPROPERTY()
     TArray<FIGS_VariantDefinition> Cooked_Variants;
 
+	void SetBuildConfiguration(UIGS_BuildConfigurationDataAsset* BCDA);
 };

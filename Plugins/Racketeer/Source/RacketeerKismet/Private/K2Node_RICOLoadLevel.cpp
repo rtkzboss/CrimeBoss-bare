@@ -18,6 +18,7 @@ static FName ResultPinName(TEXT("bSuccess"));
 static FName WorldContextPinName(TEXT("WorldContextObject"));
 static FName BuildConfigurationPinName(TEXT("BuildConfiguration"));
 static FName ConnectionNamePinName(TEXT("ConnectionName"));
+static FName VariantNamePinName(TEXT("VariantName"));
 static FName ConnectionPinName(TEXT("Connection"));
 static FName RandomStreamHolderPinName(TEXT("RandomStreamHolder"));
 static FName GeneratorVariantDataPinName(TEXT("GeneratorVariantData"));
@@ -37,6 +38,7 @@ bool UK2Node_RICOLoadLevel::IsFreeConnectionPointPin(UEdGraphPin* Pin) const
 		Pin->PinName != WorldContextPinName &&
 		Pin->PinName != BuildConfigurationPinName &&
 		Pin->PinName != ConnectionNamePinName &&
+		Pin->PinName != VariantNamePinName &&
 		Pin->PinName != ConnectionPinName &&
 		Pin->PinName != RandomStreamHolderPinName &&
 		Pin->PinName != GeneratorVariantDataPinName &&
@@ -78,6 +80,10 @@ UEdGraphPin* UK2Node_RICOLoadLevel::GetConnectionNamePin() const
 {
 	return FindPinChecked(ConnectionNamePinName, EGPD_Input);
 }
+UEdGraphPin* UK2Node_RICOLoadLevel::GetVariantNamePin() const
+{
+	return FindPinChecked(VariantNamePinName, EGPD_Input);
+}
 UEdGraphPin* UK2Node_RICOLoadLevel::GetRandomStreamHolderPin() const
 {
 	return FindPinChecked(RandomStreamHolderPinName, EGPD_Input);
@@ -110,10 +116,16 @@ bool UK2Node_RICOLoadLevel::HasBuildConfiguration() const
 	UEdGraphPin* Pin = GetBuildConfigurationPin();
 	return Pin && (Pin->LinkedTo.Num() || Cast<UIGS_BuildConfigurationDataAsset>(Pin->DefaultObject));
 }
-FName UK2Node_RICOLoadLevel::GetConnectionName() const
+TOptional<FName> UK2Node_RICOLoadLevel::GetConnectionName() const
 {
 	UEdGraphPin* Pin = GetConnectionNamePin();
-	if (!Pin || Pin->LinkedTo.Num()) return NAME_None;
+	if (!Pin || Pin->LinkedTo.Num()) return {};
+	return FName(Pin->DefaultValue);
+}
+TOptional<FName> UK2Node_RICOLoadLevel::GetVariantName() const
+{
+	UEdGraphPin* Pin = GetVariantNamePin();
+	if (!Pin || Pin->LinkedTo.Num()) return {};
 	return FName(Pin->DefaultValue);
 }
 
@@ -130,6 +142,8 @@ void UK2Node_RICOLoadLevel::AllocateDefaultPins()
 	CreatePin(EGPD_Input, UEdGraphSchema_K2::PC_Object, UIGS_BuildConfigurationDataAsset::StaticClass(), BuildConfigurationPinName);
 	CreatePin(EGPD_Input, UEdGraphSchema_K2::PC_Name, ConnectionNamePinName);
 	CreatePin(EGPD_Input, UEdGraphSchema_K2::PC_Struct, TBaseStructure<FIGS_ConnectionPointData>::Get(), ConnectionPinName);
+	UEdGraphPin* VariantNamePin = CreatePin(EGPD_Input, UEdGraphSchema_K2::PC_Name, VariantNamePinName);
+	VariantNamePin->bAdvancedView = true;
 	CreatePin(EGPD_Input, UEdGraphSchema_K2::PC_Object, UIGS_RandomStreamHolder::StaticClass(), RandomStreamHolderPinName);
 	CreatePin(EGPD_Input, UEdGraphSchema_K2::PC_Struct, TBaseStructure<FIGS_GeneratorVariantData>::Get(), GeneratorVariantDataPinName);
 	CreatePin(EGPD_Output, UEdGraphSchema_K2::PC_Boolean, ResultPinName);
@@ -181,6 +195,18 @@ void UK2Node_RICOLoadLevel::OnBuildConfigurationPinChanged()
 	if (UIGS_BuildConfigurationDataAsset* BuildConfiguration = GetBuildConfigurationDataAsset())
 	{
 		CreatePinsForBuildConfiguration(BuildConfiguration, &NewConnectionPointPins);
+		TOptional<FName> ConnectionName = GetConnectionName();
+		if (ConnectionName.IsSet() && !BuildConfiguration->ConnectionPoints.Contains(ConnectionName.GetValue()))
+		{
+			FName Connection = BuildConfiguration->ConnectionPoints.Num() ? BuildConfiguration->ConnectionPoints[0].Name : NAME_None;
+			GetConnectionNamePin()->DefaultValue = Connection.ToString();
+		}
+		TOptional<FName> VariantName = GetVariantName();
+		if (VariantName.IsSet() && !BuildConfiguration->Variants.Contains(VariantName.GetValue()))
+		{
+			FName Variant = BuildConfiguration->Variants.Num() ? BuildConfiguration->Variants[0].Name : NAME_None;
+			GetVariantNamePin()->DefaultValue = Variant.ToString();
+		}
 	}
 	RestoreSplitPins(OldPins);
 	RewireOldPinsToNewPins(OldConnectionPointPins, Pins, nullptr);
@@ -219,9 +245,10 @@ void UK2Node_RICOLoadLevel::ExpandNode(FKismetCompilerContext& CompilerContext, 
 	Super::ExpandNode(CompilerContext, SourceGraph);
 	UEdGraphSchema_K2 const* Schema = CompilerContext.GetSchema();
 
-	UIGS_BuildConfigurationDataAsset* BuildConfiguration = GetBuildConfigurationDataAsset();
-	FName ConnectionName = GetConnectionName();
-	bool bUseUObjectConfiguration = BuildConfiguration && !ConnectionName.IsNone();
+	UIGS_BuildConfigurationDataAsset* BCDA = GetBuildConfigurationDataAsset();
+	TOptional<FName> ConnectionName = GetConnectionName();
+	TOptional<FName> VariantName = GetVariantName();
+	bool bUseUObjectConfiguration = BCDA && ConnectionName.IsSet() && VariantName.IsSet();
 
 	UK2Node_CallFunction* CallNode = CompilerContext.SpawnIntermediateNode<UK2Node_CallFunction>(this, SourceGraph);
 	FName FuncName = bUseUObjectConfiguration ?
@@ -246,7 +273,7 @@ void UK2Node_RICOLoadLevel::ExpandNode(FKismetCompilerContext& CompilerContext, 
 	for (UEdGraphPin* Pin : Pins)
 	{
 		if (!IsFreeConnectionPointPin(Pin)) continue;
-		int32 Index = BuildConfiguration->ConnectionPoints.IndexOfByKey(Pin->GetFName());
+		int32 Index = BCDA->ConnectionPoints.IndexOfByKey(Pin->GetFName());
 		if (Index == INDEX_NONE) continue; // TODO: diagnostic?
 
 		UK2Node_GetArrayItem* GetNode = CompilerContext.SpawnIntermediateNode<UK2Node_GetArrayItem>(this, SourceGraph);
@@ -269,11 +296,9 @@ void UK2Node_RICOLoadLevel::ExpandNode(FKismetCompilerContext& CompilerContext, 
 		auto Outer = GetBlueprint()->SkeletonGeneratedClass->GetAuthoritativeClass();
 		UIGS_GeneratorBuildConfiguration* Config = NewObject<UIGS_GeneratorBuildConfiguration>(Outer);
 		//Config->Filters = ;
-		Config->BuildConfigurationDataAsset = BuildConfiguration;
-		//Config->VariantName = ;
-		Config->ConnectionName = ConnectionName;
-		Config->Cooked_ConnectionPoints = BuildConfiguration->ConnectionPoints;
-		Config->Cooked_Variants = BuildConfiguration->Variants;
+		Config->VariantName = VariantName.GetValue();
+		Config->ConnectionName = ConnectionName.GetValue();
+		Config->SetBuildConfiguration(BCDA);
 		if (UEdGraphPin* ConfigurationPin = CallNode->FindPin(TEXT("UObjectConfiguration")))
 		{
 			ConfigurationPin->DefaultObject = Config;
@@ -287,19 +312,29 @@ void UK2Node_RICOLoadLevel::ExpandNode(FKismetCompilerContext& CompilerContext, 
 	{
 		FIGS_BuildConfiguration Config;
 		//Config.Filters = ;
-		Config.BuildConfigurationDataAsset = BuildConfiguration;
-		//Config.VariantName = ;
-		Config.ConnectionName = ConnectionName;
-		if (BuildConfiguration)
+		if (VariantName.IsSet())
 		{
-			Config.CachedBuildConfiguration.ConnectionPoints = BuildConfiguration->ConnectionPoints;
-			Config.CachedBuildConfiguration.Variants = BuildConfiguration->Variants;
-			Config.CachedBuildConfiguration.Level = BuildConfiguration->Level;
-			Config.CachedBuildConfiguration.Initialized = true;
+			Config.VariantName = VariantName.Get(NAME_None);
 		}
 		else
 		{
-			check(0); // TODO: how do we set this at runtime?
+			checkf(0, TEXT("unimplemented")); // TODO: how do we set this at runtime?
+		}
+		if (ConnectionName.IsSet())
+		{
+			Config.ConnectionName = ConnectionName.GetValue();
+		}
+		else
+		{
+			checkf(0, TEXT("unimplemented")); // TODO: how do we set this at runtime?
+		}
+		if (BCDA)
+		{
+			Config.SetBuildConfiguration(BCDA);
+		}
+		else
+		{
+			checkf(0, TEXT("unimplemented")); // TODO: how do we set this at runtime?
 		}
 		if (UEdGraphPin* ConfigurationPin = CallNode->FindPin(TEXT("Configuration")))
 		{

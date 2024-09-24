@@ -38,12 +38,14 @@ public:
 	UEdGraphPin* GetResultPin() const;
 	UEdGraphPin* GetConnectionPin() const;
 	UEdGraphPin* GetConnectionNamePin() const;
+	UEdGraphPin* GetVariantNamePin() const;
 	UEdGraphPin* GetRandomStreamHolderPin() const;
 	UEdGraphPin* GetGeneratorVariantDataPin() const;
 	UEdGraphPin* GetBuildConfigurationPin(TOptional<TArrayView<UEdGraphPin* const>> Pins = {}) const;
 	UIGS_BuildConfigurationDataAsset* GetBuildConfigurationDataAsset(TOptional<TArrayView<UEdGraphPin* const>> Pins = {}) const;
 	bool HasBuildConfiguration() const;
-	FName GetConnectionName() const;
+	TOptional<FName> GetConnectionName() const;
+	TOptional<FName> GetVariantName() const;
 
 	//UPROPERTY()
 	//bool bUseUObjectConfiguration = true;

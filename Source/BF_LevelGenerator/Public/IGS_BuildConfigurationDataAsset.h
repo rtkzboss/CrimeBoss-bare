@@ -6,6 +6,7 @@
 #include "IGS_BuildConfigurationDataAsset.generated.h"
 
 class UWorld;
+struct FIGS_CachedBuildConfiguration;
 
 UCLASS(BlueprintType)
 class BF_LEVELGENERATOR_API UIGS_BuildConfigurationDataAsset : public UDataAsset {
@@ -22,4 +23,5 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     TSoftObjectPtr<UWorld> Level;
 
+	UIGS_BuildConfigurationDataAsset& operator=(FIGS_CachedBuildConfiguration&& BC);
 };

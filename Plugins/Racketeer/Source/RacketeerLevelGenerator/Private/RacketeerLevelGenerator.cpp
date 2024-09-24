@@ -50,26 +50,27 @@ static void GatherVariants(ULevel* Level, TArray<FIGS_VariantDefinition>& Out)
 		if (!Variant.Name.IsNone()) Out.Add(MoveTemp(Variant));
 	}
 }
-static bool GenerateBuildConfiguration(ULevel* Level, UIGS_BuildConfigurationDataAsset* Out)
+static bool GenerateBuildConfiguration(ULevel* Level, FIGS_CachedBuildConfiguration& Out)
 {
 	UWorld* LevelWorld = Level->GetTypedOuter<UWorld>();
-	Out->Level = LevelWorld;
-	Out->ConnectionPoints.Empty();
-	Out->Variants.Empty();
+	Out.Level = LevelWorld;
+	Out.ConnectionPoints.Empty();
+	Out.Variants.Empty();
 
-	GatherConnectionPoints(Level, Out->ConnectionPoints);
-	GatherVariants(Level, Out->Variants);
+	GatherConnectionPoints(Level, Out.ConnectionPoints);
+	GatherVariants(Level, Out.Variants);
 
-	Out->ConnectionPoints.Sort([](FIGS_ConnectionPointData const& A, FIGS_ConnectionPointData const& B)
+	Out.ConnectionPoints.Sort([](FIGS_ConnectionPointData const& A, FIGS_ConnectionPointData const& B)
 		{
 			return A.Name.Compare(B.Name) < 0;
 		});
-	Out->Variants.Sort([](FIGS_VariantDefinition const& A, FIGS_VariantDefinition const& B)
+	Out.Variants.Sort([](FIGS_VariantDefinition const& A, FIGS_VariantDefinition const& B)
 		{
 			return A.Name.Compare(B.Name) < 0;
 		});
 
-	return Out->ConnectionPoints.Num() > 0 || Out->Variants.Num() > 0;
+	Out.Initialized = true;
+	return Out.ConnectionPoints.Num() > 0 || Out.Variants.Num() > 0;
 }
 static FString GetDerivedDataAssetPath(FString const& LongPackageName, TCHAR const* TypeName)
 {
@@ -118,15 +119,27 @@ static UIGS_BuildConfigurationDataAsset* LoadOrCreateBuildConfigurationDataAsset
 {
 	return LoadOrCreateDerivedDataAsset<UIGS_BuildConfigurationDataAsset>(Package, BuildConfigurationDataAssetTypeName);
 }
+static UIGS_BuildConfigurationDataAsset* TryLoadBuildConfigurationDataAsset(UPackage* Package)
+{
+	return TryLoadDerivedDataAsset<UIGS_BuildConfigurationDataAsset>(Package, BuildConfigurationDataAssetTypeName);
+}
 static UIGS_BuildConfigurationDataAsset* UpdateBuildConfigurationDataAsset(ULevel* Level)
 {
 	if (Level->GetWorld()->IsPlayInEditor()) return nullptr;
 	//ALevelScriptActor* LSA = Level->GetLevelScriptActor();
 	//if (!LSA || !LSA->IsA<AIGS_LevelBuilder_LevelScriptActor>()) return nullptr;
-	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Updating build configuration data asset for %s"), *GetFullNameSafe(Level));
 
-	UIGS_BuildConfigurationDataAsset* BCDA = LoadOrCreateBuildConfigurationDataAsset(Level->GetPackage());
-	GenerateBuildConfiguration(Level, BCDA);
+	FIGS_CachedBuildConfiguration BC;
+	bool bUseful = GenerateBuildConfiguration(Level, BC);
+
+	UIGS_BuildConfigurationDataAsset* BCDA = bUseful ?
+		LoadOrCreateBuildConfigurationDataAsset(Level->GetPackage()) :
+		// if it already exists, we should update it, but don't create it
+		TryLoadBuildConfigurationDataAsset(Level->GetPackage());
+	if (!BCDA) return nullptr;
+
+	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Updated build configuration data asset for %s"), *GetFullNameSafe(Level));
+	*BCDA = MoveTemp(BC);
 	BCDA->Modify(true);
 	return BCDA;
 }
@@ -266,7 +279,7 @@ void FRacketeerLevelGeneratorModule::HandleAssetsAddExtraObjectsToDelete(TArray<
 	{
 		UWorld* World = Cast<UWorld>(Objects[I]);
 		if (!World) continue;
-		UIGS_BuildConfigurationDataAsset* BCDA = TryLoadDerivedDataAsset<UIGS_BuildConfigurationDataAsset>(World->GetPackage(), BuildConfigurationDataAssetTypeName);
+		UIGS_BuildConfigurationDataAsset* BCDA = TryLoadBuildConfigurationDataAsset(World->GetPackage());
 		if (!BCDA) continue;
 		UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("Flagging %s for deletion"), *GetFullNameSafe(BCDA));
 		Objects.AddUnique(BCDA);

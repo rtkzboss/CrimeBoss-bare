@@ -5,22 +5,25 @@
 #include "IGS_CachedBuildConfiguration.generated.h"
 
 class UWorld;
+class UIGS_BuildConfigurationDataAsset;
 
 USTRUCT(BlueprintType)
 struct FIGS_CachedBuildConfiguration {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<FIGS_ConnectionPointData> ConnectionPoints;
 
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<FIGS_VariantDefinition> Variants;
 
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TSoftObjectPtr<UWorld> Level;
 
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool Initialized;
 
     BF_LEVELGENERATOR_API FIGS_CachedBuildConfiguration();
+
+	FIGS_CachedBuildConfiguration& operator=(UIGS_BuildConfigurationDataAsset* BCDA);
 };

@@ -36,6 +36,7 @@ public class RacketeerKismet : ModuleRules
 				"SlateCore",
 				"UnrealEd",
 				"KismetCompiler",
+				"GraphEditor",
 
 				"PaybackDefinitions",
 				"BF_FrameworkBase",

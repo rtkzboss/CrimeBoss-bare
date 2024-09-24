@@ -13,3 +13,9 @@ FIGS_BuildConfiguration::FIGS_BuildConfiguration() {
     (*this).CachedBuildConfiguration.Level = FSoftObjectPath();
     (*this).CachedBuildConfiguration.Initialized = false;
 }
+
+void FIGS_BuildConfiguration::SetBuildConfiguration(UIGS_BuildConfigurationDataAsset* BCDA)
+{
+	BuildConfigurationDataAsset = BCDA;
+	CachedBuildConfiguration = BCDA;
+}

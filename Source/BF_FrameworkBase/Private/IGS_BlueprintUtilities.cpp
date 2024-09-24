@@ -72,5 +72,17 @@ void UIGS_BlueprintUtilities::GetBuildConfiguration(EBuildConfigurationExecPin& 
 }
 
 void UIGS_BlueprintUtilities::Array_Shuffle_RandomStream(const TArray<int32>& TargetArray, const FRandomStream& inRandomStream) {
+	check(0);
+}
+void UIGS_BlueprintUtilities::GenericArray_Shuffle_RandomStream(void* TargetArray, const FArrayProperty* ArrayProp, const FRandomStream& RS)
+{
+	if (!TargetArray) return;
+	FScriptArrayHelper ArrayHelper(ArrayProp, TargetArray);
+	int32 LastIndex = ArrayHelper.Num() - 1;
+	for (int32 i = 0; i <= LastIndex; ++i)
+	{
+		int32 Index = RS.RandRange(i, LastIndex);
+		if (i != Index) ArrayHelper.SwapValues(i, Index);
+	}
 }
 

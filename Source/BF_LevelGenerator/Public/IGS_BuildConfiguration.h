@@ -9,23 +9,25 @@ USTRUCT(BlueprintType)
 struct BF_LEVELGENERATOR_API FIGS_BuildConfiguration {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<FString> Filters;
 
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TSoftObjectPtr<UIGS_BuildConfigurationDataAsset> BuildConfigurationDataAsset;
 
     UPROPERTY(Transient)
     UIGS_BuildConfigurationDataAsset* BuildConfigurationDataAsset_Holder;
 
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FName VariantName;
 
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FName ConnectionName;
 
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FIGS_CachedBuildConfiguration CachedBuildConfiguration;
 
     FIGS_BuildConfiguration();
+
+	void SetBuildConfiguration(UIGS_BuildConfigurationDataAsset* BCDA);
 };

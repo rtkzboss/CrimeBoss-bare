@@ -8,6 +8,7 @@
 #include "EBoolExecPin.h"
 #include "EBuildConfigurationExecPin.h"
 #include "EValidNotValidExecPin.h"
+#include "Net/Core/PushModel/PushModel.h"
 #include "IGS_BlueprintUtilities.generated.h"
 
 class APawn;
@@ -65,7 +66,29 @@ public:
     UFUNCTION(BlueprintCallable, meta=(ExpandEnumAsExecs=outBranches))
     static void GetBuildConfiguration(EBuildConfigurationExecPin& outBranches);
 
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, CustomThunk, meta=(ArrayParm=TargetArray))
     static void Array_Shuffle_RandomStream(const TArray<int32>& TargetArray, const FRandomStream& inRandomStream);
 
+public:
+	DECLARE_FUNCTION(execArray_Shuffle_RandomStream)
+	{
+		Stack.MostRecentProperty = nullptr;
+		Stack.StepCompiledIn<FArrayProperty>(NULL);
+		void* ArrayAddr = Stack.MostRecentPropertyAddress;
+		FArrayProperty* ArrayProperty = CastField<FArrayProperty>(Stack.MostRecentProperty);
+		if (!ArrayProperty)
+		{
+			Stack.bArrayContextFailed = true;
+			return;
+		}
+		P_GET_STRUCT_REF(FRandomStream, RandomStream);
+
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		MARK_PROPERTY_DIRTY(Stack.Object, ArrayProperty);
+		GenericArray_Shuffle_RandomStream(ArrayAddr, ArrayProperty, RandomStream);
+		P_NATIVE_END;
+	}
+private:
+	static void GenericArray_Shuffle_RandomStream(void* TargetArray, const FArrayProperty* ArrayProp, const FRandomStream& RS);
 };
