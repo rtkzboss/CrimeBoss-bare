@@ -156,6 +156,7 @@ void UK2Node_RICOLoadLevel::ReallocatePinsDuringReconstruction(TArray<UEdGraphPi
 		CreatePinsForBuildConfiguration(BuildConfiguration);
 	}
 	RestoreSplitPins(OldPins);
+	UpdateConnectionPinVisibility();
 }
 void UK2Node_RICOLoadLevel::PostPlacedNewNode()
 {
@@ -175,9 +176,26 @@ void UK2Node_RICOLoadLevel::PinConnectionListChanged(UEdGraphPin* Pin)
 }
 void UK2Node_RICOLoadLevel::PinDefaultValueChanged(UEdGraphPin* Pin)
 {
-	if (Pin && Pin->PinName == BuildConfigurationPinName)
+	if (!Pin) return;
+	if (Pin->PinName == BuildConfigurationPinName)
 	{
 		OnBuildConfigurationPinChanged();
+	}
+	if (Pin->PinName == ConnectionNamePinName)
+	{
+		UpdateConnectionPinVisibility();
+	}
+}
+void UK2Node_RICOLoadLevel::UpdateConnectionPinVisibility()
+{
+	FName ConnectionName = GetConnectionName().Get(NAME_None);
+	for (UEdGraphPin* Pin : Pins)
+	{
+		if (Pin->ParentPin) continue;
+		if (IsFreeConnectionPointPin(Pin))
+		{
+			Pin->SafeSetHidden(ConnectionName == Pin->PinName);
+		}
 	}
 }
 void UK2Node_RICOLoadLevel::OnBuildConfigurationPinChanged()
@@ -210,6 +228,7 @@ void UK2Node_RICOLoadLevel::OnBuildConfigurationPinChanged()
 	}
 	RestoreSplitPins(OldPins);
 	RewireOldPinsToNewPins(OldConnectionPointPins, Pins, nullptr);
+	UpdateConnectionPinVisibility();
 
 	GetGraph()->NotifyGraphChanged();
 	FBlueprintEditorUtils::MarkBlueprintAsModified(GetBlueprint());
@@ -270,11 +289,15 @@ void UK2Node_RICOLoadLevel::ExpandNode(FKismetCompilerContext& CompilerContext, 
 	bSuccess &= MovePinLinks(CompilerContext, GetThenPin(), CallNode->GetThenPin());
 
 	UEdGraphPin* outFCPPin = CallNode->FindPin(TEXT("outFreeConnectionPoints"));
+	int32 UsedIndex = BCDA && ConnectionName.IsSet() ? BCDA->ConnectionPoints.IndexOfByKey(ConnectionName.GetValue()) : INDEX_NONE;
 	for (UEdGraphPin* Pin : Pins)
 	{
 		if (!IsFreeConnectionPointPin(Pin)) continue;
 		int32 Index = BCDA->ConnectionPoints.IndexOfByKey(Pin->GetFName());
 		if (Index == INDEX_NONE) continue; // TODO: diagnostic?
+		if (UsedIndex != INDEX_NONE && Index > UsedIndex) --Index;
+
+		if (!BCDA || !ConnectionName.IsSet()) checkf(0, TEXT("unimplemented"));
 
 		UK2Node_GetArrayItem* GetNode = CompilerContext.SpawnIntermediateNode<UK2Node_GetArrayItem>(this, SourceGraph);
 		GetNode->AllocateDefaultPins();

@@ -53,4 +53,5 @@ public:
 protected:
 	bool UseWorldContext() const;
 	void OnBuildConfigurationPinChanged();
+	void UpdateConnectionPinVisibility();
 };

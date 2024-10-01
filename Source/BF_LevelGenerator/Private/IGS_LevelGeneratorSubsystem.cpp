@@ -49,9 +49,10 @@ bool UIGS_LevelGeneratorSubsystem::LoadLevelAccordingToConfiguration(UIGS_Random
 	// TODO: game does rounding approximately everywhere in the transform process, we may need to round CPs and the level transform as well
 	FConnectionPointTransform Transform = FConnectionPointTransform::Between(*SrcConnection, Connection);
 
-	OutConnectionPoints.Empty();
+	OutConnectionPoints.Empty(Configuration.ConnectionPoints.Num() - 1);
 	for (FIGS_ConnectionPointData const& CP : Configuration.ConnectionPoints)
 	{
+		if (CP == ConnectionName) continue;
 		Transform.ApplyTo(OutConnectionPoints.Add_GetRef(CP));
 	}
 
@@ -96,7 +97,7 @@ ULevel* UIGS_LevelGeneratorSubsystem::GetMainLevel() const
 static inline FVector RotateZ(FVector In, float Rotation)
 {
 	return FVector(FVector2D(In).GetRotated(Rotation), In.Z);
-};
+}
 UIGS_LevelGeneratorSubsystem::FConnectionPointTransform UIGS_LevelGeneratorSubsystem::FConnectionPointTransform::Between(FIGS_ConnectionPointData const& Src, FIGS_ConnectionPointData const& Dst)
 {
 	float DeltaYaw = Dst.Rotation - Src.Rotation;

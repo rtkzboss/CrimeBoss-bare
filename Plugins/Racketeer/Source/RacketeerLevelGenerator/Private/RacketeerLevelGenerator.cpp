@@ -193,6 +193,7 @@ void FRacketeerLevelGeneratorModule::ShutdownModule()
 
 void FRacketeerLevelGeneratorModule::HandlePostSaveWorld(uint32 SaveFlags, UWorld* World, bool bSuccess)
 {
+	if (SaveFlags & SAVE_KeepGUID) return; // i.e. cooking
 	UE_LOG(LogRICOLevelGenerator, Verbose, TEXT("World saved %s %u"), *GetFullNameSafe(World), SaveFlags);
 	UIGS_BuildConfigurationDataAsset* BCDA = UpdateBuildConfigurationDataAsset(World->PersistentLevel);
 	if (!BCDA) return;
