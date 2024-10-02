@@ -10,6 +10,7 @@ FMETA_EventManagerSaveData::FMETA_EventManagerSaveData() {
     (*this).SavedLoopBranchNodes = TMap<FMETA_GraphNodeSave, FMETA_LoopBranchNodeSaveData>{};
     (*this).FinishedGraphsResults = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>{};
     (*this).PreparedPlotlines = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>{};
+    (*this).ExecutingPlotlines = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>{};
     (*this).SavedEconomyGraphVariables = TMap<FGameplayTag, int32>{};
     (*this).SavedParentGraphs = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>{};
     (*this).bShouldCallEndDay = false;

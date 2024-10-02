@@ -37,6 +37,9 @@ public:
     FString XBOX_OfferId;
 
     UPROPERTY(EditAnywhere)
+    FGameplayTag OnlineFact;
+
+    UPROPERTY(EditAnywhere)
     bool IsDLC;
 
     COMMON_UTILS_API FIGS_EntitlementDatabaseRow();

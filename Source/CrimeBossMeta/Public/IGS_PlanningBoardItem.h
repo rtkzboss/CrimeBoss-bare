@@ -38,7 +38,7 @@ public:
     UStaticMeshComponent* StaticMeshComponent;
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FMETA_PlanningBoardItemRow itemData;
+    FMETA_PlanningBoardItemRow ItemData;
 
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     EMETA_PlanningBoardItemStatus Status;

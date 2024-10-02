@@ -145,8 +145,8 @@ EIGS_MPLobbyType AIGS_GameStateBaseWithData::GetMPLobbyType() const {
     return EIGS_MPLobbyType::Normal;
 }
 
-EIGS_HubScenarioType AIGS_GameStateBaseWithData::GetMissionType() const {
-    return EIGS_HubScenarioType::Empty;
+EIGS_MissionType AIGS_GameStateBaseWithData::GetMissionType() const {
+    return EIGS_MissionType::MT_Default;
 }
 
 FGameplayTag AIGS_GameStateBaseWithData::GetMissionTag() const {
@@ -191,6 +191,10 @@ int32 AIGS_GameStateBaseWithData::GetIntelLevel() const {
 
 EIGS_HubBackdropTypes AIGS_GameStateBaseWithData::GetHubVariant() const {
     return EIGS_HubBackdropTypes::AllRandom;
+}
+
+EIGS_HubScenarioType AIGS_GameStateBaseWithData::GetHubScenarioType() const {
+    return EIGS_HubScenarioType::Empty;
 }
 
 EIGS_HubDistrict AIGS_GameStateBaseWithData::GetHubDistrict() const {

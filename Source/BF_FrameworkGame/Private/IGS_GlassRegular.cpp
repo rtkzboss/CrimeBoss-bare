@@ -35,7 +35,7 @@ UIGS_GlassRegular::UIGS_GlassRegular(const FObjectInitializer& ObjectInitializer
     auto gen4 = TBaseStructure<FBodyInstance>::Get()->FindPropertyByName("CollisionProfileName");
     (*gen4->ContainerPtrToValuePtr<FName>(&(*this).BodyInstance, 0)) = TEXT("BreakableGlassPhysicsOnly");
     (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
-    (*this).PrimaryComponentTick.TickInterval = 1.999999955e-02f;
+    (*this).PrimaryComponentTick.TickInterval = 3.299999982e-02f;
     (*this).SetIsReplicatedByDefault(true);
     (*this).bAutoActivate = false;
 }

@@ -37,6 +37,9 @@ void UMETA_EventManagerComponent::RemoveNodeFromCurrentNodes(FMETA_GraphStruct& 
 void UMETA_EventManagerComponent::RemoveHeisterFromEvent_Implementation(FGameplayTag inEventTag, FMETA_CharacterID inHeisterID, EMETA_CharacterState inNewState, bool& outSuccess) {
 }
 
+void UMETA_EventManagerComponent::RemoveHeisterFromAllEvents(const FMETA_CharacterID& inCharacterID, const EMETA_CharacterState inNewState, bool& outSuccess) {
+}
+
 void UMETA_EventManagerComponent::RemoveAllHeistersFromEvent_Implementation(FGameplayTag inEventTag, EMETA_CharacterState inNewState, bool& outSuccess) {
 }
 
@@ -83,8 +86,16 @@ TSoftObjectPtr<UStoryGraphManager> UMETA_EventManagerComponent::GetGoalGraphByGr
     return {};
 }
 
+bool UMETA_EventManagerComponent::GetFinishedGraphResult(const TSoftObjectPtr<UStoryGraphManager>& inGraph, EMETA_GoalStatus& outResult) const {
+    return false;
+}
+
 EMETA_EventTime UMETA_EventManagerComponent::GetEventTime_Implementation() {
     return EMETA_EventTime::DayStart;
+}
+
+bool UMETA_EventManagerComponent::GetEventsOfCharacter(const FMETA_CharacterID& inCharacterID, FGameplayTagContainer& outEventIDs) {
+    return false;
 }
 
 int32 UMETA_EventManagerComponent::GetCurrentDay_Implementation() {

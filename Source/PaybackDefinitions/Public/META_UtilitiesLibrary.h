@@ -35,6 +35,9 @@ public:
     UFUNCTION(BlueprintPure)
     static float RandomFloatInRange(const FMETA_FloatInterval InRange);
 
+    UFUNCTION(BlueprintCallable)
+    static bool IsWeaponSlot(const EIGS_InventorySlot inSlot);
+
     UFUNCTION(BlueprintPure)
     static bool IsUniqueCharacter(EIGS_CharacterID ID);
 
@@ -70,6 +73,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static bool GetLootLevel(FGameplayTag inLootTag, int32& Level, FGameplayTag& outMainLootTag);
+
+    UFUNCTION(BlueprintPure)
+    static FString GetDebugTagContainerString(const FGameplayTagContainer& inContainer);
 
     UFUNCTION(BlueprintCallable)
     static TArray<FGameplayTag> GetAllLootItemsAvailableOnMeta();
@@ -114,7 +120,7 @@ public:
     static TArray<FGameplayTag> CalculateParentLootTagsForArray(TArray<FGameplayTag> inGameplayTagArray);
 
     UFUNCTION(BlueprintCallable)
-    static int32 CalculateIndexForArrayOfChances(TArray<int32> inChances);
+    static int32 CalculateIndexForArrayOfChances(const TArray<int32>& inChances);
 
     UFUNCTION(BlueprintPure)
     static bool AreGraphCharactersIDsEqual(const FMETA_CharacterID& First, const FMETA_CharacterID& Second);

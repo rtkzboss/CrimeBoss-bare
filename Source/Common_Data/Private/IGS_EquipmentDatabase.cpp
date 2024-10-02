@@ -19,7 +19,7 @@ TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> UIGS_EquipmentDatabase::GetEq
     return {};
 }
 
-FIGS_EquipmentTableRow UIGS_EquipmentDatabase::GetDataEquipmentByTagID(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded) {
+FIGS_EquipmentTableRow UIGS_EquipmentDatabase::GetDataEquipmentByTagID(const UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded) {
     return FIGS_EquipmentTableRow{};
 }
 

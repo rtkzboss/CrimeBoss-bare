@@ -30,6 +30,10 @@ FGameplayTag UMETA_BossCharacter::GetEquippedPrimaryWeaponID() const {
     return FGameplayTag();
 }
 
+FGameplayTag UMETA_BossCharacter::GetEquippedMeleeWeaponID() const {
+    return FGameplayTag();
+}
+
 FGameplayTag UMETA_BossCharacter::GetCharacterSkinTag() const {
     return FGameplayTag();
 }

@@ -124,6 +124,9 @@ public:
     TArray<AIGS_GameCharacterFramework*> GetDetectingPlayers() const;
 
     UFUNCTION(BlueprintPure)
+    FVector GetClosestNavmeshLocation() const;
+
+    UFUNCTION(BlueprintPure)
     AIGS_GameCharacterFramework* GetCharacterOwner() const;
 
     UPROPERTY(BlueprintAssignable)
@@ -321,6 +324,9 @@ protected:
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     FVector m_LastNavmeshLocation;
+
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FVector m_ClosestNavmeshLocation;
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsOnNavlink;

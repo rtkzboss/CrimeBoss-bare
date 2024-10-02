@@ -60,6 +60,11 @@ FMETA_CharacterInfo::FMETA_CharacterInfo() {
     (*this).Data.Loadout.SecondaryPersonalWeapons = TArray<UMETA_Weapon*>{};
     (*this).Data.Loadout.SecondaryWeaponSkin = FGameplayTag();
     (*this).Data.Loadout.SecondaryPersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
+    (*this).Data.Loadout.MeleeWeapon = nullptr;
+    (*this).Data.Loadout.MeleeWeaponClass = nullptr;
+    (*this).Data.Loadout.MeleePersonalWeapons = TArray<UMETA_Weapon*>{};
+    (*this).Data.Loadout.MeleeWeaponSkin = FGameplayTag();
+    (*this).Data.Loadout.MeleePersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).Data.Loadout.SelectedEquipment = nullptr;
     (*this).Data.Loadout.ChainEquipments = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).Data.Loadout.ChainEquipmentsObjects = TArray<UMETA_Equipment*>{};

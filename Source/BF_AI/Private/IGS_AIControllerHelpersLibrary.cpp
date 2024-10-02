@@ -68,6 +68,10 @@ bool UIGS_AIControllerHelpersLibrary::IsLootingCarryableStillValid(AIGS_AIContro
     return false;
 }
 
+bool UIGS_AIControllerHelpersLibrary::IsLootBagStillPickableBy(AIGS_AIControllerBase* InController, const AIGS_LootBagPickup* inLootBag) {
+    return false;
+}
+
 bool UIGS_AIControllerHelpersLibrary::IsInDangerArea(AController* InController, const float InRadius, const bool inAddCapsuleRadiusIfCharacter) {
     return false;
 }
@@ -96,7 +100,7 @@ TArray<AIGS_MonsterCloset*> UIGS_AIControllerHelpersLibrary::GetMonsterClosetsIn
     return {};
 }
 
-FVector UIGS_AIControllerHelpersLibrary::GetLastPosOnNavmesh(AActor* inActor) {
+FVector UIGS_AIControllerHelpersLibrary::GetLastOrClosestPosOnNavmesh(AActor* inActor) {
     return FVector{};
 }
 
@@ -114,7 +118,7 @@ void UIGS_AIControllerHelpersLibrary::FocusToOffence(AIGS_AIControllerBase* InCo
 void UIGS_AIControllerHelpersLibrary::DeactivateHeistersDefend(const UObject* inWCO) {
 }
 
-bool UIGS_AIControllerHelpersLibrary::CanShootAtHiddenPos(AAIController* InController, AActor* inTarget, FVector& outPos) {
+bool UIGS_AIControllerHelpersLibrary::CanShootAtHiddenPos(AAIController* InController, FVector& outPos) {
     return false;
 }
 

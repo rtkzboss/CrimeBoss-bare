@@ -55,7 +55,7 @@ public:
     FGameplayTag MissionScenario;
 
     UPROPERTY(BlueprintReadWrite)
-    EIGS_HubScenarioType MissionType;
+    EIGS_HubScenarioType HubScenarioType;
 
     UPROPERTY(BlueprintReadWrite)
     EIGS_TileEnviroment TileEnvironment;
@@ -166,7 +166,7 @@ public:
     bool bDownedCharctersSurvive;
 
     UPROPERTY(BlueprintReadWrite)
-    bool bIsDebug;
+    bool bIsDEBUG;
 
     UPROPERTY(BlueprintReadWrite)
     FString DebugTile;

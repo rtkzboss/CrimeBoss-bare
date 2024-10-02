@@ -64,7 +64,7 @@ FCustomMissionData::FCustomMissionData() {
     (*this).MissionData.NeedObjectiveCompletion = false;
     (*this).MissionData.bDownedCharctersSurvive = false;
     (*this).MissionData.CiviliansAmountOverride = -1;
-    (*this).MissionData.bIsDebug = false;
+    (*this).MissionData.bIsDEBUG = false;
     (*this).MissionData.bIsFilled = false;
     (*this).CommonMissionData.ID = nullptr;
     (*this).CommonMissionData.MissionTagID = FGameplayTag();
@@ -95,6 +95,8 @@ FCustomMissionData::FCustomMissionData() {
     (*this).SelectedCharacter.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).SelectedCharacter.Loadout.SecondaryWeapon = nullptr;
     (*this).SelectedCharacter.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).SelectedCharacter.Loadout.MeleeWeapon = nullptr;
+    (*this).SelectedCharacter.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).SelectedCharacter.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).SelectedCharacter.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).SelectedCharacter.Loadout.Ability1ChargesLeft = -1;

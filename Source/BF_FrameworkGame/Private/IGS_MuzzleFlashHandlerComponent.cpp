@@ -3,6 +3,8 @@
 UIGS_MuzzleFlashHandlerComponent::UIGS_MuzzleFlashHandlerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).MuzzleFlashParticleFPV = FSoftObjectPath();
     (*this).MuzzleFlashParticle3PV = FSoftObjectPath();
+    (*this).MuzzleFlashParticleExtraFireModeFPV = FSoftObjectPath();
+    (*this).MuzzleFlashParticleExtraFireMode3PV = FSoftObjectPath();
     (*this).MuzzleFlashParticleCascadeFPV = FSoftObjectPath();
     (*this).MuzzleFlashParticleCascade3PV = FSoftObjectPath();
     (*this).BarrelSmokeParticleFPV = FSoftObjectPath();

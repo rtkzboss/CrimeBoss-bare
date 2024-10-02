@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "EIGS_CharacterID.h"
 #include "META_CharacterID.h"
 #include "META_GenericCharacterSave.h"
@@ -25,6 +26,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_RemovedCharacter> RemovedHeisters;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    FGameplayTagContainer ExcludedHeisters;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FMETA_CharacterID, float> RecoveryInfoOfHeistersInjures;

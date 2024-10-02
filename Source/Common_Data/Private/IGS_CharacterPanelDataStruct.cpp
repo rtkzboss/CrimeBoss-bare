@@ -24,6 +24,11 @@ FIGS_CharacterPanelDataStruct::FIGS_CharacterPanelDataStruct() {
     (*this).Loadout.SecondaryPersonalWeapons = TArray<UMETA_Weapon*>{};
     (*this).Loadout.SecondaryWeaponSkin = FGameplayTag();
     (*this).Loadout.SecondaryPersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
+    (*this).Loadout.MeleeWeapon = nullptr;
+    (*this).Loadout.MeleeWeaponClass = nullptr;
+    (*this).Loadout.MeleePersonalWeapons = TArray<UMETA_Weapon*>{};
+    (*this).Loadout.MeleeWeaponSkin = FGameplayTag();
+    (*this).Loadout.MeleePersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).Loadout.SelectedEquipment = nullptr;
     (*this).Loadout.ChainEquipments = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).Loadout.ChainEquipmentsObjects = TArray<UMETA_Equipment*>{};

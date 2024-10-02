@@ -10,6 +10,7 @@ FIGS_FPSDifficultySettings::FIGS_FPSDifficultySettings() {
     (*this).OffenceReactionDelayMultiplier = 1.000000000e+00f;
     (*this).UnzippedTimeToFleeMultiplier = 1.000000000e+00f;
     (*this).UnzippedTimeToFightBackMultiplier = 1.000000000e+00f;
+    (*this).EnemyMeleeFirstStrikeDelayMultiplier = 1.000000000e+00f;
     (*this).EnemyMeleeDamageMultiplier = 1.000000000e+00f;
     (*this).EnemyThrowableCooldownMultiplier = 1.000000000e+00f;
     (*this).PlayerAntiCampProtectionTime = 0.000000000e+00f;

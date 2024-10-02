@@ -12,6 +12,11 @@ FMETA_HeisterLoadout::FMETA_HeisterLoadout() {
     (*this).SecondaryPersonalWeapons = TArray<UMETA_Weapon*>{};
     (*this).SecondaryWeaponSkin = FGameplayTag();
     (*this).SecondaryPersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
+    (*this).MeleeWeapon = nullptr;
+    (*this).MeleeWeaponClass = nullptr;
+    (*this).MeleePersonalWeapons = TArray<UMETA_Weapon*>{};
+    (*this).MeleeWeaponSkin = FGameplayTag();
+    (*this).MeleePersonalWeaponsClass = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).SelectedEquipment = nullptr;
     (*this).ChainEquipments = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).ChainEquipmentsObjects = TArray<UMETA_Equipment*>{};

@@ -14,7 +14,10 @@ int32 UIGS_Quickplay_FinanceManagerComponent::CalculateUnlockItemCost(const FGam
     return 0;
 }
 
-void UIGS_Quickplay_FinanceManagerComponent::CalculateMissionRewardWithMultipliers(const FIGS_MissionResult& inMissionResult, int32& outMissionReward, float& outMultiplier) const {
+void UIGS_Quickplay_FinanceManagerComponent::CalculateMissionRewardWithMultipliers(const FIGS_MissionResult& inMissionResult, int32& outMissionReward, float& outMultiplier, TArray<FIGS_MissionResultRewardItem>& outRewardItems) const {
+}
+
+void UIGS_Quickplay_FinanceManagerComponent::CalculateBaseMissionReward(const FIGS_MissionResult& inMissionResult, int32& outMissionReward) const {
 }
 
 void UIGS_Quickplay_FinanceManagerComponent::AddBalance(int32 InValue) {

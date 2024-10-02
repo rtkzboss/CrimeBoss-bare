@@ -13,6 +13,7 @@ FIGS_PlayerBotItemsData::FIGS_PlayerBotItemsData() {
     (*this).DefaultSettings.AffterFireCooldown.Max = 2.000000000e+00f;
     (*this).DefaultSettings.AffterFireCooldownCover.Min = 1.500000000e+00f;
     (*this).DefaultSettings.AffterFireCooldownCover.Max = 3.000000000e+00f;
+    (*this).DefaultSettings.MaxFiringRange = 9.999000000e+03f;
     (*this).DefaultSettings.CoverStickiness = 5.000000000e-01f;
     (*this).DefaultSettings.ReactionIntensity = 8.000000119e-01f;
     (*this).OverridetSettings = TArray<FIGS_PlayerBotOverrideSettings>{};

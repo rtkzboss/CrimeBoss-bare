@@ -3,7 +3,9 @@
 #include "Engine/DataAsset.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_CharacterID.h"
+#include "EIGS_InventorySlot.h"
 #include "EIGS_ScenarioDifficulty.h"
+#include "EIGS_UserDifficulty.h"
 #include "EMETA_ItemQuality.h"
 #include "EMETA_RespectLvl.h"
 #include "META_FloatInterval.h"
@@ -60,15 +62,15 @@ protected:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     void UpdateEquipmentCachedData(const UObject* inWCO);
 
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    void UpdateCachedData(const UObject* inWCO);
+
 public:
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool TryToGenerateSecondaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData);
+    bool TryToGenerateWeaponTypeForCharacter(const UObject* inWCO, const EIGS_InventorySlot inType, const EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool TryToGenerateRandomEquipmentForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, FGameplayTag inEquippedEquipment, const TArray<FGameplayTag>& inUnlockedEquipment, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment);
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    bool TryToGeneratePrimaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     bool TryGetCommonPerkLimitForCharacter(UObject* inWCO, const FGameplayTag inCharacterTag, const EMETA_ItemQuality inQuality, const int32 inLevel, int32& outLimit);
@@ -97,7 +99,7 @@ public:
     TArray<TSubclassOf<UMETA_WeaponInventoryObject>> GetWeaponsByClassAndQuality(const UObject* inWCO, FGameplayTag inWeaponClass, EMETA_ItemQuality inQuality, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inAlreadySelectedWeapons, const TArray<FGameplayTag>& inUnlockedWeapons, bool inIgnoreUnlock);
 
     UFUNCTION(BlueprintPure)
-    int32 GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality) const;
+    int32 GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality, const float inRelativePrice) const;
 
     UFUNCTION(BlueprintPure)
     void GetWeaponEconomyDataByQuality(EMETA_ItemQuality inWeaponQuality, FMETA_WeaponEconomyData& outEconomyData, bool& bSuccess) const;
@@ -117,14 +119,17 @@ public:
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     int32 GetStartingLevelOfCharacter(UObject* inWCO, const FGameplayTag inCharacter, const EMETA_ItemQuality inQuality);
 
-    UFUNCTION(BlueprintPure)
-    float GetRewardMultiplierForDifficulty(EIGS_ScenarioDifficulty inDifficulty) const;
-
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    void GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, int32& outUpkeepCost, int32& outHireCost);
+    void GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, EMETA_ItemQuality inCharacterQuality, int32& outBaseUpkeepCost, int32& outBaseHireCost);
 
     UFUNCTION(BlueprintPure)
     FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios GetMoneyMakingScenariosAdditionalWealthAndProbabilitiesData(EMETA_RespectLvl RespectLevel, FGameplayTag inFGameplayTag) const;
+
+    UFUNCTION(BlueprintPure)
+    float GetMissionRewardMultiplierForScenarioDifficulty(EIGS_ScenarioDifficulty inDifficulty) const;
+
+    UFUNCTION(BlueprintPure)
+    float GetMissionRewardMultiplierForCampaignDifficulty(EIGS_UserDifficulty inDifficulty) const;
 
     UFUNCTION(BlueprintPure)
     float GetMissionObjectiveMonetaryValue(EMETA_RespectLvl inRespectLvl) const;
@@ -242,7 +247,10 @@ protected:
     int32 DefaultMoneyMakingScenariosProbabilities;
 
     UPROPERTY(EditDefaultsOnly)
-    TMap<EIGS_ScenarioDifficulty, float> RewardMultipliersForDifficulties;
+    TMap<EIGS_ScenarioDifficulty, float> MissionRewardsMultiplierPerScenarioDifficulty;
+
+    UPROPERTY(EditDefaultsOnly)
+    TMap<EIGS_UserDifficulty, float> MissionRewardsMultiplierPerCampaignDifficulty;
 
     UPROPERTY(EditDefaultsOnly)
     float StoryMissionRewardMultiplier;
@@ -293,16 +301,10 @@ protected:
     int32 WeaponMarketCooldownInDays;
 
     UPROPERTY(EditDefaultsOnly)
-    float WeaponsPoolRefreshStartPriceMultiplier;
-
-    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_AllowedWeaponsInfo> AllowedWeaponsPerRespectStatus;
 
     UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_AllowedEquipmentInfo> AllowedEquipmentPerRespectStatus;
-
-    UPROPERTY(EditDefaultsOnly)
-    float WeaponsPoolRefreshCostMultiplier;
 
     UPROPERTY(EditDefaultsOnly)
     float NumberOfHPSegmentsForAutomaticRecovery;

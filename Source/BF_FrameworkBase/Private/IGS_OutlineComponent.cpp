@@ -3,7 +3,6 @@
 
 UIGS_OutlineComponent::UIGS_OutlineComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     (*this).bUseRootForOutline = true;
-    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_OutlineComponent::SetOutlineCategoryState(EIGS_CameraOutlineState inCategory, bool inEnabled) {

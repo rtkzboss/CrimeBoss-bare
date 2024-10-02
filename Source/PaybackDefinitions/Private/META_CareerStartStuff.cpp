@@ -3,7 +3,6 @@
 FMETA_CareerStartStuff::FMETA_CareerStartStuff() {
     (*this).StartDay = 1;
     (*this).Cash = 0;
-    (*this).RespectLvl = EMETA_RespectLvl::Low;
     (*this).Weapons = TArray<FMETA_StartupWeaponDefinition>{};
     (*this).Heisters = TArray<EIGS_CharacterID>{};
     (*this).PartnersCash = TMap<EMETA_Partner, int32>{};

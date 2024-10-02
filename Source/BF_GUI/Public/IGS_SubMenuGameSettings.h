@@ -43,6 +43,9 @@ public:
     UIGS_WidgetFocusableSpinBox* UseAltDollarDragonSpinBox;
 
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
+    UIGS_WidgetFocusableSpinBox* UseCampaignWeaponSkinsSpinBox;
+
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* HalloweenModeSpinBox;
 
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))

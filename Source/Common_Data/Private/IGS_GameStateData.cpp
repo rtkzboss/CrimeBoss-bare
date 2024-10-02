@@ -15,7 +15,7 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).LobbyVisibility = EMETA_LobbyVisibilityType::Private;
     (*this).MissionTag = FGameplayTag();
     (*this).MissionScenario = FGameplayTag();
-    (*this).MissionType = EIGS_HubScenarioType::Empty;
+    (*this).HubScenarioType = EIGS_HubScenarioType::Empty;
     (*this).TileEnvironment = EIGS_TileEnviroment::None;
     (*this).HubDistrict = EIGS_HubDistrict::Downtown;
     (*this).HubVariant = EIGS_HubBackdropTypes::AllRandom;
@@ -81,7 +81,7 @@ FIGS_GameStateData::FIGS_GameStateData() {
     (*this).bDataMarkedFinal = false;
     (*this).NeedObjectiveCompletion = false;
     (*this).bDownedCharctersSurvive = false;
-    (*this).bIsDebug = false;
+    (*this).bIsDEBUG = false;
     (*this).DebugTile = TEXT("");
     (*this).DebugPreset = TEXT("");
     (*this).CiviliansAmountOverride = -1;

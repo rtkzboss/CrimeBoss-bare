@@ -177,6 +177,9 @@ void AIGS_PlayerCharacter::Server_RequestStopCustomMontage_Implementation(FGamep
 void AIGS_PlayerCharacter::Server_RequestPlayCustomMontage_Implementation(FGameplayTag inCustomAnimType) {
 }
 
+void AIGS_PlayerCharacter::Server_RefreshUnarmedMeleeSetup_Implementation() {
+}
+
 void AIGS_PlayerCharacter::Server_ProxyEnterCameraFeed_Implementation() {
 }
 bool AIGS_PlayerCharacter::Server_ProxyEnterCameraFeed_Validate() {
@@ -244,7 +247,10 @@ void AIGS_PlayerCharacter::OwnerPossess_Implementation() {
 void AIGS_PlayerCharacter::OnPlayerStateChanged_Implementation(AIGS_PlayerStateGame* inPlayerState) {
 }
 
-void AIGS_PlayerCharacter::OnEnemyKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult) {
+void AIGS_PlayerCharacter::OnPerkPickedUpRPC_Implementation(UClass* inClass) {
+}
+
+void AIGS_PlayerCharacter::OnEnemyKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult) const {
 }
 
 void AIGS_PlayerCharacter::NotifyDeathCameraSkippable() {
@@ -469,6 +475,9 @@ bool AIGS_PlayerCharacter::CanMoveOnLadder() const {
 }
 
 void AIGS_PlayerCharacter::CancelAndRemoveAbility1() {
+}
+
+void AIGS_PlayerCharacter::CallOnChangeShowPredictionWithTransform(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass, AIGS_WeaponBase* inWeapon) {
 }
 
 void AIGS_PlayerCharacter::CallOnChangeShowPrediction(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass) {

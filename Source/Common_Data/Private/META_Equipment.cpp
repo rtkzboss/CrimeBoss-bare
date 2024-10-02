@@ -21,7 +21,10 @@ bool UMETA_Equipment::SetInfo(UObject* inWCO, const TSubclassOf<UIGS_EquipmentIn
 void UMETA_Equipment::SetCharacter(UMETA_Character* Character) {
 }
 
-void UMETA_Equipment::SetAdditionalPercentageOfEquipmentPrice(int32 inAdditionalPercentageOfPrice) {
+void UMETA_Equipment::SetAdditionalPercentageOfEquipmentPrice(const int32 inAdditionalPercentageOfPrice) {
+}
+
+void UMETA_Equipment::IncreaseAdditionalPercentageOfEquipmentPrice(const int32 inPercentage) {
 }
 
 FMETA_EquipmentSaveData UMETA_Equipment::GetSaveData() const {
@@ -49,6 +52,10 @@ UMETA_Character* UMETA_Equipment::GetCharacter() const {
 }
 
 int32 UMETA_Equipment::GetBasePrice() const {
+    return 0;
+}
+
+int32 UMETA_Equipment::GetAdditionalPercentageOfEquipmentPrice() const {
     return 0;
 }
 

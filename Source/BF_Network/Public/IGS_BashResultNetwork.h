@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "IGS_NetProjectileHitResult.h"
 #include "GameFramework/DamageType.h"
 #include "IGS_ImpactTypeObject.h"
-#include "IGS_NetProjectileHitResult.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_BashResultNetwork.generated.h"
 

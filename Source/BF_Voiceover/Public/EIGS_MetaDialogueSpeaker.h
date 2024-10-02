@@ -61,6 +61,7 @@ enum class EIGS_MetaDialogueSpeaker : uint8 {
     Clutch,
     Volk,
     MotherTheresa,
+    WinterPlanner,
     GenericVendor = 199,
     VendorLarry,
     VendorIce,

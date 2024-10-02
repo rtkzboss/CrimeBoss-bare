@@ -18,11 +18,11 @@ TArray<AIGS_RoomBase*> UIGS_RoomPointManager::GetRoomsWithGameplayTag(FGameplayT
     return {};
 }
 
-ARoomNavmesh* UIGS_RoomPointManager::GetRoomNavData() {
+ARoomNavmesh* UIGS_RoomPointManager::GetRoomNavData() const {
     return nullptr;
 }
 
-AIGS_HumanNavMesh* UIGS_RoomPointManager::GetHumanNavData() {
+AIGS_HumanNavMesh* UIGS_RoomPointManager::GetHumanNavData() const {
     return nullptr;
 }
 

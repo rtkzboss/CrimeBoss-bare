@@ -44,6 +44,9 @@ bool UMETA_Weapon::IsMeleeWeapon() const {
 void UMETA_Weapon::IncreaseDaysInShopByOne() {
 }
 
+void UMETA_Weapon::IncreaseAdditionalPercentageOfWeaponPrice(const int32 inPercentage) {
+}
+
 FIGS_WeaponTableRow UMETA_Weapon::GetWeaponTableRow() const {
     return FIGS_WeaponTableRow{};
 }
@@ -112,6 +115,10 @@ TSubclassOf<UMETA_WeaponInventoryObject> UMETA_Weapon::GetId() const {
     return nullptr;
 }
 
+TSubclassOf<UIGS_WieldableInventoryObjectBase> UMETA_Weapon::GetFPSWeaponID() const {
+    return nullptr;
+}
+
 FText UMETA_Weapon::GetDescription() const {
     return FText::GetEmpty();
 }
@@ -120,7 +127,7 @@ int32 UMETA_Weapon::GetDaysInShop() const {
     return 0;
 }
 
-FGameplayTagContainer UMETA_Weapon::GetCompatibleWeaponSkins(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs) {
+FGameplayTagContainer UMETA_Weapon::GetCompatibleWeaponSkins(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs) const {
     return FGameplayTagContainer();
 }
 

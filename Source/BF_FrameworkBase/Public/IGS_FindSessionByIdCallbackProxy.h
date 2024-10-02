@@ -22,8 +22,4 @@ public:
     UPROPERTY(BlueprintAssignable)
     FBlueprintFindSessionsResultDelegate OnFailure;
 
-private:
-    UPROPERTY()
-    UObject* WorldContextObject;
-
 };

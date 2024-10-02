@@ -13,7 +13,6 @@ class AIGS_IntelligentGameCharacter;
 class AIGS_PlayerCharacter;
 class AIGS_WeaponBase;
 class UIGS_AutomaticShooter;
-class UIGS_PlayerAnimInstance;
 class UIGS_ReloaderBase;
 class UIGS_ShooterBase;
 class UIGS_SimpleReloader;
@@ -105,8 +104,5 @@ protected:
 
     UPROPERTY()
     FIGS_AimAnimationInfo m_AimAnimationInfo;
-
-    UPROPERTY(Transient)
-    UIGS_PlayerAnimInstance* m_PlayerAnimInstance;
 
 };

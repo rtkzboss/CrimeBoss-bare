@@ -3,6 +3,9 @@
 UIGS_Quickplay_StashManagerComponent::UIGS_Quickplay_StashManagerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 
+void UIGS_Quickplay_StashManagerComponent::SortSavedWeaponsIntoPools(const TArray<UMETA_Weapon*> inWeapons) {
+}
+
 void UIGS_Quickplay_StashManagerComponent::SetWeaponSkin(UMETA_Weapon* inWeapon, FGameplayTag inSkinTag) {
 }
 
@@ -20,7 +23,11 @@ bool UIGS_Quickplay_StashManagerComponent::IsItemOwned(FGameplayTag inItemTag) c
     return false;
 }
 
-TArray<UMETA_WeaponSkin*> UIGS_Quickplay_StashManagerComponent::GetWeaponSkinsForWeapon(FGameplayTag inItemTag) const {
+bool UIGS_Quickplay_StashManagerComponent::IsBaseWeaponDLC(FGameplayTag inItemTag) const {
+    return false;
+}
+
+TArray<UMETA_WeaponSkin*> UIGS_Quickplay_StashManagerComponent::GetWeaponSkinsForWeapon(const UMETA_Weapon* inWeapon, FGameplayTag inItemTag) const {
     return {};
 }
 
@@ -54,6 +61,10 @@ TArray<UMETA_Perk*> UIGS_Quickplay_StashManagerComponent::GetPerks() const {
 
 UMETA_Perk* UIGS_Quickplay_StashManagerComponent::GetPerkByTag(FGameplayTag inItemTag) const {
     return nullptr;
+}
+
+TArray<UMETA_Weapon*> UIGS_Quickplay_StashManagerComponent::GetMeleeWeapons() const {
+    return {};
 }
 
 UMETA_BaseObject* UIGS_Quickplay_StashManagerComponent::GetItemByTag(FGameplayTag inItemTag) const {

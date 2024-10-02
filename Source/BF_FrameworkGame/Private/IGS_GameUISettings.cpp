@@ -5,6 +5,7 @@ UIGS_GameUISettings::UIGS_GameUISettings() {
     (*this).LeftThumbstickMenuThreshold = 5.000000000e-01f;
     (*this).UITileQualityColors = TMap<EMETA_ItemQuality, FIGS_UITileQualityColors>{};
     (*this).ChatWheelDataTable = FSoftObjectPath(TEXT("/Game/00_Main/UI/HUD/DT_ChatWheelDefinitions.DT_ChatWheelDefinitions"), TEXT(""));
+    (*this).DebriefRewardsDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Maps/Menu/DT_DebriefRewardData.DT_DebriefRewardData"), TEXT(""));
     (*this).ChatWheelActionLimit = 3;
     (*this).ChatWheelActionLimitTime = 5.000000000e+00f;
     (*this).ChatWheelCooldownTime = 5.000000000e+00f;

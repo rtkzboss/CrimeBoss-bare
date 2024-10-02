@@ -35,11 +35,19 @@ float UIGS_SettingsHelpersLibrary::GetReactionCooldown(AIGS_AIControllerGame* Co
     return 0.000000000e+00f;
 }
 
+float UIGS_SettingsHelpersLibrary::GetMeleeFirstStrikeDelay(const AIGS_AIControllerBase* InController) {
+    return 0.000000000e+00f;
+}
+
 float UIGS_SettingsHelpersLibrary::GetMaxHealthForReaction(AIGS_AIControllerGame* Controller) {
     return 0.000000000e+00f;
 }
 
 float UIGS_SettingsHelpersLibrary::GetMaxHealthForCover(AIGS_AIControllerGame* Controller) {
+    return 0.000000000e+00f;
+}
+
+float UIGS_SettingsHelpersLibrary::GetMaxFiringRange(AIGS_AIControllerGame* InController) {
     return 0.000000000e+00f;
 }
 

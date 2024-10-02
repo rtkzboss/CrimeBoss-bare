@@ -144,6 +144,9 @@ public:
     EMETA_ItemQuality GetQualityTier() const;
 
     UFUNCTION(BlueprintPure)
+    FGameplayTagContainer GetPerkTags() const;
+
+    UFUNCTION(BlueprintPure)
     TArray<FMETA_PerkData> GetPerks() const;
 
     UFUNCTION(BlueprintPure)

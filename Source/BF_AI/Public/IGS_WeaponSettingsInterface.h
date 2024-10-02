@@ -18,6 +18,9 @@ public:
     int32 GetSprayFireShotsCount();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    float GetMaxFiringRange();
+
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetFireShotsCount();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

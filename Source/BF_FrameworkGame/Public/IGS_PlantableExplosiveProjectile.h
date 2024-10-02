@@ -23,6 +23,9 @@ protected:
     UFUNCTION()
     void OnRep_PlantData();
 
+    UFUNCTION()
+    void OnPhysicsSettingsChanged(UPrimitiveComponent* inChangedComponent);
+
 public:
     UFUNCTION(BlueprintCallable)
     void Detonate();

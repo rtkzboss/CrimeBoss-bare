@@ -6,6 +6,8 @@ UIGS_InteractiveFollowComponent::UIGS_InteractiveFollowComponent(const FObjectIn
     (*this).TimerHoldTimeStop = 3.000000119e-01f;
     (*this).followDistance = 1.000000000e+02f;
     (*this).CanBeUseInAlarm = true;
+    (*this).bIsEnabled = false;
+    (*this).SetIsReplicatedByDefault(false);
 }
 
 void UIGS_InteractiveFollowComponent::OnRep_IsFollowing() {

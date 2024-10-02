@@ -8,4 +8,5 @@ enum class EIGS_QPModeSource : uint8 {
     Lobby = 0,
     UrbanLegends,
     Shuffle,
+    HordeMode,
 };

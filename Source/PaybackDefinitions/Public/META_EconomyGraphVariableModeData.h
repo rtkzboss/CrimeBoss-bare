@@ -16,5 +16,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Multiplier;
 
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool bShouldScaleWithDifficulty;
+
     FMETA_EconomyGraphVariableModeData();
 };

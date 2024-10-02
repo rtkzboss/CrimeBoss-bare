@@ -16,8 +16,6 @@ AIGS_AIEnemyGroupSpawner::AIGS_AIEnemyGroupSpawner(const FObjectInitializer& Obj
     (*this).CoolDownTime = 4.000000000e+00f;
     static ConstructorHelpers::FObjectFinder<UIGS_AISpawnerData> gen2(TEXT("/Game/00_Main/Core/AI/Spawning/DA_AISpawnerData.DA_AISpawnerData"));
     (*this).AISpawnerData = gen2.Object;
-    (*this).PrimaryActorTick.bCanEverTick = true;
-    (*this).PrimaryActorTick.bStartWithTickEnabled = false;
     (*this).RootComponent = gen;
 }
 

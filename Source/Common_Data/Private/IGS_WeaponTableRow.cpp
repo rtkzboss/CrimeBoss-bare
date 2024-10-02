@@ -3,6 +3,7 @@
 #include "EMETA_ItemQuality.h"
 #include "EIGS_ItemType.h"
 #include "EIGS_MeleeAttackType.h"
+#include "EIGS_MeleeTraceType.h"
 #include "EIGS_WeaponAttackType.h"
 #include "EIGS_WieldableClass.h"
 #include "IGS_GameplayAbilityGrantDataHolder.h"
@@ -45,11 +46,15 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).Ammo.ReserveCapacity = 300;
     (*this).Ammo.AmmoCostPerShot = 1;
     (*this).Bash.AttackType = EIGS_MeleeAttackType::MAT_Bash;
+    (*this).Bash.TraceType = EIGS_MeleeTraceType::MTT_Sphere;
     (*this).Bash.DamageType = nullptr;
     (*this).Bash.ImpactType = nullptr;
     (*this).Bash.BaseDamage = 5.000000000e+01f;
+    (*this).Bash.MaxTargets = 1;
     (*this).Bash.MaxRange = 1.000000000e+02f;
     (*this).Bash.TraceRadius = 3.000000000e+01f;
+    (*this).Bash.SwingMainTraceRadius = 3.000000000e+01f;
+    (*this).Bash.SwingTraceAngle = 9.000000000e+01f;
     (*this).Animations.NoCombatEmptyReloadTime = 1.000000000e+00f;
     (*this).Animations.EmptyReloadTime = 1.000000000e+00f;
     (*this).Animations.NoCombatReloadTime = 1.000000000e+00f;
@@ -72,6 +77,9 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).AdaptiveTriggers.VibrationMode.Position = 0;
     (*this).AdaptiveTriggers.VibrationMode.Frequency = 0;
     (*this).AdaptiveTriggers.VibrationMode.Amplitude = 0;
+    (*this).PenetrationDefinition.Penetrates = false;
+    (*this).PenetrationDefinition.DamageMultArray = TArray<float>{8.000000119e-01f, 5.000000000e-01f, 2.000000030e-01f};
+    (*this).PenetrationDefinition.MaxPenetrationRange = 9.999000000e+03f;
     (*this).WieldableData.WieldableClass = FSoftObjectPath();
     (*this).WieldableData.WieldableTortillaBaseFOV = 4.500000000e+01f;
     (*this).WieldableData.WieldableTortillaAimFOV = 4.500000000e+01f;
@@ -121,11 +129,15 @@ FIGS_WeaponTableRow::FIGS_WeaponTableRow() {
     (*this).AIData.bOverridePrimaryShooter = false;
     (*this).AIData.PrimaryShooterOverride = EIGS_WeaponAttackType::AT_SemiAuto;
     (*this).AIData.AIBash.AttackType = EIGS_MeleeAttackType::MAT_Bash;
+    (*this).AIData.AIBash.TraceType = EIGS_MeleeTraceType::MTT_Sphere;
     (*this).AIData.AIBash.DamageType = nullptr;
     (*this).AIData.AIBash.ImpactType = nullptr;
     (*this).AIData.AIBash.BaseDamage = 5.000000000e+01f;
+    (*this).AIData.AIBash.MaxTargets = 1;
     (*this).AIData.AIBash.MaxRange = 1.000000000e+02f;
     (*this).AIData.AIBash.TraceRadius = 3.000000000e+01f;
+    (*this).AIData.AIBash.SwingMainTraceRadius = 3.000000000e+01f;
+    (*this).AIData.AIBash.SwingTraceAngle = 9.000000000e+01f;
     (*this).ExtraFireModeData.Attack.ProjectileClass = nullptr;
     (*this).ExtraFireModeData.Attack.BaseDamage = 1.000000000e+02f;
     (*this).ExtraFireModeData.Attack.EffectiveRange = 3.000000000e+04f;

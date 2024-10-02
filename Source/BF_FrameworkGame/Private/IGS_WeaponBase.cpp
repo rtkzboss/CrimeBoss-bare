@@ -1,7 +1,6 @@
 #include "IGS_WeaponBase.h"
 #include "SkeletalMeshComponentBudgeted.h"
 #include "Components/ArrowComponent.h"
-#include "Engine/EngineBaseTypes.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/PointLightComponent.h"
 #include "Components/SceneComponent.h"
@@ -16,6 +15,7 @@
 #include "IGS_WeaponRecoilComponent.h"
 #include "IGS_WeaponSkinHandler.h"
 #include "IGS_WeaponVisibilityHandler.h"
+#include "Templates/SubclassOf.h"
 
 AIGS_WeaponBase::AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     auto gen = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SightModMesh"));
@@ -75,7 +75,6 @@ AIGS_WeaponBase::AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer) : 
     (*this).PrimaryShooter = EIGS_WeaponAttackType::AT_UNKNOWN;
     (*this).Basher = gen26;
     (*this).VirtualSightSocketName = TEXT("VirtualSight");
-    (*this).PrimaryActorTick.TickGroup = TG_DuringPhysics;
     auto gen27 = Cast<USkeletalMeshComponentBudgeted>(GetDefaultSubobjectByName(TEXT("WieldableMesh")));
     if (gen) gen->SetupAttachment(gen27);
     if (gen2) gen2->SetupAttachment(gen27);
@@ -97,6 +96,9 @@ AIGS_WeaponBase::AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer) : 
     if (gen19) gen19->SetupAttachment(gen27);
 }
 
+void AIGS_WeaponBase::StopListeningToTrajectoryChanged() {
+}
+
 void AIGS_WeaponBase::StopAttack() {
 }
 
@@ -109,10 +111,17 @@ void AIGS_WeaponBase::SetVisibilityMod(bool inVisible) const {
 void AIGS_WeaponBase::SetNextShooter() {
 }
 
+void AIGS_WeaponBase::OnTrajectoryPredictionChanged(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass) {
+}
+
 void AIGS_WeaponBase::OnMagazineAmmoChanged_Implementation(int32 inAmmoInMagazine, int32 inMagazineCapacity) {
 }
 
 void AIGS_WeaponBase::OnInventoryAmmoChanged_Implementation(int32 inAmmoCount) {
+}
+
+bool AIGS_WeaponBase::IsPenetrating() {
+    return false;
 }
 
 bool AIGS_WeaponBase::IsAttacking() {

@@ -10,8 +10,11 @@
 #include "EMETA_DebriefType.h"
 #include "EMETA_FPSMissionSubtype.h"
 #include "EMETA_LobbyVisibilityType.h"
+#include "META_MissionID.h"
 #include "CommonDetectiveData.h"
+#include "IGS_AdditionalMissionData.h"
 #include "IGS_MissionRewardCalculations.h"
+#include "Templates/SubclassOf.h"
 #include "IGS_MissionResult.generated.h"
 
 USTRUCT(BlueprintType)
@@ -23,6 +26,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGuid MissionID;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    TSubclassOf<UMETA_MissionID> MissionClassID;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTag MissionTag;
@@ -53,6 +59,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 ObjectiveValue;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    TArray<FIGS_AdditionalMissionData> AdditionalMissionData;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 BonusValue;
@@ -104,6 +113,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bIsFilled;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    bool bIsDEBUG;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     EIGS_UserDifficulty UserDifficulty;

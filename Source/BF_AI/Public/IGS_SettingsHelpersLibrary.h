@@ -5,6 +5,7 @@
 #include "IGS_FollowSettings.h"
 #include "IGS_SettingsHelpersLibrary.generated.h"
 
+class AIGS_AIControllerBase;
 class AIGS_AIControllerGame;
 class AIGS_GameCharacterFramework;
 
@@ -39,10 +40,16 @@ public:
     static float GetReactionCooldown(AIGS_AIControllerGame* Controller, bool Randomize);
 
     UFUNCTION()
+    static float GetMeleeFirstStrikeDelay(const AIGS_AIControllerBase* InController);
+
+    UFUNCTION()
     static float GetMaxHealthForReaction(AIGS_AIControllerGame* Controller);
 
     UFUNCTION()
     static float GetMaxHealthForCover(AIGS_AIControllerGame* Controller);
+
+    UFUNCTION()
+    static float GetMaxFiringRange(AIGS_AIControllerGame* InController);
 
     UFUNCTION()
     static FIGS_FollowSettings GetFollowSettings(AIGS_GameCharacterFramework* Character);

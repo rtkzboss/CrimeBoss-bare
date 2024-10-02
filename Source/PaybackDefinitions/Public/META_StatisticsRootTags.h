@@ -14,6 +14,9 @@ public:
     FGameplayTag CampaignAttempts;
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    FGameplayTag CampaignPlaythroughs;
+
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag CampaignVictories;
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
@@ -29,7 +32,7 @@ public:
     FGameplayTag AverageMissionRating;
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FGameplayTag OwnedAssets;
+    FGameplayTag AcquiredAssets;
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FGameplayTag DeadCharacters;

@@ -18,6 +18,9 @@ public:
     UIGS_Quickplay_StashManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
+    void SortSavedWeaponsIntoPools(const TArray<UMETA_Weapon*> inWeapons);
+
+    UFUNCTION(BlueprintCallable)
     void SetWeaponSkin(UMETA_Weapon* inWeapon, FGameplayTag inSkinTag);
 
     UFUNCTION(BlueprintCallable)
@@ -33,7 +36,10 @@ public:
     bool IsItemOwned(FGameplayTag inItemTag) const;
 
     UFUNCTION(BlueprintPure)
-    TArray<UMETA_WeaponSkin*> GetWeaponSkinsForWeapon(FGameplayTag inItemTag) const;
+    bool IsBaseWeaponDLC(FGameplayTag inItemTag) const;
+
+    UFUNCTION(BlueprintPure)
+    TArray<UMETA_WeaponSkin*> GetWeaponSkinsForWeapon(const UMETA_Weapon* inWeapon, FGameplayTag inItemTag) const;
 
     UFUNCTION(BlueprintPure)
     TArray<UMETA_WeaponSkin*> GetWeaponSkins() const;
@@ -58,6 +64,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     UMETA_Perk* GetPerkByTag(FGameplayTag inItemTag) const;
+
+    UFUNCTION(BlueprintPure)
+    TArray<UMETA_Weapon*> GetMeleeWeapons() const;
 
     UFUNCTION(BlueprintPure)
     UMETA_BaseObject* GetItemByTag(FGameplayTag inItemTag) const;
@@ -86,6 +95,9 @@ protected:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMETA_Weapon*> SecondaryWeapons;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Weapon*> MeleeWeapons;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<UMETA_WeaponSkin*> WeaponSkins;

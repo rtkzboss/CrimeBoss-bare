@@ -20,6 +20,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetPinged(bool inPinged);
 
+    UFUNCTION(BlueprintCallable)
+    void SetActiveDefend(bool inIsActive);
+
     UFUNCTION()
     void OnRep_Pinged();
 

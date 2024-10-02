@@ -2,6 +2,8 @@
 #include "CoreMinimal.h"
 #include "IGS_WieldableBase.h"
 #include "EIGS_WeaponAttackType.h"
+#include "IGS_ThrowableInventoryObject.h"
+#include "IGS_WeaponPenetrationDefinition.h"
 #include "UObject/NoExportTypes.h"
 #include "IGS_BashInterface.h"
 #include "IGS_ModMeshInterface.h"
@@ -9,6 +11,7 @@
 #include "IGS_VirtualSightInfo.h"
 #include "IGS_WeaponAccuracyChangedSignature.h"
 #include "IGS_WeaponRecoilChangedSignature.h"
+#include "Templates/SubclassOf.h"
 #include "IGS_WeaponBase.generated.h"
 
 class APawn;
@@ -37,6 +40,11 @@ class BF_FRAMEWORKGAME_API AIGS_WeaponBase : public AIGS_WieldableBase, public I
 public:
     AIGS_WeaponBase(const FObjectInitializer& ObjectInitializer);
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    void StopListeningToTrajectoryChanged();
+
+public:
     UFUNCTION(BlueprintCallable)
     void StopAttack();
 
@@ -50,6 +58,9 @@ public:
     void SetNextShooter();
 
 protected:
+    UFUNCTION()
+    void OnTrajectoryPredictionChanged(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass);
+
     UFUNCTION(BlueprintNativeEvent)
     void OnMagazineAmmoChanged(int32 inAmmoInMagazine, int32 inMagazineCapacity);
 
@@ -57,6 +68,9 @@ protected:
     void OnInventoryAmmoChanged(int32 inAmmoCount);
 
 public:
+    UFUNCTION(BlueprintCallable)
+    bool IsPenetrating();
+
     UFUNCTION(BlueprintCallable)
     bool IsAttacking();
 
@@ -194,6 +208,9 @@ public:
 
     UPROPERTY(EditAnywhere)
     bool ShouldUseSniperScope;
+
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    FIGS_WeaponPenetrationDefinition PenetrationDefinition;
 
 protected:
     UPROPERTY(EditAnywhere)

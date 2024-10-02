@@ -27,6 +27,8 @@ public class BF_FrameworkBase : ModuleRules {
             "HeatMapsRuntime",
             "InputCore",
             "Landscape",
+            "LevelSequence",
+            "MovieScene",
             "NavigationSystem",
             "OnlineSubsystemUtils",
             "PathFollow",

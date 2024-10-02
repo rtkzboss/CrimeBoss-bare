@@ -70,6 +70,10 @@ int32 UIGS_FinanceManagerBaseComponent::GetDayBalance_Implementation() {
     return 0;
 }
 
+TArray<FMETA_Loan> UIGS_FinanceManagerBaseComponent::GetCurrentLoanOffers_Implementation() {
+    return {};
+}
+
 int32 UIGS_FinanceManagerBaseComponent::GetCurrentCooldownBetweenLoans_Implementation() {
     return 0;
 }

@@ -20,6 +20,9 @@ void UMETA_EventFunctionLibrary::ToSavePreparedPlotlines(TMap<TSoftObjectPtr<UME
 void UMETA_EventFunctionLibrary::ToSaveFinishedGraphsResults(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>& outFinishedGraphsResults, const TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus>& FinishedGraphsResults) {
 }
 
+void UMETA_EventFunctionLibrary::ToSaveExecutingPlotlines(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>& outExecutingPlotlines, const TMap<TSoftObjectPtr<UStoryGraphManager>, int32>& ExecutingPlotlines) {
+}
+
 void UMETA_EventFunctionLibrary::ToSaveCrewEventsAndTheirGraphs(TMap<FGameplayTag, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& outCrewEventsAndTheirGraphs, const TMap<FGameplayTag, TSoftObjectPtr<UStoryGraphManager>>& CrewEventsAndTheirGraphs) {
 }
 
@@ -80,6 +83,9 @@ void UMETA_EventFunctionLibrary::FromSavePreparedPlotlines(const TMap<TSoftObjec
 }
 
 void UMETA_EventFunctionLibrary::FromSaveFinishedGraphsResults(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>& FinishedGraphsResults, TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus>& outFinishedGraphsResults) {
+}
+
+void UMETA_EventFunctionLibrary::FromSaveExecutingPlotlines(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>& ExecutingPlotlines, TMap<TSoftObjectPtr<UStoryGraphManager>, int32>& outExecutingPlotlines) {
 }
 
 void UMETA_EventFunctionLibrary::FromSaveCrewEventsAndTheirGraphs(const TMap<FGameplayTag, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& CrewEventsAndTheirGraphs, TMap<FGameplayTag, TSoftObjectPtr<UStoryGraphManager>>& outCrewEventsAndTheirGraphs) {

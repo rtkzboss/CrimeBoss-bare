@@ -43,6 +43,8 @@ FIGS_PlayerJoinInfo::FIGS_PlayerJoinInfo() {
     (*this).CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).CachedHeisterData.Loadout.MeleeWeapon = nullptr;
+    (*this).CachedHeisterData.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).CachedHeisterData.Loadout.Ability1ChargesLeft = -1;

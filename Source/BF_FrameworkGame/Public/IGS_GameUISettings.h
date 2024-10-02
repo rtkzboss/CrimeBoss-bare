@@ -27,6 +27,9 @@ public:
     TSoftObjectPtr<UDataTable> ChatWheelDataTable;
 
     UPROPERTY(Config, EditAnywhere)
+    TSoftObjectPtr<UDataTable> DebriefRewardsDataTable;
+
+    UPROPERTY(Config, EditAnywhere)
     int32 ChatWheelActionLimit;
 
     UPROPERTY(Config, EditAnywhere)

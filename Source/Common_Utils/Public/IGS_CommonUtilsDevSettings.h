@@ -14,6 +14,9 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> EntitlementsDataTable;
 
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
+    TSoftObjectPtr<UDataTable> OnlineFactsDataTable;
+
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     FString FreeWeekend_URL;
 

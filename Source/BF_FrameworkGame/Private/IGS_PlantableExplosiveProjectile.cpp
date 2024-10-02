@@ -16,6 +16,9 @@ AIGS_PlantableExplosiveProjectile::AIGS_PlantableExplosiveProjectile(const FObje
 void AIGS_PlantableExplosiveProjectile::OnRep_PlantData() {
 }
 
+void AIGS_PlantableExplosiveProjectile::OnPhysicsSettingsChanged(UPrimitiveComponent* inChangedComponent) {
+}
+
 void AIGS_PlantableExplosiveProjectile::Detonate() {
 }
 

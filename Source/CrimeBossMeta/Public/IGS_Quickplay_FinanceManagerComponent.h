@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "IGS_UnlockItemInfo.h"
 #include "IGS_MissionResult.h"
+#include "IGS_MissionResultRewardItem.h"
 #include "GameplayTagContainer.h"
 #include "IGS_FinanceManagerBaseComponent.h"
 #include "IGS_Quickplay_FinanceManagerComponent.generated.h"
@@ -22,7 +23,10 @@ public:
     int32 CalculateUnlockItemCost(const FGameplayTag inTagID, const float inRelativePrice) const;
 
     UFUNCTION(BlueprintPure)
-    void CalculateMissionRewardWithMultipliers(const FIGS_MissionResult& inMissionResult, int32& outMissionReward, float& outMultiplier) const;
+    void CalculateMissionRewardWithMultipliers(const FIGS_MissionResult& inMissionResult, int32& outMissionReward, float& outMultiplier, TArray<FIGS_MissionResultRewardItem>& outRewardItems) const;
+
+    UFUNCTION(BlueprintPure)
+    void CalculateBaseMissionReward(const FIGS_MissionResult& inMissionResult, int32& outMissionReward) const;
 
     UFUNCTION(BlueprintCallable)
     void AddBalance(int32 InValue);

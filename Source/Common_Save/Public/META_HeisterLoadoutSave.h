@@ -31,6 +31,15 @@ public:
     TArray<TSubclassOf<UMETA_WeaponInventoryObject>> SecondaryPersonalWeapons;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSubclassOf<UMETA_WeaponInventoryObject> MeleeWeapon;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FMETA_WeaponSaveData MeleeWeaponSaveData;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<TSubclassOf<UMETA_WeaponInventoryObject>> MeleePersonalWeapons;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> Equipment;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

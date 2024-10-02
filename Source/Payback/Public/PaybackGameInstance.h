@@ -18,8 +18,17 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetUseEAS(bool inUseEAS);
 
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void HideSession();
+
     UFUNCTION(BlueprintPure)
     void GetUseEAS(bool& outUseEAS);
+
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure=false)
+    void FadeOutGame(const float inFadeTime) const;
+
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure=false)
+    void FadeInGame(const float inFadeTime) const;
 
     UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FIGS_LoginChangedAfterEASSignature OnLoginChangedAfterEAS;

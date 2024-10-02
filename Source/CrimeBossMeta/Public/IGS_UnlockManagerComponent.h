@@ -1,11 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EIGS_RewardType.h"
 #include "IGS_UnlockReward.h"
 #include "IGS_UnlockedCharacterSaveData.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_CharacterID.h"
 #include "IGS_CharacterUnlocked.h"
 #include "IGS_ContractUnlocked.h"
+#include "IGS_PlotlineUnlocked.h"
 #include "IGS_UnlockManagerBaseComponent.h"
 #include "IGS_UnlockManagerComponent.generated.h"
 
@@ -25,13 +27,22 @@ public:
     void UnlockReward(FGameplayTag inRewardID);
 
     UFUNCTION(BlueprintCallable)
+    void UnlockPlotline(const FGameplayTag inTagUnlock);
+
+    UFUNCTION(BlueprintCallable)
     void UnlockContract(FGameplayTag inTagUnlock);
+
+    UFUNCTION(BlueprintPure)
+    bool TryGetRewardType(const FGameplayTag inRewardID, EIGS_RewardType& outType);
 
     UFUNCTION(BlueprintPure)
     bool IsUniqueCharacterUnlocked(EIGS_CharacterID inCharacter, bool bMaxLeveled) const;
 
     UFUNCTION(BlueprintCallable)
     void IsRewardAlreadyUnlocked(FGameplayTag inRewardID, bool& outUnlocked);
+
+    UFUNCTION(BlueprintPure)
+    bool HasPendingRewardsOfType(const EIGS_RewardType inType);
 
     UFUNCTION(BlueprintPure)
     bool HasPendingRewards() const;
@@ -65,6 +76,9 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_CharacterUnlocked OnCharacterUnlocked;
+
+    UPROPERTY(BlueprintAssignable)
+    FIGS_PlotlineUnlocked OnPlotlineUnlocked;
 
 protected:
     UPROPERTY()

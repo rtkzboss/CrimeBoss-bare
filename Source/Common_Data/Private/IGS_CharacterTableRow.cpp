@@ -40,6 +40,8 @@ FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     (*this).DefaultLoadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).DefaultLoadout.SecondaryWeapon = nullptr;
     (*this).DefaultLoadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).DefaultLoadout.MeleeWeapon = nullptr;
+    (*this).DefaultLoadout.MeleeWeaponSkin = FGameplayTag();
     (*this).DefaultLoadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).DefaultLoadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).DefaultLoadout.Ability1ChargesLeft = -1;
@@ -65,6 +67,7 @@ FIGS_CharacterTableRow::FIGS_CharacterTableRow() {
     (*this).MetaData.PerkTags = TArray<FGameplayTag>{};
     (*this).MetaData.Perks = TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>>{};
     (*this).Quality = EMETA_ItemQuality::MinGenerate;
+    (*this).MutuallyExclusiveCharacters = FGameplayTagContainer();
     (*this).UnlockProperties.IsUnlockable = false;
     (*this).UnlockProperties.RequiredTags = FGameplayTagContainer();
     (*this).UnlockProperties.RequiredValue = 0.000000000e+00f;

@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/DamageType.h"
+#include "AttributeSet.h"
 #include "GameplayEffect.h"
 #include "EIGS_DamageStrengthType.h"
 #include "EIGS_DamageType.h"
@@ -32,6 +33,9 @@ public:
     bool bIgnoresPawns;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bInstantRagdoll;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_DamageStrengthType StrengthType;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
@@ -45,5 +49,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TSubclassOf<UGameplayEffect> GameplayEffectToApply;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FGameplayAttribute AttributeToCaptureForDurationMultiply;
 
 };

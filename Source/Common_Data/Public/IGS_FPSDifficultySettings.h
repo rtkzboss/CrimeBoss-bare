@@ -34,6 +34,9 @@ public:
     float UnzippedTimeToFightBackMultiplier;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    float EnemyMeleeFirstStrikeDelayMultiplier;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float EnemyMeleeDamageMultiplier;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

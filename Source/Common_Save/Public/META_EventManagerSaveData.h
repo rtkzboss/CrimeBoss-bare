@@ -44,6 +44,9 @@ public:
     TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32> PreparedPlotlines;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32> ExecutingPlotlines;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TMap<FGameplayTag, int32> SavedEconomyGraphVariables;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)

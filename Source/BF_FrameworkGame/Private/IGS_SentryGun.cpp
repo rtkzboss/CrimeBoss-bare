@@ -9,6 +9,9 @@ AIGS_SentryGun::AIGS_SentryGun(const FObjectInitializer& ObjectInitializer) : Su
 void AIGS_SentryGun::SetSentryCanShoot(bool inEnabled) {
 }
 
+void AIGS_SentryGun::SetCharacterOwner(AIGS_GameCharacterFramework* inCharacter) {
+}
+
 void AIGS_SentryGun::OnTakeDamage(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo) {
 }
 

@@ -98,8 +98,8 @@ public:
     UFUNCTION(BlueprintPure)
     bool GetWasThrown();
 
-    UFUNCTION(BlueprintCallable)
-    UIGS_InteractiveComponent* GetInteractiveComponent();
+    UFUNCTION(BlueprintPure)
+    UIGS_InteractiveComponent* GetInteractiveComponent() const;
 
 protected:
     UFUNCTION(BlueprintCallable)

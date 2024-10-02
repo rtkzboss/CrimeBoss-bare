@@ -9,4 +9,5 @@ enum class EIGS_QuickMissionType : uint8 {
     Contract,
     ChainContract,
     ShuffleContract,
+    HordeMode,
 };

@@ -76,7 +76,7 @@ bool AIGS_PickupActorBase::GetWasThrown() {
     return false;
 }
 
-UIGS_InteractiveComponent* AIGS_PickupActorBase::GetInteractiveComponent() {
+UIGS_InteractiveComponent* AIGS_PickupActorBase::GetInteractiveComponent() const {
     return nullptr;
 }
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "IGS_EarnedMoneyAnimationSequenceData.h"
+#include "IGS_DebriefAnimationSequenceData.h"
 #include "IGS_EarnedMoneyAnimationData.generated.h"
 
 UCLASS(BlueprintType)
@@ -10,19 +10,16 @@ class CRIMEBOSSMETA_API UIGS_EarnedMoneyAnimationData : public UObject {
 public:
     UIGS_EarnedMoneyAnimationData();
 
+    UFUNCTION(BlueprintPure)
+    int32 GetFinalValue() const;
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 InitialValue;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 FinalValue;
+    float DelayBetweenAnims;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsMoney;
-
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText TextFormat;
-
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FIGS_EarnedMoneyAnimationSequenceData> Sequences;
+    TArray<FIGS_DebriefAnimationSequenceData> Sequences;
 
 };

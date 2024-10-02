@@ -117,6 +117,9 @@ public:
     static bool AreLineSegmentsCrossing(FVector inPointA1, FVector inPointA2, FVector inPointB1, FVector inPointB2);
 
     UFUNCTION(BlueprintPure)
+    static float AddToAverage(const float inNewValue, const float inCurrentAverage, const int32 inCurrentCount);
+
+    UFUNCTION(BlueprintPure)
     static int32 AddInt32Safe(const int32 inA, const int32 inB, const int32 inMax);
 
     UFUNCTION(BlueprintPure)

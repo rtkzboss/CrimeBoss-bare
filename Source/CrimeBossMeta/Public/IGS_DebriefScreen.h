@@ -1,9 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_MissionResult.h"
+#include "IGS_MissionResultRewardItem.h"
 #include "GameplayTagContainer.h"
 #include "IGS_Screen.h"
-#include "IGS_DebriefBonus.h"
+#include "IGS_DebriefAnimationSequenceData.h"
+#include "IGS_DebriefScreenEvent.h"
 #include "IGS_DebriefScreen.generated.h"
 
 class UIGS_AnimatedWidget;
@@ -19,19 +21,19 @@ public:
     void StartAnimatedDebrief();
 
     UFUNCTION(BlueprintCallable)
-    void SetMissionResult(UPARAM(Ref) FIGS_MissionResult& inMissionResult);
+    void SetMissionResult(const FIGS_MissionResult& inMissionResult, const TArray<FIGS_MissionResultRewardItem>& inMissionRewards);
 
     UFUNCTION(BlueprintCallable)
     void SetIsSkipped(bool inIsSkipped);
-
-    UFUNCTION(BlueprintCallable)
-    void SetDebriefBonuses(TArray<FIGS_DebriefBonus> inBonuses);
 
 private:
     UFUNCTION()
     void PlayNextAnimation();
 
 public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void PlayDebriefBP();
+
     UFUNCTION(BlueprintImplementableEvent)
     void OnSkipped();
 
@@ -39,24 +41,37 @@ public:
     void OnAnimationFinishedBP();
 
     UFUNCTION(BlueprintPure)
-    bool HasSomeDebriefBonuses() const;
+    TArray<FIGS_MissionResultRewardItem> GetXpRewards() const;
+
+    UFUNCTION(BlueprintCallable)
+    TArray<FIGS_DebriefAnimationSequenceData> GetRewardUISequenceData(UPARAM(Ref) TArray<FIGS_MissionResultRewardItem>& inRewardItems);
+
+    UFUNCTION(BlueprintPure)
+    TArray<FIGS_MissionResultRewardItem> GetMoneyRewards() const;
+
+    UFUNCTION(BlueprintPure)
+    TArray<FIGS_MissionResultRewardItem> GetMissionRewards() const;
 
     UFUNCTION(BlueprintPure)
     FIGS_MissionResult GetMissionResult() const;
 
-protected:
     UFUNCTION(BlueprintPure)
-    FIGS_DebriefBonus GetDebriefBonusByTag(FGameplayTag inTag, bool& outSuccess) const;
+    FGameplayTag GetCameraTag() const;
 
-public:
+    UFUNCTION(BlueprintPure)
+    int32 GetAdditionalMissionDataByTag(FGameplayTag inTag) const;
+
     UFUNCTION(BlueprintCallable)
     void AddAnimation(UIGS_AnimatedWidget* inAnimatedWidget, UObject* inPayloadData);
 
     UPROPERTY(BlueprintReadOnly)
     bool IsSkipped;
 
-    UPROPERTY(BlueprintReadOnly)
-    TArray<FIGS_DebriefBonus> DebriefBonuses;
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    FIGS_DebriefScreenEvent OnContinueEvent;
+
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    FGameplayTag CameraTag;
 
 private:
     UPROPERTY(Instanced)

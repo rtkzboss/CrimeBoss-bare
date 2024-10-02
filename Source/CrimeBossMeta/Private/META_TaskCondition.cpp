@@ -12,6 +12,10 @@ void UMETA_TaskCondition::SetNeedValue(EMETA_NeedValueType inNeedValueType, int3
 void UMETA_TaskCondition::RefreshValues_Implementation() {
 }
 
+EMETA_TaskProgressDisplayType UMETA_TaskCondition::GetProgressValueDisplayType_Implementation() {
+    return EMETA_TaskProgressDisplayType::Value;
+}
+
 int32 UMETA_TaskCondition::GetNeedValue_Implementation() {
     return 0;
 }

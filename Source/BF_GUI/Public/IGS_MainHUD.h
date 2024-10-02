@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/HUD.h"
+#include "Styling/SlateColor.h"
 #include "EIGS_MostPrioHintType.h"
 #include "IGS_MostImportantHintChangedSignature.h"
 #include "IGS_MainHUD.generated.h"
@@ -39,7 +40,13 @@ public:
     void SetLootBarGoalValue(float InValue);
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ClearHUDMessages();
+
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void AddHUDMessage(const FText& InText, float inDuration, int32 inCountdown);
+
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void AddHUDEventMessage(const FText& inType, const FText& InText, const FSlateColor& inTypeColour, const FText& inIconGlyph, const FSlateColor& inIconColour);
 
     UPROPERTY(BlueprintAssignable)
     FIGS_MostImportantHintChangedSignature OnMostImportantHintChanged;

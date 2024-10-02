@@ -65,6 +65,9 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EMETA_ItemQuality Quality;
 
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTagContainer MutuallyExclusiveCharacters;
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_UnlockProperties UnlockProperties;
 

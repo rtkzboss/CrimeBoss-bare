@@ -54,4 +54,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
     UIGS_WidgetFocusableSpinBox* InputDeviceSpinBox;
 
+    UPROPERTY(BlueprintReadWrite, Instanced, meta=(BindWidget))
+    UIGS_WidgetFocusableSpinBox* VoiceChatActivationModeSpinBox;
+
 };

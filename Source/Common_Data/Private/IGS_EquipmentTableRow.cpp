@@ -16,6 +16,7 @@ FIGS_EquipmentTableRow::FIGS_EquipmentTableRow() {
     (*this).Data.bAllowedForGeneration = false;
     (*this).Data.PriceModifier = 1.000000000e+00f;
     (*this).Data.ResourceType = EIGS_EquipmentResourceType::ERT_Charges;
+    (*this).Data.bStartWithFullCharges = true;
     (*this).Data.Charges = 10;
     (*this).Data.bRefreshChargesOvertime = false;
     (*this).Data.SecondsUntilChargeRefresh = -1;
@@ -25,7 +26,7 @@ FIGS_EquipmentTableRow::FIGS_EquipmentTableRow() {
     (*this).Data.InitChargesGameplayEffect = FSoftObjectPath(TEXT("/Game/00_Main/GameplayAbilitySystem/Abilities/ChargesEffects/GE_InitAbilityCharges.GE_InitAbilityCharges_C"), TEXT(""));
     (*this).Data.AddChargesGameplayEffect = FSoftObjectPath(TEXT("/Game/00_Main/GameplayAbilitySystem/Abilities/ChargesEffects/GE_AddAbilityCharges.GE_AddAbilityCharges_C"), TEXT(""));
     (*this).Data.InventoryIconStringGlyph = TEXT("");
-    (*this).Data.InventoryIconOverrideFontObject = nullptr;
+    (*this).Data.InventoryIconOverrideSlateWidgetStyleAsset = nullptr;
     (*this).Data.UnlockProperties.IsUnlockable = false;
     (*this).Data.UnlockProperties.RequiredTags = FGameplayTagContainer();
     (*this).Data.UnlockProperties.RequiredValue = 0.000000000e+00f;

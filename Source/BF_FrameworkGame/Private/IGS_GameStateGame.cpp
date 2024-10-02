@@ -65,8 +65,16 @@ UIGS_PickupsManager* AIGS_GameStateGame::GetPickupsManager() const {
 }
 
 
-bool AIGS_GameStateGame::GetIsTurfWar() {
+bool AIGS_GameStateGame::GetIsTurfWar() const {
     return false;
+}
+
+bool AIGS_GameStateGame::GetIsHordeMode() const {
+    return false;
+}
+
+UIGS_HordeModeManager* AIGS_GameStateGame::GetHordeModeManager() const {
+    return nullptr;
 }
 
 UIGS_GlobalInventory* AIGS_GameStateGame::GetGlobalInventory() const {

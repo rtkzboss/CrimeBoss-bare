@@ -10,6 +10,9 @@ class BF_INPUT_API UIGS_InputDeviceDetectorComponent : public UActorComponent {
 public:
     UIGS_InputDeviceDetectorComponent(const FObjectInitializer& ObjectInitializer);
 
+    UFUNCTION()
+    void OnControllerDisconnected();
+
     UFUNCTION(BlueprintPure)
     EIGS_InputDevice GetCurrentInputDevice() const;
 

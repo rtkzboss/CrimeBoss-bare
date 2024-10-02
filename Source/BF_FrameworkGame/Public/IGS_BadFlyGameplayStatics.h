@@ -54,6 +54,12 @@ public:
     UIGS_BadFlyGameplayStatics();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static bool WasKilledByScript(UObject* inWCO, AActor* inActor);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static bool WasKilledByDamageType(UObject* inWCO, AActor* inActor, const TSubclassOf<UIGS_DamageTypeBase> inDamageType, const bool inExactMatch);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void TriggerBotLimbo(const UObject* inWCO, bool inPlayVioceovers);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
@@ -172,9 +178,6 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static void SetLowHealthEffectThreshold(AIGS_PlayerCharacter* inPlayer, float inLowHealthEffectThreshold);
-
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static void SetIsTurfWar(const UObject* inWCO);
 
     UFUNCTION(BlueprintCallable)
     static void SetGameCultureBasedOnConsoleSystemLocale();

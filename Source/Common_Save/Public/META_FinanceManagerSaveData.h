@@ -23,6 +23,9 @@ public:
     FMETA_Loan CurrentLoan;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    TArray<FMETA_Loan> CurrentLoanOffers;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     int32 CooldownToNextOffer;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)

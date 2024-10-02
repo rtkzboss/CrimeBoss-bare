@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EIGS_QPModeSource.h"
+#include "META_HordeModeMissionSave.h"
 #include "UObject/NoExportTypes.h"
 #include "EIGS_UserDifficulty.h"
 #include "META_MissionID.h"
@@ -26,6 +27,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FGuid> FinishedMissionsIDs;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    TArray<FMETA_HordeModeMissionSave> HordeModeMissions;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     bool bLastPlayedWasChain;

@@ -12,6 +12,9 @@ public:
     bool UseTimeSetup;
 
     UPROPERTY(EditAnywhere)
+    float MaxFiringRange;
+
+    UPROPERTY(EditAnywhere)
     FFloatInterval CombatRange;
 
     UPROPERTY(EditAnywhere)

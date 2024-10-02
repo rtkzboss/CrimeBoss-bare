@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EJobUITileType.h"
+#include "EIGS_MenuTileSize.h"
 #include "IGS_JobCategoryItemUIData.generated.h"
 
 class UTexture2D;
@@ -19,7 +19,7 @@ public:
     FText Description;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EJobUITileType TileDisplayType;
+    EIGS_MenuTileSize TileSize;
 
     CRIMEBOSSMETA_API FIGS_JobCategoryItemUIData();
 };

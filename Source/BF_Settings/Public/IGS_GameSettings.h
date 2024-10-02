@@ -37,6 +37,9 @@ public:
     bool bUseAltDollarDragon;
 
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
+    bool bUseCampaignWeaponSkins;
+
+    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     bool bHalloweenMode;
 
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)

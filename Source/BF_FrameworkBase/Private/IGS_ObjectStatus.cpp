@@ -166,7 +166,7 @@ void UIGS_ObjectStatus::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(UIGS_ObjectStatus, R_IsDead);
     DOREPLIFETIME(UIGS_ObjectStatus, Unkillable);
     DOREPLIFETIME(UIGS_ObjectStatus, ScriptInvulnerable);
-    DOREPLIFETIME(UIGS_ObjectStatus, DifficultyInvulnerable);
+    DOREPLIFETIME(UIGS_ObjectStatus, RegionInvulnerable);
     DOREPLIFETIME(UIGS_ObjectStatus, HealthDecayDisabled);
     DOREPLIFETIME(UIGS_ObjectStatus, InstantKillable);
     DOREPLIFETIME(UIGS_ObjectStatus, HealthState);

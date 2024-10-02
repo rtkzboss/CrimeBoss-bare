@@ -16,6 +16,7 @@ UIGS_Common_DataDevSettings_Meta::UIGS_Common_DataDevSettings_Meta() {
     (*this).TradeVendorDataTable = FSoftObjectPath(TEXT("/Game/CrimeBossMeta/Resources/DT_TradeVendorDatabase.DT_TradeVendorDatabase"), TEXT(""));
     (*this).TutorialTextDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Maps/MetaGame/MetaMenu/TutorialStuff/DT_TutorialTextDatabase.DT_TutorialTextDatabase"), TEXT(""));
     (*this).MetaEconomyDataAsset = FSoftObjectPath(TEXT("/Game/CrimeBossMeta/Resources/DA_MetaEconomyData.DA_MetaEconomyData"), TEXT(""));
+    (*this).MetaBlackmarketDataAsset = FSoftObjectPath(TEXT("/Game/CrimeBossMeta/Resources/DA_BlackMarketData.DA_BlackMarketData"), TEXT(""));
     (*this).MenuBackgroundDataTable = FSoftObjectPath(TEXT("/Game/00_Main/Maps/Menu/MenuBackgrounds/DT_MenuBackgrounds.DT_MenuBackgrounds"), TEXT(""));
     (*this).TutorialsDataTable = FSoftObjectPath(TEXT("/Game/CrimeBossMeta/Resources/Tutorials/CDT_TutorialsDatabase.CDT_TutorialsDatabase"), TEXT(""));
     (*this).MultiplayerJobsDataTable = FSoftObjectPath(TEXT("/Game/CrimeBossMeta/Resources/Multiplayer/Jobs/DT_MultiplayerJobsDatabase.DT_MultiplayerJobsDatabase"), TEXT(""));

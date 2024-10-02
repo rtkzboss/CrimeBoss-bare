@@ -24,10 +24,16 @@ public:
     FIGS_ProgressionResult SetLevel(int32 inLevel, bool inSaveProgression, bool inNotify);
 
     UFUNCTION(BlueprintCallable)
+    void SetExtraMultiplier(float inMultiplier);
+
+    UFUNCTION(BlueprintCallable)
     void SetDebugMultiplier(const float inMultiplier);
 
     UFUNCTION(BlueprintCallable)
     void ResetProgression();
+
+    UFUNCTION(BlueprintCallable)
+    void ResetExtraMultiplier();
 
     UFUNCTION(BlueprintCallable)
     void ReInitProgressionManager();

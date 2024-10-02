@@ -2,6 +2,7 @@
 
 FIGS_AIAmmoWeaponDef::FIGS_AIAmmoWeaponDef() {
     (*this).UseTimeSetup = false;
+    (*this).MaxFiringRange = 2.000000000e+03f;
     (*this).CombatRange.Min = 5.000000000e+02f;
     (*this).CombatRange.Max = 1.200000000e+03f;
     (*this).ShotsToFire.Min = 2;

@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_WieldableBase.h"
-#include "EIGS_WeaponAttackType.h"
 #include "IGS_BashInterface.h"
 #include "IGS_MeleeWeaponBase.generated.h"
 
@@ -22,7 +21,7 @@ public:
 
 protected:
     UPROPERTY(EditAnywhere)
-    EIGS_WeaponAttackType PrimaryShooter;
+    bool ShouldMeshTick3PV;
 
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_BasherComponent* Basher;

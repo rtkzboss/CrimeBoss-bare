@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
 #include "GameplayTagContainer.h"
+#include "EIGS_MenuTileSize.h"
 #include "IGS_PlotlineSelectionStarItem.h"
 #include "IGS_PlotlineSelectionDefinition.generated.h"
 
@@ -40,6 +41,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsDebugOnly;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    EIGS_MenuTileSize TileSize;
 
     FIGS_PlotlineSelectionDefinition();
 };

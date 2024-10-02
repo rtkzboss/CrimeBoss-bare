@@ -57,6 +57,9 @@ public:
     TArray<FGameplayTagContainer> GetPlayerTileGroups() const;
 
     UFUNCTION(BlueprintPure)
+    FMETA_Interval GetPlayersInitialTerritoryRange() const;
+
+    UFUNCTION(BlueprintPure)
     float GetInvestigationGrowthMultiplier() const;
 
     UFUNCTION(BlueprintPure)

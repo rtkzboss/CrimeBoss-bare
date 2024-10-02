@@ -17,6 +17,7 @@
 #include "IGS_AILoadoutHolder.h"
 #include "IGS_AISwatTeamDef.h"
 #include "IGS_GeneralReactionTeamHolder.h"
+#include "IGS_HordeModeDef.h"
 #include "IGS_PlayerCountAIDifficultyModifierDef.h"
 #include "IGS_PlayerCountBotDamageReceivedModifierPerDifficultyDef.h"
 #include "IGS_PlayerCountThrowableCooldownModifierDef.h"
@@ -91,6 +92,9 @@ public:
 
     UPROPERTY(EditDefaultsOnly)
     FIGS_AICaptainSpecDef Captains;
+
+    UPROPERTY(EditDefaultsOnly)
+    FIGS_HordeModeDef HordeMode;
 
     UPROPERTY(EditDefaultsOnly)
     FString Password;

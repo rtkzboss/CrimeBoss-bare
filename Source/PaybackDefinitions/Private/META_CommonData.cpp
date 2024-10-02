@@ -343,7 +343,7 @@ FMETA_CampaignUserDifficultyConfiguration UMETA_CommonData::GetCampaignDifficult
     return FMETA_CampaignUserDifficultyConfiguration{};
 }
 
-void UMETA_CommonData::GetBossLoadout(UClass*& outPrimaryWeapon, UClass*& outSecondaryWeapon, UClass*& outEquipment) const {
+void UMETA_CommonData::GetBossLoadout(UClass*& outPrimaryWeapon, UClass*& outSecondaryWeapon, UClass*& outMeleeWeapon, UClass*& outEquipment) const {
 }
 
 FGameplayTagContainer UMETA_CommonData::GetBadTraits() const {

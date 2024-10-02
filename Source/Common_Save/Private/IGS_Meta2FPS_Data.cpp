@@ -46,5 +46,5 @@ FIGS_Meta2FPS_Data::FIGS_Meta2FPS_Data() {
     (*this).NeedObjectiveCompletion = false;
     (*this).bDownedCharctersSurvive = false;
     (*this).CiviliansAmountOverride = -1;
-    (*this).bIsDebug = false;
+    (*this).bIsDEBUG = false;
 }

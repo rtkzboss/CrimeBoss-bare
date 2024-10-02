@@ -16,6 +16,9 @@ protected:
     FMETA_Loan CurrentLoan;
 
     UPROPERTY(BlueprintReadWrite)
+    TArray<FMETA_Loan> CurrentLoanOffers;
+
+    UPROPERTY(BlueprintReadWrite)
     int32 CooldownToNextOffer;
 
     UPROPERTY(BlueprintReadWrite)

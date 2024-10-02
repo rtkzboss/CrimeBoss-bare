@@ -14,6 +14,9 @@ class CRIMEBOSSMETA_API UMETA_CityMapManagerComponent : public UIGS_CityMapManag
 public:
     UMETA_CityMapManagerComponent(const FObjectInitializer& ObjectInitializer);
 
+    UFUNCTION(BlueprintCallable)
+    TArray<FGameplayTag> TryToGetConnectedTiles(const TArray<FGameplayTag> inValidTiles, int32 inTilesAmount);
+
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     void GetTileObject(const FGameplayTag inID, UMapTile*& outTileObject);
 

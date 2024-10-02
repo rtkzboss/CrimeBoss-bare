@@ -1,6 +1,7 @@
 #include "IGS_WieldableBase.h"
 #include "AkAudioEvent.h"
 #include "SkeletalMeshComponentBudgeted.h"
+#include "Engine/EngineBaseTypes.h"
 #include "Materials/MaterialParameterCollection.h"
 #include "IGS_DynamicMaterialHandlerComponent.h"
 
@@ -13,6 +14,7 @@ AIGS_WieldableBase::AIGS_WieldableBase(const FObjectInitializer& ObjectInitializ
     (*this).WieldableMesh = gen2;
     static ConstructorHelpers::FObjectFinder<UAkAudioEvent> gen4(TEXT("/Game/WwiseAudio/GeneratedSoundData/SoundBanks/Events/Default_Work_Unit/WU_Weapons/WU_Weapons_Ranged/AKE_Weapon_Inspect_Stop.AKE_Weapon_Inspect_Stop"));
     (*this).StopInspectingAkEvent = gen4.Object;
+    (*this).PrimaryActorTick.TickGroup = TG_DuringPhysics;
     (*this).PrimaryActorTick.bCanEverTick = true;
     (*this).RootComponent = gen2;
 }

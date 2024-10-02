@@ -6,6 +6,7 @@ FIGS_MissionResult::FIGS_MissionResult() {
     (*this).MissionID.B = 0;
     (*this).MissionID.C = 0;
     (*this).MissionID.D = 0;
+    (*this).MissionClassID = nullptr;
     (*this).MissionTag = FGameplayTag();
     (*this).MissionSubtype = EMETA_FPSMissionSubtype::MoneyMaking;
     (*this).MissionResult = ECommonMissionResult::Res_UNKNOWN;
@@ -16,6 +17,7 @@ FIGS_MissionResult::FIGS_MissionResult() {
     (*this).TotalQuickplayScore = 0;
     (*this).TotalChainScore = 0;
     (*this).ObjectiveValue = 0;
+    (*this).AdditionalMissionData = TArray<FIGS_AdditionalMissionData>{};
     (*this).BonusValue = 0;
     (*this).BonusCash = 0;
     (*this).RewardCalculations = TArray<FIGS_MissionRewardCalculations>{};
@@ -33,6 +35,7 @@ FIGS_MissionResult::FIGS_MissionResult() {
     (*this).bChainCompleted = false;
     (*this).ChainType = EIGS_ChainType::UrbanLegend;
     (*this).bIsFilled = false;
+    (*this).bIsDEBUG = false;
     (*this).UserDifficulty = EIGS_UserDifficulty::UD_Unknown;
     (*this).LobbyVisibility = EMETA_LobbyVisibilityType::Private;
     (*this).MPLobbyType = EIGS_MPLobbyType::Normal;

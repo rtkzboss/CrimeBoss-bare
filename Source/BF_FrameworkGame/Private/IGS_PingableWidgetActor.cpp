@@ -14,6 +14,9 @@ AIGS_PingableWidgetActor::AIGS_PingableWidgetActor(const FObjectInitializer& Obj
     (*this).RootComponent = gen;
 }
 
+void AIGS_PingableWidgetActor::OnAttachedToActorDestroyed(AActor* inDestroyedActor) {
+}
+
 void AIGS_PingableWidgetActor::Multicast_ShowPingWidget_Implementation(float inPingDuration) {
 }
 

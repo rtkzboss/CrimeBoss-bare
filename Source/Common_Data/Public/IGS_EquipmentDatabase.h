@@ -30,7 +30,7 @@ public:
     static TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> GetEquipmentByQualities(UObject* inWCO, const TArray<EMETA_ItemQuality>& inQualities, const TArray<FGameplayTag>& inUnlockedEquipment, bool inIgnoreUnlock);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static FIGS_EquipmentTableRow GetDataEquipmentByTagID(UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
+    static FIGS_EquipmentTableRow GetDataEquipmentByTagID(const UObject* inWCO, FGameplayTag inTagID, bool& outSucceeded);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static FIGS_EquipmentTableRow GetDataEquipment(UObject* inWCO, const TSubclassOf<UIGS_EquipmentInventoryObject>& inClass, bool& outSucceeded);

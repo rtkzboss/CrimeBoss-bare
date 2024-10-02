@@ -39,8 +39,14 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     float GetFadeDistanceEnd();
 
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void CacheFadeDistance();
+
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bTickDormant;
+
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    float CachedFadeDistance;
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     EIGS_WorldWidgetType WidgetType;

@@ -22,7 +22,7 @@ TArray<UCoverPoint*> UIGS_ScriptableBehaviorComponent::GetDefendValidCoverPoints
     return {};
 }
 
-FVector UIGS_ScriptableBehaviorComponent::GetDefendPos() {
+FVector UIGS_ScriptableBehaviorComponent::GetDefendPos() const {
     return FVector{};
 }
 

@@ -56,7 +56,13 @@ public:
     TArray<FGameplayTag> GetParentLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue);
 
     UFUNCTION(BlueprintCallable)
+    FGameplayTagContainer GetOwnedItems(TArray<UMETA_Weapon*>& outWeapons, TArray<UMETA_Equipment*>& outEquipment);
+
+    UFUNCTION(BlueprintCallable)
     TArray<FGameplayTag> GetLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue);
+
+    UFUNCTION(BlueprintCallable)
+    FGameplayTagContainer GetEquippedItems(TArray<UMETA_Weapon*>& outWeapons, TArray<UMETA_Equipment*>& outEquipment);
 
     UFUNCTION(BlueprintCallable)
     void ChangeLootByValue(FGameplayTag inLootTag, int32 InValue, bool inRawValue);

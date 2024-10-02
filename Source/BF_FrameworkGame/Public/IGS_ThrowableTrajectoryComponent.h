@@ -6,11 +6,16 @@
 #include "Templates/SubclassOf.h"
 #include "IGS_ThrowableTrajectoryComponent.generated.h"
 
+class AIGS_WeaponBase;
+
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BF_FRAMEWORKGAME_API UIGS_ThrowableTrajectoryComponent : public USceneComponent {
     GENERATED_BODY()
 public:
     UIGS_ThrowableTrajectoryComponent(const FObjectInitializer& ObjectInitializer);
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnShowPredictionChangedWithTransform(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass, AIGS_WeaponBase* inWeapon);
 
     UFUNCTION(BlueprintImplementableEvent)
     void OnShowPredictionChanged(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass);

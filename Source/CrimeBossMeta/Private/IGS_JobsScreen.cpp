@@ -12,20 +12,22 @@ void UIGS_JobsScreen::SelectCategory(int32 categoryIndex, bool autoscroll, bool 
 void UIGS_JobsScreen::ScrollToCategory(int32 categoryIndex) {
 }
 
-void UIGS_JobsScreen::OnSelectCategory_NoScrollNoFocus(UIGS_JobsScreenCategoryWidget* categoryWidget) {
+void UIGS_JobsScreen::OnSelectCategory_NoScrollNoFocus(UIGS_MenuItemCategoryWidget* categoryWidget) {
 }
 
-void UIGS_JobsScreen::OnSelectCategory_Internal(UIGS_JobsScreenCategoryWidget* categoryWidget, int32 Direction) {
+void UIGS_JobsScreen::OnSelectCategory_Internal(UIGS_MenuItemCategoryWidget* categoryWidget, int32 Direction) {
 }
 
 
-void UIGS_JobsScreen::OnJobItemSelected_Internal(UIGS_JobsItemWidget* JobWidget) {
+void UIGS_JobsScreen::OnJobItemSelected_Internal(UIGS_MenuTileWidget* jobWidget) {
 }
-
 
 
 
 void UIGS_JobsScreen::InitializeJobScreen(const TArray<FIGS_MultiplayerJobCategoryRow>& inCategories) {
+}
+
+void UIGS_JobsScreen::HandleNavigationBetweenCategories(UIGS_MenuItemCategoryWidget* categoryWidget, EUINavigation inNavigation) {
 }
 
 void UIGS_JobsScreen::GoToCategory(int32 Direction) {

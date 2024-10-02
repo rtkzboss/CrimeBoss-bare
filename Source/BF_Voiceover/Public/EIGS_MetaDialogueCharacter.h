@@ -77,6 +77,7 @@ enum class EIGS_MetaDialogueCharacter : uint8 {
     Ronin,
     BarGirl,
     Servo,
+    WinterPlanner,
     Empty = 254,
     Custom,
 };

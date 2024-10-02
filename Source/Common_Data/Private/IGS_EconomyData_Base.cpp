@@ -9,7 +9,6 @@ UIGS_EconomyData_Base::UIGS_EconomyData_Base() {
     (*this).PriceMultiplierForFirstGeneration = 1.000000000e+00f;
     (*this).HeistersPoolRefreshStartPriceMultiplier = 1.000000000e+00f;
     (*this).WeaponMarketAvailableInDays = 1;
-    (*this).WeaponsPoolRefreshStartPriceMultiplier = 1.000000000e+00f;
     (*this).NumberOfHPSegmentsForAutomaticRecovery = 4.000000060e-01f;
     (*this).MultiplierForHealing = 1.000000000e+00f;
 }
@@ -20,15 +19,14 @@ void UIGS_EconomyData_Base::UpdateWeaponsCachedData(const UObject* inWCO) {
 void UIGS_EconomyData_Base::UpdateEquipmentCachedData(const UObject* inWCO) {
 }
 
-bool UIGS_EconomyData_Base::TryToGenerateSecondaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData) {
+void UIGS_EconomyData_Base::UpdateCachedData(const UObject* inWCO) {
+}
+
+bool UIGS_EconomyData_Base::TryToGenerateWeaponTypeForCharacter(const UObject* inWCO, const EIGS_InventorySlot inType, const EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData) {
     return false;
 }
 
 bool UIGS_EconomyData_Base::TryToGenerateRandomEquipmentForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, FGameplayTag inEquippedEquipment, const TArray<FGameplayTag>& inUnlockedEquipment, TSubclassOf<UIGS_EquipmentInventoryObject>& outEquipment) {
-    return false;
-}
-
-bool UIGS_EconomyData_Base::TryToGeneratePrimaryWeaponForCharacter(const UObject* inWCO, EMETA_ItemQuality inCharacterQuality, const TArray<FGameplayTag>& inUnlockedWeapons, FMETA_RandomizedWeaponData& outRandomizedWeaponData) {
     return false;
 }
 
@@ -62,7 +60,7 @@ TArray<TSubclassOf<UMETA_WeaponInventoryObject>> UIGS_EconomyData_Base::GetWeapo
     return {};
 }
 
-int32 UIGS_EconomyData_Base::GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality) const {
+int32 UIGS_EconomyData_Base::GetWeaponPrice(FGameplayTag inWeaponClassTag, EMETA_ItemQuality inWeaponQuality, const float inRelativePrice) const {
     return 0;
 }
 
@@ -89,15 +87,19 @@ int32 UIGS_EconomyData_Base::GetStartingLevelOfCharacter(UObject* inWCO, const F
     return 0;
 }
 
-float UIGS_EconomyData_Base::GetRewardMultiplierForDifficulty(EIGS_ScenarioDifficulty inDifficulty) const {
-    return 0.000000000e+00f;
-}
-
-void UIGS_EconomyData_Base::GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, int32& outUpkeepCost, int32& outHireCost) {
+void UIGS_EconomyData_Base::GetRandomizedUniqueCharacterCostsData(const UObject* inWCO, EIGS_CharacterID inCharacterID, EMETA_ItemQuality inCharacterQuality, int32& outBaseUpkeepCost, int32& outBaseHireCost) {
 }
 
 FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios UIGS_EconomyData_Base::GetMoneyMakingScenariosAdditionalWealthAndProbabilitiesData(EMETA_RespectLvl RespectLevel, FGameplayTag inFGameplayTag) const {
     return FMETA_RewardsAndProbabilitiesForMoneyMakingScenarios{};
+}
+
+float UIGS_EconomyData_Base::GetMissionRewardMultiplierForScenarioDifficulty(EIGS_ScenarioDifficulty inDifficulty) const {
+    return 0.000000000e+00f;
+}
+
+float UIGS_EconomyData_Base::GetMissionRewardMultiplierForCampaignDifficulty(EIGS_UserDifficulty inDifficulty) const {
+    return 0.000000000e+00f;
 }
 
 float UIGS_EconomyData_Base::GetMissionObjectiveMonetaryValue(EMETA_RespectLvl inRespectLvl) const {

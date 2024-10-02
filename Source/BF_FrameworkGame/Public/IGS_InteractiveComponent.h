@@ -157,7 +157,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Enabled)
     bool bIsEnabled;
 
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
     bool bCanBeEnabled;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

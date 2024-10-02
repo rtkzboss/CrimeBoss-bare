@@ -18,4 +18,5 @@ enum class EIGS_SessionPropertyKey : uint8 {
     UserDifficulty,
     LobbyType,
     Ping,
+    HordeModeWave,
 };

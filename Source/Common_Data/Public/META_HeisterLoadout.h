@@ -44,6 +44,21 @@ public:
     TArray<TSubclassOf<UMETA_WeaponInventoryObject>> SecondaryPersonalWeaponsClass;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UMETA_Weapon* MeleeWeapon;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSubclassOf<UMETA_WeaponInventoryObject> MeleeWeaponClass;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<UMETA_Weapon*> MeleePersonalWeapons;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTag MeleeWeaponSkin;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<TSubclassOf<UMETA_WeaponInventoryObject>> MeleePersonalWeaponsClass;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMETA_Equipment* SelectedEquipment;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

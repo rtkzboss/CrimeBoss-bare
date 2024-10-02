@@ -11,6 +11,7 @@ FMETA_RandEventTableRow::FMETA_RandEventTableRow() {
     (*this).MinInvestigation = 0.000000000e+00f;
     (*this).UnlockAssetID = FGameplayTag();
     (*this).TargetGang.bAutomaticGangSelection = true;
+    (*this).TargetGang.TargetGang = EMETA_Gang::None;
     (*this).TargetGang.ConsideringTimeInDays = 7;
     (*this).TargetGang.OccupiedTerritoriesOfOtherGang = -1;
     (*this).TargetGang.OccupiedTerritoriesOfPlayer = -1;

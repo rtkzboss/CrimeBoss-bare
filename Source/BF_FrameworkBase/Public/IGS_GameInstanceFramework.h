@@ -62,9 +62,6 @@ public:
     UFUNCTION(BlueprintNativeEvent)
     bool IsTextChatAllowed();
 
-    UFUNCTION(BlueprintCallable)
-    bool IsMissionTagTurfWar(FGameplayTag inMissionTag);
-
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static bool IsMissionEndIgnored(const UObject* inWCO);
 
@@ -102,5 +99,8 @@ public:
 protected:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTagContainer TurfWarMissionTags;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FGameplayTagContainer HordeModeMissionTags;
 
 };

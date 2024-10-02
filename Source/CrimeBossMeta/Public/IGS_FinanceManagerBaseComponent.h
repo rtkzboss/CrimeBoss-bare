@@ -65,6 +65,9 @@ public:
     int32 GetDayBalance();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    TArray<FMETA_Loan> GetCurrentLoanOffers();
+
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetCurrentCooldownBetweenLoans();
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

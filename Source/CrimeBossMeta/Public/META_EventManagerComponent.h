@@ -64,6 +64,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RemoveHeisterFromEvent(FGameplayTag inEventTag, FMETA_CharacterID inHeisterID, EMETA_CharacterState inNewState, bool& outSuccess);
 
+    UFUNCTION(BlueprintCallable)
+    void RemoveHeisterFromAllEvents(const FMETA_CharacterID& inCharacterID, const EMETA_CharacterState inNewState, bool& outSuccess);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RemoveAllHeistersFromEvent(FGameplayTag inEventTag, EMETA_CharacterState inNewState, bool& outSuccess);
 
@@ -106,8 +109,14 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TSoftObjectPtr<UStoryGraphManager> GetGoalGraphByGraph(const TSoftObjectPtr<UStoryGraphManager>& inGraph);
 
+    UFUNCTION(BlueprintPure)
+    bool GetFinishedGraphResult(const TSoftObjectPtr<UStoryGraphManager>& inGraph, EMETA_GoalStatus& outResult) const;
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     EMETA_EventTime GetEventTime();
+
+    UFUNCTION(BlueprintCallable)
+    bool GetEventsOfCharacter(const FMETA_CharacterID& inCharacterID, FGameplayTagContainer& outEventIDs);
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetCurrentDay();
@@ -180,6 +189,9 @@ protected:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSoftObjectPtr<UStoryGraphManager>, int32> PreparedPlotlines;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TMap<TSoftObjectPtr<UStoryGraphManager>, int32> ExecutingPlotlines;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSoftObjectPtr<UStoryGraphManager>, TSoftObjectPtr<UStoryGraphManager>> ParentGraphs;

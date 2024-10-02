@@ -15,7 +15,7 @@ public:
     EIGS_StorePlatform StorePlatform;
 
     UPROPERTY(BlueprintReadWrite)
-    int32 HordeModeTokens;
+    uint8 HordeModeTokens;
 
     FIGS_PlayerStateData();
 };

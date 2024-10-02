@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "IGS_NetProjectileHitData.h"
 #include "IGS_NetProjectileHitResult.h"
+#include "IGS_NetProjectileHitData.h"
 #include "IGS_NetProjectileData.generated.h"
 
 USTRUCT()

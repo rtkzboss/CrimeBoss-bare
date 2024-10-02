@@ -18,6 +18,7 @@ class UIGS_AIEventsDispatcher;
 class UIGS_AIPointManager;
 class UIGS_AISpawner;
 class UIGS_AmbientLifeManager;
+class UIGS_CombatSettingsManager;
 class UIGS_DefendManager;
 class UIGS_DetectionManager;
 class UIGS_GuardControlRoomComponentBase;
@@ -64,6 +65,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     UIGS_GuardControlRoomComponentBase* GetControlRoomComponentForSquad(int32 inSquadID);
+
+    UFUNCTION(BlueprintPure)
+    UIGS_CombatSettingsManager* GetCombatSettingsManager() const;
 
     UFUNCTION(BlueprintPure)
     UIGS_AmbientLifeManager* GetAmbientLifeManager() const;
@@ -143,6 +147,9 @@ private:
 
     UPROPERTY()
     UIGS_AIDifficultyManager* m_AIDifficultyManager;
+
+    UPROPERTY()
+    UIGS_CombatSettingsManager* m_CombatSettingsManager;
 
     UPROPERTY()
     AActor* m_GeneralListener;

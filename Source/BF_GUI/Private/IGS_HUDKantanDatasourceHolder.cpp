@@ -6,6 +6,6 @@ UIGS_HUDKantanDatasourceHolder::UIGS_HUDKantanDatasourceHolder(const FObjectInit
     (*this).PressureGraphDataSource = gen;
     (*this).PressureGraphCatId_Value = TEXT("KantanSimpleSeries__0");
     (*this).PressureGraphExpectedId_Value = TEXT("KantanSimpleSeries__1");
-    (*this).PrimaryComponentTick.bCanEverTick = true;
+    (*this).PrimaryComponentTick.bStartWithTickEnabled = false;
 }
 

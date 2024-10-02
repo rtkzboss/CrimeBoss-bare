@@ -25,6 +25,9 @@ public:
     FText BadgeText;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FText BadgeIcon;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSlateColor HeadlineColor;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

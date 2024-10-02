@@ -32,7 +32,11 @@ void UIGS_PaybackGameplayStatics::SetPlayerImmortality(UObject* inWCO, bool inIm
 void UIGS_PaybackGameplayStatics::SetControllerRotation(AController* inNewPlayer, const FRotator& inStartRotation) {
 }
 
-bool UIGS_PaybackGameplayStatics::SetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable, int32 InValue, bool inIsDebugSave) {
+bool UIGS_PaybackGameplayStatics::SetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable, int32 InValue) {
+    return false;
+}
+
+bool UIGS_PaybackGameplayStatics::SetAccountNamedVariableValue(UObject* inWCO, FName InName, int32 InValue) {
     return false;
 }
 
@@ -54,7 +58,7 @@ void UIGS_PaybackGameplayStatics::OwnsCommonHeisterData(const APlayerState* inPl
 void UIGS_PaybackGameplayStatics::OwnsChainPlayerCharacters(const APlayerState* inPlayerState, const FIGS_Quick_ChainPlayerCharacters inChainPlayerCharacters, bool& OwnsPlayerCharacters) {
 }
 
-void UIGS_PaybackGameplayStatics::OverridePlayerInventory(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inPrimaryWeapon, TSubclassOf<UMETA_WeaponInventoryObject> inSecondaryWeapon, TSubclassOf<UIGS_EquipmentInventoryObject> inEquipment, bool inRemoveIfNone, EIGS_WieldableSlot inSlotToSelect) {
+void UIGS_PaybackGameplayStatics::OverridePlayerInventory(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inPrimaryWeapon, TSubclassOf<UMETA_WeaponInventoryObject> inSecondaryWeapon, TSubclassOf<UMETA_WeaponInventoryObject> inMeleeWeapon, TSubclassOf<UIGS_EquipmentInventoryObject> inEquipment, TArray<TSoftObjectPtr<UIGS_WeaponSkinData>> inRandomDefaultSkinPool, bool inRemoveIfNone, EIGS_WieldableSlot inSlotToSelect, bool inAssignRandomSkin) {
 }
 
 void UIGS_PaybackGameplayStatics::OverloadAllRobotsOfSide(UObject* inWCO, const EIGS_TeamSideEnum inTeamSide, AController*& inInstigator, const FVector inOrigin, const float inMaxDelay, const float inMaxDistance) {
@@ -92,6 +96,10 @@ UPaybackGameViewportClient* UIGS_PaybackGameplayStatics::GetPaybackViewport(UObj
     return nullptr;
 }
 
+bool UIGS_PaybackGameplayStatics::GetIsHordeMode(UObject* inWCO) {
+    return false;
+}
+
 AIGS_GameStateGame* UIGS_PaybackGameplayStatics::GetGameStateGame(UObject* inWCO) {
     return nullptr;
 }
@@ -119,7 +127,11 @@ TArray<TSubclassOf<UIGS_InventoryObjectFramework>> UIGS_PaybackGameplayStatics::
 void UIGS_PaybackGameplayStatics::GetAlarmLocalizedText(UIGS_AlarmLocalizationTable* inTable, EIGS_AlarmReason inReason, FText& OutText) {
 }
 
-int32 UIGS_PaybackGameplayStatics::GetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable, bool inIsDebugSave) {
+int32 UIGS_PaybackGameplayStatics::GetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable) {
+    return 0;
+}
+
+int32 UIGS_PaybackGameplayStatics::GetAccountNamedVariableValue(UObject* inWCO, FName InName) {
     return 0;
 }
 
@@ -147,7 +159,7 @@ void UIGS_PaybackGameplayStatics::ApplyScalableFloatModifierFromCharacterClass(U
 void UIGS_PaybackGameplayStatics::AddWeaponToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UIGS_WeaponInventoryObject> inWeapon, TArray<TSubclassOf<UIGS_ModInventoryObject>> inWeaponMods, UIGS_WeaponSkinData* inWeaponDefaultSkin, UIGS_WeaponSkinData* inWeaponSpecificSkin, bool inSelect, TSubclassOf<UMETA_WeaponInventoryObject> inOptionalDefinitionObject, bool inThrowAwayOldWeapon) {
 }
 
-void UIGS_PaybackGameplayStatics::AddWeaponDefinitionToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inWeapon, bool inSelect, bool inThrowAwayOldWeapon) {
+void UIGS_PaybackGameplayStatics::AddWeaponDefinitionToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inWeapon, TArray<TSoftObjectPtr<UIGS_WeaponSkinData>> inRandomDefaultSkinPool, bool inSelect, bool inThrowAwayOldWeapon, bool inAssignRandomSkin) {
 }
 
 void UIGS_PaybackGameplayStatics::AddMeleeWeaponToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UIGS_MeleeWeaponInventoryObject> inWeapon, bool inSelect, TSubclassOf<UMETA_WeaponInventoryObject> inOptionalDefinitionObject, bool inThrowAwayOldWeapon) {

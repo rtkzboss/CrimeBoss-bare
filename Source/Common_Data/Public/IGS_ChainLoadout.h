@@ -21,6 +21,9 @@ public:
     TArray<TSubclassOf<UMETA_WeaponInventoryObject>> SecondaryWeapon;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<TSubclassOf<UMETA_WeaponInventoryObject>> MeleeWeapon;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> Equipment;
 
     FIGS_ChainLoadout();

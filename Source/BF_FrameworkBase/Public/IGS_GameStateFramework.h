@@ -4,6 +4,7 @@
 #include "IGS_GameStateBaseWithData.h"
 #include "IGS_InventoryObjectFramework.h"
 #include "IGS_OnLootBagCountChanged.h"
+#include "IGS_OnLootSecuredByCharacter.h"
 #include "IGS_OnPocketLootChangedBP.h"
 #include "IGS_OnSecuredLootAdded.h"
 #include "Templates/SubclassOf.h"
@@ -136,6 +137,9 @@ public:
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void AddBonusLoot(UObject* inWCO, TSubclassOf<UIGS_InventoryObjectFramework> inItemClass, AIGS_GameCharacterFramework* OwningPawn);
+
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnLootSecuredByCharacter OnLootSecuredByCharacter;
 
     UPROPERTY(BlueprintAssignable)
     FIGS_OnSecuredLootAdded OnSecuredLootAdded;

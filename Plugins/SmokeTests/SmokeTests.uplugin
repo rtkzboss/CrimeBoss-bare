@@ -15,13 +15,6 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": true,
-	"Modules": [
-		{
-			"Name": "ST_Framework",
-			"Type": "DeveloperTool",
-			"LoadingPhase": "PreDefault"
-		}
-	],
 	"Plugins": [
 		{
 			"Name": "AssetTags",

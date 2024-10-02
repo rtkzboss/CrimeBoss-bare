@@ -76,7 +76,10 @@ public:
     static void SetControllerRotation(AController* inNewPlayer, const FRotator& inStartRotation);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static bool SetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable, int32 InValue, bool inIsDebugSave);
+    static bool SetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable, int32 InValue);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static bool SetAccountNamedVariableValue(UObject* inWCO, FName InName, int32 InValue);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void RestartGame(UObject* inWCO);
@@ -97,7 +100,7 @@ public:
     static void OwnsChainPlayerCharacters(const APlayerState* inPlayerState, const FIGS_Quick_ChainPlayerCharacters inChainPlayerCharacters, bool& OwnsPlayerCharacters);
 
     UFUNCTION(BlueprintCallable)
-    static void OverridePlayerInventory(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inPrimaryWeapon, TSubclassOf<UMETA_WeaponInventoryObject> inSecondaryWeapon, TSubclassOf<UIGS_EquipmentInventoryObject> inEquipment, bool inRemoveIfNone, EIGS_WieldableSlot inSlotToSelect);
+    static void OverridePlayerInventory(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inPrimaryWeapon, TSubclassOf<UMETA_WeaponInventoryObject> inSecondaryWeapon, TSubclassOf<UMETA_WeaponInventoryObject> inMeleeWeapon, TSubclassOf<UIGS_EquipmentInventoryObject> inEquipment, TArray<TSoftObjectPtr<UIGS_WeaponSkinData>> inRandomDefaultSkinPool, bool inRemoveIfNone, EIGS_WieldableSlot inSlotToSelect, bool inAssignRandomSkin);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void OverloadAllRobotsOfSide(UObject* inWCO, const EIGS_TeamSideEnum inTeamSide, UPARAM(Ref) AController*& inInstigator, const FVector inOrigin, const float inMaxDelay, const float inMaxDistance);
@@ -130,6 +133,9 @@ public:
     static UPaybackGameViewportClient* GetPaybackViewport(UObject* inWCO);
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    static bool GetIsHordeMode(UObject* inWCO);
+
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
     static AIGS_GameStateGame* GetGameStateGame(UObject* inWCO);
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
@@ -151,7 +157,10 @@ public:
     static void GetAlarmLocalizedText(UIGS_AlarmLocalizationTable* inTable, EIGS_AlarmReason inReason, FText& OutText);
 
     UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
-    static int32 GetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable, bool inIsDebugSave);
+    static int32 GetAccountVariableValue(UObject* inWCO, FGameplayTag inVariable);
+
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    static int32 GetAccountNamedVariableValue(UObject* inWCO, FName InName);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static void FinishEndMissionNoResultScreen(UObject* inWCO);
@@ -178,7 +187,7 @@ public:
     static void AddWeaponToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UIGS_WeaponInventoryObject> inWeapon, TArray<TSubclassOf<UIGS_ModInventoryObject>> inWeaponMods, UIGS_WeaponSkinData* inWeaponDefaultSkin, UIGS_WeaponSkinData* inWeaponSpecificSkin, bool inSelect, TSubclassOf<UMETA_WeaponInventoryObject> inOptionalDefinitionObject, bool inThrowAwayOldWeapon);
 
     UFUNCTION(BlueprintCallable)
-    static void AddWeaponDefinitionToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inWeapon, bool inSelect, bool inThrowAwayOldWeapon);
+    static void AddWeaponDefinitionToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UMETA_WeaponInventoryObject> inWeapon, TArray<TSoftObjectPtr<UIGS_WeaponSkinData>> inRandomDefaultSkinPool, bool inSelect, bool inThrowAwayOldWeapon, bool inAssignRandomSkin);
 
     UFUNCTION(BlueprintCallable)
     static void AddMeleeWeaponToPlayer(AIGS_PlayerCharacter* inPlayerCharacter, TSubclassOf<UIGS_MeleeWeaponInventoryObject> inWeapon, bool inSelect, TSubclassOf<UMETA_WeaponInventoryObject> inOptionalDefinitionObject, bool inThrowAwayOldWeapon);

@@ -8,7 +8,7 @@ UMETA_StatisticsManagerComponent::UMETA_StatisticsManagerComponent(const FObject
     (*this).killed_swat_tag = FGameplayTag::RequestGameplayTag(TEXT("MissionData.Common.Dead.Swats"));
 }
 
-bool UMETA_StatisticsManagerComponent::TryModifyGlobalStatistic(const FGameplayTag inStatistic, const float InValue, float& outNewValue, const bool inExpand, const EMETA_StatisticModificationType inMode) {
+bool UMETA_StatisticsManagerComponent::TryModifyGlobalStatistic(const FGameplayTag inStatistic, const float InValue, float& outNewValue, const EMETA_StatisticModificationType inMode) {
     return false;
 }
 
@@ -23,6 +23,9 @@ void UMETA_StatisticsManagerComponent::SetStartDayForStatistics(int32 inStartDay
 }
 
 void UMETA_StatisticsManagerComponent::RemoveAssetFromStatistic(FGameplayTag InAsset) {
+}
+
+void UMETA_StatisticsManagerComponent::LogGlobalStatistics(const bool inExpand) {
 }
 
 void UMETA_StatisticsManagerComponent::InitStatisticCurrentDay(int32 inDay) {
@@ -44,7 +47,7 @@ FMETA_StatisticNoteSaveData UMETA_StatisticsManagerComponent::GetStatisticByDay(
     return FMETA_StatisticNoteSaveData{};
 }
 
-float UMETA_StatisticsManagerComponent::GetGlobalStatistic(const FGameplayTag inStatistic, const bool inExpand) const {
+float UMETA_StatisticsManagerComponent::GetGlobalStatistic(const FGameplayTag inStatistic, const bool inExpand, const EMETA_StatisticEvaluationType inMode) const {
     return 0.000000000e+00f;
 }
 

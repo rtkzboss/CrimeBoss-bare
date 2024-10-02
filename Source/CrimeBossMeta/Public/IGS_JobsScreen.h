@@ -1,7 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "IGS_MenuTileWidget.h"
+#include "EIGS_MenuTileSelectionType.h"
 #include "GameplayTagContainer.h"
 #include "IGS_Screen.h"
+#include "Types/SlateEnums.h"
 #include "IGS_JobsScreenCategoryWidget.h"
 #include "IGS_MultiplayerJobCategoryRow.h"
 #include "Templates/SubclassOf.h"
@@ -9,7 +12,7 @@
 
 class UHorizontalBox;
 class UIGSScrollBox;
-class UIGS_JobsItemWidget;
+class UIGS_MenuItemCategoryWidget;
 class UUserWidget;
 
 UCLASS(EditInlineNew)
@@ -31,10 +34,10 @@ public:
 
 private:
     UFUNCTION()
-    void OnSelectCategory_NoScrollNoFocus(UIGS_JobsScreenCategoryWidget* categoryWidget);
+    void OnSelectCategory_NoScrollNoFocus(UIGS_MenuItemCategoryWidget* categoryWidget);
 
     UFUNCTION()
-    void OnSelectCategory_Internal(UIGS_JobsScreenCategoryWidget* categoryWidget, int32 Direction);
+    void OnSelectCategory_Internal(UIGS_MenuItemCategoryWidget* categoryWidget, int32 Direction);
 
 public:
     UFUNCTION(BlueprintImplementableEvent)
@@ -42,14 +45,11 @@ public:
 
 private:
     UFUNCTION()
-    void OnJobItemSelected_Internal(UIGS_JobsItemWidget* JobWidget);
+    void OnJobItemSelected_Internal(UIGS_MenuTileWidget* jobWidget);
 
 public:
     UFUNCTION(BlueprintImplementableEvent)
-    void OnJobItemSelected(UIGS_JobsItemWidget* JobWidget);
-
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnItemSelected(int32 categoryIndex, UIGS_JobsItemWidget* itemWidget);
+    void OnJobItemSelected(UIGS_MenuTileWidget* jobWidget);
 
     UFUNCTION(BlueprintImplementableEvent)
     void OnCategorySelected(int32 categoryIndex);
@@ -57,6 +57,11 @@ public:
     UFUNCTION(BlueprintCallable)
     void InitializeJobScreen(const TArray<FIGS_MultiplayerJobCategoryRow>& inCategories);
 
+private:
+    UFUNCTION()
+    void HandleNavigationBetweenCategories(UIGS_MenuItemCategoryWidget* categoryWidget, EUINavigation inNavigation);
+
+public:
     UFUNCTION(BlueprintCallable)
     void GoToCategory(int32 Direction);
 
@@ -92,6 +97,12 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Instanced)
     TArray<UIGS_JobsScreenCategoryWidget*> CategoryWidgets;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    TSubclassOf<UIGS_MenuTileWidget> ItemWidgetClass;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    EIGS_MenuTileSelectionType CategoryItemSelectionType;
 
     UPROPERTY(BlueprintReadOnly, Instanced)
     UIGS_JobsScreenCategoryWidget* RecomendedCategoryWidget;

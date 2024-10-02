@@ -10,6 +10,7 @@ FMETA_FinanceManagerSaveData::FMETA_FinanceManagerSaveData() {
     (*this).CurrentLoan.DailyRepaymentInPercentsFromBorrowedCash = 0;
     (*this).CurrentLoan.DaysToRepay = 0;
     (*this).CurrentLoan.CooldownToNextOffer = 0;
+    (*this).CurrentLoanOffers = TArray<FMETA_Loan>{};
     (*this).CooldownToNextOffer = 0;
     (*this).MissionIncome = 0;
     (*this).TradeIncome = 0;

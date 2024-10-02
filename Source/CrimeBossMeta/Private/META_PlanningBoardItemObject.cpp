@@ -6,7 +6,7 @@ UMETA_PlanningBoardItemObject::UMETA_PlanningBoardItemObject() {
 void UMETA_PlanningBoardItemObject::SetStatus(EMETA_PlanningBoardItemStatus NewStatus) {
 }
 
-void UMETA_PlanningBoardItemObject::SetData(FMETA_PlanningBoardItemRow& itemData, EMETA_PlanningBoardItemStatus Status) {
+void UMETA_PlanningBoardItemObject::SetData(FMETA_PlanningBoardItemRow& ItemData, EMETA_PlanningBoardItemStatus Status) {
 }
 
 EMETA_PlanningBoardItemStatus UMETA_PlanningBoardItemObject::GetStatus() const {

@@ -3,6 +3,7 @@
 #include "EMETA_ItemQuality.h"
 #include "EIGS_ItemType.h"
 #include "EIGS_MeleeAttackType.h"
+#include "EIGS_MeleeTraceType.h"
 #include "EIGS_WieldableClass.h"
 #include "IGS_GameplayAbilityGrantDataHolder.h"
 #include "IGS_GameplayEffectApplyDataHolder.h"
@@ -16,11 +17,15 @@ FIGS_MeleeWeaponTableRow::FIGS_MeleeWeaponTableRow() {
     (*this).Data.WwiseWeaponName = FSoftObjectPath();
     (*this).Data.AttackDefinitions = TArray<FIGS_WeaponBashAttackDefinition>{};
     (*this).Data.AIAttackDefinition.AttackType = EIGS_MeleeAttackType::MAT_Primary;
+    (*this).Data.AIAttackDefinition.TraceType = EIGS_MeleeTraceType::MTT_Sphere;
     (*this).Data.AIAttackDefinition.DamageType = nullptr;
     (*this).Data.AIAttackDefinition.ImpactType = nullptr;
     (*this).Data.AIAttackDefinition.BaseDamage = 5.000000000e+01f;
+    (*this).Data.AIAttackDefinition.MaxTargets = 1;
     (*this).Data.AIAttackDefinition.MaxRange = 1.000000000e+02f;
     (*this).Data.AIAttackDefinition.TraceRadius = 3.000000000e+01f;
+    (*this).Data.AIAttackDefinition.SwingMainTraceRadius = 3.000000000e+01f;
+    (*this).Data.AIAttackDefinition.SwingTraceAngle = 9.000000000e+01f;
     (*this).Data.WieldableClass = FSoftObjectPath();
     (*this).Data.WieldableTortillaBaseFOV = 4.500000000e+01f;
     (*this).Data.WieldableTortillaAimFOV = 4.500000000e+01f;

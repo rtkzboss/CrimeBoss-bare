@@ -269,7 +269,7 @@ public:
     FMETA_CampaignUserDifficultyConfiguration GetCampaignDifficultyConfiguration(const EIGS_UserDifficulty inUserDifficulty) const;
 
     UFUNCTION(BlueprintPure)
-    void GetBossLoadout(UClass*& outPrimaryWeapon, UClass*& outSecondaryWeapon, UClass*& outEquipment) const;
+    void GetBossLoadout(UClass*& outPrimaryWeapon, UClass*& outSecondaryWeapon, UClass*& outMeleeWeapon, UClass*& outEquipment) const;
 
     UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetBadTraits() const;
@@ -337,6 +337,9 @@ protected:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* SecondaryWeapon;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UClass* MeleeWeapon;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* Equipment;

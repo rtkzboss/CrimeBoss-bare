@@ -7,7 +7,9 @@
 #include "EIGS_ReloadInterruptReasonEnum.h"
 #include "EIGS_Speed.h"
 #include "IGS_InterestPointHolder.h"
+#include "IGS_NetProjectileHitResult.h"
 #include "EIGS_BagType.h"
+#include "EIGS_CharacterVsHeistersCollisionStatus.h"
 #include "EIGS_SpecialActionType.h"
 #include "IGS_LootBagInfo.h"
 #include "IGS_ReplicatedLadder.h"
@@ -30,7 +32,6 @@
 #include "IGS_BashResultNetwork.h"
 #include "IGS_NetProjectileData.h"
 #include "IGS_NetProjectileHitData.h"
-#include "IGS_NetProjectileHitResult.h"
 #include "IGS_NetworkDialogueEvent.h"
 #include "IGS_ReplicatedAcceleration.h"
 #include "IGS_ReplicationAnimationDataHolder.h"
@@ -127,6 +128,9 @@ private:
     void OnRep_CurrentSlot();
 
 protected:
+    UFUNCTION()
+    void OnRep_CharacterVsHeistersCollisionStatus() const;
+
     UFUNCTION()
     void OnRep_CharacterState() const;
 
@@ -380,6 +384,9 @@ protected:
 
     UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterState)
     EIGS_CharacterState mR_CharacterState;
+
+    UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_CharacterVsHeistersCollisionStatus)
+    EIGS_CharacterVsHeistersCollisionStatus mR_CharacterVsHeistersCollisionStatus;
 
 private:
     UPROPERTY(ReplicatedUsing=OnRep_MovementSpeed)

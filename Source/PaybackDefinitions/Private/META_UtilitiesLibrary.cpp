@@ -19,6 +19,10 @@ float UMETA_UtilitiesLibrary::RandomFloatInRange(const FMETA_FloatInterval InRan
     return 0.000000000e+00f;
 }
 
+bool UMETA_UtilitiesLibrary::IsWeaponSlot(const EIGS_InventorySlot inSlot) {
+    return false;
+}
+
 bool UMETA_UtilitiesLibrary::IsUniqueCharacter(EIGS_CharacterID ID) {
     return false;
 }
@@ -65,6 +69,10 @@ int32 UMETA_UtilitiesLibrary::GetNumberOfDigits(const int32 inNumber) {
 
 bool UMETA_UtilitiesLibrary::GetLootLevel(FGameplayTag inLootTag, int32& Level, FGameplayTag& outMainLootTag) {
     return false;
+}
+
+FString UMETA_UtilitiesLibrary::GetDebugTagContainerString(const FGameplayTagContainer& inContainer) {
+    return TEXT("");
 }
 
 TArray<FGameplayTag> UMETA_UtilitiesLibrary::GetAllLootItemsAvailableOnMeta() {
@@ -123,7 +131,7 @@ TArray<FGameplayTag> UMETA_UtilitiesLibrary::CalculateParentLootTagsForArray(TAr
     return {};
 }
 
-int32 UMETA_UtilitiesLibrary::CalculateIndexForArrayOfChances(TArray<int32> inChances) {
+int32 UMETA_UtilitiesLibrary::CalculateIndexForArrayOfChances(const TArray<int32>& inChances) {
     return 0;
 }
 

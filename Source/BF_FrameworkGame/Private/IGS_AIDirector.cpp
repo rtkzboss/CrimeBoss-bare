@@ -4,6 +4,7 @@
 #include "IGS_AIPointManager.h"
 #include "IGS_AISpawner.h"
 #include "IGS_AmbientLifeManager.h"
+#include "IGS_CombatSettingsManager.h"
 #include "IGS_DefendManager.h"
 #include "IGS_DetectionManager.h"
 #include "IGS_MountedWeaponManager.h"
@@ -21,6 +22,7 @@ UIGS_AIDirector::UIGS_AIDirector() {
     auto gen8 = CreateDefaultSubobject<UIGS_AIPointManager>(TEXT("AIPoint Manager"));
     auto gen9 = CreateDefaultSubobject<UIGS_TrafficManager>(TEXT("Traffic Manager"));
     auto gen10 = CreateDefaultSubobject<UIGS_AIDifficultyManager>(TEXT("AI Difficulty Manager"));
+    auto gen11 = CreateDefaultSubobject<UIGS_CombatSettingsManager>(TEXT("Combat Settings Manager"));
     (*this).m_AISpawner = gen;
     (*this).m_PressureManager = gen2;
     (*this).m_AIEventsDispatcher = gen3;
@@ -31,6 +33,7 @@ UIGS_AIDirector::UIGS_AIDirector() {
     (*this).m_AIPointsManager = gen8;
     (*this).m_TrafficManager = gen9;
     (*this).m_AIDifficultyManager = gen10;
+    (*this).m_CombatSettingsManager = gen11;
 }
 
 void UIGS_AIDirector::SetGlobalAggro(AActor* inActor, float InFloat, const AActor* inInstigator) {
@@ -72,6 +75,10 @@ AIGS_ControlRoomBase* UIGS_AIDirector::GetControlRoomForSquad(int32 inSquadID) {
 }
 
 UIGS_GuardControlRoomComponentBase* UIGS_AIDirector::GetControlRoomComponentForSquad(int32 inSquadID) {
+    return nullptr;
+}
+
+UIGS_CombatSettingsManager* UIGS_AIDirector::GetCombatSettingsManager() const {
     return nullptr;
 }
 

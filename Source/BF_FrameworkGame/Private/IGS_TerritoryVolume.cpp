@@ -8,7 +8,6 @@ AIGS_TerritoryVolume::AIGS_TerritoryVolume(const FObjectInitializer& ObjectIniti
     (*this).BrushColor.A = 255;
     (*this).bColored = true;
     (*this).bSolidWhenSelected = true;
-    (*this).PrimaryActorTick.bCanEverTick = true;
 }
 
 void AIGS_TerritoryVolume::OnTerritoryVolumeEndOverlap(UPrimitiveComponent* inOverlappedComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, int32 inOtherBodyIndex) {

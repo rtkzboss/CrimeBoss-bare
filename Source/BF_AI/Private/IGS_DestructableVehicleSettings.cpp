@@ -12,6 +12,6 @@ UIGS_DestructableVehicleSettings::UIGS_DestructableVehicleSettings() {
     (*this).FireDamage = 6.000000000e+01f;
     (*this).BaseDoorHealth = 1.800000000e+03f;
     (*this).MaxHealth = 4.000000000e+03f;
-    (*this).AiDamageMultiplier = 1.000000000e+00f;
+    (*this).AIDamageMultiplier = 1.000000000e+00f;
 }
 

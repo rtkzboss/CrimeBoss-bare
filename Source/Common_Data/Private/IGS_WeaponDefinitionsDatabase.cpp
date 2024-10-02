@@ -10,7 +10,11 @@ void UIGS_WeaponDefinitionsDatabase::SetWeaponIcon(FIGS_WeaponDefinitionTableRow
 void UIGS_WeaponDefinitionsDatabase::ModAppendDataTable(UDataTable* inNewTable) {
 }
 
-FGameplayTag UIGS_WeaponDefinitionsDatabase::GetWiedableClassById(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inWeaponId) {
+FGameplayTag UIGS_WeaponDefinitionsDatabase::GetWiedableClassByTagId(const UObject* inWCO, const FGameplayTag& inWeaponTag) {
+    return FGameplayTag();
+}
+
+FGameplayTag UIGS_WeaponDefinitionsDatabase::GetWiedableClassById(const UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inWeaponId) {
     return FGameplayTag();
 }
 
@@ -38,7 +42,11 @@ TArray<FIGS_WeaponDefinitionTableRow> UIGS_WeaponDefinitionsDatabase::GetDatabas
     return {};
 }
 
-TArray<FIGS_WeaponDefinitionTableRow> UIGS_WeaponDefinitionsDatabase::GetAllGenerableWeaponsData(const UObject* inWCO, bool inIncludeDLCs) {
+TArray<FIGS_WeaponDefinitionTableRow> UIGS_WeaponDefinitionsDatabase::GetAllGenerableWeaponsData(const UObject* inWCO, bool inIncludeDLCs, bool inOnlyIfEntitledTo) {
+    return {};
+}
+
+TArray<FIGS_WeaponDefinitionTableRow> UIGS_WeaponDefinitionsDatabase::GetAllDataWeaponsWithFPSWeaponID(const UObject* inWCO, const TSubclassOf<UIGS_WieldableInventoryObjectBase>& inFPSWeaponID, bool& outSucceeded) {
     return {};
 }
 

@@ -25,7 +25,7 @@ TArray<UMETA_WeaponSkin*> UIGS_Quickplay_BlackMarketManagerComponent::GetWeaponS
     return {};
 }
 
-TArray<UMETA_WeaponSkin*> UIGS_Quickplay_BlackMarketManagerComponent::GetWeaponSkinsForWeapon(FGameplayTag inItemTag) const {
+TArray<UMETA_WeaponSkin*> UIGS_Quickplay_BlackMarketManagerComponent::GetWeaponSkinsForWeapon(const UMETA_Weapon* inWeapon, FGameplayTag inItemTag) const {
     return {};
 }
 

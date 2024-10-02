@@ -26,6 +26,8 @@ FIGS_QuickPlayPreferencesSaveData::FIGS_QuickPlayPreferencesSaveData() {
     (*this).PlayerHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).PlayerHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).PlayerHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).PlayerHeisterData.Loadout.MeleeWeapon = nullptr;
+    (*this).PlayerHeisterData.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).PlayerHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).PlayerHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).PlayerHeisterData.Loadout.Ability1ChargesLeft = -1;

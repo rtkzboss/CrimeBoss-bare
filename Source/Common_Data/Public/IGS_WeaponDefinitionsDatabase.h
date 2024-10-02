@@ -3,6 +3,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "GameplayTagContainer.h"
 #include "IGS_WeaponDefinitionTableRow.h"
+#include "IGS_WieldableInventoryObjectBase.h"
 #include "META_WeaponInventoryObject.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_WeaponDefinitionsDatabase.generated.h"
@@ -26,7 +27,10 @@ public:
     void ModAppendDataTable(UDataTable* inNewTable);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static FGameplayTag GetWiedableClassById(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inWeaponId);
+    static FGameplayTag GetWiedableClassByTagId(const UObject* inWCO, const FGameplayTag& inWeaponTag);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static FGameplayTag GetWiedableClassById(const UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inWeaponId);
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
     static TSoftObjectPtr<UTexture2D> GetWeaponIcon(UObject* inWCO, TSubclassOf<UMETA_WeaponInventoryObject> inWeaponObject, TSoftObjectPtr<UDataAsset> inWeaponSkin);
@@ -47,6 +51,9 @@ public:
     TArray<FIGS_WeaponDefinitionTableRow> GetDatabaseTableBP();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    static TArray<FIGS_WeaponDefinitionTableRow> GetAllGenerableWeaponsData(const UObject* inWCO, bool inIncludeDLCs);
+    static TArray<FIGS_WeaponDefinitionTableRow> GetAllGenerableWeaponsData(const UObject* inWCO, bool inIncludeDLCs, bool inOnlyIfEntitledTo);
+
+    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
+    static TArray<FIGS_WeaponDefinitionTableRow> GetAllDataWeaponsWithFPSWeaponID(const UObject* inWCO, const TSubclassOf<UIGS_WieldableInventoryObjectBase>& inFPSWeaponID, bool& outSucceeded);
 
 };

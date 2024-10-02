@@ -109,6 +109,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     FGameplayTagContainer CompletedTutorialTags;
 
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    TMap<FName, int32> NamedPersistentData;
+
     UPROPERTY(SaveGame)
     FString UserAnalyticsID;
 

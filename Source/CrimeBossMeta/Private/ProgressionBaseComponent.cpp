@@ -37,7 +37,7 @@ bool UProgressionBaseComponent::ProcessNextPendingLevelUp(TArray<FIGS_UnlockItem
     return false;
 }
 
-void UProgressionBaseComponent::ProcessMissionResults(FIGS_MissionResult& inMissionResult, bool inAccumulateResult) {
+void UProgressionBaseComponent::ProcessMissionResults(FIGS_MissionResult& inMissionResult, TArray<FIGS_MissionResultRewardItem>& outRewardItems, bool inAccumulateResult) {
 }
 
 bool UProgressionBaseComponent::HasSomePendingUnlockRewards() const {

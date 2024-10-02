@@ -88,10 +88,16 @@ public:
     void PrintCharacterCount();
 
     UFUNCTION(BlueprintCallable, Exec)
-    void PingAll();
+    void PingTeam(const FString& inTeamSide);
 
     UFUNCTION(BlueprintCallable, Exec)
-    void Ping(const FString& inTeamSide);
+    void PingLoot();
+
+    UFUNCTION(BlueprintCallable, Exec)
+    void PingCharacters();
+
+    UFUNCTION(BlueprintCallable, Exec)
+    void PingAll();
 
     UFUNCTION(BlueprintCallable, Exec)
     void PerformanceCheck(int32 inFrames);

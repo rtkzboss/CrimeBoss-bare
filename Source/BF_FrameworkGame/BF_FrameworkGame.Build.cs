@@ -20,6 +20,7 @@ public class BF_FrameworkGame : ModuleRules {
             "CableComponent",
             "CommonUI",
             "Common_Data",
+            "Common_Save",
             "Common_Utils",
             "Core",
             "CoreUObject",

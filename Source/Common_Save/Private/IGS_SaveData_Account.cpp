@@ -41,6 +41,8 @@ FIGS_SaveData_Account::FIGS_SaveData_Account() {
     (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.MeleeWeapon = nullptr;
+    (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).QuickPlayPreferences.PlayerHeisterData.Loadout.Ability1ChargesLeft = -1;
@@ -84,6 +86,7 @@ FIGS_SaveData_Account::FIGS_SaveData_Account() {
     (*this).PreviousSession.MissionID.C = 0;
     (*this).PreviousSession.MissionID.D = 0;
     (*this).CompletedTutorialTags = FGameplayTagContainer();
+    (*this).NamedPersistentData = TMap<FName, int32>{};
     (*this).UserAnalyticsID = TEXT("");
     (*this).UserCountry = TEXT("");
     (*this).UserRegion = TEXT("");

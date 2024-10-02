@@ -1,6 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_HUDScreen.h"
+#include "IGS_HordeMode_UpgradeUI.h"
+#include "GameplayEffect.h"
+#include "Templates/SubclassOf.h"
 #include "IGS_MainHUDWidget.generated.h"
 
 class AIGS_PlayerCharacter;
@@ -29,9 +32,6 @@ public:
     void ShowInAbilityWidgets();
 
     UFUNCTION(BlueprintCallable)
-    void ShowHordeModeWidgets();
-
-    UFUNCTION(BlueprintCallable)
     void ShowEndMissionWidgets();
 
     UFUNCTION(BlueprintCallable)
@@ -42,6 +42,9 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetStrikesVisibility(bool InVisibility);
+
+    UFUNCTION(BlueprintCallable)
+    void SetHordeModeWidgetsVisibility(bool inIsVisible);
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetCustomTimer(const float inTotalTime);
@@ -61,6 +64,20 @@ public:
     UFUNCTION(BlueprintImplementableEvent)
     void OnNewPawn();
 
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnHordeModeUpgradesChanged(const TArray<FIGS_HordeMode_UpgradeUI>& inUpgradeUIData);
+
+    UFUNCTION(BlueprintImplementableEvent)
+    void OnHordeModeUpgradeAdded(const FIGS_HordeMode_UpgradeUI& inUpgradeUIData);
+
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnEndMissionWidgetDisplayed();
+
+private:
+    UFUNCTION()
+    void OnCharacterGameplayEffectApplied(TSubclassOf<UGameplayEffect> inEffectClass, float inLevel);
+
+public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void HideTutorialHint(const int32 inHintEnumIdx);
 
@@ -105,5 +122,9 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Export)
     TSet<UIGS_HUDSubwidgetBase*> AllWidgets;
+
+protected:
+    UPROPERTY(BlueprintReadOnly)
+    TMap<TSubclassOf<UGameplayEffect>, float> ActiveEffectsMap;
 
 };

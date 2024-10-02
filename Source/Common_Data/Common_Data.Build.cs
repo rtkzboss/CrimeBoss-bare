@@ -19,7 +19,9 @@ public class Common_Data : ModuleRules {
             "Engine",
             "GameplayAbilities",
             "GameplayTags",
+            "Niagara",
             "PaybackDefinitions",
+            "SlateCore",
         });
     }
 }

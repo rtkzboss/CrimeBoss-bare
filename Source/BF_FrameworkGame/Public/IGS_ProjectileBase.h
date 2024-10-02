@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "IGS_PoolableBaseActor.h"
+#include "IGS_WeaponPenetrationDefinition.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/DamageType.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -27,6 +28,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void SetRange(float inEffectiveRange, float inMaxRange, float inLineTraceEnd);
+
+    UFUNCTION(BlueprintCallable)
+    void SetPenetrationDefinition(const FIGS_WeaponPenetrationDefinition& inPenetrationDefinition);
 
     UFUNCTION(BlueprintCallable)
     void SetMuzzleLocation(const FVector& inMuzzleLocation);

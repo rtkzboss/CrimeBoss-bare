@@ -2,6 +2,7 @@
 #include "Net/UnrealNetwork.h"
 
 UIGS_LootBagInteractiveComponent::UIGS_LootBagInteractiveComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    (*this).SetIsReplicatedByDefault(false);
 }
 
 bool UIGS_LootBagInteractiveComponent::PutItemToInventory(AIGS_GameCharacterFramework* inInstigator) {

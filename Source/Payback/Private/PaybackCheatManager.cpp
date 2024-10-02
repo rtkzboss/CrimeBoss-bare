@@ -81,10 +81,16 @@ void UPaybackCheatManager::PrintGameplayEffects() {
 void UPaybackCheatManager::PrintCharacterCount() {
 }
 
-void UPaybackCheatManager::PingAll() {
+void UPaybackCheatManager::PingTeam(const FString& inTeamSide) {
 }
 
-void UPaybackCheatManager::Ping(const FString& inTeamSide) {
+void UPaybackCheatManager::PingLoot() {
+}
+
+void UPaybackCheatManager::PingCharacters() {
+}
+
+void UPaybackCheatManager::PingAll() {
 }
 
 void UPaybackCheatManager::PerformanceCheck(int32 inFrames) {

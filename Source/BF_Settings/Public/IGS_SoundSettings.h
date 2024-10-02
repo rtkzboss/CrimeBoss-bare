@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EIGS_VoiceChatActivationMode.h"
 #include "IGS_SettingsBase.h"
 #include "IGS_SoundSettings.generated.h"
 
@@ -53,5 +54,8 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
     bool bVoiceChatEnabledValue;
+
+    UPROPERTY(BlueprintReadOnly, Config, EditAnywhere)
+    EIGS_VoiceChatActivationMode VoiceChatActivationType;
 
 };

@@ -26,6 +26,8 @@ FIGS_PlayerStateData::FIGS_PlayerStateData() {
     (*this).HeisterDataHolder.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).HeisterDataHolder.Loadout.SecondaryWeapon = nullptr;
     (*this).HeisterDataHolder.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).HeisterDataHolder.Loadout.MeleeWeapon = nullptr;
+    (*this).HeisterDataHolder.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).HeisterDataHolder.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).HeisterDataHolder.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).HeisterDataHolder.Loadout.Ability1ChargesLeft = -1;

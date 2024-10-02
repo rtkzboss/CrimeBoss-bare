@@ -7,6 +7,7 @@
 #include "Templates/SubclassOf.h"
 #include "IGS_SentryGun.generated.h"
 
+class AIGS_GameCharacterFramework;
 class UAkComponent;
 class UIGS_OverheatComponent;
 class UIGS_SimpleHitScanShooter;
@@ -21,6 +22,11 @@ protected:
     UFUNCTION(BlueprintCallable)
     void SetSentryCanShoot(bool inEnabled);
 
+public:
+    UFUNCTION(BlueprintCallable)
+    void SetCharacterOwner(AIGS_GameCharacterFramework* inCharacter);
+
+protected:
     UFUNCTION(BlueprintCallable)
     void OnTakeDamage(float inCurrentHealth, float inCurrentShield, float inHealthChange, float inShieldChange, const FIGS_HitInfo& inHitInfo);
 

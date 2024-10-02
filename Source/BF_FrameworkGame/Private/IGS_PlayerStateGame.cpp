@@ -5,6 +5,9 @@ AIGS_PlayerStateGame::AIGS_PlayerStateGame(const FObjectInitializer& ObjectIniti
     (*this).HeisterNumber = -1;
 }
 
+void AIGS_PlayerStateGame::SpendTokens(int32 inTokens) {
+}
+
 bool AIGS_PlayerStateGame::ShouldUsePlayerStateLoadout() {
     return false;
 }
@@ -46,6 +49,9 @@ void AIGS_PlayerStateGame::SendTextChatMessage_Implementation(const FText& InTex
 }
 bool AIGS_PlayerStateGame::SendTextChatMessage_Validate(const FText& InText, const FString& inUserId, const TArray<FString>& inBlockedUsersList) {
     return true;
+}
+
+void AIGS_PlayerStateGame::OnRep_PlayerStateData() {
 }
 
 void AIGS_PlayerStateGame::OnRep_IsLevelLoaded() const {

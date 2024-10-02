@@ -50,6 +50,10 @@ TArray<FGameplayTagContainer> UMETA_PlotlineSelection::GetPlayerTileGroups() con
     return {};
 }
 
+FMETA_Interval UMETA_PlotlineSelection::GetPlayersInitialTerritoryRange() const {
+    return FMETA_Interval{};
+}
+
 float UMETA_PlotlineSelection::GetInvestigationGrowthMultiplier() const {
     return 0.000000000e+00f;
 }

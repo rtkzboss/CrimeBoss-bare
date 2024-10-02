@@ -9,6 +9,7 @@ UIGS_Quickplay_EconomyData::UIGS_Quickplay_EconomyData() {
     (*this).DigitsWithoutRounding = 3;
     (*this).HeisterLevelPerQuality = TMap<EMETA_ItemQuality, int32>{};
     (*this).CharacterStartingPerksPerQuality = TMap<EMETA_ItemQuality, int32>{};
+    (*this).HordeMode_Players_LootWeightMultiplier = TMap<int32, float>{};
 }
 
 int32 UIGS_Quickplay_EconomyData::GetStartingCash() const {

@@ -15,6 +15,7 @@ class AIGS_AIControllerBase;
 class AIGS_AIControllerGame;
 class AIGS_AIControllerPlayerBot;
 class AIGS_GameCharacterFramework;
+class AIGS_LootBagPickup;
 class AIGS_MonsterCloset;
 class UCoverPoint;
 class UIGS_OffenceData;
@@ -85,6 +86,9 @@ public:
     static bool IsLootingCarryableStillValid(AIGS_AIControllerGame* InController, const bool inIgnorePhase, const bool inIgnorePosChange);
 
     UFUNCTION(BlueprintCallable)
+    static bool IsLootBagStillPickableBy(AIGS_AIControllerBase* InController, const AIGS_LootBagPickup* inLootBag);
+
+    UFUNCTION(BlueprintCallable)
     static bool IsInDangerArea(AController* InController, const float InRadius, const bool inAddCapsuleRadiusIfCharacter);
 
     UFUNCTION(BlueprintCallable)
@@ -106,7 +110,7 @@ public:
     static TArray<AIGS_MonsterCloset*> GetMonsterClosetsInBox(UObject* inWCO, FVector inOrigin, FVector InBoxExtent);
 
     UFUNCTION(BlueprintCallable)
-    static FVector GetLastPosOnNavmesh(AActor* inActor);
+    static FVector GetLastOrClosestPosOnNavmesh(AActor* inActor);
 
     UFUNCTION(BlueprintCallable)
     static float GetDistanceToNextPathPoint(AAIController* Controller);
@@ -121,7 +125,7 @@ public:
     static void DeactivateHeistersDefend(const UObject* inWCO);
 
     UFUNCTION(BlueprintCallable)
-    static bool CanShootAtHiddenPos(AAIController* InController, AActor* inTarget, FVector& outPos);
+    static bool CanShootAtHiddenPos(AAIController* InController, FVector& outPos);
 
     UFUNCTION(BlueprintCallable)
     static bool CalculatePlayerOverlap(AIGS_AIControllerPlayerBot* playerBot);

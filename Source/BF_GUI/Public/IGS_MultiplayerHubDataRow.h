@@ -24,5 +24,8 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FText SelectionLabelDisabledText;
 
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool IsTimeLimited;
+
     BF_GUI_API FIGS_MultiplayerHubDataRow();
 };

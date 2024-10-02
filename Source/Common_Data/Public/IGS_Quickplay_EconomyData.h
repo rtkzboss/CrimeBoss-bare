@@ -66,4 +66,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TMap<FGameplayTag, int32> CharacterStartingPerksOverride;
 
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    TMap<int32, float> HordeMode_Players_LootWeightMultiplier;
+
 };

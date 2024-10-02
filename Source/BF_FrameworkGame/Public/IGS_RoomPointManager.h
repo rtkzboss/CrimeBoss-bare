@@ -31,10 +31,10 @@ public:
     TArray<AIGS_RoomBase*> GetRoomsWithGameplayTag(FGameplayTag inTag);
 
     UFUNCTION(BlueprintPure)
-    ARoomNavmesh* GetRoomNavData();
+    ARoomNavmesh* GetRoomNavData() const;
 
     UFUNCTION(BlueprintPure)
-    AIGS_HumanNavMesh* GetHumanNavData();
+    AIGS_HumanNavMesh* GetHumanNavData() const;
 
     UFUNCTION(BlueprintPure)
     TArray<AIGS_RoomBase*> GetAllRoomsInBox(FVector inOrigin, FVector InBoxExtent) const;

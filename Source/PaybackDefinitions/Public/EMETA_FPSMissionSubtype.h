@@ -11,4 +11,5 @@ enum class EMETA_FPSMissionSubtype : uint8 {
     CharacterMission,
     WarehouseAttack,
     WeakenMission,
+    HordeModeMission,
 };

@@ -3,6 +3,7 @@
 #include "IGS_ProgressionResult.h"
 #include "IGS_UnlockItemInfo.h"
 #include "IGS_MissionResult.h"
+#include "IGS_MissionResultRewardItem.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
 #include "GameplayTagContainer.h"
@@ -53,7 +54,7 @@ public:
     bool ProcessNextPendingLevelUp(TArray<FIGS_UnlockItemInfo>& outUnlockedItems);
 
     UFUNCTION(BlueprintCallable)
-    void ProcessMissionResults(UPARAM(Ref) FIGS_MissionResult& inMissionResult, bool inAccumulateResult);
+    void ProcessMissionResults(UPARAM(Ref) FIGS_MissionResult& inMissionResult, TArray<FIGS_MissionResultRewardItem>& outRewardItems, bool inAccumulateResult);
 
     UFUNCTION(BlueprintPure)
     bool HasSomePendingUnlockRewards() const;
@@ -92,7 +93,7 @@ protected:
     bool BP_ProcessLevelUp(const int32 inLevel, TArray<FIGS_UnlockItemInfo>& outUnlockedItems);
 
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    bool BP_ClaimDailyMultiplayerBonus();
+    TArray<FIGS_MissionResultRewardItem> BP_ClaimDailyMultiplayerBonus();
 
 public:
     UFUNCTION(BlueprintCallable)

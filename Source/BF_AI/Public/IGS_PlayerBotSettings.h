@@ -25,6 +25,9 @@ public:
     UPROPERTY(EditAnywhere)
     FFloatInterval AffterFireCooldownCover;
 
+    UPROPERTY(EditAnywhere)
+    float MaxFiringRange;
+
     UPROPERTY(EditDefaultsOnly)
     float CoverStickiness;
 

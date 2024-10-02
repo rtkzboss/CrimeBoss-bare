@@ -8,4 +8,5 @@ enum class EMETA_DebriefType : uint8 {
     Short,
     TurfWar,
     DontShow,
+    HordeMode,
 };

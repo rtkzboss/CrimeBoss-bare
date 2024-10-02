@@ -8,4 +8,5 @@ enum class EIGS_RewardType : uint8 {
     Character = 0,
     MissionContract,
     ChainContract,
+    Plotline,
 };

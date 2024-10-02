@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EMETA_BlackmarketType.h"
 #include "IGS_EquipmentInventoryObject.h"
 #include "META_ArmyTierConfiguration.h"
 #include "GameplayTagContainer.h"
@@ -13,6 +14,7 @@
 #include "Templates/SubclassOf.h"
 #include "META_BlackmarketManagerComponent.generated.h"
 
+class UMETA_BaseObject;
 class UMETA_Character;
 class UMETA_Equipment;
 class UMETA_PlotlineAsset;
@@ -23,6 +25,17 @@ class CRIMEBOSSMETA_API UMETA_BlackmarketManagerComponent : public UIGS_Blackmar
     GENERATED_BODY()
 public:
     UMETA_BlackmarketManagerComponent(const FObjectInitializer& ObjectInitializer);
+
+protected:
+    UFUNCTION(BlueprintCallable)
+    void SplitItemPool(const TArray<UMETA_BaseObject*>& inItems, TArray<UMETA_Weapon*>& outWeapons, TArray<UMETA_Equipment*>& outEquipment);
+
+public:
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void RefreshBlackmarketItems(const EMETA_BlackmarketType inMarketType);
+
+    UFUNCTION(BlueprintCallable)
+    void RecalculateCharacterPricesInShop();
 
     UFUNCTION(BlueprintCallable)
     void ProcessWeaponEvent();
@@ -51,6 +64,11 @@ public:
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     bool IsBMLootEventReady() const;
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    void HandlePurchasedItemRemoval(UMETA_BaseObject* inItem);
+
+public:
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     int32 GetWeaponsPoolRefreshPrice() const;
 
@@ -88,6 +106,9 @@ public:
     TArray<UMETA_Equipment*> GetEquipmentPoolForBMEquipmentEvent() const;
 
 protected:
+    UFUNCTION(BlueprintCallable)
+    TArray<UMETA_BaseObject*> GetCurrentBlackmarketPool();
+
     UFUNCTION(BlueprintPure)
     int32 GetCostOfSoldierForHire(EMETA_RespectLvl inRespect) const;
 
@@ -101,6 +122,11 @@ public:
     UFUNCTION(BlueprintPure)
     TMap<FMETA_VendorLootKey, FMETA_BMEventLootData> GetBMEventLootDataForVendors() const;
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    TArray<UMETA_BaseObject*> GetBlackmarketPool();
+
+public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     int32 GetAmountOfSoldiersCanBeBought();
 
@@ -113,10 +139,24 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ForceHeistersPoolRefresh();
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    UMETA_Weapon* DuplicateBlackmarketWeapon(const UMETA_Weapon* inSourceWeapon);
+
+    UFUNCTION(BlueprintCallable)
+    UMETA_Equipment* DuplicateBlackmarketEquipment(const UMETA_Equipment* inSourceEquipment);
+
+public:
     UFUNCTION(BlueprintCallable)
     void Debug_ProcessWeaponEvent();
 
 protected:
+    UFUNCTION(BlueprintCallable)
+    UMETA_Weapon* CreateBlackmarketWeapon(const FGameplayTag& inWeaponTag);
+
+    UFUNCTION(BlueprintCallable)
+    UMETA_Equipment* CreateBlackmarketEquipment(const FGameplayTag& inEquipmentTag);
+
     UFUNCTION(BlueprintCallable)
     void CheckWeaponEventFinished();
 
@@ -130,9 +170,22 @@ public:
     UFUNCTION(BlueprintPure)
     bool CanWeaponEventBeTriggered();
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    int32 CalculateWeaponsPoolRefreshStartPrice();
+
+    UFUNCTION(BlueprintPure)
+    int32 CalculateWeaponsPoolRefreshCost() const;
+
+public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void BuySoldiers(int32 inAmount, int32& outAmountOfSoldiersBought);
 
+protected:
+    UFUNCTION(BlueprintPure)
+    bool AreCampaignWeaponSkinsEnabled() const;
+
+public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ActivateLootEventByVendor(FMETA_VendorLootKey inVendorLootKey);
 

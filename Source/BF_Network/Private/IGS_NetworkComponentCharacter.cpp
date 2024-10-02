@@ -87,6 +87,9 @@ void UIGS_NetworkComponentCharacter::OnRep_IsMantling() const {
 void UIGS_NetworkComponentCharacter::OnRep_CurrentSlot() {
 }
 
+void UIGS_NetworkComponentCharacter::OnRep_CharacterVsHeistersCollisionStatus() const {
+}
+
 void UIGS_NetworkComponentCharacter::OnRep_CharacterState() const {
 }
 
@@ -422,6 +425,7 @@ void UIGS_NetworkComponentCharacter::GetLifetimeReplicatedProps(TArray<FLifetime
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_LootBagInfo);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_FullLootBagInfos);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_CharacterState);
+    DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_CharacterVsHeistersCollisionStatus);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_MovementSpeed);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_RequestedLeanSide);
     DOREPLIFETIME(UIGS_NetworkComponentCharacter, mR_LeaningDirection);

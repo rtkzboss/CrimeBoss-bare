@@ -30,6 +30,12 @@ public:
     UPROPERTY(BlueprintAssignable)
     FIGS_OnDirectionalPlayerCueSignature OnPlayDirectionalPlayerCueEvent;
 
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float DirectionalCueCooldown;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    float DirectionalMeleeCueRange;
+
 protected:
     UPROPERTY(EditDefaultsOnly)
     UAkAudioEvent* DirectionalBulletWhizAkAudioEvent;

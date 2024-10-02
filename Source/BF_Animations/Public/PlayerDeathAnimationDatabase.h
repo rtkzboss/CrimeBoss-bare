@@ -1,8 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/DataAsset.h"
 #include "IGS_DeathAnimationsSet.h"
 #include "IGS_DeathSpecialAnimations.h"
+#include "IGS_MeleeDeathAnimationsSet.h"
 #include "PlayerDeathAnimationDatabase.generated.h"
 
 class UPhysicalMaterial;
@@ -26,6 +28,9 @@ public:
     FIGS_DeathAnimationsSet LeftInfo;
 
     UPROPERTY(EditAnywhere)
+    FVector2D BodyPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet CrouchFrontInfo;
 
     UPROPERTY(EditAnywhere)
@@ -36,6 +41,9 @@ public:
 
     UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet CrouchLeftInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D CrouchBodyPlayRateRange;
 
     UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet FrontHeadInfo;
@@ -50,6 +58,9 @@ public:
     FIGS_DeathAnimationsSet LeftHeadInfo;
 
     UPROPERTY(EditAnywhere)
+    FVector2D HeadPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet CrouchHeadFrontInfo;
 
     UPROPERTY(EditAnywhere)
@@ -60,6 +71,9 @@ public:
 
     UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet CrouchHeadLeftInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D CrouchHeadPlayRateRange;
 
     UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet RunFrontInfo;
@@ -74,7 +88,13 @@ public:
     FIGS_DeathAnimationsSet RunLeftInfo;
 
     UPROPERTY(EditAnywhere)
+    FVector2D RunPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet ExplosionInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D ExplosionPlayRateRange;
 
     UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet StandHeavyFrontInfo;
@@ -89,6 +109,9 @@ public:
     FIGS_DeathAnimationsSet StandHeavyLeftInfo;
 
     UPROPERTY(EditAnywhere)
+    FVector2D StandHeavyPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet CrouchHeavyFrontInfo;
 
     UPROPERTY(EditAnywhere)
@@ -101,7 +124,73 @@ public:
     FIGS_DeathAnimationsSet CrouchHeavyLeftInfo;
 
     UPROPERTY(EditAnywhere)
+    FVector2D CrouchHeavyPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet BluntFrontInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet BluntRightInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet BluntBackInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet BluntLeftInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D BluntPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet CutFrontInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet CutRightInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet CutBackInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet CutLeftInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D CutPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet SpecialBoxerFrontInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet SpecialBoxerRightInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet SpecialBoxerBackInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_MeleeDeathAnimationsSet SpecialBoxerLeftInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D SpecialBoxerPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_DeathAnimationsSet StabFrontInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_DeathAnimationsSet StabRightInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_DeathAnimationsSet StabBackInfo;
+
+    UPROPERTY(EditAnywhere)
+    FIGS_DeathAnimationsSet StabLeftInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D StabPlayRateRange;
+
+    UPROPERTY(EditAnywhere)
     FIGS_DeathAnimationsSet DownstateInfo;
+
+    UPROPERTY(EditAnywhere)
+    FVector2D DownstatePlayRateRange;
 
     UPROPERTY(EditAnywhere)
     UPhysicalMaterial* HeadPhysicalMaterial;

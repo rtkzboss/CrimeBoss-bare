@@ -11,4 +11,5 @@ FIGS_PlotlineSelectionDefinition::FIGS_PlotlineSelectionDefinition() {
     (*this).StarItems = TArray<FIGS_PlotlineSelectionStarItem>{};
     (*this).IsPlotline = false;
     (*this).IsDebugOnly = false;
+    (*this).TileSize = EIGS_MenuTileSize::FullSize;
 }

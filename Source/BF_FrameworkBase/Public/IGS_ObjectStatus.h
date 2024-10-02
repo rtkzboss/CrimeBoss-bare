@@ -10,6 +10,7 @@
 #include "IGS_ObjectStatusHealthChangedEventSignature.h"
 #include "IGS_ObjectStatusHealthResetEventSignature.h"
 #include "IGS_ObjectStatusHealthStateChangedEventSignature.h"
+#include "IGS_ObjectStatusHealthStateChangedWithCharacterEventSignature.h"
 #include "IGS_ObjectStatusMaxHealthChangedEventSignature.h"
 #include "IGS_ObjectStatus.generated.h"
 
@@ -155,6 +156,9 @@ public:
     UPROPERTY(BlueprintAssignable)
     FIGS_ObjectStatusHealthStateChangedEventSignature OnHealthStateChanged;
 
+    UPROPERTY(BlueprintAssignable)
+    FIGS_ObjectStatusHealthStateChangedWithCharacterEventSignature OnHealthStateChangedWithCharacter;
+
 protected:
     UPROPERTY()
     bool bCurrentHealthWasReplicated;
@@ -187,7 +191,7 @@ protected:
     bool ScriptInvulnerable;
 
     UPROPERTY(BlueprintReadOnly, Replicated, VisibleAnywhere)
-    bool DifficultyInvulnerable;
+    bool RegionInvulnerable;
 
     UPROPERTY(Replicated)
     bool HealthDecayDisabled;

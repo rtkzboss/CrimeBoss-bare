@@ -1,12 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EIGS_ReloadInterruptReasonEnum.h"
+#include "IGS_ProjectileOverlappable.h"
 #include "EIGS_SignificanceValue.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Animation/PoseSnapshot.h"
 #include "Abilities/GameplayAbility.h"
 #include "GameplayTagContainer.h"
+#include "EIGS_DeathDirection.h"
+#include "EIGS_TPP_DeathStates.h"
 #include "IGS_CharacterThrowAwayCarryable.h"
 #include "IGS_GameCharacterBase.h"
 #include "IGS_RagdollCollisionHit.h"
@@ -32,7 +35,7 @@ class UIGS_ZiptieComponent;
 class USkeletalMeshComponent;
 
 UCLASS(Abstract)
-class BF_FRAMEWORKGAME_API AIGS_IntelligentGameCharacter : public AIGS_GameCharacterBase {
+class BF_FRAMEWORKGAME_API AIGS_IntelligentGameCharacter : public AIGS_GameCharacterBase, public IIGS_ProjectileOverlappable {
     GENERATED_BODY()
 public:
     AIGS_IntelligentGameCharacter(const FObjectInitializer& ObjectInitializer);
@@ -146,6 +149,15 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FGameplayTag TakeWeaponGameplayTag;
 
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    EIGS_DeathDirection TempKillDirection;
+
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    EIGS_TPP_DeathStates TempKillState;
+
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    bool TempIsMeleeKill;
+
 protected:
     UPROPERTY(EditAnywhere, Instanced)
     UIGS_SignificanceComponent* SignificanceComponent;
@@ -240,4 +252,6 @@ protected:
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+
+    // Fix for true pure virtual functions not being implemented
 };

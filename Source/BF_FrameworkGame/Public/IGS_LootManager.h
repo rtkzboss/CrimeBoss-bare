@@ -42,7 +42,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetMissionBagsInWeight(int32 inRequiredBags);
 
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void SendNewValueToHeisterData(AIGS_GameCharacterFramework* inOwningPawn, float inValueToAdd, bool inIsBonus) const;
 
     UFUNCTION(BlueprintCallable)

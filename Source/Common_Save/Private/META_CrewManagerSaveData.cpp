@@ -6,6 +6,7 @@ FMETA_CrewManagerSaveData::FMETA_CrewManagerSaveData() {
     (*this).GenericHeistersOnJob = TArray<FMETA_GenericCharacterSave>{};
     (*this).UniqueHeistersOnJob = TArray<FMETA_HeisterSaveData>{};
     (*this).RemovedHeisters = TArray<FMETA_RemovedCharacter>{};
+    (*this).ExcludedHeisters = FGameplayTagContainer();
     (*this).RecoveryInfoOfHeistersInjures = TMap<FMETA_CharacterID, float>{};
     (*this).HeistersMoodResetCounter = TMap<FMETA_CharacterID, int32>{};
     (*this).CounterOfDeathPreventingUsage = TMap<FMETA_CharacterID, int32>{};

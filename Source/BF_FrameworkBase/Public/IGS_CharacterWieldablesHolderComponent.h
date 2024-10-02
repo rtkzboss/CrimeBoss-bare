@@ -162,6 +162,9 @@ public:
     UPROPERTY()
     EIGS_WieldableSlot InitialSlot;
 
+    UPROPERTY(BlueprintReadWrite)
+    bool IsCookingEquipment;
+
 protected:
     UPROPERTY(VisibleAnywhere)
     AIGS_WieldableBase* CurrentWieldableActor;

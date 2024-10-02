@@ -8,8 +8,6 @@ AIGS_AISpawnPoint::AIGS_AISpawnPoint(const FObjectInitializer& ObjectInitializer
     (*this).SpawnAnimTag = FGameplayTag::RequestGameplayTag(TEXT("Anim.Spawn.None"));
     (*this).SquadID = -1;
     (*this).CanBeSeen = true;
-    (*this).PrimaryActorTick.bCanEverTick = true;
-    (*this).PrimaryActorTick.bStartWithTickEnabled = false;
     (*this).SetHidden(true);
 }
 

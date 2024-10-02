@@ -16,6 +16,9 @@ UIGS_CharacterData::UIGS_CharacterData(const FObjectInitializer& ObjectInitializ
     (*this).m_LastNavmeshLocation.X = 3.402823466e+38f;
     (*this).m_LastNavmeshLocation.Y = 3.402823466e+38f;
     (*this).m_LastNavmeshLocation.Z = 3.402823466e+38f;
+    (*this).m_ClosestNavmeshLocation.X = 3.402823466e+38f;
+    (*this).m_ClosestNavmeshLocation.Y = 3.402823466e+38f;
+    (*this).m_ClosestNavmeshLocation.Z = 3.402823466e+38f;
     (*this).bCanAbortAnimation = true;
     (*this).AlarmDeviceType = EIGS_AlarmDeviceType::AD_Unknown;
     (*this).mR_ReportDetection = true;
@@ -108,6 +111,10 @@ FVector UIGS_CharacterData::GetLastNavmeshLocation() const {
 
 TArray<AIGS_GameCharacterFramework*> UIGS_CharacterData::GetDetectingPlayers() const {
     return {};
+}
+
+FVector UIGS_CharacterData::GetClosestNavmeshLocation() const {
+    return FVector{};
 }
 
 AIGS_GameCharacterFramework* UIGS_CharacterData::GetCharacterOwner() const {

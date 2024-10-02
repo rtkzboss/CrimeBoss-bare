@@ -7,10 +7,12 @@ UIGS_ZiptieComponent::UIGS_ZiptieComponent(const FObjectInitializer& ObjectIniti
     (*this).MoveInterpSpeed = 1.000000000e+01f;
     (*this).bSetFlyingWhenLerping = false;
     (*this).bRotateOnly = true;
+    (*this).bIsEnabled = false;
     (*this).bIsHoldable = true;
     (*this).TimerHoldTime = 1.500000000e+00f;
     (*this).NameToDisplay = FText::FromString(TEXT("Unknown name"));
     (*this).InteractionDistance = 1.400000000e+02f;
+    (*this).SetIsReplicatedByDefault(false);
 }
 
 void UIGS_ZiptieComponent::OnRep_IsZiptied() const {

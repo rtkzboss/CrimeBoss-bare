@@ -19,6 +19,8 @@ FCommonHeisterData::FCommonHeisterData() {
     (*this).Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).Loadout.SecondaryWeapon = nullptr;
     (*this).Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).Loadout.MeleeWeapon = nullptr;
+    (*this).Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).Loadout.Ability1ChargesLeft = -1;

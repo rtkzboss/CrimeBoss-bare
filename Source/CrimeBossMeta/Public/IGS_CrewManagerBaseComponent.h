@@ -24,6 +24,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool ShouldShowUpkeepCost();
 
+    UFUNCTION(BlueprintCallable)
+    bool SetHeisterExclusionFromCampaign(FGameplayTag inCharacterTagID, bool inExclude);
+
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool PromoteHeister(UMETA_Character* inCharacter);
 

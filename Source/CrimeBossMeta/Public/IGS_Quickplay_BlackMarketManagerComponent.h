@@ -46,7 +46,7 @@ public:
     TArray<UMETA_WeaponSkin*> GetWeaponSkinsMarketPool() const;
 
     UFUNCTION(BlueprintPure)
-    TArray<UMETA_WeaponSkin*> GetWeaponSkinsForWeapon(FGameplayTag inItemTag) const;
+    TArray<UMETA_WeaponSkin*> GetWeaponSkinsForWeapon(const UMETA_Weapon* inWeapon, FGameplayTag inItemTag) const;
 
     UFUNCTION(BlueprintPure)
     UMETA_WeaponSkin* GetWeaponSkinByTag(FGameplayTag inItemTag) const;

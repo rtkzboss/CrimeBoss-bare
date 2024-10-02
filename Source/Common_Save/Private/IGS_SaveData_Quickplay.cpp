@@ -5,6 +5,7 @@
 #include "IGS_EquipmentInventoryObject.h"
 #include "META_AmbushMissionSave.h"
 #include "META_BaseMissionSave.h"
+#include "META_HordeModeMissionSave.h"
 #include "META_MoneyMakingMissionSave.h"
 #include "META_PerkData.h"
 #include "META_StoryMissionSave.h"
@@ -71,6 +72,19 @@ FIGS_SaveData_Quickplay::FIGS_SaveData_Quickplay() {
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeaponSaveData.RelativePrice = 0.000000000e+00f;
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryWeaponSaveData.IsUnseenInShop = false;
     (*this).CrewManagerData.BossCharacter.Loadout.SecondaryPersonalWeapons = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeapon = nullptr;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.Amount = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.AdditionalPercentageOfWeaponPrice = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.SuccessfulMissions = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.DaysInShop = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.WeaponSkin = FGameplayTag();
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.TargetWeaponsForUpgrade = TArray<UClass*>{};
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.TargetQualityToUpdateWeapon = EMETA_ItemQuality::None;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.itemTag = FGameplayTag();
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.Price = 0;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.RelativePrice = 0.000000000e+00f;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleeWeaponSaveData.IsUnseenInShop = false;
+    (*this).CrewManagerData.BossCharacter.Loadout.MeleePersonalWeapons = TArray<TSubclassOf<UMETA_WeaponInventoryObject>>{};
     (*this).CrewManagerData.BossCharacter.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).CrewManagerData.BossCharacter.Loadout.SelectedEquipment.EquipmentID = nullptr;
     (*this).CrewManagerData.BossCharacter.Loadout.SelectedEquipment.itemTag = FGameplayTag();
@@ -82,6 +96,7 @@ FIGS_SaveData_Quickplay::FIGS_SaveData_Quickplay() {
     (*this).StashManagerData.bInited = false;
     (*this).StashManagerData.PrimaryWeapons = TArray<FMETA_WeaponSaveData>{};
     (*this).StashManagerData.SecondaryWeapons = TArray<FMETA_WeaponSaveData>{};
+    (*this).StashManagerData.MeleeWeapons = TArray<FMETA_WeaponSaveData>{};
     (*this).StashManagerData.WeaponSkins = TArray<FMETA_WeaponSkinSaveData>{};
     (*this).StashManagerData.Equipment = TArray<FMETA_EquipmentSaveData>{};
     (*this).StashManagerData.Perks = TArray<FMETA_PerkSaveData>{};
@@ -125,6 +140,7 @@ FIGS_SaveData_Quickplay::FIGS_SaveData_Quickplay() {
     (*this).JobManagerData.LastPlayedMission.TurfWarMissions = TArray<FMETA_TurfWarMissionSave>{};
     (*this).JobManagerData.LastPlayedMission.OtherMissions = TArray<TSubclassOf<UMETA_MissionID>>{};
     (*this).JobManagerData.FinishedMissionsIDs = TArray<FGuid>{};
+    (*this).JobManagerData.HordeModeMissions = TArray<FMETA_HordeModeMissionSave>{};
     (*this).JobManagerData.bLastPlayedWasChain = false;
     (*this).PlayerManagerData.RespectPoints = 0;
     (*this).PlayerManagerData.TotalScorePoints = 0;

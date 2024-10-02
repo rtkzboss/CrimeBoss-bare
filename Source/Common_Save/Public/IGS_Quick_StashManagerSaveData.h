@@ -21,6 +21,9 @@ public:
     TArray<FMETA_WeaponSaveData> SecondaryWeapons;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
+    TArray<FMETA_WeaponSaveData> MeleeWeapons;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)
     TArray<FMETA_WeaponSkinSaveData> WeaponSkins;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame)

@@ -24,6 +24,9 @@ public:
     int32 LevelCap;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool UseLevelCount;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 LevelUpCount;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

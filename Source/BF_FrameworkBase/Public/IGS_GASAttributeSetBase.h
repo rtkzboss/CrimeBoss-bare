@@ -59,6 +59,9 @@ protected:
     void OnRep_HipFireSpread(const FGameplayAttributeData& inOldValue);
 
     UFUNCTION()
+    void OnRep_HealthRegenMultiplierDebuff(const FGameplayAttributeData& inOldValue);
+
+    UFUNCTION()
     void OnRep_HealthRegenMultiplier(const FGameplayAttributeData& inOldValue);
 
     UFUNCTION()
@@ -123,6 +126,9 @@ protected:
 
     UFUNCTION()
     void OnRep_AbilityRegenSpeedMult(const FGameplayAttributeData& inOldValue);
+
+    UFUNCTION()
+    void OnRep_AbilityDurationMeleeKillIncrease(const FGameplayAttributeData& inOldValue);
 
     UFUNCTION()
     void OnRep_AbilityDurationKillIncrease(const FGameplayAttributeData& inOldValue);
@@ -218,8 +224,11 @@ public:
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_HealthRegenDelay)
     FGameplayAttributeData HealthRegenDelay;
 
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_HealthRegenDelay)
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_HealthRegenMultiplier)
     FGameplayAttributeData HealthRegenMultiplier;
+
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_HealthRegenMultiplierDebuff)
+    FGameplayAttributeData HealthRegenMultiplierDebuff;
 
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_FlashEffectivity)
     FGameplayAttributeData FlashEffectivity;
@@ -250,6 +259,9 @@ public:
 
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AbilityDurationKillIncrease)
     FGameplayAttributeData AbilityDurationKillIncrease;
+
+    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_AbilityDurationMeleeKillIncrease)
+    FGameplayAttributeData AbilityDurationMeleeKillIncrease;
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 

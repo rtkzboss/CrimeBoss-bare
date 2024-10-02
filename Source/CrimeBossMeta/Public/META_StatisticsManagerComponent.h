@@ -8,6 +8,7 @@
 #include "EMETA_Gang.h"
 #include "EMETA_GoalStatus.h"
 #include "EMETA_PlotlineAssetAvailability.h"
+#include "EMETA_StatisticEvaluationType.h"
 #include "EMETA_StatisticModificationType.h"
 #include "EMETA_StatisticsHeisterState.h"
 #include "META_BaseGoal.h"
@@ -31,7 +32,7 @@ public:
     UMETA_StatisticsManagerComponent(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
-    bool TryModifyGlobalStatistic(const FGameplayTag inStatistic, const float InValue, float& outNewValue, const bool inExpand, const EMETA_StatisticModificationType inMode);
+    bool TryModifyGlobalStatistic(const FGameplayTag inStatistic, const float InValue, float& outNewValue, const EMETA_StatisticModificationType inMode);
 
     UFUNCTION(BlueprintPure)
     bool TryGetExpandedStatisticsTag(FGameplayTag inRootTag, FGameplayTag& outExpandedTag) const;
@@ -44,6 +45,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void RemoveAssetFromStatistic(FGameplayTag InAsset);
+
+    UFUNCTION(BlueprintCallable)
+    void LogGlobalStatistics(const bool inExpand);
 
     UFUNCTION(BlueprintCallable)
     void InitStatisticCurrentDay(int32 inDay);
@@ -61,7 +65,7 @@ public:
     FMETA_StatisticNoteSaveData GetStatisticByDay(int32 inDay) const;
 
     UFUNCTION(BlueprintPure)
-    float GetGlobalStatistic(const FGameplayTag inStatistic, const bool inExpand) const;
+    float GetGlobalStatistic(const FGameplayTag inStatistic, const bool inExpand, const EMETA_StatisticEvaluationType inMode) const;
 
     UFUNCTION(BlueprintPure)
     FMETA_StatisticNoteSaveData GetFullStatistic() const;

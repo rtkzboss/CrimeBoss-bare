@@ -3,6 +3,7 @@
 #include "META_AmbushMissionSave.h"
 #include "META_BaseMissionSave.h"
 #include "META_DetectiveID.h"
+#include "META_Loan.h"
 #include "META_MoneyMakingMissionSave.h"
 #include "META_StoryMissionSave.h"
 #include "META_TradeDealSellMissionSave.h"
@@ -134,6 +135,7 @@ FIGS_SaveData_Career::FIGS_SaveData_Career() {
     (*this).CrewManagerData.GenericHeistersOnJob = TArray<FMETA_GenericCharacterSave>{};
     (*this).CrewManagerData.UniqueHeistersOnJob = TArray<FMETA_HeisterSaveData>{};
     (*this).CrewManagerData.RemovedHeisters = TArray<FMETA_RemovedCharacter>{};
+    (*this).CrewManagerData.ExcludedHeisters = FGameplayTagContainer();
     (*this).CrewManagerData.RecoveryInfoOfHeistersInjures = TMap<FMETA_CharacterID, float>{};
     (*this).CrewManagerData.HeistersMoodResetCounter = TMap<FMETA_CharacterID, int32>{};
     (*this).CrewManagerData.CounterOfDeathPreventingUsage = TMap<FMETA_CharacterID, int32>{};
@@ -168,6 +170,7 @@ FIGS_SaveData_Career::FIGS_SaveData_Career() {
     (*this).EventManagerData.SavedLoopBranchNodes = TMap<FMETA_GraphNodeSave, FMETA_LoopBranchNodeSaveData>{};
     (*this).EventManagerData.FinishedGraphsResults = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>{};
     (*this).EventManagerData.PreparedPlotlines = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>{};
+    (*this).EventManagerData.ExecutingPlotlines = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>{};
     (*this).EventManagerData.SavedEconomyGraphVariables = TMap<FGameplayTag, int32>{};
     (*this).EventManagerData.SavedParentGraphs = TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>{};
     (*this).EventManagerData.bShouldCallEndDay = false;
@@ -237,6 +240,7 @@ FIGS_SaveData_Career::FIGS_SaveData_Career() {
     (*this).FinanceManagerData.CurrentLoan.DailyRepaymentInPercentsFromBorrowedCash = 0;
     (*this).FinanceManagerData.CurrentLoan.DaysToRepay = 0;
     (*this).FinanceManagerData.CurrentLoan.CooldownToNextOffer = 0;
+    (*this).FinanceManagerData.CurrentLoanOffers = TArray<FMETA_Loan>{};
     (*this).FinanceManagerData.CooldownToNextOffer = 0;
     (*this).FinanceManagerData.MissionIncome = 0;
     (*this).FinanceManagerData.TradeIncome = 0;

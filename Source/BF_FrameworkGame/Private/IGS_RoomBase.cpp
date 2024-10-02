@@ -5,8 +5,6 @@ AIGS_RoomBase::AIGS_RoomBase(const FObjectInitializer& ObjectInitializer) : Supe
     auto gen = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
     (*this).Tag = FGameplayTag::RequestGameplayTag(TEXT("Room.Area.Unknown"));
     (*this).OwnerTeamSide = EIGS_TeamSideEnum::TS_Unknown;
-    (*this).PrimaryActorTick.bCanEverTick = true;
-    (*this).PrimaryActorTick.bStartWithTickEnabled = false;
     (*this).RootComponent = gen;
 }
 

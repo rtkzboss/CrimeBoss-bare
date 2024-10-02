@@ -24,6 +24,9 @@ AIGS_InteractableDefendPointBase::AIGS_InteractableDefendPointBase(const FObject
 void AIGS_InteractableDefendPointBase::SetPinged(bool inPinged) {
 }
 
+void AIGS_InteractableDefendPointBase::SetActiveDefend(bool inIsActive) {
+}
+
 void AIGS_InteractableDefendPointBase::OnRep_Pinged() {
 }
 

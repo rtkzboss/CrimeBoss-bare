@@ -12,8 +12,12 @@ class BF_FRAMEWORKGAME_API AIGS_SuspicionEventActor : public AIGS_SuspicionActor
 public:
     AIGS_SuspicionEventActor(const FObjectInitializer& ObjectInitializer);
 
-    UPROPERTY(VisibleAnywhere)
-    AActor* AttachedActor;
+protected:
+    UFUNCTION()
+    void OnAttachedToActorReleased(TScriptInterface<IIGS_PoolableInterface> inReleasedActor);
+
+    UFUNCTION()
+    void OnAttachedToActorDestroyed(AActor* inDestroyedActor);
 
 
     // Fix for true pure virtual functions not being implemented

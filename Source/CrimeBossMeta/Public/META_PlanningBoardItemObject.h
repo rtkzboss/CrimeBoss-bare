@@ -15,7 +15,7 @@ public:
     void SetStatus(EMETA_PlanningBoardItemStatus NewStatus);
 
     UFUNCTION(BlueprintCallable)
-    void SetData(FMETA_PlanningBoardItemRow& itemData, EMETA_PlanningBoardItemStatus Status);
+    void SetData(FMETA_PlanningBoardItemRow& ItemData, EMETA_PlanningBoardItemStatus Status);
 
     UFUNCTION(BlueprintPure)
     EMETA_PlanningBoardItemStatus GetStatus() const;

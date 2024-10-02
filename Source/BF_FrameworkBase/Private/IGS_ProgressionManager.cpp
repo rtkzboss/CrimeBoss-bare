@@ -11,10 +11,16 @@ FIGS_ProgressionResult UIGS_ProgressionManager::SetLevel(int32 inLevel, bool inS
     return FIGS_ProgressionResult{};
 }
 
+void UIGS_ProgressionManager::SetExtraMultiplier(float inMultiplier) {
+}
+
 void UIGS_ProgressionManager::SetDebugMultiplier(const float inMultiplier) {
 }
 
 void UIGS_ProgressionManager::ResetProgression() {
+}
+
+void UIGS_ProgressionManager::ResetExtraMultiplier() {
 }
 
 void UIGS_ProgressionManager::ReInitProgressionManager() {

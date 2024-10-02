@@ -4,6 +4,14 @@
 UIGS_BadFlyGameplayStatics::UIGS_BadFlyGameplayStatics() {
 }
 
+bool UIGS_BadFlyGameplayStatics::WasKilledByScript(UObject* inWCO, AActor* inActor) {
+    return false;
+}
+
+bool UIGS_BadFlyGameplayStatics::WasKilledByDamageType(UObject* inWCO, AActor* inActor, const TSubclassOf<UIGS_DamageTypeBase> inDamageType, const bool inExactMatch) {
+    return false;
+}
+
 void UIGS_BadFlyGameplayStatics::TriggerBotLimbo(const UObject* inWCO, bool inPlayVioceovers) {
 }
 
@@ -130,9 +138,6 @@ void UIGS_BadFlyGameplayStatics::SetMissionLootValues(UObject* inWCO, int32 inOb
 }
 
 void UIGS_BadFlyGameplayStatics::SetLowHealthEffectThreshold(AIGS_PlayerCharacter* inPlayer, float inLowHealthEffectThreshold) {
-}
-
-void UIGS_BadFlyGameplayStatics::SetIsTurfWar(const UObject* inWCO) {
 }
 
 void UIGS_BadFlyGameplayStatics::SetGameCultureBasedOnConsoleSystemLocale() {

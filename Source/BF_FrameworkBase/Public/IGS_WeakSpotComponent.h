@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "IGS_WeakSpotObjectStatusHealthChangedEventSignature.h"
+#include "IGS_WeakSpotReference.h"
 #include "IGS_WeakSpotSignature.h"
 #include "IGS_WeakSpotComponent.generated.h"
 
@@ -23,6 +24,9 @@ public:
     bool SetEnabled(const bool inEnabled);
 
     UFUNCTION(BlueprintCallable)
+    bool HasWeakSpotComponentEnabled(const UPrimitiveComponent* InComponent);
+
+    UFUNCTION(BlueprintCallable)
     bool AddWeakSpot(const UPrimitiveComponent* inWeakSpotReference, const float inHealth, const bool inEnableAutomatically, const float inAIDamageMultiplier);
 
     UPROPERTY(BlueprintAssignable)
@@ -30,5 +34,12 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_WeakSpotObjectStatusHealthChangedEventSignature OnWeakSpotHealthChangedEvent;
+
+private:
+    UPROPERTY(Replicated)
+    TArray<FIGS_WeakSpotReference> mR_WeakSpots;
+
+public:
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 };

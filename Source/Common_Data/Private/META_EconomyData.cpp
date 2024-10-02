@@ -6,6 +6,7 @@ UMETA_EconomyData::UMETA_EconomyData() {
     (*this).PlanningCostMultiplierForLastTurfWeakening = 1.000000000e+00f;
     (*this).DaysForRehabilitationAfterBankruptValue = 5;
     (*this).BankruptValue = -100000;
+    (*this).DefaultCharacterGenerationChance = 1.000000000e+00f;
 }
 
 void UMETA_EconomyData::RandomizePerksByIDAndLevel(const UObject* inWCO, EIGS_CharacterID inID, int32 inHeisterLevel, const TArray<TSubclassOf<UIGS_GameplayEffect_PerkBase>>& inForbiddenPerks, const TArray<FMETA_PerkData>& inCurrentPerks, TArray<FMETA_PerkData>& outRandomizedPerks, bool bIsPromotion) {
@@ -21,14 +22,6 @@ FMETA_WeaponTurfReward UMETA_EconomyData::GetWeaponTurfRewardForRepeatedCapture(
 
 FMETA_WeaponTurfReward UMETA_EconomyData::GetWeaponTurfReward() const {
     return FMETA_WeaponTurfReward{};
-}
-
-int32 UMETA_EconomyData::GetWeaponsPoolRefreshStartPrice(EMETA_RespectLvl inRespectLvl) {
-    return 0;
-}
-
-float UMETA_EconomyData::GetWeaponsPoolRefreshMultiplier() {
-    return 0.000000000e+00f;
 }
 
 float UMETA_EconomyData::GetWeaponSkinChancePerQuality(const EMETA_ItemQuality inWeaponQuality) const {
@@ -258,6 +251,10 @@ FMETA_FloatInterval UMETA_EconomyData::GetDefenceLostPenaltyInterval() const {
     return FMETA_FloatInterval{};
 }
 
+float UMETA_EconomyData::GetDefaultCharacterGenerationChance() const {
+    return 0.000000000e+00f;
+}
+
 int32 UMETA_EconomyData::GetDaysForRehabilitationAfterBankruptValue() const {
     return 0;
 }
@@ -266,8 +263,16 @@ int32 UMETA_EconomyData::GetDailyChanceIncrease() const {
     return 0;
 }
 
+FMETA_CampaignCostMultipliers UMETA_EconomyData::GetCostsMultipliersForCampaignDifficulty(EIGS_UserDifficulty inDifficulty) const {
+    return FMETA_CampaignCostMultipliers{};
+}
+
 float UMETA_EconomyData::GetCostModifierForInstantHealing() const {
     return 0.000000000e+00f;
+}
+
+TArray<FMETA_CharacterGenerationChance> UMETA_EconomyData::GetCharacterGenerationChances() const {
+    return {};
 }
 
 int32 UMETA_EconomyData::GetChanceForTileIncomeToBeLoot() const {

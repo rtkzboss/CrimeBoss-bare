@@ -5,6 +5,8 @@
 #include "WieldableAbstract.h"
 #include "EIGS_ReloadInterruptReasonEnum.h"
 #include "EIGS_WieldableAction.h"
+#include "IGS_WieldableIsAimingSignature.h"
+#include "IGS_WieldableReloadSignature.h"
 #include "IGS_WieldableBase.generated.h"
 
 class AIGS_GameCharacterFramework;
@@ -152,6 +154,15 @@ public:
 
     UPROPERTY(BlueprintReadOnly)
     TWeakObjectPtr<AIGS_GameCharacterFramework> OwnerPawn;
+
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WieldableReloadSignature OnWeaponBeginReloadSignature;
+
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WieldableReloadSignature OnWeaponStopReloadSignature;
+
+    UPROPERTY(BlueprintAssignable)
+    FIGS_WieldableIsAimingSignature OnWieldableIsAimingSignature;
 
 protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)

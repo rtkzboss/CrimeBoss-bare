@@ -53,6 +53,9 @@ void AIGS_GameCharacterFramework::SubdueBy(AIGS_GameCharacterFramework* inCharac
 void AIGS_GameCharacterFramework::Stun(const float inDuration) const {
 }
 
+void AIGS_GameCharacterFramework::SetTimedInvulerability(float inDuration) {
+}
+
 void AIGS_GameCharacterFramework::SetSquad(AIGS_SquadFramework* inSquad) {
 }
 
@@ -89,6 +92,9 @@ bool AIGS_GameCharacterFramework::Server_ApplyGameplayEffectToSelf_Validate(TSub
     return true;
 }
 
+void AIGS_GameCharacterFramework::ReviveWithDelay(float inDelay) {
+}
+
 void AIGS_GameCharacterFramework::RequestStopCustomMontage(FGameplayTag inCustomAnimType) {
 }
 
@@ -118,10 +124,13 @@ void AIGS_GameCharacterFramework::PerformStealthTakedown(AIGS_GameCharacterFrame
 void AIGS_GameCharacterFramework::OnRep_IsMovementDisabled() {
 }
 
+void AIGS_GameCharacterFramework::OnGEApplied(UAbilitySystemComponent* InComponent, const FGameplayEffectSpec& inSpec, FActiveGameplayEffectHandle inHandle) {
+}
+
 void AIGS_GameCharacterFramework::OnComponentHit(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit) {
 }
 
-void AIGS_GameCharacterFramework::Multicast_ReportDamageDealt_Implementation(const FHitResult& inHitResult) {
+void AIGS_GameCharacterFramework::Multicast_ReportDamageDealt_Implementation(const FIGS_NetProjectileHitResult& inHitResult) {
 }
 
 bool AIGS_GameCharacterFramework::IsRobot() const {
@@ -353,6 +362,7 @@ void AIGS_GameCharacterFramework::AddGameplayTag(FGameplayTag inTagToAdd, bool i
 void AIGS_GameCharacterFramework::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
+    DOREPLIFETIME(AIGS_GameCharacterFramework, Perks);
     DOREPLIFETIME(AIGS_GameCharacterFramework, mR_IsMovementDisabled);
     DOREPLIFETIME(AIGS_GameCharacterFramework, CharacterIDEnum);
     DOREPLIFETIME(AIGS_GameCharacterFramework, GenericCharacterID);

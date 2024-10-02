@@ -1,5 +1,5 @@
 #include "IGS_MultiplayerJobCategoryItemRow.h"
-#include "EJobUITileType.h"
+#include "EIGS_MenuTileSize.h"
 
 FIGS_MultiplayerJobCategoryItemRow::FIGS_MultiplayerJobCategoryItemRow() {
     (*this).ID = FGameplayTag();
@@ -8,5 +8,5 @@ FIGS_MultiplayerJobCategoryItemRow::FIGS_MultiplayerJobCategoryItemRow() {
     (*this).UIData.Image = FSoftObjectPath();
     (*this).UIData.Name = FText::GetEmpty();
     (*this).UIData.Description = FText::GetEmpty();
-    (*this).UIData.TileDisplayType = EJobUITileType::Big;
+    (*this).UIData.TileSize = EIGS_MenuTileSize::FullSize;
 }

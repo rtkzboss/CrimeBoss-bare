@@ -17,5 +17,6 @@ FIGS_EntitlementDatabaseRow::FIGS_EntitlementDatabaseRow() {
     (*this).PS5_Offers.ASIA_OfferId = TEXT("");
     (*this).PS5_Offers.ASIA_StoreId = TEXT("");
     (*this).XBOX_OfferId = TEXT("");
+    (*this).OnlineFact = FGameplayTag();
     (*this).IsDLC = false;
 }

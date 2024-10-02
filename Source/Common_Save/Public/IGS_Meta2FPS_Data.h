@@ -150,7 +150,7 @@ public:
     int32 CiviliansAmountOverride;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bIsDebug;
+    bool bIsDEBUG;
 
     FIGS_Meta2FPS_Data();
 };

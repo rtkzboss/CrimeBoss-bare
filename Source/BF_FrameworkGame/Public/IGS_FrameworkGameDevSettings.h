@@ -53,6 +53,9 @@ public:
     TSoftClassPtr<AIGS_PlayerFPVArms> DefaultArmsClass;
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
+    TSoftObjectPtr<UIGS_StealthSettings> CombatSettingsDataAsset;
+
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UIGS_StealthSettings> StealthSettingsDataAsset;
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)

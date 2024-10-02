@@ -7,6 +7,7 @@
 #include "EMETA_ItemQuality.h"
 #include "IGS_MeleeWeaponTableRow.h"
 #include "IGS_WeaponTableRow.h"
+#include "IGS_WieldableInventoryObjectBase.h"
 #include "META_BaseObject.h"
 #include "META_WeaponInventoryObject.h"
 #include "Templates/SubclassOf.h"
@@ -58,6 +59,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void IncreaseDaysInShopByOne();
+
+    UFUNCTION(BlueprintCallable)
+    void IncreaseAdditionalPercentageOfWeaponPrice(const int32 inPercentage);
 
     UFUNCTION(BlueprintPure)
     FIGS_WeaponTableRow GetWeaponTableRow() const;
@@ -111,13 +115,16 @@ public:
     TSubclassOf<UMETA_WeaponInventoryObject> GetId() const;
 
     UFUNCTION(BlueprintPure)
+    TSubclassOf<UIGS_WieldableInventoryObjectBase> GetFPSWeaponID() const;
+
+    UFUNCTION(BlueprintPure)
     FText GetDescription() const;
 
     UFUNCTION(BlueprintPure)
     int32 GetDaysInShop() const;
 
-    UFUNCTION(BlueprintCallable, meta=(WorldContext=inWCO))
-    FGameplayTagContainer GetCompatibleWeaponSkins(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs);
+    UFUNCTION(BlueprintPure, meta=(WorldContext=inWCO))
+    FGameplayTagContainer GetCompatibleWeaponSkins(UObject* inWCO, const TArray<FGameplayTag>& inUnlockedWeaponSkinTagIDs) const;
 
     UFUNCTION(BlueprintPure)
     UMETA_Character* GetCharacter() const;

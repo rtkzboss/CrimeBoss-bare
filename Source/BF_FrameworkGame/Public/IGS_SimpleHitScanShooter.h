@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "IGS_NetProjectileHitResult.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/DamageType.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -17,10 +18,10 @@ public:
 
 protected:
     UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_HandleMiss(const FTransform& inShotTransform, const FHitResult& inFinalHit);
+    void Multicast_HandleMiss(const FTransform& inShotTransform, const FIGS_NetProjectileHitResult& inFinalHit);
 
     UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_HandleHitResults(const FTransform& inShotTransform, const TArray<FHitResult>& inPenetrations, const FHitResult& inFinalHit);
+    void Multicast_HandleHitResults(const FTransform& inShotTransform, const TArray<FIGS_NetProjectileHitResult>& inPenetrations, const FIGS_NetProjectileHitResult& inFinalHit);
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     TEnumAsByte<ETraceTypeQuery> TraceChannel;

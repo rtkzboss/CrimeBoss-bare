@@ -5,6 +5,15 @@ UMETA_BlackmarketManagerComponent::UMETA_BlackmarketManagerComponent(const FObje
     (*this).PrimaryComponentTick.bCanEverTick = true;
 }
 
+void UMETA_BlackmarketManagerComponent::SplitItemPool(const TArray<UMETA_BaseObject*>& inItems, TArray<UMETA_Weapon*>& outWeapons, TArray<UMETA_Equipment*>& outEquipment) {
+}
+
+void UMETA_BlackmarketManagerComponent::RefreshBlackmarketItems_Implementation(const EMETA_BlackmarketType inMarketType) {
+}
+
+void UMETA_BlackmarketManagerComponent::RecalculateCharacterPricesInShop() {
+}
+
 void UMETA_BlackmarketManagerComponent::ProcessWeaponEvent() {
 }
 
@@ -33,6 +42,9 @@ bool UMETA_BlackmarketManagerComponent::IsEquipmentEventActive() const {
 
 bool UMETA_BlackmarketManagerComponent::IsBMLootEventReady_Implementation() const {
     return false;
+}
+
+void UMETA_BlackmarketManagerComponent::HandlePurchasedItemRemoval(UMETA_BaseObject* inItem) {
 }
 
 int32 UMETA_BlackmarketManagerComponent::GetWeaponsPoolRefreshPrice_Implementation() const {
@@ -83,6 +95,10 @@ TArray<UMETA_Equipment*> UMETA_BlackmarketManagerComponent::GetEquipmentPoolForB
     return {};
 }
 
+TArray<UMETA_BaseObject*> UMETA_BlackmarketManagerComponent::GetCurrentBlackmarketPool() {
+    return {};
+}
+
 int32 UMETA_BlackmarketManagerComponent::GetCostOfSoldierForHire(EMETA_RespectLvl inRespect) const {
     return 0;
 }
@@ -96,6 +112,10 @@ bool UMETA_BlackmarketManagerComponent::GetBPEventEquipmentInfoByCurrentBossResp
 }
 
 TMap<FMETA_VendorLootKey, FMETA_BMEventLootData> UMETA_BlackmarketManagerComponent::GetBMEventLootDataForVendors() const {
+    return {};
+}
+
+TArray<UMETA_BaseObject*> UMETA_BlackmarketManagerComponent::GetBlackmarketPool() {
     return {};
 }
 
@@ -115,7 +135,23 @@ bool UMETA_BlackmarketManagerComponent::ForceHeistersPoolRefresh_Implementation(
     return false;
 }
 
+UMETA_Weapon* UMETA_BlackmarketManagerComponent::DuplicateBlackmarketWeapon(const UMETA_Weapon* inSourceWeapon) {
+    return nullptr;
+}
+
+UMETA_Equipment* UMETA_BlackmarketManagerComponent::DuplicateBlackmarketEquipment(const UMETA_Equipment* inSourceEquipment) {
+    return nullptr;
+}
+
 void UMETA_BlackmarketManagerComponent::Debug_ProcessWeaponEvent() {
+}
+
+UMETA_Weapon* UMETA_BlackmarketManagerComponent::CreateBlackmarketWeapon(const FGameplayTag& inWeaponTag) {
+    return nullptr;
+}
+
+UMETA_Equipment* UMETA_BlackmarketManagerComponent::CreateBlackmarketEquipment(const FGameplayTag& inEquipmentTag) {
+    return nullptr;
 }
 
 void UMETA_BlackmarketManagerComponent::CheckWeaponEventFinished() {
@@ -131,7 +167,19 @@ bool UMETA_BlackmarketManagerComponent::CanWeaponEventBeTriggered() {
     return false;
 }
 
+int32 UMETA_BlackmarketManagerComponent::CalculateWeaponsPoolRefreshStartPrice() {
+    return 0;
+}
+
+int32 UMETA_BlackmarketManagerComponent::CalculateWeaponsPoolRefreshCost() const {
+    return 0;
+}
+
 void UMETA_BlackmarketManagerComponent::BuySoldiers_Implementation(int32 inAmount, int32& outAmountOfSoldiersBought) {
+}
+
+bool UMETA_BlackmarketManagerComponent::AreCampaignWeaponSkinsEnabled() const {
+    return false;
 }
 
 void UMETA_BlackmarketManagerComponent::ActivateLootEventByVendor_Implementation(FMETA_VendorLootKey inVendorLootKey) {

@@ -10,7 +10,14 @@ void UIGS_UnlockManagerComponent::UnlockUniqueCharacter(EIGS_CharacterID inChara
 void UIGS_UnlockManagerComponent::UnlockReward(FGameplayTag inRewardID) {
 }
 
+void UIGS_UnlockManagerComponent::UnlockPlotline(const FGameplayTag inTagUnlock) {
+}
+
 void UIGS_UnlockManagerComponent::UnlockContract(FGameplayTag inTagUnlock) {
+}
+
+bool UIGS_UnlockManagerComponent::TryGetRewardType(const FGameplayTag inRewardID, EIGS_RewardType& outType) {
+    return false;
 }
 
 bool UIGS_UnlockManagerComponent::IsUniqueCharacterUnlocked(EIGS_CharacterID inCharacter, bool bMaxLeveled) const {
@@ -18,6 +25,10 @@ bool UIGS_UnlockManagerComponent::IsUniqueCharacterUnlocked(EIGS_CharacterID inC
 }
 
 void UIGS_UnlockManagerComponent::IsRewardAlreadyUnlocked(FGameplayTag inRewardID, bool& outUnlocked) {
+}
+
+bool UIGS_UnlockManagerComponent::HasPendingRewardsOfType(const EIGS_RewardType inType) {
+    return false;
 }
 
 bool UIGS_UnlockManagerComponent::HasPendingRewards() const {

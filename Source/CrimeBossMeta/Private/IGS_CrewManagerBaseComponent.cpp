@@ -12,6 +12,10 @@ bool UIGS_CrewManagerBaseComponent::ShouldShowUpkeepCost_Implementation() {
     return false;
 }
 
+bool UIGS_CrewManagerBaseComponent::SetHeisterExclusionFromCampaign(FGameplayTag inCharacterTagID, bool inExclude) {
+    return false;
+}
+
 bool UIGS_CrewManagerBaseComponent::PromoteHeister_Implementation(UMETA_Character* inCharacter) {
     return false;
 }

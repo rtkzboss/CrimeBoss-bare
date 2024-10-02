@@ -2,7 +2,7 @@
 
 FIGS_HUBTileRow::FIGS_HUBTileRow() {
     (*this).bIsEnabled = true;
-    (*this).bIsDebug = true;
+    (*this).bIsDEBUG = true;
     (*this).TileEnviroment = EIGS_TileEnviroment::Street;
     (*this).DistrictType = 0;
     (*this).ArtDA.BuildConfigurationDataAsset = nullptr;

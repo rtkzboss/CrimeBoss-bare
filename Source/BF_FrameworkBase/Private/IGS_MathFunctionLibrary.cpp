@@ -135,6 +135,10 @@ bool UIGS_MathFunctionLibrary::AreLineSegmentsCrossing(FVector inPointA1, FVecto
     return false;
 }
 
+float UIGS_MathFunctionLibrary::AddToAverage(const float inNewValue, const float inCurrentAverage, const int32 inCurrentCount) {
+    return 0.000000000e+00f;
+}
+
 int32 UIGS_MathFunctionLibrary::AddInt32Safe(const int32 inA, const int32 inB, const int32 inMax) {
     return 0;
 }

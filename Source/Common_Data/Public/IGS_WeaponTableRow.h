@@ -14,6 +14,7 @@
 #include "IGS_WeaponBashAttackDefinition.h"
 #include "IGS_WeaponInventoryObject.h"
 #include "IGS_WeaponOffenceDefinitions.h"
+#include "IGS_WeaponPenetrationDefinition.h"
 #include "IGS_WieldableBaseData.h"
 #include "Templates/SubclassOf.h"
 #include "IGS_WeaponTableRow.generated.h"
@@ -57,6 +58,9 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WeaponAdaptiveTriggerDefinitions AdaptiveTriggers;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FIGS_WeaponPenetrationDefinition PenetrationDefinition;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_WieldableBaseData WieldableData;

@@ -11,6 +11,7 @@ UIGS_FrameworkGameDevSettings::UIGS_FrameworkGameDevSettings() {
     (*this).BodyBagCarryableClass = FSoftObjectPath(TEXT("/Game/00_Main/Carryables/Objects/BP_Carryable_BodyBag.BP_Carryable_BodyBag_C"), TEXT(""));
     (*this).PickupClassesData = FSoftObjectPath(TEXT("/Game/00_Main/Pickups/DA_PickupClassesData.DA_PickupClassesData"), TEXT(""));
     (*this).DefaultArmsClass = FSoftObjectPath(TEXT("/Game/00_Main/Core/Player/Arms/BP_Arms_Fallback.BP_Arms_Fallback_C"), TEXT(""));
+    (*this).CombatSettingsDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/AI/DA_CombatSettings.DA_CombatSettings"), TEXT(""));
     (*this).StealthSettingsDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/Stealth/DA_StealthSettings.DA_StealthSettings"), TEXT(""));
     (*this).StealthVoiceoversDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/Stealth/DA_StealthVoiceovers.DA_StealthVoiceovers"), TEXT(""));
     (*this).OffenceTablesDataAsset = FSoftObjectPath(TEXT("/Game/00_Main/Core/Tables/Stealth/DA_OffenceTables.DA_OffenceTables"), TEXT(""));

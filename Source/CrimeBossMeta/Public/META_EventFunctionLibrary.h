@@ -52,6 +52,9 @@ public:
     static void ToSaveFinishedGraphsResults(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>& outFinishedGraphsResults, const TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus>& FinishedGraphsResults);
 
     UFUNCTION(BlueprintPure)
+    static void ToSaveExecutingPlotlines(TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>& outExecutingPlotlines, const TMap<TSoftObjectPtr<UStoryGraphManager>, int32>& ExecutingPlotlines);
+
+    UFUNCTION(BlueprintPure)
     static void ToSaveCrewEventsAndTheirGraphs(TMap<FGameplayTag, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& outCrewEventsAndTheirGraphs, const TMap<FGameplayTag, TSoftObjectPtr<UStoryGraphManager>>& CrewEventsAndTheirGraphs);
 
     UFUNCTION(BlueprintCallable)
@@ -110,6 +113,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     static void FromSaveFinishedGraphsResults(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, EMETA_GoalStatus>& FinishedGraphsResults, TMap<TSoftObjectPtr<UStoryGraphManager>, EMETA_GoalStatus>& outFinishedGraphsResults);
+
+    UFUNCTION(BlueprintPure)
+    static void FromSaveExecutingPlotlines(const TMap<TSoftObjectPtr<UMETA_BaseStoryGraphManager>, int32>& ExecutingPlotlines, TMap<TSoftObjectPtr<UStoryGraphManager>, int32>& outExecutingPlotlines);
 
     UFUNCTION(BlueprintPure)
     static void FromSaveCrewEventsAndTheirGraphs(const TMap<FGameplayTag, TSoftObjectPtr<UMETA_BaseStoryGraphManager>>& CrewEventsAndTheirGraphs, TMap<FGameplayTag, TSoftObjectPtr<UStoryGraphManager>>& outCrewEventsAndTheirGraphs);

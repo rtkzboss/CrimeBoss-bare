@@ -33,7 +33,10 @@ public:
     void SetCharacter(UMETA_Character* Character);
 
     UFUNCTION(BlueprintCallable)
-    void SetAdditionalPercentageOfEquipmentPrice(int32 inAdditionalPercentageOfPrice);
+    void SetAdditionalPercentageOfEquipmentPrice(const int32 inAdditionalPercentageOfPrice);
+
+    UFUNCTION(BlueprintCallable)
+    void IncreaseAdditionalPercentageOfEquipmentPrice(const int32 inPercentage);
 
     UFUNCTION(BlueprintPure)
     FMETA_EquipmentSaveData GetSaveData() const;
@@ -55,6 +58,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     int32 GetBasePrice() const;
+
+    UFUNCTION(BlueprintPure)
+    int32 GetAdditionalPercentageOfEquipmentPrice() const;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsUnseenInShop;

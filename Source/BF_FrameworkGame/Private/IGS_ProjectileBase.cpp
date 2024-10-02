@@ -14,6 +14,9 @@ void AIGS_ProjectileBase::SetWeaponActor(AActor* inWeaponActor) {
 void AIGS_ProjectileBase::SetRange(float inEffectiveRange, float inMaxRange, float inLineTraceEnd) {
 }
 
+void AIGS_ProjectileBase::SetPenetrationDefinition(const FIGS_WeaponPenetrationDefinition& inPenetrationDefinition) {
+}
+
 void AIGS_ProjectileBase::SetMuzzleLocation(const FVector& inMuzzleLocation) {
 }
 

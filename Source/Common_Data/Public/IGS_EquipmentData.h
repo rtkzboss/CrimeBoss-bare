@@ -8,7 +8,7 @@
 
 class UGameplayEffect;
 class UIGS_ThrowableInventoryObject;
-class UObject;
+class USlateWidgetStyleAsset;
 
 USTRUCT(BlueprintType)
 struct COMMON_DATA_API FIGS_EquipmentData : public FIGS_CommonItemData {
@@ -31,6 +31,9 @@ public:
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_EquipmentResourceType ResourceType;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool bStartWithFullCharges;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 Charges;
@@ -60,7 +63,7 @@ public:
     FString InventoryIconStringGlyph;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UObject* InventoryIconOverrideFontObject;
+    USlateWidgetStyleAsset* InventoryIconOverrideSlateWidgetStyleAsset;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FIGS_UnlockProperties UnlockProperties;

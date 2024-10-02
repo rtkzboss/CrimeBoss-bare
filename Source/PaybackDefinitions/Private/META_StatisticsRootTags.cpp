@@ -3,12 +3,13 @@
 FMETA_StatisticsRootTags::FMETA_StatisticsRootTags() {
     (*this).BestScoreTag = FGameplayTag();
     (*this).CampaignAttempts = FGameplayTag();
+    (*this).CampaignPlaythroughs = FGameplayTag();
     (*this).CampaignVictories = FGameplayTag();
     (*this).TotalWealth = FGameplayTag();
     (*this).FinishedJobs = FGameplayTag();
     (*this).FinishedJobsWithoutCasualties = FGameplayTag();
     (*this).AverageMissionRating = FGameplayTag();
-    (*this).OwnedAssets = FGameplayTag();
+    (*this).AcquiredAssets = FGameplayTag();
     (*this).DeadCharacters = FGameplayTag();
     (*this).MissingCharacters = FGameplayTag();
     (*this).ArrestedCharacters = FGameplayTag();

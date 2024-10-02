@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "GenericTeamAgentInterface.h"
 #include "IGS_CharacterMaskBase.h"
+#include "META_PerkDataToFPS.h"
 #include "IGS_GameplayTagAssetInterfaceCustom.h"
 #include "UObject/NoExportTypes.h"
 #include "GameFramework/Character.h"
-#include "GameFramework/DamageType.h"
 #include "Engine/EngineTypes.h"
 #include "VisualLogger/VisualLoggerDebugSnapshotInterface.h"
 #include "AbilitySystemInterface.h"
-#include "GameplayEffect.h"
 #include "GameplayEffectTypes.h"
+#include "GameplayEffect.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_CharacterID.h"
 #include "EIGS_DialogueGroup.h"
@@ -22,12 +22,16 @@
 #include "EIGS_AnimationTaskFinishedReason.h"
 #include "IGS_BodyInfo.h"
 #include "IGS_CharacterAimEventSignature.h"
+#include "IGS_CharacterApplyGameplayEffect.h"
 #include "IGS_CharacterHitEventSignature.h"
+#include "IGS_CharacterHolsterStartEventSignature.h"
 #include "IGS_CrouchChangedEventSignature.h"
 #include "IGS_DialogueInterface.h"
 #include "IGS_GameplayTagsChangedOnCharacterDynamicSignature.h"
 #include "IGS_HasObjectStatusInterface.h"
 #include "IGS_InterestPointHolder.h"
+#include "IGS_NetProjectileHitResult.h"
+#include "IGS_OnDelayedReviveFinished.h"
 #include "IGS_PickupThrownSignature.h"
 #include "IGS_PossessedByDynamicSignature.h"
 #include "IGS_WieldAnyItemInterface.h"
@@ -76,6 +80,9 @@ public:
     void Stun(const float inDuration) const;
 
     UFUNCTION(BlueprintCallable)
+    void SetTimedInvulerability(float inDuration);
+
+    UFUNCTION(BlueprintCallable)
     void SetSquad(AIGS_SquadFramework* inSquad);
 
     UFUNCTION(BlueprintCallable)
@@ -107,6 +114,9 @@ public:
 
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_ApplyGameplayEffectToSelf(TSubclassOf<UGameplayEffect> inGameplayEffectClass, float inLevel, FGameplayEffectContextHandle inEffectContext);
+
+    UFUNCTION(BlueprintCallable)
+    void ReviveWithDelay(float inDelay);
 
     UFUNCTION(BlueprintCallable)
     void RequestStopCustomMontage(FGameplayTag inCustomAnimType);
@@ -144,10 +154,13 @@ protected:
 
 public:
     UFUNCTION()
+    void OnGEApplied(UAbilitySystemComponent* InComponent, const FGameplayEffectSpec& inSpec, FActiveGameplayEffectHandle inHandle);
+
+    UFUNCTION()
     void OnComponentHit(UPrimitiveComponent* inHitComponent, AActor* inOtherActor, UPrimitiveComponent* inOtherComp, FVector inNormalImpulse, const FHitResult& inHit);
 
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void Multicast_ReportDamageDealt(const FHitResult& inHitResult);
+    void Multicast_ReportDamageDealt(const FIGS_NetProjectileHitResult& inHitResult);
 
     UFUNCTION(BlueprintPure)
     bool IsRobot() const;
@@ -375,6 +388,9 @@ public:
     FIGS_PickupThrownSignature OnPickupThrown;
 
     UPROPERTY(BlueprintAssignable)
+    FIGS_PickupThrownSignature OnDropDownItem;
+
+    UPROPERTY(BlueprintAssignable)
     FIGS_CrouchChangedEventSignature OnCrouchingChangedEvent;
 
     UPROPERTY(BlueprintAssignable)
@@ -384,10 +400,19 @@ public:
     FIGS_CharacterAimEventSignature OnCharacterAimEvent;
 
     UPROPERTY(BlueprintAssignable)
+    FIGS_CharacterHolsterStartEventSignature OnCharacterHolsterStartedEvent;
+
+    UPROPERTY(BlueprintAssignable)
+    FIGS_CharacterApplyGameplayEffect OnCharacterApplyGameplayEffectEvent;
+
+    UPROPERTY(BlueprintAssignable)
     FIGS_GameplayTagsChangedOnCharacterDynamicSignature OnGameplayTagsChangedEvent;
 
-    UPROPERTY()
-    TSubclassOf<UDamageType> CharacterDeathCauseType;
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnDelayedReviveFinished OnDelayedReviveFinished;
+
+    UPROPERTY(BlueprintReadOnly, Replicated)
+    TArray<FMETA_PerkDataToFPS> Perks;
 
 protected:
     UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
@@ -462,6 +487,12 @@ protected:
 private:
     UPROPERTY(Instanced)
     UIGS_GameCharacterMovementComponent* GameCMC;
+
+    UPROPERTY()
+    FTimerHandle m_DelayedReviveTimerHandle;
+
+    UPROPERTY()
+    FTimerHandle m_InvurnerableTimerHandle;
 
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;

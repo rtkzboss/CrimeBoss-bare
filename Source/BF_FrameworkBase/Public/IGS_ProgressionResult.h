@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "IGS_MissionResultRewardItem.h"
 #include "IGS_ProgressionResult.generated.h"
 
 USTRUCT(BlueprintType)
@@ -11,6 +12,9 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PointsAdded;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TArray<FIGS_MissionResultRewardItem> RewardItems;
 
     FIGS_ProgressionResult();
 };

@@ -16,6 +16,8 @@
 #include "IGS_HeisterNumberInterface.h"
 #include "IGS_DeathCameraEndedSignature.h"
 #include "IGS_IntelligentGameCharacter.h"
+#include "IGS_OnPlayerWantsToAttackSignature.h"
+#include "IGS_OnServerPerkPickedUp.h"
 #include "IGS_OnZiptyingEvent.h"
 #include "IGS_PlayerStateChangedSignature.h"
 #include "IGS_ReplicatedLadder.h"
@@ -31,6 +33,7 @@ class AIGS_PlayerFPVArms;
 class AIGS_PlayerStateGame;
 class AIGS_RideableVehicleBaseFramework;
 class AIGS_SecurityCameraViewer;
+class AIGS_WeaponBase;
 class UAkAudioEvent;
 class UAkStateValue;
 class UAkSwitchValue;
@@ -151,6 +154,9 @@ public:
     UFUNCTION(Reliable, Server)
     void Server_RequestPlayCustomMontage(FGameplayTag inCustomAnimType);
 
+    UFUNCTION(Reliable, Server)
+    void Server_RefreshUnarmedMeleeSetup();
+
 protected:
     UFUNCTION(Reliable, Server, WithValidation)
     void Server_ProxyEnterCameraFeed();
@@ -211,8 +217,11 @@ public:
     void OnPlayerStateChanged(AIGS_PlayerStateGame* inPlayerState);
 
 protected:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void OnPerkPickedUpRPC(UClass* inClass);
+
     UFUNCTION()
-    void OnEnemyKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult);
+    void OnEnemyKilled(AIGS_GameCharacterFramework* inInstigator, const FHitResult& inHitResult) const;
 
 public:
     UFUNCTION(BlueprintCallable)
@@ -408,6 +417,9 @@ public:
     void CancelAndRemoveAbility1();
 
     UFUNCTION(BlueprintCallable)
+    void CallOnChangeShowPredictionWithTransform(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass, AIGS_WeaponBase* inWeapon);
+
+    UFUNCTION(BlueprintCallable)
     void CallOnChangeShowPrediction(bool inShow, TSubclassOf<UIGS_ThrowableInventoryObject> inPredictedClass);
 
     UPROPERTY(BlueprintAssignable)
@@ -424,6 +436,9 @@ public:
 
     UPROPERTY(BlueprintAssignable)
     FIGS_PlayerStateChangedSignature OnPlayerStateChangedEvent;
+
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnPlayerWantsToAttackSignature OnPlayerWantsToAttackEvent;
 
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_UseComponent* UseComponent;
@@ -448,6 +463,9 @@ public:
 
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_BasherComponent* UnarmedMeleeBasherComponent;
+
+    UPROPERTY(BlueprintReadWrite, Instanced)
+    UIGS_ThrowableTrajectoryComponent* ThrowableTrajectoryComponent;
 
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UIGS_EthnicityVoices* EthnicityVoices;
@@ -504,6 +522,9 @@ public:
     bool m_IsPendingCarryable;
 
 protected:
+    UPROPERTY(BlueprintAssignable)
+    FIGS_OnServerPerkPickedUp OnServerPerkPickedUpEvent;
+
     UPROPERTY()
     int32 CachedLootBagCount;
 
@@ -542,9 +563,6 @@ protected:
 
     UPROPERTY(BlueprintReadOnly, Instanced, VisibleDefaultsOnly)
     UIGS_CarryableInteractiveComponent* CarryableInteractiveComponent;
-
-    UPROPERTY(BlueprintReadWrite, Instanced)
-    UIGS_ThrowableTrajectoryComponent* ThrowableTrajectoryComponent;
 
 public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)

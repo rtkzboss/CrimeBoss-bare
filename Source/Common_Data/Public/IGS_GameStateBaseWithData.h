@@ -22,6 +22,7 @@
 #include "CommonHeisterData.h"
 #include "EIGS_MPLobbyType.h"
 #include "EIGS_MissionStartupSource.h"
+#include "EIGS_MissionType.h"
 #include "EIGS_QPModeSource.h"
 #include "IGS_GameStateData.h"
 #include "IGS_GameStateDataReadyDelegate.h"
@@ -158,7 +159,7 @@ public:
     EIGS_MPLobbyType GetMPLobbyType() const;
 
     UFUNCTION(BlueprintPure)
-    EIGS_HubScenarioType GetMissionType() const;
+    EIGS_MissionType GetMissionType() const;
 
     UFUNCTION(BlueprintPure)
     FGameplayTag GetMissionTag() const;
@@ -192,6 +193,9 @@ public:
 
     UFUNCTION(BlueprintPure)
     EIGS_HubBackdropTypes GetHubVariant() const;
+
+    UFUNCTION(BlueprintPure)
+    EIGS_HubScenarioType GetHubScenarioType() const;
 
     UFUNCTION(BlueprintPure)
     EIGS_HubDistrict GetHubDistrict() const;

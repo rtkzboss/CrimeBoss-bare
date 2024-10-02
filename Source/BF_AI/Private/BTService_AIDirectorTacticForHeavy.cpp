@@ -1,4 +1,5 @@
 #include "BTService_AIDirectorTacticForHeavy.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "EIGS_StormTacticType.h"
 
 UBTService_AIDirectorTacticForHeavy::UBTService_AIDirectorTacticForHeavy() {

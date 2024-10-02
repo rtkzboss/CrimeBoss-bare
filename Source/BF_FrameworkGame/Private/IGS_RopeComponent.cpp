@@ -11,6 +11,7 @@ UIGS_RopeComponent::UIGS_RopeComponent(const FObjectInitializer& ObjectInitializ
     (*this).EndInterpSpeed = 4.000000000e+02f;
     (*this).RopeActorOffset.X = 4.000000000e+01f;
     (*this).RopeLengthOffset = 1.000000000e+02f;
+    (*this).IsRollingOffRopeAllowed = true;
     (*this).RollOffDelay = 2.000000000e+00f;
     (*this).EnableVisibilityDelay = 1.000000000e+00f;
     (*this).RollOffSpeed.Min = 8.000000000e+02f;

@@ -58,6 +58,9 @@ public:
     TSoftObjectPtr<UDataAsset> MetaEconomyDataAsset;
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
+    TSoftObjectPtr<UDataAsset> MetaBlackmarketDataAsset;
+
+    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)
     TSoftObjectPtr<UDataTable> MenuBackgroundDataTable;
 
     UPROPERTY(AdvancedDisplay, BlueprintReadOnly, Config, EditAnywhere)

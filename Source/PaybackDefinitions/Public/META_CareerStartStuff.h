@@ -3,7 +3,6 @@
 #include "EIGS_CharacterID.h"
 #include "EMETA_Gang.h"
 #include "EMETA_Partner.h"
-#include "EMETA_RespectLvl.h"
 #include "META_Interval.h"
 #include "META_StartupWeaponDefinition.h"
 #include "META_CareerStartStuff.generated.h"
@@ -17,9 +16,6 @@ public:
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 Cash;
-
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EMETA_RespectLvl RespectLvl;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FMETA_StartupWeaponDefinition> Weapons;

@@ -22,6 +22,12 @@ public:
     TSoftObjectPtr<UNiagaraSystem> MuzzleFlashParticle3PV;
 
     UPROPERTY(EditAnywhere)
+    TSoftObjectPtr<UNiagaraSystem> MuzzleFlashParticleExtraFireModeFPV;
+
+    UPROPERTY(EditAnywhere)
+    TSoftObjectPtr<UNiagaraSystem> MuzzleFlashParticleExtraFireMode3PV;
+
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UParticleSystem> MuzzleFlashParticleCascadeFPV;
 
     UPROPERTY(EditAnywhere)
@@ -53,5 +59,12 @@ public:
 
     UPROPERTY(EditAnywhere)
     bool bResetBarrelSmokeOnReactivate;
+
+protected:
+    UPROPERTY()
+    UNiagaraSystem* MuzzleFlashParticle;
+
+    UPROPERTY()
+    UNiagaraSystem* MuzzleFlashParticleExtraFireMode;
 
 };

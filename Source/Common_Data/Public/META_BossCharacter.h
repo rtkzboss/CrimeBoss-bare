@@ -30,6 +30,9 @@ public:
     FGameplayTag GetEquippedPrimaryWeaponID() const;
 
     UFUNCTION(BlueprintPure)
+    FGameplayTag GetEquippedMeleeWeaponID() const;
+
+    UFUNCTION(BlueprintPure)
     FGameplayTag GetCharacterSkinTag() const;
 
 };

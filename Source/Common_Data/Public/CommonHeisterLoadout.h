@@ -24,6 +24,12 @@ public:
     FGameplayTag SecondaryWeaponSkin;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    TSubclassOf<UMETA_WeaponInventoryObject> MeleeWeapon;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    FGameplayTag MeleeWeaponSkin;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<UIGS_EquipmentInventoryObject>> Equipment;
 
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)

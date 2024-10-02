@@ -33,8 +33,8 @@ public:
     UFUNCTION(BlueprintCallable)
     TArray<UCoverPoint*> GetDefendValidCoverPoints();
 
-    UFUNCTION(BlueprintCallable)
-    FVector GetDefendPos();
+    UFUNCTION(BlueprintPure)
+    FVector GetDefendPos() const;
 
     UFUNCTION(BlueprintPure)
     FVector GetDefendLookAt(FVector querrierLocation) const;

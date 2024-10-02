@@ -12,15 +12,15 @@ TArray<UMETA_Equipment*> UIGS_ItemDataHelpers::SortEquipmentStash(TArray<UMETA_E
     return {};
 }
 
-FMETA_HeisterLoadout UIGS_ItemDataHelpers::MakeMetaHeisterLoadoutFromSave(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, FMETA_WeaponSaveData inPrimaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, FMETA_WeaponSaveData inSecondaryWeaponSaveData, FMETA_EquipmentSaveData inEquipmentSaveData) {
+FMETA_HeisterLoadout UIGS_ItemDataHelpers::MakeMetaHeisterLoadoutFromSave(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, FMETA_WeaponSaveData inPrimaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, FMETA_WeaponSaveData inSecondaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inMeleeWeapon, FMETA_WeaponSaveData inMeleeWeaponSaveData, FMETA_EquipmentSaveData inEquipmentSaveData) {
     return FMETA_HeisterLoadout{};
 }
 
-FMETA_HeisterLoadout UIGS_ItemDataHelpers::MakeMetaHeisterLoadoutChains(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, FMETA_WeaponSaveData inPrimaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, FMETA_WeaponSaveData inSecondaryWeaponSaveData, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inPrimaryWeapons, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inSecondaryWeapons, FMETA_EquipmentSaveData inEquipmentSaveData, const TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>& inChainEquipments) {
+FMETA_HeisterLoadout UIGS_ItemDataHelpers::MakeMetaHeisterLoadoutChains(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, FMETA_WeaponSaveData inPrimaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, FMETA_WeaponSaveData inSecondaryWeaponSaveData, const TSubclassOf<UMETA_WeaponInventoryObject>& inMeleeWeapon, FMETA_WeaponSaveData inMeleeWeaponSaveData, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inPrimaryWeapons, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inSecondaryWeapons, const TArray<TSubclassOf<UMETA_WeaponInventoryObject>>& inMeleeWeapons, FMETA_EquipmentSaveData inEquipmentSaveData, const TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>& inChainEquipments) {
     return FMETA_HeisterLoadout{};
 }
 
-FMETA_HeisterLoadout UIGS_ItemDataHelpers::MakeMetaHeisterLoadout(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, const TSubclassOf<UIGS_EquipmentInventoryObject>& inEquipment, const TArray<FGameplayTag>& inUnlockedWeaponSkins) {
+FMETA_HeisterLoadout UIGS_ItemDataHelpers::MakeMetaHeisterLoadout(UObject* inWCO, const TSubclassOf<UMETA_WeaponInventoryObject>& inPrimaryWeapon, const TSubclassOf<UMETA_WeaponInventoryObject>& inSecondaryWeapon, const TSubclassOf<UMETA_WeaponInventoryObject>& inMeleeWeapon, const TSubclassOf<UIGS_EquipmentInventoryObject>& inEquipment, const TArray<FGameplayTag>& inUnlockedWeaponSkins) {
     return FMETA_HeisterLoadout{};
 }
 
@@ -84,6 +84,10 @@ bool UIGS_ItemDataHelpers::IsExplosive(FIGS_WieldableBaseData inWieldableData) {
     return false;
 }
 
+bool UIGS_ItemDataHelpers::IsDefaultWeaponSkinTag(const FGameplayTag& inWeaponTag) {
+    return false;
+}
+
 FIGS_WieldableBaseData UIGS_ItemDataHelpers::GetWieldableDataForClassBP(const UObject* inWCO, const TSubclassOf<UIGS_WieldableInventoryObjectBase> inItemClass) {
     return FIGS_WieldableBaseData{};
 }
@@ -104,12 +108,19 @@ TSubclassOf<UIGS_ThrowableInventoryObject> UIGS_ItemDataHelpers::GetThrowableFor
     return nullptr;
 }
 
+FGameplayTagContainer UIGS_ItemDataHelpers::GetTagsFromItems(const TArray<UMETA_BaseObject*>& inItems) {
+    return FGameplayTagContainer();
+}
+
 TSoftClassPtr<UIGS_ThrowableInventoryObject> UIGS_ItemDataHelpers::GetSoftThrowableForEquipment(const UObject* inWCO, TSoftClassPtr<UIGS_EquipmentInventoryObject> inEquipment) {
     return {};
 }
 
 TSoftClassPtr<UIGS_EquipmentInventoryObject> UIGS_ItemDataHelpers::GetSoftEquipmentForThrowable(const UObject* inWCO, TSoftClassPtr<UIGS_ThrowableInventoryObject> inThrowable) {
     return {};
+}
+
+void UIGS_ItemDataHelpers::GetSlateWidgetStyleFromAsset(const USlateWidgetStyleAsset* InAsset, bool& outSuccess, FTextBlockStyle& outSlateWidgetStyle) {
 }
 
 TArray<EIGS_PerkCategory> UIGS_ItemDataHelpers::GetPerksFromBitmask(int32 inBitmask) {

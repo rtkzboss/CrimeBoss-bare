@@ -14,6 +14,7 @@ FIGS_PlayerBotOverrideSettings::FIGS_PlayerBotOverrideSettings() {
     (*this).PlayerBotSettings.AffterFireCooldown.Max = 2.000000000e+00f;
     (*this).PlayerBotSettings.AffterFireCooldownCover.Min = 1.500000000e+00f;
     (*this).PlayerBotSettings.AffterFireCooldownCover.Max = 3.000000000e+00f;
+    (*this).PlayerBotSettings.MaxFiringRange = 9.999000000e+03f;
     (*this).PlayerBotSettings.CoverStickiness = 5.000000000e-01f;
     (*this).PlayerBotSettings.ReactionIntensity = 8.000000119e-01f;
 }

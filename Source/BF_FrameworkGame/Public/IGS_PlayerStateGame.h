@@ -21,6 +21,9 @@ public:
     AIGS_PlayerStateGame(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable)
+    void SpendTokens(int32 inTokens);
+
+    UFUNCTION(BlueprintCallable)
     bool ShouldUsePlayerStateLoadout();
 
     UFUNCTION(BlueprintCallable)
@@ -50,6 +53,9 @@ public:
     void SendTextChatMessage(const FText& InText, const FString& inUserId, const TArray<FString>& inBlockedUsersList);
 
 protected:
+    UFUNCTION()
+    void OnRep_PlayerStateData();
+
     UFUNCTION()
     void OnRep_IsLevelLoaded() const;
 
@@ -102,7 +108,7 @@ public:
     bool bIsReady;
 
 protected:
-    UPROPERTY(BlueprintReadOnly, Replicated, VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly, ReplicatedUsing=OnRep_PlayerStateData)
     FIGS_PlayerStateData PlayerStateData;
 
     UPROPERTY(BlueprintReadOnly, Replicated)

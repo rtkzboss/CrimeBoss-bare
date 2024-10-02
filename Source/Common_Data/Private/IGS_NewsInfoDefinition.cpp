@@ -10,4 +10,7 @@ FIGS_NewsInfoDefinition::FIGS_NewsInfoDefinition() {
     (*this).RGBVideo = FSoftObjectPath();
     (*this).VideoMask = FSoftObjectPath();
     (*this).ShowInMenu = false;
+    (*this).ShowInMenuTag = FGameplayTag();
+    (*this).ShowAlsoWhenEventIsActive = true;
+    (*this).EventID = NAME_None;
 }

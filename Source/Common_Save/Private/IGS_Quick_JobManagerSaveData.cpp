@@ -28,5 +28,6 @@ FIGS_Quick_JobManagerSaveData::FIGS_Quick_JobManagerSaveData() {
     (*this).LastPlayedMission.TurfWarMissions = TArray<FMETA_TurfWarMissionSave>{};
     (*this).LastPlayedMission.OtherMissions = TArray<TSubclassOf<UMETA_MissionID>>{};
     (*this).FinishedMissionsIDs = TArray<FGuid>{};
+    (*this).HordeModeMissions = TArray<FMETA_HordeModeMissionSave>{};
     (*this).bLastPlayedWasChain = false;
 }

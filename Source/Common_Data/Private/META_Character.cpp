@@ -136,6 +136,10 @@ EMETA_ItemQuality UMETA_Character::GetQualityTier() const {
     return EMETA_ItemQuality::None;
 }
 
+FGameplayTagContainer UMETA_Character::GetPerkTags() const {
+    return FGameplayTagContainer();
+}
+
 TArray<FMETA_PerkData> UMETA_Character::GetPerks() const {
     return {};
 }

@@ -60,7 +60,7 @@ public:
     float MaxHealth;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float AiDamageMultiplier;
+    float AIDamageMultiplier;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UNiagaraSystem* GraySmokeParticle;

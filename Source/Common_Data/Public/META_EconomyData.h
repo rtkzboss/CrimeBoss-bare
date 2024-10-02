@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "EIGS_CharacterID.h"
+#include "EIGS_UserDifficulty.h"
 #include "EMETA_AIBossStrengthChangeIntensity.h"
 #include "EMETA_ArmyTier.h"
 #include "EMETA_BossEliminationReward.h"
@@ -27,7 +28,9 @@
 #include "META_ArmyTierConfiguration.h"
 #include "META_BossCharacterConfiguration.h"
 #include "META_BossEliminationRewardsDistribution.h"
+#include "META_CampaignCostMultipliers.h"
 #include "META_CategoryEconomyVariable.h"
+#include "META_CharacterGenerationChance.h"
 #include "META_CharacterInfo.h"
 #include "META_GenericCharacterConfiguration.h"
 #include "META_LevelUpHeisterData.h"
@@ -61,12 +64,6 @@ public:
 
     UFUNCTION(BlueprintPure)
     FMETA_WeaponTurfReward GetWeaponTurfReward() const;
-
-    UFUNCTION(BlueprintCallable)
-    int32 GetWeaponsPoolRefreshStartPrice(EMETA_RespectLvl inRespectLvl);
-
-    UFUNCTION(BlueprintCallable)
-    float GetWeaponsPoolRefreshMultiplier();
 
     UFUNCTION(BlueprintPure)
     float GetWeaponSkinChancePerQuality(const EMETA_ItemQuality inWeaponQuality) const;
@@ -240,13 +237,22 @@ public:
     FMETA_FloatInterval GetDefenceLostPenaltyInterval() const;
 
     UFUNCTION(BlueprintPure)
+    float GetDefaultCharacterGenerationChance() const;
+
+    UFUNCTION(BlueprintPure)
     int32 GetDaysForRehabilitationAfterBankruptValue() const;
 
     UFUNCTION(BlueprintPure)
     int32 GetDailyChanceIncrease() const;
 
     UFUNCTION(BlueprintPure)
+    FMETA_CampaignCostMultipliers GetCostsMultipliersForCampaignDifficulty(EIGS_UserDifficulty inDifficulty) const;
+
+    UFUNCTION(BlueprintPure)
     float GetCostModifierForInstantHealing() const;
+
+    UFUNCTION(BlueprintPure)
+    TArray<FMETA_CharacterGenerationChance> GetCharacterGenerationChances() const;
 
     UFUNCTION(BlueprintPure)
     int32 GetChanceForTileIncomeToBeLoot() const;
@@ -334,6 +340,9 @@ public:
 
 protected:
     UPROPERTY(EditDefaultsOnly)
+    TMap<EIGS_UserDifficulty, FMETA_CampaignCostMultipliers> CostsMultipliersPerCampaignDifficulty;
+
+    UPROPERTY(EditDefaultsOnly)
     TMap<EMETA_RespectLvl, FMETA_TradeSettings> TradeSettings;
 
     UPROPERTY(EditDefaultsOnly)
@@ -419,6 +428,12 @@ protected:
 
     UPROPERTY(EditDefaultsOnly)
     FMETA_BossCharacterConfiguration BossCharacterConfiguration;
+
+    UPROPERTY(EditDefaultsOnly)
+    float DefaultCharacterGenerationChance;
+
+    UPROPERTY(EditDefaultsOnly)
+    TArray<FMETA_CharacterGenerationChance> CharacterGenerationChances;
 
     UPROPERTY(EditDefaultsOnly)
     TMap<int32, FMETA_LevelUpHeisterData> LevelUpGenericHeisterData;

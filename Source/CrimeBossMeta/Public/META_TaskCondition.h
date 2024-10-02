@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
+#include "EMETA_TaskProgressDisplayType.h"
 #include "EMETA_TaskStatus.h"
 #include "META_TaskStativeInfo.h"
 #include "EMETA_NeedValueType.h"
@@ -25,6 +26,9 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void RefreshValues();
+
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    EMETA_TaskProgressDisplayType GetProgressValueDisplayType();
 
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     int32 GetNeedValue();

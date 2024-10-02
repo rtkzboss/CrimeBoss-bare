@@ -11,7 +11,6 @@ UIGS_PlayerCameraComponent::UIGS_PlayerCameraComponent(const FObjectInitializer&
     (*this).CameraBoneAttachment = TEXT("camera_root");
     (*this).PrimaryComponentTick.TickGroup = TG_PrePhysics;
     (*this).PrimaryComponentTick.bCanEverTick = true;
-    (*this).SetIsReplicatedByDefault(true);
 }
 
 void UIGS_PlayerCameraComponent::StopCameraShake(const FGameplayTag inCameraShakeTag) {

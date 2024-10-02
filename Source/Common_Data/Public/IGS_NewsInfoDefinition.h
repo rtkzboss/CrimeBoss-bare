@@ -38,5 +38,14 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     bool ShowInMenu;
 
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FGameplayTag ShowInMenuTag;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    bool ShowAlsoWhenEventIsActive;
+
+    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    FName EventID;
+
     FIGS_NewsInfoDefinition();
 };

@@ -26,6 +26,12 @@ public:
     TSoftObjectPtr<UMaterialInterface> StaminaStimshotStartPostProcessInterface;
 
     UPROPERTY(EditAnywhere)
+    TSoftObjectPtr<UMaterialInterface> AdrenalineStimshotPostProcessInterface;
+
+    UPROPERTY(EditAnywhere)
+    TSoftObjectPtr<UMaterialInterface> AdrenalineStimshotStartPostProcessInterface;
+
+    UPROPERTY(EditAnywhere)
     TSoftObjectPtr<UCurveFloat> StimshotStartWeightCurve;
 
     UPROPERTY(EditAnywhere)

@@ -16,6 +16,7 @@
 
 class AIGS_GameCharacterFramework;
 class UIGS_GlobalInventory;
+class UIGS_HordeModeManager;
 class UIGS_LootManager;
 class UIGS_PickupsManager;
 class UIGS_PlayerIntelManager;
@@ -90,11 +91,15 @@ public:
     UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
     UIGS_LootManager* GetLootManager() const;
 
-protected:
     UFUNCTION(BlueprintPure)
-    bool GetIsTurfWar();
+    bool GetIsTurfWar() const;
 
-public:
+    UFUNCTION(BlueprintPure)
+    bool GetIsHordeMode() const;
+
+    UFUNCTION(BlueprintPure)
+    UIGS_HordeModeManager* GetHordeModeManager() const;
+
     UFUNCTION(BlueprintPure)
     UIGS_GlobalInventory* GetGlobalInventory() const;
 
@@ -149,6 +154,9 @@ protected:
 
     UPROPERTY(Instanced, VisibleAnywhere)
     UIGS_PickupsManager* PickupsManager;
+
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
+    UIGS_HordeModeManager* HordeModeManager;
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere, ReplicatedUsing=OnRep_CopsArriveTimer)
     float CopsArriveTimerEnd;

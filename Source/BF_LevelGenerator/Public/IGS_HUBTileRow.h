@@ -14,7 +14,7 @@ public:
     bool bIsEnabled;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bIsDebug;
+    bool bIsDEBUG;
 
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     EIGS_TileEnviroment TileEnviroment;

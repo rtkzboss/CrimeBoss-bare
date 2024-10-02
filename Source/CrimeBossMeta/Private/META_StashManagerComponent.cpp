@@ -35,8 +35,16 @@ TArray<FGameplayTag> UMETA_StashManagerComponent::GetParentLootTagsByOperator(EM
     return {};
 }
 
+FGameplayTagContainer UMETA_StashManagerComponent::GetOwnedItems(TArray<UMETA_Weapon*>& outWeapons, TArray<UMETA_Equipment*>& outEquipment) {
+    return FGameplayTagContainer();
+}
+
 TArray<FGameplayTag> UMETA_StashManagerComponent::GetLootTagsByOperator(EMETA_ConditionOperator inOperator, int32 InValue) {
     return {};
+}
+
+FGameplayTagContainer UMETA_StashManagerComponent::GetEquippedItems(TArray<UMETA_Weapon*>& outWeapons, TArray<UMETA_Equipment*>& outEquipment) {
+    return FGameplayTagContainer();
 }
 
 void UMETA_StashManagerComponent::ChangeLootByValue(FGameplayTag inLootTag, int32 InValue, bool inRawValue) {

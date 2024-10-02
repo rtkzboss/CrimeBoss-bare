@@ -34,10 +34,6 @@ private:
     UFUNCTION()
     void OnRep_IsPingedChange();
 
-protected:
-    UFUNCTION(NetMulticast, Unreliable)
-    void Multicast_PingSound();
-
 public:
     UFUNCTION()
     EIGS_TeamSideEnum GetOwnerTeamSide() const;

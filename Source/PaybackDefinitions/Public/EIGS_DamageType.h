@@ -21,4 +21,5 @@ enum class EIGS_DamageType : uint8 {
     BleedOut = 51,
     TemporaryHealth,
     FallDamage,
+    Script,
 };

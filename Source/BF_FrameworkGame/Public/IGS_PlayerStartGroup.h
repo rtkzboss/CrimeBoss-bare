@@ -13,6 +13,9 @@ public:
     bool IsActive;
 
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    bool IsForcedDuringMatch;
+
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool IsRandom;
 
 };

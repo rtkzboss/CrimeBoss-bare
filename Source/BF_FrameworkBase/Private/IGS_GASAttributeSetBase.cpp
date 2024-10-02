@@ -52,6 +52,9 @@ void UIGS_GASAttributeSetBase::OnRep_HolsterSpeed(const FGameplayAttributeData& 
 void UIGS_GASAttributeSetBase::OnRep_HipFireSpread(const FGameplayAttributeData& inOldValue) {
 }
 
+void UIGS_GASAttributeSetBase::OnRep_HealthRegenMultiplierDebuff(const FGameplayAttributeData& inOldValue) {
+}
+
 void UIGS_GASAttributeSetBase::OnRep_HealthRegenMultiplier(const FGameplayAttributeData& inOldValue) {
 }
 
@@ -118,6 +121,9 @@ void UIGS_GASAttributeSetBase::OnRep_AdditionalDownStateCount(const FGameplayAtt
 void UIGS_GASAttributeSetBase::OnRep_AbilityRegenSpeedMult(const FGameplayAttributeData& inOldValue) {
 }
 
+void UIGS_GASAttributeSetBase::OnRep_AbilityDurationMeleeKillIncrease(const FGameplayAttributeData& inOldValue) {
+}
+
 void UIGS_GASAttributeSetBase::OnRep_AbilityDurationKillIncrease(const FGameplayAttributeData& inOldValue) {
 }
 
@@ -157,6 +163,7 @@ void UIGS_GASAttributeSetBase::GetLifetimeReplicatedProps(TArray<FLifetimeProper
     DOREPLIFETIME(UIGS_GASAttributeSetBase, HealthMultiplier);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, HealthRegenDelay);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, HealthRegenMultiplier);
+    DOREPLIFETIME(UIGS_GASAttributeSetBase, HealthRegenMultiplierDebuff);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, FlashEffectivity);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, StunEffectivity);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, ReviveSpeed);
@@ -167,5 +174,6 @@ void UIGS_GASAttributeSetBase::GetLifetimeReplicatedProps(TArray<FLifetimeProper
     DOREPLIFETIME(UIGS_GASAttributeSetBase, Ability1Charges);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, AbilityRegenSpeedMult);
     DOREPLIFETIME(UIGS_GASAttributeSetBase, AbilityDurationKillIncrease);
+    DOREPLIFETIME(UIGS_GASAttributeSetBase, AbilityDurationMeleeKillIncrease);
 }
 

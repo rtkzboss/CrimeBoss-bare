@@ -14,6 +14,6 @@ public:
     int32 GetPerkLevel();
 
     UFUNCTION(BlueprintPure)
-    FIGS_PerksTableRow GetPerkData();
+    FIGS_PerksTableRow GetPerkData() const;
 
 };

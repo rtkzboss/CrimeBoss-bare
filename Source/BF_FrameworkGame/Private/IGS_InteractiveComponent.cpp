@@ -117,6 +117,7 @@ void UIGS_InteractiveComponent::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
     DOREPLIFETIME(UIGS_InteractiveComponent, bIsEnabled);
+    DOREPLIFETIME(UIGS_InteractiveComponent, bCanBeEnabled);
     DOREPLIFETIME(UIGS_InteractiveComponent, NeededItem);
     DOREPLIFETIME(UIGS_InteractiveComponent, R_bIsSuspicious);
     DOREPLIFETIME(UIGS_InteractiveComponent, R_bIsBeingUsed);

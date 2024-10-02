@@ -12,7 +12,6 @@
 #include "Templates/SubclassOf.h"
 #include "IGS_VehicleCar.generated.h"
 
-class AIGS_PlayerCharacter;
 class UAnimMontage;
 class UAnimationAsset;
 class UBoxComponent;
@@ -225,9 +224,6 @@ protected:
     float FrontWheelAngle;
 
 private:
-    UPROPERTY()
-    TArray<AIGS_PlayerCharacter*> DamagedCharacters;
-
     UPROPERTY(Replicated)
     FVector_NetQuantize100 mR_NewVelocity;
 

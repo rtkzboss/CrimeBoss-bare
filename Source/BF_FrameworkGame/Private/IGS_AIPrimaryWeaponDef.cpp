@@ -2,6 +2,7 @@
 #include "GameplayTagContainer.h"
 
 UIGS_AIPrimaryWeaponDef::UIGS_AIPrimaryWeaponDef() {
+    (*this).Weapon.MaxFiringRange = 2.000000000e+03f;
     (*this).Weapon.CombatRange.Min = 5.000000000e+02f;
     (*this).Weapon.CombatRange.Max = 1.200000000e+03f;
     (*this).Weapon.ShotsToFire.Min = 2;

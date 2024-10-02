@@ -22,6 +22,18 @@ bool UIGS_GUIUtilityFunctionLibrary::GetInputActionKeySymbol(UObject* inWCO, EIG
     return false;
 }
 
+FIGS_HordeMode_PerkRow UIGS_GUIUtilityFunctionLibrary::GetHordeModeUpgradeRowByEffect(TSubclassOf<UGameplayEffect> inEffectClass, const UDataTable* perks_table) {
+    return FIGS_HordeMode_PerkRow{};
+}
+
+FIGS_HordeMode_UpgradeUI UIGS_GUIUtilityFunctionLibrary::GetHordeModePerkUpgradeUIData(const TSubclassOf<UGameplayEffect> inEffectClass, float inLevel, bool& outSuccess) {
+    return FIGS_HordeMode_UpgradeUI{};
+}
+
+TArray<FIGS_HordeMode_UpgradeUI> UIGS_GUIUtilityFunctionLibrary::GetHordeModePerksUpgradeUIData(TMap<TSubclassOf<UGameplayEffect>, float>& inPerkUpgrades) {
+    return {};
+}
+
 bool UIGS_GUIUtilityFunctionLibrary::GetAlternativeInputActionKeySymbol(UObject* inWCO, EIGS_InputAction InAction, FName& OutText, EIGS_InputDevice inInputDevice) {
     return false;
 }

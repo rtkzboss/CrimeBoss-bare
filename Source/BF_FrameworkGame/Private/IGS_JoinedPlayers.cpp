@@ -44,6 +44,8 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).FirstPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).FirstPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).FirstPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).FirstPlayer.CachedHeisterData.Loadout.MeleeWeapon = nullptr;
+    (*this).FirstPlayer.CachedHeisterData.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).FirstPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).FirstPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).FirstPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
@@ -96,6 +98,8 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).SecondPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).SecondPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).SecondPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).SecondPlayer.CachedHeisterData.Loadout.MeleeWeapon = nullptr;
+    (*this).SecondPlayer.CachedHeisterData.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).SecondPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).SecondPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).SecondPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
@@ -148,6 +152,8 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).ThirdPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).ThirdPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).ThirdPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).ThirdPlayer.CachedHeisterData.Loadout.MeleeWeapon = nullptr;
+    (*this).ThirdPlayer.CachedHeisterData.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).ThirdPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).ThirdPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).ThirdPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;
@@ -200,6 +206,8 @@ FIGS_JoinedPlayers::FIGS_JoinedPlayers() {
     (*this).FourthPlayer.CachedHeisterData.Loadout.PrimaryWeaponSkin = FGameplayTag();
     (*this).FourthPlayer.CachedHeisterData.Loadout.SecondaryWeapon = nullptr;
     (*this).FourthPlayer.CachedHeisterData.Loadout.SecondaryWeaponSkin = FGameplayTag();
+    (*this).FourthPlayer.CachedHeisterData.Loadout.MeleeWeapon = nullptr;
+    (*this).FourthPlayer.CachedHeisterData.Loadout.MeleeWeaponSkin = FGameplayTag();
     (*this).FourthPlayer.CachedHeisterData.Loadout.Equipment = TArray<TSubclassOf<UIGS_EquipmentInventoryObject>>{};
     (*this).FourthPlayer.CachedHeisterData.Loadout.Perks = TArray<FMETA_PerkDataToFPS>{};
     (*this).FourthPlayer.CachedHeisterData.Loadout.Ability1ChargesLeft = -1;

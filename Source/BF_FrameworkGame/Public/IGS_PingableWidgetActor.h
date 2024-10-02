@@ -3,6 +3,7 @@
 #include "IGS_PoolableBaseActor.h"
 #include "IGS_PingableWidgetActor.generated.h"
 
+class AActor;
 class UIGS_WorldSpaceWidgetBase;
 
 UCLASS()
@@ -12,6 +13,9 @@ public:
     AIGS_PingableWidgetActor(const FObjectInitializer& ObjectInitializer);
 
 protected:
+    UFUNCTION()
+    void OnAttachedToActorDestroyed(AActor* inDestroyedActor);
+
     UFUNCTION(NetMulticast, Unreliable)
     void Multicast_ShowPingWidget(float inPingDuration);
 
