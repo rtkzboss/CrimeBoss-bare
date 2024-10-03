@@ -100,13 +100,10 @@ static inline FVector RotateZ(FVector In, float Rotation)
 }
 UIGS_LevelGeneratorSubsystem::FConnectionPointTransform UIGS_LevelGeneratorSubsystem::FConnectionPointTransform::Between(FIGS_ConnectionPointData const& Src, FIGS_ConnectionPointData const& Dst)
 {
-	float DeltaYaw = Dst.Rotation - Src.Rotation;
+	// no idea why they decided to make every connection rotate an extra 180deg
+	float DeltaYaw = Dst.Rotation - Src.Rotation + 180;
 	FVector Translation = Dst.Location - RotateZ(Src.Location, DeltaYaw);
 	return FConnectionPointTransform{ Translation, DeltaYaw };
-	//float DeltaYaw = Dst.Rotation - Src.Rotation;
-	//FRotator Rotation(0, DeltaYaw, 0);
-	//FVector Translation = Dst.Location - Rotation.RotateVector(Src.Location); // Src.Location.RotateAngleAxis(DeltaYaw, FVector::UpVector)
-	//return FTransform(Rotation, Translation);
 }
 FRotator UIGS_LevelGeneratorSubsystem::FConnectionPointTransform::Rotator() const
 {
